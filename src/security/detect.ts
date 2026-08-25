@@ -11,7 +11,7 @@ export function getDevToolsScore(thresholdPx = 160): number {
     debugger
     const end = performance.now()
     if (end - start > 100) score += 3
-  } catch {}
+  } catch { }
 
   return score
 }

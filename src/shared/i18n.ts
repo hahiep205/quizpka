@@ -23,6 +23,9 @@ export const appTranslations = {
     switchToEn: "Switch to English",
     switchToDark: "Switch to dark mode",
     switchToLight: "Switch to light mode",
+    communityChat: "Community Chat",
+    openCommunityChat: "Open community chat",
+    closeCommunityChat: "Close community chat",
   },
   vi: {
     home: "Trang chủ",
@@ -48,6 +51,9 @@ export const appTranslations = {
     switchToEn: "Chuyển sang tiếng Anh",
     switchToDark: "Chuyển sang giao diện tối",
     switchToLight: "Chuyển sang giao diện sáng",
+    communityChat: "Chat cộng đồng",
+    openCommunityChat: "Mở chat cộng đồng",
+    closeCommunityChat: "Đóng chat cộng đồng",
   },
 } as const
 
@@ -412,5 +418,40 @@ export const tadvPickerCopy = {
     cancel: "Hủy",
     continue: "Bắt đầu",
     questions: "câu hỏi",
+  },
+} as const
+
+export const communityChatCopy = {
+  en: {
+    title: "Community Chat",
+    subtitle: "Chat with PKA students - Civilized and polite~",
+    online: "Online",
+    placeholder: "Type a message...",
+    send: "Send",
+    close: "Close",
+    closeModal: "Close modal",
+    empty: "No messages yet. Be the first to say hello!",
+    typing: "Someone is typing...",
+    comingSoon: "Realtime chat coming soon",
+    comingSoonDesc: "Community chat is being built. Stay tuned - you will be able to chat as guest without login.",
+    nickname: "Nickname",
+    channelGeneral: "General",
+    members: "members",
+  },
+  vi: {
+    title: "Chat cộng đồng",
+    subtitle: "Trò chuyện cùng sinh viên PKA - Văn minh, lịch sự~",
+    online: "Đang online",
+    placeholder: "Nhập tin nhắn...",
+    send: "Gửi",
+    close: "Đóng",
+    closeModal: "Đóng modal",
+    empty: "Chưa có tin nhắn nào. Hãy là người đầu tiên chào nhé!",
+    typing: "Ai đó đang nhập...",
+    comingSoon: "Sắp ra mắt chat realtime",
+    comingSoonDesc: "Tính năng chat cộng đồng đang được xây dựng. Bạn sẽ có thể chat với tư cách khách mà không cần đăng nhập.",
+    nickname: "Biệt danh",
+    channelGeneral: "Chung",
+    members: "thành viên",
   },
 } as const
