@@ -1,0 +1,1806 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Bảo mật Ứng dụng và Hệ thống",
+  "totalQuestions": 150,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Ba mục tiêu cốt lõi của an toàn thông tin (mô hình CIA) bao gồm những yếu tố nào?",
+      "options": {
+        "A": "Confidentiality (Tính bảo mật) – Integration (Tính tích hợp) – Authentication (Xác thực)",
+        "B": "Confidentiality (Tính bảo mật) – Integrity (Tính toàn vẹn) – Availability (Tính sẵn sàng)",
+        "C": "Control (Kiểm soát) – Integrity (Tính toàn vẹn) – Access (Truy cập)",
+        "D": "Cryptography (Mã hóa) – Integrity (Tính toàn vẹn) – Availability (Tính sẵn sàng)"
+      },
+      "answer": "B",
+      "explainAnswer": "Mô hình CIA là nền tảng của an toàn thông tin, gồm Confidentiality, Integrity và Availability. Đáp án B đúng vì lần lượt nói đến bảo mật dữ liệu, đảm bảo dữ liệu không bị sửa sai trái phép và hệ thống luôn sẵn sàng phục vụ khi cần."
+    },
+    {
+      "id": 2,
+      "question": "Nguyên tắc 'Least Privilege' (Quyền tối thiểu) trong bảo mật hệ thống được hiểu như thế nào?",
+      "options": {
+        "A": "Cấp cho người dùng tất cả các quyền để làm việc dễ dàng.",
+        "B": "Không cấp bất kỳ quyền truy cập nào cho nhân viên thông thường.",
+        "C": "Chỉ cấp đúng các quyền tối thiểu cần thiết để hoàn thành công việc được giao.",
+        "D": "Cấp quyền truy cập dựa trên thâm niên làm việc."
+      },
+      "answer": "C",
+      "explainAnswer": "Least Privilege nghĩa là mỗi người dùng hoặc tiến trình chỉ được cấp đúng quyền cần thiết để làm nhiệm vụ. Đáp án C đúng vì cấp quá nhiều quyền sẽ làm tăng rủi ro khi tài khoản bị lạm dụng hoặc bị chiếm đoạt."
+    },
+    {
+      "id": 3,
+      "question": "Chiến lược phòng thủ 'Defense in Depth' (Phòng thủ chiều sâu) có đặc điểm gì?",
+      "options": {
+        "A": "Sử dụng một bức tường lửa thật mạnh ở vòng ngoài.",
+        "B": "Sử dụng nhiều lớp bảo vệ độc lập từ ngoài vào trong.",
+        "C": "Chỉ tập trung bảo mật cho lớp cơ sở dữ liệu cốt lõi.",
+        "D": "Giấu toàn bộ mã nguồn của ứng dụng."
+      },
+      "answer": "B",
+      "explainAnswer": "Defense in Depth không phụ thuộc vào một lớp bảo vệ duy nhất, mà dùng nhiều lớp như firewall, phân quyền, giám sát, mã hóa và kiểm soát truy cập. Đáp án B đúng vì nếu một lớp bị vượt qua thì các lớp khác vẫn tiếp tục bảo vệ hệ thống."
+    },
+    {
+      "id": 4,
+      "question": "Yếu tố nào được coi là 'tuyến phòng thủ quan trọng nhất nhưng cũng là mắt xích yếu nhất' trong an ninh mạng?",
+      "options": {
+        "A": "Hệ thống Firewall",
+        "B": "Thuật toán mã hóa",
+        "C": "Con người (Người dùng và Quản trị viên)",
+        "D": "Hệ thống IDS"
+      },
+      "answer": "C",
+      "explainAnswer": "Trong an ninh mạng, con người thường là mục tiêu dễ bị khai thác qua lừa đảo, mật khẩu yếu hoặc cấu hình sai. Đáp án C đúng vì dù hệ thống kỹ thuật mạnh đến đâu, lỗi từ người dùng hoặc quản trị viên vẫn có thể tạo ra lỗ hổng nghiêm trọng."
+    },
+    {
+      "id": 5,
+      "question": "Tấn công 'Passive Attack' (Tấn công thụ động) khác với tấn công chủ động ở điểm nào?",
+      "options": {
+        "A": "Làm thay đổi hoặc phá hủy trực tiếp dữ liệu trên hệ thống.",
+        "B": "Chỉ lén lút nghe trộm và thu thập thông tin mà không làm thay đổi dữ liệu.",
+        "C": "Gây ra hiện tượng từ chối dịch vụ.",
+        "D": "Luôn kích hoạt các cảnh báo trên hệ thống IDS."
+      },
+      "answer": "B",
+      "explainAnswer": "Passive Attack chủ yếu là nghe lén, quan sát và thu thập thông tin mà không làm thay đổi dữ liệu hay trạng thái hệ thống. Đáp án B đúng vì tấn công chủ động mới thường gây sửa đổi, phá hoại hoặc làm gián đoạn dịch vụ."
+    },
+    {
+      "id": 6,
+      "question": "Hình thức tấn công nào nhằm mục đích làm cạn kiệt tài nguyên hệ thống, khiến dịch vụ ngừng hoạt động?",
+      "options": {
+        "A": "Phishing",
+        "B": "SQL Injection",
+        "C": "DDoS",
+        "D": "Man-in-the-Middle"
+      },
+      "answer": "C",
+      "explainAnswer": "DDoS làm quá tải tài nguyên như băng thông, CPU, RAM hoặc số lượng kết nối khiến dịch vụ không thể phục vụ người dùng hợp lệ. Đáp án C đúng vì mục tiêu chính của DDoS là làm dịch vụ bị gián đoạn hoặc ngừng hoạt động."
+    },
+    {
+      "id": 7,
+      "question": "Kỹ thuật tấn công 'Phishing' thường sử dụng phương thức chủ yếu nào?",
+      "options": {
+        "A": "Gửi thông điệp giả mạo các tổ chức uy tín để lừa người dùng cung cấp thông tin.",
+        "B": "Chèn mã độc vào cơ sở dữ liệu.",
+        "C": "Bẻ khóa mật khẩu bằng phương pháp Brute Force.",
+        "D": "Quét các cổng đang mở trên máy chủ."
+      },
+      "answer": "A",
+      "explainAnswer": "Phishing thường giả mạo ngân hàng, công ty, mạng xã hội hoặc tổ chức uy tín để lừa người dùng nhập mật khẩu, OTP hoặc thông tin cá nhân. Đáp án A đúng vì trọng tâm của Phishing là lừa đảo tâm lý thông qua thông điệp giả mạo."
+    },
+    {
+      "id": 8,
+      "question": "Mô hình kiến trúc an ninh mạng nào hoạt động theo nguyên tắc 'Không bao giờ tin tưởng, luôn luôn xác minh'?",
+      "options": {
+        "A": "Perimeter Security",
+        "B": "Zero Trust",
+        "C": "Defense in Depth",
+        "D": "SSO Security"
+      },
+      "answer": "B",
+      "explainAnswer": "Zero Trust dựa trên nguyên tắc không mặc định tin tưởng bất kỳ người dùng, thiết bị hay kết nối nào. Đáp án B đúng vì mọi yêu cầu truy cập đều cần được xác minh liên tục, kể cả khi đến từ bên trong mạng nội bộ."
+    },
+    {
+      "id": 9,
+      "question": "SOC trong lĩnh vực an toàn thông tin là viết tắt của từ gì?",
+      "options": {
+        "A": "System Operations Control",
+        "B": "Security Operations Center",
+        "C": "Secure Object Configuration",
+        "D": "Standard Operations Checklist"
+      },
+      "answer": "B",
+      "explainAnswer": "SOC là trung tâm vận hành an ninh, nơi theo dõi, phân tích và phản ứng với sự kiện bảo mật. Đáp án B đúng vì SOC viết tắt của Security Operations Center."
+    },
+    {
+      "id": 10,
+      "question": "Lỗ hổng SQL Injection xảy ra chủ yếu do nguyên nhân nào?",
+      "options": {
+        "A": "Không lọc dữ liệu đầu vào và nối chuỗi trực tiếp vào câu lệnh SQL.",
+        "B": "Sử dụng cơ chế PreparedStatement.",
+        "C": "Mã hóa mật khẩu yếu.",
+        "D": "Không cấu hình Firewall."
+      },
+      "answer": "A",
+      "explainAnswer": "SQL Injection thường xảy ra khi dữ liệu người dùng nhập vào bị nối trực tiếp vào câu SQL mà không kiểm soát đúng cách. Đáp án A đúng vì kẻ tấn công có thể chèn cú pháp SQL để làm thay đổi ý nghĩa truy vấn."
+    },
+    {
+      "id": 11,
+      "question": "Để phòng chống SQL Injection ở mức mã nguồn một cách triệt để nhất, lập trình viên nên sử dụng kỹ thuật nào?",
+      "options": {
+        "A": "Statement kết hợp nối chuỗi ký tự.",
+        "B": "PreparedStatement (Parameterized Queries).",
+        "C": "Mã hóa MD5 cho toàn bộ dữ liệu.",
+        "D": "Kiểm tra dữ liệu bằng JavaScript ở Client."
+      },
+      "answer": "B",
+      "explainAnswer": "PreparedStatement dùng tham số hóa truy vấn, giúp tách dữ liệu đầu vào khỏi cú pháp SQL. Đáp án B đúng vì cơ chế này làm cho dữ liệu người dùng không bị hiểu nhầm thành lệnh SQL độc hại."
+    },
+    {
+      "id": 12,
+      "question": "Tấn công XSS (Cross-Site Scripting) được định nghĩa là gì?",
+      "options": {
+        "A": "Chèn mã SQL độc hại vào cơ sở dữ liệu.",
+        "B": "Chèn các đoạn mã kịch bản (JavaScript) độc hại để thực thi trên trình duyệt của người dùng.",
+        "C": "Can thiệp trực tiếp vào bộ nhớ RAM của Server.",
+        "D": "Tấn công từ chối dịch vụ nhằm vào cổng 80."
+      },
+      "answer": "B",
+      "explainAnswer": "XSS là lỗ hổng cho phép chèn mã script, thường là JavaScript, vào trang web để chạy trên trình duyệt nạn nhân. Đáp án B đúng vì tác động chính của XSS nằm ở phía người dùng, như đánh cắp cookie hoặc thao tác thay người dùng."
+    },
+    {
+      "id": 13,
+      "question": "Lỗ hổng Stored XSS nguy hiểm hơn Reflected XSS ở điểm nào?",
+      "options": {
+        "A": "Mã độc được lưu vĩnh viễn vào CSDL và tự động tấn công mọi người dùng truy cập trang.",
+        "B": "Nó có thể đánh cắp mật khẩu máy chủ.",
+        "C": "Nó thực thi mã bằng ngôn ngữ C++ thay vì JavaScript.",
+        "D": "Nó bỏ qua được mọi loại Tường lửa phần cứng."
+      },
+      "answer": "A",
+      "explainAnswer": "Stored XSS nguy hiểm vì mã độc được lưu trong hệ thống, ví dụ trong cơ sở dữ liệu bình luận hoặc hồ sơ người dùng. Đáp án A đúng vì mỗi khi người khác mở trang chứa dữ liệu đó, mã độc có thể tự động chạy lại."
+    },
+    {
+      "id": 14,
+      "question": "Chính sách bảo mật Same-Origin Policy (SOP) quy định các trang web chỉ được chia sẻ dữ liệu với nhau nếu có cùng yếu tố nào?",
+      "options": {
+        "A": "Giao thức, Tên miền và Địa chỉ IP.",
+        "B": "Giao thức, Tên miền và Cổng kết nối (Port).",
+        "C": "Tên miền, Trình duyệt và Cổng kết nối.",
+        "D": "Hệ điều hành, Giao thức và Tên miền."
+      },
+      "answer": "B",
+      "explainAnswer": "Same-Origin Policy xác định “cùng nguồn” dựa trên giao thức, tên miền và cổng. Đáp án B đúng vì chỉ khi cả ba yếu tố này giống nhau thì trình duyệt mới coi hai tài nguyên là cùng origin."
+    },
+    {
+      "id": 15,
+      "question": "Lỗ hổng CSRF (Cross-Site Request Forgery) có cơ chế hoạt động như thế nào?",
+      "options": {
+        "A": "Ép trình duyệt của nạn nhân tải mã độc về máy.",
+        "B": "Lợi dụng phiên đăng nhập hợp lệ của nạn nhân để gửi các yêu cầu HTTP trái phép đến máy chủ.",
+        "C": "Can thiệp vào giao thức HTTPS để lấy cắp gói tin.",
+        "D": "Đánh cắp Cookie bằng mã JavaScript độc hại."
+      },
+      "answer": "B",
+      "explainAnswer": "CSRF lợi dụng việc trình duyệt tự gửi cookie phiên đăng nhập hợp lệ khi tạo request đến website. Đáp án B đúng vì kẻ tấn công không cần biết mật khẩu, chỉ cần dụ nạn nhân đang đăng nhập gửi yêu cầu trái phép."
+    },
+    {
+      "id": 16,
+      "question": "Giải pháp hiệu quả nhất để phòng chống tấn công CSRF trên ứng dụng Web là gì?",
+      "options": {
+        "A": "Mã hóa mật khẩu người dùng.",
+        "B": "Sử dụng Anti-CSRF Token duy nhất cho mỗi biểu mẫu (Form).",
+        "C": "Chặn hoàn toàn mã JavaScript chạy trên trình duyệt.",
+        "D": "Chỉ sử dụng phương thức HTTP GET cho mọi yêu cầu."
+      },
+      "answer": "B",
+      "explainAnswer": "Anti-CSRF Token là giá trị bí mật, khó đoán, được gắn vào form hoặc request hợp lệ. Đáp án B đúng vì máy chủ có thể kiểm tra token để phân biệt request thật từ ứng dụng với request giả mạo từ trang khác."
+    },
+    {
+      "id": 17,
+      "question": "Công cụ nào sau đây đóng vai trò là Intercepting Proxy phổ biến để kiểm thử lỗ hổng Web?",
+      "options": {
+        "A": "Nmap",
+        "B": "Wireshark",
+        "C": "Burp Suite / OWASP ZAP",
+        "D": "Metasploit"
+      },
+      "answer": "C",
+      "explainAnswer": "Burp Suite và OWASP ZAP cho phép chặn, xem, sửa và gửi lại request/response giữa trình duyệt và máy chủ. Đáp án C đúng vì đây là các Intercepting Proxy phổ biến trong kiểm thử bảo mật web."
+    },
+    {
+      "id": 18,
+      "question": "Cơ chế 'Data Masking' trong cơ sở dữ liệu nhằm mục đích gì?",
+      "options": {
+        "A": "Mã hóa toàn bộ đĩa cứng lưu trữ.",
+        "B": "Che giấu dữ liệu nhạy cảm (như thay số thẻ thành XXXX) khi hiển thị cho người dùng không có thẩm quyền.",
+        "C": "Ngụy trang máy chủ CSDL dưới một địa chỉ IP giả.",
+        "D": "Xóa vĩnh viễn dữ liệu cũ."
+      },
+      "answer": "B",
+      "explainAnswer": "Data Masking dùng để che bớt dữ liệu nhạy cảm khi hiển thị, ví dụ chỉ hiện bốn số cuối của thẻ. Đáp án B đúng vì nó giảm nguy cơ lộ thông tin cho người không có thẩm quyền nhưng vẫn giữ dữ liệu đủ dùng cho nghiệp vụ."
+    },
+    {
+      "id": 19,
+      "question": "Nguyên tắc 'Separation of Duties' (Phân tách nhiệm vụ) trong CSDL có ý nghĩa gì?",
+      "options": {
+        "A": "Giao toàn quyền cho một người quản trị duy nhất.",
+        "B": "Chia nhỏ vai trò để tránh một cá nhân có toàn quyền thực hiện một chuỗi hành động nhạy cảm.",
+        "C": "Chia CSDL thành các bảng nhỏ không liên kết.",
+        "D": "Không cho phép bất kỳ ai truy cập CSDL vào ban đêm."
+      },
+      "answer": "B",
+      "explainAnswer": "Separation of Duties chia trách nhiệm cho nhiều vai trò khác nhau để tránh một cá nhân có thể tự làm toàn bộ thao tác nhạy cảm. Đáp án B đúng vì cách này giảm nguy cơ gian lận, sai sót và lạm dụng quyền."
+    },
+    {
+      "id": 20,
+      "question": "Trong mô hình AAA bảo mật dữ liệu, 'Accounting' đảm nhận vai trò gì?",
+      "options": {
+        "A": "Xác thực danh tính người dùng.",
+        "B": "Phân quyền truy cập các bảng dữ liệu.",
+        "C": "Ghi nhật ký (Auditing) và giám sát mọi thao tác trên hệ thống.",
+        "D": "Đảm bảo tính sẵn sàng của hệ thống."
+      },
+      "answer": "C",
+      "explainAnswer": "Trong AAA, Accounting là phần ghi nhận ai đã làm gì, lúc nào và trên tài nguyên nào. Đáp án C đúng vì nó phục vụ auditing, giám sát, truy vết và điều tra khi có sự cố."
+    },
+    {
+      "id": 21,
+      "question": "Để bảo mật API theo hướng phi trạng thái (Stateless), chuẩn Token nào thường được sử dụng phổ biến nhất hiện nay?",
+      "options": {
+        "A": "Basic Authentication",
+        "B": "Session Cookie",
+        "C": "JWT (JSON Web Token)",
+        "D": "NTLM"
+      },
+      "answer": "C",
+      "explainAnswer": "JWT thường được dùng trong API stateless vì token tự chứa thông tin cần thiết để xác thực yêu cầu. Đáp án C đúng vì server không bắt buộc phải lưu session truyền thống cho từng người dùng."
+    },
+    {
+      "id": 22,
+      "question": "Phần 'Signature' trong cấu trúc của một chuỗi JWT dùng để làm gì?",
+      "options": {
+        "A": "Đảm bảo tính toàn vẹn, xác minh Token không bị giả mạo hay thay đổi.",
+        "B": "Nén dung lượng của Token.",
+        "C": "Mã hóa nội dung để người dùng không đọc được payload.",
+        "D": "Quy định thời gian sống của Token."
+      },
+      "answer": "A",
+      "explainAnswer": "Signature trong JWT được tạo từ header, payload và khóa bí mật hoặc khóa riêng. Đáp án A đúng vì nó giúp máy chủ phát hiện token đã bị sửa đổi hoặc bị giả mạo."
+    },
+    {
+      "id": 23,
+      "question": "Kỹ thuật bảo vệ bộ nhớ ASLR trên hệ điều hành hoạt động theo nguyên lý nào?",
+      "options": {
+        "A": "Chặn các tiến trình không có chữ ký số khởi chạy.",
+        "B": "Xáo trộn ngẫu nhiên vị trí các vùng dữ liệu trong bộ nhớ để chặn tấn công tràn bộ đệm.",
+        "C": "Cấm thực thi mã trên toàn bộ không gian RAM.",
+        "D": "Khóa địa chỉ IP của kẻ tấn công ngay lập tức."
+      },
+      "answer": "B",
+      "explainAnswer": "ASLR làm vị trí các vùng nhớ quan trọng thay đổi ngẫu nhiên giữa các lần chạy. Đáp án B đúng vì kẻ tấn công khó đoán địa chỉ bộ nhớ để khai thác lỗi tràn bộ đệm hoặc lỗi hỏng bộ nhớ."
+    },
+    {
+      "id": 24,
+      "question": "Tính năng DEP (Data Execution Prevention) của hệ điều hành nhằm mục đích gì?",
+      "options": {
+        "A": "Đánh dấu một số vùng bộ nhớ là 'không được thực thi' để chặn mã độc chạy từ vùng đệm dữ liệu.",
+        "B": "Mã hóa toàn bộ các file văn bản trên đĩa cứng.",
+        "C": "Chặn tải các file exe từ mạng Internet.",
+        "D": "Tự động khôi phục dữ liệu bị xóa."
+      },
+      "answer": "A",
+      "explainAnswer": "DEP đánh dấu một số vùng nhớ chứa dữ liệu là không được phép thực thi mã. Đáp án A đúng vì điều này ngăn mã độc được chèn vào vùng đệm dữ liệu rồi chạy như chương trình."
+    },
+    {
+      "id": 25,
+      "question": "Chip bảo mật TPM (Trusted Platform Module) trên mainboard cung cấp chức năng chính là gì?",
+      "options": {
+        "A": "Tăng tốc độ xử lý đồ họa cho hệ điều hành.",
+        "B": "Lưu trữ khóa mã hóa an toàn ở mức phần cứng và hỗ trợ Secure Boot.",
+        "C": "Cung cấp kết nối mạng VPN phần cứng.",
+        "D": "Ngăn chặn tấn công DDoS vào hệ thống."
+      },
+      "answer": "B",
+      "explainAnswer": "TPM là chip bảo mật phần cứng dùng để lưu khóa và hỗ trợ các cơ chế tin cậy khi khởi động. Đáp án B đúng vì khóa lưu trong TPM khó bị trích xuất hơn so với lưu thuần túy bằng phần mềm."
+    },
+    {
+      "id": 26,
+      "question": "Malware nào có khả năng tự nhân bản và phát tán độc lập qua mạng mà không cần file vật chủ?",
+      "options": {
+        "A": "Virus",
+        "B": "Worm",
+        "C": "Trojan",
+        "D": "Spyware"
+      },
+      "answer": "B",
+      "explainAnswer": "Worm có khả năng tự sao chép và lan truyền qua mạng mà không cần gắn vào file vật chủ. Đáp án B đúng vì đây là điểm khác biệt chính giữa Worm và Virus truyền thống."
+    },
+    {
+      "id": 27,
+      "question": "Trojan Horse trong an ninh mạng có đặc tính lây nhiễm như thế nào?",
+      "options": {
+        "A": "Tự động lây lan qua các cổng mạng đang mở.",
+        "B": "Ngụy trang dưới vỏ bọc một phần mềm hợp pháp, hữu ích để lừa người dùng tải về cài đặt.",
+        "C": "Chỉ lây nhiễm qua các file tài liệu Word macro.",
+        "D": "Chặn hoàn toàn kết nối Internet của máy nạn nhân."
+      },
+      "answer": "B",
+      "explainAnswer": "Trojan đánh lừa người dùng bằng cách giả dạng phần mềm hợp pháp hoặc hữu ích. Đáp án B đúng vì Trojan thường cần người dùng tải, cài hoặc chạy nó, thay vì tự lây lan độc lập như Worm."
+    },
+    {
+      "id": 28,
+      "question": "Kỹ thuật 'Polymorphism' (Biến hình) giúp mã độc đạt được mục đích gì?",
+      "options": {
+        "A": "Tự động thay đổi mã để tạo chữ ký khác nhau sau mỗi lần lây nhiễm nhằm qua mặt phần mềm diệt virus.",
+        "B": "Chuyển từ Virus thành Ransomware trong tích tắc.",
+        "C": "Ngăn chặn người dùng gỡ cài đặt mã độc.",
+        "D": "Tăng tốc độ gửi dữ liệu lấy cắp ra bên ngoài."
+      },
+      "answer": "A",
+      "explainAnswer": "Polymorphism giúp mã độc thay đổi hình dạng mã hoặc chữ ký sau mỗi lần lây nhiễm. Đáp án A đúng vì mục tiêu là tránh bị phần mềm diệt virus phát hiện bằng chữ ký cố định."
+    },
+    {
+      "id": 29,
+      "question": "Mục đích chính của hệ thống Firewall trong hạ tầng mạng là gì?",
+      "options": {
+        "A": "Mã hóa toàn bộ dữ liệu đi qua mạng LAN.",
+        "B": "Kiểm soát và lọc lưu lượng mạng ra/vào hệ thống dựa trên các bộ quy tắc (Rules) được cấu hình trước.",
+        "C": "Phát hiện mã độc đa hình đang ẩn náu trong RAM.",
+        "D": "Cung cấp kết nối Wi-Fi miễn phí cho người dùng doanh nghiệp."
+      },
+      "answer": "B",
+      "explainAnswer": "Firewall kiểm soát lưu lượng mạng dựa trên quy tắc như địa chỉ IP, cổng, giao thức hoặc ứng dụng. Đáp án B đúng vì chức năng cốt lõi của firewall là cho phép hoặc chặn traffic theo chính sách bảo mật."
+    },
+    {
+      "id": 30,
+      "question": "Điểm khác biệt cốt lõi giữa IDS (Intrusion Detection System) và IPS (Intrusion Prevention System) là gì?",
+      "options": {
+        "A": "IDS dùng cho máy chủ Web, IPS dùng cho máy chủ Database.",
+        "B": "IDS chỉ phát hiện và cảnh báo hành vi bất thường, còn IPS có khả năng chủ động can thiệp và ngăn chặn cuộc tấn công.",
+        "C": "IDS là phần cứng, IPS là phần mềm.",
+        "D": "IDS mã hóa đường truyền còn IPS chỉ phân tích log."
+      },
+      "answer": "B",
+      "explainAnswer": "IDS chủ yếu theo dõi và cảnh báo khi phát hiện dấu hiệu bất thường hoặc tấn công. Đáp án B đúng vì IPS nâng cao hơn ở chỗ có thể chủ động chặn, drop gói tin hoặc ngắt kết nối độc hại."
+    },
+    {
+      "id": 31,
+      "question": "Công nghệ VPN (Virtual Private Network) bảo vệ dữ liệu truyền tải qua Internet bằng cơ chế nào?",
+      "options": {
+        "A": "Chặn tất cả các gói tin đến từ địa chỉ IP nước ngoài.",
+        "B": "Tạo một đường hầm mã hóa (Encrypted Tunnel) từ điểm cuối tới điểm cuối.",
+        "C": "Quét virus mọi file trước khi gửi đi.",
+        "D": "Tự động đổi mật khẩu đăng nhập mạng liên tục."
+      },
+      "answer": "B",
+      "explainAnswer": "VPN tạo kênh truyền được mã hóa giữa thiết bị người dùng và điểm cuối VPN. Đáp án B đúng vì dữ liệu đi qua Internet được bảo vệ bằng đường hầm mã hóa, giảm nguy cơ bị nghe lén."
+    },
+    {
+      "id": 32,
+      "question": "Thuật ngữ 'Shift-left Security' trong quy trình phát triển phần mềm an toàn (SSDLC) có nghĩa là gì?",
+      "options": {
+        "A": "Giao toàn bộ công việc kiểm thử cho đội vận hành.",
+        "B": "Chỉ kiểm tra lỗi ở giao diện phía bên trái ứng dụng.",
+        "C": "Tích hợp các hoạt động kiểm thử bảo mật vào càng sớm càng tốt, ngay từ những khâu đầu tiên của quy trình phát triển.",
+        "D": "Thực hiện bảo mật sau khi sản phẩm đã được triển khai (Deploy)."
+      },
+      "answer": "C",
+      "explainAnswer": "Shift-left Security đưa hoạt động bảo mật về sớm trong vòng đời phát triển phần mềm. Đáp án C đúng vì phát hiện lỗi từ giai đoạn yêu cầu, thiết kế hoặc viết code thường rẻ và nhanh hơn sửa sau khi triển khai."
+    },
+    {
+      "id": 33,
+      "question": "Trong mô hình DevSecOps, bảo mật được nhìn nhận như thế nào?",
+      "options": {
+        "A": "Là trách nhiệm duy nhất của đội ngũ An ninh mạng (Security Team).",
+        "B": "Là trách nhiệm chung của toàn bộ đội ngũ, được tự động hóa xuyên suốt chuỗi CI/CD.",
+        "C": "Là bước kiểm tra cuối cùng bắt buộc trước khi phát hành sản phẩm.",
+        "D": "Là quy trình thủ công chỉ áp dụng cho mã nguồn Java."
+      },
+      "answer": "B",
+      "explainAnswer": "DevSecOps coi bảo mật là trách nhiệm chung của Dev, Sec và Ops, không phải bước kiểm tra tách biệt cuối cùng. Đáp án B đúng vì bảo mật được tích hợp và tự động hóa trong pipeline CI/CD."
+    },
+    {
+      "id": 34,
+      "question": "Phương pháp kiểm thử tĩnh SAST (Static Application Security Testing) có đặc tính nào?",
+      "options": {
+        "A": "Tấn công giả lập vào ứng dụng khi ứng dụng đang chạy ở môi trường thực tế.",
+        "B": "Phân tích và quét mã nguồn (Source Code) để tìm lỗi bảo mật mà không cần thực thi chương trình.",
+        "C": "Chỉ giám sát lưu lượng mạng đi qua tường lửa.",
+        "D": "Phân tích hành vi của người dùng trên ứng dụng Web."
+      },
+      "answer": "B",
+      "explainAnswer": "SAST phân tích mã nguồn, bytecode hoặc cấu hình mà không cần chạy ứng dụng. Đáp án B đúng vì nó là kiểm thử tĩnh, phù hợp để phát hiện lỗi sớm trong quá trình phát triển."
+    },
+    {
+      "id": 35,
+      "question": "Phương pháp kiểm thử động DAST (Dynamic Application Security Testing) thường được mô tả là kiểu kiểm thử nào?",
+      "options": {
+        "A": "Kiểm thử hộp trắng (White-box testing).",
+        "B": "Kiểm thử tĩnh qua phân tích mã nguồn.",
+        "C": "Kiểm thử hộp đen (Black-box testing) trên ứng dụng đang chạy (Runtime).",
+        "D": "Kiểm tra phiên bản của các thư viện bên thứ ba."
+      },
+      "answer": "C",
+      "explainAnswer": "DAST kiểm thử ứng dụng khi đang chạy bằng cách quan sát phản hồi từ bên ngoài. Đáp án C đúng vì nó giống kiểm thử hộp đen, không nhất thiết cần biết mã nguồn bên trong."
+    },
+    {
+      "id": 36,
+      "question": "Công cụ phân tích cấu phần phần mềm SCA (Software Composition Analysis) được sử dụng để làm gì trong SSDLC?",
+      "options": {
+        "A": "Phát hiện các lỗ hổng đã biết trong các thư viện phụ thuộc mã nguồn mở (Open Source Dependencies) được tích hợp vào ứng dụng.",
+        "B": "Quét cổng (Port scanning) trên máy chủ Production.",
+        "C": "Mã hóa mật khẩu CSDL.",
+        "D": "Chống lại các cuộc tấn công từ chối dịch vụ."
+      },
+      "answer": "A",
+      "explainAnswer": "SCA kiểm tra các thư viện, package và dependency mà dự án sử dụng. Đáp án A đúng vì nhiều rủi ro đến từ thành phần mã nguồn mở đã có CVE hoặc phiên bản lỗi thời."
+    },
+    {
+      "id": 37,
+      "question": "Kỹ thuật tấn công 'Blind SQL Injection' đòi hỏi hacker phải làm gì để trích xuất dữ liệu?",
+      "options": {
+        "A": "Đọc trực tiếp nội dung CSDL in trên màn hình trang web.",
+        "B": "Chờ đợi hệ thống gửi email chứa dữ liệu về máy của hacker.",
+        "C": "Hỏi các câu hỏi logic Đúng/Sai (Boolean) hoặc dựa vào độ trễ thời gian (Time-based) của máy chủ.",
+        "D": "Khởi động lại máy chủ ứng dụng."
+      },
+      "answer": "C",
+      "explainAnswer": "Blind SQL Injection không trả dữ liệu trực tiếp ra màn hình nên phải suy luận qua phản hồi đúng/sai hoặc thời gian phản hồi. Đáp án C đúng vì kẻ kiểm thử cần đặt các điều kiện logic hoặc quan sát độ trễ để xác định dữ liệu."
+    },
+    {
+      "id": 38,
+      "question": "Tính năng 'Secure Cookie' trên trình duyệt giúp bảo vệ Cookie khỏi rủi ro nào?",
+      "options": {
+        "A": "Ngăn chặn việc gửi Cookie qua các kết nối HTTP không được mã hóa (chỉ gửi qua HTTPS).",
+        "B": "Ngăn chặn XSS đọc Cookie thông qua thuộc tính HttpOnly.",
+        "C": "Mã hóa giá trị Cookie bằng thuật toán AES-256.",
+        "D": "Vô hiệu hóa việc tạo Cookie mới trên trình duyệt."
+      },
+      "answer": "A",
+      "explainAnswer": "Secure Cookie yêu cầu trình duyệt chỉ gửi cookie qua kết nối HTTPS. Đáp án A đúng vì điều này tránh việc cookie bị truyền qua HTTP không mã hóa và dễ bị nghe lén."
+    },
+    {
+      "id": 39,
+      "question": "Tính năng 'HttpOnly' được thiết lập cho Cookie có tác dụng bảo mật gì?",
+      "options": {
+        "A": "Ngăn chặn các truy vấn SQL Injection.",
+        "B": "Chỉ cho phép kết nối qua giao thức HTTPS.",
+        "C": "Ngăn chặn mã JavaScript ở phía Client (bao gồm cả mã độc XSS) truy cập và đọc được nội dung của Cookie.",
+        "D": "Ngăn chặn tấn công CSRF tự động gửi Form."
+      },
+      "answer": "C",
+      "explainAnswer": "HttpOnly ngăn JavaScript phía client đọc giá trị cookie. Đáp án C đúng vì ngay cả khi có XSS, mã script cũng khó lấy trực tiếp cookie được gắn HttpOnly."
+    },
+    {
+      "id": 40,
+      "question": "WAF (Web Application Firewall) khác với Network Firewall thông thường ở điểm nào?",
+      "options": {
+        "A": "WAF chuyên phân tích lưu lượng ở tầng ứng dụng (Lớp 7 - HTTP/HTTPS) để chặn các cuộc tấn công như SQLi, XSS.",
+        "B": "WAF hoạt động ở tầng giao vận (Lớp 4) để chặn IP và Port.",
+        "C": "WAF không thể giải mã các kết nối HTTPS.",
+        "D": "WAF chỉ có thể được cài đặt dưới dạng thiết bị phần cứng."
+      },
+      "answer": "A",
+      "explainAnswer": "WAF phân tích request HTTP/HTTPS ở tầng ứng dụng để phát hiện mẫu tấn công web. Đáp án A đúng vì WAF tập trung vào các lỗi như SQL Injection, XSS, path traversal, khác với firewall mạng chủ yếu lọc IP/port."
+    },
+    {
+      "id": 41,
+      "question": "Hậu quả nghiêm trọng nhất của việc cấu hình hệ thống sai (Security Misconfiguration) là gì?",
+      "options": {
+        "A": "Giao diện trang web hiển thị sai màu sắc.",
+        "B": "Làm lộ các thư mục ẩn, file cấu hình hoặc cấp quyền truy cập trái phép cho kẻ tấn công bên ngoài.",
+        "C": "Tăng tốc độ truy xuất dữ liệu một cách bất thường.",
+        "D": "Tự động khởi động lại dịch vụ định kỳ."
+      },
+      "answer": "B",
+      "explainAnswer": "Security Misconfiguration có thể làm lộ file cấu hình, thư mục nhạy cảm, tài khoản mặc định hoặc quyền truy cập sai. Đáp án B đúng vì cấu hình sai thường mở đường cho kẻ tấn công truy cập trái phép."
+    },
+    {
+      "id": 42,
+      "question": "Ransomware (Mã độc tống tiền) có hành vi phá hoại điển hình nào?",
+      "options": {
+        "A": "Xóa sạch toàn bộ hệ điều hành ngay khi lây nhiễm.",
+        "B": "Lén lút sử dụng CPU của nạn nhân để đào tiền ảo.",
+        "C": "Mã hóa toàn bộ dữ liệu quan trọng của nạn nhân và yêu cầu trả tiền chuộc để lấy khóa giải mã.",
+        "D": "Tự động gửi email chứa quảng cáo rác đến danh bạ nạn nhân."
+      },
+      "answer": "C",
+      "explainAnswer": "Ransomware thường mã hóa dữ liệu quan trọng rồi yêu cầu tiền chuộc để cung cấp khóa giải mã. Đáp án C đúng vì hậu quả chính là mất quyền truy cập dữ liệu và gián đoạn hoạt động."
+    },
+    {
+      "id": 43,
+      "question": "Kỹ thuật 'Obfuscation' (Làm mờ mã) thường được tin tặc sử dụng với mục đích gì?",
+      "options": {
+        "A": "Làm cho mã độc chạy nhanh hơn.",
+        "B": "Làm cho cấu trúc mã nguồn trở nên rối rắm, khó đọc, gây khó khăn cho việc phân tích và dịch ngược (Reverse Engineering).",
+        "C": "Tăng kích thước file mã độc để tránh bị phát hiện.",
+        "D": "Vô hiệu hóa kết nối mạng của hệ thống."
+      },
+      "answer": "B",
+      "explainAnswer": "Obfuscation làm mã khó đọc, khó phân tích và khó dịch ngược hơn. Đáp án B đúng vì tin tặc dùng kỹ thuật này để che giấu hành vi thật của mã độc hoặc làm chậm quá trình phân tích."
+    },
+    {
+      "id": 44,
+      "question": "Thuật ngữ 'Zero-day Exploit' ám chỉ loại mã khai thác nào?",
+      "options": {
+        "A": "Khai thác dựa trên mật khẩu mặc định (000000).",
+        "B": "Khai thác lỗ hổng bảo mật chưa từng được công bố và nhà sản xuất phần mềm chưa có bản vá (Patch).",
+        "C": "Khai thác lỗ hổng đã được vá cách đây nhiều năm nhưng người dùng chưa cập nhật.",
+        "D": "Tấn công làm sập hệ thống trong 0 ngày."
+      },
+      "answer": "B",
+      "explainAnswer": "Zero-day Exploit khai thác lỗ hổng chưa được công bố rộng rãi hoặc chưa có bản vá từ nhà sản xuất. Đáp án B đúng vì “zero-day” nhấn mạnh việc bên phòng thủ gần như chưa có thời gian chuẩn bị bản vá."
+    },
+    {
+      "id": 45,
+      "question": "Rootkit là một dạng phần mềm độc hại có chức năng chuyên biệt gì?",
+      "options": {
+        "A": "Mã hóa đĩa cứng và đòi tiền chuộc.",
+        "B": "Theo dõi thao tác bàn phím (Keylogger).",
+        "C": "Can thiệp sâu vào nhân hệ điều hành (Kernel) để che giấu sự tồn tại của các mã độc khác hoặc các tiến trình trái phép.",
+        "D": "Hiển thị các bảng quảng cáo Pop-up liên tục."
+      },
+      "answer": "C",
+      "explainAnswer": "Rootkit thường ẩn sâu trong hệ thống, thậm chí ở mức kernel, để che giấu tiến trình, file hoặc kết nối độc hại. Đáp án C đúng vì chức năng chính của Rootkit là duy trì sự ẩn mình và hỗ trợ kiểm soát trái phép."
+    },
+    {
+      "id": 46,
+      "question": "Khi quản trị viên phát hiện hệ thống máy chủ vừa bị xâm nhập, hành động ưu tiên đầu tiên cần làm theo quy trình ứng phó là gì?",
+      "options": {
+        "A": "Lập tức tắt nguồn máy chủ bằng cách rút phích cắm.",
+        "B": "Xóa toàn bộ log hệ thống để dọn dẹp.",
+        "C": "Cô lập (Isolate) hệ thống bị nhiễm khỏi mạng nội bộ để ngăn chặn lây lan nhưng vẫn duy trì trạng thái để điều tra.",
+        "D": "Format lại toàn bộ ổ đĩa cứng và cài lại từ đầu."
+      },
+      "answer": "C",
+      "explainAnswer": "Khi phát hiện máy chủ bị xâm nhập, cần cô lập khỏi mạng để ngăn lây lan nhưng vẫn giữ nguyên trạng thái phục vụ điều tra. Đáp án C đúng vì tắt nguồn hoặc xóa dữ liệu ngay có thể làm mất bằng chứng quan trọng."
+    },
+    {
+      "id": 47,
+      "question": "Kiến trúc DMZ (Demilitarized Zone) trong thiết kế mạng có tác dụng gì?",
+      "options": {
+        "A": "Là khu vực chứa các máy chủ nội bộ cực kỳ quan trọng, cách ly hoàn toàn với Internet.",
+        "B": "Là một phân mạng trung gian chứa các dịch vụ công khai (Web, Mail, DNS) đối mặt với Internet, giúp tách biệt và bảo vệ mạng nội bộ.",
+        "C": "Là mạng WiFi dành riêng cho khách truy cập.",
+        "D": "Là trung tâm điều hành SOC."
+      },
+      "answer": "B",
+      "explainAnswer": "DMZ là vùng mạng trung gian đặt các dịch vụ công khai như web, mail hoặc DNS. Đáp án B đúng vì nó tách dịch vụ đối mặt Internet khỏi mạng nội bộ, giảm rủi ro lan truyền khi dịch vụ công khai bị tấn công."
+    },
+    {
+      "id": 48,
+      "question": "Khái niệm 'Social Engineering' trong các cuộc tấn công mạng nhắm vào yếu tố nào?",
+      "options": {
+        "A": "Lỗ hổng mã nguồn C++.",
+        "B": "Thuật toán băm SHA-256.",
+        "C": "Sự chủ quan, thiếu hiểu biết và lòng tin của con người.",
+        "D": "Tính năng định tuyến của thiết bị Router."
+      },
+      "answer": "C",
+      "explainAnswer": "Social Engineering khai thác tâm lý, lòng tin, sự chủ quan hoặc thiếu hiểu biết của con người. Đáp án C đúng vì nó không nhất thiết cần lỗ hổng kỹ thuật mà dựa vào việc lừa người dùng làm sai."
+    },
+    {
+      "id": 49,
+      "question": "Quy trình CI/CD trong phát triển phần mềm là viết tắt của từ gì?",
+      "options": {
+        "A": "Continuous Integration / Continuous Deployment (Tích hợp liên tục / Triển khai liên tục)",
+        "B": "Code Inspection / Code Deployment",
+        "C": "Continuous Inspection / Constant Delivery",
+        "D": "Controlled Integration / Continuous Development"
+      },
+      "answer": "A",
+      "explainAnswer": "CI/CD là quy trình tự động hóa việc tích hợp code và triển khai/phân phối phần mềm liên tục. Đáp án A đúng vì Continuous Integration và Continuous Deployment là cách hiểu phổ biến của CI/CD trong phát triển phần mềm."
+    },
+    {
+      "id": 50,
+      "question": "Botnet (Mạng máy tính ma) thường được tin tặc sử dụng nhiều nhất cho mục đích tấn công nào?",
+      "options": {
+        "A": "SQL Injection",
+        "B": "Tấn công từ chối dịch vụ phân tán (DDoS)",
+        "C": "Man-in-the-Middle",
+        "D": "Cross-Site Scripting (XSS)"
+      },
+      "answer": "B",
+      "explainAnswer": "Botnet gồm nhiều máy bị điều khiển từ xa, có thể cùng gửi lượng lớn request hoặc traffic. Đáp án B đúng vì DDoS là một mục đích rất phổ biến của botnet nhờ sức mạnh phân tán từ nhiều thiết bị."
+    },
+    {
+      "id": 51,
+      "question": "Hình thức tấn công 'Spear Phishing' khác với 'Phishing' truyền thống ở điểm nào?",
+      "options": {
+        "A": "Sử dụng mã độc tống tiền thay vì đánh cắp mật khẩu.",
+        "B": "Phân tán quy mô lớn hàng triệu email ngẫu nhiên.",
+        "C": "Nhắm mục tiêu cụ thể vào một cá nhân hoặc tổ chức sau khi đã thu thập thông tin chi tiết về họ.",
+        "D": "Chỉ thực hiện được qua mạng nội bộ LAN."
+      },
+      "answer": "C",
+      "explainAnswer": "Spear Phishing không gửi đại trà mà được cá nhân hóa cho một mục tiêu cụ thể. Đáp án C đúng vì kẻ tấn công thường thu thập thông tin trước để email hoặc tin nhắn trông đáng tin hơn."
+    },
+    {
+      "id": 52,
+      "question": "Tấn công Man-in-the-Middle (MITM) là gì?",
+      "options": {
+        "A": "Kẻ tấn công đánh sập máy chủ trung gian.",
+        "B": "Kẻ tấn công bí mật chen ngang vào giữa luồng giao tiếp của hai bên để nghe lén hoặc sửa đổi dữ liệu.",
+        "C": "Tấn công trực tiếp vào cơ sở dữ liệu của ứng dụng.",
+        "D": "Phát tán mã độc qua một thiết bị USB trung gian."
+      },
+      "answer": "B",
+      "explainAnswer": "MITM xảy ra khi kẻ tấn công đứng giữa hai bên đang giao tiếp để nghe lén hoặc sửa dữ liệu. Đáp án B đúng vì hai bên có thể tưởng đang nói chuyện trực tiếp với nhau nhưng thực tế luồng truyền đã bị chen ngang."
+    },
+    {
+      "id": 53,
+      "question": "Hệ thống SIEM (Security Information and Event Management) có chức năng chính là gì?",
+      "options": {
+        "A": "Ngăn chặn các cuộc tấn công DDoS vào hệ thống Web.",
+        "B": "Thu thập, lưu trữ, phân tích log và sự kiện bảo mật từ nhiều nguồn để phát hiện mối đe dọa.",
+        "C": "Mã hóa toàn bộ cơ sở dữ liệu của doanh nghiệp.",
+        "D": "Tự động vá lỗi hệ điều hành."
+      },
+      "answer": "B",
+      "explainAnswer": "SIEM tập trung log và sự kiện bảo mật từ nhiều hệ thống như firewall, server, ứng dụng và endpoint. Đáp án B đúng vì SIEM giúp phân tích tương quan, phát hiện dấu hiệu tấn công và hỗ trợ điều tra."
+    },
+    {
+      "id": 54,
+      "question": "Tấn công 'Brute Force' vào chức năng đăng nhập hoạt động theo nguyên lý nào?",
+      "options": {
+        "A": "Thử nghiệm ngẫu nhiên hoặc tuần tự tất cả các tổ hợp ký tự có thể để tìm ra mật khẩu đúng.",
+        "B": "Sử dụng một đoạn mã SQL để bypass màn hình đăng nhập.",
+        "C": "Đánh cắp cookie phiên làm việc của người dùng.",
+        "D": "Chèn mã JavaScript độc hại vào tên đăng nhập."
+      },
+      "answer": "A",
+      "explainAnswer": "Brute Force thử nhiều tổ hợp mật khẩu hoặc khóa cho đến khi tìm được giá trị đúng. Đáp án A đúng vì phương pháp này dựa vào sức mạnh tính toán và số lần thử lớn, không dựa vào mẹo nghiệp vụ."
+    },
+    {
+      "id": 55,
+      "question": "Tấn công 'Dictionary Attack' tối ưu hơn Brute Force thông thường ở điểm nào?",
+      "options": {
+        "A": "Nó bỏ qua bước kiểm tra mật khẩu.",
+        "B": "Chỉ thử các mật khẩu có ý nghĩa, các từ thông dụng từ một danh sách (từ điển) được biên soạn sẵn.",
+        "C": "Nó đánh sập máy chủ nhanh hơn.",
+        "D": "Nó có thể giải mã được thuật toán băm SHA-256."
+      },
+      "answer": "B",
+      "explainAnswer": "Dictionary Attack dùng danh sách mật khẩu phổ biến, từ có nghĩa hoặc dữ liệu rò rỉ trước đó. Đáp án B đúng vì nó hiệu quả hơn vét cạn toàn bộ khi người dùng đặt mật khẩu dễ đoán."
+    },
+    {
+      "id": 56,
+      "question": "Lỗ hổng Broken Authentication thường xuất hiện khi hệ thống bỏ qua việc nào sau đây?",
+      "options": {
+        "A": "Sử dụng WAF chặn IP lạ.",
+        "B": "Quản lý phiên làm việc kém an toàn, cho phép mật khẩu yếu, thiếu giới hạn số lần đăng nhập sai.",
+        "C": "Lọc các ký tự nháy đơn (') trong input.",
+        "D": "Sử dụng chứng chỉ HTTPS/SSL."
+      },
+      "answer": "B",
+      "explainAnswer": "Broken Authentication xuất hiện khi cơ chế đăng nhập, quản lý phiên hoặc chính sách mật khẩu yếu. Đáp án B đúng vì thiếu giới hạn đăng nhập sai, cho phép mật khẩu yếu hoặc session không an toàn đều dễ dẫn đến chiếm tài khoản."
+    },
+    {
+      "id": 57,
+      "question": "Lỗ hổng IDOR (Insecure Direct Object References) xảy ra khi nào?",
+      "options": {
+        "A": "Hệ thống hiển thị trực tiếp cấu trúc thư mục của máy chủ.",
+        "B": "Ứng dụng cho phép người dùng truy cập dữ liệu của người khác bằng cách thay đổi giá trị tham số định danh (như id=1 thành id=2) mà không kiểm tra quyền.",
+        "C": "Mã hóa sai đối tượng dữ liệu trong bộ nhớ.",
+        "D": "Cho phép upload file chứa mã độc lên hệ thống."
+      },
+      "answer": "B",
+      "explainAnswer": "IDOR xảy ra khi ứng dụng dùng ID trực tiếp nhưng không kiểm tra người dùng có quyền truy cập đối tượng đó hay không. Đáp án B đúng vì chỉ cần đổi tham số như id=1 sang id=2 đã có thể xem dữ liệu người khác nếu thiếu kiểm soát quyền."
+    },
+    {
+      "id": 58,
+      "question": "DOM-based XSS khác biệt với Stored XSS và Reflected XSS ở điểm nào?",
+      "options": {
+        "A": "Mã độc được thực thi ở máy chủ Backend.",
+        "B": "Mã độc lây nhiễm thông qua file đính kèm email.",
+        "C": "Lỗ hổng tồn tại hoàn toàn trong quá trình xử lý mã JavaScript của trình duyệt phía Client (DOM), gói tin HTTP không nhất thiết chứa mã độc.",
+        "D": "Chỉ nhắm vào người dùng có quyền Quản trị viên (Admin)."
+      },
+      "answer": "C",
+      "explainAnswer": "DOM-based XSS nằm trong cách JavaScript phía trình duyệt xử lý DOM và dữ liệu đầu vào. Đáp án C đúng vì mã độc có thể không đi qua máy chủ theo cách rõ ràng như Stored hoặc Reflected XSS."
+    },
+    {
+      "id": 59,
+      "question": "Content Security Policy (CSP) là cơ chế bảo mật dùng để phòng chống chủ yếu loại tấn công nào?",
+      "options": {
+        "A": "SQL Injection",
+        "B": "DDoS",
+        "C": "Cross-Site Scripting (XSS)",
+        "D": "Local File Inclusion"
+      },
+      "answer": "C",
+      "explainAnswer": "CSP cho phép website quy định nguồn script, style, image hoặc tài nguyên nào được phép tải và thực thi. Đáp án C đúng vì CSP đặc biệt hữu ích trong việc giảm tác động của XSS bằng cách chặn script không hợp lệ."
+    },
+    {
+      "id": 60,
+      "question": "CORS (Cross-Origin Resource Sharing) được sử dụng nhằm mục đích gì?",
+      "options": {
+        "A": "Chặn toàn bộ các yêu cầu HTTP ngoại lai.",
+        "B": "Cho phép một trang web gửi yêu cầu truy cập tài nguyên tới một tên miền khác một cách an toàn và có kiểm soát.",
+        "C": "Mã hóa dữ liệu liên miền.",
+        "D": "Đồng bộ hóa dữ liệu giữa các máy chủ."
+      },
+      "answer": "B",
+      "explainAnswer": "CORS là cơ chế trình duyệt cho phép chia sẻ tài nguyên giữa các origin khác nhau theo chính sách do server khai báo. Đáp án B đúng vì nó không mở tự do mọi truy cập, mà cho phép có kiểm soát."
+    },
+    {
+      "id": 61,
+      "question": "Nguy cơ lớn nhất của lỗ hổng File Upload không an toàn là gì?",
+      "options": {
+        "A": "Máy chủ bị cạn kiệt dung lượng đĩa cứng.",
+        "B": "Kẻ tấn công tải lên file mã độc (Web Shell), sau đó thực thi để chiếm toàn quyền kiểm soát máy chủ Web.",
+        "C": "Ứng dụng bị chậm do phải xử lý ảnh độ phân giải cao.",
+        "D": "Thay đổi giao diện của ứng dụng web."
+      },
+      "answer": "B",
+      "explainAnswer": "File Upload không an toàn có thể cho phép tải lên web shell hoặc file thực thi độc hại. Đáp án B đúng vì nếu file đó được chạy trên máy chủ, kẻ tấn công có thể điều khiển hệ thống web."
+    },
+    {
+      "id": 62,
+      "question": "Kỹ thuật Directory Traversal (Path Traversal) nhằm mục đích gì?",
+      "options": {
+        "A": "Xóa toàn bộ thư mục web.",
+        "B": "Đọc các file nhạy cảm bên ngoài thư mục gốc của ứng dụng (ví dụ: ../../../etc/passwd).",
+        "C": "Tải các file giao diện về máy cá nhân.",
+        "D": "Đổi tên thư mục trên máy chủ."
+      },
+      "answer": "B",
+      "explainAnswer": "Directory Traversal lợi dụng tham số đường dẫn để đi ra ngoài thư mục cho phép. Đáp án B đúng vì mục tiêu thường là đọc file nhạy cảm như cấu hình, mật khẩu hoặc file hệ thống."
+    },
+    {
+      "id": 63,
+      "question": "Tấn công Session Hijacking (Đánh cắp phiên) thường lợi dụng điều kiện nào?",
+      "options": {
+        "A": "Kẻ tấn công biết được Session ID hợp lệ của người dùng qua XSS hoặc bắt gói tin.",
+        "B": "Mật khẩu của người dùng quá yếu.",
+        "C": "Máy chủ không kiểm tra mã CAPTCHA.",
+        "D": "Ứng dụng bị lỗi SQL Injection."
+      },
+      "answer": "A",
+      "explainAnswer": "Session Hijacking xảy ra khi kẻ tấn công lấy được Session ID hợp lệ rồi dùng nó như nạn nhân. Đáp án A đúng vì XSS, nghe lén traffic hoặc lưu trữ cookie kém an toàn đều có thể làm lộ session."
+    },
+    {
+      "id": 64,
+      "question": "Trong bảo mật CSDL, kỹ thuật Tokenization (Mã hóa thay thế) hoạt động như thế nào?",
+      "options": {
+        "A": "Xóa hoàn toàn dữ liệu nhạy cảm khỏi hệ thống.",
+        "B": "Thay thế dữ liệu nhạy cảm (như số thẻ tín dụng) bằng một chuỗi ký tự vô nghĩa (Token), dữ liệu thật được cất ở hầm chứa an toàn.",
+        "C": "Dùng hàm băm một chiều để băm dữ liệu.",
+        "D": "Mã hóa dữ liệu bằng thuật toán RSA."
+      },
+      "answer": "B",
+      "explainAnswer": "Tokenization thay dữ liệu thật bằng một token không có ý nghĩa nếu đứng riêng lẻ. Đáp án B đúng vì dữ liệu nhạy cảm thật được lưu ở nơi an toàn hơn, giúp giảm rủi ro khi hệ thống xử lý bị lộ token."
+    },
+    {
+      "id": 65,
+      "question": "KMS (Key Management Service) trong hạ tầng đám mây có vai trò gì?",
+      "options": {
+        "A": "Lọc các gói tin mạng độc hại.",
+        "B": "Quản lý tập trung vòng đời, tạo và lưu trữ an toàn các khóa mã hóa bảo vệ cơ sở dữ liệu.",
+        "C": "Phát hiện mã độc Ransomware.",
+        "D": "Tự động phân quyền truy cập cho nhân viên."
+      },
+      "answer": "B",
+      "explainAnswer": "KMS quản lý vòng đời khóa mã hóa, gồm tạo, lưu trữ, xoay vòng và kiểm soát truy cập khóa. Đáp án B đúng vì khóa mã hóa cần được bảo vệ tập trung và an toàn để bảo vệ dữ liệu."
+    },
+    {
+      "id": 66,
+      "question": "Thành phần nào đóng vai trò như một 'chốt chặn' tập trung để xử lý xác thực, giới hạn lưu lượng (rate limiting) cho các API của hệ thống?",
+      "options": {
+        "A": "Web Server",
+        "B": "Database Server",
+        "C": "API Gateway",
+        "D": "Load Balancer"
+      },
+      "answer": "C",
+      "explainAnswer": "API Gateway là điểm đi vào tập trung cho các API, thường xử lý xác thực, phân quyền, rate limiting và định tuyến. Đáp án C đúng vì nó giúp kiểm soát các request trước khi chuyển đến dịch vụ phía sau."
+    },
+    {
+      "id": 67,
+      "question": "Kỹ thuật 'Rate Limiting' trong bảo mật API nhằm ngăn chặn loại tấn công nào hiệu quả nhất?",
+      "options": {
+        "A": "SQL Injection",
+        "B": "Brute Force, DDoS và lạm dụng tài nguyên",
+        "C": "Cross-Site Scripting (XSS)",
+        "D": "Man-in-the-Middle"
+      },
+      "answer": "B",
+      "explainAnswer": "Rate Limiting giới hạn số request trong một khoảng thời gian nhất định. Đáp án B đúng vì nó làm giảm hiệu quả của brute force, DDoS tầng ứng dụng và hành vi lạm dụng tài nguyên."
+    },
+    {
+      "id": 68,
+      "question": "OAuth 2.0 là một tiêu chuẩn giao thức được sử dụng chủ yếu cho mục đích gì?",
+      "options": {
+        "A": "Truyền tải file mã hóa an toàn.",
+        "B": "Ủy quyền truy cập (Authorization) an toàn mà không cần chia sẻ mật khẩu gốc.",
+        "C": "Mã hóa kênh truyền mạng vật lý.",
+        "D": "Phát hiện mã độc trong hệ thống Web."
+      },
+      "answer": "B",
+      "explainAnswer": "OAuth 2.0 cho phép ứng dụng bên thứ ba được cấp quyền truy cập giới hạn mà không cần biết mật khẩu gốc của người dùng. Đáp án B đúng vì đây là giao thức ủy quyền, không phải giao thức truyền file hay quét mã độc."
+    },
+    {
+      "id": 69,
+      "question": "Sự khác biệt cốt lõi giữa Authentication (Xác thực) và Authorization (Phân quyền) là gì?",
+      "options": {
+        "A": "Authentication kiểm tra 'Bạn là ai?', Authorization kiểm tra 'Bạn được phép làm gì?'.",
+        "B": "Authentication kiểm tra quyền truy cập thư mục, Authorization kiểm tra mật khẩu.",
+        "C": "Cả hai đều cùng một ý nghĩa, chỉ khác tên gọi.",
+        "D": "Authentication bảo vệ CSDL, Authorization bảo vệ giao diện Web."
+      },
+      "answer": "A",
+      "explainAnswer": "Authentication trả lời câu hỏi người dùng có đúng là người họ khai báo hay không. Đáp án A đúng vì Authorization xảy ra sau đó, quyết định người đã xác thực được phép làm gì."
+    },
+    {
+      "id": 70,
+      "question": "Lỗ hổng BOLA (Broken Object Level Authorization) trong API thường dẫn đến hậu quả gì?",
+      "options": {
+        "A": "Server API bị ngưng hoạt động.",
+        "B": "Kẻ tấn công có thể truy cập, sửa đổi hoặc xóa tài nguyên của người dùng khác bằng cách thao tác ID trên URL API.",
+        "C": "API trả về thông báo lỗi dạng mã HTML.",
+        "D": "Tất cả các token bị vô hiệu hóa."
+      },
+      "answer": "B",
+      "explainAnswer": "BOLA là lỗi phân quyền ở cấp đối tượng trong API. Đáp án B đúng vì nếu API không kiểm tra quyền với từng object, kẻ tấn công có thể đổi ID để truy cập tài nguyên của người khác."
+    },
+    {
+      "id": 71,
+      "question": "Vì sao quá trình cập nhật bản vá (Patch Management) cho Hệ điều hành lại vô cùng quan trọng?",
+      "options": {
+        "A": "Giúp giao diện hệ điều hành đẹp hơn.",
+        "B": "Khắc phục các lỗ hổng đã biết, ngăn chặn hacker khai thác để chiếm quyền điều khiển hệ thống.",
+        "C": "Tăng dung lượng ổ đĩa tự động.",
+        "D": "Giảm nhiệt độ hoạt động của CPU."
+      },
+      "answer": "B",
+      "explainAnswer": "Patch Management giúp cập nhật bản vá cho các lỗ hổng đã biết trong hệ điều hành và phần mềm. Đáp án B đúng vì hệ thống chưa vá thường trở thành mục tiêu dễ khai thác bằng công cụ có sẵn."
+    },
+    {
+      "id": 72,
+      "question": "Tính năng bảo vệ CFG (Control Flow Guard) trên Windows có tác dụng gì?",
+      "options": {
+        "A": "Ngăn chặn các luồng thực thi mã không hợp lệ, giảm thiểu các cuộc tấn công khai thác lỗi hỏng bộ nhớ.",
+        "B": "Kiểm soát lưu lượng Internet giống Firewall.",
+        "C": "Giới hạn thời gian sử dụng máy tính của người dùng.",
+        "D": "Chặn quảng cáo trên trình duyệt Edge."
+      },
+      "answer": "A",
+      "explainAnswer": "Control Flow Guard kiểm soát luồng thực thi để giảm khả năng chuyển hướng chương trình đến vị trí mã không hợp lệ. Đáp án A đúng vì nó giúp giảm tác động của các lỗi khai thác hỏng bộ nhớ."
+    },
+    {
+      "id": 73,
+      "question": "Nguyên tắc 'Security by Design' yêu cầu điều gì trong quá trình phát triển ứng dụng?",
+      "options": {
+        "A": "Thiết kế giao diện người dùng có màu sắc cảnh báo rủi ro.",
+        "B": "Bảo mật phải được tích hợp vào mọi bước của chu kỳ phát triển ngay từ giai đoạn thiết kế kiến trúc ban đầu.",
+        "C": "Bảo mật chỉ dành riêng cho kiến trúc sư phần mềm thiết kế.",
+        "D": "Mua các phần mềm bảo mật đắt tiền về tích hợp sau khi ra mắt."
+      },
+      "answer": "B",
+      "explainAnswer": "Security by Design yêu cầu bảo mật được tính đến từ lúc thiết kế kiến trúc, dữ liệu và luồng nghiệp vụ. Đáp án B đúng vì thêm bảo mật sau khi sản phẩm hoàn thành thường tốn kém và dễ bỏ sót rủi ro."
+    },
+    {
+      "id": 74,
+      "question": "Cuộc tấn công APT (Advanced Persistent Threat) có đặc điểm nổi bật nào?",
+      "options": {
+        "A": "Tấn công ồ ạt, gây sập hệ thống trong vài giây rồi rút lui.",
+        "B": "Cuộc tấn công mục tiêu, tinh vi, diễn ra lén lút, duy trì sự tồn tại trong hệ thống thời gian dài để ăn cắp dữ liệu.",
+        "C": "Chỉ lây nhiễm qua USB.",
+        "D": "Chỉ do những hacker nghiệp dư thực hiện."
+      },
+      "answer": "B",
+      "explainAnswer": "APT là kiểu tấn công có mục tiêu rõ ràng, kỹ thuật tinh vi và duy trì hiện diện lâu dài. Đáp án B đúng vì mục tiêu thường là gián điệp, đánh cắp dữ liệu hoặc phá hoại âm thầm thay vì gây ồn ào ngay lập tức."
+    },
+    {
+      "id": 75,
+      "question": "Thuật ngữ 'Payload' trong thành phần của một đoạn mã khai thác (Exploit) nghĩa là gì?",
+      "options": {
+        "A": "Công cụ dùng để quét lỗ hổng mạng.",
+        "B": "Gói dữ liệu hoặc mã lệnh độc hại sẽ được thực thi trên máy nạn nhân sau khi khai thác thành công.",
+        "C": "Kích thước của file mã độc.",
+        "D": "Địa chỉ IP của kẻ tấn công."
+      },
+      "answer": "B",
+      "explainAnswer": "Payload là phần mã hoặc dữ liệu thực hiện hành động sau khi khai thác thành công. Đáp án B đúng vì exploit chỉ là cách vào được hệ thống, còn payload là phần tạo ra tác động như mở phiên điều khiển hoặc thực thi lệnh."
+    },
+    {
+      "id": 76,
+      "question": "Spyware là phần mềm độc hại có hành vi chính là gì?",
+      "options": {
+        "A": "Mã hóa ổ đĩa và đòi tiền.",
+        "B": "Bí mật thu thập thông tin, lịch sử duyệt web, thói quen của người dùng và gửi về cho kẻ tấn công.",
+        "C": "Mở cổng Backdoor cho hacker.",
+        "D": "Hiển thị quảng cáo liên tục trên trình duyệt."
+      },
+      "answer": "B",
+      "explainAnswer": "Spyware bí mật theo dõi và thu thập thông tin của người dùng. Đáp án B đúng vì nó có thể lấy lịch sử duyệt web, thông tin đăng nhập, hành vi sử dụng hoặc dữ liệu cá nhân rồi gửi ra ngoài."
+    },
+    {
+      "id": 77,
+      "question": "Keylogger thuộc nhóm mã độc nào sau đây dựa trên chức năng?",
+      "options": {
+        "A": "Ransomware",
+        "B": "Spyware / Information Stealer",
+        "C": "Adware",
+        "D": "Worm"
+      },
+      "answer": "B",
+      "explainAnswer": "Keylogger ghi lại phím người dùng gõ, thường nhằm đánh cắp mật khẩu hoặc thông tin nhạy cảm. Đáp án B đúng vì về chức năng, nó thuộc nhóm Spyware hoặc Information Stealer."
+    },
+    {
+      "id": 78,
+      "question": "Kỹ thuật 'Metamorphism' của Malware nguy hiểm hơn 'Polymorphism' ở điểm nào?",
+      "options": {
+        "A": "Metamorphism tự động viết lại hoàn toàn logic cấu trúc mã nguồn của nó ở mỗi lần lây nhiễm, khiến việc phát hiện cực kỳ khó khăn.",
+        "B": "Nó chỉ thay đổi khóa giải mã ở vỏ bọc bên ngoài.",
+        "C": "Nó xóa toàn bộ ổ đĩa mà không cần kích hoạt.",
+        "D": "Nó giả mạo địa chỉ MAC của thiết bị."
+      },
+      "answer": "A",
+      "explainAnswer": "Metamorphism nguy hiểm hơn vì mã độc có thể tự viết lại cấu trúc mã của nó, không chỉ đổi vỏ hoặc chữ ký bên ngoài. Đáp án A đúng vì điều này khiến việc nhận diện bằng mẫu cố định khó hơn nhiều."
+    },
+    {
+      "id": 79,
+      "question": "Stateful Firewall (Tường lửa trạng thái) ưu việt hơn Stateless Firewall (Tường lửa phi trạng thái) nhờ khả năng nào?",
+      "options": {
+        "A": "Xử lý tốc độ mạng Gigabit.",
+        "B": "Theo dõi và ghi nhớ trạng thái của toàn bộ phiên kết nối từ lúc mở đến lúc đóng, ngăn chặn các gói tin giả mạo thuộc về một kết nối không tồn tại.",
+        "C": "Chỉ kiểm tra đơn lẻ từng gói tin độc lập.",
+        "D": "Ngăn chặn được 100% mã độc Zero-day."
+      },
+      "answer": "B",
+      "explainAnswer": "Stateful Firewall theo dõi trạng thái của phiên kết nối, ví dụ kết nối đã được thiết lập hay chưa. Đáp án B đúng vì nhờ nhớ ngữ cảnh phiên, nó có thể chặn gói tin giả mạo không thuộc kết nối hợp lệ."
+    },
+    {
+      "id": 80,
+      "question": "Tường lửa thế hệ mới NGFW (Next-Generation Firewall) thường được tích hợp thêm các chức năng nào so với Firewall truyền thống?",
+      "options": {
+        "A": "Nhận diện người dùng cá nhân (Identity-awareness), hệ thống phòng chống xâm nhập (IPS), và kiểm soát tận lớp Ứng dụng (Application Control).",
+        "B": "Chỉ có tính năng lọc địa chỉ IP và Port.",
+        "C": "Chỉ thêm tính năng tăng tốc độ truyền tải nội dung tĩnh.",
+        "D": "Lưu trữ sao lưu CSDL SQL."
+      },
+      "answer": "A",
+      "explainAnswer": "NGFW không chỉ lọc IP và port mà còn hiểu ứng dụng, người dùng và có thể tích hợp IPS. Đáp án A đúng vì đây là các khả năng nâng cao so với firewall truyền thống."
+    },
+    {
+      "id": 81,
+      "question": "Cơ chế phát hiện IDS dựa trên 'Signature-based' (Dựa trên chữ ký) hoạt động như thế nào?",
+      "options": {
+        "A": "Sử dụng AI để phán đoán lưu lượng độc hại.",
+        "B": "So sánh mẫu dữ liệu mạng thu được với cơ sở dữ liệu các mẫu mã độc/tấn công đã biết.",
+        "C": "Đo lường băng thông sử dụng của hệ thống.",
+        "D": "Chỉ phân tích lưu lượng HTTPS đã mã hóa."
+      },
+      "answer": "B",
+      "explainAnswer": "Signature-based IDS so sánh traffic hoặc hành vi với các mẫu tấn công đã biết. Đáp án B đúng vì phương pháp này hiệu quả với mối đe dọa đã có chữ ký, nhưng kém hơn với kỹ thuật hoàn toàn mới."
+    },
+    {
+      "id": 82,
+      "question": "Cơ chế phát hiện IDS dựa trên 'Anomaly-based' (Dựa trên hành vi/bất thường) có ưu điểm lớn nhất là gì?",
+      "options": {
+        "A": "Hoạt động cực kỳ nhanh, tiêu tốn ít tài nguyên.",
+        "B": "Không bao giờ sinh ra cảnh báo giả (False Positive).",
+        "C": "Có khả năng phát hiện ra các cuộc tấn công Zero-day mới chưa từng có trong cơ sở dữ liệu.",
+        "D": "Tự động vá lỗi hệ điều hành."
+      },
+      "answer": "C",
+      "explainAnswer": "Anomaly-based IDS học hoặc định nghĩa hành vi bình thường rồi cảnh báo khi có sai lệch đáng kể. Đáp án C đúng vì nó có cơ hội phát hiện tấn công mới hoặc Zero-day chưa có chữ ký."
+    },
+    {
+      "id": 83,
+      "question": "Giao thức IPsec thường được sử dụng trong giải pháp bảo mật nào để mã hóa ở tầng Network?",
+      "options": {
+        "A": "Cơ sở dữ liệu",
+        "B": "Firewall ứng dụng Web",
+        "C": "Mạng riêng ảo (VPN)",
+        "D": "Hệ thống IDS"
+      },
+      "answer": "C",
+      "explainAnswer": "IPsec hoạt động ở tầng Network và thường dùng để tạo VPN bảo mật. Đáp án C đúng vì nó mã hóa và bảo vệ gói IP giữa các điểm mạng."
+    },
+    {
+      "id": 84,
+      "question": "Khác biệt giữa IPsec VPN và SSL/TLS VPN là gì?",
+      "options": {
+        "A": "IPsec chạy trên trình duyệt web, SSL cần cài đặt phần mềm Client phức tạp.",
+        "B": "IPsec cung cấp kết nối mạng (Network-level), còn SSL/TLS VPN thường dễ dàng truy cập linh hoạt qua trình duyệt Web (Application-level).",
+        "C": "SSL VPN an toàn hơn IPsec VPN gấp 10 lần.",
+        "D": "IPsec VPN không hỗ trợ mã hóa."
+      },
+      "answer": "B",
+      "explainAnswer": "IPsec VPN thường cung cấp kết nối ở mức mạng, phù hợp kết nối site-to-site hoặc client-to-network. Đáp án B đúng vì SSL/TLS VPN thường linh hoạt hơn ở mức ứng dụng và có thể truy cập qua trình duyệt."
+    },
+    {
+      "id": 85,
+      "question": "Hệ thống 'Honeypot' trong kiến trúc phòng thủ mạng được thiết lập nhằm mục đích gì?",
+      "options": {
+        "A": "Tăng tốc độ truy cập Internet cho nhân viên.",
+        "B": "Là một hệ thống giả mạo được thiết kế cố tình có lỗ hổng để đánh lừa, bẫy hacker tấn công nhằm thu thập thông tin và chiến thuật của chúng.",
+        "C": "Lọc các email rác.",
+        "D": "Chặn người dùng truy cập web đen."
+      },
+      "answer": "B",
+      "explainAnswer": "Honeypot là hệ thống mồi nhử được thiết kế để thu hút kẻ tấn công. Đáp án B đúng vì nó giúp đội phòng thủ quan sát kỹ thuật, công cụ và hành vi của hacker trong môi trường được kiểm soát."
+    },
+    {
+      "id": 86,
+      "question": "Trong quy trình CI/CD an toàn, bước 'SCA (Software Composition Analysis)' thường được tự động hóa để làm gì?",
+      "options": {
+        "A": "Kiểm tra lỗi cú pháp của ngôn ngữ lập trình.",
+        "B": "Phát hiện các lỗ hổng (CVE) có sẵn trong các thư viện Open Source mà dự án đang sử dụng.",
+        "C": "Biên dịch mã nguồn thành file thực thi.",
+        "D": "Đẩy code lên môi trường Production."
+      },
+      "answer": "B",
+      "explainAnswer": "Trong CI/CD an toàn, SCA có thể tự động kiểm tra dependency mỗi lần build hoặc merge code. Đáp án B đúng vì mục tiêu là phát hiện CVE trong thư viện open source trước khi đưa ứng dụng lên môi trường thật."
+    },
+    {
+      "id": 87,
+      "question": "Kỹ thuật 'Secret Scanning' trong DevSecOps được sinh ra để ngăn ngừa rủi ro nào?",
+      "options": {
+        "A": "Lập trình viên vô tình commit các khóa API (API Keys), mật khẩu, token lên kho lưu trữ mã nguồn (ví dụ: GitHub, GitLab).",
+        "B": "Lập trình viên sử dụng phần mềm bẻ khóa.",
+        "C": "Ngăn chặn tấn công DDoS vào hệ thống Git.",
+        "D": "Kiểm tra mã độc tống tiền trong máy cá nhân."
+      },
+      "answer": "A",
+      "explainAnswer": "Secret Scanning tìm các chuỗi nhạy cảm như API key, token, mật khẩu hoặc private key trong mã nguồn. Đáp án A đúng vì commit nhầm secret lên Git có thể khiến hệ thống bị truy cập trái phép."
+    },
+    {
+      "id": 88,
+      "question": "Trong bảo mật Container (ví dụ Docker/Kubernetes) như được nhắc tới trong bài 8, giải pháp an toàn nào được khuyến nghị?",
+      "options": {
+        "A": "Chạy tất cả các Container bằng quyền Root để đảm bảo tương thích tối đa.",
+        "B": "Thực hiện Image Scanning để tìm lỗ hổng trước khi triển khai và áp dụng Least Privilege (không chạy với quyền root).",
+        "C": "Tắt hoàn toàn Tường lửa để Container giao tiếp nhanh hơn.",
+        "D": "Cài đặt phần mềm Antivirus cá nhân vào từng Container."
+      },
+      "answer": "B",
+      "explainAnswer": "Container an toàn cần được kiểm tra image trước khi chạy và hạn chế quyền bên trong container. Đáp án B đúng vì chạy bằng root hoặc dùng image có lỗ hổng sẽ làm tăng rủi ro khi container bị khai thác."
+    },
+    {
+      "id": 89,
+      "question": "Bảo mật trong DevOps truyền thống thường xảy ra ở giai đoạn nào?",
+      "options": {
+        "A": "Thường được xử lý ở cuối vòng đời, chỉ kiểm tra trước khi Release gây chậm trễ tiến độ.",
+        "B": "Tích hợp liên tục vào từng dòng code.",
+        "C": "Chỉ xử lý lúc thiết kế hệ thống ban đầu.",
+        "D": "Hoàn toàn bị bỏ qua."
+      },
+      "answer": "A",
+      "explainAnswer": "Trong DevOps truyền thống, bảo mật thường bị đưa về cuối quy trình trước khi release. Đáp án A đúng vì cách làm này dễ gây chậm trễ, tốn chi phí sửa lỗi và xung đột với tốc độ triển khai."
+    },
+    {
+      "id": 90,
+      "question": "Sự xuất hiện của 'Web Shell' trên máy chủ chứng tỏ điều gì?",
+      "options": {
+        "A": "Quản trị viên vừa cài đặt giao diện điều khiển mới.",
+        "B": "Hệ thống có thể đã bị xâm nhập thông qua lỗ hổng tải file hoặc RCE, hacker đã đặt một công cụ để điều khiển máy chủ từ xa qua giao diện web.",
+        "C": "Server đang thực hiện backup dữ liệu.",
+        "D": "Cơ sở dữ liệu đang nâng cấp."
+      },
+      "answer": "B",
+      "explainAnswer": "Web Shell là dấu hiệu máy chủ có thể đã bị kẻ tấn công đặt công cụ điều khiển từ xa qua web. Đáp án B đúng vì nó thường xuất hiện sau lỗ hổng upload file, RCE hoặc tài khoản quản trị bị chiếm."
+    },
+    {
+      "id": 91,
+      "question": "Cấu hình phân quyền nào trên hệ điều hành Linux giúp ngăn chặn các tiến trình trái phép sửa đổi file hệ thống quan trọng?",
+      "options": {
+        "A": "Cấp quyền 777 cho mọi thư mục.",
+        "B": "Loại bỏ quyền Write (w) của người dùng thông thường đối với các thư mục như /etc và /bin.",
+        "C": "Cho phép mọi user sử dụng lệnh sudo mà không cần mật khẩu.",
+        "D": "Ẩn các file hệ thống đi."
+      },
+      "answer": "B",
+      "explainAnswer": "Các thư mục hệ thống như /etc và /bin cần hạn chế quyền ghi đối với người dùng thường. Đáp án B đúng vì nếu user thông thường sửa được file hệ thống, mã độc hoặc cấu hình nguy hiểm có thể được cài vào hệ điều hành."
+    },
+    {
+      "id": 92,
+      "question": "Giải pháp nào là hiệu quả nhất để chống lại rủi ro bị bẻ khóa mật khẩu thông qua tấn công Brute Force?",
+      "options": {
+        "A": "Chỉ sử dụng chữ thường để gõ nhanh hơn.",
+        "B": "Áp dụng xác thực đa yếu tố (MFA) kết hợp với chính sách khóa tài khoản (Account Lockout) sau nhiều lần thử sai.",
+        "C": "Lưu trữ mật khẩu dạng Plaintext.",
+        "D": "Khởi động lại máy chủ mỗi ngày."
+      },
+      "answer": "B",
+      "explainAnswer": "MFA yêu cầu thêm yếu tố xác thực ngoài mật khẩu, còn account lockout giảm số lần thử sai liên tiếp. Đáp án B đúng vì kết hợp hai biện pháp này làm Brute Force khó thành công hơn nhiều."
+    },
+    {
+      "id": 93,
+      "question": "Logic Flaw (Lỗ hổng Logic) trong ứng dụng web có thể bị phát hiện dễ dàng nhất qua công cụ nào?",
+      "options": {
+        "A": "Trình quét lỗ hổng tự động (Scanner) luôn tìm ra 100%.",
+        "B": "Firewall tự động chặn.",
+        "C": "Thường rất khó phát hiện tự động, yêu cầu kiểm thử viên bảo mật phải rà soát thủ công luồng nghiệp vụ của ứng dụng.",
+        "D": "Antivirus cài trên máy Server."
+      },
+      "answer": "C",
+      "explainAnswer": "Logic Flaw phụ thuộc vào quy trình nghiệp vụ, ví dụ đặt số lượng âm hoặc bỏ qua bước thanh toán. Đáp án C đúng vì scanner tự động thường khó hiểu ngữ cảnh nghiệp vụ, nên cần kiểm thử thủ công kỹ."
+    },
+    {
+      "id": 94,
+      "question": "Khái niệm 'Attack Surface' (Bề mặt tấn công) trong bảo mật hệ thống được hiểu là gì?",
+      "options": {
+        "A": "Giao diện trang chủ của Website.",
+        "B": "Tổng số điểm (endpoints), giao diện, API, cổng mạng... có thể bị lợi dụng để xâm nhập vào hệ thống.",
+        "C": "Mức độ thiệt hại đo bằng tiền.",
+        "D": "Số lượng máy tính bị nhiễm virus trong mạng."
+      },
+      "answer": "B",
+      "explainAnswer": "Attack Surface là toàn bộ điểm mà kẻ tấn công có thể tương tác hoặc khai thác. Đáp án B đúng vì endpoint, API, port, giao diện quản trị và dịch vụ công khai đều có thể trở thành cửa vào hệ thống."
+    },
+    {
+      "id": 95,
+      "question": "Một trong những phương pháp giảm thiểu 'Attack Surface' hiệu quả là gì?",
+      "options": {
+        "A": "Mở toàn bộ cổng mạng dự phòng.",
+        "B": "Gỡ bỏ các dịch vụ, phần mềm không cần thiết, vô hiệu hóa các API hoặc giao thức cũ (như Telnet, FTP).",
+        "C": "Tăng số lượng tài khoản quản trị viên lên.",
+        "D": "Sử dụng nhiều hệ quản trị CSDL cùng lúc."
+      },
+      "answer": "B",
+      "explainAnswer": "Giảm Attack Surface nghĩa là giảm bớt những thứ không cần thiết có thể bị khai thác. Đáp án B đúng vì gỡ dịch vụ thừa, tắt API cũ và vô hiệu hóa giao thức yếu giúp hệ thống ít điểm bị tấn công hơn."
+    },
+    {
+      "id": 96,
+      "question": "Kỹ thuật 'Sanitization' đối với dữ liệu đầu vào có nghĩa là gì?",
+      "options": {
+        "A": "Chặn hoàn toàn bất kỳ ai có địa chỉ IP lạ tải dữ liệu lên.",
+        "B": "Làm sạch dữ liệu, loại bỏ hoặc mã hóa các ký tự đặc biệt có khả năng thực thi mã độc trước khi hệ thống xử lý (như xóa thẻ <script>).",
+        "C": "Mã hóa MD5 cho toàn bộ dữ liệu người dùng nhập.",
+        "D": "Nén dữ liệu người dùng thành file zip."
+      },
+      "answer": "B",
+      "explainAnswer": "Sanitization là xử lý dữ liệu đầu vào để loại bỏ, mã hóa hoặc vô hiệu hóa phần nguy hiểm. Đáp án B đúng vì ký tự hoặc thẻ có khả năng thực thi mã độc cần được làm sạch trước khi lưu hoặc hiển thị."
+    },
+    {
+      "id": 97,
+      "question": "Tại sao việc thiết kế hệ thống theo mô hình 'Microservices' (Dịch vụ vi mô) có lợi cho bảo mật DevSecOps?",
+      "options": {
+        "A": "Vì nó làm cho hệ thống chạy chậm hơn, Hacker nản chí.",
+        "B": "Phân tách rõ ràng trách nhiệm, hạn chế bán kính ảnh hưởng (Blast Radius) nếu một dịch vụ nhỏ bị tấn công, các dịch vụ khác vẫn an toàn.",
+        "C": "Không cần sử dụng API Gateway nữa.",
+        "D": "Loại bỏ hoàn toàn lỗ hổng SQL Injection."
+      },
+      "answer": "B",
+      "explainAnswer": "Microservices chia hệ thống thành các dịch vụ nhỏ có ranh giới rõ ràng. Đáp án B đúng vì nếu một dịch vụ bị tấn công, việc phân tách tốt giúp hạn chế phạm vi ảnh hưởng sang các dịch vụ khác."
+    },
+    {
+      "id": 98,
+      "question": "Khái niệm 'Insider Threat' (Mối đe dọa nội bộ) đề cập đến nhóm đối tượng nào?",
+      "options": {
+        "A": "Nhóm tin tặc hoạt động ngoài lãnh thổ.",
+        "B": "Mã độc xâm nhập sâu vào Kernel của hệ điều hành.",
+        "C": "Nhân viên cũ/hiện tại, nhà thầu hoặc đối tác đã có quyền truy cập hợp pháp vào hệ thống, nhưng cố ý hoặc vô ý gây rò rỉ dữ liệu.",
+        "D": "Các công cụ tự động dò quét mật khẩu từ Internet."
+      },
+      "answer": "C",
+      "explainAnswer": "Insider Threat đến từ người đã có quyền truy cập hợp pháp như nhân viên, cựu nhân viên, nhà thầu hoặc đối tác. Đáp án C đúng vì rủi ro có thể do cố ý đánh cắp dữ liệu hoặc vô ý cấu hình, chia sẻ sai."
+    },
+    {
+      "id": 99,
+      "question": "Giao thức nào cung cấp cơ chế bảo mật (mã hóa và toàn vẹn dữ liệu) cho lớp Giao vận (Transport Layer) trên Internet hiện nay?",
+      "options": {
+        "A": "HTTP",
+        "B": "TLS/SSL (Tạo nên HTTPS)",
+        "C": "FTP",
+        "D": "Telnet"
+      },
+      "answer": "B",
+      "explainAnswer": "TLS/SSL cung cấp mã hóa, xác thực và toàn vẹn dữ liệu cho kết nối ở tầng giao vận/ứng dụng trên Internet. Đáp án B đúng vì HTTPS chính là HTTP chạy trên TLS/SSL."
+    },
+    {
+      "id": 100,
+      "question": "Chức năng 'Logging & Monitoring' liên tục trong bảo mật hệ thống giúp đạt được điều kiện gì theo mô hình CIA?",
+      "options": {
+        "A": "Bảo mật tuyệt đối (100% Confidentiality).",
+        "B": "Giúp phát hiện sớm các dị thường, phục vụ truy vết điều tra (Accounting) để duy trì sự Toàn vẹn (Integrity) và Sẵn sàng (Availability).",
+        "C": "Ngăn chặn mọi cuộc tấn công Phishing.",
+        "D": "Tự động đổi mật khẩu CSDL."
+      },
+      "answer": "B",
+      "explainAnswer": "Logging & Monitoring giúp phát hiện bất thường sớm và cung cấp dấu vết để điều tra. Đáp án B đúng vì việc giám sát tốt hỗ trợ duy trì tính toàn vẹn, tính sẵn sàng và khả năng truy vết trong hệ thống."
+    },
+    {
+      "id": 101,
+      "question": "Trong quy trình phát triển phần mềm an toàn (SSDLC), kỹ thuật 'Threat Modeling' (Mô hình hóa mối đe dọa) thường được thực hiện ở giai đoạn nào là tốt nhất?",
+      "options": {
+        "A": "Giai đoạn Triển khai (Deployment)",
+        "B": "Giai đoạn Thiết kế kiến trúc (Design)",
+        "C": "Giai đoạn Vận hành (Operations)",
+        "D": "Giai đoạn Xóa bỏ hệ thống"
+      },
+      "answer": "B",
+      "explainAnswer": "Threat Modeling nên thực hiện tốt nhất ở giai đoạn thiết kế kiến trúc. Đáp án B đúng vì lúc này đội phát triển vẫn còn dễ thay đổi thiết kế để giảm rủi ro trước khi viết nhiều code."
+    },
+    {
+      "id": 102,
+      "question": "Mục đích chính của 'Threat Modeling' là gì?",
+      "options": {
+        "A": "Dự đoán và xác định các mối đe dọa tiềm ẩn để thiết kế các biện pháp giảm nhẹ trước khi viết code.",
+        "B": "Quét mã nguồn để tìm lỗi cú pháp.",
+        "C": "Mã hóa cơ sở dữ liệu khách hàng.",
+        "D": "Kiểm tra tốc độ tải trang web."
+      },
+      "answer": "A",
+      "explainAnswer": "Threat Modeling giúp trả lời hệ thống có thể bị tấn công ở đâu, bởi ai và bằng cách nào. Đáp án A đúng vì mục tiêu là nhận diện rủi ro sớm để thiết kế biện pháp giảm nhẹ phù hợp."
+    },
+    {
+      "id": 103,
+      "question": "Hình thức tấn công 'Whaling' là một biến thể của Phishing, nhưng có đặc điểm gì khác biệt?",
+      "options": {
+        "A": "Sử dụng mạng xã hội để phát tán tin nhắn rác.",
+        "B": "Chỉ nhắm mục tiêu vào các nhân vật cấp cao trong tổ chức (như CEO, CFO).",
+        "C": "Sử dụng mã độc tống tiền thay vì đánh cắp mật khẩu.",
+        "D": "Tấn công qua mạng WiFi công cộng."
+      },
+      "answer": "B",
+      "explainAnswer": "Whaling là biến thể Phishing nhắm vào “cá lớn” như CEO, CFO hoặc lãnh đạo cấp cao. Đáp án B đúng vì nhóm này có quyền hạn lớn và thông tin giá trị nên thường là mục tiêu đặc biệt."
+    },
+    {
+      "id": 104,
+      "question": "Trong mật mã học, hàm băm (Hash Function) được sử dụng chủ yếu để đảm bảo yếu tố nào trong mô hình CIA?",
+      "options": {
+        "A": "Tính bảo mật (Confidentiality)",
+        "B": "Tính toàn vẹn (Integrity)",
+        "C": "Tính sẵn sàng (Availability)",
+        "D": "Tính ẩn danh"
+      },
+      "answer": "B",
+      "explainAnswer": "Hàm băm tạo ra giá trị đại diện cho dữ liệu, chỉ cần dữ liệu thay đổi nhỏ thì hash cũng thay đổi. Đáp án B đúng vì nhờ đó hash thường được dùng để kiểm tra tính toàn vẹn dữ liệu."
+    },
+    {
+      "id": 105,
+      "question": "Để bảo vệ mật khẩu người dùng lưu trong cơ sở dữ liệu an toàn nhất, phương pháp nào sau đây được khuyến nghị?",
+      "options": {
+        "A": "Lưu dưới dạng văn bản rõ (Plaintext).",
+        "B": "Mã hóa bằng thuật toán đối xứng AES.",
+        "C": "Sử dụng hàm băm (như Bcrypt, Argon2) kết hợp với chuỗi Salt ngẫu nhiên.",
+        "D": "Sử dụng hàm băm MD5 không có Salt."
+      },
+      "answer": "C",
+      "explainAnswer": "Mật khẩu không nên lưu plaintext hoặc mã hóa có thể giải ngược trực tiếp. Đáp án C đúng vì Bcrypt hoặc Argon2 kết hợp Salt giúp chống dò mật khẩu và giảm tác hại khi cơ sở dữ liệu bị lộ."
+    },
+    {
+      "id": 106,
+      "question": "Chuỗi 'Salt' trong quá trình băm mật khẩu có tác dụng gì?",
+      "options": {
+        "A": "Làm cho mật khẩu dễ nhớ hơn.",
+        "B": "Ngăn chặn tấn công bằng bảng tra cứu băm (Rainbow Tables) do tạo ra các mã băm khác nhau cho cùng một mật khẩu.",
+        "C": "Giúp nén kích thước mật khẩu.",
+        "D": "Giúp khôi phục lại mật khẩu gốc khi người dùng quên."
+      },
+      "answer": "B",
+      "explainAnswer": "Salt là chuỗi ngẫu nhiên thêm vào trước khi băm mật khẩu. Đáp án B đúng vì cùng một mật khẩu nhưng salt khác nhau sẽ tạo hash khác nhau, khiến Rainbow Table khó sử dụng."
+    },
+    {
+      "id": 107,
+      "question": "Sự khác biệt giữa mã hóa đối xứng (Symmetric) và bất đối xứng (Asymmetric) là gì?",
+      "options": {
+        "A": "Mã hóa đối xứng dùng chung một khóa để mã hóa và giải mã; bất đối xứng dùng cặp khóa (Public/Private key).",
+        "B": "Mã hóa đối xứng chậm hơn bất đối xứng rất nhiều.",
+        "C": "Mã hóa bất đối xứng không thể giải mã được.",
+        "D": "Mã hóa đối xứng chỉ dùng cho dữ liệu văn bản."
+      },
+      "answer": "A",
+      "explainAnswer": "Mã hóa đối xứng dùng một khóa chung cho cả mã hóa và giải mã. Đáp án A đúng vì mã hóa bất đối xứng dùng cặp khóa public/private, một khóa có thể công khai và khóa còn lại cần giữ bí mật."
+    },
+    {
+      "id": 108,
+      "question": "Giao thức SSL/TLS sử dụng phương pháp mã hóa nào để tối ưu hóa giữa bảo mật và hiệu suất?",
+      "options": {
+        "A": "Chỉ sử dụng mã hóa đối xứng.",
+        "B": "Chỉ sử dụng mã hóa bất đối xứng.",
+        "C": "Dùng mã hóa bất đối xứng để trao đổi khóa ban đầu, sau đó dùng khóa đối xứng để truyền dữ liệu.",
+        "D": "Không sử dụng mã hóa, chỉ dùng chữ ký số."
+      },
+      "answer": "C",
+      "explainAnswer": "SSL/TLS kết hợp hai kiểu mã hóa để cân bằng bảo mật và hiệu suất. Đáp án C đúng vì bất đối xứng phù hợp trao đổi khóa ban đầu, còn đối xứng nhanh hơn cho việc truyền dữ liệu sau đó."
+    },
+    {
+      "id": 109,
+      "question": "Xác thực đa yếu tố (MFA - Multi-Factor Authentication) yêu cầu người dùng cung cấp tối thiểu hai yếu tố khác loại. Mã OTP gửi qua SMS thuộc loại yếu tố nào?",
+      "options": {
+        "A": "Something you know (Thứ bạn biết - VD: Mật khẩu)",
+        "B": "Something you have (Thứ bạn có - VD: Điện thoại nhận SMS)",
+        "C": "Something you are (Thứ thuộc về bạn - VD: Sinh trắc học)",
+        "D": "Somewhere you are (Nơi bạn ở - VD: Vị trí GPS)"
+      },
+      "answer": "B",
+      "explainAnswer": "Mã OTP qua SMS phụ thuộc vào việc người dùng có thiết bị hoặc SIM nhận tin nhắn. Đáp án B đúng vì nó thuộc nhóm “Something you have”, khác với mật khẩu là “Something you know”."
+    },
+    {
+      "id": 110,
+      "question": "Trong hệ thống IDS/IPS, cảnh báo giả (False Positive) nghĩa là gì?",
+      "options": {
+        "A": "Hệ thống bỏ lọt một cuộc tấn công thực sự.",
+        "B": "Hệ thống cảnh báo có tấn công nhưng thực chất đó là lưu lượng mạng hợp lệ của người dùng bình thường.",
+        "C": "Hệ thống bị sập do quá tải.",
+        "D": "Hệ thống chặn thành công một mã độc."
+      },
+      "answer": "B",
+      "explainAnswer": "False Positive là cảnh báo nhầm khi lưu lượng hoặc hành vi hợp lệ bị hệ thống coi là tấn công. Đáp án B đúng vì cảnh báo giả nhiều sẽ làm đội vận hành mất thời gian và dễ bỏ sót cảnh báo thật."
+    },
+    {
+      "id": 111,
+      "question": "Ngược lại, hiện tượng bỏ lọt (False Negative) trong hệ thống an ninh mạng có nghĩa là gì?",
+      "options": {
+        "A": "Cảnh báo sai lưu lượng bình thường.",
+        "B": "Cuộc tấn công thực sự xảy ra nhưng hệ thống không phát hiện và không đưa ra cảnh báo nào.",
+        "C": "Mật khẩu bị sai nhiều lần.",
+        "D": "Hệ thống tự động ngắt kết nối Internet."
+      },
+      "answer": "B",
+      "explainAnswer": "False Negative nguy hiểm vì cuộc tấn công thật xảy ra nhưng hệ thống không phát hiện. Đáp án B đúng vì khi không có cảnh báo, đội phòng thủ có thể không phản ứng kịp thời."
+    },
+    {
+      "id": 112,
+      "question": "Kỹ thuật 'Baiting' trong Social Engineering là gì?",
+      "options": {
+        "A": "Gọi điện thoại mạo danh nhân viên IT.",
+        "B": "Cố tình bỏ lại các USB chứa mã độc ở nơi công cộng (như bãi xe) để nạn nhân tò mò nhặt về cắm vào máy tính.",
+        "C": "Đi theo người khác qua cổng an ninh mà không cần quẹt thẻ (Tailgating).",
+        "D": "Đục thùng rác để tìm tài liệu nhạy cảm (Dumpster diving)."
+      },
+      "answer": "B",
+      "explainAnswer": "Baiting dùng “mồi nhử” để kích thích sự tò mò hoặc lòng tham của nạn nhân. Đáp án B đúng vì ví dụ điển hình là bỏ USB chứa mã độc ở nơi công cộng để người khác nhặt và cắm vào máy."
+    },
+    {
+      "id": 113,
+      "question": "Khi thiết kế ứng dụng cho phép người dùng tải lên hình ảnh (File Upload), biện pháp kiểm tra nào là chưa đủ an toàn và dễ bị qua mặt nhất?",
+      "options": {
+        "A": "Chỉ kiểm tra phần đuôi mở rộng của file ở phía giao diện Client (JavaScript).",
+        "B": "Kiểm tra MIME type ở phía Backend.",
+        "C": "Kiểm tra Magic Bytes ở đầu file.",
+        "D": "Quét virus file bằng công cụ tích hợp trước khi lưu trữ."
+      },
+      "answer": "A",
+      "explainAnswer": "Kiểm tra đuôi file ở phía client bằng JavaScript rất dễ bị bỏ qua hoặc chỉnh sửa. Đáp án A đúng vì kiểm tra an toàn phải thực hiện ở backend, kết hợp MIME type, magic bytes, quét mã độc và chính sách lưu trữ phù hợp."
+    },
+    {
+      "id": 114,
+      "question": "Một ứng dụng web hiển thị URL như sau: `http://example.com/download?file=report.pdf`. Lỗ hổng nào có khả năng cao nhất tồn tại nếu lập trình viên không lọc tham số `file`?",
+      "options": {
+        "A": "SQL Injection",
+        "B": "Directory Traversal (LFI - Local File Inclusion)",
+        "C": "Cross-Site Scripting (XSS)",
+        "D": "CSRF"
+      },
+      "answer": "B",
+      "explainAnswer": "Tham số file trong chức năng download nếu không được lọc có thể bị lợi dụng để trỏ ra ngoài thư mục cho phép. Đáp án B đúng vì đây là tình huống điển hình của Directory Traversal hoặc Local File Inclusion."
+    },
+    {
+      "id": 115,
+      "question": "Mô hình 'Trách nhiệm chung' (Shared Responsibility Model) trong bảo mật Điện toán đám mây quy định điều gì?",
+      "options": {
+        "A": "Nhà cung cấp Cloud chịu 100% trách nhiệm về bảo mật.",
+        "B": "Người dùng chịu 100% trách nhiệm về bảo mật.",
+        "C": "Nhà cung cấp bảo vệ hạ tầng vật lý và nền tảng; Khách hàng chịu trách nhiệm bảo mật dữ liệu, ứng dụng và cấu hình của họ trên đám mây.",
+        "D": "Công ty bảo hiểm sẽ đền bù mọi rủi ro."
+      },
+      "answer": "C",
+      "explainAnswer": "Shared Responsibility Model chia rõ trách nhiệm bảo mật giữa nhà cung cấp cloud và khách hàng. Đáp án C đúng vì cloud provider bảo vệ hạ tầng nền tảng, còn khách hàng phải bảo vệ dữ liệu, ứng dụng, tài khoản và cấu hình của mình."
+    },
+    {
+      "id": 116,
+      "question": "Chứng chỉ số (Digital Certificate) dựa trên chuẩn X.509 được cấp phát bởi tổ chức nào?",
+      "options": {
+        "A": "Tổ chức chứng thực (CA - Certificate Authority)",
+        "B": "Nhà cung cấp dịch vụ mạng (ISP)",
+        "C": "Tổ chức Y tế thế giới (WHO)",
+        "D": "Bộ Thông tin và Truyền thông"
+      },
+      "answer": "A",
+      "explainAnswer": "Chứng chỉ số X.509 được cấp và ký bởi Certificate Authority để xác nhận danh tính chủ thể. Đáp án A đúng vì CA là bên được tin cậy trong mô hình hạ tầng khóa công khai PKI."
+    },
+    {
+      "id": 117,
+      "question": "Mô hình Cyber Kill Chain (Chuỗi tiêu diệt mạng) do Lockheed Martin đề xuất mô tả điều gì?",
+      "options": {
+        "A": "Cách thức viết phần mềm an toàn.",
+        "B": "Các giai đoạn tuần tự mà kẻ tấn công thường thực hiện để xâm nhập và đánh cắp dữ liệu, từ thăm dò đến hành động cuối cùng.",
+        "C": "Cấu trúc mạng của doanh nghiệp.",
+        "D": "Sự phân quyền trong cơ sở dữ liệu."
+      },
+      "answer": "B",
+      "explainAnswer": "Cyber Kill Chain mô tả các bước thường gặp trong một chiến dịch tấn công mạng. Đáp án B đúng vì mô hình này giúp đội phòng thủ hiểu và cắt đứt chuỗi tấn công từ thăm dò đến hành động cuối."
+    },
+    {
+      "id": 118,
+      "question": "Trong Cyber Kill Chain, giai đoạn 'Reconnaissance' (Thăm dò) tin tặc thường làm gì?",
+      "options": {
+        "A": "Gửi mã độc vào email.",
+        "B": "Thu thập thông tin tình báo về mục tiêu (như email nhân viên, cấu trúc mạng, loại máy chủ) từ các nguồn mở (OSINT).",
+        "C": "Cài đặt Rootkit vào hệ thống.",
+        "D": "Rút dữ liệu ra ngoài (Exfiltration)."
+      },
+      "answer": "B",
+      "explainAnswer": "Reconnaissance là giai đoạn thu thập thông tin ban đầu về mục tiêu. Đáp án B đúng vì tin tặc thường dùng OSINT để tìm email, nhân sự, công nghệ, tên miền, IP hoặc cấu trúc hệ thống."
+    },
+    {
+      "id": 119,
+      "question": "Lỗ hổng SSRF (Server-Side Request Forgery) có mức độ nguy hiểm như thế nào?",
+      "options": {
+        "A": "Ép trình duyệt người dùng gửi request.",
+        "B": "Lừa máy chủ Web gửi một yêu cầu mạng tới một hệ thống nội bộ khác mà thông thường không được phép truy cập từ Internet.",
+        "C": "Làm thay đổi giao diện ứng dụng web.",
+        "D": "Xóa cookie phiên làm việc."
+      },
+      "answer": "B",
+      "explainAnswer": "SSRF khiến máy chủ bị lợi dụng để gửi request thay cho kẻ tấn công. Đáp án B đúng vì máy chủ có thể truy cập được tài nguyên nội bộ mà người ngoài Internet bình thường không truy cập trực tiếp được."
+    },
+    {
+      "id": 120,
+      "question": "Bảo mật ứng dụng (AppSec) hiện đại không chỉ phụ thuộc vào WAF mà còn cần RASP (Runtime Application Self-Protection). Tính năng của RASP là gì?",
+      "options": {
+        "A": "Hoạt động như một Firewall cứng trước mạng.",
+        "B": "Được gắn trực tiếp vào trong môi trường thực thi của ứng dụng, giúp ứng dụng tự giám sát và chặn hành vi độc hại từ bên trong khi đang chạy.",
+        "C": "Quét mã nguồn tĩnh.",
+        "D": "Quản lý mật khẩu người dùng."
+      },
+      "answer": "B",
+      "explainAnswer": "RASP được tích hợp trong môi trường chạy của ứng dụng để quan sát hành vi từ bên trong. Đáp án B đúng vì nó có thể phát hiện và chặn hành vi bất thường khi ứng dụng đang thực thi."
+    },
+    {
+      "id": 121,
+      "question": "Khái niệm 'Vulnerability Management' (Quản lý lỗ hổng) là một quy trình như thế nào?",
+      "options": {
+        "A": "Là một hoạt động chỉ làm một lần khi mua máy chủ mới.",
+        "B": "Là một chu trình liên tục bao gồm quét định kỳ, phân loại rủi ro, vá lỗi và xác nhận lại.",
+        "C": "Là quá trình viết mã độc giả lập.",
+        "D": "Là quy trình khởi động lại tường lửa."
+      },
+      "answer": "B",
+      "explainAnswer": "Vulnerability Management là quy trình lặp lại liên tục, không phải công việc làm một lần. Đáp án B đúng vì tổ chức cần quét, đánh giá mức độ rủi ro, vá lỗi và kiểm tra lại thường xuyên."
+    },
+    {
+      "id": 122,
+      "question": "Trong báo cáo kiểm thử bảo mật (Penetration Testing), lỗ hổng 'Critical' (Nghiêm trọng) có nghĩa là gì?",
+      "options": {
+        "A": "Lỗi cần sự tương tác phức tạp của người dùng mới có thể khai thác.",
+        "B": "Lỗ hổng có thể bị khai thác dễ dàng, trực tiếp từ xa và gây hậu quả thảm khốc (chiếm quyền máy chủ, lộ toàn bộ CSDL).",
+        "C": "Lỗi thiết kế giao diện không đẹp.",
+        "D": "Lỗi cấu hình tiêu chuẩn."
+      },
+      "answer": "B",
+      "explainAnswer": "Lỗ hổng Critical thường có khả năng khai thác cao và tác động rất nghiêm trọng. Đáp án B đúng vì nó có thể dẫn đến chiếm quyền máy chủ, lộ dữ liệu lớn hoặc làm gián đoạn hệ thống quan trọng."
+    },
+    {
+      "id": 123,
+      "question": "Phương pháp 'Fuzzing' (Kiểm thử mờ) trong bảo mật ứng dụng hoạt động như thế nào?",
+      "options": {
+        "A": "Gửi các dữ liệu rác, ngẫu nhiên, không hợp lệ hoặc quá khổ vào ứng dụng với khối lượng lớn để xem ứng dụng có bị crash hoặc sinh lỗi bất thường hay không.",
+        "B": "Đọc từng dòng mã nguồn để tìm lỗi logic.",
+        "C": "Mã hóa đường truyền bằng giao thức SSL.",
+        "D": "Sử dụng AI để tối ưu hóa code."
+      },
+      "answer": "A",
+      "explainAnswer": "Fuzzing đưa vào ứng dụng nhiều dữ liệu bất thường, sai định dạng hoặc quá kích thước. Đáp án A đúng vì mục tiêu là tìm crash, lỗi xử lý input hoặc hành vi không mong muốn."
+    },
+    {
+      "id": 124,
+      "question": "Để bảo mật dữ liệu lưu trữ (Data at Rest) trên máy chủ cơ sở dữ liệu, giải pháp nào là bắt buộc?",
+      "options": {
+        "A": "Mã hóa ổ đĩa vật lý hoặc mã hóa cấp độ bảng/trường dữ liệu (TDE).",
+        "B": "Sử dụng cáp quang tốc độ cao.",
+        "C": "Sử dụng SSL/TLS.",
+        "D": "Ẩn file dữ liệu."
+      },
+      "answer": "A",
+      "explainAnswer": "Data at Rest là dữ liệu đang được lưu trên ổ đĩa, cơ sở dữ liệu hoặc bản sao lưu. Đáp án A đúng vì mã hóa lưu trữ như TDE hoặc mã hóa ổ đĩa giúp bảo vệ dữ liệu khi thiết bị hoặc file lưu trữ bị lộ."
+    },
+    {
+      "id": 125,
+      "question": "Thuật toán AES-256 có con số 256 thể hiện điều gì?",
+      "options": {
+        "A": "Thời gian giải mã là 256 giây.",
+        "B": "Độ dài của khóa mã hóa là 256 bit.",
+        "C": "Thuật toán chia dữ liệu thành 256 khối.",
+        "D": "Số người có thể dùng chung khóa."
+      },
+      "answer": "B",
+      "explainAnswer": "Trong AES-256, số 256 thể hiện độ dài khóa là 256 bit. Đáp án B đúng vì khóa dài hơn làm tăng không gian khóa, khiến việc dò khóa bằng vét cạn trở nên không khả thi trong thực tế."
+    },
+    {
+      "id": 126,
+      "question": "Rủi ro chính của việc sử dụng các thành phần bên thứ ba (Third-party Components) đã cũ trong ứng dụng là gì?",
+      "options": {
+        "A": "Làm giao diện kém tương thích với mobile.",
+        "B": "Các thành phần này có thể chứa các lỗ hổng đã được công bố rộng rãi (CVE), khiến ứng dụng trở thành mục tiêu dễ dàng của các mã khai thác có sẵn.",
+        "C": "Làm tăng dung lượng RAM.",
+        "D": "Vi phạm bản quyền hình ảnh."
+      },
+      "answer": "B",
+      "explainAnswer": "Thành phần bên thứ ba cũ có thể chứa lỗ hổng đã được công bố và có mã khai thác sẵn. Đáp án B đúng vì kẻ tấn công thường nhắm vào dependency lỗi thời do nhiều hệ thống sử dụng nhưng không cập nhật kịp."
+    },
+    {
+      "id": 127,
+      "question": "Giải pháp 'Disaster Recovery Plan' (Kế hoạch phục hồi sau thảm họa) nhằm giải quyết mục tiêu nào trong CIA?",
+      "options": {
+        "A": "Tính bảo mật (Confidentiality)",
+        "B": "Tính toàn vẹn (Integrity)",
+        "C": "Tính sẵn sàng (Availability)",
+        "D": "Tính xác thực"
+      },
+      "answer": "C",
+      "explainAnswer": "Disaster Recovery Plan giúp hệ thống phục hồi sau sự cố lớn như mất dữ liệu, lỗi hạ tầng hoặc thảm họa. Đáp án C đúng vì mục tiêu chính là duy trì hoặc khôi phục tính sẵn sàng của dịch vụ."
+    },
+    {
+      "id": 128,
+      "question": "Backup dữ liệu tuân theo quy tắc 3-2-1 được hiểu như thế nào?",
+      "options": {
+        "A": "Lưu 3 bản copy, vào 2 giờ sáng, bằng 1 phần mềm.",
+        "B": "Có 3 bản sao dữ liệu, lưu trên 2 loại phương tiện lưu trữ khác nhau, với 1 bản sao được lưu ở địa điểm ngoài (Off-site/Cloud).",
+        "C": "Có 3 kỹ sư quản lý, 2 máy chủ dự phòng, 1 đường mạng.",
+        "D": "Sao lưu 3 lần trong 2 tháng cho 1 dự án."
+      },
+      "answer": "B",
+      "explainAnswer": "Quy tắc 3-2-1 yêu cầu có nhiều bản sao trên nhiều loại phương tiện và một bản ở ngoài địa điểm chính. Đáp án B đúng vì cách này giảm nguy cơ mất toàn bộ dữ liệu khi một thiết bị, hệ thống hoặc địa điểm gặp sự cố."
+    },
+    {
+      "id": 129,
+      "question": "Tấn công 'XML External Entity' (XXE) xảy ra ở đâu?",
+      "options": {
+        "A": "Trong bộ nhớ RAM của Server.",
+        "B": "Trong quá trình bộ phân tích cú pháp (Parser) của ứng dụng xử lý file XML có chứa các tham chiếu thực thể mở rộng độc hại.",
+        "C": "Trên các định dạng file ảnh JPEG.",
+        "D": "Trong giao thức mạng TCP."
+      },
+      "answer": "B",
+      "explainAnswer": "XXE xảy ra khi parser XML xử lý các external entity độc hại hoặc không an toàn. Đáp án B đúng vì lỗi này có thể làm lộ file nội bộ, gây SSRF hoặc ảnh hưởng đến hệ thống xử lý XML."
+    },
+    {
+      "id": 130,
+      "question": "Trong bảo mật mạng, khái niệm 'MAC Spoofing' là hành vi gì?",
+      "options": {
+        "A": "Tấn công máy tính chạy hệ điều hành macOS.",
+        "B": "Giả mạo địa chỉ vật lý (MAC Address) của một thiết bị mạng hợp pháp để qua mặt hệ thống kiểm soát truy cập (như mạng WiFi doanh nghiệp).",
+        "C": "Ngắt cáp mạng vật lý.",
+        "D": "Làm nhiễu sóng Bluetooth."
+      },
+      "answer": "B",
+      "explainAnswer": "MAC Spoofing là giả mạo địa chỉ MAC của thiết bị mạng. Đáp án B đúng vì kẻ tấn công có thể dùng MAC giả để vượt qua kiểm soát truy cập dựa trên địa chỉ vật lý."
+    },
+    {
+      "id": 131,
+      "question": "Tại sao việc 'Hardcode' (Viết cứng) mật khẩu hoặc API Key trực tiếp vào mã nguồn lại bị coi là thực hành lập trình tồi (Bad Practice)?",
+      "options": {
+        "A": "Vì nó làm cho mã nguồn chạy chậm hơn.",
+        "B": "Vì mã nguồn có thể bị rò rỉ hoặc dịch ngược (Reverse engineering), dẫn đến việc lộ mật khẩu một cách dễ dàng.",
+        "C": "Vì trình biên dịch không hỗ trợ.",
+        "D": "Vì nó làm tăng dung lượng file exe."
+      },
+      "answer": "B",
+      "explainAnswer": "Hardcode mật khẩu hoặc API key trong mã nguồn rất nguy hiểm vì mã có thể bị rò rỉ, bị chia sẻ hoặc bị dịch ngược. Đáp án B đúng vì khi secret nằm trực tiếp trong code, việc thu hồi và xoay vòng cũng khó quản lý hơn."
+    },
+    {
+      "id": 132,
+      "question": "Biện pháp thay thế tốt nhất cho việc Hardcode mật khẩu vào mã nguồn là gì?",
+      "options": {
+        "A": "Sử dụng biến môi trường (Environment Variables) hoặc các hệ thống quản lý Secret chuyên dụng (như HashiCorp Vault, AWS Secrets Manager).",
+        "B": "Viết mật khẩu ra một file text lưu trên desktop máy chủ.",
+        "C": "Ghi nhớ trong đầu và nhập bằng tay mỗi lần chạy ứng dụng.",
+        "D": "Sử dụng mật khẩu mặc định của framework."
+      },
+      "answer": "A",
+      "explainAnswer": "Biến môi trường và hệ thống quản lý secret giúp tách thông tin nhạy cảm khỏi mã nguồn. Đáp án A đúng vì các công cụ như Vault hoặc Secrets Manager hỗ trợ lưu trữ, cấp quyền và xoay vòng secret an toàn hơn."
+    },
+    {
+      "id": 133,
+      "question": "Theo báo cáo của OWASP Top 10, 'Broken Access Control' (Lỗi kiểm soát truy cập) là gì?",
+      "options": {
+        "A": "Người dùng quên mật khẩu.",
+        "B": "Người dùng có thể thực hiện các hành động ngoài quyền hạn thiết kế của họ (ví dụ: người dùng thường xem được trang Admin).",
+        "C": "Hệ thống bị cúp điện.",
+        "D": "Firewall chặn nhầm người dùng hợp pháp."
+      },
+      "answer": "B",
+      "explainAnswer": "Broken Access Control xảy ra khi hệ thống không thực thi đúng giới hạn quyền của người dùng. Đáp án B đúng vì người dùng có thể xem, sửa hoặc thực hiện chức năng ngoài phạm vi được phép, ví dụ truy cập trang admin."
+    },
+    {
+      "id": 134,
+      "question": "Kỹ thuật phân tích rủi ro định lượng (Quantitative Risk Analysis) khác với định tính (Qualitative) ở điểm nào?",
+      "options": {
+        "A": "Định lượng chỉ dùng cho công ty nhỏ.",
+        "B": "Định lượng sử dụng các giá trị tài chính và xác suất bằng số liệu thống kê cụ thể (ví dụ: thiệt hại 100.000, xác suất 5%); định tính dùng mức độ (Cao, Trung bình, Thấp).",
+        "C": "Định lượng làm mất thời gian hơn và không chính xác bằng.",
+        "D": "Định lượng không đánh giá hệ thống mạng."
+      },
+      "answer": "B",
+      "explainAnswer": "Phân tích rủi ro định lượng dùng số liệu như tiền thiệt hại, xác suất và giá trị kỳ vọng. Đáp án B đúng vì phân tích định tính chỉ phân loại bằng mức như Cao, Trung bình, Thấp nên ít định lượng tài chính hơn."
+    },
+    {
+      "id": 135,
+      "question": "Tấn công 'DNS Spoofing' (Giả mạo DNS) có tác động gì đến người dùng?",
+      "options": {
+        "A": "Làm người dùng không thể truy cập bất kỳ trang web nào.",
+        "B": "Chuyển hướng (Redirect) người dùng từ một tên miền hợp pháp sang một địa chỉ IP chứa trang web giả mạo do hacker kiểm soát.",
+        "C": "Xóa toàn bộ bộ nhớ Cache của trình duyệt.",
+        "D": "Đổi mật khẩu WiFi của người dùng."
+      },
+      "answer": "B",
+      "explainAnswer": "DNS Spoofing làm sai lệch kết quả phân giải tên miền. Đáp án B đúng vì người dùng có thể gõ đúng tên miền thật nhưng bị chuyển đến địa chỉ IP của trang giả mạo."
+    },
+    {
+      "id": 136,
+      "question": "Khái niệm 'Sandboxing' trong bảo mật hệ điều hành là gì?",
+      "options": {
+        "A": "Lưu trữ dữ liệu ra ổ cứng ngoài.",
+        "B": "Một cơ chế cô lập an toàn, trong đó các chương trình hoặc mã không tin cậy được thực thi trong một môi trường bị hạn chế nghiêm ngặt, không thể ảnh hưởng đến hệ thống chính.",
+        "C": "Phần mềm dọn rác hệ thống.",
+        "D": "Giao diện dòng lệnh của Linux."
+      },
+      "answer": "B",
+      "explainAnswer": "Sandboxing tạo môi trường cô lập với quyền hạn bị giới hạn để chạy chương trình không tin cậy. Đáp án B đúng vì nếu chương trình có hại, nó khó ảnh hưởng trực tiếp đến hệ thống chính."
+    },
+    {
+      "id": 137,
+      "question": "Tại sao việc dùng mật khẩu có độ dài lớn (ví dụ: Passphrase trên 15 ký tự) lại an toàn hơn là mật khẩu ngắn chứa ký tự đặc biệt?",
+      "options": {
+        "A": "Vì các hệ thống không cho phép nhập ký tự đặc biệt.",
+        "B": "Vì độ dài làm tăng theo cấp số nhân không gian toán học của các trường hợp vét cạn (Brute Force), khiến thời gian bẻ khóa trở nên bất khả thi so với mật khẩu ngắn.",
+        "C": "Vì mật khẩu dài dễ nhớ hơn.",
+        "D": "Vì các công cụ hacker không gõ được chữ cái thường."
+      },
+      "answer": "B",
+      "explainAnswer": "Mật khẩu càng dài thì số khả năng cần thử khi brute force tăng rất nhanh. Đáp án B đúng vì một passphrase dài thường khó bị vét cạn hơn mật khẩu ngắn dù mật khẩu ngắn có thêm vài ký tự đặc biệt."
+    },
+    {
+      "id": 138,
+      "question": "Chức năng của 'Jump Server' (Máy chủ nhảy/Bastion Host) trong quản trị mạng là gì?",
+      "options": {
+        "A": "Máy chủ đóng vai trò như router mạng LAN.",
+        "B": "Là một máy chủ duy nhất có độ bảo mật cực cao, được dùng làm điểm kiểm soát trung gian để quản trị viên truy cập vào các hệ thống nhạy cảm bên trong mạng nội bộ.",
+        "C": "Máy chủ chuyên dùng để chơi game.",
+        "D": "Máy chủ tự động nhảy IP để tránh bị tấn công."
+      },
+      "answer": "B",
+      "explainAnswer": "Jump Server hoặc Bastion Host là điểm trung gian được kiểm soát chặt để truy cập hệ thống nội bộ nhạy cảm. Đáp án B đúng vì nó giúp tập trung xác thực, ghi log và giảm việc mở truy cập quản trị trực tiếp từ bên ngoài."
+    },
+    {
+      "id": 139,
+      "question": "Một nhân viên IT rời công ty nhưng tài khoản mạng của người đó không bị khóa ngay lập tức. Đây là lỗ hổng thuộc quy trình nào?",
+      "options": {
+        "A": "Quy trình vá lỗi (Patch Management).",
+        "B": "Quy trình cấp/thu hồi quyền truy cập (Identity and Access Management / Offboarding).",
+        "C": "Quy trình mã hóa dữ liệu.",
+        "D": "Quy trình bảo trì phần cứng."
+      },
+      "answer": "B",
+      "explainAnswer": "Khi nhân viên nghỉ việc, tài khoản và quyền truy cập cần được thu hồi ngay trong quy trình offboarding. Đáp án B đúng vì đây là phần quan trọng của Identity and Access Management để tránh tài khoản cũ bị lạm dụng."
+    },
+    {
+      "id": 140,
+      "question": "Giao thức SSH (Secure Shell) thường dùng cổng mặc định nào để quản trị máy chủ từ xa một cách an toàn?",
+      "options": {
+        "A": "Port 80",
+        "B": "Port 443",
+        "C": "Port 22",
+        "D": "Port 21"
+      },
+      "answer": "C",
+      "explainAnswer": "SSH mặc định sử dụng cổng 22 để quản trị máy chủ từ xa an toàn. Đáp án C đúng vì SSH thay thế các giao thức không an toàn hơn như Telnet bằng kết nối được mã hóa."
+    },
+    {
+      "id": 141,
+      "question": "Để ngăn chặn tấn công từ chối dịch vụ (DoS) vào ứng dụng Web, kỹ thuật cấu hình nào trên Web Server là cần thiết?",
+      "options": {
+        "A": "Mở rộng kích thước file Upload tối đa.",
+        "B": "Thiết lập Timeout (Thời gian chờ) hợp lý và giới hạn kích thước Request Header/Body.",
+        "C": "Cho phép chạy Script với quyền Root.",
+        "D": "Hiển thị thông báo lỗi chi tiết ra màn hình."
+      },
+      "answer": "B",
+      "explainAnswer": "Giới hạn timeout và kích thước request giúp tránh việc máy chủ bị giữ kết nối hoặc xử lý dữ liệu quá lớn quá lâu. Đáp án B đúng vì đây là biện pháp cấu hình web server cần thiết để giảm rủi ro DoS ở tầng ứng dụng."
+    },
+    {
+      "id": 142,
+      "question": "Tấn công 'Cryptojacking' có nghĩa là gì?",
+      "options": {
+        "A": "Bẻ khóa các thuật toán mật mã của hệ thống.",
+        "B": "Cài mã độc lén lút sử dụng tài nguyên CPU/GPU của nạn nhân để đào tiền điện tử cho hacker.",
+        "C": "Mã hóa dữ liệu và tống tiền bằng Bitcoin.",
+        "D": "Đánh cắp ví điện tử lạnh."
+      },
+      "answer": "B",
+      "explainAnswer": "Cryptojacking là hành vi lén dùng tài nguyên máy nạn nhân để đào tiền điện tử. Đáp án B đúng vì người dùng thường chỉ thấy máy chậm, nóng hoặc tốn điện mà không biết tài nguyên đang bị lạm dụng."
+    },
+    {
+      "id": 143,
+      "question": "Khi nhận được một email yêu cầu đổi mật khẩu ngân hàng kèm theo đường link, cách hành xử an toàn nhất là gì?",
+      "options": {
+        "A": "Click ngay vào link và đổi mật khẩu để bảo đảm an toàn.",
+        "B": "Bỏ qua email, tự gõ địa chỉ trang web chính thức của ngân hàng vào trình duyệt để kiểm tra.",
+        "C": "Chuyển tiếp email cho bạn bè hỏi ý kiến.",
+        "D": "Nhắn tin phản hồi lại email đó."
+      },
+      "answer": "B",
+      "explainAnswer": "Email yêu cầu đổi mật khẩu kèm link có thể là Phishing nên không nên bấm trực tiếp. Đáp án B đúng vì cách an toàn là tự nhập địa chỉ website chính thức hoặc dùng ứng dụng chính thức để kiểm tra."
+    },
+    {
+      "id": 144,
+      "question": "Lỗ hổng bảo mật dạng 'Business Logic' (Lỗ hổng nghiệp vụ) khác biệt ở điểm nào?",
+      "options": {
+        "A": "Liên quan đến lỗi phần cứng mạng.",
+        "B": "Không xuất phát từ lỗi cú pháp hay mã hóa, mà do sự sai sót trong thiết kế quy trình nghiệp vụ (ví dụ: thanh toán đơn hàng với số lượng âm).",
+        "C": "Chỉ xảy ra ở các doanh nghiệp lớn.",
+        "D": "Do dùng chung mật khẩu."
+      },
+      "answer": "B",
+      "explainAnswer": "Business Logic không nhất thiết là lỗi cú pháp, mà là lỗi trong cách thiết kế quy trình nghiệp vụ. Đáp án B đúng vì ví dụ số lượng âm, bỏ qua bước thanh toán hoặc dùng mã giảm giá sai đều cần hiểu logic hệ thống mới phát hiện."
+    },
+    {
+      "id": 145,
+      "question": "Một chính sách bảo mật tốt trong doanh nghiệp phải đảm bảo được yếu tố nào?",
+      "options": {
+        "A": "Được phổ biến và yêu cầu tuân thủ bởi tất cả mọi người, kể cả ban lãnh đạo.",
+        "B": "Chỉ bộ phận IT mới cần biết.",
+        "C": "Khóa mọi kết nối Internet ra bên ngoài.",
+        "D": "Chỉ áp dụng khi có sự cố xảy ra."
+      },
+      "answer": "A",
+      "explainAnswer": "Chính sách bảo mật chỉ hiệu quả khi được phổ biến, áp dụng và tuân thủ bởi toàn bộ tổ chức. Đáp án A đúng vì nếu lãnh đạo hoặc một nhóm người được miễn tuân thủ, chính sách sẽ có lỗ hổng từ quy trình và con người."
+    },
+    {
+      "id": 146,
+      "question": "Khái niệm 'Red Team' trong an toàn thông tin đóng vai trò gì?",
+      "options": {
+        "A": "Đội ngũ chuyên lo về pháp lý doanh nghiệp.",
+        "B": "Đội ngũ đóng giả làm tin tặc thực sự, tiến hành các cuộc tấn công toàn diện để kiểm tra khả năng phòng thủ và phản ứng của tổ chức.",
+        "C": "Đội ngũ bảo trì phần cứng.",
+        "D": "Đội ngũ lập trình giao diện Web."
+      },
+      "answer": "B",
+      "explainAnswer": "Red Team mô phỏng kẻ tấn công thật để kiểm tra năng lực phòng thủ toàn diện của tổ chức. Đáp án B đúng vì họ không chỉ tìm lỗi kỹ thuật mà còn kiểm tra quy trình, con người và khả năng phản ứng."
+    },
+    {
+      "id": 147,
+      "question": "Khái niệm 'Blue Team' đối lập với 'Red Team' đảm nhận nhiệm vụ gì?",
+      "options": {
+        "A": "Thiết kế các chiến dịch quảng cáo.",
+        "B": "Là đội ngũ phòng thủ nội bộ, chịu trách nhiệm thiết lập các biện pháp an ninh, giám sát mạng và ngăn chặn các cuộc tấn công.",
+        "C": "Viết mã độc để thử nghiệm hệ thống.",
+        "D": "Kiểm toán tài chính của công ty."
+      },
+      "answer": "B",
+      "explainAnswer": "Blue Team chịu trách nhiệm phòng thủ, giám sát, phát hiện và phản ứng với tấn công. Đáp án B đúng vì họ thiết lập kiểm soát bảo mật, theo dõi log, xử lý cảnh báo và củng cố hệ thống."
+    },
+    {
+      "id": 148,
+      "question": "Trong bối cảnh bảo mật ứng dụng hiện tại, tại sao việc chỉ mã hóa (Encryption) là chưa đủ mà còn cần băm (Hashing) và chữ ký số (Digital Signature)?",
+      "options": {
+        "A": "Vì mã hóa quá chậm.",
+        "B": "Mã hóa chỉ bảo vệ tính bí mật (Confidentiality). Băm và chữ ký số bổ sung tính toàn vẹn (Integrity) và chống chối bỏ (Non-repudiation).",
+        "C": "Vì hacker đã giải mã được tất cả các thuật toán.",
+        "D": "Vì mã hóa không hoạt động trên thiết bị di động."
+      },
+      "answer": "B",
+      "explainAnswer": "Encryption chủ yếu bảo vệ tính bí mật bằng cách làm dữ liệu không đọc được nếu thiếu khóa. Đáp án B đúng vì Hashing hỗ trợ kiểm tra toàn vẹn, còn Digital Signature bổ sung xác thực nguồn gốc và chống chối bỏ."
+    },
+    {
+      "id": 149,
+      "question": "Hành động nào sau đây là nguyên tắc tốt nhất (Best Practice) khi xây dựng các thông báo lỗi (Error Messages) cho ứng dụng?",
+      "options": {
+        "A": "Hiển thị toàn bộ câu truy vấn SQL lỗi để lập trình viên dễ fix bug.",
+        "B": "Hiển thị thông báo chung chung cho người dùng (vd: 'Đã có lỗi xảy ra, vui lòng thử lại'), và ghi lại lỗi chi tiết vào file log an toàn phía máy chủ.",
+        "C": "Hiển thị chi tiết phiên bản hệ điều hành và Framework đang dùng.",
+        "D": "Bỏ qua các lỗi và cho ứng dụng chạy tiếp bình thường."
+      },
+      "answer": "B",
+      "explainAnswer": "Thông báo lỗi cho người dùng không nên lộ chi tiết nhạy cảm như SQL, stack trace hoặc phiên bản hệ thống. Đáp án B đúng vì người dùng chỉ cần thông báo chung, còn chi tiết kỹ thuật nên được ghi vào log an toàn phía máy chủ."
+    },
+    {
+      "id": 150,
+      "question": "Môn học 'Bảo mật Ứng dụng và Hệ thống' nhấn mạnh thông điệp cốt lõi nào cho sinh viên/kỹ sư tương lai?",
+      "options": {
+        "A": "Bảo mật chỉ là việc cài đặt các phần mềm đắt tiền.",
+        "B": "Bảo mật không bao giờ là một điểm đến tuyệt đối, mà là một quy trình liên tục đòi hỏi sự cảnh giác, nguyên tắc cốt lõi (Security by Design) và cập nhật không ngừng.",
+        "C": "Sau khi tốt nghiệp, chỉ cần quan tâm viết code cho ứng dụng chạy là đủ.",
+        "D": "Bảo mật hệ thống là trách nhiệm duy nhất của đội ngũ Ops."
+      },
+      "answer": "B",
+      "explainAnswer": "Bảo mật không phải trạng thái đạt được một lần rồi kết thúc, vì hệ thống, lỗ hổng và kỹ thuật tấn công luôn thay đổi. Đáp án B đúng vì kỹ sư cần coi bảo mật là quy trình liên tục dựa trên Security by Design, giám sát và cập nhật thường xuyên."
+    }
+  ]
+}

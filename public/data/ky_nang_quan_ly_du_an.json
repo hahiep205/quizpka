@@ -1,0 +1,2853 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kỹ năng Quản lý Dự án",
+  "totalQuestions": 219,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Chương 1",
+      "question": "Quản lý dự án là gì?",
+      "options": {
+        "A": "Quá trình lập kế hoạch, điều phối, thời gian, nguồn lực và giám sát quá trình phát triển của dự án đầu tư",
+        "B": "Quá trình sản xuất sản phẩm hàng loạt.",
+        "C": "Quá trình chỉ tập trung vào lập kế hoạch tài chính.",
+        "D": "Quá trình tập trung vào duy trì hoạt động hàng ngày."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Quá trình lập kế hoạch, điều phối, thời gian, nguồn lực và giám sát quá trình phát triển của dự án đầu tư"
+    },
+    {
+      "id": 2,
+      "chapter": "Chương 1",
+      "question": "Mục tiêu chính của quản lý dự án là gì?",
+      "options": {
+        "A": "Tối đa hóa lợi nhuận cho công ty.",
+        "B": "Hoàn thành các công việc dự án trong phạm vi ngân sách và thời gian đã định.",
+        "C": "Đưa ra những sản phẩm có chất lượng cao nhất.",
+        "D": "Đảm bảo mọi dự án đều thành công tuyệt đối."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Hoàn thành các công việc dự án trong phạm vi ngân sách và thời gian đã định."
+    },
+    {
+      "id": 3,
+      "chapter": "Chương 1",
+      "question": "Đặc điểm nào sau đây KHÔNG phải là đặc điểm của một dự án?",
+      "options": {
+        "A": "Dự án có mục tiêu xác định.",
+        "B": "Dự án được thực hiện trong một khoảng thời gian nhất định.",
+        "C": "Dự án bao gồm các hoạt động lặp đi lặp lại thường xuyên.",
+        "D": "Liên quan đến việc thực hiện một điều mà chưa từng làm được trước đó."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Dự án bao gồm các hoạt động lặp đi lặp lại thường xuyên."
+    },
+    {
+      "id": 4,
+      "chapter": "Chương 1",
+      "question": "Điều nào sau đây không phải là ưu điểm của việc sử dụng quản lý dự án tốt?",
+      "options": {
+        "A": "Rút ngắn thời gian phát triển",
+        "B": "Tinh thần làm việc tốt hơn",
+        "C": "Chi phí vốn thấp hơn",
+        "D": "Lợi nhuận cao hơn"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Chi phí vốn thấp hơn"
+    },
+    {
+      "id": 5,
+      "chapter": "Chương 1",
+      "question": "Điểm nào sau đây là điểm đặc biệt của dự án?",
+      "options": {
+        "A": "Hoạt động lặp lại và có tính thường xuyên.",
+        "B": "Được thực hiện trong khoảng thời gian không xác định.",
+        "C": "Có mục tiêu cụ thể và giới hạn về nguồn lực.",
+        "D": "Không có ràng buộc về chất lượng tiêu chuẩn."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Có mục tiêu cụ thể và giới hạn về nguồn lực."
+    },
+    {
+      "id": 6,
+      "chapter": "Chương 1",
+      "question": "Quản lý rủi ro trong dự án bao gồm nội dung nào?",
+      "options": {
+        "A": "Xác định các rủi ro nguy hiểm và có kế hoạch.",
+        "B": "Phân chia nguồn năng lượng của dự án.",
+        "C": "Quản lý thông tin giữa các liên kết.",
+        "D": "Phân công trách nhiệm cho các thành viên."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Xác định các rủi ro nguy hiểm và có kế hoạch."
+    },
+    {
+      "id": 7,
+      "chapter": "Chương 1",
+      "question": "Dự án và hoạt động thường xuyên điểm nào sau đây KHÔNG phải là điểm khác nhau?",
+      "options": {
+        "A": "Dự án có thời gian bắt đầu và kết thúc duy nhất",
+        "B": "Do con người thực hiện, được lên kế hoạch, thực hiện, kiểm tra (vì đây là điểm giống)",
+        "C": "Hoạt động thường xuyên là hoạt động liên tục có tính chất lặp lại",
+        "D": "Dự án có nguồn lực hạn chế"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Do con người thực hiện, được lên kế hoạch, thực hiện, kiểm tra (vì đây là điểm giống)"
+    },
+    {
+      "id": 8,
+      "chapter": "Chương 1",
+      "question": "Dự án dài hạn thường có mục tiêu gắn với điều gì?",
+      "options": {
+        "A": "Mục tiêu kế hoạch kinh doanh hàng năm của doanh nghiệp",
+        "B": "Chiến lược phát triển trung hạn của doanh nghiệp",
+        "C": "Chiến lược phát triển dài hạn của doanh nghiệp",
+        "D": "Các mục tiêu kinh doanh hàng ngày của doanh nghiệp"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Chiến lược phát triển dài hạn của doanh nghiệp"
+    },
+    {
+      "id": 9,
+      "chapter": "Chương 1",
+      "question": "Điều nào sau đây không phải là ưu điểm của việc sử dụng quản lý dự án tốt? (Slide 60 chương 1)",
+      "options": {
+        "A": "Rút ngắn thời gian phát triển",
+        "B": "Tinh thần làm việc tốt hơn",
+        "C": "Chi phí vốn thấp hơn",
+        "D": "Lợi nhuận cao hơn"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Chi phí vốn thấp hơn"
+    },
+    {
+      "id": 10,
+      "chapter": "Chương 1",
+      "question": "Một dự án xây dựng trung tâm thương mại tại một thành phố lớn với vốn đầu tư hỗn hợp từ cả nguồn vốn tư nhân và ngân sách nhà nước. Dự án này thuộc loại nào theo nguồn vốn đầu tư?",
+      "options": {
+        "A": "Dự án sử dụng vốn Ngân sách Nhà nước",
+        "B": "Dự án sử dụng vốn tín dụng do Nhà nước bảo lãnh",
+        "C": "Dự án sử dụng vốn tư nhân",
+        "D": "Dự án sử dụng vốn hỗn hợp"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Dự án sử dụng vốn hỗn hợp"
+    },
+    {
+      "id": 11,
+      "chapter": "Chương 1",
+      "question": "Dự án mở rộng diện tích canh tác lúa nước tại một vùng đồng bằng để tăng sản lượng sản xuất nông nghiệp thuộc loại dự án nào theo cơ cấu tái sản xuất?",
+      "options": {
+        "A": "Dự án theo chiều rộng",
+        "B": "Dự án theo chiều sâu",
+        "C": "Dự án hỗn hợp",
+        "D": "Dự án đầu tư cơ sở hạ tầng"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Dự án theo chiều rộng"
+    },
+    {
+      "id": 12,
+      "chapter": "Chương 1",
+      "question": "Ai là người chịu trách nhiệm thực hiện các chức năng kỹ thuật trong một dự án?",
+      "options": {
+        "A": "Chủ dự án",
+        "B": "Giám đốc dự án",
+        "C": "Nhà đầu tư",
+        "D": "Ban quản lý dự án"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Giám đốc dự án"
+    },
+    {
+      "id": 13,
+      "chapter": "Chương 1",
+      "question": "Đâu là yêu cầu với một nhà quản lý dự án giỏi?",
+      "options": {
+        "A": "Bản lĩnh chính trị",
+        "B": "Năng lực chuyên môn",
+        "C": "Dám đương đầu",
+        "D": "Tất cả đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả đáp án trên"
+    },
+    {
+      "id": 14,
+      "chapter": "Chương 1",
+      "question": "Loại dự án nào sau đây thuộc dự án chiến lược",
+      "options": {
+        "A": "Dự án nền tảng",
+        "B": "Dự án cải tiến nhỏ",
+        "C": "Dự án bắt buộc thực hiện",
+        "D": "Không có đáp án đúng"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Dự án nền tảng"
+    },
+    {
+      "id": 15,
+      "chapter": "Chương 1",
+      "question": "Một chu kỳ sống dự án gồm mấy giai đoạn?",
+      "options": {
+        "A": "2 giai đoạn",
+        "B": "3 giai đoạn",
+        "C": "4 giai đoạn",
+        "D": "5 giai đoạn"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 4 giai đoạn"
+    },
+    {
+      "id": 16,
+      "chapter": "Chương 1",
+      "question": "Ý tưởng của một dự án có thể xuất phát từ các nguồn nào?",
+      "options": {
+        "A": "CL phát triển KT – XH hay CL phát triển ngành, lĩnh vực",
+        "B": "Thông qua việc phát hiện những bất cập trong việc bố trí và sử dụng các nguồn lực của DN",
+        "C": "Những nhu cầu sản xuất và tiêu dùng chưa được thỏa mãn",
+        "D": "Tất cả phương án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả phương án trên"
+    },
+    {
+      "id": 17,
+      "chapter": "Chương 1",
+      "question": "Đặc điểm nào sau đây KHÔNG thuộc về một dự án?",
+      "options": {
+        "A": "Tính phức tạp và không thường xuyên.",
+        "B": "Các công việc lệ thuộc vào nhau.",
+        "C": "Sử dụng nguồn lực vô hạn để đạt mục tiêu.",
+        "D": "Được thực hiện trong điều kiện ràng buộc về thời gian, ngân sách và chất lượng."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Sử dụng nguồn lực vô hạn để đạt mục tiêu."
+    },
+    {
+      "id": 18,
+      "chapter": "Chương 1",
+      "question": "Mục tiêu dự án cần được xác định theo nguyên tắc nào?",
+      "options": {
+        "A": "SWOT",
+        "B": "SMART",
+        "C": "ROI",
+        "D": "KPI"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. SMART"
+    },
+    {
+      "id": 19,
+      "chapter": "Chương 1",
+      "question": "Chu kì của một dự án thông thường có những giai đoạn:",
+      "options": {
+        "A": "Xây dựng ý tưởng, giai đoạn phát triển, giai đoạn triển khai, giai đoạn kết thúc",
+        "B": "Xác định dự án, lập kế hoạch, thực hiện dự án, bàn giao kết thúc dự án",
+        "C": "Xây dựng ý tưởng, giai đoạn phát triển, giai đoạn triển khai, giai đoạn xem xét đánh giá",
+        "D": "Giai đoạn nêu ý tưởng, xây dựng ý tưởng, giai đoạn phát triển, giai đoạn triển khai."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Xác định dự án, lập kế hoạch, thực hiện dự án, bàn giao kết thúc dự án"
+    },
+    {
+      "id": 20,
+      "chapter": "Chương 1",
+      "question": "Đặc điểm của dự án, ngoại trừ:",
+      "options": {
+        "A": "Thời gian tồn tại vô hạn.",
+        "B": "Sản phẩm của dự án mang tính chất đơn chiếc, độc đáo.",
+        "C": "Môi trường hoạt động “va chạm”.",
+        "D": "Tính bất định và rủi ro cao."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Thời gian tồn tại vô hạn."
+    },
+    {
+      "id": 21,
+      "chapter": "Chương 1",
+      "question": "Đầu tư vào lực lượng lao động, đầu tư xây dựng cơ bản và đầu tư vào tài sản lưu động, thuộc cách phân loại đầu tư:",
+      "options": {
+        "A": "Theo chức năng quản trị vốn",
+        "B": "Theo nguồn vốn",
+        "C": "Theo nội dung kinh tế",
+        "D": "Theo mục tiêu đầu tư"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Theo nội dung kinh tế"
+    },
+    {
+      "id": 22,
+      "chapter": "Chương 1",
+      "question": "Đầu tư gián tiếp là phương thức đầu tư, mà trong đó chủ đầu tư:",
+      "options": {
+        "A": "Trực tiếp tham gia quản trị vốn bỏ ra",
+        "B": "Không trực tiếp tham gia quản trị vốn bỏ ra",
+        "C": "Có khi trực tiếp có khi không trực tiếp quản trị vốn bỏ ra",
+        "D": "Tất cả các câu đều đúng"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Không trực tiếp tham gia quản trị vốn bỏ ra"
+    },
+    {
+      "id": 23,
+      "chapter": "Chương 1",
+      "question": "Các giai đoạn của dự án?",
+      "options": {
+        "A": "Lập kế hoạch dự án, thiết kế dự án, tổ chức thực hiện dự án, giám sát thực hiện dự án, kết thúc dự án",
+        "B": "Tổ chức thực hiện dự án, , thiết kế dự án, lập kế hoạch dự án, giám sát thực hiện dự án, kết thúc dự án",
+        "C": "Thiết kế dự án, lập kế hoạch dự án, tổ chức thực hiện dự án, giám sát thực hiện dự án, kết thúc dự án",
+        "D": "Thiết kế dự án, tổ chức thực hiện dự án, lập kế hoạch dự án, giám sát thực hiện dự án, kết thúc dự án"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Thiết kế dự án, lập kế hoạch dự án, tổ chức thực hiện dự án, giám sát thực hiện dự án, kết thúc dự án"
+    },
+    {
+      "id": 24,
+      "chapter": "Chương 1",
+      "question": "Giám đốc dự án đã khám phá vấn đề với môđun thống kê của dự án. Các số đo đã được ghi rõ cho các đơn vị của Mỹ nhưng các nhà lập trình nước ngoài sử dụng các đơn vị quốc tế. Vấn đề này có thể tránh được ở chỗ nào trong dự án?",
+      "options": {
+        "A": "Lập kế hoạch dự án.",
+        "B": "Kiểm thử dự án.",
+        "C": "Kiểm soát dự án.",
+        "D": "Quay vòng dự án"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Lập kế hoạch dự án."
+    },
+    {
+      "id": 25,
+      "chapter": "Chương 1",
+      "question": "Bản chất cơ bản của một dự án là ______.",
+      "options": {
+        "A": "Vĩnh viễn",
+        "B": "Tạm thời",
+        "C": "A hoặc B",
+        "D": "Cả A và B"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Tạm thời"
+    },
+    {
+      "id": 26,
+      "chapter": "Chương 1",
+      "question": "Một dự án bao gồm các yếu tố như sau: I. Thời điểm bắt đầu và kết thúc; II. Mục đích cụ thể; III. Những điều kiện ràng buộc",
+      "options": {
+        "A": "Chỉ I",
+        "B": "Chỉ II",
+        "C": "Chỉ I và II",
+        "D": "I, II và III"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. I, II và III"
+    },
+    {
+      "id": 27,
+      "chapter": "Chương 1",
+      "question": "Câu nào sau đây thể hiện đúng chu kỳ dự án?",
+      "options": {
+        "A": "Lập kế hoạch → Xác định → Thực hiện → Bàn giao",
+        "B": "Lập kế hoạch → Thực hiện → Xác định → Bàn giao",
+        "C": "Xác định → Lập kế hoạch → Thực hiện → Bàn giao",
+        "D": "Xác định → Thực hiện → Lập kế hoạch → Bàn giao"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Xác định → Lập kế hoạch → Thực hiện → Bàn giao"
+    },
+    {
+      "id": 28,
+      "chapter": "Chương 1",
+      "question": "Đâu là sự khác nhau giữa dự án và hoạt động thường xuyên?",
+      "options": {
+        "A": "Bị giới hạn về nguồn lực",
+        "B": "Được lên kế hoạch, thực hiện và kiểm tra",
+        "C": "Hoạt động thường xuyên có tính chất lặp lại còn dự án thì có thời hạn và là duy nhất.",
+        "D": "Dự án có tính chất lặp lại còn hoạt động thường xuyên thì có thời hạn và là duy nhất"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Hoạt động thường xuyên có tính chất lặp lại còn dự án thì có thời hạn và là duy nhất."
+    },
+    {
+      "id": 29,
+      "chapter": "Chương 1",
+      "question": "Dự án không có đặc điểm nào sau đây?",
+      "options": {
+        "A": "Được thực hiện trong khoảng thời gian nhất định",
+        "B": "Liên quan đến việc thực hiện một điều đã từng làm được trước đó",
+        "C": "Thường liên quan đến nhiều bộ phận trong công ty và lĩnh vực chuyên môn khác nhau",
+        "D": "Đáp ứng các yêu cầu về tiêu chuẩn chất lượng đầu ra, chi phí và thời gian cụ thể."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Liên quan đến việc thực hiện một điều đã từng làm được trước đó"
+    },
+    {
+      "id": 30,
+      "chapter": "Chương 1",
+      "question": "Dự án bao gồm mấy giai đoạn?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 5"
+    },
+    {
+      "id": 31,
+      "chapter": "Chương 1",
+      "question": "Đặc điểm nào sau đây KHÔNG phải là đặc điểm của dự án?",
+      "options": {
+        "A": "Có mục tiêu cụ thể",
+        "B": "Thời gian thực hiện không xác định",
+        "C": "Liên quan đến nhiều bộ phận và lĩnh vực chuyên môn",
+        "D": "Được quản lý trong điều kiện ràng buộc về thời gian và nguồn lực"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Thời gian thực hiện không xác định"
+    },
+    {
+      "id": 32,
+      "chapter": "Chương 1",
+      "question": "Một dự án dự kiến kéo dài 10 tháng với tổng chi phí là 1 tỷ đồng. Nếu chi phí phải tăng thêm 15% và thời gian kéo dài thêm 2 tháng, chi phí tổng cộng là bao nhiêu?",
+      "options": {
+        "A": "1 tỷ đồng",
+        "B": "1,15 tỷ đồng",
+        "C": "1,3 tỷ đồng",
+        "D": "1,45 tỷ đồng"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 1,3 tỷ đồng"
+    },
+    {
+      "id": 33,
+      "chapter": "Chương 2",
+      "question": "Giai đoạn thực hiện đầu tư chiếm bao nhiêu tổng số vốn đầu tư?",
+      "options": {
+        "A": "40-45%",
+        "B": "65-75%",
+        "C": "80-95%",
+        "D": "85-99.5%"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. 85-99.5%"
+    },
+    {
+      "id": 34,
+      "chapter": "Chương 2",
+      "question": "Đâu không thuộc Các bước của quá trình soạn thảo dự án đầu tư?",
+      "options": {
+        "A": "Nghiên cứu cơ hội đầu tư",
+        "B": "Nghiên cứu tiền khả thi",
+        "C": "Nghiên cứu khả thi",
+        "D": "Hoàn tất các thủ tục triển khai đầu tư"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Hoàn tất các thủ tục triển khai đầu tư"
+    },
+    {
+      "id": 35,
+      "chapter": "Chương 2",
+      "question": "Chu kỳ của 1 dự án là gì",
+      "options": {
+        "A": "Chu kỳ của một dự án là các giai đoạn mà dự án đó đã lên kế hoạch và soạn thảo trước đó",
+        "B": "Chu kỳ của một dự án là các bước: lên ý tưởng, soạn thảo văn bản, nghiên cứu cơ hội đầu tư, nghiên cứu tài chính...hoàn thành và chấm dứt dự án",
+        "C": "Chu kỳ của một dự án là các bước hoặc các giai đoạn mà một dự án phải trải qua, bắt đầu từ khi dự án mới chỉ là ý tưởng đến khi dự án hoàn thành và chấm dứt hoạt động.",
+        "D": "Chu kỳ của một dự án được tính từ thời điểm bắt đầu đến thời điểm kết thúc dự án đó"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Chu kỳ của một dự án là các bước hoặc các giai đoạn mà một dự án phải trải qua, bắt đầu từ khi dự án mới chỉ là ý tưởng đến khi dự án hoàn thành và chấm dứt hoạt động."
+    },
+    {
+      "id": 36,
+      "chapter": "Chương 2",
+      "question": "Soạn thảo dự án có những bước nào",
+      "options": {
+        "A": "Nghiên cứu đầu tư, nghiên cứu khả thi, nghiên cứu tiền khả thi",
+        "B": "Nghiên cứu cơ hội đầu tư, nghiên cứu tiền khả thi, nghiên cứu khả thi.",
+        "C": "Nghiên cứu cơ hội đầu tư, nghiên cứu tính khả thi, nghiên cứu tài chính",
+        "D": "Nghiên cứu cơ hội đầu tư, nghiên cứu tài chính, nghiên cứu khả thi"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Nghiên cứu cơ hội đầu tư, nghiên cứu tiền khả thi, nghiên cứu khả thi."
+    },
+    {
+      "id": 37,
+      "chapter": "Chương 2",
+      "question": "Bước nào trong quá trình soạn thảo dự án đầu tư giúp xác định tính khả thi của dự án?",
+      "options": {
+        "A": "Đánh giá kỹ thuật",
+        "B": "Đánh giá rủi ro",
+        "C": "Phân tích tài chính",
+        "D": "Nghiên cứu tiền khả thi"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Nghiên cứu tiền khả thi"
+    },
+    {
+      "id": 38,
+      "chapter": "Chương 2",
+      "question": "Mục tiêu chính của giai đoạn lập dự án là gì?",
+      "options": {
+        "A": "Xây dựng kế hoạch thực hiện dự án.",
+        "B": "Đánh giá khả năng thành công của dự án.",
+        "C": "Xác định nguồn vốn cho dự án.",
+        "D": "Tất cả các đáp án trên."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả các đáp án trên."
+    },
+    {
+      "id": 39,
+      "chapter": "Chương 2",
+      "question": "Trong quá trình thẩm định dự án, yếu tố nào sau đây quan trọng nhất?",
+      "options": {
+        "A": "Kinh nghiệm của nhà đầu tư.",
+        "B": "Quy mô của dự án.",
+        "C": "Khả năng sinh lời của dự án.",
+        "D": "Mối quan hệ với các đối tác."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Khả năng sinh lời của dự án."
+    },
+    {
+      "id": 40,
+      "chapter": "Chương 2",
+      "question": "Một phương án đầu tư được coi là thuận lợi được xem xét yếu tố cơ bản nào?",
+      "options": {
+        "A": "Cơ hội đầu tư",
+        "B": "Đầu ra và đầu vào phương án đó",
+        "C": "Tài chính",
+        "D": "Lợi ích kinh tế"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Đầu ra và đầu vào phương án đó"
+    },
+    {
+      "id": 41,
+      "chapter": "Chương 2",
+      "question": "Đâu KHÔNG phải là căn cứ nghiên cứu cơ hội đầu tư",
+      "options": {
+        "A": "Chủ trương, chính sách của Nhà nước",
+        "B": "Bối cảnh chung về kinh tế - xã hội, pháp luật ảnh hưởng đến dự án",
+        "C": "Nhu cầu thị trường trong và ngoài nước",
+        "D": "Những kết quả, hiệu quả sẽ đạt được nếu thực hiện đầu tư"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Bối cảnh chung về kinh tế - xã hội, pháp luật ảnh hưởng đến dự án"
+    },
+    {
+      "id": 42,
+      "chapter": "Chương 2",
+      "question": "Nội dung cơ bản để thẩm định dự án đầu tư về mặt công nghệ và kỹ thuật? Chọn câu trả lời sai",
+      "options": {
+        "A": "Tư cách pháp nhân",
+        "B": "Sự hợp lý về địa điểm xây dựng (quy hoạch xây dựng đảm bảo an ninh quốc phòng)",
+        "C": "Sử dụng đất đai, tài nguyên",
+        "D": "Tính hiện đại hợp lý của công nghệ thiết bị sử dụng theo dự án"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Tư cách pháp nhân"
+    },
+    {
+      "id": 43,
+      "chapter": "Chương 2",
+      "question": "Người thực hiện ý tưởng đầu tư là ai?",
+      "options": {
+        "A": "Ban giám đốc",
+        "B": "Chuyên viên nhân sự của công ty",
+        "C": "Chuyên viên phòng kinh doanh",
+        "D": "Chuyên viên kinh tế của công ty"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Ban giám đốc"
+    },
+    {
+      "id": 44,
+      "chapter": "Chương 2",
+      "question": "Đâu KHÔNG PHẢI là người thực hiện ý tưởng đầu tư",
+      "options": {
+        "A": "Chủ đầu tư",
+        "B": "Ban giám đốc",
+        "C": "Chuyên viên nghiên cứu chiến lược phát triển",
+        "D": "Chuyên viên nhân sự của công ty"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Chuyên viên nhân sự của công ty"
+    },
+    {
+      "id": 45,
+      "chapter": "Chương 2",
+      "question": "Đâu KHÔNG PHẢI mục đích của thẩm định dự án",
+      "options": {
+        "A": "Đánh giá hiệu quả",
+        "B": "Đánh giá cơ cấu tài sản và nguồn vốn",
+        "C": "Đánh giá tính hợp lí",
+        "D": "Đánh giá tính khả thi"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Đánh giá cơ cấu tài sản và nguồn vốn"
+    },
+    {
+      "id": 46,
+      "chapter": "Chương 2",
+      "question": "Để tiếp cận khung Logic cần tiến hành mấy giai đoạn?",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "5"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 2"
+    },
+    {
+      "id": 47,
+      "chapter": "Chương 2",
+      "question": "Tại giai đoạn điều tra, phân tích của Tiếp cận khung Logic gồm công cụ nào?",
+      "options": {
+        "A": "SWOT",
+        "B": "Thảo luận nhóm",
+        "C": "Cây mục tiêu",
+        "D": "Phân tích điều kiện"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. SWOT"
+    },
+    {
+      "id": 48,
+      "chapter": "Chương 2",
+      "question": "Tại giai đoạn Hoạch định/thiết kế của Tiếp cận khung Logic gồm công cụ nào?",
+      "options": {
+        "A": "Cây vấn đề",
+        "B": "Sơ đồ Veen",
+        "C": "Cây mục tiêu",
+        "D": "Ma trận các bên liên quan"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Cây mục tiêu"
+    },
+    {
+      "id": 49,
+      "chapter": "Chương 2",
+      "question": "Nội dung thực hiện của Thông tin chi phí sản xuất kinh doanh (Input) là:",
+      "options": {
+        "A": "Xác định đơn giá sản phẩm",
+        "B": "Xác định thị phần, khả năng tiêu thụ sản phẩm",
+        "C": "Xác định nhà cung cấp, giá cả, chủng loại NVL",
+        "D": "Xác định nhu cầu về trang thiết bị"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Xác định nhà cung cấp, giá cả, chủng loại NVL"
+    },
+    {
+      "id": 50,
+      "chapter": "Chương 2",
+      "question": "Nội dung thực hiện của Thông tin về thị trường (output) là:",
+      "options": {
+        "A": "Xác định thị phần và khả năng tiêu thụ sản phẩm của dự án",
+        "B": "Xác định về lựa chọn công nghệ và quy trình",
+        "C": "Chứng minh bán đấu về tính cần thiết của việc đầu tư",
+        "D": "Xác định mặt trái dự án đi vào hoạt động"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Xác định thị phần và khả năng tiêu thụ sản phẩm của dự án"
+    },
+    {
+      "id": 51,
+      "chapter": "Chương 2",
+      "question": "Giai đoạn nào quyết định sự thành công hay thất bại của toàn bộ dự án?",
+      "options": {
+        "A": "Vận hành kết quả đầu tư",
+        "B": "Chuẩn bị đầu tư",
+        "C": "Thực hiện đầu tư",
+        "D": "Đánh giá đầu tư"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Chuẩn bị đầu tư"
+    },
+    {
+      "id": 52,
+      "chapter": "Chương 2",
+      "question": "Tại sao thẩm định dự án đối với các định chế tài chính là quan trọng?",
+      "options": {
+        "A": "Để đánh giá hiệu quả kinh doanh của nhà đầu tư",
+        "B": "Để quyết định có cho vay vốn hay không",
+        "C": "Để kiểm soát chi phí xây dựng",
+        "D": "Để phát triển thị trường"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Để quyết định có cho vay vốn hay không"
+    },
+    {
+      "id": 53,
+      "chapter": "Chương 2",
+      "question": "Trong quá trình lập dự án, bước nào là quan trọng nhất để đảm bảo sự thành công của dự án?",
+      "options": {
+        "A": "Xác định mục tiêu dự án",
+        "B": "Phân tích rủi ro",
+        "C": "Lập kế hoạch tài chính",
+        "D": "Đánh giá hiệu quả dự án"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Xác định mục tiêu dự án"
+    },
+    {
+      "id": 54,
+      "chapter": "Chương 2",
+      "question": "Khi thẩm định một dự án, yếu tố nào sau đây thường không được xem xét?",
+      "options": {
+        "A": "Tiềm năng sinh lợi của dự án",
+        "B": "Độ khả thi về kỹ thuật",
+        "C": "Sự phù hợp với quy định pháp lý",
+        "D": "Sở thích cá nhân của nhà đầu tư"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Sở thích cá nhân của nhà đầu tư"
+    },
+    {
+      "id": 55,
+      "chapter": "Chương 2",
+      "question": "Một dự án có thể được thẩm định theo quan điểm nào?",
+      "options": {
+        "A": "Tài chính",
+        "B": "Kinh tế",
+        "C": "Xã hội",
+        "D": "Tất cả các đáp án trên đều đúng"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả các đáp án trên đều đúng"
+    },
+    {
+      "id": 56,
+      "chapter": "Chương 2",
+      "question": "Một dự án được gọi là khả thi khi:",
+      "options": {
+        "A": "Dự án đó phải tuân thủ đầy đủ các quy định của pháp luật",
+        "B": "Dự án đó có khả năng thực hiện được",
+        "C": "Dự án đó phải mang lại hiệu quả về tài chính và/hoặc hiệu quả kinh tế xã hội",
+        "D": "Dự án phải thỏa mãn được ba yêu cầu trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Dự án phải thỏa mãn được ba yêu cầu trên"
+    },
+    {
+      "id": 57,
+      "chapter": "Chương 2",
+      "question": "Mục đích chính của việc nghiên cứu tiền khả thi là gì?",
+      "options": {
+        "A": "Nghiên cứu sâu hơn các khía cạnh chưa chắc chắn của cơ hội đầu tư để lựa chọn tiếp.",
+        "B": "Xác định chính xác chi phí đầu tư và lợi nhuận dự kiến của dự án.",
+        "C": "Đánh giá toàn diện tác động của dự án đến môi trường và xã hội.",
+        "D": "Phân tích chi tiết các công nghệ sẽ được áp dụng trong dự án."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Nghiên cứu sâu hơn các khía cạnh chưa chắc chắn của cơ hội đầu tư để lựa chọn tiếp."
+    },
+    {
+      "id": 58,
+      "chapter": "Chương 2",
+      "question": "Đặc điểm của nghiên cứu tiền khả thi là:",
+      "options": {
+        "A": "Nghiên cứu chi tiết, sâu sát từng khía cạnh kỹ thuật, tài chính của dự án.",
+        "B": "Xem xét ở trạng thái tĩnh, ở mức trung bình mọi đầu vào, đầu ra của dự án.",
+        "C": "Đánh giá đầy đủ rủi ro và cơ hội của dự án trong tương lai.",
+        "D": "Xác định chính xác nguồn vốn và đối tác hợp tác cho dự án."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Xem xét ở trạng thái tĩnh, ở mức trung bình mọi đầu vào, đầu ra của dự án."
+    },
+    {
+      "id": 59,
+      "chapter": "Chương 2",
+      "question": "Quá trình hình thành và thực hiện một dự án đầu tư, có:",
+      "options": {
+        "A": "2 giai đoạn",
+        "B": "3 giai đoạn",
+        "C": "4 giai đoạn",
+        "D": "5 giai đoạn"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. 3 giai đoạn"
+    },
+    {
+      "id": 60,
+      "chapter": "Chương 2",
+      "question": "Có mấy bước trong quá trình soạn thảo dự án đầu tư:",
+      "options": {
+        "A": "3 bước",
+        "B": "4 bước",
+        "C": "5 bước",
+        "D": "6 bước"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 3 bước"
+    },
+    {
+      "id": 61,
+      "chapter": "Chương 2",
+      "question": "Điền từ đúng trong thẩm định dự án thì “Tổ chức xem xét .........., khoa học và toàn diện các nội dung cơ bản của dự án”?",
+      "options": {
+        "A": "Chủ quan",
+        "B": "Định tính",
+        "C": "Khách quan",
+        "D": "Định lượng"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Khách quan"
+    },
+    {
+      "id": 62,
+      "chapter": "Chương 2",
+      "question": "Thẩm định dự án là gì?",
+      "options": {
+        "A": "Xem xét một cách chủ quan các nội dung của dự án",
+        "B": "Tổ chức xem xét khách quan, khoa học và toàn diện các nội dung cơ bản của dự án",
+        "C": "Đưa ra quyết định mà không cần xem xét dữ liệu",
+        "D": "Lập kế hoạch cho các hoạt động không liên quan đến dự án"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Tổ chức xem xét khách quan, khoa học và toàn diện các nội dung cơ bản của dự án"
+    },
+    {
+      "id": 63,
+      "chapter": "Chương 2",
+      "question": "Bảng phân công trách nhiệm trong lập dự án không bao gồm nội dung nào?",
+      "options": {
+        "A": "Ý tưởng đầu tư",
+        "B": "Phương án kỹ thuật",
+        "C": "Báo cáo tài chính của chủ đầu tư",
+        "D": "Phân tích thị trường"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Báo cáo tài chính của chủ đầu tư"
+    },
+    {
+      "id": 64,
+      "chapter": "Chương 2",
+      "question": "Trong giai đoạn chuẩn bị đầu tư, nội dung nào là quan trọng nhất?",
+      "options": {
+        "A": "Nghiên cứu kỹ thuật",
+        "B": "Nghiên cứu thị trường",
+        "C": "Nghiên cứu tài chính",
+        "D": "Thiết kế dự án"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Nghiên cứu thị trường"
+    },
+    {
+      "id": 65,
+      "chapter": "Chương 2",
+      "question": "Tình huống nào dẫn đến thất bại trong đầu tư dự án?",
+      "options": {
+        "A": "Không nghiên cứu kỹ địa điểm",
+        "B": "Không đủ vốn đầu tư",
+        "C": "Thiếu nhân lực",
+        "D": "Sai phương pháp tài chính"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Không nghiên cứu kỹ địa điểm"
+    },
+    {
+      "id": 66,
+      "chapter": "Chương 2",
+      "question": "Nghiên cứu tiền khả thi là giai đoạn nào trong quá trình lập dự án?",
+      "options": {
+        "A": "Trước nghiên cứu khả thi",
+        "B": "Sau nghiên cứu khả thi",
+        "C": "Đồng thời với nghiên cứu khả thi",
+        "D": "Không cần thiết thực hiện"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Trước nghiên cứu khả thi"
+    },
+    {
+      "id": 67,
+      "chapter": "Chương 2",
+      "question": "Điểm quan trọng nhất trong nghiên cứu tiền khả thi là gì?",
+      "options": {
+        "A": "Nghiên cứu chi phí dự án",
+        "B": "Xác định các khía cạnh pháp lý",
+        "C": "Phân tích thị trường và xác định tính khả thi sơ bộ",
+        "D": "Nghiên cứu tài chính"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Phân tích thị trường và xác định tính khả thi sơ bộ"
+    },
+    {
+      "id": 68,
+      "chapter": "Chương 2",
+      "question": "Phương pháp thẩm định dựa trên độ nhạy có nghĩa là:",
+      "options": {
+        "A": "Xem xét mức độ thay đổi của dự án khi có yếu tố bất trắc",
+        "B": "So sánh các dự án khác nhau",
+        "C": "Thẩm định từng khía cạnh của dự án",
+        "D": "Thẩm định các yếu tố về công nghệ"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Xem xét mức độ thay đổi của dự án khi có yếu tố bất trắc"
+    },
+    {
+      "id": 69,
+      "chapter": "Chương 2",
+      "question": "Thẩm định các chỉ tiêu tài chính của dự án không bao gồm:",
+      "options": {
+        "A": "BEP",
+        "B": "NPV",
+        "C": "Tỷ lệ lạm phát",
+        "D": "IRR"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tỷ lệ lạm phát"
+    },
+    {
+      "id": 70,
+      "chapter": "Chương 3",
+      "question": "Tác dụng chính của lập kế hoạch dự án là gì?",
+      "options": {
+        "A": "Giảm chi phí",
+        "B": "Tăng cường sự mơ hồ",
+        "C": "Đảm bảo dự án đạt được mục tiêu và yêu cầu",
+        "D": "Tăng cường sự cạnh tranh"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Đảm bảo dự án đạt được mục tiêu và yêu cầu"
+    },
+    {
+      "id": 71,
+      "chapter": "Chương 3",
+      "question": "\"Mốc thời gian\" trong kế hoạch dự án thường được sử dụng để làm gì?",
+      "options": {
+        "A": "Đánh giá chi phí",
+        "B": "Xác định các thời điểm quan trọng trong tiến trình dự án",
+        "C": "Tăng cường giao tiếp",
+        "D": "Phân chia nhiệm vụ"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Xác định các thời điểm quan trọng trong tiến trình dự án"
+    },
+    {
+      "id": 72,
+      "chapter": "Chương 3",
+      "question": "Nội dung nào không nằm trong kế hoạch quản lý rủi ro?",
+      "options": {
+        "A": "Xác định rủi ro",
+        "B": "Xác định cá nhân hoặc bộ phận chịu trách nhiệm",
+        "C": "Xác định ngân sách",
+        "D": "Dự tính phương pháp phòng ngừa, xử lý rủi ro"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Xác định ngân sách"
+    },
+    {
+      "id": 73,
+      "chapter": "Chương 3",
+      "question": "Lập kế hoạch dự án là gì?",
+      "options": {
+        "A": "Xác định các mục tiêu dài hạn của dự án",
+        "B": "Đưa ra các chiến lược marketing cho dự án",
+        "C": "Xác định các bước, nguồn lực và thời gian cần thiết để hoàn thành dự án",
+        "D": "Đánh giá hiệu quả của dự án sau khi kết thúc"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Xác định các bước, nguồn lực và thời gian cần thiết để hoàn thành dự án"
+    },
+    {
+      "id": 74,
+      "chapter": "Chương 3",
+      "question": "Trong cấu trúc phân tách công việc (WBS), cấp bậc thấp nhất thường biểu thị điều gì?",
+      "options": {
+        "A": "Các mục tiêu chính của dự án",
+        "B": "Các nhiệm vụ cấp cao cần thực hiện",
+        "C": "Các công việc cụ thể, bao gồm ước tính chi phí và thời gian",
+        "D": "Kế hoạch dự phòng cho các rủi ro"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Các công việc cụ thể, bao gồm ước tính chi phí và thời gian"
+    },
+    {
+      "id": 75,
+      "chapter": "Chương 3",
+      "question": "Trong chu trình quản lý dự án, nội dung của phần lập kế hoạch bao gồm",
+      "options": {
+        "A": "Đo lường kết quả, so sánh với mục tiêu, báo cáo, giải quyết các vấn đề",
+        "B": "Phân phối nguồn lực, đo lường kết quả, so sánh với mục tiêu, báo cáo",
+        "C": "Thiết lập mục tiêu, dự tính nguồn lực, xây dựng kết quả",
+        "D": "Khuyến khích và động viên cán bộ- nhân viên, báo cáo, giải quyết các vấn đề"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Thiết lập mục tiêu, dự tính nguồn lực, xây dựng kết quả"
+    },
+    {
+      "id": 76,
+      "chapter": "Chương 3",
+      "question": "Cấu trúc phân chia công việc WBS (Work breakdown structure) là:",
+      "options": {
+        "A": "Dự tính ngân sách",
+        "B": "Xây dựng kế hoạch kiểm soát",
+        "C": "Xác định các công việc dự án làm cơ sở để lập kế hoạch nguồn lực quản lý thời gian",
+        "D": "Xác định thời gian để thực hiện dự án"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Xác định các công việc dự án làm cơ sở để lập kế hoạch nguồn lực quản lý thời gian"
+    },
+    {
+      "id": 77,
+      "chapter": "Chương 3",
+      "question": "Công cụ lập kế hoạch tiến độ KHÔNG bao gồm:",
+      "options": {
+        "A": "Biểu đồ Gantt",
+        "B": "Sơ đồ mạng",
+        "C": "Sơ đồ Pert/CPM",
+        "D": "Sơ đồ phụ tải"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Sơ đồ phụ tải"
+    },
+    {
+      "id": 78,
+      "chapter": "Chương 3",
+      "question": "Trong quá trình lập kế hoạch dự án, biểu đồ Gantt được sử dụng để:",
+      "options": {
+        "A": "Xác định và phân tích rủi ro",
+        "B": "Theo dõi tiến độ và lịch trình của dự án",
+        "C": "Theo dõi tiến độ và lịch trình của dự án",
+        "D": "Phân tích nhu cầu nguồn lực"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Theo dõi tiến độ và lịch trình của dự án"
+    },
+    {
+      "id": 79,
+      "chapter": "Chương 3",
+      "question": "Quy trình lập kế hoạch dự án gồm bao nhiêu bước?",
+      "options": {
+        "A": "4 bước",
+        "B": "5 bước",
+        "C": "6 bước",
+        "D": "7 bước"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 6 bước"
+    },
+    {
+      "id": 80,
+      "chapter": "Chương 3",
+      "question": "Kế hoạch nào tập trung vào việc dự tính tổng vốn đầu tư, chi phí cho các công việc, khoản mục và hạng mục công việc?",
+      "options": {
+        "A": "Kế hoạch chi phí",
+        "B": "Kế hoạch nhân lực",
+        "C": "Kế hoạch tổng thể",
+        "D": "Kế hoạch quản lý chất lượng"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Kế hoạch chi phí"
+    },
+    {
+      "id": 81,
+      "chapter": "Chương 3",
+      "question": "Quá trình lập kế hoạch dự án giúp ích cho việc:",
+      "options": {
+        "A": "Đưa ra quyết định về nhân sự",
+        "B": "Đánh giá hiệu suất của dự án",
+        "C": "Định hướng và kiểm soát công việc",
+        "D": "Tăng cường sự hài lòng của khách hàng"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Định hướng và kiểm soát công việc"
+    },
+    {
+      "id": 82,
+      "chapter": "Chương 3",
+      "question": "Bước “Xác lập mục tiêu dự án” cần hiểu đối tượng nào?",
+      "options": {
+        "A": "Danh sách nhiệm vụ",
+        "B": "Thời gian bắt đầu và kết thúc",
+        "C": "Tài chính",
+        "D": "Khách hàng, người dùng sp, lãnh đạo"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Khách hàng, người dùng sp, lãnh đạo"
+    },
+    {
+      "id": 83,
+      "chapter": "Chương 3",
+      "question": "Kế hoạch nào dưới đây có thể giúp giảm thiểu sự lãng phí nguồn lực và thời gian bằng cách đảm bảo các nguồn lực được phân phối hợp lý và theo tiến độ?",
+      "options": {
+        "A": "Kế hoạch quản lý chất lượng",
+        "B": "Kế hoạch thời gian",
+        "C": "Kế hoạch phân phối nguồn lực",
+        "D": "Kế hoạch nhân lực"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Kế hoạch phân phối nguồn lực"
+    },
+    {
+      "id": 84,
+      "chapter": "Chương 3",
+      "question": "Để mô tả mối quan hệ logic giữa các công việc trong dự án, phương pháp nào sau đây được sử dụng?",
+      "options": {
+        "A": "Phân tích dòng tiền",
+        "B": "Sơ đồ GANTT",
+        "C": "Sơ đồ phân chia công việc (WBS)",
+        "D": "Sơ đồ theo thứ tự công việc (AON)"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Sơ đồ theo thứ tự công việc (AON)"
+    },
+    {
+      "id": 85,
+      "chapter": "Chương 3",
+      "question": "Khi lập kế hoạch nhân lực cho dự án, yếu tố nào KHÔNG được xem xét?",
+      "options": {
+        "A": "Nhu cầu nhân lực theo từng giai đoạn",
+        "B": "Các yêu cầu về kỹ năng và đào tạo",
+        "C": "Ngân sách dự toán chi phí cho các hoạt động",
+        "D": "Kế hoạch tiền lương và tiền công"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Ngân sách dự toán chi phí cho các hoạt động"
+    },
+    {
+      "id": 86,
+      "chapter": "Chương 3",
+      "question": "Nội dung nào dưới đây không phải là phần của kế hoạch chi phí?",
+      "options": {
+        "A": "Dự kiến tổng nhu cầu vốn đầu tư",
+        "B": "Kế hoạch huy động vốn trong từng thời kỳ",
+        "C": "Xác định hình thức tổ chức quản lý dự án",
+        "D": "Kế hoạch phân bổ ngân sách cho các khoản mục chi phí"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Xác định hình thức tổ chức quản lý dự án"
+    },
+    {
+      "id": 87,
+      "chapter": "Chương 3",
+      "question": "Lập kế hoạch dự án là việc tổ chức dự án theo một quy trình ......., xác định mục tiêu của dự án và cụ thể hóa thành các công việc cần làm, các biện pháp, các nguồn lực và thời gian cần thiết nhằm hoàn thành tốt các mục tiêu của dự án.",
+      "options": {
+        "A": "Logic",
+        "B": "Linh hoạt",
+        "C": "Ngẫu nhiên",
+        "D": "Cụ thể"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Logic"
+    },
+    {
+      "id": 88,
+      "chapter": "Chương 3",
+      "question": "Hãy sắp xếp các bước sau theo đúng thứ tự trong quy trình lập kế hoạch dự án:\\n1: Xác lập mục tiêu dự án\\n2: Xây dựng sơ đồ kế hoạch dự án\\n3: Phát triển kế hoạch\\n4: Lập tiến độ thực hiện dự án\\n5: Lập kế hoạch kiểm soát và BC\\n6: Dự toán CP và phân bổ NL",
+      "options": {
+        "A": "1-2-3-4-5-6",
+        "B": "1-3-2-4-6-5",
+        "C": "1-3-2-4-6-5",
+        "D": "1-2-4-3-5-6"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. 1-3-2-4-6-5"
+    },
+    {
+      "id": 89,
+      "chapter": "Chương 3",
+      "question": "Lập kế hoạch dự án gồm mấy nội dung?",
+      "options": {
+        "A": "7",
+        "B": "8",
+        "C": "9",
+        "D": "10"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. 10"
+    },
+    {
+      "id": 90,
+      "chapter": "Chương 3",
+      "question": "Kế hoạch quản lý rủi ro bao gồm những gì?",
+      "options": {
+        "A": "Xác định các loại rủi ro tiềm tàng",
+        "B": "Dự tính phương pháp phòng ngừa",
+        "C": "Xử lý rủi ro",
+        "D": "Tất cả các yếu tố trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả các yếu tố trên"
+    },
+    {
+      "id": 91,
+      "chapter": "Chương 3",
+      "question": "Đâu là kế hoạch dự án?",
+      "options": {
+        "A": "Kế hoạch truyền thông",
+        "B": "Kế hoạch không gian",
+        "C": "Kế hoạch thời gian",
+        "D": "Kế hoạch giai đoạn"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Kế hoạch thời gian"
+    },
+    {
+      "id": 92,
+      "chapter": "Chương 3",
+      "question": "Quy trình lập kế hoạch dự án gồm mấy bước?",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 6"
+    },
+    {
+      "id": 93,
+      "chapter": "Chương 3",
+      "question": "Trong quá trình lập kế hoạch dự án, WBS (Work Breakdown Structure) có vai trò gì?",
+      "options": {
+        "A": "Là công cụ để giám sát chi phí dự án.",
+        "B": "Là phương pháp giúp chia nhỏ dự án thành các công việc cụ thể để quản lý dễ dàng hơn.",
+        "C": "Là kế hoạch dự phòng cho các rủi ro có thể xảy ra.",
+        "D": "Là lịch trình chính để kiểm soát tiến độ dự án."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Là phương pháp giúp chia nhỏ dự án thành các công việc cụ thể để quản lý dễ dàng hơn."
+    },
+    {
+      "id": 94,
+      "chapter": "Chương 3",
+      "question": "Kế hoạch tổng thể của một dự án thường bao gồm những yếu tố nào?",
+      "options": {
+        "A": "Mục tiêu, nhân sự, kinh phí, nguồn lực",
+        "B": "Chỉ tiêu đánh giá, rủi ro, đối thủ cạnh tranh",
+        "C": "Chi phí, thời gian, sản phẩm cuối cùng",
+        "D": "Tất cả các yếu tố trên"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Mục tiêu, nhân sự, kinh phí, nguồn lực"
+    },
+    {
+      "id": 95,
+      "chapter": "Chương 3",
+      "question": "Có mấy bước lập kế hoạch dự án ?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. 6"
+    },
+    {
+      "id": 96,
+      "chapter": "Chương 3",
+      "question": "Dự án D có tổng khối lượng công việc là 5000 giờ. Nếu tỷ lệ hoàn thành sau 6 tháng là 40%, và tổng thời gian dự kiến là 12 tháng, hãy tính số giờ cần hoàn thành mỗi tháng trong 6 tháng còn lại để hoàn thành đúng hạn.",
+      "options": {
+        "A": "600 giờ",
+        "B": "700 giờ",
+        "C": "500 giờ",
+        "D": "900 giờ"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 500 giờ"
+    },
+    {
+      "id": 97,
+      "chapter": "Chương 3",
+      "question": "Lập kế hoạch dự án bao gồm?",
+      "options": {
+        "A": "Xác định nguồn lực và thời gian cần thiết cho từng công việc.",
+        "B": "Xác định cách thức, phân bổ thực hiện từng công việc",
+        "C": "Xác định quy trình logic các công việc cần phải thực hiện",
+        "D": "Xác định mục tiêu và cụ thể hóa thành các công việc dự kiến làm"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Xác định nguồn lực và thời gian cần thiết cho từng công việc."
+    },
+    {
+      "id": 98,
+      "chapter": "Chương 3",
+      "question": "Phát biểu nào sau đây đúng về nội dung B2: “Phát triển kế hoạch”",
+      "options": {
+        "A": "Xác định các nhiệm vụ chính để thực hiện mục tiêu.",
+        "B": "Xác định quy trình cần thiết của các hoạt động",
+        "C": "Xác định các hoạt động quan trọng và chi phí rủi ro",
+        "D": "Xác định sự cân đối giữa thời gian và chi phí"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Xác định các nhiệm vụ chính để thực hiện mục tiêu."
+    },
+    {
+      "id": 99,
+      "chapter": "Chương 3",
+      "question": "Đâu không phải tác dụng của lập kế hoạch dự án?",
+      "options": {
+        "A": "Kế hoạch nhân lực và kế hoạch khác có liên quan là cơ sở tuyển dụng, đào tạo, bố trí nhân lực cho dự án",
+        "B": "Kế hoạch chi phí là căn cứ cơ bản để dự toán tổng vốn đầu tư cho dự án và chi phí cho từng công việc",
+        "C": "Kế hoạch phân phối nguồn lực và kế hoạch thời gian là cơ sở quan trọng để điều phối nguồn lực và quản lý tiến độ các công việc của dự án",
+        "D": "Lập kế hoạch dự án chính xác làm tăng rủi ro của dự án, lãng phí nguồn lực"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Lập kế hoạch dự án chính xác làm tăng rủi ro của dự án, lãng phí nguồn lực"
+    },
+    {
+      "id": 100,
+      "chapter": "Chương 3",
+      "question": "Đâu không phải nội dung của lập kế hoạch dự án?",
+      "options": {
+        "A": "Các mục tiêu của dự án",
+        "B": "Khía cạnh kĩ thuật và quản trị của dự án",
+        "C": "Vấn đề hợp đồng của dự án",
+        "D": "Kiểm soát và báo cáo"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Kiểm soát và báo cáo"
+    },
+    {
+      "id": 101,
+      "chapter": "Chương 3",
+      "question": "Cấu trúc phân tách công việc (WBS) là gì?",
+      "options": {
+        "A": "Công cụ quản lý quan trọng để phân chia dự án thành các nhóm nhiệm vụ và công việc cụ thể",
+        "B": "Phương pháp phân tích thị trường",
+        "C": "Công cụ đánh giá tài chính",
+        "D": "Một phương pháp phân tích rủi ro"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Công cụ quản lý quan trọng để phân chia dự án thành các nhóm nhiệm vụ và công việc cụ thể"
+    },
+    {
+      "id": 102,
+      "chapter": "Chương 3",
+      "question": "Tác dụng của WBS đối với nhà quản lý dự án là gì?",
+      "options": {
+        "A": "Giúp lập kế hoạch công việc và dự toán ngân sách",
+        "B": "Phân tích rủi ro của dự án",
+        "C": "Chỉ rõ các kênh phân phối sản phẩm",
+        "D": "Đánh giá hiệu quả kinh tế của dự án"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Giúp lập kế hoạch công việc và dự toán ngân sách"
+    },
+    {
+      "id": 103,
+      "chapter": "Chương 3",
+      "question": "Dự án A có tổng chi phí đầu tư là 100 tỷ đồng, dự kiến hoàn thành trong 12 tháng. Nếu sau 6 tháng dự án hoàn thành 40% công việc với chi phí là 50 tỷ đồng, chi phí cần thiết để hoàn thành phần còn lại là bao nhiêu?",
+      "options": {
+        "A": "60 tỷ đồng",
+        "B": "50 tỷ đồng",
+        "C": "40 tỷ đồng",
+        "D": "70 tỷ đồng"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 60 tỷ đồng"
+    },
+    {
+      "id": 104,
+      "chapter": "Chương 3",
+      "question": "Dự án C có tổng vốn đầu tư ban đầu là 500 tỷ đồng. Nếu sau 3 năm, lợi nhuận đạt 600 tỷ đồng, tính tỷ suất sinh lời nội bộ IRR của dự án",
+      "options": {
+        "A": "20%",
+        "B": "30%",
+        "C": "25%",
+        "D": "35%"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 25%"
+    },
+    {
+      "id": 105,
+      "chapter": "Chương 4",
+      "question": "Quản lý thời gian và tiến độ dự án có ý nghĩa gì?",
+      "options": {
+        "A": "Giám sát chi phí và nguồn lực dự án",
+        "B": "Hoàn thành dự án trong phạm vi ngân sách và thời gian",
+        "C": "Đảm bảo chất lượng dự án đạt yêu cầu",
+        "D": "Cả ba đáp án trên đều đúng"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Cả ba đáp án trên đều đúng"
+    },
+    {
+      "id": 106,
+      "chapter": "Chương 4",
+      "question": "Đâu là phát biểu đúng về trình bày sơ đồ mạng theo phương pháp AOA (Activity on Arrow)?",
+      "options": {
+        "A": "Công việc được thể hiện trên các nút trên các nút",
+        "B": "Sơ đồ được lập từ trái sang phải",
+        "C": "Có thể xuất hiện đường cụt trên sơ đồ trong một số trường hợp nhất định",
+        "D": "Trên mỗi mũi tên chỉ thể hiện tên công việc"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Sơ đồ được lập từ trái sang phải"
+    },
+    {
+      "id": 107,
+      "chapter": "Chương 4",
+      "question": "Các công việc nằm trên đường găng được gọi là?",
+      "options": {
+        "A": "Công việc đường",
+        "B": "Đường có các công việc găng",
+        "C": "Đường công việc",
+        "D": "Công việc găng"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Công việc găng"
+    },
+    {
+      "id": 108,
+      "chapter": "Chương 4",
+      "question": "Biến giả trong sơ đồ PERT có tác dụng gì?",
+      "options": {
+        "A": "Xác định thời gian của công việc",
+        "B": "Biểu thị mối quan hệ giữa các công việc",
+        "C": "Giúp ước tính chi phí",
+        "D": "Xác định đường găng"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Biểu thị mối quan hệ giữa các công việc"
+    },
+    {
+      "id": 109,
+      "chapter": "Chương 4",
+      "question": "Chọn phát biểu ĐÚNG NHẤT khi xây dựng mạng công việc theo phương pháp AON?",
+      "options": {
+        "A": "Các công việc được trình bày trong một nút (hình chữ nhật)",
+        "B": "Những thông tin trong nút gồm tên công việc, ngày bắt đầu, ngày kết thúc và độ dài thời gian thực hiện công việc",
+        "C": "Các mũi tên chỉ thuần túy xác định thứ tự trước sau của các công việc",
+        "D": "Cả A, B và C đều đúng"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Cả A, B và C đều đúng"
+    },
+    {
+      "id": 110,
+      "chapter": "Chương 4",
+      "question": "Đâu không phải là quy tắc và quy ước khi vẽ sơ đồ mạng lưới PERT/CPM?",
+      "options": {
+        "A": "Tất cả các mũi tên biểu diễn công việc và mối liên hệ phải đều hướng từ trái sang phải",
+        "B": "Bắt đầu bằng 1 sự kiện và cũng chỉ kết thúc bằng 1 sự kiện",
+        "C": "Bắt đầu bằng 1 sự kiện (sự kiện đầu) và kết thúc bằng nhiều sự kiện",
+        "D": "Để thực hiện những công việc song song có tính chất khác nhau thì phải đưa thêm vào sơ đồ mạng công việc giả (biến giả)"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Bắt đầu bằng 1 sự kiện (sự kiện đầu) và kết thúc bằng nhiều sự kiện"
+    },
+    {
+      "id": 111,
+      "chapter": "Chương 4",
+      "question": "Tìm câu sai:",
+      "options": {
+        "A": "Trong sơ đồ PERT chiều dài của mũi tên không cần phải tỷ lệ với độ lớn thời gian của công việc dự án",
+        "B": "Trong sơ đồ PERT có công việc thật và có thể có công việc ảo",
+        "C": "Đường có thời gian dài nhất trong sơ đồ PERT được gọi là đường găng",
+        "D": "Đường có thời gian ngắn nhất trong sơ đồ PERT được gọi là đường găng"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Đường có thời gian ngắn nhất trong sơ đồ PERT được gọi là đường găng"
+    },
+    {
+      "id": 112,
+      "chapter": "Chương 4",
+      "question": "Nếu công việc A phải hoàn thành trước khi bắt đầu công việc B, và công việc B phải hoàn thành trước khi bắt đầu công việc C, thời gian hoàn thành dự án là bao nhiêu nếu thời gian hoàn thành của các công việc A, B, và C lần lượt là 2, 3, và 4 tuần?",
+      "options": {
+        "A": "9 tuần",
+        "B": "5 tuần",
+        "C": "4 tuần",
+        "D": "2 tuần"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 9 tuần"
+    },
+    {
+      "id": 113,
+      "chapter": "Chương 4",
+      "question": "Trong một dự án, công việc A có thời gian hoàn thành là 3 tuần, công việc B là 4 tuần, và công việc C là 2 tuần. Nếu công việc A và B có thể thực hiện đồng thời, nhưng phải hoàn thành trước khi bắt đầu công việc C, thời gian dự trữ của công việc B là bao nhiêu?",
+      "options": {
+        "A": "0 tuần",
+        "B": "1 tuần",
+        "C": "2 tuần",
+        "D": "3 tuần"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 0 tuần"
+    },
+    {
+      "id": 114,
+      "chapter": "Chương 4",
+      "question": "Trong phương pháp AOA, công việc được đặt trên:",
+      "options": {
+        "A": "Nút",
+        "B": "Đường găng",
+        "C": "Mũi tên",
+        "D": "Biến giả"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Mũi tên"
+    },
+    {
+      "id": 115,
+      "chapter": "Chương 4",
+      "question": "Phương pháp AON biểu diễn công việc bằng:",
+      "options": {
+        "A": "Mũi tên",
+        "B": "Nút",
+        "C": "Đường găng",
+        "D": "Biểu đồ"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Nút"
+    },
+    {
+      "id": 116,
+      "chapter": "Chương 4",
+      "question": "Đường găng trong quản lý dự án là gì?",
+      "options": {
+        "A": "Đường nối các công việc quan trọng",
+        "B": "Đường có tổng thời gian dài nhất",
+        "C": "Đường có nhiều nguồn lực nhất",
+        "D": "Đường có tổng chi phí cao nhất"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Đường có tổng thời gian dài nhất"
+    },
+    {
+      "id": 117,
+      "chapter": "Chương 4",
+      "question": "Đường găng là đường qua các sự kiện có thời gian dự trữ bằng:",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "0",
+        "D": "3"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 0"
+    },
+    {
+      "id": 118,
+      "chapter": "Chương 4",
+      "question": "Các thông số thời gian của công việc bao gồm:",
+      "options": {
+        "A": "Thời gian sớm nhất, thời gian muộn nhất",
+        "B": "Thời gian thực hiện, chi phí dự án",
+        "C": "Chi phí tối thiểu, chi phí tối đa",
+        "D": "Thời gian hoàn thành và chất lượng dự án"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Thời gian sớm nhất, thời gian muộn nhất"
+    },
+    {
+      "id": 119,
+      "chapter": "Chương 4",
+      "question": "Thời gian dự trữ là:",
+      "options": {
+        "A": "Thời gian để hoàn thành dự án",
+        "B": "Khoảng thời gian có thể trì hoãn một công việc mà không ảnh hưởng đến dự án",
+        "C": "Thời gian dự tính để hoàn thành các công việc dự án",
+        "D": "Thời gian để kiểm soát dự án"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Khoảng thời gian có thể trì hoãn một công việc mà không ảnh hưởng đến dự án"
+    },
+    {
+      "id": 120,
+      "chapter": "Chương 4",
+      "question": "Biến giả trong sơ đồ PERT có tác dụng gì?",
+      "options": {
+        "A": "Đại diện cho công việc thực sự yêu cầu thời gian và chi phí",
+        "B": "Chỉ rõ mối quan hệ giữa các công việc và sự kiện",
+        "C": "Tăng cường hiệu quả dự án",
+        "D": "Giảm thiểu chi phí của dự án"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Chỉ rõ mối quan hệ giữa các công việc và sự kiện"
+    },
+    {
+      "id": 121,
+      "chapter": "Chương 4",
+      "question": "Quản lý chi phí trong dự án yêu cầu:",
+      "options": {
+        "A": "Giám sát chi phí cho từng công việc và toàn bộ dự án",
+        "B": "Tập trung vào việc giảm thiểu chi phí không quan trọng",
+        "C": "Không quan tâm đến nguồn lực nhân sự",
+        "D": "Đảm bảo không vượt quá ngân sách."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Giám sát chi phí cho từng công việc và toàn bộ dự án"
+    },
+    {
+      "id": 122,
+      "chapter": "Chương 4",
+      "question": "Một công việc có thời gian cực tiểu là 3 ngày, thời gian cực đại là 9 ngày và thời gian trung bình là 6 ngày. Theo phương pháp PERT, thời gian trung bình để hoàn thành công việc là:",
+      "options": {
+        "A": "6.5 ngày",
+        "B": "7.5 ngày",
+        "C": "6 ngày",
+        "D": "5 ngày"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 6 ngày"
+    },
+    {
+      "id": 123,
+      "chapter": "Chương 4",
+      "question": "Một dự án có các công việc A, B và C với thời gian thực hiện tương ứng là 4 ngày, 3 ngày và 2 ngày. Công việc B và C có thể thực hiện song song ngay sau khi A hoàn thành. Vậy thời gian hoàn thành dự án là:",
+      "options": {
+        "A": "7 ngày",
+        "B": "9 ngày",
+        "C": "6 ngày",
+        "D": "5 ngày"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 7 ngày"
+    },
+    {
+      "id": 124,
+      "chapter": "Chương 5",
+      "question": "Dự toán chi phí công việc của dự án là gì?",
+      "options": {
+        "A": "Tính toán tổng chi phí cho toàn bộ dự án",
+        "B": "Xác định ngân sách cho từng giai đoạn của dự án",
+        "C": "Ước lượng chi phí cho từng công việc cụ thể trong dự án",
+        "D": "Dự báo doanh thu dự án"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Ước lượng chi phí cho từng công việc cụ thể trong dự án"
+    },
+    {
+      "id": 125,
+      "chapter": "Chương 5",
+      "question": "Trong giai đoạn xác định tổng dự án, yếu tố nào sau đây không thuộc về quá trình lập kế hoạch?",
+      "options": {
+        "A": "Xác định mục tiêu dự án",
+        "B": "Lập ngân sách",
+        "C": "Đánh giá rủi ro",
+        "D": "Thực hiện dự án"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Thực hiện dự án"
+    },
+    {
+      "id": 126,
+      "chapter": "Chương 5",
+      "question": "Mối quan hệ giữa thời gian và chi phí trong một dự án thường có dạng nào sau đây?",
+      "options": {
+        "A": "Chi phí luôn tăng theo thời gian",
+        "B": "Thời gian càng ngắn, chi phí càng cao",
+        "C": "Chi phí không đổi khi thời gian thay đổi",
+        "D": "Thời gian càng dài, chi phí càng thấp"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Thời gian càng ngắn, chi phí càng cao"
+    },
+    {
+      "id": 127,
+      "chapter": "Chương 5",
+      "question": "Chi phí để rút ngắn thời gian của một hoạt động là $5,000 cho mỗi tháng. Nếu bạn muốn rút ngắn thời gian hoạt động đó 3 tháng, tổng chi phí sẽ là:",
+      "options": {
+        "A": "$5,000",
+        "B": "$10,000",
+        "C": "$15,000",
+        "D": "$20,000"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. $15,000"
+    },
+    {
+      "id": 128,
+      "chapter": "Chương 5",
+      "question": "Nếu bạn có 10 công việc trong dự án và mỗi công việc có chi phí là 5 triệu đồng, chi phí tổng của dự án là bao nhiêu?",
+      "options": {
+        "A": "50 triệu đồng",
+        "B": "40 triệu đồng",
+        "C": "30 triệu đồng",
+        "D": "20 triệu đồng"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 50 triệu đồng"
+    },
+    {
+      "id": 129,
+      "chapter": "Chương 5",
+      "question": "Phương pháp dự toán nào kết hợp cả ước tính tổng chi phí trước, sau đó kiểm tra lại bằng cách phân tích chi phí chi tiết cho một số hạng mục?",
+      "options": {
+        "A": "Phương pháp từ trên xuống",
+        "B": "Phương pháp từ dưới lên",
+        "C": "Phương pháp kết hợp",
+        "D": "Phương pháp theo khoản mục và công việc"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Phương pháp kết hợp"
+    },
+    {
+      "id": 130,
+      "chapter": "Chương 5",
+      "question": "Nhược điểm chính của phương pháp dự toán ngân sách từ trên xuống là gì?",
+      "options": {
+        "A": "Khó kiểm soát chi phí chi tiết từng hạng mục",
+        "B": "Tốn thời gian",
+        "C": "Độ chính xác cao nhưng cần nhiều nguồn lực",
+        "D": "Phù hợp cho các dự án phức tạp"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Khó kiểm soát chi phí chi tiết từng hạng mục"
+    },
+    {
+      "id": 131,
+      "chapter": "Chương 5",
+      "question": "Khi nào là thời điểm lý tưởng để lập ngân sách cho một dự án?",
+      "options": {
+        "A": "Ngay sau khi dự án bắt đầu",
+        "B": "Trước khi dự án bắt đầu",
+        "C": "Trong quá trình thực hiện dự án",
+        "D": "Sau khi dự án kết thúc"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Trước khi dự án bắt đầu"
+    },
+    {
+      "id": 132,
+      "chapter": "Chương 5",
+      "question": "Khi nào là thời điểm thích hợp để cập nhật ngân sách dự án?",
+      "options": {
+        "A": "Sau khi dự án bắt đầu",
+        "B": "Định kỳ hàng tháng",
+        "C": "Khi có sự thay đổi trong phạm vi dự án hoặc các yếu tố quan trọng",
+        "D": "Khi dự án gần kết thúc"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Khi có sự thay đổi trong phạm vi dự án hoặc các yếu tố quan trọng"
+    },
+    {
+      "id": 133,
+      "chapter": "Chương 5",
+      "question": "Phân loại dự toán ngân sách dự án theo thời gian, ngân sách nào xác định tổng ngân sách cho toàn bộ vòng đời của dự án?",
+      "options": {
+        "A": "Ngân sách dài hạn",
+        "B": "Ngân sách ngắn hạn",
+        "C": "Ngân sách dự án",
+        "D": "Ngân sách cho các hoạt động không theo dự án"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Ngân sách dài hạn"
+    },
+    {
+      "id": 134,
+      "chapter": "Chương 5",
+      "question": "Có mấy phương pháp dự toán ngân sách?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 5"
+    },
+    {
+      "id": 135,
+      "chapter": "Chương 5",
+      "question": "Mục tiêu chính của quản lý chi phí dự án là gì?",
+      "options": {
+        "A": "Đảm bảo cho dự án hoàn tất với chi phí ít nhất có thể",
+        "B": "Đảm bảo cho dự án hoàn tất trong ngân sách cho phép",
+        "C": "Cung cấp thông tin chi phí trung thực và chính xác về các dự án",
+        "D": "Để đảm bảo rằng tiền của 1 tổ chức đang được sử dụng 1 cách khôn ngoan"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Đảm bảo cho dự án hoàn tất trong ngân sách cho phép"
+    },
+    {
+      "id": 136,
+      "chapter": "Chương 5",
+      "question": "Mối quan hệ thường xảy ra nhất giữa chi phí với tiến độ thực hiện dự án là:",
+      "options": {
+        "A": "Vượt chi ngân sách dự trù, tiến độ nhanh",
+        "B": "Vượt chi ngân sách đã dự trù, chậm tiến độ",
+        "C": "Chi dưới ngân sách đã dự trù, chậm tiến độ",
+        "D": "Chi dưới ngân sách đã dự trù, vượt tiến độ"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Vượt chi ngân sách đã dự trù, chậm tiến độ"
+    },
+    {
+      "id": 137,
+      "chapter": "Chương 5",
+      "question": "Phương án đẩy nhanh dự án thường tập trung vào mục tiêu nào sau đây?",
+      "options": {
+        "A": "Giảm số lượng lao động",
+        "B": "Tăng tốc độ thực hiện dự án",
+        "C": "Giảm chi phí nguyên vật liệu",
+        "D": "Kéo dài thời gian hoàn thành dự án"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Tăng tốc độ thực hiện dự án"
+    },
+    {
+      "id": 138,
+      "chapter": "Chương 5",
+      "question": "Cùng bảng mô tả công việc như trên, anh/chị hãy xác định tổng chi phí của dự án bình thường là?",
+      "options": {
+        "A": "1.065.000 đồng",
+        "B": "1.274.000 đồng",
+        "C": "1.056.000 đồng",
+        "D": "1.427.000 đồng"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 1.065.000 đồng"
+    },
+    {
+      "id": 139,
+      "chapter": "Chương 5",
+      "question": "Với bảng mô tả dự án trên, đâu là chi phí biên lớn nhất trong tập hợp những công việc găng?",
+      "options": {
+        "A": "Công việc G",
+        "B": "Công việc K",
+        "C": "Công việc B",
+        "D": "Công việc I"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Công việc K"
+    },
+    {
+      "id": 140,
+      "chapter": "Chương 5",
+      "question": "Cùng bảng mô tả các công việc trên, anh/ chị hãy xác định được tổng chi phí tiết kiệm theo kế hoạch giảm tổng chi phí của phương án đẩy nhanh?",
+      "options": {
+        "A": "60 triệu",
+        "B": "90 triệu",
+        "C": "78 triệu",
+        "D": "102 triệu"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 78 triệu"
+    },
+    {
+      "id": 141,
+      "chapter": "Chương 5",
+      "question": "Đường găng mới xuất hiện sau khi thực hiện kế hoạch giảm tổng chi phí của phương án đẩy nhanh:",
+      "options": {
+        "A": "B - E - G - H",
+        "B": "B - E - G - I - K",
+        "C": "A - C - G - H",
+        "D": "B - E - F - K"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. B - E - G - I - K"
+    },
+    {
+      "id": 142,
+      "chapter": "Chương 6",
+      "question": "Điền vào chỗ còn trống về khái niệm của phân phối nguồn lực dự án: Phân phối nguồn lực dự án là việc,....... nguồn lực dự án một cách hợp lý để hoàn thành các ... dự án",
+      "options": {
+        "A": "Bố trí, sắp xếp.....mục tiêu",
+        "B": "Lập kế hoạch, triển khai..... để xuất",
+        "C": "Bố trí, hoàn thành....... giai đoạn dự án",
+        "D": "Sắp xếp, chọn lọc.....mục tiêu"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Bố trí, sắp xếp.....mục tiêu"
+    },
+    {
+      "id": 143,
+      "chapter": "Chương 6",
+      "question": "Các ý sau ý nào KHÔNG phải là kết cấu của biểu đồ phụ tải nguồn lực:",
+      "options": {
+        "A": "Trục tung phản ánh số lượng nguồn lực (lao động hoặc máy móc thiết bị),",
+        "B": "Trục hoành phản ánh thời gian của dự án",
+        "C": "Các công việc được sắp xếp theo đúng mối quan hệ trước sau và phản ánh đúng về nhu cầu nguồn lực cũng như thời gian thực hiện.",
+        "D": "Các công việc không găng được sắp xếp hợp lý trong phạm vi thời gian dự trữ"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Các công việc không găng được sắp xếp hợp lý trong phạm vi thời gian dự trữ"
+    },
+    {
+      "id": 144,
+      "chapter": "Chương 6",
+      "question": "Có mấy công cụ được sử dụng để phân phối nguồn lực",
+      "options": {
+        "A": "2",
+        "B": "5",
+        "C": "3",
+        "D": "6"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 2"
+    },
+    {
+      "id": 145,
+      "chapter": "Chương 6",
+      "question": "Trục tung của biểu đồ phụ tải nguồn lực KHÔNG phản ánh cái gì?",
+      "options": {
+        "A": "Lao động",
+        "B": "Nguyên vật liệu",
+        "C": "Máy móc thiết bị",
+        "D": "Thời gian"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Thời gian"
+    },
+    {
+      "id": 146,
+      "chapter": "Chương 6",
+      "question": "Có bao nhiêu vấn đề cần giải quyết bài toán về phân phối nguồn lực",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 2"
+    },
+    {
+      "id": 147,
+      "chapter": "Chương 6",
+      "question": "Có bao nhiêu cách phân loại nguồn lực?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. 4"
+    },
+    {
+      "id": 148,
+      "chapter": "Chương 6",
+      "question": "Có mấy bước để xây dựng biểu đồ phụ tải nguồn lực?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "5",
+        "D": "4"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. 4"
+    },
+    {
+      "id": 149,
+      "chapter": "Chương 6",
+      "question": "Điều chỉnh đều nguồn lực trong quản lý dự án là gì?",
+      "options": {
+        "A": "Giảm bớt số lượng nguồn lực cần sử dụng để tiết kiệm chi phí cho dự án.",
+        "B": "Dịch chuyển công việc trong phạm vi thời gian dự trữ nhằm mục tiêu không làm thay đổi ngày kết thúc dự án và tối thiểu hóa sự khác biệt về cầu nguồn lực giữa các thời kỳ.",
+        "C": "Tăng cường sử dụng nguồn lực tại các thời điểm cần thiết để đẩy nhanh tiến độ dự án.",
+        "D": "Thay đổi thời gian hoàn thành dự án để tối ưu hóa việc sử dụng nguồn lực trong từng giai đoạn."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Dịch chuyển công việc trong phạm vi thời gian dự trữ nhằm mục tiêu không làm thay đổi ngày kết thúc dự án và tối thiểu hóa sự khác biệt về cầu nguồn lực giữa các thời kỳ."
+    },
+    {
+      "id": 150,
+      "chapter": "Chương 6",
+      "question": "Điều phối nguồn lực trên cơ sở thời gian dự trữ tối thiểu gồm bao nhiêu bước?",
+      "options": {
+        "A": "4 bước",
+        "B": "2 bước",
+        "C": "3 bước",
+        "D": "5 bước"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 4 bước"
+    },
+    {
+      "id": 151,
+      "chapter": "Chương 6",
+      "question": "Nội dung nào KHÔNG thuộc quy trình xây dựng Biểu đồ phụ tải nguồn lực?",
+      "options": {
+        "A": "Xác định cơ cấu phân chia công việc",
+        "B": "Vẽ biểu đồ phụ tải nguồn lực",
+        "C": "Lập biểu đồ PERT/CPM điều chỉnh",
+        "D": "Xây dựng sơ đồ PERT/CPM"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Xác định cơ cấu phân chia công việc"
+    },
+    {
+      "id": 152,
+      "chapter": "Chương 6",
+      "question": "Tìm câu sai trong các câu sau:",
+      "options": {
+        "A": "Phương pháp sơ đồ GANTT chỉ ra được phương thức điều hòa nguồn lực",
+        "B": "Phương pháp sơ đồ GANTT không chỉ ra được làm thế nào để san bằng sự căng thẳng hay nhàn rỗi trong huy động nguồn lực",
+        "C": "Phương pháp sơ đồ GANTT đơn giản, dễ thực hiện",
+        "D": "Phương pháp sơ đồ GANTT áp dụng cho những dự án quy mô nhỏ"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Phương pháp sơ đồ GANTT chỉ ra được phương thức điều hòa nguồn lực"
+    },
+    {
+      "id": 153,
+      "chapter": "Chương 6",
+      "question": "Quy trình bố trí nguồn lực trên sơ đồ GANTT, có:",
+      "options": {
+        "A": "2 bước",
+        "B": "3 bước",
+        "C": "4 bước",
+        "D": "5 bước"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. 3 bước"
+    },
+    {
+      "id": 154,
+      "chapter": "Chương 6",
+      "question": "Tác dụng nào của phân phối nguồn lực dự án giúp đảm bảo rằng dự án không chỉ hoàn thành đúng hạn mà còn trong ngân sách cho phép?",
+      "options": {
+        "A": "Huy động và sử dụng hiệu quả nguồn lực lao động, máy móc thiết bị của đơn vị.",
+        "B": "Góp phần giảm thiểu rủi ro, tiết kiệm chi phí và đảm bảo dự án hoàn thành đúng tiến độ.",
+        "C": "Hạn chế sự biến động về nhu cầu nguồn lực trong quá trình triển khai dự án.",
+        "D": "Có kế hoạch trong đào tạo, tuyển dụng, bố trí lao động cũng như máy móc thiết bị."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Góp phần giảm thiểu rủi ro, tiết kiệm chi phí và đảm bảo dự án hoàn thành đúng tiến độ."
+    },
+    {
+      "id": 155,
+      "chapter": "Chương 6",
+      "question": "Trong phân phối nguồn lực dự án, bài toán nào yêu cầu nhà quản lý phải đảm bảo nhu cầu nguồn lực ổn định trong suốt quá trình thực hiện?",
+      "options": {
+        "A": "Bố trí nguồn lực tối thiểu để hoàn thành dự án.",
+        "B": "Sắp xếp, bố trí nguồn lực ổn định.",
+        "C": "Bố trí nguồn lực hạn chế để hoàn thành dự án.",
+        "D": "Kết hợp các bài toán về chi phí."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Sắp xếp, bố trí nguồn lực ổn định."
+    },
+    {
+      "id": 156,
+      "chapter": "Chương 6",
+      "question": "Tại sao việc phân phối nguồn lực dự án lại cần thiết trong quá trình thực hiện?",
+      "options": {
+        "A": "Để giảm thiểu thời gian thực hiện dự án.",
+        "B": "Để đảm bảo nguồn lực được sắp xếp hợp lý nhằm hoàn thành các mục tiêu của dự án.",
+        "C": "Để tăng cường ngân sách cho dự án.",
+        "D": "Để đánh giá năng lực của nhân viên trong đơn vị."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Để đảm bảo nguồn lực được sắp xếp hợp lý nhằm hoàn thành các mục tiêu của dự án."
+    },
+    {
+      "id": 157,
+      "chapter": "Chương 6",
+      "question": "Có mấy cách phân loại nguồn lực?",
+      "options": {
+        "A": "1",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 4"
+    },
+    {
+      "id": 158,
+      "chapter": "Chương 6",
+      "question": "Đặc điểm nào sau đây của phân phối nguồn lực dự án thể hiện tính chủ quan của nhà quản lý?",
+      "options": {
+        "A": "Phân bổ nguồn lực theo yêu cầu của dự án",
+        "B": "Quyết định cách huy động và sắp xếp nguồn lực",
+        "C": "Đánh giá hiệu quả của nguồn lực",
+        "D": "Theo dõi tiến độ dự án"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Quyết định cách huy động và sắp xếp nguồn lực"
+    },
+    {
+      "id": 159,
+      "chapter": "Chương 6",
+      "question": "Điều hòa nguồn lực là phương pháp nhằm mục đích gì?",
+      "options": {
+        "A": "Tăng chi phí dự án",
+        "B": "Giảm số lượng công việc",
+        "C": "Thay đổi thời gian thực hiện dự án",
+        "D": "Tối thiểu hóa sự khác biệt về nhu cầu nguồn lực giữa các giai đoạn"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tối thiểu hóa sự khác biệt về nhu cầu nguồn lực giữa các giai đoạn"
+    },
+    {
+      "id": 160,
+      "chapter": "Chương 6",
+      "question": "Nguyên tắc ưu tiên nào quyết định thời hạn thực hiện dự án?",
+      "options": {
+        "A": "Ưu tiên các công việc có thời gian thực hiện nhỏ nhất",
+        "B": "Ưu tiên các công việc có dự trữ thời gian nhỏ nhất",
+        "C": "Ưu tiên các công việc găng",
+        "D": "Ưu tiên các công việc theo ý muốn chủ quan"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Ưu tiên các công việc găng"
+    },
+    {
+      "id": 161,
+      "chapter": "Chương 6",
+      "question": "Biểu đồ phụ tải nguồn lực dùng để phản ánh điều gì?",
+      "options": {
+        "A": "Chi phí của dự án",
+        "B": "Số lượng từng loại nguồn lực cần thiết theo kế hoạch",
+        "C": "Thời gian hoàn thành dự án",
+        "D": "Đánh giá hiệu suất làm việc"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Số lượng từng loại nguồn lực cần thiết theo kế hoạch"
+    },
+    {
+      "id": 162,
+      "chapter": "Chương 6",
+      "question": "Phương pháp điều chỉnh đều nguồn lực cho phép dịch chuyển công việc trong phạm vi nào?",
+      "options": {
+        "A": "Thời gian thực hiện",
+        "B": "Thời gian khởi công",
+        "C": "Thời gian hoàn thành",
+        "D": "Thời gian dự trữ"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Thời gian dự trữ"
+    },
+    {
+      "id": 163,
+      "chapter": "Chương 6",
+      "question": "Sau khi điều chỉnh đều nguồn lực, phương pháp này giúp dự án giảm thiểu điều gì?",
+      "options": {
+        "A": "Mức dự trữ vật tư hàng hóa và chi phí nhân công",
+        "B": "Số lượng công việc cần thực hiện",
+        "C": "Thời gian hoàn thành dự án",
+        "D": "Sự hợp tác giữa các thành viên"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Mức dự trữ vật tư hàng hóa và chi phí nhân công"
+    },
+    {
+      "id": 164,
+      "chapter": "Chương 7",
+      "question": "Thế nào là quản lý chất lượng dự án?",
+      "options": {
+        "A": "Là tập hợp các hoạt động của chức năng quản lý, là một quá trình nhằm đảm bảo cho dự án thỏa mãn tốt nhất yêu cầu về chất lượng trong mối quan hệ mật thiết với tiến độ và doanh thu của dự án.",
+        "B": "Là sự đạt được và tuân thủ đúng những tiêu chuẩn, yêu cầu kinh tế kỹ thuật đã được thiết kế từ trước.",
+        "C": "Là xác định chất lượng như tổng thể các chi tiết nhỏ của một sản phẩm mà nó phải thoả mãn những quy định đã được đề ra.",
+        "D": "Là tập hợp các hoạt động của chức năng quản lý, là một quá trình nhằm đảm bảo cho dự án thỏa mãn tốt nhất yêu cầu về chất lượng trong mối quan hệ mật thiết với tiến độ và chi phí của dự án."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Là tập hợp các hoạt động của chức năng quản lý, là một quá trình nhằm đảm bảo cho dự án thỏa mãn tốt nhất yêu cầu về chất lượng trong mối quan hệ mật thiết với tiến độ và chi phí của dự án."
+    },
+    {
+      "id": 165,
+      "chapter": "Chương 7",
+      "question": "Đâu không phải là nội dung của quản trị chất lượng dự án?",
+      "options": {
+        "A": "Lập kế hoạch chất lượng",
+        "B": "Đảm bảo chất lượng",
+        "C": "Rả soát rủi ro",
+        "D": "Kiểm soát chất lượng"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Rả soát rủi ro"
+    },
+    {
+      "id": 166,
+      "chapter": "Chương 7",
+      "question": "Tác dụng của quản lý chất lượng dự án là?",
+      "options": {
+        "A": "Đáp ứng được những yêu cầu của chủ đầu tư, của những người hưởng lợi từ dự án.",
+        "B": "Là nhân tố quan trọng đảm bảo thắng lợi trong cạnh tranh, tăng thị phần cho doanh nghiệp.",
+        "C": "Nâng cao chất lượng, góp phần giảm chi phí sản xuất, tăng năng suất lao động, tăng thu nhập cho người lao động.",
+        "D": "Tất cả đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả đáp án trên"
+    },
+    {
+      "id": 167,
+      "chapter": "Chương 7",
+      "question": "Căn cứ nào sau đây không phải là căn cứ để lập kế hoạch chất lượng dự án?",
+      "options": {
+        "A": "Chính sách chất lượng của chủ đầu tư",
+        "B": "Phạm vi dự án",
+        "C": "Các yếu tố thuộc môi trường kinh doanh",
+        "D": "Kế hoạch tài chính của dự án"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Kế hoạch tài chính của dự án"
+    },
+    {
+      "id": 168,
+      "chapter": "Chương 7",
+      "question": "Nội dung nào sau đây không thuộc kế hoạch chất lượng dự án?",
+      "options": {
+        "A": "Xây dựng chương trình chiến lược, chính sách và kế hoạch hóa chất lượng",
+        "B": "Xác định các yêu cầu chất lượng cần phải đạt ở từng thời kỳ",
+        "C": "Lập kế hoạch tài chính chi tiết cho dự án",
+        "D": "Phân tích các ảnh hưởng của các nhân tố tới chất lượng dự án"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Lập kế hoạch tài chính chi tiết cho dự án"
+    },
+    {
+      "id": 169,
+      "chapter": "Chương 7",
+      "question": "Ở mức lập kế hoạch quản lý, yếu tố nào sau đây cần được quyết định?",
+      "options": {
+        "A": "Tiêu chuẩn chất lượng",
+        "B": "Nhóm có trách nhiệm đối",
+        "C": "Các kiểu rà soát thường xuyên",
+        "D": "Tất cả các đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả các đáp án trên"
+    },
+    {
+      "id": 170,
+      "chapter": "Chương 7",
+      "question": "Công cụ nào sau đây không phải là công cụ kiểm soát chất lượng dự án?",
+      "options": {
+        "A": "Biểu đồ Gantt",
+        "B": "Biểu đồ nhân quả",
+        "C": "Biểu đồ Pareto",
+        "D": "Lưu đồ"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Biểu đồ Gantt"
+    },
+    {
+      "id": 171,
+      "chapter": "Chương 7",
+      "question": "Có mấy bước quản lý rủi ro?",
+      "options": {
+        "A": "3 bước",
+        "B": "4 bước",
+        "C": "5 bước",
+        "D": "2 bước"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. 4 bước"
+    },
+    {
+      "id": 172,
+      "chapter": "Chương 7",
+      "question": "Xây dựng kế hoạch quản lý rủi ro KHÔNG bao gồm những nội dung nào sau đây?",
+      "options": {
+        "A": "Xác định rủi ro liên quan đến dự án.",
+        "B": "Xác định khả năng ngăn chặn rủi ro.",
+        "C": "Xác định văn hóa địa phương.",
+        "D": "Dự tính nguồn lực, chi phí."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Xác định văn hóa địa phương."
+    },
+    {
+      "id": 173,
+      "chapter": "Chương 7",
+      "question": "Phân tích, đánh giá rủi ro có thể thực hiện bằng phương pháp nào?",
+      "options": {
+        "A": "Định tính",
+        "B": "Định lượng",
+        "C": "Đáp án A và B đều đúng",
+        "D": "Đáp án A và B đều sai"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Đáp án A và B đều đúng"
+    },
+    {
+      "id": 174,
+      "chapter": "Chương 7",
+      "question": "Đâu không phải là công cụ, kỹ thuật để nhận diện rủi ro?",
+      "options": {
+        "A": "Kỹ thuật Delphi",
+        "B": "Phỏng vấn",
+        "C": "Phân tích SWOT",
+        "D": "Phương pháp CPM"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Phương pháp CPM"
+    },
+    {
+      "id": 175,
+      "chapter": "Chương 7",
+      "question": "Để thực hiện được phương pháp né tránh rủi ro thì chủ đầu tư nên thực hiện ở giai đoạn nào?",
+      "options": {
+        "A": "Giai đoạn xác định",
+        "B": "Giai đoạn lập kế hoạch",
+        "C": "Giai đoạn thực hiện",
+        "D": "Giai đoạn bàn giao"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Giai đoạn lập kế hoạch"
+    },
+    {
+      "id": 176,
+      "chapter": "Chương 7",
+      "question": "Biện pháp nào sau đây có thể giảm thiểu rủi ro khống chế?",
+      "options": {
+        "A": "Đa dạng hóa danh mục đầu tư",
+        "B": "Mua bảo hiểm thiên tai.",
+        "C": "Đào tạo và nâng cao kỹ năng cho nhân viên.",
+        "D": "Theo dõi và dự báo thị trường tài chính."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Đào tạo và nâng cao kỹ năng cho nhân viên."
+    },
+    {
+      "id": 177,
+      "chapter": "Chương 7",
+      "question": "Điều kiện nào sau đây là cần thiết để một rủi ro có thể được bảo hiểm?",
+      "options": {
+        "A": "Tổn thất phải ngẫu nhiên và bất ngờ",
+        "B": "Tổn thất phải đo được và định lượng được về tài chính",
+        "C": "Phải có số đông người tham gia bảo hiểm",
+        "D": "Tất cả các đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả các đáp án trên"
+    },
+    {
+      "id": 178,
+      "chapter": "Chương 7",
+      "question": "Chất lượng được đo bằng gì?",
+      "options": {
+        "A": "Chi phí dự án",
+        "B": "Tiến độ dự án",
+        "C": "Sự thỏa mãn nhu cầu",
+        "D": "Tài nguyên dự án"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Sự thỏa mãn nhu cầu"
+    },
+    {
+      "id": 179,
+      "chapter": "Chương 7",
+      "question": "Theo quan điểm của người tiêu dùng, chất lượng là gì?",
+      "options": {
+        "A": "Sự đạt được các tiêu chuẩn kỹ thuật",
+        "B": "Sự tuân thủ các quy định luật pháp",
+        "C": "Sự phù hợp với yêu cầu và mục đích",
+        "D": "Sự tối ưu về chi phí"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Sự phù hợp với yêu cầu và mục đích"
+    },
+    {
+      "id": 180,
+      "chapter": "Chương 7",
+      "question": "Mục tiêu chính của quản lý chất lượng dự án là gì?",
+      "options": {
+        "A": "Đảm bảo dự án được hoàn thành đúng tiến độ",
+        "B": "Đảm bảo dự án tuân thủ các quy định pháp luật",
+        "C": "Đảm bảo dự án thỏa mãn yêu cầu về chất lượng, chi phí tối ưu",
+        "D": "Đảm bảo sử dụng tài nguyên hiệu quả"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Đảm bảo dự án thỏa mãn yêu cầu về chất lượng, chi phí tối ưu"
+    },
+    {
+      "id": 181,
+      "chapter": "Chương 7",
+      "question": "Quy trình quản lý chất lượng dự án gồm bao nhiêu bước?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. 3"
+    },
+    {
+      "id": 182,
+      "chapter": "Chương 7",
+      "question": "Lập kế hoạch chất lượng dự án bao gồm việc nào sau đây?",
+      "options": {
+        "A": "Đo lường tiến độ",
+        "B": "Xác định các tiêu chuẩn chất lượng",
+        "C": "Giám sát ngân sách",
+        "D": "Phân công nhân sự"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Xác định các tiêu chuẩn chất lượng"
+    },
+    {
+      "id": 183,
+      "chapter": "Chương 7",
+      "question": "Căn cứ nào sau đây là nền tảng để lập kế hoạch chất lượng?",
+      "options": {
+        "A": "Số lượng nhân sự",
+        "B": "Chính sách chất lượng của chủ đầu tư",
+        "C": "Thời gian thực hiện dự án",
+        "D": "Mức độ phức tạp của dự án"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Chính sách chất lượng của chủ đầu tư"
+    },
+    {
+      "id": 184,
+      "chapter": "Chương 7",
+      "question": "Đảm bảo chất lượng trong quản lý dự án là gì?",
+      "options": {
+        "A": "Giám sát tài chính của dự án",
+        "B": "Đánh giá hiệu suất tổng thể để đảm bảo đáp ứng tiêu chuẩn chất lượng liên quan",
+        "C": "Điều chỉnh các quy trình nội bộ",
+        "D": "Đo lường tiến độ và hiệu suất"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Đánh giá hiệu suất tổng thể để đảm bảo đáp ứng tiêu chuẩn chất lượng liên quan"
+    },
+    {
+      "id": 185,
+      "chapter": "Chương 7",
+      "question": "Căn cứ nào sau đây đảm bảo cho chất lượng của dự án?",
+      "options": {
+        "A": "Giảm chi phí nhân sự",
+        "B": "Kéo dài thời gian thực hiện",
+        "C": "Kế hoạch hoàn thiện các quá trình",
+        "D": "Tăng số lượng nguồn nhân lực"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Kế hoạch hoàn thiện các quá trình"
+    },
+    {
+      "id": 186,
+      "chapter": "Chương 7",
+      "question": "Rủi ro nội sinh là gì?",
+      "options": {
+        "A": "Rủi ro do tác động của thiên nhiên",
+        "B": "Rủi ro do các nguyên nhân nội tại của dự án",
+        "C": "Rủi ro do thị trường thay đổi",
+        "D": "Rủi ro do sự thay đổi của chính sách"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Rủi ro do các nguyên nhân nội tại của dự án"
+    },
+    {
+      "id": 187,
+      "chapter": "Chương 7",
+      "question": "Rủi ro ngoại sinh có thể xuất phát từ đâu?",
+      "options": {
+        "A": "Môi trường tự nhiên",
+        "B": "Quy trình quản lý dự án",
+        "C": "Đội ngũ nhân sự",
+        "D": "Các đối tác dự án"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Môi trường tự nhiên"
+    },
+    {
+      "id": 188,
+      "chapter": "Chương 7",
+      "question": "Rủi ro thuần túy là gì?",
+      "options": {
+        "A": "Rủi ro gây thiệt hại về kinh tế, như hỏa hoạn, mất cắp, tai nạn,...",
+        "B": "Rủi ro liên quan đến thay đổi giá cả",
+        "C": "Rủi ro do sự thay đổi của công nghệ",
+        "D": "Rủi ro do sai sót trong quản lý"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Rủi ro gây thiệt hại về kinh tế, như hỏa hoạn, mất cắp, tai nạn,..."
+    },
+    {
+      "id": 189,
+      "chapter": "Chương 7",
+      "question": "Phân loại rủi ro theo môi trường bao gồm rủi ro nào sau đây?",
+      "options": {
+        "A": "Rủi ro về trách nhiệm pháp lý",
+        "B": "Rủi ro do môi trường văn hóa xã hội",
+        "C": "Rủi ro về công nghệ",
+        "D": "Tất cả các đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả các đáp án trên"
+    },
+    {
+      "id": 190,
+      "chapter": "Chương 7",
+      "question": "Phân loại rủi ro theo lĩnh vực hoạt động bao gồm?",
+      "options": {
+        "A": "Rủi ro về chất lượng",
+        "B": "Rủi ro về thời gian",
+        "C": "Rủi ro trong công nghiệp",
+        "D": "Rủi ro về trách nhiệm pháp lý"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Rủi ro trong công nghiệp"
+    },
+    {
+      "id": 191,
+      "chapter": "Chương 7",
+      "question": "Vai trò của quản lý rủi ro là gì?",
+      "options": {
+        "A": "Giúp chủ đầu tư chủ động ngăn chặn rủi ro, hạn chế tổn thất",
+        "B": "Đảm bảo dự án hoàn thành trước thời hạn",
+        "C": "Giảm chi phí thực hiện dự án",
+        "D": "Tăng số lượng nhân sự cho dự án"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Giúp chủ đầu tư chủ động ngăn chặn rủi ro, hạn chế tổn thất"
+    },
+    {
+      "id": 192,
+      "chapter": "Chương 7",
+      "question": "Quá trình quản lý rủi ro dự án gồm có mấy bước?",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 6"
+    },
+    {
+      "id": 193,
+      "chapter": "Chương 7",
+      "question": "Biện pháp đối phó với rủi ro thuần túy là gì?",
+      "options": {
+        "A": "Tối ưu hóa chi phí",
+        "B": "Bảo hiểm",
+        "C": "Tăng cường nhân sự",
+        "D": "Giám sát chặt chẽ quy trình"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Bảo hiểm"
+    },
+    {
+      "id": 194,
+      "chapter": "Chương 7",
+      "question": "Rủi ro hệ thống là gì?",
+      "options": {
+        "A": "Rủi ro chỉ ảnh hưởng đến một dự án",
+        "B": "Rủi ro ảnh hưởng đến mọi dự án trong xã hội",
+        "C": "Rủi ro liên quan đến nguồn lực nhân sự",
+        "D": "Rủi ro liên quan đến công nghệ"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Rủi ro ảnh hưởng đến mọi dự án trong xã hội"
+    },
+    {
+      "id": 195,
+      "chapter": "Chương 7",
+      "question": "Rủi ro không thể bảo hiểm được là rủi ro nào?",
+      "options": {
+        "A": "Rủi ro về tài sản",
+        "B": "Rủi ro về nhân lực",
+        "C": "Rủi ro đầu cơ",
+        "D": "Rủi ro do thiên tai"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Rủi ro đầu cơ"
+    },
+    {
+      "id": 196,
+      "chapter": "Chương 7",
+      "question": "Rủi ro có thể tính toán được là gì?",
+      "options": {
+        "A": "Rủi ro không thể đo lường và dự đoán",
+        "B": "Rủi ro mà tần số xuất hiện và mức độ tác động có thể tiên đoán ở một mức tin cậy nhất định",
+        "C": "Rủi ro liên quan đến thay đổi về luật pháp",
+        "D": "Rủi ro liên quan đến môi trường thiên nhiên"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Rủi ro mà tần số xuất hiện và mức độ tác động có thể tiên đoán ở một mức tin cậy nhất định"
+    },
+    {
+      "id": 197,
+      "chapter": "Chương 7",
+      "question": "Phân loại rủi ro dự án theo đối tượng bao gồm loại nào sau đây?",
+      "options": {
+        "A": "Rủi ro về công nghệ",
+        "B": "Rủi ro về văn hóa xã hội",
+        "C": "Rủi ro về tài sản",
+        "D": "Rủi ro về nguồn tài nguyên"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Rủi ro về tài sản"
+    },
+    {
+      "id": 198,
+      "chapter": "Chương 8",
+      "question": "Giám sát dự án có thể được hiểu như thế nào?",
+      "options": {
+        "A": "Giám sát dự án là quá trình lập kế hoạch chi tiết cho toàn bộ dự án.",
+        "B": "Giám sát dự án là quá trình ghi chép, kiểm tra và theo dõi tiến độ dự án.",
+        "C": "Giám sát dự án là quá trình đánh giá kết quả của dự án sau khi hoàn thành.",
+        "D": "Giám sát dự án là việc phân tích các rủi ro tiềm ẩn của dự án."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Giám sát dự án là quá trình ghi chép, kiểm tra và theo dõi tiến độ dự án."
+    },
+    {
+      "id": 199,
+      "chapter": "Chương 8",
+      "question": "Đâu là tác dụng của giám sát dự án?",
+      "options": {
+        "A": "Đảm bảo tài nguyên được phân bổ đúng cách.",
+        "B": "Quản lý tiến độ, giữ chi phí trong phạm vi và phát hiện vấn đề.",
+        "C": "Xác định các mục tiêu dài hạn của dự án.",
+        "D": "Phát triển các chiến lược marketing cho dự án."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Quản lý tiến độ, giữ chi phí trong phạm vi và phát hiện vấn đề."
+    },
+    {
+      "id": 200,
+      "chapter": "Chương 8",
+      "question": "Bước nào dưới đây không phải là một phần của quy trình giám sát dự án?",
+      "options": {
+        "A": "Xác định các chỉ số cần đạt được",
+        "B": "Phát hiện vấn đề và đề xuất giải pháp",
+        "C": "Ra quyết định về việc kết thúc dự án",
+        "D": "Viết báo cáo giám sát"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Ra quyết định về việc kết thúc dự án"
+    },
+    {
+      "id": 201,
+      "chapter": "Chương 8",
+      "question": "Chỉ tiêu nào sau đây KHÔNG thuộc nhóm chỉ tiêu phân tích trong bước tính toán và phân tích các chỉ số?",
+      "options": {
+        "A": "Chênh lệch lịch trình.",
+        "B": "Chênh lệch kế hoạch.",
+        "C": "Tỷ lệ hoàn thành công việc.",
+        "D": "Chênh lệch thực tế."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tỷ lệ hoàn thành công việc."
+    },
+    {
+      "id": 202,
+      "chapter": "Chương 8",
+      "question": "Mục đích chính của việc viết báo cáo giám sát là gì?",
+      "options": {
+        "A": "Lưu trữ thông tin về dự án.",
+        "B": "Cung cấp thông tin cho các bên liên quan để đưa ra quyết định.",
+        "C": "Đánh giá hiệu quả công việc của nhóm giám sát.",
+        "D": "Thuyết phục các nhà đầu tư rót thêm vốn."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Cung cấp thông tin cho các bên liên quan để đưa ra quyết định."
+    },
+    {
+      "id": 203,
+      "chapter": "Chương 8",
+      "question": "Để giám sát tài chính dự án hiệu quả, công cụ nào dưới đây thường được sử dụng để theo dõi và ghi chép các vấn đề tài chính?",
+      "options": {
+        "A": "Đường cong chữ S",
+        "B": "Kiểm tra giới hạn",
+        "C": "Kiểm soát thực hiện sơ đồ giá trị thu được",
+        "D": "Cả 3 đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Cả 3 đáp án trên"
+    },
+    {
+      "id": 204,
+      "chapter": "Chương 8",
+      "question": "Đánh giá dự án được hiểu như thế nào?",
+      "options": {
+        "A": "Là quá trình phân tích chi tiết từng công việc trong dự án.",
+        "B": "Là quá trình xác định, phân tích một cách hệ thống và khách quan các kết quả, hiệu quả và tác động của dự án.",
+        "C": "Là quá trình lập kế hoạch tài chính cho dự án.",
+        "D": "Là quá trình thực hiện các công việc theo kế hoạch đã định."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Là quá trình xác định, phân tích một cách hệ thống và khách quan các kết quả, hiệu quả và tác động của dự án."
+    },
+    {
+      "id": 205,
+      "chapter": "Chương 8",
+      "question": "Đánh giá nào dưới đây không thuộc vào phân loại đánh giá dự án theo thời điểm thực hiện?",
+      "options": {
+        "A": "Đánh giá giữa kỳ",
+        "B": "Đánh giá nội bộ",
+        "C": "Đánh giá cuối kỳ",
+        "D": "Đánh giá sau dự án"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Đánh giá nội bộ"
+    },
+    {
+      "id": 206,
+      "chapter": "Chương 8",
+      "question": "Ý nào không phải là nội dung cần đánh giá giữa kỳ?",
+      "options": {
+        "A": "Tiến độ, thời gian, chi phí của từng công việc và toàn bộ dự án",
+        "B": "Xác định các kết quả và mức độ ảnh hưởng lâu dài của dự án",
+        "C": "Tính pháp lý, năng lực, uy tín của các bên có liên quan",
+        "D": "So sánh, đánh giá giữa thực tế thực hiện với kế hoạch của từng loại công việc"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Xác định các kết quả và mức độ ảnh hưởng lâu dài của dự án"
+    },
+    {
+      "id": 207,
+      "chapter": "Chương 8",
+      "question": "Tiêu chí nào dưới đây không thuộc vào tiêu chí đánh giá dự án?",
+      "options": {
+        "A": "Hiệu suất",
+        "B": "Hiệu quả",
+        "C": "Tính bền vững",
+        "D": "Chi phí đầu vào"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Chi phí đầu vào"
+    },
+    {
+      "id": 208,
+      "chapter": "Chương 8",
+      "question": "Bước nào dưới đây không phải là một bước trong quy trình đánh giá dự án?",
+      "options": {
+        "A": "Ra quyết định đánh giá dự án",
+        "B": "Thu thập, tổng hợp, phân tích tài liệu phục vụ cho đánh giá dự án",
+        "C": "Xây dựng tiêu chuẩn đánh giá dự án",
+        "D": "Phê duyệt thiết kế dự án"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Phê duyệt thiết kế dự án"
+    },
+    {
+      "id": 209,
+      "chapter": "Chương 8",
+      "question": "Điểm khác biệt chính giữa giám sát và đánh giá dự án là gì?",
+      "options": {
+        "A": "Giám sát dự án tập trung vào kết quả cuối cùng, trong khi đánh giá dự án tập trung vào quá trình thực hiện.",
+        "B": "Giám sát dự án được thực hiện liên tục, trong khi đánh giá dự án thường được thực hiện tại các thời điểm cụ thể.",
+        "C": "Giám sát dự án do các chuyên gia độc lập thực hiện, trong khi đánh giá dự án do các thành viên trong đội dự án thực hiện.",
+        "D": "Giám sát dự án sử dụng phương pháp định lượng, trong khi đánh giá dự án sử dụng phương pháp định tính."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Giám sát dự án được thực hiện liên tục, trong khi đánh giá dự án thường được thực hiện tại các thời điểm cụ thể."
+    },
+    {
+      "id": 210,
+      "chapter": "Chương 8",
+      "question": "Mục tiêu chính của giám sát dự án là gì?",
+      "options": {
+        "A": "Đánh giá tiến độ thực hiện dự án",
+        "B": "Đảm bảo tài chính của dự án",
+        "C": "Kiểm soát rủi ro của dự án",
+        "D": "Đảm bảo các bên liên quan hài lòng"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Đánh giá tiến độ thực hiện dự án"
+    },
+    {
+      "id": 211,
+      "chapter": "Chương 8",
+      "question": "Đánh giá dự án thường được thực hiện vào thời điểm nào?",
+      "options": {
+        "A": "Sau khi dự án kết thúc",
+        "B": "Trước khi bắt đầu dự án",
+        "C": "Trong suốt quá trình thực hiện dự án",
+        "D": "Cả trước, trong và sau khi thực hiện dự án"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Cả trước, trong và sau khi thực hiện dự án"
+    },
+    {
+      "id": 212,
+      "chapter": "Chương 8",
+      "question": "Có bao nhiêu bước tiến hành giám sát dự án?",
+      "options": {
+        "A": "3",
+        "B": "5",
+        "C": "6",
+        "D": "4"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. 5"
+    },
+    {
+      "id": 213,
+      "chapter": "Chương 8",
+      "question": "Tại sao cần đánh giá dự án?",
+      "options": {
+        "A": "Khẳng định lại tính khả thi, tính cần thiết, tính hiện thực của dự án",
+        "B": "Đánh giá lại tính hợp lý, hợp pháp của dự án",
+        "C": "Đúc rút ra các bài học, tìm ra các giải pháp để phát huy điểm mạnh, khắc phục điểm yếu cho các giai đoạn tiếp theo",
+        "D": "Tất cả các phương án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả các phương án trên"
+    },
+    {
+      "id": 214,
+      "chapter": "Chương 8",
+      "question": "Điểm giống nhau giữa giám sát và đánh giá dự án là gì?",
+      "options": {
+        "A": "Cả 2 phương pháp đều liên quan đến đo lường tình hình thực hiện so với mục tiêu để ra",
+        "B": "Cả 2 phương pháp đều liên quan đến đo lường tình hình thực hiện so với sản phẩm để ra",
+        "C": "Cả 2 phương pháp đều liên quan đến đo lường tình hình thực hiện so với mục tiêu và sản phẩm để ra",
+        "D": "Không có đáp án nào đúng"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Cả 2 phương pháp đều liên quan đến đo lường tình hình thực hiện so với mục tiêu và sản phẩm để ra"
+    },
+    {
+      "id": 215,
+      "chapter": "Chương 8",
+      "question": "Phương pháp nào sau đây thường được sử dụng để thu thập dữ liệu trong giám sát và đánh giá dự án?",
+      "options": {
+        "A": "Phỏng vấn",
+        "B": "Quan sát trực tiếp",
+        "C": "Khảo sát",
+        "D": "Tất cả các phương án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả các phương án trên"
+    },
+    {
+      "id": 216,
+      "chapter": "Chương 8",
+      "question": "Tiêu chí đánh giá tính bền vững của dự án là gì?",
+      "options": {
+        "A": "Đánh giá khả năng tiếp tục các hoạt động của dự án sau khi dự án kết thúc và được chuyển giao.",
+        "B": "Đánh giá mức độ phù hợp của dự án với mục tiêu phát triển của vùng, ngành, của những người thụ hưởng khác.",
+        "C": "Đánh giá mức độ ảnh hưởng của dự án đến các mặt kinh tế - xã hội và môi trường.",
+        "D": "Xem xét mức độ đạt được các mục tiêu của dự án so với các yếu tố đầu vào."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Đánh giá khả năng tiếp tục các hoạt động của dự án sau khi dự án kết thúc và được chuyển giao."
+    },
+    {
+      "id": 217,
+      "chapter": "Chương 8",
+      "question": "Khi tiến hành đánh giá giữa kì của dự án, yếu tố nào dưới đây được xem là quan trọng nhất?",
+      "options": {
+        "A": "Đánh giá mức độ hài lòng của nhân sự dự án",
+        "B": "Đánh giá hiệu quả sử dụng nguồn lực",
+        "C": "Đánh giá tác động ngắn hạn của dự án",
+        "D": "Đánh giá rủi ro có thể ảnh hưởng đến thành công của dự án"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Đánh giá rủi ro có thể ảnh hưởng đến thành công của dự án"
+    },
+    {
+      "id": 218,
+      "chapter": "Chương 8",
+      "question": "Báo cáo tiến độ dự án thường bao gồm những thông tin nào sau đây?",
+      "options": {
+        "A": "Thông tin về chi phí và tiến độ",
+        "B": "Thông tin về rủi ro và quản lý thay đổi",
+        "C": "Thông tin về đội ngũ nhân viên và năng lực",
+        "D": "Tất cả các thông tin trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả các thông tin trên"
+    },
+    {
+      "id": 219,
+      "chapter": "Chương 8",
+      "question": "Nội dung cơ bản của báo cáo đánh giá dự án gồm:",
+      "options": {
+        "A": "7 nội dung",
+        "B": "10 nội dung",
+        "C": "8 nội dung",
+        "D": "9 nội dung"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. 10 nội dung"
+    }
+  ]
+}

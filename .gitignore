@@ -23,6 +23,3 @@ dist-ssr
 *.sln
 *.sw?
 
-# Generated data - source is data/, public/data is built via npm run sync:data
-public/data
-data/

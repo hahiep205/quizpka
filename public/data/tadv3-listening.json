@@ -1,0 +1,372 @@
+{
+  "title": "Đề Thi Nghe Tiếng Anh (Listening Test) - Level 2",
+  "totalParts": 5,
+  "totalQuestions": 25,
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "PART 1: Short Announcements or Instructions",
+      "instruction": "Directions: In this part, you will hear 5 short announcements or instructions. You will hear each instruction or announcement twice. For each question, choose the correct answer, A, B or C. Before you listen, you have 15 seconds to look at the questions.",
+      "audioUrl": "tadv3-audio_part_1_listening.mp3",
+      "questions": [
+        {
+          "id": 1,
+          "audioTimestamp": "0:00",
+          "question": "How does the speaker get to work?",
+          "options": {
+            "A": "He drives to work",
+            "B": "He walks",
+            "C": "He takes a bus"
+          },
+          "answer": "C",
+          "transcript": "Speaker: My schedule is as busy as my friend's schedules. Usually, I wake up at seven o'clock. I get on a bus at eight o'clock and arrive at work at nine. After I get off work at about six o'clock, I go shopping or walk through the park with my wife. Sometimes, when I want a quiet evening, I just stay at home and watch TV.",
+          "explainAnswer": "Người nói kể: \"I get on a bus at 8 o'clock, and arrive at work at 9\" — người này đi làm bằng xe buýt."
+        },
+        {
+          "id": 2,
+          "audioTimestamp": "1:03",
+          "question": "What is on sale?",
+          "options": {
+            "A": "Pets",
+            "B": "Markets",
+            "C": "Vehicles"
+          },
+          "answer": "C",
+          "transcript": "Speaker: Hop on down to Bunny Motors for our huge sales event. We have the fastest and most expensive cars on the market. But you can now save up to 50% on the purchase of a new automobile. Want to seem richer and be smarter than all your neighbors? Then hop on down to Bunny Motors today.",
+          "explainAnswer": "\"Hop on down to Bunny Motors... save up to 50% on the purchase of a new automobile\" — đây là quảng cáo giảm giá ô tô (vehicles), không phải thú cưng hay chợ."
+        },
+        {
+          "id": 3,
+          "audioTimestamp": "1:50",
+          "question": "How long has the speaker been studying judo?",
+          "options": {
+            "A": "Over ten years",
+            "B": "Since he was ten",
+            "C": "Before he was ten"
+          },
+          "answer": "A",
+          "transcript": "Speaker: I have been studying judo for over 10 years. During my last competition, one opponent pulled my shoulder out of its socket. Despite the pain, I was able to throw my opponent to the ground. Because I really didn't want to lose. After I, the referee, raised my hand in victory.",
+          "explainAnswer": "\"I have been studying judo for over 10 years.\" — người nói đã học judo hơn 10 năm."
+        },
+        {
+          "id": 4,
+          "audioTimestamp": "2:43",
+          "question": "What does the speaker NOT have experience doing?",
+          "options": {
+            "A": "Sweeping",
+            "B": "Cooking",
+            "C": "Watering"
+          },
+          "answer": "B",
+          "transcript": "Speaker: Over the past few years, I've had many jobs in the service industry. My duties included watering plants, sweeping floors, and serving customers in a restaurant. So even though I look very young, I have a lot of experience. If you choose to hire me, I can be available to start work as soon as tomorrow morning.",
+          "explainAnswer": "Người nói kể các công việc đã làm: \"watering plants, sweeping floors, and serving customers in a restaurant\" (tưới cây, quét sàn, phục vụ khách) — không nhắc đến nấu ăn (cooking)."
+        },
+        {
+          "id": 5,
+          "audioTimestamp": "3:39",
+          "question": "Who do you think this ad is for?",
+          "options": {
+            "A": "People who find it difficult to relax.",
+            "B": "People who are relaxed.",
+            "C": "People who have lots of energy."
+          },
+          "answer": "A",
+          "transcript": "Speaker: Do you find it difficult to relax? Are you always stressed? If so, the answer to your problem is yoga. Yoga can help your body relax and give you a lot more energy. Contact the Rama Yoga Center at 311-4265 for more information.",
+          "explainAnswer": "Quảng cáo mở đầu bằng câu hỏi: \"Do you find it difficult to relax? Are you always stressed?\" rồi giới thiệu yoga là giải pháp — nhắm đến người khó thư giãn, hay căng thẳng."
+        }
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "PART 2: Short Conversations",
+      "instruction": "Directions: In this part, you will hear five short conversations. You will hear each conversation twice. There is one question for each conversation. Before you listen, you have 15 seconds to look at the questions.",
+      "audioUrl": "tadv3-audio_part_2_listening.mp3",
+      "questions": [
+        {
+          "id": 6,
+          "audioTimestamp": "0:00",
+          "question": "What's the weather like for Jack's holiday?",
+          "options": {
+            "A": "rainy",
+            "B": "sunny",
+            "C": "snowy"
+          },
+          "answer": "A",
+          "transcript": "Mum: Hello, Jack. Are you having a good holiday?\nJack: Hi, Mum. Not really. It's rained every day since I got here.\nMum: That's a pity. It's been nice and sunny here. When will you be home?\nJack: In two days' time. I hope it doesn't snow before then.",
+          "explainAnswer": "Jack nói: \"It's rained every day since I got here.\" — thời tiết ở nơi Jack đang nghỉ là mưa. Trời nắng (\"sunny\") là thời tiết ở nhà (nơi mẹ Jack đang ở), không phải nơi Jack đi nghỉ."
+        },
+        {
+          "id": 7,
+          "audioTimestamp": "0:59",
+          "question": "What will they have for dinner?",
+          "options": {
+            "A": "pizzas",
+            "B": "spaghetti",
+            "C": "fish and chips"
+          },
+          "answer": "C",
+          "transcript": "Person 1: Shall we have pizza tonight?\nPerson 2: No, I don't fancy pizza. How about spaghetti?\nPerson 1: We had that on Monday. I know. Let's have fish and chips.",
+          "explainAnswer": "Sau khi từ chối pizza và spaghetti (đã ăn thứ Hai), họ thống nhất: \"Let's have fish and chips.\""
+        },
+        {
+          "id": 8,
+          "audioTimestamp": "1:46",
+          "question": "Which room will the meeting be in?",
+          "options": {
+            "A": "8",
+            "B": "18",
+            "C": "80"
+          },
+          "answer": "B",
+          "transcript": "Person 1: We were going to change the meeting from room 18 to room 8 or 80.\nPerson 2: So which one did you change it to?\nPerson 1: In the end we decided not to change it after all.",
+          "explainAnswer": "Họ định đổi phòng họp từ 18 sang 8 hoặc 80, nhưng \"In the end we decided not to change it after all\" — nghĩa là vẫn giữ nguyên phòng 18."
+        },
+        {
+          "id": 9,
+          "audioTimestamp": "2:24",
+          "question": "Where are Cindy's trainers now?",
+          "options": {
+            "A": "in the car",
+            "B": "on the window",
+            "C": "under the stairs"
+          },
+          "answer": "C",
+          "transcript": "Person 1: Cindy, did you find them then? I bet they're under the stairs.\nCindy: I looked in the car as I'd had them there yesterday, but I couldn't see them anywhere. Then I was sure I'd left them on the window, but they weren't there either.\nPerson 1: Oh, here they are under the stairs. They're under the stairs.",
+          "explainAnswer": "Sau khi tìm ở xe hơi và cửa sổ đều không thấy, cuối cùng tìm thấy: \"Oh, here they are — under the stairs.\""
+        },
+        {
+          "id": 10,
+          "audioTimestamp": "3:26",
+          "question": "How much did Sue pay for the shirt?",
+          "options": {
+            "A": "£30",
+            "B": "£35",
+            "C": "£40"
+          },
+          "answer": "A",
+          "transcript": "Person 1: I like your shirt, Sue. Is it new?\nSue: Thanks. It's the first time I've worn it. How much do you think it cost?\nPerson 1: It looks very expensive. About £40.\nSue: A lot less. It was £35 but I got it for £30 because there was a small mark on the front.",
+          "explainAnswer": "Giá gốc là £35, nhưng Sue nói: \"I got it for thirty pounds because there was a small mark on the front\" — cô mua với giá £30 vì áo có vết bẩn nhỏ."
+        }
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "PART 3: Longer Conversation - Homework",
+      "instruction": "Directions: In this part, you will hear a longer conversation and answer questions 11 to 15. You will hear the conversation twice. Before you listen, you have 15 seconds to look at the questions.",
+      "audioUrl": "tadv3-audio_part_3_listening.mp3",
+      "questions": [
+        {
+          "id": 11,
+          "audioTimestamp": "0:00",
+          "question": "Name of book:",
+          "options": {
+            "A": "Rivers",
+            "B": "Lakes",
+            "C": "Oceans"
+          },
+          "answer": "A",
+          "transcript": "Sally: Hello, Richard. I wasn't at school today because I was ill. Can you tell me what our biology homework is?\nRichard: Yes, Sally. In class we talked about animals that live in water. For homework we have to read a book about them. The book's called Rivers. It's in the school library.\nSally: OK. Who is it by?\nRichard: Let me see. It's by Martin Cooper.\nSally: Is that C, double O, P, E, R?\nRichard: That's right. You'll find the books on the third shelf on the biology bookshelf. We have to look at part seven, pages 123 to 127.\nSally: OK. That's not very much. What is it about?\nRichard: That part's all about fish. It's quite interesting. Mrs. Knight says we're going to study lakes next week.\nSally: Oh, right. Do we have to read these pages for the lesson on Monday?\nRichard: We have until Friday to do it.\nSally: Oh, good. I'll go to the library on Thursday. Thanks, Richard. See you tomorrow.",
+          "explainAnswer": "Richard nói: \"The book's called Rivers.\" Tên \"Lakes\" là chủ đề họ sẽ học tuần sau, không phải tên sách hiện tại — đây là bẫy."
+        },
+        {
+          "id": 12,
+          "audioTimestamp": "0:34",
+          "question": "Written by:",
+          "options": {
+            "A": "Martin Cooper",
+            "B": "Martin Cowper",
+            "C": "Martin Copper"
+          },
+          "answer": "A",
+          "transcript": "Sally: Hello, Richard. I wasn't at school today because I was ill. Can you tell me what our biology homework is?\nRichard: Yes, Sally. In class we talked about animals that live in water. For homework we have to read a book about them. The book's called Rivers. It's in the school library.\nSally: OK. Who is it by?\nRichard: Let me see. It's by Martin Cooper.\nSally: Is that C, double O, P, E, R?\nRichard: That's right. You'll find the books on the third shelf on the biology bookshelf. We have to look at part seven, pages 123 to 127.\nSally: OK. That's not very much. What is it about?\nRichard: That part's all about fish. It's quite interesting. Mrs. Knight says we're going to study lakes next week.\nSally: Oh, right. Do we have to read these pages for the lesson on Monday?\nRichard: We have until Friday to do it.\nSally: Oh, good. I'll go to the library on Thursday. Thanks, Richard. See you tomorrow.",
+          "explainAnswer": "Richard trả lời: \"It's by Martin Cooper\" và đánh vần rõ \"C, double O, P, E, R\" = Cooper."
+        },
+        {
+          "id": 13,
+          "audioTimestamp": "0:50",
+          "question": "Read pages:",
+          "options": {
+            "A": "123 to 127",
+            "B": "113 to 117",
+            "C": "130 to 137"
+          },
+          "answer": "A",
+          "transcript": "Sally: Hello, Richard. I wasn't at school today because I was ill. Can you tell me what our biology homework is?\nRichard: Yes, Sally. In class we talked about animals that live in water. For homework we have to read a book about them. The book's called Rivers. It's in the school library.\nSally: OK. Who is it by?\nRichard: Let me see. It's by Martin Cooper.\nSally: Is that C, double O, P, E, R?\nRichard: That's right. You'll find the books on the third shelf on the biology bookshelf. We have to look at part seven, pages 123 to 127.\nSally: OK. That's not very much. What is it about?\nRichard: That part's all about fish. It's quite interesting. Mrs. Knight says we're going to study lakes next week.\nSally: Oh, right. Do we have to read these pages for the lesson on Monday?\nRichard: We have until Friday to do it.\nSally: Oh, good. I'll go to the library on Thursday. Thanks, Richard. See you tomorrow.",
+          "explainAnswer": "\"We have to look at part seven, pages one hundred and twenty three to one hundred and twenty seven\" = trang 123 đến 127."
+        },
+        {
+          "id": 14,
+          "audioTimestamp": "1:04",
+          "question": "Learn about:",
+          "options": {
+            "A": "Fish",
+            "B": "Lakes",
+            "C": "Insects"
+          },
+          "answer": "A",
+          "transcript": "Sally: Hello, Richard. I wasn't at school today because I was ill. Can you tell me what our biology homework is?\nRichard: Yes, Sally. In class we talked about animals that live in water. For homework we have to read a book about them. The book's called Rivers. It's in the school library.\nSally: OK. Who is it by?\nRichard: Let me see. It's by Martin Cooper.\nSally: Is that C, double O, P, E, R?\nRichard: That's right. You'll find the books on the third shelf on the biology bookshelf. We have to look at part seven, pages 123 to 127.\nSally: OK. That's not very much. What is it about?\nRichard: That part's all about fish. It's quite interesting. Mrs. Knight says we're going to study lakes next week.\nSally: Oh, right. Do we have to read these pages for the lesson on Monday?\nRichard: We have until Friday to do it.\nSally: Oh, good. I'll go to the library on Thursday. Thanks, Richard. See you tomorrow.",
+          "explainAnswer": "Richard nói: \"That part's all about fish.\" Chủ đề \"lakes\" (hồ) là bài học của tuần sau, không phải nội dung cần đọc hiện tại."
+        },
+        {
+          "id": 15,
+          "audioTimestamp": "1:16",
+          "question": "Finish by:",
+          "options": {
+            "A": "Friday",
+            "B": "Monday",
+            "C": "Thursday"
+          },
+          "answer": "A",
+          "transcript": "Sally: Hello, Richard. I wasn't at school today because I was ill. Can you tell me what our biology homework is?\nRichard: Yes, Sally. In class we talked about animals that live in water. For homework we have to read a book about them. The book's called Rivers. It's in the school library.\nSally: OK. Who is it by?\nRichard: Let me see. It's by Martin Cooper.\nSally: Is that C, double O, P, E, R?\nRichard: That's right. You'll find the books on the third shelf on the biology bookshelf. We have to look at part seven, pages 123 to 127.\nSally: OK. That's not very much. What is it about?\nRichard: That part's all about fish. It's quite interesting. Mrs. Knight says we're going to study lakes next week.\nSally: Oh, right. Do we have to read these pages for the lesson on Monday?\nRichard: We have until Friday to do it.\nSally: Oh, good. I'll go to the library on Thursday. Thanks, Richard. See you tomorrow.",
+          "explainAnswer": "Richard nói: \"We have until Friday to do it.\" — hạn hoàn thành bài tập là thứ Sáu. Thứ Hai là ngày ban đầu Sally tưởng phải nộp; thứ Năm là ngày Sally định đi thư viện."
+        }
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "PART 4: Longer Conversation - Sports Centre",
+      "instruction": "Directions: In this part, you will hear a longer conversation and answer questions 16 to 20. You will hear the conversation twice. Before you listen, you have 15 seconds to look at the questions.",
+      "audioUrl": "tadv3-audio_part_4_listening.mp3",
+      "questions": [
+        {
+          "id": 16,
+          "audioTimestamp": "0:00",
+          "question": "What sport can't people do at the sports centre?",
+          "options": {
+            "A": "tennis",
+            "B": "table-tennis",
+            "C": "volleyball"
+          },
+          "answer": "A",
+          "transcript": "Michael: Hello, Marina. Have you been to the new sports centre yet?\nMarina: No, Michael.\nMichael: Where is it?\nMichael: In Long Road. You know, near Bridge Street, behind the station.\nMarina: Oh, is it good?\nMichael: Yes, it's great. You can do a lot of sports. I played table tennis and volleyball last week.\nMarina: What about tennis?\nMichael: Not yet. They're going to build some tennis courts next year.\nMarina: Is it expensive?\nMichael: Not really, Marina. It's 50 pounds a year if you're 15 to 18 and 30 pounds if you're under 15.\nMarina: Oh, that's good because I'm still 14.\nMichael: And on Tuesday, Thursday and Friday it stays open late till 10 o'clock.\nMarina: Oh, great. How did you get there?\nMichael: I got the number 16 bus. It's only 10 minutes from the bus station. Do you want to go next week?\nMarina: OK, any day except Thursday.\nMichael: Well, why don't we go on Friday? Then we can stay late.\nMarina: Yes. OK, let's meet after school.",
+          "explainAnswer": "Michael nói: \"Not yet. They're going to build some tennis courts next year.\" — sân tennis chưa có, sẽ xây năm sau. Table tennis và volleyball đã chơi được (Michael đã chơi tuần trước)."
+        },
+        {
+          "id": 17,
+          "audioTimestamp": "0:51",
+          "question": "How much must Marina pay?",
+          "options": {
+            "A": "£14 a year",
+            "B": "£30 a year",
+            "C": "£50 a year"
+          },
+          "answer": "B",
+          "transcript": "Michael: Hello, Marina. Have you been to the new sports centre yet?\nMarina: No, Michael.\nMichael: Where is it?\nMichael: In Long Road. You know, near Bridge Street, behind the station.\nMarina: Oh, is it good?\nMichael: Yes, it's great. You can do a lot of sports. I played table tennis and volleyball last week.\nMarina: What about tennis?\nMichael: Not yet. They're going to build some tennis courts next year.\nMarina: Is it expensive?\nMichael: Not really, Marina. It's 50 pounds a year if you're 15 to 18 and 30 pounds if you're under 15.\nMarina: Oh, that's good because I'm still 14.\nMichael: And on Tuesday, Thursday and Friday it stays open late till 10 o'clock.\nMarina: Oh, great. How did you get there?\nMichael: I got the number 16 bus. It's only 10 minutes from the bus station. Do you want to go next week?\nMarina: OK, any day except Thursday.\nMichael: Well, why don't we go on Friday? Then we can stay late.\nMarina: Yes. OK, let's meet after school.",
+          "explainAnswer": "\"fifty pounds a year if you're fifteen to eighteen and thirty pounds if you're under fifteen\" — Marina nói cô \"still fourteen\" (14 tuổi), nên phải trả £30/năm."
+        },
+        {
+          "id": 18,
+          "audioTimestamp": "1:05",
+          "question": "How many days a week is the sports centre open late?",
+          "options": {
+            "A": "2",
+            "B": "3",
+            "C": "4"
+          },
+          "answer": "B",
+          "transcript": "Michael: Hello, Marina. Have you been to the new sports centre yet?\nMarina: No, Michael.\nMichael: Where is it?\nMichael: In Long Road. You know, near Bridge Street, behind the station.\nMarina: Oh, is it good?\nMichael: Yes, it's great. You can do a lot of sports. I played table tennis and volleyball last week.\nMarina: What about tennis?\nMichael: Not yet. They're going to build some tennis courts next year.\nMarina: Is it expensive?\nMichael: Not really, Marina. It's 50 pounds a year if you're 15 to 18 and 30 pounds if you're under 15.\nMarina: Oh, that's good because I'm still 14.\nMichael: And on Tuesday, Thursday and Friday it stays open late till 10 o'clock.\nMarina: Oh, great. How did you get there?\nMichael: I got the number 16 bus. It's only 10 minutes from the bus station. Do you want to go next week?\nMarina: OK, any day except Thursday.\nMichael: Well, why don't we go on Friday? Then we can stay late.\nMarina: Yes. OK, let's meet after school.",
+          "explainAnswer": "\"on Tuesday, Thursday and Friday it stays open late till ten o'clock\" — 3 ngày một tuần mở cửa muộn."
+        },
+        {
+          "id": 19,
+          "audioTimestamp": "1:13",
+          "question": "Which bus goes to the sports centre?",
+          "options": {
+            "A": "number 10",
+            "B": "number 16",
+            "C": "number 60"
+          },
+          "answer": "B",
+          "transcript": "Michael: Hello, Marina. Have you been to the new sports centre yet?\nMarina: No, Michael.\nMichael: Where is it?\nMichael: In Long Road. You know, near Bridge Street, behind the station.\nMarina: Oh, is it good?\nMichael: Yes, it's great. You can do a lot of sports. I played table tennis and volleyball last week.\nMarina: What about tennis?\nMichael: Not yet. They're going to build some tennis courts next year.\nMarina: Is it expensive?\nMichael: Not really, Marina. It's 50 pounds a year if you're 15 to 18 and 30 pounds if you're under 15.\nMarina: Oh, that's good because I'm still 14.\nMichael: And on Tuesday, Thursday and Friday it stays open late till 10 o'clock.\nMarina: Oh, great. How did you get there?\nMichael: I got the number 16 bus. It's only 10 minutes from the bus station. Do you want to go next week?\nMarina: OK, any day except Thursday.\nMichael: Well, why don't we go on Friday? Then we can stay late.\nMarina: Yes. OK, let's meet after school.",
+          "explainAnswer": "Michael nói: \"I got the number sixteen bus.\""
+        },
+        {
+          "id": 20,
+          "audioTimestamp": "1:20",
+          "question": "When will Michael and Marina go to the sports centre?",
+          "options": {
+            "A": "Tuesday",
+            "B": "Thursday",
+            "C": "Friday"
+          },
+          "answer": "C",
+          "transcript": "Michael: Hello, Marina. Have you been to the new sports centre yet?\nMarina: No, Michael.\nMichael: Where is it?\nMichael: In Long Road. You know, near Bridge Street, behind the station.\nMarina: Oh, is it good?\nMichael: Yes, it's great. You can do a lot of sports. I played table tennis and volleyball last week.\nMarina: What about tennis?\nMichael: Not yet. They're going to build some tennis courts next year.\nMarina: Is it expensive?\nMichael: Not really, Marina. It's 50 pounds a year if you're 15 to 18 and 30 pounds if you're under 15.\nMarina: Oh, that's good because I'm still 14.\nMichael: And on Tuesday, Thursday and Friday it stays open late till 10 o'clock.\nMarina: Oh, great. How did you get there?\nMichael: I got the number 16 bus. It's only 10 minutes from the bus station. Do you want to go next week?\nMarina: OK, any day except Thursday.\nMichael: Well, why don't we go on Friday? Then we can stay late.\nMarina: Yes. OK, let's meet after school.",
+          "explainAnswer": "Marina nói được, trừ thứ Năm (\"any day except Thursday\"), Michael đề nghị: \"why don't we go on Friday? Then we can stay late\" và Marina đồng ý."
+        }
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "PART 5: Short Talk - Hotel in Ireland",
+      "instruction": "Directions: In this part, you will hear a short talk and answer questions 21 to 25. You will hear the talk twice. Before you listen, you have 15 seconds to look at the questions.",
+      "audioUrl": "tadv3-audio_part_5_listening.mp3",
+      "questions": [
+        {
+          "id": 21,
+          "audioTimestamp": "0:00",
+          "question": "Name: The ...... Hotel",
+          "options": {
+            "A": "White",
+            "B": "Black",
+            "C": "Green"
+          },
+          "answer": "A",
+          "transcript": "Speaker: This week I'm going to tell you about my favourite hotel. It's in the west of Ireland and the best time to go there is June. I've loved this hotel since I was a child. It's called the White Hotel because it's always painted that colour. It's built on one of the most beautiful islands I have ever visited, Achill Island. You say Achill, but it's spelt A-C-H-I-double-L. It's one of the oldest hotels in this part of the country. It was built in 1859 and the rich and famous have enjoyed going there ever since. You can see the sea or mountains from every room, but it's difficult to book a bedroom there because there are only 36 of them and the hotel can't take more than 50 guests at one time. Visitors also enjoy the hotel restaurant. People go there from all over the world to eat its fish. It's caught that day in the sea round the island. Try it cooked with tomatoes.",
+          "explainAnswer": "\"It's called the White Hotel because it's always painted that colour.\""
+        },
+        {
+          "id": 22,
+          "audioTimestamp": "0:35",
+          "question": "Where: ...... Island",
+          "options": {
+            "A": "Achill Island",
+            "B": "Ashell Island",
+            "C": "Aitchel Island"
+          },
+          "answer": "A",
+          "transcript": "Speaker: This week I'm going to tell you about my favourite hotel. It's in the west of Ireland and the best time to go there is June. I've loved this hotel since I was a child. It's called the White Hotel because it's always painted that colour. It's built on one of the most beautiful islands I have ever visited, Achill Island. You say Achill, but it's spelt A-C-H-I-double-L. It's one of the oldest hotels in this part of the country. It was built in 1859 and the rich and famous have enjoyed going there ever since. You can see the sea or mountains from every room, but it's difficult to book a bedroom there because there are only 36 of them and the hotel can't take more than 50 guests at one time. Visitors also enjoy the hotel restaurant. People go there from all over the world to eat its fish. It's caught that day in the sea round the island. Try it cooked with tomatoes.",
+          "explainAnswer": "\"It's built on one of the most beautiful islands I have ever visited, Achill Island\", đánh vần rõ \"A-C-H-I-double-L\"."
+        },
+        {
+          "id": 23,
+          "audioTimestamp": "0:57",
+          "question": "Hotel first built in the year:",
+          "options": {
+            "A": "1859",
+            "B": "1958",
+            "C": "1889"
+          },
+          "answer": "A",
+          "transcript": "Speaker: This week I'm going to tell you about my favourite hotel. It's in the west of Ireland and the best time to go there is June. I've loved this hotel since I was a child. It's called the White Hotel because it's always painted that colour. It's built on one of the most beautiful islands I have ever visited, Achill Island. You say Achill, but it's spelt A-C-H-I-double-L. It's one of the oldest hotels in this part of the country. It was built in 1859 and the rich and famous have enjoyed going there ever since. You can see the sea or mountains from every room, but it's difficult to book a bedroom there because there are only 36 of them and the hotel can't take more than 50 guests at one time. Visitors also enjoy the hotel restaurant. People go there from all over the world to eat its fish. It's caught that day in the sea round the island. Try it cooked with tomatoes.",
+          "explainAnswer": "\"It was built in eighteen fifty nine\" = năm 1859."
+        },
+        {
+          "id": 24,
+          "audioTimestamp": "1:04",
+          "question": "Number of bedrooms:",
+          "options": {
+            "A": "36",
+            "B": "50",
+            "C": "63"
+          },
+          "answer": "A",
+          "transcript": "Speaker: This week I'm going to tell you about my favourite hotel. It's in the west of Ireland and the best time to go there is June. I've loved this hotel since I was a child. It's called the White Hotel because it's always painted that colour. It's built on one of the most beautiful islands I have ever visited, Achill Island. You say Achill, but it's spelt A-C-H-I-double-L. It's one of the oldest hotels in this part of the country. It was built in 1859 and the rich and famous have enjoyed going there ever since. You can see the sea or mountains from every room, but it's difficult to book a bedroom there because there are only 36 of them and the hotel can't take more than 50 guests at one time. Visitors also enjoy the hotel restaurant. People go there from all over the world to eat its fish. It's caught that day in the sea round the island. Try it cooked with tomatoes.",
+          "explainAnswer": "\"there are only thirty six of them\" — khách sạn chỉ có 36 phòng. Số 50 là số khách tối đa (\"the hotel can't take more than fifty guests at one time\"), không phải số phòng — đây là bẫy."
+        },
+        {
+          "id": 25,
+          "audioTimestamp": "1:20",
+          "question": "Restaurant famous for:",
+          "options": {
+            "A": "Fish",
+            "B": "Steak",
+            "C": "Bread"
+          },
+          "answer": "A",
+          "transcript": "Speaker: This week I'm going to tell you about my favourite hotel. It's in the west of Ireland and the best time to go there is June. I've loved this hotel since I was a child. It's called the White Hotel because it's always painted that colour. It's built on one of the most beautiful islands I have ever visited, Achill Island. You say Achill, but it's spelt A-C-H-I-double-L. It's one of the oldest hotels in this part of the country. It was built in 1859 and the rich and famous have enjoyed going there ever since. You can see the sea or mountains from every room, but it's difficult to book a bedroom there because there are only 36 of them and the hotel can't take more than 50 guests at one time. Visitors also enjoy the hotel restaurant. People go there from all over the world to eat its fish. It's caught that day in the sea round the island. Try it cooked with tomatoes.",
+          "explainAnswer": "\"People go there from all over the world to eat its fish. It's caught that day in the sea round the island.\""
+        }
+      ]
+    }
+  ]
+}

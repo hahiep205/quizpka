@@ -1,0 +1,372 @@
+{
+  "title": "Đề Thi Nghe Tiếng Anh (Listening Test)",
+  "totalParts": 5,
+  "totalQuestions": 25,
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "PART 1: Short Announcements or Instructions",
+      "instruction": "Directions: In this part, you will hear 5 short announcements or instructions. You will hear each instruction or announcement twice. For each question, choose the correct answer, A, B or C. Before you listen, you have 15 seconds to look at the questions.",
+      "audioUrl": "audio_part_1_listening.mp3",
+      "questions": [
+        {
+          "id": 1,
+          "audioTimestamp": "0:00",
+          "question": "Who makes the phone call?",
+          "options": {
+            "A": "Ms. Proctor.",
+            "B": "Mr. Gale.",
+            "C": "Mr. Kale."
+          },
+          "answer": "C",
+          "transcript": "Receptionist: Good morning, British Council.\nMr. Kale: Hello, may I speak to Ms. Proctor?\nReceptionist: I'm sorry, she is not in. Can I take a message?\nMr. Kale: Yes, please. This is Mr. Kale.\nReceptionist: Is that G-A-L-E?\nMr. Kale: No, it's K-A-L-E. Thank you.",
+          "explainAnswer": "Người gọi điện tự giới thiệu 'This is Mr. Kale'. Khi người tiếp nhận hỏi lại tên có phải đánh vần bắt đầu bằng chữ 'G' (G-A-L-E) không, người gọi đã sửa lại là bắt đầu bằng chữ 'K' (K-A-L-E)."
+        },
+        {
+          "id": 2,
+          "audioTimestamp": "0:45",
+          "question": "When is the party at Bob’s house?",
+          "options": {
+            "A": "On Monday.",
+            "B": "On Saturday.",
+            "C": "On Sunday."
+          },
+          "answer": "C",
+          "transcript": "Receiver: Good afternoon, 651-8935.\nCaller: Hello, could I speak to Wendy?\nReceiver: I'm afraid she is not in right now. Can I take a message?\nCaller: Yes. There is a party at Bob's house on Sunday night. Bob's address is Flat 4, 45 Church Road.\nReceiver: Bob's address is Flat 4, 45 Church Road.",
+          "explainAnswer": "Trong hội thoại, người gọi để lại lời nhắn: 'There is a party at Bob's house on Sunday night' (Có một bữa tiệc tại nhà Bob vào tối Chủ Nhật)."
+        },
+        {
+          "id": 3,
+          "audioTimestamp": "1:48",
+          "question": "Who makes the phone call?",
+          "options": {
+            "A": "David Pell.",
+            "B": "David Bell.",
+            "C": "David Dell."
+          },
+          "answer": "B",
+          "transcript": "Receptionist: Hello, can I help you?\nDavid Bell: Yes, I'd like to see Professor Hanson on Tuesday, please.\nReceptionist: Who is speaking?\nDavid Bell: David Bell.\nReceptionist: Yes, would 3:30 be convenient?\nDavid Bell: That would be fine. Many thanks.\nReceptionist: Mr. Bell, would you leave your telephone number, please?\nDavid Bell: Yes, my number is 859-7783.\nReceptionist: Thank you.",
+          "explainAnswer": "Khi người nghe hỏi tên ('Who is speaking?'), người gọi trả lời rõ ràng tên mình là 'David Bell'."
+        },
+        {
+          "id": 4,
+          "audioTimestamp": "2:54",
+          "question": "At what time will Rita have an appointment with the doctor?",
+          "options": {
+            "A": "2:14.",
+            "B": "2:40.",
+            "C": "4:20."
+          },
+          "answer": "B",
+          "transcript": "Secretary: Good morning, Dr. Jenkinson's secretary. Can I help you?\nRita Harper: Good morning. I'd like to make an appointment to see the doctor on Friday, please.\nSecretary: Who is speaking, please?\nRita Harper: Rita Harper.\nSecretary: Thank you. Is 2:40 any good?\nRita Harper: That's fine. Thank you very much.\nSecretary: Mrs. Harper, could you leave your telephone number, please?\nRita Harper: Yes, of course. My telephone number is 563-2860.\nSecretary: 563-2860. Thank you, Mrs. Harper.",
+          "explainAnswer": "Thư ký đề xuất khung giờ: 'Is 2:40 any good?' (2 giờ 40 phút có ổn không?), Rita trả lời 'That's fine' (Được ạ) -> Khung giờ hẹn là 2:40."
+        },
+        {
+          "id": 5,
+          "audioTimestamp": "4:09",
+          "question": "What is Mr Priest’s telephone number?",
+          "options": {
+            "A": "421 7896.",
+            "B": "241 8796.",
+            "C": "421 8769."
+          },
+          "answer": "A",
+          "transcript": "Secretary: Hello, Mr. Watson's secretary, can I help you?\nRichard Priest: Good afternoon. I'd like to make an appointment to see Mr. Watson next Monday, please.\nSecretary: Who's speaking, please?\nRichard Priest: Richard Priest.\nSecretary: Yes, Mr. Priest. Monday is all right. Would 10:15 be convenient?\nRichard Priest: Thank you, that'll be fine.\nSecretary: Oh, would you leave your telephone number, please, just in case we need it.\nRichard Priest: My telephone number is 421-7896.\nSecretary: 421-7896. Thank you, Mr. Priest.",
+          "explainAnswer": "Ông Priest đọc số điện thoại của mình là '421-7896' và thư ký đã lặp lại chính xác chuỗi số này."
+        }
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "PART 2: Short Conversations",
+      "instruction": "Directions: In this part, you will hear five short conversations. You will hear each conversation twice. There is one question for each conversation. Before you listen, you have 15 seconds to look at the questions.",
+      "audioUrl": "audio_part_2_listening.mp3",
+      "questions": [
+        {
+          "id": 6,
+          "audioTimestamp": "0:00",
+          "question": "What was the weather like when the holiday began?",
+          "options": {
+            "A": "Rainy.",
+            "B": "Sunny.",
+            "C": "Cloudy."
+          },
+          "answer": "A",
+          "transcript": "Person 1: Did you have a good holiday?\nPerson 2: Oh, it was ok. It rained for the first three days.\nPerson 1: But you're really brown. Wasn't it sunny?\nPerson 2: Yes, we had sun for a few days, but in the last two days it was cloudy.",
+          "explainAnswer": "Người nói nhắc tới thời tiết những ngày đầu kỳ nghỉ: 'It rained for the first three days' (Trời mưa trong 3 ngày đầu tiên) -> Thời tiết lúc mới bắt đầu là mưa (Rainy)."
+        },
+        {
+          "id": 7,
+          "audioTimestamp": "0:43",
+          "question": "When did Gary start his new job?",
+          "options": {
+            "A": "In March.",
+            "B": "In April.",
+            "C": "In May."
+          },
+          "answer": "C",
+          "transcript": "Jane: Hello, Gary. I haven't seen you since March.\nGary: Hi, Jane. No, I've been busy with my new job.\nJane: Really? When did you start that?\nGary: May. I left my last job in April.",
+          "explainAnswer": "Khi Jane hỏi khi nào Gary bắt đầu công việc mới ('When did you start that?'), Gary trả lời ngắn gọn: 'May' (Tháng Năm)."
+        },
+        {
+          "id": 8,
+          "audioTimestamp": "1:25",
+          "question": "What music will they have at the party?",
+          "options": {
+            "A": "Guitar.",
+            "B": "Piano.",
+            "C": "CDs."
+          },
+          "answer": "C",
+          "transcript": "Person 1: Are you going to bring your guitar to the party?\nPerson 2: It's broken, I'm afraid. But you can play the piano for us.\nPerson 1: I'm not good enough. Let's just play your new CDs.\nPerson 2: All right, I'll bring the guitar another time.",
+          "explainAnswer": "Đàn guitar bị hỏng, piano thì không ai chơi giỏi, nên họ chốt lại phương án: 'Let's just play your new CDs' (Hãy mở mấy đĩa CD mới của bạn đi)."
+        },
+        {
+          "id": 9,
+          "audioTimestamp": "2:04",
+          "question": "How much did John’s football shirt cost?",
+          "options": {
+            "A": "£13.25.",
+            "B": "£30.25.",
+            "C": "£35.25."
+          },
+          "answer": "A",
+          "transcript": "Person 1: That's a great football shirt, John. Was it expensive?\nJohn: Not really. £13.25.\nPerson 1: That's quite cheap.\nJohn: Yes, it is.",
+          "explainAnswer": "John nói rõ giá chiếc áo đá bóng: '£13.25' (Thirteen pounds twenty five)."
+        },
+        {
+          "id": 10,
+          "audioTimestamp": "2:49",
+          "question": "What is the man buying for his lunch?",
+          "options": {
+            "A": "Soup.",
+            "B": "Pizza.",
+            "C": "Egg."
+          },
+          "answer": "B",
+          "transcript": "Shop Assistant: Can I help you, Mr. Stoker? Some soup to take away, as usual?\nMr. Stoker: Not today, thanks. But I'd like something hot. A slice of that pizza, please.\nShop Assistant: Okay. Anything else?\nMr. Stoker: Just a packet of egg sandwiches for Mrs. Brown. I said I'd take some back for her.",
+          "explainAnswer": "Ông Stoker từ chối món súp quen thuộc và gọi cho bản thân: 'A slice of that pizza, please' (Cho tôi một miếng pizza). Bánh mì trứng (egg sandwiches) là mua hộ cho bà Brown."
+        }
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "PART 3: Longer Conversation - Message Form",
+      "instruction": "Directions: In this part, you will hear a longer conversation and answer question 11-15. You will hear the conversation twice. Before you listen, you have 15 seconds to look at the questions.",
+      "audioUrl": "audio_part_3_listening.mp3",
+      "questions": [
+        {
+          "id": 11,
+          "audioTimestamp": "0:00",
+          "question": "Who is the message from?",
+          "options": {
+            "A": "Elaine",
+            "B": "Martin",
+            "C": "Grand Hotel"
+          },
+          "answer": "A",
+          "transcript": "Receiver: Hello, 785-3126.\nElaine: Hello, could I speak to Martin, please?\nReceiver: I'm afraid he's out at the moment. Can I take a message for him?\nElaine: Yes, please. My name's Elaine.\nReceiver: How do you spell that?\nElaine: E-L-A-I-N-E.\nReceiver: Right, Elaine. And what's the message?\nElaine: Tell Martin that the party tonight is at the Grand Hotel. I'll meet him there.\nReceiver: Does he know the address?\nElaine: Oh, yes, everyone knows the Grand Hotel.\nReceiver: Ok, I'll tell him.\nElaine: And tell him I'll try to be there at half past eight, but I may be a bit late.\nReceiver: Oh, I'm sure he won't mind waiting. I'll tell him 8:30. Is there anything else?\nElaine: Oh, yes. Ask him to bring a friend.\nReceiver: A friend? Oh, good. That could be me.\nElaine: Well, and please ask him to phone me if he can't come.\nReceiver: Has he got your phone number?\nElaine: It's 724-5936.\nReceiver: Right, I've got that.\nElaine: Thanks a lot. Bye.\nReceiver: Bye.",
+          "explainAnswer": "Người gọi điện để lại lời nhắn xưng tên mình là Elaine ('My name's Elaine'). Lời nhắn gửi cho Martin."
+        },
+        {
+          "id": 12,
+          "audioTimestamp": "0:38",
+          "question": "Where is the party?",
+          "options": {
+            "A": "At Martin's house",
+            "B": "At the Grand Hotel",
+            "C": "At Elaine's house"
+          },
+          "answer": "B",
+          "transcript": "Receiver: Hello, 785-3126.\nElaine: Hello, could I speak to Martin, please?\nReceiver: I'm afraid he's out at the moment. Can I take a message for him?\nElaine: Yes, please. My name's Elaine.\nReceiver: How do you spell that?\nElaine: E-L-A-I-N-E.\nReceiver: Right, Elaine. And what's the message?\nElaine: Tell Martin that the party tonight is at the Grand Hotel. I'll meet him there.\nReceiver: Does he know the address?\nElaine: Oh, yes, everyone knows the Grand Hotel.\nReceiver: Ok, I'll tell him.\nElaine: And tell him I'll try to be there at half past eight, but I may be a bit late.\nReceiver: Oh, I'm sure he won't mind waiting. I'll tell him 8:30. Is there anything else?\nElaine: Oh, yes. Ask him to bring a friend.\nReceiver: A friend? Oh, good. That could be me.\nElaine: Well, and please ask him to phone me if he can't come.\nReceiver: Has he got your phone number?\nElaine: It's 724-5936.\nReceiver: Right, I've got that.\nElaine: Thanks a lot. Bye.\nReceiver: Bye.",
+          "explainAnswer": "Elaine nhắn: 'Tell Martin that the party tonight is at the Grand Hotel' (Báo với Martin là bữa tiệc tối nay ở khách sạn Grand Hotel)."
+        },
+        {
+          "id": 13,
+          "audioTimestamp": "0:51",
+          "question": "What time will Elaine try to be there?",
+          "options": {
+            "A": "8:00 p.m.",
+            "B": "8:13 p.m.",
+            "C": "8:30 p.m."
+          },
+          "answer": "C",
+          "transcript": "Receiver: Hello, 785-3126.\nElaine: Hello, could I speak to Martin, please?\nReceiver: I'm afraid he's out at the moment. Can I take a message for him?\nElaine: Yes, please. My name's Elaine.\nReceiver: How do you spell that?\nElaine: E-L-A-I-N-E.\nReceiver: Right, Elaine. And what's the message?\nElaine: Tell Martin that the party tonight is at the Grand Hotel. I'll meet him there.\nReceiver: Does he know the address?\nElaine: Oh, yes, everyone knows the Grand Hotel.\nReceiver: Ok, I'll tell him.\nElaine: And tell him I'll try to be there at half past eight, but I may be a bit late.\nReceiver: Oh, I'm sure he won't mind waiting. I'll tell him 8:30. Is there anything else?\nElaine: Oh, yes. Ask him to bring a friend.\nReceiver: A friend? Oh, good. That could be me.\nElaine: Well, and please ask him to phone me if he can't come.\nReceiver: Has he got your phone number?\nElaine: It's 724-5936.\nReceiver: Right, I've got that.\nElaine: Thanks a lot. Bye.\nReceiver: Bye.",
+          "explainAnswer": "Elaine nói: 'I'll try to be there at half past eight' (Tôi sẽ cố gắng tới đó lúc 8 rưỡi / 8:30)."
+        },
+        {
+          "id": 14,
+          "audioTimestamp": "1:03",
+          "question": "What should Martin bring?",
+          "options": {
+            "A": "A drink",
+            "B": "A friend",
+            "C": "A present"
+          },
+          "answer": "B",
+          "transcript": "Receiver: Hello, 785-3126.\nElaine: Hello, could I speak to Martin, please?\nReceiver: I'm afraid he's out at the moment. Can I take a message for him?\nElaine: Yes, please. My name's Elaine.\nReceiver: How do you spell that?\nElaine: E-L-A-I-N-E.\nReceiver: Right, Elaine. And what's the message?\nElaine: Tell Martin that the party tonight is at the Grand Hotel. I'll meet him there.\nReceiver: Does he know the address?\nElaine: Oh, yes, everyone knows the Grand Hotel.\nReceiver: Ok, I'll tell him.\nElaine: And tell him I'll try to be there at half past eight, but I may be a bit late.\nReceiver: Oh, I'm sure he won't mind waiting. I'll tell him 8:30. Is there anything else?\nElaine: Oh, yes. Ask him to bring a friend.\nReceiver: A friend? Oh, good. That could be me.\nElaine: Well, and please ask him to phone me if he can't come.\nReceiver: Has he got your phone number?\nElaine: It's 724-5936.\nReceiver: Right, I've got that.\nElaine: Thanks a lot. Bye.\nReceiver: Bye.",
+          "explainAnswer": "Elaine nhắc thêm: 'Ask him to bring a friend' (Bảo anh ấy dẫn theo một người bạn)."
+        },
+        {
+          "id": 15,
+          "audioTimestamp": "1:20",
+          "question": "What is Elaine's phone number?",
+          "options": {
+            "A": "785 3126",
+            "B": "724 5936",
+            "C": "724 5396"
+          },
+          "answer": "B",
+          "transcript": "Receiver: Hello, 785-3126.\nElaine: Hello, could I speak to Martin, please?\nReceiver: I'm afraid he's out at the moment. Can I take a message for him?\nElaine: Yes, please. My name's Elaine.\nReceiver: How do you spell that?\nElaine: E-L-A-I-N-E.\nReceiver: Right, Elaine. And what's the message?\nElaine: Tell Martin that the party tonight is at the Grand Hotel. I'll meet him there.\nReceiver: Does he know the address?\nElaine: Oh, yes, everyone knows the Grand Hotel.\nReceiver: Ok, I'll tell him.\nElaine: And tell him I'll try to be there at half past eight, but I may be a bit late.\nReceiver: Oh, I'm sure he won't mind waiting. I'll tell him 8:30. Is there anything else?\nElaine: Oh, yes. Ask him to bring a friend.\nReceiver: A friend? Oh, good. That could be me.\nElaine: Well, and please ask him to phone me if he can't come.\nReceiver: Has he got your phone number?\nElaine: It's 724-5936.\nReceiver: Right, I've got that.\nElaine: Thanks a lot. Bye.\nReceiver: Bye.",
+          "explainAnswer": "Elaine đọc số điện thoại của mình là '724-5936'. (Lưu ý: 785-3126 là số của nhà Martin)."
+        }
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "PART 4: Longer Conversation - Shopping",
+      "instruction": "Directions: In this part, you will hear a longer conversation and answer questions 16-20. You will hear the conversation twice. Before you listen, you have 15 seconds to look at the questions.",
+      "audioUrl": "audio_part_4_listening.mp3",
+      "questions": [
+        {
+          "id": 16,
+          "audioTimestamp": "0:14",
+          "question": "Alex has seen a nice, but expensive…",
+          "options": {
+            "A": "skirt.",
+            "B": "dress.",
+            "C": "shirt."
+          },
+          "answer": "B",
+          "transcript": "Helen: Hi Alex. Are you coming to the party on Saturday?\nAlex: Yes, I am going shopping to buy something new to wear to it.\nHelen: What are you going to buy?\nAlex: I have seen a nice dress, but it is too expensive, so I might buy a skirt instead.\nHelen: Why don't you buy some new trousers?\nAlex: I have lots of trousers, but I only have two skirts.\nHelen: Have you been to the new shop on George Street? It is called Sonic. It has very nice skirts and dresses. It's not too expensive either.\nAlex: I will have a look there. I also want to buy some new shoes. What are you going to wear to the party?\nHelen: I think I'm going to wear my new jeans, black top and my pink pointy shoes.",
+          "explainAnswer": "Alex chia sẻ: 'I have seen a nice dress, but it is too expensive' (Tớ thấy một chiếc váy liền đẹp nhưng đắt quá)."
+        },
+        {
+          "id": 17,
+          "audioTimestamp": "0:19",
+          "question": "What does Helen suggest Alex buy?",
+          "options": {
+            "A": "trousers",
+            "B": "jeans",
+            "C": "T-shirt"
+          },
+          "answer": "A",
+          "transcript": "Helen: Hi Alex. Are you coming to the party on Saturday?\nAlex: Yes, I am going shopping to buy something new to wear to it.\nHelen: What are you going to buy?\nAlex: I have seen a nice dress, but it is too expensive, so I might buy a skirt instead.\nHelen: Why don't you buy some new trousers?\nAlex: I have lots of trousers, but I only have two skirts.\nHelen: Have you been to the new shop on George Street? It is called Sonic. It has very nice skirts and dresses. It's not too expensive either.\nAlex: I will have a look there. I also want to buy some new shoes. What are you going to wear to the party?\nHelen: I think I'm going to wear my new jeans, black top and my pink pointy shoes.",
+          "explainAnswer": "Helen gợi ý: 'Why don't you buy some new trousers?' (Sao cậu không mua một chiếc quần dài mới?)."
+        },
+        {
+          "id": 18,
+          "audioTimestamp": "0:21",
+          "question": "How many skirts does Alex have?",
+          "options": {
+            "A": "three",
+            "B": "two",
+            "C": "one"
+          },
+          "answer": "B",
+          "transcript": "Helen: Hi Alex. Are you coming to the party on Saturday?\nAlex: Yes, I am going shopping to buy something new to wear to it.\nHelen: What are you going to buy?\nAlex: I have seen a nice dress, but it is too expensive, so I might buy a skirt instead.\nHelen: Why don't you buy some new trousers?\nAlex: I have lots of trousers, but I only have two skirts.\nHelen: Have you been to the new shop on George Street? It is called Sonic. It has very nice skirts and dresses. It's not too expensive either.\nAlex: I will have a look there. I also want to buy some new shoes. What are you going to wear to the party?\nHelen: I think I'm going to wear my new jeans, black top and my pink pointy shoes.",
+          "explainAnswer": "Alex giải thích lý do không mua quần: 'I have lots of trousers, but I only have two skirts' (Tớ có nhiều quần rồi, nhưng chỉ có 2 cái chân váy thôi)."
+        },
+        {
+          "id": 19,
+          "audioTimestamp": "0:25",
+          "question": "What is the name of the new shop on George Street?",
+          "options": {
+            "A": "Shooz",
+            "B": "Raw",
+            "C": "Sonic"
+          },
+          "answer": "C",
+          "transcript": "Helen: Hi Alex. Are you coming to the party on Saturday?\nAlex: Yes, I am going shopping to buy something new to wear to it.\nHelen: What are you going to buy?\nAlex: I have seen a nice dress, but it is too expensive, so I might buy a skirt instead.\nHelen: Why don't you buy some new trousers?\nAlex: I have lots of trousers, but I only have two skirts.\nHelen: Have you been to the new shop on George Street? It is called Sonic. It has very nice skirts and dresses. It's not too expensive either.\nAlex: I will have a look there. I also want to buy some new shoes. What are you going to wear to the party?\nHelen: I think I'm going to wear my new jeans, black top and my pink pointy shoes.",
+          "explainAnswer": "Helen nhắc tới cửa hàng mới: 'Have you been to the new shop on George Street? It is called Sonic' -> Tên cửa hàng là Sonic."
+        },
+        {
+          "id": 20,
+          "audioTimestamp": "0:40",
+          "question": "What colour top will Helen wear?",
+          "options": {
+            "A": "black",
+            "B": "blue",
+            "C": "pink"
+          },
+          "answer": "A",
+          "transcript": "Helen: Hi Alex. Are you coming to the party on Saturday?\nAlex: Yes, I am going shopping to buy something new to wear to it.\nHelen: What are you going to buy?\nAlex: I have seen a nice dress, but it is too expensive, so I might buy a skirt instead.\nHelen: Why don't you buy some new trousers?\nAlex: I have lots of trousers, but I only have two skirts.\nHelen: Have you been to the new shop on George Street? It is called Sonic. It has very nice skirts and dresses. It's not too expensive either.\nAlex: I will have a look there. I also want to buy some new shoes. What are you going to wear to the party?\nHelen: I think I'm going to wear my new jeans, black top and my pink pointy shoes.",
+          "explainAnswer": "Helen nói về trang phục của mình: 'wear my new jeans, black top and my pink pointy shoes' -> Áo (top) của Helen màu đen (black)."
+        }
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "PART 5: Short Talk - Travel Agency Announcement",
+      "instruction": "Directions: In this part, you will hear a short talk and answer questions 21-25. You will hear the talk twice. Before you listen, you have 15 seconds to look at the questions.",
+      "audioUrl": "audio_part_5_listening.mp3",
+      "questions": [
+        {
+          "id": 21,
+          "audioTimestamp": "0:26",
+          "question": "What is the new phone number?",
+          "options": {
+            "A": "847 2296",
+            "B": "847 2926",
+            "C": "874 2296"
+          },
+          "answer": "A",
+          "transcript": "Hello, this is the South Seas Travel Agency. I'm sorry, no one can speak to you right now. The South Seas Travel Agency has moved to another part of town. We also have a new phone number. Please ring us on 847-2296. Our new address is 98 Warnock Road. That's W-A-R-N-O-C-K. It's easy to find. It's near the park at the end of the road, opposite the bank. We will be open for business at our new office on 21 May. We hope to see you soon at our new address. We have many exciting holidays at special prices, and we have a present for anyone who spends £350 or more on a holiday. If your holiday costs £350, we will give you a travel bag absolutely free. This beautiful bag can carry everything you need on a plane journey, and it can be yours free. Thank you for calling the South Seas Travel Agency.",
+          "explainAnswer": "Thông báo đưa ra số điện thoại mới: 'Please ring us on 847-2296'."
+        },
+        {
+          "id": 22,
+          "audioTimestamp": "0:33",
+          "question": "What is the name of the new address's road?",
+          "options": {
+            "A": "Warnock Road",
+            "B": "Park Road",
+            "C": "Watson Road"
+          },
+          "answer": "A",
+          "transcript": "Hello, this is the South Seas Travel Agency. I'm sorry, no one can speak to you right now. The South Seas Travel Agency has moved to another part of town. We also have a new phone number. Please ring us on 847-2296. Our new address is 98 Warnock Road. That's W-A-R-N-O-C-K. It's easy to find. It's near the park at the end of the road, opposite the bank. We will be open for business at our new office on 21 May. We hope to see you soon at our new address. We have many exciting holidays at special prices, and we have a present for anyone who spends £350 or more on a holiday. If your holiday costs £350, we will give you a travel bag absolutely free. This beautiful bag can carry everything you need on a plane journey, and it can be yours free. Thank you for calling the South Seas Travel Agency.",
+          "explainAnswer": "Đoạn băng đọc và đánh vần tên đường: 'Our new address is 98 Warnock Road. That's W-A-R-N-O-C-K'."
+        },
+        {
+          "id": 23,
+          "audioTimestamp": "0:49",
+          "question": "What is the agency's new address opposite to?",
+          "options": {
+            "A": "A park",
+            "B": "A station",
+            "C": "A bank"
+          },
+          "answer": "C",
+          "transcript": "Hello, this is the South Seas Travel Agency. I'm sorry, no one can speak to you right now. The South Seas Travel Agency has moved to another part of town. We also have a new phone number. Please ring us on 847-2296. Our new address is 98 Warnock Road. That's W-A-R-N-O-C-K. It's easy to find. It's near the park at the end of the road, opposite the bank. We will be open for business at our new office on 21 May. We hope to see you soon at our new address. We have many exciting holidays at special prices, and we have a present for anyone who spends £350 or more on a holiday. If your holiday costs £350, we will give you a travel bag absolutely free. This beautiful bag can carry everything you need on a plane journey, and it can be yours free. Thank you for calling the South Seas Travel Agency.",
+          "explainAnswer": "Mô tả vị trí địa chỉ mới: 'It's near the park at the end of the road, opposite the bank' (Đối diện ngân hàng)."
+        },
+        {
+          "id": 24,
+          "audioTimestamp": "1:09",
+          "question": "How much do you need to spend on a holiday to get a free gift?",
+          "options": {
+            "A": "£350",
+            "B": "£300",
+            "C": "£315"
+          },
+          "answer": "A",
+          "transcript": "Hello, this is the South Seas Travel Agency. I'm sorry, no one can speak to you right now. The South Seas Travel Agency has moved to another part of town. We also have a new phone number. Please ring us on 847-2296. Our new address is 98 Warnock Road. That's W-A-R-N-O-C-K. It's easy to find. It's near the park at the end of the road, opposite the bank. We will be open for business at our new office on 21 May. We hope to see you soon at our new address. We have many exciting holidays at special prices, and we have a present for anyone who spends £350 or more on a holiday. If your holiday costs £350, we will give you a travel bag absolutely free. This beautiful bag can carry everything you need on a plane journey, and it can be yours free. Thank you for calling the South Seas Travel Agency.",
+          "explainAnswer": "Điều kiện nhận quà tặng: 'we have a present for anyone who spends £350 or more on a holiday'."
+        },
+        {
+          "id": 25,
+          "audioTimestamp": "1:16",
+          "question": "What is given as a free gift?",
+          "options": {
+            "A": "A map",
+            "B": "A travel bag",
+            "C": "A guide book"
+          },
+          "answer": "B",
+          "transcript": "Hello, this is the South Seas Travel Agency. I'm sorry, no one can speak to you right now. The South Seas Travel Agency has moved to another part of town. We also have a new phone number. Please ring us on 847-2296. Our new address is 98 Warnock Road. That's W-A-R-N-O-C-K. It's easy to find. It's near the park at the end of the road, opposite the bank. We will be open for business at our new office on 21 May. We hope to see you soon at our new address. We have many exciting holidays at special prices, and we have a present for anyone who spends £350 or more on a holiday. If your holiday costs £350, we will give you a travel bag absolutely free. This beautiful bag can carry everything you need on a plane journey, and it can be yours free. Thank you for calling the South Seas Travel Agency.",
+          "explainAnswer": "Tên quà tặng miễn phí được nhắc tới cụ thể: 'we will give you a travel bag absolutely free' (Một chiếc túi du lịch hoàn toàn miễn phí)."
+        }
+      ]
+    }
+  ]
+}
