@@ -143,7 +143,7 @@ export function SiteHeader({
   return (
     <>
       <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-slate-50/95 shadow-[var(--shadow-1)] backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/95 dark:shadow-[var(--shadow-2)] supports-[backdrop-filter]:bg-slate-50/80 dark:supports-[backdrop-filter]:bg-slate-950/80">
-      <div className="relative mx-auto flex w-full max-w-[1120px] items-center justify-between gap-3 px-6 py-[18px] lg:px-8">
+      <div className="relative mx-auto flex w-full max-w-[1120px] items-center justify-between gap-3 px-6 py-[10px] md:py-[18px] lg:px-8">
         {/* Mobile: hamburger left */}
         <button
           type="button"
