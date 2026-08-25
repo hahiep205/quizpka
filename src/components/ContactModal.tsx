@@ -40,7 +40,7 @@ function Field({
   )
 }
 
-export function ContactModal({ open, type, onClose, lang = "en" }: ContactModalProps) {
+export function ContactModal({ open, type, onClose, lang = "vi" }: ContactModalProps) {
   const titleId = useId()
   const [form, setForm] = useState(initialForm)
   const [submitted, setSubmitted] = useState(false)

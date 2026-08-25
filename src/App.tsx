@@ -26,7 +26,7 @@ export default function App() {
   const [loginOpen, setLoginOpen] = useState(false)
   const [lang, setLang] = useState<Lang>(() => {
     const saved = localStorage.getItem("quizpka-lang")
-    return saved === "vi" || saved === "en" ? saved : "en"
+    return saved === "vi" || saved === "en" ? saved : "vi"
   })
   const [theme, setTheme] = useState<Theme>(() => {
     const saved = localStorage.getItem("quizpka-theme")

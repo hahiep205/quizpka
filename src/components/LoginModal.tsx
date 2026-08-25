@@ -11,7 +11,7 @@ type LoginModalProps = {
 
 
 
-export function LoginModal({ open, onClose, lang = "en" }: LoginModalProps) {
+export function LoginModal({ open, onClose, lang = "vi" }: LoginModalProps) {
   const titleId = useId()
   const [visible, setVisible] = useState(false)
   const [state, setState] = useState<"open" | "closed">("closed")
