@@ -1,0 +1,1512 @@
+[
+  {
+    "group": 1,
+    "audio": "p4_g01_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Why is the speaker calling Ms. Vance?",
+        "options": {
+          "A": "To report an emergency network outage",
+          "B": "To confirm an IT upgrade approval",
+          "C": "To notify her of a software subscription expiration",
+          "D": "To request her account password reset"
+        },
+        "correct_answer": "B",
+        "correct_text": "To confirm an IT upgrade approval",
+        "audio_transcript": "Speaker: ...I'm calling to inform you that your request for an upgrade to the Enterprise Cloud Storage package has been approved by your department director.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Sự cố mạng khẩn cấp. Không đề cập sự cố sập mạng."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng mục đích cuộc gọi là xác nhận yêu cầu nâng cấp IT đã được duyệt (To confirm an IT upgrade approval)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Hết hạn phần mềm. Không thông báo hết hạn phần mềm."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Yêu cầu đổi mật khẩu. Không xin đổi mật khẩu."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "upgrade has been approved",
+            "paraphrases": ["enhancement accepted", "request sanctioned"],
+            "meaning": "yêu cầu nâng cấp đã được phê duyệt"
+          },
+          {
+            "phrase": "Enterprise Cloud Storage",
+            "paraphrases": ["corporate cloud drive"],
+            "meaning": "gói lưu trữ đám mây doanh nghiệp"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Purpose Statement 'I'm calling to...' - Lắng nghe mục đích cuộc gọi ở câu thứ 2 'I'm calling to inform you...'.",
+          "Bước 2: Match 'upgrade... has been approved' - Bắt chính xác từ 'upgrade' đi kèm 'approved'.",
+          "Bước 3: Select Option B - Chọn B."
+        ]
+      },
+      {
+        "id": 2,
+        "question": "What is Ms. Vance asked to do tonight?",
+        "options": {
+          "A": "Disconnect her desktop monitor",
+          "B": "Download a security system patch",
+          "C": "Keep her laptop connected to the network",
+          "D": "Restart her office router"
+        },
+        "correct_answer": "C",
+        "correct_text": "Keep her laptop connected to the network",
+        "audio_transcript": "Speaker: ...please make sure your laptop remains connected to the company network overnight...",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Ngắt màn hình máy tính. Không yêu cầu ngắt màn hình."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Tự tải bản vá an ninh. Hệ thống tự động đẩy bản vá (automated system push updates), người dùng không phải tự tải."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng yêu cầu giữ kết nối laptop với mạng qua đêm (Keep her laptop connected to the network)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Khởi động lại router. Không bảo khởi động lại thiết bị phát wifi."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "remains connected overnight",
+            "paraphrases": ["stay plugged into network all night"],
+            "meaning": "duy trì kết nối mạng qua đêm"
+          },
+          {
+            "phrase": "automated system push updates",
+            "paraphrases": ["auto-install security patches"],
+            "meaning": "hệ thống tự động đẩy bản cập nhật"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Focus on Time Keyword 'overnight' - Tập trung lắng nghe câu chứa mốc thời gian qua đêm 'overnight'.",
+          "Bước 2: Match 'remains connected' - Bắt chính xác cụm 'laptop remains connected'.",
+          "Bước 3: Select Option C - Chọn C."
+        ]
+      },
+      {
+        "id": 3,
+        "question": "How can Ms. Vance contact the speaker?",
+        "options": {
+          "A": "By visiting Room 101",
+          "B": "By submitting a ticket online",
+          "C": "By sending a text message",
+          "D": "By calling extension 3304"
+        },
+        "correct_answer": "D",
+        "correct_text": "By calling extension 3304",
+        "audio_transcript": "Speaker: ...please call me back at extension three three zero four.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Đến phòng 101 trực tiếp. Không bảo đến gặp trực tiếp tại phòng 101."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Tạo yêu cầu online. Không gửi ticket hỗ trợ."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Nhắn tin SMS. Không gửi tin nhắn thoại."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng phương thức liên hệ bằng gọi số máy lẻ 3304 (By calling extension 3304)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "extension 3304",
+            "paraphrases": ["internal phone line 3304"],
+            "meaning": "số máy lẻ 3304"
+          },
+          {
+            "phrase": "call me back",
+            "paraphrases": ["return my call", "dial my number"],
+            "meaning": "gọi lại cho tôi"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Closing Contact Info - Lắng nghe câu cuối bài nói cung cấp thông tin liên hệ.",
+          "Bước 2: Match Number '3304' - Bắt chính xác con số máy lẻ 'extension three three zero four'.",
+          "Bước 3: Select Option D - Chọn D."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 2,
+    "audio": "p4_g02_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 4,
+        "question": "What is the announcement mainly about?",
+        "options": {
+          "A": "A gate relocation for Flight 412",
+          "B": "A flight cancellation announcement",
+          "C": "A lost luggage report",
+          "D": "A duty-free store promotion"
+        },
+        "correct_answer": "A",
+        "correct_text": "A gate relocation for Flight 412",
+        "audio_transcript": "Speaker: ...the boarding area for Flight four one two has been relocated to Gate B twenty-four...",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng chủ đề thông báo là việc chuyển cửa khởi hành cho chuyến 412 (A gate relocation for Flight 412)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Hủy chuyến bay. Chuyến bay không bị hủy, chỉ đổi cửa ra máy bay."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Thất lạc hành lý. Không thông báo mất hành lý."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Khuyến mãi cửa hàng miễn thuế. Không quảng cáo hàng miễn thuế."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "relocated to Gate B24",
+            "paraphrases": ["moved to a new departure gate"],
+            "meaning": "được chuyển sang Cửa B24"
+          },
+          {
+            "phrase": "boarding area",
+            "paraphrases": ["departure lounge", "gate area"],
+            "meaning": "khu vực lên máy bay / cửa khởi hành"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Airport Announcement Purpose - Lắng nghe câu đầu thông báo địa điểm và số hiệu chuyến bay.",
+          "Bước 2: Match 'relocated to Gate B24' - Bắt chính xác từ 'relocated' liên quan đến 'gate'.",
+          "Bước 3: Select Option A - Chọn A."
+        ]
+      },
+      {
+        "id": 5,
+        "question": "What time will boarding begin?",
+        "options": {
+          "A": "3:30 P.M.",
+          "B": "4:15 P.M.",
+          "C": "5:00 P.M.",
+          "D": "6:45 P.M."
+        },
+        "correct_answer": "B",
+        "correct_text": "4:15 P.M.",
+        "audio_transcript": "Speaker: ...Boarding will begin promptly at four fifteen P.M. ...",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Mốc 3:30 P.M. Không đề cập 3:30 P.M."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng giờ bắt đầu mở cửa cho khách lên máy bay (4:15 P.M.)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Mốc 5:00 P.M. 5:00 P.M. không có trong bài phát thanh."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Mốc 6:45 P.M. 6:45 P.M. không phải giờ lên máy bay."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "boarding will begin",
+            "paraphrases": ["passenger loading starts"],
+            "meaning": "việc cho khách lên máy bay sẽ bắt đầu"
+          },
+          {
+            "phrase": "four fifteen P.M.",
+            "paraphrases": ["4:15 PM"],
+            "meaning": "4 giờ 15 phút chiều"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Focus on Time Expression 'Boarding will begin...' - Tập trung cụm từ chỉ thời gian sau 'Boarding will begin'.",
+          "Bước 2: Match 'four fifteen P.M.' - Bắt chính xác mốc giờ 4:15 P.M.",
+          "Bước 3: Select Option B - Chọn B."
+        ]
+      },
+      {
+        "id": 6,
+        "question": "How can passengers identify airport customer service agents?",
+        "options": {
+          "A": "They are standing at Gate B12",
+          "B": "They are driving electric shuttle carts",
+          "C": "They are holding red flight boarding passes",
+          "D": "They are wearing yellow vests"
+        },
+        "correct_answer": "D",
+        "correct_text": "They are wearing yellow vests",
+        "audio_transcript": "Speaker: ...Airport customer service agents wearing yellow vests are stationed along the corridor...",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Vị trí Gate B12 cũ đang thi công. Họ đứng dọc hành lang, không phải ở cửa B12 cũ đang sửa."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Lái xe buýt điện. Không lái xe đưa đón."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Cầm thẻ lên máy bay màu đỏ. Không có chi tiết cầm thẻ đỏ."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng dấu hiệu nhận biết nhân viên là mặc áo gile màu vàng (They are wearing yellow vests)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "wearing yellow vests",
+            "paraphrases": ["attired in bright yellow waistcoats"],
+            "meaning": "mặc áo gile phản quang màu vàng"
+          },
+          {
+            "phrase": "stationed along the corridor",
+            "paraphrases": ["positioned in the hallway"],
+            "meaning": "túc trực dọc theo hành lang"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Agent Visual Feature - Lắng nghe đặc điểm nhận dạng nhân viên sau 'customer service agents'.",
+          "Bước 2: Match 'wearing yellow vests' - Bắt chính xác từ chỉ trang phục 'yellow vests'.",
+          "Bước 3: Select Option D - Chọn D."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 3,
+    "audio": "p4_g03_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 7,
+        "question": "Why is the speaker congratulating the team?",
+        "options": {
+          "A": "They won an industry safety award",
+          "B": "Q2 regional sales increased by 22%",
+          "C": "They opened a new headquarters building",
+          "D": "A competitor was acquired"
+        },
+        "correct_answer": "B",
+        "correct_text": "Q2 regional sales increased by 22%",
+        "audio_transcript": "Speaker: ...congratulating everyone on our remarkable Q2 results... overall regional sales increased by twenty-two percent...",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Giải thưởng an toàn ngành. Không có giải thưởng an toàn."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng nguyên nhân chúc mừng là doanh số quý 2 tăng 22% (Q2 regional sales increased by 22%)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Mở tòa nhà trụ sở mới. Không mở trụ sở mới."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Mua lại đối thủ cạnh tranh. Không thâu tóm công ty đối thủ."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "sales increased by 22%",
+            "paraphrases": ["revenue rose twenty-two percent"],
+            "meaning": "doanh số tăng 22%"
+          },
+          {
+            "phrase": "congratulating on Q2 results",
+            "paraphrases": ["praising second quarter performance"],
+            "meaning": "chúc mừng kết quả quý 2"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Praise Reason - Lắng nghe lý do sau cụm từ 'congratulating everyone on...'.",
+          "Bước 2: Match 'increased by twenty-two percent' - Bắt chính xác con số tăng trưởng 22%.",
+          "Bước 3: Select Option B - Chọn B."
+        ]
+      },
+      {
+        "id": 8,
+        "question": "When will the new commercial product line launch?",
+        "options": {
+          "A": "In July",
+          "B": "In August",
+          "C": "In September",
+          "D": "In December"
+        },
+        "correct_answer": "C",
+        "correct_text": "In September",
+        "audio_transcript": "Speaker: ...commercial vacuum series, which will launch in September.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Tháng 7. Tháng 7 không được đề cập."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Tháng 8. Tháng 8 chưa phải thời điểm ra mắt."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng tháng ra mắt sản phẩm thương mại mới là tháng 9 (In September)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Tháng 12. Tháng 12 không phải tháng ra mắt."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "launch in September",
+            "paraphrases": ["debut in September", "roll out in September"],
+            "meaning": "ra mắt vào tháng 9"
+          },
+          {
+            "phrase": "commercial vacuum series",
+            "paraphrases": ["professional cleaner line"],
+            "meaning": "dòng máy hút bụi thương mại"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Product Launch Month - Tập trung câu giới thiệu sản phẩm mới sau cụm 'will launch in...'.",
+          "Bước 2: Match 'September' - Bắt chính xác tên tháng 'September'.",
+          "Bước 3: Select Option C - Chọn C."
+        ]
+      },
+      {
+        "id": 9,
+        "question": "What are employees asked to do before next Wednesday?",
+        "options": {
+          "A": "Review product specifications on the team drive",
+          "B": "Submit travel expense reports",
+          "C": "Interview commercial clients",
+          "D": "Clean their workstations"
+        },
+        "correct_answer": "A",
+        "correct_text": "Review product specifications on the team drive",
+        "audio_transcript": "Speaker: ...Please review these materials before our training seminar next Wednesday.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng công việc nhân viên phải chuẩn bị là xem tài liệu thông số trên đĩa chung (Review product specifications on the team drive)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Nộp báo cáo chi phí công tác. Không yêu cầu nộp báo cáo chi phí."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Phỏng vấn khách hàng thương mại. Không phỏng vấn khách hàng."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Dọn vệ sinh góc làm việc. Không dọn góc làm việc."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "review these materials",
+            "paraphrases": ["examine documents", "study specifications"],
+            "meaning": "xem xét / nghiên cứu các tài liệu này"
+          },
+          {
+            "phrase": "before training seminar",
+            "paraphrases": ["prior to workshop"],
+            "meaning": "trước buổi thảo luận đào tạo"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Directive before Deadline - Lắng nghe câu yêu cầu đứng trước mốc thời gian 'before our training seminar next Wednesday'.",
+          "Bước 2: Match 'Please review these materials' - Bắt chính xác động từ 'review'.",
+          "Bước 3: Select Option A - Chọn A."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 4,
+    "audio": "p4_g04_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 10,
+        "question": "What event is FreshMarket celebrating today?",
+        "options": {
+          "A": "A grand reopening",
+          "B": "A store clearance sale",
+          "C": "A corporate anniversary celebration",
+          "D": "A product recall notice event"
+        },
+        "correct_answer": "A",
+        "correct_text": "A grand reopening",
+        "audio_transcript": "Speaker: ...We are excited to celebrate our grand reopening today after two months of extensive remodeling.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng sự kiện ăn mừng hôm nay là lễ khai trương lại cửa hàng (A grand reopening)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Xả hàng tồn kho. Đây là lễ khai trương lại, không phải xả kho dẹp cửa hàng."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Kỷ niệm thành lập tập đoàn. Không phải lễ kỷ niệm thành lập."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Thu hồi sản phẩm. Không thu hồi sản phẩm lỗi."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "grand reopening",
+            "paraphrases": ["store launch after renovation"],
+            "meaning": "lễ khai trương lại cửa hàng"
+          },
+          {
+            "phrase": "extensive remodeling",
+            "paraphrases": ["major store redesign"],
+            "meaning": "tái thiết kế / sửa chữa diện rộng"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Welcome Announcement Opening - Lắng nghe câu đầu của bài phát thanh cửa hàng 'We are excited to celebrate...'.",
+          "Bước 2: Match 'grand reopening' - Bắt chính xác cụm 'grand reopening'.",
+          "Bước 3: Select Option A - Chọn A."
+        ]
+      },
+      {
+        "id": 11,
+        "question": "What discount is offered on organic produce today?",
+        "options": {
+          "A": "10%",
+          "B": "15%",
+          "C": "25%",
+          "D": "50%"
+        },
+        "correct_answer": "C",
+        "correct_text": "25%",
+        "audio_transcript": "Speaker: ...offering an exclusive twenty-five percent discount on all organic produce...",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Con số 10%. 10% không được đề cập."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Con số 15%. 15% không phải tỷ lệ giảm giá."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng tỷ lệ phần trăm giảm giá cho rau củ hữu cơ (25%)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Con số 50%. 50% không có trong bài."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "25% discount",
+            "paraphrases": ["twenty-five percent price cut"],
+            "meaning": "giảm giá 25%"
+          },
+          {
+            "phrase": "organic produce",
+            "paraphrases": ["pesticide-free fruits and vegetables"],
+            "meaning": "nông sản hữu cơ"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Discount Percentage Announcement - Tập trung con số đứng trước 'discount on all organic produce'.",
+          "Bước 2: Match 'twenty-five percent' - Bắt chính xác con số 25%.",
+          "Bước 3: Select Option C - Chọn C."
+        ]
+      },
+      {
+        "id": 12,
+        "question": "What will the first 100 shoppers receive?",
+        "options": {
+          "A": "A gift card worth $50",
+          "B": "A cookbook signed by a chef",
+          "C": "A free coffee mug",
+          "D": "A reusable canvas tote bag with food samples"
+        },
+        "correct_answer": "D",
+        "correct_text": "A reusable canvas tote bag with food samples",
+        "audio_transcript": "Speaker: ...the first 100 shoppers... will receive a reusable canvas tote bag filled with complimentary gourmet food samples.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Thẻ quà tặng $50. Không tặng thẻ mua hàng $50."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Sách nấu ăn có chữ ký. Không tặng sách nấu ăn."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Cốc uống cà phê. Không tặng cốc."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng quà tặng cho 100 vị khách đầu tiên là túi vải canvas chứa đồ ăn dùng thử (A reusable canvas tote bag with food samples)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "reusable canvas tote bag",
+            "paraphrases": ["cloth shopping bag"],
+            "meaning": "túi vải canvas dùng nhiều lần"
+          },
+          {
+            "phrase": "complimentary food samples",
+            "paraphrases": ["free tasting items"],
+            "meaning": "mẫu dùng thử đồ ăn miễn phí"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for 'first 100 shoppers' - Lắng nghe cụm từ chỉ điều kiện 'first 100 shoppers'.",
+          "Bước 2: Match 'canvas tote bag' - Bắt chính xác tên quà tặng 'reusable canvas tote bag'.",
+          "Bước 3: Select Option D - Chọn D."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 5,
+    "audio": "p4_g05_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 13,
+        "question": "What product is being advertised?",
+        "options": {
+          "A": "A solar battery home charger",
+          "B": "An auto repair and tinting service",
+          "C": "A hybrid SUV rental service",
+          "D": "An electric vehicle sedan"
+        },
+        "correct_answer": "D",
+        "correct_text": "An electric vehicle sedan",
+        "audio_transcript": "Speaker: ...Introducing the all-new Solara E.V. Sedan from GreenDrive Motors!",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Trạm sạc năng lượng mặt trời. Trạm sạc là quà tặng đi kèm, không phải sản phẩm chính được quảng cáo."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Dịch vụ sửa xe. Không quảng cáo gara sửa xe."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Dịch vụ cho thuê xe SUV. Không cho thuê xe SUV."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng sản phẩm xe ô tô điện sedan đang được quảng cáo (An electric vehicle sedan)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "E.V. Sedan",
+            "paraphrases": ["electric passenger car"],
+            "meaning": "xe ô tô điện kiểu dáng sedan"
+          },
+          {
+            "phrase": "lower monthly fuel costs",
+            "paraphrases": ["cut gas expenses"],
+            "meaning": "giảm chi phí nhiên liệu hàng tháng"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Product Introduction - Lắng nghe sau từ giới thiệu 'Introducing...'.",
+          "Bước 2: Match 'Solara E.V. Sedan' - Khớp E.V. Sedan với đáp án 'electric vehicle sedan'.",
+          "Bước 3: Select Option D - Chọn D."
+        ]
+      },
+      {
+        "id": 14,
+        "question": "What is the single-charge battery range of the vehicle?",
+        "options": {
+          "A": "150 miles",
+          "B": "250 miles",
+          "C": "Up to 350 miles",
+          "D": "500 miles"
+        },
+        "correct_answer": "C",
+        "correct_text": "Up to 350 miles",
+        "audio_transcript": "Speaker: ...With an impressive battery range of up to 350 miles on a single charge...",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Con số 150 dặm. 150 dặm không phải quãng đường tối đa."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Con số 250 dặm. 250 dặm không có trong bài."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng phạm vi di chuyển sau 1 lần sạc pin (Up to 350 miles)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Con số 500 dặm. 500 dặm không có trong bài."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "up to 350 miles",
+            "paraphrases": ["maximum 350-mile distance"],
+            "meaning": "lên tới 350 dặm (khoảng 560 km)"
+          },
+          {
+            "phrase": "single charge",
+            "paraphrases": ["one battery recharge cycle"],
+            "meaning": "một lần sạc pin"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Focus on Battery Range Number - Lắng nghe con số đứng sau 'battery range of...'.",
+          "Bước 2: Match '350 miles' - Bắt chính xác con số 'three hundred fifty miles'.",
+          "Bước 3: Select Option C - Chọn C."
+        ]
+      },
+      {
+        "id": 15,
+        "question": "What special incentive is offered to test drivers this weekend?",
+        "options": {
+          "A": "Free vehicle tinting",
+          "B": "A $1,500 environmental rebate and free charging station installation",
+          "C": "Two years of free car washes",
+          "D": "A complimentary leather jacket"
+        },
+        "correct_answer": "B",
+        "correct_text": "A $1,500 environmental rebate and free charging station installation",
+        "audio_transcript": "Speaker: ...receive a one thousand five hundred dollars state environmental rebate plus a free home charging station installation.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Dán phim cách nhiệt miễn phí. Không dán kính xe."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng phần ưu đãi bao gồm $1,500 trợ giá và miễn phí lắp trạm sạc tại nhà (A $1,500 environmental rebate and free charging station installation)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "2 năm rửa xe miễn phí. Không miễn phí rửa xe."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Áo da tặng kèm. Không tặng áo da."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "environmental rebate",
+            "paraphrases": ["eco subsidy", "green discount"],
+            "meaning": "khoản hoàn tiền / trợ giá môi trường"
+          },
+          {
+            "phrase": "home charging station installation",
+            "paraphrases": ["in-home charger setup"],
+            "meaning": "lắp đặt trạm sạc tại nhà"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Weekend Test Drive Offer - Lắng nghe câu chứa ưu đãi sau cụm 'for a test drive and receive...'.",
+          "Bước 2: Match '$1,500' and 'charging station' - Bắt chính xác con số 'one thousand five hundred dollars' và 'free home charging station'.",
+          "Bước 3: Select Option B - Chọn B."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 6,
+    "audio": "p4_g06_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 16,
+        "question": "What collection is the tour guide showcasing today?",
+        "options": {
+          "A": "Renaissance Sculpture collection",
+          "B": "Ancient Egyptian pottery",
+          "C": "Impressionist oil paintings",
+          "D": "Contemporary photography"
+        },
+        "correct_answer": "A",
+        "correct_text": "Renaissance Sculpture collection",
+        "audio_transcript": "Speaker: ...I will be your docent for today's special guided tour of the Renaissance Sculpture collection.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng bộ sưu tập nghệ thuật được hướng dẫn hôm nay là Điêu khắc thời Phục hưng (Renaissance Sculpture collection)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Đồ gốm Ai Cập cổ đại. Không tham quan đồ gốm Ai Cập."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Tranh sơn dầu Ấn tượng. Không tham quan tranh sơn dầu."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Nhiếp ảnh đương đại. Không tham quan bộ sưu tập nhiếp ảnh."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "Renaissance Sculpture",
+            "paraphrases": ["classical carved art masterpieces"],
+            "meaning": "điêu khắc thời Phục hưng"
+          },
+          {
+            "phrase": "guided tour",
+            "paraphrases": ["docent-led walkthrough"],
+            "meaning": "chuyến tham quan có hướng dẫn viên"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Docent Introduction - Lắng nghe câu giới thiệu tên chuyến tham quan sau cụm 'guided tour of...'.",
+          "Bước 2: Match 'Renaissance Sculpture' - Bắt chính xác cụm 'Renaissance Sculpture collection'.",
+          "Bước 3: Select Option A - Chọn A."
+        ]
+      },
+      {
+        "id": 17,
+        "question": "What is strictly prohibited inside the main exhibition halls?",
+        "options": {
+          "A": "Wearing backpacks",
+          "B": "Flash photography and video recording",
+          "C": "Talking out loud",
+          "D": "Using strollers"
+        },
+        "correct_answer": "B",
+        "correct_text": "Flash photography and video recording",
+        "audio_transcript": "Speaker: ...Flash photography and video recording are strictly prohibited inside the main exhibition halls...",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Đeo balo. Không đề cập cấm đeo balo."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng hành vi bị nghiêm cấm là chụp ảnh flash và quay phim (Flash photography and video recording)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Nói to. Không đề cập cấm nói lớn."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Dùng xe đẩy trẻ em. Không đề cập cấm xe đẩy."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "strictly prohibited",
+            "paraphrases": ["banned", "not allowed"],
+            "meaning": "bị nghiêm cấm"
+          },
+          {
+            "phrase": "flash photography",
+            "paraphrases": ["taking pictures with flash"],
+            "meaning": "chụp ảnh có dùng đèn flash"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Prohibition Keyword 'prohibited' - Tập trung cụm từ đứng trước 'are strictly prohibited'.",
+          "Bước 2: Match 'Flash photography and video recording' - Bắt chính xác tên 2 hành vi bị cấm.",
+          "Bước 3: Select Option B - Chọn B."
+        ]
+      },
+      {
+        "id": 18,
+        "question": "How long will the guided tour last?",
+        "options": {
+          "A": "20 minutes",
+          "B": "30 minutes",
+          "C": "45 minutes",
+          "D": "90 minutes"
+        },
+        "correct_answer": "C",
+        "correct_text": "45 minutes",
+        "audio_transcript": "Speaker: ...At the end of our 45-minute tour, please feel free to ask questions...",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Con số 20 phút. 20 phút không có trong bài."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Con số 30 phút. 30 phút không phải thời lượng."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng thời lượng chuyến tham quan là 45 phút (45 minutes)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Con số 90 phút. 90 phút không có trong bài."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "45-minute tour",
+            "paraphrases": ["three-quarter hour walk"],
+            "meaning": "chuyến tham quan 45 phút"
+          },
+          {
+            "phrase": "at the end of tour",
+            "paraphrases": ["upon tour conclusion"],
+            "meaning": "vào cuối chuyến tham quan"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Duration Number - Lắng nghe con số đi liền trước từ 'tour'.",
+          "Bước 2: Match '45-minute' - Bắt chính xác con số 'forty-five minute'.",
+          "Bước 3: Select Option C - Chọn C."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 7,
+    "audio": "p4_g07_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 19,
+        "question": "Why is the speaker calling Mr. Chen?",
+        "options": {
+          "A": "To reschedule a surgical procedure",
+          "B": "To request insurance policy verification",
+          "C": "To confirm a prescription order",
+          "D": "To remind him of a dental appointment"
+        },
+        "correct_answer": "D",
+        "correct_text": "To remind him of a dental appointment",
+        "audio_transcript": "Speaker: ...I am calling to remind you of your scheduled routine teeth cleaning appointment tomorrow...",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Lùi lịch phẫu thuật. Đây là lịch vệ sinh răng thường quy, không phải ca phẫu thuật."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Xác minh gói bảo hiểm. Không gọi để xác minh gói bảo hiểm."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Xác nhận đơn thuốc. Không đề cập lấy thuốc."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng mục đích cuộc gọi là nhắc lịch khám nha khoa (To remind him of a dental appointment)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "remind of dental appointment",
+            "paraphrases": ["teeth checkup reminder"],
+            "meaning": "nhắc lịch hẹn khám nha khoa"
+          },
+          {
+            "phrase": "routine teeth cleaning",
+            "paraphrases": ["regular dental hygiene treatment"],
+            "meaning": "lấy cao răng / làm sạch răng định kỳ"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Call Purpose - Lắng nghe mục đích cuộc gọi ngay từ câu đầu của nhân viên phòng khám.",
+          "Bước 2: Match appointment reminder - Bắt chính xác cụm remind... appointment.",
+          "Bước 3: Select Option D - Chọn D."
+        ]
+      },
+      {
+        "id": 20,
+        "question": "What is Mr. Chen asked to bring to the appointment?",
+        "options": {
+          "A": "A X-ray scan report",
+          "B": "His medical insurance card",
+          "C": "A doctor referral letter",
+          "D": "A payment check"
+        },
+        "correct_answer": "B",
+        "correct_text": "His medical insurance card",
+        "audio_transcript": "Speaker: ...Please remember to bring your medical insurance card and arrive 15 minutes early...",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Kết quả chụp X-quang. Không bảo mang ảnh X-quang."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng vật phẩm cần mang theo là thẻ bảo hiểm y tế (His medical insurance card)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Giấy giới thiệu của bác sĩ. Không bảo mang giấy giới thiệu."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Séc thanh toán. Không bảo mang séc tiền."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "medical insurance card",
+            "paraphrases": ["health coverage ID"],
+            "meaning": "thẻ bảo hiểm y tế"
+          },
+          {
+            "phrase": "remember to bring",
+            "paraphrases": ["don't forget to carry"],
+            "meaning": "nhớ mang theo"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to remember to bring - Lắng nghe vật dụng cần mang sau lời nhắc remember to bring.",
+          "Bước 2: Match medical insurance card - Bắt chính xác từ medical insurance card.",
+          "Bước 3: Select Option B - Chọn B."
+        ]
+      },
+      {
+        "id": 21,
+        "question": "How much advance notice is required to avoid a cancellation fee?",
+        "options": {
+          "A": "24 hours",
+          "B": "12 hours",
+          "C": "48 hours",
+          "D": "72 hours"
+        },
+        "correct_answer": "A",
+        "correct_text": "24 hours",
+        "audio_transcript": "Speaker: ...please notify our reception desk at least 24 hours in advance at 555-0198 to avoid a late cancellation fee.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng thời gian báo trước tối thiểu là 24 giờ (24 hours)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "12 giờ. 12 giờ quá ngắn."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "48 giờ. 48 giờ không có trong bài."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "72 giờ. 72 giờ không có trong bài."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "24 hours in advance",
+            "paraphrases": ["one day prior notice"],
+            "meaning": "trước 24 tiếng / trước 1 ngày"
+          },
+          {
+            "phrase": "avoid cancellation fee",
+            "paraphrases": ["prevent late penalty charge"],
+            "meaning": "tránh bị tính phí phạt hủy lịch"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Cancellation Policy - Tập trung lắng nghe câu chứa cụm avoid a late cancellation fee.",
+          "Bước 2: Match 24 hours in advance - Bắt chính xác mốc thời gian 24 hours.",
+          "Bước 3: Select Option A - Chọn A."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 8,
+    "audio": "p4_g08_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 22,
+        "question": "What will the facilities management team install this Friday evening?",
+        "options": {
+          "A": "High-efficiency solar window blinds",
+          "B": "Automated office LED lighting",
+          "C": "Smart automated thermostats",
+          "D": "Energy-saving ceiling fans"
+        },
+        "correct_answer": "C",
+        "correct_text": "Smart automated thermostats",
+        "audio_transcript": "Speaker: ...facilities management team will be installing smart automated thermostats across all office floors this Friday evening.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Rèm cửa năng lượng mặt trời. Không lắp rèm cửa."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Đèn LED tự động. Không lắp hệ thống đèn LED."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng thiết bị được lắp đặt là bộ điều nhiệt tự động thông minh (Smart automated thermostats)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Quạt trần tiết kiệm điện. Không lắp quạt trần."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "smart automated thermostats",
+            "paraphrases": ["intelligent temperature controllers"],
+            "meaning": "bộ điều nhiệt tự động thông minh"
+          },
+          {
+            "phrase": "facilities management team",
+            "paraphrases": ["building maintenance crew"],
+            "meaning": "đội quản lý tòa nhà / cơ sở vật chất"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Installation Action - Lắng nghe thiết bị đi sau từ 'will be installing...'.",
+          "Bước 2: Match 'smart automated thermostats' - Bắt chính xác tên thiết bị 'smart automated thermostats'.",
+          "Bước 3: Select Option C - Chọn C."
+        ]
+      },
+      {
+        "id": 23,
+        "question": "What are employees instructed to do before leaving their desk each day?",
+        "options": {
+          "A": "Ensure all windows are securely closed",
+          "B": "Turn off all desk monitors",
+          "C": "Lock their office drawers",
+          "D": "Empty their wastebaskets"
+        },
+        "correct_answer": "A",
+        "correct_text": "Ensure all windows are securely closed",
+        "audio_transcript": "Speaker: ...Please ensure that all windows are securely closed before leaving your desk each day...",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng hành động phải đóng chặt tất cả các cửa sổ trước khi ra về (Ensure all windows are securely closed)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Tắt màn hình máy tính. Không nhắc tắt màn hình trong đoạn này."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Khóa hộc bàn. Không bảo khóa hộc tủ."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Đổ thùng rác. Không bảo đi dọn rác."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "windows are securely closed",
+            "paraphrases": ["shut all glass windows tightly"],
+            "meaning": "các cửa sổ được đóng kín/chặt"
+          },
+          {
+            "phrase": "maximize HVAC energy efficiency",
+            "paraphrases": ["optimize cooling performance"],
+            "meaning": "tối đa hóa hiệu quả năng lượng của hệ thống điều hòa"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Instruction 'Please ensure...' - Lắng nghe lời nhắc nhở trước khi rời bàn 'before leaving your desk'.",
+          "Bước 2: Match 'windows are securely closed' - Bắt chính xác cụm 'windows are securely closed'.",
+          "Bước 3: Select Option A - Chọn A."
+        ]
+      },
+      {
+        "id": 24,
+        "question": "By when should teams submit requests for special temperature adjustments?",
+        "options": {
+          "A": "Wednesday evening",
+          "B": "Saturday morning",
+          "C": "Friday 5 P.M.",
+          "D": "Thursday noon"
+        },
+        "correct_answer": "D",
+        "correct_text": "Thursday noon",
+        "audio_transcript": "Speaker: ...submit an online request ticket to the Facilities Helpdesk by Thursday noon.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Tối thứ Tư. Tối thứ Tư không phải hạn chót."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Sáng thứ Bảy. Sáng thứ Bảy đã quá muộn."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "5h chiều thứ Sáu. Chiều thứ Sáu là thời điểm thợ bắt đầu lắp thiết bị mới."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng hạn chót nộp yêu cầu điều chỉnh nhiệt độ đặc biệt (Thursday noon)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "by Thursday noon",
+            "paraphrases": ["no later than 12 PM Thursday"],
+            "meaning": "trước trưa thứ Năm (12h trưa)"
+          },
+          {
+            "phrase": "online request ticket",
+            "paraphrases": ["web helpdesk application"],
+            "meaning": "phiếu yêu cầu trực tuyến"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Deadline Expression 'by...' - Tập trung mốc thời hạn sau từ 'by'.",
+          "Bước 2: Match 'Thursday noon' - Bắt chính xác mốc 'Thursday noon'.",
+          "Bước 3: Select Option D - Chọn D."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 9,
+    "audio": "p4_g09_audio.mp3",
+    "image": "p4_g09_image.png",
+    "questions": [
+      {
+        "id": 25,
+        "question": "Why was Dr. Evelyn Thorne unable to attend the summit?",
+        "options": {
+          "A": "She accepted a new university role",
+          "B": "She experienced a medical emergency",
+          "C": "Her flight in Frankfurt was canceled",
+          "D": "Her visa application was rejected"
+        },
+        "correct_answer": "C",
+        "correct_text": "Her flight in Frankfurt was canceled",
+        "audio_transcript": "Speaker: ...Doctor Evelyn Thorne was unfortunately unable to travel due to a flight cancellation in Frankfurt.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Nhận vị trí mới ở đại học. Không phải đổi công tác."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Bị cấp cứu y tế. Không bị cấp cứu."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng nguyên nhân tiến sĩ Thorne vắng mặt do chuyến bay ở Frankfurt bị hủy (Her flight in Frankfurt was canceled)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Bị từ chối visa. Không bị từ chối visa."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "flight cancellation in Frankfurt",
+            "paraphrases": ["canceled Frankfurt plane"],
+            "meaning": "chuyến bay ở Frankfurt bị hủy"
+          },
+          {
+            "phrase": "unable to travel",
+            "paraphrases": ["could not make the trip"],
+            "meaning": "không thể di chuyển đến tham dự"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Absence Reason 'due to...' - Lắng nghe cụm chỉ nguyên nhân 'due to a flight cancellation'.",
+          "Bước 2: Match 'flight cancellation in Frankfurt' - Bắt chính xác từ 'flight cancellation'.",
+          "Bước 3: Select Option C - Chọn C."
+        ]
+      },
+      {
+        "id": 26,
+        "question": "Look at the graphic. What topic will Dr. Marcus Vance present on?",
+        "options": {
+          "A": "Cybersecurity Protocols for Financial Systems",
+          "B": "Generative AI in Enterprise Cloud Architecture",
+          "C": "Quantum Computing Hardware Frontiers",
+          "D": "5G Telecommunications Infrastructure"
+        },
+        "correct_answer": "B",
+        "correct_text": "Generative AI in Enterprise Cloud Architecture",
+        "audio_transcript": "Speaker: ...Doctor Vance will speak on 'Generative AI in Enterprise Cloud Architecture'.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Chủ đề an ninh mạng tài chính. Đây là chủ đề của diễn giả ở khung giờ khác."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng chủ đề Tiến sĩ Vance sẽ bài trình bày (Generative AI in Enterprise Cloud Architecture)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Chủ đề điện toán lượng tử. Điện toán lượng tử không phải chủ đề được nói đến."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Hạ tầng 5G. Hạ tầng 5G không phải chủ đề Tiến sĩ Vance trình bày."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "Generative AI",
+            "paraphrases": ["generative artificial intelligence"],
+            "meaning": "trí tuệ nhân tạo tạo sinh"
+          },
+          {
+            "phrase": "Enterprise Cloud Architecture",
+            "paraphrases": ["corporate cloud infrastructure"],
+            "meaning": "kiến trúc đám mây doanh nghiệp"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Match Dr. Vance's Topic - Nhìn bảng chương trình đối chiếu tên Tiến sĩ Marcus Vance với chủ đề bài trình bày.",
+          "Bước 2: Listen to Title Confirmation - Bắt chính xác cụm tên bài nói 'Generative AI in Enterprise Cloud Architecture'.",
+          "Bước 3: Select Option B - Chọn B."
+        ]
+      },
+      {
+        "id": 27,
+        "question": "What event will take place immediately after the presentation?",
+        "options": {
+          "A": "A networking coffee break in the foyer",
+          "B": "A panel debate on ethics",
+          "C": "A gala dinner in the ballroom",
+          "D": "A hands-on coding workshop"
+        },
+        "correct_answer": "A",
+        "correct_text": "A networking coffee break in the foyer",
+        "audio_transcript": "Speaker: ...After the 45-minute presentation, please join us in the foyer for a networking coffee break.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng sự kiện tiếp theo ngay sau bài nói là tiệc giải lao cà phê kết nối tại sảnh (A networking coffee break in the foyer)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Thảo luận đạo đức. Không có tranh luận đạo đức."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Tiệc tối sang trọng. Không có tiệc gala tối ngay lúc này."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Xưởng lập trình. Không có xưởng lập trình."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "networking coffee break",
+            "paraphrases": ["social refreshment interlude"],
+            "meaning": "tiệc cà phê kết nối / giao lưu"
+          },
+          {
+            "phrase": "in the foyer",
+            "paraphrases": ["in the main hall lobby"],
+            "meaning": "tại sảnh lớn"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to 'After the presentation...' - Lắng nghe sự kiện sau bài nói sau cụm 'After the... presentation'.",
+          "Bước 2: Match 'networking coffee break' - Bắt chính xác cụm 'networking coffee break'.",
+          "Bước 3: Select Option A - Chọn A."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 10,
+    "audio": "p4_g10_audio.mp3",
+    "image": "p4_g10_image.png",
+    "questions": [
+      {
+        "id": 28,
+        "question": "Where is the store directory map located?",
+        "options": {
+          "A": "Near the customer service desk",
+          "B": "Near the main entrance",
+          "C": "Inside the employee breakroom",
+          "D": "In the parking garage elevator"
+        },
+        "correct_answer": "A",
+        "correct_text": "Near the customer service desk",
+        "audio_transcript": "Speaker: ...Look at the store directory map posted near the customer service desk.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng vị trí đặt sơ đồ chỉ dẫn là gần quầy chăm sóc khách hàng (Near the customer service desk)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Gần lối vào chính. Bản đồ dán ở quầy dịch vụ khách hàng, không phải ở cửa chính."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Phòng nghỉ nhân viên. Không dán trong phòng nhân viên."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Thang máy bãi xe. Không dán trong thang máy."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "store directory map",
+            "paraphrases": ["retail layout diagram"],
+            "meaning": "bản đồ/sơ đồ chỉ dẫn siêu thị"
+          },
+          {
+            "phrase": "customer service desk",
+            "paraphrases": ["help counter"],
+            "meaning": "quầy dịch vụ/chăm sóc khách hàng"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Map Location Detail - Lắng nghe vị trí bản đồ sau từ 'posted near...'.",
+          "Bước 2: Match 'customer service desk' - Bắt chính xác cụm 'customer service desk'.",
+          "Bước 3: Select Option A - Chọn A."
+        ]
+      },
+      {
+        "id": 29,
+        "question": "Look at the graphic. Which sector are Express Checkout Counters 1 through 4 now located in?",
+        "options": {
+          "A": "Sector A",
+          "B": "Sector B",
+          "C": "Sector C",
+          "D": "Sector D"
+        },
+        "correct_answer": "C",
+        "correct_text": "Sector C",
+        "audio_transcript": "Speaker: ...Express Checkout Counters 1 through 4 have now been relocated to Sector C...",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Khu vực A. Khu vực A chứa danh mục hàng hóa khác."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Khu vực B. Khu vực B không phải nơi chuyển quầy thanh toán nhanh."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng khu vực đặt quầy thanh toán nhanh 1-4 mới là Sector C."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Khu vực D. Khu vực D không đúng."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "relocated to Sector C",
+            "paraphrases": ["moved to Zone C"],
+            "meaning": "được di dời sang Khu vực C"
+          },
+          {
+            "phrase": "Express Checkout Counters",
+            "paraphrases": ["fast-track cash registers"],
+            "meaning": "các quầy thanh toán nhanh"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Observe Map Graphic Sectors - Quan sát các Khu vực A, B, C, D trên bản đồ siêu thị.",
+          "Bước 2: Listen to 'relocated to Sector C' - Bắt chính xác tên khu vực 'Sector C'.",
+          "Bước 3: Select Option C - Chọn C."
+        ]
+      },
+      {
+        "id": 30,
+        "question": "Who is encouraged to use the express checkout counters in Sector C?",
+        "options": {
+          "A": "Shoppers purchasing gift cards only",
+          "B": "Shoppers paying in foreign currency",
+          "C": "Senior citizens and veterans",
+          "D": "Shoppers with 10 items or fewer"
+        },
+        "correct_answer": "D",
+        "correct_text": "Shoppers with 10 items or fewer",
+        "audio_transcript": "Speaker: ...Shoppers with 10 items or fewer are encouraged to use Sector C to skip the main cashier lines.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Khách chỉ mua thẻ quà tặng. Không giới hạn chỉ cho thẻ quà tặng."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Khách trả bằng ngoại tệ. Không đề cập trả bằng ngoại tệ."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Người cao tuổi và cựu chiến binh. Không đề cập ưu tiên theo độ tuổi."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng đối tượng được ưu tiên thanh toán nhanh là khách có từ 10 món trở xuống (Shoppers with 10 items or fewer)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "10 items or fewer",
+            "paraphrases": ["ten articles or less"],
+            "meaning": "từ 10 món đồ trở xuống"
+          },
+          {
+            "phrase": "skip main cashier lines",
+            "paraphrases": ["bypass regular checkouts"],
+            "meaning": "bỏ qua / không phải xếp hàng ở quầy chính"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Target Customer Eligibility - Lắng nghe đối tượng được khuyến khích sau 'Shoppers with...'.",
+          "Bước 2: Match '10 items or fewer' - Bắt chính xác cụm '10 items or fewer'.",
+          "Bước 3: Select Option D - Chọn D."
+        ]
+      }
+    ]
+  }
+]

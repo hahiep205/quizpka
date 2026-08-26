@@ -1,14 +1,17 @@
 import { useEffect, useMemo, useState } from "react"
 import { ContactModal, type ContactModalType } from "@/components/ContactModal"
 import { LoginModal } from "@/components/LoginModal"
+import { ToeicAnnouncementModal } from "@/components/ToeicAnnouncementModal"
 import { DocumentsPage } from "@/pages/DocumentsPage"
 import { DashboardPage } from "@/pages/DashboardPage"
 import { PracticeGuestPage } from "@/pages/PracticeGuestPage"
+import { FeedbackPage } from "@/pages/FeedbackPage"
 import { appTranslations as translations } from "@/shared/i18n"
 import { useGlobalSecurity } from "@/hooks/useGlobalSecurity"
 import { SecurityOverlay } from "@/security/SecurityOverlay"
 import { SiteHeader } from "@/app/layout/SiteHeader"
 import { HeroSection } from "@/features/landing/HeroSection"
+import { ToeicSection } from "@/features/landing/ToeicSection"
 import { SiteFooter } from "@/app/layout/SiteFooter"
 
 type Lang = "en" | "vi"
@@ -24,6 +27,7 @@ export default function App() {
   const [contactOpen, setContactOpen] = useState(false)
   const [contactType, setContactType] = useState<ContactModalType | null>(null)
   const [loginOpen, setLoginOpen] = useState(false)
+  const [announcementOpen, setAnnouncementOpen] = useState(false)
   const [lang, setLang] = useState<Lang>(() => {
     const saved = localStorage.getItem("quizpka-lang")
     return saved === "vi" || saved === "en" ? saved : "vi"
@@ -56,6 +60,22 @@ export default function App() {
     return () => window.removeEventListener("popstate", onPopState)
   }, [])
 
+  // TOEIC announcement: show after 1s on homepage, "don't show today" persists per day
+  useEffect(() => {
+    if (pathname !== "/") return
+    try {
+      const d = new Date()
+      const today = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`
+      const dismissed = localStorage.getItem("quizpka-toeic-announcement-dismissed")
+      if (dismissed === today) return
+      const timer = window.setTimeout(() => setAnnouncementOpen(true), 1000)
+      return () => window.clearTimeout(timer)
+    } catch {
+      const timer = window.setTimeout(() => setAnnouncementOpen(true), 1000)
+      return () => window.clearTimeout(timer)
+    }
+  }, [pathname])
+
   const openContact = (type: ContactModalType) => {
     setContactType(type)
     setContactOpen(true)
@@ -71,6 +91,26 @@ export default function App() {
 
   const closeLogin = () => {
     setLoginOpen(false)
+  }
+
+  const closeAnnouncement = () => setAnnouncementOpen(false)
+  const handleDontShowToday = () => {
+    try {
+      const d = new Date()
+      const today = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`
+      localStorage.setItem("quizpka-toeic-announcement-dismissed", today)
+    } catch {}
+    setAnnouncementOpen(false)
+  }
+  const handleTryNow = () => {
+    setAnnouncementOpen(false)
+    window.setTimeout(() => {
+      document.getElementById("features")?.scrollIntoView({ behavior: "smooth", block: "start" })
+    }, 150)
+  }
+  const handleFeedback = () => {
+    setAnnouncementOpen(false)
+    openContact("Support")
   }
 
   const shellClassName =
@@ -102,6 +142,37 @@ export default function App() {
     )
   }
 
+  if (pathname === "/feedback") {
+    return (
+      <div className={shellClassName}>
+        <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_#ffffff_0%,_rgba(248,250,252,0.55)_45%,_#f8fafc_100%)] dark:bg-[radial-gradient(ellipse_at_top,_rgba(30,58,138,0.25)_0%,_rgba(2,6,23,0.2)_45%,_#020617_100%)]" />
+        <div className="relative flex min-h-svh flex-col">
+          <SiteHeader
+            lang={lang}
+            theme={theme}
+            t={t}
+            onToggleLang={() => setLang((current) => (current === "en" ? "vi" : "en"))}
+            onToggleTheme={() => setTheme((current) => (current === "light" ? "dark" : "light"))}
+            onOpenLogin={openLogin}
+          />
+          <FeedbackPage
+            lang={lang}
+            onBack={() => {
+              window.history.pushState(null, "", "/")
+              setPathname("/")
+              window.scrollTo(0, 0)
+            }}
+          />
+          <SiteFooter t={t} onOpenContact={openContact} />
+        </div>
+
+        <ContactModal open={contactOpen} type={contactType} onClose={closeContact} lang={lang} />
+
+        <LoginModal open={loginOpen} onClose={closeLogin} lang={lang} />
+      </div>
+    )
+  }
+
   return (
     <div className={shellClassName}>
       {locked && <SecurityOverlay onClose={() => setLocked(false)} />}
@@ -119,6 +190,7 @@ export default function App() {
         />
         <HeroSection t={t} onOpenLogin={openLogin} />
         <DocumentsPage lang={lang} />
+        <ToeicSection lang={lang} />
         <SiteFooter t={t} onOpenContact={openContact} />
       </div>
 
@@ -130,6 +202,15 @@ export default function App() {
       />
 
       <LoginModal open={loginOpen} onClose={closeLogin} lang={lang} />
+
+      <ToeicAnnouncementModal
+        open={announcementOpen}
+        lang={lang}
+        onClose={closeAnnouncement}
+        onDontShowToday={handleDontShowToday}
+        onTryNow={handleTryNow}
+        onFeedback={handleFeedback}
+      />
     </div>
   )
 }

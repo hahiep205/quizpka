@@ -6,7 +6,7 @@ export function initBlockAll() {
   const onKeyDown = (e: KeyboardEvent) => {
     const k = e.key.toLowerCase()
     const isDev =
-      e.key === "F12" ||
+      // TẠM MỞ F12: đã bỏ chặn F12
       (e.ctrlKey && e.shiftKey && ["i", "j", "c"].includes(k)) ||
       (e.ctrlKey && ["u", "s"].includes(k)) ||
       (e.metaKey && e.altKey && ["i", "j", "c"].includes(k)) ||

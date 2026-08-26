@@ -1,0 +1,354 @@
+[
+  {
+    "id": 1,
+    "type": "picture_description",
+    "part": "Listening - Part 1",
+    "prompt": "Look at the picture marked number 1 in your test book.",
+    "audio": "p1_q001.mp3",
+    "image": "p1_q001.webp",
+    "options": {
+      "A": "He is putting on a pair of glasses.",
+      "B": "He is typing on a computer keyboard.",
+      "C": "He is adjusting a desk lamp.",
+      "D": "He is filing papers in a cabinet."
+    },
+    "correct_answer": "B",
+    "correct_text": "He is typing on a computer keyboard.",
+    "image_description": "Hình ảnh mô tả nhân vật nam đang ngồi tại bàn làm việc và dùng hai tay gõ bàn phím máy tính.",
+    "audio_transcript": "He is typing on a computer keyboard.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Nhầm lẫn giữa hành động xỏ kính và trạng thái đeo kính sẵn. 'Put on' ám chỉ hành động đang đưa kính lên đeo, trong khi nhân vật đã đeo kính sẵn (wear)."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng hành động chính đang diễn ra là gõ bàn phím máy tính (typing on a computer keyboard)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Sai thao tác tay. Nhân vật không dùng tay điều chỉnh đèn bàn (adjusting a desk lamp)."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Sai vị trí công việc. Nhân vật đang ngồi làm việc tại bàn, không đứng cất tài liệu vào tủ (filing papers in a cabinet)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "type on a computer keyboard",
+        "paraphrases": [
+          "input text",
+          "operate a desktop"
+        ],
+        "meaning": "gõ bàn phím máy tính"
+      },
+      {
+        "phrase": "put on vs wear",
+        "paraphrases": [
+          "donning vs wearing"
+        ],
+        "meaning": "đang xỏ/đeo vào (hành động) vs đang đeo sẵn (trạng thái)"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Observe Main Subject & Hands Action - Quan sát nhân vật nam duy nhất và vị trí hai bàn tay trên bàn phím.",
+      "Bước 2: Distinguish Put on vs Wear - Cảnh giác với đáp án A vì kính đã được đeo sẵn trên mặt (wear), không phải hành động đang đưa tay xỏ kính (put on).",
+      "Bước 3: Select Option B - Chọn B ('typing on a computer keyboard')."
+    ]
+  },
+  {
+    "id": 2,
+    "type": "picture_description",
+    "part": "Listening - Part 1",
+    "prompt": "Look at the picture marked number 2 in your test book.",
+    "audio": "p1_q002.mp3",
+    "image": "p1_q002.webp",
+    "options": {
+      "A": "Some people are looking at a document on the table.",
+      "B": "Some people are exiting a conference room.",
+      "C": "A presentation is being given on a screen.",
+      "D": "Chairs are being moved into the hallway."
+    },
+    "correct_answer": "A",
+    "correct_text": "Some people are looking at a document on the table.",
+    "image_description": "Bức tranh vẽ nhóm 3 người đang đứng quanh bàn họp và cùng hướng ánh mắt nhìn vào bản tài liệu mở sẵn trên bàn.",
+    "audio_transcript": "Some people are looking at a document on the table.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng hành động chung của nhóm người là đang tập trung nhìn tài liệu trên bàn (looking at a document on the table)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Sai hướng di chuyển. Mọi người đang đứng yên quanh bàn họp, không có ai bước ra cửa (exiting a conference room)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Chi tiết không tồn tại. Không có màn hình trình chiếu hay diễn giả đứng thuyết trình (presentation on a screen)."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Thể bị động tiếp diễn (being V-ed) khi không có người thực hiện. 'Chairs are being moved' ngụ ý có người đang bê dịch chuyển ghế, trong khi các ghế đều đứng yên."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "look at a document",
+        "paraphrases": [
+          "examine a paper",
+          "inspect a report"
+        ],
+        "meaning": "nhìn/quan sát tài liệu"
+      },
+      {
+        "phrase": "conference room",
+        "paraphrases": [
+          "meeting room",
+          "boardroom"
+        ],
+        "meaning": "phòng họp"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Observe Group Interaction - Nhận diện điểm chung trong ánh mắt và tư thế của nhóm người quanh bàn họp.",
+      "Bước 2: Eliminate Passive Voice Traps - Loại D do dùng 'being moved' khi không có ai đang di chuyển đồ vật.",
+      "Bước 3: Select Option A - Chọn A ('looking at a document')."
+    ]
+  },
+  {
+    "id": 3,
+    "type": "picture_description",
+    "part": "Listening - Part 1",
+    "prompt": "Look at the picture marked number 3 in your test book.",
+    "audio": "p1_q003.mp3",
+    "image": "p1_q003.webp",
+    "options": {
+      "A": "A computer monitor is being installed.",
+      "B": "A bookshelf is being emptied.",
+      "C": "Some documents are stacked on the desk.",
+      "D": "A laptop computer is left open."
+    },
+    "correct_answer": "C",
+    "correct_text": "Some documents are stacked on the desk.",
+    "image_description": "Bức tranh vắng người mô tả góc làm việc với các xấp tài liệu được xếp chồng chỉn chu trên mặt bàn gỗ.",
+    "audio_transcript": "Some documents are stacked on the desk.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Thể bị động tiếp diễn trong tranh không người. 'Is being installed' ngụ ý thợ đang lắp đặt màn hình, nhưng tranh hoàn toàn vắng người."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Thể bị động tiếp diễn trong tranh không người. 'Is being emptied' ngụ ý có người đang dọn dẹp giá sách."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng trạng thái vật thể là tài liệu được xếp chồng trên bàn (stacked on the desk)."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Sai trạng thái đóng/mở của máy tính. 'Laptop is left open' mâu thuẫn với hình ảnh máy tính xách tay đang gấp nắp (closed)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "stacked on the desk",
+        "paraphrases": [
+          "piled up on the table",
+          "arranged in piles"
+        ],
+        "meaning": "xếp chồng trên bàn"
+      },
+      {
+        "phrase": "left open vs closed",
+        "paraphrases": [
+          "unfolded vs shut"
+        ],
+        "meaning": "mở nắp vs đóng nắp"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify No-People Photo Rule - Nhận diện tranh vắng người ➔ Cảnh giác lập tức với câu có chứa 'being V-ed'.",
+      "Bước 2: Check Object States - Kiểm tra trạng thái xấp tài liệu (stacked) và máy tính (closed).",
+      "Bước 3: Select Option C - Chọn C ('documents are stacked')."
+    ]
+  },
+  {
+    "id": 4,
+    "type": "picture_description",
+    "part": "Listening - Part 1",
+    "prompt": "Look at the picture marked number 4 in your test book.",
+    "audio": "p1_q004.mp3",
+    "image": "p1_q004.webp",
+    "options": {
+      "A": "Cargo is being weighed on a scale.",
+      "B": "A truck is being driven along a highway.",
+      "C": "A worker is unloading boxes from the truck.",
+      "D": "Boxes are being loaded onto a delivery truck."
+    },
+    "correct_answer": "D",
+    "correct_text": "Boxes are being loaded onto a delivery truck.",
+    "image_description": "Bức tranh thể hiện nhân vật công nhân mặc áo bảo hộ đang bê xếp các thùng hàng lên thùng xe tải giao hàng.",
+    "audio_transcript": "Boxes are being loaded onto a delivery truck.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Thao tác không xuất hiện trong hình. Không có bàn cân hay thao tác cân trọng lượng hàng hóa (weighed on a scale)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Sai trạng thái hoạt động của xe. Xe tải đang đỗ tại sân kho bãi, không phải đang lưu thông trên cao tốc (driven along a highway)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Ngược hướng hành động (xếp lên vs dỡ xuống). 'Unloading boxes' ám chỉ dỡ hàng xuống, mâu thuẫn với thao tác đưa hàng lên thùng xe (loading)."
+      },
+      "D": {
+        "status": "correct",
+        "reason": "Đúng hành động hàng hóa đang được bốc xếp lên xe (boxes are being loaded onto a delivery truck)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "load onto a truck",
+        "paraphrases": [
+          "place cargo inside a vehicle",
+          "pack goods"
+        ],
+        "meaning": "bốc/xếp hàng lên xe tải"
+      },
+      {
+        "phrase": "loading vs unloading",
+        "paraphrases": [
+          "putting in vs taking out"
+        ],
+        "meaning": "xếp lên vs dỡ xuống"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Check Action Direction - Xác định chiều chuyển động của thùng hàng (đang đưa vào thùng xe ➔ loading).",
+      "Bước 2: Distinguish Load vs Unload - Loại C vì unloading nghĩa là dỡ hàng xuống.",
+      "Bước 3: Select Option D - Chọn D ('boxes are being loaded')."
+    ]
+  },
+  {
+    "id": 5,
+    "type": "picture_description",
+    "part": "Listening - Part 1",
+    "prompt": "Look at the picture marked number 5 in your test book.",
+    "audio": "p1_q005.mp3",
+    "image": "p1_q005.webp",
+    "options": {
+      "A": "Artwork has been mounted on the wall.",
+      "B": "Furniture is being assembled in a workshop.",
+      "C": "Guests are waiting in a lobby.",
+      "D": "Rugs are being cleaned with a vacuum."
+    },
+    "correct_answer": "A",
+    "correct_text": "Artwork has been mounted on the wall.",
+    "image_description": "Bức tranh sảnh công ty vắng người mô tả bức tranh nghệ thuật khổ lớn được treo cố định trên tường phía trên ghế sofa.",
+    "audio_transcript": "Artwork has been mounted on the wall.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng trạng thái hoàn thành là tranh nghệ thuật đã được treo/gắn trên tường (has been mounted on the wall)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Thể bị động tiếp diễn trong tranh không người. 'Is being assembled' ngụ ý thợ đang đóng/lắp ráp nội thất trong xưởng."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Sự hiện diện của con người. 'Guests are waiting' mâu thuẫn trực tiếp với khung cảnh sảnh hoàn toàn vắng khách."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Thể bị động tiếp diễn trong tranh không người. 'Are being cleaned' ngụ ý có người đang cầm máy hút bụi lau dọn."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "mounted on the wall",
+        "paraphrases": [
+          "hung on the wall",
+          "attached to the wall"
+        ],
+        "meaning": "được treo/gắn cố định trên tường"
+      },
+      {
+        "phrase": "artwork",
+        "paraphrases": [
+          "painting",
+          "framed print",
+          "picture"
+        ],
+        "meaning": "tác phẩm nghệ thuật / bức tranh"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Check Wall Decor Details - Quan sát bức tranh nghệ thuật treo phía trên dãy ghế sofa.",
+      "Bước 2: Eliminate Action Verbs on People - Loại B và D vì chứa 'being V-ed', loại C vì không có khách (guests).",
+      "Bước 3: Select Option A - Chọn A ('artwork has been mounted')."
+    ]
+  },
+  {
+    "id": 6,
+    "type": "picture_description",
+    "part": "Listening - Part 1",
+    "prompt": "Look at the picture marked number 6 in your test book.",
+    "audio": "p1_q006.mp3",
+    "image": "p1_q006.webp",
+    "options": {
+      "A": "She is paying for her purchases at the counter.",
+      "B": "She is inspecting merchandise on a shelf.",
+      "C": "She is putting on a winter coat.",
+      "D": "Shelves are being built by a worker."
+    },
+    "correct_answer": "B",
+    "correct_text": "She is inspecting merchandise on a shelf.",
+    "image_description": "Hình ảnh mô tả nhân vật nữ trong cửa hàng bán lẻ đang cầm một món hàng lấy từ kệ lên để xem xét nhãn mác.",
+    "audio_transcript": "She is inspecting merchandise on a shelf.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Sai vị trí. 'Paying at the counter' ám chỉ thanh toán tại quầy thu ngân, trong khi nhân vật đang đứng tại dãy kệ trưng bày."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng hành động quan sát/kiểm tra hàng hóa trên kệ (inspecting merchandise on a shelf)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Nhầm lẫn giữa hành động xỏ áo và mặc áo sẵn. 'Putting on a coat' ám chỉ hành động đang đưa tay mặc áo khoác vào."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Sai hành động. 'Shelves are being built' ngụ ý thợ đang thi công đóng kệ hàng."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "inspect merchandise",
+        "paraphrases": [
+          "examine goods",
+          "look at items"
+        ],
+        "meaning": "kiểm tra / xem xét hàng hóa"
+      },
+      {
+        "phrase": "display shelf",
+        "paraphrases": [
+          "retail rack",
+          "store display"
+        ],
+        "meaning": "kệ trưng bày sản phẩm"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Locate Subject Action & Surroundings - Quan sát nhân vật nữ đang cầm sản phẩm ngay tại khu vực kệ hàng.",
+      "Bước 2: Differentiate Store Locations - Loại A vì nhân vật không đứng tại quầy thu ngân (counter).",
+      "Bước 3: Select Option B - Chọn B ('inspecting merchandise')."
+    ]
+  }
+]

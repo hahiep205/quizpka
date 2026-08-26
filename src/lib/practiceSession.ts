@@ -1,5 +1,6 @@
 import type { QuizSetupValues } from "@/components/QuizSetupModal"
 import type { ExamCatalogItem } from "@/data/subjects"
+import type { ToeicScope } from "@/data/toeic"
 
 export const PRACTICE_SESSION_KEY = "quizpka-practice4guest"
 
@@ -9,6 +10,7 @@ export type PracticeSessionPayload = {
   setup: QuizSetupValues
   lang: "en" | "vi"
   chapterId?: string
+  toeicScope?: ToeicScope
 }
 
 export function savePracticeSession(payload: PracticeSessionPayload) {

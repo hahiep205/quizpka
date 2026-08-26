@@ -1,0 +1,1502 @@
+[
+  {
+    "id": 1,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Ms. Harrison ------- reviewed the quarterly financial statement before presenting it to the board of directors.",
+    "options": {
+      "A": "care",
+      "B": "careful",
+      "C": "carefully",
+      "D": "carefulness"
+    },
+    "correct_answer": "C",
+    "correct_text": "carefully",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Danh từ/động từ nguyên mẫu 'care'. Không thể đặt danh từ hoặc động từ thường giữa chủ ngữ và động từ chính đã chia."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Tính từ 'careful'. Tính từ chỉ đứng trước danh từ hoặc sau động từ nối, không bổ nghĩa trực tiếp cho động từ hành động 'reviewed'."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng trạng từ đuôi -ly 'carefully' đứng trước bổ nghĩa cho động từ 'reviewed'."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Danh từ trừu tượng 'carefulness'. Danh từ không thể bổ nghĩa cho động từ."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "carefully review",
+        "paraphrases": ["scrutinize thoroughly", "examine meticulously"],
+        "meaning": "xem xét / kiểm tra cẩn thận"
+      },
+      {
+        "phrase": "quarterly financial statement",
+        "paraphrases": ["three-month earnings report"],
+        "meaning": "báo cáo tài chính quý"
+      }
+    ],
+    "grammar_point": "Adverb modifying verb (Part of Speech)",
+    "strategy": [
+      "Bước 1: Analyze Clause Structure - Xác định cấu trúc S + [blank] + V + O (Subject 'Ms. Harrison' + Blank + Verb 'reviewed').",
+      "Bước 2: Determine Part of Speech - Từ đứng trước bổ nghĩa cho động từ chia thì quá khứ 'reviewed' phải là trạng từ (Adverb ending in -ly).",
+      "Bước 3: Select Option C - Chọn C (carefully)."
+    ]
+  },
+  {
+    "id": 2,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Due to high demand during the peak season, clients are advised to make hotel ------- at least two weeks in advance.",
+    "options": {
+      "A": "reservations",
+      "B": "submissions",
+      "C": "allowances",
+      "D": "intentions"
+    },
+    "correct_answer": "A",
+    "correct_text": "reservations",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng từ kết hợp 'make hotel reservations' (đặt phòng khách sạn)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Từ vựng 'submissions' (sự nộp bài/hồ sơ). Không dùng 'submissions' với khách sạn."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Từ vựng 'allowances' (tiền trợ cấp/hạn mức). Không phù hợp ngữ cảnh đặt phòng."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Từ vựng 'intentions' (ý định). Không đi cùng cấu trúc 'make hotel...'"
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "make hotel reservations",
+        "paraphrases": ["book hotel rooms"],
+        "meaning": "đặt phòng khách sạn"
+      },
+      {
+        "phrase": "in advance",
+        "paraphrases": ["prior to arrival", "ahead of time"],
+        "meaning": "trước / làm trước"
+      }
+    ],
+    "grammar_point": "Collocation / Vocabulary",
+    "strategy": [
+      "Bước 1: Identify Collocation Context - Nhận biết cụm 'make hotel + Noun' đi kèm 'in advance'.",
+      "Bước 2: Evaluate Noun Choices - Xét nghĩa 4 đáp án: A (đặt chỗ), B (nộp), C (trợ cấp), D (ý định).",
+      "Bước 3: Select Option A - Chọn A (reservations)."
+    ]
+  },
+  {
+    "id": 3,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Apex Global upgraded its server infrastructure to prevent unauthorized access to ------- corporate data.",
+    "options": {
+      "A": "incompatible",
+      "B": "confidential",
+      "C": "deliberate",
+      "D": "provisional"
+    },
+    "correct_answer": "B",
+    "correct_text": "confidential",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Từ vựng 'incompatible' (không tương thích). Dữ liệu không tương thích không phải lý do ngăn chặn truy cập trái phép."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng tính từ 'confidential' (bảo mật/mật) đi với 'corporate data'."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Từ vựng 'deliberate' (cố ý/chủ tâm). Không mô tả dữ liệu cố ý."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Từ vựng 'provisional' (tạm thời). Dữ liệu tạm thời không khớp logic ngăn rò rỉ."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "confidential data",
+        "paraphrases": ["classified information", "sensitive records"],
+        "meaning": "dữ liệu bảo mật / tài liệu mật"
+      },
+      {
+        "phrase": "unauthorized access",
+        "paraphrases": ["illegal entry", "unpermitted intrusion"],
+        "meaning": "truy cập trái phép"
+      }
+    ],
+    "grammar_point": "Vocabulary in context (Adjective)",
+    "strategy": [
+      "Bước 1: Analyze Context Clues - Nhận biết manh mối 'prevent unauthorized access' (ngăn chặn truy cập trái phép).",
+      "Bước 2: Match Adjective to 'corporate data' - Chọn tính từ hợp logic thể hiện tính chất cần bảo mật của dữ liệu.",
+      "Bước 3: Select Option B - Chọn B (confidential)."
+    ]
+  },
+  {
+    "id": 4,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "------- the flight was delayed by heavy rain, the keynote speaker managed to arrive in time for the opening ceremony.",
+    "options": {
+      "A": "Owing to",
+      "B": "Despite",
+      "C": "Because of",
+      "D": "Although"
+    },
+    "correct_answer": "D",
+    "correct_text": "Although",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Giới từ chỉ nguyên nhân 'Owing to'. Owing to là giới từ và sai nghĩa tương phản."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Giới từ 'Despite'. Despite là giới từ, chỉ đứng trước Noun/V-ing, không đứng trước mệnh đề có động từ chia 'was delayed'."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Giới từ chỉ nguyên nhân 'Because of'. Because of là giới từ (không cộng mệnh đề) và sai nghĩa tương phản."
+      },
+      "D": {
+        "status": "correct",
+        "reason": "Đúng liên từ phụ thuộc 'Although' + Clause (mệnh đề S + V)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "although + clause",
+        "paraphrases": ["even though + clause", "despite the fact that"],
+        "meaning": "mặc dù (cộng mệnh đề)"
+      },
+      {
+        "phrase": "managed to arrive",
+        "paraphrases": ["succeeded in reaching"],
+        "meaning": "đã xoay xở/kịp tới nơi"
+      }
+    ],
+    "grammar_point": "Conjunction vs Preposition (Although vs Despite/Because of)",
+    "strategy": [
+      "Bước 1: Check Following Structure - Kiểm tra sau chỗ trống là mệnh đề 'the flight was delayed' (S + V) hay cụm danh từ.",
+      "Bước 2: Eliminate Prepositions - Loại A, B, C vì 'Owing to', 'Despite', 'Because of' là giới từ.",
+      "Bước 3: Select Option D - Chọn D (Although)."
+    ]
+  },
+  {
+    "id": 5,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Lumina Logistics ------- more than 500 electric vehicles since the new eco-friendly initiative was introduced.",
+    "options": {
+      "A": "acquired",
+      "B": "has acquired",
+      "C": "acquires",
+      "D": "will acquire"
+    },
+    "correct_answer": "B",
+    "correct_text": "has acquired",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Thì Quá khứ đơn 'acquired'. Quá khứ đơn không diễn tả hành động kéo dài từ quá khứ đến hiện tại đi với 'since'."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng thì Hiện tại hoàn thành 'has acquired' kết hợp với trạng từ chỉ thời gian 'since'."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Thì Hiện tại đơn 'acquires'. Hiện tại đơn diễn tả thói quen/sự thật, không dùng với 'since'."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Thì Tương lai đơn 'will acquire'. Tương lai đơn không dùng với mốc thời gian quá khứ 'since... was introduced'."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "has acquired since",
+        "paraphrases": ["has purchased from the time when"],
+        "meaning": "đã thu mua / sở hữu kể từ khi"
+      },
+      {
+        "phrase": "eco-friendly initiative",
+        "paraphrases": ["green environmental plan"],
+        "meaning": "sáng kiến thân thiện với môi trường"
+      }
+    ],
+    "grammar_point": "Present Perfect with 'since'",
+    "strategy": [
+      "Bước 1: Identify Time Indicator 'since' - Nhận biết liên từ chỉ mốc thời gian 'since + Mệnh đề Quá khứ đơn'.",
+      "Bước 2: Apply Tense Rule - Mệnh đề chính đi với 'since' luôn chia thì Hiện tại hoàn thành (Have/Has + V3/ed).",
+      "Bước 3: Select Option B - Chọn B (has acquired)."
+    ]
+  },
+  {
+    "id": 6,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "All department heads are required to submit a ------- report outlining their annual budget projections.",
+    "options": {
+      "A": "comprehensive",
+      "B": "comprehend",
+      "C": "comprehensibly",
+      "D": "comprehension"
+    },
+    "correct_answer": "A",
+    "correct_text": "comprehensive",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng tính từ đuôi -ive 'comprehensive' bổ nghĩa cho danh từ 'report'."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Động từ nguyên mẫu 'comprehend'. Động từ không đứng giữa mạo từ 'a' và danh từ 'report'."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Trạng từ 'comprehensibly'. Trạng từ không trực tiếp bổ nghĩa cho danh từ."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Danh từ 'comprehension'. Hai danh từ ghép 'comprehension report' không tạo thành cụm từ tự nhiên bằng tính từ 'comprehensive report'."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "comprehensive report",
+        "paraphrases": ["thorough detailed account"],
+        "meaning": "báo cáo toàn diện / chi tiết"
+      },
+      {
+        "phrase": "budget projections",
+        "paraphrases": ["financial forecasts"],
+        "meaning": "dự báo ngân sách"
+      }
+    ],
+    "grammar_point": "Adjective before noun (Part of Speech)",
+    "strategy": [
+      "Bước 1: Analyze Position - Nhận biết khoảng trống nằm giữa mạo từ 'a' và danh từ 'report'.",
+      "Bước 2: Identify Adjective Ending -ive - Xác định từ cần điền là tính từ bổ nghĩa cho 'report' -> 'comprehensive'.",
+      "Bước 3: Select Option A - Chọn A (comprehensive)."
+    ]
+  },
+  {
+    "id": 7,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The board of directors decided to ------- the annual shareholder meeting until late November.",
+    "options": {
+      "A": "renew",
+      "B": "dismiss",
+      "C": "postpone",
+      "D": "terminate"
+    },
+    "correct_answer": "C",
+    "correct_text": "postpone",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Động từ 'renew' (gia hạn). Không gia hạn cuộc họp cổ đông."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Động từ 'dismiss' (sa thải / giải tán). Không dùng 'dismiss' cuộc họp đi với mốc thời gian 'until'."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng động từ 'postpone' (hoãn lại sang mốc thời gian khác đi với 'until')."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Động từ 'terminate' (chấm dứt hẳn). Terminate là chấm dứt hoàn toàn, không đi với hoãn tới thời điểm 'until'."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "postpone until",
+        "paraphrases": ["delay until", "put off to"],
+        "meaning": "hoãn lại cho tới"
+      },
+      {
+        "phrase": "annual shareholder meeting",
+        "paraphrases": ["yearly AGM gathering"],
+        "meaning": "cuộc họp cổ đông thường niên"
+      }
+    ],
+    "grammar_point": "Vocabulary / Verb choice with time preposition",
+    "strategy": [
+      "Bước 1: Identify Preposition Clue 'until' - Chú ý mốc thời gian dời lịch đi với giới từ 'until late November'.",
+      "Bước 2: Match Verb Meaning - Chọn động từ mang nghĩa hoãn/dời lịch 'postpone'.",
+      "Bước 3: Select Option C - Chọn C (postpone)."
+    ]
+  },
+  {
+    "id": 8,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Vanguard Systems has achieved remarkable ------- in reducing customer response times over the past two years.",
+    "options": {
+      "A": "succeed",
+      "B": "successful",
+      "C": "successfully",
+      "D": "success"
+    },
+    "correct_answer": "D",
+    "correct_text": "success",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Động từ 'succeed'. Động từ không thể làm tân ngữ trực tiếp đứng sau tính từ 'remarkable'."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Tính từ 'successful'. Hai tính từ đứng cạnh nhau không tạo thành tân ngữ cho 'achieved'."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Trạng từ 'successfully'. Trạng từ không làm tân ngữ đứng sau tính từ."
+      },
+      "D": {
+        "status": "correct",
+        "reason": "Đúng danh từ 'success' làm tân ngữ cho động từ 'achieved'."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "achieve remarkable success",
+        "paraphrases": ["attain outstanding achievement"],
+        "meaning": "đạt được thành công đáng kinh ngạc"
+      },
+      {
+        "phrase": "customer response times",
+        "paraphrases": ["client support turnaround"],
+        "meaning": "thời gian phản hồi khách hàng"
+      }
+    ],
+    "grammar_point": "Noun as object after adjective (Part of Speech)",
+    "strategy": [
+      "Bước 1: Analyze Sentence Pattern - Nhận diện cấu trúc Subject (Vanguard Systems) + Verb (has achieved) + Adjective (remarkable) + [Noun Object].",
+      "Bước 2: Identify Noun Form - Trong các từ họ 'succeed', chỉ có 'success' là danh từ.",
+      "Bước 3: Select Option D - Chọn D (success)."
+    ]
+  },
+  {
+    "id": 9,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The survey ------- by Veritas Consulting indicates that employee satisfaction has risen by 15 percent.",
+    "options": {
+      "A": "conducting",
+      "B": "conducted",
+      "C": "conducts",
+      "D": "conduct"
+    },
+    "correct_answer": "B",
+    "correct_text": "conducted",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Hiện tại phân từ 'conducting'. Survey (bản khảo sát) được thực hiện (bị động), không tự thực hiện (chủ động) nên không dùng V-ing."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng Quá khứ phân từ 'conducted' trong mệnh đề quan hệ rút gọn bị động (The survey which was conducted by...)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Động từ chia thì hiện tại 'conducts'. Câu đã có động từ chính là 'indicates', không thể dùng thêm động từ chia thì mà không có đại từ quan hệ."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Động từ nguyên mẫu 'conduct'. Động từ nguyên mẫu không bổ nghĩa cho danh từ 'survey'."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "survey conducted by",
+        "paraphrases": ["study carried out by"],
+        "meaning": "cuộc khảo sát được tiến hành bởi"
+      },
+      {
+        "phrase": "employee satisfaction",
+        "paraphrases": ["staff contentment"],
+        "meaning": "sự hài lòng của nhân viên"
+      }
+    ],
+    "grammar_point": "Reduced relative clause (Passive participle)",
+    "strategy": [
+      "Bước 1: Identify Main Verb - Xác định động từ chính của câu là 'indicates'. Chỗ trống thuộc mệnh đề quan hệ bổ nghĩa cho 'The survey'.",
+      "Bước 2: Determine Voice (Passive) - Bản khảo sát được thực hiện bởi (by...) -> Rút gọn bị động dùng V3/ed (conducted).",
+      "Bước 3: Select Option B - Chọn B (conducted)."
+    ]
+  },
+  {
+    "id": 10,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Please keep all financial documents in a secure cabinet, as the information contained within them is strictly -------.",
+    "options": {
+      "A": "confidential",
+      "B": "temporary",
+      "C": "deliberate",
+      "D": "affordable"
+    },
+    "correct_answer": "A",
+    "correct_text": "confidential",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng tính từ 'confidential' đi ghép thành cụm 'strictly confidential' (tuyệt đối bảo mật)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Từ vựng 'temporary' (tạm thời). Thông tin tạm thời không phải lý do cất vào tủ bảo mật."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Từ vựng 'deliberate' (cố ý). Không mô tả thông tin tài chính là 'cố ý'."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Từ vựng 'affordable' (phải chăng/vừa túi tiền). Thông tin không dùng từ 'affordable'."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "strictly confidential",
+        "paraphrases": ["highly classified", "top secret"],
+        "meaning": "tuyệt đối bảo mật"
+      },
+      {
+        "phrase": "secure cabinet",
+        "paraphrases": ["locked storage locker"],
+        "meaning": "tủ hồ sơ an toàn/có khóa"
+      }
+    ],
+    "grammar_point": "Vocabulary / Collocation (strictly confidential)",
+    "strategy": [
+      "Bước 1: Identify Adverb Collocation 'strictly...' - Chú ý trạng từ 'strictly' đi trước chỗ trống.",
+      "Bước 2: Match Document Context - Cất giữ tài liệu tài chính an toàn vì thông tin mang tính tuyệt mật (strictly confidential).",
+      "Bước 3: Select Option A - Chọn A (confidential)."
+    ]
+  },
+  {
+    "id": 11,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "All travel expense reimbursement requests must be processed ------- ten business days after the conclusion of the trip.",
+    "options": {
+      "A": "along",
+      "B": "among",
+      "C": "within",
+      "D": "onto"
+    },
+    "correct_answer": "C",
+    "correct_text": "within",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Giới từ 'along' (dọc theo). Along dùng chỉ vị trí/hướng di chuyển không gian."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Giới từ 'among' (trong số/giữa nhiều đối tượng). Among đứng trước danh từ số nhiều chỉ người/vật, không dùng chỉ khoảng thời gian."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng giới từ 'within' + khoảng thời gian (trong vòng 10 ngày làm việc)."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Giới từ 'onto' (lên trên bề mặt). Onto dùng chỉ chuyển động lên trên."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "within ten business days",
+        "paraphrases": ["inside a 10-day working period"],
+        "meaning": "trong vòng 10 ngày làm việc"
+      },
+      {
+        "phrase": "expense reimbursement",
+        "paraphrases": ["cost refund payment"],
+        "meaning": "hoàn trả chi phí công tác"
+      }
+    ],
+    "grammar_point": "Preposition of time (within)",
+    "strategy": [
+      "Bước 1: Identify Time Phrase - Phía sau chỗ trống là khoảng thời gian 'ten business days'.",
+      "Bước 2: Select Preposition of Time Limit - Giới từ thể hiện khoảng thời gian tối đa để xử lý thủ tục là 'within'.",
+      "Bước 3: Select Option C - Chọn C (within)."
+    ]
+  },
+  {
+    "id": 12,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The new automated software has proven to be ------- effective in streamlining the invoice processing workflow.",
+    "options": {
+      "A": "exception",
+      "B": "exceptional",
+      "C": "exceptionally",
+      "D": "except"
+    },
+    "correct_answer": "C",
+    "correct_text": "exceptionally",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Danh từ 'exception'. Danh từ không thể bổ nghĩa cho tính từ 'effective'."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Tính từ 'exceptional'. Tính từ không bổ nghĩa cho tính từ đứng sau."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng trạng từ đuôi -ly 'exceptionally' đứng trước gia tăng mức độ bổ nghĩa cho tính từ 'effective'."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Giới từ/nối từ 'except'. Giới từ không phù hợp vị trí đứng trước tính từ."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "exceptionally effective",
+        "paraphrases": ["extraordinarily efficient"],
+        "meaning": "đặc biệt hiệu quả / cực kỳ hiệu quả"
+      },
+      {
+        "phrase": "streamlining workflow",
+        "paraphrases": ["optimizing operational process"],
+        "meaning": "tinh gọn quy trình làm việc"
+      }
+    ],
+    "grammar_point": "Adverb modifying adjective",
+    "strategy": [
+      "Bước 1: Analyze Target Word - Từ đứng sau chỗ trống là tính từ 'effective'.",
+      "Bước 2: Apply Adverb-Adjective Rule - Trạng từ (Adverb) bổ nghĩa cho Tính từ (Adjective) -> chọn đuôi -ly 'exceptionally'.",
+      "Bước 3: Select Option C - Chọn C (exceptionally)."
+    ]
+  },
+  {
+    "id": 13,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "------- you receive written confirmation from the human resources department, your transfer request cannot be finalized.",
+    "options": {
+      "A": "Whereas",
+      "B": "Provided that",
+      "C": "In case",
+      "D": "Unless"
+    },
+    "correct_answer": "D",
+    "correct_text": "Unless",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Liên từ 'Whereas' (Trong khi đó - tương phản). Whereas dùng so sánh đối lập giữa 2 mệnh đề độc lập."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Liên từ điều kiện khẳng định 'Provided that' (Miễn là). Provided that mang nghĩa khẳng định, ngược nghĩa với vế sau 'cannot be finalized'."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Liên từ 'In case' (Phòng khi). In case không phù hợp với mệnh đề chính chứa phủ định 'cannot'."
+      },
+      "D": {
+        "status": "correct",
+        "reason": "Đúng liên từ điều kiện phủ định 'Unless' (= If you do not receive...)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "unless you receive",
+        "paraphrases": ["if you do not get"],
+        "meaning": "trừ khi / nếu bạn không nhận được"
+      },
+      {
+        "phrase": "written confirmation",
+        "paraphrases": ["official document approval"],
+        "meaning": "sự xác nhận bằng văn bản"
+      }
+    ],
+    "grammar_point": "Conditional conjunction (Unless)",
+    "strategy": [
+      "Bước 1: Examine Clause Logic - Nhận biết vế 2 có phủ định 'cannot be finalized'.",
+      "Bước 2: Select Negative Condition - Liên từ tạo điều kiện 'Nếu không có X thì Y không thể xảy ra' là 'Unless'.",
+      "Bước 3: Select Option D - Chọn D (Unless)."
+    ]
+  },
+  {
+    "id": 14,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Strict adherence to safety guidelines is essential to maintain full ------- with international manufacturing standards.",
+    "options": {
+      "A": "compliance",
+      "B": "negotiation",
+      "C": "expansion",
+      "D": "subscription"
+    },
+    "correct_answer": "A",
+    "correct_text": "compliance",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng danh từ 'compliance' đi ghép với giới từ 'with' (compliance with standards)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Danh từ 'negotiation' (sự đàm phán). Negotiation đi với 'with' mang nghĩa đàm phán với ai, không mang nghĩa tuân thủ tiêu chuẩn sản xuất."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Danh từ 'expansion' (sự mở rộng). Expansion đi với 'into/of', không ghép với 'with standards'."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Danh từ 'subscription' (sự đăng ký theo dõi). Subscription đi với 'to'."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "compliance with standards",
+        "paraphrases": ["adherence to regulations"],
+        "meaning": "sự tuân thủ theo các tiêu chuẩn"
+      },
+      {
+        "phrase": "manufacturing standards",
+        "paraphrases": ["production guidelines"],
+        "meaning": "tiêu chuẩn sản xuất"
+      }
+    ],
+    "grammar_point": "Collocation (compliance with)",
+    "strategy": [
+      "Bước 1: Identify Preposition Partner 'with' - Chú ý giới từ 'with' đứng sau khoảng trống.",
+      "Bước 2: Match Noun Meaning - Danh từ đi với 'with' thể hiện việc chấp hành tiêu chuẩn là 'compliance'.",
+      "Bước 3: Select Option A - Chọn A (compliance)."
+    ]
+  },
+  {
+    "id": 15,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The maintenance crew is scheduled ------- the main elevator system early tomorrow morning.",
+    "options": {
+      "A": "inspecting",
+      "B": "to inspect",
+      "C": "inspects",
+      "D": "inspected"
+    },
+    "correct_answer": "B",
+    "correct_text": "to inspect",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Danh động từ V-ing 'inspecting'. Be scheduled không đi trực tiếp với V-ing."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng dạng To-infinitive 'to inspect' theo sau cấu trúc 'be scheduled to V'."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Động từ chia ngôi thứ 3 số ít 'inspects'. Không thể dùng động từ chia thì đứng sau 'is scheduled'."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Quá khứ phân từ 'inspected'. Không dùng hai quá khứ phân từ đứng liền nhau dạng này."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "is scheduled to inspect",
+        "paraphrases": ["is slated to examine"],
+        "meaning": "được lên lịch để kiểm tra"
+      },
+      {
+        "phrase": "maintenance crew",
+        "paraphrases": ["repair team"],
+        "meaning": "đội bảo trì"
+      }
+    ],
+    "grammar_point": "be scheduled to + infinitive",
+    "strategy": [
+      "Bước 1: Recognize Verb Pattern - Cấu trúc 'be scheduled + to V'.",
+      "Bước 2: Select To-Infinitive Form - Chọn dạng 'to inspect'.",
+      "Bước 3: Select Option B - Chọn B (to inspect)."
+    ]
+  },
+  {
+    "id": 16,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Orion Pharma has announced a significant ------- in its research and development funding for the upcoming fiscal year.",
+    "options": {
+      "A": "increased",
+      "B": "increasingly",
+      "C": "increase",
+      "D": "increasing"
+    },
+    "correct_answer": "C",
+    "correct_text": "increase",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Tính từ/quá khứ phân từ 'increased'. Không dùng hai tính từ đứng liền nhau dạng này làm tân ngữ."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Trạng từ 'increasingly'. Trạng từ không đứng trực tiếp sau mạo từ 'a' + tính từ 'significant' để làm tân ngữ."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng danh từ 'increase' đứng sau tính từ 'significant'."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Danh động từ/tính từ 'increasing'. Danh từ đếm được/không đếm được tiêu chuẩn 'increase' là lựa chọn đúng nhất."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "significant increase",
+        "paraphrases": ["substantial growth", "marked rise"],
+        "meaning": "sự gia tăng đáng kể"
+      },
+      {
+        "phrase": "R&D funding",
+        "paraphrases": ["research budget allocations"],
+        "meaning": "nguồn vốn nghiên cứu và phát triển"
+      }
+    ],
+    "grammar_point": "Noun after article + adjective",
+    "strategy": [
+      "Bước 1: Analyze Structure - Khoảng trống đứng sau 'a + significant (Adjective)' -> Cần điền Noun.",
+      "Bước 2: Identify Noun Form - 'Increase' vừa là động từ vừa là danh từ gốc.",
+      "Bước 3: Select Option C - Chọn C (increase)."
+    ]
+  },
+  {
+    "id": 17,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The company’s net profits rose ------- after the implementation of the new digital marketing strategy.",
+    "options": {
+      "A": "cordially",
+      "B": "reluctantly",
+      "C": "mutually",
+      "D": "substantially"
+    },
+    "correct_answer": "D",
+    "correct_text": "substantially",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Trạng từ 'cordially' (thân ái/nồng nhiệt). Cordially dùng trong chào hỏi/thư từ."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Trạng từ 'reluctantly' (ngần ngừ/miễn cưỡng). Lợi nhuận không tăng 'miễn cưỡng'."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Trạng từ 'mutually' (lẫn nhau/hỗ tương). Không dùng 'mutually' bổ nghĩa cho 'rose'."
+      },
+      "D": {
+        "status": "correct",
+        "reason": "Đúng trạng từ 'substantially' (tăng đáng kể)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "rose substantially",
+        "paraphrases": ["increased significantly"],
+        "meaning": "tăng lên đáng kể"
+      },
+      {
+        "phrase": "net profits",
+        "paraphrases": ["bottom-line earnings"],
+        "meaning": "lợi nhuận ròng"
+      }
+    ],
+    "grammar_point": "Adverb of degree modifying verb",
+    "strategy": [
+      "Bước 1: Identify Verb Modifier - Trạng từ đứng sau bổ nghĩa cho động từ tăng trưởng 'rose'.",
+      "Bước 2: Evaluate Meaning - Lợi nhuận ròng tăng đáng kể nhờ chiến lược marketing -> 'substantially'.",
+      "Bước 3: Select Option D - Chọn D (substantially)."
+    ]
+  },
+  {
+    "id": 18,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "------- of the candidates interviewed yesterday possessed the required project management certifications.",
+    "options": {
+      "A": "Each",
+      "B": "Every",
+      "C": "All",
+      "D": "Almost"
+    },
+    "correct_answer": "A",
+    "correct_text": "Each",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng đại từ 'Each' (Each of + Noun plural)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Từ định lượng 'Every'. Every là tính từ từ định lượng, không đi trực tiếp với 'of' (không dùng Every of the... mà phải là Every one of the...)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Từ 'All'. Mặc dù All of the có tồn tại nhưng trong ngữ cảnh TOEIC khi đáp án A là Each, Each mang nghĩa nhấn mạnh tính cá nhân từng ứng viên sở hữu chứng chỉ."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Trạng từ 'Almost'. Almost là trạng từ, không đứng trước 'of the candidates' làm chủ ngữ."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "each of the candidates",
+        "paraphrases": ["every single applicant"],
+        "meaning": "mỗi một người trong số các ứng viên"
+      },
+      {
+        "phrase": "possess certifications",
+        "paraphrases": ["hold official credentials"],
+        "meaning": "sở hữu các chứng chỉ"
+      }
+    ],
+    "grammar_point": "Quantifier / Determiner (Each of)",
+    "strategy": [
+      "Bước 1: Examine '... of the candidates' - Cấu trúc '[Blank] + of the + Noun plural'.",
+      "Bước 2: Eliminate 'Every' - Loại 'Every' vì Every không đi với 'of'.",
+      "Bước 3: Select Option A - Chọn A (Each)."
+    ]
+  },
+  {
+    "id": 19,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "------- submitting the final budget proposal, department heads must obtain approval from the finance committee.",
+    "options": {
+      "A": "In accordance with",
+      "B": "Prior to",
+      "C": "On behalf of",
+      "D": "As well as"
+    },
+    "correct_answer": "B",
+    "correct_text": "Prior to",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Cụm giới từ 'In accordance with' (Chiếu theo/Tuân theo). Không nói 'chiếu theo việc nộp đề xuất'."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng cụm giới từ 'Prior to' + V-ing (Prior to submitting = Before submitting)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Cụm giới từ 'On behalf of' (Thay mặt cho). On behalf of đứng trước danh từ chỉ người/tổ chức, không đứng trước V-ing chỉ hành động."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Cụm giới từ/nối 'As well as' (Cũng như). As well as không đứng đầu câu tạo mệnh đề thời gian độc lập kiểu này."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "prior to submitting",
+        "paraphrases": ["before handing in"],
+        "meaning": "trước khi nộp"
+      },
+      {
+        "phrase": "obtain approval",
+        "paraphrases": ["secure sign-off", "receive clearance"],
+        "meaning": "có được sự phê duyệt"
+      }
+    ],
+    "grammar_point": "Prepositional phrase of time (Prior to + V-ing)",
+    "strategy": [
+      "Bước 1: Identify Time Sequence Context - Nhận biết hành động nộp đề xuất diễn ra trước bước xin phê duyệt.",
+      "Bước 2: Match 'Prior to' = 'Before' - Chọn cụm giới từ chỉ thời gian 'Prior to' + V-ing.",
+      "Bước 3: Select Option B - Chọn B (Prior to)."
+    ]
+  },
+  {
+    "id": 20,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Only certified technicians are authorized to ------- the heavy machinery used in the assembly plant.",
+    "options": {
+      "A": "promote",
+      "B": "generate",
+      "C": "operate",
+      "D": "negotiate"
+    },
+    "correct_answer": "C",
+    "correct_text": "operate",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Động từ 'promote' (thúc đẩy/quảng bá). Không quảng bá máy móc nhà máy."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Động từ 'generate' (tạo ra/phát ra). Generate đi với electricity/revenue, không dùng cho việc vận hành máy móc."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng động từ 'operate' đi với tân ngữ 'heavy machinery' (vận hành máy móc nặng)."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Động từ 'negotiate' (đàm phán). Không đàm phán máy móc."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "operate heavy machinery",
+        "paraphrases": ["run industrial equipment"],
+        "meaning": "vận hành máy móc hạng nặng"
+      },
+      {
+        "phrase": "certified technicians",
+        "paraphrases": ["licensed specialists"],
+        "meaning": "kỹ thuật viên có chứng chỉ"
+      }
+    ],
+    "grammar_point": "Vocabulary / Verb-object collocation",
+    "strategy": [
+      "Bước 1: Match Verb to Object 'heavy machinery' - Tìm động từ đi kèm với máy móc nhà máy.",
+      "Bước 2: Select 'operate' - Vận hành thiết bị nhà máy -> 'operate'.",
+      "Bước 3: Select Option C - Chọn C (operate)."
+    ]
+  },
+  {
+    "id": 21,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The revised contract terms are far more ------- to small business owners than the previous agreement.",
+    "options": {
+      "A": "favor",
+      "B": "favorable",
+      "C": "favorably",
+      "D": "favoritism"
+    },
+    "correct_answer": "B",
+    "correct_text": "favorable",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Động từ/danh từ 'favor'. Không dùng động từ/danh từ sau 'far more' trong câu so sánh tính từ."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng tính từ đuôi -able 'favorable' (thuận lợi/có lợi)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Trạng từ 'favorably'. Trạng từ không đứng sau động từ to be 'are' làm tính từ bổ ngữ."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Danh từ 'favoritism'. Danh từ không đứng trong cấu trúc so sánh tính từ hơn 'more... than'."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "favorable terms",
+        "paraphrases": ["advantageous conditions"],
+        "meaning": "các điều khoản có lợi / thuận lợi"
+      },
+      {
+        "phrase": "revised contract",
+        "paraphrases": ["amended agreement"],
+        "meaning": "hợp đồng đã sửa đổi"
+      }
+    ],
+    "grammar_point": "Comparative adjective (more + adjective)",
+    "strategy": [
+      "Bước 1: Recognize Comparative Pattern - Cấu trúc 'are far more + [Adjective] + than'.",
+      "Bước 2: Select Adjective Form - Chọn tính từ 'favorable'.",
+      "Bước 3: Select Option B - Chọn B (favorable)."
+    ]
+  },
+  {
+    "id": 22,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "It is ------- that all personnel complete the mandatory cybersecurity training before logging into the network.",
+    "options": {
+      "A": "casual",
+      "B": "spacious",
+      "C": "flexible",
+      "D": "imperative"
+    },
+    "correct_answer": "D",
+    "correct_text": "imperative",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Tính từ 'casual' (bình thường/suồng sã). Casual ngược nghĩa với tính chất bắt buộc."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Tính từ 'spacious' (rộng rãi). Spacious mô tả không gian căn phòng."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Tính từ 'flexible' (linh hoạt). Đào tạo bắt buộc (mandatory) thì không phải linh hoạt."
+      },
+      "D": {
+        "status": "correct",
+        "reason": "Đúng tính từ 'imperative' (cấp thiết/bắt buộc) đi với cấu trúc 'It is imperative that'."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "it is imperative that",
+        "paraphrases": ["it is essential that", "it is vital that"],
+        "meaning": "điều cấp thiết/bắt buộc là"
+      },
+      {
+        "phrase": "mandatory training",
+        "paraphrases": ["compulsory course"],
+        "meaning": "khóa đào tạo bắt buộc"
+      }
+    ],
+    "grammar_point": "Subjunctive / It is imperative that",
+    "strategy": [
+      "Bước 1: Recognize Subjunctive Pattern 'It is... that' - Cấu trúc giả định 'It is + Adjective + that + S + V(bare)'.",
+      "Bước 2: Match 'mandatory' Context - Khóa học bắt buộc nên việc hoàn thành là cấp thiết -> 'imperative'.",
+      "Bước 3: Select Option D - Chọn D (imperative)."
+    ]
+  },
+  {
+    "id": 23,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The marketing campaign generated significant public interest; -------, total sales figures did not meet the initial targets.",
+    "options": {
+      "A": "nevertheless",
+      "B": "furthermore",
+      "C": "consequently",
+      "D": "similarly"
+    },
+    "correct_answer": "A",
+    "correct_text": "nevertheless",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng trạng từ liên kết 'nevertheless' chỉ sự tương phản giữa 2 vế câu."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Từ chỉ bổ sung 'furthermore' (hơn nữa). Furthermore dùng bổ sung ý cùng chiều, không dùng khi vế 2 trái ngược ('did not meet targets')."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Từ chỉ kết quả 'consequently' (do đó/kết quả là). Consequently chỉ nguyên nhân-kết quả thuận chiều."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Từ chỉ so sánh 'similarly' (tương tự như vậy). Similarly dùng khi 2 vế tương đồng."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "nevertheless",
+        "paraphrases": ["however", "nonetheless"],
+        "meaning": "tuy nhiên / dẫu vậy"
+      },
+      {
+        "phrase": "did not meet targets",
+        "paraphrases": ["fell short of goals"],
+        "meaning": "không đạt chỉ tiêu"
+      }
+    ],
+    "grammar_point": "Conjunctive adverb (contrast)",
+    "strategy": [
+      "Bước 1: Analyze Contrast in Sentences - Vế 1 tích cực (generated public interest), vế 2 tiêu cực (did not meet targets).",
+      "Bước 2: Select Contrast Conjunctive Adverb - Từ nối thể hiện đối lập sau dấu chấm phẩy ';' là 'nevertheless'.",
+      "Bước 3: Select Option A - Chọn A (nevertheless)."
+    ]
+  },
+  {
+    "id": 24,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Applicants are asked to complete the form ------- to the email and return it to the recruitment team by Friday.",
+    "options": {
+      "A": "attaches",
+      "B": "attaching",
+      "C": "attached",
+      "D": "attachment"
+    },
+    "correct_answer": "C",
+    "correct_text": "attached",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Động từ chia thì 'attaches'. Câu đã có động từ chính 'are asked'."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Hiện tại phân từ 'attaching'. Tờ đơn được đính kèm (bị động), không tự đính kèm (chủ động)."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng quá khứ phân từ 'attached' (tờ đơn được đính kèm trong email)."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Danh từ 'attachment'. Danh từ không đứng vị trí này đi với giới từ 'to the email'."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "form attached to",
+        "paraphrases": ["enclosed application form"],
+        "meaning": "mẫu đơn được đính kèm vào"
+      },
+      {
+        "phrase": "return to recruitment team",
+        "paraphrases": ["send back to HR staff"],
+        "meaning": "gửi lại cho đội tuyển dụng"
+      }
+    ],
+    "grammar_point": "Reduced relative clause (Passive participle)",
+    "strategy": [
+      "Bước 1: Identify Noun Modifier Pattern - Cụm 'the form + [V3/ed] + to the email'.",
+      "Bước 2: Select Passive Participle - Đơn được đính kèm -> chọn 'attached'.",
+      "Bước 3: Select Option C - Chọn C (attached)."
+    ]
+  },
+  {
+    "id": 25,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "An internal audit revealed a minor ------- between the inventory records and the actual stock in the warehouse.",
+    "options": {
+      "A": "permission",
+      "B": "destination",
+      "C": "guidance",
+      "D": "discrepancy"
+    },
+    "correct_answer": "D",
+    "correct_text": "discrepancy",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Danh từ 'permission' (sự cho phép). Permission đi với 'to V', không khớp với 'between X and Y'."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Danh từ 'destination' (điểm đến). Không nói 'điểm đến giữa sổ sách và hàng tồn kho'."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Danh từ 'guidance' (sự hướng dẫn). Không phù hợp ngữ cảnh kiểm toán."
+      },
+      "D": {
+        "status": "correct",
+        "reason": "Đúng danh từ 'discrepancy' (sự chênh lệch/sai lệch giữa sổ sách và thực tế)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "discrepancy between",
+        "paraphrases": ["inconsistency between", "mismatch between"],
+        "meaning": "sự sai lệch / chênh lệch giữa"
+      },
+      {
+        "phrase": "internal audit",
+        "paraphrases": ["in-house financial review"],
+        "meaning": "cuộc kiểm toán nội bộ"
+      }
+    ],
+    "grammar_point": "Vocabulary (discrepancy between)",
+    "strategy": [
+      "Bước 1: Notice 'between X and Y' - Cụm danh từ + 'between the inventory records and the actual stock'.",
+      "Bước 2: Select Audit Term - Kiểm toán phát hiện ra sự chênh lệch -> 'discrepancy'.",
+      "Bước 3: Select Option D - Chọn D (discrepancy)."
+    ]
+  },
+  {
+    "id": 26,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Ms. Lawson served as the head of the legal department ------- the entire restructuring process.",
+    "options": {
+      "A": "besides",
+      "B": "throughout",
+      "C": "regarding",
+      "D": "whereas"
+    },
+    "correct_answer": "B",
+    "correct_text": "throughout",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Giới từ 'besides' (bên cạnh đó / ngoài ra). Besides bổ sung thông tin, không chỉ khoảng thời gian kéo dài."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng giới từ 'throughout' (trong suốt toàn bộ quá trình tái cơ cấu)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Giới từ 'regarding' (về / liên quan đến). Regarding chỉ chủ đề, không thể hiện hành động giữ chức vụ trong suốt quá trình."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Liên từ 'whereas' (trong khi đó). Whereas là liên từ, chỉ đứng trước mệnh đề S + V."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "throughout the process",
+        "paraphrases": ["during the whole operation"],
+        "meaning": "trong suốt toàn bộ quá trình"
+      },
+      {
+        "phrase": "restructuring process",
+        "paraphrases": ["reorganization procedure"],
+        "meaning": "quá trình tái cơ cấu"
+      }
+    ],
+    "grammar_point": "Preposition of duration (throughout)",
+    "strategy": [
+      "Bước 1: Analyze Time Phrase - Cụm 'the entire restructuring process' chỉ một khoảng thời gian.",
+      "Bước 2: Select Preposition of Duration - Giữ chức vụ liên tục từ đầu tới cuối -> dùng 'throughout'.",
+      "Bước 3: Select Option B - Chọn B (throughout)."
+    ]
+  },
+  {
+    "id": 27,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Because Mr. Vance prepared the entire annual presentation -------, his supervisor commended his exceptional dedication.",
+    "options": {
+      "A": "him",
+      "B": "his",
+      "C": "himself",
+      "D": "he"
+    },
+    "correct_answer": "C",
+    "correct_text": "himself",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Đại từ nhân xưng tân ngữ 'him'. Tân ngữ 'the entire annual presentation' đã có sẵn, không thể đặt tân ngữ 'him' đứng ngay sau."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Tính từ sở hữu 'his'. Tính từ sở hữu phải đi cùng danh từ."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng đại từ phản thân 'himself' dùng nhấn mạnh (by himself / single-handedly)."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Đại từ nhân xưng chủ ngữ 'he'. Chủ ngữ không đứng ở cuối mệnh đề."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "prepared himself",
+        "paraphrases": ["prepared single-handedly", "prepared on his own"],
+        "meaning": "tự tay chuẩn bị một mình"
+      },
+      {
+        "phrase": "commended dedication",
+        "paraphrases": ["praised commitment"],
+        "meaning": "khen ngợi sự tận tụy"
+      }
+    ],
+    "grammar_point": "Reflexive pronoun for emphasis",
+    "strategy": [
+      "Bước 1: Check Complete Clause S-V-O - Subject (Mr. Vance) + Verb (prepared) + Object (the entire annual presentation).",
+      "Bước 2: Select Emphatic Reflexive Pronoun - Để nhấn mạnh chủ ngữ tự làm việc đó một mình, chọn đại từ phản thân 'himself'.",
+      "Bước 3: Select Option C - Chọn C (himself)."
+    ]
+  },
+  {
+    "id": 28,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The company built a new warehouse facility to ------- the increasing volume of international shipments.",
+    "options": {
+      "A": "accommodate",
+      "B": "surpass",
+      "C": "reconcile",
+      "D": "substitute"
+    },
+    "correct_answer": "A",
+    "correct_text": "accommodate",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng động từ 'accommodate' (đáp ứng/chứa đủ khối lượng hàng)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Động từ 'surpass' (vượt qua). Nhà kho xây để chứa hàng, không dùng 'vượt qua khối lượng hàng'."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Động từ 'reconcile' (hòa giải/đối chiếu). Reconcile dùng cho tranh chấp hoặc đối chiếu sổ sách."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Động từ 'substitute' (thay thế). Không thay thế khối lượng hàng."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "accommodate the volume",
+        "paraphrases": ["hold the capacity", "handle the workload"],
+        "meaning": "đáp ứng / chứa đủ khối lượng"
+      },
+      {
+        "phrase": "warehouse facility",
+        "paraphrases": ["storage depot"],
+        "meaning": "cơ sở nhà kho"
+      }
+    ],
+    "grammar_point": "Vocabulary / Verb choice",
+    "strategy": [
+      "Bước 1: Identify Purpose of New Warehouse - Xây nhà kho mới mục đích là để có thêm không gian chứa hàng (volume).",
+      "Bước 2: Select 'accommodate' - Động từ mang nghĩa chứa đựng / đáp ứng dung tích là 'accommodate'.",
+      "Bước 3: Select Option A - Chọn A (accommodate)."
+    ]
+  },
+  {
+    "id": 29,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Management expanded the customer support team ------- inquiries could be handled more efficiently during peak hours.",
+    "options": {
+      "A": "such as",
+      "B": "in order to",
+      "C": "as if",
+      "D": "so that"
+    },
+    "correct_answer": "D",
+    "correct_text": "so that",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Từ chỉ ví dụ 'such as' (như là). Such as đứng trước danh từ/cụm danh từ để liệt kê."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Cụm từ chỉ mục đích 'in order to'. In order to chỉ đứng trước động từ nguyên mẫu (in order to handle), không đứng trước mệnh đề 'inquiries could be handled'."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Liên từ 'as if' (như thể là). As if chỉ sự ví von giả định."
+      },
+      "D": {
+        "status": "correct",
+        "reason": "Đúng liên từ 'so that' + Clause (mệnh đề S + V)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "so that + clause",
+        "paraphrases": ["in order that + clause"],
+        "meaning": "để cho / nhằm mục đích (cộng mệnh đề)"
+      },
+      {
+        "phrase": "handled efficiently",
+        "paraphrases": ["processed effectively"],
+        "meaning": "được xử lý hiệu quả"
+      }
+    ],
+    "grammar_point": "Purpose conjunction (so that + clause)",
+    "strategy": [
+      "Bước 1: Examine Structure after Blank - Vế sau là mệnh đề 'inquiries could be handled' (S + modal verb + V).",
+      "Bước 2: Eliminate 'in order to' - Loại 'in order to' vì in order to chỉ đi với V-bare.",
+      "Bước 3: Select Option D - Chọn D (so that)."
+    ]
+  },
+  {
+    "id": 30,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The manufacturing plant implemented ------- quality control measures to reduce defects in the production line.",
+    "options": {
+      "A": "stringent",
+      "B": "reluctant",
+      "C": "deliberate",
+      "D": "provisional"
+    },
+    "correct_answer": "A",
+    "correct_text": "stringent",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng tính từ 'stringent' đi ghép thành cụm 'stringent quality control measures' (các biện pháp kiểm soát chất lượng nghiêm ngặt)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Tính từ 'reluctant' (do dự/miễn cưỡng). Không mô tả biện pháp kiểm soát chất lượng là 'do dự'."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Tính từ 'deliberate' (thận trọng/cố ý). Deliberate không tạo thành thuật ngữ chuẩn bằng 'stringent'."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Tính từ 'provisional' (tạm thời). Provisional không khớp mục đích giảm thiểu sản phẩm lỗi lâu dài."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "stringent measures",
+        "paraphrases": ["strict regulations", "rigorous protocols"],
+        "meaning": "các biện pháp nghiêm ngặt"
+      },
+      {
+        "phrase": "reduce defects",
+        "paraphrases": ["minimize flaws"],
+        "meaning": "giảm thiểu sản phẩm lỗi"
+      }
+    ],
+    "grammar_point": "Vocabulary / Collocation (stringent measures)",
+    "strategy": [
+      "Bước 1: Match Adjective to Collocation - Tính từ đi với 'quality control measures' để giảm lỗi sản phẩm.",
+      "Bước 2: Select 'stringent' - Biện pháp nghiêm ngặt -> 'stringent'.",
+      "Bước 3: Select Option A - Chọn A (stringent)."
+    ]
+  }
+]

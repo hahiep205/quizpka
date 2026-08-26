@@ -8,6 +8,7 @@ import {
 } from "@/lib/practiceSession"
 import { getSubjectById, examCatalog } from "@/data/subjects"
 import { tadvExamOptions } from "@/data/tadvExams"
+import { getToeicScopeOption } from "@/data/toeic"
 
 type Lang = "en" | "vi"
 
@@ -45,7 +46,23 @@ export function PracticeGuestPage({
   const exam = useMemo(() => {
     if (!payload) return null
     const found = examCatalog.find((item) => item.id === payload.examId) ?? null
-    if (found) return found
+    if (found) {
+      if (payload.toeicScope) {
+        const opt = getToeicScopeOption(payload.toeicScope)
+        if (opt) {
+          return {
+            ...found,
+            questionCount: opt.count,
+            durationMinutes: opt.durationMinutes,
+            title: {
+              en: `${found.title.en} - ${opt.label.en}`,
+              vi: `${found.title.vi} - ${opt.label.vi}`,
+            },
+          }
+        }
+      }
+      return found
+    }
     const tadvOpt = tadvExamOptions.find((o) => o.id === payload.examId)
     if (tadvOpt) {
       const subj = getSubjectById(payload.subjectId)
@@ -110,6 +127,7 @@ export function PracticeGuestPage({
           exam={exam}
           setup={payload.setup}
           chapterId={payload.chapterId ?? undefined}
+          toeicScope={payload.toeicScope}
           onExit={() => {
             clearPracticeSession()
             goHomeFromPractice()

@@ -17,6 +17,8 @@ import { filterQuestionsBySubjectChapter, hasChapterSupport } from "@/data/subje
 import { quizCopy as copy } from "@/shared/i18n"
 import type { Question, AnswerValue, BankFile } from "@/features/quiz/model/quiz.types"
 import { mapBankQuestions, buildFallbackQuestions, isAnswerCorrect, shuffle, formatTime } from "@/features/quiz/lib/quizHelpers"
+import { loadToeicQuestions } from "@/features/quiz/lib/toeicHelpers"
+import type { ToeicScope } from "@/data/toeic"
 import { QuizQuestionBlock } from "@/features/quiz/ui/QuizQuestionBlock"
 import { ReviewPanel } from "@/features/quiz/ui/ReviewPanel"
 import { StatCard } from "@/features/quiz/ui/StatCard"
@@ -31,10 +33,11 @@ type QuizSessionProps = {
   exam: ExamPaper
   setup: QuizSetupValues
   chapterId?: string
+  toeicScope?: ToeicScope
   onExit: () => void
 }
 
-export function QuizSession({ lang, subject, exam, setup, chapterId, onExit }: QuizSessionProps) {
+export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope, onExit }: QuizSessionProps) {
   const t = copy[lang]
   const [questions, setQuestions] = useState<Question[]>([])
   const [loading, setLoading] = useState(true)
@@ -51,7 +54,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, onExit }: Q
   const [lightboxImage, setLightboxImage] = useState<string | null>(null)
   const [retryHistory, setRetryHistory] = useState<{ correct: number; total: number; accuracy: number }[]>([])
   const [forcePractice, setForcePractice] = useState(false)
-  const retryStorageKey = `quiz-retry-${exam.id}-${chapterId ?? "all"}`
+  const retryStorageKey = `quiz-retry-${exam.id}-${chapterId ?? "all"}-${toeicScope ?? "noscope"}`
 
   // Load retry history from sessionStorage on mount
   useEffect(() => {
@@ -79,7 +82,10 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, onExit }: Q
       setSecondsLeft(setup.timed ? setup.durationMinutes * 60 : 0)
       try {
         let base: Question[] = []
-        if (exam.questionBanks?.length) {
+        if (subject.id === "toeic" && toeicScope) {
+          base = await loadToeicQuestions(toeicScope, exam.id, setup)
+          if (!base.length) throw new Error("empty bank")
+        } else if (exam.questionBanks?.length) {
           const banks = await Promise.all(
             exam.questionBanks.map(async (url) => {
               const response = await fetch(url)
@@ -123,7 +129,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, onExit }: Q
     }
     void loadQuestions()
     return () => { cancelled = true }
-  }, [chapterId, exam, reloadToken, setup, subject.id, t.loadError, retryStorageKey])
+  }, [chapterId, exam, reloadToken, setup, subject.id, t.loadError, retryStorageKey, toeicScope])
 
   useEffect(() => {
     if (finished || loading || error || questions.length === 0) return
@@ -274,6 +280,47 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, onExit }: Q
     return { startIndex, label }
   })
 
+  const isToeic = subject.code === "TOEIC01"
+  const isSinglePartToeic = isToeic && !!toeicScope && /^part[1-7]$/.test(toeicScope)
+  const isTwoLevelToeic = isToeic && !!toeicScope && ["full", "listening", "reading"].includes(toeicScope)
+  const toeicGroups: Array<{ start: number; end: number; count: number; partLabel: string; groupLabel: string; title: string }> = (() => {
+    if (!isToeic) return []
+    const partCounters = new Map<string, number>()
+    return partStartIndices.map((start, idx) => {
+      const end = idx < partStartIndices.length - 1 ? partStartIndices[idx + 1] : questions.length
+      const count = end - start
+      const title = questions[start]?.partTitle ?? `Group ${idx + 1}`
+      const partNum = title.match(/Part\s+(\d+)/i)?.[1]
+      const groupNum = title.match(/Group\s+(\d+)/i)?.[1]
+      const qNum = title.match(/Q\s*(\d+)/i)?.[1]
+      const partKey = partNum ? `Part ${partNum}` : title.split(" - ")[1] ?? `group-${idx}`
+      const nextInPart = (partCounters.get(partKey) ?? 0) + 1
+      partCounters.set(partKey, nextInPart)
+      let groupLabel = ""
+      if (groupNum) groupLabel = `Nhóm ${groupNum}`
+      else if (qNum) groupLabel = `Câu ${qNum}`
+      else groupLabel = `Nhóm ${nextInPart}`
+      const partLabel = partNum ? `Part ${partNum}` : (title.split(" - ")[1] ?? `Nhóm ${idx + 1}`)
+      return { start, end, count, title, partLabel, groupLabel }
+    })
+  })()
+
+  const toeicTwoLevelData = (() => {
+    if (!isTwoLevelToeic) return null
+    const partMap = new Map<string, { partNum: string; partLabel: string; totalQuestions: number; firstStart: number }>()
+    for (const g of toeicGroups) {
+      const pn = g.partLabel.match(/Part\s+(\d+)/)?.[1] ?? g.partLabel
+      const existing = partMap.get(pn)
+      if (existing) existing.totalQuestions += g.count
+      else partMap.set(pn, { partNum: pn, partLabel: g.partLabel, totalQuestions: g.count, firstStart: g.start })
+    }
+    const partList = Array.from(partMap.values()).sort((a, b) => Number(a.partNum) - Number(b.partNum))
+    const currentGroup = toeicGroups.find((g) => currentIndex >= g.start && currentIndex < g.end)
+    const selectedPartNum = currentGroup ? (currentGroup.partLabel.match(/Part\s+(\d+)/)?.[1] ?? partList[0]?.partNum ?? null) : (partList[0]?.partNum ?? null)
+    const filteredGroups = selectedPartNum ? toeicGroups.filter((g) => g.partLabel === `Part ${selectedPartNum}`) : []
+    return { partList, selectedPartNum, filteredGroups }
+  })()
+
   return (
     <div className="mx-auto flex w-full max-w-[980px] flex-1 flex-col px-4 pb-10 pt-4 sm:px-6 lg:px-8">
       <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
@@ -330,7 +377,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, onExit }: Q
               <audio controls preload="metadata" className="w-full" src={current.audioUrl}>Your browser does not support audio playback.</audio>
             </div>
           ) : null}
-          {!current.imageUrl && current.passage ? <p className="mb-5 whitespace-pre-line rounded-[12px] border-2 border-[#E5E5E5] bg-[#F6F7FB] px-4 py-3 text-[13px] leading-6 text-[#4B4B4B] dark:border-white/10 dark:bg-white/5 dark:text-slate-200">{current.passage}</p> : null}
+          {!current.imageUrl && current.passage && !current.passage.trim().startsWith("Transcript:") ? <p className="mb-5 whitespace-pre-line rounded-[12px] border-2 border-[#E5E5E5] bg-[#F6F7FB] px-4 py-3 text-[13px] leading-6 text-[#4B4B4B] dark:border-white/10 dark:bg-white/5 dark:text-slate-200">{current.passage}</p> : null}
           {!current.imageUrl && current.referenceNotices ? <div className="mb-5 grid gap-2 sm:grid-cols-2">{Object.entries(current.referenceNotices).map(([key, notice]) => <div key={key} className="rounded-[10px] border border-[#E5E5E5] bg-[#F6F7FB] px-3 py-2 text-[12px] leading-5 text-[#4B4B4B] dark:border-white/10 dark:bg-white/5 dark:text-slate-200"><span className="font-extrabold text-[#129BDC]">{key}. </span>{notice}</div>)}</div> : null}
           <div className={cn("space-y-8", subject.code === "TADV01" && "space-y-5")}>
             {partQuestions.map((question) => <QuizQuestionBlock key={question.id} question={question} questionNumber={questions.findIndex((item) => item.id === question.id) + 1} answers={answers} isPractice={isPractice} compact={subject.code === "TADV01"} t={t} onAnswer={(answer) => setAnswers((currentAnswers) => ({ ...currentAnswers, [question.id]: answer }))} />)}
@@ -392,31 +439,246 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, onExit }: Q
                   )
                 })}
               </div>
-            ) : <div
-              className="grid gap-[5px] pb-1"
-              style={{ gridTemplateColumns: "repeat(4, minmax(0, 1fr))" }}
-            >
-              {questions.map((question, index) => {
-                const answered = answers[question.id] !== undefined
-                return (
-                  <button
-                    key={question.id}
-                    type="button"
-                    onClick={() => goToQuestion(index)}
-                    className={cn(
-                      "box-border flex h-[32px] w-full min-w-0 items-center justify-center rounded-[9px] border-2 text-[11px] font-extrabold transition-transform active:translate-y-[1px]",
-                      partQuestionIds.has(question.id)
-                        ? "border-[#1CB0F6] bg-[#1CB0F6] text-white"
-                        : answered
-                          ? "border-[#B3E5FC] bg-[#E8F7FE] text-[#129BDC]"
-                          : "border-[#E5E5E5] bg-[#F6F7FB] text-[#777777]"
-                    )}
-                  >
-                    {index + 1}
-                  </button>
-                )
-              })}
-            </div>}
+            ) : isToeic ? (
+              isTwoLevelToeic && toeicTwoLevelData ? (
+                <div className="flex flex-col gap-3">
+                  <div className="grid grid-cols-4 gap-2 pb-1 lg:grid-cols-3">
+                    {toeicTwoLevelData.partList.map((part) => {
+                      const active = part.partNum === toeicTwoLevelData.selectedPartNum
+                      const partGroups = toeicGroups.filter((g) => g.partLabel === part.partLabel)
+                      const answeredInPart = partGroups.reduce((acc, g) => acc + questions.slice(g.start, g.end).filter((q) => answers[q.id] !== undefined).length, 0)
+                      const allAnswered = answeredInPart === part.totalQuestions
+                      const someAnswered = answeredInPart > 0 && !allAnswered
+                      return (
+                        <button
+                          key={part.partNum}
+                          type="button"
+                          title={part.partLabel}
+                          onClick={() => goToQuestion(part.firstStart)}
+                          className={cn(
+                            "flex aspect-square flex-col items-center justify-center rounded-[12px] border-2 p-2 text-center transition-colors",
+                            active
+                              ? "border-[#1CB0F6] bg-[#1CB0F6] text-white shadow-[0_2px_0_#189CD8]"
+                              : allAnswered
+                                ? "border-[#58CC02] bg-[#E6F5D9] text-[#3A8A00] dark:border-[#58CC02]/30 dark:bg-[#58CC02]/10 dark:text-[#7ED321]"
+                                : someAnswered
+                                  ? "border-[#FFD000] bg-[#FFF8E1] text-[#9A7B00] dark:border-[#FFD000]/30 dark:bg-[#FFD000]/10"
+                                  : "border-[#E5E5E5] bg-[#F6F7FB] text-[#4B4B4B] hover:border-[#B3E5FC] dark:border-white/10 dark:bg-white/5 dark:text-slate-200"
+                          )}
+                        >
+                          <span className="text-[11px] font-extrabold leading-none">{part.partLabel}</span>
+                          <span
+                            className={cn(
+                              "mt-1.5 rounded-full px-2 py-0.5 text-[10px] font-extrabold leading-none",
+                              active
+                                ? "bg-white/20 text-white"
+                                : allAnswered
+                                  ? "bg-white text-[#3A8A00] dark:bg-white/10 dark:text-[#7ED321]"
+                                  : someAnswered
+                                    ? "bg-white text-[#9A7B00] border border-[#FFE69C] dark:bg-white/10"
+                                    : "bg-white text-[#777777] border border-[#E5E5E5] dark:bg-white/5 dark:text-slate-300 dark:border-white/10"
+                            )}
+                          >
+                            {part.totalQuestions} câu
+                          </span>
+                        </button>
+                      )
+                    })}
+                  </div>
+                  <div className="h-px bg-[#E5E5E5] dark:bg-white/10" />
+                  <div className="grid grid-cols-4 gap-2 pb-1 lg:grid-cols-3">
+                    {toeicTwoLevelData.filteredGroups.map((g) => {
+                      const active = g.start === currentPartStartIndex
+                      const answeredInGroup = questions.slice(g.start, g.end).filter((q) => answers[q.id] !== undefined).length
+                      const allAnswered = answeredInGroup === g.count
+                      const someAnswered = answeredInGroup > 0 && !allAnswered
+                      if (g.count === 1) {
+                        return (
+                          <button
+                            key={g.start}
+                            type="button"
+                            title={g.title}
+                            onClick={() => goToQuestion(g.start)}
+                            className={cn(
+                              "flex aspect-square flex-col items-center justify-center rounded-[12px] border-2 p-2 text-center transition-colors",
+                              active
+                                ? "border-[#1CB0F6] bg-[#1CB0F6] text-white shadow-[0_2px_0_#189CD8]"
+                                : allAnswered
+                                  ? "border-[#58CC02] bg-[#E6F5D9] text-[#3A8A00] dark:border-[#58CC02]/30 dark:bg-[#58CC02]/10 dark:text-[#7ED321]"
+                                  : "border-[#E5E5E5] bg-[#F6F7FB] text-[#4B4B4B] hover:border-[#B3E5FC] dark:border-white/10 dark:bg-white/5 dark:text-slate-200"
+                            )}
+                          >
+                            <span className="text-[13px] font-extrabold leading-none">{g.groupLabel}</span>
+                          </button>
+                        )
+                      }
+                      return (
+                        <button
+                          key={g.start}
+                          type="button"
+                          title={g.title}
+                          onClick={() => goToQuestion(g.start)}
+                          className={cn(
+                            "flex aspect-square flex-col items-center justify-center rounded-[12px] border-2 p-2 text-center transition-colors",
+                            active
+                              ? "border-[#1CB0F6] bg-[#1CB0F6] text-white shadow-[0_2px_0_#189CD8]"
+                              : allAnswered
+                                ? "border-[#58CC02] bg-[#E6F5D9] text-[#3A8A00] dark:border-[#58CC02]/30 dark:bg-[#58CC02]/10 dark:text-[#7ED321]"
+                                : someAnswered
+                                  ? "border-[#FFD000] bg-[#FFF8E1] text-[#9A7B00] dark:border-[#FFD000]/30 dark:bg-[#FFD000]/10"
+                                  : "border-[#E5E5E5] bg-[#F6F7FB] text-[#4B4B4B] hover:border-[#B3E5FC] dark:border-white/10 dark:bg-white/5 dark:text-slate-200"
+                          )}
+                        >
+                          <span className="text-[13px] font-extrabold leading-none">{g.groupLabel}</span>
+                          <span
+                            className={cn(
+                              "mt-1.5 rounded-full px-2 py-0.5 text-[10px] font-extrabold leading-none",
+                              active
+                                ? "bg-white/20 text-white"
+                                : allAnswered
+                                  ? "bg-white text-[#3A8A00] dark:bg-white/10 dark:text-[#7ED321]"
+                                  : someAnswered
+                                    ? "bg-white text-[#9A7B00] border border-[#FFE69C] dark:bg-white/10"
+                                    : "bg-white text-[#777777] border border-[#E5E5E5] dark:bg-white/5 dark:text-slate-300 dark:border-white/10"
+                            )}
+                          >
+                            {g.count} câu
+                          </span>
+                        </button>
+                      )
+                    })}
+                  </div>
+                </div>
+              ) : (
+                <div className="grid grid-cols-4 gap-2 pb-1 lg:grid-cols-3">
+                  {toeicGroups.map((g) => {
+                    const active = g.start === currentPartStartIndex
+                    const answeredInGroup = questions.slice(g.start, g.end).filter((q) => answers[q.id] !== undefined).length
+                    const allAnswered = answeredInGroup === g.count
+                    const someAnswered = answeredInGroup > 0 && !allAnswered
+                    // Nhóm 1 câu (Part5, Part1, Part2): chỉ 1 dòng Câu X cỡ lớn, bỏ Part label + badge
+                    if (g.count === 1) {
+                      return (
+                        <button
+                          key={g.start}
+                          type="button"
+                          title={g.title}
+                          onClick={() => goToQuestion(g.start)}
+                          className={cn(
+                            "flex aspect-square flex-col items-center justify-center rounded-[12px] border-2 p-2 text-center transition-colors",
+                            active
+                              ? "border-[#1CB0F6] bg-[#1CB0F6] text-white shadow-[0_2px_0_#189CD8]"
+                              : allAnswered
+                                ? "border-[#58CC02] bg-[#E6F5D9] text-[#3A8A00] dark:border-[#58CC02]/30 dark:bg-[#58CC02]/10 dark:text-[#7ED321]"
+                                : "border-[#E5E5E5] bg-[#F6F7FB] text-[#4B4B4B] hover:border-[#B3E5FC] dark:border-white/10 dark:bg-white/5 dark:text-slate-200"
+                          )}
+                        >
+                          <span className="text-[13px] font-extrabold leading-none">{g.groupLabel}</span>
+                        </button>
+                      )
+                    }
+                    // Theo Part lẻ (part1..part7): không cần hiển thị Part X, tăng size Nhóm lên 13px
+                    if (isSinglePartToeic) {
+                      return (
+                        <button
+                          key={g.start}
+                          type="button"
+                          title={g.title}
+                          onClick={() => goToQuestion(g.start)}
+                          className={cn(
+                            "flex aspect-square flex-col items-center justify-center rounded-[12px] border-2 p-2 text-center transition-colors",
+                            active
+                              ? "border-[#1CB0F6] bg-[#1CB0F6] text-white shadow-[0_2px_0_#189CD8]"
+                              : allAnswered
+                                ? "border-[#58CC02] bg-[#E6F5D9] text-[#3A8A00] dark:border-[#58CC02]/30 dark:bg-[#58CC02]/10 dark:text-[#7ED321]"
+                                : someAnswered
+                                  ? "border-[#FFD000] bg-[#FFF8E1] text-[#9A7B00] dark:border-[#FFD000]/30 dark:bg-[#FFD000]/10"
+                                  : "border-[#E5E5E5] bg-[#F6F7FB] text-[#4B4B4B] hover:border-[#B3E5FC] dark:border-white/10 dark:bg-white/5 dark:text-slate-200"
+                          )}
+                        >
+                          <span className="text-[13px] font-extrabold leading-none">{g.groupLabel}</span>
+                          <span
+                            className={cn(
+                              "mt-1.5 rounded-full px-2 py-0.5 text-[10px] font-extrabold leading-none",
+                              active
+                                ? "bg-white/20 text-white"
+                                : allAnswered
+                                  ? "bg-white text-[#3A8A00] dark:bg-white/10 dark:text-[#7ED321]"
+                                  : someAnswered
+                                    ? "bg-white text-[#9A7B00] border border-[#FFE69C] dark:bg-white/10"
+                                    : "bg-white text-[#777777] border border-[#E5E5E5] dark:bg-white/5 dark:text-slate-300 dark:border-white/10"
+                            )}
+                          >
+                            {g.count} câu
+                          </span>
+                        </button>
+                      )
+                    }
+                    return (
+                      <button
+                        key={g.start}
+                        type="button"
+                        title={g.title}
+                        onClick={() => goToQuestion(g.start)}
+                        className={cn(
+                          "flex aspect-square flex-col items-center justify-center rounded-[12px] border-2 p-2 text-center transition-colors",
+                          active
+                            ? "border-[#1CB0F6] bg-[#1CB0F6] text-white shadow-[0_2px_0_#189CD8]"
+                            : allAnswered
+                              ? "border-[#58CC02] bg-[#E6F5D9] text-[#3A8A00] dark:border-[#58CC02]/30 dark:bg-[#58CC02]/10 dark:text-[#7ED321]"
+                              : someAnswered
+                                ? "border-[#FFD000] bg-[#FFF8E1] text-[#9A7B00] dark:border-[#FFD000]/30 dark:bg-[#FFD000]/10"
+                                : "border-[#E5E5E5] bg-[#F6F7FB] text-[#4B4B4B] hover:border-[#B3E5FC] dark:border-white/10 dark:bg-white/5 dark:text-slate-200"
+                        )}
+                      >
+                        <span className="text-[11px] font-extrabold leading-none">{g.partLabel}</span>
+                        <span className="mt-1 text-[10px] font-bold leading-none opacity-80">{g.groupLabel}</span>
+                        <span
+                          className={cn(
+                            "mt-1.5 rounded-full px-2 py-0.5 text-[10px] font-extrabold leading-none",
+                            active
+                              ? "bg-white/20 text-white"
+                              : allAnswered
+                                ? "bg-white text-[#3A8A00] dark:bg-white/10 dark:text-[#7ED321]"
+                                : someAnswered
+                                  ? "bg-white text-[#9A7B00] border border-[#FFE69C] dark:bg-white/10"
+                                  : "bg-white text-[#777777] border border-[#E5E5E5] dark:bg-white/5 dark:text-slate-300 dark:border-white/10"
+                          )}
+                        >
+                          {g.count} câu
+                        </span>
+                      </button>
+                    )
+                  })}
+                </div>
+              )
+            ) : (
+              <div
+                className="grid gap-[5px] pb-1"
+                style={{ gridTemplateColumns: "repeat(4, minmax(0, 1fr))" }}
+              >
+                {questions.map((question, index) => {
+                  const answered = answers[question.id] !== undefined
+                  return (
+                    <button
+                      key={question.id}
+                      type="button"
+                      onClick={() => goToQuestion(index)}
+                      className={cn(
+                        "box-border flex h-[32px] w-full min-w-0 items-center justify-center rounded-[9px] border-2 text-[11px] font-extrabold transition-transform active:translate-y-[1px]",
+                        partQuestionIds.has(question.id)
+                          ? "border-[#1CB0F6] bg-[#1CB0F6] text-white"
+                          : answered
+                            ? "border-[#B3E5FC] bg-[#E8F7FE] text-[#129BDC]"
+                            : "border-[#E5E5E5] bg-[#F6F7FB] text-[#777777]"
+                      )}
+                    >
+                      {index + 1}
+                    </button>
+                  )
+                })}
+              </div>
+            )}
           </div>
           <button
             type="button"

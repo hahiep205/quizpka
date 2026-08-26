@@ -123,6 +123,7 @@ export function DashboardPage({
   const filteredExams = useMemo(() => {
     const normalized = query.trim().toLocaleLowerCase(lang)
     return examCatalog.filter((exam) => {
+      if (exam.subjectId === "toeic") return false
       const categoryKey = exam.category.en === "General" ? "general" : "major"
       const matchesFilter = filter === "all" || categoryKey === filter
       const haystack = `${exam.title[lang]} ${exam.subjectName[lang]} ${exam.subjectCode}`.toLocaleLowerCase(lang)

@@ -73,6 +73,7 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
   const filteredExams = useMemo(() => {
     const normalized = query.trim().toLowerCase()
     const matches = examCatalog.filter((exam) => {
+      if (exam.subjectId === "toeic") return false
       const categoryKey = exam.category.en === "General" ? "general" : "major"
       const matchType = typeFilter === "all" || categoryKey === typeFilter
       const subjectHaystack = [

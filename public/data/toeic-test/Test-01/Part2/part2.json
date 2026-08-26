@@ -1,0 +1,1296 @@
+[
+  {
+    "id": 7,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q007.mp3",
+    "question": "Where can I find the updated expense reporting form?",
+    "options": {
+      "A": "Yes, I filled it out yesterday.",
+      "B": "Check the internal employee portal.",
+      "C": "It's in the filing cabinet."
+    },
+    "correct_answer": "B",
+    "correct_text": "Check the internal employee portal.",
+    "audio_transcript": "Where can I find the updated expense reporting form? -> Check the internal employee portal.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Trả lời Yes/No cho câu hỏi WH. Câu hỏi bắt đầu bằng 'Where' tuyệt đối không trả lời bằng 'Yes/No'."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng địa điểm số để tìm biểu mẫu (Check the internal employee portal)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Địa điểm cũ / vật lý không phù hợp biểu mẫu cập nhật. Tài liệu biểu mẫu trực tuyến cập nhật không nằm trong tủ tài liệu giấy cũ."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "expense reporting form",
+        "paraphrases": [
+          "reimbursement document",
+          "cost statement"
+        ],
+        "meaning": "mẫu báo cáo chi phí"
+      },
+      {
+        "phrase": "employee portal",
+        "paraphrases": [
+          "intranet network",
+          "staff website"
+        ],
+        "meaning": "cổng thông tin nội bộ nhân viên"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Focus on Question Word 'Where' - Bắt ngay từ hỏi địa điểm 'Where' ở đầu câu.",
+      "Bước 2: Eliminate Yes/No Distractors - Loại bỏ phương án A vì đáp án bắt đầu bằng 'Yes'.",
+      "Bước 3: Select Option B - Chọn B ('Check the internal portal')."
+    ]
+  },
+  {
+    "id": 8,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q008.mp3",
+    "question": "When will the quarterly audit report be completed?",
+    "options": {
+      "A": "In the main auditorium.",
+      "B": "By Thursday afternoon.",
+      "C": "To audit the accounts."
+    },
+    "correct_answer": "B",
+    "correct_text": "By Thursday afternoon.",
+    "audio_transcript": "When will the quarterly audit report be completed? -> By Thursday afternoon.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Nhầm địa điểm (Where) cho câu hỏi thời gian (When). 'In the main auditorium' trả lời cho câu hỏi địa điểm."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng mốc thời hạn hoàn thành (By Thursday afternoon)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Lặp từ trùng âm (audit) và nhầm mục đích (Why). 'To audit the accounts' trả lời cho câu hỏi mục đích."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "quarterly audit report",
+        "paraphrases": [
+          "three-month financial review"
+        ],
+        "meaning": "báo cáo kiểm toán quý"
+      },
+      {
+        "phrase": "by Thursday afternoon",
+        "paraphrases": [
+          "no later than Thursday PM"
+        ],
+        "meaning": "trước chiều thứ Năm"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Focus on Question Word 'When' - Xác định câu hỏi tìm mốc thời gian hoàn thành (completed).",
+      "Bước 2: Distinguish Time vs Location & Purpose - Loại A (nơi chốn) và C (mục đích To + V).",
+      "Bước 3: Select Option B - Chọn B."
+    ]
+  },
+  {
+    "id": 9,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q009.mp3",
+    "question": "Who is responsible for organizing the annual retirement banquet?",
+    "options": {
+      "A": "Yes, it's held every year.",
+      "B": "In the Grand Ballroom.",
+      "C": "Ask Miz Sarah, she manages that."
+    },
+    "correct_answer": "C",
+    "correct_text": "Ask Miz Sarah, she manages that.",
+    "audio_transcript": "Who is responsible for organizing the annual retirement banquet? -> Ask Miz Sarah, she manages that.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Yes/No cho câu hỏi WH và lặp từ đồng nghĩa (annual -> every year). Câu hỏi 'Who' không trả lời bằng 'Yes'."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Địa điểm (Where). 'In the Grand Ballroom' trả lời cho câu hỏi địa điểm tổ chức ở đâu."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng người phụ trách là cô Sarah (Ask Miz Sarah, she manages that)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "responsible for",
+        "paraphrases": [
+          "in charge of",
+          "manages"
+        ],
+        "meaning": "chịu trách nhiệm / phụ trách"
+      },
+      {
+        "phrase": "retirement banquet",
+        "paraphrases": [
+          "pensioner party",
+          "farewell dinner"
+        ],
+        "meaning": "tiệc nghỉ hưu"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Focus on Question Word 'Who' - Lắng nghe từ chìa khóa 'Who' tìm tên người hoặc chức danh.",
+      "Bước 2: Identify Indirect Person Designation - Nhận diện đáp án C trỏ đến tên riêng 'Sarah'.",
+      "Bước 3: Select Option C - Chọn C."
+    ]
+  },
+  {
+    "id": 10,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q010.mp3",
+    "question": "Why was the client presentation rescheduled for Friday?",
+    "options": {
+      "A": "There were many slides in the presentation.",
+      "B": "Because the key stakeholder was traveling.",
+      "C": "Yes, I prepared the slides."
+    },
+    "correct_answer": "B",
+    "correct_text": "Because the key stakeholder was traveling.",
+    "audio_transcript": "Why was the client presentation rescheduled for Friday? -> Because the key stakeholder was traveling.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Lặp từ trùng âm (presentation, slides). Số lượng trang bài thuyết trình không phải lý do dời lịch họp."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng nguyên nhân hoãn lịch trình (Because the key stakeholder was traveling)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Yes/No cho câu hỏi WH. Câu hỏi 'Why' không trả lời bằng 'Yes'."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "rescheduled",
+        "paraphrases": [
+          "postponed",
+          "moved to another date"
+        ],
+        "meaning": "dời lịch / hoãn lại"
+      },
+      {
+        "phrase": "key stakeholder",
+        "paraphrases": [
+          "primary decision maker",
+          "main client representative"
+        ],
+        "meaning": "bên liên quan chính / đối tác quan trọng"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Focus on Question Word 'Why' - Xác định câu hỏi tìm lý do (Because / Due to / Reason).",
+      "Bước 2: Spot Direct Cause Signal 'Because' - Nhận ra tín hiệu B chứa từ nối nguyên nhân 'Because'.",
+      "Bước 3: Select Option B - Chọn B."
+    ]
+  },
+  {
+    "id": 11,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q011.mp3",
+    "question": "Are you free to review the marketing budget proposal this afternoon?",
+    "options": {
+      "A": "I have a client meeting until four P.M.",
+      "B": "Yes, the market is expanding.",
+      "C": "It was proposed last week."
+    },
+    "correct_answer": "A",
+    "correct_text": "I have a client meeting until four P.M.",
+    "audio_transcript": "Are you free to review the marketing budget proposal this afternoon? -> I have a client meeting until four P.M.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng câu trả lời phản hồi gián tiếp nêu lịch bận (I have a client meeting until four P.M.)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Lặp từ trùng âm mâu thuẫn nghĩa (marketing -> market). Thị trường mở rộng không trả lời cho việc rảnh rỗi lịch trình cá nhân."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Lặp từ trùng dạng (proposal -> proposed). Đề xuất được đưa ra tuần trước không trả lời cho thời gian rảnh chiều nay."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "are you free",
+        "paraphrases": [
+          "are you available",
+          "do you have time"
+        ],
+        "meaning": "bạn có rảnh không"
+      },
+      {
+        "phrase": "review budget proposal",
+        "paraphrases": [
+          "examine financial plan"
+        ],
+        "meaning": "xem xét đề xuất ngân sách"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Recognize Indirect Polite Refusal - Lưu ý câu hỏi 'Are you free' có thể được trả lời bằng cách nêu lý do bận họp thay vì nói 'No'.",
+      "Bước 2: Avoid Sound Association Traps - Loại B và C vì dùng từ lặp âm biến thể (market, proposed) nhưng sai ngữ nghĩa.",
+      "Bước 3: Select Option A - Chọn A."
+    ]
+  },
+  {
+    "id": 12,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q012.mp3",
+    "question": "Should we hire a local contractor or handle the renovation ourselves?",
+    "options": {
+      "A": "Yes, the office is very spacious.",
+      "B": "I hired a new assistant yesterday.",
+      "C": "Neither, we decided to outsource it to Apex Design."
+    },
+    "correct_answer": "C",
+    "correct_text": "Neither, we decided to outsource it to Apex Design.",
+    "audio_transcript": "Should we hire a local contractor or handle the renovation ourselves? -> Neither, we decided to outsource it to Apex Design.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Trả lời Yes/No cho câu hỏi lựa chọn (Choice Question). Câu hỏi lựa chọn A or B không bao giờ trả lời bằng Yes/No."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Lặp từ trùng âm (hire -> hired). Thuê trợ lý mới không liên quan đến sửa chữa văn phòng."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng phản hồi bác bỏ cả hai phương án và nêu giải pháp thứ ba (Neither, outsource to Apex Design)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "local contractor",
+        "paraphrases": [
+          "external builder",
+          "construction firm"
+        ],
+        "meaning": "nhà thầu địa phương"
+      },
+      {
+        "phrase": "outsource",
+        "paraphrases": [
+          "subcontract",
+          "delegate to external agency"
+        ],
+        "meaning": "thuê ngoài"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Choice Question Structure (A or B) - Nhận diện từ 'or' nằm giữa hai phương án.",
+      "Bước 2: Watch out for Neither / Third Option Pattern - Tìm đáp án chứa 'Neither' hoặc 'Both' hoặc một lựa chọn thứ 3.",
+      "Bước 3: Select Option C - Chọn C."
+    ]
+  },
+  {
+    "id": 13,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q013.mp3",
+    "question": "The printer on the second floor has run out of paper again.",
+    "options": {
+      "A": "There is a fresh supply box in the storage closet.",
+      "B": "Print twenty copies of the agenda.",
+      "C": "Yes, it's a fast printer."
+    },
+    "correct_answer": "A",
+    "correct_text": "There is a fresh supply box in the storage closet.",
+    "audio_transcript": "The printer on the second floor has run out of paper again. -> There is a fresh supply box in the storage closet.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng phản hồi đưa ra giải pháp xử lý sự cố hết giấy (There is a fresh supply box in the storage closet)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Lặp từ trùng âm và yêu cầu vô lý khi máy đang hết giấy. Yêu cầu in 20 bản khi máy in đang hết giấy là phi logic."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Yes/No không phù hợp câu trần thuật báo lỗi. Tốc độ máy in nhanh không giải quyết được vấn đề máy hết giấy."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "run out of paper",
+        "paraphrases": [
+          "depleted paper supply",
+          "no paper left"
+        ],
+        "meaning": "hết giấy"
+      },
+      {
+        "phrase": "fresh supply box",
+        "paraphrases": [
+          "new ream of paper",
+          "stock box"
+        ],
+        "meaning": "hộp vật tư/giấy mới"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Recognize Problem Statement - Xác định câu trần thuật báo sự cố ('has run out of paper').",
+      "Bước 2: Look for Helpful Solution Response - Tìm câu trả lời đưa ra hướng giải quyết (chỉ chỗ lấy giấy mới).",
+      "Bước 3: Select Option A - Chọn A."
+    ]
+  },
+  {
+    "id": 14,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q014.mp3",
+    "question": "When will the new computer hardware be delivered?",
+    "options": {
+      "A": "We ordered ten desktop computers.",
+      "B": "It depends on the supplier's shipping schedule.",
+      "C": "To the main warehouse in Chicago."
+    },
+    "correct_answer": "B",
+    "correct_text": "It depends on the supplier's shipping schedule.",
+    "audio_transcript": "When will the new computer hardware be delivered? -> It depends on the supplier's shipping schedule.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Lặp từ trùng chủ đề (computer) trả lời cho câu hỏi số lượng/món đồ. Số lượng máy tính đã đặt không trả lời cho câu hỏi thời gian khi nào giao."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng câu trả lời gián tiếp kinh điển 'It depends on...'."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Địa điểm (Where). 'To the main warehouse in Chicago' trả lời cho câu hỏi giao đến đâu."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "computer hardware",
+        "paraphrases": [
+          "IT equipment",
+          "tech machinery"
+        ],
+        "meaning": "phần cứng máy tính"
+      },
+      {
+        "phrase": "it depends on",
+        "paraphrases": [
+          "contingent upon",
+          "subject to"
+        ],
+        "meaning": "nó tùy thuộc vào"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Recognize 'It depends on' Pattern - 'It depends on...' là đáp án đúng gián tiếp cực kỳ phổ biến trong TOEIC Part 2.",
+      "Bước 2: Eliminate Location Answers for 'When' - Loại C do chỉ địa điểm kho ở Chicago.",
+      "Bước 3: Select Option B - Chọn B."
+    ]
+  },
+  {
+    "id": 15,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q015.mp3",
+    "question": "Where is the orientation session for new hires being held?",
+    "options": {
+      "A": "In the third-floor conference room.",
+      "B": "Every Monday at nine A.M.",
+      "C": "Yes, I attended it last week."
+    },
+    "correct_answer": "A",
+    "correct_text": "In the third-floor conference room.",
+    "audio_transcript": "Where is the orientation session for new hires being held? -> In the third-floor conference room.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng vị trí căn phòng diễn ra sự kiện (In the third-floor conference room)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Thời gian (When / Frequency). 'Every Monday at nine A.M.' trả lời cho câu hỏi tần suất hoặc thời gian."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Yes/No cho câu hỏi WH. Câu hỏi 'Where' không bao giờ bắt đầu trả lời bằng 'Yes'."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "orientation session",
+        "paraphrases": [
+          "onboarding meeting",
+          "introductory seminar"
+        ],
+        "meaning": "buổi định hướng nhân viên mới"
+      },
+      {
+        "phrase": "new hires",
+        "paraphrases": [
+          "new employees",
+          "recruits"
+        ],
+        "meaning": "nhân viên mới tuyển"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Focus on Question Word 'Where' - Xác định câu hỏi vị trí địa điểm.",
+      "Bước 2: Eliminate Time & Yes/No Distractors - Loại B (thời gian) và C (chứa Yes).",
+      "Bước 3: Select Option A - Chọn A."
+    ]
+  },
+  {
+    "id": 16,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q016.mp3",
+    "question": "How do I submit an application for the internal transfer?",
+    "options": {
+      "A": "The job pays a competitive salary.",
+      "B": "Yes, I worked there for two years.",
+      "C": "Through the online career portal."
+    },
+    "correct_answer": "C",
+    "correct_text": "Through the online career portal.",
+    "audio_transcript": "How do I submit an application for the internal transfer? -> Through the online career portal.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Thông tin lương thưởng không trả lời cho cách thức nộp đơn. Mức lương cạnh tranh không hướng dẫn cách nộp đơn ứng tuyển."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Yes/No cho câu hỏi WH. Câu hỏi 'How' không trả lời bằng 'Yes'."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng phương thức thực hiện nộp đơn (Through the online career portal)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "submit an application",
+        "paraphrases": [
+          "apply for a position",
+          "file a resume"
+        ],
+        "meaning": "nộp đơn ứng tuyển"
+      },
+      {
+        "phrase": "career portal",
+        "paraphrases": [
+          "job application site",
+          "recruitment platform"
+        ],
+        "meaning": "cổng thông tin tuyển dụng"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Focus on Question Word 'How' - Xác định câu hỏi tìm phương thức / cách thức làm (Through / By).",
+      "Bước 2: Identify Preposition 'Through' - Nhận ra giới từ chỉ phương thức 'Through' ở đầu đáp án C.",
+      "Bước 3: Select Option C - Chọn C."
+    ]
+  },
+  {
+    "id": 17,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q017.mp3",
+    "question": "Shall we order catering for the client lunch?",
+    "options": {
+      "A": "In the staff cafeteria.",
+      "B": "That sounds like a great idea.",
+      "C": "Twenty guests have confirmed."
+    },
+    "correct_answer": "B",
+    "correct_text": "That sounds like a great idea.",
+    "audio_transcript": "Shall we order catering for the client lunch? -> That sounds like a great idea.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Địa điểm (Where). 'In the staff cafeteria' trả lời cho câu hỏi ăn ở đâu."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng câu đáp lại sự đề xuất mang tính đồng ý (That sounds like a great idea)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Con số số lượng khách. Số lượng khách xác nhận không trả lời trực tiếp cho lời đề nghị đặt đồ ăn."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "shall we",
+        "paraphrases": [
+          "why don't we",
+          "how about"
+        ],
+        "meaning": "chúng ta hãy / liệu chúng ta có nên"
+      },
+      {
+        "phrase": "order catering",
+        "paraphrases": [
+          "arrange food delivery",
+          "book meal service"
+        ],
+        "meaning": "đặt dịch vụ ăn uống"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Recognize Suggestion Pattern 'Shall we' - 'Shall we...' là cấu trúc đưa ra lời đề nghị / gợi ý.",
+      "Bước 2: Look for Acceptance Phrase - Tìm cụm từ chấp nhận lời gợi ý như 'That sounds great / Sure / Good idea'.",
+      "Bước 3: Select Option B - Chọn B."
+    ]
+  },
+  {
+    "id": 18,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q018.mp3",
+    "question": "Who submitted the revised budget proposal to the finance committee?",
+    "options": {
+      "A": "Mister Tanaka from accounting.",
+      "B": "To reduce operational costs.",
+      "C": "Yes, it was approved yesterday."
+    },
+    "correct_answer": "A",
+    "correct_text": "Mister Tanaka from accounting.",
+    "audio_transcript": "Who submitted the revised budget proposal to the finance committee? -> Mister Tanaka from accounting.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng danh tính người thực hiện hành động (Mister Tanaka from accounting)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Mục đích (Why / To + V). 'To reduce operational costs' trả lời cho câu hỏi lý do tại sao nộp đề xuất."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Yes/No cho câu hỏi WH. Câu hỏi 'Who' tuyệt đối không trả lời bằng 'Yes'."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "submitted",
+        "paraphrases": [
+          "handed in",
+          "turned in"
+        ],
+        "meaning": "đã nộp / trình lên"
+      },
+      {
+        "phrase": "finance committee",
+        "paraphrases": [
+          "fiscal board",
+          "budget panel"
+        ],
+        "meaning": "uỷ ban tài chính"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Focus on Question Word 'Who' - Hỏi 'Who' ➔ Tìm tên riêng người hoặc chức danh phòng ban.",
+      "Bước 2: Eliminate Purpose & Yes/No Options - Loại B (mục đích To + V) và C (bắt đầu bằng Yes).",
+      "Bước 3: Select Option A - Chọn A ('Mister Tanaka')."
+    ]
+  },
+  {
+    "id": 19,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q019.mp3",
+    "question": "The air conditioning in conference room B isn't working properly.",
+    "options": {
+      "A": "Yes, the meeting went very well.",
+      "B": "It's located on the second floor.",
+      "C": "I'll call building maintenance right away."
+    },
+    "correct_answer": "C",
+    "correct_text": "I'll call building maintenance right away.",
+    "audio_transcript": "The air conditioning in conference room B isn't working properly. -> I'll call building maintenance right away.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Phản hồi không liên quan đến sự cố hỏng hóc. Cuộc họp diễn ra tốt đẹp không giải quyết vấn đề điều hòa bị hỏng."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Vị trí phòng họp. Vị trí tầng 2 của phòng họp không khắc phục được sự cố điều hòa."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng hành động xử lý vấn đề ngay lập tức (call building maintenance right away)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "air conditioning isn't working",
+        "paraphrases": [
+          "AC unit is malfunctioning",
+          "HVAC broken"
+        ],
+        "meaning": "điều hòa không hoạt động bình thường / bị hỏng"
+      },
+      {
+        "phrase": "building maintenance",
+        "paraphrases": [
+          "facilities repair service",
+          "technicians"
+        ],
+        "meaning": "bộ phận bảo trì tòa nhà"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Facilities Malfunction Statement - Nhận diện câu trần thuật thông báo hỏng hóc máy móc/thiết bị.",
+      "Bước 2: Look for Immediate Action / Solution - Tìm câu đáp thể hiện sự giúp đỡ hoặc gọi thợ sửa chữa.",
+      "Bước 3: Select Option C - Chọn C."
+    ]
+  },
+  {
+    "id": 20,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q020.mp3",
+    "question": "Why hasn't the shipment of office supplies arrived yet?",
+    "options": {
+      "A": "The delivery truck broke down this morning.",
+      "B": "Yes, we ordered extra printer paper.",
+      "C": "In the supply room near the elevator."
+    },
+    "correct_answer": "A",
+    "correct_text": "The delivery truck broke down this morning.",
+    "audio_transcript": "Why hasn't the shipment of office supplies arrived yet? -> The delivery truck broke down this morning.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng nguyên nhân gây ra sự chậm trễ giao hàng (The delivery truck broke down this morning)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Yes/No cho câu hỏi WH. Câu hỏi 'Why' không trả lời bằng 'Yes'."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Địa điểm (Where). 'In the supply room near the elevator' trả lời cho câu hỏi hàng hóa cất ở đâu."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "shipment of supplies",
+        "paraphrases": [
+          "delivery of materials",
+          "consignment"
+        ],
+        "meaning": "chuyến hàng vật tư văn phòng"
+      },
+      {
+        "phrase": "truck broke down",
+        "paraphrases": [
+          "vehicle malfunctioned",
+          "out of service"
+        ],
+        "meaning": "xe tải bị hỏng"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Focus on Question Word 'Why' - Xác định câu hỏi nguyên nhân tại sao hàng chưa đến.",
+      "Bước 2: Eliminate Yes/No and Location Options - Loại B (bắt đầu bằng Yes) và C (chỉ nơi chốn).",
+      "Bước 3: Select Option A - Chọn A."
+    ]
+  },
+  {
+    "id": 21,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q021.mp3",
+    "question": "Would you prefer to schedule the interview in the morning or the afternoon?",
+    "options": {
+      "A": "Yes, the candidate was very qualified.",
+      "B": "Morning would be much better for me.",
+      "C": "In Conference Room 3."
+    },
+    "correct_answer": "B",
+    "correct_text": "Morning would be much better for me.",
+    "audio_transcript": "Would you prefer to schedule the interview in the morning or the afternoon? -> Morning would be much better for me.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Yes/No cho câu hỏi lựa chọn. Câu hỏi lựa chọn 'morning or afternoon' không trả lời bằng 'Yes'."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng phương án lựa chọn thời gian ưa thích (Morning would be much better for me)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Địa điểm (Where). 'In Conference Room 3' trả lời cho câu hỏi địa điểm ở đâu."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "would you prefer",
+        "paraphrases": [
+          "would you rather",
+          "which time suits you"
+        ],
+        "meaning": "bạn thích/muốn lựa chọn nào hơn"
+      },
+      {
+        "phrase": "schedule the interview",
+        "paraphrases": [
+          "arrange the meeting"
+        ],
+        "meaning": "lên lịch phỏng vấn"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Preference Choice Question - Nhận diện từ 'Would you prefer' và cấu trúc lựa chọn A or B.",
+      "Bước 2: Select Chosen Option - Chọn B ('Morning') trả lời trực diện cho 1 trong 2 lựa chọn.",
+      "Bước 3: Select Option B - Chọn B."
+    ]
+  },
+  {
+    "id": 22,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q022.mp3",
+    "question": "Didn't Mister Vance sign the merger agreement?",
+    "options": {
+      "A": "Yes, the sign is located near the entrance.",
+      "B": "At the downtown branch office.",
+      "C": "Actually, his legal team is still reviewing it."
+    },
+    "correct_answer": "C",
+    "correct_text": "Actually, his legal team is still reviewing it.",
+    "audio_transcript": "Didn't Mister Vance sign the merger agreement? -> Actually, his legal team is still reviewing it.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Từ trùng âm khác nghĩa (sign - ký hợp đồng vs biển hiệu). Biển hiệu ở lối vào là danh từ sign, mâu thuẫn với động từ sign (ký) hợp đồng."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Địa điểm (Where). 'At the downtown branch office' trả lời cho câu hỏi ở đâu."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng câu trả lời đính chính tình trạng thực tế (Actually, legal team is still reviewing it)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "merger agreement",
+        "paraphrases": [
+          "amalgamation contract",
+          "corporate buyout deal"
+        ],
+        "meaning": "thỏa thuận/hợp đồng sáp nhập"
+      },
+      {
+        "phrase": "still reviewing",
+        "paraphrases": [
+          "currently examining",
+          "under consideration"
+        ],
+        "meaning": "vẫn đang xem xét/rà soát"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Recognize Negative Question 'Didn't...' - Câu hỏi phủ định 'Didn't...' hỏi về sự việc đã xảy ra hay chưa.",
+      "Bước 2: Spot Corrective Signal 'Actually' - 'Actually' là tín hiệu đính chính thông tin cực kỳ phổ biến trong TOEIC.",
+      "Bước 3: Select Option C - Chọn C."
+    ]
+  },
+  {
+    "id": 23,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q023.mp3",
+    "question": "We'll be shutting down the intranet for two hours to upgrade the server.",
+    "options": {
+      "A": "We should notify all employees in advance.",
+      "B": "Yes, the server is fast.",
+      "C": "Two hours ago."
+    },
+    "correct_answer": "A",
+    "correct_text": "We should notify all employees in advance.",
+    "audio_transcript": "We'll be shutting down the intranet for two hours to upgrade the server. -> We should notify all employees in advance.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng phản hồi đề xuất hành động cần thiết sau thông báo (We should notify all employees in advance)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Lặp từ trùng âm (server) không liên quan nội dung tạm ngắt mạng. Tốc độ máy chủ nhanh không liên quan đến việc sắp tạm ngừng hoạt động."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Lặp từ trùng thời gian (two hours). 'Two hours ago' trả lời cho câu hỏi thời gian quá khứ khi nào."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "shutting down",
+        "paraphrases": [
+          "deactivating",
+          "taking offline"
+        ],
+        "meaning": "tạm ngừng/tắt hoạt động"
+      },
+      {
+        "phrase": "notify in advance",
+        "paraphrases": [
+          "inform beforehand",
+          "give prior notice"
+        ],
+        "meaning": "thông báo trước"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Recognize Information Statement - Xác định câu trần thuật đưa tin tức/thông báo kỹ thuật.",
+      "Bước 2: Identify Logical Next Action - Tìm phản ứng đề xuất hành động ứng phó phù hợp (thông báo cho nhân viên biết trước).",
+      "Bước 3: Select Option A - Chọn A."
+    ]
+  },
+  {
+    "id": 24,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q024.mp3",
+    "question": "When is the product launch strategy meeting scheduled?",
+    "options": {
+      "A": "To launch our new software line.",
+      "B": "Check the shared master calendar.",
+      "C": "In the main executive boardroom."
+    },
+    "correct_answer": "B",
+    "correct_text": "Check the shared master calendar.",
+    "audio_transcript": "When is the product launch strategy meeting scheduled? -> Check the shared master calendar.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Lặp từ (launch) và nhầm sang câu hỏi mục đích (Why / To + V). 'To launch our new software line' trả lời cho câu hỏi mục đích Why."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng phản hồi gián tiếp chỉ nơi tra cứu thời gian (Check the shared master calendar)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Địa điểm (Where). 'In the main executive boardroom' trả lời cho câu hỏi địa điểm ở đâu."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "product launch strategy",
+        "paraphrases": [
+          "rollout plan",
+          "market entry strategy"
+        ],
+        "meaning": "chiến lược ra mắt sản phẩm"
+      },
+      {
+        "phrase": "shared master calendar",
+        "paraphrases": [
+          "company central schedule",
+          "shared agenda"
+        ],
+        "meaning": "lịch chung của công ty"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Focus on Question Word 'When' - Xác định câu hỏi tìm thời gian.",
+      "Bước 2: Recognize Information Reference Source - Câu trả lời chỉ nguồn tra cứu lịch ('Check the calendar') là câu trả lời gián tiếp đúng.",
+      "Bước 3: Select Option B - Chọn B."
+    ]
+  },
+  {
+    "id": 25,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q025.mp3",
+    "question": "The client approved the revised proposal, didn't they?",
+    "options": {
+      "A": "Yes, they sent the signed copy this morning.",
+      "B": "Not that I know of.",
+      "C": "Approval is required for all travel."
+    },
+    "correct_answer": "A",
+    "correct_text": "Yes, they sent the signed copy this morning.",
+    "audio_transcript": "The client approved the revised proposal, didn't they? -> Yes, they sent the signed copy this morning.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng phản hồi xác nhận thông tin kèm bằng chứng (Yes, they sent the signed copy this morning)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Mâu thuẫn với sự thật khách hàng đã phê duyệt."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Lặp từ trùng âm (approval) không liên quan. Phê duyệt chi phí đi lại không liên quan đến hợp đồng của khách hàng."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "revised proposal",
+        "paraphrases": [
+          "amended offer",
+          "updated quotation"
+        ],
+        "meaning": "đề xuất đã chỉnh sửa"
+      },
+      {
+        "phrase": "signed copy",
+        "paraphrases": [
+          "executed document",
+          "endorsed paper"
+        ],
+        "meaning": "bản sao đã ký kết"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Focus on Tag Question Ending 'didn't they' - Xác định câu hỏi đuôi yêu cầu xác nhận thông tin.",
+      "Bước 2: Verify Evidence Detail - Đáp án A xác nhận 'Yes' và bổ sung bằng chứng 'sent the signed copy'.",
+      "Bước 3: Select Option A - Chọn A."
+    ]
+  },
+  {
+    "id": 26,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q026.mp3",
+    "question": "Could you email me the sales spreadsheet?",
+    "options": {
+      "A": "Yes, sales increased by ten percent.",
+      "B": "In the file cabinet.",
+      "C": "I'll send it over right after this meeting."
+    },
+    "correct_answer": "C",
+    "correct_text": "I'll send it over right after this meeting.",
+    "audio_transcript": "Could you email me the sales spreadsheet? -> I'll send it over right after this meeting.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Lặp từ trùng chủ đề (sales) không trả lời cho lời nhờ gửi file. Tăng trưởng doanh số 10% không trả lời cho việc có gửi file email được không."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Vị trí lưu trữ giấy (Where). 'In the file cabinet' mâu thuẫn vì người hỏi xin gửi file qua email."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng phản hồi nhận lời gửi file ngay sau họp (I'll send it over right after this meeting)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "sales spreadsheet",
+        "paraphrases": [
+          "revenue worksheet",
+          "Excel file"
+        ],
+        "meaning": "bảng tính doanh số"
+      },
+      {
+        "phrase": "send over",
+        "paraphrases": [
+          "forward via email",
+          "transmit"
+        ],
+        "meaning": "gửi qua"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Recognize Request Pattern 'Could you' - 'Could you...' là lời yêu cầu giúp đỡ nộp/gửi tài liệu.",
+      "Bước 2: Look for Compliance Response - Tìm câu đáp hứa hẹn thực hiện 'I will send...'.",
+      "Bước 3: Select Option C - Chọn C."
+    ]
+  },
+  {
+    "id": 27,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q027.mp3",
+    "question": "Who will be taking over as Regional Director?",
+    "options": {
+      "A": "To the new regional office.",
+      "B": "The hiring committee is still interviewing candidates.",
+      "C": "Yes, he accepted the job offer."
+    },
+    "correct_answer": "B",
+    "correct_text": "The hiring committee is still interviewing candidates.",
+    "audio_transcript": "Who will be taking over as Regional Director? -> The hiring committee is still interviewing candidates.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Lặp từ trùng âm (regional) và nhầm sang địa điểm (Where). 'To the new regional office' trả lời cho câu hỏi chuyển đi đâu."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng phản hồi gián tiếp báo tình trạng đang tuyển dụng (hiring committee still interviewing candidates)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Yes/No cho câu hỏi WH. Câu hỏi 'Who' không bắt đầu bằng 'Yes'."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "taking over",
+        "paraphrases": [
+          "assuming the role",
+          "succeeding"
+        ],
+        "meaning": "đảm nhận / tiếp quản vị trí"
+      },
+      {
+        "phrase": "hiring committee",
+        "paraphrases": [
+          "recruitment panel",
+          "selection board"
+        ],
+        "meaning": "hội đồng tuyển dụng"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Focus on Question Word 'Who' - Xác định câu hỏi tìm danh tính người tiếp quản vị trí.",
+      "Bước 2: Recognize Status Response Pattern - Thắc mắc người thay thế có thể được trả lời gián tiếp bằng việc quy trình phỏng vấn đang diễn ra.",
+      "Bước 3: Select Option B - Chọn B."
+    ]
+  },
+  {
+    "id": 28,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q028.mp3",
+    "question": "Our team just surpassed the third-quarter sales revenue target by fifteen percent.",
+    "options": {
+      "A": "Revenue is calculated annually.",
+      "B": "Yes, I target three clients a day.",
+      "C": "Congratulations, that's fantastic news!"
+    },
+    "correct_answer": "C",
+    "correct_text": "Congratulations, that's fantastic news!",
+    "audio_transcript": "Our team just surpassed the third-quarter sales revenue target by fifteen percent. -> Congratulations, that's fantastic news!",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Lặp từ (revenue) đưa ra nhận định không phù hợp lời khoe thành tích. Cách tính doanh thu theo năm không phản hồi thích hợp cho thành tích vừa đạt được."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Lặp từ trùng âm (target) và dùng Yes không phù hợp. Đặt mục tiêu 3 khách hàng một ngày không liên quan đến thành tích chung của nhóm."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng lời chúc mừng tự nhiên cho thành tích công ty (Congratulations, that's fantastic news!)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "surpassed the target",
+        "paraphrases": [
+          "exceeded the goal",
+          "beat the quota"
+        ],
+        "meaning": "vượt chỉ tiêu"
+      },
+      {
+        "phrase": "fantastic news",
+        "paraphrases": [
+          "wonderful achievement",
+          "great result"
+        ],
+        "meaning": "tin tức tuyệt vời"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Recognize Achievement Statement - Xác định câu trần thuật đưa tin thành công / vượt mục tiêu ('surpassed target').",
+      "Bước 2: Look for Congratulatory Response - Tìm đáp án thể hiện sự chúc mừng/tán thưởng ('Congratulations').",
+      "Bước 3: Select Option C - Chọn C."
+    ]
+  },
+  {
+    "id": 29,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q029.mp3",
+    "question": "Where can I locate the floor plan for the warehouse expansion?",
+    "options": {
+      "A": "It's attached to the email I sent this morning.",
+      "B": "To expand our storage capacity.",
+      "C": "Construction begins next month."
+    },
+    "correct_answer": "A",
+    "correct_text": "It's attached to the email I sent this morning.",
+    "audio_transcript": "Where can I locate the floor plan for the warehouse expansion? -> It's attached to the email I sent this morning.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng vị trí tìm tệp tài liệu (attached to the email I sent this morning)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Lặp từ (expand) và nhầm sang mục đích (Why / To + V). 'To expand our storage capacity' trả lời cho lý do mở rộng kho."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Thời gian khởi công (When). Thời gian thi công tháng sau không trả lời cho vị trí xem bản vẽ sơ đồ."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "floor plan",
+        "paraphrases": [
+          "architectural layout",
+          "blueprint"
+        ],
+        "meaning": "sơ đồ mặt bằng"
+      },
+      {
+        "phrase": "attached to the email",
+        "paraphrases": [
+          "included as an attachment"
+        ],
+        "meaning": "được đính kèm trong email"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Focus on Question Word 'Where' - Xác định câu hỏi tìm nơi lưu trữ tài liệu.",
+      "Bước 2: Recognize Digital Location 'Attached to email' - File đính kèm email là vị trí tài liệu phổ biến.",
+      "Bước 3: Select Option A - Chọn A."
+    ]
+  },
+  {
+    "id": 30,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q030.mp3",
+    "question": "How often does the safety committee inspect the assembly line?",
+    "options": {
+      "A": "Yes, safety is our top priority.",
+      "B": "On a quarterly basis.",
+      "C": "The inspector arrived late."
+    },
+    "correct_answer": "B",
+    "correct_text": "On a quarterly basis.",
+    "audio_transcript": "How often does the safety committee inspect the assembly line? -> On a quarterly basis.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Yes/No cho câu hỏi WH và lặp từ trùng âm (safety). Câu hỏi 'How often' không trả lời bằng 'Yes'."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng từ chỉ tần suất định kỳ (On a quarterly basis)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Lặp từ biến thể (inspect -> inspector). Thanh tra viên đến muộn không trả lời cho câu hỏi về tần suất kiểm tra định kỳ."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "how often",
+        "paraphrases": [
+          "how frequently",
+          "what is the interval"
+        ],
+        "meaning": "bao lâu một lần / tần suất như thế nào"
+      },
+      {
+        "phrase": "on a quarterly basis",
+        "paraphrases": [
+          "every three months",
+          "four times a year"
+        ],
+        "meaning": "định kỳ theo quý (3 tháng/lần)"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Focus on Question Expression 'How often' - Xác định câu hỏi tìm tần suất thời gian.",
+      "Bước 2: Look for Frequency Adverbs / Phrases - Tìm cụm từ chỉ tần suất như 'daily', 'weekly', 'on a quarterly basis'.",
+      "Bước 3: Select Option B - Chọn B."
+    ]
+  },
+  {
+    "id": 31,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q031.mp3",
+    "question": "I thought the cybersecurity webinar was scheduled for this afternoon.",
+    "options": {
+      "A": "No, it was pushed back to Thursday at ten A.M.",
+      "B": "Yes, the web page loaded quickly.",
+      "C": "I registered for the seminar."
+    },
+    "correct_answer": "A",
+    "correct_text": "No, it was pushed back to Thursday at ten A.M.",
+    "audio_transcript": "I thought the cybersecurity webinar was scheduled for this afternoon. -> No, it was pushed back to Thursday at ten A.M.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng phản hồi đính chính thông tin lịch trình (No, it was pushed back to Thursday at ten A.M.)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Lặp từ trùng âm (webinar -> web page). Trang web tải nhanh không liên quan đến lịch trình hội thảo."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Từ đồng nghĩa (webinar -> seminar) không trả lời đúng trọng tâm lịch trình. Đã đăng ký tham dự không đính chính được thời gian diễn ra hội thảo."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "pushed back to",
+        "paraphrases": [
+          "rescheduled for",
+          "postponed until"
+        ],
+        "meaning": "được hoãn/dời lịch sang"
+      },
+      {
+        "phrase": "cybersecurity webinar",
+        "paraphrases": [
+          "online IT security seminar"
+        ],
+        "meaning": "hội thảo trực tuyến về an ninh mạng"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Recognize 'I thought...' Statement - 'I thought...' là suy nghĩ/hiểu nhầm ➔ Tìm câu trả lời xác nhận hoặc đính chính.",
+      "Bước 2: Spot Time Correction 'No, pushed back to...' - Nhận ra đáp án A đính chính lịch bị hoãn lùi lại.",
+      "Bước 3: Select Option A - Chọn A."
+    ]
+  }
+]

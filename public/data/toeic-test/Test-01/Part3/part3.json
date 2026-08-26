@@ -1,0 +1,1965 @@
+[
+  {
+    "group": 1,
+    "audio": "p3_g01_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 1,
+        "question": "What are the speakers mainly discussing?",
+        "options": {
+          "A": "A company merger",
+          "B": "An office relocation",
+          "C": "A software installation",
+          "D": "A product launch"
+        },
+        "correct_answer": "B",
+        "correct_text": "An office relocation",
+        "audio_transcript": "Woman: ...has the moving company confirmed the schedule for our office relocation to the new tech park downtown?",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Chủ đề sáp nhập không xuất hiện trong bài. Không có thông tin về việc sáp nhập công ty (company merger)."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng chủ đề chính là việc di dời văn phòng (An office relocation)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Lặp từ liên quan máy tính (computer monitors) gây nhầm lẫn. Việc ngắt kết nối màn hình là bước nhỏ chuẩn bị, không phải chủ đề cài đặt phần mềm."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Sự kiện không đề cập. Không có sự kiện ra mắt sản phẩm mới (product launch)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "office relocation",
+            "paraphrases": ["moving office", "facility transfer"],
+            "meaning": "di dời / chuyển văn phòng"
+          },
+          {
+            "phrase": "moving company",
+            "paraphrases": ["relocation service", "movers"],
+            "meaning": "công ty chuyển nhà/văn phòng"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to First 2 Lines for Gist - Lắng nghe 1-2 câu đầu tiên của bài nói để bắt từ khóa chủ đề 'office relocation'.",
+          "Bước 2: Distinguish Main Topic from Step Details - Phân biệt chủ đề lớn (chuyển văn phòng) với các chi tiết nhỏ như dọn máy tính.",
+          "Bước 3: Select Option B - Chọn B."
+        ]
+      },
+      {
+        "id": 2,
+        "question": "What does the man say employees must do before Friday?",
+        "options": {
+          "A": "Submit moving expense claims",
+          "B": "Pack physical client files",
+          "C": "Disconnect and label computer monitors",
+          "D": "Assemble new office desks"
+        },
+        "correct_answer": "C",
+        "correct_text": "Disconnect and label computer monitors",
+        "audio_transcript": "Man: ...we need to make sure all computer monitors are disconnected and labeled before they get here.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Thủ tục chi phí không được nhắc tới. Nhân vật nam không yêu cầu nộp hóa đơn chi phí (expense claims)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Đóng gói hồ sơ cá nhân. Nhân vật nữ nhắc đến việc đóng gói đồ cá nhân, nhưng nhân vật nam nhấn mạnh màn hình máy tính."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng chi tiết yêu cầu ngắt kết nối và dán nhãn màn hình máy tính (Disconnect and label computer monitors)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Hành động lắp ráp bàn mới. Không có yêu cầu tự lắp bàn mới."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "disconnected and labeled",
+            "paraphrases": ["unplugged and tagged"],
+            "meaning": "rút phích cắm/ngắt kết nối và dán nhãn"
+          },
+          {
+            "phrase": "computer monitors",
+            "paraphrases": ["desktop screens", "display units"],
+            "meaning": "màn hình máy tính"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Focus on Man's Dialogue Key Requirement - Lắng nghe đoạn thoại của nhân vật nam sau từ 'we need to make sure'.",
+          "Bước 2: Match Direct Keywords - Bắt chính xác cụm 'computer monitors are disconnected and labeled'.",
+          "Bước 3: Select Option C - Chọn C."
+        ]
+      },
+      {
+        "id": 3,
+        "question": "What will the woman do next?",
+        "options": {
+          "A": "Call the moving company",
+          "B": "Collect old keycards",
+          "C": "Purchase packing boxes",
+          "D": "Send an email to department heads"
+        },
+        "correct_answer": "D",
+        "correct_text": "Send an email to department heads",
+        "audio_transcript": "Woman: ...I'll send an email to all department heads right now so employees can pack...",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Gọi cho công ty chuyển nhà. Công ty chuyển nhà đã được liên hệ xác nhận lịch trước đó."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Thu lại thẻ từ. Thu lại thẻ từ là công việc vào chiều thứ Sáu, không phải hành động ngay tiếp theo."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Mua thùng carton. Không đề cập đến việc mua thùng đóng gói."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng hành động tiếp theo nhân vật nữ hứa làm ngay lập tức (Send an email to department heads)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "send an email right now",
+            "paraphrases": ["dispatch a message immediately"],
+            "meaning": "gửi email ngay lập tức"
+          },
+          {
+            "phrase": "department heads",
+            "paraphrases": ["unit managers", "team leads"],
+            "meaning": "trưởng các bộ phận / phòng ban"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Immediate Signals 'I'll... right now' - Bắt các cụm từ chỉ hành động tức thì của nhân vật như 'I'll... right now'.",
+          "Bước 2: Match Action 'send an email' - Khớp câu 'I'll send an email to all department heads'.",
+          "Bước 3: Select Option D - Chọn D."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 2,
+    "audio": "p3_g02_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 4,
+        "question": "What is the main topic of the conversation?",
+        "options": {
+          "A": "A digital marketing budget proposal",
+          "B": "A print advertising contract",
+          "C": "A video production schedule",
+          "D": "A social media campaign launch"
+        },
+        "correct_answer": "A",
+        "correct_text": "A digital marketing budget proposal",
+        "audio_transcript": "Man: Jessica, have you reviewed the budget proposal for our Q3 digital marketing campaign on social media?",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng chủ đề thảo luận chính là bản đề xuất ngân sách tiếp thị số (A digital marketing budget proposal)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Quảng cáo in ấn. Quảng cáo in ấn chỉ là khoản ngân sách phụ được cắt giảm điều chuyển."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Lịch sản xuất video. Quảng cáo video chỉ là một danh mục ngân sách bị đắt, không phải thảo luận lịch quay."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Lễ ra mắt chiến dịch. Hai người đang bàn về đề xuất ngân sách trình duyệt, chưa đến bước ra mắt."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "budget proposal",
+            "paraphrases": ["financial plan", "cost estimate"],
+            "meaning": "đề xuất ngân sách"
+          },
+          {
+            "phrase": "digital marketing campaign",
+            "paraphrases": ["online promotion strategy"],
+            "meaning": "chiến dịch tiếp thị kỹ thuật số"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Focus on Opening Question - Nghe câu mở đầu của nhân vật nam để tìm chủ đề chính 'budget proposal'.",
+          "Bước 2: Avoid Partial Sound Overlaps - Loại B và C vì chỉ là các chi tiết danh mục con được đề cập trong bài.",
+          "Bước 3: Select Option A - Chọn A."
+        ]
+      },
+      {
+        "id": 5,
+        "question": "What concern does the woman express about the video ads?",
+        "options": {
+          "A": "The deadline for launching the website",
+          "B": "The high cost allocated for video ads",
+          "C": "The performance of the design team",
+          "D": "The availability of social media channels"
+        },
+        "correct_answer": "B",
+        "correct_text": "The high cost allocated for video ads",
+        "audio_transcript": "Woman: ...the allocated budget for video advertisements seems a bit high—almost fifteen thousand dollars.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Hạn chót trang web. Không có thông tin về thời hạn website."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng băn khoăn của nhân vật nữ về chi phí phân bổ cho quảng cáo video quá cao (The high cost allocated for video ads)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Hiệu suất đội thiết kế. Không đề cập đến chất lượng đội thiết kế."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Kênh mạng xã hội. Không băn khoăn về sự sẵn có của các mạng xã hội."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "seems a bit high",
+            "paraphrases": ["appears excessive", "costly"],
+            "meaning": "có vẻ hơi cao / đắt"
+          },
+          {
+            "phrase": "allocated budget",
+            "paraphrases": ["assigned funding", "earmarked expense"],
+            "meaning": "ngân sách được phân bổ"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Contrast/Concern Signals 'but... high' - Lắng nghe từ nối 'but' thể hiện băn khoăn của nhân vật nữ.",
+          "Bước 2: Match 'video advertisements... high' - Bắt khớp từ 'video advertisements' với 'high cost'.",
+          "Bước 3: Select Option B - Chọn B."
+        ]
+      },
+      {
+        "id": 6,
+        "question": "What does the woman ask the man to do?",
+        "options": {
+          "A": "Contact a graphic designer",
+          "B": "Cancel the print advertisement order",
+          "C": "Schedule a press conference",
+          "D": "Update the financial spreadsheet"
+        },
+        "correct_answer": "D",
+        "correct_text": "Update the financial spreadsheet",
+        "audio_transcript": "Woman: ...Please update the spreadsheet and send it to the Finance V.P. for final sign-off.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Liên hệ nhà thiết kế đồ họa. Không đề cập đến việc gọi thiết kế đồ họa."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Hủy đơn quảng cáo in. Chỉ cắt giảm $3,000 từ ngân sách in ấn chứ không hủy hoàn toàn đơn hàng."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Họp báo. Không có lịch họp báo."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng yêu cầu cập nhật lại bảng tính chi phí (Update the financial spreadsheet)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "update the spreadsheet",
+            "paraphrases": ["revise the financial sheet", "modify numbers"],
+            "meaning": "cập nhật bảng tính"
+          },
+          {
+            "phrase": "final sign-off",
+            "paraphrases": ["ultimate approval", "executive signature"],
+            "meaning": "sự phê duyệt cuối cùng"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to End Request 'Please...' - Tập trung vào câu đề nghị ở đoạn cuối bài nói của nhân vật nữ ('Please...').",
+          "Bước 2: Match Direct Imperative 'update the spreadsheet' - Bắt chính xác cụm 'update the spreadsheet'.",
+          "Bước 3: Select Option D - Chọn D."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 3,
+    "audio": "p3_g03_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 7,
+        "question": "What topic are the speakers discussing?",
+        "options": {
+          "A": "An e-commerce website redesign",
+          "B": "A database migration error",
+          "C": "Scheduled Cloud server maintenance",
+          "D": "A customer account portal upgrade"
+        },
+        "correct_answer": "C",
+        "correct_text": "Scheduled Cloud server maintenance",
+        "audio_transcript": "Woman: Alex, did you receive the alert from our Cloud hosting provider about scheduled server maintenance tonight?",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Thiết kế lại trang web. Không bàn về việc thay đổi giao diện thiết kế web."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Lỗi di chuyển dữ liệu. Quá trình di chuyển dữ liệu (migration) đang diễn ra theo kế hoạch, chưa xảy ra lỗi."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng chủ đề bảo trì máy chủ điện toán đám mây theo lịch (Scheduled Cloud server maintenance)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Nâng cấp cổng tài khoản. Không đề cập đến việc nâng cấp portal tài khoản."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "scheduled server maintenance",
+            "paraphrases": ["planned IT system service"],
+            "meaning": "bảo trì máy chủ theo lịch"
+          },
+          {
+            "phrase": "Cloud hosting provider",
+            "paraphrases": ["web server vendor"],
+            "meaning": "nhà cung cấp dịch vụ lưu trữ đám mây"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Focus on Opening Question Details - Lắng nghe câu đầu của bài hội thoại chứa từ khóa 'scheduled server maintenance'.",
+          "Bước 2: Distinguish Topic from Routine Step 'migration' - Đừng nhầm lẫn bước nhỏ migration với chủ đề chung là bảo trì máy chủ.",
+          "Bước 3: Select Option C - Chọn C."
+        ]
+      },
+      {
+        "id": 8,
+        "question": "What will happen to the e-commerce portal tonight?",
+        "options": {
+          "A": "Prices will be automatically discounted",
+          "B": "It will be temporarily offline",
+          "C": "Customer accounts will be locked",
+          "D": "It will accept payment in foreign currency"
+        },
+        "correct_answer": "B",
+        "correct_text": "It will be temporarily offline",
+        "audio_transcript": "Man: ...During that time, our e-commerce portal will be temporarily offline.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Giảm giá tự động. Không đề cập đến việc giảm giá sản phẩm."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng chi tiết trang web sẽ tạm thời ngoại tuyến/ngừng hoạt động (It will be temporarily offline)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Khóa tài khoản khách. Tài khoản không bị khóa, chỉ là trang web ngắt kết nối."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Thanh toán ngoại tệ. Không đề cập đến thanh toán ngoại tệ."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "temporarily offline",
+            "paraphrases": ["briefly unavailable", "down for maintenance"],
+            "meaning": "tạm thời ngừng hoạt động / ngoại tuyến"
+          },
+          {
+            "phrase": "e-commerce portal",
+            "paraphrases": ["online shopping store"],
+            "meaning": "cổng thương mại điện tử"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Man's Detail Explanation - Lắng nghe đoạn nhân vật nam giải thích về tác động trong 3 tiếng bảo trì.",
+          "Bước 2: Match 'temporarily offline' - Bắt chính xác cụm 'temporarily offline'.",
+          "Bước 3: Select Option B - Chọn B."
+        ]
+      },
+      {
+        "id": 9,
+        "question": "What action does the woman say she will take immediately?",
+        "options": {
+          "A": "Post a banner notification on the homepage",
+          "B": "Cancel server subscription",
+          "C": "Call customer support hotline",
+          "D": "Hire freelance IT developers"
+        },
+        "correct_answer": "A",
+        "correct_text": "Post a banner notification on the homepage",
+        "audio_transcript": "Woman: ...I'll put a banner notification on the homepage right away.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng hành động tức thì của nhân vật nữ là đăng thông báo trên trang chủ (Post a banner notification on the homepage)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Hủy đăng ký máy chủ. Không hủy gói dịch vụ server."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Gọi tổng đài hỗ trợ. Không gọi điện cho tổng đài."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Thuê lập trình viên bên ngoài. Không đề cập đến việc thuê IT ngoài."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "banner notification",
+            "paraphrases": ["alert bar", "header message"],
+            "meaning": "biểu ngữ thông báo"
+          },
+          {
+            "phrase": "right away",
+            "paraphrases": ["immediately", "without delay"],
+            "meaning": "ngay lập tức"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for 'I'll... right away' - Tập trung câu khẳng định hành động của nhân vật nữ 'I'll... right away'.",
+          "Bước 2: Match 'banner notification' - Khớp câu 'put a banner notification on the homepage'.",
+          "Bước 3: Select Option A - Chọn A."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 4,
+    "audio": "p3_g04_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 10,
+        "question": "What event are the speakers discussing?",
+        "options": {
+          "A": "A graphic design webinar",
+          "B": "An advanced Data Analytics workshop",
+          "C": "A workplace safety training",
+          "D": "A foreign language seminar"
+        },
+        "correct_answer": "B",
+        "correct_text": "An advanced Data Analytics workshop",
+        "audio_transcript": "Speaker 1 (Tom): ...are you both planning to attend the advanced Data Analytics workshop hosted by H.R. next Tuesday?",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Thảo luận thiết kế đồ họa. Không liên quan đến graphic design."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng sự kiện đang thảo luận là hội thảo Phân tích dữ liệu nâng cao (An advanced Data Analytics workshop)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Tập huấn an toàn lao động. Không đề cập đến an toàn lao động."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Hội thảo ngoại ngữ. Không đề cập đến học tiếng nước ngoài."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "Data Analytics workshop",
+            "paraphrases": ["data analysis seminar", "analytics training"],
+            "meaning": "xưởng/buổi thực hành phân tích dữ liệu"
+          },
+          {
+            "phrase": "hosted by H.R.",
+            "paraphrases": ["organized by Personnel Department"],
+            "meaning": "do phòng Nhân sự tổ chức"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Track 3 Speakers Introduction - Lắng nghe người nói đầu tiên (Tom) mở đầu bằng việc hỏi cả 2 đồng nghiệp.",
+          "Bước 2: Match 'advanced Data Analytics workshop' - Bắt chính xác tên khóa đào tạo trong câu hỏi mở đầu.",
+          "Bước 3: Select Option B - Chọn B."
+        ]
+      },
+      {
+        "id": 11,
+        "question": "What change did the H.R. department make?",
+        "options": {
+          "A": "They postponed the date to next month",
+          "B": "They made it a virtual online course",
+          "C": "They changed the guest speaker",
+          "D": "They added more seats for registration"
+        },
+        "correct_answer": "D",
+        "correct_text": "They added more seats for registration",
+        "audio_transcript": "Speaker 3 (Marcus): ...They expanded the room capacity and reopened 10 more seats for registration.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Hoãn ngày sang tháng sau. Lịch hội thảo vẫn diễn ra vào thứ Ba tuần tới như dự kiến."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Chuyển thành khóa trực tuyến. Sự kiện diễn ra trực tiếp tại phòng học lớn hơn."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Đổi diễn giả khách mời. Không đề cập đến việc thay đổi diễn giả."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng thay đổi của phòng HR là mở thêm số lượng chỗ đăng ký (They added more seats for registration)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "expanded room capacity",
+            "paraphrases": ["increased seating", "added more spaces"],
+            "meaning": "mở rộng sức chứa phòng"
+          },
+          {
+            "phrase": "reopened seats",
+            "paraphrases": ["made additional spots available"],
+            "meaning": "mở lại chỗ đăng ký"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Speaker 3 (Marcus) Clarification - Tập trung thông tin đính chính từ Marcus ('Actually, I spoke with...').",
+          "Bước 2: Match 'expanded capacity... 10 more seats' - Khớp thông tin mở rộng chỗ ngồi với đáp án D.",
+          "Bước 3: Select Option D - Chọn D."
+        ]
+      },
+      {
+        "id": 12,
+        "question": "What will Rachel do next?",
+        "options": {
+          "A": "Log into the portal to secure a spot",
+          "B": "Print out training certificates",
+          "C": "Submit a vacation request form",
+          "D": "Reserve a conference room"
+        },
+        "correct_answer": "A",
+        "correct_text": "Log into the portal to secure a spot",
+        "audio_transcript": "Speaker 2 (Rachel): ...I'll log into the portal and secure my spot right now before it fills up again.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng hành động tiếp theo của Rachel là đăng nhập trang nội bộ để đăng ký suất học (Log into the portal to secure a spot)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "In chứng chỉ đào tạo. Không phải in chứng chỉ."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Nộp đơn xin nghỉ phép. Không đề cập đơn xin nghỉ."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Đặt phòng họp. Phòng HR đã lo liệu phòng học, Rachel không cần đặt phòng."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "secure a spot",
+            "paraphrases": ["reserve a seat", "register immediately"],
+            "meaning": "đăng ký / giữ chỗ"
+          },
+          {
+            "phrase": "log into the portal",
+            "paraphrases": ["access the intranet system"],
+            "meaning": "đăng nhập cổng thông tin nội bộ"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Identify Rachel's Final Turn - Lắng nghe lượt nói cuối của Rachel ('Speaker 2').",
+          "Bước 2: Match Action 'log into... secure spot' - Bắt chính xác cụm 'I'll log into the portal and secure my spot'.",
+          "Bước 3: Select Option A - Chọn A."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 5,
+    "audio": "p3_g05_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 13,
+        "question": "What did the client ask to change?",
+        "options": {
+          "A": "The location of the office",
+          "B": "The topic of a seminar",
+          "C": "The date of a presentation",
+          "D": "The price of a software package"
+        },
+        "correct_answer": "C",
+        "correct_text": "The date of a presentation",
+        "audio_transcript": "Woman: Brian, the client from Apex Solutions just called to ask if we can push back tomorrow's presentation to Friday morning.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Thay đổi địa điểm văn phòng. Không đề cập đến việc đổi địa điểm văn phòng."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Thay đổi chủ đề hội thảo. Chủ đề hội thảo không bị thay đổi."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng thông tin khách hàng xin đổi ngày thuyết trình (The date of a presentation)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Thay đổi giá phần mềm. Không bàn về giá bán phần mềm."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "push back a presentation",
+            "paraphrases": ["postpone a talk", "reschedule a demonstration"],
+            "meaning": "lùi lịch / hoãn bài thuyết trình"
+          },
+          {
+            "phrase": "date of a presentation",
+            "paraphrases": ["presentation timeline"],
+            "meaning": "ngày thuyết trình"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Focus on Client's Request Detail - Lắng nghe câu đầu của nhân vật nữ về yêu cầu của khách hàng 'push back tomorrow's presentation'.",
+          "Bước 2: Paraphrase 'push back presentation' -> 'date of presentation' - Nhận ra cụm 'push back presentation' chính là đổi ngày thuyết trình.",
+          "Bước 3: Select Option C - Chọn C."
+        ]
+      },
+      {
+        "id": 14,
+        "question": "Why is the man pleased with the schedule change?",
+        "options": {
+          "A": "He needs to travel out of town",
+          "B": "The design team is finalizing the prototype",
+          "C": "His computer is being repaired",
+          "D": "He has a doctor appointment"
+        },
+        "correct_answer": "B",
+        "correct_text": "The design team is finalizing the prototype",
+        "audio_transcript": "Man: That works out well for us. Our design team is still finalizing the prototype mockups for the new software interface.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Đi công tác ngoài thành phố. Nhân vật nam không có lịch đi công tác."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng lý do nhóm thiết kế đang hoàn thiện mẫu thử nghiệm (The design team is finalizing the prototype)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Máy tính đang sửa. Không đề cập việc máy tính hỏng."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Hẹn khám bác sĩ. Không đề cập lịch khám bệnh."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "finalizing the prototype",
+            "paraphrases": ["completing the sample model", "finishing mockups"],
+            "meaning": "hoàn thiện mô hình/mẫu thử nghiệm"
+          },
+          {
+            "phrase": "works out well",
+            "paraphrases": ["convenient", "beneficial"],
+            "meaning": "thuận lợi / rất phù hợp"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Man's Agreement Reaction - Lắng nghe phản ứng của nhân vật nam sau từ 'That works out well'.",
+          "Bước 2: Match 'finalizing the prototype' - Bắt chính xác cụm 'design team is still finalizing the prototype'.",
+          "Bước 3: Select Option B - Chọn B."
+        ]
+      },
+      {
+        "id": 15,
+        "question": "What does the man ask the woman to include in the calendar invite?",
+        "options": {
+          "A": "A survey questionnaire",
+          "B": "A copy of the annual financial report",
+          "C": "The company parking permit",
+          "D": "A video conference room link"
+        },
+        "correct_answer": "D",
+        "correct_text": "A video conference room link",
+        "audio_transcript": "Man: ...make sure to include the link to our video conference room in the calendar invite.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Bảng khảo sát. Không gửi bảng hỏi khảo sát."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Báo cáo tài chính hàng năm. Không gửi báo cáo tài chính."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Giấy phép đỗ xe. Không đề cập thẻ đỗ xe."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng chi tiết yêu cầu kèm link phòng họp trực tuyến (A video conference room link)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "video conference room link",
+            "paraphrases": ["online meeting URL", "virtual session link"],
+            "meaning": "đường link phòng họp trực tuyến"
+          },
+          {
+            "phrase": "calendar invite",
+            "paraphrases": ["meeting invitation"],
+            "meaning": "thư mời trên lịch làm việc"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Man's Last Directive - Lắng nghe chỉ dẫn cuối của nhân vật nam 'make sure to include...'.",
+          "Bước 2: Match 'link to video conference room' - Bắt khớp cụm từ 'link to our video conference room'.",
+          "Bước 3: Select Option D - Chọn D."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 6,
+    "audio": "p3_g06_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 16,
+        "question": "Why is the woman calling the catering company?",
+        "options": {
+          "A": "To cancel a dinner reservation",
+          "B": "To update a lunch catering order menu",
+          "C": "To report a billing error",
+          "D": "To apply for a chef position"
+        },
+        "correct_answer": "B",
+        "correct_text": "To update a lunch catering order menu",
+        "audio_transcript": "Woman: ...I placed a lunch catering order for 25 people... I need to update the menu selection.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Hủy tiệc tối. Đây là đơn tiệc trưa và nhân vật nữ gọi để điều chỉnh món chứ không hủy."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng mục đích gọi để cập nhật menu đơn tiệc trưa (To update a lunch catering order menu)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Báo lỗi hóa đơn. Không đề cập sự cố tính tiền."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Ứng tuyển đầu bếp. Không xin việc làm đầu bếp."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "lunch catering order",
+            "paraphrases": ["midday meal delivery"],
+            "meaning": "đơn đặt tiệc trưa"
+          },
+          {
+            "phrase": "update menu selection",
+            "paraphrases": ["modify food choices"],
+            "meaning": "cập nhật/thay đổi danh mục món ăn"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Woman's Opening Statement - Lắng nghe mục đích cuộc gọi ngay từ câu đầu của khách hàng.",
+          "Bước 2: Match 'update the menu selection' - Bắt chính xác từ 'update' và 'catering order'.",
+          "Bước 3: Select Option B - Chọn B."
+        ]
+      },
+      {
+        "id": 17,
+        "question": "What special dietary requirement is mentioned?",
+        "options": {
+          "A": "Gluten-free dessert",
+          "B": "Nut-free salad",
+          "C": "Vegetarian meals for two guests",
+          "D": "Low-sodium soup"
+        },
+        "correct_answer": "C",
+        "correct_text": "Vegetarian meals for two guests",
+        "audio_transcript": "Woman: Two of our international guests require vegetarian meals...",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Tráng miệng không chứa gluten. Không đề cập gluten-free."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Món không hạt. Không đề cập dị ứng hạt."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng chi tiết yêu cầu phần ăn chay cho 2 vị khách (Vegetarian meals for two guests)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Súp ít muối. Không đề cập hàm lượng muối."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "vegetarian meals",
+            "paraphrases": ["meat-free dishes", "plant-based portions"],
+            "meaning": "bữa ăn chay"
+          },
+          {
+            "phrase": "require",
+            "paraphrases": ["request", "need"],
+            "meaning": "yêu cầu / cần"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Focus on Dietary Request Key Word - Lắng nghe từ chỉ chế độ ăn đặc biệt 'vegetarian'.",
+          "Bước 2: Match Quantity 'Two guests' - Khớp số lượng 'Two of our international guests'.",
+          "Bước 3: Select Option C - Chọn C."
+        ]
+      },
+      {
+        "id": 18,
+        "question": "What food item will be substituted for two portions?",
+        "options": {
+          "A": "Roasted vegetable wraps",
+          "B": "Beef lasagna",
+          "C": "Seafood pasta",
+          "D": "Fruit tarts"
+        },
+        "correct_answer": "A",
+        "correct_text": "Roasted vegetable wraps",
+        "audio_transcript": "Woman: ...please substitute the chicken paninis for roasted vegetable wraps for those two portions.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng món ăn được chọn thay thế là bánh cuộn rau củ nướng (Roasted vegetable wraps)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Món mì Ý thịt bò. Không phải lasagna thịt bò."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Mì hải sản. Không chọn hải sản."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Bánh hoa quả. Không đề cập bánh tráng miệng."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "roasted vegetable wraps",
+            "paraphrases": ["grilled veggie rolls"],
+            "meaning": "bánh cuộn rau củ nướng"
+          },
+          {
+            "phrase": "substitute for",
+            "paraphrases": ["replace with", "swap"],
+            "meaning": "thay thế cho"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Substitution Target Item - Lắng nghe món được thay thế sau từ 'substitute... for'.",
+          "Bước 2: Match 'roasted vegetable wraps' - Bắt chính xác tên món 'roasted vegetable wraps'.",
+          "Bước 3: Select Option A - Chọn A."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 7,
+    "audio": "p3_g07_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 19,
+        "question": "Why was the shipment delayed?",
+        "options": {
+          "A": "A strike by warehouse workers",
+          "B": "A mechanical failure",
+          "C": "An incorrect delivery address",
+          "D": "Severe weather conditions"
+        },
+        "correct_answer": "D",
+        "correct_text": "Severe weather conditions",
+        "audio_transcript": "Man: ...due to severe weather conditions along the coast, the freight truck was delayed.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Đình công công nhân kho. Không có đình công."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Hỏng hóc kỹ thuật xe. Không phải hỏng xe."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Nhầm địa chỉ giao hàng. Không nhầm địa chỉ."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng nguyên nhân trễ chuyến hàng do thời tiết xấu (Severe weather conditions)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "severe weather conditions",
+            "paraphrases": ["bad weather", "coastal storm"],
+            "meaning": "điều kiện thời tiết xấu / khắc nghiệt"
+          },
+          {
+            "phrase": "freight truck delayed",
+            "paraphrases": ["cargo vehicle postponed"],
+            "meaning": "xe chở hàng bị trễ"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Cause Signal 'due to' - Bắt cụm chỉ nguyên nhân 'due to severe weather conditions'.",
+          "Bước 2: Match 'Severe weather' - Khớp ngay từ khóa 'severe weather'.",
+          "Bước 3: Select Option D - Chọn D."
+        ]
+      },
+      {
+        "id": 20,
+        "question": "How did the logistics company resolve the issue?",
+        "options": {
+          "A": "They offered a full refund",
+          "B": "They upgraded the shipment to overnight air express",
+          "C": "They reprinted the promotional items",
+          "D": "They sent a replacement driver"
+        },
+        "correct_answer": "B",
+        "correct_text": "They upgraded the shipment to overnight air express",
+        "audio_transcript": "Man: ...However, we upgraded your shipment to overnight air express at no extra charge.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Hoàn tiền 100%. Công ty không hoàn tiền mà nâng cấp hình thức vận chuyển."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng phương án khắc phục nâng cấp lên chuyển phát nhanh hàng không qua đêm (They upgraded the shipment to overnight air express)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "In lại bút quà tặng. Bút đã sản xuất xong, không cần in lại."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Cử tài xế thay thế. Không thay đổi tài xế."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "upgraded to overnight air express",
+            "paraphrases": ["expedited via air delivery"],
+            "meaning": "nâng cấp lên chuyển phát hỏa tốc qua đêm bằng đường hàng không"
+          },
+          {
+            "phrase": "at no extra charge",
+            "paraphrases": ["free of charge", "without additional cost"],
+            "meaning": "không tính thêm phí"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Solution Pivot 'However...' - Tập trung nghe giải pháp của công ty sau từ nối 'However'.",
+          "Bước 2: Match 'upgraded... overnight air express' - Bắt chính xác từ 'upgraded' và 'air express'.",
+          "Bước 3: Select Option B - Chọn B."
+        ]
+      },
+      {
+        "id": 21,
+        "question": "When is the shipment guaranteed to arrive?",
+        "options": {
+          "A": "Tuesday evening",
+          "B": "Thursday morning",
+          "C": "Wednesday afternoon",
+          "D": "Friday noon"
+        },
+        "correct_answer": "C",
+        "correct_text": "Wednesday afternoon",
+        "audio_transcript": "Man: Yes, it is guaranteed to be delivered to your hotel lobby by Wednesday afternoon.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Tối thứ Ba. Tối thứ Ba chưa thể giao tới."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Sáng thứ Năm. Sáng thứ Năm là thời điểm triển lãm thương mại khai mạc."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng mốc thời gian cam kết giao hàng thành công (Wednesday afternoon)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Trưa thứ Sáu. Trưa thứ Sáu quá muộn."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "guaranteed to be delivered",
+            "paraphrases": ["promised arrival time"],
+            "meaning": "được cam kết giao đến"
+          },
+          {
+            "phrase": "by Wednesday afternoon",
+            "paraphrases": ["no later than Wednesday PM"],
+            "meaning": "trước chiều thứ Tư"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Last Confirmation Line - Lắng nghe mốc thời hạn giao hàng trong câu trả lời cuối cùng.",
+          "Bước 2: Match 'guaranteed... Wednesday afternoon' - Bắt chính xác mốc 'Wednesday afternoon'.",
+          "Bước 3: Select Option C - Chọn C."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 8,
+    "audio": "p3_g08_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 22,
+        "question": "What is the man calling to reserve?",
+        "options": {
+          "A": "A hotel suite for a VIP guest",
+          "B": "A Grand Ballroom for a conference",
+          "C": "A table at the hotel restaurant",
+          "D": "A shuttle bus service"
+        },
+        "correct_answer": "B",
+        "correct_text": "A Grand Ballroom for a conference",
+        "audio_transcript": "Speaker 2 (David): ...Lisa and I would like to reserve your Grand Ballroom for our regional sales conference on October fourteenth.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Đặt phòng VIP. Không phải đặt phòng ở VIP."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng địa điểm cần đặt là phòng đại sảnh hội nghị (A Grand Ballroom for a conference)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Đặt bàn nhà hàng. Không đặt bàn ăn lẻ."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Đặt xe đưa đón. Không đặt xe buýt."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "reserve Grand Ballroom",
+            "paraphrases": ["book main conference hall"],
+            "meaning": "đặt phòng hội nghị lớn / đại sảnh"
+          },
+          {
+            "phrase": "sales conference",
+            "paraphrases": ["commercial meeting"],
+            "meaning": "hội thảo kinh doanh/bán hàng"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Caller's Request - Lắng nghe mục đích cuộc gọi của David ('reserve your Grand Ballroom').",
+          "Bước 2: Match 'Grand Ballroom' - Khớp ngay từ khóa 'Grand Ballroom'.",
+          "Bước 3: Select Option B - Chọn B."
+        ]
+      },
+      {
+        "id": 23,
+        "question": "What condition does the receptionist mention for booking the ballroom?",
+        "options": {
+          "A": "A minimum catering spend of $5,000",
+          "B": "A non-refundable deposit of $10,000",
+          "C": "A requirement to hire hotel staff",
+          "D": "A minimum reservation period of three days"
+        },
+        "correct_answer": "A",
+        "correct_text": "A minimum catering spend of $5,000",
+        "audio_transcript": "Speaker 1 (Receptionist): ...the Grand Ballroom requires a minimum catering spend of five thousand dollars for full-day bookings.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng điều kiện chi tiêu tối thiểu $5,000 cho đồ ăn thức uống (A minimum catering spend of $5,000)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Tiền đặt cọc $10,000. Không bắt buộc đặt cọc $10,000."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Thuê nhân viên khách sạn. Không đề cập việc thuê nhân viên."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Đặt tối thiểu 3 ngày. Đây chỉ là sự kiện nguyên ngày (full-day booking)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "minimum catering spend",
+            "paraphrases": ["lowest required food purchase"],
+            "meaning": "mức chi tiêu tối thiểu cho dịch vụ ăn uống"
+          },
+          {
+            "phrase": "full-day booking",
+            "paraphrases": ["whole day reservation"],
+            "meaning": "đặt phòng cả ngày"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Receptionist's Terms - Tập trung điều kiện do lễ tân nêu sau từ 'requires'.",
+          "Bước 2: Match '$5,000 minimum catering spend' - Bắt chính xác con số 'five thousand dollars' và 'minimum catering spend'.",
+          "Bước 3: Select Option A - Chọn A."
+        ]
+      },
+      {
+        "id": 24,
+        "question": "What does Lisa (Speaker 3) ask to receive?",
+        "options": {
+          "A": "Driving directions to the hotel",
+          "B": "Photos of previous events",
+          "C": "A customer feedback form",
+          "D": "The contract and menu choices"
+        },
+        "correct_answer": "D",
+        "correct_text": "The contract and menu choices",
+        "audio_transcript": "Speaker 3 (Lisa): ...Could you ask her to send us the formal contract and menu choices so our event committee can review them?",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Chỉ đường đến khách sạn. Không xin chỉ đường."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Ảnh các sự kiện cũ. Không xin album ảnh."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Phiếu phản hồi khách hàng. Không xin phiếu phản hồi."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng danh mục Lisa xin gửi là hợp đồng và menu (The contract and menu choices)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "formal contract and menu choices",
+            "paraphrases": ["official agreement and food options"],
+            "meaning": "hợp đồng chính thức và danh mục thực đơn"
+          },
+          {
+            "phrase": "event committee review",
+            "paraphrases": ["planning panel examination"],
+            "meaning": "ủy ban sự kiện xem xét/duyệt"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Lisa (Speaker 3) Turn - Tập trung lượt nói của Lisa ở cuối cuộc gọi.",
+          "Bước 2: Match 'contract and menu choices' - Bắt chính xác cụm 'formal contract and menu choices'.",
+          "Bước 3: Select Option D - Chọn D."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 9,
+    "audio": "p3_g09_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 25,
+        "question": "What are the speakers reviewing?",
+        "options": {
+          "A": "An energy audit report for headquarters",
+          "B": "A quarterly tax return form",
+          "C": "A new office security policy",
+          "D": "An architectural model of a new factory"
+        },
+        "correct_answer": "A",
+        "correct_text": "An energy audit report for headquarters",
+        "audio_transcript": "Speaker 1 (Man 1): ...We need to review the energy audit report for our headquarters.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng chủ đề cuộc họp xem xét báo cáo kiểm toán năng lượng trụ sở (An energy audit report for headquarters)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Tờ khai thuế hàng quý. Không đề cập đến tờ khai thuế."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Chính sách an ninh. Không bàn về quy định an ninh."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Mô hình kiến trúc nhà máy. Không đề cập đến mô hình nhà máy."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "energy audit report",
+            "paraphrases": ["power consumption review"],
+            "meaning": "báo cáo kiểm toán năng lượng"
+          },
+          {
+            "phrase": "headquarters",
+            "paraphrases": ["main office", "corporate HQ"],
+            "meaning": "trụ sở chính"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Speaker 1 Opening Directive - Lắng nghe lượt nói đầu tiên của người 1 sau cụm 'We need to review'.",
+          "Bước 2: Match 'energy audit report' - Bắt chính xác tên báo cáo kiểm toán năng lượng.",
+          "Bước 3: Select Option A - Chọn A."
+        ]
+      },
+      {
+        "id": 26,
+        "question": "According to Kevin (Man 2), how much could the upgrade save annually?",
+        "options": {
+          "A": "$5,000",
+          "B": "$15,000",
+          "C": "Nearly $25,000",
+          "D": "$50,000"
+        },
+        "correct_answer": "C",
+        "correct_text": "Nearly $25,000",
+        "audio_transcript": "Speaker 3 (Kevin): ...could cut our annual utility bill by nearly twenty-five thousand dollars.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Con số $5,000. $5,000 không được đề cập."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Con số 15 năm tuổi đời của máy lạnh cũ. 15 năm là tuổi đời của hệ thống điều hòa cũ, không phải số tiền tiết kiệm."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng khoản tiền tiết kiệm hàng năm gần $25,000 (Nearly $25,000)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Con số $50,000. Con số $50,000 không có trong bài."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "cut annual utility bill",
+            "paraphrases": ["reduce yearly electricity costs"],
+            "meaning": "cắt giảm hóa đơn tiện ích/điện nước hàng năm"
+          },
+          {
+            "phrase": "nearly $25,000",
+            "paraphrases": ["almost twenty-five thousand dollars"],
+            "meaning": "gần 25.000 đô la"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Kevin's Statement on Savings - Tập trung lượt nói của Kevin ('Speaker 3') sau cụm từ 'cut our annual bill'.",
+          "Bước 2: Distinguish Number Context - Phân biệt 15 năm tuổi đời máy cũ với số tiền tiết kiệm gần 25,000 USD.",
+          "Bước 3: Select Option C - Chọn C."
+        ]
+      },
+      {
+        "id": 27,
+        "question": "What is Laura asked to do by Friday?",
+        "options": {
+          "A": "Interview new maintenance workers",
+          "B": "Pay the monthly electric bill",
+          "C": "Inspect the rooftop solar panels",
+          "D": "Prepare a capital expenditure proposal"
+        },
+        "correct_answer": "D",
+        "correct_text": "Prepare a capital expenditure proposal",
+        "audio_transcript": "Speaker 1 (Man 1): ...Laura, please prepare a capital expenditure proposal for the executive board by Friday.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Phỏng vấn thợ bảo trì. Không phỏng vấn nhân viên mới."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Thanh toán hóa đơn tiền điện. Không bảo đi đóng tiền điện."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Kiểm tra pin mặt trời. Không đề cập tấm pin năng lượng mặt trời trên mái."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng công việc Laura được giao là chuẩn bị đề xuất chi phí vốn đầu tư (Prepare a capital expenditure proposal)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "capital expenditure proposal",
+            "paraphrases": ["CapEx budget plan", "investment proposal"],
+            "meaning": "đề xuất chi phí đầu tư vốn"
+          },
+          {
+            "phrase": "executive board",
+            "paraphrases": ["board of directors", "management panel"],
+            "meaning": "ban điều hành / hội đồng quản trị"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Directive to Laura - Lắng nghe tên Laura ở lượt nói cuối cùng 'Laura, please prepare...'.",
+          "Bước 2: Match 'capital expenditure proposal' - Bắt chính xác cụm từ chỉ bản đề xuất CapEx.",
+          "Bước 3: Select Option D - Chọn D."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 10,
+    "audio": "p3_g10_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 28,
+        "question": "Why is the man at the flight connection desk?",
+        "options": {
+          "A": "His luggage was damaged",
+          "B": "He lost his passport",
+          "C": "His connecting flight was canceled",
+          "D": "He wants to upgrade to first class"
+        },
+        "correct_answer": "C",
+        "correct_text": "His connecting flight was canceled",
+        "audio_transcript": "Man: ...my connecting flight to Tokyo was canceled due to engine troubles.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Hành lý hư hỏng. Không đề cập hư hỏng hành lý."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Mất hộ chiếu. Không làm mất hộ chiếu."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng lý do chuyến bay nối chuyến bị hủy (His connecting flight was canceled)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Nâng hạng khoang nhất. Không xin nâng hạng ghế sang."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "connecting flight canceled",
+            "paraphrases": ["transfer flight called off"],
+            "meaning": "chuyến bay nối chuyến bị hủy"
+          },
+          {
+            "phrase": "engine troubles",
+            "paraphrases": ["mechanical failure", "technical issue"],
+            "meaning": "sự cố động cơ"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Man's Problem Explanation - Lắng nghe câu trình bày lý do của vị khách nam.",
+          "Bước 2: Match 'connecting flight... canceled' - Bắt chính xác từ 'canceled' đi cùng 'connecting flight'.",
+          "Bước 3: Select Option C - Chọn C."
+        ]
+      },
+      {
+        "id": 29,
+        "question": "What does the woman offer to provide for tonight?",
+        "options": {
+          "A": "A meal coupon for the airport lounge",
+          "B": "A complimentary hotel voucher",
+          "C": "A cash refund for taxi fare",
+          "D": "A duty-free shopping discount code"
+        },
+        "correct_answer": "B",
+        "correct_text": "A complimentary hotel voucher",
+        "audio_transcript": "Woman: ...we will provide a complimentary hotel voucher for tonight.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Phiếu ăn phòng chờ. Nhân viên cung cấp voucher khách sạn chứ không phải phiếu ăn phòng chờ."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng vật phẩm hỗ trợ là phiếu ở khách sạn miễn phí đêm nay (A complimentary hotel voucher)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Hoàn tiền taxi. Không hoàn tiền mặt cho xe taxi."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Mã giảm giá miễn thuế. Không tặng mã mua sắm duty-free."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "complimentary hotel voucher",
+            "paraphrases": ["free accommodation coupon"],
+            "meaning": "phiếu ở khách sạn miễn phí"
+          },
+          {
+            "phrase": "provide for tonight",
+            "paraphrases": ["issue for the evening"],
+            "meaning": "cấp cho đêm nay"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Airline Staff Solution - Tập trung phần giải pháp đền bù do nhân vật nữ đưa ra.",
+          "Bước 2: Match 'complimentary hotel voucher' - Bắt chính xác cụm từ 'complimentary hotel voucher'.",
+          "Bước 3: Select Option B - Chọn B."
+        ]
+      },
+      {
+        "id": 30,
+        "question": "What does the man ask about at the end?",
+        "options": {
+          "A": "Where to claim the hotel voucher and shuttle pass",
+          "B": "How to apply for an international credit card",
+          "C": "The weather forecast in Tokyo",
+          "D": "The weight limit for carry-on bags"
+        },
+        "correct_answer": "A",
+        "correct_text": "Where to claim the hotel voucher and shuttle pass",
+        "audio_transcript": "Man: ...Where can I claim the hotel voucher and shuttle transfer pass?",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng thắc mắc cuối cùng của khách hàng về địa điểm nhận voucher và vé xe bus (Where to claim the hotel voucher and shuttle pass)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Mở thẻ tín dụng. Không hỏi mở thẻ tín dụng."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Thời tiết Tokyo. Không hỏi dự báo thời tiết."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Cân nặng hành lý xách tay. Không hỏi hạn mức hành lý."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "claim the voucher",
+            "paraphrases": ["collect the coupon", "pick up the pass"],
+            "meaning": "lấy / nhận phiếu"
+          },
+          {
+            "phrase": "shuttle transfer pass",
+            "paraphrases": ["bus transport ticket"],
+            "meaning": "thẻ/vé xe buýt đưa đón"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Customer's Final Question - Lắng nghe câu hỏi cuối cùng của hành khách nam.",
+          "Bước 2: Match 'Where can I claim... voucher' - Bắt chính xác từ hỏi địa điểm nhận voucher.",
+          "Bước 3: Select Option A - Chọn A."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 11,
+    "audio": "p3_g11_audio.mp3",
+    "image": "p3_g11_image.png",
+    "questions": [
+      {
+        "id": 31,
+        "question": "What is the main purpose of the conversation?",
+        "options": {
+          "A": "To review desk reassignments on Floor 4",
+          "B": "To order office coffee machines",
+          "C": "To plan a company holiday party",
+          "D": "To hire a new security guard"
+        },
+        "correct_answer": "A",
+        "correct_text": "To review desk reassignments on Floor 4",
+        "audio_transcript": "Man: Karen, here is the updated floor plan for Floor four. Management decided to move the Quality Assurance team...",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng mục đích cuộc thảo luận là xem xét phân bố lại vị trí bàn làm việc tầng 4 (To review desk reassignments on Floor 4)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Đặt máy pha cà phê. Không đề cập máy cà phê."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Lên kế hoạch tiệc lễ. Không bàn về tiệc công ty."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Tuyển bảo vệ mới. Không tuyển bảo vệ."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "desk reassignments",
+            "paraphrases": ["relocating work stations", "moving teams"],
+            "meaning": "phân bổ/chuyển vị trí bàn làm việc"
+          },
+          {
+            "phrase": "updated floor plan",
+            "paraphrases": ["revised architectural layout"],
+            "meaning": "sơ đồ mặt bằng cập nhật"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to First Line Context - Lắng nghe câu mở đầu đề cập đến 'updated floor plan for Floor four'.",
+          "Bước 2: Match 'desk reassignments' - Bắt ý chuyển nhóm QA sang khu vực mới.",
+          "Bước 3: Select Option A - Chọn A."
+        ]
+      },
+      {
+        "id": 32,
+        "question": "Look at the graphic. Which desk area will the Quality Assurance team move to?",
+        "options": {
+          "A": "Desk Area 1",
+          "B": "Desk Area 2",
+          "C": "Desk Area 3",
+          "D": "Desk Area 4"
+        },
+        "correct_answer": "C",
+        "correct_text": "Desk Area 3",
+        "audio_transcript": "Man: ...Desk Area 3 has extra network ports installed, which is ideal for the QA team's automated testing rigs.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Khu vực bàn 1. Khu vực 1 không có hệ thống cổng mạng bổ sung."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Khu vực bàn 2. Khu vực 2 không dành cho đội QA."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng khu vực bàn 3 được chỉ định cho đội QA (Desk Area 3)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Khu vực bàn 4. Khu vực 4 không khớp mô tả."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "Desk Area 3",
+            "paraphrases": ["Workstation Zone 3"],
+            "meaning": "Khu vực bàn làm việc số 3"
+          },
+          {
+            "phrase": "extra network ports",
+            "paraphrases": ["additional LAN sockets"],
+            "meaning": "cổng kết nối mạng bổ sung"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Look at Graphic Labels - Quan sát sơ đồ mặt bằng các vị trí Desk Area 1, 2, 3, 4.",
+          "Bước 2: Listen to Graphic Signal 'Desk Area 3' - Lắng nghe trực tiếp tên vị trí được nối mạng thích hợp cho đội QA.",
+          "Bước 3: Select Option C - Chọn C."
+        ]
+      },
+      {
+        "id": 33,
+        "question": "Who will the woman inform tomorrow morning?",
+        "options": {
+          "A": "The catering vendor",
+          "B": "The chief financial officer",
+          "C": "The building landlord",
+          "D": "The Quality Assurance manager"
+        },
+        "correct_answer": "D",
+        "correct_text": "The Quality Assurance manager",
+        "audio_transcript": "Woman: ...I'll inform the QA manager to move their equipment into Desk Area 3 tomorrow morning.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Bên cung cấp đồ ăn. Không báo bên tiệc."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Giám đốc tài chính CFO. Không liên quan CFO."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Chủ tòa nhà. Không báo chủ nhà."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng người sẽ được thông báo vào sáng mai là Quản lý đội QA (The Quality Assurance manager)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "QA manager",
+            "paraphrases": ["Quality Assurance lead"],
+            "meaning": "Quản lý đội kiểm thử chất lượng"
+          },
+          {
+            "phrase": "inform tomorrow morning",
+            "paraphrases": ["notify first thing tomorrow"],
+            "meaning": "thông báo vào sáng mai"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Woman's Final Statement - Lắng nghe lượt nói cuối của nhân vật nữ bắt đầu bằng 'I'll inform...'.",
+          "Bước 2: Match 'QA manager' - Bắt chính xác cụm 'QA manager'.",
+          "Bước 3: Select Option D - Chọn D."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 12,
+    "audio": "p3_g12_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 34,
+        "question": "What are the speakers reviewing?",
+        "options": {
+          "A": "Annual sales performance metrics",
+          "B": "A website redesign blueprint",
+          "C": "A patent infringement lawsuit",
+          "D": "An office safety inspection"
+        },
+        "correct_answer": "A",
+        "correct_text": "Annual sales performance metrics",
+        "audio_transcript": "Speaker 1 (Sandra): ...I called you both in to discuss the annual sales performance metrics for our regional branch.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng chủ đề cuộc họp xem xét các chỉ số doanh số hàng năm (Annual sales performance metrics)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Bản thiết kế lại website. Không bàn về trang web."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Kiện tụng bản quyền. Không có vụ kiện."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Kiểm tra an toàn văn phòng. Không kiểm tra an toàn."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "sales performance metrics",
+            "paraphrases": ["revenue results", "sales figures"],
+            "meaning": "chỉ số hiệu suất bán hàng/doanh số"
+          },
+          {
+            "phrase": "regional branch",
+            "paraphrases": ["local office", "territory division"],
+            "meaning": "chi nhánh khu vực"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Speaker 1 Opening - Nghe lượt mở đầu của Sandra để tìm chủ đề cuộc họp.",
+          "Bước 2: Match 'annual sales performance metrics' - Khớp chính xác cụm từ về doanh số bán hàng.",
+          "Bước 3: Select Option A - Chọn A."
+        ]
+      },
+      {
+        "id": 35,
+        "question": "By what percentage did the sales team exceed their annual target?",
+        "options": {
+          "A": "10%",
+          "B": "18%",
+          "C": "25%",
+          "D": "40%"
+        },
+        "correct_answer": "B",
+        "correct_text": "18%",
+        "audio_transcript": "Speaker 2 (Mark): ...Our team exceeded the annual target by eighteen percent...",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Con số 10% thưởng. 10% là tỷ lệ tiền thưởng performance bonus, không phải phần trăm vượt chỉ tiêu."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng tỷ lệ phần trăm vượt chỉ tiêu doanh số năm (18%)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Con số 25%. Con số 25% không có trong bài."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Con số 40%. 40% không có trong bài."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "exceeded target by 18%",
+            "paraphrases": ["surpassed goal by eighteen percent"],
+            "meaning": "vượt chỉ tiêu 18%"
+          },
+          {
+            "phrase": "annual target",
+            "paraphrases": ["yearly goal", "annual quota"],
+            "meaning": "mục tiêu / chỉ tiêu hàng năm"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Mark's Detail Percentage - Nghe lượt nói của Mark ('Speaker 2') sau từ 'exceeded the annual target'.",
+          "Bước 2: Distinguish 18% Target vs 10% Bonus - Phân biệt 18% vượt chỉ tiêu với 10% tiền thưởng cuối bài.",
+          "Bước 3: Select Option B - Chọn B."
+        ]
+      },
+      {
+        "id": 36,
+        "question": "What did corporate approve for the sales representatives?",
+        "options": {
+          "A": "New company vehicles",
+          "B": "An extra week of paid vacation",
+          "C": "A 10% performance bonus",
+          "D": "Free gym memberships"
+        },
+        "correct_answer": "C",
+        "correct_text": "A 10% performance bonus",
+        "audio_transcript": "Speaker 1 (Sandra): ...corporate approved a ten percent performance bonus for all sales representatives starting next pay period.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Thưởng xe công ty mới. Không cấp xe hơi."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Thưởng thêm 1 tuần nghỉ phép. Không thưởng thêm kỳ nghỉ."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng phần thưởng tập đoàn phê duyệt là 10% tiền thưởng hiệu năng (A 10% performance bonus)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Thẻ tập gym miễn phí. Không tặng thẻ tập gym."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "performance bonus",
+            "paraphrases": ["incentive pay", "merit reward"],
+            "meaning": "tiền thưởng theo hiệu suất làm việc"
+          },
+          {
+            "phrase": "starting next pay period",
+            "paraphrases": ["effective next payroll"],
+            "meaning": "bắt đầu từ kỳ trả lương tới"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Sandra's Final Reward Announcement - Nghe đoạn công bố thưởng của Sandra 'corporate approved...'.",
+          "Bước 2: Match 'ten percent performance bonus' - Bắt chính xác cụm từ chỉ khoản tiền thưởng 10%.",
+          "Bước 3: Select Option C - Chọn C."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 13,
+    "audio": "p3_g13_audio.mp3",
+    "image": "p3_g13_image.png",
+    "questions": [
+      {
+        "id": 37,
+        "question": "What item is the man placing an order for?",
+        "options": {
+          "A": "Office printer paper",
+          "B": "Computer monitors",
+          "C": "Ergonomic desk chairs",
+          "D": "Conference room projectors"
+        },
+        "correct_answer": "A",
+        "correct_text": "Office printer paper",
+        "audio_transcript": "Man: Miz Taylor, I'm reviewing our inventory order for office printer paper from Metro Supplies.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng mặt hàng được đặt là giấy in văn phòng (Office printer paper)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Màn hình máy tính. Không đặt màn hình."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Ghế công sở. Không đặt ghế."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Máy chiếu phòng họp. Không đặt máy chiếu."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "office printer paper",
+            "paraphrases": ["printing stock", "copy paper"],
+            "meaning": "giấy in văn phòng"
+          },
+          {
+            "phrase": "inventory order",
+            "paraphrases": ["stock supply purchase"],
+            "meaning": "đơn đặt hàng tồn kho / vật tư"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Man's Opening Sentence - Lắng nghe ngay câu đầu của nhân vật nam để tìm mặt hàng cần mua.",
+          "Bước 2: Match 'office printer paper' - Bắt chính xác cụm 'office printer paper'.",
+          "Bước 3: Select Option A - Chọn A."
+        ]
+      },
+      {
+        "id": 38,
+        "question": "Look at the graphic. What is the wholesale price per carton for the item selected?",
+        "options": {
+          "A": "$28",
+          "B": "$35",
+          "C": "$42",
+          "D": "$50"
+        },
+        "correct_answer": "C",
+        "correct_text": "$42",
+        "audio_transcript": "Man: ...the 24-pound bright white paper is listed at forty-two dollars per carton when ordering more than 10 cartons.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Mức giá $28. $28 là giá của loại giấy tiêu chuẩn 20-pound."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Mức giá $35. $35 là giá dòng sản phẩm khác."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng đơn giá bán sỉ $42 mỗi thùng cho dòng giấy được chọn (42 dollars per carton)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Mức giá $50. $50 không khớp với dòng giấy được chọn."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "listed at $42",
+            "paraphrases": ["priced at forty-two dollars"],
+            "meaning": "có giá niêm yết $42"
+          },
+          {
+            "phrase": "wholesale price per carton",
+            "paraphrases": ["bulk cost per box"],
+            "meaning": "giá bán sỉ mỗi thùng"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Correlate Graphic Table Specs - Nhìn bảng giá catalog để chiếu từ loại giấy '24-pound bright white' sang cột giá.",
+          "Bước 2: Listen to Price Audio Confirmation '$42' - Bắt chính xác con số 'forty-two dollars per carton'.",
+          "Bước 3: Select Option C - Chọn C."
+        ]
+      },
+      {
+        "id": 39,
+        "question": "How many cartons does the woman ask the man to order?",
+        "options": {
+          "A": "5 cartons",
+          "B": "10 cartons",
+          "C": "20 cartons",
+          "D": "15 cartons"
+        },
+        "correct_answer": "D",
+        "correct_text": "15 cartons",
+        "audio_transcript": "Woman: ...Go ahead and order 15 cartons right now so we can qualify for the bulk discount...",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Con số 5 thùng. 5 thùng không đủ số lượng tối thiểu để giảm giá."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Mốc 10 thùng. 10 thùng là mốc tối thiểu để được tính giá sỉ, nhưng số lượng đặt mua thực tế là 15 thùng."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Con số 20 thùng. Không đề cập 20 thùng."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng số lượng thùng nhân vật nữ yêu cầu đặt hàng (15 cartons)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "order 15 cartons",
+            "paraphrases": ["purchase fifteen boxes"],
+            "meaning": "đặt mua 15 thùng"
+          },
+          {
+            "phrase": "qualify for bulk discount",
+            "paraphrases": ["eligible for volume price reduction"],
+            "meaning": "đủ điều kiện hưởng chiết khấu mua số lượng lớn"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Woman's Quantity Directive - Lắng nghe câu chỉ dẫn số lượng của nhân vật nữ ở đoạn cuối.",
+          "Bước 2: Distinguish Threshold (10) vs Actual Order (15) - Phân biệt mốc 10 thùng tính giá sỉ với số lượng đặt mua thực tế là 15 thùng.",
+          "Bước 3: Select Option D - Chọn D."
+        ]
+      }
+    ]
+  }
+]

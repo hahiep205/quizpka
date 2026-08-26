@@ -47,6 +47,11 @@ const securityName: LocalizedText = {
   vi: "Bảo mật ứng dụng và hệ thống",
 }
 
+const toeicName: LocalizedText = {
+  en: "TOEIC Preparation",
+  vi: "Luyện thi TOEIC",
+}
+
 export const subjects: Subject[] = [
   {
     id: "tieng-anh-dau-vao",
@@ -285,6 +290,38 @@ export const subjects: Subject[] = [
           vi: "Bộ tài liệu ôn tập cuối kỳ đầy đủ 150 câu trắc nghiệm về bảo mật ứng dụng và hệ thống.",
         },
         questionBank: "/data/bo_cau_hoi_bao_mat_ung_dung_he_thong_2.json",
+      },
+    ],
+  },
+  {
+    id: "toeic",
+    code: "TOEIC01",
+    name: toeicName,
+    category: { en: "TOEIC", vi: "TOEIC" },
+    exams: [
+      {
+        id: "toeic-test-01",
+        type: "final",
+        year: 2026,
+        questionCount: 200,
+        durationMinutes: 120,
+        title: {
+          en: "TOEIC Practice Set 01",
+          vi: "Bộ tài liệu ôn luyện TOEIC 01",
+        },
+        description: {
+          en: "Full ETS 2024 format with 200 questions across Listening and Reading. Choose Full Test, skill-based or per-Part practice.",
+          vi: "Chuẩn ETS 2024 với 200 câu Listening & Reading. Chọn Full Test, luyện theo kỹ năng hoặc theo từng Part.",
+        },
+        questionBanks: [
+          "/data/toeic-test/Test-01/Part1/test01-part1.json",
+          "/data/toeic-test/Test-01/Part2/part2.json",
+          "/data/toeic-test/Test-01/Part3/part3.json",
+          "/data/toeic-test/Test-01/Part4/part4.json",
+          "/data/toeic-test/Test-01/Part5/part5.json",
+          "/data/toeic-test/Test-01/Part6/part6.json",
+          "/data/toeic-test/Test-01/Part7/part7.json",
+        ],
       },
     ],
   },

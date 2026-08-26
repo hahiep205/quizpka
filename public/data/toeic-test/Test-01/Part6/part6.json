@@ -1,0 +1,926 @@
+[
+  {
+    "group_id": "part6_group_131_134",
+    "part": "Reading - Part 6",
+    "passage": "To: All Staff <staff@apexlogistics.com>\nFrom: IT Department <it-support@apexlogistics.com>\nDate: October 12\nSubject: Important: Scheduled IT Infrastructure Upgrade\n\nDear Team,\n\nPlease be advised that the IT department ------- (131) a major maintenance and server upgrade this coming Saturday, October 15, starting at 10:00 P.M. This upgrade is necessary to improve system security and network processing speed.\n\nDuring this scheduled downtime, all internal servers, including the employee portal and cloud storage, will be offline. We anticipate minimal ------- (132) to daily operations, as the work has been deliberately set for the weekend. ------- (133) the maintenance period, staff members will not be able to access their corporate email accounts remotely.\n\n------- (134). We recommend saving all active files to your local hard drives before leaving the office on Friday afternoon.\n\nThank you for your cooperation and patience.\n\nSincerely,\nMarcus Vance\nDirector of Information Technology\nApex Logistics",
+    "questions": [
+      {
+        "id": 131,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "1. Select the option that best fits blank (131).",
+        "options": {
+          "A": "was conducted",
+          "B": "will be conducting",
+          "C": "has conducted",
+          "D": "conducts"
+        },
+        "correct_answer": "B",
+        "correct_text": "will be conducting",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Quá khứ đơn bị động 'was conducted' không phù hợp với mốc thời gian tương lai 'this coming Saturday'."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Tương lai tiếp diễn 'will be conducting' phù hợp với sự việc được lên lịch diễn ra vào 'this coming Saturday'."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Hiện tại hoàn thành 'has conducted' không dùng để diễn tả sự việc sẽ diễn ra vào một thời điểm cụ thể trong tương lai."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Hiện tại đơn 'conducts' không phù hợp bằng dạng tương lai trong ngữ cảnh sự kiện cụ thể đã được lên lịch vào thứ Bảy tới."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "this coming Saturday",
+            "paraphrases": [
+              "this upcoming weekend"
+            ],
+            "meaning": "thứ Bảy tới"
+          },
+          {
+            "phrase": "conduct maintenance",
+            "paraphrases": [
+              "carry out servicing"
+            ],
+            "meaning": "tiến hành bảo trì"
+          }
+        ],
+        "grammar_point": "Future Continuous",
+        "strategy": [
+          "Bước 1: Locate Time Expression - Xác định cụm chỉ thời gian 'this coming Saturday'.",
+          "Bước 2: Select Future Form - Nhận biết sự việc xảy ra trong tương lai và chọn dạng tương lai phù hợp.",
+          "Bước 3: Select Option B - Chọn 'will be conducting'."
+        ],
+        "passage": "To: All Staff <staff@apexlogistics.com>\nFrom: IT Department <it-support@apexlogistics.com>\nDate: October 12\nSubject: Important: Scheduled IT Infrastructure Upgrade\n\nDear Team,\n\nPlease be advised that the IT department ------- (131) a major maintenance and server upgrade this coming Saturday, October 15, starting at 10:00 P.M. This upgrade is necessary to improve system security and network processing speed.\n\nDuring this scheduled downtime, all internal servers, including the employee portal and cloud storage, will be offline. We anticipate minimal ------- (132) to daily operations, as the work has been deliberately set for the weekend. ------- (133) the maintenance period, staff members will not be able to access their corporate email accounts remotely.\n\n------- (134). We recommend saving all active files to your local hard drives before leaving the office on Friday afternoon.\n\nThank you for your cooperation and patience.\n\nSincerely,\nMarcus Vance\nDirector of Information Technology\nApex Logistics",
+        "passage_group": "131-134"
+      },
+      {
+        "id": 132,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "2. Select the option that best fits blank (132).",
+        "options": {
+          "A": "disruption",
+          "B": "promotion",
+          "C": "subsidy",
+          "D": "negotiation"
+        },
+        "correct_answer": "A",
+        "correct_text": "disruption",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Danh từ 'disruption' có nghĩa là sự gián đoạn và phù hợp với cụm 'minimal disruption to daily operations'."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "'Promotion' nghĩa là quảng bá hoặc thăng chức, không phù hợp với ngữ cảnh bảo trì hệ thống."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "'Subsidy' nghĩa là tiền trợ cấp, không phù hợp với hoạt động vận hành bị ảnh hưởng bởi bảo trì."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "'Negotiation' nghĩa là sự thương lượng, không phù hợp với ngữ cảnh này."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "minimal disruption",
+            "paraphrases": [
+              "slightest interruption"
+            ],
+            "meaning": "sự gián đoạn tối thiểu / không đáng kể"
+          },
+          {
+            "phrase": "daily operations",
+            "paraphrases": [
+              "routine business activities"
+            ],
+            "meaning": "hoạt động hàng ngày"
+          }
+        ],
+        "grammar_point": "Vocabulary in Context / Collocation",
+        "strategy": [
+          "Bước 1: Analyze Context Meaning - Bảo trì được thực hiện cuối tuần để hạn chế ảnh hưởng đến công việc.",
+          "Bước 2: Match Collocation 'disruption to...' - Xác định cụm từ phù hợp với 'daily operations'.",
+          "Bước 3: Select Option A - Chọn 'disruption'."
+        ],
+        "passage": "To: All Staff <staff@apexlogistics.com>\nFrom: IT Department <it-support@apexlogistics.com>\nDate: October 12\nSubject: Important: Scheduled IT Infrastructure Upgrade\n\nDear Team,\n\nPlease be advised that the IT department ------- (131) a major maintenance and server upgrade this coming Saturday, October 15, starting at 10:00 P.M. This upgrade is necessary to improve system security and network processing speed.\n\nDuring this scheduled downtime, all internal servers, including the employee portal and cloud storage, will be offline. We anticipate minimal ------- (132) to daily operations, as the work has been deliberately set for the weekend. ------- (133) the maintenance period, staff members will not be able to access their corporate email accounts remotely.\n\n------- (134). We recommend saving all active files to your local hard drives before leaving the office on Friday afternoon.\n\nThank you for your cooperation and patience.\n\nSincerely,\nMarcus Vance\nDirector of Information Technology\nApex Logistics",
+        "passage_group": "131-134"
+      },
+      {
+        "id": 133,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "3. Select the option that best fits blank (133).",
+        "options": {
+          "A": "As though",
+          "B": "In spite of",
+          "C": "Whereas",
+          "D": "Throughout"
+        },
+        "correct_answer": "D",
+        "correct_text": "Throughout",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "'As though' là liên từ chỉ sự giả định và không phù hợp trước cụm danh từ 'the maintenance period'."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "'In spite of' thể hiện sự nhượng bộ, không diễn tả chính xác quan hệ thời gian trong câu."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "'Whereas' là liên từ phụ thuộc, thường đứng trước một mệnh đề S + V, không đứng trực tiếp trước cụm danh từ."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "'Throughout' là giới từ chỉ toàn bộ khoảng thời gian và phù hợp với 'the maintenance period'."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "throughout the maintenance period",
+            "paraphrases": [
+              "during the entire servicing window"
+            ],
+            "meaning": "trong suốt khoảng thời gian bảo trì"
+          },
+          {
+            "phrase": "access remotely",
+            "paraphrases": [
+              "log in off-site"
+            ],
+            "meaning": "truy cập từ xa"
+          }
+        ],
+        "grammar_point": "Preposition of Time",
+        "strategy": [
+          "Bước 1: Examine Structure - Khoảng trống đứng trước cụm danh từ 'the maintenance period'.",
+          "Bước 2: Select Preposition of Time - Chọn giới từ diễn tả toàn bộ khoảng thời gian là 'Throughout'.",
+          "Bước 3: Select Option D - Chọn D."
+        ],
+        "passage": "To: All Staff <staff@apexlogistics.com>\nFrom: IT Department <it-support@apexlogistics.com>\nDate: October 12\nSubject: Important: Scheduled IT Infrastructure Upgrade\n\nDear Team,\n\nPlease be advised that the IT department ------- (131) a major maintenance and server upgrade this coming Saturday, October 15, starting at 10:00 P.M. This upgrade is necessary to improve system security and network processing speed.\n\nDuring this scheduled downtime, all internal servers, including the employee portal and cloud storage, will be offline. We anticipate minimal ------- (132) to daily operations, as the work has been deliberately set for the weekend. ------- (133) the maintenance period, staff members will not be able to access their corporate email accounts remotely.\n\n------- (134). We recommend saving all active files to your local hard drives before leaving the office on Friday afternoon.\n\nThank you for your cooperation and patience.\n\nSincerely,\nMarcus Vance\nDirector of Information Technology\nApex Logistics",
+        "passage_group": "131-134"
+      },
+      {
+        "id": 134,
+        "type": "sentence_insertion",
+        "part": "Reading - Part 6",
+        "question": "4. Select the option that best fits blank (134).",
+        "options": {
+          "A": "The new software tools will be demonstrated in next week's seminar.",
+          "B": "Consequently, all scheduled meetings must be moved to the main conference room.",
+          "C": "Please note that any unsaved data stored on the network during this time may be lost.",
+          "D": "A full list of updated IT prices is attached for your reference."
+        },
+        "correct_answer": "C",
+        "correct_text": "Please note that any unsaved data stored on the network during this time may be lost.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Thông tin về hội thảo phần mềm tuần tới không liên quan đến đợt bảo trì máy chủ và lời khuyên lưu dữ liệu."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Việc chuyển phòng họp không tạo được mối liên hệ logic với khuyến nghị lưu các tệp đang hoạt động vào ổ cứng."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Câu này cảnh báo dữ liệu chưa lưu có thể bị mất, tạo quan hệ nguyên nhân - kết quả trực tiếp với lời khuyên lưu file ở câu sau."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Bảng giá IT đính kèm không liên quan đến nguy cơ mất dữ liệu trong thời gian bảo trì."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "unsaved data may be lost",
+            "paraphrases": [
+              "unarchived files risk deletion"
+            ],
+            "meaning": "dữ liệu chưa lưu có thể bị mất"
+          },
+          {
+            "phrase": "saving to local hard drives",
+            "paraphrases": [
+              "storing on internal computer disk"
+            ],
+            "meaning": "lưu vào ổ cứng cá nhân"
+          }
+        ],
+        "grammar_point": "Sentence Insertion / Cause-Effect Cohesion",
+        "strategy": [
+          "Bước 1: Read Following Sentence - Đọc câu sau vị trí trống, đặc biệt là lời khuyên lưu file.",
+          "Bước 2: Identify Cause-Effect Link - Tìm câu giải thích lý do của lời khuyên, đó là nguy cơ mất dữ liệu.",
+          "Bước 3: Select Option C - Chọn câu cảnh báo mất dữ liệu."
+        ],
+        "passage": "To: All Staff <staff@apexlogistics.com>\nFrom: IT Department <it-support@apexlogistics.com>\nDate: October 12\nSubject: Important: Scheduled IT Infrastructure Upgrade\n\nDear Team,\n\nPlease be advised that the IT department ------- (131) a major maintenance and server upgrade this coming Saturday, October 15, starting at 10:00 P.M. This upgrade is necessary to improve system security and network processing speed.\n\nDuring this scheduled downtime, all internal servers, including the employee portal and cloud storage, will be offline. We anticipate minimal ------- (132) to daily operations, as the work has been deliberately set for the weekend. ------- (133) the maintenance period, staff members will not be able to access their corporate email accounts remotely.\n\n------- (134). We recommend saving all active files to your local hard drives before leaving the office on Friday afternoon.\n\nThank you for your cooperation and patience.\n\nSincerely,\nMarcus Vance\nDirector of Information Technology\nApex Logistics",
+        "passage_group": "131-134"
+      }
+    ]
+  },
+  {
+    "group_id": "part6_group_135_138",
+    "part": "Reading - Part 6",
+    "passage": "Under the revised policy, full-time employees who have completed at least six months of continuous service will become ------- (135) for the hybrid work model.\n\n------- (136), remote work is a privilege rather than an absolute right. Department heads retain the authority to adjust or revoke an employee's remote working schedule if performance targets are not met.\n\nEmployees participating in the program are expected to ------- (137) weekly progress reports every Friday afternoon.\n\n------- (138). Additional details and application forms can be downloaded from the employee portal.",
+    "questions": [
+      {
+        "id": 135,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "1. Select the option that best fits blank (135).",
+        "options": {
+          "A": "eligible",
+          "B": "eligibility",
+          "C": "eligibly",
+          "D": "eligibilities"
+        },
+        "correct_answer": "A",
+        "correct_text": "eligible",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Cấu trúc 'be eligible to do something' yêu cầu tính từ 'eligible' sau động từ 'be'."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Đáp án 'eligibility' không phù hợp với cấu trúc hoặc ngữ cảnh của câu."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Đáp án 'eligibly' không phù hợp với cấu trúc hoặc ngữ cảnh của câu."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Đáp án 'eligibilities' không phù hợp với cấu trúc hoặc ngữ cảnh của câu."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "eligible to apply",
+            "paraphrases": [
+              "qualified to request"
+            ],
+            "meaning": "đủ điều kiện nộp đơn"
+          },
+          {
+            "phrase": "probationary period",
+            "paraphrases": [
+              "trial employment phase"
+            ],
+            "meaning": "thời gian thử việc"
+          }
+        ],
+        "grammar_point": "Part of Speech / Adjective",
+        "strategy": [
+          "Bước 1: Recognize Pattern 'be... to V' - Nhận biết vị trí cần tính từ trong cấu trúc.",
+          "Bước 2: Select Adjective Form - Chọn tính từ 'eligible'.",
+          "Bước 3: Select Option A - Chọn A."
+        ],
+        "passage": "Under the revised policy, full-time employees who have completed at least six months of continuous service will become ------- (135) for the hybrid work model.\n\n------- (136), remote work is a privilege rather than an absolute right. Department heads retain the authority to adjust or revoke an employee's remote working schedule if performance targets are not met.\n\nEmployees participating in the program are expected to ------- (137) weekly progress reports every Friday afternoon.\n\n------- (138). Additional details and application forms can be downloaded from the employee portal.",
+        "passage_group": "135-138"
+      },
+      {
+        "id": 136,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "2. Select the option that best fits blank (136).",
+        "options": {
+          "A": "Consequently",
+          "B": "Furthermore",
+          "C": "However",
+          "D": "Otherwise"
+        },
+        "correct_answer": "C",
+        "correct_text": "However",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Đáp án 'Consequently' không phù hợp với cấu trúc hoặc ngữ cảnh của câu."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Đáp án 'Furthermore' không phù hợp với cấu trúc hoặc ngữ cảnh của câu."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "However thể hiện sự tương phản: nhân viên được phép làm việc từ xa nhưng quyền này vẫn chịu giới hạn và sự phê duyệt của quản lý."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Đáp án 'Otherwise' không phù hợp với cấu trúc hoặc ngữ cảnh của câu."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "however",
+            "paraphrases": [
+              "nevertheless, nonetheless"
+            ],
+            "meaning": "tuy nhiên / dẫu vậy"
+          },
+          {
+            "phrase": "manager discretion",
+            "paraphrases": [
+              "supervisor judgement"
+            ],
+            "meaning": "quyết định tùy nghi của quản lý"
+          }
+        ],
+        "grammar_point": "Transition / Contrast",
+        "strategy": [
+          "Bước 1: Analyze Transition Relationship - Câu trước nêu quyền được làm việc từ xa; câu sau nêu giới hạn của quyền đó.",
+          "Bước 2: Select Contrast Adverb - Chọn từ nối tương phản 'However'.",
+          "Bước 3: Select Option C - Chọn C."
+        ],
+        "passage": "Under the revised policy, full-time employees who have completed at least six months of continuous service will become ------- (135) for the hybrid work model.\n\n------- (136), remote work is a privilege rather than an absolute right. Department heads retain the authority to adjust or revoke an employee's remote working schedule if performance targets are not met.\n\nEmployees participating in the program are expected to ------- (137) weekly progress reports every Friday afternoon.\n\n------- (138). Additional details and application forms can be downloaded from the employee portal.",
+        "passage_group": "135-138"
+      },
+      {
+        "id": 137,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "3. Select the option that best fits blank (137).",
+        "options": {
+          "A": "revoke",
+          "B": "submit",
+          "C": "demote",
+          "D": "forfeit"
+        },
+        "correct_answer": "B",
+        "correct_text": "submit",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Đáp án 'revoke' không phù hợp với cấu trúc hoặc ngữ cảnh của câu."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Động từ 'submit' phù hợp với tân ngữ là 'weekly progress reports', nghĩa là nộp báo cáo tiến độ."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Đáp án 'demote' không phù hợp với cấu trúc hoặc ngữ cảnh của câu."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Đáp án 'forfeit' không phù hợp với cấu trúc hoặc ngữ cảnh của câu."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "submit a form",
+            "paraphrases": [
+              "hand in an application"
+            ],
+            "meaning": "nộp một biểu mẫu / đơn"
+          },
+          {
+            "phrase": "two weeks prior",
+            "paraphrases": [
+              "fourteen days in advance"
+            ],
+            "meaning": "2 tuần trước đó"
+          }
+        ],
+        "grammar_point": "Vocabulary in Context / Verb-Object Collocation",
+        "strategy": [
+          "Bước 1: Match Verb to Object - Xác định tân ngữ là 'weekly progress reports'.",
+          "Bước 2: Select Action Verb - Hành động phù hợp là nộp báo cáo, tức 'submit'.",
+          "Bước 3: Select Option B - Chọn B."
+        ],
+        "passage": "Under the revised policy, full-time employees who have completed at least six months of continuous service will become ------- (135) for the hybrid work model.\n\n------- (136), remote work is a privilege rather than an absolute right. Department heads retain the authority to adjust or revoke an employee's remote working schedule if performance targets are not met.\n\nEmployees participating in the program are expected to ------- (137) weekly progress reports every Friday afternoon.\n\n------- (138). Additional details and application forms can be downloaded from the employee portal.",
+        "passage_group": "135-138"
+      },
+      {
+        "id": 138,
+        "type": "sentence_insertion",
+        "part": "Reading - Part 6",
+        "question": "4. Select the option that best fits blank (138).",
+        "options": {
+          "A": "Department managers will hold an orientation session next Monday to address any questions.",
+          "B": "Travel reimbursements must be approved by the accounting team prior to departure.",
+          "C": "The company has recently purchased new office furniture for the main building.",
+          "D": "Failure to comply with these requirements may result in immediate suspension from the program."
+        },
+        "correct_answer": "D",
+        "correct_text": "Failure to comply with these requirements may result in immediate suspension from the program.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Đáp án 'Department managers will hold an orientation session next Monday to address any questions.' không phù hợp với cấu trúc hoặc ngữ cảnh của câu."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Đáp án 'Travel reimbursements must be approved by the accounting team prior to departure.' không phù hợp với cấu trúc hoặc ngữ cảnh của câu."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Đáp án 'The company has recently purchased new office furniture for the main building.' không phù hợp với cấu trúc hoặc ngữ cảnh của câu."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Câu D khép lại quy định bằng chế tài nếu không tuân thủ các yêu cầu vừa nêu."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "failure to comply",
+            "paraphrases": [
+              "non-adherence to rules"
+            ],
+            "meaning": "không tuân thủ theo quy định"
+          },
+          {
+            "phrase": "immediate suspension",
+            "paraphrases": [
+              "instant removal from program"
+            ],
+            "meaning": "đình chỉ ngay lập tức"
+          }
+        ],
+        "grammar_point": "Sentence Insertion / Cohesion",
+        "strategy": [
+          "Bước 1: Analyze Memorandum Structure - Đoạn văn đang liệt kê các yêu cầu của chương trình.",
+          "Bước 2: Match 'these requirements' - Cụm từ này quy chiếu tới các yêu cầu vừa được nêu.",
+          "Bước 3: Select Option D - Chọn D."
+        ],
+        "passage": "Under the revised policy, full-time employees who have completed at least six months of continuous service will become ------- (135) for the hybrid work model.\n\n------- (136), remote work is a privilege rather than an absolute right. Department heads retain the authority to adjust or revoke an employee's remote working schedule if performance targets are not met.\n\nEmployees participating in the program are expected to ------- (137) weekly progress reports every Friday afternoon.\n\n------- (138). Additional details and application forms can be downloaded from the employee portal.",
+        "passage_group": "135-138"
+      }
+    ]
+  },
+  {
+    "group_id": "part6_group_139_142",
+    "part": "Reading - Part 6",
+    "passage": "DALLAS, TX — Vanguard Technologies, a global provider of advanced automation systems, today announced the strategic ------- (139) of its North American distribution network. The company will open a state-of-the-art 150,000-square-foot logistics facility in Dallas early next spring.\n\nThe new facility is designed to ------- (140) the growing volume of order fulfillment requests from clients across the Midwest and Southern regions.\n\nThe regional complex, ------- (141) construction began last August, is expected to generate over 300 full-time technical jobs in the local area. ------- (142).",
+    "questions": [
+      {
+        "id": 139,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "1. Select the option that best fits blank (139).",
+        "options": {
+          "A": "expansive",
+          "B": "expand",
+          "C": "expanded",
+          "D": "expansion"
+        },
+        "correct_answer": "D",
+        "correct_text": "expansion",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Đáp án 'expansive' không phù hợp với cấu trúc hoặc mạch nghĩa của đoạn văn."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Đáp án 'expand' không phù hợp với cấu trúc hoặc mạch nghĩa của đoạn văn."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Đáp án 'expanded' không phù hợp với cấu trúc hoặc mạch nghĩa của đoạn văn."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Sau 'the + strategic' cần danh từ 'expansion'."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "strategic expansion",
+            "paraphrases": [
+              "planned network growth"
+            ],
+            "meaning": "sự mở rộng mang tính chiến lược"
+          },
+          {
+            "phrase": "distribution network",
+            "paraphrases": [
+              "supply chain system"
+            ],
+            "meaning": "mạng lưới phân phối"
+          }
+        ],
+        "grammar_point": "Part of Speech",
+        "strategy": [
+          "Bước 1: Analyze Blank Position - Khoảng trống sau 'the + strategic'.",
+          "Bước 2: Identify Noun Form - Cần danh từ 'expansion'.",
+          "Bước 3: Select Option D - Chọn D."
+        ],
+        "passage": "DALLAS, TX — Vanguard Technologies, a global provider of advanced automation systems, today announced the strategic ------- (139) of its North American distribution network. The company will open a state-of-the-art 150,000-square-foot logistics facility in Dallas early next spring.\n\nThe new facility is designed to ------- (140) the growing volume of order fulfillment requests from clients across the Midwest and Southern regions.\n\nThe regional complex, ------- (141) construction began last August, is expected to generate over 300 full-time technical jobs in the local area. ------- (142).",
+        "passage_group": "139-142"
+      },
+      {
+        "id": 140,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "2. Select the option that best fits blank (140).",
+        "options": {
+          "A": "relocate",
+          "B": "accommodate",
+          "C": "terminate",
+          "D": "negotiate"
+        },
+        "correct_answer": "B",
+        "correct_text": "accommodate",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Đáp án 'relocate' không phù hợp với cấu trúc hoặc mạch nghĩa của đoạn văn."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "'Accommodate' nghĩa là đáp ứng/xử lý và phù hợp với 'growing volume of ... requests'."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Đáp án 'terminate' không phù hợp với cấu trúc hoặc mạch nghĩa của đoạn văn."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Đáp án 'negotiate' không phù hợp với cấu trúc hoặc mạch nghĩa của đoạn văn."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "accommodate the volume",
+            "paraphrases": [
+              "handle the quantity of orders"
+            ],
+            "meaning": "đáp ứng / xử lý khối lượng đơn hàng"
+          },
+          {
+            "phrase": "order fulfillment",
+            "paraphrases": [
+              "order processing and shipping"
+            ],
+            "meaning": "hoàn tất đơn hàng"
+          }
+        ],
+        "grammar_point": "Vocabulary in Context",
+        "strategy": [
+          "Bước 1: Match Verb to Object - Tân ngữ là khối lượng yêu cầu đơn hàng gia tăng.",
+          "Bước 2: Select 'accommodate' - Chọn động từ mang nghĩa đáp ứng/xử lý khối lượng.",
+          "Bước 3: Select Option B - Chọn B."
+        ],
+        "passage": "DALLAS, TX — Vanguard Technologies, a global provider of advanced automation systems, today announced the strategic ------- (139) of its North American distribution network. The company will open a state-of-the-art 150,000-square-foot logistics facility in Dallas early next spring.\n\nThe new facility is designed to ------- (140) the growing volume of order fulfillment requests from clients across the Midwest and Southern regions.\n\nThe regional complex, ------- (141) construction began last August, is expected to generate over 300 full-time technical jobs in the local area. ------- (142).",
+        "passage_group": "139-142"
+      },
+      {
+        "id": 141,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "3. Select the option that best fits blank (141).",
+        "options": {
+          "A": "where",
+          "B": "which",
+          "C": "whose",
+          "D": "whom"
+        },
+        "correct_answer": "C",
+        "correct_text": "whose",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Đáp án 'where' không phù hợp với cấu trúc hoặc mạch nghĩa của đoạn văn."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Đáp án 'which' không phù hợp với cấu trúc hoặc mạch nghĩa của đoạn văn."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "'Whose' đứng trước danh từ 'construction' để thể hiện sự sở hữu: the regional complex's construction."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Đáp án 'whom' không phù hợp với cấu trúc hoặc mạch nghĩa của đoạn văn."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "whose construction began",
+            "paraphrases": [
+              "the building of which started"
+            ],
+            "meaning": "mà việc xây dựng nó đã bắt đầu"
+          },
+          {
+            "phrase": "regional complex",
+            "paraphrases": [
+              "local facility center"
+            ],
+            "meaning": "khu phức hợp khu vực"
+          }
+        ],
+        "grammar_point": "Relative Clause / Possessive Relative Pronoun",
+        "strategy": [
+          "Bước 1: Analyze Structure after Blank - Sau chỗ trống là danh từ 'construction'.",
+          "Bước 2: Apply Possessive Pattern - Cần đại từ quan hệ sở hữu cho 'complex's construction'.",
+          "Bước 3: Select Option C - Chọn C."
+        ],
+        "passage": "DALLAS, TX — Vanguard Technologies, a global provider of advanced automation systems, today announced the strategic ------- (139) of its North American distribution network. The company will open a state-of-the-art 150,000-square-foot logistics facility in Dallas early next spring.\n\nThe new facility is designed to ------- (140) the growing volume of order fulfillment requests from clients across the Midwest and Southern regions.\n\nThe regional complex, ------- (141) construction began last August, is expected to generate over 300 full-time technical jobs in the local area. ------- (142).",
+        "passage_group": "139-142"
+      },
+      {
+        "id": 142,
+        "type": "sentence_insertion",
+        "part": "Reading - Part 6",
+        "question": "4. Select the option that best fits blank (142).",
+        "options": {
+          "A": "Furthermore, local recruitment fairs will be hosted starting next month to fill these technical positions.",
+          "B": "As a result, the Dallas facility will be permanently closed by the end of the year.",
+          "C": "In contrast, competitors have decided to decrease their overall domestic production.",
+          "D": "Please submit your revised invoice to the accounting department promptly."
+        },
+        "correct_answer": "A",
+        "correct_text": "Furthermore, local recruitment fairs will be hosted starting next month to fill these technical positions.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Câu A nối trực tiếp thông tin 300 việc làm kỹ thuật với hoạt động tuyển dụng các vị trí đó."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Đáp án 'As a result, the Dallas facility will be permanently closed by the end of the year.' không phù hợp với cấu trúc hoặc mạch nghĩa của đoạn văn."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Đáp án 'In contrast, competitors have decided to decrease their overall domestic production.' không phù hợp với cấu trúc hoặc mạch nghĩa của đoạn văn."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Đáp án 'Please submit your revised invoice to the accounting department promptly.' không phù hợp với cấu trúc hoặc mạch nghĩa của đoạn văn."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "recruitment fairs",
+            "paraphrases": [
+              "job hiring expos"
+            ],
+            "meaning": "ngày hội tuyển dụng"
+          },
+          {
+            "phrase": "fill technical positions",
+            "paraphrases": [
+              "hire specialized staff"
+            ],
+            "meaning": "tuyển các vị trí kỹ thuật"
+          }
+        ],
+        "grammar_point": "Sentence Insertion / Reference",
+        "strategy": [
+          "Bước 1: Read Preceding Sentence - Xác định thông tin 'over 300 full-time technical jobs'.",
+          "Bước 2: Match Reference - 'these technical positions' quy chiếu trực tiếp tới các việc làm vừa nêu.",
+          "Bước 3: Select Option A - Chọn A."
+        ],
+        "passage": "DALLAS, TX — Vanguard Technologies, a global provider of advanced automation systems, today announced the strategic ------- (139) of its North American distribution network. The company will open a state-of-the-art 150,000-square-foot logistics facility in Dallas early next spring.\n\nThe new facility is designed to ------- (140) the growing volume of order fulfillment requests from clients across the Midwest and Southern regions.\n\nThe regional complex, ------- (141) construction began last August, is expected to generate over 300 full-time technical jobs in the local area. ------- (142).",
+        "passage_group": "139-142"
+      }
+    ]
+  },
+  {
+    "group_id": "part6_group_143_146",
+    "part": "Reading - Part 6",
+    "passage": "In order to continually enhance your vacation experience, Horizon Resort & Spa will be ------- (143) extensive facility upgrades during the upcoming off-peak season.\n\nStarting November 10, the main outdoor swimming pool and wellness center ------- (144) for scheduled renovations.\n\nAdditionally, we are pleased to offer a ------- (145) spa voucher worth $30 to all registered guests staying for more than two consecutive nights.\n\n------- (146). We apologize for any inconvenience these temporary closures may cause and appreciate your continued patronage.",
+    "questions": [
+      {
+        "id": 143,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "1. Select the option that best fits blank (143).",
+        "options": {
+          "A": "rejecting",
+          "B": "canceling",
+          "C": "undertaking",
+          "D": "forfeiting"
+        },
+        "correct_answer": "C",
+        "correct_text": "undertaking",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Đáp án 'rejecting' không phù hợp với cấu trúc hoặc mạch nghĩa của đoạn văn."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Đáp án 'canceling' không phù hợp với cấu trúc hoặc mạch nghĩa của đoạn văn."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "'Undertaking' phù hợp với 'extensive facility upgrades', nghĩa là thực hiện/tiến hành nâng cấp."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Đáp án 'forfeiting' không phù hợp với cấu trúc hoặc mạch nghĩa của đoạn văn."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "undertaking upgrades",
+            "paraphrases": [
+              "executing facility improvements"
+            ],
+            "meaning": "tiến hành nâng cấp"
+          },
+          {
+            "phrase": "off-peak season",
+            "paraphrases": [
+              "low-demand travel period"
+            ],
+            "meaning": "mùa thấp điểm"
+          }
+        ],
+        "grammar_point": "Vocabulary in Context / Verb-Object Collocation",
+        "strategy": [
+          "Bước 1: Match Verb to Object - Tân ngữ là 'extensive facility upgrades'.",
+          "Bước 2: Select Action Verb - Hành động phù hợp là tiến hành nâng cấp, 'undertaking'.",
+          "Bước 3: Select Option C - Chọn C."
+        ],
+        "passage": "In order to continually enhance your vacation experience, Horizon Resort & Spa will be ------- (143) extensive facility upgrades during the upcoming off-peak season.\n\nStarting November 10, the main outdoor swimming pool and wellness center ------- (144) for scheduled renovations.\n\nAdditionally, we are pleased to offer a ------- (145) spa voucher worth $30 to all registered guests staying for more than two consecutive nights.\n\n------- (146). We apologize for any inconvenience these temporary closures may cause and appreciate your continued patronage.",
+        "passage_group": "143-146"
+      },
+      {
+        "id": 144,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "2. Select the option that best fits blank (144).",
+        "options": {
+          "A": "closing",
+          "B": "closed",
+          "C": "have closed",
+          "D": "will be closed"
+        },
+        "correct_answer": "D",
+        "correct_text": "will be closed",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Đáp án 'closing' không phù hợp với cấu trúc hoặc mạch nghĩa của đoạn văn."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Đáp án 'closed' không phù hợp với cấu trúc hoặc mạch nghĩa của đoạn văn."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Đáp án 'have closed' không phù hợp với cấu trúc hoặc mạch nghĩa của đoạn văn."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Mốc thời gian tương lai 'Starting November 10' và chủ ngữ là đối tượng chịu tác động nên dùng tương lai bị động 'will be closed'."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "will be closed",
+            "paraphrases": [
+              "shall be shut down"
+            ],
+            "meaning": "sẽ bị đóng cửa"
+          },
+          {
+            "phrase": "scheduled renovations",
+            "paraphrases": [
+              "planned maintenance overhaul"
+            ],
+            "meaning": "đợt cải tạo đã lên lịch"
+          }
+        ],
+        "grammar_point": "Future Passive",
+        "strategy": [
+          "Bước 1: Locate Time Clue - Xác định 'Starting November 10'.",
+          "Bước 2: Determine Voice - Hồ bơi và trung tâm sẽ bị đóng cửa nên dùng bị động.",
+          "Bước 3: Select Option D - Chọn 'will be closed'."
+        ],
+        "passage": "In order to continually enhance your vacation experience, Horizon Resort & Spa will be ------- (143) extensive facility upgrades during the upcoming off-peak season.\n\nStarting November 10, the main outdoor swimming pool and wellness center ------- (144) for scheduled renovations.\n\nAdditionally, we are pleased to offer a ------- (145) spa voucher worth $30 to all registered guests staying for more than two consecutive nights.\n\n------- (146). We apologize for any inconvenience these temporary closures may cause and appreciate your continued patronage.",
+        "passage_group": "143-146"
+      },
+      {
+        "id": 145,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "3. Select the option that best fits blank (145).",
+        "options": {
+          "A": "complimentary",
+          "B": "exorbitant",
+          "C": "tentative",
+          "D": "confidential"
+        },
+        "correct_answer": "A",
+        "correct_text": "complimentary",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "'Complimentary' nghĩa là miễn phí/tặng kèm và phù hợp với voucher spa trị giá $30 được tặng cho khách."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Đáp án 'exorbitant' không phù hợp với cấu trúc hoặc mạch nghĩa của đoạn văn."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Đáp án 'tentative' không phù hợp với cấu trúc hoặc mạch nghĩa của đoạn văn."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Đáp án 'confidential' không phù hợp với cấu trúc hoặc mạch nghĩa của đoạn văn."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "complimentary voucher",
+            "paraphrases": [
+              "free gift coupon"
+            ],
+            "meaning": "phiếu quà tặng miễn phí"
+          },
+          {
+            "phrase": "consecutive nights",
+            "paraphrases": [
+              "back-to-back days"
+            ],
+            "meaning": "các đêm liên tiếp"
+          }
+        ],
+        "grammar_point": "Vocabulary in Context",
+        "strategy": [
+          "Bước 1: Analyze Gift Context - Khách được tặng voucher $30.",
+          "Bước 2: Match 'free of charge' - Chọn tính từ 'complimentary'.",
+          "Bước 3: Select Option A - Chọn A."
+        ],
+        "passage": "In order to continually enhance your vacation experience, Horizon Resort & Spa will be ------- (143) extensive facility upgrades during the upcoming off-peak season.\n\nStarting November 10, the main outdoor swimming pool and wellness center ------- (144) for scheduled renovations.\n\nAdditionally, we are pleased to offer a ------- (145) spa voucher worth $30 to all registered guests staying for more than two consecutive nights.\n\n------- (146). We apologize for any inconvenience these temporary closures may cause and appreciate your continued patronage.",
+        "passage_group": "143-146"
+      },
+      {
+        "id": 146,
+        "type": "sentence_insertion",
+        "part": "Reading - Part 6",
+        "question": "4. Select the option that best fits blank (146).",
+        "options": {
+          "A": "Flight reservations must be confirmed 24 hours prior to departure.",
+          "B": "Vouchers can be redeemed at the front desk upon check-in.",
+          "C": "Construction of the new outdoor pool was completed three years ago.",
+          "D": "Please return your room key cards to the security guard upon exiting."
+        },
+        "correct_answer": "B",
+        "correct_text": "Vouchers can be redeemed at the front desk upon check-in.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Đáp án 'Flight reservations must be confirmed 24 hours prior to departure.' không phù hợp với cấu trúc hoặc mạch nghĩa của đoạn văn."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Câu B hướng dẫn cách nhận/đổi voucher và liên kết trực tiếp với 'complimentary spa voucher' ở câu trước."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Đáp án 'Construction of the new outdoor pool was completed three years ago.' không phù hợp với cấu trúc hoặc mạch nghĩa của đoạn văn."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Đáp án 'Please return your room key cards to the security guard upon exiting.' không phù hợp với cấu trúc hoặc mạch nghĩa của đoạn văn."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "redeemed at front desk",
+            "paraphrases": [
+              "collected at reception"
+            ],
+            "meaning": "được nhận / đổi tại quầy lễ tân"
+          },
+          {
+            "phrase": "upon check-in",
+            "paraphrases": [
+              "when arriving at hotel"
+            ],
+            "meaning": "khi làm thủ tục nhận phòng"
+          }
+        ],
+        "grammar_point": "Sentence Insertion / Reference",
+        "strategy": [
+          "Bước 1: Read Preceding Sentence - Câu trước giới thiệu voucher spa $30.",
+          "Bước 2: Match Reference - 'Vouchers' ở câu B quy chiếu trực tiếp tới voucher vừa được nhắc.",
+          "Bước 3: Select Option B - Chọn B."
+        ],
+        "passage": "In order to continually enhance your vacation experience, Horizon Resort & Spa will be ------- (143) extensive facility upgrades during the upcoming off-peak season.\n\nStarting November 10, the main outdoor swimming pool and wellness center ------- (144) for scheduled renovations.\n\nAdditionally, we are pleased to offer a ------- (145) spa voucher worth $30 to all registered guests staying for more than two consecutive nights.\n\n------- (146). We apologize for any inconvenience these temporary closures may cause and appreciate your continued patronage.",
+        "passage_group": "143-146"
+      }
+    ]
+  }
+]

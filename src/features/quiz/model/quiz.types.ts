@@ -5,6 +5,7 @@ export type Question = {
   correctIndex?: number
   acceptedAnswers?: string[]
   explanation?: string
+  detailedExplanation?: string
   partTitle?: string
   section?: "Listening" | "Reading"
   instruction?: string

@@ -1,0 +1,846 @@
+{
+  "title": "TOEIC Reading Part 7 — Reading Comprehension",
+  "totalParts": 1,
+  "totalQuestions": 54,
+  "partNumber": 7,
+  "partTitle": "Reading Comprehension",
+  "instruction": "For each question, choose the best answer.",
+  "groups": [
+    {
+      "groupId": 1,
+      "passageType": "single",
+      "passage": "Mark Davis [10:14 A.M.]: Hi Sarah, is the main conference room available at 2:00 P.M. for the budget meeting with the regional VP?\nSarah Jenkins [10:16 A.M.]: It was booked by the IT team until 3:00 P.M., but they just moved their session to Room 4B. So yes, it's free now.\nMark Davis [10:17 A.M.]: Perfect. Could you ask facilities to set up the projector and whiteboards by 1:45 P.M.?\nSarah Jenkins [10:19 A.M.]: I'll submit the request right away.",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Why did Mark contact Sarah?",
+          "options": {
+            "A": "To inquire about meeting room availability",
+            "B": "To cancel a flight reservation",
+            "C": "To order new laptop chargers",
+            "D": "To invite her to lunch"
+          },
+          "answer": "A",
+          "explainAnswer": "Mark contacted Sarah to ask whether the main conference room was available for his budget meeting."
+        },
+        {
+          "id": 2,
+          "question": "What is implied about the IT team?",
+          "options": {
+            "A": "They canceled their meeting",
+            "B": "They relocated their session to another room",
+            "C": "They bought new laptops",
+            "D": "They hired new consultants"
+          },
+          "answer": "B",
+          "explainAnswer": "Sarah says the IT team moved its session to Room 4B, so the team relocated its session."
+        }
+      ]
+    },
+    {
+      "groupId": 2,
+      "passageType": "single",
+      "passage": "MEMORANDUM\nTo: All Employees, Veritas Headquarters\nFrom: Facilities Management\nDate: September 5\nSubject: Updated Waste Sorting Procedures\n\nEffective Monday, September 10, Veritas Consulting is upgrading its office recycling system. Color-coded disposal bins will be placed in all breakrooms and near elevator lobbies. Blue bins are designated for paper and cardboard, green bins for plastics and aluminum cans, and gray bins for organic food waste.\n\nPlease note that confidential documents containing client financial records must NOT be thrown into blue bins; they must be disposed of in the locked shredding consoles located next to the printing stations. Thank you for helping us achieve our corporate sustainability goals.",
+      "questions": [
+        {
+          "id": 3,
+          "question": "What is the primary focus of the memorandum?",
+          "options": {
+            "A": "New office parking guidelines",
+            "B": "An upcoming company holiday",
+            "C": "A revision of working hours",
+            "D": "Updated waste sorting procedures"
+          },
+          "answer": "D",
+          "explainAnswer": "The memorandum announces updated procedures for sorting and disposing of office waste."
+        },
+        {
+          "id": 4,
+          "question": "Where should confidential documents be placed?",
+          "options": {
+            "A": "In blue recycling bins",
+            "B": "In green plastic bins",
+            "C": "In locked shredding consoles",
+            "D": "In gray organic bins"
+          },
+          "answer": "C",
+          "explainAnswer": "The memorandum states that confidential documents must be disposed of in locked shredding consoles."
+        }
+      ]
+    },
+    {
+      "groupId": 3,
+      "passageType": "single",
+      "passage": "To: All Department Heads <dept-heads@veritasconsulting.com>\nFrom: Sarah Jenkins, Chief Financial Officer <s.jenkins@veritasconsulting.com>\nDate: August 14\nSubject: New Electronic Expense Reporting Protocol\n\nDear Team,\n\nStarting September 1, Veritas Consulting will officially transition to the ConcurExpense digital platform for all corporate reimbursement requests. Paper-based expense forms will no longer be accepted by the accounting department after August 31.\n\nTo ensure a smooth transition, all employees must complete a mandatory 30-minute online training module on how to scan receipts and categorize corporate card transactions. The training portal will be accessible via the employee intranet starting August 18.\n\nPlease ensure that everyone in your respective divisions completes the module no later than August 28. If your team members experience any technical issues during registration, please contact the IT Helpdesk at extension 4402.\n\nThank you for your cooperation in modernizing our administrative processes.\n\nBest regards,\nSarah Jenkins\nCFO, Veritas Consulting",
+      "questions": [
+        {
+          "id": 5,
+          "question": "What change is being announced in the email?",
+          "options": {
+            "A": "Transition to a digital expense platform",
+            "B": "Closure of the accounting department",
+            "C": "Increase in employee travel allowances",
+            "D": "Introduction of a new payroll schedule"
+          },
+          "answer": "A",
+          "explainAnswer": "The email announces that Veritas Consulting will transition to the ConcurExpense digital platform for reimbursement requests."
+        },
+        {
+          "id": 6,
+          "question": "By what date must employees complete the mandatory training module?",
+          "options": {
+            "A": "August 14",
+            "B": "August 18",
+            "C": "August 28",
+            "D": "September 1"
+          },
+          "answer": "C",
+          "explainAnswer": "Employees are required to complete the training module no later than August 28."
+        },
+        {
+          "id": 7,
+          "question": "Who should employees contact if they encounter technical issues?",
+          "options": {
+            "A": "The CFO",
+            "B": "The IT Helpdesk",
+            "C": "Human Resources",
+            "D": "External auditors"
+          },
+          "answer": "B",
+          "explainAnswer": "The email instructs employees with technical issues during registration to contact the IT Helpdesk."
+        }
+      ]
+    },
+    {
+      "groupId": 4,
+      "passageType": "single",
+      "passage": "SAN JOSE, CA — SolarTech Innovations, a leader in high-efficiency photovoltaic panels, announced today that it will invest $45 million to construct a state-of-the-art manufacturing facility in Austin, Texas.\n\nThe new 150,000-square-foot facility is expected to create over 350 clean energy jobs in engineering, assembly, and logistics over the next two years. Construction is slated to begin in October, with commercial production anticipated to commence by December 2027.\n\n'Expanding our manufacturing footprint in Texas allows us to meet the soaring demand for residential solar solutions across North America,' stated Elena Rostova, CEO of SolarTech Innovations. Qualified candidates interested in employment opportunities are encouraged to visit www.solartechinnovations.com/careers.",
+      "questions": [
+        {
+          "id": 8,
+          "question": "What is the main subject of the press release?",
+          "options": {
+            "A": "A company bankruptcy filing",
+            "B": "An executive retirement announcement",
+            "C": "A recall of defective solar panels",
+            "D": "The construction of a new manufacturing facility"
+          },
+          "answer": "D",
+          "explainAnswer": "The press release announces SolarTech Innovations' plan to construct a new manufacturing facility in Austin."
+        },
+        {
+          "id": 9,
+          "question": "How many jobs will the new facility create?",
+          "options": {
+            "A": "350",
+            "B": "150",
+            "C": "450",
+            "D": "1,000"
+          },
+          "answer": "A",
+          "explainAnswer": "The passage says the facility is expected to create over 350 clean energy jobs."
+        },
+        {
+          "id": 10,
+          "question": "Where can job applicants find employment information?",
+          "options": {
+            "A": "At local employment agencies in San Jose",
+            "B": "On the company's careers website",
+            "C": "By calling the CEO directly",
+            "D": "In local newspaper classifieds"
+          },
+          "answer": "B",
+          "explainAnswer": "Applicants are directed to SolarTech Innovations' careers website for employment opportunities."
+        }
+      ]
+    },
+    {
+      "groupId": 5,
+      "passageType": "single",
+      "passage": "Customer Review: Grand Harbor Hotel & Suites\nReviewed by: Marcus Thorne (Stay Date: August 12-15)\nRating: 4.5 / 5 Stars\n\nMy business trip to Seattle was overall very pleasant thanks to the staff at Grand Harbor Hotel. The executive suite was spacious, quiet, and equipped with high-speed Wi-Fi, which made working in the evening seamless. The complimentary breakfast buffet offered a great selection of fresh fruit and pastries.\n\nThe only minor drawback was that the fitness center was closed for routine maintenance on Wednesday afternoon. However, the concierge staff promptly offered me a free day pass to a partner gym down the street. I will definitely stay here again on my next visit.",
+      "questions": [
+        {
+          "id": 11,
+          "question": "What is Marcus Thorne's overall opinion of his hotel stay?",
+          "options": {
+            "A": "Highly dissatisfied",
+            "B": "Completely indifferent",
+            "C": "Mostly positive",
+            "D": "Confused by charges"
+          },
+          "answer": "C",
+          "explainAnswer": "Marcus describes his stay as very pleasant and says he will stay again, indicating a mostly positive opinion."
+        },
+        {
+          "id": 12,
+          "question": "What issue did Mr. Thorne encounter on Wednesday afternoon?",
+          "options": {
+            "A": "His room keycard stopped working",
+            "B": "His airport shuttle was delayed",
+            "C": "The breakfast buffet was sold out",
+            "D": "The fitness center was closed for maintenance"
+          },
+          "answer": "D",
+          "explainAnswer": "The review states that the fitness center was closed for routine maintenance on Wednesday afternoon."
+        },
+        {
+          "id": 13,
+          "question": "How did the concierge staff resolve the issue?",
+          "options": {
+            "A": "They offered a free day pass to a nearby partner gym",
+            "B": "They refunded his entire room charge",
+            "C": "They upgraded his room to a presidential suite",
+            "D": "They gave him a free massage voucher"
+          },
+          "answer": "A",
+          "explainAnswer": "The concierge offered Marcus a free day pass to a partner gym nearby."
+        }
+      ]
+    },
+    {
+      "groupId": 6,
+      "passageType": "single",
+      "passage": "Oakridge Public Library — Community Announcement\n\nStarting October 1, the Oakridge Public Library will extend its operating hours to better serve students and working professionals. The main branch will remain open until 9:00 P.M. Monday through Thursday, and until 6:00 P.M. on Fridays and Saturdays.\n\nIn addition, library cardholders can now access over 50,000 e-books, audiobooks, and digital academic journals through our updated mobile app, LibbyConnect. Simply log in with your 14-digit library card number and PIN to start borrowing digital titles for up to 21 days free of charge.",
+      "questions": [
+        {
+          "id": 14,
+          "question": "What change is announced regarding the library main branch?",
+          "options": {
+            "A": "Relocation to a new building",
+            "B": "Extension of operating hours",
+            "C": "Introduction of book rental fees",
+            "D": "Closure of the children's section"
+          },
+          "answer": "B",
+          "explainAnswer": "The announcement says the main branch will extend its operating hours starting October 1."
+        },
+        {
+          "id": 15,
+          "question": "What can library cardholders do using the LibbyConnect app?",
+          "options": {
+            "A": "Reserve study rooms for private events",
+            "B": "Purchase physical hardcover books at a discount",
+            "C": "Borrow e-books and audiobooks for up to 21 days",
+            "D": "Print documents remotely"
+          },
+          "answer": "C",
+          "explainAnswer": "Cardholders can use LibbyConnect to borrow digital titles, including e-books and audiobooks, for up to 21 days."
+        },
+        {
+          "id": 16,
+          "question": "What information is needed to log into the mobile app?",
+          "options": {
+            "A": "A credit card number",
+            "B": "A social security number",
+            "C": "A passport number",
+            "D": "A 14-digit library card number and PIN"
+          },
+          "answer": "D",
+          "explainAnswer": "The announcement instructs users to log in with their 14-digit library card number and PIN."
+        }
+      ]
+    },
+    {
+      "groupId": 7,
+      "passageType": "single",
+      "passage": "GlobalBridge Language Solutions — Fast & Accurate Business Translation\n\nAre you expanding your company into international markets? GlobalBridge provides certified translation and localization services in over 40 languages, including Spanish, Mandarin, Japanese, German, and French.\n\nOur team of over 200 native-speaking linguists specializes in legal contracts, technical software manuals, marketing websites, and medical compliance documentation. We guarantee a 48-hour turnaround time for standard documents up to 5,000 words.\n\nSpecial Offer: Request a free quote before November 30 and receive a 15% discount on your first localization project. Email your documents to project@globalbridgelanguages.com to get started!",
+      "questions": [
+        {
+          "id": 17,
+          "question": "What service does GlobalBridge Language Solutions offer?",
+          "options": {
+            "A": "Certified translation and localization services",
+            "B": "Language tutoring for children",
+            "C": "International freight shipping",
+            "D": "Web hosting server maintenance"
+          },
+          "answer": "A",
+          "explainAnswer": "GlobalBridge provides certified translation and localization services in more than 40 languages."
+        },
+        {
+          "id": 18,
+          "question": "What turnaround time is guaranteed for standard documents?",
+          "options": {
+            "A": "24 hours",
+            "B": "48 hours",
+            "C": "7 days",
+            "D": "14 days"
+          },
+          "answer": "B",
+          "explainAnswer": "The company guarantees a 48-hour turnaround for standard documents up to 5,000 words."
+        },
+        {
+          "id": 19,
+          "question": "How can clients qualify for a 15% discount?",
+          "options": {
+            "A": "By translating documents over 10,000 words",
+            "B": "By paying in cash",
+            "C": "By requesting a free quote before November 30",
+            "D": "By referring a new corporate client"
+          },
+          "answer": "C",
+          "explainAnswer": "Clients qualify for the 15% discount by requesting a free quote before November 30."
+        }
+      ]
+    },
+    {
+      "groupId": 8,
+      "passageType": "single",
+      "passage": "SAN FRANCISCO — The rapid shift toward hybrid work models over the past three years has fueled unprecedented expansion in the flexible coworking space sector. According to a new report published by Urban Real Estate Insights, flexible workspace inventory in major U.S. metropolitan areas grew by 34% in the last fiscal year alone.\n\nCorporate employers are increasingly opting for short-term, lease-flexible hub spaces rather than binding 10-year commercial leases. [1] This shift allows companies to scale office capacity dynamically based on employee attendance patterns. [2] Consequently, major coworking providers like FlexDesk and Workspace Hub are adding high-speed fiber internet, soundproof phone booths, and premium conference amenities to cater to enterprise clients. [3] Real estate analysts predict that flexible workspaces will account for nearly 15% of total commercial office stock by 2030. [4]",
+      "questions": [
+        {
+          "id": 20,
+          "question": "What is the main topic of the article?",
+          "options": {
+            "A": "Rising residential rent prices in San Francisco",
+            "B": "New tax incentives for commercial landlords",
+            "C": "Safety regulations for high-rise construction",
+            "D": "The growth of the flexible coworking space sector"
+          },
+          "answer": "D",
+          "explainAnswer": "The article focuses on the rapid expansion and growing use of flexible coworking spaces."
+        },
+        {
+          "id": 21,
+          "question": "By what percentage did flexible workspace inventory grow last fiscal year?",
+          "options": {
+            "A": "10%",
+            "B": "34%",
+            "C": "15%",
+            "D": "50%"
+          },
+          "answer": "B",
+          "explainAnswer": "The report states that flexible workspace inventory grew by 34% in the last fiscal year."
+        },
+        {
+          "id": 22,
+          "question": "Why are corporate employers preferring short-term leases?",
+          "options": {
+            "A": "To scale office capacity dynamically",
+            "B": "To eliminate employee salaries",
+            "C": "To avoid paying property taxes",
+            "D": "To sell office furniture"
+          },
+          "answer": "A",
+          "explainAnswer": "Short-term flexible spaces allow companies to adjust office capacity according to employee attendance patterns."
+        },
+        {
+          "id": 23,
+          "question": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? 'For example, many tech firms now allow staff to work three days in-office and two days remotely.'",
+          "options": {
+            "A": "[1]",
+            "B": "[3]",
+            "C": "[2]",
+            "D": "[4]"
+          },
+          "answer": "C",
+          "explainAnswer": "The example describes employee attendance patterns and therefore fits best immediately after the statement about dynamically scaling office capacity at position [2]."
+        }
+      ]
+    },
+    {
+      "groupId": 9,
+      "passageType": "single",
+      "passage": "Vanguard Tech Solutions — Career Opportunity\nPosition: Senior Full-Stack Software Engineer\nLocation: Austin, TX (Hybrid: 2 days remote)\nSalary: $135,000 – $155,000 + Stock Options\n\nAbout Us:\nVanguard Tech Solutions is an enterprise Cloud analytics provider serving Fortune 500 financial institutions. We are seeking an experienced Senior Full-Stack Engineer to lead the development of our next-generation data processing engine.\n\nKey Responsibilities:\n• Architect scalable REST APIs and microservices using Java Spring Boot and React.\n• Optimize PostgreSQL database queries to maintain sub-50ms latency under high CCU loads.\n• Mentor junior developers and participate in code reviews.\n\nQualifications:\n• Bachelor's degree in Computer Science or related engineering discipline.\n• Minimum 5 years of professional software development experience.\n• Proficiency in Docker, Kubernetes, and AWS Cloud infrastructure.\n\nTo Apply:\nSubmit your resume and GitHub portfolio link to careers@vanguardtech.com before October 15.",
+      "questions": [
+        {
+          "id": 24,
+          "question": "What position is Vanguard Tech Solutions hiring for?",
+          "options": {
+            "A": "Chief Financial Officer",
+            "B": "Graphic UI Designer",
+            "C": "Human Resources Coordinator",
+            "D": "Senior Full-Stack Software Engineer"
+          },
+          "answer": "D",
+          "explainAnswer": "The job advertisement lists the position as Senior Full-Stack Software Engineer."
+        },
+        {
+          "id": 25,
+          "question": "How many years of professional experience are required?",
+          "options": {
+            "A": "1 year",
+            "B": "3 years",
+            "C": "Minimum 5 years",
+            "D": "10 years"
+          },
+          "answer": "C",
+          "explainAnswer": "The qualifications require a minimum of five years of professional software development experience."
+        },
+        {
+          "id": 26,
+          "question": "Which technologies are mentioned in the responsibilities section?",
+          "options": {
+            "A": "Java Spring Boot and React",
+            "B": "Python and Django",
+            "C": "PHP and WordPress",
+            "D": "Ruby on Rails"
+          },
+          "answer": "A",
+          "explainAnswer": "The responsibilities specifically mention building APIs and microservices using Java Spring Boot and React."
+        },
+        {
+          "id": 27,
+          "question": "By what date should candidates submit their application?",
+          "options": {
+            "A": "September 1",
+            "B": "October 15",
+            "C": "November 30",
+            "D": "December 31"
+          },
+          "answer": "B",
+          "explainAnswer": "Candidates are instructed to submit their resume and GitHub portfolio link before October 15."
+        }
+      ]
+    },
+    {
+      "groupId": 10,
+      "passageType": "single",
+      "passage": "Vanguard Tech Solutions — Maintenance Schedule Notice\n\nPlease be advised that our IT Infrastructure team will perform essential database re-indexing and server operating system updates this Saturday, November 12.\n\nSchedule Window:\n• 10:00 P.M. – 11:30 P.M.: Internal HR Portal & Expense System offline.\n• 11:30 P.M. – 2:00 A.M.: Customer Relationship Management (CRM) database offline.\n• 2:00 A.M. – 4:00 A.M.: Final verification & backup sync.\n\nAll corporate systems are expected to resume normal operations by 4:00 A.M. on Sunday, November 13. Please save all pending work before 10:00 P.M. Saturday.",
+      "questions": [
+        {
+          "id": 28,
+          "question": "When will the CRM database be offline?",
+          "options": {
+            "A": "10:00 P.M. – 11:30 P.M.",
+            "B": "All day Sunday",
+            "C": "2:00 A.M. – 4:00 A.M.",
+            "D": "11:30 P.M. – 2:00 A.M."
+          },
+          "answer": "D",
+          "explainAnswer": "The maintenance schedule lists the CRM database as offline from 11:30 P.M. to 2:00 A.M."
+        },
+        {
+          "id": 29,
+          "question": "When are all systems expected to resume normal operations?",
+          "options": {
+            "A": "Saturday at 10:00 P.M.",
+            "B": "Sunday at 4:00 A.M.",
+            "C": "Monday at 9:00 A.M.",
+            "D": "Sunday at noon"
+          },
+          "answer": "B",
+          "explainAnswer": "The notice states that all corporate systems are expected to resume normal operations by 4:00 A.M. on Sunday, November 13."
+        }
+      ]
+    },
+    {
+      "groupId": 11,
+      "passageType": "multiple",
+      "passages": [
+        {
+          "documentId": 1,
+          "documentType": "email",
+          "title": "Order Inquiry — Ergonomic Office Chairs",
+          "content": "To: Sales Team, OfficePro Furniture <sales@officeprofurniture.com>\nFrom: Clara Vance, Purchasing Manager <c.vance@novatechsolutions.com>\nDate: September 10\nSubject: Order Inquiry — Ergonomic Office Chairs\n\nDear Sales Team,\n\nNovaTech Solutions is in the process of refurnishing our software engineering department. We would like to place an order for 40 ErgoFlex Mesh Task Chairs (Model EF-200) listed on your website at $250 each. Additionally, we require 10 Standing Desk Converters (Model SD-100) listed at $180 each.\n\nAs a long-standing corporate client, we expect our standard 10% volume discount applied to the total order. Please send us an official purchase order confirmation along with estimated shipping dates to our Austin office.\n\nSincerely,\nClara Vance\nPurchasing Manager, NovaTech Solutions"
+        },
+        {
+          "documentId": 2,
+          "documentType": "purchase_order",
+          "title": "Purchase Order Confirmation",
+          "content": "OfficePro Furniture Inc. — Purchase Order #PO-8842\nCustomer: NovaTech Solutions\nDelivery Address: 450 Innovation Way, Austin, TX 78701\nDate: September 12\n\nItems Ordered:\n1. 40 x ErgoFlex Mesh Task Chairs (Model EF-200) @ $250 = $10,000\n2. 10 x Standing Desk Converters (Model SD-100) @ $180 = $1,800\nSubtotal: $11,800\nCorporate Volume Discount (10%): -$1,180\nShipping & Handling: FREE (Qualifies for free freight on orders over $5,000)\nTotal Amount Due: $10,620\n\nEstimated Delivery Date: September 18 via Express Freight Freightways."
+        }
+      ],
+      "questions": [
+        {
+          "id": 30,
+          "question": "Why did Clara Vance send the email to OfficePro Furniture?",
+          "options": {
+            "A": "To place an inquiry order for office furniture",
+            "B": "To request a job interview",
+            "C": "To report a broken chair",
+            "D": "To cancel a store lease"
+          },
+          "answer": "A",
+          "explainAnswer": "Clara wrote to inquire about ordering office furniture for NovaTech Solutions' software engineering department."
+        },
+        {
+          "id": 31,
+          "question": "How much did NovaTech Solutions save from the corporate volume discount?",
+          "options": {
+            "A": "$500",
+            "B": "$1,800",
+            "C": "$1,180",
+            "D": "$10,620"
+          },
+          "answer": "C",
+          "explainAnswer": "The purchase order shows a 10% corporate volume discount of $1,180."
+        },
+        {
+          "id": 32,
+          "question": "Why was shipping free for Purchase Order #PO-8842?",
+          "options": {
+            "A": "NovaTech picked up the items at the warehouse",
+            "B": "The delivery address was within 5 miles",
+            "C": "Shipping was paid by a third party",
+            "D": "The total order exceeded $5,000"
+          },
+          "answer": "D",
+          "explainAnswer": "The purchase order states that free freight applies to orders over $5,000, and this order qualifies."
+        },
+        {
+          "id": 33,
+          "question": "When is the furniture order estimated to be delivered to Austin?",
+          "options": {
+            "A": "September 10",
+            "B": "September 18",
+            "C": "September 12",
+            "D": "September 30"
+          },
+          "answer": "B",
+          "explainAnswer": "The purchase order gives an estimated delivery date of September 18."
+        },
+        {
+          "id": 34,
+          "question": "Which department at NovaTech Solutions is being refurnished?",
+          "options": {
+            "A": "The software engineering department",
+            "B": "The human resources division",
+            "C": "The legal compliance department",
+            "D": "The accounting office"
+          },
+          "answer": "A",
+          "explainAnswer": "Clara states that NovaTech Solutions is refurnishing its software engineering department."
+        }
+      ]
+    },
+    {
+      "groupId": 12,
+      "passageType": "multiple",
+      "passages": [
+        {
+          "documentId": 1,
+          "documentType": "webpage",
+          "title": "Skyline Eco-Lodge — Mountain Resort Packages",
+          "content": "Nestled in the Cascade Mountains, Skyline Eco-Lodge offers luxury eco-friendly accommodations with solar-heated chalets, private hiking trails, and farm-to-table dining.\n\nResort Amenities:\n• Complimentary organic breakfast served from 7:00 A.M. to 10:00 A.M.\n• Guided wildlife photography tours available every Tuesday and Saturday ($40 per guest).\n• Free shuttle service to and from Summit Train Station.\n• On-site spa treatments (Advance booking required at least 24 hours prior)."
+        },
+        {
+          "documentId": 2,
+          "documentType": "customer_review",
+          "title": "Customer Review",
+          "content": "Reviewer: David Miller (Stay Date: July 8-11)\nRating: 5 / 5 Stars\n\nMy stay at Skyline Eco-Lodge was absolute perfection! The chalet was immaculate, and the view of the valley at sunrise was breathtaking. I took advantage of the guided wildlife photography tour on Saturday morning led by guide Thomas—we spotted bald eagles and deer!\n\nI also booked a deep-tissue massage at the spa on Friday. The front desk staff was extremely accommodating when I called Thursday morning to reserve the treatment slot. The shuttle driver, Peter, was punctual and friendly. I highly recommend Skyline Eco-Lodge to anyone seeking a peaceful mountain getaway."
+        }
+      ],
+      "questions": [
+        {
+          "id": 35,
+          "question": "Where is Skyline Eco-Lodge located?",
+          "options": {
+            "A": "In downtown Seattle",
+            "B": "Near a beach resort in Florida",
+            "C": "In the Cascade Mountains",
+            "D": "Near a desert national park"
+          },
+          "answer": "C",
+          "explainAnswer": "The webpage states that Skyline Eco-Lodge is nestled in the Cascade Mountains."
+        },
+        {
+          "id": 36,
+          "question": "How much did David Miller pay for the guided photography tour on Saturday?",
+          "options": {
+            "A": "Free",
+            "B": "$100",
+            "C": "$70",
+            "D": "$40"
+          },
+          "answer": "D",
+          "explainAnswer": "The resort information states that guided wildlife photography tours cost $40 per guest."
+        },
+        {
+          "id": 37,
+          "question": "How did Mr. Miller comply with the lodge's spa booking policy?",
+          "options": {
+            "A": "He paid for the spa in cash upon arrival",
+            "B": "He booked the massage on Thursday morning for Friday",
+            "C": "He brought his own massage oils",
+            "D": "He booked six months in advance"
+          },
+          "answer": "B",
+          "explainAnswer": "The policy requires booking at least 24 hours in advance, and David booked his Friday massage on Thursday morning."
+        },
+        {
+          "id": 38,
+          "question": "What is the name of the shuttle driver mentioned in the review?",
+          "options": {
+            "A": "Peter",
+            "B": "Thomas",
+            "C": "David",
+            "D": "Marcus"
+          },
+          "answer": "A",
+          "explainAnswer": "David's review identifies the shuttle driver as Peter."
+        },
+        {
+          "id": 39,
+          "question": "What rating did Mr. Miller give to Skyline Eco-Lodge?",
+          "options": {
+            "A": "3 Stars",
+            "B": "4 Stars",
+            "C": "1 Star",
+            "D": "5 Stars"
+          },
+          "answer": "D",
+          "explainAnswer": "The customer review gives Skyline Eco-Lodge a rating of 5 out of 5 stars."
+        }
+      ]
+    },
+    {
+      "groupId": 13,
+      "passageType": "multiple",
+      "passages": [
+        {
+          "documentId": 1,
+          "documentType": "event_schedule",
+          "title": "International Renewable Energy Expo (IRE-2026)",
+          "content": "International Renewable Energy Expo (IRE-2026)\nLocation: Convention Center Hall B, Denver, CO\nDate: October 20\n\nMorning Sessions:\n• 9:00 A.M. – 10:30 A.M.: Solar Grid Integration (Room 101) — Speaker: Dr. Alan Turing\n• 10:45 A.M. – 12:15 P.M.: Wind Turbine Blade Efficiency (Room 102) — Speaker: Dr. Elena Rostova\n• 1:30 P.M. – 3:00 P.M.: Hydrogen Fuel Cell Storage (Room 103) — Speaker: Prof. Marcus Vance"
+        },
+        {
+          "documentId": 2,
+          "documentType": "email",
+          "title": "Speaker Travel & AV Equipment Confirmation",
+          "content": "To: Dr. Elena Rostova <e.rostova@solartech.com>\nFrom: Event Logistics Committee <logistics@ire2026.org>\nDate: October 12\nSubject: Speaker Travel & AV Equipment Confirmation\n\nDear Dr. Rostova,\n\nThank you for confirming your presentation on 'Wind Turbine Blade Efficiency' at IRE-2026. As requested, we have reserved a dual-projector setup and a wireless lapel microphone for your session in Room 102. Your flight arriving at Denver International Airport at 8:15 A.M. on October 20 qualifies for complimentary private sedan transfer to the convention center."
+        },
+        {
+          "documentId": 3,
+          "documentType": "feedback_survey",
+          "title": "Feedback Survey",
+          "content": "Attendee: Laura Martinez, Senior Energy Analyst\nOverall Event Rating: 4.8 / 5.0\n\nFeedback Comments:\nI attended Dr. Elena Rostova's presentation in Room 102 on October 20. The insights on composite materials for turbine blades were exceptional. The audio visual setup was flawless, and the Q&A session was very engaging. I highly recommend publishing her presentation slides on the IRE website."
+        }
+      ],
+      "questions": [
+        {
+          "id": 40,
+          "question": "What topic did Dr. Elena Rostova present at IRE-2026?",
+          "options": {
+            "A": "Wind Turbine Blade Efficiency",
+            "B": "Solar Grid Integration",
+            "C": "Hydrogen Fuel Cell Storage",
+            "D": "Nuclear Power Plant Safety"
+          },
+          "answer": "A",
+          "explainAnswer": "The event schedule and confirmation email state that Dr. Rostova presented on Wind Turbine Blade Efficiency."
+        },
+        {
+          "id": 41,
+          "question": "Where and when did Dr. Rostova's session take place?",
+          "options": {
+            "A": "Room 101 at 9:00 A.M.",
+            "B": "Room 102 at 10:45 A.M.",
+            "C": "Room 103 at 1:30 P.M.",
+            "D": "Room 204 at 4:00 P.M."
+          },
+          "answer": "B",
+          "explainAnswer": "The event schedule lists Dr. Rostova's session in Room 102 from 10:45 A.M. to 12:15 P.M."
+        },
+        {
+          "id": 42,
+          "question": "What AV equipment was reserved for Dr. Rostova's session?",
+          "options": {
+            "A": "A 3D printer and virtual reality goggles",
+            "B": "A soundproof glass booth",
+            "C": "A dual-projector setup and wireless lapel microphone",
+            "D": "A laser pointer and flipchart"
+          },
+          "answer": "C",
+          "explainAnswer": "The confirmation email says a dual-projector setup and wireless lapel microphone were reserved."
+        },
+        {
+          "id": 43,
+          "question": "What recommendation did Laura Martinez make in the feedback survey?",
+          "options": {
+            "A": "Reduce the ticket price for next year",
+            "B": "Serve warm lunch meals",
+            "C": "Change the convention center location",
+            "D": "Publish Dr. Rostova's presentation slides on the website"
+          },
+          "answer": "D",
+          "explainAnswer": "Laura recommends publishing Dr. Rostova's presentation slides on the IRE website."
+        },
+        {
+          "id": 44,
+          "question": "How will Dr. Rostova travel from Denver International Airport to the venue?",
+          "options": {
+            "A": "Via a complimentary private sedan transfer",
+            "B": "By public subway train",
+            "C": "By rental car",
+            "D": "By city taxi"
+          },
+          "answer": "A",
+          "explainAnswer": "The email confirms that her arrival qualifies for a complimentary private sedan transfer."
+        }
+      ]
+    },
+    {
+      "groupId": 14,
+      "passageType": "multiple",
+      "passages": [
+        {
+          "documentId": 1,
+          "documentType": "internal_memorandum",
+          "title": "Laptop Refresh Program 2026",
+          "content": "To: Department Managers, Apex Global\nFrom: IT Infrastructure Committee\nDate: October 1\nSubject: Laptop Refresh Program 2026\n\nAll legacy laptops issued prior to 2023 will be replaced this month under our hardware refresh program. Each department manager must submit a equipment order form to Apex Supplies by October 10. Standard laptops cost $1,200 per unit, while high-performance graphics workstations cost $2,200 per unit. Shipping is covered under our corporate vendor agreement."
+        },
+        {
+          "documentId": 2,
+          "documentType": "invoice",
+          "title": "Invoice #INV-4921",
+          "content": "Apex Supplies Ltd. — Invoice #INV-4921\nBill To: Apex Global Accounting Department\nDate: October 12\n\nOrder Items:\n1. 10 x Standard Business Laptops @ $1,200 = $12,000\n2. 5 x High-Performance Graphics Workstations @ $2,200 = $11,000\nSubtotal: $23,000\nCorporate Loyalty Rebate (5%): -$1,150\nTotal Amount Due: $21,850\nPayment Due Date: November 12"
+        },
+        {
+          "documentId": 3,
+          "documentType": "email",
+          "title": "Invoice #INV-4921 Inquiry",
+          "content": "To: Apex Supplies Billing <billing@apexsupplies.com>\nFrom: Clara Vance <c.vance@apexglobal.com>\nDate: October 15\nSubject: Invoice #INV-4921 Inquiry\n\nDear Billing Department,\n\nI am writing regarding Invoice #INV-4921 received on October 12. We noticed that the 5% Corporate Loyalty Rebate of $1,150 was applied to the subtotal. However, under our updated Q4 agreement signed last week, Apex Global is entitled to an 8% loyalty rebate on orders exceeding $20,000.\n\nPlease issue a revised invoice reflecting the 8% rebate (-$1,840) so our accounting department can process payment before November 12. Thank you!"
+        }
+      ],
+      "questions": [
+        {
+          "id": 45,
+          "question": "What program is described in Document 1?",
+          "options": {
+            "A": "An employee wellness initiative",
+            "B": "The Laptop Refresh Program 2026",
+            "C": "An annual office party planning",
+            "D": "A software piracy audit"
+          },
+          "answer": "B",
+          "explainAnswer": "Document 1 is an internal memorandum describing the Laptop Refresh Program 2026."
+        },
+        {
+          "id": 46,
+          "question": "According to Document 1, how much does a high-performance graphics workstation cost?",
+          "options": {
+            "A": "$1,200",
+            "B": "$1,840",
+            "C": "$2,200",
+            "D": "$23,000"
+          },
+          "answer": "C",
+          "explainAnswer": "Document 1 states that each high-performance graphics workstation costs $2,200."
+        },
+        {
+          "id": 47,
+          "question": "Why did Clara Vance write the email to Apex Supplies Billing?",
+          "options": {
+            "A": "To report broken screens on 5 laptops",
+            "B": "To change the delivery address",
+            "C": "To cancel the entire hardware order",
+            "D": "To request a revised invoice reflecting an 8% rebate"
+          },
+          "answer": "D",
+          "explainAnswer": "Clara asks Apex Supplies to issue a revised invoice applying the 8% loyalty rebate allowed under the updated agreement."
+        },
+        {
+          "id": 48,
+          "question": "How much rebate does Clara Vance claim Apex Global is entitled to?",
+          "options": {
+            "A": "$1,840",
+            "B": "$1,150",
+            "C": "$2,200",
+            "D": "$21,850"
+          },
+          "answer": "A",
+          "explainAnswer": "Clara states that Apex Global is entitled to an 8% rebate of $1,840 on the order."
+        },
+        {
+          "id": 49,
+          "question": "By when must Apex Global process payment for the invoice?",
+          "options": {
+            "A": "October 10",
+            "B": "November 12",
+            "C": "October 12",
+            "D": "December 1"
+          },
+          "answer": "B",
+          "explainAnswer": "The invoice lists November 12 as the payment due date, and Clara says payment will be processed before that date."
+        }
+      ]
+    },
+    {
+      "groupId": 15,
+      "passageType": "multiple",
+      "passages": [
+        {
+          "documentId": 1,
+          "documentType": "job_advertisement",
+          "title": "Horizon Financial Group — Career Opportunity",
+          "content": "Horizon Financial Group — Career Opportunity\nPosition: Senior Financial Analyst\nLocation: Denver, CO\n\nJob Summary:\nHorizon Financial Group is seeking a Senior Financial Analyst to manage corporate portfolio modeling and client risk assessments. Candidates must possess a Master's degree in Finance or Economics, a minimum of 6 years of experience in corporate valuation, and advanced proficiency in SQL and Financial Modeling software."
+        },
+        {
+          "documentId": 2,
+          "documentType": "cover_email",
+          "title": "Application — Senior Financial Analyst Position",
+          "content": "To: HR Hiring Committee <careers@horizonfinancial.com>\nFrom: David Miller <d.miller@financepro.com>\nDate: October 18\nSubject: Application — Senior Financial Analyst Position\n\nDear Hiring Committee,\n\nI am writing to express my strong interest in the Senior Financial Analyst position. I hold a Master's degree in Finance from Denver State University and have 7 years of professional valuation experience at Capital Advisory Services.\n\nAttached are my resume, portfolio of financial models, and three professional references. I look forward to discussing how my experience aligns with your team's goals.\n\nBest regards,\nDavid Miller"
+        },
+        {
+          "documentId": 3,
+          "documentType": "interview_confirmation_email",
+          "title": "Interview Invitation — Senior Financial Analyst",
+          "content": "To: David Miller <d.miller@financepro.com>\nFrom: Sarah Jenkins, HR Director <s.jenkins@horizonfinancial.com>\nDate: October 22\nSubject: Interview Invitation — Senior Financial Analyst\n\nDear Mr. Miller,\n\nWe were highly impressed by your resume and financial modeling portfolio. We would like to invite you for an in-person panel interview at our Denver headquarters on Tuesday, October 28 at 10:00 A.M.\n\nPlease confirm your availability by October 25. Upon arrival, please check in at the reception desk on Floor 12 and present a valid photo ID. We look forward to meeting you!"
+        }
+      ],
+      "questions": [
+        {
+          "id": 50,
+          "question": "What educational qualification is required for the Senior Financial Analyst position?",
+          "options": {
+            "A": "A High School Diploma",
+            "B": "A Medical License",
+            "C": "A Law degree",
+            "D": "A Master's degree in Finance or Economics"
+          },
+          "answer": "D",
+          "explainAnswer": "The job advertisement requires candidates to possess a Master's degree in Finance or Economics."
+        },
+        {
+          "id": 51,
+          "question": "How many years of experience does David Miller have?",
+          "options": {
+            "A": "3 years",
+            "B": "5 years",
+            "C": "7 years",
+            "D": "10 years"
+          },
+          "answer": "C",
+          "explainAnswer": "David states in his application that he has 7 years of professional valuation experience."
+        },
+        {
+          "id": 52,
+          "question": "When and where is David Miller's interview scheduled?",
+          "options": {
+            "A": "Online via Zoom on October 18",
+            "B": "At Denver headquarters on Tuesday, October 28 at 10:00 A.M.",
+            "C": "In Austin on November 1",
+            "D": "At Capital Advisory Services on October 25"
+          },
+          "answer": "B",
+          "explainAnswer": "The interview confirmation schedules an in-person panel interview at the Denver headquarters on Tuesday, October 28 at 10:00 A.M."
+        },
+        {
+          "id": 53,
+          "question": "What must David Miller present at the reception desk upon arrival?",
+          "options": {
+            "A": "A valid photo ID",
+            "B": "His original diploma",
+            "C": "A printed copy of the job ad",
+            "D": "A medical health check certificate"
+          },
+          "answer": "A",
+          "explainAnswer": "The interview confirmation instructs David to present a valid photo ID when checking in at the reception desk."
+        },
+        {
+          "id": 54,
+          "question": "By when must David confirm his availability for the interview?",
+          "options": {
+            "A": "October 18",
+            "B": "October 22",
+            "C": "October 25",
+            "D": "October 28"
+          },
+          "answer": "C",
+          "explainAnswer": "The interview confirmation asks David to confirm his availability by October 25."
+        }
+      ]
+    }
+  ]
+}
