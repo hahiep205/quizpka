@@ -1,0 +1,1955 @@
+[
+  {
+    "group": 1,
+    "audio": "p3_g01_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Where do the speakers most likely work?",
+        "options": {
+          "A": "At a logistics fulfillment center.",
+          "B": "At a hardware repair shop.",
+          "C": "At a software development firm.",
+          "D": "At a commercial bank branch."
+        },
+        "correct_answer": "A",
+        "correct_text": "At a logistics fulfillment center.",
+        "audio_transcript": "Woman: ...bulk order of barcode scanners we placed for our new fulfillment center.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng địa điểm làm việc được xác nhận qua cụm 'our new fulfillment center' trong đoạn hội thoại."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Dịch vụ phần cứng. Bẫy thường gặp (Sai) Lưu ý bẫy: Nghe thấy 'barcode scanners' dễ nhầm sang cửa hàng sửa chữa thiết bị."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Công ty phần mềm. Bẫy thường gặp (Sai) Lưu ý bẫy: Mặc dù có nhắc tới 'IT team' cấu hình thiết bị, môi trường chính vẫn là kho logistics."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Chi nhánh ngân hàng. Bẫy thường gặp (Sai) Lưu ý bẫy: Không có thông tin nào liên quan đến hoạt động ngân hàng thương mại."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "fulfillment center",
+            "paraphrases": ["logistics distribution facility", "warehouse hub"],
+            "meaning": "trung tâm phân phối hàng hóa / kho logistics"
+          },
+          {
+            "phrase": "bulk order",
+            "paraphrases": ["large quantity purchase"],
+            "meaning": "đơn hàng số lượng lớn"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Opening Clues - Tập trung lắng nghe 1-2 câu đầu của đoạn thoại để bắt từ khóa chỉ môi trường làm việc (fulfillment center).",
+          "Bước 2: Distinguish Main Hub vs Secondary Dept - Phân biệt nơi làm việc tổng thể (fulfillment center) với các phòng ban hỗ trợ được nhắc tới (IT team).",
+          "Bước 3: Match Facility Paraphrase - Liên kết 'fulfillment center' với danh từ tổng quát 'logistics fulfillment center'."
+        ]
+      },
+      {
+        "id": 2,
+        "question": "What problem does the man mention?",
+        "options": {
+          "A": "The invoice amount was incorrect.",
+          "B": "Some items were out of stock.",
+          "C": "The delivery address was wrong.",
+          "D": "The barcode scanners were damaged."
+        },
+        "correct_answer": "B",
+        "correct_text": "Some items were out of stock.",
+        "audio_transcript": "Man: They mentioned that the shipment was delayed because two items were out of stock...",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Số tiền hóa đơn. Bẫy thường gặp (Sai) Lưu ý bẫy: Không có thông tin nào nhắc tới việc sai sót số tiền trên hóa đơn (invoice amount)."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng sự cố hết hàng (out of stock) gây ra sự chậm trễ giao hàng."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Sai địa chỉ giao hàng. Bẫy thường gặp (Sai) Lưu ý bẫy: Địa chỉ giao hàng không bị nhầm lẫn trong bài nghe."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Máy quét bị hỏng. Bẫy thường gặp (Sai) Lưu ý bẫy: Máy quét bị chậm trễ do thiếu hàng chứ không phải do bị hư hỏng (damaged)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "out of stock",
+            "paraphrases": ["unavailable", "out of inventory"],
+            "meaning": "hết hàng / không có sẵn trong kho"
+          },
+          {
+            "phrase": "delayed",
+            "paraphrases": ["postponed", "pushed back"],
+            "meaning": "bị trì hoãn / giao chậm"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Target Problem Statement - Lắng nghe lượt lời của người nam sau từ nối chỉ nguyên nhân (because...).",
+          "Bước 2: Match Exact Cause Keyword - Bắt chính xác lý do trì hoãn: 'two items were out of stock'.",
+          "Bước 3: Eliminate Unmentioned Issues - Loại bỏ các sự cố tưởng chừng hợp lý (wrong address / damaged goods) nếu bài không đề cập."
+        ]
+      },
+      {
+        "id": 3,
+        "question": "What will the man do next?",
+        "options": {
+          "A": "Cancel the bulk order.",
+          "B": "Call the supplier again.",
+          "C": "Inspect the delivery truck.",
+          "D": "Email an IT supervisor."
+        },
+        "correct_answer": "D",
+        "correct_text": "Email an IT supervisor.",
+        "audio_transcript": "Man: Sure, I'll send an email to the IT supervisor right away.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Hủy đơn hàng. Bẫy thường gặp (Sai) Lưu ý bẫy: Đơn hàng vẫn được chấp nhận lùi lịch sang thứ Năm chứ không bị hủy (cancel)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Hành động đã làm trong quá khứ. Bẫy thường gặp (Sai) Lưu ý bẫy: Nhân vật nam đã gọi cho nhà cung cấp trước đó ('spoke with the supplier'), không phải hành động tiếp theo."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Kiểm tra xe giao hàng. Bẫy thường gặp (Sai) Lưu ý bẫy: Xe giao hàng (delivery truck) được nhắc tới nhưng người nam không đi kiểm tra xe."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng hành động tiếp theo (send an email to the IT supervisor) được cam kết ở cuối đoạn thoại."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "send an email",
+            "paraphrases": ["write a message", "contact electronically"],
+            "meaning": "gửi thư điện tử"
+          },
+          {
+            "phrase": "right away",
+            "paraphrases": ["immediately", "promptly"],
+            "meaning": "ngay lập tức"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Focus on Ending Turns - Tập trung 100% vào lượt lời cuối cùng của nhân vật để tìm hành động tiếp theo (Next Action).",
+          "Bước 2: Watch for Future Verbs - Tìm các động từ chỉ ý định tương lai như 'I'll...', 'Let me...', 'I plan to...'.",
+          "Bước 3: Distinguish Past vs Next Action - Cảnh giác với bẫy hành động vừa hoàn thành ở quá khứ (spoke with the supplier)."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 2,
+    "audio": "p3_g02_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 4,
+        "question": "What field of work are the speakers discussing?",
+        "options": {
+          "A": "Real estate development.",
+          "B": "Financial auditing.",
+          "C": "Biotechnology research.",
+          "D": "Sustainable agriculture."
+        },
+        "correct_answer": "C",
+        "correct_text": "Biotechnology research.",
+        "audio_transcript": "Man: Dr. Chen, have you reviewed the preliminary findings from our clinical trial for the new diagnostic reagent?",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Ngành bất động sản. Bẫy thường gặp (Sai) Lưu ý bẫy: Không có thuật ngữ nào liên quan đến xây dựng hay bất động sản."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Kiểm toán tài chính. Bẫy thường gặp (Sai) Lưu ý bẫy: Mặc dù bài nhắc đến 'target' và 'data', không có từ vựng kiểm toán tài chính."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng lĩnh vực nghiên cứu công nghệ sinh học (Biotechnology research) dựa trên từ vựng chuyên ngành y sinh."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Nông nghiệp bền vững. Bẫy thường gặp (Sai) Lưu ý bẫy: Lĩnh vực thử nghiệm lâm sàng thuốc thử chẩn đoán thuộc y sinh chứ không thuộc nông nghiệp."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "clinical trial",
+            "paraphrases": ["medical research test", "human trial"],
+            "meaning": "thử nghiệm lâm sàng"
+          },
+          {
+            "phrase": "diagnostic reagent",
+            "paraphrases": ["medical testing chemical"],
+            "meaning": "thuốc thử chẩn đoán y tế"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Domain Jargon - Nhận diện từ vựng chuyên ngành độc quyền (clinical trial / diagnostic reagent) trong câu đầu.",
+          "Bước 2: Map to Broad Industry - Liên kết thuật ngữ y sinh với ngành 'Biotechnology research'.",
+          "Bước 3: Reject Generic Business Domains - Loại bỏ các lựa chọn ngành nghề phổ biến (real estate / financial auditing) nếu không xuất hiện từ vựng đặc trưng."
+        ]
+      },
+      {
+        "id": 5,
+        "question": "What does the woman say about the trial results?",
+        "options": {
+          "A": "They exceeded the target accuracy.",
+          "B": "They require additional funding.",
+          "C": "They were rejected by the committee.",
+          "D": "They were incomplete."
+        },
+        "correct_answer": "A",
+        "correct_text": "They exceeded the target accuracy.",
+        "audio_transcript": "Woman: The accuracy rate is over ninety-five percent, which exceeds our initial target.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng thông tin độ chính xác vượt mục tiêu ban đầu ('exceeds our initial target')."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Yêu cầu thêm kinh phí. Bẫy thường gặp (Sai) Lưu ý bẫy: Bài nghe không đề cập tới nhu cầu xin thêm tài trợ hay kinh phí (funding)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Bị hội đồng từ chối. Bẫy thường gặp (Sai) Lưu ý bẫy: Báo cáo mới chuẩn bị nộp cho hội đồng (regulatory board), chưa bị từ chối."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Kết quả chưa hoàn chỉnh. Bẫy thường gặp (Sai) Lưu ý bẫy: Kết quả sơ bộ đã hoàn thành và đạt độ chính xác cao."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "exceed initial target",
+            "paraphrases": ["surpass expected goal", "outperform benchmark"],
+            "meaning": "vượt mức mục tiêu ban đầu"
+          },
+          {
+            "phrase": "accuracy rate",
+            "paraphrases": ["precision percentage"],
+            "meaning": "tỷ lệ độ chính xác"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Speaker 2 Evaluation - Tập trung lắng nghe nhận xét đánh giá kết quả từ người nữ.",
+          "Bước 2: Identify Action Verb 'Exceed' - Bắt động từ chìa khóa 'exceeds' và nối với cụm danh từ 'target accuracy'.",
+          "Bước 3: Eliminate Negative Assumptions - Loại bỏ các phương án mang nghĩa tiêu cực (rejected / incomplete) khi lời nói thể hiện sự tích cực."
+        ]
+      },
+      {
+        "id": 6,
+        "question": "What is the man asked to do by Wednesday?",
+        "options": {
+          "A": "Schedule a board meeting.",
+          "B": "Compile statistical charts.",
+          "C": "Contact a supplier.",
+          "D": "Publish a journal article."
+        },
+        "correct_answer": "B",
+        "correct_text": "Compile statistical charts.",
+        "audio_transcript": "Woman: I'll need your help compiling the statistical charts by Wednesday afternoon...",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Lên lịch họp hội đồng. Bẫy thường gặp (Sai) Lưu ý bẫy: Hội đồng (regulatory board) được nhắc tới là nơi nộp báo cáo, không phải đối tượng lên lịch họp."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng nhiệm vụ nhờ tổng hợp biểu đồ thống kê ('compiling the statistical charts') trước chiều thứ Tư."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Liên hệ nhà cung cấp. Bẫy thường gặp (Sai) Lưu ý bẫy: Không có nhiệm vụ liên hệ nhà cung cấp nào được yêu cầu."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Xuất bản bài báo. Bẫy thường gặp (Sai) Lưu ý bẫy: Bài nghe nói về việc nộp báo cáo cho hội đồng quản lý, không phải đăng tạp chí."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "compile charts",
+            "paraphrases": ["assemble statistical diagrams", "gather data graphs"],
+            "meaning": "tổng hợp biểu đồ thống kê"
+          },
+          {
+            "phrase": "by Wednesday",
+            "paraphrases": ["no later than Wednesday"],
+            "meaning": "trước hoặc chậm nhất là thứ Tư"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Deadline Clue - Tập trung lắng nghe cụm từ mốc thời hạn 'by Wednesday'.",
+          "Bước 2: Capture Verb + Noun - Bắt cặp động từ + danh từ đi kèm thời hạn: 'compiling the statistical charts'.",
+          "Bước 3: Verify Request Target - Xác nhận đây là lời nhờ vả từ người nữ dành cho người nam ('I'll need your help...')."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 3,
+    "audio": "p3_g03_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 7,
+        "question": "Who most likely is the man?",
+        "options": {
+          "A": "A marketing consultant.",
+          "B": "A restaurant patron.",
+          "C": "A travel agent.",
+          "D": "A hotel event manager."
+        },
+        "correct_answer": "D",
+        "correct_text": "A hotel event manager.",
+        "audio_transcript": "Man: Thank you for considering Nexus Grand Hotel. The ballroom is available on that date... accommodates up to three hundred guests...",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Công ty đại diện người gọi. Bẫy thường gặp (Sai) Lưu ý bẫy: Nhân vật nữ gọi từ công ty Lumina Marketing, không phải người nam."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Thực khách nhà hàng. Bẫy thường gặp (Sai) Lưu ý bẫy: Nhân vật nam là nhân viên cung cấp dịch vụ, không phải khách hàng ăn tại nhà hàng."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Đại lý du lịch. Bẫy thường gặp (Sai) Lưu ý bẫy: Nhân vật nam trực tiếp quản lý cơ sở phòng tiệc của khách sạn chứ không bán tour."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng vị trí quản lý sự kiện khách sạn (hotel event manager) tiếp nhận đơn đặt phòng tiệc."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "ballroom booking",
+            "paraphrases": ["event hall reservation"],
+            "meaning": "đặt phòng tiệc / đại sảnh sự kiện"
+          },
+          {
+            "phrase": "accommodate guests",
+            "paraphrases": ["seat attendees", "hold visitors"],
+            "meaning": "sức chứa lượng khách"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Opening Greeting - Lắng nghe câu chào đại diện doanh nghiệp ('Thank you for considering Nexus Grand Hotel').",
+          "Bước 2: Identify Service Provider Role - Nhận diện người cung cấp thông tin sức chứa và dịch vụ tiệc là quản lý sự kiện khách sạn.",
+          "Bước 3: Avoid Speaker Swap Trap - Không nhầm lẫn vai trò công ty của người gọi (Lumina Marketing) với người nhận cuộc gọi."
+        ]
+      },
+      {
+        "id": 8,
+        "question": "What event is the woman planning?",
+        "options": {
+          "A": "A product launch.",
+          "B": "A press conference.",
+          "C": "A corporate anniversary gala.",
+          "D": "A trade exhibition."
+        },
+        "correct_answer": "C",
+        "correct_text": "A corporate anniversary gala.",
+        "audio_transcript": "Woman: ...booking your main ballroom for our corporate anniversary gala on October twelfth.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Ra mắt sản phẩm. Bẫy thường gặp (Sai) Lưu ý bẫy: Không có thông tin giới thiệu sản phẩm mới trong cuộc gọi."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Họp báo. Bẫy thường gặp (Sai) Lưu ý bẫy: Sự kiện được mô tả là tiệc lớn với 300 khách chứ không phải họp báo."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng loại sự kiện tiệc kỷ niệm công ty ('corporate anniversary gala') được nhắc đến trực tiếp."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Triển lãm thương mại. Bẫy thường gặp (Sai) Lưu ý bẫy: Sự kiện là buổi gala dùng tiệc chứ không phải triển lãm gian hàng."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "corporate anniversary gala",
+            "paraphrases": ["company milestone celebration banquet"],
+            "meaning": "tiệc gala kỷ niệm thành lập công ty"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Caller's Request - Lắng nghe lý do gọi điện ở lượt lời đầu tiên của người nữ ('booking for our...').",
+          "Bước 2: Capture Event Name - Bắt chính xác cụm danh từ sự kiện: 'corporate anniversary gala'.",
+          "Bước 3: Match Celebration Category - Nối từ gala với các lựa chọn tiệc kỷ niệm của doanh nghiệp."
+        ]
+      },
+      {
+        "id": 9,
+        "question": "What will the man send to the woman?",
+        "options": {
+          "A": "A banquet menu.",
+          "B": "A contract draft.",
+          "C": "A floor plan map.",
+          "D": "A discount voucher."
+        },
+        "correct_answer": "A",
+        "correct_text": "A banquet menu.",
+        "audio_transcript": "Man: Our in-house culinary team handles catering. I can send you our banquet menu options and price tiers right now.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng tài liệu thực đơn tiệc ('banquet menu options') được hứa gửi ngay."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Bản thảo hợp đồng. Bẫy thường gặp (Sai) Lưu ý bẫy: Hợp đồng chưa được soạn vì hai bên mới trao đổi thông tin ban đầu."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Sơ đồ mặt bằng. Bẫy thường gặp (Sai) Lưu ý bẫy: Mặc dù có thảo luận về sức chứa phòng tiệc, sơ đồ mặt bằng không phải thứ hứa gửi."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Phiếu giảm giá. Bẫy thường gặp (Sai) Lưu ý bẫy: Bài nghe không đề cập tới bất kỳ voucher giảm giá nào."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "banquet menu",
+            "paraphrases": ["catering food choices", "event dining menu"],
+            "meaning": "thực đơn tiệc"
+          },
+          {
+            "phrase": "price tiers",
+            "paraphrases": ["cost levels", "pricing options"],
+            "meaning": "các mức giá khác nhau"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Focus on Offer/Promise - Lắng nghe lượt lời cuối của người nam khi đưa ra lời hứa ('I can send you...').",
+          "Bước 2: Identify Document Name - Bắt chính xác tên tài liệu: 'banquet menu options'.",
+          "Bước 3: Eliminate Premature Documents - Loại bỏ hợp đồng (contract) vì quy trình tư vấn tiệc mới ở bước chọn thực đơn."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 4,
+    "audio": "p3_g04_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 10,
+        "question": "What issue are the speakers discussing?",
+        "options": {
+          "A": "A security data breach.",
+          "B": "Performance delays on a mobile banking app.",
+          "C": "An error in financial accounting.",
+          "D": "A failed credit card transaction."
+        },
+        "correct_answer": "B",
+        "correct_text": "Performance delays on a mobile banking app.",
+        "audio_transcript": "Woman (Speaker 1): Our mobile banking application experienced severe login delays during peak hours yesterday.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Rò rỉ dữ liệu an ninh. Bẫy thường gặp (Sai) Lưu ý bẫy: Sự cố do nghẽn mạng quá tải lượt dùng, không có cuộc tấn công hay rò rỉ dữ liệu."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng sự cố hiệu suất ứng dụng ngân hàng di động bị chậm trễ đăng nhập ('login delays')."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Lỗi kế toán. Bẫy thường gặp (Sai) Lưu ý bẫy: Lĩnh vực ngân hàng nhưng sự cố thuộc IT ứng dụng chứ không phải kế toán."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Thất bại giao dịch thẻ. Bẫy thường gặp (Sai) Lưu ý bẫy: Nghẽn hệ thống đăng nhập app chứ không phải lỗi quẹt thẻ tín dụng."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "login delays",
+            "paraphrases": ["performance lag", "slow access response"],
+            "meaning": "trì hoãn / chậm trễ đăng nhập"
+          },
+          {
+            "phrase": "peak hours",
+            "paraphrases": ["busy traffic period"],
+            "meaning": "giờ cao điểm lượt truy cập"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to 3-Speaker Opening - Trong hội thoại 3 người, Speaker 1 thường nêu lý do triệu tập họp ngay ở câu đầu.",
+          "Bước 2: Match App + Delay Keywords - Nối 'mobile banking app' và 'login delays' với phương án 'Performance delays'.",
+          "Bước 3: Reject Security Scare Traps - Không chọn bẫy an ninh (data breach) khi bài chỉ đề cập sự cố tải chậm."
+        ]
+      },
+      {
+        "id": 11,
+        "question": "What solution does Sandra (Speaker 3) propose?",
+        "options": {
+          "A": "Launching a new marketing campaign.",
+          "B": "Hiring additional software developers.",
+          "C": "Migrating microservices to a new server cluster.",
+          "D": "Restricting user access during peak hours."
+        },
+        "correct_answer": "C",
+        "correct_text": "Migrating microservices to a new server cluster.",
+        "audio_transcript": "Woman (Speaker 3 - Sandra): If we migrate two secondary microservices to the new server cluster, we can alleviate the bottleneck by fifty percent.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Chiến dịch marketing. Bẫy thường gặp (Sai) Lưu ý bẫy: Chiến dịch marketing là nguyên nhân gây bùng nổ lượt dùng, không phải giải pháp IT."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Tuyển thêm lập trình viên. Bẫy thường gặp (Sai) Lưu ý bẫy: Bài nghe không nhắc tới việc tuyển dụng thêm nhân sự."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng giải pháp kỹ thuật do Sandra đề xuất (migrate microservices to new server cluster)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Hạn chế người dùng. Bẫy thường gặp (Sai) Lưu ý bẫy: Không có chính sách chặn hay hạn chế quyền truy cập của khách hàng."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "migrate microservices",
+            "paraphrases": ["transfer software components"],
+            "meaning": "di chuyển các dịch vụ nhỏ"
+          },
+          {
+            "phrase": "alleviate bottleneck",
+            "paraphrases": ["reduce system congestion"],
+            "meaning": "giảm thiểu điểm nghẽn hệ thống"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Track Speaker Identity (Sandra) - Lắng nghe và theo dõi đúng giọng của Sandra (Speaker 3 - người nữ thứ hai).",
+          "Bước 2: Isolate Solution Proposal - Bắt chính xác đề xuất kỹ thuật: 'migrate two secondary microservices'.",
+          "Bước 3: Avoid 3-Speaker Confusion - Không nhầm lẫn phân tích nguyên nhân của Alex (Speaker 2) với giải pháp của Sandra (Speaker 3)."
+        ]
+      },
+      {
+        "id": 12,
+        "question": "What is Alex (Speaker 2) assigned to do?",
+        "options": {
+          "A": "Purchase new hardware servers.",
+          "B": "Refund affected bank customers.",
+          "C": "Write a press release statement.",
+          "D": "Prepare a maintenance protocol for tonight."
+        },
+        "correct_answer": "D",
+        "correct_text": "Prepare a maintenance protocol for tonight.",
+        "audio_transcript": "Woman (Speaker 1): Alex, can you coordinate... tonight? -> Man (Speaker 2 - Alex): Absolutely. I'll prepare the maintenance protocol right away.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Mua máy chủ mới. Bẫy thường gặp (Sai) Lưu ý bẫy: Họ tận dụng cụm máy chủ hiện có để di chuyển dữ liệu chứ không đặt mua mới."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Hoàn tiền khách hàng. Bẫy thường gặp (Sai) Lưu ý bẫy: Sự cố trễ app không đi kèm chính sách hoàn tiền cho người dùng."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Viết thông cáo báo chí. Bẫy thường gặp (Sai) Lưu ý bẫy: Nhiệm vụ là kỹ thuật nội bộ, không phải viết thông cáo PR công khai."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng nhiệm vụ được giao và cam kết thực hiện ngay (prepare maintenance protocol)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "prepare maintenance protocol",
+            "paraphrases": ["draft technical procedure"],
+            "meaning": "chuẩn bị quy trình bảo trì"
+          },
+          {
+            "phrase": "coordinate",
+            "paraphrases": ["manage", "organize together"],
+            "meaning": "phối hợp thực hiện"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Track Assigned Person (Alex) - Lắng nghe câu phân công hướng về tên Alex ở cuối bài thoại.",
+          "Bước 2: Listen for Acceptance Confirmation - Xác nhận lời nhận việc từ Alex ('Absolutely. I'll prepare...').",
+          "Bước 3: Match Technical Protocol Keyword - Nối cụm 'prepare maintenance protocol' với đáp án D."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 5,
+    "audio": "p3_g05_audio.mp3",
+    "image": "p3_g05_image.png",
+    "questions": [
+      {
+        "id": 13,
+        "question": "Why is the man talking to the woman?",
+        "options": {
+          "A": "To ask for directions to an event.",
+          "B": "To report a room key issue.",
+          "C": "To cancel a spa appointment.",
+          "D": "To reserve a dining table."
+        },
+        "correct_answer": "A",
+        "correct_text": "To ask for directions to an event.",
+        "audio_transcript": "Man: I'm attending the Clean Energy Symposium today, but I seem to be lost. Could you direct me to the correct building?",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng mục đích cuộc gọi/trò chuyện để hỏi đường ('ask for directions / direct me to the building')."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Hỏng chìa khóa phòng. Bẫy thường gặp (Sai) Lưu ý bẫy: Khách hàng hỏi đường đi sự kiện chứ không gặp vấn đề về phòng ở."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Hủy hẹn spa. Bẫy thường gặp (Sai) Lưu ý bẫy: Khu Spa (wellness spa) chỉ được nhắc tới như một điểm mốc chỉ đường."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Đặt bàn ăn. Bẫy thường gặp (Sai) Lưu ý bẫy: Nhà hàng (Oceanview Dining Pavilion) là điểm mốc so sánh vị trí, không phải nơi người nam đặt bàn."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "direct me to the building",
+            "paraphrases": ["ask for directions", "inquire about location"],
+            "meaning": "hỏi đường tới tòa nhà"
+          },
+          {
+            "phrase": "seem to be lost",
+            "paraphrases": ["unable to find the way"],
+            "meaning": "có vẻ bị lạc đường"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Opening Statement - Lắng nghe ngay câu đầu của người nam để tìm mục đích giao tiếp (Purpose).",
+          "Bước 2: Match Direction Request - Nối cụm 'I seem to be lost. Could you direct me...' với 'ask for directions'.",
+          "Bước 3: Ignore Map Landmarks as Reasons - Không nhầm lẫn các công trình trên sơ đồ (spa / dining) với lý do chính của cuộc trò chuyện."
+        ]
+      },
+      {
+        "id": 14,
+        "question": "Look at the graphic. Which building will the man go to?",
+        "options": {
+          "A": "Building A",
+          "B": "Building B",
+          "C": "Building C",
+          "D": "Building D"
+        },
+        "correct_answer": "C",
+        "correct_text": "Building C",
+        "audio_transcript": "Woman: Ah, the Clean Energy Symposium is being hosted in the Executive Conference Center. (Graphic: Building C — Executive Conference Center)",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Tòa nhà sảnh chính. Bẫy thường gặp (Sai) Lưu ý bẫy: Building A là sảnh chính (Main Lobby & Guest Reception), không phải nơi tổ chức hội thảo."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Khu Spa chăm sóc sức khỏe. Bẫy thường gặp (Sai) Lưu ý bẫy: Building B là khu Spa & Fitness Center, chỉ được nhắc đến như một điểm mốc chỉ đường."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng địa điểm diễn ra sự kiện (Building C - Executive Conference Center) đối chiếu từ tên hội thảo."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Nhà hàng Oceanview. Bẫy thường gặp (Sai) Lưu ý bẫy: Building D là nhà hàng ăn uống (Oceanview Dining Pavilion), nằm đối diện Building C qua sân trung tâm."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "hosted in the Executive Conference Center",
+            "paraphrases": ["held in Building C", "taking place in the convention facility"],
+            "meaning": "được tổ chức tại Trung tâm hội nghị điều hành (Tòa nhà C)"
+          },
+          {
+            "phrase": "Executive Conference Center",
+            "paraphrases": ["main convention facility", "Building C"],
+            "meaning": "Trung tâm hội nghị điều hành"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Read Graphic Prompt First - Đọc câu hỏi biểu đồ trước để biết cần tìm tên sự kiện 'Clean Energy Symposium'.",
+          "Bước 2: Listen for Facility Name - Tập trung bắt tên địa điểm đi kèm tên hội thảo ('hosted in the Executive Conference Center').",
+          "Bước 3: Cross-Reference Map - Đối chiếu 'Executive Conference Center' với tên tòa nhà trên sơ đồ Map -> Chọn Building C."
+        ]
+      },
+      {
+        "id": 15,
+        "question": "What location does the woman suggest walking past?",
+        "options": {
+          "A": "The main lobby.",
+          "B": "The wellness spa.",
+          "C": "The swimming pool.",
+          "D": "The parking lot."
+        },
+        "correct_answer": "B",
+        "correct_text": "The wellness spa.",
+        "audio_transcript": "Woman: You can walk through the garden path right past the wellness spa.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Sảnh chính. Bẫy thường gặp (Sai) Lưu ý bẫy: Sảnh chính không phải là địa điểm người nữ bảo đi qua trong câu chỉ đường."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng điểm mốc chỉ đường 'past the wellness spa' được nêu trong đoạn thoại."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Hồ bơi. Bẫy thường gặp (Sai) Lưu ý bẫy: Hồ bơi không xuất hiện trên sơ đồ và không được nhắc tới."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Bãi đậu xe. Bẫy thường gặp (Sai) Lưu ý bẫy: Bãi đậu xe không được nhắc đến trong đoạn hướng dẫn chỉ đường."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "past the wellness spa",
+            "paraphrases": ["by the fitness and spa building"],
+            "meaning": "đi ngang qua khu spa"
+          },
+          {
+            "phrase": "garden path",
+            "paraphrases": ["walkway through the garden"],
+            "meaning": "con đường đi bộ qua lối vườn"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Direction Verbs - Lắng nghe động từ chỉ hướng di chuyển: 'walk through...', 'past...'.",
+          "Bước 2: Capture Landmark Noun - Bắt chính xác danh từ địa điểm đi sau giới từ 'past': 'the wellness spa'.",
+          "Bước 3: Match Map Legend - Nối từ 'wellness spa' với phương án B."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 6,
+    "audio": "p3_g06_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 16,
+        "question": "What project are the speakers discussing?",
+        "options": {
+          "A": "Installing a wind turbine.",
+          "B": "Upgrading an electrical grid.",
+          "C": "Constructing a commercial building.",
+          "D": "Maintaining a solar panel array."
+        },
+        "correct_answer": "D",
+        "correct_text": "Maintaining a solar panel array.",
+        "audio_transcript": "Woman: ...we need to finalize the maintenance schedule for the solar panel array at the Apex Commercial Complex.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Tuabin gió. Bẫy thường gặp (Sai) Lưu ý bẫy: Dự án liên quan đến năng lượng mặt trời (solar), không phải năng lượng gió (wind turbine)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Nâng cấp lưới điện. Bẫy thường gặp (Sai) Lưu ý bẫy: Công việc là bảo trì tấm pin cụ thể chứ không phải nâng cấp toàn bộ lưới điện quốc gia."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Xây dựng tòa nhà. Bẫy thường gặp (Sai) Lưu ý bẫy: Tòa nhà thương mại Apex là địa điểm đặt thiết bị chứ không phải công trình đang xây dựng."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng dự án bảo trì hệ thống pin mặt trời ('maintenance... solar panel array')."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "solar panel array",
+            "paraphrases": ["photovoltaic system", "solar energy equipment"],
+            "meaning": "hệ thống dãy pin năng lượng mặt trời"
+          },
+          {
+            "phrase": "maintenance schedule",
+            "paraphrases": ["upkeep calendar"],
+            "meaning": "lịch trình bảo trì"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to First Turn Purpose - Lắng nghe ngay lượt thoại đầu tiên để bắt chủ đề dự án.",
+          "Bước 2: Identify Key Equipment Noun - Bắt danh từ thiết bị 'solar panel array' và động từ 'finalize maintenance'.",
+          "Bước 3: Match Project Summary - Nối thông tin với lựa chọn 'Maintaining a solar panel array'."
+        ]
+      },
+      {
+        "id": 17,
+        "question": "When is the maintenance appointment actually scheduled?",
+        "options": {
+          "A": "Wednesday at 2:00 P.M.",
+          "B": "Tuesday at 2:00 P.M.",
+          "C": "Wednesday at 10:00 A.M.",
+          "D": "Tuesday at 10:00 A.M."
+        },
+        "correct_answer": "A",
+        "correct_text": "Wednesday at 2:00 P.M.",
+        "audio_transcript": "Man: Oh, wait, let me double-check my calendar... the appointment is actually confirmed for Wednesday at two o'clock in the afternoon.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng mốc thời gian chính thức sau khi đính chính (Wednesday at 2:00 P.M.)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Nhầm thứ Ba và 2 giờ chiều. Bẫy thường gặp (Sai) Lưu ý bẫy: Kết hợp nhầm ngày thứ Ba với giờ 2:00 P.M."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Nhầm thứ Tư và 10 giờ sáng. Bẫy thường gặp (Sai) Lưu ý bẫy: Kết hợp nhầm ngày thứ Tư với giờ 10:00 A.M."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Mốc thời gian ban đầu chưa tự sửa. Bẫy thường gặp (Sai) Lưu ý bẫy: 10:00 sáng thứ Ba (Tuesday 10:00 A.M.) là mốc thời gian người nam đọc nhầm trước khi đính chính."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "Wednesday at two o'clock in the afternoon",
+            "paraphrases": ["Wednesday at 2:00 P.M."],
+            "meaning": "thứ Tư lúc 2 giờ chiều"
+          },
+          {
+            "phrase": "misread",
+            "paraphrases": ["read incorrectly", "made a mistake"],
+            "meaning": "đọc nhầm / nhìn nhầm"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Master Self-Correction Trap - Khi nghe thấy 'Oh, wait...' hoặc 'Let me check...', lập tức bỏ mốc thời gian đầu tiên.",
+          "Bước 2: Listen for Word 'Actually' - Mốc thời gian thật luôn đứng sau từ khẳng định 'actually confirmed for...'.",
+          "Bước 3: Match Day + Hour Pair - Nối đúng cặp 'Wednesday' + '2 o'clock afternoon' (2:00 P.M.)."
+        ]
+      },
+      {
+        "id": 18,
+        "question": "Why is the confirmed time better according to the woman?",
+        "options": {
+          "A": "The weather will be sunnier.",
+          "B": "Electricity rates are lower.",
+          "C": "The building manager will be on-site.",
+          "D": "The technicians offer a discount."
+        },
+        "correct_answer": "C",
+        "correct_text": "The building manager will be on-site.",
+        "audio_transcript": "Woman: Okay, Wednesday at two works better anyway because the building manager will be on-site then.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Thời tiết nắng hơn. Bẫy thường gặp (Sai) Lưu ý bẫy: Thời tiết không được người nữ nhắc tới làm lý do."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Giá điện rẻ hơn. Bẫy thường gặp (Sai) Lưu ý bẫy: Giá điện không phải là nguyên nhân làm khung giờ này thuận tiện hơn."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng lý do quản lý tòa nhà có mặt tại chỗ ('building manager will be on-site')."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Kỹ thuật viên giảm giá. Bẫy thường gặp (Sai) Lưu ý bẫy: Không có chính sách giảm giá nào từ phía kỹ thuật viên."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "on-site",
+            "paraphrases": ["present at the location", "available at the property"],
+            "meaning": "có mặt tại công trình / địa điểm"
+          },
+          {
+            "phrase": "building manager",
+            "paraphrases": ["facility supervisor"],
+            "meaning": "quản lý tòa nhà"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Cause Conjunction - Lắng nghe lượt lời người nữ ngay sau liên từ chỉ lý do 'because...'.",
+          "Bước 2: Capture Key Term 'On-site' - Bắt thuật ngữ 'on-site' và đi kèm 'building manager'.",
+          "Bước 3: Match Manager Presence Option - Chọn phương án C giải thích sự có mặt của người quản lý."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 7,
+    "audio": "p3_g07_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 19,
+        "question": "What product line is the campaign promoting?",
+        "options": {
+          "A": "High-end electronics.",
+          "B": "Eco-friendly items.",
+          "C": "Luxury cosmetics.",
+          "D": "Office furniture."
+        },
+        "correct_answer": "B",
+        "correct_text": "Eco-friendly items.",
+        "audio_transcript": "Man: Lisa, how is the promotional campaign for our eco-friendly product line performing...",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Đồ điện tử cao cấp. Bẫy thường gặp (Sai) Lưu ý bẫy: Dù bán online, sản phẩm không phải là thiết bị điện tử cao cấp."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng dòng sản phẩm thân thiện với môi trường ('eco-friendly product line') được nêu ở đầu bài thoại."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Mỹ phẩm sang trọng. Bẫy thường gặp (Sai) Lưu ý bẫy: Mỹ phẩm sang trọng không phải dòng sản phẩm được quảng bá."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Nội thất văn phòng. Bẫy thường gặp (Sai) Lưu ý bẫy: Không có thông tin nào liên quan đến bàn ghế văn phòng."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "eco-friendly product line",
+            "paraphrases": ["environmentally friendly items", "green products"],
+            "meaning": "dòng sản phẩm thân thiện với môi trường"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Product Adjective - Lắng nghe tính từ mô tả sản phẩm đi kèm từ 'promotional campaign'.",
+          "Bước 2: Capture 'Eco-friendly' - Bắt chính xác thuật ngữ 'eco-friendly'.",
+          "Bước 3: Match Green Product Category - Nối từ 'eco-friendly' với đáp án 'Eco-friendly items'."
+        ]
+      },
+      {
+        "id": 20,
+        "question": "What problem does the woman report about the website?",
+        "options": {
+          "A": "The payment gateway is crashing.",
+          "B": "Customer reviews are negative.",
+          "C": "Product images fail to load.",
+          "D": "Users are abandoning shopping carts."
+        },
+        "correct_answer": "D",
+        "correct_text": "Users are abandoning shopping carts.",
+        "audio_transcript": "Woman: ...checkout conversion rate is slightly lower than expected. Many users are abandoning their shopping carts before completing payment.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Sập cổng thanh toán. Bẫy thường gặp (Sai) Lưu ý bẫy: Cổng thanh toán vẫn hoạt động bình thường nhưng khách chủ động rời giỏ hàng do phí ship."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Đánh giá tiêu cực. Bẫy thường gặp (Sai) Lưu ý bẫy: Bài nghe không đề cập tới các nhận xét hay đánh giá tiêu cực."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Hình ảnh không tải được. Bẫy thường gặp (Sai) Lưu ý bẫy: Lượt truy cập tăng 40% chứng tỏ giao diện và hình ảnh tải tốt."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng sự cố khách hàng rời bỏ giỏ hàng trước khi thanh toán ('abandoning their shopping carts')."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "abandoning shopping carts",
+            "paraphrases": ["leaving checkout without buying", "dropping order items"],
+            "meaning": "bỏ dở giỏ hàng không thanh toán"
+          },
+          {
+            "phrase": "conversion rate",
+            "paraphrases": ["sales completion percentage"],
+            "meaning": "tỷ lệ chuyển đổi mua hàng"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Speaker 2 Metric Report - Lắng nghe báo cáo chỉ số của người nữ sau khi khen lượng truy cập tăng.",
+          "Bước 2: Identify E-Commerce Problem Phrase - Bắt cụm từ chuyên ngành 'abandoning shopping carts'.",
+          "Bước 3: Match Problem Statement - Nối cụm từ với đáp án D."
+        ]
+      },
+      {
+        "id": 21,
+        "question": "What solution does the woman suggest?",
+        "options": {
+          "A": "Offering free shipping on orders over $50.",
+          "B": "Redesigning the website homepage.",
+          "C": "Reducing product prices by 20%.",
+          "D": "Hiring a new advertising agency."
+        },
+        "correct_answer": "A",
+        "correct_text": "Offering free shipping on orders over $50.",
+        "audio_transcript": "Woman: Exactly. I recommend offering free shipping for orders over fifty dollars to incentivize customers...",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng giải pháp miễn phí giao hàng cho đơn trên 50$ ('free shipping for orders over fifty dollars')."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Thiết kế lại trang chủ. Bẫy thường gặp (Sai) Lưu ý bẫy: Lượt truy cập trang chủ rất tốt (tăng 40%) nên không cần thiết kế lại."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Giảm giá sản phẩm 20%. Bẫy thường gặp (Sai) Lưu ý bẫy: Vấn đề nằm ở phí giao hàng chứ không phải giá niêm yết sản phẩm."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Thuê công ty quảng cáo mới. Bẫy thường gặp (Sai) Lưu ý bẫy: Chiến dịch quảng cáo hiện tại rất thành công về lượt truy cập."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "free shipping over fifty dollars",
+            "paraphrases": ["waiving delivery fee for orders above $50"],
+            "meaning": "miễn phí vận chuyển cho đơn hàng trên 50$"
+          },
+          {
+            "phrase": "incentivize",
+            "paraphrases": ["encourage", "motivate"],
+            "meaning": "khuyến khích / tạo động lực"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Recommendation Verb - Lắng nghe cụm từ đưa ra lời khuyên 'I recommend...' ở cuối bài thoại.",
+          "Bước 2: Capture Shipping Offer & Threshold - Bắt chính xác cụm 'free shipping' kèm con số ngưỡng '$50'.",
+          "Bước 3: Match Free Delivery Option - Chọn đáp án A chứa cả hành động và ngưỡng tiền chính xác."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 8,
+    "audio": "p3_g08_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 22,
+        "question": "What type of agreement are the speakers negotiating?",
+        "options": {
+          "A": "A commercial real estate lease.",
+          "B": "A software licensing contract.",
+          "C": "A solar power purchase agreement.",
+          "D": "A hotel management partnership."
+        },
+        "correct_answer": "C",
+        "correct_text": "A solar power purchase agreement.",
+        "audio_transcript": "Man (Speaker 1 - Jason): Apex Renewable Energy is ready to finalize the power purchase agreement for your new resort complex.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Hợp đồng thuê bất động sản. Bẫy thường gặp (Sai) Lưu ý bẫy: Khu nghỉ dưỡng (resort complex) là nơi lắp đặt pin chứ không phải đối tượng đi thuê đất."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Hợp đồng phần mềm. Bẫy thường gặp (Sai) Lưu ý bẫy: Không có thông tin nào liên quan đến cấp phép phần mềm."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng hợp đồng mua bán điện mặt trời ('power purchase agreement for solar power')."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Đối tác quản lý khách sạn. Bẫy thường gặp (Sai) Lưu ý bẫy: Mặc dù khách hàng là khu resort, hợp đồng ký kết là về năng lượng điện."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "power purchase agreement",
+            "paraphrases": ["PPA", "energy supply contract"],
+            "meaning": "hợp đồng mua bán điện năng"
+          },
+          {
+            "phrase": "fixed rate",
+            "paraphrases": ["stable pricing structure"],
+            "meaning": "mức giá cố định"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to 3-Speaker Intro - Tập trung câu đầu của Speaker 1 để tìm loại hợp đồng được đàm phán.",
+          "Bước 2: Identify 'Power Purchase Agreement' - Bắt cụm 'power purchase agreement' kết hợp từ 'solar power' của Speaker 2.",
+          "Bước 3: Match Energy Contract Option - Nối thông tin với lựa chọn 'A solar power purchase agreement'."
+        ]
+      },
+      {
+        "id": 23,
+        "question": "What concern does Mr. Tanaka (Speaker 3) raise?",
+        "options": {
+          "A": "The duration of the agreement.",
+          "B": "Billing for emergency inverter repairs.",
+          "C": "The initial installation timeline.",
+          "D": "The insurance coverage limit."
+        },
+        "correct_answer": "B",
+        "correct_text": "Billing for emergency inverter repairs.",
+        "audio_transcript": "Man (Speaker 3 - Mr. Tanaka): Right. Does Apex cover emergency inverter repairs, or is that billed separately?",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Thời hạn hợp đồng. Bẫy thường gặp (Sai) Lưu ý bẫy: Karen (Speaker 2) đã khen thời hạn 20 năm cố định giá rất tốt, không phải mối lo ngại."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng mối quan tâm về việc tính phí sửa chữa khẩn cấp ('emergency inverter repairs billed separately')."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Lịch trình lắp đặt ban đầu. Bẫy thường gặp (Sai) Lưu ý bẫy: Không có thắc mắc nào về tiến độ lắp đặt ban đầu."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Hạn mức bảo hiểm. Bẫy thường gặp (Sai) Lưu ý bẫy: Hạn mức bảo hiểm không được đề cập trong bài thoại."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "billed separately",
+            "paraphrases": ["charged as extra cost", "itemized extra"],
+            "meaning": "tính phí riêng biệt"
+          },
+          {
+            "phrase": "emergency inverter repairs",
+            "paraphrases": ["urgent equipment maintenance"],
+            "meaning": "sửa chữa bộ biến tần khẩn cấp"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Isolate Speaker 3 (Mr. Tanaka) - Trong hội thoại 3 người, xác định đúng giọng nói của Mr. Tanaka (giọng nam thứ 2).",
+          "Bước 2: Listen for Question Intent - Bắt câu hỏi nghi vấn của ông: 'Does Apex cover... or is that billed separately?'.",
+          "Bước 3: Match Repair Billing Concern - Chọn phương án B nói về chi phí sửa chữa khẩn cấp."
+        ]
+      },
+      {
+        "id": 24,
+        "question": "What will Karen and Mr. Tanaka do this afternoon?",
+        "options": {
+          "A": "Request a price reduction.",
+          "B": "Postpone the meeting.",
+          "C": "Consult a legal advisor.",
+          "D": "Sign the agreement."
+        },
+        "correct_answer": "D",
+        "correct_text": "Sign the agreement.",
+        "audio_transcript": "Woman (Speaker 2 - Karen): ...Mr. Tanaka and I are ready to sign the contract this afternoon.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Yêu cầu giảm giá. Bẫy thường gặp (Sai) Lưu ý bẫy: Họ hoàn toàn hài lòng với mức giá cố định 20 năm nên không đòi giảm giá."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Hoãn cuộc họp. Bẫy thường gặp (Sai) Lưu ý bẫy: Cuộc gọi đã giải quyết xong mọi thắc mắc và tiến tới ký kết."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Tham vấn luật sư. Bẫy thường gặp (Sai) Lưu ý bẫy: Bản thảo hợp đồng đã được duyệt xong, không cần gửi cố vấn pháp lý nữa."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng hành động ký hợp đồng ngay chiều nay ('sign the contract this afternoon')."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "sign the contract",
+            "paraphrases": ["execute the agreement", "finalize the deal"],
+            "meaning": "ký kết hợp đồng"
+          },
+          {
+            "phrase": "this afternoon",
+            "paraphrases": ["later today"],
+            "meaning": "chiều hôm nay"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Conclusion Resolution - Lắng nghe lượt lời chốt kết quả ở cuối cuộc gọi từ Karen.",
+          "Bước 2: Identify Action Verb 'Sign' - Bắt chính xác động từ 'ready to sign the contract'.",
+          "Bước 3: Match Agreement Signing - Chọn phương án D 'Sign the agreement'."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 9,
+    "audio": "p3_g09_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 25,
+        "question": "What problem are the speakers discussing?",
+        "options": {
+          "A": "Slow website performance during sales.",
+          "B": "High shipping costs for customers.",
+          "C": "Incorrect inventory counts.",
+          "D": "Data security vulnerabilities."
+        },
+        "correct_answer": "A",
+        "correct_text": "Slow website performance during sales.",
+        "audio_transcript": "Woman: ...how slowly our e-commerce site has been loading during the flash sale events this week?",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng sự cố website tải chậm trong đợt giảm giá ('site loading slowly during flash sales')."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Phí vận chuyển cao. Bẫy thường gặp (Sai) Lưu ý bẫy: Không có thảo luận nào về chi phí giao hàng."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Sai số lượng kho. Bẫy thường gặp (Sai) Lưu ý bẫy: Vấn đề là máy chủ web bị quá tải chứ không phải đếm sai tồn kho."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Lỗ hổng an ninh. Bẫy thường gặp (Sai) Lưu ý bẫy: Quá tải lượt truy cập gây chậm web chứ không bị tấn công dữ liệu."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "site loading slowly",
+            "paraphrases": ["slow website performance", "high page load latency"],
+            "meaning": "trang web tải chậm"
+          },
+          {
+            "phrase": "flash sale events",
+            "paraphrases": ["limited-time promotional sales"],
+            "meaning": "sự kiện giảm giá chớp nhoáng"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Complaint Phrase - Lắng nghe câu mở đầu của người nữ về từ phàn nàn 'how slowly...'.",
+          "Bước 2: Connect Loading + Flash Sale - Kết hợp hai thông tin 'site loading slowly' và 'flash sale events'.",
+          "Bước 3: Match Slow Website Performance - Chọn đáp án A thể hiện hiệu suất trang web kém."
+        ]
+      },
+      {
+        "id": 26,
+        "question": "What does the man imply when he says, 'Our server capacity is currently limited'?",
+        "options": {
+          "A": "The company should reduce its marketing budget.",
+          "B": "The IT department is cutting server maintenance costs.",
+          "C": "The current IT infrastructure cannot handle peak user traffic.",
+          "D": "Users are not interested in the promotional sales."
+        },
+        "correct_answer": "C",
+        "correct_text": "The current IT infrastructure cannot handle peak user traffic.",
+        "audio_transcript": "Man: ...checked the system metrics during peak traffic yesterday. Our server capacity is currently limited.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Giảm ngân sách marketing. Bẫy thường gặp (Sai) Lưu ý bẫy: Ngược lại, marketing tạo ra lưu lượng khách hàng lớn là điều tốt, cần nâng cấp máy chủ chứ không phải cắt giảm quảng cáo."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Cắt chi phí bảo trì. Bẫy thường gặp (Sai) Lưu ý bẫy: Giới hạn dung lượng là do cấu hình hạ tầng hiện có, không phải do cắt giảm chi phí bảo dưỡng."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng ngụ ý giải thích hạ tầng CNTT hiện tại không thể chống chịu lượng truy cập đỉnh ('cannot handle peak traffic')."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Người dùng không quan tâm. Bẫy thường gặp (Sai) Lưu ý bẫy: Lưu lượng đỉnh (peak traffic) chứng tỏ rất nhiều người dùng đang quan tâm đợt sale."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "server capacity limited",
+            "paraphrases": ["infrastructure unable to support peak load"],
+            "meaning": "dung lượng máy chủ bị giới hạn"
+          },
+          {
+            "phrase": "peak traffic",
+            "paraphrases": ["maximum user volume"],
+            "meaning": "lượt truy cập đỉnh điểm"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Analyze Quote Context - Đọc kĩ câu trích dẫn trong ngoặc kép 'Our server capacity is currently limited'.",
+          "Bước 2: Relate to Previous Problem - Liên hệ câu trích với lời phàn nàn web chậm trước đó để hiểu ngụ ý giải thích nguyên nhân kỹ thuật.",
+          "Bước 3: Match Capacity Overload Option - Chọn phương án C giải thích hạ tầng quá tải."
+        ]
+      },
+      {
+        "id": 27,
+        "question": "What will the man do by tomorrow morning?",
+        "options": {
+          "A": "Purchase new server hardware.",
+          "B": "Prepare a cloud migration proposal.",
+          "C": "Cancel the flash sale event.",
+          "D": "Contact the web host provider."
+        },
+        "correct_answer": "B",
+        "correct_text": "Prepare a cloud migration proposal.",
+        "audio_transcript": "Man: I'll prepare a migration proposal for the IT director by tomorrow morning.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Mua phần cứng mới. Bẫy thường gặp (Sai) Lưu ý bẫy: Giải pháp được chọn là chuyển đổi đám mây (cloud migration) thay vì mua máy chủ vật lý mới."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng công việc chuẩn bị bản đề xuất di chuyển dữ liệu đám mây ('prepare a migration proposal')."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Hủy đợt giảm giá. Bẫy thường gặp (Sai) Lưu ý bẫy: Sự kiện bán hàng mang lại lượng truy cập cao, không có lý do gì hủy bỏ."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Liên hệ nhà cung cấp. Bẫy thường gặp (Sai) Lưu ý bẫy: Nhân vật nam báo cáo với giám đốc CNTT nội bộ trước khi liên hệ bất kỳ nhà cung cấp bên ngoài nào."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "prepare a migration proposal",
+            "paraphrases": ["draft a cloud transition plan"],
+            "meaning": "chuẩn bị bản đề xuất chuyển đổi hệ thống"
+          },
+          {
+            "phrase": "by tomorrow morning",
+            "paraphrases": ["before the next business day"],
+            "meaning": "trước sáng ngày mai"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Speaker's Final Commitment - Lắng nghe câu kết thúc của người nam chứa cấu trúc hứa hẹn 'I'll... by tomorrow morning'.",
+          "Bước 2: Identify Noun Phrase 'Migration Proposal' - Bắt chính xác cụm danh từ 'migration proposal'.",
+          "Bước 3: Match Cloud Proposal Option - Nối với phương án B nói về đề xuất chuyển đổi đám mây."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 10,
+    "audio": "p3_g10_audio.mp3",
+    "image": "p3_g10_image.png",
+    "questions": [
+      {
+        "id": 28,
+        "question": "Look at the graphic. Which quarter had the highest online revenue?",
+        "options": {
+          "A": "Quarter 1",
+          "B": "Quarter 2",
+          "C": "Quarter 3",
+          "D": "Quarter 4"
+        },
+        "correct_answer": "D",
+        "correct_text": "Quarter 4",
+        "audio_transcript": "Man: ...surge in online orders during the final three months of the year due to our holiday promotions.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Quý 1 ($1.2 Million). Bẫy thường gặp (Sai) Lưu ý bẫy: Quarter 1 có doanh thu thấp nhất trong năm."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Quý 2 ($1.8 Million). Bẫy thường gặp (Sai) Lưu ý bẫy: Quarter 2 có doanh thu khá nhưng vẫn kém Quý 4."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Quý 3 ($1.5 Million). Bẫy thường gặp (Sai) Lưu ý bẫy: Nhân vật nữ nhắc đến Quý 3 là quý cần tập trung thúc đẩy năm nay, không phải quý cao nhất năm ngoái."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng quý 4 (Quarter 4) đạt doanh thu kỷ kỷ $2.4 Million tương ứng 3 tháng cuối năm."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "final three months of the year",
+            "paraphrases": ["Quarter 4", "Q4"],
+            "meaning": "3 tháng cuối năm (Quý 4)"
+          },
+          {
+            "phrase": "surge in online orders",
+            "paraphrases": ["revenue spike", "dramatic sales increase"],
+            "meaning": "sự tăng vọt về đơn hàng trực tuyến"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Convert Time Phrase to Quarter - Chuyển đổi cụm từ 'final three months of the year' thành Quý 4.",
+          "Bước 2: Cross-Check Chart Peak Value - Nhìn vào sơ đồ doanh thu để xác nhận Quarter 4 ghi nhận con số $2.4 Million lớn nhất.",
+          "Bước 3: Select Highest Revenue Option - Chọn đáp án D tương ứng Quarter 4."
+        ]
+      },
+      {
+        "id": 29,
+        "question": "According to the woman, what goal should be prioritized this year?",
+        "options": {
+          "A": "Boosting performance in the third quarter.",
+          "B": "Reducing shipping packaging costs.",
+          "C": "Expanding physical retail stores.",
+          "D": "Hiring new marketing specialists."
+        },
+        "correct_answer": "A",
+        "correct_text": "Boosting performance in the third quarter.",
+        "audio_transcript": "Woman: However, we need to boost our third-quarter performance this year.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng mục tiêu ưu tiên thúc đẩy doanh số Quý 3 ('boost our third-quarter performance')."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Cắt giảm chi phí bao bì. Bẫy thường gặp (Sai) Lưu ý bẫy: Chi phí đóng gói không được đề cập tới trong cuộc họp."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Mở rộng cửa hàng vật lý. Bẫy thường gặp (Sai) Lưu ý bẫy: Cuộc họp chỉ tập trung thảo luận về mảng bán hàng online."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Tuyển thêm chuyên gia marketing. Bẫy thường gặp (Sai) Lưu ý bẫy: Chưa có nhu cầu tuyển dụng nhân sự mới được nêu ra."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "boost third-quarter performance",
+            "paraphrases": ["increase Q3 revenue", "improve Q3 sales"],
+            "meaning": "thúc đẩy hiệu suất quý 3"
+          },
+          {
+            "phrase": "prioritize",
+            "paraphrases": ["focus on", "give precedence to"],
+            "meaning": "ưu tiên"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Contrast Conjunction - Lắng nghe lượt thoại người nữ ngay sau từ nối chuyển ý 'However...'.",
+          "Bước 2: Identify Target Quarter - Bắt từ chỉ quý 'third-quarter' đi với động từ 'boost performance'.",
+          "Bước 3: Match Priority Goal - Chọn đáp án A thể hiện việc cải thiện kết quả Quý 3."
+        ]
+      },
+      {
+        "id": 30,
+        "question": "What is the man currently finalizing?",
+        "options": {
+          "A": "A customer satisfaction survey.",
+          "B": "An annual financial audit report.",
+          "C": "A targeted email marketing campaign.",
+          "D": "A new product pricing structure."
+        },
+        "correct_answer": "C",
+        "correct_text": "A targeted email marketing campaign.",
+        "audio_transcript": "Man: I agree. I'm finalizing a targeted email campaign to drive sales during the late summer period.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Khảo sát khách hàng. Bẫy thường gặp (Sai) Lưu ý bẫy: Công việc không phải làm khảo sát mà là gửi email bán hàng trực tiếp."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Báo cáo kiểm toán. Bẫy thường gặp (Sai) Lưu ý bẫy: Báo cáo doanh thu đã có sẵn trên biểu đồ, không phải báo cáo kiểm toán."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng chiến dịch marketing email ('targeted email campaign') đang được hoàn thiện."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Bảng giá sản phẩm mới. Bẫy thường gặp (Sai) Lưu ý bẫy: Không có kế hoạch điều chỉnh bảng giá sản phẩm."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "targeted email campaign",
+            "paraphrases": ["email marketing promotion", "direct email outreach"],
+            "meaning": "chiến dịch gửi email marketing mục tiêu"
+          },
+          {
+            "phrase": "finalizing",
+            "paraphrases": ["completing", "putting finishing touches on"],
+            "meaning": "hoàn thiện / hoàn tất"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Man's Action Verb - Lắng nghe lượt lời cuối của người nam ngay sau động từ 'finalizing'.",
+          "Bước 2: Capture 'Targeted Email Campaign' - Bắt cụm danh từ 'targeted email campaign'.",
+          "Bước 3: Match Email Promotion - Chọn đáp án C nói về chiến dịch email marketing."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 11,
+    "audio": "p3_g11_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 31,
+        "question": "What equipment was approved for purchase?",
+        "options": {
+          "A": "A high-powered electron microscope.",
+          "B": "An automated DNA synthesizer.",
+          "C": "A refrigerated centrifuge.",
+          "D": "A digital calibration scale."
+        },
+        "correct_answer": "B",
+        "correct_text": "An automated DNA synthesizer.",
+        "audio_transcript": "Man: Dr. Patel, the procurement committee approved our budget request for the automated DNA synthesizer.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Kính hiển vi điện tử. Bẫy thường gặp (Sai) Lưu ý bẫy: Kính hiển vi không phải thiết bị nằm trong đề xuất ngân sách được duyệt."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng máy tổng hợp DNA tự động ('automated DNA synthesizer') vừa được phê duyệt."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Máy ly tâm lạnh. Bẫy thường gặp (Sai) Lưu ý bẫy: Máy ly tâm không xuất hiện trong bài thoại."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Cân kỹ thuật số. Bẫy thường gặp (Sai) Lưu ý bẫy: Không có thông tin mua sắm thiết bị cân đo."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "automated DNA synthesizer",
+            "paraphrases": ["robotic DNA synthesis machine"],
+            "meaning": "máy tổng hợp DNA tự động"
+          },
+          {
+            "phrase": "procurement committee",
+            "paraphrases": ["purchasing board"],
+            "meaning": "ủy ban mua sắm thiết bị"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to First Turn Approval - Lắng nghe ngay câu thoại đầu tiên báo tin vui về ngân sách được duyệt.",
+          "Bước 2: Capture Device Name - Bắt chính xác tên thiết bị chuyên ngành 'automated DNA synthesizer'.",
+          "Bước 3: Match Equipment Option - Chọn đáp án B."
+        ]
+      },
+      {
+        "id": 32,
+        "question": "How will the new machine benefit the research team?",
+        "options": {
+          "A": "It will reduce energy consumption.",
+          "B": "It will lower raw material costs.",
+          "C": "It will automate report writing.",
+          "D": "It will speed up gene sequencing research."
+        },
+        "correct_answer": "D",
+        "correct_text": "It will speed up gene sequencing research.",
+        "audio_transcript": "Woman: That's fantastic news! Having that machine in our BioTech lab will speed up our gene sequencing research by at least three weeks...",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Tiết kiệm năng lượng. Bẫy thường gặp (Sai) Lưu ý bẫy: Mức tiêu thụ điện của thiết bị không được đề cập."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Giảm chi phí nguyên liệu. Bẫy thường gặp (Sai) Lưu ý bẫy: Giá máy giảm 15% khi đặt sớm chứ không phải giảm chi phí nguyên liệu."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Tự động viết báo cáo. Bẫy thường gặp (Sai) Lưu ý bẫy: Máy tổng hợp mẫu gen chứ không viết báo cáo."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng lợi ích tăng tốc độ nghiên cứu giải mã gen ('speed up our gene sequencing research')."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "speed up gene sequencing research",
+            "paraphrases": ["accelerate genetic research timeline"],
+            "meaning": "đẩy nhanh nghiên cứu giải mã gen"
+          },
+          {
+            "phrase": "three weeks per project",
+            "paraphrases": ["significant time reduction"],
+            "meaning": "rút ngắn 3 tuần mỗi dự án"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Reaction Benefit - Lắng nghe phản ứng của người nữ ngay sau câu cảm thán 'fantastic news'.",
+          "Bước 2: Identify Time Acceleration Phrase - Bắt cụm 'speed up... gene sequencing research'.",
+          "Bước 3: Match Research Speed Benefit - Chọn đáp án D."
+        ]
+      },
+      {
+        "id": 33,
+        "question": "What is the man asked to do today?",
+        "options": {
+          "A": "Place the order with the vendor.",
+          "B": "Submit a new budget proposal.",
+          "C": "Inspect the laboratory facility.",
+          "D": "Train the research assistants."
+        },
+        "correct_answer": "A",
+        "correct_text": "Place the order with the vendor.",
+        "audio_transcript": "Woman: Great. Please place the order with the equipment vendor today so we can receive it before the next trial phase starts.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng nhiệm vụ tiến hành đặt hàng với bên bán ('place the order with the equipment vendor today')."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Nộp đề xuất ngân sách mới. Bẫy thường gặp (Sai) Lưu ý bẫy: Ngân sách đã vừa được phê duyệt xong, không cần nộp đề xuất mới."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Kiểm tra phòng lab. Bẫy thường gặp (Sai) Lưu ý bẫy: Không có yêu cầu kiểm tra cơ sở vật chất phòng lab."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Đào tạo trợ lý. Bẫy thường gặp (Sai) Lưu ý bẫy: Việc đào tạo nhân sự chưa được nhắc tới trong lượt giao việc."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "place the order with the equipment vendor",
+            "paraphrases": ["purchase equipment from supplier"],
+            "meaning": "đặt hàng với nhà cung cấp thiết bị"
+          },
+          {
+            "phrase": "before the next trial phase",
+            "paraphrases": ["prior to upcoming testing stage"],
+            "meaning": "trước khi giai đoạn thử nghiệm tiếp theo bắt đầu"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Imperative Request - Lắng nghe câu mệnh lệnh 'Please...' ở cuối cuộc hội thoại.",
+          "Bước 2: Identify Purchasing Phrase - Bắt cụm động từ 'place the order with the equipment vendor'.",
+          "Bước 3: Match Order Action Option - Chọn đáp án A."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 12,
+    "audio": "p3_g12_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 34,
+        "question": "Who are the speakers discussing?",
+        "options": {
+          "A": "Hotel guests.",
+          "B": "Tour operators.",
+          "C": "Front-desk receptionists.",
+          "D": "Event caterers."
+        },
+        "correct_answer": "C",
+        "correct_text": "Front-desk receptionists.",
+        "audio_transcript": "Woman: Robert, have all the front-desk receptionists completed the customer service workshop...?",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Khách sạn. Bẫy thường gặp (Sai) Lưu ý bẫy: Khách sạn là đối tượng phục vụ, không phải nhóm nhân viên cần đi tập huấn."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Đơn vị lữ hành. Bẫy thường gặp (Sai) Lưu ý bẫy: Các công ty tour không thuộc nhân sự nội bộ resort."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng nhóm nhân viên lễ tân khách sạn ('front-desk receptionists')."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Nhân viên tiệc. Bẫy thường gặp (Sai) Lưu ý bẫy: Đội ngũ cung cấp tiệc không được nhắc tới."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "front-desk receptionists",
+            "paraphrases": ["reception staff", "front office personnel"],
+            "meaning": "nhân viên lễ tân tiền sảnh"
+          },
+          {
+            "phrase": "customer service workshop",
+            "paraphrases": ["hospitality training session"],
+            "meaning": "buổi tập huấn dịch vụ khách hàng"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Job Title in Opening - Lắng nghe danh từ chỉ nghề nghiệp ngay trong câu mở đầu hội thoại.",
+          "Bước 2: Capture 'Front-desk Receptionists' - Bắt chính xác thuật ngữ 'front-desk receptionists'.",
+          "Bước 3: Match Job Role Option - Chọn phương án C."
+        ]
+      },
+      {
+        "id": 35,
+        "question": "Why did some staff members miss the workshop?",
+        "options": {
+          "A": "Illness.",
+          "B": "Flight delays.",
+          "C": "Severe weather.",
+          "D": "Scheduling conflicts."
+        },
+        "correct_answer": "B",
+        "correct_text": "Flight delays.",
+        "audio_transcript": "Man: ...four newly hired staff members missed the session last Tuesday due to flight delays.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Bị ốm. Bẫy thường gặp (Sai) Lưu ý bẫy: Ốm đau là lý do nghỉ phổ biến nhưng không được nhắc tới ở đây."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng nguyên nhân chuyến bay bị trễ ('due to flight delays')."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Thời tiết xấu. Bẫy thường gặp (Sai) Lưu ý bẫy: Dù thời tiết có thể gây hoãn chuyến, bài nghe chỉ nêu trực tiếp lý do 'flight delays'."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Trùng lịch. Bẫy thường gặp (Sai) Lưu ý bẫy: Nhân viên chưa kịp di chuyển về tới nơi do hoãn chuyến chứ không phải do trùng ca trực."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "flight delays",
+            "paraphrases": ["airline delays", "travel disruptions"],
+            "meaning": "chuyến bay bị trễ / hoãn"
+          },
+          {
+            "phrase": "missed the session",
+            "paraphrases": ["failed to attend"],
+            "meaning": "bỏ lỡ buổi tập huấn"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Cause Preposition - Lắng nghe cụm từ chỉ nguyên nhân vắng mặt đi sau 'due to...'.",
+          "Bước 2: Capture 'Flight Delays' - Bắt từ chìa khóa 'flight delays'.",
+          "Bước 3: Match Travel Delay Option - Chọn đáp án B."
+        ]
+      },
+      {
+        "id": 36,
+        "question": "What will happen on Friday morning?",
+        "options": {
+          "A": "The new resort wing will open.",
+          "B": "New employees will be interviewed.",
+          "C": "A staff performance review will take place.",
+          "D": "A makeup training session will be held."
+        },
+        "correct_answer": "D",
+        "correct_text": "A makeup training session will be held.",
+        "audio_transcript": "Man: I can conduct a makeup workshop this Friday morning in the staff training room.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Khai trương resort mới. Bẫy thường gặp (Sai) Lưu ý bẫy: Lễ khai trương khu resort mới diễn ra vào tháng sau ('next month'), không phải sáng thứ Sáu này."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Phỏng vấn nhân viên mới. Bẫy thường gặp (Sai) Lưu ý bẫy: Nhân viên đã được tuyển xong, chỉ đi học bổ sung kiến thức."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Đánh giá hiệu suất. Bẫy thường gặp (Sai) Lưu ý bẫy: Không có cuộc họp đánh giá năng lực nhân viên nào."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng buổi tập huấn bù ('makeup workshop') được lên lịch vào sáng thứ Sáu."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "makeup workshop",
+            "paraphrases": ["makeup training session", "supplementary class"],
+            "meaning": "buổi tập huấn bù / lớp học bổ sung"
+          },
+          {
+            "phrase": "this Friday morning",
+            "paraphrases": ["end of the week AM"],
+            "meaning": "sáng thứ Sáu tuần này"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Identify Time Anchor 'Friday Morning' - Lắng nghe mốc thời gian 'Friday morning' ở lượt thoại chốt của người nam.",
+          "Bước 2: Capture Event 'Makeup Workshop' - Bắt từ chỉ sự kiện 'makeup workshop'.",
+          "Bước 3: Match Makeup Class Option - Nối với đáp án D."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 13,
+    "audio": "p3_g13_audio.mp3",
+    "image": "p3_g13_image.png",
+    "questions": [
+      {
+        "id": 37,
+        "question": "What facility are the speakers discussing?",
+        "options": {
+          "A": "A solar battery storage facility.",
+          "B": "A wind turbine manufacturing plant.",
+          "C": "A hydroelectric power station.",
+          "D": "A commercial recycling center."
+        },
+        "correct_answer": "A",
+        "correct_text": "A solar battery storage facility.",
+        "audio_transcript": "Man: Rachel, I'm analyzing the electricity expenses for our solar battery storage facility.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng cơ sở lưu trữ pin mặt trời ('solar battery storage facility') được đề cập ở đầu cuộc nói chuyện."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Nhà máy tuabin gió. Bẫy thường gặp (Sai) Lưu ý bẫy: Cơ sở lưu trữ điện pin mặt trời, không sản xuất tuabin gió."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Trạm thủy điện. Bẫy thường gặp (Sai) Lưu ý bẫy: Thủy điện không phải chủ đề của cơ sở này."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Trung tâm tái chế. Bẫy thường gặp (Sai) Lưu ý bẫy: Không có thông tin về hoạt động tái chế rác thải."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "solar battery storage facility",
+            "paraphrases": ["energy storage plant", "battery farm"],
+            "meaning": "cơ sở lưu trữ pin năng lượng mặt trời"
+          },
+          {
+            "phrase": "electricity expenses",
+            "paraphrases": ["utility costs", "power bills"],
+            "meaning": "chi phí tiền điện"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Facility Name - Lắng nghe cụm từ danh từ chỉ cơ sở ở câu thoại mở đầu.",
+          "Bước 2: Capture 'Solar Battery Storage' - Bắt chính xác cụm 'solar battery storage facility'.",
+          "Bước 3: Match Energy Storage Option - Chọn phương án A."
+        ]
+      },
+      {
+        "id": 38,
+        "question": "Look at the graphic. Which rate tier do the speakers plan to avoid?",
+        "options": {
+          "A": "Tier 1",
+          "B": "Tier 2",
+          "C": "Tier 3",
+          "D": "Tier 4"
+        },
+        "correct_answer": "C",
+        "correct_text": "Tier 3",
+        "audio_transcript": "Man: If we discharge our stored solar energy into the facility between 3:00 P.M. and 6:00 P.M., we can avoid paying that top rate tier completely.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Tier 1 ($0.08 / kWh). Bẫy thường gặp (Sai) Lưu ý bẫy: Tier 1 là giờ thấp điểm ban đêm (10 PM - 6 AM), giá rẻ nhất."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Tier 2 ($0.12 / kWh). Bẫy thường gặp (Sai) Lưu ý bẫy: Tier 2 là giờ tiêu chuẩn sáng-chưa (6 AM - 2 PM)."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng khung giờ 3:00 P.M. - 6:00 P.M. rơi vào dải giờ cao điểm Tier 3 (Peak Hours) có mức giá $0.22 / kWh cao nhất mà công ty muốn tránh."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Tier 4 ($0.15 / kWh). Bẫy thường gặp (Sai) Lưu ý bẫy: Tier 4 là khung giờ tối (8 PM - 10 PM)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "discharge solar energy",
+            "paraphrases": ["release stored battery power"],
+            "meaning": "xả điện mặt trời đã lưu trữ"
+          },
+          {
+            "phrase": "top rate tier",
+            "paraphrases": ["highest price bracket", "peak pricing tier"],
+            "meaning": "bậc giá điện cao nhất"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Specific Time Window - Bắt khoảng thời gian xả pin được người nam nêu: '3:00 P.M. and 6:00 P.M.'.",
+          "Bước 2: Cross-Reference Rate Table - Đối chiếu dải 3 PM - 6 PM vào bảng cước Apex Energy ➔ nằm trong khung 02:00 P.M. - 08:00 P.M. của Tier 3 (Peak Hours).",
+          "Bước 3: Match Peak Tier Option - Chọn đáp án C tương ứng Tier 3."
+        ]
+      },
+      {
+        "id": 39,
+        "question": "What will the woman do next?",
+        "options": {
+          "A": "Contact the utility company.",
+          "B": "Program an automated battery management system.",
+          "C": "Install new solar panels.",
+          "D": "Submit a budget proposal to the board."
+        },
+        "correct_answer": "B",
+        "correct_text": "Program an automated battery management system.",
+        "audio_transcript": "Woman: Great idea! I'll program our automated battery management system to execute that discharge cycle starting today.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Liên hệ công ty điện lực. Bẫy thường gặp (Sai) Lưu ý bẫy: Không cần liên hệ công ty điện vì hệ thống pin chủ động xả điện nội bộ."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng hành động tiếp theo là cài đặt/lập trình phần mềm quản lý pin tự động ('program our automated battery management system')."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Lắp tấm pin mới. Bẫy thường gặp (Sai) Lưu ý bẫy: Cơ sở đã có sẵn hệ thống pin, chỉ cần tối ưu phần mềm xả điện."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Trình đề xuất ngân sách. Bẫy thường gặp (Sai) Lưu ý bẫy: Không có yêu cầu xin thêm ngân sách."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "program battery management system",
+            "paraphrases": ["configure energy management software"],
+            "meaning": "lập trình hệ thống quản lý pin"
+          },
+          {
+            "phrase": "discharge cycle",
+            "paraphrases": ["power release process"],
+            "meaning": "chu kỳ xả điện"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Woman's Final Decision - Lắng nghe phát biểu chốt hành động của người nữ ở câu thoại kết thúc.",
+          "Bước 2: Identify Action Verb 'Program' - Bắt chính xác động từ 'program' đi kèm 'automated battery management system'.",
+          "Bước 3: Match Software Programming Option - Chọn đáp án B."
+        ]
+      }
+    ]
+  }
+]

@@ -1,135 +1,84 @@
-import { subjects } from "@/data/subjects"
-import type { ChapterOption } from "@/data/subjects"
-import { hcmChapterOptions, filterHcmQuestionsByChapter, type HcmChapterId } from "@/data/hcmChapters"
+import { subjects, type ChapterOption, type SubjectId } from "@/data/subjects"
+import { filterHcmQuestionsByChapter, isHcmChapterId } from "@/data/hcmChapters"
 
 export type { ChapterOption }
+export type ChapterId = string
 
-export type ChapterId = HcmChapterId | string
+type ChapterQuestion = { id: number | string; chapter?: string }
+type ChapterFilter = <T extends ChapterQuestion>(questions: T[], chapterId: ChapterId) => T[]
+type ChapterSubjectId = Exclude<SubjectId, "tieng-anh-dau-vao" | "bao-mat-ung-dung-he-thong" | "toeic">
 
-// Build map from subjects.chapters (source of truth)
-export const subjectChapterMap: Record<string, ChapterOption[]> = Object.fromEntries(
-  subjects.filter((s) => s.chapters && s.chapters.length > 0).map((s) => [s.id, s.chapters!])
+export const subjectChapterMap: Partial<Record<SubjectId, ChapterOption[]>> = Object.fromEntries(
+  subjects.flatMap((subject) => subject.chapters?.length ? [[subject.id, subject.chapters] as const] : [])
 )
 
-// Re-export hcm options for direct use (kept for compatibility)
-export { hcmChapterOptions }
+function numericId(id: number | string): number | null {
+  const parsed = typeof id === "number" ? id : Number.parseInt(id, 10)
+  return Number.isFinite(parsed) ? parsed : null
+}
 
-// Filter helpers (kept for question filtering logic)
-function filterCnxhQuestionsByChapter<T extends { id: number | string }>(
-  questions: T[],
-  chapterId: string
-): T[] {
-  if (chapterId === "all") return questions
-  const getRange = (id: string): [number, number] | null => {
-    if (id === "c1") return [1, 28]
-    if (id === "c2") return [29, 56]
-    if (id === "c3") return [57, 84]
-    if (id === "c4") return [85, 112]
-    if (id === "c5") return [113, 140]
-    if (id === "c6") return [141, 168]
-    if (id === "c7") return [169, 195]
-    if (id === "c1234_mid") return [1, 112]
-    if (id === "c567_final") return [113, 195]
-    return null
-  }
-  const range = getRange(chapterId)
+function filterByRange<T extends ChapterQuestion>(questions: T[], chapterId: string, ranges: Record<string, readonly [number, number]>): T[] {
+  const range = ranges[chapterId]
   if (!range) return questions
-  const [start, end] = range
-  return questions.filter((q) => {
-    const nid = typeof q.id === "string" ? parseInt(q.id, 10) : q.id
-    return nid >= start && nid <= end
+  return questions.filter((question) => {
+    const id = numericId(question.id)
+    return id !== null && id >= range[0] && id <= range[1]
   })
 }
 
-function filterKnldQuestionsByChapter<T extends { chapter?: string }>(questions: T[], chapterId: string): T[] {
-  if (chapterId === "all") return questions
-  if (chapterId === "c1") return questions.filter((q) => q.chapter === "Chương 1")
-  if (chapterId === "c2") return questions.filter((q) => q.chapter === "Chương 2")
-  if (chapterId === "c3") return questions.filter((q) => q.chapter === "Chương 3")
-  if (chapterId === "c4") return questions.filter((q) => q.chapter === "Chương 4")
-  if (chapterId === "c5") return questions.filter((q) => q.chapter === "Chương 5")
-  if (chapterId === "c123_mid") return questions.filter((q) => q.chapter === "Chương 1" || q.chapter === "Chương 2" || q.chapter === "Chương 3")
-  if (chapterId === "c45_final") return questions.filter((q) => q.chapter === "Chương 4" || q.chapter === "Chương 5")
-  return questions
+function filterByChapterNames<T extends ChapterQuestion>(questions: T[], chapterId: string, groups: Record<string, readonly string[]>): T[] {
+  const names = groups[chapterId]
+  return names ? questions.filter((question) => names.includes(question.chapter ?? "")) : questions
 }
 
-function filterPmQuestionsByChapter<T extends { chapter?: string }>(questions: T[], chapterId: string): T[] {
-  if (chapterId === "all") return questions
-  if (chapterId === "c1") return questions.filter((q) => q.chapter === "Chương 1")
-  if (chapterId === "c2") return questions.filter((q) => q.chapter === "Chương 2")
-  if (chapterId === "c3") return questions.filter((q) => q.chapter === "Chương 3")
-  if (chapterId === "c4") return questions.filter((q) => q.chapter === "Chương 4")
-  if (chapterId === "c5") return questions.filter((q) => q.chapter === "Chương 5")
-  if (chapterId === "c6") return questions.filter((q) => q.chapter === "Chương 6")
-  if (chapterId === "c7") return questions.filter((q) => q.chapter === "Chương 7")
-  if (chapterId === "c8") return questions.filter((q) => q.chapter === "Chương 8")
-  if (chapterId === "c12345_mid") return questions.filter((q) => ["Chương 1", "Chương 2", "Chương 3", "Chương 4", "Chương 5"].includes(q.chapter ?? ""))
-  if (chapterId === "c678_final") return questions.filter((q) => ["Chương 6", "Chương 7", "Chương 8"].includes(q.chapter ?? ""))
-  return questions
-}
+const cnxhFilter: ChapterFilter = (questions, chapterId) => filterByRange(questions, chapterId, {
+  c1: [1, 28], c2: [29, 56], c3: [57, 84], c4: [85, 112], c5: [113, 140], c6: [141, 168], c7: [169, 195], c1234_mid: [1, 112], c567_final: [113, 195],
+})
 
-function filterLsdQuestionsByChapter<T extends { chapter?: string }>(questions: T[], chapterId: string): T[] {
-  if (chapterId === "all") return questions
-  if (chapterId === "suutam") return questions.filter((q) => ["Câu Hỏi Trên Canvas", "Chương Mất Gốc", "Chương Nhập Môn"].includes(q.chapter ?? ""))
-  if (chapterId === "c1") return questions.filter((q) => ["Chương 1", "Chương 1 donate"].includes(q.chapter ?? ""))
-  if (chapterId === "c2") return questions.filter((q) => ["Chương 2", "Chương 2 donate"].includes(q.chapter ?? ""))
-  if (chapterId === "c3") return questions.filter((q) => ["Chương 3", "Chương 3 Donate"].includes(q.chapter ?? ""))
-  if (chapterId === "c12_mid") return questions.filter((q) => ["Chương 1", "Chương 1 donate", "Chương 2", "Chương 2 donate"].includes(q.chapter ?? ""))
-  if (chapterId === "c3_final") return questions.filter((q) => ["Chương 3", "Chương 3 Donate"].includes(q.chapter ?? ""))
-  return questions
-}
+const knldFilter: ChapterFilter = (questions, chapterId) => filterByChapterNames(questions, chapterId, {
+  c1: ["Chương 1"], c2: ["Chương 2"], c3: ["Chương 3"], c4: ["Chương 4"], c5: ["Chương 5"], c123_mid: ["Chương 1", "Chương 2", "Chương 3"], c45_final: ["Chương 4", "Chương 5"],
+})
 
-function filterQthQuestionsByChapter<T extends { chapter?: string }>(questions: T[], chapterId: string): T[] {
-  if (chapterId === "all") return questions
-  if (chapterId === "c1") return questions.filter((q) => q.chapter === "Chương 1")
-  if (chapterId === "c2") return questions.filter((q) => q.chapter === "Chương 2")
-  if (chapterId === "c3") return questions.filter((q) => q.chapter === "Chương 3")
-  if (chapterId === "c4") return questions.filter((q) => q.chapter === "Chương 4")
-  if (chapterId === "c5") return questions.filter((q) => q.chapter === "Chương 5")
-  if (chapterId === "c6") return questions.filter((q) => q.chapter === "Chương 6")
-  if (chapterId === "c7") return questions.filter((q) => q.chapter === "Chương 7")
-  if (chapterId === "c1234_mid") return questions.filter((q) => ["Chương 1", "Chương 2", "Chương 3", "Chương 4", "Chương 1,2,3 MIX"].includes(q.chapter ?? ""))
-  if (chapterId === "c567_final") return questions.filter((q) => ["Chương 5", "Chương 6", "Chương 7", "Chương 4&5 MIX", "Chương 6&7 MIX"].includes(q.chapter ?? ""))
-  return questions
-}
+const pmFilter: ChapterFilter = (questions, chapterId) => filterByChapterNames(questions, chapterId, {
+  c1: ["Chương 1"], c2: ["Chương 2"], c3: ["Chương 3"], c4: ["Chương 4"], c5: ["Chương 5"], c6: ["Chương 6"], c7: ["Chương 7"], c8: ["Chương 8"], c12345_mid: ["Chương 1", "Chương 2", "Chương 3", "Chương 4", "Chương 5"], c678_final: ["Chương 6", "Chương 7", "Chương 8"],
+})
 
-function filterMln2tcQuestionsByChapter<T extends { chapter?: string }>(questions: T[], chapterId: string): T[] {
-  if (chapterId === "all") return questions
-  if (chapterId === "c12_mid") return questions.filter((q) => ["Câu Hỏi Trong Slide Bài Giảng", "Chương 1 nè", "Chương 2 nè", "Chương 1,2 câu 0,35-0.4 điểm"].includes(q.chapter ?? ""))
-  if (chapterId === "c3_final") return questions.filter((q) => ["Chương 3 câu 0,35 điểm", "Chương 1,2,3 câu 0,3 điểm"].includes(q.chapter ?? ""))
-  return questions
-}
+const lsdFilter: ChapterFilter = (questions, chapterId) => filterByChapterNames(questions, chapterId, {
+  suutam: ["Câu Hỏi Trên Canvas", "Chương Mất Gốc", "Chương Nhập Môn"], c1: ["Chương 1", "Chương 1 donate"], c2: ["Chương 2", "Chương 2 donate"], c3: ["Chương 3", "Chương 3 Donate"], c12_mid: ["Chương 1", "Chương 1 donate", "Chương 2", "Chương 2 donate"], c3_final: ["Chương 3", "Chương 3 Donate"],
+})
 
-function filterMln3tcQuestionsByChapter<T extends { chapter?: string }>(questions: T[], chapterId: string): T[] {
-  if (chapterId === "all") return questions
-  if (chapterId === "c12_mid") return questions.filter((q) => q.chapter === "Chương 1" || q.chapter === "Chương 2")
-  if (chapterId === "c3_final") return questions.filter((q) => q.chapter === "Chương 3 cuối kì")
-  return questions
+const qthFilter: ChapterFilter = (questions, chapterId) => filterByChapterNames(questions, chapterId, {
+  c1: ["Chương 1"], c2: ["Chương 2"], c3: ["Chương 3"], c4: ["Chương 4"], c5: ["Chương 5"], c6: ["Chương 6"], c7: ["Chương 7"], c1234_mid: ["Chương 1", "Chương 2", "Chương 3", "Chương 4", "Chương 1,2,3 MIX"], c567_final: ["Chương 5", "Chương 6", "Chương 7", "Chương 4&5 MIX", "Chương 6&7 MIX"],
+})
+
+const mln2tcFilter: ChapterFilter = (questions, chapterId) => filterByChapterNames(questions, chapterId, {
+  c12_mid: ["Câu Hỏi Trong Slide Bài Giảng", "Chương 1 nè", "Chương 2 nè", "Chương 1,2 câu 0,35-0.4 điểm"], c3_final: ["Chương 3 câu 0,35 điểm", "Chương 1,2,3 câu 0,3 điểm"],
+})
+
+const mln3tcFilter: ChapterFilter = (questions, chapterId) => filterByChapterNames(questions, chapterId, {
+  c12_mid: ["Chương 1", "Chương 2"], c3_final: ["Chương 3 cuối kì"],
+})
+
+const chapterFilters: Partial<Record<ChapterSubjectId, ChapterFilter>> = {
+  "tu-tuong-ho-chi-minh": (questions, chapterId) => isHcmChapterId(chapterId) ? filterHcmQuestionsByChapter(questions, chapterId) : questions,
+  "chu-nghia-xa-hoi-khoa-hoc": cnxhFilter,
+  "ky-nang-khoi-nghiep-va-lanh-dao": knldFilter,
+  "ky-nang-quan-ly-du-an": pmFilter,
+  "lich-su-dang-cong-san-viet-nam": lsdFilter,
+  "quan-tri-hoc": qthFilter,
+  "triet-hoc-mac-lenin-2tc": mln2tcFilter,
+  "triet-hoc-mac-lenin-3tc": mln3tcFilter,
 }
 
 export function getChapterOptionsForSubject(subjectId: string): ChapterOption[] | null {
-  return subjectChapterMap[subjectId] ?? null
+  return subjectChapterMap[subjectId as SubjectId] ?? null
 }
 
 export function hasChapterSupport(subjectId: string): boolean {
-  return subjectId in subjectChapterMap
+  return subjectId in chapterFilters
 }
 
-export function filterQuestionsBySubjectChapter<T extends { chapter?: string; id: number | string }>(
-  subjectId: string,
-  questions: T[],
-  chapterId: string
-): T[] {
+export function filterQuestionsBySubjectChapter<T extends ChapterQuestion>(subjectId: string, questions: T[], chapterId: ChapterId): T[] {
   if (chapterId === "all") return questions
-  if (subjectId === "tu-tuong-ho-chi-minh") {
-    return filterHcmQuestionsByChapter(questions as any, chapterId as HcmChapterId) as T[]
-  }
-  if (subjectId === "chu-nghia-xa-hoi-khoa-hoc") return filterCnxhQuestionsByChapter(questions, chapterId)
-  if (subjectId === "ky-nang-khoi-nghiep-va-lanh-dao") return filterKnldQuestionsByChapter(questions, chapterId)
-  if (subjectId === "ky-nang-quan-ly-du-an") return filterPmQuestionsByChapter(questions, chapterId)
-  if (subjectId === "lich-su-dang-cong-san-viet-nam") return filterLsdQuestionsByChapter(questions, chapterId)
-  if (subjectId === "quan-tri-hoc") return filterQthQuestionsByChapter(questions, chapterId)
-  if (subjectId === "triet-hoc-mac-lenin-2tc") return filterMln2tcQuestionsByChapter(questions, chapterId)
-  if (subjectId === "triet-hoc-mac-lenin-3tc") return filterMln3tcQuestionsByChapter(questions, chapterId)
-  return questions
+  return chapterFilters[subjectId as ChapterSubjectId]?.(questions, chapterId) ?? questions
 }

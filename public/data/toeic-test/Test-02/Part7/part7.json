@@ -1,0 +1,839 @@
+{
+  "title": "TOEIC Reading Part 7 — Reading Comprehension",
+  "totalParts": 1,
+  "totalQuestions": 54,
+  "partNumber": 7,
+  "partTitle": "Reading Comprehension",
+  "instruction": "For each question, choose the best answer.",
+  "groups": [
+    {
+      "groupId": 1,
+      "passageType": "single",
+      "passage": "Nexus Retail E-Commerce Shipping Policy Update\nEffective November 1\n\nNexus Retail is pleased to announce an update to our express delivery services. Beginning November 1, all standard ground shipments over $75 will automatically qualify for free two-day express shipping within the continental United States. Orders under $75 will continue to incur a flat shipping fee of $5.99.\n\nAdditionally, customers using our mobile shopping application will receive real-time SMS tracking updates for their packages at no additional cost. To enable this feature, simply update your communication preferences under the \"Account Settings\" tab in the mobile app prior to placing your order.",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What change will take effect on November 1?",
+          "options": {
+            "A": "Free express shipping will be offered for qualifying orders.",
+            "B": "The mobile shopping application will be discontinued.",
+            "C": "Standard ground shipping fees will increase.",
+            "D": "SMS tracking updates will require a monthly subscription."
+          },
+          "answer": "A",
+          "explainAnswer": "Đoạn 1 nêu rõ kể từ ngày 1 tháng 11, tất cả đơn hàng tiêu chuẩn trên $75 sẽ tự động được miễn phí giao hàng nhanh 2 ngày (free express shipping for qualifying orders)."
+        },
+        {
+          "id": 2,
+          "question": "According to the notice, how can customers activate SMS tracking?",
+          "options": {
+            "A": "By calling customer support.",
+            "B": "By purchasing a premium membership.",
+            "C": "By adjusting settings in the mobile application.",
+            "D": "By replying to an email confirmation."
+          },
+          "answer": "C",
+          "explainAnswer": "Đoạn 2 hướng dẫn khách hàng kích hoạt tính năng SMS tracking bằng cách cập nhật tùy chọn truyền thông trong mục Account Settings trên ứng dụng di động."
+        }
+      ]
+    },
+    {
+      "groupId": 2,
+      "passageType": "single",
+      "passage": "Apex Renewable Energy — Job Opportunity\nPosition: Senior Solar Systems Engineer\nLocation: Denver, CO\n\nApex Renewable Energy, a leading provider of commercial solar power solutions, is seeking an experienced Senior Solar Systems Engineer to join our growing engineering team.\n\nKey Responsibilities:\n- Design commercial photovoltaic (PV) solar array layouts for enterprise clients.\n- Perform technical feasibility studies and energy output simulations.\n- Coordinate with field installation crews to ensure compliance with local electrical codes.\n\nQualifications:\n- Bachelor's degree in Electrical or Mechanical Engineering.\n- Minimum five years of professional experience in solar PV system design.\n- Proficiency in AutoCAD and PVSyst simulation software.\n\nTo apply, please submit your resume and cover letter to careers@apexrenewable.com by October 25.",
+      "questions": [
+        {
+          "id": 3,
+          "question": "What is NOT mentioned as a responsibility for the position?",
+          "options": {
+            "A": "Designing photovoltaic solar array layouts.",
+            "B": "Negotiating land lease contracts for solar farms.",
+            "C": "Conducting energy output simulations.",
+            "D": "Coordinating with field installation crews."
+          },
+          "answer": "B",
+          "explainAnswer": "Trong mục Key Responsibilities, bài tuyển dụng liệt kê thiết kế sơ đồ mảng pin (A), chạy mô phỏng năng lượng (C), và phối hợp với đội lắp đặt hiện trường (D). Đàm phán hợp đồng thuê đất (B) KHÔNG hề được nhắc tới."
+        },
+        {
+          "id": 4,
+          "question": "What requirement is listed under qualifications?",
+          "options": {
+            "A": "A master's degree in business administration.",
+            "B": "Fluency in multiple foreign languages.",
+            "C": "Certification in occupational health and safety.",
+            "D": "At least five years of solar design experience."
+          },
+          "answer": "D",
+          "explainAnswer": "Trong mục Qualifications, yêu cầu về kinh nghiệm là 'Minimum five years of professional experience in solar PV system design' (tối thiểu / ít nhất 5 năm kinh nghiệm thiết kế điện mặt trời)."
+        }
+      ]
+    },
+    {
+      "groupId": 3,
+      "passageType": "single",
+      "passage": "Internal Chat Thread: Lumina Marketing & Nexus Palm Resort Team\n\nDavid Vance [10:14 A.M.]: Hi Clara, I'm reviewing the setup for tonight's corporate gala at Building C. The AV team noticed that the wireless microphones are picking up interference.\nClara Diaz [10:16 A.M.]: Thanks for the heads-up, David. Did you test the backup frequency channels on the main audio console?\nDavid Vance [10:18 A.M.]: Yes, we switched to channel 4, but there's still a slight hum. The catering staff is also arriving early at 2:00 P.M. to set up the banquet tables.\nClara Diaz [10:20 A.M.]: Okay. I'll have the resort's chief IT technician bring two replacement microphone sets over to Building C right after lunch. We'll get this resolved before the 6:00 P.M. reception.\nDavid Vance [10:21 A.M.]: Perfect, appreciate the quick help!",
+      "questions": [
+        {
+          "id": 5,
+          "question": "What problem are the speakers discussing?",
+          "options": {
+            "A": "Audio equipment is experiencing interference.",
+            "B": "Banquet tables were damaged during delivery.",
+            "C": "The catering staff arrived late.",
+            "D": "Building C is unavailable for the gala."
+          },
+          "answer": "A",
+          "explainAnswer": "David mở đầu đoạn chat lúc 10:14 A.M. báo cáo sự cố micro không dây bị nhiễu sóng (wireless microphones are picking up interference)."
+        },
+        {
+          "id": 6,
+          "question": "What will Clara arrange to happen after lunch?",
+          "options": {
+            "A": "The catering menu will be updated.",
+            "B": "The reception starting time will be postponed.",
+            "C": "A technician will deliver replacement microphones.",
+            "D": "Building C will be cleaned."
+          },
+          "answer": "C",
+          "explainAnswer": "Clara nhắn lúc 10:20 A.M. khẳng định sẽ cử kỹ thuật viên IT mang 2 bộ micro thay thế sang Building C ngay sau giờ ăn trưa (right after lunch)."
+        }
+      ]
+    },
+    {
+      "groupId": 4,
+      "passageType": "single",
+      "passage": "FOR IMMEDIATE RELEASE\n\nOmniHealth BioTech Completes Phase II Clinical Trial for Reagent Diagnostic Tool\n\nBOSTON, MA — October 18 — OmniHealth BioTech Inc. today announced the successful completion of its Phase II clinical trial for Respiration-X, an advanced diagnostic reagent kit designed for rapid pathogen identification in clinical laboratories.\n\nThe trial, conducted across six accredited university research hospitals, evaluated the diagnostic speed and accuracy of Respiration-X in processing over 1,200 patient samples. According to final data released by OmniHealth, the kit achieved a 98.4% diagnostic accuracy rate while reducing sample processing time from four hours to under 45 minutes.\n\n\"Completing Phase II with such outstanding results marks a major milestone,\" stated Dr. Marcus Vance, Vice President of Research & Development at OmniHealth. \"We are now preparing our submission for regulatory approval and plan to initiate Phase III multi-center trials early next year.\"\n\nDetailed clinical trial results will be published in the upcoming December issue of the Journal of Biomolecular Diagnostics.",
+      "questions": [
+        {
+          "id": 7,
+          "question": "What is the main purpose of the press release?",
+          "options": {
+            "A": "To announce a corporate merger.",
+            "B": "To report clinical trial results for a diagnostic kit.",
+            "C": "To advertise job openings at university hospitals.",
+            "D": "To recall a defective medical device."
+          },
+          "answer": "B",
+          "explainAnswer": "Mục đích chính của bài thông cáo báo chí là công bố kết quả hoàn thành thành công thử nghiệm lâm sàng Giai đoạn II cho bộ chẩn đoán Respiration-X."
+        },
+        {
+          "id": 8,
+          "question": "What key performance advantage of Respiration-X is mentioned?",
+          "options": {
+            "A": "It operates without electricity.",
+            "B": "It requires no trained personnel to operate.",
+            "C": "It is the least expensive option on the market.",
+            "D": "It reduces sample processing time to under 45 minutes."
+          },
+          "answer": "D",
+          "explainAnswer": "Đoạn 2 nêu rõ ưu điểm vượt trội về hiệu năng của Respiration-X là rút ngắn thời gian xử lý mẫu thử từ 4 tiếng xuống còn dưới 45 phút."
+        },
+        {
+          "id": 9,
+          "question": "What will happen in December?",
+          "options": {
+            "A": "Trial results will be published in a medical journal.",
+            "B": "Phase III trials will commence.",
+            "C": "The company will open a new laboratory in Boston.",
+            "D": "Regulatory approval will be granted."
+          },
+          "answer": "A",
+          "explainAnswer": "Câu cuối bài thông cáo xác nhận kết quả thử nghiệm lâm sàng chi tiết sẽ được công bố trên số báo tháng 12 của tạp chí y khoa Journal of Biomolecular Diagnostics."
+        }
+      ]
+    },
+    {
+      "groupId": 5,
+      "passageType": "single",
+      "passage": "Nexus Palm Resort — Event Venue Reservation Terms\n\nThank you for choosing Nexus Palm Resort for your event. Please review our venue reservation guidelines below:\n\n1. Deposit & Confirmation: A non-refundable 25% deposit is required upon signing the event contract to secure your booking date. The remaining balance must be settled no later than 14 business days prior to the event.\n\n2. Cancellations: Cancellations made at least 30 days before the scheduled event will receive a 50% refund of the total contract amount (excluding the initial deposit). Cancellations made less than 30 days prior to the event are ineligible for a refund.\n\n3. Catering & AV Services: All food and beverage requirements must be coordinated through our in-house culinary department. Outside catering is strictly prohibited. External audiovisual equipment is permitted subject to a $150 technical inspection fee.",
+      "questions": [
+        {
+          "id": 10,
+          "question": "When must the remaining balance for an event be paid?",
+          "options": {
+            "A": "Exactly 30 days after contract signing.",
+            "B": "On the day of the event.",
+            "C": "At least 14 business days before the event.",
+            "D": "Within 24 hours of booking confirmation."
+          },
+          "answer": "C",
+          "explainAnswer": "Mục 1 của điều khoản nêu rõ số tiền còn lại phải được thanh toán không muộn hơn 14 ngày làm việc trước sự kiện ('no later than 14 business days prior' = 'at least 14 business days before')."
+        },
+        {
+          "id": 11,
+          "question": "What is stated regarding catering at the resort?",
+          "options": {
+            "A": "Clients may bring food from any licensed restaurant.",
+            "B": "All food must be provided by the resort's in-house team.",
+            "C": "Catering is included free of charge with venue rental.",
+            "D": "Kitchen facilities are available for client use."
+          },
+          "answer": "B",
+          "explainAnswer": "Mục 3 quy định tất cả yêu cầu ăn uống phải do bộ phận ẩm thực nội bộ của resort đảm nhiệm, nghiêm cấm mang đồ ăn từ bên ngoài vào."
+        }
+      ]
+    },
+    {
+      "groupId": 6,
+      "passageType": "single",
+      "passage": "MEMORANDUM\n\nTo: IT Operations & Data Center Personnel\nFrom: Robert Sterling, Chief Technology Officer\nDate: September 29\nSubject: Data Center Power Grid Upgrade & Maintenance Schedule\n\nNext month, Nexus Retail will undergo a critical infrastructure upgrade at our primary data center facility in Chicago. To support our expanding e-commerce operations and cloud services, we are installing secondary backup generators and high-efficiency cooling units.\n\nThe upgrade work will take place over the weekend of October 14–15. During this window, primary server power will be switched to temporary auxiliary generators. While we do not anticipate any service disruption to our online shopping portal, all non-essential database maintenance tasks scheduled for that weekend must be postponed.\n\nData center personnel working during the upgrade must attend a mandatory safety briefing on Friday, October 13, at 3:00 P.M. in Conference Room 4B.",
+      "questions": [
+        {
+          "id": 12,
+          "question": "What is the main purpose of the memo?",
+          "options": {
+            "A": "To announce new employee benefits.",
+            "B": "To hire new IT consultants.",
+            "C": "To report a decrease in online sales.",
+            "D": "To inform staff about a data center infrastructure upgrade."
+          },
+          "answer": "D",
+          "explainAnswer": "Mục đích chính của bản ghi nhớ là thông báo cho toàn thể nhân viên IT về kế hoạch nâng cấp hạ tầng trung tâm dữ liệu tại Chicago."
+        },
+        {
+          "id": 13,
+          "question": "What are staff required to postpone during the upgrade weekend?",
+          "options": {
+            "A": "Non-essential database maintenance tasks.",
+            "B": "Online customer order processing.",
+            "C": "All employee shift changes.",
+            "D": "Mobile application software updates."
+          },
+          "answer": "A",
+          "explainAnswer": "Đoạn 2 nêu rõ tất cả các nhiệm vụ bảo trì cơ sở dữ liệu không thiết yếu dự kiến vào cuối tuần nâng cấp bắt buộc phải tạm hoãn."
+        },
+        {
+          "id": 14,
+          "question": "When will the mandatory safety briefing take place?",
+          "options": {
+            "A": "Sunday, October 15, at 5:00 P.M.",
+            "B": "Saturday, October 14, at 9:00 A.M.",
+            "C": "Friday, October 13, at 3:00 P.M.",
+            "D": "Monday, October 16, at 8:00 A.M."
+          },
+          "answer": "C",
+          "explainAnswer": "Đoạn cuối khẳng định nhân viên làm việc trong đợt nâng cấp phải tham dự buổi phổ biến an toàn bắt buộc vào Thứ Sáu, ngày 13 tháng 10 lúc 3:00 P.M."
+        }
+      ]
+    },
+    {
+      "groupId": 7,
+      "passageType": "single",
+      "passage": "The Rise of Mobile Contactless Payments in E-Commerce\nBy Financial Tech Analyst Sandra Miller\n\nOver the past two years, the retail industry has experienced a monumental shift in consumer payment preferences. According to a recent report by the Global FinTech Institute, mobile contactless payments and digital wallets accounted for nearly 58% of all online transactions this year, representing a significant increase from just 34% three years ago.\n\nIndustry experts attribute this rapid acceleration to two primary factors: heightened biometric security and streamlined checkout experiences. Modern mobile banking applications integrate facial recognition and fingerprint scanning, making digital transactions far more secure than traditional credit card entries. Furthermore, with one-click payment features, online shoppers can complete purchases in seconds without repeatedly entering billing details.\n\nHowever, small and medium-sized enterprises (SMEs) face challenges during implementation. Upgrading legacy point-of-sale (POS) systems and integrating secure API gateways often require substantial upfront capital. To address this barrier, several financial technology firms have launched flexible software-as-a-service (SaaS) subscription models that allow smaller merchants to adopt contactless payment processing with minimal initial investment.\n\nLooking ahead, analysts project that digital wallet adoption will surpass 75% globally by 2028, fundamentally transforming how merchants and consumers interact in the digital marketplace.",
+      "questions": [
+        {
+          "id": 15,
+          "question": "What percentage of online transactions were made using digital wallets this year?",
+          "options": {
+            "A": "34%",
+            "B": "58%",
+            "C": "45%",
+            "D": "75%"
+          },
+          "answer": "B",
+          "explainAnswer": "Đoạn 1 nêu rõ trong năm nay, thanh toán qua ví điện tử chiếm tới gần 58% tổng số giao dịch trực tuyến."
+        },
+        {
+          "id": 16,
+          "question": "What is cited as a reason for the popularity of mobile payments?",
+          "options": {
+            "A": "Free promotional gifts with every purchase.",
+            "B": "Unlimited credit limits for users.",
+            "C": "Lower tax rates on digital transactions.",
+            "D": "Biometric security features and faster checkout."
+          },
+          "answer": "D",
+          "explainAnswer": "Đoạn 2 khẳng định các yếu tố chính thúc đẩy tính phổ biến của thanh toán di động là tính năng bảo mật sinh trắc học được nâng cao và trải nghiệm thanh toán nhanh chóng, tinh gọn."
+        },
+        {
+          "id": 17,
+          "question": "What obstacle do small and medium-sized enterprises face?",
+          "options": {
+            "A": "High upfront costs for upgrading legacy POS systems.",
+            "B": "Lack of interest from consumers.",
+            "C": "Strict government prohibitions on digital payments.",
+            "D": "Frequent internet network outages."
+          },
+          "answer": "A",
+          "explainAnswer": "Đoạn 3 chỉ rõ trở ngại mà các doanh nghiệp vừa và nhỏ (SMEs) gặp phải là chi phí vốn ban đầu rất lớn để nâng cấp các hệ thống máy tính tiền POS thế hệ cũ."
+        },
+        {
+          "id": 18,
+          "question": "The word \"surpass\" in paragraph 4 is closest in meaning to:",
+          "options": {
+            "A": "replace",
+            "B": "decline",
+            "C": "exceed",
+            "D": "maintain"
+          },
+          "answer": "C",
+          "explainAnswer": "Từ 'surpass' trong đoạn 4 có nghĩa là vượt qua / vượt mốc (exceed 75% globally)."
+        }
+      ]
+    },
+    {
+      "groupId": 8,
+      "passageType": "single",
+      "passage": "Nexus Retail Online Marketplace — Customer Product Review\nProduct: EcoSolar Portable Power Bank 20,000mAh\nVerified Buyer: Brian Gallagher\nRating: 4 out of 5 stars\nDate: October 8\n\nReview Title: Excellent build quality, but charging takes patience!\n\nI purchased the EcoSolar Power Bank three weeks ago for a week-long camping trip in Colorado. Overall, I am very impressed with the durability of the unit. The rubberized casing protected the battery from several accidental drops, and the dual USB-C ports allowed me to charge both my smartphone and GPS device simultaneously.\n\nThe solar charging feature works well under direct sunlight, though it is noticeably slower than wall-socket charging. It took about 6 hours of full sun exposure to recharge the power bank from 20% to 80%. If you are expecting instant solar charging, you might be disappointed, but as an emergency backup in the wilderness, it is invaluable.\n\nCustomer support was also very responsive. When my package arrived initially, the solar panel cover was slightly scratched. I contacted Nexus Retail's chat support, and they shipped a replacement unit within two business days without requiring me to pay return postage.\n\nI would definitely recommend this product to outdoor enthusiasts!",
+      "questions": [
+        {
+          "id": 19,
+          "question": "Why did Brian Gallagher purchase the power bank?",
+          "options": {
+            "A": "For daily use in his office.",
+            "B": "For a camping trip in Colorado.",
+            "C": "For an international business flight.",
+            "D": "To resell it at his electronics shop."
+          },
+          "answer": "B",
+          "explainAnswer": "Đoạn 1 nêu rõ Brian mua sạc dự phòng cho chuyến đi cắm trại kéo dài 1 tuần tại bang Colorado."
+        },
+        {
+          "id": 20,
+          "question": "What feature of the product did Brian praise for its durability?",
+          "options": {
+            "A": "The solar panel glass.",
+            "B": "The fabric carrying pouch.",
+            "C": "The digital LED display screen.",
+            "D": "The rubberized casing."
+          },
+          "answer": "D",
+          "explainAnswer": "Brian khen ngợi lớp vỏ bọc bằng cao su (rubberized casing) đã bảo vệ viên pin an toàn qua nhiều lần vô tình làm rơi."
+        },
+        {
+          "id": 21,
+          "question": "How long did it take to charge the battery from 20% to 80% using solar power?",
+          "options": {
+            "A": "6 hours",
+            "B": "4 hours",
+            "C": "2 hours",
+            "D": "8 hours"
+          },
+          "answer": "A",
+          "explainAnswer": "Đoạn 2 ghi rõ mất khoảng 6 tiếng sạc dưới ánh nắng mặt trời trực tiếp để nạp pin từ 20% lên 80%."
+        },
+        {
+          "id": 22,
+          "question": "What did customer support do when Brian reported a damaged item?",
+          "options": {
+            "A": "Issued a store credit gift card.",
+            "B": "Refused to honor the warranty.",
+            "C": "Sent a replacement unit with free return postage.",
+            "D": "Repaired the scratched panel at their workshop."
+          },
+          "answer": "C",
+          "explainAnswer": "Đoạn 3 chỉ rõ dịch vụ chăm sóc khách hàng đã giao sản phẩm mới thay thế trong vòng 2 ngày làm việc và miễn phí toàn bộ phí gửi trả hàng cũ."
+        }
+      ]
+    },
+    {
+      "groupId": 9,
+      "passageType": "single",
+      "passage": "Apex Renewable Energy — Commercial Solar Maintenance Agreement\n\nClient Name: Lumina Logistics Inc.\nService Location: 450 Logistics Parkway, Atlanta, GA\nContract Duration: 24 Months (Effective January 1, 2026 – December 31, 2027)\n\nScope of Work:\nApex Renewable Energy agrees to provide comprehensive maintenance services for the 500kW rooftop photovoltaic (PV) solar panel system installed at the client's service location. Maintenance services shall include:\n1. Quarterly Inspections: Visual and thermal camera inspection of all solar modules, mounting structures, and wiring connections.\n2. Inverter Servicing: Semi-annual diagnostic testing and firmware updates for all central power inverters.\n3. Panel Washing: Bi-annual automated surface cleaning to remove dust and debris accumulation.\n4. Emergency Repairs: Guaranteed 4-hour on-site response for critical system outages reported between 8:00 A.M. and 6:00 P.M. EST on business days.\n\nPayment Terms:\nThe annual agreement fee is $12,000, payable in quarterly installments of $3,000 due on the first day of each calendar quarter (January 1, April 1, July 1, October 1). Payments received after a 10-day grace period will incur a late fee of 2.5% per month.\n\nTermination Clause:\nEither party may terminate this agreement prior to the expiration date by providing a 60-day written notice to the other party.",
+      "questions": [
+        {
+          "id": 23,
+          "question": "What is the total duration of the agreement?",
+          "options": {
+            "A": "12 months",
+            "B": "24 months",
+            "C": "36 months",
+            "D": "48 months"
+          },
+          "answer": "B",
+          "explainAnswer": "Phần thông tin khởi đầu hợp đồng xác nhận thời hạn hợp đồng kéo dài 24 tháng (Contract Duration: 24 Months)."
+        },
+        {
+          "id": 24,
+          "question": "How often will panel washing be performed?",
+          "options": {
+            "A": "Every month",
+            "B": "Four times a year",
+            "C": "Once every two years",
+            "D": "Twice a year"
+          },
+          "answer": "D",
+          "explainAnswer": "Mục 3 quy định dịch vụ rửa tấm pin mặt trời được thực hiện 'Bi-annual' (nửa năm 1 lần / 2 lần một năm = Twice a year)."
+        },
+        {
+          "id": 25,
+          "question": "What is guaranteed for emergency repairs reported during business hours?",
+          "options": {
+            "A": "A 4-hour on-site response time.",
+            "B": "Free replacement of all solar panels.",
+            "C": "Full refund of the quarterly payment.",
+            "D": "Instant remote system reboot."
+          },
+          "answer": "A",
+          "explainAnswer": "Mục 4 đảm bảo thời gian có mặt phản hồi xử lý sự cố tại chỗ trong vòng 4 giờ đối với các lỗi nghiêm trọng được báo trong giờ làm việc."
+        },
+        {
+          "id": 26,
+          "question": "How much is the client required to pay each quarter?",
+          "options": {
+            "A": "$2,500",
+            "B": "$6,000",
+            "C": "$3,000",
+            "D": "$12,000"
+          },
+          "answer": "C",
+          "explainAnswer": "Mục Payment Terms ghi rõ phí thỏa thuận hàng năm là $12,000 được trả làm 4 đợt theo quý, mỗi quý thanh toán $3,000."
+        },
+        {
+          "id": 27,
+          "question": "What happens if payment is received 15 days late?",
+          "options": {
+            "A": "The contract is automatically cancelled.",
+            "B": "A 2.5% monthly late fee will be applied.",
+            "C": "Solar power supply will be shut off immediately.",
+            "D": "The client will be reported to a credit agency."
+          },
+          "answer": "B",
+          "explainAnswer": "Thanh toán trễ 15 ngày đã vượt quá 10 ngày ân hạn (10-day grace period), do đó khách hàng sẽ chịu mức phạt nộp chậm 2.5% mỗi tháng."
+        },
+        {
+          "id": 28,
+          "question": "How can either party terminate the contract early?",
+          "options": {
+            "A": "By paying a $1,000 penalty fee.",
+            "B": "By filing a dispute with the local court.",
+            "C": "By calling customer support hotline.",
+            "D": "By providing a 60-day written notice."
+          },
+          "answer": "D",
+          "explainAnswer": "Mục Termination Clause nêu rõ mỗi bên có quyền chấm dứt hợp đồng trước thời hạn bằng cách gửi thông báo bằng văn bản trước 60 ngày cho bên kia."
+        },
+        {
+          "id": 29,
+          "question": "The word \"comprehensive\" in line 6 is closest in meaning to:",
+          "options": {
+            "A": "thorough",
+            "B": "complicated",
+            "C": "expensive",
+            "D": "temporary"
+          },
+          "answer": "A",
+          "explainAnswer": "Từ 'comprehensive' trong dòng 6 có nghĩa là toàn diện / kỹ lưỡng (thorough maintenance services)."
+        }
+      ]
+    },
+    {
+      "groupId": 10,
+      "passageType": "multiple",
+      "passages": [
+        {
+          "documentId": 1,
+          "documentType": "email",
+          "title": "Order Confirmation Email",
+          "content": "From: Nexus Retail Orders <orders@nexusretail.com>\nTo: Karen Bennett <karen.bennett@email.com>\nDate: October 5\nOrder Number: #NX-88421\n\nDear Ms. Bennett,\n\nThank you for your order with Nexus Retail. Your order details are listed below:\n- 1x EcoSolar Portable Power Bank 20,000mAh — $89.99\n- 2x Heavy-Duty USB-C Charging Cables — $14.99 each ($29.98 total)\n- Shipping Option: Two-Day Express Shipping — $12.99\n- Total Amount Charged: $132.96\n\nYour items will be shipped via Nexus Express Courier from our Atlanta distribution warehouse. Estimated delivery date is Thursday, October 8. Track your package using tracking ID #NX-TRK-9901."
+        },
+        {
+          "documentId": 2,
+          "documentType": "email",
+          "title": "Customer Refund Request Email",
+          "content": "From: Karen Bennett <karen.bennett@email.com>\nTo: Nexus Retail Support <support@nexusretail.com>\nDate: October 9\nSubject: Refund Request for Order #NX-88421\n\nDear Customer Support,\n\nI received my package yesterday afternoon (October 8). While the EcoSolar Power Bank arrived in perfect condition and works wonderfully, I noticed an issue with the USB-C cables included in the shipment.\n\nI ordered two Heavy-Duty USB-C Charging Cables, but the package contained two micro-USB cables instead, which are incompatible with my devices. Since I urgently need the USB-C cables for a business trip next Monday, I purchased replacement cables at a local retail store this morning.\n\nTherefore, I would like to request a full refund of $29.98 for the incorrect cables. I have attached photos of the unopened micro-USB cables and my order confirmation. Please let me know how to return the wrong items.\n\nBest regards,\nKaren Bennett"
+        }
+      ],
+      "questions": [
+        {
+          "id": 30,
+          "question": "Where was Order #NX-88421 shipped from?",
+          "options": {
+            "A": "Chicago",
+            "B": "Denver",
+            "C": "Atlanta",
+            "D": "Boston"
+          },
+          "answer": "C",
+          "explainAnswer": "Văn bản 1 (Email xác nhận đơn hàng) ghi rõ hàng được giao từ kho phân phối tại Atlanta (Atlanta distribution warehouse)."
+        },
+        {
+          "id": 31,
+          "question": "What item arrived in perfect condition?",
+          "options": {
+            "A": "The micro-USB cables.",
+            "B": "The EcoSolar Power Bank.",
+            "C": "The delivery box.",
+            "D": "The replacement retail cables."
+          },
+          "answer": "B",
+          "explainAnswer": "Văn bản 2 (Email phản hồi của khách) xác nhận bộ sạc dự phòng EcoSolar Power Bank đến nơi trong tình trạng hoàn hảo và hoạt động rất tốt."
+        },
+        {
+          "id": 32,
+          "question": "Look at both documents. Why is Ms. Bennett requesting a refund?",
+          "options": {
+            "A": "The package arrived three days after the estimated date.",
+            "B": "The power bank failed to charge her devices.",
+            "C": "She found a lower price on another website.",
+            "D": "The wrong type of cables was included in her shipment."
+          },
+          "answer": "D",
+          "explainAnswer": "Đối chiếu 2 văn bản: Văn bản 1 thể hiện đơn hàng đặt 2 cáp USB-C, nhưng Văn bản 2 khách hàng phản ánh kiện hàng lại chứa 2 cáp micro-USB ➔ Đã bị đóng gói nhầm sai loại cáp."
+        },
+        {
+          "id": 33,
+          "question": "How much total refund is Ms. Bennett requesting?",
+          "options": {
+            "A": "$29.98",
+            "B": "$12.99",
+            "C": "$89.99",
+            "D": "$132.96"
+          },
+          "answer": "A",
+          "explainAnswer": "Văn bản 2 nêu rõ khách hàng yêu cầu hoàn trả đúng $29.98 (bằng với giá trị 2 sợi cáp bị giao nhầm $14.99 x 2 ở Văn bản 1)."
+        },
+        {
+          "id": 34,
+          "question": "What does Ms. Bennett plan to do next Monday?",
+          "options": {
+            "A": "Visit the Atlanta warehouse.",
+            "B": "Return to the retail store.",
+            "C": "Attend a business trip.",
+            "D": "Host a training workshop."
+          },
+          "answer": "C",
+          "explainAnswer": "Văn bản 2 giải thích lý do cần gấp cáp USB-C là để chuẩn bị cho chuyến đi công tác vào thứ Hai tuần tới (business trip next Monday)."
+        }
+      ]
+    },
+    {
+      "groupId": 11,
+      "passageType": "multiple",
+      "passages": [
+        {
+          "documentId": 1,
+          "documentType": "proposal",
+          "title": "BioTech Equipment Purchase Proposal",
+          "content": "To: Executive Procurement Committee\nFrom: Dr. Chen, Lead BioTech Researcher\nDate: September 12\nSubject: Proposal for Automated DNA Synthesizer Purchase\n\nOur research team is requesting approval to purchase the GeneSynth 500 Automated DNA Synthesizer from Vertex Scientific Instruments. As we expand our clinical trial research for pathogen diagnostic kits, our current manual DNA synthesis process has become a major bottleneck.\n\nKey Specifications & Benefits:\n- Model: GeneSynth 500 (Automated High-Throughput Synthesizer)\n- Purchase Price: $75,000 (Includes delivery and installation)\n- Extended Warranty: 2-Year Full On-Site Maintenance ($5,000)\n- Total Investment: $80,000\n- Expected Benefit: Reduces DNA sequence preparation time from 4 weeks to 5 days per project.\n\nWe request that the committee review and approve this investment during the upcoming quarterly budget meeting."
+        },
+        {
+          "documentId": 2,
+          "documentType": "memorandum",
+          "title": "Internal Procurement Approval Memo",
+          "content": "MEMORANDUM\nTo: Dr. Chen, Lead BioTech Researcher\nFrom: Sandra Sterling, Chair of Procurement Committee\nDate: September 20\nSubject: Approval of BioTech Equipment Request (Proposal #BT-904)\n\nI am pleased to inform you that the Executive Procurement Committee officially approved your proposal (#BT-904) to acquire the GeneSynth 500 Automated DNA Synthesizer.\n\nDuring our review on September 18, the committee agreed that accelerating our clinical research timeline justifies the $80,000 total investment. Please note the following instructions for finalizing the acquisition:\n1. Issue the purchase order to Vertex Scientific Instruments no later than October 1.\n2. Coordinate with the Facilities Department to ensure electrical and ventilation requirements in Lab 3B are prepared prior to delivery.\n3. Vertex Scientific has confirmed that equipment delivery and installation will occur on October 15.\n\nThank you for your dedication to advancing OmniHealth's research capabilities."
+        }
+      ],
+      "questions": [
+        {
+          "id": 35,
+          "question": "Who is the supplier of the GeneSynth 500?",
+          "options": {
+            "A": "OmniHealth BioTech",
+            "B": "Vertex Scientific Instruments",
+            "C": "GeneSynth Corporation",
+            "D": "Apex Renewable Energy"
+          },
+          "answer": "B",
+          "explainAnswer": "Văn bản 1 (Tờ trình mua sắm) ghi rõ thiết bị tổng hợp DNA GeneSynth 500 được đặt mua từ nhà cung cấp Vertex Scientific Instruments."
+        },
+        {
+          "id": 36,
+          "question": "What is the primary benefit of the new equipment mentioned in Proposal #BT-904?",
+          "options": {
+            "A": "It reduces energy consumption in Lab 3B.",
+            "B": "It provides free 5-year maintenance.",
+            "C": "It eliminates the need for trained lab staff.",
+            "D": "It cuts DNA sequence preparation time to 5 days."
+          },
+          "answer": "D",
+          "explainAnswer": "Văn bản 1 mục Expected Benefit khẳng định lợi ích chính của thiết bị mới là rút ngắn thời gian chuẩn bị chuỗi DNA từ 4 tuần xuống chỉ còn 5 ngày mỗi dự án."
+        },
+        {
+          "id": 37,
+          "question": "Look at both documents. How much is allocated specifically for the extended warranty?",
+          "options": {
+            "A": "$5,000",
+            "B": "$75,000",
+            "C": "$80,000",
+            "D": "$90,000"
+          },
+          "answer": "A",
+          "explainAnswer": "Đối chiếu 2 văn bản: Văn bản 1 chi tiết hóa gói bảo hành mở rộng 2 năm tại chỗ là $5,000 (nằm trong tổng đầu tư $80,000 được phê duyệt ở Văn bản 2)."
+        },
+        {
+          "id": 38,
+          "question": "What must Dr. Chen do before October 1?",
+          "options": {
+            "A": "Submit a revised budget proposal.",
+            "B": "Complete electrical installation in Lab 3B.",
+            "C": "Issue the purchase order to the vendor.",
+            "D": "Host a training workshop for lab staff."
+          },
+          "answer": "C",
+          "explainAnswer": "Văn bản 2 (Memo chỉ dẫn của Hội đồng mua sắm) yêu cầu Tiến sĩ Chen phải phát hành đơn đặt hàng (PO) cho nhà cung cấp Vertex Scientific chậm nhất trước ngày 1 tháng 10."
+        },
+        {
+          "id": 39,
+          "question": "When is the equipment scheduled to be delivered and installed?",
+          "options": {
+            "A": "September 12",
+            "B": "October 15",
+            "C": "October 1",
+            "D": "September 20"
+          },
+          "answer": "B",
+          "explainAnswer": "Văn bản 2 mục 3 xác nhận nhà cung cấp Vertex Scientific sẽ giao hàng và tiến hành lắp đặt thiết bị vào ngày 15 tháng 10."
+        }
+      ]
+    },
+    {
+      "groupId": 12,
+      "passageType": "multiple",
+      "passages": [
+        {
+          "documentId": 1,
+          "documentType": "email",
+          "title": "Event Booking Inquiry Email",
+          "content": "From: Lisa Sterling <lisa.sterling@novatech.com>\nTo: Events Department <events@nexuspalmresort.com>\nDate: August 10\nSubject: Gala Dinner Venue Inquiry — NovaTech Annual Celebration\n\nDear Nexus Palm Resort Events Team,\n\nNovaTech Solutions is planning its Annual Employee Celebration Gala for Saturday, November 15. We anticipate approximately 250 attendees, including executive board members and international branch managers.\n\nWe are interested in renting the Oceanview Dining Pavilion from 5:00 P.M. to 11:00 P.M. We will require full catering services, including a three-course plated dinner and a two-hour open bar reception. Additionally, we need stage lighting and wireless microphone systems.\n\nPlease provide a formal quote and venue availability confirmation.\n\nSincerely,\nLisa Sterling, Corporate Event Coordinator"
+        },
+        {
+          "documentId": 2,
+          "documentType": "quotation",
+          "title": "Formal Price Quotation",
+          "content": "NEXUS PALM RESORT — EVENT QUOTATION\nQuotation Date: August 12\nClient: NovaTech Solutions (Attn: Lisa Sterling)\nEvent Date: November 15\n\nItem Description | Rate / Unit | Qty | Total Amount\nOceanview Dining Pavilion Rental (6 Hours) | $2,500 / event | 1 | $2,500\nPremium 3-Course Plated Dinner | $65 / person | 250 | $16,250\n2-Hour Open Bar Package | $25 / person | 250 | $6,250\nStage Lighting & Audio Package (Wireless Mics) | $800 / event | 1 | $800\nSubtotal: $25,800\nService Charge (10%) & Local Tax (8%): $4,644\nTotal Event Estimate: $30,444\n\n*Special Note: A 20% deposit ($6,088.80) is required within 10 days to lock in the reservation."
+        },
+        {
+          "documentId": 3,
+          "documentType": "receipt",
+          "title": "Booking Confirmation & Deposit Receipt",
+          "content": "NEXUS PALM RESORT — DEPOSIT RECEIPT\nReceipt Number: #REC-NV-901\nDate Issued: August 18\nReceived From: NovaTech Solutions\nPayment Amount: $6,088.80 (Paid via Corporate Visa ****-4412)\n\nThis receipt confirms that Nexus Palm Resort has received the required 20% deposit for the NovaTech Annual Employee Celebration Gala scheduled for November 15 at the Oceanview Dining Pavilion.\n\nConfirmed Event Logistics:\n- Guest Count: 250 Guests\n- Setup Start Time: 3:00 P.M. (Complimentary early access for decorating)\n- Event Duration: 5:00 P.M. – 11:00 P.M.\n- Remaining Balance Due: $24,355.20 (Due by November 1)\n\nThank you for choosing Nexus Palm Resort!"
+        }
+      ],
+      "questions": [
+        {
+          "id": 40,
+          "question": "What event is NovaTech Solutions planning?",
+          "options": {
+            "A": "A press conference for a product launch.",
+            "B": "A customer appreciation luncheon.",
+            "C": "A shareholder voting meeting.",
+            "D": "An annual employee celebration gala."
+          },
+          "answer": "D",
+          "explainAnswer": "Văn bản 1 (Email đặt chỗ) nêu rõ mục đích của NovaTech Solutions là lên kế hoạch tổ chức buổi tiệc Gala kỷ niệm nhân viên hàng năm (Annual Employee Celebration Gala) vào thứ Bảy ngày 15 tháng 11."
+        },
+        {
+          "id": 41,
+          "question": "Look at Document 2. What is the total estimated cost before taxes and service charges?",
+          "options": {
+            "A": "$25,800",
+            "B": "$16,250",
+            "C": "$30,444",
+            "D": "$6,088.80"
+          },
+          "answer": "A",
+          "explainAnswer": "Văn bản 2 (Bảng báo giá) liệt kê mục Subtotal (tổng chi phí dịch vụ trước khi tính thuế và phí phục vụ) là $25,800."
+        },
+        {
+          "id": 42,
+          "question": "Look at all three documents. On what date was the deposit paid by NovaTech Solutions?",
+          "options": {
+            "A": "August 10",
+            "B": "August 12",
+            "C": "August 18",
+            "D": "November 1"
+          },
+          "answer": "C",
+          "explainAnswer": "Đối chiếu 3 văn bản: Văn bản 1 gửi ngày 10/8, Văn bản 2 báo giá ngày 12/8. Văn bản 3 (Biên nhận tiền cọc #REC-NV-901) ghi ngày phát hành và nhận tiền cọc $6,088.80 chính thức vào ngày August 18."
+        },
+        {
+          "id": 43,
+          "question": "According to Document 3, what benefit is provided at no extra cost?",
+          "options": {
+            "A": "Complimentary open bar extension.",
+            "B": "Early access at 3:00 P.M. for decorating.",
+            "C": "Free hotel rooms for executive managers.",
+            "D": "Discounted parking for all guests."
+          },
+          "answer": "B",
+          "explainAnswer": "Văn bản 3 mục Confirmed Event Logistics ghi rõ việc được nhận địa điểm sớm từ 3:00 P.M. để chuẩn bị trang trí là dịch vụ miễn phí không tính thêm tiền (Complimentary early access)."
+        },
+        {
+          "id": 44,
+          "question": "By when must NovaTech Solutions pay the remaining balance of $24,355.20?",
+          "options": {
+            "A": "August 22",
+            "B": "October 12",
+            "C": "November 15",
+            "D": "November 1"
+          },
+          "answer": "D",
+          "explainAnswer": "Văn bản 3 dòng cuối cùng nêu rõ hạn chót để NovaTech Solutions thanh toán nốt số tiền còn lại $24,355.20 là trước ngày 1 tháng 11 (Due by November 1)."
+        }
+      ]
+    },
+    {
+      "groupId": 13,
+      "passageType": "multiple",
+      "passages": [
+        {
+          "documentId": 1,
+          "documentType": "notice",
+          "title": "Request for Proposals (RFP) Notice",
+          "content": "Lumina Logistics Commercial Solar Initiative\nRFP Issue Date: May 1\nProject Objective: Install a 500kW rooftop photovoltaic (PV) solar panel system at Lumina's regional distribution warehouse in Atlanta, GA.\n\nRFP Submission Criteria:\n1. All proposals must include high-efficiency monocrystalline solar panels with a minimum 25-year performance warranty.\n2. Inverters must feature real-time IoT cloud monitoring capabilities.\n3. Total turnkey installation budget cannot exceed $450,000.\n4. Bids must be submitted to rfp-solar@luminalogistics.com no later than June 1."
+        },
+        {
+          "documentId": 2,
+          "documentType": "proposal",
+          "title": "Vendor Proposal Summary",
+          "content": "APEX RENEWABLE ENERGY — PROPOSAL BID\nSubmitted To: Lumina Logistics Inc.\nSubmission Date: May 25\nProject Manager: Jason Miller\n\nProposed Solution:\n- Solar Modules: 1,250 Units of Apex MonoMax 400W Monocrystalline Panels (25-Year Manufacturer Warranty included).\n- Inverter System: Apex SmartCloud Commercial 500kW Central Inverter with real-time IoT monitoring software.\n- Project Timeline: Construction start July 10, completion August 30.\n- Total Turnkey Cost: $425,000 (Includes equipment, installation, permitting, and grid connection)."
+        },
+        {
+          "documentId": 3,
+          "documentType": "report",
+          "title": "Independent Technical Audit Report",
+          "content": "TECHNICAL EVALUATION AUDIT REPORT\nAuditor Firm: Vanguard Engineering Services\nClient: Lumina Logistics Selection Committee\nEvaluation Date: June 10\nSubject: Review of Apex Renewable Energy Proposal Bid\n\nAudit Summary:\nVanguard Engineering reviewed Apex Renewable Energy's proposal ($425,000 bid) against Lumina's RFP criteria.\n1. Equipment Compliance: The proposed Apex MonoMax panels meet all high-efficiency monocrystalline requirements and carry the mandatory 25-year warranty. The SmartCloud inverter satisfies IoT monitoring specifications.\n2. Financial Evaluation: The $425,000 bid is $25,000 below Lumina's maximum budget ceiling ($450,000).\n3. Recommendation: Vanguard recommends awarding the contract to Apex Renewable Energy, subject to Apex providing a certified structural roof load assessment prior to July 1."
+        }
+      ],
+      "questions": [
+        {
+          "id": 45,
+          "question": "What is the maximum budget specified in Lumina Logistics' RFP?",
+          "options": {
+            "A": "$450,000",
+            "B": "$425,000",
+            "C": "$400,000",
+            "D": "$500,000"
+          },
+          "answer": "A",
+          "explainAnswer": "Văn bản 1 (RFP Notice) mục 3 quy định rõ ràng rằng tổng ngân sách cho việc lắp đặt trọn gói không được vượt quá $450,000."
+        },
+        {
+          "id": 46,
+          "question": "What type of solar panels does Apex Renewable Energy propose to use?",
+          "options": {
+            "A": "Thin-film solar cells.",
+            "B": "Flexible organic panels.",
+            "C": "Monocrystalline solar panels.",
+            "D": "Polycrystalline panels."
+          },
+          "answer": "C",
+          "explainAnswer": "Văn bản 2 (Bảng đề xuất giá của Apex) nêu rõ giải pháp sử dụng 1,250 tấm pin mặt trời đơn tinh thể Apex MonoMax 400W Monocrystalline Panels."
+        },
+        {
+          "id": 47,
+          "question": "Look at all three documents. How much under budget was Apex's bid compared to the RFP ceiling?",
+          "options": {
+            "A": "$15,000",
+            "B": "$25,000",
+            "C": "$35,000",
+            "D": "$50,000"
+          },
+          "answer": "B",
+          "explainAnswer": "Đối chiếu cả 3 văn bản: Văn bản 1 đưa ra trần ngân sách $450,000. Văn bản 2 báo giá $425,000. Văn bản 3 (Báo cáo kiểm toán) tính toán và xác nhận khoản chênh lệch thấp hơn trần ngân sách đúng bằng $25,000 ($450,000 - $425,000 = $25,000)."
+        },
+        {
+          "id": 48,
+          "question": "According to Document 3, what document must Apex submit before July 1?",
+          "options": {
+            "A": "An updated insurance policy.",
+            "B": "A environmental impact study.",
+            "C": "A revised equipment pricing schedule.",
+            "D": "A certified structural roof load assessment."
+          },
+          "answer": "D",
+          "explainAnswer": "Văn bản 3 (Báo cáo kiểm toán độc lập) điều khoản 3 (Recommendation) nêu rõ kiến nghị trao hợp đồng cho Apex với điều kiện Apex phải nộp bản đánh giá tải trọng mái đã chứng nhận (certified structural roof load assessment) trước ngày 1 tháng 7."
+        },
+        {
+          "id": 49,
+          "question": "What is the scheduled completion date for project construction in Apex's proposal?",
+          "options": {
+            "A": "August 30",
+            "B": "June 10",
+            "C": "July 10",
+            "D": "June 1"
+          },
+          "answer": "A",
+          "explainAnswer": "Văn bản 2 (Đề xuất của Apex) mục Project Timeline xác nhận thời hạn hoàn thành thi công (completion) dự kiến là ngày 30 tháng 8."
+        }
+      ]
+    },
+    {
+      "groupId": 14,
+      "passageType": "multiple",
+      "passages": [
+        {
+          "documentId": 1,
+          "documentType": "protocol",
+          "title": "Clinical Trial Protocol Overview",
+          "content": "Protocol Code: #CT-REAGENT-2026\nSponsor: OmniHealth BioTech Inc.\nPrincipal Investigator: Dr. Chen, Lead BioTech Researcher\nStudy Title: Evaluation of MediScan 4.0 Diagnostic Reagent Kit in Hospital Laboratories\n\nProtocol Objective:\nTo evaluate the clinical diagnostic efficacy, processing speed, and pathogen accuracy of MediScan 4.0 across accredited university hospitals.\n\nParticipant Eligibility:\n- Patient age 18–65 presenting with respiratory symptoms.\n- Written informed consent must be executed prior to sample collection.\n- Exclusion: Patients currently enrolled in other experimental pharmaceutical trials."
+        },
+        {
+          "documentId": 2,
+          "documentType": "consent_form",
+          "title": "Patient Informed Consent Form",
+          "content": "OMNIHEALTH BIOTECH — PATIENT CONSENT FORM\nStudy Code: #CT-REAGENT-2026\nPatient Name: Robert Miller\nAge: 42\nEnrolling Facility: Boston University Medical Center\n\nI, Robert Miller, hereby confirm that I have read and understood the information sheet regarding Clinical Trial #CT-REAGENT-2026.\n- I understand that my participation involves providing one diagnostic blood sample for testing with MediScan 4.0.\n- I understand that my personal medical data will be anonymized and kept strictly confidential in accordance with HIPAA regulations.\n- I voluntarily consent to participate and understand I may withdraw at any time without affecting my standard medical care.\n\nSignature: Robert Miller\nDate: September 5, 2026\nWitness Signature: Dr. Chen\nDate: September 5, 2026"
+        },
+        {
+          "documentId": 3,
+          "documentType": "letter",
+          "title": "Ethics Board Approval Letter",
+          "content": "INSTITUTIONAL REVIEW BOARD (IRB) — APPROVAL LETTER\nIRB Approval Code: #IRB-BUMC-8821\nTo: Dr. Chen, Lead Investigator\nFrom: Institutional Review Board Chair, Boston University Medical Center\nDate: September 10, 2026\n\nDear Dr. Chen,\n\nThe Institutional Review Board (IRB) has completed its ethics review of Clinical Trial Protocol #CT-REAGENT-2026 and associated Informed Consent Forms (including Patient #42-Robert Miller).\n\nThe IRB hereby grants FULL ETHICAL APPROVAL for the trial to proceed at Boston University Medical Center.\n\nApproval Terms:\n1. All patient consent records must be stored in secure encrypted digital archives for a minimum of 7 years.\n2. Any adverse events or protocol deviations must be reported to the IRB within 24 hours.\n3. Annual progress reports must be submitted prior to September 1, 2027.\n\nSincerely,\nDr. Elizabeth Vance, IRB Chair"
+        }
+      ],
+      "questions": [
+        {
+          "id": 50,
+          "question": "What is the main objective of Protocol #CT-REAGENT-2026?",
+          "options": {
+            "A": "To test a new surgical procedure.",
+            "B": "To manufacture medical protective equipment.",
+            "C": "To evaluate the clinical efficacy of the MediScan 4.0 reagent kit.",
+            "D": "To train nursing staff on patient intake."
+          },
+          "answer": "C",
+          "explainAnswer": "Văn bản 1 (Tổng quan giao thức thử nghiệm) phần Protocol Objective nêu rõ mục tiêu chính là đánh giá hiệu quả chẩn đoán lâm sàng, tốc độ xử lý và độ chính xác phát hiện mầm bệnh của bộ thuốc thử MediScan 4.0."
+        },
+        {
+          "id": 51,
+          "question": "Who is the Principal Investigator for the study?",
+          "options": {
+            "A": "Dr. Marcus Vance",
+            "B": "Dr. Chen",
+            "C": "Dr. Elizabeth Vance",
+            "D": "Robert Miller"
+          },
+          "answer": "B",
+          "explainAnswer": "Văn bản 1 dòng 3 ghi rõ Nghiên cứu viên chính (Principal Investigator) của dự án thử nghiệm lâm sàng là Tiến sĩ Chen."
+        },
+        {
+          "id": 52,
+          "question": "Look at Document 2. How old is patient Robert Miller?",
+          "options": {
+            "A": "18",
+            "B": "70",
+            "C": "65",
+            "D": "42"
+          },
+          "answer": "D",
+          "explainAnswer": "Văn bản 2 (Đơn chấp thuận của bệnh nhân) dòng 3 ghi rõ số tuổi của bệnh nhân Robert Miller là 42 tuổi."
+        },
+        {
+          "id": 53,
+          "question": "Look at all three documents. Where is patient Robert Miller enrolled for the trial?",
+          "options": {
+            "A": "Boston University Medical Center",
+            "B": "OmniHealth Headquarters",
+            "C": "Apex Research Institute",
+            "D": "Denver General Hospital"
+          },
+          "answer": "A",
+          "explainAnswer": "Đối chiếu cả 3 văn bản: Văn bản 2 dòng 4 ghi rõ cơ sở tiếp nhận bệnh nhân Robert Miller là Boston University Medical Center. Văn bản 3 (Thư phê duyệt IRB) xác nhận cấp phép cho thử nghiệm tiến hành trực tiếp tại Boston University Medical Center."
+        },
+        {
+          "id": 54,
+          "question": "How long must patient consent records be stored according to IRB approval terms?",
+          "options": {
+            "A": "24 hours",
+            "B": "7 years",
+            "C": "5 years",
+            "D": "1 year"
+          },
+          "answer": "B",
+          "explainAnswer": "Văn bản 3 (Thư chấp thuận IRB) mục Approval Terms điều 1 nêu rõ tất cả hồ sơ chấp thuận của bệnh nhân phải được lưu trữ trong kho kỹ thuật số mã hóa an toàn tối thiểu 7 năm (minimum of 7 years)."
+        }
+      ]
+    }
+  ]
+}

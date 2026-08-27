@@ -2,7 +2,7 @@ import { useEffect, useId, useState } from "react"
 import { BookOpen, Clock3, FileText, Headphones, X } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
-import { toeicScopeOptions, type ToeicScope } from "@/data/toeic"
+import { getToeicScopeOptions, type ToeicScope } from "@/data/toeic"
 import { toeicPickerCopy as copy } from "@/shared/i18n"
 
 type Lang = "en" | "vi"
@@ -10,6 +10,7 @@ type Lang = "en" | "vi"
 type Props = {
   open: boolean
   lang: Lang
+  examId: string
   onClose: () => void
   onSelect: (scope: ToeicScope) => void
 }
@@ -37,7 +38,7 @@ function ScopeIcon({ scope, active }: { scope: ToeicScope; active: boolean }) {
   )
 }
 
-export function ToeicScopePickerModal({ open, lang, onClose, onSelect }: Props) {
+export function ToeicScopePickerModal({ open, lang, examId, onClose, onSelect }: Props) {
   const titleId = useId()
   const [visible, setVisible] = useState(false)
   const [state, setState] = useState<"open" | "closed">("closed")
@@ -73,11 +74,12 @@ export function ToeicScopePickerModal({ open, lang, onClose, onSelect }: Props) 
 
   if (!visible) return null
 
-  const fullOpts = toeicScopeOptions.filter((o) => o.id === "full")
-  const skillOpts = toeicScopeOptions.filter((o) => o.id === "listening" || o.id === "reading")
-  const partOpts = toeicScopeOptions.filter((o) => o.id.startsWith("part"))
+  const scopeOptions = getToeicScopeOptions(examId)
+  const fullOpts = scopeOptions.filter((o) => o.id === "full")
+  const skillOpts = scopeOptions.filter((o) => o.id === "listening" || o.id === "reading")
+  const partOpts = scopeOptions.filter((o) => o.id.startsWith("part"))
 
-  const renderGroup = (label: string, opts: typeof toeicScopeOptions) => (
+  const renderGroup = (label: string, opts: typeof scopeOptions) => (
     <div className="space-y-3">
       <p className="lp-label px-1 text-slate-500 dark:text-slate-400">{label}</p>
       <div className="grid gap-3">

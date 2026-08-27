@@ -1,39 +1,14 @@
 import { useState } from "react"
 import { X } from "lucide-react"
+import { Dialog } from "@/components/ui/dialog"
 import type { Question, AnswerValue } from "@/features/quiz/model/quiz.types"
 import { DetailedAnalysisContent } from "@/features/quiz/ui/DetailedAnalysisContent"
+import { quizCopy } from "@/shared/i18n"
 
-type Lang = "en" | "vi"
-
-const copy = {
-  en: {
-    question: "Question",
-    rightAnswer: "Correct answer",
-    explanation: "Explanation",
-    detailedExplanation: "Detailed Analysis",
-    noAnswer: "No answer",
-    closeReview: "Close review",
-    review: "Review answers",
-    yourAnswer: "Your answer",
-  },
-  vi: {
-    question: "Câu",
-    rightAnswer: "Đáp án đúng",
-    explanation: "Giải thích",
-    detailedExplanation: "Phân tích chi tiết",
-    noAnswer: "Chưa chọn",
-    closeReview: "Đóng xem lại",
-    review: "Xem lại bài làm",
-    yourAnswer: "Đáp án đã chọn",
-  },
-} as const
-
-export function ReviewPanel({ t, questions, answers, onClose }: { t: (typeof copy)[Lang]; questions: Question[]; answers: Record<string, AnswerValue>; onClose: () => void }) {
+export function ReviewPanel({ t, questions, answers, onClose }: { t: (typeof quizCopy)["en" | "vi"]; questions: Question[]; answers: Record<string, AnswerValue>; onClose: () => void }) {
   const [expanded, setExpanded] = useState<Record<string, boolean>>({})
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-      <button type="button" className="contact-modal-overlay absolute inset-0 bg-[rgba(16,15,62,0.45)] backdrop-blur-[2px]" data-state="open" onClick={onClose} />
-      <div className="contact-modal-panel relative z-10 flex max-h-[min(820px,92vh)] w-full max-w-[760px] flex-col overflow-hidden rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900" data-state="open">
+    <Dialog open onClose={onClose} title={t.review} closeLabel={t.closeReview} className="z-[100]" panelClassName="flex max-h-[min(820px,92vh)] w-full max-w-[760px] flex-col overflow-hidden rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900">
         <div className="flex items-center justify-between border-b border-[#E5E5E5] px-5 py-4 dark:border-white/10 sm:px-6">
           <h3 className="lp-modal-title text-[20px]">{t.review}</h3>
           <button type="button" onClick={onClose} className="lp-btn lp-btn--secondary lp-btn--icon"><X className="h-4 w-4" strokeWidth={2} /></button>
@@ -62,7 +37,7 @@ export function ReviewPanel({ t, questions, answers, onClose }: { t: (typeof cop
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-sparkles h-3 w-3" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg>
                           </span>
                           <span className="text-[13px] font-extrabold tracking-[-0.01em] text-[#100F3E] dark:text-white">
-                            {(t as unknown as { detailedExplanation?: string }).detailedExplanation ?? copy.vi.detailedExplanation}
+                            {t.detailedExplanation}
                           </span>
                         </span>
                         <span
@@ -86,7 +61,6 @@ export function ReviewPanel({ t, questions, answers, onClose }: { t: (typeof cop
         <div className="border-t border-[#E5E5E5] px-5 py-4 dark:border-white/10 sm:px-6">
           <button type="button" className="lp-btn lp-btn--primary lp-btn--sm lp-btn--block" onClick={onClose}>{t.closeReview}</button>
         </div>
-      </div>
-    </div>
+    </Dialog>
   )
 }

@@ -1,0 +1,1352 @@
+[
+  {
+    "id": 1,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The senior corporate attorney recommended conducting a thorough ------- of the merger contract before signing.",
+    "options": {
+      "A": "inspect",
+      "B": "inspection",
+      "C": "inspected",
+      "D": "inspects"
+    },
+    "correct_answer": "B",
+    "correct_text": "inspection",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Động từ nguyên thể không thể làm tân ngữ sau tính từ."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng danh từ inspection bổ nghĩa sau tính từ thorough."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Đạng quá khứ/tính từ bị động không phù hợp ngữ pháp."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Động từ chia số ít không thể làm tân ngữ."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "thorough inspection",
+        "paraphrases": ["detailed examination", "rigorous review"],
+        "meaning": "cuộc kiểm tra tỉ mỉ"
+      }
+    ],
+    "grammar_point": "Noun as object after adjective",
+    "strategy": [
+      "Bước 1: Identify Blank Position - Nhận diện vị trí chỗ trống đứng sau mạo từ 'a' và tính từ 'thorough'.",
+      "Bước 2: Determine Required Part of Speech - Xác định từ loại cần điền là danh từ (inspection).",
+      "Bước 3: Select Option B - Chọn B ('inspection')."
+    ]
+  },
+  {
+    "id": 2,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "All employees involved in handling client records must adhere ------- to the new corporate data privacy regulations.",
+    "options": {
+      "A": "highly",
+      "B": "nearly",
+      "C": "strictly",
+      "D": "widely"
+    },
+    "correct_answer": "C",
+    "correct_text": "strictly",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Trạng từ highly không kết hợp với động từ adhere."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Trạng từ nearly sai nghĩa ngữ cảnh."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng kết hợp từ cố định adhere strictly to."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Trạng từ widely sai nghĩa ngữ cảnh."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "adhere strictly to",
+        "paraphrases": ["comply rigorously with", "abide strictly by"],
+        "meaning": "tuân thủ nghiêm ngặt theo"
+      }
+    ],
+    "grammar_point": "Collocation (adhere strictly to)",
+    "strategy": [
+      "Bước 1: Identify Collocation Pattern - Nhận diện cấu trúc đi với động từ 'adhere'.",
+      "Bước 2: Match Adverb 'strictly' - Nhớ cụm cố định 'adhere strictly to regulations'.",
+      "Bước 3: Select Option C - Chọn C ('strictly')."
+    ]
+  },
+  {
+    "id": 3,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "------- the tenant pays the security deposit by Friday, the landlord will reserve the commercial office space.",
+    "options": {
+      "A": "Provided that",
+      "B": "In spite of",
+      "C": "Owing to",
+      "D": "As long as if"
+    },
+    "correct_answer": "A",
+    "correct_text": "Provided that",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng liên từ điều kiện Provided that đứng trước mệnh đề S + V."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Giới từ nhượng bộ phải đi với cụm danh từ."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Giới từ chỉ nguyên nhân phải đi với cụm danh từ."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Cấu trúc thừa từ sai cú pháp."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "Provided that",
+        "paraphrases": ["on the condition that", "as long as"],
+        "meaning": "miễn là / với điều kiện là"
+      }
+    ],
+    "grammar_point": "Conditional conjunction (provided that)",
+    "strategy": [
+      "Bước 1: Analyze Clause Structure - Nhận biết phía sau là một mệnh đề hoàn chỉnh (S + V).",
+      "Bước 2: Identify Conditional Meaning - Xác định ý nghĩa điều kiện 'Miễn là bên thuê nộp tiền đặt cọc'.",
+      "Bước 3: Select Option A - Chọn A ('Provided that')."
+    ]
+  },
+  {
+    "id": 4,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Lumina Real Estate Group submitted a formal proposal for a commercial lease ------- to extend their tenancy for another five years.",
+    "options": {
+      "A": "expansion",
+      "B": "insertion",
+      "C": "allocation",
+      "D": "extension"
+    },
+    "correct_answer": "D",
+    "correct_text": "extension",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Danh từ expansion (mở rộng) không đi ghép với lease trong ngữ cảnh gia hạn thời gian."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Danh từ insertion (sự chèn vào) sai nghĩa."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Danh từ allocation (sự phân bổ) sai nghĩa."
+      },
+      "D": {
+        "status": "correct",
+        "reason": "Đúng danh từ extension tạo thành cụm lease extension (gia hạn hợp đồng thuê)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "commercial lease extension",
+        "paraphrases": ["rental contract renewal", "tenancy extension"],
+        "meaning": "việc gia hạn hợp đồng thuê thương mại"
+      }
+    ],
+    "grammar_point": "Vocabulary (extension)",
+    "strategy": [
+      "Bước 1: Read Clue Verb 'extend' - Chú ý vế sau chứa động từ 'extend their tenancy'.",
+      "Bước 2: Match Noun 'extension' - Chọn danh từ tương ứng 'extension' ghép với 'commercial lease'.",
+      "Bước 3: Select Option D - Chọn D ('extension')."
+    ]
+  },
+  {
+    "id": 5,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The analytical report ------- by Apex Media highlights key performance metrics for the Q3 advertising campaign.",
+    "options": {
+      "A": "publishing",
+      "B": "published",
+      "C": "publishes",
+      "D": "publish"
+    },
+    "correct_answer": "B",
+    "correct_text": "published",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Dạng V-ing chỉ thể chủ động không phù hợp."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng quá khứ phân từ published trong mệnh đề quan hệ rút gọn bị động."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Động từ chia thì hiện tại số ít thừa động từ trong câu."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Động từ nguyên thể không thể bổ nghĩa cho danh từ."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "report published by",
+        "paraphrases": ["report released by", "report issued by"],
+        "meaning": "báo cáo được xuất bản bởi"
+      }
+    ],
+    "grammar_point": "Reduced relative clause (passive)",
+    "strategy": [
+      "Bước 1: Find Main Verb 'highlights' - Xác định động từ chính của câu là 'highlights'.",
+      "Bước 2: Identify Passive Reduced Relative Clause - Nhận biết báo cáo mang nghĩa bị động ('được xuất bản bởi') ➔ dùng V-ed.",
+      "Bước 3: Select Option B - Chọn B ('published')."
+    ]
+  },
+  {
+    "id": 6,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The board of directors agreed to sign the merger agreement only after review by legal counsel was ------- completed.",
+    "options": {
+      "A": "satisfactorily",
+      "B": "satisfaction",
+      "C": "satisfy",
+      "D": "satisfactory"
+    },
+    "correct_answer": "A",
+    "correct_text": "satisfactorily",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng trạng từ satisfactorily bổ nghĩa cho động từ completed."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Danh từ satisfaction không đứng giữa was và completed."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Động từ satisfy không đứng sau was."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Tính từ satisfactory không bổ nghĩa cho động từ completed."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "satisfactorily completed",
+        "paraphrases": ["successfully finished", "adequately concluded"],
+        "meaning": "hoàn thành một cách thỏa đáng"
+      }
+    ],
+    "grammar_point": "Adverb modifying verb",
+    "strategy": [
+      "Bước 1: Identify Auxiliary and Participle - Nhận biết vị trí đứng giữa 'was' và 'completed'.",
+      "Bước 2: Select Adverb (-ly) - Chọn trạng từ đuôi -ly (satisfactorily) để bổ nghĩa.",
+      "Bước 3: Select Option A - Chọn A ('satisfactorily')."
+    ]
+  },
+  {
+    "id": 7,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The corporate lawyer advised the client to immediately ------- the breach of contract to avoid potential litigation.",
+    "options": {
+      "A": "demolish",
+      "B": "generate",
+      "C": "rectify",
+      "D": "formulate"
+    },
+    "correct_answer": "C",
+    "correct_text": "rectify",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Động từ demolish (phá hủy) chỉ dùng cho công trình."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Động từ generate (tạo ra) sai nghĩa."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng động từ rectify tạo thành cụm rectify a breach (khắc phục sự vi phạm)."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Động từ formulate (đề ra/phát triển) sai nghĩa."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "rectify a breach",
+        "paraphrases": ["remedy a contract violation", "cure a default"],
+        "meaning": "khắc phục sự vi phạm hợp đồng"
+      }
+    ],
+    "grammar_point": "Vocabulary (rectify)",
+    "strategy": [
+      "Bước 1: Identify Object 'the breach' - Nhận biết tân ngữ 'the breach of contract'.",
+      "Bước 2: Match Verb 'rectify' - Nhớ cụm cố định 'rectify a breach'.",
+      "Bước 3: Select Option C - Chọn C ('rectify')."
+    ]
+  },
+  {
+    "id": 8,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "------- the legal team reviewed the non-disclosure clause earlier, the dispute with Vertex Systems would have been avoided.",
+    "options": {
+      "A": "If",
+      "B": "Were",
+      "C": "Should",
+      "D": "Had"
+    },
+    "correct_answer": "D",
+    "correct_text": "Had",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Dùng If thì mệnh đề phải là 'If the legal team had reviewed'."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Were là trợ động từ đảo ngữ Loại 2."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Should là trợ động từ đảo ngữ Loại 1."
+      },
+      "D": {
+        "status": "correct",
+        "reason": "Đúng trợ động từ Had cho đảo ngữ câu điều kiện Loại 3."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "Had the team reviewed",
+        "paraphrases": ["If the team had reviewed", "Supposing the team had examined"],
+        "meaning": "giá như đội ngũ đã xem xét"
+      }
+    ],
+    "grammar_point": "Inverted conditional type 3",
+    "strategy": [
+      "Bước 1: Check Main Clause 'would have been avoided' - Nhìn mệnh đề chính có 'would have been avoided' ➔ Điều kiện Loại 3.",
+      "Bước 2: Identify Inversion Structure - Thấy trợ động từ đứng trước chủ ngữ ➔ Đảo ngữ Loại 3 dùng 'Had'.",
+      "Bước 3: Select Option D - Chọn D ('Had')."
+    ]
+  },
+  {
+    "id": 9,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Commercial rental rates in the financial district are ------- higher than those in the suburban logistics zone.",
+    "options": {
+      "A": "substantially",
+      "B": "densely",
+      "C": "precisely",
+      "D": "narrowly"
+    },
+    "correct_answer": "A",
+    "correct_text": "substantially",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng trạng từ substantially nhấn mạnh so sánh hơn higher."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Trạng từ densely (đông đúc) không đi với higher."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Trạng từ precisely (chính xác) không nhấn mạnh chênh lệch so sánh."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Trạng từ narrowly (hẹp thòi/suýt nữa) sai nghĩa."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "substantially higher",
+        "paraphrases": ["significantly higher", "considerably greater"],
+        "meaning": "cao hơn đáng kể"
+      }
+    ],
+    "grammar_point": "Adverb modifying comparative adjective",
+    "strategy": [
+      "Bước 1: Identify Comparative Degree 'higher' - Nhận biết tính từ so sánh hơn 'higher'.",
+      "Bước 2: Match Modifying Adverb - Chọn trạng từ nhấn mạnh mức độ 'substantially'.",
+      "Bước 3: Select Option A - Chọn A ('substantially')."
+    ]
+  },
+  {
+    "id": 10,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "------- the economic slowdown, demand for online vocational training courses at LearnPulse EduTech has continued to grow.",
+    "options": {
+      "A": "Although",
+      "B": "Notwithstanding",
+      "C": "Provided",
+      "D": "Whereas"
+    },
+    "correct_answer": "B",
+    "correct_text": "Notwithstanding",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Although là liên từ, phải đi với mệnh đề S + V."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng giới từ nhượng bộ Notwithstanding đứng trước cụm danh từ."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Provided là liên từ điều kiện, phải đi với mệnh đề."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Whereas là liên từ chỉ sự tương phản, phải đi với mệnh đề."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "Notwithstanding the slowdown",
+        "paraphrases": ["despite the economic downturn", "in spite of the slowdown"],
+        "meaning": "bất chấp sự suy thoái kinh tế"
+      }
+    ],
+    "grammar_point": "Preposition (notwithstanding)",
+    "strategy": [
+      "Bước 1: Identify Noun Phrase 'the economic slowdown' - Xác định phía sau là cụm danh từ, không có động từ chia thì.",
+      "Bước 2: Match Concession Preposition - Chọn giới từ nhượng bộ 'Notwithstanding'.",
+      "Bước 3: Select Option B - Chọn B ('Notwithstanding')."
+    ]
+  },
+  {
+    "id": 11,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Apex Media and Lumina Real Estate reached a ------- agreement regarding the digital advertisement campaign schedule.",
+    "options": {
+      "A": "mutuality",
+      "B": "mutually",
+      "C": "mutual",
+      "D": "mutualize"
+    },
+    "correct_answer": "C",
+    "correct_text": "mutual",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Danh từ mutuality không bổ nghĩa cho danh từ agreement."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Trạng từ mutually không bổ nghĩa cho danh từ."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng tính từ mutual bổ nghĩa cho danh từ agreement."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Động từ mutualize sai từ loại."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "mutual agreement",
+        "paraphrases": ["shared consensus", "joint accord"],
+        "meaning": "thỏa thuận chung / sự đồng thuận từ hai phía"
+      }
+    ],
+    "grammar_point": "Adjective before noun",
+    "strategy": [
+      "Bước 1: Identify Noun 'agreement' - Nhận biết vị trí chỗ trống đứng trước danh từ 'agreement'.",
+      "Bước 2: Select Adjective 'mutual' - Chọn tính từ 'mutual' bổ nghĩa.",
+      "Bước 3: Select Option C - Chọn C ('mutual')."
+    ]
+  },
+  {
+    "id": 12,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The updated non-disclosure contract includes a strict confidentiality ------- that remains in effect for five years.",
+    "options": {
+      "A": "reservation",
+      "B": "estimation",
+      "C": "delegation",
+      "D": "obligation"
+    },
+    "correct_answer": "D",
+    "correct_text": "obligation",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Danh từ reservation (sự đặt chỗ) sai nghĩa."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Danh từ estimation (sự ước tính) sai nghĩa."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Danh từ delegation (sự ủy quyền) sai nghĩa."
+      },
+      "D": {
+        "status": "correct",
+        "reason": "Đúng danh từ obligation tạo thành cụm confidentiality obligation (nghĩa vụ bảo mật)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "confidentiality obligation",
+        "paraphrases": ["secrecy requirement", "confidentiality duty"],
+        "meaning": "nghĩa vụ bảo mật thông tin"
+      }
+    ],
+    "grammar_point": "Vocabulary (obligation)",
+    "strategy": [
+      "Bước 1: Identify Adjective/Noun 'confidentiality' - Nhận biết từ đi kèm 'confidentiality'.",
+      "Bước 2: Match Legal Noun 'obligation' - Nhớ cụm cố định 'confidentiality obligation'.",
+      "Bước 3: Select Option D - Chọn D ('obligation')."
+    ]
+  },
+  {
+    "id": 13,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The media director recommended that the digital advertising budget ------- reallocated to high-engagement social media platforms.",
+    "options": {
+      "A": "be",
+      "B": "is",
+      "C": "was",
+      "D": "being"
+    },
+    "correct_answer": "A",
+    "correct_text": "be",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng dạng V-bare 'be' trong cấu trúc giả định cách bị động."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Chia thì hiện tại is - không dùng trong subjunctive."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Chia thì quá khứ was - không dùng trong subjunctive."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Dạng being không đứng sau S làm động từ bị động giả định."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "recommended that budget be reallocated",
+        "paraphrases": ["advised budget reallocation", "suggested reallocating budget"],
+        "meaning": "khuyến nghị rằng ngân sách nên được phân bổ lại"
+      }
+    ],
+    "grammar_point": "Subjunctive (recommend that + bare infinitive)",
+    "strategy": [
+      "Bước 1: Identify Verb 'recommended that' - Nhận biết động từ chỉ yêu cầu/khuyến nghị 'recommended that'.",
+      "Bước 2: Apply Subjunctive Rule - Nhớ quy tắc Subjunctive: S + (should) + V-bare ➔ dạng bị động là 'be + V3'.",
+      "Bước 3: Select Option A - Chọn A ('be')."
+    ]
+  },
+  {
+    "id": 14,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Only the chief legal counsel is authorized to ------- binding commercial lease contracts on behalf of the firm.",
+    "options": {
+      "A": "terminate",
+      "B": "execute",
+      "C": "forfeit",
+      "D": "speculate"
+    },
+    "correct_answer": "B",
+    "correct_text": "execute",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Động từ terminate (chấm dứt) mâu thuẫn với việc được ủy quyền ký mới."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng động từ execute mang nghĩa ký kết/thực thi hợp đồng."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Động từ forfeit (tước đoạt/mất quyền) sai nghĩa."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Động từ speculate (đầu cơ) sai nghĩa."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "execute binding contracts",
+        "paraphrases": ["sign and finalize legal contracts", "enforce binding agreements"],
+        "meaning": "ký kết / thực thi các hợp đồng có tính ràng buộc"
+      }
+    ],
+    "grammar_point": "Vocabulary (execute)",
+    "strategy": [
+      "Bước 1: Identify Object 'binding commercial lease contracts' - Nhận biết tân ngữ là hợp đồng thuê thương mại.",
+      "Bước 2: Match Legal Verb 'execute' - Chọn động từ chuyên ngành 'execute' (ký kết/thực thi).",
+      "Bước 3: Select Option B - Chọn B ('execute')."
+    ]
+  },
+  {
+    "id": 15,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "------- strong demand for office space in the financial district, property owners have increased commercial rental rates.",
+    "options": {
+      "A": "Even though",
+      "B": "Because",
+      "C": "In light of",
+      "D": "Provided that"
+    },
+    "correct_answer": "C",
+    "correct_text": "In light of",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Even though là liên từ nhượng bộ, phải đi với mệnh đề S + V."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Because là liên từ, phải đi với mệnh đề S + V."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng cụm giới từ In light of đứng trước cụm danh từ."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Provided that là liên từ điều kiện, phải đi với mệnh đề."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "In light of strong demand",
+        "paraphrases": ["considering high demand", "due to strong demand"],
+        "meaning": "xét đến / do nhu cầu mạnh mẽ"
+      }
+    ],
+    "grammar_point": "Prepositional phrase (in light of)",
+    "strategy": [
+      "Bước 1: Identify Noun Phrase 'strong demand...' - Xác định phía sau là cụm danh từ.",
+      "Bước 2: Match Causal Prepositional Phrase - Chọn cụm giới từ 'In light of' (+ Noun Phrase).",
+      "Bước 3: Select Option C - Chọn C ('In light of')."
+    ]
+  },
+  {
+    "id": 16,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The media studio upgrade includes new camera equipment designed to meet international broadcast -------.",
+    "options": {
+      "A": "specify",
+      "B": "specific",
+      "C": "specifically",
+      "D": "specifications"
+    },
+    "correct_answer": "D",
+    "correct_text": "specifications",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Động từ specify không làm tân ngữ cho meet."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Tính từ specific không thể làm tân ngữ trực tiếp cho meet."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Trạng từ specifically không đứng cuối câu làm tân ngữ."
+      },
+      "D": {
+        "status": "correct",
+        "reason": "Đúng danh từ số nhiều specifications tạo thành cụm meet specifications."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "meet broadcast specifications",
+        "paraphrases": ["comply with broadcasting standards", "fulfill technical requirements"],
+        "meaning": "đáp ứng các tiêu chuẩn kỹ thuật phát sóng"
+      }
+    ],
+    "grammar_point": "Noun as object (specifications)",
+    "strategy": [
+      "Bước 1: Identify Verb 'meet' - Nhận biết động từ 'meet' cần một danh từ làm tân ngữ.",
+      "Bước 2: Select Plural Noun 'specifications' - Chọn danh từ số nhiều 'specifications' bổ nghĩa.",
+      "Bước 3: Select Option D - Chọn D ('specifications')."
+    ]
+  },
+  {
+    "id": 17,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The advertising agency is ------- responsible for managing social media video campaign placements for the EduTech app.",
+    "options": {
+      "A": "exclusively",
+      "B": "moderately",
+      "C": "tentatively",
+      "D": "densely"
+    },
+    "correct_answer": "A",
+    "correct_text": "exclusively",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng trạng từ exclusively đi với responsible for."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Trạng từ moderately (vừa phải) sai nghĩa ngữ cảnh."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Trạng từ tentatively (dự kiến/tạm thời) sai nghĩa."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Trạng từ densely (dày đặc) sai nghĩa."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "exclusively responsible for",
+        "paraphrases": ["solely in charge of", "exclusively assigned to"],
+        "meaning": "chịu trách nhiệm độc quyền / duy nhất"
+      }
+    ],
+    "grammar_point": "Adverb collocation (exclusively responsible)",
+    "strategy": [
+      "Bước 1: Identify Adjective 'responsible for' - Nhận biết cụm tính từ 'responsible for'.",
+      "Bước 2: Match Adverb 'exclusively' - Nhớ cụm cố định 'exclusively responsible for'.",
+      "Bước 3: Select Option A - Chọn A ('exclusively')."
+    ]
+  },
+  {
+    "id": 18,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "------- official approval from the municipal planning board, Lumina Real Estate will begin construction on the commercial complex.",
+    "options": {
+      "A": "Upon to receive",
+      "B": "Upon receiving",
+      "C": "Having received by",
+      "D": "Receives"
+    },
+    "correct_answer": "B",
+    "correct_text": "Upon receiving",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Cấu trúc Upon to receive sai cú pháp."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng cụm giới từ Upon receiving đứng trước cụm danh từ."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Cấu trúc Having received by sai nghĩa bị động."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Động từ chia thì Receives sai cấu trúc đầu câu thiếu chủ ngữ."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "Upon receiving approval",
+        "paraphrases": ["as soon as approval is obtained", "immediately after getting approval"],
+        "meaning": "ngay khi nhận được sự phê duyệt"
+      }
+    ],
+    "grammar_point": "Preposition + V-ing (Upon receiving)",
+    "strategy": [
+      "Bước 1: Recognize Time Meaning - Nhận biết ý nghĩa thời gian 'Ngay khi nhận được sự phê duyệt'.",
+      "Bước 2: Apply 'Upon + V-ing' - Chọn cấu trúc chuẩn 'Upon receiving'.",
+      "Bước 3: Select Option B - Chọn B ('Upon receiving')."
+    ]
+  },
+  {
+    "id": 19,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The landlord reserved the right to ------- the commercial lease if the tenant fails to pay monthly rent for two consecutive months.",
+    "options": {
+      "A": "negotiate",
+      "B": "publicize",
+      "C": "terminate",
+      "D": "formulate"
+    },
+    "correct_answer": "C",
+    "correct_text": "terminate",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Động từ negotiate (đàm phán) mâu thuẫn với chế tài vi phạm."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Động từ publicize (công khai) sai nghĩa."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng động từ terminate tạo thành terminate the lease (chấm dứt hợp đồng thuê)."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Động từ formulate (đề ra) sai nghĩa."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "terminate the commercial lease",
+        "paraphrases": ["cancel the rental agreement", "end the tenancy contract"],
+        "meaning": "chấm dứt hợp đồng thuê thương mại"
+      }
+    ],
+    "grammar_point": "Vocabulary (terminate)",
+    "strategy": [
+      "Bước 1: Identify Condition 'fails to pay rent' - Đọc điều kiện bên thuê không trả tiền nhà 2 tháng.",
+      "Bước 2: Match Legal Verb 'terminate' - Chọn động từ phù hợp cho chế tài chấm dứt hợp đồng 'terminate'.",
+      "Bước 3: Select Option C - Chọn C ('terminate')."
+    ]
+  },
+  {
+    "id": 20,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "------- the trial period for the vocational learning platform was successful, the client decided to sign a multi-year contract.",
+    "options": {
+      "A": "In spite of",
+      "B": "Due to",
+      "C": "Regardless of",
+      "D": "Given that"
+    },
+    "correct_answer": "D",
+    "correct_text": "Given that",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Giới từ In spite of phải đi với cụm danh từ."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Giới từ Due to phải đi với cụm danh từ."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Giới từ Regardless of phải đi với cụm danh từ."
+      },
+      "D": {
+        "status": "correct",
+        "reason": "Đúng liên từ Given that đứng trước mệnh đề S + V."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "Given that the trial was successful",
+        "paraphrases": ["since the trial proved successful", "considering that the trial succeeded"],
+        "meaning": "xét thấy thời gian dùng thử đã thành công"
+      }
+    ],
+    "grammar_point": "Conjunction (given that)",
+    "strategy": [
+      "Bước 1: Identify Full Clause S + V - Nhận biết phía sau có chủ ngữ 'the trial period' và động từ 'was'.",
+      "Bước 2: Select Conjunction 'Given that' - Chọn liên từ 'Given that' cho mệnh đề nguyên nhân.",
+      "Bước 3: Select Option D - Chọn D ('Given that')."
+    ]
+  },
+  {
+    "id": 21,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Apex Media intends to ------- a revised digital advertisement contract with the client before the end of the month.",
+    "options": {
+      "A": "negotiate",
+      "B": "negotiation",
+      "C": "negotiable",
+      "D": "negotiator"
+    },
+    "correct_answer": "A",
+    "correct_text": "negotiate",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng động từ nguyên thể negotiate sau intends to."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Danh từ negotiation sai từ loại."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Tính từ negotiable sai từ loại."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Danh từ chỉ người negotiator sai từ loại."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "intends to negotiate",
+        "paraphrases": ["plans to discuss terms", "aims to bargain"],
+        "meaning": "dự định đàm phán"
+      }
+    ],
+    "grammar_point": "Verb after 'intend to' (bare infinitive)",
+    "strategy": [
+      "Bước 1: Identify Structure 'intends to' - Nhận biết cấu trúc 'intends to + V-bare'.",
+      "Bước 2: Select Bare Verb 'negotiate' - Chọn động từ nguyên thể 'negotiate'.",
+      "Bước 3: Select Option A - Chọn A ('negotiate')."
+    ]
+  },
+  {
+    "id": 22,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The legal team added a mutual ------- clause to ensure both parties are protected against financial losses resulting from third-party claims.",
+    "options": {
+      "A": "transaction",
+      "B": "indemnification",
+      "C": "acceleration",
+      "D": "verification"
+    },
+    "correct_answer": "B",
+    "correct_text": "indemnification",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Danh từ transaction (giao dịch) không đi với clause trong ngữ cảnh bảo vệ tổn thất."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng danh từ indemnification tạo thành cụm indemnification clause (điều khoản bồi thường)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Danh từ acceleration (tăng tốc) sai nghĩa."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Danh từ verification (xác minh) sai nghĩa."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "indemnification clause",
+        "paraphrases": ["compensation clause", "hold-harmless clause"],
+        "meaning": "điều khoản bồi thường thiệt hại"
+      }
+    ],
+    "grammar_point": "Vocabulary (indemnification)",
+    "strategy": [
+      "Bước 1: Read Protection Context - Đọc ngữ cảnh vế sau 'protected against financial losses'.",
+      "Bước 2: Match Legal Term 'indemnification' - Chọn từ chuyên ngành 'indemnification' ghép với 'clause'.",
+      "Bước 3: Select Option B - Chọn B ('indemnification')."
+    ]
+  },
+  {
+    "id": 23,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Seldom ------- a commercial zoning amendment approved by the city council without prior public consultation.",
+    "options": {
+      "A": "will",
+      "B": "has",
+      "C": "is",
+      "D": "does"
+    },
+    "correct_answer": "C",
+    "correct_text": "is",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Trợ động từ will sai cấu trúc bị động (cần be + V3)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Trợ động từ has sai thì/cấu trúc bị động (cần been + V3)."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng trợ động từ is cho thể bị động đảo ngữ (is approved)."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Trợ động từ does chỉ dùng cho thể chủ động động từ thường."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "Seldom is an amendment approved",
+        "paraphrases": ["rarely is a zoning change passed", "almost never is an amendment approved"],
+        "meaning": "hiếm khi một sửa đổi được phê duyệt"
+      }
+    ],
+    "grammar_point": "Inversion with negative adverb (Seldom)",
+    "strategy": [
+      "Bước 1: Identify Negative Adverb 'Seldom' - Nhận biết trạng từ phủ định 'Seldom' đứng đầu câu cần đảo ngữ.",
+      "Bước 2: Check Passive Participle 'approved' - Nhìn động từ bị động 'approved' ➔ dùng trợ động từ 'is'.",
+      "Bước 3: Select Option C - Chọn C ('is')."
+    ]
+  },
+  {
+    "id": 24,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The real estate developer received ------- approval from the planning commission, pending a final environmental impact assessment.",
+    "options": {
+      "A": "redundant",
+      "B": "compulsory",
+      "C": "absolute",
+      "D": "preliminary"
+    },
+    "correct_answer": "D",
+    "correct_text": "preliminary",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Tính từ redundant (dư thừa) sai nghĩa."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Tính từ compulsory (bắt buộc) sai nghĩa."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Tính từ absolute (tuyệt đối) mâu thuẫn với việc còn chờ đánh giá cuối."
+      },
+      "D": {
+        "status": "correct",
+        "reason": "Đúng tính từ preliminary tạo thành cụm preliminary approval (phê duyệt sơ bộ)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "preliminary approval",
+        "paraphrases": ["initial authorization", "provisional approval"],
+        "meaning": "sự phê duyệt sơ bộ / bước đầu"
+      }
+    ],
+    "grammar_point": "Adjective collocation (preliminary approval)",
+    "strategy": [
+      "Bước 1: Read Pending Clue 'pending final assessment' - Chú ý vế sau 'pending a final assessment' (chờ đánh giá cuối cùng).",
+      "Bước 2: Match Adjective 'preliminary' - Chọn tính từ tương ứng chỉ giai đoạn đầu 'preliminary'.",
+      "Bước 3: Select Option D - Chọn D ('preliminary')."
+    ]
+  },
+  {
+    "id": 25,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "------- the media budget is approved by the client, the production team will begin casting actors for the video advertisement tomorrow.",
+    "options": {
+      "A": "Once",
+      "B": "Even if",
+      "C": "In case of",
+      "D": "Regardless of"
+    },
+    "correct_answer": "A",
+    "correct_text": "Once",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng liên từ thời gian Once đứng trước mệnh đề S + V."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Liên từ Even if (cho dù) sai nghĩa ngữ cảnh."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Giới từ In case of phải đi với cụm danh từ."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Giới từ Regardless of phải đi với cụm danh từ."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "Once the budget is approved",
+        "paraphrases": ["as soon as budget approval is secured", "when the budget is approved"],
+        "meaning": "một khi ngân sách được phê duyệt"
+      }
+    ],
+    "grammar_point": "Time conjunction (once)",
+    "strategy": [
+      "Bước 1: Analyze Clause S + V - Nhận biết phía sau là một mệnh đề hoàn chỉnh.",
+      "Bước 2: Identify Time Conjunction - Xác định ý nghĩa thời gian 'Một khi ngân sách được duyệt'.",
+      "Bước 3: Select Option A - Chọn A ('Once')."
+    ]
+  },
+  {
+    "id": 26,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "LearnPulse EduTech has experienced rapid growth, achieving record course enrollment numbers for three ------- years.",
+    "options": {
+      "A": "consecutively",
+      "B": "consecutive",
+      "C": "consecution",
+      "D": "consecutive's"
+    },
+    "correct_answer": "B",
+    "correct_text": "consecutive",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Trạng từ consecutively không đứng trực tiếp bổ nghĩa cho danh từ."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng tính từ consecutive bổ nghĩa cho danh từ years."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Danh từ consecution sai từ loại."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Dạng sở hữu cách không hợp lệ."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "three consecutive years",
+        "paraphrases": ["three successive years", "three straight years"],
+        "meaning": "ba năm liên tiếp"
+      }
+    ],
+    "grammar_point": "Adjective before noun",
+    "strategy": [
+      "Bước 1: Identify Noun 'years' - Nhận biết chỗ trống đứng trước danh từ số nhiều 'years'.",
+      "Bước 2: Select Adjective 'consecutive' - Chọn tính từ 'consecutive' bổ nghĩa.",
+      "Bước 3: Select Option B - Chọn B ('consecutive')."
+    ]
+  },
+  {
+    "id": 27,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The educational board plans to ------- feedback from corporate clients to improve the vocational course curriculum.",
+    "options": {
+      "A": "fluctuate",
+      "B": "liquidate",
+      "C": "solicit",
+      "D": "deteriorate"
+    },
+    "correct_answer": "C",
+    "correct_text": "solicit",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Động từ fluctuate (biến động) không đi trực tiếp với tân ngữ feedback."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Động từ liquidate (thanh lý tài sản) sai nghĩa."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng động từ solicit tạo thành cụm solicit feedback (kêu gọi phản hồi)."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Động từ deteriorate (xấu đi/xói mòn) sai nghĩa."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "solicit feedback",
+        "paraphrases": ["gather comments", "request suggestions"],
+        "meaning": "kêu gọi / thu thập ý kiến phản hồi"
+      }
+    ],
+    "grammar_point": "Vocabulary (solicit feedback)",
+    "strategy": [
+      "Bước 1: Identify Object 'feedback' - Nhận biết tân ngữ 'feedback'.",
+      "Bước 2: Match Verb 'solicit' - Chọn động từ chuyên nghiệp đi với feedback 'solicit'.",
+      "Bước 3: Select Option C - Chọn C ('solicit')."
+    ]
+  },
+  {
+    "id": 28,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The more targeted a digital media advertisement is, ------- the customer engagement rate becomes.",
+    "options": {
+      "A": "high",
+      "B": "higher",
+      "C": "highest",
+      "D": "the higher"
+    },
+    "correct_answer": "D",
+    "correct_text": "the higher",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Tính từ nguyên thể high không dùng trong so sánh kép."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Thiếu mạo từ mandatory 'the' ở vế thứ 2."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Dạng so sánh nhất highest sai cấu trúc."
+      },
+      "D": {
+        "status": "correct",
+        "reason": "Đúng cụm 'the higher' cho vế thứ hai của so sánh kép."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "The more targeted..., the higher...",
+        "paraphrases": ["increased targeting yields greater engagement", "higher precision leads to greater engagement"],
+        "meaning": "càng nhắm mục tiêu..., càng cao..."
+      }
+    ],
+    "grammar_point": "Double comparative",
+    "strategy": [
+      "Bước 1: Recognize Double Comparative 'The more...' - Nhận biết vế 1 mở đầu bằng 'The more targeted'.",
+      "Bước 2: Apply 'the + Comparative' - Chọn vế 2 tương ứng bắt buộc có 'the' + so sánh hơn ('the higher').",
+      "Bước 3: Select Option D - Chọn D ('the higher')."
+    ]
+  },
+  {
+    "id": 29,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The joint venture between the real estate firm and the media agency proved to be of ------- benefit to both organizations.",
+    "options": {
+      "A": "mutual",
+      "B": "reluctant",
+      "C": "arbitrary",
+      "D": "redundant"
+    },
+    "correct_answer": "A",
+    "correct_text": "mutual",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng tính từ mutual tạo thành cụm mutual benefit (lợi ích tương hỗ)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Tính từ reluctant (miễn cưỡng) sai nghĩa."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Tính từ arbitrary (tùy tiện) sai nghĩa."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Tính từ redundant (dư thừa) sai nghĩa."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "of mutual benefit",
+        "paraphrases": ["mutually advantageous", "beneficial to both parties"],
+        "meaning": "mang lại lợi ích tương hỗ"
+      }
+    ],
+    "grammar_point": "Adjective collocation (mutual benefit)",
+    "strategy": [
+      "Bước 1: Identify Noun 'benefit to both' - Nhận biết tân ngữ 'benefit to both organizations'.",
+      "Bước 2: Match Adjective 'mutual' - Chọn tính từ kết hợp 'mutual'.",
+      "Bước 3: Select Option A - Chọn A ('mutual')."
+    ]
+  },
+  {
+    "id": 30,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The legal compliance committee was established to ------- corporate governance policies across all international subsidiaries.",
+    "options": {
+      "A": "accommodate",
+      "B": "manipulate",
+      "C": "enforce",
+      "D": "accumulate"
+    },
+    "correct_answer": "C",
+    "correct_text": "enforce",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Động từ accommodate (đáp ứng/chứa) sai nghĩa."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Động từ manipulate (thao túng) mâu thuẫn với mục đích ủy ban tuân thủ."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng động từ enforce tạo thành enforce governance policies (thực thi chính sách)."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Động từ accumulate (tích lũy) sai nghĩa."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "enforce governance policies",
+        "paraphrases": ["implement corporate compliance standards", "apply governance rules"],
+        "meaning": "thực thi các chính sách quản trị doanh nghiệp"
+      }
+    ],
+    "grammar_point": "Vocabulary (enforce)",
+    "strategy": [
+      "Bước 1: Identify Purpose of Compliance Committee - Đọc mục đích thành lập ủy ban tuân thủ pháp chế.",
+      "Bước 2: Match Governance Verb 'enforce' - Chọn động từ 'enforce' (thực thi) đi với 'policies'.",
+      "Bước 3: Select Option C - Chọn C ('enforce')."
+    ]
+  }
+]

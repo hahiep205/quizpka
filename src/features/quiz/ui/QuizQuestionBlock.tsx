@@ -3,25 +3,7 @@ import { cn } from "@/lib/utils"
 import { isAnswerCorrect } from "@/features/quiz/lib/quizHelpers"
 import type { Question, AnswerValue } from "@/features/quiz/model/quiz.types"
 import { DetailedAnalysisContent } from "@/features/quiz/ui/DetailedAnalysisContent"
-
-type Lang = "en" | "vi"
-
-const copy = {
-  en: {
-    question: "Question",
-    explanation: "Explanation",
-    detailedExplanation: "Detailed Analysis",
-    rightAnswer: "Correct answer",
-    typeAnswer: "Type your answer",
-  },
-  vi: {
-    question: "Câu",
-    explanation: "Giải thích",
-    detailedExplanation: "Phân tích chi tiết",
-    rightAnswer: "Đáp án đúng",
-    typeAnswer: "Nhập câu trả lời",
-  },
-} as const
+import { quizCopy } from "@/shared/i18n"
 
 export function QuizQuestionBlock({
   question,
@@ -37,7 +19,7 @@ export function QuizQuestionBlock({
   answers: Record<string, AnswerValue>
   isPractice: boolean
   compact?: boolean
-  t: (typeof copy)[Lang]
+  t: (typeof quizCopy)["en" | "vi"]
   onAnswer: (answer: AnswerValue) => void
 }) {
   const selected = answers[question.id]
@@ -143,7 +125,7 @@ export function QuizQuestionBlock({
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-sparkles h-3 w-3" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg>
                     </span>
                     <span className="text-[13px] font-extrabold tracking-[-0.01em] text-[#100F3E] dark:text-white">
-                      {(t as unknown as { detailedExplanation?: string }).detailedExplanation ?? copy.vi.detailedExplanation}
+                      {t.detailedExplanation}
                     </span>
                   </span>
                   <span

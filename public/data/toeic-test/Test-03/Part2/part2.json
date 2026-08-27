@@ -1,0 +1,1082 @@
+[
+  {
+    "id": 7,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q007.mp3",
+    "question": "Where is the new commercial real estate branch located?",
+    "options": {
+      "A": "On the fifth floor of the Horizon Tower.",
+      "B": "Yes, the lease agreement was signed.",
+      "C": "I inspected the property yesterday."
+    },
+    "correct_answer": "A",
+    "correct_text": "On the fifth floor of the Horizon Tower.",
+    "audio_transcript": "Where is the new commercial real estate branch located? -> On the fifth floor of the Horizon Tower.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng địa điểm vị trí tòa nhà (On the fifth floor of the Horizon Tower)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Trả lời Yes/No cho câu hỏi WH. Lưu ý bẫy: Câu hỏi bắt đầu bằng Where không bao giờ trả lời bằng Yes/No."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Nhầm câu hỏi thời gian hoặc hành động quá khứ. Lưu ý bẫy: Inspected yesterday trả lời cho câu hỏi When/What did you do, không chỉ địa điểm."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "commercial real estate",
+        "paraphrases": ["business property", "office premises"],
+        "meaning": "bất động sản thương mại"
+      },
+      {
+        "phrase": "located",
+        "paraphrases": ["situated", "based"],
+        "meaning": "tọa lạc, đặt tại"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Question Word 'Where' - Nhận biết ngay từ hỏi địa điểm 'Where' ở đầu câu hỏi.",
+      "Bước 2: Eliminate Yes/No Options - Loại ngay phương án B chứa 'Yes'.",
+      "Bước 3: Select Option A - Chọn A ('On the fifth floor of the Horizon Tower.')."
+    ]
+  },
+  {
+    "id": 8,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q008.mp3",
+    "question": "When will the updated corporate compliance guidelines be published?",
+    "options": {
+      "A": "Compliance training is mandatory for all staff.",
+      "B": "Over fifty pages of legal regulations.",
+      "C": "The legal counsel just posted the schedule on the intranet."
+    },
+    "correct_answer": "C",
+    "correct_text": "The legal counsel just posted the schedule on the intranet.",
+    "audio_transcript": "When will the updated corporate compliance guidelines be published? -> The legal counsel just posted the schedule on the intranet.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Lặp từ compliance và giải thích quy định bắt buộc. Lưu ý bẫy: Phát biểu về tính bắt buộc của đào tạo không trả lời mốc thời gian khi nào xuất bản."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Nhầm thông tin số lượng trang. Lưu ý bẫy: Over fifty pages trả lời cho câu hỏi How long/How many pages."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng phản hồi gián tiếp chỉ nơi xem lịch trình xuất bản."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "corporate compliance",
+        "paraphrases": ["regulatory adherence", "legal standards"],
+        "meaning": "tuân thủ quy định doanh nghiệp"
+      },
+      {
+        "phrase": "legal counsel",
+        "paraphrases": ["in-house attorney", "legal advisor"],
+        "meaning": "cố vấn pháp lý"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Question Word 'When' - Bắt từ hỏi thời gian 'When' ở đầu câu.",
+      "Bước 2: Recognize Indirect Responses - Lưu ý TOEIC 2026 ưa chuộng đáp án gián tiếp chỉ nguồn tra cứu lịch trình.",
+      "Bước 3: Select Option C - Chọn C ('The legal counsel just posted the schedule...')."
+    ]
+  },
+  {
+    "id": 9,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q009.mp3",
+    "question": "Who is handling the digital ad campaign?",
+    "options": {
+      "A": "In the main media studio.",
+      "B": "Apex Advertising Agency was selected yesterday.",
+      "C": "Yes, the ad campaign was very successful."
+    },
+    "correct_answer": "B",
+    "correct_text": "Apex Advertising Agency was selected yesterday.",
+    "audio_transcript": "Who is handling the digital ad campaign? -> Apex Advertising Agency was selected yesterday.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Nhầm địa điểm phòng thu. Lưu ý bẫy: In the main media studio trả lời cho câu hỏi Where."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng tên đại lý/tổ chức chịu trách nhiệm (Apex Advertising Agency)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Trả lời Yes/No cho câu hỏi WH và lặp từ ad campaign. Lưu ý bẫy: Câu hỏi Who không trả lời bằng Yes/No."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "handle a campaign",
+        "paraphrases": ["manage an ad project", "be in charge of promotion"],
+        "meaning": "phụ trách chiến dịch quảng cáo"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Question Word 'Who' - Xác định câu hỏi tìm đối tượng/tổ chức 'Who'.",
+      "Bước 2: Eliminate Yes/No and Where options - Loại A (chỉ địa điểm) và C (chứa 'Yes').",
+      "Bước 3: Select Option B - Chọn B ('Apex Advertising Agency was selected...')."
+    ]
+  },
+  {
+    "id": 10,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q010.mp3",
+    "question": "What legal document do we need to submit for the zoning permit?",
+    "options": {
+      "A": "The certified property site map.",
+      "B": "The permit costs two thousand dollars.",
+      "C": "We applied for the permit last month."
+    },
+    "correct_answer": "A",
+    "correct_text": "The certified property site map.",
+    "audio_transcript": "What legal document do we need to submit for the zoning permit? -> The certified property site map.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng tên văn bản pháp lý cần nộp (certified property site map)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Nhầm thông tin lệ phí. Lưu ý bẫy: Two thousand dollars trả lời cho câu hỏi lệ phí How much."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Lặp từ permit và đưa mốc thời gian đã nộp. Lưu ý bẫy: Thông tin thời gian nộp đơn không trả lời tên tài liệu cần nộp."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "zoning permit",
+        "paraphrases": ["land-use authorization", "planning permission"],
+        "meaning": "giấy phép quy hoạch phân khu"
+      },
+      {
+        "phrase": "certified site map",
+        "paraphrases": ["validated property layout", "official plot plan"],
+        "meaning": "bản đồ quy hoạch được chứng thực"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Target 'What legal document' - Tập trung tìm tên văn bản giấy tờ được nhắc đến.",
+      "Bước 2: Eliminate Cost and Time Distractors - Loại B (chi phí) và C (thời gian nộp).",
+      "Bước 3: Select Option A - Chọn A ('The certified property site map.')."
+    ]
+  },
+  {
+    "id": 11,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q011.mp3",
+    "question": "Which commercial building option should we recommend to the client?",
+    "options": {
+      "A": "The client is very satisfied with our service.",
+      "B": "No, the lease agreement isn't ready.",
+      "C": "The Plaza Center offers better parking facilities."
+    },
+    "correct_answer": "C",
+    "correct_text": "The Plaza Center offers better parking facilities.",
+    "audio_transcript": "Which commercial building option should we recommend to the client? -> The Plaza Center offers better parking facilities.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Lặp từ client và nhận xét mức độ hài lòng. Lưu ý bẫy: Sự hài lòng của khách hàng không trả lời tên tòa nhà đề xuất."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Trả lời No cho câu hỏi lựa chọn WH. Lưu ý bẫy: Câu hỏi Which/What không dùng No để mở đầu."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng tên tòa nhà thương mại cụ thể (The Plaza Center)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "commercial building",
+        "paraphrases": ["business complex", "office tower"],
+        "meaning": "tòa nhà thương mại"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Selection Question 'Which' - Xác định câu hỏi yêu cầu đưa ra lựa chọn tòa nhà cụ thể.",
+      "Bước 2: Eliminate No option - Loại ngay B chứa 'No'.",
+      "Bước 3: Select Option C - Chọn C ('The Plaza Center offers...')."
+    ]
+  },
+  {
+    "id": 12,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q012.mp3",
+    "question": "Where can I find the trademark infringement case files?",
+    "options": {
+      "A": "Yes, trademark registration takes six months.",
+      "B": "They are archived in the legal department's secure database.",
+      "C": "The lawyer cited three previous court rulings."
+    },
+    "correct_answer": "B",
+    "correct_text": "They are archived in the legal department's secure database.",
+    "audio_transcript": "Where can I find the trademark infringement case files? -> They are archived in the legal department's secure database.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Trả lời Yes/No cho câu hỏi Where. Lưu ý bẫy: Câu hỏi Where không trả lời bằng Yes/No."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng vị trí cơ sở dữ liệu lưu trữ (legal department's secure database)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Từ đồng âm cite/site. Lưu ý bẫy: Động từ cited (trích dẫn) phát âm giống site (địa điểm), không trả lời nơi tìm hồ sơ."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "trademark infringement",
+        "paraphrases": ["brand violation", "intellectual property breach"],
+        "meaning": "vi phạm nhãn hiệu"
+      },
+      {
+        "phrase": "archive",
+        "paraphrases": ["store digitally", "file away"],
+        "meaning": "lưu trữ hồ sơ"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Question Word 'Where' - Bắt từ hỏi địa điểm 'Where' ở đầu câu.",
+      "Bước 2: Watch for Homophones - Cảnh giác từ 'cited' ở C phát âm giống 'site'.",
+      "Bước 3: Select Option B - Chọn B ('They are archived in the database.')."
+    ]
+  },
+  {
+    "id": 13,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q013.mp3",
+    "question": "When will the vocational training course schedule be finalized?",
+    "options": {
+      "A": "As soon as the board approves the department budget.",
+      "B": "The training room accommodates thirty students.",
+      "C": "To improve digital skills among our employees."
+    },
+    "correct_answer": "A",
+    "correct_text": "As soon as the board approves the department budget.",
+    "audio_transcript": "When will the vocational training course schedule be finalized? -> As soon as the board approves the department budget.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng mốc thời gian phụ thuộc điều kiện phê duyệt ngân sách."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Lặp từ training và nêu sức chứa phòng. Lưu ý bẫy: Sức chứa 30 học viên trả lời cho câu hỏi How many students."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Cấu trúc To + V trả lời mục đích câu hỏi Why. Lưu ý bẫy: Mục đích cải thiện kỹ năng trả lời cho Why, không phải When."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "vocational training",
+        "paraphrases": ["job skill instruction", "professional development"],
+        "meaning": "đào tạo nghề"
+      },
+      {
+        "phrase": "finalize",
+        "paraphrases": ["wrap up", "conclude"],
+        "meaning": "chốt, hoàn thiện"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Question Word 'When' - Nhận biết câu hỏi thời gian 'When'.",
+      "Bước 2: Identify Conditional Time Clause - Nhận diện 'As soon as...' là mốc thời gian điều kiện.",
+      "Bước 3: Select Option A - Chọn A ('As soon as the board approves...')."
+    ]
+  },
+  {
+    "id": 14,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q014.mp3",
+    "question": "Who should I contact to revise the corporate video script?",
+    "options": {
+      "A": "The video was broadcast last night.",
+      "B": "Yes, the script was well written.",
+      "C": "Reach out to Marcus in the media production team."
+    },
+    "correct_answer": "C",
+    "correct_text": "Reach out to Marcus in the media production team.",
+    "audio_transcript": "Who should I contact to revise the corporate video script? -> Reach out to Marcus in the media production team.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Lặp từ video và đưa thời gian phát sóng. Lưu ý bẫy: Thời điểm phát sóng không trả lời người cần liên hệ."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Trả lời Yes và nhận xét chất lượng kịch bản. Lưu ý bẫy: Câu hỏi Who không trả lời bằng Yes."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng nhân sự phụ trách (Marcus in the media production team)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "revise a script",
+        "paraphrases": ["edit a draft", "modify text"],
+        "meaning": "sửa đổi kịch bản"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Question Target 'Who' - Bắt nhu cầu tìm người liên hệ 'Who should I contact'.",
+      "Bước 2: Look for Name or Role - Tìm đáp án chứa tên riêng hoặc chức danh (Marcus).",
+      "Bước 3: Select Option C - Chọn C ('Reach out to Marcus...')."
+    ]
+  },
+  {
+    "id": 15,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q015.mp3",
+    "question": "What caused the delay in the land deed registration process?",
+    "options": {
+      "A": "The land area is twenty thousand square meters.",
+      "B": "Didn't you receive the status update memo from legal?",
+      "C": "The developer opened an office in Chicago."
+    },
+    "correct_answer": "B",
+    "correct_text": "Didn't you receive the status update memo from legal?",
+    "audio_transcript": "What caused the delay in the land deed registration process? -> Didn't you receive the status update memo from legal?",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Đưa thông tin diện tích đất. Lưu ý bẫy: Twenty thousand square meters trả lời cho câu hỏi diện tích How large."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng phản hồi gián tiếp dạng câu hỏi ngược hướng dẫn đọc memo pháp lý."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Bối cảnh địa điểm mở văn phòng mới. Lưu ý bẫy: Việc mở văn phòng ở Chicago không giải thích lý do hoãn đăng ký bằng khoán."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "land deed",
+        "paraphrases": ["title document", "property ownership certificate"],
+        "meaning": "bằng khoán/văn tự đất"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Cause Query 'What caused' - Xác định câu hỏi tìm nguyên nhân sự cố chậm trễ.",
+      "Bước 2: Expect Counter-Questions - Chú ý dạng trả lời gián tiếp hỏi ngược 'Didn't you...?' phổ biến trong TOEIC 2026.",
+      "Bước 3: Select Option B - Chọn B ('Didn't you receive the memo...?')."
+    ]
+  },
+  {
+    "id": 16,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q016.mp3",
+    "question": "Why did the agency decide to lease a new production studio?",
+    "options": {
+      "A": "Our current location doesn't have enough space for advanced cameras.",
+      "B": "At least five years remaining on the agreement.",
+      "C": "Yes, the studio equipment was delivered."
+    },
+    "correct_answer": "A",
+    "correct_text": "Our current location doesn't have enough space for advanced cameras.",
+    "audio_transcript": "Why did the agency decide to lease a new production studio? -> Our current location doesn't have enough space for advanced cameras.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng lý do hạn chế không gian (doesn't have enough space)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Từ đồng âm lease/least. Lưu ý bẫy: At least (ít nhất) phát âm giống lease (cho thuê), không giải thích nguyên nhân."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Trả lời Yes cho câu hỏi Why và lặp từ studio. Lưu ý bẫy: Câu hỏi Why không trả lời bằng Yes."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "lease a studio",
+        "paraphrases": ["rent a production facility"],
+        "meaning": "thuê studio sản xuất"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Reason Query 'Why' - Bắt từ hỏi lý do 'Why' ở đầu câu.",
+      "Bước 2: Watch out for Homophone 'least' - Cảnh giác bẫy từ đồng âm 'least' ở B.",
+      "Bước 3: Select Option A - Chọn A ('Our current location doesn't have enough space...')."
+    ]
+  },
+  {
+    "id": 17,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q017.mp3",
+    "question": "How can employees register for the compliance training program?",
+    "options": {
+      "A": "Compliance training is held annually.",
+      "B": "About two hundred dollars per course.",
+      "C": "The registration portal link is in the email from HR."
+    },
+    "correct_answer": "C",
+    "correct_text": "The registration portal link is in the email from HR.",
+    "audio_transcript": "How can employees register for the compliance training program? -> The registration portal link is in the email from HR.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Lặp từ compliance và chỉ tần suất hàng năm. Lưu ý bẫy: Tần suất hàng năm trả lời cho câu hỏi How often."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Nhầm lệ phí khóa học. Lưu ý bẫy: Two hundred dollars trả lời cho câu hỏi lệ phí How much."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng hướng dẫn phương thức đăng ký qua link email."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "registration portal",
+        "paraphrases": ["sign-up link", "enrollment webpage"],
+        "meaning": "cổng đăng ký"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Method Question 'How' - Xác định câu hỏi tìm phương thức/cách làm 'How'.",
+      "Bước 2: Eliminate Frequency and Price Distractors - Loại A (tần suất) và B (học phí).",
+      "Bước 3: Select Option C - Chọn C ('The registration portal link is in the email...')."
+    ]
+  },
+  {
+    "id": 18,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q018.mp3",
+    "question": "Why has the property zoning application been put on hold?",
+    "options": {
+      "A": "To expand the commercial building layout.",
+      "B": "The municipal planning board requested additional environmental reports.",
+      "C": "Yes, the application was approved yesterday."
+    },
+    "correct_answer": "B",
+    "correct_text": "The municipal planning board requested additional environmental reports.",
+    "audio_transcript": "Why has the property zoning application been put on hold? -> The municipal planning board requested additional environmental reports.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Cấu trúc To + V nêu mục đích mở rộng. Lưu ý bẫy: Mục đích mở rộng không phải lý do tại sao đơn bị tạm dừng."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng lý do cơ quan chức năng yêu cầu bổ sung báo cáo."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Trả lời Yes và mâu thuẫn thông tin đã duyệt. Lưu ý bẫy: Duyệt yesterday mâu thuẫn hoàn toàn với tình trạng đang bị hoãn (put on hold)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "put on hold",
+        "paraphrases": ["suspended", "deferred"],
+        "meaning": "tạm hoãn"
+      },
+      {
+        "phrase": "planning board",
+        "paraphrases": ["zoning committee", "municipal authority"],
+        "meaning": "hội đồng quy hoạch"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify 'Put on hold' Context - Nhận biết bối cảnh hồ sơ đang bị tạm dừng.",
+      "Bước 2: Eliminate Contradictions - Loại ngay C vì khẳng định đã duyệt mâu thuẫn.",
+      "Bước 3: Select Option B - Chọn B ('The municipal planning board requested...')."
+    ]
+  },
+  {
+    "id": 19,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q019.mp3",
+    "question": "How does the real estate agency estimate the market value of a property?",
+    "options": {
+      "A": "By evaluating recent sales data and location factors.",
+      "B": "The property was sold for three million dollars.",
+      "C": "Real estate values have increased significantly."
+    },
+    "correct_answer": "A",
+    "correct_text": "By evaluating recent sales data and location factors.",
+    "audio_transcript": "How does the real estate agency estimate the market value of a property? -> By evaluating recent sales data and location factors.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng phương pháp phân tích dữ liệu bán hàng và vị trí."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Nêu giá bán cụ thể của một bất động sản. Lưu ý bẫy: Three million dollars trả lời cho câu hỏi giá bán How much."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Nhận xét xu hướng tăng giá chung. Lưu ý bẫy: Đánh giá xu hướng chung không trả lời quy trình định giá như thế nào."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "estimate market value",
+        "paraphrases": ["assess property worth", "appraise price"],
+        "meaning": "ước tính giá trị thị trường"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Method Clause 'By + V-ing' - Nhận biết cấu trúc trả lời phương pháp 'By evaluating...'",
+      "Bước 2: Eliminate Price Tag Option B - Loại B chỉ nêu giá tiền cụ thể.",
+      "Bước 3: Select Option A - Chọn A ('By evaluating recent sales data...')."
+    ]
+  },
+  {
+    "id": 20,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q020.mp3",
+    "question": "Has the legal team finalized the non-disclosure agreement yet?",
+    "options": {
+      "A": "Yes, the agreement is twenty pages long.",
+      "B": "Non-disclosure agreements are confidential.",
+      "C": "They are still negotiating the intellectual property clause."
+    },
+    "correct_answer": "C",
+    "correct_text": "They are still negotiating the intellectual property clause.",
+    "audio_transcript": "Has the legal team finalized the non-disclosure agreement yet? -> They are still negotiating the intellectual property clause.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Yes giả kèm thông tin số trang. Lưu ý bẫy: Chỉ số trang 20 pages long không chứng minh đã chốt xong hợp đồng."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Lặp từ non-disclosure agreement và nêu định nghĩa bảo mật. Lưu ý bẫy: Định nghĩa confidential không trả lời tiến độ hoàn thành."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng phản hồi gián tiếp giải thích đang đàm phán nên chưa xong."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "non-disclosure agreement",
+        "paraphrases": ["confidentiality agreement", "NDA document"],
+        "meaning": "thỏa thuận bảo mật thông tin"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Recognize Indirect Yes/No Responses - Cảnh giác với bẫy 'Yes giả' ở phương án A.",
+      "Bước 2: Identify Ongoing Status - Nhận biết 'still negotiating' ám chỉ chưa xong.",
+      "Bước 3: Select Option C - Chọn C ('They are still negotiating...')."
+    ]
+  },
+  {
+    "id": 21,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q021.mp3",
+    "question": "Hasn't the commercial lease extension been signed yet?",
+    "options": {
+      "A": "The tenant moves in next month.",
+      "B": "They requested a modification to the maintenance clause first.",
+      "C": "Yes, the office space is two hundred square meters."
+    },
+    "correct_answer": "B",
+    "correct_text": "They requested a modification to the maintenance clause first.",
+    "audio_transcript": "Hasn't the commercial lease extension been signed yet? -> They requested a modification to the maintenance clause first.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Nhầm thời điểm chuyển vào. Lưu ý bẫy: Thời điểm dọn vào không trả lời nguyên nhân chưa ký gia hạn."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng nguyên nhân tạm hoãn ký do cần điều chỉnh điều khoản bảo trì."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Yes kèm diện tích phòng. Lưu ý bẫy: Thông tin diện tích không giải thích trạng thái ký hợp đồng."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "lease extension",
+        "paraphrases": ["rental renewal"],
+        "meaning": "gia hạn hợp đồng thuê"
+      },
+      {
+        "phrase": "modification",
+        "paraphrases": ["amendment", "adjustment"],
+        "meaning": "sự sửa đổi điều khoản"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Handle Negative Framing - Đọc hiểu câu hỏi phủ định 'Hasn't... signed yet?'.",
+      "Bước 2: Identify Pending Condition - Nhận biết điều kiện sửa đổi điều khoản (modification).",
+      "Bước 3: Select Option B - Chọn B ('They requested a modification...')."
+    ]
+  },
+  {
+    "id": 22,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q022.mp3",
+    "question": "Did the corporate lawyer review the liability clause in the contract?",
+    "options": {
+      "A": "Yes, she approved all the terms this morning.",
+      "B": "The cat sharpened its claws on the furniture.",
+      "C": "Liability insurance is recommended for all businesses."
+    },
+    "correct_answer": "A",
+    "correct_text": "Yes, she approved all the terms this morning.",
+    "audio_transcript": "Did the corporate lawyer review the liability clause in the contract? -> Yes, she approved all the terms this morning.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng câu trả lời trực tiếp Yes và thông tin phê duyệt sáng nay."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Từ đồng âm clause/claws. Lưu ý bẫy: Claws (móng vuốt) phát âm giống clause (điều khoản), hoàn toàn vô nghĩa trong bối cảnh."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Lặp từ liability và chuyển sang chủ đề bảo hiểm. Lưu ý bẫy: Lời khuyên về bảo hiểm liability insurance không trả lời luật sư đã duyệt hợp đồng chưa."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "liability clause",
+        "paraphrases": ["responsibility provision", "indemnity term"],
+        "meaning": "điều khoản trách nhiệm pháp lý"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Direct Yes/No Confirmation - Bắt câu trả lời khẳng định 'Yes, she approved'.",
+      "Bước 2: Avoid Homophone 'claws' - Bỏ qua ngay B chứa từ đồng âm 'claws'.",
+      "Bước 3: Select Option A - Chọn A ('Yes, she approved all the terms...')."
+    ]
+  },
+  {
+    "id": 23,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q023.mp3",
+    "question": "Isn't Ms. Gomez scheduled to present the architectural proposal today?",
+    "options": {
+      "A": "She bought a formal business suit for the event.",
+      "B": "The proposal was published in a design magazine.",
+      "C": "Her flight from Chicago was delayed due to bad weather."
+    },
+    "correct_answer": "C",
+    "correct_text": "Her flight from Chicago was delayed due to bad weather.",
+    "audio_transcript": "Isn't Ms. Gomez scheduled to present the architectural proposal today? -> Her flight from Chicago was delayed due to bad weather.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Từ đồng âm suit/suite. Lưu ý bẫy: Suit (bộ vest) không trả lời câu hỏi về lịch thuyết trình."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Lặp từ proposal và đưa tin xuất bản tạp chí. Lưu ý bẫy: Được đăng tạp chí không giải thích việc có thuyết trình hôm nay hay không."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng nguyên nhân chuyến bay trễ khiến nhân sự không có mặt đúng lịch."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "be scheduled to present",
+        "paraphrases": ["slated to deliver", "set to pitch"],
+        "meaning": "theo lịch sẽ thuyết trình"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Unforeseen Delay Reason - Tìm lý do ngăn cản sự kiện diễn ra đúng lịch.",
+      "Bước 2: Eliminate Homophone 'suit' - Loại A chứa từ bẫy đồng âm 'suit'.",
+      "Bước 3: Select Option C - Chọn C ('Her flight from Chicago was delayed...')."
+    ]
+  },
+  {
+    "id": 24,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q024.mp3",
+    "question": "Should we host the annual conference at Plaza Hotel or University Auditorium?",
+    "options": {
+      "A": "Yes, the conference starts at nine o'clock.",
+      "B": "The planning committee decided to use the Civic Convention Center instead.",
+      "C": "The auditorium seats five hundred people."
+    },
+    "correct_answer": "B",
+    "correct_text": "The planning committee decided to use the Civic Convention Center instead.",
+    "audio_transcript": "Should we host the annual conference at Plaza Hotel or University Auditorium? -> The planning committee decided to use the Civic Convention Center instead.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Trả lời Yes cho câu hỏi lựa chọn Choice Question. Lưu ý bẫy: Câu hỏi lựa chọn A or B tuyệt đối không trả lời bằng Yes/No."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng phản hồi gián tiếp đưa ra phương án địa điểm thứ ba."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Lặp từ auditorium và đưa sức chứa ghế. Lưu ý bẫy: Sức chứa 500 người không đưa ra quyết định chọn địa điểm nào."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "planning committee",
+        "paraphrases": ["organizing board", "event panel"],
+        "meaning": "ban tổ chức/lên kế hoạch"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Choice Pattern 'A or B' - Nhận dạng câu hỏi lựa chọn giữa 2 phương án.",
+      "Bước 2: Never Select Yes/No - Loại ngay lập tức phương án A chứa 'Yes'.",
+      "Bước 3: Select Option B - Chọn B ('Decided to use Civic Convention Center instead.')."
+    ]
+  },
+  {
+    "id": 25,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q025.mp3",
+    "question": "Is the trademark registration handled by in-house team or external law firm?",
+    "options": {
+      "A": "Our internal legal department is taking care of it.",
+      "B": "I registered for the seminar yesterday.",
+      "C": "Yes, trademark fees are non-refundable."
+    },
+    "correct_answer": "A",
+    "correct_text": "Our internal legal department is taking care of it.",
+    "audio_transcript": "Is the trademark registration handled by in-house team or external law firm? -> Our internal legal department is taking care of it.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng lựa chọn đội ngũ nội bộ với từ đồng nghĩa (internal legal department)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Lặp từ registered trong bối cảnh tham dự hội thảo. Lưu ý bẫy: Việc đăng ký seminar không trả lời đơn vị nào xử lý nhãn hiệu."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Trả lời Yes cho câu hỏi lựa chọn Choice Question. Lưu ý bẫy: Câu hỏi A or B không dùng Yes."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "in-house team",
+        "paraphrases": ["internal department", "company staff"],
+        "meaning": "đội ngũ nội bộ"
+      },
+      {
+        "phrase": "take care of",
+        "paraphrases": ["handle", "manage"],
+        "meaning": "đảm nhận, xử lý"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Choice Alternatives - Bắt hai lựa chọn 'in-house' vs 'external'.",
+      "Bước 2: Recognize Paraphrase 'internal' - Nhận biết 'internal department' paraphrase cho 'in-house team'.",
+      "Bước 3: Select Option A - Chọn A ('Our internal legal department is taking care of it.')."
+    ]
+  },
+  {
+    "id": 26,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q026.mp3",
+    "question": "Our client is concerned that land zoning will take longer than expected.",
+    "options": {
+      "A": "The land area measures ten hectares.",
+      "B": "Zoning regulations were updated last month.",
+      "C": "Let me schedule a consultation with our senior land-use attorney."
+    },
+    "correct_answer": "C",
+    "correct_text": "Let me schedule a consultation with our senior land-use attorney.",
+    "audio_transcript": "Our client is concerned that land zoning will take longer than expected. -> Let me schedule a consultation with our senior land-use attorney.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Đưa thông tin đo đạc diện tích. Lưu ý bẫy: Thông tin diện tích 10 hectares không giúp giải quyết mối lo ngại của khách."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Lặp từ zoning và nói về cập nhật quy định. Lưu ý bẫy: Việc cập nhật quy định tháng trước không phải hành động xử lý lo lắng."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng phản hồi đề xuất giải pháp lên lịch tư vấn luật sư."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "land-use attorney",
+        "paraphrases": ["zoning lawyer", "property legal specialist"],
+        "meaning": "luật sư quy hoạch đất đai"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Statement Concern - Lắng nghe mối lo lắng của khách hàng trong câu trần thuật.",
+      "Bước 2: Look for Solution Action - Tìm đáp án thể hiện hành động hỗ trợ giải quyết (schedule consultation).",
+      "Bước 3: Select Option C - Chọn C ('Let me schedule a consultation...')."
+    ]
+  },
+  {
+    "id": 27,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q027.mp3",
+    "question": "We need to increase digital ad spending to reach more customers.",
+    "options": {
+      "A": "The app was downloaded ten thousand times.",
+      "B": "Let's review our current marketing ROI before committing more funds.",
+      "C": "Yes, the advertisement was broadcast on television."
+    },
+    "correct_answer": "B",
+    "correct_text": "Let's review our current marketing ROI before committing more funds.",
+    "audio_transcript": "We need to increase digital ad spending to reach more customers. -> Let's review our current marketing ROI before committing more funds.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Đưa thông tin lượt tải ứng dụng. Lưu ý bẫy: Con số 10,000 lượt tải không trực tiếp phản hồi việc có tăng chi tiêu hay không."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng phản hồi thận trọng đề xuất đánh giá chỉ số ROI trước khi tăng chi tiêu."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Trả lời Yes và nhắc đến truyền hình. Lưu ý bẫy: Việc phát sóng truyền hình không trả lời đề xuất ngân sách số."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "ad spending",
+        "paraphrases": ["marketing expenditure", "promotional budget"],
+        "meaning": "chi tiêu quảng cáo"
+      },
+      {
+        "phrase": "marketing ROI",
+        "paraphrases": ["campaign return", "ad efficiency metric"],
+        "meaning": "tỷ suất lợi nhuận đầu tư marketing"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Analyze Budget Proposal Statement - Bắt đề xuất tăng chi tiêu quảng cáo số.",
+      "Bước 2: Identify Business Assessment Response - Tìm đáp án chứa quan điểm kiểm tra hiệu quả ROI.",
+      "Bước 3: Select Option B - Chọn B ('Let's review our current marketing ROI...')."
+    ]
+  },
+  {
+    "id": 28,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q028.mp3",
+    "question": "Why don't we hire a legal consultant to protect our intellectual property?",
+    "options": {
+      "A": "That sounds wise, provided the fee fits our department budget.",
+      "B": "The portfolio contains three patent applications.",
+      "C": "Because the copyright expired last year."
+    },
+    "correct_answer": "A",
+    "correct_text": "That sounds wise, provided the fee fits our department budget.",
+    "audio_transcript": "Why don't we hire a legal consultant to protect our intellectual property? -> That sounds wise, provided the fee fits our department budget.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng phản hồi đồng ý gợi ý (That sounds wise)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Lặp từ portfolio và liệt kê số lượng bằng sáng chế. Lưu ý bẫy: Thông tin số bằng sáng chế không trả lời có đồng ý thuê tư vấn hay không."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Dùng Because để bẫy câu hỏi Why thông thường. Lưu ý bẫy: Cấu trúc Why don't we là câu gợi ý đề xuất, không dùng Because để trả lời."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "intellectual property",
+        "paraphrases": ["IP assets", "proprietary rights"],
+        "meaning": "sở hữu trí tuệ"
+      },
+      {
+        "phrase": "That sounds wise",
+        "paraphrases": ["That makes sense", "Good idea"],
+        "meaning": "nghe có vẻ hợp lý/khôn ngoan"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Suggestion Pattern 'Why don't we' - Bắt dạng câu gợi ý đề xuất 'Why don't we...'",
+      "Bước 2: Avoid 'Because' Trap - Loại ngay C vì câu gợi ý không trả lời bằng 'Because'.",
+      "Bước 3: Select Option A - Chọn A ('That sounds wise, provided...')."
+    ]
+  },
+  {
+    "id": 29,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q029.mp3",
+    "question": "The online registration system for the vocational institute is experiencing a glitch.",
+    "options": {
+      "A": "Registration is open to all qualified applicants.",
+      "B": "The vocational institute was founded in 2010.",
+      "C": "I'll inform the web technical team immediately."
+    },
+    "correct_answer": "C",
+    "correct_text": "I'll inform the web technical team immediately.",
+    "audio_transcript": "The online registration system for the vocational institute is experiencing a glitch. -> I'll inform the web technical team immediately.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Lặp từ registration và nói về đối tượng áp dụng. Lưu ý bẫy: Quy định đối tượng đăng ký không xử lý được sự cố kỹ thuật hệ thống."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Thông tin lịch sử thành lập viện. Lưu ý bẫy: Năm thành lập 2010 không trả lời hành động sửa lỗi hệ thống."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng hành động khắc phục sự cố báo ngay cho đội kỹ thuật."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "experience a glitch",
+        "paraphrases": ["encounter a technical issue", "have a system error"],
+        "meaning": "gặp sự cố kỹ thuật"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Glitch Problem - Bắt thông tin báo lỗi hệ thống 'experiencing a glitch'.",
+      "Bước 2: Select Action to Resolve - Chọn hành động khắc phục 'inform technical team'.",
+      "Bước 3: Select Option C - Chọn C ('I'll inform the web technical team immediately.')."
+    ]
+  },
+  {
+    "id": 30,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q030.mp3",
+    "question": "Should we contract a broker to evaluate the office property, or handle it internally?",
+    "options": {
+      "A": "The broker's office is located downtown.",
+      "B": "Our internal facilities manager can handle the market comparison instead.",
+      "C": "Yes, the office lease was signed last month."
+    },
+    "correct_answer": "B",
+    "correct_text": "Our internal facilities manager can handle the market comparison instead.",
+    "audio_transcript": "Should we contract a broker to evaluate the office property, or handle it internally? -> Our internal facilities manager can handle the market comparison instead.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Lặp từ broker và chỉ vị trí văn phòng. Lưu ý bẫy: Vị trí văn phòng môi giới không trả lời có nên ký hợp đồng hay không."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng phương án thay thế sử dụng nhân sự nội bộ công ty."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Trả lời Yes và khẳng định đã ký hợp đồng. Lưu ý bẫy: Đã ký tháng trước mâu thuẫn với việc đang cân nhắc tìm môi giới đánh giá."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "facilities manager",
+        "paraphrases": ["building supervisor", "premises admin"],
+        "meaning": "quản lý cơ sở vật chất"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Analyze Advice Question 'Should we' - Bắt câu hỏi hỏi ý kiến có nên thuê ngoài không.",
+      "Bước 2: Identify Internal Alternative - Nhận diện đáp án chỉ nhân sự nội bộ tự làm (internal facilities manager).",
+      "Bước 3: Select Option B - Chọn B ('Our internal facilities manager can handle...')."
+    ]
+  },
+  {
+    "id": 31,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q031.mp3",
+    "question": "The board of directors approved the merger clause for the two companies.",
+    "options": {
+      "A": "That guarantees the deal will close before the end of the fiscal year!",
+      "B": "The wooden board in the hallway needs repair.",
+      "C": "I felt bored during the lengthy legal briefing."
+    },
+    "correct_answer": "A",
+    "correct_text": "That guarantees the deal will close before the end of the fiscal year!",
+    "audio_transcript": "The board of directors approved the merger clause for the two companies. -> That guarantees the deal will close before the end of the fiscal year!",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng bình luận nhận xét kết quả tích cực của việc phê duyệt."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Từ đa nghĩa board. Lưu ý bẫy: Board of directors (hội đồng quản trị) bị bẫy sang wooden board (tấm bảng gỗ)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Từ đồng âm board/bored. Lưu ý bẫy: Bored (chán nản) phát âm giống board, không liên quan đến thương vụ sáp nhập."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "board of directors",
+        "paraphrases": ["executive board", "governing panel"],
+        "meaning": "hội đồng quản trị"
+      },
+      {
+        "phrase": "merger clause",
+        "paraphrases": ["amalgamation term", "acquisition provision"],
+        "meaning": "điều khoản sáp nhập"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Positive News Statement - Nhận biết thông tin tích cực HĐQT đã thông qua sáp nhập.",
+      "Bước 2: Avoid Polysemy & Homophones - Loại ngay B (bảng gỗ) và C (chán nản).",
+      "Bước 3: Select Option A - Chọn A ('That guarantees the deal will close...')."
+    ]
+  }
+]

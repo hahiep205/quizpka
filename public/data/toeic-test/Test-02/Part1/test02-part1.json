@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "type": "picture_description",
+    "part": "Listening - Part 1",
+    "prompt": "Look at the picture marked number 1 in your test book.",
+    "audio": "p1_q001.mp3",
+    "image": "p1_q001.webp",
+    "options": {
+      "A": "He is sealing a cardboard container with tape.",
+      "B": "He is examining a barcode scanner near some boxes.",
+      "C": "He is loading crates onto a delivery truck.",
+      "D": "He is carrying a package across a storage room."
+    },
+    "correct_answer": "B",
+    "correct_text": "He is examining a barcode scanner near some boxes.",
+    "image_description": "Nhân viên kho hàng đang cầm và kiểm tra máy quét mã vạch ('examining a barcode scanner') gần các thùng hàng.",
+    "audio_transcript": "He is examining a barcode scanner near some boxes.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Sai hành động. Không có hoạt động dán băng keo lên thùng carton."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng hành động (examining) và thiết bị (barcode scanner) trong ảnh."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Nhầm bối cảnh xe tải giao hàng. Có các kiện hàng nhưng không xuất hiện xe tải hay hành động chất hàng."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Sai hành động di chuyển bưu kiện. Carrying là hành động bưng bê di chuyển, khác với examining là đứng kiểm tra."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "examine",
+        "paraphrases": [
+          "inspect",
+          "check",
+          "scrutinize"
+        ],
+        "meaning": "kiểm tra kỹ"
+      },
+      {
+        "phrase": "barcode scanner",
+        "paraphrases": [
+          "handheld reader",
+          "inventory scanner"
+        ],
+        "meaning": "thiết bị quét mã vạch"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Observe - Quan sát kỹ tư thế và hành động chính của người làm việc trước khi xét các chi tiết phụ.",
+      "Bước 2: Identify - Đối chiếu động từ thao tác (examining) với thiết bị đang cầm trên tay (barcode scanner).",
+      "Bước 3: Verify - Không chọn đáp án chỉ vì vật thể xuất hiện trong ảnh; hành động mô tả cũng phải khớp hoàn toàn."
+    ]
+  },
+  {
+    "id": 2,
+    "type": "picture_description",
+    "part": "Listening - Part 1",
+    "prompt": "Look at the picture marked number 2 in your test book.",
+    "audio": "p1_q002.mp3",
+    "image": "p1_q002.webp",
+    "options": {
+      "A": "Technicians are inspecting solar panels on a rooftop.",
+      "B": "Electricians are repairing power lines along a street.",
+      "C": "Workers are climbing down a metal ladder.",
+      "D": "Engineers are installing a wind turbine in a field."
+    },
+    "correct_answer": "A",
+    "correct_text": "Technicians are inspecting solar panels on a rooftop.",
+    "image_description": "Hai kỹ thuật viên đội mũ bảo hộ đang trực tiếp kiểm tra các tấm pin năng lượng mặt trời trên mái nhà ('inspecting solar panels on a rooftop').",
+    "audio_transcript": "Technicians are inspecting solar panels on a rooftop.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng đối tượng (kỹ thuật viên), thiết bị (solar panels) và vị trí (rooftop)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Sai vị trí và đường dây điện. Bức tranh diễn ra trên mái nhà chứ không phải dọc theo con phố."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Sai hành động leo thang. Nhân vật đang đứng thao tác kiểm tra chứ không trèo xuống thang."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Nhầm thuật ngữ ngành năng lượng. Dùng từ cùng lĩnh vực (wind turbine) để đánh lừa người nghe."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "inspect",
+        "paraphrases": [
+          "examine",
+          "audit",
+          "check"
+        ],
+        "meaning": "kiểm tra"
+      },
+      {
+        "phrase": "solar panel",
+        "paraphrases": [
+          "photovoltaic module",
+          "solar array"
+        ],
+        "meaning": "tấm pin mặt trời"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Observe - Quan sát đối tượng chính và vị trí thao tác trong tranh.",
+      "Bước 2: Identify - Kiểm tra chính xác danh từ thiết bị (solar panels vs wind turbines).",
+      "Bước 3: Verify - Loại bỏ các đáp án mô tả vị trí sai (along a street) dù có vẻ hợp lý."
+    ]
+  },
+  {
+    "id": 3,
+    "type": "picture_description",
+    "part": "Listening - Part 1",
+    "prompt": "Look at the picture marked number 3 in your test book.",
+    "audio": "p1_q003.mp3",
+    "image": "p1_q003.webp",
+    "options": {
+      "A": "Cables are being connected to computers by a technician.",
+      "B": "A door to a storage room is being unlocked.",
+      "C": "Server cabinets are lined up in a data center.",
+      "D": "Equipment is being packed into cardboard boxes."
+    },
+    "correct_answer": "C",
+    "correct_text": "Server cabinets are lined up in a data center.",
+    "image_description": "Các tủ máy chủ được xếp thẳng hàng ngay ngắn ('server cabinets are lined up') trong phòng trung tâm dữ liệu tĩnh hoàn toàn vắng người.",
+    "audio_transcript": "Server cabinets are lined up in a data center.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Bị động tiếp diễn (being connected). Tranh hoàn toàn vắng người nên không có hành động kết nối dây đang diễn ra."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Bị động tiếp diễn (being unlocked). Không có người đang thực hiện hành động mở khóa cửa."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng trạng thái tĩnh (are lined up) của các tủ máy chủ trong phòng máy chủ."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Bị động tiếp diễn (being packed). Không có người đang đóng gói thiết bị vào thùng."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "server cabinet",
+        "paraphrases": [
+          "server rack",
+          "IT enclosure"
+        ],
+        "meaning": "tủ máy chủ"
+      },
+      {
+        "phrase": "line up",
+        "paraphrases": [
+          "arrange in a row",
+          "position side by side"
+        ],
+        "meaning": "xếp thành hàng"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Observe - Nhận diện ngay bức tranh là tranh tĩnh hoàn toàn vắng bóng người (No People).",
+      "Bước 2: Identify - Loại các phương án chứa cấu trúc 'being' thể hiện hành động con người đang diễn ra.",
+      "Bước 3: Verify - Chọn đáp án mô tả vị trí/trạng thái tĩnh của vật thể (are lined up)."
+    ]
+  },
+  {
+    "id": 4,
+    "type": "picture_description",
+    "part": "Listening - Part 1",
+    "prompt": "Look at the picture marked number 4 in your test book.",
+    "audio": "p1_q004.mp3",
+    "image": "p1_q004.webp",
+    "options": {
+      "A": "Patrons are seated under umbrellas at an outdoor dining area.",
+      "B": "Customers are standing in line at a food counter.",
+      "C": "Umbrellas are being folded by restaurant staff.",
+      "D": "Waiters are clearing dishes from empty tables."
+    },
+    "correct_answer": "A",
+    "correct_text": "Patrons are seated under umbrellas at an outdoor dining area.",
+    "image_description": "Thực khách đang ngồi an tọa dưới các tán ô che nắng tại khu vực ăn uống ngoài trời của khu nghỉ dưỡng ('seated under umbrellas at an outdoor dining area').",
+    "audio_transcript": "Patrons are seated under umbrellas at an outdoor dining area.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng trạng thái (are seated) của thực khách dưới ô ngoài trời."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Sai tư thế thực khách. Khách đang ngồi tại bàn chứ không đứng xếp hàng (standing in line)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Sai trạng thái của ô. Các chiếc ô đang mở che nắng, không có nhân viên nào đang gập ô."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Sai bối cảnh bàn ăn. Các bàn đang có khách ngồi dùng bữa chứ không phải bàn trống."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "patron",
+        "paraphrases": [
+          "customer",
+          "diner",
+          "guest"
+        ],
+        "meaning": "thực khách / khách hàng"
+      },
+      {
+        "phrase": "seated",
+        "paraphrases": [
+          "sitting",
+          "occupying a seat"
+        ],
+        "meaning": "ngồi an tọa"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Observe - Phân biệt tư thế tĩnh (seated) và hành động đang chuyển động (standing in line / sitting down).",
+      "Bước 2: Identify - Đối chiếu trạng thái đồ vật (ô đang mở che nắng vs being folded).",
+      "Bước 3: Verify - Xác định chính xác bối cảnh khu vực ăn uống ngoài trời (outdoor dining area)."
+    ]
+  },
+  {
+    "id": 5,
+    "type": "picture_description",
+    "part": "Listening - Part 1",
+    "prompt": "Look at the picture marked number 5 in your test book.",
+    "audio": "p1_q005.mp3",
+    "image": "p1_q005.webp",
+    "options": {
+      "A": "A scientist is adjusting a microscope on a desk.",
+      "B": "Glassware and instruments are arranged on a counter.",
+      "C": "Test tubes are being washed in a sink.",
+      "D": "Chemical solutions are being poured into a beaker."
+    },
+    "correct_answer": "B",
+    "correct_text": "Glassware and instruments are arranged on a counter.",
+    "image_description": "Dụng cụ thủy tinh và thiết bị đo lường được bài trí ngay ngắn trên mặt bàn phòng thí nghiệm vắng người ('are arranged on a counter').",
+    "audio_transcript": "Glassware and instruments are arranged on a counter.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Sai chủ thể con người. Tranh phòng thí nghiệm hoàn toàn vắng người, không có nhà khoa học nào."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng trạng thái sắp xếp tĩnh (are arranged) của dụng cụ trên mặt bàn."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Bị động tiếp diễn (being washed). Không có người đang rửa ống nghiệm trong bồn."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Bị động tiếp diễn (being poured). Không có hành động rót hóa chất vào cốc."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "glassware",
+        "paraphrases": [
+          "beakers",
+          "flasks",
+          "test tubes"
+        ],
+        "meaning": "dụng cụ thủy tinh"
+      },
+      {
+        "phrase": "arrange",
+        "paraphrases": [
+          "set out",
+          "position",
+          "place"
+        ],
+        "meaning": "sắp xếp / đặt để"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Observe - Xác định bức tranh hoàn toàn không có sự xuất hiện của con người.",
+      "Bước 2: Identify - Loại bỏ các câu chứa danh từ chỉ người không có thực hoặc động từ bị động tiếp diễn (being washed/poured).",
+      "Bước 3: Verify - Tìm câu mô tả sự sắp xếp tĩnh của vật thể trên mặt bàn (are arranged on a counter)."
+    ]
+  },
+  {
+    "id": 6,
+    "type": "picture_description",
+    "part": "Listening - Part 1",
+    "prompt": "Look at the picture marked number 6 in your test book.",
+    "audio": "p1_q006.mp3",
+    "image": "p1_q006.webp",
+    "options": {
+      "A": "She is typing an email on a mobile phone.",
+      "B": "She is putting on a pair of protective glasses.",
+      "C": "She is handing a document to a client across a counter.",
+      "D": "She is wearing a headset while working at a computer."
+    },
+    "correct_answer": "D",
+    "correct_text": "She is wearing a headset while working at a computer.",
+    "image_description": "Nhân viên ngân hàng đang đeo sẵn tai nghe trên đầu ('wearing a headset') trong khi thao tác làm việc tại máy tính để bàn.",
+    "audio_transcript": "She is wearing a headset while working at a computer.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Sai loại thiết bị. Nhân vật đang thao tác trên máy tính bàn (computer), không phải điện thoại di động (mobile phone)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Trạng thái vs hành động (wearing vs putting on). 'Wearing' mô tả đồ vật đã nằm sẵn trên người; 'putting on' mô tả cử động tay đang đeo kính vào."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Sai hành động với khách hàng. Không có khách hàng đứng trước quầy và không có hành động đưa tài liệu."
+      },
+      "D": {
+        "status": "correct",
+        "reason": "Đúng trạng thái đeo tai nghe sẵn (wearing a headset) và làm việc tại máy tính."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "wear",
+        "paraphrases": [
+          "have on",
+          "be dressed in"
+        ],
+        "meaning": "mặc / đeo sẵn (trạng thái)"
+      },
+      {
+        "phrase": "put on",
+        "paraphrases": [
+          "don",
+          "slip on",
+          "try on"
+        ],
+        "meaning": "đeo vào / xỏ vào (hành động)"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Observe - Áp dụng quy tắc TOEIC: chọn 'wearing' khi đồ vật đã được đeo sẵn và loại 'putting on' khi mô tả hành động đang đeo vào.",
+      "Bước 2: Identify - Kiểm tra loại thiết bị nhân vật đang làm việc (desktop computer vs mobile phone).",
+      "Bước 3: Verify - Xác định xem nhân vật có tương tác với người khác (client) qua quầy hay không."
+    ]
+  }
+]

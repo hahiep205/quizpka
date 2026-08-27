@@ -1,0 +1,839 @@
+{
+  "title": "TOEIC Reading Part 7 — Reading Comprehension",
+  "totalParts": 1,
+  "totalQuestions": 54,
+  "partNumber": 7,
+  "partTitle": "Reading Comprehension",
+  "instruction": "For each question, choose the best answer.",
+  "groups": [
+    {
+      "groupId": 1,
+      "passageType": "single",
+      "passage": "TEXT MESSAGE CHAIN — LUMINA REAL ESTATE BROKERAGE\n\nLisa Vance [10:14 A.M.]: Hi Mark, the landlord for Horizon Tower Suite 403 just confirmed that we can conduct the final walkthrough inspection tomorrow at 2:00 P.M.\nMark Sterling [10:16 A.M.]: That works for me. Will the building manager be there to answer questions about the HVAC maintenance responsibility?\nLisa Vance [10:18 A.M.]: Yes, Mr. Henderson from building management will join us. He will bring the certified air quality report and the maintenance logs.\nMark Sterling [10:20 A.M.]: Great! If everything looks good during the walkthrough, I'm prepared to sign the lease agreement electronically tomorrow evening.",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the purpose of the text message chain?",
+          "options": {
+            "A": "To negotiate a lower monthly rent rate.",
+            "B": "To confirm details for a property walkthrough.",
+            "C": "To report a broken air conditioning unit.",
+            "D": "To hire a new real estate agent."
+          },
+          "answer": "B",
+          "explainAnswer": "Lisa mở đầu tin nhắn bằng việc chốt thời gian kiểm tra thực tế mặt bằng (walkthrough inspection) cho Horizon Tower Suite 403."
+        },
+        {
+          "id": 2,
+          "question": "What does Mark Sterling plan to do tomorrow evening if the inspection goes well?",
+          "options": {
+            "A": "Move office furniture into Suite 403.",
+            "B": "Transfer a security deposit via bank wire.",
+            "C": "Execute the lease contract online.",
+            "D": "Schedule a second property viewing."
+          },
+          "answer": "C",
+          "explainAnswer": "Mark khẳng định ở tin nhắn cuối cùng: nếu buổi kiểm tra tốt, ông sẵn sàng ký hợp đồng điện tử vào chiều tối mai."
+        }
+      ]
+    },
+    {
+      "groupId": 2,
+      "passageType": "single",
+      "passage": "NOTICE — LEARNPULSE EDUTECH CENTER\nEXCELLENCE IN COMMERCIAL REAL ESTATE LAW — CERTIFICATION COURSE\n\nAre you looking to advance your career in commercial property development and corporate legal compliance? LearnPulse EduTech is now accepting registrations for our upcoming 6-week online certification course: Commercial Real Estate Law (Course 201).\n\nCourse Highlights:\n• Live interactive lectures on Tuesdays & Thursdays from 6:30 P.M. to 8:30 P.M.\n• Taught by Senior Legal Counsel Sarah Gomez.\n• Comprehensive coverage of land zoning, lease agreements, and liability clauses.\n\nCourse Fee: $650 (Includes digital textbooks and exam certification fees).\nEarly-Bird Discount: Register before October 20 to receive a 15% discount ($552.50 net fee).\n\nTo enroll, visit www.learnpulse-edutech.com/register or call our admissions office at (555) 019-2834.",
+      "questions": [
+        {
+          "id": 3,
+          "question": "Who is the course intended for?",
+          "options": {
+            "A": "Residential interior designers.",
+            "B": "Studio video camera operators.",
+            "C": "Full-time university undergraduate students.",
+            "D": "Professionals seeking career advancement in commercial real estate law."
+          },
+          "answer": "D",
+          "explainAnswer": "Thông báo chiêu sinh hướng tới các nhân sự muốn phát triển sự nghiệp trong lĩnh vực phát triển BĐS thương mại và tuân thủ pháp lý doanh nghiệp."
+        },
+        {
+          "id": 4,
+          "question": "How can applicants receive a 15% fee discount?",
+          "options": {
+            "A": "By registering before October 20.",
+            "B": "By enrolling with a colleague.",
+            "C": "By paying cash at the center office.",
+            "D": "By taking a preliminary entrance exam."
+          },
+          "answer": "A",
+          "explainAnswer": "Mục Early-Bird Discount ghi rõ: Đăng ký trước ngày 20 tháng 10 để nhận mức giảm giá 15%."
+        }
+      ]
+    },
+    {
+      "groupId": 3,
+      "passageType": "single",
+      "passage": "MEMORANDUM — APEX MEDIA CORPORATION\nTO: Department Managers & Project Supervisors\nFROM: Corporate Compliance Division\nDATE: October 14, 2026\nSUBJECT: Mandatory Intellectual Property Audit Deadline\n\nAs our firm prepares to launch major digital advertising campaigns for EduTech and Real Estate clients in Q4, we must ensure all media assets comply fully with federal copyright and trademark laws.\n\nAll department heads must audit their current stock of digital graphics, video clips, and audio tracks to confirm proper commercial licensing. An inventory audit report must be submitted to Senior Counsel Sarah Gomez by Friday, November 5.\n\nFailure to submit the inventory by the deadline may result in a temporary hold on project funding approvals. Thank you for your immediate attention to this compliance requirement.",
+      "questions": [
+        {
+          "id": 5,
+          "question": "What is the main purpose of the memorandum?",
+          "options": {
+            "A": "To announce a new media office location.",
+            "B": "To mandate an intellectual property audit by a specific deadline.",
+            "C": "To promote a corporate training seminar.",
+            "D": "To adjust employee health insurance benefits."
+          },
+          "answer": "B",
+          "explainAnswer": "Bản ghi nhớ quy định bắt buộc các trưởng phòng phải tiến hành kiểm toán tài sản sở hữu trí tuệ và nộp báo cáo trước ngày 5/11."
+        },
+        {
+          "id": 6,
+          "question": "Who should receive the inventory audit reports?",
+          "options": {
+            "A": "Dr. Marcus Chen",
+            "B": "Robert Sterling",
+            "C": "Sarah Gomez",
+            "D": "Lisa Vance"
+          },
+          "answer": "C",
+          "explainAnswer": "Đoạn 2 ghi rõ báo cáo kiểm toán kiểm kê phải được nộp cho Cố vấn pháp lý cấp cao Sarah Gomez."
+        }
+      ]
+    },
+    {
+      "groupId": 4,
+      "passageType": "single",
+      "passage": "PRESS RELEASE — APEX MEDIA CORPORATION\nFOR IMMEDIATE RELEASE\nApex Media Launches High-Density Digital Billboard Network in Downtown Business District\n\nCHICAGO — October 16, 2026 — Apex Media Corporation, a leading regional digital advertising firm, today announced the activation of its new high-density digital billboard network across the Downtown Financial Hub.\n\nThe network features twelve state-of-the-art LED displays strategically positioned along major commuter routes and commercial corridors. Equipped with real-time audience analytics technology, the displays allow corporate advertisers to dynamically adjust their video messages based on peak traffic times.\n\n\"Our new digital billboard network offers unprecedented visibility for commercial brands seeking to engage urban professionals,\" stated Jason Vance, Creative Director at Apex Media. \"Lumina Real Estate Group and LearnPulse EduTech have already signed inaugural advertising contracts representing over forty percent of our Q4 display inventory.\"",
+      "questions": [
+        {
+          "id": 7,
+          "question": "What product or service is Apex Media launching?",
+          "options": {
+            "A": "A print magazine publishing house.",
+            "B": "An online vocational degree portal.",
+            "C": "A real estate brokerage app.",
+            "D": "A network of high-density digital billboards."
+          },
+          "answer": "D",
+          "explainAnswer": "Tiêu đề thông cáo báo chí khẳng định Apex Media chính thức kích hoạt mạng lưới biển quảng cáo kỹ thuật số mật độ cao."
+        },
+        {
+          "id": 8,
+          "question": "According to the press release, what feature do the new displays include?",
+          "options": {
+            "A": "Real-time audience analytics technology.",
+            "B": "Solar-powered backup batteries.",
+            "C": "Touch-screen interactive ordering panels.",
+            "D": "Built-in Wi-Fi hotspots for pedestrians."
+          },
+          "answer": "A",
+          "explainAnswer": "Đoạn 2 ghi rõ các màn hình được trang bị công nghệ phân tích khán giả theo thời gian thực (real-time audience analytics technology)."
+        },
+        {
+          "id": 9,
+          "question": "What company has signed an inaugural advertising contract with Apex Media?",
+          "options": {
+            "A": "Horizon Legal Counsel",
+            "B": "Vertex Systems",
+            "C": "Lumina Real Estate Group",
+            "D": "Civic Convention Center"
+          },
+          "answer": "C",
+          "explainAnswer": "Giám đốc sáng tạo Jason Vance xác nhận Tập đoàn Bất động sản Lumina đã ký hợp đồng quảng cáo mở màn đợt này."
+        }
+      ]
+    },
+    {
+      "groupId": 5,
+      "passageType": "single",
+      "passage": "ARTICLE — URBAN COMMERCIAL PROPERTY REVIEW\nCHICAGO COMMERCIAL ZONING UPDATES DRIVE OFFICE REBOUND\nBy Clara Diaz | October 19, 2026\n\nThe City Council's recent approval of revised commercial zoning regulations is already reshaping Chicago's commercial real estate market. By raising building height restrictions from twelve to twenty stories in the Downtown Financial Hub, city officials have sparked renewed interest from institutional real estate investors.\n\nIndustry analysts predict that commercial property values in District 1 will appreciate by fifteen percent over the next two years. \"Higher density allowances enable property developers to construct modern, multi-suite commercial complexes,\" explained Robert Sterling, Senior Partner at Lumina Real Estate Group.\n\nHowever, office lease rates are also expected to rise. Small business tenants are advised to secure multi-year lease agreements now before current rental rates adjust upward in Q1 2027.",
+      "questions": [
+        {
+          "id": 10,
+          "question": "What change was approved by the City Council?",
+          "options": {
+            "A": "Lowering property tax rates for residential homes.",
+            "B": "Raising commercial building height limits to twenty stories.",
+            "C": "Converting commercial offices into public parks.",
+            "D": "Restricting international real estate investments."
+          },
+          "answer": "B",
+          "explainAnswer": "Đoạn 1 khẳng định Hội đồng Thành phố đã phê duyệt nâng giới hạn chiều cao tòa nhà thương mại từ 12 lên 20 tầng."
+        },
+        {
+          "id": 11,
+          "question": "What advice does the article offer to small business tenants?",
+          "options": {
+            "A": "To sell their commercial properties immediately.",
+            "B": "To reduce their employee headcount.",
+            "C": "To relocate their offices to suburban zones.",
+            "D": "To secure multi-year lease agreements before rates increase."
+          },
+          "answer": "D",
+          "explainAnswer": "Đoạn cuối bài viết khuyên các khách thuê doanh nghiệp nhỏ nên chốt các hợp đồng thuê nhiều năm ngay từ bây giờ trước khi giá thuê tăng vào Q1 2027."
+        }
+      ]
+    },
+    {
+      "groupId": 6,
+      "passageType": "single",
+      "passage": "EMAIL — HORIZON LEGAL COUNSEL\nTo: Mark Sterling <msterling@luminarealestate.com>\nFrom: Sarah Gomez <sgomez@horizonlegal.com>\nDate: October 20, 2026\nSubject: Settlement Agreement — Vertex Systems Lawsuit\n\nDear Mr. Sterling,\n\nI am pleased to inform you that Vertex Systems has accepted our out-of-court settlement terms regarding the trademark infringement dispute over the \"LearnPulse\" brand assets.\n\nUnder the agreed terms, Vertex Systems will immediately cease all marketing operations utilizing the conflicting logo mark. Additionally, they have agreed to pay a lump-sum financial settlement of seventy-five thousand dollars to cover our legal fees and intellectual property valuation costs.\n\nPlease review the attached formal settlement agreement document. If the terms meet your approval, please sign the signature page electronically and return it to my office by 5:00 P.M. on Thursday. Once received, I will file the final motion for dismissal with the court clerk.\n\nSincerely,\nSarah Gomez\nSenior Counsel, Horizon Legal Group",
+      "questions": [
+        {
+          "id": 12,
+          "question": "What is the main outcome of the lawsuit settlement?",
+          "options": {
+            "A": "Vertex Systems will cease using the conflicting trademark mark.",
+            "B": "Vertex Systems will acquire LearnPulse EduTech.",
+            "C": "Lumina Real Estate will pay a financial penalty to Vertex Systems.",
+            "D": "The lawsuit will proceed to a full court trial."
+          },
+          "answer": "A",
+          "explainAnswer": "Đoạn 2 ghi rõ kết quả thỏa thuận: Vertex Systems sẽ dừng ngay lập tức mọi hoạt động tiếp thị sử dụng logo trùng lặp vi phạm."
+        },
+        {
+          "id": 13,
+          "question": "How much will Vertex Systems pay as a settlement fee?",
+          "options": {
+            "A": "$45,000",
+            "B": "$50,000",
+            "C": "$75,000",
+            "D": "$100,000"
+          },
+          "answer": "C",
+          "explainAnswer": "Đoạn 2 ghi rõ số tiền bồi thường hòa giải mà Vertex Systems đồng ý trả là 75,000 USD (seventy-five thousand dollars)."
+        },
+        {
+          "id": 14,
+          "question": "What must Mr. Sterling do by Thursday at 5:00 P.M.?",
+          "options": {
+            "A": "File a motion at the courthouse in person.",
+            "B": "Electronically sign and return the settlement agreement signature page.",
+            "C": "Attend a conference call with Vertex Systems lawyers.",
+            "D": "Pay legal fees to the court clerk."
+          },
+          "answer": "B",
+          "explainAnswer": "Đoạn 3 yêu cầu Mr. Sterling ký điện tử vào trang chữ ký và nộp lại cho văn phòng luật sư trước 5:00 chiều thứ Năm."
+        }
+      ]
+    },
+    {
+      "groupId": 7,
+      "passageType": "single",
+      "passage": "WEBPAGE — LEARNPULSE EDUTECH PLATFORM\nURL: https://www.learnpulse-edutech.com/enterprise-plans\n\nLEARNPULSE ENTERPRISE SOLUTIONS FOR CORPORATE TRAINING\n\nTransform your workforce with LearnPulse's cloud-based vocational learning ecosystem. Our platform offers customizable training paths for corporate teams in Real Estate, Legal Compliance, and Digital Media.\n\nENTERPRISE TIER FEATURES:\n\n1. Standard Corporate Tier ($1,500/month):\n   • Access for up to 50 active employee accounts.\n   • Full library of Course 101 (Digital Marketing) & Course 201 (Real Estate Law).\n   • Standard email IT support (24-hour response time).\n\n2. Premium Professional Tier ($3,000/month):\n   • Access for up to 200 active employee accounts.\n   • Includes all Standard courses PLUS Course 301 (AI Data Analytics).\n   • Priority 24/7 dedicated IT account manager.\n   • Custom corporate branding on learning dashboard.\n\nAll annual subscriptions paid upfront receive a 20% discount! Contact sales@learnpulse-edutech.com to request a live demo.",
+      "questions": [
+        {
+          "id": 15,
+          "question": "What service does the webpage describe?",
+          "options": {
+            "A": "Residential real estate appraisals.",
+            "B": "Court litigation filing services.",
+            "C": "Studio video camera rental packages.",
+            "D": "Cloud-based corporate vocational training platform tiers."
+          },
+          "answer": "D",
+          "explainAnswer": "Trang web mô tả các gói giải pháp đào tạo nghề trực tuyến cho doanh nghiệp trên nền tảng đám mây."
+        },
+        {
+          "id": 16,
+          "question": "What feature is exclusive to the Premium Professional Tier?",
+          "options": {
+            "A": "Priority 24/7 dedicated IT account manager.",
+            "B": "Access for up to 50 active employee accounts.",
+            "C": "Course 101 Digital Marketing library.",
+            "D": "Standard email IT support with 24-hour response time."
+          },
+          "answer": "A",
+          "explainAnswer": "Mục Premium Professional Tier có tính năng độc quyền: Quản lý tài khoản IT riêng phục vụ ưu tiên 24/7."
+        },
+        {
+          "id": 17,
+          "question": "How can clients obtain a 20% discount on subscriptions?",
+          "options": {
+            "A": "By registering before October 20.",
+            "B": "By submitting a client referral.",
+            "C": "By paying annual subscriptions upfront.",
+            "D": "By enrolling over 500 employees."
+          },
+          "answer": "C",
+          "explainAnswer": "Dòng cuối trang web ghi rõ: Tất cả các gói đăng ký hàng năm trả tiền trước sẽ nhận mức giảm giá 20%."
+        }
+      ]
+    },
+    {
+      "groupId": 8,
+      "passageType": "single",
+      "passage": "MEMORANDUM — APEX MEDIA STUDIOS\nTO: Production Crew & Studio Staff\nFROM: Lisa Vance, Studio Production Manager\nDATE: October 21, 2026\nSUBJECT: Promotional Video Filming Schedule — Lumina Real Estate Project\n\nPlease review the production timeline for tomorrow's video shoot at Studio Control Room A. All technical crew members must report to the studio at 7:30 A.M. for equipment calibration. [1]\n\nFILMING TIMELINE:\n• 08:00 A.M. – 10:00 A.M.: Scene 1 (Interior Office Suite Interviews)\n• 10:15 A.M. – 12:30 P.M.: Scene 2 (Architectural Blueprint Demonstration)\n• 12:30 P.M. – 01:30 P.M.: Crew Lunch Break (Catered in Cafeteria B)\n• 01:30 P.M. – 04:30 P.M.: Scene 3 (Exterior Aerial Drone Filming) [2]\n\nAll camera operators must inspect high-definition lenses before 8:00 A.M. [3] Furthermore, drone filming conducted during Scene 3 requires a certified aerial technician on site per FAA regulations. [4]\n\nThank you for your cooperation in maintaining a safe and efficient filming environment.",
+      "questions": [
+        {
+          "id": 18,
+          "question": "What is the main purpose of the memorandum?",
+          "options": {
+            "A": "To announce a studio rental rate increase.",
+            "B": "To outline the filming timeline and safety rules for a video project.",
+            "C": "To recruit new video editing staff.",
+            "D": "To cancel an outdoor drone video shoot."
+          },
+          "answer": "B",
+          "explainAnswer": "Bản ghi nhớ đưa ra tiến độ quay phim chi tiết cho dự án video quảng cáo của Lumina Real Estate và các quy định an toàn kỹ thuật đi kèm."
+        },
+        {
+          "id": 19,
+          "question": "At what time is Scene 2 scheduled to begin?",
+          "options": {
+            "A": "07:30 A.M.",
+            "B": "08:00 A.M.",
+            "C": "01:30 P.M.",
+            "D": "10:15 A.M."
+          },
+          "answer": "D",
+          "explainAnswer": "Bảng FILMING TIMELINE chỉ rõ Cảnh 2 bắt đầu lúc 10:15 A.M."
+        },
+        {
+          "id": 20,
+          "question": "What is required during Scene 3 aerial filming?",
+          "options": {
+            "A": "A certified aerial drone technician on site.",
+            "B": "Additional studio interior lighting.",
+            "C": "A signed lease agreement from the landlord.",
+            "D": "Live streaming to social media."
+          },
+          "answer": "A",
+          "explainAnswer": "Đoạn văn sau bảng timeline ghi rõ quay flycam Cảnh 3 bắt buộc có kỹ thuật viên điều khiển flycam được chứng nhận có mặt tại chỗ."
+        },
+        {
+          "id": 21,
+          "question": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"Please ensure all battery packs are fully charged prior to your arrival.\"",
+          "options": {
+            "A": "[3]",
+            "B": "[2]",
+            "C": "[1]",
+            "D": "[4]"
+          },
+          "answer": "C",
+          "explainAnswer": "Câu chèn 'Vui lòng đảm bảo tất cả các bộ pin được sạc đầy trước khi tới' nối tiếp hoàn hảo với yêu cầu tập trung tại studio lúc 7:30 A.M."
+        }
+      ]
+    },
+    {
+      "groupId": 9,
+      "passageType": "single",
+      "passage": "REPORT — HORIZON LEGAL GROUP CLIENT SATISFACTION SURVEY\nPREPARED BY: Client Relations Division\nDATE: October 22, 2026\n\nHorizon Legal Group recently surveyed fifty corporate clients across the Real Estate, EduTech, and Digital Media sectors to assess satisfaction with our legal compliance and intellectual property services. [1]\n\nKEY SURVEY FINDINGS:\n• 94% of respondents rated our contract drafting speed as \"Excellent\" or \"Very Good.\"\n• 88% expressed high satisfaction with trademark litigation settlement outcomes.\n• 72% indicated a desire for additional guidance on international land zoning regulations. [2]\n\nRECOMMENDED ACTIONS:\nTo address client feedback, our senior partners recommend establishing a dedicated Commercial Property & Zoning Advisory Desk by Q1 2027. [3] Senior Counsel Sarah Gomez will oversee the recruitment of two specialized land-use attorneys to lead this initiative. [4]\n\nIn addition, Horizon Legal Group plans to launch a digital client portal next quarter for online contract tracking. Our clients emphasize clear communication and timely compliance updates.",
+      "questions": [
+        {
+          "id": 22,
+          "question": "What type of clients participated in the survey?",
+          "options": {
+            "A": "Residential apartment buyers.",
+            "B": "Corporate clients in Real Estate, EduTech, and Media sectors.",
+            "C": "High school vocational students.",
+            "D": "Drone equipment manufacturers."
+          },
+          "answer": "B",
+          "explainAnswer": "Đoạn 1 chỉ rõ đối tượng tham gia khảo sát là 50 khách hàng doanh nghiệp thuộc 3 lĩnh vực: BĐS, EduTech và Truyền thông số."
+        },
+        {
+          "id": 23,
+          "question": "What percentage of respondents were satisfied with trademark litigation outcomes?",
+          "options": {
+            "A": "72%",
+            "B": "100%",
+            "C": "94%",
+            "D": "88%"
+          },
+          "answer": "D",
+          "explainAnswer": "Mục KEY SURVEY FINDINGS ghi rõ 88% người trả lời hài lòng cao với kết quả hòa giải kiện tụng nhãn hiệu."
+        },
+        {
+          "id": 24,
+          "question": "What initiative will Senior Counsel Sarah Gomez lead?",
+          "options": {
+            "A": "Establishing a Commercial Property & Zoning Advisory Desk.",
+            "B": "Redesigning the firm's website.",
+            "C": "Opening a new branch office in London.",
+            "D": "Developing an online vocational portal."
+          },
+          "answer": "A",
+          "explainAnswer": "Mục RECOMMENDED ACTIONS chỉ rõ Sarah Gomez sẽ dẫn dắt việc thành lập Bàn Tư vấn Quy hoạch & Bất động sản Thương mại."
+        },
+        {
+          "id": 25,
+          "question": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"Overall client satisfaction reached ninety-one percent, reflecting strong trust in our legal team.\"",
+          "options": {
+            "A": "[3]",
+            "B": "[2]",
+            "C": "[1]",
+            "D": "[4]"
+          },
+          "answer": "C",
+          "explainAnswer": "Câu chèn đưa ra con số hài lòng tổng thể 91% nối tiếp hoàn hảo câu khảo sát 50 khách hàng ở mở đầu trước khi chi tiết hóa các chỉ số 94%, 88%, 72% ở [2]."
+        },
+        {
+          "id": 26,
+          "question": "What is the main purpose of the client survey report?",
+          "options": {
+            "A": "To request additional funding from venture capital investors.",
+            "B": "To announce a price increase for corporate litigation.",
+            "C": "To recruit new junior attorneys for the compliance division.",
+            "D": "To evaluate client satisfaction with recent legal services."
+          },
+          "answer": "D",
+          "explainAnswer": "Báo cáo được lập nhằm mục đích đánh giá mức độ hài lòng của khách hàng doanh nghiệp đối với các dịch vụ pháp lý đã cung cấp."
+        },
+        {
+          "id": 27,
+          "question": "Which practice area received the highest rating from respondents?",
+          "options": {
+            "A": "Real Estate Acquisitions",
+            "B": "Intellectual Property Protection",
+            "C": "Tax Dispute Resolution",
+            "D": "Labor Union Negotiations"
+          },
+          "answer": "B",
+          "explainAnswer": "Mảng bảo hộ sở hữu trí tuệ và soạn thảo hợp đồng nhận mức đánh giá cao nhất (94%)."
+        },
+        {
+          "id": 28,
+          "question": "What upcoming initiative is scheduled for next quarter?",
+          "options": {
+            "A": "Launching a digital client portal for online contract tracking.",
+            "B": "Closing the regional branch office in Chicago.",
+            "C": "Replacing the entire executive board of directors.",
+            "D": "Restricting consulting services to international clients."
+          },
+          "answer": "A",
+          "explainAnswer": "Đoạn cuối báo cáo khẳng định quý tới Horizon Legal Group dự định ra mắt cổng thông tin khách hàng số để theo dõi tiến độ hợp đồng trực tuyến."
+        },
+        {
+          "id": 29,
+          "question": "What is suggested about Meridian Legal Group's corporate clients?",
+          "options": {
+            "A": "They rarely submit feedback after legal proceedings.",
+            "B": "They primarily operate in the hospitality industry.",
+            "C": "They value clear communication and timely compliance updates.",
+            "D": "They require mandatory annual retainer fee increases."
+          },
+          "answer": "C",
+          "explainAnswer": "Câu cuối cùng bài viết nhấn mạnh trực tiếp: Khách hàng đặc biệt coi trọng giao tiếp rõ ràng và việc cập nhật tuân thủ đúng hạn."
+        }
+      ]
+    },
+    {
+      "groupId": 10,
+      "passageType": "multiple",
+      "passages": [
+        {
+          "documentId": 1,
+          "documentType": "email",
+          "title": "Email — Commercial Office Space Lease Inquiry",
+          "content": "To: Mark Sterling <msterling@luminarealestate.com>\nFrom: Robert Vance <rvance@apexmedia.com>\nDate: October 22, 2026\nSubject: Commercial Office Space Lease Inquiry — Horizon Tower\n\nDear Mr. Sterling,\n\nApex Media Corporation is currently seeking to lease an entire floor of commercial office space to accommodate our expanding media production staff. We reviewed your listing for Suite 400 at Horizon Tower.\n\nOur executive team requires a minimum of 8,000 square feet, including space for two dedicated video editing suites and a central conference room. We are interested in a 5-year lease term starting December 1, 2026.\n\nCould you please send us the formal lease agreement template along with details regarding utility payment structures and parking provisions? We would like our legal counsel, Sarah Gomez, to review the contract terms before our board meeting next Tuesday.\n\nSincerely,\nRobert Vance, Operations Director, Apex Media"
+        },
+        {
+          "documentId": 2,
+          "documentType": "lease_agreement",
+          "title": "Lease Agreement Extract",
+          "content": "COMMERCIAL LEASE AGREEMENT EXTRACT — HORIZON TOWER SUITE 400\n\nLandlord: Lumina Real Estate Group\nTenant: Apex Media Corporation\nPremises: Suite 400, Horizon Tower (Total Area: 8,500 sq.ft.)\nLease Commencement Date: December 1, 2026\nLease Term: 5 Years (Expiring November 30, 2031)\n\nSECTION 4: RENTAL RATES & PAYMENT TERMS\nMonthly Base Rent: $25,500 ($36 / sq.ft. annually), payable on the 1st of each month.\n\nSECTION 7: PARKING & MAINTENANCE PROVISIONS\nTenant shall receive four reserved basement parking spaces at no additional cost. Landlord shall be responsible for building structural maintenance and central HVAC repairs. Tenant is responsible for internal suite janitorial services.\n\nSECTION 12: EARLY TERMINATION CLAUSE\nEither party may terminate this agreement after 36 months by providing 90 days' written notice and paying a early termination penalty equivalent to two months' base rent ($51,000)."
+        }
+      ],
+      "questions": [
+        {
+          "id": 30,
+          "question": "What is Apex Media seeking to do according to Document 1?",
+          "options": {
+            "A": "Sell a commercial office building.",
+            "B": "Lease an entire floor of commercial office space.",
+            "C": "Sublet a warehouse facility.",
+            "D": "Hire an external real estate broker."
+          },
+          "answer": "B",
+          "explainAnswer": "Email Doc 1 khẳng định Apex Media đang tìm thuê toàn bộ một tầng văn phòng thương mại cho nhân sự sản xuất truyền thông."
+        },
+        {
+          "id": 31,
+          "question": "In Document 1, who will review the lease terms before the board meeting?",
+          "options": {
+            "A": "Dr. Marcus Chen",
+            "B": "Clara Diaz",
+            "C": "Lisa Vance",
+            "D": "Sarah Gomez"
+          },
+          "answer": "D",
+          "explainAnswer": "Email Doc 1 chỉ rõ Cố vấn pháp lý Sarah Gomez sẽ là người xem xét các điều khoản hợp đồng trước họp HĐQT."
+        },
+        {
+          "id": 32,
+          "question": "Look at Document 2. What is the monthly base rent for Suite 400?",
+          "options": {
+            "A": "$25,500",
+            "B": "$8,500",
+            "C": "$36,000",
+            "D": "$51,000"
+          },
+          "answer": "A",
+          "explainAnswer": "Doc 2 Section 4 ghi rõ giá thuê cơ sở hàng tháng cho Suite 400 là 25,500 USD."
+        },
+        {
+          "id": 33,
+          "question": "What is indicated about parking provisions in Document 2?",
+          "options": {
+            "A": "Parking is available for an extra monthly fee of $200.",
+            "B": "Tenant receives four reserved basement parking spaces at no additional cost.",
+            "C": "Parking spaces are assigned on a first-come, first-served basis.",
+            "D": "No parking is provided in Horizon Tower."
+          },
+          "answer": "B",
+          "explainAnswer": "Doc 2 Section 7 khẳng định bên thuê sẽ nhận 4 chỗ đậu xe tầng hầm dành riêng miễn phí."
+        },
+        {
+          "id": 34,
+          "question": "What requirement mentioned in Document 1 is satisfied by the lease terms in Document 2?",
+          "options": {
+            "A": "A 10-year lease term duration.",
+            "B": "Free monthly janitorial services.",
+            "C": "The requested minimum area of 8,000 square feet.",
+            "D": "A monthly rent rate under $15,000."
+          },
+          "answer": "C",
+          "explainAnswer": "BẮT BẪY ĐỐI CHIẾU 2 TÀI LIỆU (CROSS-DOC). Doc 1 yêu cầu diện tích tối thiểu 8,000 sq.ft. Doc 2 cung cấp hợp đồng diện tích 8,500 sq.ft ➔ đáp ứng vượt yêu cầu diện tích tối thiểu."
+        }
+      ]
+    },
+    {
+      "groupId": 11,
+      "passageType": "multiple",
+      "passages": [
+        {
+          "documentId": 1,
+          "documentType": "advertisement",
+          "title": "Online Advertisement — Corporate Training Solutions",
+          "content": "LEARNPULSE EDUTECH — CORPORATE TRAINING SOLUTIONS\n\nBoost your organization's productivity with custom online vocational training! LearnPulse EduTech offers comprehensive certification packages tailored for corporate teams in Real Estate Law, Digital Marketing, and AI Data Analytics.\n\nSpecial Corporate Group Packages:\n• Bronze Package (10-25 Employees): 10% discount off standard tuition.\n• Silver Package (26-50 Employees): 15% discount off standard tuition + free digital textbooks.\n• Gold Package (51+ Employees): 25% discount off standard tuition + dedicated 24/7 IT account manager + custom corporate branding.\n\nStandard Tuition Fee: $650 per course per employee.\nSubmit an inquiry form at www.learnpulse-edutech.com/corporate to receive a custom quote within 24 hours."
+        },
+        {
+          "documentId": 2,
+          "documentType": "form",
+          "title": "Online Inquiry Form",
+          "content": "LEARNPULSE EDUTECH — CORPORATE QUOTE REQUEST\n\nClient Organization: Lumina Real Estate Group\nContact Person: Mark Sterling, Operations Manager\nEmail: msterling@luminarealestate.com\nDate Submitted: October 23, 2026\n\nSelected Course: Course 201 — Commercial Real Estate Law\nNumber of Employees Enrolling: 60 employees\nRequested Start Date: November 15, 2026\n\nAdditional Notes:\nWe would like to utilize our corporate branding on the student dashboard interface. Also, please confirm if our team qualifies for dedicated IT support during the 6-week training period."
+        }
+      ],
+      "questions": [
+        {
+          "id": 35,
+          "question": "What course is Lumina Real Estate interested in according to Document 2?",
+          "options": {
+            "A": "Course 101 — Digital Marketing",
+            "B": "Course 201 — Commercial Real Estate Law",
+            "C": "Course 301 — AI Data Analytics",
+            "D": "Course 401 — Executive Leadership"
+          },
+          "answer": "B",
+          "explainAnswer": "Form Doc 2 ghi rõ khóa học được chọn là Course 201 — Commercial Real Estate Law."
+        },
+        {
+          "id": 36,
+          "question": "How many employees does Lumina Real Estate plan to enroll?",
+          "options": {
+            "A": "20 employees",
+            "B": "35 employees",
+            "C": "100 employees",
+            "D": "60 employees"
+          },
+          "answer": "D",
+          "explainAnswer": "Form Doc 2 chỉ rõ số lượng nhân viên đăng ký tham gia học là 60 người."
+        },
+        {
+          "id": 37,
+          "question": "Look at Document 1. What is the standard tuition fee per employee before discounts?",
+          "options": {
+            "A": "$650",
+            "B": "$550",
+            "C": "$450",
+            "D": "$750"
+          },
+          "answer": "A",
+          "explainAnswer": "Quảng cáo Doc 1 ghi rõ học phí chuẩn là $650 cho mỗi khóa học/nhân viên trước khi tính chiết khấu nhóm."
+        },
+        {
+          "id": 38,
+          "question": "Which group discount package does Lumina Real Estate qualify for based on Documents 1 and 2?",
+          "options": {
+            "A": "Bronze Package",
+            "B": "Silver Package",
+            "C": "Gold Package",
+            "D": "No package discount applies"
+          },
+          "answer": "C",
+          "explainAnswer": "BẮT BẪY ĐỐI CHIẾU 2 TÀI LIỆU (CROSS-DOC). Form Doc 2 đăng ký 60 nhân viên. Quảng cáo Doc 1 quy định Gold Package dành cho nhóm từ 51 nhân viên trở lên (51+ Employees) ➔ Lumina đạt tiêu chuẩn Gold Package."
+        },
+        {
+          "id": 39,
+          "question": "What discount percentage off standard tuition will Lumina Real Estate receive?",
+          "options": {
+            "A": "10%",
+            "B": "15%",
+            "C": "20%",
+            "D": "25%"
+          },
+          "answer": "D",
+          "explainAnswer": "BẮT BẪY ĐỐI CHIẾU 2 TÀI LIỆU (CROSS-DOC). Từ kết quả câu #184, Lumina thuộc gói **Gold Package**. Quảng cáo Doc 1 quy định Gold Package được giảm 25% trên học phí chuẩn."
+        }
+      ]
+    },
+    {
+      "groupId": 12,
+      "passageType": "multiple",
+      "passages": [
+        {
+          "documentId": 1,
+          "documentType": "memorandum",
+          "title": "Internal Memorandum — Strategy Proposal",
+          "content": "TO: Marketing Campaign Directors\nFROM: Jason Vance, Creative Director, Apex Media\nDATE: October 20, 2026\nSUBJECT: Strategy Proposal for Lumina Real Estate Account\n\nAs we finalize our Q4 marketing proposals, we must present an integrated media package to Lumina Real Estate Group for their new commercial project, Horizon Tower.\n\nOur strategy must combine high-impact digital billboard displays in District 1 (Financial Hub) with targeted social media video ads. Based on initial budget projections, we will recommend a total campaign budget of $100,000 over three months.\n\nPlease ensure the formal proposal includes detailed performance metrics from our previous EduTech campaign to demonstrate our return on investment (ROI)."
+        },
+        {
+          "documentId": 2,
+          "documentType": "proposal",
+          "title": "Marketing Campaign Proposal Extract",
+          "content": "PREPARED FOR: Lumina Real Estate Group\nPREPARED BY: Apex Media Corporation\nPROPOSAL DATE: October 22, 2026\nPROJECT: Horizon Tower Commercial Leasing Campaign\n\nCAMPAIGN BREAKDOWN & BUDGET:\n• Component A: Digital Billboard Network (District 1) ➔ $60,000 (60% share)\n• Component B: Social Media Video Placement ➔ $30,000 (30% share)\n• Component C: Search Engine Marketing ➔ $10,000 (10% share)\nTOTAL PROPOSED BUDGET: $100,000\n\nKEY ROI GUARANTEES:\n1. Minimum 500,000 digital impressions per month across downtown LED displays.\n2. Guaranteed 25% increase in online lease inquiry form submissions.\n3. Dedicated account management by Operations Director Robert Vance."
+        },
+        {
+          "documentId": 3,
+          "documentType": "email",
+          "title": "Email — Proposal Acceptance",
+          "content": "To: Jason Vance <jvance@apexmedia.com>\nFrom: Mark Sterling <msterling@luminarealestate.com>\nDate: October 24, 2026\nSubject: Re: Proposal Acceptance — Horizon Tower Campaign\n\nDear Mr. Vance,\n\nOur executive board reviewed Apex Media's marketing proposal for the Horizon Tower commercial leasing campaign. We are thoroughly impressed with your proposed strategy and the guaranteed ROI metrics.\n\nWe accept the proposal with one minor modification: we would like to reallocate $10,000 from Component C to Component B to further boost our social media video ad reach. This increases Component B to $40,000 while maintaining the total budget at $100,000.\n\nOur legal counsel, Sarah Gomez, will draft the formal media contract based on these updated allocations. We look forward to launching the campaign on November 1.\n\nBest regards,\nMark Sterling, Operations Manager, Lumina Real Estate Group"
+        }
+      ],
+      "questions": [
+        {
+          "id": 40,
+          "question": "What is the main objective of the campaign discussed in Document 1?",
+          "options": {
+            "A": "To promote a residential apartment complex.",
+            "B": "To advertise commercial office space at Horizon Tower.",
+            "C": "To recruit new video editing technicians.",
+            "D": "To launch an online vocational learning app."
+          },
+          "answer": "B",
+          "explainAnswer": "Doc 1 khẳng định mục tiêu gói truyền thông là quảng cáo mặt bằng thương mại cho dự án Horizon Tower của Lumina Real Estate."
+        },
+        {
+          "id": 41,
+          "question": "In Document 2, what component represents 60% of the proposed budget?",
+          "options": {
+            "A": "Component A: Digital Billboard Network",
+            "B": "Component B: Social Media Video Placement",
+            "C": "Component C: Search Engine Marketing",
+            "D": "Component D: Print Magazine Ads"
+          },
+          "answer": "A",
+          "explainAnswer": "Đề xuất Doc 2 ghi rõ Component A (Mạng lưới biển quảng cáo kỹ thuật số) chiếm 60,000 USD, tương đương 60% ngân sách."
+        },
+        {
+          "id": 42,
+          "question": "What change does Mark Sterling request in Document 3?",
+          "options": {
+            "A": "Reducing the total budget to $80,000.",
+            "B": "Postponing the campaign launch date to December.",
+            "C": "Cancelling digital billboard advertising in District 1.",
+            "D": "Reallocating $10,000 from Component C to Component B."
+          },
+          "answer": "D",
+          "explainAnswer": "BẮT BẪY ĐỐI CHIẾU TÀI LIỆU (CROSS-DOC). Mark Sterling yêu cầu điều chỉnh duy nhất: chuyển $10,000 từ Component C sang Component B để đẩy mạnh quảng cáo video social."
+        },
+        {
+          "id": 43,
+          "question": "After the modification requested in Document 3, what will be the new budget for Component B?",
+          "options": {
+            "A": "$10,000",
+            "B": "$30,000",
+            "C": "$40,000",
+            "D": "$60,000"
+          },
+          "answer": "C",
+          "explainAnswer": "BẮT BẪY ĐỐI CHIẾU 3 TÀI LIỆU (TRIPLE CROSS-DOC). Ngân sách Component B ban đầu là $30,000 (Doc 2). Sau khi nhận $10,000 chuyển từ C (Doc 3), ngân sách mới cho Component B tăng lên $40,000."
+        },
+        {
+          "id": 44,
+          "question": "Who will draft the formal media contract according to Document 3?",
+          "options": {
+            "A": "Sarah Gomez",
+            "B": "Robert Vance",
+            "C": "Jason Vance",
+            "D": "Clara Diaz"
+          },
+          "answer": "A",
+          "explainAnswer": "Doc 3 khẳng định Cố vấn pháp lý Sarah Gomez sẽ soạn thảo bản hợp đồng truyền thông chính thức dựa trên các tỷ lệ phân bổ đã cập nhật."
+        }
+      ]
+    },
+    {
+      "groupId": 13,
+      "passageType": "multiple",
+      "passages": [
+        {
+          "documentId": 1,
+          "documentType": "press_release",
+          "title": "Press Release — Vertex Systems",
+          "content": "FOR IMMEDIATE RELEASE — OCTOBER 10, 2026\nVertex Systems Announces New Accounting Software Suite \"LearnPulse Pro\"\n\nAUSTIN — Vertex Systems today announced the release of \"LearnPulse Pro,\" a corporate accounting software suite designed for commercial real estate firms. The software streamlines property tax calculations and automated lease invoicing.\n\nVertex Systems has launched a regional marketing campaign across digital media channels. Company spokesperson David Sterling highlighted that the software features cloud data encryption and automated financial auditing tools."
+        },
+        {
+          "documentId": 2,
+          "documentType": "legal_notice",
+          "title": "Formal Cease-and-Desist Legal Notice",
+          "content": "FROM: Horizon Legal Group (Representing LearnPulse EduTech)\nTO: Vertex Systems Executive Board\nDATE: October 15, 2026\nSUBJECT: Trademark Infringement Notice — \"LearnPulse\" Brand Asset\n\nTake notice that LearnPulse EduTech holds federal trademark registration #4,892,101 for the brand name \"LearnPulse\" across educational and digital software services, registered in 2021.\n\nYour commercial release of \"LearnPulse Pro\" constitutes direct trademark infringement and creates market confusion among corporate clients. You are hereby demanded to:\n1. Immediately cease all commercial use of the \"LearnPulse\" name.\n2. Withdraw all digital advertising campaigns utilizing said trademark within seven business days.\n\nFailure to comply will result in immediate federal litigation seeking injunctive relief and financial damages."
+        },
+        {
+          "documentId": 3,
+          "documentType": "email",
+          "title": "Email — Settlement Finalized",
+          "content": "To: Sarah Gomez <sgomez@horizonlegal.com>\nFrom: Marcus Chen <mchen@learnpulse-edutech.com>\nDate: October 26, 2026\nSubject: Re: Vertex Settlement Finalized\n\nDear Sarah,\n\nThank you for your outstanding legal representation in resolving the trademark infringement dispute with Vertex Systems.\n\nI received confirmation from our finance department that Vertex Systems transferred the agreed seventy-five thousand dollar ($75,000) settlement payment into our escrow account today. Furthermore, our marketing team verified that all \"LearnPulse Pro\" advertisements have been removed from digital media channels.\n\nWe appreciate Horizon Legal Group's swift action. Please send the final legal billing invoice to our accounting office.\n\nSincerely,\nDr. Marcus Chen, Founder, LearnPulse EduTech"
+        }
+      ],
+      "questions": [
+        {
+          "id": 45,
+          "question": "What product did Vertex Systems launch in Document 1?",
+          "options": {
+            "A": "A commercial real estate brokerage portal.",
+            "B": "A corporate accounting software suite named \"LearnPulse Pro.\"",
+            "C": "A digital billboard display network.",
+            "D": "A vocational drone training course."
+          },
+          "answer": "B",
+          "explainAnswer": "Thông cáo báo chí Doc 1 khẳng định Vertex Systems ra mắt bộ phần mềm kế toán doanh nghiệp có tên 'LearnPulse Pro'."
+        },
+        {
+          "id": 46,
+          "question": "In Document 2, what demand did Horizon Legal Group make to Vertex Systems?",
+          "options": {
+            "A": "To lower the retail price of their software.",
+            "B": "To redesign their corporate logo colors.",
+            "C": "To merge with LearnPulse EduTech.",
+            "D": "To cease all commercial use of the \"LearnPulse\" name within seven business days."
+          },
+          "answer": "D",
+          "explainAnswer": "Thư cảnh báo Doc 2 yêu cầu Vertex Systems chấm dứt ngay mọi việc sử dụng tên 'LearnPulse' và rút hết quảng cáo trong vòng 7 ngày làm việc."
+        },
+        {
+          "id": 47,
+          "question": "What legal basis did LearnPulse EduTech rely on in Document 2 to challenge Vertex Systems?",
+          "options": {
+            "A": "Federal trademark registration #4,892,101 registered in 2021.",
+            "B": "A patent registered in 2026.",
+            "C": "A commercial lease agreement signed with Lumina Real Estate.",
+            "D": "A copyright filing for video production scripts."
+          },
+          "answer": "A",
+          "explainAnswer": "Doc 2 chỉ rõ cơ sở pháp lý để khiếu nại là Bằng đăng ký nhãn hiệu liênbang số #4,892,101 cho tên thương hiệu 'LearnPulse' đã được cấp từ năm 2021."
+        },
+        {
+          "id": 48,
+          "question": "According to Document 3, how much money was transferred to LearnPulse's account?",
+          "options": {
+            "A": "$50,000",
+            "B": "$65,000",
+            "C": "$75,000",
+            "D": "$100,000"
+          },
+          "answer": "C",
+          "explainAnswer": "Email Doc 3 khẳng định Vertex Systems đã chuyển khoản 75,000 USD tiền bồi thường hòa giải vào tài khoản phong tỏa của LearnPulse."
+        },
+        {
+          "id": 49,
+          "question": "What action confirmed that Vertex Systems complied with the settlement in Document 3?",
+          "options": {
+            "A": "They published an apology in a national newspaper.",
+            "B": "They removed all \"LearnPulse Pro\" digital advertisements.",
+            "C": "They changed their company name to Apex Media.",
+            "D": "They offered free software accounts to Horizon Legal."
+          },
+          "answer": "B",
+          "explainAnswer": "BẮT BẪY ĐỐI CHIẾU 3 TÀI LIỆU (TRIPLE CROSS-DOC). Doc 2 yêu cầu rút quảng cáo. Doc 3 xác nhận đội ngũ marketing đã kiểm tra và thấy toàn bộ quảng cáo 'LearnPulse Pro' đã bị gỡ bỏ khỏi các kênh truyền thông số."
+        }
+      ]
+    },
+    {
+      "groupId": 14,
+      "passageType": "multiple",
+      "passages": [
+        {
+          "documentId": 1,
+          "documentType": "listing",
+          "title": "Commercial Property Listing",
+          "content": "LUMINA REAL ESTATE GROUP — FEATURED COMMERCIAL PROPERTY\n\nProperty ID: LRE-2026-HT400\nProperty Name: Horizon Tower — Suite 400 & 401 (Full Floor)\nLocation: 500 Financial Hub Corridor, Chicago, IL\n\nKey Specifications:\n• Total Usable Space: 12,000 square feet.\n• Features: High-speed fiber optic infrastructure, 4 executive corner offices, 2 conference rooms.\n• Rental Rate: $35 per square foot annually ($35,000 / month).\n• Lease Terms: Minimum 3-year term required. Available December 1, 2026."
+        },
+        {
+          "documentId": 2,
+          "documentType": "report",
+          "title": "Property Inspection Report Extract",
+          "content": "PREPARED BY: Chicago Structural Inspection Services\nINSPECTED FOR: LearnPulse EduTech Corporation\nINSPECTION DATE: October 24, 2026\nPROPERTY: Horizon Tower Suite 400 & 401\n\nINSPECTION SUMMARY FINDINGS:\n1. Structural Integrity: Excellent condition. Foundation and supporting pillars fully certified.\n2. HVAC & Air Quality: Central air system operating at 98% efficiency. Filters replaced on Oct 15.\n3. Electrical & Data Infrastructure: Fiber optic data lines fully operational. Backup generator certified.\n4. Recommendation: Property is in prime condition for immediate commercial occupancy."
+        },
+        {
+          "documentId": 3,
+          "documentType": "email",
+          "title": "Email — Lease Agreement Draft",
+          "content": "To: Mark Sterling <msterling@luminarealestate.com>\nFrom: Marcus Chen <mchen@learnpulse-edutech.com>\nDate: October 27, 2026\nSubject: Lease Agreement Draft — Horizon Tower Suites 400 & 401\n\nDear Mr. Sterling,\n\nWe received the structural inspection report from Chicago Structural Inspection Services regarding Horizon Tower Suites 400 & 401. We are pleased with the excellent findings regarding the fiber optic data infrastructure and HVAC system.\n\nLearnPulse EduTech accepts the listed annual rental rate of $35 per square foot. However, since we require the space for our corporate headquarters expansion, we request a 5-year lease term duration instead of the minimum 3-year term.\n\nOur legal counsel, Sarah Gomez, is reviewing your standard lease template. We aim to sign the final contract electronically before November 5.\n\nBest regards,\nDr. Marcus Chen, Founder, LearnPulse EduTech"
+        }
+      ],
+      "questions": [
+        {
+          "id": 50,
+          "question": "What is the total usable space of the property listed in Document 1?",
+          "options": {
+            "A": "8,000 square feet",
+            "B": "10,000 square feet",
+            "C": "15,000 square feet",
+            "D": "12,000 square feet"
+          },
+          "answer": "D",
+          "explainAnswer": "Bảng niêm yết Doc 1 ghi rõ tổng diện tích sử dụng của bất động sản Suite 400 & 401 là 12,000 feet vuông."
+        },
+        {
+          "id": 51,
+          "question": "According to Document 2, what was the inspection finding regarding the HVAC system?",
+          "options": {
+            "A": "It is operating at 98% efficiency with filters replaced on Oct 15.",
+            "B": "It requires immediate replacement.",
+            "C": "It lacks central heating capability.",
+            "D": "It failed electrical safety certification."
+          },
+          "answer": "A",
+          "explainAnswer": "Báo cáo kiểm định Doc 2 Item 2 ghi rõ hệ thống điều hòa trung tâm hoạt động ở mức 98% hiệu suất và các bộ lọc đã được thay vào ngày 15/10."
+        },
+        {
+          "id": 52,
+          "question": "What monthly rental payment will LearnPulse EduTech pay based on Documents 1 and 3?",
+          "options": {
+            "A": "$25,500",
+            "B": "$35,000",
+            "C": "$45,000",
+            "D": "$50,000"
+          },
+          "answer": "B",
+          "explainAnswer": "BẮT BẪY ĐỐI CHIẾU 2 TÀI LIỆU (CROSS-DOC). Tin niêm yết Doc 1 ghi giá thuê $35,000/tháng. Email Doc 3 Dr. Marcus Chen chấp nhận giá niêm yết $35/sq.ft ➔ Mức tiền thuê hàng tháng sẽ trả là **$35,000/tháng**."
+        },
+        {
+          "id": 53,
+          "question": "What change to the lease terms does Dr. Marcus Chen request in Document 3?",
+          "options": {
+            "A": "A reduction in monthly rental rate.",
+            "B": "Free parking spaces for all executives.",
+            "C": "A 5-year lease term duration instead of the minimum 3-year term.",
+            "D": "Postponing the lease commencement date to 2027."
+          },
+          "answer": "C",
+          "explainAnswer": "BẮT BẪY ĐỐI CHIẾU TÀI LIỆU (CROSS-DOC). Tin niêm yết Doc 1 ghi thời hạn tối thiểu 3 năm. Email Doc 3 Tiến sĩ Marcus Chen đề nghị ký thời hạn 5 năm cho nhu cầu mở rộng trụ sở chính lâu dài."
+        },
+        {
+          "id": 54,
+          "question": "What target date does LearnPulse EduTech set for signing the final contract in Document 3?",
+          "options": {
+            "A": "November 5",
+            "B": "October 27",
+            "C": "October 24",
+            "D": "December 1"
+          },
+          "answer": "A",
+          "explainAnswer": "Email Doc 3 khẳng định LearnPulse EduTech đặt mục tiêu ký hợp đồng điện tử trước ngày 5 tháng 11."
+        }
+      ]
+    }
+  ]
+}

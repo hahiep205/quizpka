@@ -1,5 +1,18 @@
 export type ExamType = "midterm" | "final"
 
+export type SubjectId =
+  | "tieng-anh-dau-vao"
+  | "tu-tuong-ho-chi-minh"
+  | "lich-su-dang-cong-san-viet-nam"
+  | "quan-tri-hoc"
+  | "triet-hoc-mac-lenin-2tc"
+  | "triet-hoc-mac-lenin-3tc"
+  | "ky-nang-quan-ly-du-an"
+  | "chu-nghia-xa-hoi-khoa-hoc"
+  | "ky-nang-khoi-nghiep-va-lanh-dao"
+  | "bao-mat-ung-dung-he-thong"
+  | "toeic"
+
 export type LocalizedText = {
   en: string
   vi: string
@@ -27,7 +40,7 @@ export type ChapterOption = {
 }
 
 export type Subject = {
-  id: string
+  id: SubjectId
   code: string
   name: LocalizedText
   category: LocalizedText
@@ -36,7 +49,7 @@ export type Subject = {
 }
 
 export type ExamCatalogItem = ExamPaper & {
-  subjectId: string
+  subjectId: SubjectId
   subjectCode: string
   subjectName: LocalizedText
   category: LocalizedText
@@ -310,8 +323,8 @@ export const subjects: Subject[] = [
           vi: "Bộ tài liệu ôn luyện TOEIC 01",
         },
         description: {
-          en: "Full ETS 2024 format with 200 questions across Listening and Reading. Choose Full Test, skill-based or per-Part practice.",
-          vi: "Chuẩn ETS 2024 với 200 câu Listening & Reading. Chọn Full Test, luyện theo kỹ năng hoặc theo từng Part.",
+          en: "Full ETS 2026 format with 200 questions across Listening and Reading. Choose Full Test, skill-based or per-Part practice.",
+          vi: "Chuẩn ETS 2026 với 200 câu Listening & Reading. Chọn Full Test, luyện theo kỹ năng hoặc theo từng Part.",
         },
         questionBanks: [
           "/data/toeic-test/Test-01/Part1/test01-part1.json",
@@ -321,6 +334,54 @@ export const subjects: Subject[] = [
           "/data/toeic-test/Test-01/Part5/part5.json",
           "/data/toeic-test/Test-01/Part6/part6.json",
           "/data/toeic-test/Test-01/Part7/part7.json",
+        ],
+      },
+      {
+        id: "toeic-test-02",
+        type: "final",
+        year: 2026,
+        questionCount: 200,
+        durationMinutes: 120,
+        title: {
+          en: "TOEIC Practice Set 02",
+          vi: "Bộ tài liệu ôn luyện TOEIC 02",
+        },
+        description: {
+          en: "Full ETS 2026 format with 200 questions across Listening and Reading. Choose Full Test, skill-based or per-Part practice.",
+          vi: "Chuẩn ETS 2026 với 200 câu Listening & Reading. Chọn Full Test, luyện theo kỹ năng hoặc theo từng Part.",
+        },
+        questionBanks: [
+          "/data/toeic-test/Test-02/Part1/test02-part1.json",
+          "/data/toeic-test/Test-02/Part2/part2.json",
+          "/data/toeic-test/Test-02/Part3/part3.json",
+          "/data/toeic-test/Test-02/Part4/part4.json",
+          "/data/toeic-test/Test-02/Part5/part5.json",
+          "/data/toeic-test/Test-02/Part6/part6.json",
+          "/data/toeic-test/Test-02/Part7/part7.json",
+        ],
+      },
+      {
+        id: "toeic-test-03",
+        type: "final",
+        year: 2026,
+        questionCount: 200,
+        durationMinutes: 120,
+        title: {
+          en: "TOEIC Practice Set 03",
+          vi: "Bộ tài liệu ôn luyện TOEIC 03",
+        },
+        description: {
+          en: "Full ETS 2026 format with 200 questions across Listening and Reading. Choose Full Test, skill-based or per-Part practice.",
+          vi: "Chuẩn ETS 2026 với 200 câu Listening & Reading. Chọn Full Test, luyện theo kỹ năng hoặc theo từng Part.",
+        },
+        questionBanks: [
+          "/data/toeic-test/Test-03/Part1/test03-part1.json",
+          "/data/toeic-test/Test-03/Part2/part2.json",
+          "/data/toeic-test/Test-03/Part3/part3.json",
+          "/data/toeic-test/Test-03/Part4/part4.json",
+          "/data/toeic-test/Test-03/Part5/part5.json",
+          "/data/toeic-test/Test-03/Part6/part6.json",
+          "/data/toeic-test/Test-03/Part7/part7.json",
         ],
       },
     ],

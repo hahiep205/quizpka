@@ -12,7 +12,7 @@ import {
 import { QuizSetupModal, type QuizSetupValues } from "@/components/QuizSetupModal"
 import { ToeicScopePickerModal } from "@/components/ToeicScopePickerModal"
 import { getSubjectById, type ExamCatalogItem } from "@/data/subjects"
-import { toeicScopeOptions, toeicTestMeta, type ToeicScope } from "@/data/toeic"
+import { type ToeicScope } from "@/data/toeic"
 import { goToPracticeGuest } from "@/lib/practiceSession"
 import { toeicSectionCopy as copy } from "@/shared/i18n"
 import { getToeicScopeOption } from "@/data/toeic"
@@ -34,19 +34,22 @@ export function ToeicSection({ lang }: { lang: Lang }) {
   const [pickerOpen, setPickerOpen] = useState(false)
   const [setupOpen, setSetupOpen] = useState(false)
   const [selectedScope, setSelectedScope] = useState<ToeicScope>("full")
+  const [selectedExamId, setSelectedExamId] = useState<string>("toeic-test-01")
 
   const subject = getSubjectById("toeic")
-  const baseExam: ExamCatalogItem | null = subject
-    ? {
-        ...subject.exams[0],
+  const examCatalogItems: ExamCatalogItem[] = subject
+    ? subject.exams.map((exam) => ({
+        ...exam,
         subjectId: subject.id,
         subjectCode: subject.code,
         subjectName: subject.name,
         category: subject.category,
-      }
-    : null
+      }))
+    : []
+  const baseExam = examCatalogItems.find((exam) => exam.id === selectedExamId) ?? null
 
-  const handleTryNow = () => {
+  const handleTryNow = (examId: string) => {
+    setSelectedExamId(examId)
     setPickerOpen(true)
   }
 
@@ -73,7 +76,7 @@ export function ToeicSection({ lang }: { lang: Lang }) {
   }
 
   // derive display exam for setup modal (override count/duration per scope)
-  const scopeOption = getToeicScopeOption(selectedScope)
+  const scopeOption = getToeicScopeOption(selectedScope, selectedExamId)
   const setupExam: ExamCatalogItem | null = baseExam
     ? {
         ...baseExam,
@@ -105,7 +108,8 @@ export function ToeicSection({ lang }: { lang: Lang }) {
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-        <Card variant="interactive" padding="md" className="flex h-full flex-col">
+        {examCatalogItems.map((exam) => (
+          <Card key={exam.id} variant="interactive" padding="md" className="flex h-full flex-col">
           <CardHeader>
             <span className="inline-flex h-11 w-11 items-center justify-center rounded-[12px] bg-[#E8F7FE] text-[#1CB0F6]">
               <FileText className="h-5 w-5" strokeWidth={1.75} />
@@ -115,35 +119,36 @@ export function ToeicSection({ lang }: { lang: Lang }) {
 
           <div className="flex flex-1 flex-col gap-4">
             <div className="space-y-3">
-              <CardTitle className="lp-card-title">{t.examTitle}</CardTitle>
+              <CardTitle className="lp-card-title">{exam.title[lang]}</CardTitle>
               <p className="lp-card-meta mt-3 inline-flex items-center gap-1.5">
                 <BookOpen className="h-3.5 w-3.5" strokeWidth={1.75} />
                 {lang === "vi" ? "Luyện thi TOEIC" : "TOEIC Preparation"}
               </p>
-              <CardDescription className="lp-card-desc line-clamp-2">{t.examDesc}</CardDescription>
+              <CardDescription className="lp-card-desc line-clamp-2">{exam.description[lang]}</CardDescription>
             </div>
 
             <CardContent className="lp-card-desc flex flex-wrap gap-x-4 gap-y-2 !space-y-0">
               <span className="inline-flex items-center gap-1.5">
                 <FileText className="h-3.5 w-3.5" strokeWidth={1.75} />
-                {toeicTestMeta.questionCount} {t.questions}
+                {exam.questionCount} {t.questions}
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <Clock3 className="h-3.5 w-3.5" strokeWidth={1.75} />
-                {toeicTestMeta.durationMinutes} {t.minutes}
+                {exam.durationMinutes} {t.minutes}
               </span>
             </CardContent>
           </div>
 
           <CardFooter className="mt-6">
-            <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm flex-1" onClick={() => setDetailOpen(true)}>
+            <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm flex-1" onClick={() => { setSelectedExamId(exam.id); setDetailOpen(true) }}>
               {t.details}
             </button>
-            <button type="button" className="lp-btn lp-btn--primary lp-btn--sm flex-1" onClick={handleTryNow}>
+            <button type="button" className="lp-btn lp-btn--primary lp-btn--sm flex-1" onClick={() => handleTryNow(exam.id)}>
               {t.start}
             </button>
           </CardFooter>
-        </Card>
+          </Card>
+        ))}
       </div>
 
       {detailOpen && baseExam ? (
@@ -158,7 +163,7 @@ export function ToeicSection({ lang }: { lang: Lang }) {
           <Card variant="large" padding="lg" className="contact-modal-panel relative z-10 w-full max-w-[480px] shadow-[var(--shadow-3)]" data-state="open">
             <div className="mb-4 flex items-start justify-between gap-3">
               <div>
-                <h3 className="lp-modal-title">{t.examTitle}</h3>
+                <h3 className="lp-modal-title">{baseExam.title[lang]}</h3>
               </div>
               <button type="button" className="lp-btn lp-btn--secondary lp-btn--icon" onClick={() => setDetailOpen(false)} aria-label={t.close}>
                 <X className="h-4 w-4" strokeWidth={2} />
@@ -168,23 +173,10 @@ export function ToeicSection({ lang }: { lang: Lang }) {
             <div className="space-y-3">
               <DetailRow label={t.subject} value={lang === "vi" ? "Luyện thi TOEIC" : "TOEIC Preparation"} />
               <DetailRow label={t.examType} value={t.badge} />
-              <DetailRow label={t.questions} value={`${toeicTestMeta.questionCount}`} />
-              <DetailRow label={t.expectedTime} value={`${toeicTestMeta.durationMinutes} ${t.minutes}`} />
+              <DetailRow label={t.questions} value={`${baseExam.questionCount}`} />
+              <DetailRow label={t.expectedTime} value={`${baseExam.durationMinutes} ${t.minutes}`} />
               <div>
-                <p className="lp-modal-desc">{t.examDesc}</p>
-              </div>
-              <div className="rounded-[12px] bg-[#F6F7FB] px-4 py-3 dark:bg-white/5">
-                <p className="lp-label mb-2 text-slate-500">{lang === "vi" ? "Phạm vi luyện" : "Available scopes"}</p>
-                <ul className="space-y-1.5 text-[13px] font-semibold leading-5 text-[#100F3E] dark:text-slate-200">
-                  {toeicScopeOptions.map((opt) => (
-                    <li key={opt.id} className="flex justify-between gap-2">
-                      <span>{opt.label[lang]}</span>
-                      <span className="shrink-0 text-slate-500">
-                        {opt.count} {t.questions} · {opt.durationMinutes} {t.minutes}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+                <p className="lp-modal-desc">{baseExam.description[lang]}</p>
               </div>
             </div>
 
@@ -197,7 +189,7 @@ export function ToeicSection({ lang }: { lang: Lang }) {
                 className="lp-btn lp-btn--primary lp-btn--sm"
                 onClick={() => {
                   setDetailOpen(false)
-                  handleTryNow()
+                  handleTryNow(baseExam.id)
                 }}
               >
                 {t.start}
@@ -207,7 +199,7 @@ export function ToeicSection({ lang }: { lang: Lang }) {
         </div>
       ) : null}
 
-      <ToeicScopePickerModal open={pickerOpen} lang={lang} onClose={() => setPickerOpen(false)} onSelect={handlePickerSelect} />
+      <ToeicScopePickerModal open={pickerOpen} lang={lang} examId={selectedExamId} onClose={() => setPickerOpen(false)} onSelect={handlePickerSelect} />
 
       <QuizSetupModal open={setupOpen} lang={lang} exam={setupExam} subject={setupSubject} onClose={handleSetupClose} onStart={handleSetupStart} />
     </section>

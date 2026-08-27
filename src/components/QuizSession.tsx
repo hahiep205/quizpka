@@ -1,10 +1,9 @@
-import { useEffect, useMemo, useState } from "react"
+import { useCallback, useEffect, useMemo, useState } from "react"
 import {
   ArrowLeft,
   ChevronLeft,
   ChevronRight,
   Clock3,
-  X,
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import {
@@ -13,17 +12,20 @@ import {
   type Subject,
 } from "@/data/subjects"
 import type { QuizSetupValues } from "@/components/QuizSetupModal"
-import { filterQuestionsBySubjectChapter, hasChapterSupport } from "@/data/subjectChapters"
 import { quizCopy as copy } from "@/shared/i18n"
-import type { Question, AnswerValue, BankFile } from "@/features/quiz/model/quiz.types"
-import { mapBankQuestions, buildFallbackQuestions, isAnswerCorrect, shuffle, formatTime } from "@/features/quiz/lib/quizHelpers"
-import { loadToeicQuestions } from "@/features/quiz/lib/toeicHelpers"
+import type { Question, AnswerValue } from "@/features/quiz/model/quiz.types"
+import { shuffle, formatTime } from "@/features/quiz/lib/quizHelpers"
 import type { ToeicScope } from "@/data/toeic"
+import { getAnsweredCount, getIncorrectQuestions, getQuizStats } from "@/features/quiz/lib/quizSelectors"
+import { useQuizQuestions } from "@/features/quiz/hooks/useQuizQuestions"
+import { useQuizTimer } from "@/features/quiz/hooks/useQuizTimer"
+import { useRetryHistory } from "@/features/quiz/hooks/useRetryHistory"
 import { QuizQuestionBlock } from "@/features/quiz/ui/QuizQuestionBlock"
 import { ReviewPanel } from "@/features/quiz/ui/ReviewPanel"
 import { StatCard } from "@/features/quiz/ui/StatCard"
 import { CenterCard } from "@/features/quiz/ui/CenterCard"
 import { ResultStamp } from "@/features/quiz/ui/ResultStamp"
+import { Dialog } from "@/components/ui/dialog"
 
 type Lang = "en" | "vi"
 
@@ -39,129 +41,42 @@ type QuizSessionProps = {
 
 export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope, onExit }: QuizSessionProps) {
   const t = copy[lang]
-  const [questions, setQuestions] = useState<Question[]>([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-  const [reloadToken, setReloadToken] = useState(0)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [answers, setAnswers] = useState<Record<string, AnswerValue>>({})
-  const [secondsLeft, setSecondsLeft] = useState(setup.timed ? setup.durationMinutes * 60 : 0)
-  const [elapsedSeconds, setElapsedSeconds] = useState(0)
   const [finished, setFinished] = useState(false)
   const [confirmOpen, setConfirmOpen] = useState(false)
   const [reviewOpen, setReviewOpen] = useState(false)
   const [transitionKey, setTransitionKey] = useState(0)
   const [lightboxImage, setLightboxImage] = useState<string | null>(null)
-  const [retryHistory, setRetryHistory] = useState<{ correct: number; total: number; accuracy: number }[]>([])
   const [forcePractice, setForcePractice] = useState(false)
   const retryStorageKey = `quiz-retry-${exam.id}-${chapterId ?? "all"}-${toeicScope ?? "noscope"}`
-
-  // Load retry history from sessionStorage on mount
-  useEffect(() => {
-    try {
-      const raw = sessionStorage.getItem(retryStorageKey)
-      if (raw) setRetryHistory(JSON.parse(raw))
-    } catch {}
-  }, [retryStorageKey])
-
-  // Persist retry history
-  useEffect(() => {
-    try {
-      if (retryHistory.length > 0) sessionStorage.setItem(retryStorageKey, JSON.stringify(retryHistory))
-      else sessionStorage.removeItem(retryStorageKey)
-    } catch {}
-  }, [retryHistory, retryStorageKey])
+  const { questions, setQuestions, loading, error, reload } = useQuizQuestions({ subject, exam, setup, chapterId, toeicScope })
+  const { history: retryHistory, setHistory: setRetryHistory, clear: clearRetryHistory } = useRetryHistory(retryStorageKey)
+  const handleTimeout = useCallback(() => setFinished(true), [])
+  const { secondsLeft, elapsedSeconds, reset: resetTimer } = useQuizTimer({
+    isRunning: !finished && !loading && !error && questions.length > 0,
+    timed: setup.timed,
+    durationMinutes: setup.durationMinutes,
+    onTimeout: handleTimeout,
+  })
 
   useEffect(() => {
-    let cancelled = false
-    async function loadQuestions() {
-      setLoading(true); setError(null); setCurrentIndex(0); setAnswers({}); setFinished(false); setReviewOpen(false); setConfirmOpen(false); setElapsedSeconds(0); setRetryHistory([]); setForcePractice(false)
-      try {
-        sessionStorage.removeItem(retryStorageKey)
-      } catch {}
-      setSecondsLeft(setup.timed ? setup.durationMinutes * 60 : 0)
-      try {
-        let base: Question[] = []
-        if (subject.id === "toeic" && toeicScope) {
-          base = await loadToeicQuestions(toeicScope, exam.id, setup)
-          if (!base.length) throw new Error("empty bank")
-        } else if (exam.questionBanks?.length) {
-          const banks = await Promise.all(
-            exam.questionBanks.map(async (url) => {
-              const response = await fetch(url)
-              if (!response.ok) throw new Error("bank load failed")
-              return (await response.json()) as BankFile
-            })
-          )
-          base = mapBankQuestions(
-            {
-              parts: banks.flatMap((bank) =>
-                (bank.parts ?? []).map((part) => ({
-                  ...part,
-                  section: bank.title?.includes("Nghe") ? "Listening" : "Reading",
-                }))
-              ),
-            },
-            exam.id,
-            setup
-          )
-          if (!base.length) throw new Error("empty bank")
-        } else if (exam.questionBank) {
-          const response = await fetch(exam.questionBank)
-          if (!response.ok) throw new Error("bank load failed")
-          const bank = (await response.json()) as BankFile
-          if (!bank.questions?.length) throw new Error("empty bank")
-          if (chapterId && chapterId !== "all" && hasChapterSupport(subject.id)) {
-            bank.questions = filterQuestionsBySubjectChapter(subject.id, bank.questions, chapterId)
-            if (!bank.questions.length) throw new Error("empty bank")
-          }
-          base = mapBankQuestions(bank, exam.id, setup)
-        } else {
-          base = buildFallbackQuestions(exam, setup)
-        }
-        if (!cancelled) setQuestions(base)
-      } catch (loadError) {
-        console.error(loadError)
-        if (!cancelled) { setError(t.loadError); setQuestions([]) }
-      } finally {
-        if (!cancelled) setLoading(false)
-      }
-    }
-    void loadQuestions()
-    return () => { cancelled = true }
-  }, [chapterId, exam, reloadToken, setup, subject.id, t.loadError, retryStorageKey, toeicScope])
-
-  useEffect(() => {
-    if (finished || loading || error || questions.length === 0) return
-    const timer = window.setInterval(() => {
-      setElapsedSeconds((value) => value + 1)
-      if (!setup.timed) return
-      setSecondsLeft((current) => {
-        if (current <= 1) { window.clearInterval(timer); setFinished(true); return 0 }
-        return current - 1
-      })
-    }, 1000)
-    return () => window.clearInterval(timer)
-  }, [error, finished, loading, questions.length, setup.timed])
+    if (!loading) return
+    setCurrentIndex(0)
+    setAnswers({})
+    setFinished(false)
+    setReviewOpen(false)
+    setConfirmOpen(false)
+    clearRetryHistory()
+    setForcePractice(false)
+    resetTimer()
+  }, [clearRetryHistory, loading, resetTimer])
 
   const current = questions[currentIndex]
-  const answeredCount = useMemo(() => questions.filter((q) => answers[q.id] !== undefined).length, [answers, questions])
+  const answeredCount = useMemo(() => getAnsweredCount(questions, answers), [answers, questions])
   const progress = questions.length ? Math.round((answeredCount / questions.length) * 100) : 0
-  const stats = useMemo(() => {
-    let correct = 0, wrong = 0, skipped = 0
-    for (const question of questions) {
-      const selected = answers[question.id]
-      if (selected === undefined) skipped += 1
-      else if (isAnswerCorrect(question, selected)) correct += 1
-      else wrong += 1
-    }
-    const attempted = correct + wrong
-    const accuracy = attempted === 0 ? 0 : Math.round((correct / attempted) * 100)
-    const score10 = questions.length === 0 ? 0 : Math.round(((correct / questions.length) * 10) * 10) / 10
-    return { correct, wrong, skipped, accuracy, score10 }
-  }, [answers, questions])
-
-  const wrongQuestions = useMemo(() => questions.filter((q) => !isAnswerCorrect(q, answers[q.id])), [questions, answers])
+  const stats = useMemo(() => getQuizStats(questions, answers), [answers, questions])
+  const wrongQuestions = useMemo(() => getIncorrectQuestions(questions, answers), [questions, answers])
 
   const handleRetryWrong = () => {
     if (wrongQuestions.length === 0) return
@@ -173,8 +88,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
     setFinished(false)
     setReviewOpen(false)
     setConfirmOpen(false)
-    setElapsedSeconds(0)
-    setSecondsLeft(setup.timed ? setup.durationMinutes * 60 : 0)
+    resetTimer()
     setTransitionKey((v) => v + 1)
     setForcePractice(true)
   }
@@ -184,10 +98,10 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
   if (loading) return (<CenterCard><p className="lp-modal-desc text-[15px]">{t.loading}</p></CenterCard>)
   if (error || questions.length === 0) return (
     <CenterCard>
-      <p className="lp-modal-desc text-[15px]">{error ?? t.loadError}</p>
+      <p className="lp-modal-desc text-[15px]">{t.loadError}</p>
       <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:justify-center">
         <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={onExit}>{t.backDocs}</button>
-        <button type="button" className="lp-btn lp-btn--primary lp-btn--sm" onClick={() => setReloadToken((v) => v + 1)}>{t.retry}</button>
+        <button type="button" className="lp-btn lp-btn--primary lp-btn--sm" onClick={reload}>{t.retry}</button>
       </div>
     </CenterCard>
   )
@@ -260,6 +174,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
   }
 
   const isPractice = setup.mode === "practice" || forcePractice
+  const displayPartTitle = current.partTitle?.replace(/\s+-\s+part6_group_\d+_\d+$/i, "")
   const getPartKey = (question: Question) => question.partTitle ?? question.id
   const currentPartKey = getPartKey(current)
   const partQuestions = questions.filter((question) => getPartKey(question) === currentPartKey)
@@ -349,7 +264,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
           </div>
           {current.partTitle || current.instruction ? (
             <div className="mb-5 rounded-[12px] border-2 border-[#B3E5FC] bg-[#E8F7FE] px-4 py-3 text-[13px] leading-6 text-[#100F3E] dark:border-sky-500/20 dark:bg-sky-500/10 dark:text-sky-100">
-              {current.partTitle ? <p className="font-extrabold text-[#129BDC]">{current.partTitle}</p> : null}
+              {displayPartTitle ? <p className="font-extrabold text-[#129BDC]">{displayPartTitle}</p> : null}
               {current.instruction ? <p className={current.partTitle ? "mt-1" : ""}>{current.instruction}</p> : null}
             </div>
           ) : null}
@@ -359,7 +274,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
                 type="button"
                 className="block w-full cursor-zoom-in"
                 onClick={() => setLightboxImage(current.imageUrl ?? null)}
-                aria-label="Xem ảnh phóng to"
+                aria-label={t.imageZoomLabel}
               >
                 <img
                   src={current.imageUrl}
@@ -368,7 +283,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
                   loading="lazy"
                 />
               </button>
-              <p className="px-3 py-2 text-center text-[11px] font-semibold text-slate-400 dark:text-slate-500">Nhấn vào ảnh để phóng to</p>
+              <p className="px-3 py-2 text-center text-[11px] font-semibold text-slate-400 dark:text-slate-500">{t.imageZoomHint}</p>
             </div>
           ) : null}
           {current.audioUrl ? (
@@ -691,26 +606,20 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
       </div>
 
       {confirmOpen ? (
-        <div className="fixed inset-0 z-[95] flex items-center justify-center p-4">
-          <button type="button" className="contact-modal-overlay absolute inset-0 bg-[rgba(16,15,62,0.45)] backdrop-blur-[2px]" data-state="open" onClick={() => setConfirmOpen(false)} />
-          <div className="contact-modal-panel relative z-10 w-full max-w-[420px] rounded-[16px] border-2 border-[#E5E5E5] bg-white p-5 shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 sm:p-6" data-state="open">
+        <Dialog open onClose={() => setConfirmOpen(false)} title={t.confirmTitle} closeLabel={t.confirmNo} className="z-[95]" panelClassName="w-full max-w-[420px] rounded-[16px] border-2 border-[#E5E5E5] bg-white p-5 shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 sm:p-6">
             <h3 className="lp-modal-title text-[20px]">{t.confirmTitle}</h3>
             <p className="lp-modal-desc mt-2">{t.confirmDesc}</p>
             <div className="mt-5 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
               <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={() => setConfirmOpen(false)}>{t.confirmNo}</button>
               <button type="button" className="lp-btn lp-btn--primary lp-btn--sm" onClick={() => { setConfirmOpen(false); setFinished(true) }}>{t.confirmYes}</button>
             </div>
-          </div>
-        </div>
+        </Dialog>
       ) : null}
 
       {lightboxImage ? (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm" onClick={() => setLightboxImage(null)}>
-          <button type="button" className="absolute right-4 top-4 rounded-full bg-white p-2 text-slate-700 shadow-lg" onClick={() => setLightboxImage(null)} aria-label="Đóng">
-            <X className="h-5 w-5" />
-          </button>
-          <img src={lightboxImage} alt="Reading part enlarged" className="max-h-[90vh] max-w-[95vw] rounded-lg object-contain shadow-2xl" onClick={(e) => e.stopPropagation()} />
-        </div>
+        <Dialog open onClose={() => setLightboxImage(null)} title={t.imagePreviewTitle} closeLabel={t.confirmNo} className="z-[100] bg-black/80 backdrop-blur-sm" panelClassName="max-h-[90vh] max-w-[95vw]">
+          <img src={lightboxImage} alt={t.imagePreviewTitle} className="max-h-[90vh] max-w-[95vw] rounded-lg object-contain shadow-2xl" />
+        </Dialog>
       ) : null}
     </div>
   )

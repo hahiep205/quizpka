@@ -1,6 +1,8 @@
 import type { LocalizedText } from "@/data/subjects"
 
 export const TOEIC_TEST_ID = "toeic-test-01"
+export const TOEIC_TEST_IDS = ["toeic-test-01", "toeic-test-02", "toeic-test-03"] as const
+export type ToeicTestId = (typeof TOEIC_TEST_IDS)[number]
 export const TOEIC_SUBJECT_ID = "toeic"
 export const TOEIC_SUBJECT_CODE = "TOEIC01"
 
@@ -26,20 +28,29 @@ export type ToeicScopeOption = {
   groupLabel: LocalizedText
 }
 
-const BASE = "/data/toeic-test/Test-01"
+function createPartFiles(testNumber: string) {
+  const base = `/data/toeic-test/Test-${testNumber}`
+  return {
+    part1: `${base}/Part1/test${testNumber.replace("-", "")}-part1.json`,
+    part2: `${base}/Part2/part2.json`,
+    part3: `${base}/Part3/part3.json`,
+    part4: `${base}/Part4/part4.json`,
+    part5: `${base}/Part5/part5.json`,
+    part6: `${base}/Part6/part6.json`,
+    part7: `${base}/Part7/part7.json`,
+  } as const
+}
 
-const PART_FILES = {
-  part1: `${BASE}/Part1/test01-part1.json`,
-  part2: `${BASE}/Part2/part2.json`,
-  part3: `${BASE}/Part3/part3.json`,
-  part4: `${BASE}/Part4/part4.json`,
-  part5: `${BASE}/Part5/part5.json`,
-  part6: `${BASE}/Part6/part6.json`,
-  part7: `${BASE}/Part7/part7.json`,
-} as const
+const PART_FILES_BY_TEST: Record<ToeicTestId, ReturnType<typeof createPartFiles>> = {
+  "toeic-test-01": createPartFiles("01"),
+  "toeic-test-02": createPartFiles("02"),
+  "toeic-test-03": createPartFiles("03"),
+}
 
-export const toeicScopeOptions: ToeicScopeOption[] = [
-  {
+export function getToeicScopeOptions(examId: string = TOEIC_TEST_ID): ToeicScopeOption[] {
+  const files = PART_FILES_BY_TEST[examId as ToeicTestId] ?? PART_FILES_BY_TEST[TOEIC_TEST_ID]
+  return [
+    {
     id: "full",
     label: { en: "Full Test (200 questions)", vi: "Full Test (200 câu)" },
     description: {
@@ -48,7 +59,7 @@ export const toeicScopeOptions: ToeicScopeOption[] = [
     },
     count: 200,
     durationMinutes: 120,
-    files: Object.values(PART_FILES),
+    files: Object.values(files),
     groupLabel: { en: "Full", vi: "Toàn bộ" },
   },
   {
@@ -60,7 +71,7 @@ export const toeicScopeOptions: ToeicScopeOption[] = [
     },
     count: 100,
     durationMinutes: 60,
-    files: [PART_FILES.part1, PART_FILES.part2, PART_FILES.part3, PART_FILES.part4],
+    files: [files.part1, files.part2, files.part3, files.part4],
     groupLabel: { en: "By Skill", vi: "Theo kỹ năng" },
   },
   {
@@ -72,82 +83,85 @@ export const toeicScopeOptions: ToeicScopeOption[] = [
     },
     count: 100,
     durationMinutes: 75,
-    files: [PART_FILES.part5, PART_FILES.part6, PART_FILES.part7],
+    files: [files.part5, files.part6, files.part7],
     groupLabel: { en: "By Skill", vi: "Theo kỹ năng" },
   },
   {
     id: "part1",
-    label: { en: "Part 1 - Photographs (6 questions)", vi: "Part 1 - Mô tả tranh (6 câu)" },
+    label: { en: "Part 1 - Photographs", vi: "Part 1 - Mô tả tranh" },
     description: { en: "Listening - Part 1", vi: "Listening - Part 1" },
     count: 6,
     durationMinutes: 5,
-    files: [PART_FILES.part1],
+    files: [files.part1],
     groupLabel: { en: "By Part", vi: "Theo Part" },
   },
   {
     id: "part2",
-    label: { en: "Part 2 - Q&A (25 questions)", vi: "Part 2 - Hỏi & Đáp (25 câu)" },
+    label: { en: "Part 2 - Q&A", vi: "Part 2 - Hỏi & Đáp" },
     description: { en: "Listening - Part 2", vi: "Listening - Part 2" },
     count: 25,
     durationMinutes: 15,
-    files: [PART_FILES.part2],
+    files: [files.part2],
     groupLabel: { en: "By Part", vi: "Theo Part" },
   },
   {
     id: "part3",
-    label: { en: "Part 3 - Conversations (39 questions)", vi: "Part 3 - Hội thoại (39 câu)" },
+    label: { en: "Part 3 - Conversations", vi: "Part 3 - Hội thoại" },
     description: { en: "Listening - Part 3", vi: "Listening - Part 3" },
     count: 39,
     durationMinutes: 25,
-    files: [PART_FILES.part3],
+    files: [files.part3],
     groupLabel: { en: "By Part", vi: "Theo Part" },
   },
   {
     id: "part4",
-    label: { en: "Part 4 - Talks (30 questions)", vi: "Part 4 - Bài nói (30 câu)" },
+    label: { en: "Part 4 - Talks", vi: "Part 4 - Bài nói" },
     description: { en: "Listening - Part 4", vi: "Listening - Part 4" },
     count: 30,
     durationMinutes: 20,
-    files: [PART_FILES.part4],
+    files: [files.part4],
     groupLabel: { en: "By Part", vi: "Theo Part" },
   },
   {
     id: "part5",
-    label: { en: "Part 5 - Incomplete Sentences (30 questions)", vi: "Part 5 - Câu chưa hoàn chỉnh (30 câu)" },
+    label: { en: "Part 5 - Incomplete Sentences", vi: "Part 5 - Câu chưa hoàn chỉnh" },
     description: { en: "Reading - Part 5", vi: "Reading - Part 5" },
     count: 30,
     durationMinutes: 15,
-    files: [PART_FILES.part5],
+    files: [files.part5],
     groupLabel: { en: "By Part", vi: "Theo Part" },
   },
   {
     id: "part6",
-    label: { en: "Part 6 - Text Completion (16 questions)", vi: "Part 6 - Hoàn thiện đoạn văn (16 câu)" },
+    label: { en: "Part 6 - Text Completion", vi: "Part 6 - Hoàn thiện đoạn văn" },
     description: { en: "Reading - Part 6", vi: "Reading - Part 6" },
     count: 16,
     durationMinutes: 10,
-    files: [PART_FILES.part6],
+    files: [files.part6],
     groupLabel: { en: "By Part", vi: "Theo Part" },
   },
   {
     id: "part7",
-    label: { en: "Part 7 - Reading Comprehension (54 questions)", vi: "Part 7 - Đọc hiểu (54 câu)" },
+    label: { en: "Part 7 - Reading Comprehension", vi: "Part 7 - Đọc hiểu" },
     description: { en: "Reading - Part 7", vi: "Reading - Part 7" },
     count: 54,
     durationMinutes: 55,
-    files: [PART_FILES.part7],
+    files: [files.part7],
     groupLabel: { en: "By Part", vi: "Theo Part" },
   },
-]
-
-export const toeicPartFiles = PART_FILES
-
-export function getToeicScopeOption(id: string): ToeicScopeOption | null {
-  return toeicScopeOptions.find((o) => o.id === id) ?? null
+  ]
 }
 
-export function getToeicFilesForScope(scope: ToeicScope): string[] {
-  const opt = getToeicScopeOption(scope)
+export const toeicScopeOptions = getToeicScopeOptions()
+
+export const toeicPartFiles = PART_FILES_BY_TEST[TOEIC_TEST_ID]
+
+export function getToeicScopeOption(id: string, examId: string = TOEIC_TEST_ID): ToeicScopeOption | null {
+  return getToeicScopeOptions(examId).find((o) => o.id === id) ?? null
+}
+
+export function getToeicFilesForScope(scope: ToeicScope, examId: string = TOEIC_TEST_ID): string[] {
+  const opt = getToeicScopeOption(scope, examId)
   return opt ? opt.files : []
 }
 
@@ -165,8 +179,8 @@ export const toeicTestMeta = {
     vi: "Bộ tài liệu ôn luyện TOEIC 01",
   } as LocalizedText,
   description: {
-    en: "Full ETS 2024 format with 200 questions across Listening and Reading. Choose Full Test, skill-based or per-Part practice.",
-    vi: "Chuẩn ETS 2024 với 200 câu Listening & Reading. Chọn Full Test, luyện theo kỹ năng hoặc theo từng Part.",
+    en: "Full ETS 2026 format with 200 questions across Listening and Reading. Choose Full Test, skill-based or per-Part practice.",
+    vi: "Chuẩn ETS 2026 với 200 câu Listening & Reading. Chọn Full Test, luyện theo kỹ năng hoặc theo từng Part.",
   } as LocalizedText,
   questionCount: 200,
   durationMinutes: 120,

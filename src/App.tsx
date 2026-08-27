@@ -1,11 +1,7 @@
-import { useEffect, useMemo, useState } from "react"
-import { ContactModal, type ContactModalType } from "@/components/ContactModal"
-import { LoginModal } from "@/components/LoginModal"
-import { ToeicAnnouncementModal } from "@/components/ToeicAnnouncementModal"
+import { lazy, Suspense, useEffect, useMemo, useState } from "react"
+import { appRoutes, useAppPath } from "@/app/navigation"
+import type { ContactModalType } from "@/components/ContactModal"
 import { DocumentsPage } from "@/pages/DocumentsPage"
-import { DashboardPage } from "@/pages/DashboardPage"
-import { PracticeGuestPage } from "@/pages/PracticeGuestPage"
-import { FeedbackPage } from "@/pages/FeedbackPage"
 import { appTranslations as translations } from "@/shared/i18n"
 import { useGlobalSecurity } from "@/hooks/useGlobalSecurity"
 import { SecurityOverlay } from "@/security/SecurityOverlay"
@@ -13,17 +9,19 @@ import { SiteHeader } from "@/app/layout/SiteHeader"
 import { HeroSection } from "@/features/landing/HeroSection"
 import { ToeicSection } from "@/features/landing/ToeicSection"
 import { SiteFooter } from "@/app/layout/SiteFooter"
+import type { Language, Theme } from "@/shared/types/app"
 
-type Lang = "en" | "vi"
-type Theme = "light" | "dark"
+const ContactModal = lazy(() => import("@/components/ContactModal").then(({ ContactModal: component }) => ({ default: component })))
+const LoginModal = lazy(() => import("@/components/LoginModal").then(({ LoginModal: component }) => ({ default: component })))
+const ToeicAnnouncementModal = lazy(() => import("@/components/ToeicAnnouncementModal").then(({ ToeicAnnouncementModal: component }) => ({ default: component })))
+const DashboardPage = lazy(() => import("@/pages/DashboardPage").then(({ DashboardPage: component }) => ({ default: component })))
+const PracticeGuestPage = lazy(() => import("@/pages/PracticeGuestPage").then(({ PracticeGuestPage: component }) => ({ default: component })))
+const NotFoundPage = lazy(() => import("@/pages/NotFoundPage").then(({ NotFoundPage: component }) => ({ default: component })))
 
-function getPathname() {
-  if (typeof window === "undefined") return "/"
-  return window.location.pathname.replace(/\/+$/, "") || "/"
-}
+type Lang = Language
 
 export default function App() {
-  const [pathname, setPathname] = useState(getPathname)
+  const pathname = useAppPath()
   const [contactOpen, setContactOpen] = useState(false)
   const [contactType, setContactType] = useState<ContactModalType | null>(null)
   const [loginOpen, setLoginOpen] = useState(false)
@@ -54,15 +52,9 @@ export default function App() {
     localStorage.setItem("quizpka-lang", lang)
   }, [lang])
 
-  useEffect(() => {
-    const onPopState = () => setPathname(getPathname())
-    window.addEventListener("popstate", onPopState)
-    return () => window.removeEventListener("popstate", onPopState)
-  }, [])
-
   // TOEIC announcement: show after 1s on homepage, "don't show today" persists per day
   useEffect(() => {
-    if (pathname !== "/") return
+    if (pathname !== appRoutes.home) return
     try {
       const d = new Date()
       const today = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`
@@ -116,62 +108,33 @@ export default function App() {
   const shellClassName =
     "relative min-h-svh bg-slate-50 transition-colors duration-300 dark:bg-slate-950"
 
-  if (pathname === "/practice4guest") {
+  if (pathname === appRoutes.practice) {
     return (
       <div className={shellClassName}>
         {locked && <SecurityOverlay onClose={() => setLocked(false)} />}
         <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_#ffffff_0%,_rgba(248,250,252,0.55)_45%,_#f8fafc_100%)] dark:bg-[radial-gradient(ellipse_at_top,_rgba(30,58,138,0.25)_0%,_rgba(2,6,23,0.2)_45%,_#020617_100%)]" />
-        <PracticeGuestPage lang={lang} />
+        <Suspense fallback={<RouteLoading />}><PracticeGuestPage lang={lang} /></Suspense>
       </div>
     )
   }
 
-  if (pathname === "/dashboard") {
+  if (pathname === appRoutes.dashboard) {
     return (
       <>
         {locked && <SecurityOverlay onClose={() => setLocked(false)} />}
-        <DashboardPage
+        <Suspense fallback={<RouteLoading />}><DashboardPage
           lang={lang}
           theme={theme}
           onToggleLang={() => setLang((current) => (current === "en" ? "vi" : "en"))}
           onToggleTheme={() =>
             setTheme((current) => (current === "light" ? "dark" : "light"))
           }
-        />
+        /></Suspense>
       </>
     )
   }
 
-  if (pathname === "/feedback") {
-    return (
-      <div className={shellClassName}>
-        <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_#ffffff_0%,_rgba(248,250,252,0.55)_45%,_#f8fafc_100%)] dark:bg-[radial-gradient(ellipse_at_top,_rgba(30,58,138,0.25)_0%,_rgba(2,6,23,0.2)_45%,_#020617_100%)]" />
-        <div className="relative flex min-h-svh flex-col">
-          <SiteHeader
-            lang={lang}
-            theme={theme}
-            t={t}
-            onToggleLang={() => setLang((current) => (current === "en" ? "vi" : "en"))}
-            onToggleTheme={() => setTheme((current) => (current === "light" ? "dark" : "light"))}
-            onOpenLogin={openLogin}
-          />
-          <FeedbackPage
-            lang={lang}
-            onBack={() => {
-              window.history.pushState(null, "", "/")
-              setPathname("/")
-              window.scrollTo(0, 0)
-            }}
-          />
-          <SiteFooter t={t} onOpenContact={openContact} />
-        </div>
-
-        <ContactModal open={contactOpen} type={contactType} onClose={closeContact} lang={lang} />
-
-        <LoginModal open={loginOpen} onClose={closeLogin} lang={lang} />
-      </div>
-    )
-  }
+  if (pathname !== appRoutes.home) return <Suspense fallback={<RouteLoading />}><NotFoundPage lang={lang} /></Suspense>
 
   return (
     <div className={shellClassName}>
@@ -194,24 +157,28 @@ export default function App() {
         <SiteFooter t={t} onOpenContact={openContact} />
       </div>
 
-      <ContactModal
+      <Suspense fallback={null}><ContactModal
         open={contactOpen}
         type={contactType}
         onClose={closeContact}
         lang={lang}
-      />
+      /></Suspense>
 
-      <LoginModal open={loginOpen} onClose={closeLogin} lang={lang} />
+      <Suspense fallback={null}><LoginModal open={loginOpen} onClose={closeLogin} lang={lang} /></Suspense>
 
-      <ToeicAnnouncementModal
+      <Suspense fallback={null}><ToeicAnnouncementModal
         open={announcementOpen}
         lang={lang}
         onClose={closeAnnouncement}
         onDontShowToday={handleDontShowToday}
         onTryNow={handleTryNow}
         onFeedback={handleFeedback}
-      />
+      /></Suspense>
     </div>
   )
+}
+
+function RouteLoading() {
+  return <div className="mx-auto flex min-h-svh items-center justify-center px-6"><p className="lp-modal-desc text-[15px]">Loading…</p></div>
 }
 

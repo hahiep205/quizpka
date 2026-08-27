@@ -31,9 +31,9 @@ import { cn } from "@/lib/utils"
 import { dashboardCopy as copy } from "@/shared/i18n"
 import { useChapterPractice } from "@/lib/useChapterPractice"
 import { tadvExamOptions } from "@/data/tadvExams"
+import type { Language, Theme } from "@/shared/types/app"
 
-type Lang = "en" | "vi"
-type Theme = "light" | "dark"
+type Lang = Language
 type DashboardView = "home" | "leaderboard" | "history" | "settings"
 
 type DashboardPageProps = {

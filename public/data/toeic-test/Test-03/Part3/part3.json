@@ -1,0 +1,1770 @@
+[
+  {
+    "group": 1,
+    "audio": "p3_g01_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 1,
+        "question": "What is the main topic of the conversation?",
+        "options": {
+          "A": "Hiring a new maintenance technician.",
+          "B": "Reviewing a commercial lease agreement.",
+          "C": "Renovating a residential apartment.",
+          "D": "Purchasing office furniture."
+        },
+        "correct_answer": "B",
+        "correct_text": "Reviewing a commercial lease agreement.",
+        "audio_transcript": "Woman: Hi Robert, I reviewed the draft lease agreement for the new office space...",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Nhầm chi tiết nhỏ về bảo trì. Bẫy thường gặp (Sai) Lưu ý bẫy: Bảo trì HVAC chỉ là một điều khoản nhỏ trong hợp đồng, không phải chủ đề chính."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng chủ đề thảo luận hợp đồng thuê văn phòng thương mại (Reviewing a commercial lease agreement)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Sai loại bất động sản. Bẫy thường gặp (Sai) Lưu ý bẫy: Đây là văn phòng thương mại (Horizon Tower), không phải căn hộ nhà ở."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Sự kiện mua sắm không xuất hiện. Bẫy thường gặp (Sai) Lưu ý bẫy: Không có thông tin về mua sắm nội thất văn phòng."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "draft lease agreement",
+            "paraphrases": ["commercial lease document", "rental contract draft"],
+            "meaning": "dự thảo hợp đồng thuê"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to First Turn for Topic - Lắng nghe lượt thoại đầu tiên để bắt từ khóa chủ đề (reviewed draft lease agreement).",
+          "Bước 2: Distinguish Main Topic from Clauses - Phân biệt chủ đề lớn (hợp đồng thuê) với các điều khoản chi tiết nhỏ.",
+          "Bước 3: Select Option B - Chọn B ('Reviewing a commercial lease agreement.')."
+        ]
+      },
+      {
+        "id": 2,
+        "question": "What concern does the man express about the lease terms?",
+        "options": {
+          "A": "The monthly rent is too high.",
+          "B": "The building location is inconvenient.",
+          "C": "The air conditioning system should be inspected first.",
+          "D": "The lease duration is too short."
+        },
+        "correct_answer": "C",
+        "correct_text": "The air conditioning system should be inspected first.",
+        "audio_transcript": "Man: ...make sure the building management inspects the air conditioning system before we sign.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Mâu thuẫn với thông tin giảm tiền thuê. Bẫy thường gặp (Sai) Lưu ý bẫy: Nhân vật phát biểu đã báo chủ nhà đồng ý giảm tiền thuê (landlord agreed to lower monthly rent)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Địa điểm tòa nhà không bị phàn nàn. Bẫy thường gặp (Sai) Lưu ý bẫy: Không có ý kiến phàn nàn về vị trí tòa tháp Horizon."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng mối lo ngại cần kiểm tra hệ thống điều hòa (air conditioning system) trước khi ký."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Thời hạn hợp đồng không được nhắc tới. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đề cập đến thời hạn hợp đồng ngắn hay dài."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "HVAC / air conditioning",
+            "paraphrases": ["climate control system", "cooling system"],
+            "meaning": "hệ thống điều hòa không khí"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Man's Concern - Tập trung lượt thoại của người nam sau từ nối 'However'.",
+          "Bước 2: Match HVAC to Air Conditioning - Nhận biết 'HVAC' và 'air conditioning system' là thuật ngữ tương đương.",
+          "Bước 3: Select Option C - Chọn C ('The air conditioning system should be inspected first.')."
+        ]
+      },
+      {
+        "id": 3,
+        "question": "What will the woman do next?",
+        "options": {
+          "A": "Sign the lease contract immediately.",
+          "B": "Cancel the signing meeting.",
+          "C": "Visit the Horizon Tower facility.",
+          "D": "Call a real estate broker."
+        },
+        "correct_answer": "D",
+        "correct_text": "Call a real estate broker.",
+        "audio_transcript": "Woman: ...I'll call the real estate broker right now and request a certified inspection report...",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Ký hợp đồng là lịch vào thứ Năm. Bẫy thường gặp (Sai) Lưu ý bẫy: Buổi ký hợp đồng diễn ra vào thứ Năm, không phải ký ngay lập tức."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Hủy buổi họp mâu thuẫn. Bẫy thường gặp (Sai) Lưu ý bẫy: Buổi họp ký kết vẫn diễn ra vào thứ Năm sau khi có báo cáo kiểm tra."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Tham quan tòa nhà không phải hành động tiếp theo. Bẫy thường gặp (Sai) Lưu ý bẫy: Không nói đến việc đi tới tòa tháp Horizon ngay bây giờ."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng hành động tiếp theo là gọi cho môi giới (I'll call the real estate broker right now)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "call real estate broker",
+            "paraphrases": ["contact property agent", "reach out to broker"],
+            "meaning": "gọi điện cho môi giới bất động sản"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Last Female Turn - Lắng nghe câu chứa 'I'll... right now' ở cuối bài thoại.",
+          "Bước 2: Identify Pledged Action - Bắt chính xác động từ 'call the real estate broker'.",
+          "Bước 3: Select Option B - Chọn D ('Call a real estate broker.')."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 2,
+    "audio": "p3_g02_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 4,
+        "question": "Where do the speakers most likely work?",
+        "options": {
+          "A": "At an EduTech company.",
+          "B": "At a commercial bank.",
+          "C": "At a real estate agency.",
+          "D": "At a television broadcasting station."
+        },
+        "correct_answer": "A",
+        "correct_text": "At an EduTech company.",
+        "audio_transcript": "Man: ...trademark search for our new EduTech brand name... Woman: ...our core business is vocational training...",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng môi trường công ty công nghệ giáo dục (At an EduTech company)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Nhầm bối cảnh ngân hàng. Bẫy thường gặp (Sai) Lưu ý bẫy: Thuật ngữ accounting software thuộc công ty phần mềm đối thủ, không phải nơi người nói làm việc."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Không thuộc ngành bất động sản. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đề cập đến giao dịch bất động sản."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Không thuộc đài truyền hình. Bẫy thường gặp (Sai) Lưu ý bẫy: Không xuất hiện bối cảnh phát thanh hay studio truyền hình."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "EduTech / vocational training",
+            "paraphrases": ["digital education firm", "learning technology company"],
+            "meaning": "công ty công nghệ giáo dục"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Industry Keywords - Bắt các cụm từ chỉ lĩnh vực 'new EduTech brand' và 'vocational training'.",
+          "Bước 2: Infer Workplace - Suy luận nơi làm việc là công ty công nghệ giáo dục.",
+          "Bước 3: Select Option A - Chọn A ('At an EduTech company.')."
+        ]
+      },
+      {
+        "id": 5,
+        "question": "What issue did the trademark search reveal?",
+        "options": {
+          "A": "The application fee has increased.",
+          "B": "The trademark registration period was shortened.",
+          "C": "A similar name was registered for accounting software.",
+          "D": "The brand logo was rejected by the patent office."
+        },
+        "correct_answer": "C",
+        "correct_text": "A similar name was registered for accounting software.",
+        "audio_transcript": "Man: ...a software firm registered 'LearnPulse Pro' last year for corporate accounting software.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Lệ phí không tăng. Bẫy thường gặp (Sai) Lưu ý bẫy: Không nói đến chi phí đăng ký nhãn hiệu."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Thời hạn không bị rút ngắn. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đề cập đến việc thay đổi thời hạn đăng ký."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng vấn đề tên tương tự đã đăng ký cho phần mềm kế toán (A similar name was registered for accounting software)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Logo không bị bác bỏ. Bẫy thường gặp (Sai) Lưu ý bẫy: Chưa nộp đơn nên chưa có việc logo bị cục sở hữu trí tuệ từ chối."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "registered LearnPulse Pro",
+            "paraphrases": ["similar brand registered", "existing conflicting trademark"],
+            "meaning": "tên tương tự đã được đăng ký"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Man's Detail Turn - Theo dõi lời giải thích của người nam sau từ 'However'.",
+          "Bước 2: Match Accounting Software Detail - Bắt từ khóa 'registered LearnPulse Pro for corporate accounting software'.",
+          "Bước 3: Select Option B - Chọn C ('A similar name was registered...')."
+        ]
+      },
+      {
+        "id": 6,
+        "question": "What is the man instructed to do for next Monday?",
+        "options": {
+          "A": "Schedule a client consultation.",
+          "B": "Prepare official registration documents.",
+          "C": "Redesign the brand logo.",
+          "D": "Contact a software firm."
+        },
+        "correct_answer": "B",
+        "correct_text": "Prepare official registration documents.",
+        "audio_transcript": "Woman: ...Please prepare the official registration documents for filing next Monday.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Lên lịch tư vấn không phải chỉ thị. Bẫy thường gặp (Sai) Lưu ý bẫy: Cố vấn pháp lý đã duyệt xong, không cần hẹn tư vấn khách hàng."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng chỉ thị chuẩn bị hồ sơ đăng ký chính thức (Prepare official registration documents)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Không phải thiết kế lại logo. Bẫy thường gặp (Sai) Lưu ý bẫy: Tên thương hiệu được duyệt tiếp tục nên không phải sửa logo."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Không phải liên hệ công ty đối thủ. Bẫy thường gặp (Sai) Lưu ý bẫy: Vì thuộc 2 mảng khác nhau nên không cần liên hệ công ty phần mềm kế toán."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "prepare official registration documents",
+            "paraphrases": ["draft filing paperwork", "complete registration forms"],
+            "meaning": "chuẩn bị văn bản đăng ký chính thức"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Direct Instruction - Lắng nghe câu chứa mệnh lệnh 'Please prepare...' của người nữ.",
+          "Bước 2: Match Filing Papers - Bắt cụm 'official registration documents for filing next Monday'.",
+          "Bước 3: Select Option B - Chọn B ('Prepare official registration documents.')."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 3,
+    "audio": "p3_g03_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 7,
+        "question": "What project are the speakers working on?",
+        "options": {
+          "A": "Publishing an academic textbook.",
+          "B": "Auditing a legal contract.",
+          "C": "Designing a residential building.",
+          "D": "Producing a promotional video shoot."
+        },
+        "correct_answer": "D",
+        "correct_text": "Producing a promotional video shoot.",
+        "audio_transcript": "Woman: ...production budget for our client's new promotional video shoot?",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Không thuộc mảng xuất bản sách. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đề cập đến việc xuất bản sách giáo khoa."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Không liên quan kiểm toán hợp đồng. Bẫy thường gặp (Sai) Lưu ý bẫy: Đây là dự án truyền thông video, không phải kiểm toán pháp lý."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Không thuộc ngành thiết kế kiến trúc. Bẫy thường gặp (Sai) Lưu ý bẫy: Không liên quan thiết kế nhà ở."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng dự án sản xuất quay video quảng cáo (Producing a promotional video shoot)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "promotional video shoot",
+            "paraphrases": ["commercial filming project", "advertising video production"],
+            "meaning": "buổi quay video quảng cáo"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Opening Line - Nghe ngay câu hỏi đầu tiên của người nữ để tìm tên dự án.",
+          "Bước 2: Identify Video Shoot Keywords - Bắt cụm từ 'promotional video shoot'.",
+          "Bước 3: Select Option B - Chọn D ('Producing a promotional video shoot.')."
+        ]
+      },
+      {
+        "id": 8,
+        "question": "What added $1,500 to the production cost?",
+        "options": {
+          "A": "Hiring an extra makeup artist.",
+          "B": "Renting a larger studio room.",
+          "C": "Requesting 4K drone aerial filming.",
+          "D": "Extending the filming schedule by two days."
+        },
+        "correct_answer": "C",
+        "correct_text": "Requesting 4K drone aerial filming.",
+        "audio_transcript": "Man: ...client just requested 4K drone aerial filming for the outdoor scenes, which adds fifteen hundred dollars.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Thợ trang điểm không được nhắc tới. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đề cập đến chi phí trang điểm."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Thuê studio nằm trong ngân sách ban đầu. Bẫy thường gặp (Sai) Lưu ý bẫy: Tiền thuê studio ban đầu nằm trong ngân sách (within budget)."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng lý do quay phim flycam 4K phát sinh $1,500 (Requesting 4K drone aerial filming)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Kéo dài lịch quay không phải lý do. Bẫy thường gặp (Sai) Lưu ý bẫy: Không có thông tin kéo dài lịch quay thêm 2 ngày."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "4K drone aerial filming",
+            "paraphrases": ["high-res drone photography", "aerial video footage"],
+            "meaning": "quay phim bằng flycam 4K từ trên cao"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Amount '$1,500' - Theo dõi mốc chi phí 'fifteen hundred dollars' ($1,500) trong lời người nam.",
+          "Bước 2: Match Drone Requirement - Bắt cụm '4K drone aerial filming for outdoor scenes'.",
+          "Bước 3: Select Option C - Chọn C ('Requesting 4K drone aerial filming.')."
+        ]
+      },
+      {
+        "id": 9,
+        "question": "What will the man do for next Friday?",
+        "options": {
+          "A": "Book a drone operator.",
+          "B": "Sign a lease contract.",
+          "C": "Deliver finished video files.",
+          "D": "Conduct a budget review."
+        },
+        "correct_answer": "A",
+        "correct_text": "Book a drone operator.",
+        "audio_transcript": "Man: ...I'll book the drone operator for next Friday.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng hành động đặt kỹ thuật viên flycam (Book a drone operator)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Ký hợp đồng thuê không liên quan. Bẫy thường gặp (Sai) Lưu ý bẫy: Đây là dự án quay video, không phải ký hợp đồng bất động sản."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Chưa quay nên chưa thể giao file hoàn thiện. Bẫy thường gặp (Sai) Lưu ý bẫy: Thứ Sáu mới tiến hành quay, chưa có file video hoàn thiện để giao."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Ngân sách đã được phê duyệt xong. Bẫy thường gặp (Sai) Lưu ý bẫy: Ngân sách đã được VP Marketing phê duyệt sáng nay."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "book drone operator",
+            "paraphrases": ["reserve aerial technician", "hire flycam pilot"],
+            "meaning": "đặt kỹ thuật viên điều khiển flycam"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Final Sentence - Nghe chính xác câu chốt 'I'll... for next Friday'.",
+          "Bước 2: Match Drone Operator Booking - Bắt động từ 'book the drone operator'.",
+          "Bước 3: Select Option A - Chọn A ('Book a drone operator.')."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 4,
+    "audio": "p3_g04_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 10,
+        "question": "What transaction are the speakers discussing?",
+        "options": {
+          "A": "Purchasing a commercial building.",
+          "B": "A merger agreement with a media company.",
+          "C": "Hiring a new Chief Financial Officer.",
+          "D": "Launch an online learning app."
+        },
+        "correct_answer": "B",
+        "correct_text": "A merger agreement with a media company.",
+        "audio_transcript": "Woman (Karen): ...discuss our upcoming merger agreement with Apex Media.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Không mua tòa nhà thương mại. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đề cập đến giao dịch mua bán bất động sản."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng giao dịch sáp nhập với công ty truyền thông Apex Media (A merger agreement with a media company)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Không tuyển dụng CFO mới. Bẫy thường gặp (Sai) Lưu ý bẫy: David báo cáo tài chính nhưng không phải nhân sự mới được tuyển."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Không ra mắt app học tập. Bẫy thường gặp (Sai) Lưu ý bẫy: Không nói đến ứng dụng học trực tuyến."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "merger agreement with Apex Media",
+            "paraphrases": ["corporate acquisition", "media firm buyout"],
+            "meaning": "thỏa thuận sáp nhập với công ty truyền thông"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Identify 3-Speaker Opening Topic - Nghe ngay câu chào mở đầu của Karen với 2 đồng nghiệp.",
+          "Bước 2: Match Merger Keywords - Bắt cụm 'upcoming merger agreement with Apex Media'.",
+          "Bước 3: Select Option B - Chọn B ('A merger agreement with a media company.')."
+        ]
+      },
+      {
+        "id": 11,
+        "question": "What does David (Speaker 2) report about Apex Media?",
+        "options": {
+          "A": "They expanded into international markets.",
+          "B": "Their legal department is understaffed.",
+          "C": "Their broadcasting license expired.",
+          "D": "They have zero outstanding tax liabilities."
+        },
+        "correct_answer": "D",
+        "correct_text": "They have zero outstanding tax liabilities.",
+        "audio_transcript": "Man 1 (David): ...audit team verified that Apex Media has zero outstanding tax liabilities.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Thị trường quốc tế không xuất hiện. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đề cập đến việc mở rộng thị trường quốc tế."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Phòng pháp chế không bị thiếu nhân sự. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đề cập thiếu nhân sự pháp lý."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Phân biệt lời nói 3 người. Bẫy thường gặp (Sai) Lưu ý bẫy: Vấn đề license do Mr. Patel (Speaker 3) hỏi, không phải báo cáo của David."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng báo cáo tài chính không có nợ thuế tồn đọng (They have zero outstanding tax liabilities)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "zero outstanding tax liabilities",
+            "paraphrases": ["no unpaid tax debts", "clear tax history"],
+            "meaning": "không có bất kỳ khoản nợ thuế đọng nào"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Target David's Turn (Speaker 2) - Chú ý phân biệt chính xác giọng nam 1 (David) khi báo cáo khía cạnh tài chính.",
+          "Bước 2: Match Zero Tax Debt - Bắt cụm 'zero outstanding tax liabilities'.",
+          "Bước 3: Select Option B - Chọn D ('They have zero outstanding tax liabilities.')."
+        ]
+      },
+      {
+        "id": 12,
+        "question": "What is expected to be ready by Wednesday?",
+        "options": {
+          "A": "License transfer filing paperwork.",
+          "B": "The final financial audit report.",
+          "C": "A press release statement.",
+          "D": "Board meeting minutes."
+        },
+        "correct_answer": "A",
+        "correct_text": "License transfer filing paperwork.",
+        "audio_transcript": "Woman (Karen): ...external law firm is drafting that paperwork [formal transfer filing] now... ready for submission by Wednesday.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng hồ sơ chuyển nhượng giấy phép sẽ xong vào thứ Tư (License transfer filing paperwork)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Báo cáo tài chính đã hoàn tất từ trước. Bẫy thường gặp (Sai) Lưu ý bẫy: Báo cáo kiểm toán tài chính đã được David xác nhận xong."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Thông cáo báo chí không phải thứ Tư. Bẫy thường gặp (Sai) Lưu ý bẫy: Không nhắc đến thông cáo báo chí."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Biên bản họp HĐQT diễn ra vào thứ Sáu. Bẫy thường gặp (Sai) Lưu ý bẫy: Cuộc họp HĐQT diễn ra vào thứ Sáu (Friday's meeting)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "license transfer filing paperwork",
+            "paraphrases": ["regulatory transfer documents", "broadcasting license paperwork"],
+            "meaning": "giấy tờ hồ sơ chuyển nhượng giấy phép"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Day Benchmark 'Wednesday' - Theo dõi mốc thời gian 'by Wednesday' trong lượt thoại của Karen.",
+          "Bước 2: Match Transfer Paperwork - Bắt cụm 'drafting that paperwork [transfer filing]'.",
+          "Bước 3: Select Option C - Chọn A ('License transfer filing paperwork.')."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 5,
+    "audio": "p3_g05_audio.mp3",
+    "image": "p3_g5_image.png",
+    "questions": [
+      {
+        "id": 13,
+        "question": "Why is the man visiting Plaza Center?",
+        "options": {
+          "A": "To attend an ad agency interview.",
+          "B": "To have a real estate consultation.",
+          "C": "To deliver studio video equipment.",
+          "D": "To take a vocational training class."
+        },
+        "correct_answer": "B",
+        "correct_text": "To have a real estate consultation.",
+        "audio_transcript": "Man: ...I have a 2:00 P.M. consultation with Ms. Diaz at Lumina Real Estate Group...",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Công ty quảng cáo chỉ là văn phòng đi qua. Bẫy thường gặp (Sai) Lưu ý bẫy: Apex Advertising Agency chỉ là địa điểm đi qua trên hành hành, không phải nơi phỏng vấn."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng mục đích có buổi tư vấn bất động sản (To have a real estate consultation)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Không có hoạt động giao thiết bị video. Bẫy thường gặp (Sai) Lưu ý bẫy: Không phải nhân viên giao hàng thiết bị."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Không tham gia lớp học nghề. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đến để học lớp đào tạo nghề."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "consultation at Lumina Real Estate",
+            "paraphrases": ["property advisory appointment", "real estate meeting"],
+            "meaning": "buổi tư vấn bất động sản"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Man's Opening Sentence - Nghe ngay câu hỏi đường đầu tiên của người nam.",
+          "Bước 2: Match Consultation Reason - Bắt cụm 'consultation... at Lumina Real Estate Group'.",
+          "Bước 3: Select Option B - Chọn B ('To have a real estate consultation.')."
+        ]
+      },
+      {
+        "id": 14,
+        "question": "Look at the graphic. Which suite is the man looking for?",
+        "options": {
+          "A": "Suite 401",
+          "B": "Suite 402",
+          "C": "Suite 403",
+          "D": "Suite 404"
+        },
+        "correct_answer": "C",
+        "correct_text": "Suite 403",
+        "audio_transcript": "Man: ...I have a 2:00 P.M. consultation with Ms. Diaz at Lumina Real Estate Group... Woman: ...right between Horizon Legal Counsel and LearnPulse EduTech Labs. (Graphic: Suite 403 — Lumina Real Estate Group)",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Suite 401 là công ty quảng cáo. Bẫy thường gặp (Sai) Lưu ý bẫy: Suite 401 thuộc Apex Advertising Agency."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Nghe tên công ty lân cận. Bẫy thường gặp (Sai) Lưu ý bẫy: Suite 402 thuộc Horizon Legal Counsel (văn phòng luật bên cạnh)."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng phòng Suite 403 của Lumina Real Estate Group."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Suite 404 thuộc công ty EduTech. Bẫy thường gặp (Sai) Lưu ý bẫy: Suite 404 thuộc LearnPulse EduTech Labs."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "Suite 403",
+            "paraphrases": ["Lumina Real Estate office", "room between legal and edutech"],
+            "meaning": "phòng Suite 403"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Locate Lumina Real Estate on Map - Tìm tên công ty 'Lumina Real Estate Group' được nghe từ audio trên biểu đồ.",
+          "Bước 2: Match Suite Number - Đối chiếu tên công ty với số phòng tương ứng (Suite 403).",
+          "Bước 3: Select Option C - Chọn C ('Suite 403')."
+        ]
+      },
+      {
+        "id": 15,
+        "question": "What location will the man walk past along the main corridor?",
+        "options": {
+          "A": "The elevator bank.",
+          "B": "The cafeteria.",
+          "C": "The maintenance room.",
+          "D": "The advertising agency."
+        },
+        "correct_answer": "D",
+        "correct_text": "The advertising agency.",
+        "audio_transcript": "Woman: ...Just walk straight down the main corridor past the advertising agency.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Thang máy là điểm xuất phát đứng ban đầu. Bẫy thường gặp (Sai) Lưu ý bẫy: Elevator bank là nơi người nam đang đứng ban đầu, không phải địa điểm đi qua trên hành lang."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Quán ăn không có trên tầng 4. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đề cập quán ăn cafeteria trên hành lang."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Phòng bảo trì không xuất hiện. Bẫy thường gặp (Sai) Lưu ý bẫy: Không nhắc tới phòng bảo trì maintenance room."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng địa điểm công ty quảng cáo sẽ đi qua (The advertising agency)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "past the advertising agency",
+            "paraphrases": ["by Apex Advertising Agency", "along the ad firm suite"],
+            "meaning": "đi qua công ty quảng cáo"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Directional Preposition 'past' - Theo dõi giới từ chỉ hướng 'past [X]' khi nghe chỉ đường.",
+          "Bước 2: Match Advertising Agency - Bắt cụm 'past the advertising agency'.",
+          "Bước 3: Select Option A - Chọn D ('The advertising agency.')."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 6,
+    "audio": "p3_g06_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 16,
+        "question": "What task are the speakers arranging?",
+        "options": {
+          "A": "Conducting a structural property inspection.",
+          "B": "Installing new office lighting.",
+          "C": "Publishing a real estate advertisement.",
+          "D": "Drafting a commercial lease."
+        },
+        "correct_answer": "A",
+        "correct_text": "Conducting a structural property inspection.",
+        "audio_transcript": "Woman: ...schedule the structural property inspection for the commercial warehouse building...",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng nhiệm vụ thu xếp kiểm tra kết cấu bất động sản (Conducting a structural property inspection)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Lắp đặt hệ thống chiếu sáng không xuất hiện. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đề cập đến việc lắp hệ thống đèn văn phòng."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Không thuộc nhiệm vụ quảng cáo. Bẫy thường gặp (Sai) Lưu ý bẫy: Không có thông tin đăng bài quảng cáo bất động sản."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Hợp đồng mua bán chứ không phải hợp đồng thuê. Bẫy thường gặp (Sai) Lưu ý bẫy: Đây là hợp đồng mua bán (purchase contract), không phải hợp đồng thuê (commercial lease)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "structural property inspection",
+            "paraphrases": ["building structure assessment", "property inspection visit"],
+            "meaning": "kiểm tra kết cấu bất động sản"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to First Female Turn - Nghe ngay lượt thoại đầu tiên của người nữ để bắt tên nhiệm vụ.",
+          "Bước 2: Match Inspection Keywords - Bắt cụm 'schedule the structural property inspection'.",
+          "Bước 3: Select Option B - Chọn A ('Conducting a structural property inspection.')."
+        ]
+      },
+      {
+        "id": 17,
+        "question": "When will the property inspection actually take place?",
+        "options": {
+          "A": "Friday at 10:00 A.M.",
+          "B": "Friday at 2:00 P.M.",
+          "C": "Monday at 2:00 P.M.",
+          "D": "Monday at 10:00 A.M."
+        },
+        "correct_answer": "C",
+        "correct_text": "Monday at 2:00 P.M.",
+        "audio_transcript": "Man: ...Oh, wait, let me check the client's latest email update... Ah, I misread the message — the inspection is actually confirmed for Monday afternoon at two o'clock instead.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Mốc thời gian ban đầu bị đọc nhầm. Bẫy thường gặp (Sai) Lưu ý bẫy: Friday at 10 A.M. là mốc thời gian người nam đọc nhầm ban đầu, đã bị bác bỏ ngay sau đó."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Ghép sai ngày thứ Sáu với giờ chiều. Bẫy thường gặp (Sai) Lưu ý bẫy: Thứ Sáu là ngày đọc nhầm ban đầu, không phải lịch thực tế."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng mốc thời gian thực tế đã đính chính (Monday afternoon at two o'clock = Monday at 2:00 P.M.)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Ghép sai thứ Hai với giờ sáng. Bẫy thường gặp (Sai) Lưu ý bẫy: Thứ Hai là đúng ngày nhưng buổi chiều (2:00 P.M.), không phải 10:00 A.M."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "Monday afternoon at two o'clock",
+            "paraphrases": ["Monday at 2:00 P.M.", "Monday 14:00"],
+            "meaning": "chiều thứ Hai lúc 2 giờ"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Watch for Self-Correction Cue - Cảnh giác cao độ khi nghe từ đính chính 'Oh, wait... I misread'.",
+          "Bước 2: Catch Final Corrected Time - Chờ nghe mốc thời gian chốt ở câu sau 'actually confirmed for Monday afternoon at two o'clock'.",
+          "Bước 3: Select Option D - Chọn C ('Monday at 2:00 P.M.')."
+        ]
+      },
+      {
+        "id": 18,
+        "question": "Why is the confirmed time beneficial according to the woman?",
+        "options": {
+          "A": "The weather will be sunnier for outdoor photography.",
+          "B": "It allows extra time to review property title documents.",
+          "C": "The building inspector offers a discounted rate.",
+          "D": "The warehouse owner will be present on-site."
+        },
+        "correct_answer": "B",
+        "correct_text": "It allows extra time to review property title documents.",
+        "audio_transcript": "Woman: Okay, Monday at two is fine. That gives our legal team extra time to review the property title documents anyway.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Yếu tố thời tiết không được đề cập. Bẫy thường gặp (Sai) Lưu ý bẫy: Không nói đến thời tiết nắng đẹp cho việc chụp ảnh."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng lý do cho phép thêm thời gian xem xét giấy tờ pháp lý (It allows extra time to review property title documents)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Không có ưu đãi giảm giá. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đề cập đến việc người kiểm định giảm phí."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Chủ kho có mặt không phải lợi ích người nữ nêu. Bẫy thường gặp (Sai) Lưu ý bẫy: Nhân vật phát biểu sẽ email gửi chủ kho sau đó, nhưng không phải lý do người nữ khen tốt."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "extra time to review title documents",
+            "paraphrases": ["additional time for document check", "more time for legal review"],
+            "meaning": "thêm thời gian xem xét tài liệu quyền sở hữu"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Woman's Agreement Turn - Theo dõi lời người nữ sau khi nghe mốc thứ Hai.",
+          "Bước 2: Match Legal Review Benefit - Bắt cụm 'gives our legal team extra time to review property title documents'.",
+          "Bước 3: Select Option B - Chọn B ('It allows extra time to review property title documents.')."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 7,
+    "audio": "p3_g07_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 19,
+        "question": "What product is the company developing?",
+        "options": {
+          "A": "An online vocational training module.",
+          "B": "A real estate management software.",
+          "C": "A legal document archiving tool.",
+          "D": "A mobile video editing app."
+        },
+        "correct_answer": "A",
+        "correct_text": "An online vocational training module.",
+        "audio_transcript": "Man: ...how is the development of our new online vocational training module progressing?",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng sản phẩm học phần đào tạo nghề trực tuyến (An online vocational training module)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Không thuộc ngành bất động sản. Bẫy thường gặp (Sai) Lưu ý bẫy: Không phát triển phần mềm quản lý bất động sản."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Không thuộc ngành luật. Bẫy thường gặp (Sai) Lưu ý bẫy: Không liên quan công cụ lưu trữ hồ sơ pháp lý."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Bài giảng video chứ không phải app chỉnh video. Bẫy thường gặp (Sai) Lưu ý bẫy: Video lecture là thành phần bài giảng, không phải phát triển ứng dụng chỉnh sửa video."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "online vocational training module",
+            "paraphrases": ["digital skill course", "e-learning vocational program"],
+            "meaning": "học phần đào tạo nghề trực tuyến"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Man's Opening Question - Nghe ngay câu hỏi đầu tiên của người nam.",
+          "Bước 2: Match Course Module - Bắt cụm 'new online vocational training module'.",
+          "Bước 3: Select Option A - Chọn A ('An online vocational training module.')."
+        ]
+      },
+      {
+        "id": 20,
+        "question": "What component of the project is delayed?",
+        "options": {
+          "A": "Video lecture recordings.",
+          "B": "Voiceover dubbing.",
+          "C": "Certificate printing.",
+          "D": "Interactive quiz modules."
+        },
+        "correct_answer": "D",
+        "correct_text": "Interactive quiz modules.",
+        "audio_transcript": "Woman: The video lecture recordings are complete, but the instructional design team is running behind schedule on creating the interactive quiz modules.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Mâu thuẫn với thông tin đã hoàn tất. Bẫy thường gặp (Sai) Lưu ý bẫy: Quay video bài giảng đã hoàn thành (video lecture recordings are complete)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Lồng tiếng không được đề cập. Bẫy thường gặp (Sai) Lưu ý bẫy: Không nhắc tới việc lồng tiếng."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "In chứng chỉ không phải vấn đề. Bẫy thường gặp (Sai) Lưu ý bẫy: Không nói tới việc in ấn chứng chỉ."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng thành phần bài kiểm tra tương tác bị chậm tiến độ (Interactive quiz modules)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "running behind schedule on interactive quiz modules",
+            "paraphrases": ["delayed quiz creation", "interactive test component delay"],
+            "meaning": "chậm tiến độ tạo bài kiểm tra tương tác"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Contrast 'but... running behind' - Chú ý từ nối 'but' trong câu trả lời của người nữ.",
+          "Bước 2: Identify Delayed Item - Bắt tên bộ phận chậm tiến độ 'creating the interactive quiz modules'.",
+          "Bước 3: Select Option C - Chọn D ('Interactive quiz modules.')."
+        ]
+      },
+      {
+        "id": 21,
+        "question": "What solution does the woman propose?",
+        "options": {
+          "A": "Postponing the launch date to December.",
+          "B": "Assigning additional instructional designers.",
+          "C": "Reducing the course registration fee.",
+          "D": "Hiring an external software consultant."
+        },
+        "correct_answer": "B",
+        "correct_text": "Assigning additional instructional designers.",
+        "audio_transcript": "Woman: I suggest assigning two senior instructional designers from the media team to assist with quiz creation...",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Mâu thuẫn với mục tiêu giữ nguyên lịch ra mắt. Bẫy thường gặp (Sai) Lưu ý bẫy: Giải pháp đưa ra để giữ đúng lịch ra mắt ngày 1 tháng 11, không phải hoãn."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng giải pháp điều động thêm nhà thiết kế bài giảng (Assigning additional instructional designers)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Giảm lệ phí không giúp sửa chậm tiến độ. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đề cập đến việc giảm giá đăng ký."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Dùng nhân sự nội bộ chứ không thuê tư vấn ngoài. Bẫy thường gặp (Sai) Lưu ý bẫy: Điều động nhân sự từ đội media nội bộ (media team), không thuê ngoài."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "assigning two senior instructional designers",
+            "paraphrases": ["reallocating design staff", "assigning additional instructional designers"],
+            "meaning": "phân công thêm các nhà thiết kế bài giảng"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Suggestion 'I suggest...' - Bắt câu đề xuất ở lượt thoại cuối của người nữ.",
+          "Bước 2: Match Designer Allocation - Bắt cụm 'assigning two senior instructional designers'.",
+          "Bước 3: Select Option B - Chọn B ('Assigning additional instructional designers.')."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 8,
+    "audio": "p3_g08_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 22,
+        "question": "What service is Apex Advertising providing?",
+        "options": {
+          "A": "Corporate legal representation.",
+          "B": "Real estate property appraisal.",
+          "C": "A digital media advertising strategy.",
+          "D": "Vocational staff training."
+        },
+        "correct_answer": "C",
+        "correct_text": "A digital media advertising strategy.",
+        "audio_transcript": "Man 1 (Jason): ...Apex Advertising has completed the digital media strategy for Lumina Real Estate's new luxury housing development.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Không thuộc ngành đại diện pháp lý. Bẫy thường gặp (Sai) Lưu ý bẫy: Apex Advertising là đại lý quảng cáo, không phải công ty luật."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Lumina Real Estate là khách hàng, không phải dịch vụ Apex làm. Bẫy thường gặp (Sai) Lưu ý bẫy: Bất động sản Lumina là bên mua dịch vụ quảng cáo."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng dịch vụ chiến lược quảng cáo truyền thông số (A digital media advertising strategy)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Không thuộc ngành đào tạo nghề. Bẫy thường gặp (Sai) Lưu ý bẫy: Không có hoạt động đào tạo nhân sự."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "digital media strategy",
+            "paraphrases": ["online ad plan", "digital promotion strategy"],
+            "meaning": "chiến lược quảng cáo truyền thông số"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Opening Statement - Lắng nghe lời chào giới thiệu dự án của Jason (Speaker 1).",
+          "Bước 2: Match Digital Media Strategy - Bắt cụm 'completed the digital media strategy'.",
+          "Bước 3: Select Option B - Chọn C ('A digital media advertising strategy.')."
+        ]
+      },
+      {
+        "id": 23,
+        "question": "What question does Mr. Vance (Speaker 3) ask?",
+        "options": {
+          "A": "Whether billboard budget covers prime downtown locations.",
+          "B": "Whether the campaign start date can be moved.",
+          "C": "Whether the video production cost can be reduced.",
+          "D": "Whether social media ads are included."
+        },
+        "correct_answer": "A",
+        "correct_text": "Whether billboard budget covers prime downtown locations.",
+        "audio_transcript": "Man 2 (Mr. Vance): ...Does the proposed forty-thousand-dollar budget cover prime downtown digital locations, or just suburban routes?",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng thắc mắc về việc ngân sách có bao phủ các vị trí trung tâm không (Whether billboard budget covers prime downtown locations)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Ngày bắt đầu không được hỏi. Bẫy thường gặp (Sai) Lưu ý bẫy: Không hỏi về việc lùi ngày bắt đầu chiến dịch."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Không hỏi giảm chi phí video. Bẫy thường gặp (Sai) Lưu ý bẫy: Video mạng xã hội đã khen 'look fantastic', không xin giảm giá."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Quảng cáo mạng xã hội đã được xác nhận có. Bẫy thường gặp (Sai) Lưu ý bẫy: Sarah đã xác nhận video quảng cáo mạng xã hội rất tuyệt vời."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "cover prime downtown digital locations",
+            "paraphrases": ["include central city billboard spots", "downtown location coverage"],
+            "meaning": "bao gồm các vị trí trung tâm đắt giá"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Identify Mr. Vance (Speaker 3) - Chú ý phân biệt giọng nam thứ 2 (Mr. Vance).",
+          "Bước 2: Match Billboard Downtown Location Query - Bắt câu hỏi 'cover prime downtown digital locations'.",
+          "Bước 3: Select Option B - Chọn A ('Whether billboard budget covers prime downtown locations.')."
+        ]
+      },
+      {
+        "id": 24,
+        "question": "What will the clients do today?",
+        "options": {
+          "A": "Request a price reduction.",
+          "B": "Postpone the campaign.",
+          "C": "Hire an external law firm.",
+          "D": "Sign the media agreement."
+        },
+        "correct_answer": "D",
+        "correct_text": "Sign the media agreement.",
+        "audio_transcript": "Woman (Sarah): ...In that case, Mr. Vance and I are ready to sign the media agreement today.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Hài lòng nên không xin giảm giá. Bẫy thường gặp (Sai) Lưu ý bẫy: Sau khi nghe giải thích gói Tier 1 thì hoàn toàn hài lòng, không đòi giảm giá."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Không hoãn chiến dịch. Bẫy thường gặp (Sai) Lưu ý bẫy: Sẵn sàng ký kết ngay hôm nay để triển khai."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Không thuê công ty luật. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đề cập đến việc thuê công ty luật."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng hành động khách hàng ký hợp đồng truyền thông hôm nay (Sign the media agreement)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "sign the media agreement today",
+            "paraphrases": ["execute advertising contract today", "finalize media deal"],
+            "meaning": "ký hợp đồng truyền thông hôm nay"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Final Client Decision - Lắng nghe câu chốt quyết định của Sarah ở lượt thoại cuối.",
+          "Bước 2: Match Signing Action - Bắt cụm 'ready to sign the media agreement today'.",
+          "Bước 3: Select Option B - Chọn D ('Sign the media agreement.')."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 9,
+    "audio": "p3_g09_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 25,
+        "question": "What case are the speakers working on?",
+        "options": {
+          "A": "A commercial lease dispute.",
+          "B": "A patent infringement lawsuit.",
+          "C": "A labor union arbitration.",
+          "D": "A zoning permit appeal."
+        },
+        "correct_answer": "B",
+        "correct_text": "A patent infringement lawsuit.",
+        "audio_transcript": "Woman: ...drafting the summary judgment motion for the patent infringement lawsuit against Vertex Systems?",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Không phải tranh chấp hợp đồng thuê. Bẫy thường gặp (Sai) Lưu ý bẫy: Đây là vụ án vi phạm bản quyền bằng sáng chế, không phải hợp đồng thuê."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng vụ kiện vi phạm bằng sáng chế (A patent infringement lawsuit)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Không phải trọng tài lao động. Bẫy thường gặp (Sai) Lưu ý bẫy: Không liên quan tranh chấp công đoàn lao động."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Không phải kháng cáo quy hoạch. Bẫy thường gặp (Sai) Lưu ý bẫy: Không liên quan đến giấy phép quy hoạch đất."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "patent infringement lawsuit",
+            "paraphrases": ["intellectual property litigation", "patent court case"],
+            "meaning": "vụ kiện vi phạm bằng sáng chế"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Opening Question - Lắng nghe câu hỏi đầu tiên của người nữ.",
+          "Bước 2: Match Patent Lawsuit Keywords - Bắt cụm 'patent infringement lawsuit'.",
+          "Bước 3: Select Option B - Chọn B ('A patent infringement lawsuit.')."
+        ]
+      },
+      {
+        "id": 26,
+        "question": "What does the man imply when he says, 'The court hearing deadline is in three days'?",
+        "options": {
+          "A": "He wants to request a court extension.",
+          "B": "He believes the court hearing will be cancelled.",
+          "C": "He needs urgent assistance to complete the filing on time.",
+          "D": "He is satisfied with the current progress."
+        },
+        "correct_answer": "C",
+        "correct_text": "He needs urgent assistance to complete the filing on time.",
+        "audio_transcript": "Man: I'm still organizing the expert witness statements. The court hearing deadline is in three days.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Xin gia hạn không xuất hiện. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đề cập đến việc gửi đơn xin gia hạn tòa án."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Phiên tòa không bị hủy. Bẫy thường gặp (Sai) Lưu ý bẫy: Không có thông tin phiên tòa bị hủy."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng ngụ ý cần sự giúp đỡ khẩn cấp để kịp hạn nộp (He needs urgent assistance to complete the filing on time)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Mâu thuẫn với sự lo lắng áp lực thời gian. Bẫy thường gặp (Sai) Lưu ý bẫy: Đang bị áp lực thời gian nên không hề hài lòng với tiến độ hiện tại."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "court hearing deadline is in three days",
+            "paraphrases": ["urgent filing timeline", "pressing court deadline"],
+            "meaning": "hạn chót phiên tòa chỉ còn ba ngày nữa"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Analyze Quote Context - Đặt câu trích dẫn trong bối cảnh công việc còn dở dang 'still organizing...'",
+          "Bước 2: Infer Time Pressure Implication - Suy luận câu nói thể hiện áp lực thời gian và phát tín hiệu cần sự giúp đỡ.",
+          "Bước 3: Select Option B - Chọn C ('He needs urgent assistance...')."
+        ]
+      },
+      {
+        "id": 27,
+        "question": "What will the speakers do after lunch?",
+        "options": {
+          "A": "File the motion at the courthouse.",
+          "B": "Call the client's legal counsel.",
+          "C": "Interview an expert witness.",
+          "D": "Meet in the law library to review documents."
+        },
+        "correct_answer": "D",
+        "correct_text": "Meet in the law library to review documents.",
+        "audio_transcript": "Man: ...Let's meet in the law library right after lunch.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Nộp tại tòa chưa thể thực hiện ngay. Bẫy thường gặp (Sai) Lưu ý bẫy: Mới đang hiệu đính tài liệu, chưa nộp đơn tại tòa ngay sau giờ ăn trưa."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Không gọi điện cho cố vấn pháp lý. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đề cập việc gọi điện sau giờ trưa."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Không phỏng vấn nhân chứng. Bẫy thường gặp (Sai) Lưu ý bẫy: Đã có lời khai nhân chứng chuyên gia, chỉ đang sắp xếp lại."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng cuộc hẹn gặp tại thư viện luật để duyệt tài liệu (Meet in the law library to review documents)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "meet in the law library right after lunch",
+            "paraphrases": ["gather in law library post-lunch", "review legal paperwork in library"],
+            "meaning": "gặp nhau ở thư viện luật ngay sau giờ ăn trưa"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Time Anchor 'after lunch' - Theo dõi mốc thời gian 'right after lunch' ở câu thoại cuối.",
+          "Bước 2: Match Law Library Location - Bắt cụm 'meet in the law library'.",
+          "Bước 3: Select Option B - Chọn D ('Meet in the law library to review documents.')."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 10,
+    "audio": "p3_g10_audio.mp3",
+    "image": "p3_g10_image.png",
+    "questions": [
+      {
+        "id": 28,
+        "question": "Look at the graphic. Which category represents Social Media Video Ads?",
+        "options": {
+          "A": "Category A",
+          "B": "Category B",
+          "C": "Category C",
+          "D": "Category D"
+        },
+        "correct_answer": "A",
+        "correct_text": "Category A",
+        "audio_transcript": "Man: ...allocated the largest share — forty percent — to short-form social media video ads...",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng Category A đại diện cho Social Media Video Ads (40%)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Category B đại diện cho biển quảng cáo ngoài trời (30%). Bẫy thường gặp (Sai) Lưu ý bẫy: Category B chiếm 30% thuộc digital billboard displays."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Category C đại diện cho SEM (20%). Bẫy thường gặp (Sai) Lưu ý bẫy: Category C chiếm 20% thuộc search engine marketing."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Nghe nhắc tới Category D trong audio. Bẫy thường gặp (Sai) Lưu ý bẫy: Category D chiếm 10% thuộc tạp chí in, người nữ nhắc tới nhưng không phải câu hỏi."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "largest share (40%)",
+            "paraphrases": ["maximum budget portion", "40% budget allocation"],
+            "meaning": "tỷ trọng lớn nhất (40%)"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Social Media Allocation Percentage - Nghe tỷ lệ phần trăm phân bổ cho 'social media video ads' (40%).",
+          "Bước 2: Cross-Reference Chart - Đối chiếu 40% trên biểu đồ với chữ cái tương ứng (Category A).",
+          "Bước 3: Select Option A - Chọn A ('Category A')."
+        ]
+      },
+      {
+        "id": 29,
+        "question": "Why was Category A assigned the largest budget share?",
+        "options": {
+          "A": "It is required by government regulations.",
+          "B": "It drives the highest customer engagement.",
+          "C": "Print media costs have increased.",
+          "D": "The client requested a discount."
+        },
+        "correct_answer": "B",
+        "correct_text": "It drives the highest customer engagement.",
+        "audio_transcript": "Man: ...allocated the largest share — forty percent — to short-form social media video ads since that drives the highest engagement.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Quy định chính phủ không được nhắc tới. Bẫy thường gặp (Sai) Lưu ý bẫy: Không có quy định pháp luật nào bắt buộc phân bổ ngân sách."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng lý do mang lại tương tác khách hàng cao nhất (It drives the highest customer engagement)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Không phải vì chi phí tạp chí tăng. Bẫy thường gặp (Sai) Lưu ý bẫy: Truyền thông in ấn giảm độc giả chứ không phải tăng chi phí."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Không phải vì khách hàng xin giảm giá. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đề cập chiết khấu cho khách hàng."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "drives the highest engagement",
+            "paraphrases": ["generates maximum customer interaction", "highest audience response rate"],
+            "meaning": "mang lại mức độ tương tác cao nhất"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Causal Conjunction 'since' - Bắt từ nối nguyên nhân 'since' sau cụm 'forty percent'.",
+          "Bước 2: Match Customer Engagement Reason - Bắt cụm 'drives the highest engagement'.",
+          "Bước 3: Select Option B - Chọn B ('It drives the highest customer engagement.')."
+        ]
+      },
+      {
+        "id": 30,
+        "question": "What does the man advise regarding Category D?",
+        "options": {
+          "A": "Doubling its budget allocation.",
+          "B": "Eliminating it from the strategy.",
+          "C": "Keeping the current ten percent allocation.",
+          "D": "Reallocating funds to billboard displays."
+        },
+        "correct_answer": "C",
+        "correct_text": "Keeping the current ten percent allocation.",
+        "audio_transcript": "Man: ...No, print readership has declined. The current ten percent allocation for Category D is sufficient for niche magazines.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Mâu thuẫn với nhận định tạp chí in giảm độc giả. Bẫy thường gặp (Sai) Lưu ý bẫy: Bác bỏ đề xuất tăng ngân sách tạp chí in của người nữ."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Không loại bỏ hoàn toàn. Bẫy thường gặp (Sai) Lưu ý bẫy: Vẫn giữ 10% cho tạp chí chuyên biệt, không cắt giảm về 0%."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng lời khuyên giữ nguyên mức phân bổ 10% hiện tại (Keeping the current ten percent allocation)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Không chuyển tiền sang biển quảng cáo. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đề xuất điều chuyển tiền sang biển quảng cáo."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "current 10% allocation is sufficient",
+            "paraphrases": ["maintain current 10% share", "keep 10% print budget"],
+            "meaning": "mức phân bổ 10% hiện tại là đủ"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Man's Rejection of Increase - Nghe từ chối 'No... current 10% allocation is sufficient' ở lượt thoại cuối.",
+          "Bước 2: Match Maintain Allocation Option - Bắt ý giữ nguyên tỷ lệ 10% hiện tại.",
+          "Bước 3: Select Option C - Chọn C ('Keeping the current ten percent allocation.')."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 11,
+    "audio": "p3_g11_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 31,
+        "question": "What upgrade was approved for the learning portal?",
+        "options": {
+          "A": "Purchasing new student laptops.",
+          "B": "Hiring additional online tutors.",
+          "C": "Redesigning the course curriculum.",
+          "D": "Upgrading the cloud server cluster."
+        },
+        "correct_answer": "D",
+        "correct_text": "Upgrading the cloud server cluster.",
+        "audio_transcript": "Man: ...IT steering committee approved our budget request to upgrade the cloud server cluster for our EduTech learning portal.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Mua laptop sinh viên không xuất hiện. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đề cập việc mua thiết bị laptop cho sinh viên."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Không tuyển gia sư online. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đề cập đến việc tuyển nhân sự gia sư."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Không phải thiết kế lại giáo trình. Bẫy thường gặp (Sai) Lưu ý bẫy: Đây là nâng cấp hạ tầng CNTT, không phải sửa nội dung học."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng việc phê duyệt nâng cấp cụm máy chủ đám mây (Upgrading the cloud server cluster)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "upgrade cloud server cluster",
+            "paraphrases": ["cloud infrastructure upgrade", "expand server cluster capacity"],
+            "meaning": "nâng cấp cụm máy chủ đám mây"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Opening News Announcement - Lắng nghe tin tức phê duyệt nâng cấp từ người nam.",
+          "Bước 2: Match Cloud Server Upgrade - Bắt cụm 'upgrade the cloud server cluster'.",
+          "Bước 3: Select Option B - Chọn D ('Upgrading the cloud server cluster.')."
+        ]
+      },
+      {
+        "id": 32,
+        "question": "How will the upgrade benefit the portal?",
+        "options": {
+          "A": "It will prevent system crashes during peak exam login times.",
+          "B": "It will reduce student tuition fees.",
+          "C": "It will automate essay grading.",
+          "D": "It will encrypt student medical records."
+        },
+        "correct_answer": "A",
+        "correct_text": "It will prevent system crashes during peak exam login times.",
+        "audio_transcript": "Woman: ...Expanding server capacity will prevent system crashes when thousands of students log in concurrently during final exam week.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng lợi ích ngăn sập hệ thống trong đợt cao điểm thi (It will prevent system crashes during peak exam login times)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Học phí không liên quan hạ tầng server. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đề cập đến việc giảm học phí sinh viên."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Không tự động chấm bài luận. Bẫy thường gặp (Sai) Lưu ý bẫy: Không nói đến tính năng tự động chấm bài."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Không bảo mật hồ sơ y tế. Bẫy thường gặp (Sai) Lưu ý bẫy: Đây là cổng học tập giáo dục, không phải hồ sơ y tế."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "prevent system crashes during exam week",
+            "paraphrases": ["avoid portal failure during peak usage", "maintain server stability under high traffic"],
+            "meaning": "ngăn ngừa sập hệ thống trong đợt cao điểm thi"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Woman's Reaction - Theo dõi lời giải thích lợi ích của người nữ.",
+          "Bước 2: Match System Crash Prevention - Bắt cụm 'prevent system crashes when... log in concurrently'.",
+          "Bước 3: Select Option B - Chọn A ('It will prevent system crashes...')."
+        ]
+      },
+      {
+        "id": 33,
+        "question": "What is the man asked to do today?",
+        "options": {
+          "A": "Write an exam schedule.",
+          "B": "Collect student feedback.",
+          "C": "Contact the cloud host vendor.",
+          "D": "Submit a new budget proposal."
+        },
+        "correct_answer": "C",
+        "correct_text": "Contact the cloud host vendor.",
+        "audio_transcript": "Woman: ...Please contact the cloud host vendor today so the migration can be completed before next month's testing window.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Viết lịch thi không phải chỉ thị. Bẫy thường gặp (Sai) Lưu ý bẫy: Tuần thi chỉ là mốc thời gian tham chiếu, không phải yêu cầu lập lịch thi."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Thu thập phản hồi không phải chỉ thị. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đề cập thu thập ý kiến sinh viên."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng chỉ thị liên hệ nhà cung cấp dịch vụ máy chủ đám mây hôm nay (Contact the cloud host vendor)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Đề xuất ngân sách đã được phê duyệt xong. Bẫy thường gặp (Sai) Lưu ý bẫy: Đề xuất ngân sách $60,000 đã được phê duyệt từ đầu."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "contact cloud host vendor",
+            "paraphrases": ["reach out to cloud host provider", "call cloud service vendor"],
+            "meaning": "liên hệ nhà cung cấp máy chủ đám mây"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Final Imperative Sentence - Bắt câu mệnh lệnh 'Please contact... today' ở lượt thoại cuối.",
+          "Bước 2: Match Cloud Vendor Option - Bắt cụm 'contact the cloud host vendor'.",
+          "Bước 3: Select Option A - Chọn C ('Contact the cloud host vendor.')."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 12,
+    "audio": "p3_g12_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 34,
+        "question": "What agreement are the speakers discussing?",
+        "options": {
+          "A": "A commercial real estate lease.",
+          "B": "A non-disclosure agreement (NDA).",
+          "C": "An employment contract.",
+          "D": "A software licensing agreement."
+        },
+        "correct_answer": "B",
+        "correct_text": "A non-disclosure agreement (NDA).",
+        "audio_transcript": "Woman: ...finalized the non-disclosure agreement (NDA) for our joint venture with LearnPulse EduTech?",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Không phải hợp đồng thuê BĐS. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đề cập đến thuê mặt bằng văn phòng."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng thỏa thuận bảo mật thông tin (A non-disclosure agreement - NDA)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Không phải hợp đồng lao động. Bẫy thường gặp (Sai) Lưu ý bẫy: Đây là thỏa thuận giữa 2 doanh nghiệp liên doanh, không phải nhân sự."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Bảo mật phần mềm chứ không phải cấp phép phần mềm. Bẫy thường gặp (Sai) Lưu ý bẫy: Bảo mật thuật toán phần mềm nằm trong điều khoản NDA, không phải hợp đồng bản quyền phần mềm."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "non-disclosure agreement (NDA)",
+            "paraphrases": ["confidentiality agreement", "secrecy pact"],
+            "meaning": "thỏa thuận bảo mật thông tin (NDA)"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Opening Question - Lắng nghe câu hỏi đầu tiên của người nữ.",
+          "Bước 2: Match NDA Acronym - Bắt tên hợp đồng 'non-disclosure agreement (NDA)'.",
+          "Bước 3: Select Option B - Chọn B ('A non-disclosure agreement (NDA).')."
+        ]
+      },
+      {
+        "id": 35,
+        "question": "What amendment did the legal counsel request?",
+        "options": {
+          "A": "Lowering the financial penalty for breach.",
+          "B": "Removing the indemnification clause.",
+          "C": "Adding a dispute arbitration location.",
+          "D": "Extending confidentiality obligation to five years."
+        },
+        "correct_answer": "D",
+        "correct_text": "Extending confidentiality obligation to five years.",
+        "audio_transcript": "Man: ...their legal counsel requested an amendment extending the confidentiality obligation from three years to five years.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Giảm tiền phạt không được yêu cầu. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đề cập đến việc giảm mức phạt tài chính khi vi phạm."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Mâu thuẫn với thông tin giữ lại điều khoản bồi thường. Bẫy thường gặp (Sai) Lưu ý bẫy: Điều khoản bồi thường (indemnification) được giữ nguyên và bảo vệ cả 2 bên."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Không bổ sung địa điểm trọng tài. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đề cập đến địa điểm giải quyết tranh chấp."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng yêu cầu gia hạn thời gian nghĩa vụ bảo mật lên 5 năm (Extending confidentiality obligation to five years)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "extending confidentiality obligation from 3 to 5 years",
+            "paraphrases": ["lengthening confidentiality duration to 5 years", "5-year confidentiality term amendment"],
+            "meaning": "gia hạn nghĩa vụ bảo mật lên năm năm"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Man's Detail Turn - Bắt chi tiết sau cụm 'requested an amendment'.",
+          "Bước 2: Match 5-Year Extension - Bắt cụm 'extending the confidentiality obligation... to five years'.",
+          "Bước 3: Select Option B - Chọn D ('Extending confidentiality obligation to five years.')."
+        ]
+      },
+      {
+        "id": 36,
+        "question": "What will the man do this afternoon?",
+        "options": {
+          "A": "Send the updated NDA draft for signature.",
+          "B": "Schedule a board meeting.",
+          "C": "Consult an external arbitrator.",
+          "D": "Pay legal registration fees."
+        },
+        "correct_answer": "A",
+        "correct_text": "Send the updated NDA draft for signature.",
+        "audio_transcript": "Man: ...I'll send the updated NDA draft to their executive team for signature this afternoon.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng hành động gửi bản thảo NDA cập nhật để ký kết chiều nay (Send the updated NDA draft for signature)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Lên lịch họp HĐQT không xuất hiện. Bẫy thường gặp (Sai) Lưu ý bẫy: Không nói tới cuộc họp ban quản trị."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Không tham vấn trọng tài ngoài. Bẫy thường gặp (Sai) Lưu ý bẫy: Hợp đồng đã thỏa thuận xong, không cần trọng tài."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Không nộp lệ phí đăng ký. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đề cập chi phí đăng ký pháp lý."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "send updated NDA draft for signature",
+            "paraphrases": ["forward revised agreement for execution", "email finalized NDA for signing"],
+            "meaning": "gửi bản thảo NDA cập nhật để ký kết"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Final Action Pledged - Bắt câu chốt 'I'll send... this afternoon' ở lượt thoại cuối.",
+          "Bước 2: Match Draft Delivery Option - Bắt cụm 'send the updated NDA draft to their executive team for signature'.",
+          "Bước 3: Select Option B - Chọn A ('Send the updated NDA draft for signature.')."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 13,
+    "audio": "p3_g13_audio.mp3",
+    "image": "p3_g13_image.png",
+    "questions": [
+      {
+        "id": 37,
+        "question": "Why is the man enrolling employees in a course?",
+        "options": {
+          "A": "To improve their public speaking skills.",
+          "B": "To train them on accounting software.",
+          "C": "To help them understand commercial property legal regulations.",
+          "D": "To prepare them for an international assignment."
+        },
+        "correct_answer": "C",
+        "correct_text": "To help them understand commercial property legal regulations.",
+        "audio_transcript": "Man: ...We want them to understand the legal regulations governing commercial property transactions.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Kỹ năng thuyết trình không được đề cập. Bẫy thường gặp (Sai) Lưu ý bẫy: Không nói đến kỹ năng nói trước công chúng."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Đào tạo phần mềm kế toán không xuất hiện. Bẫy thường gặp (Sai) Lưu ý bẫy: Đây là khóa học luật bất động sản, không phải phần mềm kế toán."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng mục đích giúp nhân viên hiểu các quy định pháp lý bất động sản thương mại (To help them understand commercial property legal regulations)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Công tác quốc tế không xuất hiện. Bẫy thường gặp (Sai) Lưu ý bẫy: Không đề cập đến việc chuẩn bị đi công tác nước ngoài."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "understand legal regulations on commercial property",
+            "paraphrases": ["comprehend real estate law", "learn commercial property regulations"],
+            "meaning": "hiểu các quy định pháp lý bất động sản thương mại"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Man's Enrollment Goal - Bắt cụm nguyên nhân 'We want them to...' ở câu thoại đầu.",
+          "Bước 2: Match Property Regulations - Bắt cụm 'understand the legal regulations governing commercial property'.",
+          "Bước 3: Select Option B - Chọn C ('To help them understand...')."
+        ]
+      },
+      {
+        "id": 38,
+        "question": "Look at the graphic. Which course will the employees take?",
+        "options": {
+          "A": "Course 101",
+          "B": "Course 201",
+          "C": "Course 301",
+          "D": "Course 401"
+        },
+        "correct_answer": "B",
+        "correct_text": "Course 201",
+        "audio_transcript": "Woman: ...class specifically covering commercial real estate law is held on Tuesdays and Thursdays... process the tuition payment of six hundred fifty dollars per person...",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Course 101 là tiếp thị số. Bẫy thường gặp (Sai) Lưu ý bẫy: Course 101 thuộc Digital Marketing ($450 / Mon/Wed)."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng Course 201 (Commercial Real Estate Law / $650 / Tue/Thu)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Course 301 là phân tích dữ liệu AI. Bẫy thường gặp (Sai) Lưu ý bẫy: Course 301 thuộc AI Data Analytics ($850 / Fri/Sat)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Course 401 là lãnh đạo cao cấp. Bẫy thường gặp (Sai) Lưu ý bẫy: Course 401 thuộc Executive Leadership ($1,200 / Sunday)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "Commercial Real Estate Law ($650)",
+            "paraphrases": ["Course 201", "Tue/Thu $650 real estate class"],
+            "meaning": "Khóa học 201 (Luật BĐS thương mại)"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Subject or Fee Clues - Bắt tên môn 'Commercial Real Estate Law' hoặc mức phí '$650' trong audio.",
+          "Bước 2: Cross-Reference Table - Đối chiếu tên môn học hoặc mức phí trên bảng biểu với mã khóa học tương ứng (Course 201).",
+          "Bước 3: Select Option B - Chọn B ('Course 201')."
+        ]
+      },
+      {
+        "id": 39,
+        "question": "How will the tuition payment be made?",
+        "options": {
+          "A": "By corporate credit card.",
+          "B": "By bank wire transfer.",
+          "C": "By paper check.",
+          "D": "By payroll deduction."
+        },
+        "correct_answer": "A",
+        "correct_text": "By corporate credit card.",
+        "audio_transcript": "Woman: ...I'll process the tuition payment of six hundred fifty dollars per person on our corporate credit card today.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng phương thức thanh toán bằng thẻ tín dụng doanh nghiệp (By corporate credit card)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Chuyển khoản ngân hàng không được đề cập. Bẫy thường gặp (Sai) Lưu ý bẫy: Không dùng hình thức chuyển khoản ngân hàng."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Séc giấy không được đề cập. Bẫy thường gặp (Sai) Lưu ý bẫy: Không viết séc thanh toán."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Trừ lương không được đề cập. Bẫy thường gặp (Sai) Lưu ý bẫy: Công ty tài trợ 100%, không khấu trừ vào lương nhân viên."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "corporate credit card",
+            "paraphrases": ["company credit card", "business card payment"],
+            "meaning": "thẻ tín dụng doanh nghiệp"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Final Payment Sentence - Theo dõi phương thức thanh toán ở câu thoại chốt của người nữ.",
+          "Bước 2: Match Credit Card Mention - Bắt cụm 'on our corporate credit card today'.",
+          "Bước 3: Select Option A - Chọn A ('By corporate credit card.')."
+        ]
+      }
+    ]
+  }
+]

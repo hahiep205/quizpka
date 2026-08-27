@@ -1,0 +1,862 @@
+[
+  {
+    "group_id": "part6_group_131_134",
+    "part": "Reading - Part 6",
+    "passage": "To: All Merchant Partners\nFrom: Systems Infrastructure Team <it-support@nexusretail.com>\nDate: October 14\nSubject: Scheduled E-Commerce Platform Upgrade & System Downtime\n\nDear Valued Partners,\n\nWe are writing to inform you that Nexus Retail will be performing a major system upgrade to our e-commerce platform. This scheduled migration is designed to increase server capacity and enhance transaction security. The maintenance window is scheduled for Sunday, October 22, from 1:00 A.M. to 5:00 A.M. EST. During this period, the merchant portal will be ------- (131) unavailable.\n\nPlease note that any customer orders placed immediately before the maintenance window will be queued and processed ------- (132) as soon as system operations resume. Furthermore, we strongly advise all merchant partners to save their inventory records ------- (133) the start of the scheduled downtime to prevent data discrepancy.\n\n------- (134). We appreciate your cooperation and patience as we work to improve our digital infrastructure.\n\nSincerely,\nThe IT Systems Infrastructure Team\nNexus Retail Inc.",
+    "questions": [
+      {
+        "id": 131,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "1. Select the option that best fits blank (131).",
+        "options": {
+          "A": "temporarily",
+          "B": "temporary",
+          "C": "temporariness",
+          "D": "temporize"
+        },
+        "correct_answer": "A",
+        "correct_text": "temporarily",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng trạng từ 'temporarily' bổ nghĩa cho tính từ 'unavailable' trong cấu trúc will be + adv + adj."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Tính từ 'temporary' không thể đứng giữa 'will be' và 'unavailable' vì hai tính từ không bổ nghĩa trực tiếp cho nhau."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Danh từ 'temporariness' không phù hợp ở vị trí trạng ngữ bổ nghĩa cho tính từ."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Động từ 'temporize' không thể đứng sau 'will be' khi đã có tính từ 'unavailable'."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "temporarily unavailable",
+            "paraphrases": ["interrupted for a short period", "out of service briefly"],
+            "meaning": "tạm thời không khả dụng / ngưng phục vụ"
+          },
+          {
+            "phrase": "maintenance window",
+            "paraphrases": ["service period", "downtime slot"],
+            "meaning": "khung thời gian bảo trì"
+          }
+        ],
+        "grammar_point": "Adverb",
+        "strategy": [
+          "Bước 1: Identify Blank Position – Nhận diện vị trí chỗ trống: will be + _______ + unavailable (Adj).",
+          "Bước 2: Apply Adverb-Adjective Rule – Trước tính từ cần một trạng từ bổ nghĩa.",
+          "Bước 3: Select Option A – Chọn trạng từ 'temporarily' (đáp án A)."
+        ],
+        "passage": "To: All Merchant Partners\nFrom: Systems Infrastructure Team <it-support@nexusretail.com>\nDate: October 14\nSubject: Scheduled E-Commerce Platform Upgrade & System Downtime\n\nDear Valued Partners,\n\nWe are writing to inform you that Nexus Retail will be performing a major system upgrade to our e-commerce platform. This scheduled migration is designed to increase server capacity and enhance transaction security. The maintenance window is scheduled for Sunday, October 22, from 1:00 A.M. to 5:00 A.M. EST. During this period, the merchant portal will be ------- (131) unavailable.\n\nPlease note that any customer orders placed immediately before the maintenance window will be queued and processed ------- (132) as soon as system operations resume. Furthermore, we strongly advise all merchant partners to save their inventory records ------- (133) the start of the scheduled downtime to prevent data discrepancy.\n\n------- (134). We appreciate your cooperation and patience as we work to improve our digital infrastructure.\n\nSincerely,\nThe IT Systems Infrastructure Team\nNexus Retail Inc.",
+        "passage_group": "part6_group_131_134"
+      },
+      {
+        "id": 132,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "2. Select the option that best fits blank (132).",
+        "options": {
+          "A": "prompt",
+          "B": "promptly",
+          "C": "promptness",
+          "D": "prompter"
+        },
+        "correct_answer": "B",
+        "correct_text": "promptly",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Tính từ 'prompt' không đứng sau động từ bị động để bổ nghĩa cách thức."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Trạng từ 'promptly' (một cách nhanh chóng / lập tức) bổ nghĩa cho động từ 'processed'."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Danh từ 'promptness' không thể đứng sau động từ bị động làm thành phần bổ nghĩa."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Danh từ chỉ người 'prompter' không phù hợp về ngữ nghĩa lẫn ngữ pháp."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "processed promptly",
+            "paraphrases": ["handled without delay", "executed immediately"],
+            "meaning": "được xử lý nhanh chóng"
+          },
+          {
+            "phrase": "operations resume",
+            "paraphrases": ["services restart"],
+            "meaning": "hoạt động khôi phục lại"
+          }
+        ],
+        "grammar_point": "Adverb",
+        "strategy": [
+          "Bước 1: Analyze Passive Verb Structure – Nhìn phần động từ bị động đứng trước: 'will be queued and processed'.",
+          "Bước 2: Apply Adverb Modifier Rule – Động từ hành động bị động cần trạng từ đuôi -ly bổ nghĩa cách thức.",
+          "Bước 3: Select Option B – Chọn 'promptly' (đáp án B)."
+        ],
+        "passage": "To: All Merchant Partners\nFrom: Systems Infrastructure Team <it-support@nexusretail.com>\nDate: October 14\nSubject: Scheduled E-Commerce Platform Upgrade & System Downtime\n\nDear Valued Partners,\n\nWe are writing to inform you that Nexus Retail will be performing a major system upgrade to our e-commerce platform. This scheduled migration is designed to increase server capacity and enhance transaction security. The maintenance window is scheduled for Sunday, October 22, from 1:00 A.M. to 5:00 A.M. EST. During this period, the merchant portal will be ------- (131) unavailable.\n\nPlease note that any customer orders placed immediately before the maintenance window will be queued and processed ------- (132) as soon as system operations resume. Furthermore, we strongly advise all merchant partners to save their inventory records ------- (133) the start of the scheduled downtime to prevent data discrepancy.\n\n------- (134). We appreciate your cooperation and patience as we work to improve our digital infrastructure.\n\nSincerely,\nThe IT Systems Infrastructure Team\nNexus Retail Inc.",
+        "passage_group": "part6_group_131_134"
+      },
+      {
+        "id": 133,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "3. Select the option that best fits blank (133).",
+        "options": {
+          "A": "except for",
+          "B": "in spite of",
+          "C": "as far as",
+          "D": "prior to"
+        },
+        "correct_answer": "D",
+        "correct_text": "prior to",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "'Except for' (ngoại trừ) không diễn tả mối quan hệ thời gian phù hợp với hành động lưu dữ liệu trước khi bảo trì."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "'In spite of' (mặc dù) mang nghĩa nhượng bộ, không hợp lý trong ngữ cảnh khuyến nghị phòng ngừa."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "'As far as' (theo như / tới tận) không dùng để chỉ mốc thời gian."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "'Prior to' (trước thời điểm cái gì) diễn tả đúng mối quan hệ thời gian: lưu dữ liệu trước khi bắt đầu bảo trì."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "prior to the start",
+            "paraphrases": ["before the commencement"],
+            "meaning": "trước thời điểm bắt đầu"
+          },
+          {
+            "phrase": "prevent data discrepancy",
+            "paraphrases": ["avoid inventory mismatch"],
+            "meaning": "ngăn ngừa sai lệch dữ liệu"
+          }
+        ],
+        "grammar_point": "Preposition of Time",
+        "strategy": [
+          "Bước 1: Identify Time Relationship – Xác định mối quan hệ thời gian giữa hành động 'save records' và mốc 'the start of downtime'.",
+          "Bước 2: Match Preposition Meaning – Khuyên lưu dữ liệu trước khi tắt hệ thống → prior to (= before).",
+          "Bước 3: Select Option D – Chọn 'prior to' (đáp án D)."
+        ],
+        "passage": "To: All Merchant Partners\nFrom: Systems Infrastructure Team <it-support@nexusretail.com>\nDate: October 14\nSubject: Scheduled E-Commerce Platform Upgrade & System Downtime\n\nDear Valued Partners,\n\nWe are writing to inform you that Nexus Retail will be performing a major system upgrade to our e-commerce platform. This scheduled migration is designed to increase server capacity and enhance transaction security. The maintenance window is scheduled for Sunday, October 22, from 1:00 A.M. to 5:00 A.M. EST. During this period, the merchant portal will be ------- (131) unavailable.\n\nPlease note that any customer orders placed immediately before the maintenance window will be queued and processed ------- (132) as soon as system operations resume. Furthermore, we strongly advise all merchant partners to save their inventory records ------- (133) the start of the scheduled downtime to prevent data discrepancy.\n\n------- (134). We appreciate your cooperation and patience as we work to improve our digital infrastructure.\n\nSincerely,\nThe IT Systems Infrastructure Team\nNexus Retail Inc.",
+        "passage_group": "part6_group_131_134"
+      },
+      {
+        "id": 134,
+        "type": "sentence_insertion",
+        "part": "Reading - Part 6",
+        "question": "4. Select the option that best fits blank (134).",
+        "options": {
+          "A": "Consequently, any transactions during this four-hour period will be processed through our manual telephone service.",
+          "B": "In light of this, we anticipate that no further system updates will be required for the remainder of the fiscal year.",
+          "C": "Therefore, we encourage you to complete all urgent portal activities before the scheduled system maintenance begins.",
+          "D": "However, merchant registration fees will be adjusted starting next calendar month."
+        },
+        "correct_answer": "C",
+        "correct_text": "Therefore, we encourage you to complete all urgent portal activities before the scheduled system maintenance begins.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Dịch vụ điện thoại thủ công không phù hợp vì đoạn văn đã nêu hệ thống tự động lưu đơn và xử lý lại sau khi khôi phục."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Việc dự đoán không cần cập nhật thêm trong năm tài chính không liên quan đến nội dung bảo trì và lời kêu gọi hợp tác."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Câu kết luận hợp lý với từ nối 'Therefore', nối tiếp khuyến nghị lưu dữ liệu và dẫn đến lời cảm ơn cuối thư."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Điều chỉnh phí đăng ký người bán lệch hoàn toàn chủ đề bảo trì hệ thống."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "complete all urgent portal activities",
+            "paraphrases": ["finish critical tasks on the platform"],
+            "meaning": "hoàn tất tất cả các hoạt động khẩn cấp trên cổng thông tin"
+          },
+          {
+            "phrase": "scheduled system maintenance",
+            "paraphrases": ["planned downtime"],
+            "meaning": "đợt bảo trì hệ thống theo lịch"
+          }
+        ],
+        "grammar_point": "Sentence Insertion / Cohesion",
+        "strategy": [
+          "Bước 1: Analyze Sentence Insertion Context – Đọc câu trước (khuyên lưu dữ liệu để tránh lỗi) và câu sau (cảm ơn sự hợp tác).",
+          "Bước 2: Evaluate Cohesion & Transition – Tìm câu chứa từ nối 'Therefore' đóng vai trò kết luận khuyên hoàn tất việc khẩn cấp trước khi bảo trì bắt đầu.",
+          "Bước 3: Select Option C – Chọn đáp án C."
+        ],
+        "passage": "To: All Merchant Partners\nFrom: Systems Infrastructure Team <it-support@nexusretail.com>\nDate: October 14\nSubject: Scheduled E-Commerce Platform Upgrade & System Downtime\n\nDear Valued Partners,\n\nWe are writing to inform you that Nexus Retail will be performing a major system upgrade to our e-commerce platform. This scheduled migration is designed to increase server capacity and enhance transaction security. The maintenance window is scheduled for Sunday, October 22, from 1:00 A.M. to 5:00 A.M. EST. During this period, the merchant portal will be ------- (131) unavailable.\n\nPlease note that any customer orders placed immediately before the maintenance window will be queued and processed ------- (132) as soon as system operations resume. Furthermore, we strongly advise all merchant partners to save their inventory records ------- (133) the start of the scheduled downtime to prevent data discrepancy.\n\n------- (134). We appreciate your cooperation and patience as we work to improve our digital infrastructure.\n\nSincerely,\nThe IT Systems Infrastructure Team\nNexus Retail Inc.",
+        "passage_group": "part6_group_131_134"
+      }
+    ]
+  },
+  {
+    "group_id": "part6_group_135_138",
+    "part": "Reading - Part 6",
+    "passage": "MEMORANDUM\n\nTo: All Field Technicians & Engineering Staff\nFrom: Apex Renewable Energy Safety Committee\nDate: November 3\nSubject: Updated Safety Protocols for Solar Panel Array Maintenance\n\nPlease be advised that the Safety Committee has revised the operational guidelines for routine solar panel maintenance at all commercial facilities. These changes are intended to ------- (135) maximum worker safety during high-voltage equipment inspections.\n\nEffective immediately, all technicians must complete a digital safety checklist before ------- (136) any electrical maintenance on the central inverter units. Additionally, personal protective equipment (PPE), including insulated gloves and arc-flash face shields, must be worn at all times while on the roof. Failure to adhere to these updated regulations may ------- (137) disciplinary action or suspension of site access.\n\n------- (138). If you have questions regarding the new protocols, please contact the Safety Department at extension 502.",
+    "questions": [
+      {
+        "id": 135,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "5. Select the option that best fits blank (135).",
+        "options": {
+          "A": "ensure",
+          "B": "endure",
+          "C": "enclose",
+          "D": "enlarge"
+        },
+        "correct_answer": "A",
+        "correct_text": "ensure",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "'Ensure' kết hợp tự nhiên với cụm 'maximum worker safety' mang nghĩa đảm bảo an toàn."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "'Endure' (chịu đựng) không đi với 'safety' và tạo nghĩa vô lý."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "'Enclose' (đính kèm / vây quanh) không phù hợp với ngữ cảnh an toàn lao động."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "'Enlarge' (mở rộng) thường dùng cho kích thước, không đi với khái niệm an toàn."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "ensure worker safety",
+            "paraphrases": ["guarantee protection for staff", "safeguard employees"],
+            "meaning": "đảm bảo / bảo vệ an toàn cho người lao động"
+          },
+          {
+            "phrase": "routine maintenance",
+            "paraphrases": ["regular servicing"],
+            "meaning": "bảo trì định kỳ"
+          }
+        ],
+        "grammar_point": "Verb-Object Collocation",
+        "strategy": [
+          "Bước 1: Analyze Target Noun Object – Nhìn tân ngữ đi sau chỗ trống: 'maximum worker safety'.",
+          "Bước 2: Match Safety Verb – Động từ mang nghĩa đảm bảo an toàn → ensure.",
+          "Bước 3: Select Option A – Chọn 'ensure' (đáp án A)."
+        ],
+        "passage": "MEMORANDUM\n\nTo: All Field Technicians & Engineering Staff\nFrom: Apex Renewable Energy Safety Committee\nDate: November 3\nSubject: Updated Safety Protocols for Solar Panel Array Maintenance\n\nPlease be advised that the Safety Committee has revised the operational guidelines for routine solar panel maintenance at all commercial facilities. These changes are intended to ------- (135) maximum worker safety during high-voltage equipment inspections.\n\nEffective immediately, all technicians must complete a digital safety checklist before ------- (136) any electrical maintenance on the central inverter units. Additionally, personal protective equipment (PPE), including insulated gloves and arc-flash face shields, must be worn at all times while on the roof. Failure to adhere to these updated regulations may ------- (137) disciplinary action or suspension of site access.\n\n------- (138). If you have questions regarding the new protocols, please contact the Safety Department at extension 502.",
+        "passage_group": "part6_group_135_138"
+      },
+      {
+        "id": 136,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "6. Select the option that best fits blank (136).",
+        "options": {
+          "A": "perform",
+          "B": "performing",
+          "C": "performance",
+          "D": "performed"
+        },
+        "correct_answer": "B",
+        "correct_text": "performing",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Sau giới từ 'before' không dùng động từ nguyên thể không chia."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Danh động từ 'performing' (V-ing) đứng sau giới từ và kéo theo tân ngữ 'any electrical maintenance'."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Danh từ 'performance' không thể đi trực tiếp với tân ngữ 'any electrical maintenance' mà không có giới từ."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Quá khứ phân từ 'performed' mang nghĩa bị động, trong khi chủ ngữ 'technicians' chủ động thực hiện bảo trì."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "before performing maintenance",
+            "paraphrases": ["prior to carrying out servicing"],
+            "meaning": "trước khi thực hiện bảo trì"
+          },
+          {
+            "phrase": "digital safety checklist",
+            "paraphrases": ["electronic safety protocol form"],
+            "meaning": "danh mục kiểm tra an toàn kỹ thuật số"
+          }
+        ],
+        "grammar_point": "Preposition + Gerund",
+        "strategy": [
+          "Bước 1: Locate Preposition & Following Object – Cấu trúc: giới từ (before) + _______ + tân ngữ (any electrical maintenance).",
+          "Bước 2: Apply Preposition + V-ing Rule – Sau giới từ kéo tân ngữ bắt buộc dùng Danh động từ (V-ing).",
+          "Bước 3: Select Option B – Chọn 'performing' (đáp án B)."
+        ],
+        "passage": "MEMORANDUM\n\nTo: All Field Technicians & Engineering Staff\nFrom: Apex Renewable Energy Safety Committee\nDate: November 3\nSubject: Updated Safety Protocols for Solar Panel Array Maintenance\n\nPlease be advised that the Safety Committee has revised the operational guidelines for routine solar panel maintenance at all commercial facilities. These changes are intended to ------- (135) maximum worker safety during high-voltage equipment inspections.\n\nEffective immediately, all technicians must complete a digital safety checklist before ------- (136) any electrical maintenance on the central inverter units. Additionally, personal protective equipment (PPE), including insulated gloves and arc-flash face shields, must be worn at all times while on the roof. Failure to adhere to these updated regulations may ------- (137) disciplinary action or suspension of site access.\n\n------- (138). If you have questions regarding the new protocols, please contact the Safety Department at extension 502.",
+        "passage_group": "part6_group_135_138"
+      },
+      {
+        "id": 137,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "7. Select the option that best fits blank (137).",
+        "options": {
+          "A": "consist of",
+          "B": "rely on",
+          "C": "account for",
+          "D": "result in"
+        },
+        "correct_answer": "D",
+        "correct_text": "result in",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "'Consist of' (bao gồm) không diễn tả mối quan hệ nguyên nhân – kết quả từ vi phạm."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "'Rely on' (dựa vào) không phù hợp với ngữ cảnh cảnh báo hậu quả."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "'Account for' (giải thích / chiếm tỷ lệ) không dùng để chỉ việc gây ra hình phạt."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "'Result in' (dẫn đến hậu quả) diễn tả chính xác mối quan hệ: không tuân thủ → kỷ luật."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "result in disciplinary action",
+            "paraphrases": ["lead to penalty", "cause disciplinary consequences"],
+            "meaning": "dẫn đến hình thức kỷ luật"
+          },
+          {
+            "phrase": "adhere to regulations",
+            "paraphrases": ["comply with rules"],
+            "meaning": "tuân thủ các quy định"
+          }
+        ],
+        "grammar_point": "Phrasal Verb / Cause-Effect",
+        "strategy": [
+          "Bước 1: Identify Cause-Effect Context – Chủ ngữ là 'Failure to adhere...' (không tuân thủ), tân ngữ là 'disciplinary action' (kỷ luật).",
+          "Bước 2: Match Phrasal Verb – Phân từ chỉ mối quan hệ dẫn đến hậu quả → result in (= lead to).",
+          "Bước 3: Select Option D – Chọn 'result in' (đáp án D)."
+        ],
+        "passage": "MEMORANDUM\n\nTo: All Field Technicians & Engineering Staff\nFrom: Apex Renewable Energy Safety Committee\nDate: November 3\nSubject: Updated Safety Protocols for Solar Panel Array Maintenance\n\nPlease be advised that the Safety Committee has revised the operational guidelines for routine solar panel maintenance at all commercial facilities. These changes are intended to ------- (135) maximum worker safety during high-voltage equipment inspections.\n\nEffective immediately, all technicians must complete a digital safety checklist before ------- (136) any electrical maintenance on the central inverter units. Additionally, personal protective equipment (PPE), including insulated gloves and arc-flash face shields, must be worn at all times while on the roof. Failure to adhere to these updated regulations may ------- (137) disciplinary action or suspension of site access.\n\n------- (138). If you have questions regarding the new protocols, please contact the Safety Department at extension 502.",
+        "passage_group": "part6_group_135_138"
+      },
+      {
+        "id": 138,
+        "type": "sentence_insertion",
+        "part": "Reading - Part 6",
+        "question": "8. Select the option that best fits blank (138).",
+        "options": {
+          "A": "Consequently, all electrical technicians will receive a salary increase starting next quarter.",
+          "B": "The solar panel installation on Building B has been completed ahead of schedule.",
+          "C": "Complete compliance audits will be conducted randomly by site supervisors throughout the month.",
+          "D": "However, the main conference room has been reserved for a private corporate event."
+        },
+        "correct_answer": "C",
+        "correct_text": "Complete compliance audits will be conducted randomly by site supervisors throughout the month.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Tăng lương cho kỹ thuật viên không liên quan đến cảnh báo kỷ luật và chủ đề an toàn."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Hoàn thành lắp đặt tòa B không liên quan đến quy trình an toàn chung."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Câu bổ sung biện pháp giám sát tuân thủ (kiểm toán ngẫu nhiên) hợp logic, nối tiếp cảnh báo và dẫn đến thông tin liên hệ."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Đặt phòng họp sự kiện lệch chủ đề an toàn lao động trên mái nhà."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "compliance audits conducted randomly",
+            "paraphrases": ["unannounced safety inspections carried out"],
+            "meaning": "các đợt kiểm toán tuân thủ được tiến hành ngẫu nhiên"
+          },
+          {
+            "phrase": "regarding the new protocols",
+            "paraphrases": ["concerning updated safety rules"],
+            "meaning": "về các quy trình mới"
+          }
+        ],
+        "grammar_point": "Sentence Insertion / Topic Continuity",
+        "strategy": [
+          "Bước 1: Analyze Sentence Insertion Context – Đọc câu trước (cảnh báo phạt kỷ luật) và câu sau (liên hệ Safety Department).",
+          "Bước 2: Evaluate Cohesion & Topic Continuity – Tìm câu mở rộng biện pháp giám sát quy định an toàn ('compliance audits') để giữ mạch chủ đề.",
+          "Bước 3: Select Option C – Chọn đáp án C."
+        ],
+        "passage": "MEMORANDUM\n\nTo: All Field Technicians & Engineering Staff\nFrom: Apex Renewable Energy Safety Committee\nDate: November 3\nSubject: Updated Safety Protocols for Solar Panel Array Maintenance\n\nPlease be advised that the Safety Committee has revised the operational guidelines for routine solar panel maintenance at all commercial facilities. These changes are intended to ------- (135) maximum worker safety during high-voltage equipment inspections.\n\nEffective immediately, all technicians must complete a digital safety checklist before ------- (136) any electrical maintenance on the central inverter units. Additionally, personal protective equipment (PPE), including insulated gloves and arc-flash face shields, must be worn at all times while on the roof. Failure to adhere to these updated regulations may ------- (137) disciplinary action or suspension of site access.\n\n------- (138). If you have questions regarding the new protocols, please contact the Safety Department at extension 502.",
+        "passage_group": "part6_group_135_138"
+      }
+    ]
+  },
+  {
+    "group_id": "part6_group_139_142",
+    "part": "Reading - Part 6",
+    "passage": "FOR IMMEDIATE RELEASE\n\nSAN FRANCISCO, CA — OmniHealth BioTech Inc. today announced the commercial launch of MediScan 4.0, an innovative AI-driven diagnostic software platform. Designed to assist medical professionals in evaluating complex imaging data, the new software represents a ------- (139) breakthrough in clinical research technology.\n\nMediScan 4.0 was developed over a two-year period in close collaboration with leading medical university research centers. During extensive clinical trials, the platform ------- (140) demonstrated the ability to process high-resolution MRI scans thirty-five percent faster than conventional diagnostic tools.\n\nDr. Aris Thorne, Chief Medical Officer at OmniHealth, stated, \"Our goal has always been to empower healthcare providers with tools that enhance accuracy ------- (141) reducing patient wait times.\"\n\n------- (142). Medical facilities interested in scheduling a product demonstration may visit OmniHealth's website at www.omnihealthbiotech.com.",
+    "questions": [
+      {
+        "id": 139,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "9. Select the option that best fits blank (139).",
+        "options": {
+          "A": "sign",
+          "B": "significant",
+          "C": "signify",
+          "D": "significantly"
+        },
+        "correct_answer": "B",
+        "correct_text": "significant",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "'Sign' (danh từ/động từ) không phải tính từ bổ nghĩa cho danh từ 'breakthrough'."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Tính từ 'significant' bổ nghĩa cho danh từ 'breakthrough' trong cấu trúc a + adj + noun."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Động từ 'signify' không thể đứng trước danh từ để bổ nghĩa."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Trạng từ 'significantly' không đứng trước danh từ để bổ nghĩa trực tiếp."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "significant breakthrough",
+            "paraphrases": ["major innovation", "substantial milestone"],
+            "meaning": "bước đột phá quan trọng / đáng kể"
+          },
+          {
+            "phrase": "clinical research",
+            "paraphrases": ["medical trial study"],
+            "meaning": "nghiên cứu lâm sàng"
+          }
+        ],
+        "grammar_point": "Part of Speech / Adjective",
+        "strategy": [
+          "Bước 1: Identify Noun Modifier Context – Nhận diện vị trí: a + _______ + breakthrough (Noun).",
+          "Bước 2: Apply Adjective Rule – Trước danh từ cần tính từ bổ nghĩa.",
+          "Bước 3: Select Option B – Chọn tính từ 'significant' (đáp án B)."
+        ],
+        "passage": "FOR IMMEDIATE RELEASE\n\nSAN FRANCISCO, CA — OmniHealth BioTech Inc. today announced the commercial launch of MediScan 4.0, an innovative AI-driven diagnostic software platform. Designed to assist medical professionals in evaluating complex imaging data, the new software represents a ------- (139) breakthrough in clinical research technology.\n\nMediScan 4.0 was developed over a two-year period in close collaboration with leading medical university research centers. During extensive clinical trials, the platform ------- (140) demonstrated the ability to process high-resolution MRI scans thirty-five percent faster than conventional diagnostic tools.\n\nDr. Aris Thorne, Chief Medical Officer at OmniHealth, stated, \"Our goal has always been to empower healthcare providers with tools that enhance accuracy ------- (141) reducing patient wait times.\"\n\n------- (142). Medical facilities interested in scheduling a product demonstration may visit OmniHealth's website at www.omnihealthbiotech.com.",
+        "passage_group": "part6_group_139_142"
+      },
+      {
+        "id": 140,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "10. Select the option that best fits blank (140).",
+        "options": {
+          "A": "consistently",
+          "B": "reluctantly",
+          "C": "marginally",
+          "D": "excessively"
+        },
+        "correct_answer": "A",
+        "correct_text": "consistently",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Trạng từ 'consistently' (nhất quán / ổn định) khen ngợi hiệu năng phần mềm y tế, phù hợp với văn phong thông cáo."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "'Reluctantly' (miễn cưỡng) chỉ dùng cho tâm lý con người, không dùng cho phần mềm."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "'Marginally' (không đáng kể) mâu thuẫn với con số 35% ấn tượng."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "'Excessively' (quá mức) mang sắc thái tiêu cực, không phù hợp."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "consistently demonstrate",
+            "paraphrases": ["reliably show", "steadily prove"],
+            "meaning": "nhất quán chứng minh / luôn luôn thể hiện"
+          },
+          {
+            "phrase": "conventional diagnostic tools",
+            "paraphrases": ["standard medical testing equipment"],
+            "meaning": "các công cụ chẩn đoán truyền thống"
+          }
+        ],
+        "grammar_point": "Adverb",
+        "strategy": [
+          "Bước 1: Identify Verb Modifier Position – Vị trí đứng trước động từ quá khứ 'demonstrated' → cần trạng từ bổ nghĩa.",
+          "Bước 2: Evaluate Adverb Tone – Ngữ cảnh khen ngợi phần mềm y tế hoạt động ổn định → chọn 'consistently'.",
+          "Bước 3: Select Option A – Chọn 'consistently' (đáp án A)."
+        ],
+        "passage": "FOR IMMEDIATE RELEASE\n\nSAN FRANCISCO, CA — OmniHealth BioTech Inc. today announced the commercial launch of MediScan 4.0, an innovative AI-driven diagnostic software platform. Designed to assist medical professionals in evaluating complex imaging data, the new software represents a ------- (139) breakthrough in clinical research technology.\n\nMediScan 4.0 was developed over a two-year period in close collaboration with leading medical university research centers. During extensive clinical trials, the platform ------- (140) demonstrated the ability to process high-resolution MRI scans thirty-five percent faster than conventional diagnostic tools.\n\nDr. Aris Thorne, Chief Medical Officer at OmniHealth, stated, \"Our goal has always been to empower healthcare providers with tools that enhance accuracy ------- (141) reducing patient wait times.\"\n\n------- (142). Medical facilities interested in scheduling a product demonstration may visit OmniHealth's website at www.omnihealthbiotech.com.",
+        "passage_group": "part6_group_139_142"
+      },
+      {
+        "id": 141,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "11. Select the option that best fits blank (141).",
+        "options": {
+          "A": "unless",
+          "B": "despite",
+          "C": "in spite of",
+          "D": "while"
+        },
+        "correct_answer": "D",
+        "correct_text": "while",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "'Unless' (trừ khi) mang nghĩa điều kiện phủ định, không phù hợp với hai mục tiêu tích cực song song."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "'Despite' (mặc dù) thể hiện sự tương phản, trong khi tăng độ chính xác và giảm thời gian chờ là cùng chiều tích cực."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "'In spite of' cũng mang nghĩa tương phản, không hợp lý."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Liên từ 'while' + V-ing diễn tả hai hành động song song tích cực: tăng độ chính xác trong khi giảm thời gian chờ."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "enhance accuracy while reducing wait times",
+            "paraphrases": ["improve precision concurrently with shortening delays"],
+            "meaning": "tăng độ chính xác trong khi giảm thời gian chờ"
+          },
+          {
+            "phrase": "empower healthcare providers",
+            "paraphrases": ["enable medical professionals"],
+            "meaning": "trao quyền / hỗ trợ các nhà cung cấp dịch vụ y tế"
+          }
+        ],
+        "grammar_point": "Conjunction / Parallel Actions",
+        "strategy": [
+          "Bước 1: Analyze Parallel Benefits – Xác định hai lợi ích tích cực: 'enhance accuracy' và 'reducing wait times'.",
+          "Bước 2: Select Parallel Action Conjunction – Kết nối hai hành động diễn ra song song tích cực → while + V-ing.",
+          "Bước 3: Select Option D – Chọn 'while' (đáp án D)."
+        ],
+        "passage": "FOR IMMEDIATE RELEASE\n\nSAN FRANCISCO, CA — OmniHealth BioTech Inc. today announced the commercial launch of MediScan 4.0, an innovative AI-driven diagnostic software platform. Designed to assist medical professionals in evaluating complex imaging data, the new software represents a ------- (139) breakthrough in clinical research technology.\n\nMediScan 4.0 was developed over a two-year period in close collaboration with leading medical university research centers. During extensive clinical trials, the platform ------- (140) demonstrated the ability to process high-resolution MRI scans thirty-five percent faster than conventional diagnostic tools.\n\nDr. Aris Thorne, Chief Medical Officer at OmniHealth, stated, \"Our goal has always been to empower healthcare providers with tools that enhance accuracy ------- (141) reducing patient wait times.\"\n\n------- (142). Medical facilities interested in scheduling a product demonstration may visit OmniHealth's website at www.omnihealthbiotech.com.",
+        "passage_group": "part6_group_139_142"
+      },
+      {
+        "id": 142,
+        "type": "sentence_insertion",
+        "part": "Reading - Part 6",
+        "question": "12. Select the option that best fits blank (142).",
+        "options": {
+          "A": "However, patients are advised to consult their insurance providers regarding coverage limits.",
+          "B": "The university research center has decided to cancel the joint venture project.",
+          "C": "Subscription pricing details and nationwide deployment timelines are available upon request.",
+          "D": "The annual BioTech conference was postponed until next fiscal year."
+        },
+        "correct_answer": "C",
+        "correct_text": "Subscription pricing details and nationwide deployment timelines are available upon request.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Tư vấn bảo hiểm bệnh nhân không liên quan đến thông cáo B2B về phần mềm chẩn đoán."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Hủy dự án nghiên cứu mâu thuẫn với thông báo ra mắt thương mại thành công."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Thông tin thương mại (giá gói đăng ký & triển khai) là bước chuẩn trước lời kêu gọi hành động truy cập website."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Hoãn hội nghị không liên quan đến việc giới thiệu và demo sản phẩm MediScan 4.0."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "subscription pricing details",
+            "paraphrases": ["package cost information"],
+            "meaning": "thông tin chi tiết về giá đăng ký"
+          },
+          {
+            "phrase": "available upon request",
+            "paraphrases": ["provided when asked"],
+            "meaning": "có sẵn theo yêu cầu"
+          }
+        ],
+        "grammar_point": "Sentence Insertion / Press Release Structure",
+        "strategy": [
+          "Bước 1: Analyze Press Release Structure – Đọc câu trước (phát biểu của lãnh đạo) và câu sau (kêu gọi truy cập website để xem demo).",
+          "Bước 2: Identify Missing Commercial Info – Trước lời kêu gọi hành động CTA cuối bài thông cáo báo chí luôn là thông tin giá/triển khai.",
+          "Bước 3: Select Option C – Chọn đáp án C."
+        ],
+        "passage": "FOR IMMEDIATE RELEASE\n\nSAN FRANCISCO, CA — OmniHealth BioTech Inc. today announced the commercial launch of MediScan 4.0, an innovative AI-driven diagnostic software platform. Designed to assist medical professionals in evaluating complex imaging data, the new software represents a ------- (139) breakthrough in clinical research technology.\n\nMediScan 4.0 was developed over a two-year period in close collaboration with leading medical university research centers. During extensive clinical trials, the platform ------- (140) demonstrated the ability to process high-resolution MRI scans thirty-five percent faster than conventional diagnostic tools.\n\nDr. Aris Thorne, Chief Medical Officer at OmniHealth, stated, \"Our goal has always been to empower healthcare providers with tools that enhance accuracy ------- (141) reducing patient wait times.\"\n\n------- (142). Medical facilities interested in scheduling a product demonstration may visit OmniHealth's website at www.omnihealthbiotech.com.",
+        "passage_group": "part6_group_139_142"
+      }
+    ]
+  },
+  {
+    "group_id": "part6_group_143_146",
+    "part": "Reading - Part 6",
+    "passage": "Nexus Palm Resort Monthly Guest Newsletter\nNovember Edition\n\nAt Nexus Palm Resort, we believe that luxury hospitality and environmental stewardship go hand in hand. As part of our commitment to sustainable tourism, we are proud to announce the ------- (143) of our \"Green Palm Initiative\" starting December 1.\n\nThis eco-friendly program focuses on three core areas: reducing energy consumption, eliminating single-use plastic, and supporting local organic agriculture. Over the past three months, our facilities team successfully installed solar panel arrays across all dining pavilions. These panels now ------- (144) approximately thirty percent of the resort's daily electricity needs.\n\nAdditionally, all guest suites have been ------- (145) with energy-efficient LED lighting and automated climate control sensors that adjust room temperatures when guests are away.\n\n------- (146). We invite you to join us in protecting our beautiful coastal ecosystem during your stay!",
+    "questions": [
+      {
+        "id": 143,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "13. Select the option that best fits blank (143).",
+        "options": {
+          "A": "limit",
+          "B": "launch",
+          "C": "loss",
+          "D": "lack"
+        },
+        "correct_answer": "B",
+        "correct_text": "launch",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "'Limit' (hạn chế) mang nghĩa tiêu cực, không phù hợp với thông báo tự hào về sáng kiến mới."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Danh từ 'launch' (sự ra mắt / khởi chạy) kết hợp tự nhiên với 'of our Green Palm Initiative' trong ngữ cảnh công bố tích cực."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "'Loss' (sự mất mát) tiêu cực, mâu thuẫn với sắc thái tự hào."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "'Lack' (sự thiếu hụt) tiêu cực, không đi với 'proud to announce'."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "launch of an initiative",
+            "paraphrases": ["rollout of a program", "introduction of a project"],
+            "meaning": "sự ra mắt / khởi chạy một sáng kiến"
+          },
+          {
+            "phrase": "sustainable tourism",
+            "paraphrases": ["eco-friendly travel"],
+            "meaning": "du lịch bền vững"
+          }
+        ],
+        "grammar_point": "Part of Speech / Noun",
+        "strategy": [
+          "Bước 1: Analyze Noun Phrase Pattern – Nhìn vị trí chỗ trống: announce the + _______ + of our initiative.",
+          "Bước 2: Evaluate Tone & Collocation – Tự hào công bố khởi chạy chương trình xanh → launch.",
+          "Bước 3: Select Option B – Chọn 'launch' (đáp án B)."
+        ],
+        "passage": "Nexus Palm Resort Monthly Guest Newsletter\nNovember Edition\n\nAt Nexus Palm Resort, we believe that luxury hospitality and environmental stewardship go hand in hand. As part of our commitment to sustainable tourism, we are proud to announce the ------- (143) of our \"Green Palm Initiative\" starting December 1.\n\nThis eco-friendly program focuses on three core areas: reducing energy consumption, eliminating single-use plastic, and supporting local organic agriculture. Over the past three months, our facilities team successfully installed solar panel arrays across all dining pavilions. These panels now ------- (144) approximately thirty percent of the resort's daily electricity needs.\n\nAdditionally, all guest suites have been ------- (145) with energy-efficient LED lighting and automated climate control sensors that adjust room temperatures when guests are away.\n\n------- (146). We invite you to join us in protecting our beautiful coastal ecosystem during your stay!",
+        "passage_group": "part6_group_143_146"
+      },
+      {
+        "id": 144,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "14. Select the option that best fits blank (144).",
+        "options": {
+          "A": "generate",
+          "B": "consume",
+          "C": "evaluate",
+          "D": "transfer"
+        },
+        "correct_answer": "A",
+        "correct_text": "generate",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "'Generate' (tạo ra) kết hợp với 'electricity' và phù hợp với vai trò của pin mặt trời là sản xuất điện."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "'Consume' (tiêu thụ) sai nghĩa vì pin mặt trời tạo ra điện, không tiêu thụ điện của resort."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "'Evaluate' (đánh giá) không đi với tỷ lệ 30% nhu cầu điện."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "'Transfer' (chuyển giao) không dùng để chỉ công suất sản xuất điện của hệ thống pin."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "generate electricity",
+            "paraphrases": ["produce power", "supply energy"],
+            "meaning": "phát ra / tạo ra năng lượng điện"
+          },
+          {
+            "phrase": "solar panel array",
+            "paraphrases": ["photovoltaic panel system"],
+            "meaning": "hệ thống dãy pin năng lượng mặt trời"
+          }
+        ],
+        "grammar_point": "Verb-Object Collocation",
+        "strategy": [
+          "Bước 1: Identify Subject & Object – Chủ ngữ là 'These panels' (tấm pin), tân ngữ là 'electricity needs' (nhu cầu điện).",
+          "Bước 2: Match Energy Collocation – Hệ thống năng lượng sản xuất ra điện → generate.",
+          "Bước 3: Select Option A – Chọn 'generate' (đáp án A)."
+        ],
+        "passage": "Nexus Palm Resort Monthly Guest Newsletter\nNovember Edition\n\nAt Nexus Palm Resort, we believe that luxury hospitality and environmental stewardship go hand in hand. As part of our commitment to sustainable tourism, we are proud to announce the ------- (143) of our \"Green Palm Initiative\" starting December 1.\n\nThis eco-friendly program focuses on three core areas: reducing energy consumption, eliminating single-use plastic, and supporting local organic agriculture. Over the past three months, our facilities team successfully installed solar panel arrays across all dining pavilions. These panels now ------- (144) approximately thirty percent of the resort's daily electricity needs.\n\nAdditionally, all guest suites have been ------- (145) with energy-efficient LED lighting and automated climate control sensors that adjust room temperatures when guests are away.\n\n------- (146). We invite you to join us in protecting our beautiful coastal ecosystem during your stay!",
+        "passage_group": "part6_group_143_146"
+      },
+      {
+        "id": 145,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "15. Select the option that best fits blank (145).",
+        "options": {
+          "A": "expanded",
+          "B": "enclosed",
+          "C": "expired",
+          "D": "equipped"
+        },
+        "correct_answer": "D",
+        "correct_text": "equipped",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "'Expanded with' không đúng cấu trúc; 'expand' dùng cho mở rộng quy mô, không phải trang bị thiết bị."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "'Enclosed with' dùng cho tệp/thư đính kèm, không dùng cho phòng khách sạn."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "'Expired' (hết hạn) hoàn toàn sai nghĩa."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "'Be equipped with' là cấu trúc cố định nghĩa là được trang bị, phù hợp với ngữ cảnh lắp đặt đèn LED và cảm biến."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "be equipped with",
+            "paraphrases": ["be fitted with", "be supplied with"],
+            "meaning": "được trang bị cái gì"
+          },
+          {
+            "phrase": "energy-efficient LED lighting",
+            "paraphrases": ["power-saving LED bulbs"],
+            "meaning": "hệ thống chiếu sáng LED tiết kiệm năng lượng"
+          }
+        ],
+        "grammar_point": "Passive Collocation",
+        "strategy": [
+          "Bước 1: Locate Passive Auxiliary & Preposition – Cấu trúc: have been + _______ + with + N.",
+          "Bước 2: Recognize Equipment Passive Collocation – Thiết bị đi với 'with' → be equipped with.",
+          "Bước 3: Select Option D – Chọn 'equipped' (đáp án D)."
+        ],
+        "passage": "Nexus Palm Resort Monthly Guest Newsletter\nNovember Edition\n\nAt Nexus Palm Resort, we believe that luxury hospitality and environmental stewardship go hand in hand. As part of our commitment to sustainable tourism, we are proud to announce the ------- (143) of our \"Green Palm Initiative\" starting December 1.\n\nThis eco-friendly program focuses on three core areas: reducing energy consumption, eliminating single-use plastic, and supporting local organic agriculture. Over the past three months, our facilities team successfully installed solar panel arrays across all dining pavilions. These panels now ------- (144) approximately thirty percent of the resort's daily electricity needs.\n\nAdditionally, all guest suites have been ------- (145) with energy-efficient LED lighting and automated climate control sensors that adjust room temperatures when guests are away.\n\n------- (146). We invite you to join us in protecting our beautiful coastal ecosystem during your stay!",
+        "passage_group": "part6_group_143_146"
+      },
+      {
+        "id": 146,
+        "type": "sentence_insertion",
+        "part": "Reading - Part 6",
+        "question": "16. Select the option that best fits blank (146).",
+        "options": {
+          "A": "Consequently, room rates will be increased by ten percent during peak season.",
+          "B": "The resort's main swimming pool will be closed for maintenance next week.",
+          "C": "Guests can opt out of daily towel replacement to help us conserve water.",
+          "D": "Free shuttle buses to the airport are available every thirty minutes."
+        },
+        "correct_answer": "C",
+        "correct_text": "Guests can opt out of daily towel replacement to help us conserve water.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Tăng giá phòng mâu thuẫn với thông điệp mời khách hàng chung tay bảo vệ môi trường."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Đóng hồ bơi là tin tiêu cực, không liên quan đến chủ đề môi trường và bản tin tích cực."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Câu hướng dẫn hành động xanh cụ thể cho khách hàng (từ chối thay khăn hàng ngày), nối kết logic với lời mời bảo vệ hệ sinh thái."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Lịch trình xe buýt sân bay lệch chủ đề môi trường."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "opt out of daily towel replacement",
+            "paraphrases": ["decline everyday towel changes"],
+            "meaning": "lựa chọn không thay khăn tắm hàng ngày"
+          },
+          {
+            "phrase": "protecting coastal ecosystem",
+            "paraphrases": ["preserving marine environment"],
+            "meaning": "bảo vệ hệ sinh thái vùng bờ biển"
+          }
+        ],
+        "grammar_point": "Sentence Insertion / Guest Action",
+        "strategy": [
+          "Bước 1: Analyze Sentence Insertion Flow – Đọc câu trước (resort lắp pin & đèn LED) và câu sau (mời khách hàng cùng bảo vệ hệ sinh thái).",
+          "Bước 2: Connect Guest Action to Invitation – Tìm câu nêu hành động bảo vệ môi trường cụ thể mà khách hàng có thể thực hiện → opt out towel replacement to conserve water.",
+          "Bước 3: Select Option C – Chọn đáp án C."
+        ],
+        "passage": "Nexus Palm Resort Monthly Guest Newsletter\nNovember Edition\n\nAt Nexus Palm Resort, we believe that luxury hospitality and environmental stewardship go hand in hand. As part of our commitment to sustainable tourism, we are proud to announce the ------- (143) of our \"Green Palm Initiative\" starting December 1.\n\nThis eco-friendly program focuses on three core areas: reducing energy consumption, eliminating single-use plastic, and supporting local organic agriculture. Over the past three months, our facilities team successfully installed solar panel arrays across all dining pavilions. These panels now ------- (144) approximately thirty percent of the resort's daily electricity needs.\n\nAdditionally, all guest suites have been ------- (145) with energy-efficient LED lighting and automated climate control sensors that adjust room temperatures when guests are away.\n\n------- (146). We invite you to join us in protecting our beautiful coastal ecosystem during your stay!",
+        "passage_group": "part6_group_143_146"
+      }
+    ]
+  }
+]

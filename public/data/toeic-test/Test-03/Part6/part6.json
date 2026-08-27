@@ -1,0 +1,782 @@
+[
+  {
+    "group_id": "part6_group_131_134",
+    "part": "Reading - Part 6",
+    "passage": "To: All Regional Property Managers\nFrom: Lisa Vance, Senior Director of Real Estate\nDate: October 12, 2026\nSubject: Commercial Lease Renewal — Horizon Tower Suite 403\n\nI am writing to update you on the commercial lease negotiations for our corporate regional office at Horizon Tower. The landlord has formally accepted our proposed lease extension terms. ------- [131], we have secured a reduced annual rental rate for the next three years, which will allow us to allocate more funds toward office facility upgrades.\n\nPlease note that the finalized agreement includes a revised clause regarding HVAC system maintenance. Under the new terms, our department is ------- [132] for routine inspections and basic filter replacements. The building management, however, will remain liable for major equipment structural repairs.\n\nOur legal counsel has reviewed the revised contract draft and confirmed that all terms align with corporate policy. We plan to ------- [133] the contract electronically by Friday afternoon. ------- [134]. Please reach out if you have any questions regarding these updated terms.",
+    "questions": [
+      {
+        "id": 131,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "1. Select the option that best fits blank (131).",
+        "options": {
+          "A": "Specifically",
+          "B": "Otherwise",
+          "C": "Conversely",
+          "D": "Nevertheless"
+        },
+        "correct_answer": "A",
+        "correct_text": "Specifically",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng trạng từ liên kết Specifically mang tính cụ thể hóa chi tiết việc chủ nhà đã chấp nhận điều khoản gia hạn."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Trạng từ Otherwise (Nếu không thì) dùng cho điều kiện ngược lại, sai quan hệ logic."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Trạng từ Conversely (Ngược lại) dùng cho quan hệ đối lập, sai quan hệ logic."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Trạng từ Nevertheless (Tuy nhiên) dùng cho quan hệ nhượng bộ/tương phản, sai quan hệ logic."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "Specifically",
+            "paraphrases": ["to be precise", "in particular"],
+            "meaning": "cụ thể là / chi tiết hơn là"
+          }
+        ],
+        "grammar_point": "Transition / Elaboration",
+        "strategy": [
+          "Bước 1: Read Surrounding Sentences - Đọc câu trước 'landlord accepted terms' và câu sau 'secured reduced rental rate'.",
+          "Bước 2: Identify Elaboration Relation - Xác định quan hệ cụ thể hóa chi tiết kết quả đàm phán.",
+          "Bước 3: Select Option A - Chọn A ('Specifically')."
+        ],
+        "passage": "To: All Regional Property Managers\nFrom: Lisa Vance, Senior Director of Real Estate\nDate: October 12, 2026\nSubject: Commercial Lease Renewal — Horizon Tower Suite 403\n\nI am writing to update you on the commercial lease negotiations for our corporate regional office at Horizon Tower. The landlord has formally accepted our proposed lease extension terms. ------- [131], we have secured a reduced annual rental rate for the next three years, which will allow us to allocate more funds toward office facility upgrades.\n\nPlease note that the finalized agreement includes a revised clause regarding HVAC system maintenance. Under the new terms, our department is ------- [132] for routine inspections and basic filter replacements. The building management, however, will remain liable for major equipment structural repairs.\n\nOur legal counsel has reviewed the revised contract draft and confirmed that all terms align with corporate policy. We plan to ------- [133] the contract electronically by Friday afternoon. ------- [134]. Please reach out if you have any questions regarding these updated terms.",
+        "passage_group": "part6_group_131_134"
+      },
+      {
+        "id": 132,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "2. Select the option that best fits blank (132).",
+        "options": {
+          "A": "responsibly",
+          "B": "responsibility",
+          "C": "responsible",
+          "D": "respond"
+        },
+        "correct_answer": "C",
+        "correct_text": "responsible",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Trạng từ 'responsibly' không bổ nghĩa cho động từ liên kết 'is' trong cấu trúc này."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Danh từ 'responsibility' không đi trực tiếp sau 'is' trong cấu trúc be + adj + for."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Tính từ 'responsible' đúng trong cấu trúc 'be responsible for' (chịu trách nhiệm về)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Động từ 'respond' không đứng sau 'is' ở dạng nguyên thể."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "is responsible for",
+            "paraphrases": ["is accountable for", "is in charge of"],
+            "meaning": "chịu trách nhiệm cho / phụ trách"
+          }
+        ],
+        "grammar_point": "Part of Speech / Adjective",
+        "strategy": [
+          "Bước 1: Identify Structure 'is _______ for' - Nhận biết cấu trúc đi với động từ to be và giới từ for.",
+          "Bước 2: Select Adjective 'responsible' - Chọn tính từ 'responsible'.",
+          "Bước 3: Select Option C - Chọn C ('responsible')."
+        ],
+        "passage": "To: All Regional Property Managers\nFrom: Lisa Vance, Senior Director of Real Estate\nDate: October 12, 2026\nSubject: Commercial Lease Renewal — Horizon Tower Suite 403\n\nI am writing to update you on the commercial lease negotiations for our corporate regional office at Horizon Tower. The landlord has formally accepted our proposed lease extension terms. ------- [131], we have secured a reduced annual rental rate for the next three years, which will allow us to allocate more funds toward office facility upgrades.\n\nPlease note that the finalized agreement includes a revised clause regarding HVAC system maintenance. Under the new terms, our department is ------- [132] for routine inspections and basic filter replacements. The building management, however, will remain liable for major equipment structural repairs.\n\nOur legal counsel has reviewed the revised contract draft and confirmed that all terms align with corporate policy. We plan to ------- [133] the contract electronically by Friday afternoon. ------- [134]. Please reach out if you have any questions regarding these updated terms.",
+        "passage_group": "part6_group_131_134"
+      },
+      {
+        "id": 133,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "3. Select the option that best fits blank (133).",
+        "options": {
+          "A": "execution",
+          "B": "executing",
+          "C": "executed",
+          "D": "execute"
+        },
+        "correct_answer": "D",
+        "correct_text": "execute",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Danh từ 'execution' không đứng sau 'plan to' khi có tân ngữ 'the contract' phía sau."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Dạng V-ing 'executing' không đứng sau 'plan to'."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Dạng quá khứ 'executed' không đứng sau 'plan to'."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Động từ nguyên thể 'execute' đúng sau cấu trúc 'plan to'."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "plan to execute the contract",
+            "paraphrases": ["intend to sign the agreement", "aim to finalize contract terms"],
+            "meaning": "dự định ký kết / thực thi hợp đồng"
+          }
+        ],
+        "grammar_point": "Verb Form / Plan to + Bare Verb",
+        "strategy": [
+          "Bước 1: Identify Structure 'plan to' - Nhận biết cấu trúc 'plan to + V-bare'.",
+          "Bước 2: Select Bare Verb 'execute' - Chọn động từ nguyên thể 'execute'.",
+          "Bước 3: Select Option D - Chọn D ('execute')."
+        ],
+        "passage": "To: All Regional Property Managers\nFrom: Lisa Vance, Senior Director of Real Estate\nDate: October 12, 2026\nSubject: Commercial Lease Renewal — Horizon Tower Suite 403\n\nI am writing to update you on the commercial lease negotiations for our corporate regional office at Horizon Tower. The landlord has formally accepted our proposed lease extension terms. ------- [131], we have secured a reduced annual rental rate for the next three years, which will allow us to allocate more funds toward office facility upgrades.\n\nPlease note that the finalized agreement includes a revised clause regarding HVAC system maintenance. Under the new terms, our department is ------- [132] for routine inspections and basic filter replacements. The building management, however, will remain liable for major equipment structural repairs.\n\nOur legal counsel has reviewed the revised contract draft and confirmed that all terms align with corporate policy. We plan to ------- [133] the contract electronically by Friday afternoon. ------- [134]. Please reach out if you have any questions regarding these updated terms.",
+        "passage_group": "part6_group_131_134"
+      },
+      {
+        "id": 134,
+        "type": "sentence_insertion",
+        "part": "Reading - Part 6",
+        "question": "4. Select the option that best fits blank (134).",
+        "options": {
+          "A": "A separate memo regarding residential properties will be issued next month.",
+          "B": "Consequently, the building management team will conduct a final walk-through inspection on Wednesday.",
+          "C": "However, the commercial real estate market has experienced a sharp decline.",
+          "D": "As a result, we must relocate our office to a different city immediately."
+        },
+        "correct_answer": "B",
+        "correct_text": "Consequently, the building management team will conduct a final walk-through inspection on Wednesday.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Bất động sản nhà ở (residential properties) mâu thuẫn với ngữ cảnh văn phòng thương mại Horizon Tower."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Câu B tạo mạch logic nguyên nhân - kết quả hợp lý: kiểm tra mặt bằng thực tế vào thứ Tư trước khi ký hợp đồng vào thứ Sáu."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Thị trường BĐS sụt giảm mâu thuẫn với việc vừa đàm phán thành công gia hạn hợp đồng."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Chuyển sang thành phố khác mâu thuẫn trực tiếp với việc ký gia hạn hợp đồng tại Horizon Tower."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "final walk-through inspection",
+            "paraphrases": ["final site visit", "pre-signing property check"],
+            "meaning": "buổi kiểm tra trực tiếp mặt bằng cuối cùng"
+          }
+        ],
+        "grammar_point": "Sentence Insertion / Logical Sequence",
+        "strategy": [
+          "Bước 1: Read Preceding Sentence - Đọc câu trước: 'Kế hoạch ký hợp đồng điện tử trước chiều thứ Sáu'.",
+          "Bước 2: Match Pre-Signing Action - Tìm bước thực tế diễn ra trước thứ Sáu (kiểm tra mặt bằng vào thứ Tư).",
+          "Bước 3: Select Option B - Chọn B ('Consequently, the building management team...')."
+        ],
+        "passage": "To: All Regional Property Managers\nFrom: Lisa Vance, Senior Director of Real Estate\nDate: October 12, 2026\nSubject: Commercial Lease Renewal — Horizon Tower Suite 403\n\nI am writing to update you on the commercial lease negotiations for our corporate regional office at Horizon Tower. The landlord has formally accepted our proposed lease extension terms. ------- [131], we have secured a reduced annual rental rate for the next three years, which will allow us to allocate more funds toward office facility upgrades.\n\nPlease note that the finalized agreement includes a revised clause regarding HVAC system maintenance. Under the new terms, our department is ------- [132] for routine inspections and basic filter replacements. The building management, however, will remain liable for major equipment structural repairs.\n\nOur legal counsel has reviewed the revised contract draft and confirmed that all terms align with corporate policy. We plan to ------- [133] the contract electronically by Friday afternoon. ------- [134]. Please reach out if you have any questions regarding these updated terms.",
+        "passage_group": "part6_group_131_134"
+      }
+    ]
+  },
+  {
+    "group_id": "part6_group_135_138",
+    "part": "Reading - Part 6",
+    "passage": "FOR IMMEDIATE RELEASE\nApex Media Secures Exclusive Advertising Partnership with LearnPulse EduTech\n\nCHICAGO — October 15, 2026 — Apex Media Corporation today announced that it has entered into an exclusive strategic partnership with LearnPulse EduTech, a leading provider of online vocational training solutions. Under the terms of the agreement, Apex Media will serve as the ------- [135] digital advertising agency for LearnPulse's suite of professional certification programs nationwide.\n\nThrough this collaboration, Apex Media will oversee targeted social media video campaigns and search engine optimization strategies. The joint initiative aims to ------- [136] brand awareness among working professionals seeking career advancement. \"We are thrilled to leverage Apex Media's digital expertise to expand our student enrollment,\" stated Dr. Marcus Chen, Founder of LearnPulse EduTech.\n\nPreliminary campaign testing conducted last month demonstrated a thirty percent increase in course inquiries. ------- [137], both companies have agreed to allocate an additional two hundred thousand dollars to Q4 advertising spending. ------- [138].",
+    "questions": [
+      {
+        "id": 135,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "5. Select the option that best fits blank (135).",
+        "options": {
+          "A": "sole",
+          "B": "solely",
+          "C": "soleness",
+          "D": "solitude"
+        },
+        "correct_answer": "A",
+        "correct_text": "sole",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Tính từ 'sole' đứng trước cụm danh từ 'digital advertising agency' mang nghĩa duy nhất / độc quyền."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Trạng từ 'solely' bổ nghĩa cho động từ, không đứng trước danh từ để bổ nghĩa."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Danh từ 'soleness' không hợp từ loại, không đứng trước danh từ 'agency'."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Danh từ 'solitude' (sự cô đơn) sai nghĩa, không phù hợp ngữ cảnh doanh nghiệp."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "sole digital advertising agency",
+            "paraphrases": ["exclusive digital advertising firm", "only marketing agency"],
+            "meaning": "công ty quảng cáo kỹ thuật số duy nhất / độc quyền"
+          }
+        ],
+        "grammar_point": "Part of Speech / Adjective",
+        "strategy": [
+          "Bước 1: Identify Noun Phrase 'digital advertising agency' - Nhận biết vị trí chỗ trống đứng trước cụm danh từ.",
+          "Bước 2: Select Adjective 'sole' - Chọn tính từ 'sole' (duy nhất).",
+          "Bước 3: Select Option A - Chọn A ('sole')."
+        ],
+        "passage": "FOR IMMEDIATE RELEASE\nApex Media Secures Exclusive Advertising Partnership with LearnPulse EduTech\n\nCHICAGO — October 15, 2026 — Apex Media Corporation today announced that it has entered into an exclusive strategic partnership with LearnPulse EduTech, a leading provider of online vocational training solutions. Under the terms of the agreement, Apex Media will serve as the ------- [135] digital advertising agency for LearnPulse's suite of professional certification programs nationwide.\n\nThrough this collaboration, Apex Media will oversee targeted social media video campaigns and search engine optimization strategies. The joint initiative aims to ------- [136] brand awareness among working professionals seeking career advancement. \"We are thrilled to leverage Apex Media's digital expertise to expand our student enrollment,\" stated Dr. Marcus Chen, Founder of LearnPulse EduTech.\n\nPreliminary campaign testing conducted last month demonstrated a thirty percent increase in course inquiries. ------- [137], both companies have agreed to allocate an additional two hundred thousand dollars to Q4 advertising spending. ------- [138].",
+        "passage_group": "part6_group_135_138"
+      },
+      {
+        "id": 136,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "6. Select the option that best fits blank (136).",
+        "options": {
+          "A": "terminate",
+          "B": "liquidate",
+          "C": "deteriorate",
+          "D": "elevate"
+        },
+        "correct_answer": "D",
+        "correct_text": "elevate",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Động từ 'terminate' (chấm dứt) mâu thuẫn với mục tiêu hợp tác quảng cáo."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Động từ 'liquidate' (thanh lý tài sản) sai nghĩa, không dùng cho 'brand awareness'."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Động từ 'deteriorate' (làm tồi tệ đi) mang nghĩa tiêu cực."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Động từ 'elevate' mang nghĩa nâng cao/thúc đẩy nhận diện thương hiệu, phù hợp với mục tiêu chiến dịch."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "elevate brand awareness",
+            "paraphrases": ["boost brand recognition", "enhance brand visibility"],
+            "meaning": "nâng cao / thúc đẩy nhận diện thương hiệu"
+          }
+        ],
+        "grammar_point": "Verb-Object Collocation",
+        "strategy": [
+          "Bước 1: Identify Object 'brand awareness' - Nhận biết tân ngữ 'brand awareness'.",
+          "Bước 2: Select Positive Verb 'elevate' - Chọn động từ mang nghĩa nâng cao 'elevate'.",
+          "Bước 3: Select Option D - Chọn D ('elevate')."
+        ],
+        "passage": "FOR IMMEDIATE RELEASE\nApex Media Secures Exclusive Advertising Partnership with LearnPulse EduTech\n\nCHICAGO — October 15, 2026 — Apex Media Corporation today announced that it has entered into an exclusive strategic partnership with LearnPulse EduTech, a leading provider of online vocational training solutions. Under the terms of the agreement, Apex Media will serve as the ------- [135] digital advertising agency for LearnPulse's suite of professional certification programs nationwide.\n\nThrough this collaboration, Apex Media will oversee targeted social media video campaigns and search engine optimization strategies. The joint initiative aims to ------- [136] brand awareness among working professionals seeking career advancement. \"We are thrilled to leverage Apex Media's digital expertise to expand our student enrollment,\" stated Dr. Marcus Chen, Founder of LearnPulse EduTech.\n\nPreliminary campaign testing conducted last month demonstrated a thirty percent increase in course inquiries. ------- [137], both companies have agreed to allocate an additional two hundred thousand dollars to Q4 advertising spending. ------- [138].",
+        "passage_group": "part6_group_135_138"
+      },
+      {
+        "id": 137,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "7. Select the option that best fits blank (137).",
+        "options": {
+          "A": "Nevertheless",
+          "B": "In contrast",
+          "C": "Consequently",
+          "D": "Otherwise"
+        },
+        "correct_answer": "C",
+        "correct_text": "Consequently",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Trạng từ 'Nevertheless' (Tuy nhiên) dùng cho quan hệ nhượng bộ, sai quan hệ logic."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Cụm 'In contrast' (Ngược lại) dùng cho tương phản, sai quan hệ logic."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Trạng từ 'Consequently' (Do đó / Vì vậy) diễn tả quan hệ nguyên nhân - kết quả: thử nghiệm thành công → quyết định chi thêm 200.000 USD."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Trạng từ 'Otherwise' (Nếu không thì) dùng cho điều kiện trái ngược, sai quan hệ logic."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "Consequently",
+            "paraphrases": ["as a result", "therefore"],
+            "meaning": "do đó / vì vậy"
+          }
+        ],
+        "grammar_point": "Transition / Cause-Effect",
+        "strategy": [
+          "Bước 1: Analyze Cause '30% increase in inquiries' - Đọc nguyên nhân: thử nghiệm thành công tăng 30% đăng ký.",
+          "Bước 2: Analyze Result 'allocate additional $200,000' - Đọc kết quả: quyết định chi thêm 200.000 USD.",
+          "Bước 3: Select Option C - Chọn C ('Consequently')."
+        ],
+        "passage": "FOR IMMEDIATE RELEASE\nApex Media Secures Exclusive Advertising Partnership with LearnPulse EduTech\n\nCHICAGO — October 15, 2026 — Apex Media Corporation today announced that it has entered into an exclusive strategic partnership with LearnPulse EduTech, a leading provider of online vocational training solutions. Under the terms of the agreement, Apex Media will serve as the ------- [135] digital advertising agency for LearnPulse's suite of professional certification programs nationwide.\n\nThrough this collaboration, Apex Media will oversee targeted social media video campaigns and search engine optimization strategies. The joint initiative aims to ------- [136] brand awareness among working professionals seeking career advancement. \"We are thrilled to leverage Apex Media's digital expertise to expand our student enrollment,\" stated Dr. Marcus Chen, Founder of LearnPulse EduTech.\n\nPreliminary campaign testing conducted last month demonstrated a thirty percent increase in course inquiries. ------- [137], both companies have agreed to allocate an additional two hundred thousand dollars to Q4 advertising spending. ------- [138].",
+        "passage_group": "part6_group_135_138"
+      },
+      {
+        "id": 138,
+        "type": "sentence_insertion",
+        "part": "Reading - Part 6",
+        "question": "8. Select the option that best fits blank (138).",
+        "options": {
+          "A": "However, print magazine advertising remains our primary source of revenue.",
+          "B": "This strategic partnership is expected to expand our digital audience reach significantly over the next year.",
+          "C": "As a result, LearnPulse will discontinue all online vocational training courses.",
+          "D": "The legal dispute between the two firms was settled out of court."
+        },
+        "correct_answer": "B",
+        "correct_text": "This strategic partnership is expected to expand our digital audience reach significantly over the next year.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Báo in (print magazine) mâu thuẫn với trọng tâm quảng cáo kỹ thuật số của toàn bài báo."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Câu B tóm tắt kỳ vọng tăng trưởng tích cực từ hợp tác chiến lược, phù hợp với vị trí cuối thông cáo báo chí."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Hủy bỏ các khóa học mâu thuẫn với việc đang đầu tư mở rộng đăng ký học viên."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Tranh chấp pháp lý sai ngữ cảnh hợp tác vui vẻ của thông cáo báo chí."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "expand digital audience reach",
+            "paraphrases": ["grow online target market", "increase digital user base"],
+            "meaning": "mở rộng quy mô khán giả kỹ thuật số"
+          }
+        ],
+        "grammar_point": "Sentence Insertion / Press Release Conclusion",
+        "strategy": [
+          "Bước 1: Read Context of Press Release Conclusion - Nhận biết vị trí cuối bài thông cáo báo chí sau thông báo chi thêm tiền quảng cáo.",
+          "Bước 2: Match Positive Future Outlook - Tìm câu tổng kết kỳ vọng tích cực cho tương lai của đối tác.",
+          "Bước 3: Select Option B - Chọn B ('This strategic partnership...')."
+        ],
+        "passage": "FOR IMMEDIATE RELEASE\nApex Media Secures Exclusive Advertising Partnership with LearnPulse EduTech\n\nCHICAGO — October 15, 2026 — Apex Media Corporation today announced that it has entered into an exclusive strategic partnership with LearnPulse EduTech, a leading provider of online vocational training solutions. Under the terms of the agreement, Apex Media will serve as the ------- [135] digital advertising agency for LearnPulse's suite of professional certification programs nationwide.\n\nThrough this collaboration, Apex Media will oversee targeted social media video campaigns and search engine optimization strategies. The joint initiative aims to ------- [136] brand awareness among working professionals seeking career advancement. \"We are thrilled to leverage Apex Media's digital expertise to expand our student enrollment,\" stated Dr. Marcus Chen, Founder of LearnPulse EduTech.\n\nPreliminary campaign testing conducted last month demonstrated a thirty percent increase in course inquiries. ------- [137], both companies have agreed to allocate an additional two hundred thousand dollars to Q4 advertising spending. ------- [138].",
+        "passage_group": "part6_group_135_138"
+      }
+    ]
+  },
+  {
+    "group_id": "part6_group_139_142",
+    "part": "Reading - Part 6",
+    "passage": "MEMORANDUM\nTo: All Department Heads and Project Managers\nFrom: Corporate Legal Compliance Division\nDate: October 18, 2026\nSubject: Mandatory Intellectual Property (IP) Compliance Audit\n\nIn light of our upcoming international product expansion, the legal department is conducting a comprehensive audit of all registered trademarks, brand assets, and client contracts. This initiative is designed to ensure strict ------- [139] with global intellectual property regulations and prevent potential infringement liabilities.\n\nAll department heads are required to submit an inventory of current promotional materials and software licenses by November 5. Our in-house legal team will review these filings to verify that all trademark usage aligns ------- [140] with approved corporate branding guidelines.\n\nIf your team requires assistance in classifying proprietary assets, please contact Senior Legal Counsel Sarah Gomez at extension 304. She will be conducting introductory guidance sessions ------- [141] the next two weeks. ------- [142].",
+    "questions": [
+      {
+        "id": 139,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "9. Select the option that best fits blank (139).",
+        "options": {
+          "A": "comply",
+          "B": "compliantly",
+          "C": "compliant",
+          "D": "compliance"
+        },
+        "correct_answer": "D",
+        "correct_text": "compliance",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Động từ 'comply' không đứng sau tính từ 'strict' trong cụm danh từ."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Trạng từ 'compliantly' không làm tân ngữ đứng sau 'strict'."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Tính từ 'compliant' không đứng sau tính từ 'strict' để làm danh từ."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Danh từ 'compliance' đứng sau tính từ 'strict' tạo thành cụm 'strict compliance with'."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "strict compliance with",
+            "paraphrases": ["full adherence to", "rigorous conformity to"],
+            "meaning": "sự tuân thủ nghiêm ngặt đối với"
+          }
+        ],
+        "grammar_point": "Part of Speech / Noun",
+        "strategy": [
+          "Bước 1: Identify Adjective 'strict' - Nhận biết vị trí đứng sau tính từ 'strict'.",
+          "Bước 2: Select Noun 'compliance' - Chọn danh từ 'compliance' ghép thành cụm 'strict compliance with'.",
+          "Bước 3: Select Option D - Chọn D ('compliance')."
+        ],
+        "passage": "MEMORANDUM\nTo: All Department Heads and Project Managers\nFrom: Corporate Legal Compliance Division\nDate: October 18, 2026\nSubject: Mandatory Intellectual Property (IP) Compliance Audit\n\nIn light of our upcoming international product expansion, the legal department is conducting a comprehensive audit of all registered trademarks, brand assets, and client contracts. This initiative is designed to ensure strict ------- [139] with global intellectual property regulations and prevent potential infringement liabilities.\n\nAll department heads are required to submit an inventory of current promotional materials and software licenses by November 5. Our in-house legal team will review these filings to verify that all trademark usage aligns ------- [140] with approved corporate branding guidelines.\n\nIf your team requires assistance in classifying proprietary assets, please contact Senior Legal Counsel Sarah Gomez at extension 304. She will be conducting introductory guidance sessions ------- [141] the next two weeks. ------- [142].",
+        "passage_group": "part6_group_139_142"
+      },
+      {
+        "id": 140,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "10. Select the option that best fits blank (140).",
+        "options": {
+          "A": "precisely",
+          "B": "preciseness",
+          "C": "precise",
+          "D": "precision"
+        },
+        "correct_answer": "A",
+        "correct_text": "precisely",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Trạng từ 'precisely' bổ nghĩa cho động từ 'aligns' (aligns precisely with = khớp một cách chính xác với)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Danh từ 'preciseness' không bổ nghĩa cho động từ 'aligns'."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Tính từ 'precise' không đứng bổ nghĩa cho động từ thường 'aligns'."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Danh từ 'precision' không đứng sau động từ 'aligns' mà thiếu giới từ."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "aligns precisely with",
+            "paraphrases": ["matches exactly with", "conforms strictly to"],
+            "meaning": "khớp một cách chính xác với"
+          }
+        ],
+        "grammar_point": "Adverb",
+        "strategy": [
+          "Bước 1: Identify Verb 'aligns' - Nhận biết động từ 'aligns' cần trạng từ bổ nghĩa.",
+          "Bước 2: Select Adverb 'precisely' - Chọn trạng từ đuôi -ly 'precisely'.",
+          "Bước 3: Select Option A - Chọn A ('precisely')."
+        ],
+        "passage": "MEMORANDUM\nTo: All Department Heads and Project Managers\nFrom: Corporate Legal Compliance Division\nDate: October 18, 2026\nSubject: Mandatory Intellectual Property (IP) Compliance Audit\n\nIn light of our upcoming international product expansion, the legal department is conducting a comprehensive audit of all registered trademarks, brand assets, and client contracts. This initiative is designed to ensure strict ------- [139] with global intellectual property regulations and prevent potential infringement liabilities.\n\nAll department heads are required to submit an inventory of current promotional materials and software licenses by November 5. Our in-house legal team will review these filings to verify that all trademark usage aligns ------- [140] with approved corporate branding guidelines.\n\nIf your team requires assistance in classifying proprietary assets, please contact Senior Legal Counsel Sarah Gomez at extension 304. She will be conducting introductory guidance sessions ------- [141] the next two weeks. ------- [142].",
+        "passage_group": "part6_group_139_142"
+      },
+      {
+        "id": 141,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "11. Select the option that best fits blank (141).",
+        "options": {
+          "A": "despite",
+          "B": "underneath",
+          "C": "throughout",
+          "D": "onto"
+        },
+        "correct_answer": "C",
+        "correct_text": "throughout",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Giới từ 'despite' (mặc dù) là giới từ nhượng bộ, không hợp logic thời gian."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Giới từ 'underneath' (bên dưới) là giới từ vị trí không gian, không dùng cho khoảng thời gian."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Giới từ 'throughout' chỉ khoảng thời gian kéo dài liên tục: trong suốt hai tuần tới."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Giới từ 'onto' (lên trên) là giới từ chỉ hướng chuyển động."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "throughout the next two weeks",
+            "paraphrases": ["over the course of the next two weeks", "during the next two weeks"],
+            "meaning": "trong suốt hai tuần tới"
+          }
+        ],
+        "grammar_point": "Preposition of Time",
+        "strategy": [
+          "Bước 1: Identify Time Span 'the next two weeks' - Nhận biết cụm danh từ chỉ khoảng thời gian hai tuần tới.",
+          "Bước 2: Select Duration Preposition 'throughout' - Chọn giới từ 'throughout'.",
+          "Bước 3: Select Option C - Chọn C ('throughout')."
+        ],
+        "passage": "MEMORANDUM\nTo: All Department Heads and Project Managers\nFrom: Corporate Legal Compliance Division\nDate: October 18, 2026\nSubject: Mandatory Intellectual Property (IP) Compliance Audit\n\nIn light of our upcoming international product expansion, the legal department is conducting a comprehensive audit of all registered trademarks, brand assets, and client contracts. This initiative is designed to ensure strict ------- [139] with global intellectual property regulations and prevent potential infringement liabilities.\n\nAll department heads are required to submit an inventory of current promotional materials and software licenses by November 5. Our in-house legal team will review these filings to verify that all trademark usage aligns ------- [140] with approved corporate branding guidelines.\n\nIf your team requires assistance in classifying proprietary assets, please contact Senior Legal Counsel Sarah Gomez at extension 304. She will be conducting introductory guidance sessions ------- [141] the next two weeks. ------- [142].",
+        "passage_group": "part6_group_139_142"
+      },
+      {
+        "id": 142,
+        "type": "sentence_insertion",
+        "part": "Reading - Part 6",
+        "question": "12. Select the option that best fits blank (142).",
+        "options": {
+          "A": "As a result, the legal department will relocate to a new office building downtown.",
+          "B": "Failure to submit the required documentation by the deadline may result in project approval delays.",
+          "C": "All employees are encouraged to enroll in the digital marketing course.",
+          "D": "The trademark application was officially rejected by the court clerk."
+        },
+        "correct_answer": "B",
+        "correct_text": "Failure to submit the required documentation by the deadline may result in project approval delays.",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Chuyển văn phòng sang khu trung tâm mâu thuẫn với nội dung kiểm toán IP."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Câu B cảnh báo hậu quả trễ hạn nộp tài liệu kiểm toán, phù hợp với phong cách memo pháp chế."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Đăng ký khóa học marketing không đúng với memo phòng pháp chế."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Tòa án bác bỏ ứng tuyển nhãn hiệu mâu thuẫn với rà soát kiểm toán nội bộ."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "Failure to submit by deadline",
+            "paraphrases": ["late filing causes approval delays", "missing deadline delays project approval"],
+            "meaning": "việc không nộp đúng hạn sẽ gây chậm trễ phê duyệt"
+          }
+        ],
+        "grammar_point": "Sentence Insertion / Compliance Warning",
+        "strategy": [
+          "Bước 1: Read Memo Context on Deadline - Nhận biết đoạn văn yêu cầu nộp kiểm toán tài sản trí tuệ trước ngày 5/11.",
+          "Bước 2: Match Compliance Warning Sentence - Tìm câu cảnh báo chế tài nếu trễ hạn nộp.",
+          "Bước 3: Select Option B - Chọn B ('Failure to submit...')."
+        ],
+        "passage": "MEMORANDUM\nTo: All Department Heads and Project Managers\nFrom: Corporate Legal Compliance Division\nDate: October 18, 2026\nSubject: Mandatory Intellectual Property (IP) Compliance Audit\n\nIn light of our upcoming international product expansion, the legal department is conducting a comprehensive audit of all registered trademarks, brand assets, and client contracts. This initiative is designed to ensure strict ------- [139] with global intellectual property regulations and prevent potential infringement liabilities.\n\nAll department heads are required to submit an inventory of current promotional materials and software licenses by November 5. Our in-house legal team will review these filings to verify that all trademark usage aligns ------- [140] with approved corporate branding guidelines.\n\nIf your team requires assistance in classifying proprietary assets, please contact Senior Legal Counsel Sarah Gomez at extension 304. She will be conducting introductory guidance sessions ------- [141] the next two weeks. ------- [142].",
+        "passage_group": "part6_group_139_142"
+      }
+    ]
+  },
+  {
+    "group_id": "part6_group_143_146",
+    "part": "Reading - Part 6",
+    "passage": "ANNOUNCEMENT\nScheduled Cloud Infrastructure Upgrade — LearnPulse Learning Portal\n\nLearnPulse EduTech wishes to inform all registered students and corporate clients that we will be executing a major upgrade to our cloud server cluster on Saturday, October 24. This system enhancement is designed to ------- [143] server capacity and ensure seamless access during upcoming final examination periods.\n\nThe maintenance team will begin the system migration at 11:00 P.M. CST on Saturday and expects to conclude all technical operations by 4:00 A.M. CST on Sunday. During this period, automated load-balancing software will be installed, and database protocols will be ------- [144] updated.\n\nWe apologize for any inconvenience this temporary service interruption may cause. ------- [145], our IT helpdesk will remain available via email to address urgent technical inquiries. ------- [146]. Thank you for your cooperation as we work to improve your digital learning experience.",
+    "questions": [
+      {
+        "id": 143,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "13. Select the option that best fits blank (143).",
+        "options": {
+          "A": "expansive",
+          "B": "expanded",
+          "C": "expansion",
+          "D": "expand"
+        },
+        "correct_answer": "D",
+        "correct_text": "expand",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Tính từ 'expansive' không đứng sau 'designed to'."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Dạng V-ed 'expanded' không đứng sau 'designed to'."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Danh từ 'expansion' không đứng trực tiếp sau 'designed to' khi có tân ngữ 'server capacity' phía sau."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Động từ nguyên thể 'expand' đúng sau cấu trúc 'designed to'."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "expand server capacity",
+            "paraphrases": ["increase server bandwidth", "grow server infrastructure"],
+            "meaning": "mở rộng dung lượng máy chủ"
+          }
+        ],
+        "grammar_point": "Verb Form / Designed to + Bare Verb",
+        "strategy": [
+          "Bước 1: Identify Structure 'designed to' - Nhận biết cấu trúc 'designed to + V-bare'.",
+          "Bước 2: Select Bare Verb 'expand' - Chọn động từ nguyên thể 'expand'.",
+          "Bước 3: Select Option D - Chọn D ('expand')."
+        ],
+        "passage": "ANNOUNCEMENT\nScheduled Cloud Infrastructure Upgrade — LearnPulse Learning Portal\n\nLearnPulse EduTech wishes to inform all registered students and corporate clients that we will be executing a major upgrade to our cloud server cluster on Saturday, October 24. This system enhancement is designed to ------- [143] server capacity and ensure seamless access during upcoming final examination periods.\n\nThe maintenance team will begin the system migration at 11:00 P.M. CST on Saturday and expects to conclude all technical operations by 4:00 A.M. CST on Sunday. During this period, automated load-balancing software will be installed, and database protocols will be ------- [144] updated.\n\nWe apologize for any inconvenience this temporary service interruption may cause. ------- [145], our IT helpdesk will remain available via email to address urgent technical inquiries. ------- [146]. Thank you for your cooperation as we work to improve your digital learning experience.",
+        "passage_group": "part6_group_143_146"
+      },
+      {
+        "id": 144,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "14. Select the option that best fits blank (144).",
+        "options": {
+          "A": "fullness",
+          "B": "full",
+          "C": "fully",
+          "D": "fulled"
+        },
+        "correct_answer": "C",
+        "correct_text": "fully",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Danh từ 'fullness' không đứng giữa 'will be' và 'updated'."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Tính từ 'full' không bổ nghĩa cho động từ 'updated'."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Trạng từ 'fully' bổ nghĩa cho động từ 'updated' trong cấu trúc bị động."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "'Fulled' không phải từ loại chuẩn trong ngữ cảnh này."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "fully updated",
+            "paraphrases": ["completely updated", "thoroughly revised"],
+            "meaning": "được cập nhật một cách đầy đủ / hoàn toàn"
+          }
+        ],
+        "grammar_point": "Adverb",
+        "strategy": [
+          "Bước 1: Identify Auxiliary and Participle - Nhận biết vị trí giữa 'will be' và 'updated'.",
+          "Bước 2: Select Adverb 'fully' - Chọn trạng từ đuôi -ly 'fully'.",
+          "Bước 3: Select Option C - Chọn C ('fully')."
+        ],
+        "passage": "ANNOUNCEMENT\nScheduled Cloud Infrastructure Upgrade — LearnPulse Learning Portal\n\nLearnPulse EduTech wishes to inform all registered students and corporate clients that we will be executing a major upgrade to our cloud server cluster on Saturday, October 24. This system enhancement is designed to ------- [143] server capacity and ensure seamless access during upcoming final examination periods.\n\nThe maintenance team will begin the system migration at 11:00 P.M. CST on Saturday and expects to conclude all technical operations by 4:00 A.M. CST on Sunday. During this period, automated load-balancing software will be installed, and database protocols will be ------- [144] updated.\n\nWe apologize for any inconvenience this temporary service interruption may cause. ------- [145], our IT helpdesk will remain available via email to address urgent technical inquiries. ------- [146]. Thank you for your cooperation as we work to improve your digital learning experience.",
+        "passage_group": "part6_group_143_146"
+      },
+      {
+        "id": 145,
+        "type": "incomplete_sentence",
+        "part": "Reading - Part 6",
+        "question": "15. Select the option that best fits blank (145).",
+        "options": {
+          "A": "Otherwise",
+          "B": "Furthermore",
+          "C": "Nevertheless",
+          "D": "In contrast"
+        },
+        "correct_answer": "B",
+        "correct_text": "Furthermore",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Trạng từ 'Otherwise' (Nếu không thì) dùng cho điều kiện trái ngược, sai quan hệ logic."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Trạng từ 'Furthermore' (Hơn thế nữa / Ngoài ra) dùng bổ sung thông tin hỗ trợ IT trong khi nâng cấp hệ thống."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Trạng từ 'Nevertheless' (Tuy nhiên) dùng cho đối lập/nhượng bộ, sai quan hệ logic."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Cụm 'In contrast' (Ngược lại) dùng cho đối lập, sai quan hệ logic."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "Furthermore",
+            "paraphrases": ["in addition", "moreover"],
+            "meaning": "hơn thế nữa / ngoài ra"
+          }
+        ],
+        "grammar_point": "Transition / Addition",
+        "strategy": [
+          "Bước 1: Read Surrounding Context - Đọc câu trước xin lỗi vì gián đoạn và câu sau thông báo hỗ trợ IT.",
+          "Bước 2: Identify Addition Relation - Xác định quan hệ bổ sung thông tin hỗ trợ → chọn 'Furthermore'.",
+          "Bước 3: Select Option B - Chọn B ('Furthermore')."
+        ],
+        "passage": "ANNOUNCEMENT\nScheduled Cloud Infrastructure Upgrade — LearnPulse Learning Portal\n\nLearnPulse EduTech wishes to inform all registered students and corporate clients that we will be executing a major upgrade to our cloud server cluster on Saturday, October 24. This system enhancement is designed to ------- [143] server capacity and ensure seamless access during upcoming final examination periods.\n\nThe maintenance team will begin the system migration at 11:00 P.M. CST on Saturday and expects to conclude all technical operations by 4:00 A.M. CST on Sunday. During this period, automated load-balancing software will be installed, and database protocols will be ------- [144] updated.\n\nWe apologize for any inconvenience this temporary service interruption may cause. ------- [145], our IT helpdesk will remain available via email to address urgent technical inquiries. ------- [146]. Thank you for your cooperation as we work to improve your digital learning experience.",
+        "passage_group": "part6_group_143_146"
+      },
+      {
+        "id": 146,
+        "type": "sentence_insertion",
+        "part": "Reading - Part 6",
+        "question": "16. Select the option that best fits blank (146).",
+        "options": {
+          "A": "During this scheduled maintenance window, online course registration will be temporarily unavailable.",
+          "B": "Consequently, all enrolled students will receive a full tuition refund.",
+          "C": "The new media production studio will open next month.",
+          "D": "As a result, final examination dates have been postponed until next year."
+        },
+        "correct_answer": "A",
+        "correct_text": "During this scheduled maintenance window, online course registration will be temporarily unavailable.",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Câu A thông báo dịch vụ tạm ngưng trong thời gian bảo trì, phù hợp với ngữ cảnh khung giờ bảo trì 5 tiếng."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Hoàn tiền học phí mâu thuẫn với việc bảo trì máy chủ ban đêm kéo dài 5 tiếng."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Khai trương studio truyền thông mâu thuẫn ngữ cảnh nâng cấp máy chủ EduTech."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Hoãn thi sang năm sau mâu thuẫn với việc bảo trì để chuẩn bị cho kỳ thi sắp tới."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "maintenance window",
+            "paraphrases": ["service interruption period", "scheduled upgrade window"],
+            "meaning": "khung thời gian bảo trì theo lịch"
+          }
+        ],
+        "grammar_point": "Sentence Insertion / Service Interruption Notice",
+        "strategy": [
+          "Bước 1: Read Maintenance Context - Nhận biết ngữ cảnh thông báo khung thời gian bảo trì từ 11h đêm tới 4h sáng.",
+          "Bước 2: Match Service Availability Detail - Tìm câu thông báo dịch vụ tạm ngưng tương ứng.",
+          "Bước 3: Select Option A - Chọn A ('During this scheduled maintenance window...')."
+        ],
+        "passage": "ANNOUNCEMENT\nScheduled Cloud Infrastructure Upgrade — LearnPulse Learning Portal\n\nLearnPulse EduTech wishes to inform all registered students and corporate clients that we will be executing a major upgrade to our cloud server cluster on Saturday, October 24. This system enhancement is designed to ------- [143] server capacity and ensure seamless access during upcoming final examination periods.\n\nThe maintenance team will begin the system migration at 11:00 P.M. CST on Saturday and expects to conclude all technical operations by 4:00 A.M. CST on Sunday. During this period, automated load-balancing software will be installed, and database protocols will be ------- [144] updated.\n\nWe apologize for any inconvenience this temporary service interruption may cause. ------- [145], our IT helpdesk will remain available via email to address urgent technical inquiries. ------- [146]. Thank you for your cooperation as we work to improve your digital learning experience.",
+        "passage_group": "part6_group_143_146"
+      }
+    ]
+  }
+]

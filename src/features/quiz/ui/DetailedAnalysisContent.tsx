@@ -27,7 +27,7 @@ function parseDetailed(content: string): ParsedSection[] {
             return { key, ok, text }
           }
           // fallback: A: reason
-          const m2 = line.match(/^([A-F])\s*[:\-]\s*(.*)$/)
+          const m2 = line.match(/^([A-F])\s*[:-]\s*(.*)$/)
           if (m2) return { key: m2[1], ok: false, text: m2[2] }
           return null
         })
@@ -41,7 +41,7 @@ function parseDetailed(content: string): ParsedSection[] {
       const lines = body.split("\n").map((l) => l.trim()).filter(Boolean)
       const vocab = lines.map((line) => {
         // - carefully review: meaning (paraphrases)
-        const m = line.match(/^-\s*([^:]+):\s*([^\(]+)(?:\(([^\)]+)\))?\s*$/)
+        const m = line.match(/^-\s*([^:]+):\s*([^(]+)(?:\(([^)]+)\))?\s*$/)
         if (m) {
           return { phrase: m[1].trim(), meaning: m[2].trim(), paraphrases: m[3]?.trim() }
         }

@@ -1,6 +1,5 @@
-import { useEffect, useId, useState } from "react"
 import { X } from "lucide-react"
-import { Card } from "@/components/ui/card"
+import { Dialog } from "@/components/ui/dialog"
 import { contactCopy as copy } from "@/shared/i18n"
 
 export type ContactModalType = "Contribute" | "Support"
@@ -13,62 +12,15 @@ type ContactModalProps = {
 }
 
 export function ContactModal({ open, type, onClose, lang = "vi" }: ContactModalProps) {
-  const titleId = useId()
-  const [visible, setVisible] = useState(false)
-  const [state, setState] = useState<"open" | "closed">("closed")
   const t = copy[lang]
-
-  useEffect(() => {
-    if (open) {
-      setVisible(true)
-      setState("open")
-      return
-    }
-    if (!visible) return
-    setState("closed")
-    const timer = window.setTimeout(() => setVisible(false), 180)
-    return () => window.clearTimeout(timer)
-  }, [open, visible])
-
-  useEffect(() => {
-    if (!open) return
-    const previousOverflow = document.body.style.overflow
-    document.body.style.overflow = "hidden"
-    const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") onClose()
-    }
-    window.addEventListener("keydown", onKeyDown)
-    return () => {
-      document.body.style.overflow = previousOverflow
-      window.removeEventListener("keydown", onKeyDown)
-    }
-  }, [open, onClose])
-
-  if (!visible || !type) return null
+  if (!type) return null
 
   const heading = type === "Contribute" ? t.contributeTitle : t.supportTitle
 
   return (
-    <div className="fixed inset-0 z-[80] flex items-center justify-center p-4">
-      <button
-        type="button"
-        aria-label={t.closeModal}
-        data-state={state}
-        className="contact-modal-overlay absolute inset-0 bg-[rgba(16,15,62,0.45)] backdrop-blur-[2px]"
-        onClick={onClose}
-      />
-
-      <Card
-        variant="large"
-        padding="none"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby={titleId}
-        data-state={state}
-        className="contact-modal-panel relative z-10 flex max-h-[85vh] w-full max-w-[520px] flex-col overflow-hidden shadow-[var(--shadow-3)]"
-      >
+    <Dialog open={open} onClose={onClose} title={heading} closeLabel={t.closeModal} panelClassName="flex max-h-[85vh] w-full max-w-[520px] flex-col overflow-hidden rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[var(--shadow-3)] dark:border-white/10 dark:bg-slate-900">
         <div className="flex items-center justify-between gap-3 border-b border-slate-200 px-5 py-3.5 dark:border-white/10">
-          <h2 id={titleId} className="lp-modal-title text-[17px]">
+          <h2 className="lp-modal-title text-[17px]">
             {heading}
           </h2>
           <button type="button" className="lp-btn lp-btn--secondary lp-btn--icon h-8 w-8" onClick={onClose} aria-label={t.close}>
@@ -109,7 +61,6 @@ export function ContactModal({ open, type, onClose, lang = "vi" }: ContactModalP
             )}
           </div>
         </div>
-      </Card>
-    </div>
+    </Dialog>
   )
 }

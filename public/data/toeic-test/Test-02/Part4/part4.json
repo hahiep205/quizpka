@@ -1,0 +1,1512 @@
+[
+  {
+    "group": 1,
+    "audio": "p4_g01_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Why is the speaker calling?",
+        "options": {
+          "A": "To process a refund request.",
+          "B": "To report a change in delivery time.",
+          "C": "To confirm a hotel reservation.",
+          "D": "To request a price quotation."
+        },
+        "correct_answer": "B",
+        "correct_text": "To report a change in delivery time.",
+        "audio_transcript": "\"I'm calling regarding your order... delivery was originally scheduled for Wednesday... shipment is now scheduled to arrive... Thursday\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Cuộc gọi liên quan đến thời gian giao hàng, không có nội dung hoàn trả chi phí."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng mục đích thông báo đổi lịch giao hàng ('report a change in delivery time')."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Nội dung cuộc gọi thuộc ngành vận tải Logistics, không liên quan đến ngành nhà hàng - khách sạn."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Đơn hàng đã được đặt xong, người gọi chỉ cập nhật lịch giao."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "change in delivery time",
+            "paraphrases": ["rescheduled shipment arrival", "delivery date update"],
+            "meaning": "thay đổi thời gian / ngày giao hàng"
+          },
+          {
+            "phrase": "originally scheduled for",
+            "paraphrases": ["previously planned for"],
+            "meaning": "ban đầu được lên lịch vào"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Call Purpose Statement - Lắng nghe lý do gọi điện ngay trong 1-2 câu thoại đầu tiên ('I'm calling regarding...').",
+          "Bước 2: Identify Schedule Change Keywords - Bắt từ chỉ sự thay đổi lịch trình 'originally scheduled... now scheduled'.",
+          "Bước 3: Match Delivery Update Option - Chọn phương án B."
+        ]
+      },
+      {
+        "id": 2,
+        "question": "What caused the delay?",
+        "options": {
+          "A": "Severe weather conditions.",
+          "B": "Incorrect shipping address.",
+          "C": "A vehicle mechanical issue.",
+          "D": "Out-of-stock items."
+        },
+        "correct_answer": "C",
+        "correct_text": "A vehicle mechanical issue.",
+        "audio_transcript": "\"...our transport truck experienced a minor mechanical delay.\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Thời tiết là lý do hoãn chuyến phổ biến nhưng không được nhắc tới."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Địa chỉ giao hàng downtown vẫn chính xác."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng sự cố kỹ thuật của xe cộ ('transport truck experienced a minor mechanical delay')."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Hàng tủ máy chủ đã sẵn sàng trên xe vận chuyển."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "mechanical delay",
+            "paraphrases": ["vehicle mechanical issue", "truck breakdown"],
+            "meaning": "sự cố kỹ thuật của phương tiện"
+          },
+          {
+            "phrase": "transport truck",
+            "paraphrases": ["delivery vehicle"],
+            "meaning": "xe tải vận chuyển"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Cause Keyword 'Delay' - Lắng nghe từ chìa khóa chỉ lý do hoãn giao hàng 'experienced a delay'.",
+          "Bước 2: Capture Technical Term 'Mechanical' - Bắt chính xác thuật ngữ kỹ thuật 'mechanical delay'.",
+          "Bước 3: Match Vehicle Issue Option - Chọn phương án C."
+        ]
+      },
+      {
+        "id": 3,
+        "question": "What is the listener asked to do?",
+        "options": {
+          "A": "Sign for packages at the loading dock.",
+          "B": "Pay the remaining balance online.",
+          "C": "Send an email to the supervisor.",
+          "D": "Return damaged goods."
+        },
+        "correct_answer": "A",
+        "correct_text": "Sign for packages at the loading dock.",
+        "audio_transcript": "\"Please ensure that someone is available at the loading dock to sign for the packages.\"",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng yêu cầu ký nhận hàng tại khu vực bãi bốc dỡ ('available at the loading dock to sign for the packages')."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Đơn hàng không yêu cầu thanh toán bổ sung qua mạng."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Người gọi chỉ nhắc gọi lại qua số máy lẻ nếu có thắc mắc."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Hàng hóa chưa giao tới nơi, không có việc trả lại hàng bị hỏng."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "sign for the packages",
+            "paraphrases": ["provide signature upon receipt", "sign delivery slip"],
+            "meaning": "ký nhận các kiện hàng"
+          },
+          {
+            "phrase": "loading dock",
+            "paraphrases": ["receiving bay", "unloading zone"],
+            "meaning": "bãi / khu vực bốc dỡ hàng"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Imperative Request Phrase - Lắng nghe câu yêu cầu lịch sự ở cuối tin nhắn thoại 'Please ensure...'",
+          "Bước 2: Identify Action Pair 'Loading Dock / Sign' - Bắt cụm hành động 'loading dock... sign for the packages'.",
+          "Bước 3: Match Signature Option - Chọn đáp án A."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 2,
+    "audio": "p4_g02_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 4,
+        "question": "Where is the announcement being made?",
+        "options": {
+          "A": "In a commercial bank.",
+          "B": "In a BioTech research laboratory.",
+          "C": "At a hotel conference hall.",
+          "D": "In a solar manufacturing plant."
+        },
+        "correct_answer": "D",
+        "correct_text": "In a solar manufacturing plant.",
+        "audio_transcript": "\"technicians on Assembly Line B... robotic soldering units\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Thuật ngữ dây chuyền lắp ráp không xuất hiện trong ngân hàng."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Dù có thiết bị công nghệ nhưng từ chìa khóa 'Assembly Line' chỉ thuộc nhà máy."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Địa điểm là môi trường sản xuất công nghiệp, không phải hội trường khách sạn."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng môi trường nhà máy sản xuất ('Assembly Line B', 'robotic soldering units')."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "Assembly Line",
+            "paraphrases": ["manufacturing plant", "production line"],
+            "meaning": "dây chuyền sản xuất / lắp ráp"
+          },
+          {
+            "phrase": "robotic soldering units",
+            "paraphrases": ["automated welding equipment"],
+            "meaning": "bộ phận máy hàn robot tự động"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Speaker Greeting & Location Clues - Lắng nghe các danh từ chỉ khu vực công nghiệp ngay câu mở đầu thông báo.",
+          "Bước 2: Capture Industrial Terms - Bắt cụm 'Assembly Line B' và 'robotic soldering units'.",
+          "Bước 3: Match Manufacturing Plant Option - Chọn phương án D."
+        ]
+      },
+      {
+        "id": 5,
+        "question": "Why will Section 3 be powered down?",
+        "options": {
+          "A": "To replace worn conveyor belts.",
+          "B": "To conduct emergency maintenance on soldering units.",
+          "C": "To install new solar panels.",
+          "D": "To reduce energy consumption."
+        },
+        "correct_answer": "B",
+        "correct_text": "To conduct emergency maintenance on soldering units.",
+        "audio_transcript": "\"powered down in fifteen minutes for emergency preventative maintenance... in the robotic soldering units\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Băng tải không phải nguyên nhân khiến hệ thống ngắt điện."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng nguyên nhân bảo trì khẩn cấp các bộ phận hàn ('emergency preventative maintenance... in the robotic soldering units')."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Không có thông tin về việc lắp đặt thêm tấm pin mới."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Ngắt điện là do sự cố nhiệt độ của máy hàn, không phải chiến dịch tiết kiệm năng lượng."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "emergency preventative maintenance",
+            "paraphrases": ["urgent equipment servicing", "emergency repairs"],
+            "meaning": "bảo trì phòng ngừa khẩn cấp"
+          },
+          {
+            "phrase": "temperature fluctuation",
+            "paraphrases": ["unstable temperature reading"],
+            "meaning": "biến động / dao động nhiệt độ"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Downtime Reason Preposition - Lắng nghe cụm chỉ mục đích đi sau 'powered down... for...'",
+          "Bước 2: Capture Maintenance Phrase - Bắt cụm 'emergency preventative maintenance'.",
+          "Bước 3: Match Emergency Servicing Option - Chọn đáp án B."
+        ]
+      },
+      {
+        "id": 6,
+        "question": "What are workers instructed to do during the downtime?",
+        "options": {
+          "A": "Clean their workstations.",
+          "B": "Attend a team briefing.",
+          "C": "Watch a safety orientation video.",
+          "D": "Inspect finished products."
+        },
+        "correct_answer": "C",
+        "correct_text": "Watch a safety orientation video.",
+        "audio_transcript": "\"report to the break room for our monthly safety orientation video\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Công nhân không được giao nhiệm vụ vệ sinh góc làm việc."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Không có cuộc họp thảo luận công việc nào diễn ra."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng nhiệm vụ tập trung xem video hướng dẫn an toàn ('report to the break room for our monthly safety orientation video')."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Toàn bộ dây chuyền tạm dừng hoạt động, công nhân di chuyển khỏi khu vực sản xuất."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "safety orientation video",
+            "paraphrases": ["safety instructional video", "safety training recording"],
+            "meaning": "video hướng dẫn an toàn lao động"
+          },
+          {
+            "phrase": "report to the break room",
+            "paraphrases": ["gather in the staff room"],
+            "meaning": "tập trung tại phòng nghỉ nhân viên"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Instruction During Downtime - Lắng nghe chỉ thị ở cuối bài thông báo đi kèm mốc thời gian 'During this period'.",
+          "Bước 2: Capture Video Title - Bắt từ khóa 'safety orientation video'.",
+          "Bước 3: Match Safety Video Option - Chọn phương án C."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 3,
+    "audio": "p4_g03_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 7,
+        "question": "What is the main topic of the presentation?",
+        "options": {
+          "A": "A new medical diagnostic software platform.",
+          "B": "Construction plans for a new hospital.",
+          "C": "A financial report on medical insurance.",
+          "D": "A training course for lab technicians."
+        },
+        "correct_answer": "A",
+        "correct_text": "A new medical diagnostic software platform.",
+        "audio_transcript": "\"present OmniHealth's latest AI-driven diagnostic software platform, MediScan 4.0\"",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng chủ đề giới thiệu phần mềm chẩn đoán y tế mới ('latest AI-driven diagnostic software platform')."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Bài thuyết trình hợp tác với các mạng lưới bệnh viện để thử nghiệm phần mềm, không phải xây bệnh viện."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Không đề cập tới báo cáo tài chính hay các gói bảo hiểm."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Đây là buổi ra mắt sản phẩm công nghệ y tế, không phải khóa học."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "AI-driven diagnostic software platform",
+            "paraphrases": ["medical diagnostic software", "AI healthcare application"],
+            "meaning": "nền tảng phần mềm chẩn đoán y tế ứng dụng AI"
+          },
+          {
+            "phrase": "present latest product",
+            "paraphrases": ["introduce new platform"],
+            "meaning": "thuyết trình / giới thiệu sản phẩm mới nhất"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Opening Product Announcement - Lắng nghe câu giới thiệu chủ đề ngay sau lời chào mở đầu 'present... latest platform'.",
+          "Bước 2: Capture Key Domain Words 'Diagnostic Software' - Bắt cụm từ chìa khóa 'diagnostic software platform'.",
+          "Bước 3: Match Medical Software Option - Chọn đáp án A."
+        ]
+      },
+      {
+        "id": 8,
+        "question": "What result did the software achieve during clinical testing?",
+        "options": {
+          "A": "It reduced overall treatment costs.",
+          "B": "It automated patient scheduling.",
+          "C": "It expanded hospital capacity.",
+          "D": "It reduced processing times by 35%."
+        },
+        "correct_answer": "D",
+        "correct_text": "It reduced processing times by 35%.",
+        "audio_transcript": "\"reduced diagnostic processing times by thirty-five percent\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Chỉ số thu được là rút ngắn thời gian xử lý, không phải chi phí điều trị."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Phần mềm chuyên về chẩn đoán hình ảnh/bệnh lý, không phải quản lý lịch khám."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Quy mô thử nghiệm gồm 10 bệnh viện nhưng không có dữ liệu mở rộng dung tích."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng chỉ số rút ngắn 35% thời gian xử lý ('reduced diagnostic processing times by thirty-five percent')."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "reduced processing times by 35%",
+            "paraphrases": ["shortened diagnostic duration by 35%", "35% faster analysis"],
+            "meaning": "giảm 35% thời gian xử lý chẩn đoán"
+          },
+          {
+            "phrase": "accuracy rate",
+            "paraphrases": ["precision level"],
+            "meaning": "tỷ lệ chính xác"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Test Result Metrics - Lắng nghe các dữ liệu số liệu kết quả đi sau cụm 'I'm proud to report...'",
+          "Bước 2: Capture Percentage Figure '35%' - Bắt con số phần trăm 'thirty-five percent' gắn liền với 'reduced processing times'.",
+          "Bước 3: Match Processing Time Option - Chọn phương án D."
+        ]
+      },
+      {
+        "id": 9,
+        "question": "What will happen next month?",
+        "options": {
+          "A": "A new hospital network will be built.",
+          "B": "The software will be rolled out nationwide.",
+          "C": "The development team will hire new engineers.",
+          "D": "A clinical trial will be cancelled."
+        },
+        "correct_answer": "B",
+        "correct_text": "The software will be rolled out nationwide.",
+        "audio_transcript": "\"Next month, we will begin rolling out the software to all affiliated healthcare providers across the nation\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Phần mềm được phân phối tới mạng lưới có sẵn, không phải xây thêm bệnh viện."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng kế hoạch triển khai phần mềm trên phạm vi toàn quốc ('begin rolling out the software... across the nation')."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Đội ngũ phát triển đã hoàn tất giai đoạn sản xuất và thử nghiệm."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Thử nghiệm lâm sàng đã thành công rực rỡ, không bị hủy."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "rolling out across the nation",
+            "paraphrases": ["rolled out nationwide", "deploy countrywide"],
+            "meaning": "triển khai rộng rãi trên toàn quốc"
+          },
+          {
+            "phrase": "affiliated healthcare providers",
+            "paraphrases": ["partner medical institutions"],
+            "meaning": "các cơ sở / đối tác y tế liên kết"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Future Time Anchor 'Next Month' - Lắng nghe mốc thời gian tương lai 'Next month' ở câu kết bài.",
+          "Bước 2: Capture Rollout Phrase - Bắt cụm động từ 'begin rolling out... across the nation'.",
+          "Bước 3: Match Nationwide Deployment Option - Chọn đáp án B."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 4,
+    "audio": "p4_g04_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 10,
+        "question": "What event is taking place?",
+        "options": {
+          "A": "A press conference for a resort opening.",
+          "B": "A shareholder meeting for a hotel chain.",
+          "C": "An annual hospitality award ceremony.",
+          "D": "A retirement dinner for a chef."
+        },
+        "correct_answer": "C",
+        "correct_text": "An annual hospitality award ceremony.",
+        "audio_transcript": "\"present tonight's Annual Hospitality Excellence Award\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Resort đã đi vào hoạt động và đang nhận giải thưởng."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Đây là đêm tiệc vinh danh trang trọng, không phải họp cổ đông."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng sự kiện lễ trao giải thưởng ngành khách sạn hàng năm ('Annual Hospitality Excellence Award')."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Sự kiện trao giải cho tổng quản lý resort về thành tích du lịch bền vững."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "Annual Hospitality Excellence Award",
+            "paraphrases": ["hospitality award ceremony", "yearly industry award event"],
+            "meaning": "lễ trao giải thưởng xuất sắc ngành khách sạn hàng năm"
+          },
+          {
+            "phrase": "present award",
+            "paraphrases": ["confer recognition", "grant award"],
+            "meaning": "trao / vinh danh giải thưởng"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Event Name in Opening - Lắng nghe tên sự kiện chính ngay trong lời chào mở đầu của người nói.",
+          "Bước 2: Capture Award Keyphrase - Bắt chính xác cụm 'Annual Hospitality Excellence Award'.",
+          "Bước 3: Match Award Ceremony Option - Chọn phương án C."
+        ]
+      },
+      {
+        "id": 11,
+        "question": "Why is Nexus Palm Resort being recognized?",
+        "options": {
+          "A": "For offering the lowest room rates.",
+          "B": "For hosting the largest conference event.",
+          "C": "For expanding into new international markets.",
+          "D": "For setting a benchmark in sustainable tourism."
+        },
+        "correct_answer": "D",
+        "correct_text": "For setting a benchmark in sustainable tourism.",
+        "audio_transcript": "\"Nexus Palm Resort, has set a new benchmark for sustainable tourism.\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Giải thưởng tôn vinh tính bền vững bảo vệ môi trường, không phải giá thành rẻ."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Sự kiện được vinh danh là chính sách bảo vệ môi trường, không phải quy mô hội nghị."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Không đề cập tới việc mở rộng chuỗi khách sạn ra nước ngoài."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng lý do tạo chuẩn mực trong du lịch bền vững ('set a new benchmark for sustainable tourism')."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "benchmark for sustainable tourism",
+            "paraphrases": ["excellence in eco-friendly hospitality", "green tourism standard"],
+            "meaning": "chuẩn mực trong du lịch bền vững"
+          },
+          {
+            "phrase": "recipient of award",
+            "paraphrases": ["award winner", "honored organization"],
+            "meaning": "đơn vị / tổ chức nhận giải thưởng"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Recognition Cause - Lắng nghe cụm từ chỉ lý do nhận giải đi sau tên tổ chức 'recipient... has set...'.",
+          "Bước 2: Capture Keyphrase 'Sustainable Tourism' - Bắt cụm từ chìa khóa 'sustainable tourism'.",
+          "Bước 3: Match Green Standard Option - Chọn phương án D."
+        ]
+      },
+      {
+        "id": 12,
+        "question": "What is Elena Rostova invited to do?",
+        "options": {
+          "A": "Accept the award on stage.",
+          "B": "Give a keynote presentation.",
+          "C": "Lead a guided tour.",
+          "D": "Announce next year's nominees."
+        },
+        "correct_answer": "A",
+        "correct_text": "Accept the award on stage.",
+        "audio_transcript": "\"Please join me in giving a warm round of applause to Elena Rostova as she comes to the stage to accept this award!\"",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng hành động bước lên sân khấu nhận giải ('comes to the stage to accept this award')."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Bà Elena lên sân khấu để nhận giải thưởng chứ không trình bày bài thuyết trình chính."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Hoạt động diễn ra trong hội trường đêm trao giải, không phải chuyến tham quan thực địa."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Người nói chính là người trao giải, bà Elena là đại diện bên nhận giải."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "come to the stage to accept this award",
+            "paraphrases": ["receive award on stage", "accept trophy on stage"],
+            "meaning": "bước lên sân khấu ký / nhận giải thưởng"
+          },
+          {
+            "phrase": "warm round of applause",
+            "paraphrases": ["enthusiastic applause", "big hand"],
+            "meaning": "tràng pháo tay nồng nhiệt"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Invitation at Speech Closing - Lắng nghe câu mời nhân vật chính lên sân khấu ở cuối bài phát biểu ('join me in...').",
+          "Bước 2: Capture Action Pair 'Stage / Accept Award' - Bắt cụm hành động 'comes to the stage to accept this award'.",
+          "Bước 3: Match Receive Award Option - Chọn phương án A."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 5,
+    "audio": "p4_g05_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 13,
+        "question": "What is the main purpose of the message?",
+        "options": {
+          "A": "To report a server security breach.",
+          "B": "To update the time for server maintenance.",
+          "C": "To approve a department budget.",
+          "D": "To hire a new system administrator."
+        },
+        "correct_answer": "B",
+        "correct_text": "To update the time for server maintenance.",
+        "audio_transcript": "\"I'm calling to update you regarding the scheduled maintenance for our core banking servers.\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Đây là hoạt động bảo trì định kỳ, không phải sự cố bảo mật bị xâm nhập."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng mục đích cập nhật thời gian bảo trì máy chủ ('update the time for server maintenance')."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Nội dung cuộc gọi hoàn toàn thuộc phòng Kỹ thuật hạ tầng IT, không thảo luận ngân sách."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Không đề cập tới hoạt động tuyển dụng nhân sự mới."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "update scheduled maintenance",
+            "paraphrases": ["inform about maintenance time change", "revise downtime schedule"],
+            "meaning": "cập nhật lịch bảo trì hệ thống"
+          },
+          {
+            "phrase": "core banking servers",
+            "paraphrases": ["main banking system servers"],
+            "meaning": "hệ thống máy chủ ngân hàng cốt lõi"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Call Objective in Opening - Lắng nghe mục đích cuộc gọi ngay câu mở đầu 'I'm calling to update you regarding...'",
+          "Bước 2: Capture Domain Terms 'Server Maintenance' - Bắt cụm từ 'scheduled maintenance for core banking servers'.",
+          "Bước 3: Match Maintenance Update Option - Chọn đáp án B."
+        ]
+      },
+      {
+        "id": 14,
+        "question": "When will the maintenance actually take place?",
+        "options": {
+          "A": "Thursday at 9:00 A.M.",
+          "B": "Thursday at 1:00 P.M.",
+          "C": "Friday at 9:00 A.M.",
+          "D": "Friday at 1:00 P.M."
+        },
+        "correct_answer": "D",
+        "correct_text": "Friday at 1:00 P.M.",
+        "audio_transcript": "\"Oh, wait, let me check the revised schedule on the intranet... No, I apologize, I misread the update — the maintenance has actually been moved to Friday afternoon at one P.M. instead\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Thứ Năm 9:00 A.M. là mốc thời gian cũ bị đọc nhầm trước khi người nói nói 'Oh wait... I misread'."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Mốc 1:00 P.M. thuộc ngày thứ Sáu, không phải thứ Năm."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Khung giờ sáng 9:00 A.M. thuộc mốc cũ đã bị hủy bỏ."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng mốc thời gian chính xác đã được đính chính ('moved to Friday afternoon at one P.M.')."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "moved to Friday afternoon at one P.M.",
+            "paraphrases": ["rescheduled to Friday at 1:00 P.M.", "Friday 1 PM downtime"],
+            "meaning": "được chuyển sang 1 giờ chiều thứ Sáu"
+          },
+          {
+            "phrase": "misread the update",
+            "paraphrases": ["made a mistake reading schedule"],
+            "meaning": "đọc nhầm thông tin cập nhật"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Self-Correction Indicators - Chú ý tín hiệu tự sửa thông tin 'Oh wait... No, I apologize, I misread...'.",
+          "Bước 2: Filter Out Initial Distractor Time - Loại bỏ ngay mốc thời gian xuất hiện trước cụm từ đính chính (Thursday 9 AM).",
+          "Bước 3: Match Corrected Time Option - Chọn phương án D."
+        ]
+      },
+      {
+        "id": 15,
+        "question": "What should the customer support team do today?",
+        "options": {
+          "A": "Post a downtime notice on the online portal.",
+          "B": "Call all bank clients directly.",
+          "C": "Issue refunds for service fees.",
+          "D": "Shut down the online banking app."
+        },
+        "correct_answer": "A",
+        "correct_text": "Post a downtime notice on the online portal.",
+        "audio_transcript": "\"Please make sure the customer support team posts a notice about the Friday downtime on our online portal today.\"",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng nhiệm vụ đăng thông báo ngắt hệ thống lên portal trực tuyến ('posts a notice... on our online portal')."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Thông báo được phát trên website/portal, không phải gọi điện cho từng khách hàng."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Không có chính sách hoàn tiền phí được đề cập."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Hệ thống chỉ tạm ngừng hoạt động vào 1 giờ chiều thứ Sáu tuần tới."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "posts a notice on online portal",
+            "paraphrases": ["publish website announcement", "post portal alert"],
+            "meaning": "đăng thông báo lên cổng thông tin trực tuyến"
+          },
+          {
+            "phrase": "Friday downtime",
+            "paraphrases": ["Friday system outage", "Friday maintenance period"],
+            "meaning": "thời gian ngắt hệ thống vào thứ Sáu"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Support Team Assignment - Lắng nghe cụm từ chỉ nhiệm vụ của 'customer support team' ở câu chốt.",
+          "Bước 2: Capture Action 'Posts a Notice' - Bắt cụm động từ 'posts a notice... on our online portal'.",
+          "Bước 3: Match Portal Notice Option - Chọn phương án A."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 6,
+    "audio": "p4_g06_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 16,
+        "question": "What is the radio report mainly about?",
+        "options": {
+          "A": "The launch of a new radio station.",
+          "B": "The decline of online shopping websites.",
+          "C": "The growth of mobile contactless payments.",
+          "D": "Changes in credit card interest rates."
+        },
+        "correct_answer": "C",
+        "correct_text": "The growth of mobile contactless payments.",
+        "audio_transcript": "\"mobile contactless payments have grown by sixty percent in the e-commerce sector\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "WNX Radio là đài phát thanh hiện tại đang phát sóng bản tin thường lệ."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Thương mại điện tử đang chứng kiến sự tăng trưởng mạnh mẽ của ví điện tử."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng chủ đề sự tăng trưởng của thanh toán di động không tiếp xúc ('mobile contactless payments have grown by sixty percent')."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Thẻ tín dụng chỉ được nhắc tới như phương thức thanh toán truyền thống đang bị thay thế."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "growth of mobile contactless payments",
+            "paraphrases": ["rise in digital wallet adoption", "expansion of contactless payment"],
+            "meaning": "sự tăng trưởng của thanh toán di động không tiếp xúc"
+          },
+          {
+            "phrase": "e-commerce sector",
+            "paraphrases": ["online shopping market"],
+            "meaning": "ngành / lĩnh vực thương mại điện tử"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to News Report Lead Sentence - Lắng nghe chủ đề chính ngay câu đầu tiên của bản tin đài phát thanh.",
+          "Bước 2: Capture Key Metric Phrase - Bắt cụm từ 'mobile contactless payments have grown'.",
+          "Bước 3: Match Payment Growth Option - Chọn phương án C."
+        ]
+      },
+      {
+        "id": 17,
+        "question": "According to the speaker, why do consumers prefer digital wallets?",
+        "options": {
+          "A": "They feature biometric security and faster checkout.",
+          "B": "They have lower transaction fees.",
+          "C": "They offer cash-back rewards.",
+          "D": "They work without an internet connection."
+        },
+        "correct_answer": "A",
+        "correct_text": "They feature biometric security and faster checkout.",
+        "audio_transcript": "\"due to enhanced biometric security and faster checkout speeds\"",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng lý do bảo mật sinh trắc học và tốc độ thanh toán nhanh ('enhanced biometric security and faster checkout speeds')."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Phí giao dịch không phải nguyên nhân chính được liệt kê trong khảo sát."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Không đề cập tới chính sách hoàn tiền trong bài nói."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Ví điện tử thanh toán online vẫn yêu cầu kết nối mạng."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "biometric security and faster checkout",
+            "paraphrases": ["enhanced security and speed", "fingerprint authentication & quick payment"],
+            "meaning": "bảo mật sinh trắc học và thanh toán nhanh"
+          },
+          {
+            "phrase": "favoring digital wallets",
+            "paraphrases": ["preferring mobile payment apps"],
+            "meaning": "ưa chuộng / ưu tiên sử dụng ví điện tử"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Reason Preposition 'Due To' - Lắng nghe cụm từ chỉ nguyên nhân đi sau 'due to...'",
+          "Bước 2: Capture Key Advantage Words - Bắt cụm từ 'enhanced biometric security and faster checkout speeds'.",
+          "Bước 3: Match Security & Speed Option - Chọn phương án A."
+        ]
+      },
+      {
+        "id": 18,
+        "question": "Who will be interviewed after the commercial break?",
+        "options": {
+          "A": "A financial regulator.",
+          "B": "A small business owner.",
+          "C": "A Chief Technology Officer.",
+          "D": "A radio show host."
+        },
+        "correct_answer": "C",
+        "correct_text": "A Chief Technology Officer.",
+        "audio_transcript": "\"Marcus Vance, Chief Technology Officer at Nexus Financial\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Marcus Vance là lãnh đạo công nghệ doanh nghiệp, không phải thanh tra chính phủ."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Doanh nghiệp nhỏ là đối tượng hướng tới của chủ đề thảo luận, không phải chức danh khách mời."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng chức danh Giám đốc Công nghệ ('Chief Technology Officer')."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Người dẫn chương trình là người đưa ra lời giới thiệu khách mời."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "Chief Technology Officer",
+            "paraphrases": ["CTO", "head of technology"],
+            "meaning": "Giám đốc Công nghệ"
+          },
+          {
+            "phrase": "joining us after commercial break",
+            "paraphrases": ["upcoming guest interviewee"],
+            "meaning": "khách mời tham gia sau quảng cáo"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Guest Introduction at Teaser - Lắng nghe tên và chức danh khách mời ở lời dẫn dắt kết bài ('Joining us after...').",
+          "Bước 2: Capture Job Title 'Chief Technology Officer' - Bắt chính xác chức danh 'Chief Technology Officer'.",
+          "Bước 3: Match CTO Option - Chọn đáp án C."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 7,
+    "audio": "p4_g07_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 19,
+        "question": "What department is the speaker addressing?",
+        "options": {
+          "A": "The accounting team.",
+          "B": "The operations and management team.",
+          "C": "The legal advisory team.",
+          "D": "The customer service call center."
+        },
+        "correct_answer": "B",
+        "correct_text": "The operations and management team.",
+        "audio_transcript": "\"attending this quarterly operational review... field operations team\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Buổi họp tập trung vào nhân lực kỹ thuật field operations, không thảo luận sổ sách kế toán."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng đối tượng người nghe là đội ngũ vận hành và quản lý ('quarterly operational review... field operations team')."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Không đề cập tới các vấn đề tranh chấp pháp lý hay hợp đồng."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Nội dung họp bàn về kỹ thuật viên bảo trì lưới điện mặt trời thực địa."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "quarterly operational review",
+            "paraphrases": ["operations and management review", "quarterly operations meeting"],
+            "meaning": "cuộc họp đánh giá vận hành hàng quý"
+          },
+          {
+            "phrase": "field operations team",
+            "paraphrases": ["on-site maintenance management"],
+            "meaning": "đội ngũ vận hành thực địa"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Meeting Audience Welcome - Lắng nghe tên cuộc họp và đối tượng tham dự ngay lời chào mở đầu.",
+          "Bước 2: Capture Words 'Operational / Operations' - Bắt từ 'operational review' và 'field operations team'.",
+          "Bước 3: Match Operations Team Option - Chọn phương án B."
+        ]
+      },
+      {
+        "id": 20,
+        "question": "What does the speaker imply when he says, \"Only three technicians are currently assigned to the regional solar grid\"?",
+        "options": {
+          "A": "The technicians are highly efficient.",
+          "B": "The company is overstaffed in the region.",
+          "C": "Solar installation demand has decreased.",
+          "D": "Additional technicians need to be hired urgently."
+        },
+        "correct_answer": "D",
+        "correct_text": "Additional technicians need to be hired urgently.",
+        "audio_transcript": "\"Only three technicians are currently assigned to the regional solar grid. To ensure we meet our maintenance response guarantees, we must accelerate our recruitment campaign\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Câu nói mang sắc thái lo lắng về rủi ro vỡ cam kết bảo trì, không phải khen ngợi năng suất."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Con số 3 kỹ thuật viên thể hiện sự thiếu hụt nhân lực trầm trọng."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Công ty đang mở rộng quy mô lắp đặt ('expand solar panel installations'), nhu cầu tăng cao."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng ngụ ý cần tuyển gấp bổ sung kỹ thuật viên ('accelerate our recruitment campaign... onboard additional certified technicians')."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "only three technicians assigned",
+            "paraphrases": ["severe shortage of technical staff", "understaffed grid operation"],
+            "meaning": "chỉ có duy nhất 3 kỹ thuật viên được phân công (thiếu nhân lực nghiêm trọng)"
+          },
+          {
+            "phrase": "accelerate recruitment campaign",
+            "paraphrases": ["urgently hire more technicians"],
+            "meaning": "đẩy nhanh chiến dịch tuyển dụng"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Locate Quote in Audio - Xác định vị trí câu trích dẫn 'Only three technicians...'.",
+          "Bước 2: Analyze Context & Following Resolution - Lắng nghe câu giải pháp tiếp theo 'we must accelerate our recruitment campaign'.",
+          "Bước 3: Infer Urgent Hiring Need - Suy luận ra ngụ ý cần tuyển người gấp và chọn đáp án D."
+        ]
+      },
+      {
+        "id": 21,
+        "question": "What action does the speaker recommend?",
+        "options": {
+          "A": "Accelerating a recruitment campaign.",
+          "B": "Reducing solar panel prices.",
+          "C": "Closing non-performing regional offices.",
+          "D": "Purchasing new service vehicles."
+        },
+        "correct_answer": "A",
+        "correct_text": "Accelerating a recruitment campaign.",
+        "audio_transcript": "\"accelerate our recruitment campaign and onboard additional certified technicians\"",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng hành động đẩy nhanh tuyển dụng ('accelerate our recruitment campaign')."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Giải pháp tập trung giải quyết vấn đề nhân sự, không giảm giá thiết bị."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Công ty đang mở rộng khu vực phục vụ, không đóng cửa chi nhánh."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Không đề cập tới mua sắm phương tiện giao thông."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "accelerate recruitment campaign",
+            "paraphrases": ["speed up hiring process", "expedite talent acquisition"],
+            "meaning": "đẩy nhanh chiến dịch tuyển dụng"
+          },
+          {
+            "phrase": "onboard additional technicians",
+            "paraphrases": ["hire more technical staff"],
+            "meaning": "tuyển thêm kỹ thuật viên"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Recommendation at Conclusion - Lắng nghe câu giải pháp ở cuối bài nói ('To ensure... we must...').",
+          "Bước 2: Capture Action 'Accelerate Recruitment' - Bắt cụm từ 'accelerate our recruitment campaign'.",
+          "Bước 3: Match Hiring Option - Chọn phương án A."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 8,
+    "audio": "p4_g08_audio.mp3",
+    "image": "p4_g08_image.png",
+    "questions": [
+      {
+        "id": 22,
+        "question": "Who is the speaker addressing?",
+        "options": {
+          "A": "New resort employees.",
+          "B": "Conference guests.",
+          "C": "Local tour guides.",
+          "D": "Construction contractors."
+        },
+        "correct_answer": "B",
+        "correct_text": "Conference guests.",
+        "audio_transcript": "\"distinguished guests... planned for you during this week's conference\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Thông báo dành cho khách lưu trú dự hội nghị ('distinguished guests... conference')."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng đối tượng người nghe là khách dự hội nghị ('conference guests')."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Người nghe là người trực tiếp tham gia lịch trình sự kiện hội nghị."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Không đề cập tới đối tượng công nhân hay nhà thầu."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "conference guests",
+            "paraphrases": ["event attendees", "convention delegates"],
+            "meaning": "khách tham dự hội nghị"
+          },
+          {
+            "phrase": "distinguished guests",
+            "paraphrases": ["honored visitors"],
+            "meaning": "quý khách quý"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Opening Audience Greeting - Lắng nghe từ ngữ xưng hô mở đầu 'Welcome... distinguished guests!'.",
+          "Bước 2: Capture Context 'This Week's Conference' - Bắt cụm từ 'during this week's conference'.",
+          "Bước 3: Match Attendees Option - Chọn phương án B."
+        ]
+      },
+      {
+        "id": 23,
+        "question": "Look at the graphic. On which day is the announcement being made?",
+        "options": {
+          "A": "Monday",
+          "B": "Tuesday",
+          "C": "Wednesday",
+          "D": "Thursday"
+        },
+        "correct_answer": "C",
+        "correct_text": "Wednesday",
+        "audio_transcript": "\"The Executive Networking Luncheon originally scheduled for the Oceanview Pavilion has been moved indoors... (Graphic: Wednesday)\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Thứ Hai diễn ra Sunset Cocktail Reception."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Thứ Ba diễn ra Beachfront Yoga & Wellness Class."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng ngày thứ Tư (Executive Networking Luncheon nằm trên ô Wednesday trong bảng biểu)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Thứ Năm diễn ra Sustainable Tourism Guest Workshop."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "Executive Networking Luncheon",
+            "paraphrases": ["business networking lunch"],
+            "meaning": "tiệc trưa kết nối doanh nghiệp"
+          },
+          {
+            "phrase": "today's schedule",
+            "paraphrases": ["current day event"],
+            "meaning": "lịch trình ngày hôm nay"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Identify Graphic Keyphrase in Audio - Nghe thấy cụm từ 'today's schedule... Executive Networking Luncheon'.",
+          "Bước 2: Cross-Reference Event Name on Graphic - Dóng tên sự kiện Executive Networking Luncheon sang cột thứ trong bảng biểu.",
+          "Bước 3: Select Matched Day 'Wednesday' - Chọn đáp án C (Wednesday)."
+        ]
+      },
+      {
+        "id": 24,
+        "question": "What are listeners required to present at the entrance?",
+        "options": {
+          "A": "A printed meal voucher.",
+          "B": "A photo identification card.",
+          "C": "A room key card.",
+          "D": "A conference badge."
+        },
+        "correct_answer": "D",
+        "correct_text": "A conference badge.",
+        "audio_transcript": "\"Please make sure to present your conference badge at the entrance for admission.\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Thẻ hội nghị dùng chung cho cả sự kiện, không cần trình phiếu ăn rời."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Hội nghị yêu cầu thẻ hội nghị riêng do BTC cấp."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Thẻ từ phòng chỉ dùng mở cửa phòng nghỉ, không có giá trị vào cửa hội nghị."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng vật phẩm yêu cầu trình tại cửa vào ('present your conference badge at the entrance')."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "present conference badge at entrance",
+            "paraphrases": ["show event identification pass", "display badge for entry"],
+            "meaning": "xuất trình thẻ hội nghị tại lối vào"
+          },
+          {
+            "phrase": "for admission",
+            "paraphrases": ["to gain entrance", "to enter hall"],
+            "meaning": "để được vào cửa"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Entrance Requirement Directive - Lắng nghe chỉ thị ở câu kết 'Please make sure to present...'.",
+          "Bước 2: Capture Required Item 'Conference Badge' - Bắt cụm từ 'conference badge at the entrance'.",
+          "Bước 3: Match Badge Option - Chọn phương án D."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 9,
+    "audio": "p4_g09_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 25,
+        "question": "What is the main purpose of the talk?",
+        "options": {
+          "A": "To conduct a safety orientation for new employees.",
+          "B": "To present new research findings.",
+          "C": "To interview candidates for a research role.",
+          "D": "To demonstrate a new laboratory machine."
+        },
+        "correct_answer": "A",
+        "correct_text": "To conduct a safety orientation for new employees.",
+        "audio_transcript": "\"welcome to your first day as research associates... leading your safety orientation today\"",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng mục đích hướng dẫn an toàn cho nhân viên mới ('conduct a safety orientation for new employees')."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Đây là buổi định hướng nhập môn an toàn, không phải hội thảo khoa học."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Người nghe đã trúng tuyển và đang trong ngày làm việc đầu tiên ('first day as research associates')."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Buổi định hướng bao quát quy trình an toàn phòng lab cấp độ 3."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "safety orientation for first day",
+            "paraphrases": ["onboarding safety orientation", "new staff safety briefing"],
+            "meaning": "hướng dẫn an toàn cho nhân viên mới"
+          },
+          {
+            "phrase": "research associates",
+            "paraphrases": ["new research staff", "junior scientists"],
+            "meaning": "cộng sự / nhân viên nghiên cứu"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Talk Purpose in Introduction - Lắng nghe mục đích ngay lời chào mở đầu 'welcome to your first day... leading your safety orientation'.",
+          "Bước 2: Capture Onboarding Safety Terms - Bắt cụm từ 'first day... safety orientation'.",
+          "Bước 3: Match Safety Orientation Option - Chọn đáp án A."
+        ]
+      },
+      {
+        "id": 26,
+        "question": "What must workers do before entering cleanroom areas?",
+        "options": {
+          "A": "Wash glassware in the sink.",
+          "B": "Calibrate laboratory equipment.",
+          "C": "Put on full protective lab suits and gear.",
+          "D": "Sign a confidentiality agreement."
+        },
+        "correct_answer": "C",
+        "correct_text": "Put on full protective lab suits and gear.",
+        "audio_transcript": "\"Before you enter the cleanroom areas, you must store all personal belongings in your assigned lockers and put on full protective lab suits, including disposable gloves and safety goggles.\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Rửa dụng cụ là công việc trong thí nghiệm, không phải điều kiện tiên quyết trước khi vào phòng sạch."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Hiệu chuẩn máy móc diễn ra sau khi đã trang bị bảo hộ đầy đủ."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng trang bị trang phục bảo hộ phòng lab đầy đủ ('put on full protective lab suits, including disposable gloves and safety goggles')."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Thỏa thuận bảo mật được ký ở phòng HR trước khi vào khu kỹ thuật."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "put on full protective lab suits",
+            "paraphrases": ["wear full protective gear", "don lab suits and goggles"],
+            "meaning": "mặc quần áo và trang bị bảo hộ phòng lab đầy đủ"
+          },
+          {
+            "phrase": "cleanroom areas",
+            "paraphrases": ["sterile lab zones"],
+            "meaning": "khu vực phòng sạch vô trùng"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Pre-Entry Requirement Condition - Lắng nghe điều kiện đi sau 'Before you enter the cleanroom areas...'.",
+          "Bước 2: Capture Protective Clothing List - Bắt danh mục 'put on full protective lab suits, gloves and safety goggles'.",
+          "Bước 3: Match Protective Gear Option - Chọn phương án C."
+        ]
+      },
+      {
+        "id": 27,
+        "question": "Where will the listeners go next?",
+        "options": {
+          "A": "To the main cafeteria.",
+          "B": "To the outdoor testing facility.",
+          "C": "To the executive boardroom.",
+          "D": "To the locker room."
+        },
+        "correct_answer": "D",
+        "correct_text": "To the locker room.",
+        "audio_transcript": "\"Now, please follow me to the locker room to receive your security access badges.\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Nhà ăn không phải điểm dừng chân trong quy trình định hướng an toàn phòng lab."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Phòng lab BioTech là cơ sở làm việc trong nhà."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Phòng họp hội đồng dành cho ban quản trị, không phải điểm cấp thẻ."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng điểm đến tiếp theo là phòng cất đồ ('follow me to the locker room')."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "follow me to the locker room",
+            "paraphrases": ["proceed to the locker room", "head to storage lockers"],
+            "meaning": "đi theo tôi đến phòng thay/cất đồ"
+          },
+          {
+            "phrase": "security access badges",
+            "paraphrases": ["entry authorization badges"],
+            "meaning": "thẻ truy cập an ninh"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Next Destination Directive - Lắng nghe câu hướng dẫn di chuyển ở kết bài 'Now, please follow me to...'.",
+          "Bước 2: Capture Destination Term 'Locker Room' - Bắt từ 'locker room'.",
+          "Bước 3: Match Locker Room Option - Chọn phương án D."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 10,
+    "audio": "p4_g10_audio.mp3",
+    "image": "p4_g10_image.png",
+    "questions": [
+      {
+        "id": 28,
+        "question": "Who is the intended audience for the announcement?",
+        "options": {
+          "A": "E-commerce online store merchants.",
+          "B": "Truck drivers.",
+          "C": "Retail store shoppers.",
+          "D": "Warehouse construction workers."
+        },
+        "correct_answer": "A",
+        "correct_text": "E-commerce online store merchants.",
+        "audio_transcript": "\"Attention all online store merchants using Nexus Logistics fulfillment!\"",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng đối tượng người nghe là thương nhân bán hàng online ('online store merchants')."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Tài xế vận chuyển là bộ phận vận hành nội bộ, không phải đối tượng trả phí vận chuyển."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Khách mua lẻ là khách hàng của merchants, không trực tiếp ký hợp đồng với đơn vị fulfillment."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Không phải thông báo nội bộ cho nhân viên kho."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "online store merchants",
+            "paraphrases": ["e-commerce sellers", "digital store owners"],
+            "meaning": "thương nhân / người bán hàng online"
+          },
+          {
+            "phrase": "fulfillment services",
+            "paraphrases": ["order processing and shipping"],
+            "meaning": "dịch vụ hoàn tất đơn hàng và vận chuyển"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Direct Audience Address - Lắng nghe lời xướng danh ngay đầu thông báo 'Attention all...'.",
+          "Bước 2: Capture Target Phrase 'Online Store Merchants' - Bắt cụm từ 'online store merchants'.",
+          "Bước 3: Match E-Commerce Sellers Option - Chọn đáp án A."
+        ]
+      },
+      {
+        "id": 29,
+        "question": "Look at the graphic. Which shipping tier will cost $12.99?",
+        "options": {
+          "A": "Tier 1",
+          "B": "Tier 2",
+          "C": "Tier 3",
+          "D": "Tier 4"
+        },
+        "correct_answer": "B",
+        "correct_text": "Tier 2",
+        "audio_transcript": "\"our most popular option — the Two-Day Express delivery tier — will now be priced at twelve dollars and ninety-nine cents per package. (Graphic: Tier 2)\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Tier 1 là gói Standard Ground có giá $5.99."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng gói Tier 2 (Two-Day Express tương ứng với $12.99 trên bảng biểu)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Tier 3 là gói Overnight Priority có giá $24.99."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Tier 4 là gói Same-Day Courier có giá $39.99."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "Two-Day Express delivery tier",
+            "paraphrases": ["2-day shipping option"],
+            "meaning": "gói giao hàng hỏa tốc 2 ngày"
+          },
+          {
+            "phrase": "priced at $12.99",
+            "paraphrases": ["costs twelve ninety-nine"],
+            "meaning": "có mức giá 12.99 đô la"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Capture Service Name & Price Pair in Audio - Nghe thấy 'Two-Day Express... twelve dollars and ninety-nine cents'.",
+          "Bước 2: Cross-Reference Price / Service on Graphic - Dóng tên Two-Day Express ($12.99) sang bảng biểu xem thuộc Tier mấy.",
+          "Bước 3: Select Matched Tier 'Tier 2' - Chọn phương án B (Tier 2)."
+        ]
+      },
+      {
+        "id": 30,
+        "question": "How can merchants qualify for a 15% discount?",
+        "options": {
+          "A": "By signing a two-year contract.",
+          "B": "By paying with a Nexus credit card.",
+          "C": "By processing over 500 orders monthly.",
+          "D": "By picking up packages at the warehouse."
+        },
+        "correct_answer": "C",
+        "correct_text": "By processing over 500 orders monthly.",
+        "audio_transcript": "\"merchants who process more than five hundred orders monthly will continue to receive a fifteen percent volume discount\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Mức chiết khấu căn cứ theo sản lượng đơn hàng hàng tháng, không yêu cầu cam kết hợp đồng 2 năm."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Không đề cập tới chương trình ưu đãi thanh toán bằng thẻ."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng điều kiện xử lý trên 500 đơn hàng mỗi tháng ('process more than five hundred orders monthly')."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Nexus Logistics là đơn vị giao hàng tận nơi cho khách."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "process more than 500 orders monthly",
+            "paraphrases": ["exceed 500 monthly order threshold", "ship over 500 packages per month"],
+            "meaning": "xử lý hơn 500 đơn hàng mỗi tháng"
+          },
+          {
+            "phrase": "fifteen percent volume discount",
+            "paraphrases": ["15% bulk shipping discount"],
+            "meaning": "chiết khấu 15% theo sản lượng"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Discount Qualification Condition - Lắng nghe điều kiện để nhận 'fifteen percent volume discount' ở câu chốt.",
+          "Bước 2: Capture Numerical Threshold '500 Orders' - Bắt con số chỉ điều kiện 'process more than five hundred orders monthly'.",
+          "Bước 3: Match 500 Orders Option - Chọn đáp án C."
+        ]
+      }
+    ]
+  }
+]

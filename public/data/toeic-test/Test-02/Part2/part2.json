@@ -1,0 +1,1147 @@
+[
+  {
+    "id": 7,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q007.mp3",
+    "question": "Where is the annual e-commerce convention being held this year?",
+    "options": {
+      "A": "At the Nexus International Center in Chicago.",
+      "B": "Yes, it's held every November.",
+      "C": "I attended the conference last week."
+    },
+    "correct_answer": "A",
+    "correct_text": "At the Nexus International Center in Chicago.",
+    "audio_transcript": "Where is the annual e-commerce convention being held this year? -> At the Nexus International Center in Chicago.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng thông tin địa điểm (Nexus International Center in Chicago) cho câu hỏi Where."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Yes/No đối với câu hỏi WH- và nhầm thông tin thời gian. Lưu ý bẫy: Câu hỏi WH- không bao giờ trả lời bằng Yes/No. 'Every November' trả lời cho câu hỏi When."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Lặp từ và nhầm thì thời gian. Lưu ý bẫy: Lặp từ 'conference' nhưng nói về hành động đã tham dự tuần trước (last week) thay vì địa điểm tổ chức."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "annual convention",
+        "paraphrases": ["yearly conference", "annual summit"],
+        "meaning": "hội nghị hàng năm"
+      },
+      {
+        "phrase": "held",
+        "paraphrases": ["hosted", "organized"],
+        "meaning": "được tổ chức"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Question Intent - Nhận diện từ hỏi Where (ở đâu) để chủ động chờ đợi thông tin địa điểm.",
+      "Bước 2: Eliminate Yes/No - Loại bỏ phương án này vì các phương án bắt đầu bằng Yes/No khi gặp câu hỏi WH-.",
+      "Bước 3: Verify Preposition Phrase - Ưu tiên chọn cụm giới từ chỉ nơi chốn (At/In/On + Venue)."
+    ]
+  },
+  {
+    "id": 8,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q008.mp3",
+    "question": "When will the new online payment gateway be launched?",
+    "options": {
+      "A": "Payments can be processed by credit card.",
+      "B": "Over ten thousand active accounts.",
+      "C": "The IT manager just emailed the updated timeline."
+    },
+    "correct_answer": "C",
+    "correct_text": "The IT manager just emailed the updated timeline.",
+    "audio_transcript": "When will the new online payment gateway be launched? -> The IT manager just emailed the updated timeline.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Từ vựng liên quan chủ đề thanh toán. Lưu ý bẫy: 'Payments by credit card' trả lời cho câu hỏi phương thức (How), không trả lời mốc thời gian."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Thông tin số lượng. Lưu ý bẫy: 'Over ten thousand accounts' trả lời cho câu hỏi số lượng (How many), không trả lời mốc thời gian."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Phản hồi gián tiếp hợp lý chỉ ra nơi kiểm tra lịch trình (emailed the updated timeline)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "payment gateway",
+        "paraphrases": ["online checkout system"],
+        "meaning": "cổng thanh toán trực tuyến"
+      },
+      {
+        "phrase": "launch",
+        "paraphrases": ["release", "roll out"],
+        "meaning": "ra mắt / phát hành"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Question Intent - Nhận diện từ hỏi When (khi nào) để tìm thông tin mốc thời gian.",
+      "Bước 2: Expect Indirect Responses - Nếu không có đáp án chứa thời gian cụ thể, tìm câu chỉ ra nơi cập nhật lịch trình (emailed the timeline).",
+      "Bước 3: Avoid Topic Traps - Không chọn phương án chỉ vì có từ vựng liên quan đến chủ đề (payments/credit card)."
+    ]
+  },
+  {
+    "id": 9,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q009.mp3",
+    "question": "Who is responsible for reviewing the BioTech research proposals?",
+    "options": {
+      "A": "In the third-floor laboratory.",
+      "B": "Dr. Vance's team is handling all evaluations.",
+      "C": "Yes, the proposal was approved yesterday."
+    },
+    "correct_answer": "B",
+    "correct_text": "Dr. Vance's team is handling all evaluations.",
+    "audio_transcript": "Who is responsible for reviewing the BioTech research proposals? -> Dr. Vance's team is handling all evaluations.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Thông tin địa điểm phòng thí nghiệm. Lưu ý bẫy: 'In the third-floor laboratory' trả lời cho câu hỏi Where, không trả lời Who."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng tên nhóm phụ trách (Dr. Vance's team) và paraphrase 'handling all evaluations'."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Yes đối với câu hỏi WH- và lặp từ proposal. Lưu ý bẫy: Câu hỏi WH- không dùng Yes. 'Approved yesterday' không trả lời câu hỏi Who."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "be responsible for",
+        "paraphrases": ["be in charge of", "handle"],
+        "meaning": "chịu trách nhiệm / đảm nhận"
+      },
+      {
+        "phrase": "review",
+        "paraphrases": ["evaluate", "assess"],
+        "meaning": "xem xét / đánh giá"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Question Intent - Nhận diện từ hỏi Who (ai) để tìm danh tính cá nhân hoặc đội nhóm phụ trách.",
+      "Bước 2: Recognize Paraphrase - Nhận diện cụm 'is handling' tương đương với 'is responsible for'.",
+      "Bước 3: Reject Location Traps - Loại bỏ phương án này vì phương án chứa vị trí địa điểm (third-floor laboratory)."
+    ]
+  },
+  {
+    "id": 10,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q010.mp3",
+    "question": "What document do I need to submit for travel expense reimbursement?",
+    "options": {
+      "A": "The itemized receipts from your trip.",
+      "B": "Reimbursements take five business days.",
+      "C": "I enjoyed the hotel facilities very much."
+    },
+    "correct_answer": "A",
+    "correct_text": "The itemized receipts from your trip.",
+    "audio_transcript": "What document do I need to submit for travel expense reimbursement? -> The itemized receipts from your trip.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng tên chứng từ cần nộp (itemized receipts) cho câu hỏi What document."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Lặp từ và đưa khoảng thời gian. Lưu ý bẫy: Lặp từ 'reimbursements' nhưng đưa mốc thời gian 5 ngày (take five business days) trả lời cho How long."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Ngữ cảnh du lịch/khách sạn. Lưu ý bẫy: Nói về cảm nhận tiện ích khách sạn, không trả lời cho câu hỏi về giấy tờ."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "expense reimbursement",
+        "paraphrases": ["travel cost refund"],
+        "meaning": "hoàn trả chi phí đi lại"
+      },
+      {
+        "phrase": "itemized receipt",
+        "paraphrases": ["detailed bill"],
+        "meaning": "hóa đơn liệt kê chi tiết"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Focus on Key Noun - Lắng nghe danh từ chính sau từ hỏi What (What document -> cần tên giấy tờ).",
+      "Bước 2: Match Document Noun - Chọn phương án chứa đúng danh từ chứng từ tài chính (itemized receipts).",
+      "Bước 3: Eliminate Duration Traps - Loại phương án chứa mốc thời gian (five business days) khi hỏi về giấy tờ."
+    ]
+  },
+  {
+    "id": 11,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q011.mp3",
+    "question": "Which vendor should we select for our resort's catering service?",
+    "options": {
+      "A": "The catering staff was very professional.",
+      "B": "No, we haven't received the delivery yet.",
+      "C": "Apex Culinary offered the most competitive pricing."
+    },
+    "correct_answer": "C",
+    "correct_text": "Apex Culinary offered the most competitive pricing.",
+    "audio_transcript": "Which vendor should we select for our resort's catering service? -> Apex Culinary offered the most competitive pricing.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Lặp từ catering. Lưu ý bẫy: Lặp từ 'catering' nhưng khen nhân viên thay vì đưa tên nhà cung cấp được chọn."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "No và chủ đề giao hàng. Lưu ý bẫy: Câu hỏi WH- không dùng No. Nội dung giao hàng không trả lời việc lựa chọn vendor."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng tên đơn vị được chọn (Apex Culinary) kèm lý do chi phí cạnh tranh."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "vendor",
+        "paraphrases": ["supplier", "contractor"],
+        "meaning": "nhà cung cấp / đối tác"
+      },
+      {
+        "phrase": "competitive pricing",
+        "paraphrases": ["affordable rates"],
+        "meaning": "mức giá cạnh tranh"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Question Intent - Lắng nghe cụm Which vendor (nhà cung cấp nào) để chờ tên doanh nghiệp/đối tác.",
+      "Bước 2: Match Proper Noun - Ưu tiên chọn câu chứa tên riêng công ty (Apex Culinary) kèm tiêu chí chọn lựa.",
+      "Bước 3: Reject Same-Word Distractor - Cảnh giác với phương án lặp lại từ 'catering' nhưng không trực tiếp trả lời câu hỏi."
+    ]
+  },
+  {
+    "id": 12,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q012.mp3",
+    "question": "Where can I find the user manual for the new solar energy inverter?",
+    "options": {
+      "A": "Yes, solar energy is very cost-effective.",
+      "B": "It's stored in the shared engineering folder online.",
+      "C": "He manualized the procedures last week."
+    },
+    "correct_answer": "B",
+    "correct_text": "It's stored in the shared engineering folder online.",
+    "audio_transcript": "Where can I find the user manual for the new solar energy inverter? -> It's stored in the shared engineering folder online.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Yes và lặp từ solar energy. Lưu ý bẫy: Câu hỏi WH- không dùng Yes. Khen tiết kiệm chi phí không trả lời vị trí tìm sách."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng vị trí lưu trữ số (shared engineering folder online) trả lời cho câu hỏi Where."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Biến thể từ vựng (manual -> manualized). Lưu ý bẫy: Dùng dạng động từ chế biến từ 'manualized' để đánh lừa âm thanh nhưng sai nghĩa."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "user manual",
+        "paraphrases": ["instruction guide"],
+        "meaning": "sách hướng dẫn sử dụng"
+      },
+      {
+        "phrase": "shared folder",
+        "paraphrases": ["intranet directory"],
+        "meaning": "thư mục dùng chung"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Question Intent - Nhận diện từ hỏi Where (ở đâu) đối với tài liệu số/tệp tin.",
+      "Bước 2: Recognize Digital Location - Thời đại số, đáp án câu Where thường chỉ vị trí thư mục (shared folder / intranet).",
+      "Bước 3: Avoid Sound Derivatives - Cảnh giác với các từ biến thể chia động từ từ danh từ chính (manual -> manualized)."
+    ]
+  },
+  {
+    "id": 13,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q013.mp3",
+    "question": "When is the security audit for the online banking servers scheduled?",
+    "options": {
+      "A": "As soon as the regulatory compliance team arrives.",
+      "B": "The audit report was twenty pages long.",
+      "C": "To ensure data protection for our clients."
+    },
+    "correct_answer": "A",
+    "correct_text": "As soon as the regulatory compliance team arrives.",
+    "audio_transcript": "When is the security audit for the online banking servers scheduled? -> As soon as the regulatory compliance team arrives.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng cụm thời gian phụ thuộc (As soon as team arrives) trả lời thời điểm kiểm toán."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Lặp từ audit và số trang. Lưu ý bẫy: Nêu độ dài báo cáo 20 trang (twenty pages long), không trả lời thời gian tổ chức."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Mục đích To + V. Lưu ý bẫy: 'To ensure data protection' trả lời cho câu hỏi Why (mục đích), không trả lời When."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "security audit",
+        "paraphrases": ["safety inspection"],
+        "meaning": "kiểm toán / kiểm tra bảo mật"
+      },
+      {
+        "phrase": "as soon as",
+        "paraphrases": ["immediately upon"],
+        "meaning": "ngay khi"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Question Intent - Nhận diện từ hỏi When để chờ đợi câu trả lời thời gian.",
+      "Bước 2: Recognize Conditional Time Clauses - Mốc thời gian trong TOEIC thường đứng sau các liên từ phụ thuộc như As soon as / After / Before.",
+      "Bước 3: Reject 'To + V' Purpose Clause - Cụm 'To + Verb' luôn trả lời cho câu hỏi Why, loại ngay khi gặp câu hỏi When."
+    ]
+  },
+  {
+    "id": 14,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q014.mp3",
+    "question": "Who should I contact if I experience technical issues with the clinical software?",
+    "options": {
+      "A": "The software was updated yesterday afternoon.",
+      "B": "Yes, I have experienced that before.",
+      "C": "You can reach out to the IT help desk at extension 402."
+    },
+    "correct_answer": "C",
+    "correct_text": "You can reach out to the IT help desk at extension 402.",
+    "audio_transcript": "Who should I contact if I experience technical issues with the clinical software? -> You can reach out to the IT help desk at extension 402.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Lặp từ software. Lưu ý bẫy: Nói về thời điểm cập nhật phần mềm (yesterday afternoon), không trả lời câu hỏi liên hệ ai."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Yes và lặp từ experience. Lưu ý bẫy: Câu hỏi WH- không dùng Yes. Chia sẻ cá nhân không cung cấp đầu mối hỗ trợ."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng bộ phận hỗ trợ (IT help desk) và số máy lẻ (extension 402) trả lời cho câu hỏi Who."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "help desk",
+        "paraphrases": ["support team", "service desk"],
+        "meaning": "bộ phận hỗ trợ kỹ thuật"
+      },
+      {
+        "phrase": "extension",
+        "paraphrases": ["internal phone line"],
+        "meaning": "số máy lẻ điện thoại nội bộ"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Question Intent - Lắng nghe cụm 'Who should I contact' để chờ danh tính phòng ban hỗ trợ.",
+      "Bước 2: Recognize Department & Extension - Phản hồi chuẩn thường chỉ ra tên bộ phận (IT help desk) kèm số nội bộ (extension 402).",
+      "Bước 3: Reject Same-Word Traps - Loại bỏ phương án lặp lại từ 'software' hay 'experience' không giải quyết yêu cầu."
+    ]
+  },
+  {
+    "id": 15,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q015.mp3",
+    "question": "What is the main cause of the delay in processing the merchant applications?",
+    "options": {
+      "A": "We process hundreds of payments daily.",
+      "B": "Haven't you checked the status report from compliance?",
+      "C": "The merchant opened a new branch in Denver."
+    },
+    "correct_answer": "B",
+    "correct_text": "Haven't you checked the status report from compliance?",
+    "audio_transcript": "What is the main cause of the delay in processing the merchant applications? -> Haven't you checked the status report from compliance?",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Lặp từ process. Lưu ý bẫy: Lặp từ 'process' nhưng khoe năng lực xử lý thanh toán, không giải thích lý do chậm trễ."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Phản hồi gián tiếp dạng câu hỏi ngược gợi ý kiểm tra báo cáo trạng thái để biết nguyên nhân."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Lặp từ merchant và mở chi nhánh. Lưu ý bẫy: Lặp từ 'merchant' nhưng nói việc mở chi nhánh ở Denver, không giải thích nguyên nhân delay."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "merchant application",
+        "paraphrases": ["vendor registration"],
+        "meaning": "đơn đăng ký người bán"
+      },
+      {
+        "phrase": "compliance",
+        "paraphrases": ["regulatory division"],
+        "meaning": "bộ phận tuân thủ quy định"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Question Intent - Lắng nghe câu hỏi tìm nguyên nhân (What is the main cause...).",
+      "Bước 2: Master Counter-Question Strategy - Nhận diện bẫy cao cấp: các câu hỏi ngược (Haven't you checked...?) có tỷ lệ đáp án đúng rất cao trong đề thi TOEIC.",
+      "Bước 3: Reject Same-Word Distractors - Loại phương án lặp từ 'process' hay 'merchant' mang nghĩa sáo rỗng."
+    ]
+  },
+  {
+    "id": 16,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q016.mp3",
+    "question": "Why was the electricity bill for the resort higher than expected this month?",
+    "options": {
+      "A": "The air conditioning ran constantly during the heatwave.",
+      "B": "We are planning to build a new swimming pool.",
+      "C": "Yes, the invoice has already been paid."
+    },
+    "correct_answer": "A",
+    "correct_text": "The air conditioning ran constantly during the heatwave.",
+    "audio_transcript": "Why was the electricity bill for the resort higher than expected this month? -> The air conditioning ran constantly during the heatwave.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng nguyên nhân gây tốn điện (air conditioning ran constantly in heatwave)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Đồng âm bill / build. Lưu ý bẫy: Từ 'bill' (hóa đơn) phát âm tương tự 'build' (xây dựng) gây nhầm lẫn âm thanh."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Yes cho câu hỏi Why. Lưu ý bẫy: Câu hỏi Why không trả lời bằng Yes. Việc hóa đơn đã thanh toán không giải thích tại sao nó tăng."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "electricity bill",
+        "paraphrases": ["power charge", "utility invoice"],
+        "meaning": "hóa đơn tiền điện"
+      },
+      {
+        "phrase": "heatwave",
+        "paraphrases": ["hot weather period"],
+        "meaning": "đợt nắng nóng gay gắt"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Question Intent - Nhận diện từ hỏi Why (tại sao) để tìm lý do giải thích nguyên nhân.",
+      "Bước 2: Beware Sound-Alikes - Phân biệt kỹ từ phát âm gần giống nhau (bill vs build) trong ngữ cảnh tài chính.",
+      "Bước 3: Eliminate Yes/No - Loại bỏ phương án này vì phương án bắt đầu bằng Yes đối với câu hỏi Why."
+    ]
+  },
+  {
+    "id": 17,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q017.mp3",
+    "question": "How can clients sign up for the new digital banking rewards program?",
+    "options": {
+      "A": "Rewards can be redeemed for travel vouchers.",
+      "B": "About fifteen thousand dollars in total.",
+      "C": "The step-by-step guide is published on our mobile app."
+    },
+    "correct_answer": "C",
+    "correct_text": "The step-by-step guide is published on our mobile app.",
+    "audio_transcript": "How can clients sign up for the new digital banking rewards program? -> The step-by-step guide is published on our mobile app.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Lặp từ rewards và giải thích đổi quà. Lưu ý bẫy: Lặp từ 'rewards' nhưng giải thích cách đổi voucher (redeemed), không hướng dẫn cách đăng ký."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Số tiền trả lời cho câu hỏi How much. Lưu ý bẫy: Đưa số tiền '$15,000' trả lời cho câu hỏi chi phí, không trả lời cách thức đăng ký."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng hướng dẫn phương thức đăng ký gián tiếp qua tài liệu trên mobile app."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "sign up for",
+        "paraphrases": ["register for", "enroll in"],
+        "meaning": "đăng ký tham gia"
+      },
+      {
+        "phrase": "step-by-step guide",
+        "paraphrases": ["instruction manual"],
+        "meaning": "hướng dẫn từng bước"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Question Intent - Nhận diện từ hỏi How can clients sign up (cách thức đăng ký).",
+      "Bước 2: Look for Instruction References - Tìm đáp án chỉ ra tài liệu hướng dẫn (step-by-step guide on mobile app).",
+      "Bước 3: Reject How Much Traps - Loại phương án chứa số tiền (fifteen thousand dollars) trả lời nhầm cho How much."
+    ]
+  },
+  {
+    "id": 18,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q018.mp3",
+    "question": "Why hasn't the solar panel maintenance team arrived yet?",
+    "options": {
+      "A": "To increase the energy output of the facility.",
+      "B": "Their service van broke down on the highway.",
+      "C": "Yes, the panels are working efficiently."
+    },
+    "correct_answer": "B",
+    "correct_text": "Their service van broke down on the highway.",
+    "audio_transcript": "Why hasn't the solar panel maintenance team arrived yet? -> Their service van broke down on the highway.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Cấu trúc chỉ mục đích 'To + V'. Lưu ý bẫy: 'To increase energy output' trả lời cho câu hỏi Why chỉ mục tiêu, không giải thích lý do đến muộn."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng nguyên nhân sự cố giao thông (van broke down) khiến đội bảo trì đến trễ."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Yes và lặp từ panels. Lưu ý bẫy: Câu hỏi Why không dùng Yes. Khen tấm pin hoạt động tốt không giải thích tại sao thợ chưa đến."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "break down",
+        "paraphrases": ["malfunction", "stop working"],
+        "meaning": "gặp sự cố hỏng hóc"
+      },
+      {
+        "phrase": "maintenance team",
+        "paraphrases": ["service crew"],
+        "meaning": "đội bảo trì / thợ dịch vụ"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Distinguish Reason vs Purpose - Phân biệt câu hỏi lý do sự cố (Why hasn't arrived) với câu hỏi mục đích (Why do we install).",
+      "Bước 2: Look for Unexpected Causes - Lý do trễ giờ thường xoay quanh sự cố ngoài dự kiến (van broke down / traffic jam).",
+      "Bước 3: Reject 'To + Verb' Clauses - Không chọn cụm chỉ mục đích 'To + V' khi câu hỏi yêu cầu giải thích sự chậm trễ."
+    ]
+  },
+  {
+    "id": 19,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q019.mp3",
+    "question": "How much will it cost to upgrade our e-commerce platform's security software?",
+    "options": {
+      "A": "Our IT department is currently requesting quotes from vendors.",
+      "B": "It was upgraded three months ago.",
+      "C": "Software licenses are valid for one year."
+    },
+    "correct_answer": "A",
+    "correct_text": "Our IT department is currently requesting quotes from vendors.",
+    "audio_transcript": "How much will it cost to upgrade our e-commerce platform's security software? -> Our IT department is currently requesting quotes from vendors.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Phản hồi gián tiếp hợp lý giải thích chưa có giá chốt vì đang chờ báo giá từ đối tác."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Lặp từ upgraded và mốc thời gian. Lưu ý bẫy: Lặp từ 'upgraded' nhưng nói mốc thời gian 3 tháng trước (three months ago) trả lời cho câu hỏi When."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Thời hạn giấy phép. Lưu ý bẫy: 'Valid for one year' trả lời cho câu hỏi thời hạn (How long), không trả lời về giá cả."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "request a quote",
+        "paraphrases": ["ask for pricing", "solicit bids"],
+        "meaning": "yêu cầu báo giá"
+      },
+      {
+        "phrase": "upgrade",
+        "paraphrases": ["enhance", "update"],
+        "meaning": "nâng cấp"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Question Intent - Lắng nghe cụm How much will it cost (chi phí bao nhiêu).",
+      "Bước 2: Expect Process-Status Responses - Khi chưa có con số chính xác, phản hồi chuẩn thường chỉ ra trạng thái đang xin báo giá (requesting quotes).",
+      "Bước 3: Reject Time & Duration Traps - Loại bỏ phương án đưa mốc quá khứ (three months ago) hoặc thời hạn (valid for one year)."
+    ]
+  },
+  {
+    "id": 20,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q020.mp3",
+    "question": "Have you sent the revised contract to the BioTech investor yet?",
+    "options": {
+      "A": "Yes, the investment market is very active.",
+      "B": "The contract is ten pages long.",
+      "C": "My assistant is finalizing the last clause right now."
+    },
+    "correct_answer": "C",
+    "correct_text": "My assistant is finalizing the last clause right now.",
+    "audio_transcript": "Have you sent the revised contract to the BioTech investor yet? -> My assistant is finalizing the last clause right now.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Yes giả tạo và thông tin lạc đề. Lưu ý bẫy: Dùng 'Yes' để tạo cảm giác đúng nhưng vế sau khen thị trường sôi động không trả lời việc đã gửi hợp đồng chưa."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Lặp từ contract kèm số trang. Lưu ý bẫy: Lặp từ 'contract' nhưng nói độ dài 10 trang, không trả lời trạng thái đã gửi chưa."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Phản hồi gián tiếp chuẩn xác giải thích lý do chưa gửi vì đang sửa điều khoản cuối cùng."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "revised contract",
+        "paraphrases": ["amended agreement"],
+        "meaning": "hợp đồng đã được chỉnh sửa"
+      },
+      {
+        "phrase": "finalize a clause",
+        "paraphrases": ["complete a section"],
+        "meaning": "hoàn thiện điều khoản"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Question Intent - Nhận diện câu hỏi kiểm tra tiến độ Yes/No (Have you sent... yet?).",
+      "Bước 2: Beware Fake Yes/No - Cảnh giác với phương án có 'Yes' nhưng vế sau hoàn toàn lạc đề.",
+      "Bước 3: Accept Action Explanations - Chọn phản hồi giải thích công việc đang được thực hiện (finalizing the last clause)."
+    ]
+  },
+  {
+    "id": 21,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q021.mp3",
+    "question": "Hasn't the new resort promotional video been uploaded to the website?",
+    "options": {
+      "A": "I prefer watching movies at the theater.",
+      "B": "There was a technical glitch with the media server.",
+      "C": "Yes, the video editor lives in New York."
+    },
+    "correct_answer": "B",
+    "correct_text": "There was a technical glitch with the media server.",
+    "audio_transcript": "Hasn't the new resort promotional video been uploaded to the website? -> There was a technical glitch with the media server.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Chủ đề phim ảnh. Lưu ý bẫy: Nói về sở thích xem phim ở rạp (movies at theater), không liên quan đến việc upload video."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng lý do sự cố hệ thống (technical glitch with server) ngăn cản việc tải video."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Yes và thông tin nơi biên tập viên. Lưu ý bẫy: Nơi ở của video editor (New York) không giải thích việc video đã được tải lên chưa."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "technical glitch",
+        "paraphrases": ["system error", "bug"],
+        "meaning": "trục trặc kỹ thuật"
+      },
+      {
+        "phrase": "promotional video",
+        "paraphrases": ["marketing clip"],
+        "meaning": "video quảng bá"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Question Intent - Nhận diện câu hỏi phủ định (Hasn't... uploaded?) thắc mắc việc chưa hoàn thành.",
+      "Bước 2: Look for Problem Causes - Phản hồi chuẩn cho câu hỏi phủ định thường chỉ ra lý do trục trặc (technical glitch).",
+      "Bước 3: Reject Off-Topic Associations - Loại bỏ phương án này vì các câu nói về sở thích xem phim rạp (movies/theater)."
+    ]
+  },
+  {
+    "id": 22,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q022.mp3",
+    "question": "Did you check whether the server backup completed successfully last night?",
+    "options": {
+      "A": "Yes, I verified the log files first thing this morning.",
+      "B": "The bank manager signed the cashier's cheque.",
+      "C": "Backing up a vehicle requires caution."
+    },
+    "correct_answer": "A",
+    "correct_text": "Yes, I verified the log files first thing this morning.",
+    "audio_transcript": "Did you check whether the server backup completed successfully last night? -> Yes, I verified the log files first thing this morning.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng phản hồi xác nhận (Yes) kèm hành động kiểm tra tệp nhật ký máy chủ."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Từ đồng âm check / cheque. Lưu ý bẫy: Từ 'check' (kiểm tra) phát âm giống hệt 'cheque' (tờ séc ngân hàng)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Đa nghĩa backup (sao lưu dữ liệu vs lùi xe). Lưu ý bẫy: 'Backing up a vehicle' mang nghĩa lùi xe ô tô, hoàn toàn khác nghĩa sao lưu dữ liệu máy chủ."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "verify log files",
+        "paraphrases": ["check system records"],
+        "meaning": "xác minh tệp nhật ký hệ thống"
+      },
+      {
+        "phrase": "first thing this morning",
+        "paraphrases": ["early today"],
+        "meaning": "việc đầu tiên sáng nay"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Question Intent - Nhận diện câu hỏi xác nhận Yes/No (Did you check...?).",
+      "Bước 2: Beware Sound-Alikes & Homophones - Phân biệt kỹ từ phát âm giống hệt nhau (check kiểm tra vs cheque tờ séc).",
+      "Bước 3: Watch for Contextual Polysemy - Nhận diện từ nhiều nghĩa (backup data vs backup vehicle)."
+    ]
+  },
+  {
+    "id": 23,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q023.mp3",
+    "question": "Isn't Mr. Patel supposed to present the quarterly financial results today?",
+    "options": {
+      "A": "He feels stiff after exercising yesterday.",
+      "B": "The results were published in a medical journal.",
+      "C": "He had to reschedule his presentation to Friday."
+    },
+    "correct_answer": "C",
+    "correct_text": "He had to reschedule his presentation to Friday.",
+    "audio_transcript": "Isn't Mr. Patel supposed to present the quarterly financial results today? -> He had to reschedule his presentation to Friday.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Đồng âm Patel / staff / stiff. Lưu ý bẫy: Nói về cảm giác đau cơ sau tập thể thao, bẫy âm thanh tên người."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Lặp từ results và sai bối cảnh y tế. Lưu ý bẫy: Lặp từ 'results' nhưng nói kết quả đăng trên tạp chí y khoa (medical journal), không thuộc tài chính công ty."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng phản hồi đính chính sự thay đổi lịch trình (reschedule to Friday)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "be supposed to",
+        "paraphrases": ["be scheduled to"],
+        "meaning": "theo kế hoạch phải làm"
+      },
+      {
+        "phrase": "reschedule",
+        "paraphrases": ["postpone to a later date"],
+        "meaning": "thay đổi lịch trình"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Question Intent - Nhận diện câu hỏi phủ định hỏi về lịch trình dự kiến (Isn't... supposed to...?).",
+      "Bước 2: Expect Schedule Corrections - Đáp án đúng thường đính chính việc thay đổi lịch (reschedule to Friday).",
+      "Bước 3: Reject Medical Context Traps - Cảnh giác với phương án lặp từ 'results' nhưng nhầm bối cảnh y tế."
+    ]
+  },
+  {
+    "id": 24,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q024.mp3",
+    "question": "Should we upgrade our existing server hardware or migrate to a cloud platform?",
+    "options": {
+      "A": "Yes, the server room is on the second floor.",
+      "B": "Our CTO recommended transitioning entirely to the cloud.",
+      "C": "The hardware store closes at eight o'clock."
+    },
+    "correct_answer": "B",
+    "correct_text": "Our CTO recommended transitioning entirely to the cloud.",
+    "audio_transcript": "Should we upgrade our existing server hardware or migrate to a cloud platform? -> Our CTO recommended transitioning entirely to the cloud.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Yes đối với câu hỏi lựa chọn. Lưu ý bẫy: Choice Question tuyệt đối KHÔNG bao giờ trả lời bằng Yes/No."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng phản hồi lựa chọn một trong hai phương án (transitioning to cloud)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Đa nghĩa hardware (phần cứng CNTT vs cửa hàng kim khí). Lưu ý bẫy: 'Hardware store' chỉ cửa hàng bán đồ kim khí, nhầm nghĩa với phần cứng máy chủ."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "migrate to the cloud",
+        "paraphrases": ["cloud transition"],
+        "meaning": "chuyển đổi lên điện toán đám mây"
+      },
+      {
+        "phrase": "CTO",
+        "paraphrases": ["Chief Technology Officer"],
+        "meaning": "giám đốc công nghệ"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Choice Structure - Nhận diện từ nối 'OR' phân tách 2 lựa chọn (upgrade hardware OR migrate to cloud).",
+      "Bước 2: Eliminate Yes/No Immediately - Loại 100% phương án bắt đầu bằng Yes/No khi gặp Choice Question.",
+      "Bước 3: Avoid Hardware Store Traps - Phân biệt từ đa nghĩa hardware trong lĩnh vực IT với cửa hàng kim khí."
+    ]
+  },
+  {
+    "id": 25,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q025.mp3",
+    "question": "Is the BioTech conference taking place in Boston or San Francisco?",
+    "options": {
+      "A": "It will be held in San Francisco this year.",
+      "B": "I prefer taking the train to work.",
+      "C": "Yes, many experts will attend."
+    },
+    "correct_answer": "A",
+    "correct_text": "It will be held in San Francisco this year.",
+    "audio_transcript": "Is the BioTech conference taking place in Boston or San Francisco? -> It will be held in San Francisco this year.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng phản hồi lựa chọn thành phố San Francisco."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Từ đồng âm/ngữ cảnh taking place / taking train. Lưu ý bẫy: Nhầm cụm 'taking place' (diễn ra) với 'taking the train' (đi tàu hỏa)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Yes đối với Choice Question. Lưu ý bẫy: Choice Question không dùng Yes để trả lời."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "take place",
+        "paraphrases": ["be held", "occur"],
+        "meaning": "diễn ra / tổ chức tại"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Choice Structure - Lắng nghe 2 lựa chọn địa điểm phân tách bởi 'OR' (Boston OR San Francisco).",
+      "Bước 2: Eliminate Yes/No - Loại bỏ phương án này vì phương án C vì dùng 'Yes' cho câu hỏi lựa chọn.",
+      "Bước 3: Distinguish Take Place vs Take Train - Phân biệt cụm động từ 'take place' (tổ chức) và 'take the train' (đi tàu)."
+    ]
+  },
+  {
+    "id": 26,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q026.mp3",
+    "question": "We haven't received enough customer registrations for the solar energy webinar tomorrow.",
+    "options": {
+      "A": "Solar panels generate clean electricity.",
+      "B": "Registration costs fifty dollars per participant.",
+      "C": "Let me send a reminder email to our subscriber list."
+    },
+    "correct_answer": "C",
+    "correct_text": "Let me send a reminder email to our subscriber list.",
+    "audio_transcript": "We haven't received enough customer registrations for the solar energy webinar tomorrow. -> Let me send a reminder email to our subscriber list.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Lặp từ solar. Lưu ý bẫy: Lặp từ 'solar' nhưng đưa phát biểu thông tin chung chung không giải quyết vấn đề đăng ký."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Lặp từ registration. Lưu ý bẫy: Lặp từ 'registration' nhưng nói về mức phí 50$, không đưa giải pháp tăng lượng đăng ký."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng phản hồi hành động (Let me send reminder email) xử lý câu trần thuật."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "webinar",
+        "paraphrases": ["online seminar"],
+        "meaning": "hội thảo trực tuyến"
+      },
+      {
+        "phrase": "subscriber list",
+        "paraphrases": ["mailing list"],
+        "meaning": "danh sách người đăng ký nhận tin"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Statement Problem - Nhận diện câu trần thuật nêu khó khăn (haven't received enough registrations).",
+      "Bước 2: Look for Helpful Action - Phản hồi chuẩn cho câu trần thuật nêu sự cố thường là một đề xuất hành động giúp đỡ (Let me send...).",
+      "Bước 3: Reject Irrelevant Facts - Loại phương án lặp từ nhưng đưa thông tin thực tế không liên quan (solar panels generate electricity)."
+    ]
+  },
+  {
+    "id": 27,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q027.mp3",
+    "question": "Our team needs to reduce operational expenses before the end of the quarter.",
+    "options": {
+      "A": "The quarter ends on September thirtieth.",
+      "B": "We could start by reviewing our software subscription costs.",
+      "C": "Yes, the operation was successful."
+    },
+    "correct_answer": "B",
+    "correct_text": "We could start by reviewing our software subscription costs.",
+    "audio_transcript": "Our team needs to reduce operational expenses before the end of the quarter. -> We could start by reviewing our software subscription costs.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Lặp từ quarter. Lưu ý bẫy: Lặp từ 'quarter' nhưng chỉ nhắc mốc ngày kết thúc quý, không đưa giải pháp giảm chi phí."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng đề xuất hành động thực thi (reviewing software subscription costs) để cắt giảm chi phí."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Đa nghĩa operational (vận hành vs ca phẫu thuật). Lưu ý bẫy: 'Operation' ở đây bị lái sang nghĩa ca phẫu thuật y tế thành công."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "operational expenses",
+        "paraphrases": ["OPEX", "running costs"],
+        "meaning": "chi phí vận hành"
+      },
+      {
+        "phrase": "software subscription",
+        "paraphrases": ["software license fee"],
+        "meaning": "phí thuê bao phần mềm"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Statement Goal - Lắng nghe mục tiêu cần thực hiện trong câu trần thuật (needs to reduce expenses).",
+      "Bước 2: Find Constructive Suggestions - Chọn đáp án đưa ra gợi ý giải pháp bắt đầu (We could start by...).",
+      "Bước 3: Avoid Polysemy Traps - Cảnh giác với các từ nhiều nghĩa (operational chi phí vận hành vs ca phẫu thuật)."
+    ]
+  },
+  {
+    "id": 28,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q028.mp3",
+    "question": "Why don't we reschedule the e-commerce strategy meeting to Thursday morning?",
+    "options": {
+      "A": "That works for me, as long as it's before eleven.",
+      "B": "The strategy was approved by the board.",
+      "C": "Because the room was already booked."
+    },
+    "correct_answer": "A",
+    "correct_text": "That works for me, as long as it's before eleven.",
+    "audio_transcript": "Why don't we reschedule the e-commerce strategy meeting to Thursday morning? -> That works for me, as long as it's before eleven.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng phản hồi chấp thuận lời đề nghị đổi lịch họp (That works for me)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Lặp từ strategy. Lưu ý bẫy: Lặp từ 'strategy' nhưng nói về phê duyệt của hội đồng, không trả lời việc đổi lịch họp."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Cấu trúc trả lời 'Because' cho câu hỏi Why. Lưu ý bẫy: 'Why don't we' là cấu trúc gợi ý, không phải câu hỏi tìm nguyên nhân 'Why' để dùng 'Because'."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "Why don't we...?",
+        "paraphrases": ["Shall we...?", "How about...?"],
+        "meaning": "tại sao chúng ta không... (lời gợi ý)"
+      },
+      {
+        "phrase": "That works for me",
+        "paraphrases": ["That is convenient for me"],
+        "meaning": "thời gian đó hợp lý với tôi"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Recognize Suggestion Form - Nhận diện 'Why don't we...?' là lời gợi ý chứ không phải câu hỏi lý do.",
+      "Bước 2: Reject 'Because' Responses - Loại 100% các đáp án chứa 'Because' khi gặp cấu trúc gợi ý Why don't we.",
+      "Bước 3: Accept Polite Agreements - Ưu tiên chọn các câu đồng ý lịch trình (That works for me / Sounds good)."
+    ]
+  },
+  {
+    "id": 29,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q029.mp3",
+    "question": "The online reservation system for the resort is currently down.",
+    "options": {
+      "A": "Reservations must be made two weeks in advance.",
+      "B": "The resort features two swimming pools.",
+      "C": "I'll notify the IT infrastructure team right away."
+    },
+    "correct_answer": "C",
+    "correct_text": "I'll notify the IT infrastructure team right away.",
+    "audio_transcript": "The online reservation system for the resort is currently down. -> I'll notify the IT infrastructure team right away.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Lặp từ reservations. Lưu ý bẫy: Lặp từ 'reservations' nhưng nói về quy định đặt trước 2 tuần, không giải quyết việc sập mạng."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Lặp từ resort. Lưu ý bẫy: Lặp từ 'resort' nhưng khoe tiện ích hồ bơi, không liên quan đến sự cố hệ thống."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng hành động ứng phó khẩn cấp (notify IT team right away) cho câu thông báo sự cố."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "system is down",
+        "paraphrases": ["out of service", "offline"],
+        "meaning": "hệ thống bị sập / ngừng hoạt động"
+      },
+      {
+        "phrase": "right away",
+        "paraphrases": ["immediately", "at once"],
+        "meaning": "ngay lập tức"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Outage Statement - Lắng nghe thông báo sự cố kỹ thuật trong câu trần thuật (system is down).",
+      "Bước 2: Expect Immediate Action - Chọn câu thể hiện hành động hỗ trợ lập tức (I'll notify IT right away).",
+      "Bước 3: Reject Same-Word Traps - Loại bỏ phương án lặp từ 'reservations' hay 'resort' thông tin lề đường."
+    ]
+  },
+  {
+    "id": 30,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q030.mp3",
+    "question": "Should we hire an external consultant to audit our BioTech lab procedures?",
+    "options": {
+      "A": "The consultant lives in Boston.",
+      "B": "Our internal compliance officer can conduct the review instead.",
+      "C": "Yes, the lab equipment was delivered."
+    },
+    "correct_answer": "B",
+    "correct_text": "Our internal compliance officer can conduct the review instead.",
+    "audio_transcript": "Should we hire an external consultant to audit our BioTech lab procedures? -> Our internal compliance officer can conduct the review instead.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Lặp từ consultant. Lưu ý bẫy: Lặp từ 'consultant' nhưng nói nơi ở Boston, không đưa ý kiến có nên thuê hay không."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng phương án thay thế nội bộ (internal compliance officer) kèm paraphrase 'conduct review' = 'audit'."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Yes và lặp từ lab. Lưu ý bẫy: Dùng Yes nhưng vế sau nói về việc giao thiết bị phòng lab, không liên quan kiểm toán quy trình."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "external consultant",
+        "paraphrases": ["third-party advisor"],
+        "meaning": "tư vấn viên bên ngoài"
+      },
+      {
+        "phrase": "conduct a review",
+        "paraphrases": ["perform an audit"],
+        "meaning": "thực hiện kiểm toán / đánh giá"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify Suggestion Intent - Nhận diện câu xin ý kiến/gợi ý (Should we hire external...?).",
+      "Bước 2: Expect Alternative Solutions - Đáp án xuất sắc trong TOEIC thường đưa ra giải pháp thay thế (internal officer instead).",
+      "Bước 3: Recognize Paraphrased Terms - Nhận diện cụm 'conduct the review' thay thế cho từ 'audit' trong câu hỏi."
+    ]
+  },
+  {
+    "id": 31,
+    "type": "question_response",
+    "part": "Listening - Part 2",
+    "audio": "p2_q031.mp3",
+    "question": "The board of directors approved the merger with Apex Financial this morning.",
+    "options": {
+      "A": "That's great news for our stock value!",
+      "B": "The wooden board needs to be replaced.",
+      "C": "I feel bored during long lectures."
+    },
+    "correct_answer": "A",
+    "correct_text": "That's great news for our stock value!",
+    "audio_transcript": "The board of directors approved the merger with Apex Financial this morning. -> That's great news for our stock value!",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng phản hồi nhận xét tác động tích cực (great news for stock value) cho tin sáp nhập."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Đa nghĩa từ board (Hội đồng quản trị vs tấm bảng gỗ). Lưu ý bẫy: Lặp từ 'board' nhưng bị lái sang nghĩa tấm bảng gỗ (wooden board) cần thay thế."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Đồng âm board / bored. Lưu ý bẫy: Từ 'board' phát âm giống hệt 'bored' (chán nản) trong các bài giảng."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "board of directors",
+        "paraphrases": ["executive board"],
+        "meaning": "hội đồng quản trị"
+      },
+      {
+        "phrase": "merger",
+        "paraphrases": ["corporate acquisition"],
+        "meaning": "sự sáp nhập doanh nghiệp"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify News Announcement - Lắng nghe câu trần thuật thông báo tin tức doanh nghiệp quan trọng.",
+      "Bước 2: Match Reaction Comment - Phản hồi chuẩn thường là lời bình luận cảm xúc/tác động (That's great news for stock value!).",
+      "Bước 3: Beware Board vs Wooden Board vs Bored - Phân biệt từ đa nghĩa board (hội đồng vs tấm bảng) và từ đồng âm bored."
+    ]
+  }
+]

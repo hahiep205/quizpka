@@ -1,0 +1,1362 @@
+[
+  {
+    "group": 1,
+    "audio": "p4_g01_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Why is the speaker calling?",
+        "options": {
+          "A": "To arrange a job interview.",
+          "B": "To provide an update on an office lease.",
+          "C": "To report a water leak issue.",
+          "D": "To request a loan application."
+        },
+        "correct_answer": "B",
+        "correct_text": "To provide an update on an office lease.",
+        "audio_transcript": "\"Speaker: ...calling regarding your inquiry about leasing office space at Horizon Tower.\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Phỏng vấn tuyển dụng không được đề cập."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng mục đích cung cấp cập nhật về hợp đồng thuê văn phòng (To provide an update on an office lease)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Sự cố rò rỉ nước không được đề cập."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Đơn xin vay vốn không liên quan."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "leasing office space",
+            "paraphrases": ["commercial rental update", "office lease information"],
+            "meaning": "cung cấp cập nhật thuê văn phòng"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Voicemail Opening Statement - Nghe ngay lý do gọi điện ở câu đầu tiên 'I'm calling regarding...'.",
+          "Bước 2: Match Office Lease Keywords - Bắt cụm 'leasing office space at Horizon Tower'.",
+          "Bước 3: Select Option B - Chọn B ('To provide an update on an office lease.')."
+        ]
+      },
+      {
+        "id": 2,
+        "question": "What has the landlord agreed to include?",
+        "options": {
+          "A": "Free internet access.",
+          "B": "Monthly cleaning services.",
+          "C": "New office furniture.",
+          "D": "Two dedicated parking spaces."
+        },
+        "correct_answer": "D",
+        "correct_text": "Two dedicated parking spaces.",
+        "audio_transcript": "\"Speaker: ...willing to include two dedicated parking spaces at no extra charge.\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Mạng internet miễn phí không được đề cập."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Dịch vụ vệ sinh hàng tháng không xuất hiện."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Nội thất văn phòng mới không được đề cập."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng điều khoản chủ nhà đồng ý bổ sung 2 chỗ đậu xe riêng (Two dedicated parking spaces)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "include two dedicated parking spaces",
+            "paraphrases": ["provide reserved parking spots", "include free parking slots"],
+            "meaning": "bao gồm hai chỗ đậu xe riêng"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Concession Phrase - Bắt từ nối 'willing to include...' trong bài phát biểu.",
+          "Bước 2: Match Parking Detail - Bắt cụm 'two dedicated parking spaces at no extra charge'.",
+          "Bước 3: Select Option B - Chọn D ('Two dedicated parking spaces.')."
+        ]
+      },
+      {
+        "id": 3,
+        "question": "What is the listener asked to confirm?",
+        "options": {
+          "A": "A time for a walk-through inspection.",
+          "B": "The total square footage required.",
+          "C": "The company's credit card number.",
+          "D": "The start date for new employees."
+        },
+        "correct_answer": "A",
+        "correct_text": "A time for a walk-through inspection.",
+        "audio_transcript": "\"Speaker: ...Please call me back at extension 402 to confirm if Wednesday at two P.M. works for a final walk-through inspection.\"",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng yêu cầu xác nhận thời gian cho buổi kiểm tra trực tiếp (A time for a walk-through inspection)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Diện tích văn phòng đã chốt từ trước."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Số thẻ tín dụng không được yêu cầu qua voicemail."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Ngày nhân viên mới không được đề cập."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "confirm time for walk-through inspection",
+            "paraphrases": ["verify site visit schedule", "confirm inspection appointment"],
+            "meaning": "xác nhận thời gian kiểm tra trực tiếp"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Call-to-Action Sentence - Theo dõi câu yêu cầu 'Please call me back... to confirm...' ở cuối bài.",
+          "Bước 2: Match Inspection Schedule - Bắt cụm 'Wednesday at two P.M. works for a final walk-through inspection'.",
+          "Bước 3: Select Option A - Chọn A ('A time for a walk-through inspection.')."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 2,
+    "audio": "p4_g02_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 4,
+        "question": "Where is the speech taking place?",
+        "options": {
+          "A": "In a broadcasting studio.",
+          "B": "At a law firm library.",
+          "C": "At a convention center.",
+          "D": "In a university classroom."
+        },
+        "correct_answer": "C",
+        "correct_text": "At a convention center.",
+        "audio_transcript": "\"Speaker: Welcome, everyone, to our Annual Corporate Legal Compliance Seminar here at the Civic Convention Center.\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Studio phát thanh không phải địa điểm."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Thư viện luật không phải địa điểm tổ chức."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng địa điểm diễn ra tại trung tâm hội nghị (At a convention center)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Lớp học đại học không phải địa điểm."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "Civic Convention Center",
+            "paraphrases": ["convention hall", "conference center"],
+            "meaning": "trung tâm hội nghị"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Welcome Announcement - Nghe ngay câu chào mở đầu 'Welcome... here at...'.",
+          "Bước 2: Match Convention Center Landmark - Bắt cụm 'Civic Convention Center'.",
+          "Bước 3: Select Option C - Chọn C ('At a convention center.')."
+        ]
+      },
+      {
+        "id": 5,
+        "question": "Why was the schedule changed?",
+        "options": {
+          "A": "The conference room was changed.",
+          "B": "The audio equipment broke down.",
+          "C": "Attendance was lower than expected.",
+          "D": "A presenter's flight was delayed."
+        },
+        "correct_answer": "D",
+        "correct_text": "A presenter's flight was delayed.",
+        "audio_transcript": "\"Speaker: ...Dr. Aris Thorne... was originally scheduled to speak first, but his flight was delayed.\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Phòng hội thảo giữ nguyên."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Thiết bị âm thanh hỏng không được đề cập."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Số lượng tham dự không liên quan."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng lý do chuyến bay của diễn giả bị hoãn (A presenter's flight was delayed)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "his flight was delayed",
+            "paraphrases": ["presenter arrived late due to flight", "speaker flight delay"],
+            "meaning": "chuyến bay của diễn giả bị trễ"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Schedule Change Cause - Theo dõi lý do sau cụm 'note a change to our morning schedule'.",
+          "Bước 2: Match Flight Delay Keyword - Bắt cụm 'his flight was delayed'.",
+          "Bước 3: Select Option A - Chọn D ('A presenter's flight was delayed.')."
+        ]
+      },
+      {
+        "id": 6,
+        "question": "Who will give the first presentation?",
+        "options": {
+          "A": "Dr. Aris Thorne",
+          "B": "Attorney Sarah Gomez",
+          "C": "Robert Sterling",
+          "D": "Lisa Vance"
+        },
+        "correct_answer": "B",
+        "correct_text": "Attorney Sarah Gomez",
+        "audio_transcript": "\"Speaker: Therefore, Attorney Sarah Gomez will deliver her presentation on intellectual property protection starting immediately.\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Nghe tên diễn giả ban đầu bị trễ."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng diễn giả phát biểu đầu tiên là Luật sư Sarah Gomez (Attorney Sarah Gomez)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Robert Sterling thuộc mảng bất động sản ở Set 1."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Lisa Vance thuộc mảng bất động sản ở Set 1."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "Attorney Sarah Gomez will deliver presentation starting immediately",
+            "paraphrases": ["Sarah Gomez speaks first", "first presentation by Sarah Gomez"],
+            "meaning": "Luật sư Sarah Gomez sẽ phát biểu đầu tiên"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Replacement Presenter 'Therefore...' - Bắt từ kết luận 'Therefore' chỉ người thay thế phát biểu đầu tiên.",
+          "Bước 2: Match Speaker Name - Bắt chính xác tên 'Attorney Sarah Gomez'.",
+          "Bước 3: Select Option B - Chọn B ('Attorney Sarah Gomez')."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 3,
+    "audio": "p4_g03_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 7,
+        "question": "What is the speaker presenting?",
+        "options": {
+          "A": "Results of a digital advertising campaign.",
+          "B": "Plans for constructing a media studio.",
+          "C": "A legal audit of a corporate contract.",
+          "D": "A proposal for purchasing real estate."
+        },
+        "correct_answer": "A",
+        "correct_text": "Results of a digital advertising campaign.",
+        "audio_transcript": "\"Speaker: Today I want to share the performance results for Apex Media's recent Q3 digital advertising campaign...\"",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng chủ đề kết quả chiến dịch quảng cáo kỹ thuật số (Results of a digital advertising campaign)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Kế hoạch xây studio không được đề cập."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Kiểm toán hợp đồng pháp lý không liên quan."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Mua bất động sản không liên quan."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "performance results of digital advertising campaign",
+            "paraphrases": ["ad campaign metrics", "digital promotion performance"],
+            "meaning": "kết quả hiệu suất chiến dịch quảng cáo kỹ thuật số"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Presentation Purpose - Nghe ngay câu mở đầu 'Today I want to share...'.",
+          "Bước 2: Match Campaign Results Keywords - Bắt cụm 'performance results for... digital advertising campaign'.",
+          "Bước 3: Select Option A - Chọn A ('Results of a digital advertising campaign.')."
+        ]
+      },
+      {
+        "id": 8,
+        "question": "What metric increased by 45%?",
+        "options": {
+          "A": "Software development costs.",
+          "B": "Employee retention rates.",
+          "C": "Campaign engagement.",
+          "D": "Studio equipment rentals."
+        },
+        "correct_answer": "C",
+        "correct_text": "Campaign engagement.",
+        "audio_transcript": "\"Speaker: ...I'm pleased to report that campaign engagement increased by forty-five percent compared to last quarter...\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Chi phí phát triển phần mềm không xuất hiện."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Tỷ lệ giữ chân nhân viên không liên quan."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng chỉ số tương tác chiến dịch tăng 45% (Campaign engagement)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Thuê thiết bị studio không liên quan."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "campaign engagement increased by 45%",
+            "paraphrases": ["audience engagement grew 45%", "interaction rate rose 45%"],
+            "meaning": "mức độ tương tác của chiến dịch tăng 45%"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Percentage 'forty-five percent' - Theo dõi con số 'forty-five percent' (45%) trong bài phát biểu.",
+          "Bước 2: Match Preceding Metric - Bắt danh từ đi kèm 'campaign engagement'.",
+          "Bước 3: Select Option B - Chọn C ('Campaign engagement.')."
+        ]
+      },
+      {
+        "id": 9,
+        "question": "What will the team do next week?",
+        "options": {
+          "A": "Launch a new television broadcast.",
+          "B": "Reduce the advertising budget.",
+          "C": "Hire new video editors.",
+          "D": "Present analytics to the client's executive board."
+        },
+        "correct_answer": "D",
+        "correct_text": "Present analytics to the client's executive board.",
+        "audio_transcript": "\"Speaker: ...Next week, we will present these analytics to the client's executive board and propose expanding our strategy...\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Phát sóng truyền hình mới không được đề cập."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Mâu thuẫn với đề xuất mở rộng ngân sách."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Tuyển biên tập video không được đề cập."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng hành động thuyết trình phân tích cho ban điều hành khách hàng tuần tới (Present analytics to the client's executive board)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "present analytics to executive board",
+            "paraphrases": ["report metrics to client board", "present performance data to executives"],
+            "meaning": "thuyết trình phân tích dữ liệu cho ban điều hành"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Time Indicator 'Next week' - Bắt mốc thời gian 'Next week' ở câu thoại cuối.",
+          "Bước 2: Match Presentation Action - Bắt cụm 'present these analytics to the client's executive board'.",
+          "Bước 3: Select Option B - Chọn D ('Present analytics to the client's executive board.')."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 4,
+    "audio": "p4_g04_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 10,
+        "question": "What event is being held?",
+        "options": {
+          "A": "An educational innovation award ceremony.",
+          "B": "A press conference for a school opening.",
+          "C": "A shareholder voting meeting.",
+          "D": "A graduation ceremony."
+        },
+        "correct_answer": "A",
+        "correct_text": "An educational innovation award ceremony.",
+        "audio_transcript": "\"Speaker: Ladies and gentlemen, welcome to the Annual Educational Innovation Awards.\"",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng sự kiện lễ trao giải đổi mới giáo dục (An educational innovation award ceremony)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Họp báo khai trương trường không xuất hiện."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Họp biểu quyết cổ đông không liên quan."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Lễ tốt nghiệp không phải sự kiện."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "Annual Educational Innovation Awards",
+            "paraphrases": ["education award event", "learning innovation ceremony"],
+            "meaning": "lễ trao giải đổi mới giáo dục"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Event Greeting - Nghe ngay lời chào mở đầu 'welcome to...'.",
+          "Bước 2: Match Award Ceremony Title - Bắt cụm 'Annual Educational Innovation Awards'.",
+          "Bước 3: Select Option A - Chọn A ('An educational innovation award ceremony.')."
+        ]
+      },
+      {
+        "id": 11,
+        "question": "What award is LearnPulse EduTech receiving?",
+        "options": {
+          "A": "Best Real Estate Platform.",
+          "B": "Excellence in Vocational Training.",
+          "C": "Top Media Production Studio.",
+          "D": "Outstanding Corporate Law Firm."
+        },
+        "correct_answer": "B",
+        "correct_text": "Excellence in Vocational Training.",
+        "audio_transcript": "\"Speaker: ...present the 2026 Excellence in Vocational Training Award to LearnPulse EduTech.\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Nền tảng BĐS không phải danh hiệu."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng giải thưởng Xuất sắc trong Đào tạo Nghề (Excellence in Vocational Training)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Studio sản xuất truyền thông không xuất hiện."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Công ty luật không xuất hiện."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "Excellence in Vocational Training Award",
+            "paraphrases": ["vocational education award", "training excellence honor"],
+            "meaning": "giải thưởng xuất sắc trong đào tạo nghề"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Award Announcement - Bắt cụm từ 'present the... Award to LearnPulse'.",
+          "Bước 2: Match Award Name - Bắt chính xác 'Excellence in Vocational Training Award'.",
+          "Bước 3: Select Option B - Chọn B ('Excellence in Vocational Training.')."
+        ]
+      },
+      {
+        "id": 12,
+        "question": "What is Dr. Marcus Chen invited to do?",
+        "options": {
+          "A": "Deliver a keynote lecture.",
+          "B": "Announce the next category nominees.",
+          "C": "Come forward to receive a trophy.",
+          "D": "Sign a sponsorship contract."
+        },
+        "correct_answer": "C",
+        "correct_text": "Come forward to receive a trophy.",
+        "audio_transcript": "\"Speaker: Please give a warm round of applause to Dr. Chen as he comes forward to receive this trophy!\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Đọc bài giảng chính không được yêu cầu."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Công bố danh sách đề cử không phải việc của người nhận giải."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng lời mời tiến lên phía trước để nhận cúp (Come forward to receive a trophy)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Ký hợp đồng tài trợ không liên quan."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "comes forward to receive this trophy",
+            "paraphrases": ["step up to accept award", "receive trophy on stage"],
+            "meaning": "tiến lên phía trước để nhận cúp giải thưởng"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Closing Invitation - Theo dõi lời mời ở câu cuối 'give a warm round of applause...'",
+          "Bước 2: Match Trophy Receipt - Bắt cụm 'comes forward to receive this trophy'.",
+          "Bước 3: Select Option B - Chọn C ('Come forward to receive a trophy.')."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 5,
+    "audio": "p4_g05_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 13,
+        "question": "What is the main purpose of the message?",
+        "options": {
+          "A": "To report a cancelled court hearing.",
+          "B": "To settle a dispute out of court.",
+          "C": "To hire a new litigation attorney.",
+          "D": "To update the deadline for a court filing."
+        },
+        "correct_answer": "D",
+        "correct_text": "To update the deadline for a court filing.",
+        "audio_transcript": "\"Speaker: ...calling to update you on the patent infringement filing... extended the filing deadline...\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Báo hủy phiên tòa không xuất hiện."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Hòa giải ngoài tòa không xuất hiện."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Tuyển luật sư mới không xuất hiện."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng mục đích cập nhật thời hạn nộp hồ sơ tòa án (To update the deadline for a court filing)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "update on patent infringement filing",
+            "paraphrases": ["court deadline update", "filing schedule notification"],
+            "meaning": "cập nhật thời hạn nộp hồ sơ tòa án"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Message Opening Purpose - Bắt câu mục đích gọi 'I'm calling to update you on...'.",
+          "Bước 2: Match Filing Deadline Update - Bắt cụm 'update... filing deadline'.",
+          "Bước 3: Select Option B - Chọn D ('To update the deadline for a court filing.')."
+        ]
+      },
+      {
+        "id": 14,
+        "question": "When is the court filing actually due?",
+        "options": {
+          "A": "Thursday at 11:00 A.M.",
+          "B": "Thursday at 5:00 P.M.",
+          "C": "Friday at 11:00 A.M.",
+          "D": "Friday at 5:00 P.M."
+        },
+        "correct_answer": "C",
+        "correct_text": "Friday at 11:00 A.M.",
+        "audio_transcript": "\"Speaker: ...No, wait, let me re-read the updated court order... Ah, I misread the judge's directive — the clerk's office extended the filing deadline to Friday morning at eleven A.M. instead.\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Ghép sai thứ Năm với 11 giờ sáng."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Mốc thời gian ban đầu bị đọc nhầm."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng mốc thời gian nộp hồ sơ thực tế sau khi đính chính (Friday morning at eleven A.M. = Friday at 11:00 A.M.)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Ghép sai thứ Sáu với 5 giờ chiều."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "extended deadline to Friday morning at 11 A.M.",
+            "paraphrases": ["Friday 11:00 A.M. filing due", "due Friday morning at 11"],
+            "meaning": "hạn nộp lùi sang sáng thứ Sáu lúc 11 giờ"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Watch for Self-Correction Cue 'No, wait...' - Cảnh giác khi nghe từ đính chính 'No, wait... I misread'.",
+          "Bước 2: Catch Final Corrected Deadline - Chờ nghe mốc chốt thực tế 'extended the filing deadline to Friday morning at eleven A.M.'.",
+          "Bước 3: Select Option C - Chọn C ('Friday at 11:00 A.M.')."
+        ]
+      },
+      {
+        "id": 15,
+        "question": "What should the legal assistants complete by Thursday evening?",
+        "options": {
+          "A": "Prepare the exhibit indexes.",
+          "B": "Pay the court filing fees.",
+          "C": "Interview the expert witness.",
+          "D": "Redesign the company website."
+        },
+        "correct_answer": "A",
+        "correct_text": "Prepare the exhibit indexes.",
+        "audio_transcript": "\"Speaker: ...Please make sure the legal assistants prepare the exhibit indexes by Thursday evening.\"",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng nhiệm vụ chuẩn bị danh mục tài liệu đính kèm (Prepare the exhibit indexes)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Nộp lệ phí tòa án không được đề cập."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Phỏng vấn nhân chứng đã xong."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Thiết kế lại website không liên quan."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "prepare the exhibit indexes",
+            "paraphrases": ["organize legal exhibit index", "compile document evidence lists"],
+            "meaning": "chuẩn bị danh mục tài liệu/vật chứng đính kèm"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Final Request 'Please make sure...' - Theo dõi câu yêu cầu ở lượt thoại cuối.",
+          "Bước 2: Match Legal Assistant Task - Bắt cụm 'legal assistants prepare the exhibit indexes'.",
+          "Bước 3: Select Option A - Chọn A ('Prepare the exhibit indexes.')."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 6,
+    "audio": "p4_g06_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 16,
+        "question": "What is the radio report mainly about?",
+        "options": {
+          "A": "The construction of a new highway.",
+          "B": "Approved commercial zoning changes.",
+          "C": "A decline in residential property sales.",
+          "D": "The opening of a new city park."
+        },
+        "correct_answer": "B",
+        "correct_text": "Approved commercial zoning changes.",
+        "audio_transcript": "\"Speaker: ...City Planning Commission voted yesterday to approve significant zoning changes for the Downtown Commercial District.\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Xây đường cao tốc không được đề cập."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng chủ đề bản tin radio nói về các thay đổi quy hoạch thương mại đã được duyệt (Approved commercial zoning changes)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Giảm doanh số BĐS nhà ở không được đề cập."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Khai trương công viên không xuất hiện."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "approve significant zoning changes",
+            "paraphrases": ["commercial zoning updates", "approved development zoning"],
+            "meaning": "phê duyệt các thay đổi quy hoạch thương mại"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Broadcast News Topic - Nghe câu tin tức đầu tiên 'In regional news, the City Planning Commission...'.",
+          "Bước 2: Match Approved Zoning Changes - Bắt cụm 'approve significant zoning changes'.",
+          "Bước 3: Select Option B - Chọn B ('Approved commercial zoning changes.')."
+        ]
+      },
+      {
+        "id": 17,
+        "question": "What change was made to building height restrictions?",
+        "options": {
+          "A": "They were reduced to 8 stories.",
+          "B": "They will be reviewed in two years.",
+          "C": "They were eliminated entirely.",
+          "D": "They were increased to 20 stories."
+        },
+        "correct_answer": "D",
+        "correct_text": "They were increased to 20 stories.",
+        "audio_transcript": "\"Speaker: ...commercial building height restrictions will be increased from twelve stories to twenty stories to encourage density.\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Giảm xuống 8 tầng không phải con số đề cập."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Đánh giá trong 2 năm không được đề cập."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Không loại bỏ hoàn toàn."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng thay đổi tăng giới hạn chiều cao lên 20 tầng (They were increased to 20 stories)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "increased from 12 to 20 stories",
+            "paraphrases": ["raised building height limit to 20 floors", "height restriction expanded to 20 stories"],
+            "meaning": "tăng giới hạn chiều cao tòa nhà lên 20 tầng"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Height Limit Number - Bắt cụm 'height restrictions will be increased from...'.",
+          "Bước 2: Match Final Floor Number 'twenty stories' - Bắt con số đích 'twenty stories' (20 tầng).",
+          "Bước 3: Select Option B - Chọn D ('They were increased to 20 stories.')."
+        ]
+      },
+      {
+        "id": 18,
+        "question": "Who will be interviewed after the commercial break?",
+        "options": {
+          "A": "An urban planning expert.",
+          "B": "A city mayor.",
+          "C": "A construction contractor.",
+          "D": "A commercial bank manager."
+        },
+        "correct_answer": "A",
+        "correct_text": "An urban planning expert.",
+        "audio_transcript": "\"Speaker: ...Urban planning expert Clara Diaz will join us after the break to discuss how these zoning updates will impact commercial property values...\"",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng người được phỏng vấn là chuyên gia quy hoạch đô thị (An urban planning expert)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Thị trưởng thành phố không xuất hiện."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Nhà thầu xây dựng không xuất hiện."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Giám đốc ngân hàng không xuất hiện."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "Urban planning expert Clara Diaz",
+            "paraphrases": ["city planning specialist", "urban development consultant"],
+            "meaning": "chuyên gia quy hoạch đô thị"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Post-Break Guest - Theo dõi lời giới thiệu khách mời sau cụm 'after the break'.",
+          "Bước 2: Match Urban Planning Title - Bắt danh xưng 'Urban planning expert Clara Diaz'.",
+          "Bước 3: Select Option B - Chọn A ('An urban planning expert.')."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 7,
+    "audio": "p4_g07_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 19,
+        "question": "What is the main topic of the presentation?",
+        "options": {
+          "A": "Expanding into residential real estate.",
+          "B": "Redesigning corporate logo branding.",
+          "C": "Managing legal department workload and staffing.",
+          "D": "Purchasing new office computers."
+        },
+        "correct_answer": "C",
+        "correct_text": "Managing legal department workload and staffing.",
+        "audio_transcript": "\"Speaker: ...quarterly legal department meeting... internal legal team is facing a severe workload bottleneck.\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Mở rộng BĐS nhà ở không được đề cập."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Thiết kế lại logo không phải chủ đề."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng chủ đề quản lý khối lượng công việc và nhân sự phòng pháp chế (Managing legal department workload and staffing)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Mua máy tính không liên quan."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "workload bottleneck in legal team",
+            "paraphrases": ["legal staffing constraint", "legal workload management"],
+            "meaning": "ngẽn khối lượng công việc phòng pháp chế"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Meeting Purpose - Nghe mục đích họp phòng pháp chế 'quarterly legal department meeting...'.",
+          "Bước 2: Match Workload Bottleneck - Bắt cụm 'facing a severe workload bottleneck'.",
+          "Bước 3: Select Option B - Chọn C ('Managing legal department workload and staffing.')."
+        ]
+      },
+      {
+        "id": 20,
+        "question": "What does the speaker imply when he says, \"Our legal department only has two trademark attorneys on staff\"?",
+        "options": {
+          "A": "The current attorneys are not qualified.",
+          "B": "The department budget should be cut.",
+          "C": "Trademark registration is no longer necessary.",
+          "D": "Additional legal help must be hired or contracted."
+        },
+        "correct_answer": "D",
+        "correct_text": "Additional legal help must be hired or contracted.",
+        "audio_transcript": "\"Speaker: ...Our legal department only has two trademark attorneys on staff. To ensure we can review contract filings without costly delays, we must immediately contract an external corporate law firm...\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Luật sư hiện tại không kém trình độ."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Cắt giảm ngân sách mâu thuẫn."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Đăng ký nhãn hiệu vẫn rất quan trọng."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng ngụ ý cần phải thuê hoặc ký hợp đồng thêm sự hỗ trợ pháp lý (Additional legal help must be hired or contracted)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "only has two trademark attorneys",
+            "paraphrases": ["understaffed legal team", "urgent need for outside lawyers"],
+            "meaning": "chỉ có hai luật sư nhãn hiệu trong nhân sự"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Analyze Quote Context - Đặt câu trích dẫn giữa phàn nàn quá tải 'bottleneck' và kết luận 'contract external law firm'.",
+          "Bước 2: Infer Staff Shortage Implication - Suy luận việc thiếu nhân sự nội bộ dẫn đến việc bắt buộc thuê hỗ trợ bên ngoài.",
+          "Bước 3: Select Option B - Chọn D ('Additional legal help must be hired or contracted.')."
+        ]
+      },
+      {
+        "id": 21,
+        "question": "What solution does the speaker recommend?",
+        "options": {
+          "A": "Hiring an external corporate law firm.",
+          "B": "Cancelling international expansion plans.",
+          "C": "Closing the legal department.",
+          "D": "Reducing trademark filing fees."
+        },
+        "correct_answer": "A",
+        "correct_text": "Hiring an external corporate law firm.",
+        "audio_transcript": "\"Speaker: ...we must immediately contract an external corporate law firm to assist with our trademark portfolio.\"",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng giải pháp thuê công ty luật doanh nghiệp bên ngoài (Hiring an external corporate law firm)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Hủy kế hoạch mở rộng quốc tế mâu thuẫn."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Đóng cửa phòng pháp chế mâu thuẫn."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Giảm lệ phí nộp đơn không phải giải pháp."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "contract external corporate law firm",
+            "paraphrases": ["hire outside legal agency", "retain external law firm"],
+            "meaning": "ký hợp đồng thuê công ty luật bên ngoài"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Recommendation 'we must immediately...' - Theo dõi giải pháp chốt ở câu cuối.",
+          "Bước 2: Match External Law Firm Action - Bắt cụm 'contract an external corporate law firm'.",
+          "Bước 3: Select Option A - Chọn A ('Hiring an external corporate law firm.')."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 8,
+    "audio": "p4_g08_audio.mp3",
+    "image": "p4_g08_image.png",
+    "questions": [
+      {
+        "id": 22,
+        "question": "Who is the speaker addressing?",
+        "options": {
+          "A": "Real estate clients.",
+          "B": "Broadcast technicians.",
+          "C": "Trainees attending professional sessions.",
+          "D": "Construction workers."
+        },
+        "correct_answer": "C",
+        "correct_text": "Trainees attending professional sessions.",
+        "audio_transcript": "\"Speaker: Attention all trainees attending today's professional development sessions at LearnPulse EduTech Center!\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Khách hàng BĐS không phải đối tượng phát thanh."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Kỹ thuật viên truyền thông không xuất hiện."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng đối tượng là các học viên tham dự các buổi đào tạo chuyên môn (Trainees attending professional sessions)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Công nhân công trường không xuất hiện."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "trainees attending professional sessions",
+            "paraphrases": ["course attendees", "session participants"],
+            "meaning": "các học viên tham dự buổi đào tạo chuyên môn"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Announcement Salutation - Nghe ngay câu chào chú ý đầu tiên 'Attention all...'.",
+          "Bước 2: Match Trainee Audience - Bắt cụm 'trainees attending today's professional development sessions'.",
+          "Bước 3: Select Option B - Chọn C ('Trainees attending professional sessions.')."
+        ]
+      },
+      {
+        "id": 23,
+        "question": "Look at the graphic. Which room was originally scheduled for the Commercial Real Estate Law Seminar?",
+        "options": {
+          "A": "Room 101",
+          "B": "Room 102",
+          "C": "Room 103",
+          "D": "Room 104"
+        },
+        "correct_answer": "B",
+        "correct_text": "Room 102",
+        "audio_transcript": "\"Speaker: ...The Commercial Real Estate Law Seminar has been relocated to the Main Auditorium... (Graphic: Room 102 — Commercial Real Estate Law Seminar)\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Room 101 là hội thảo Tiếp thị số."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng Room 102 ban đầu được xếp cho Commercial Real Estate Law Seminar."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Room 103 là đào tạo phân tích dữ liệu AI."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Room 104 là định hướng lãnh đạo cao cấp."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "Commercial Real Estate Law Seminar",
+            "paraphrases": ["Room 102 class", "real estate law seminar"],
+            "meaning": "Hội thảo Luật Bất động sản Thương mại"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Seminar Name & Room - Nghe tên hội thảo 'Commercial Real Estate Law Seminar' đi kèm số phòng ban đầu.",
+          "Bước 2: Cross-Reference Table - Dóng tên hội thảo sang bảng biểu để tìm mã phòng (Room 102).",
+          "Bước 3: Select Option B - Chọn B ('Room 102')."
+        ]
+      },
+      {
+        "id": 24,
+        "question": "What are attendees instructed to receive at the Auditorium entrance?",
+        "options": {
+          "A": "A parking voucher.",
+          "B": "A USB flash drive.",
+          "C": "A name tag badge.",
+          "D": "Printed lecture binders."
+        },
+        "correct_answer": "D",
+        "correct_text": "Printed lecture binders.",
+        "audio_transcript": "\"Speaker: ...check in with the coordinator at the Auditorium entrance to receive your printed lecture binders.\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Phiếu gửi xe không được đề cập."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "USB không được đề cập."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Thẻ tên không được đề cập."
+          },
+          "D": {
+            "status": "correct",
+            "reason": "Đúng vật phẩm nhận tại lối vào là bìa hồ sơ bài giảng đã in (Printed lecture binders)."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "printed lecture binders",
+            "paraphrases": ["physical course binders", "printed study materials"],
+            "meaning": "bìa hồ sơ bài giảng đã in"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Check-In Instruction - Bắt câu hướng dẫn 'check in... to receive...' ở câu cuối.",
+          "Bước 2: Match Lecture Binders - Bắt cụm 'printed lecture binders'.",
+          "Bước 3: Select Option B - Chọn D ('Printed lecture binders.')."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 9,
+    "audio": "p4_g09_audio.mp3",
+    "image": null,
+    "questions": [
+      {
+        "id": 25,
+        "question": "What is the main purpose of the talk?",
+        "options": {
+          "A": "To conduct an orientation for new studio technicians.",
+          "B": "To present a new television commercial.",
+          "C": "To interview applicants for a producer role.",
+          "D": "To negotiate a studio lease."
+        },
+        "correct_answer": "A",
+        "correct_text": "To conduct an orientation for new studio technicians.",
+        "audio_transcript": "\"Speaker: Welcome to your first day as studio production technicians at Apex Media Studios... begin with a walkthrough of our broadcasting equipment protocols.\"",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng mục đích hướng dẫn định hướng cho các kỹ thuật viên studio mới (To conduct an orientation for new studio technicians)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Thuyết trình quảng cáo TV không xuất hiện."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Phỏng vấn ứng viên không xuất hiện."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Đàm phán thuê studio không xuất hiện."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "first day as studio production technicians",
+            "paraphrases": ["new technician onboarding", "studio staff orientation"],
+            "meaning": "ngày đầu tiên làm kỹ thuật viên sản xuất studio"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Orientation Welcome - Nghe ngay câu chào 'Welcome to your first day as...'.",
+          "Bước 2: Match Onboarding Context - Xác định bối cảnh hướng dẫn nhân viên mới ngày đầu.",
+          "Bước 3: Select Option B - Chọn A ('To conduct an orientation...')."
+        ]
+      },
+      {
+        "id": 26,
+        "question": "What must technicians do before operating HD cameras?",
+        "options": {
+          "A": "Wash their hands.",
+          "B": "Submit a vacation request.",
+          "C": "Complete a safety checklist and log in.",
+          "D": "Adjust the studio lighting."
+        },
+        "correct_answer": "C",
+        "correct_text": "Complete a safety checklist and log in.",
+        "audio_transcript": "\"Speaker: ...Before operating any HD cameras or audio consoles, you must complete your equipment safety checklist and log in with your assigned ID.\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Rửa tay không được đề cập."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Nộp đơn nghỉ phép không xuất hiện."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng yêu cầu hoàn thành danh mục an toàn và đăng nhập (Complete a safety checklist and log in)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Điều chỉnh đèn studio chưa phải bước bắt buộc trước camera."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "complete safety checklist and log in",
+            "paraphrases": ["fill safety form and log in", "complete equipment protocol check"],
+            "meaning": "hoàn thành danh mục kiểm tra an toàn và đăng nhập"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for Condition 'Before operating...' - Bắt cụm điều kiện 'Before operating any HD cameras...'.",
+          "Bước 2: Match Checklist Requirement - Bắt cụm 'complete your equipment safety checklist and log in'.",
+          "Bước 3: Select Option B - Chọn C ('Complete a safety checklist and log in.')."
+        ]
+      },
+      {
+        "id": 27,
+        "question": "Where will the listeners go next?",
+        "options": {
+          "A": "To the main cafeteria.",
+          "B": "To Studio Control Room A.",
+          "C": "To the executive office.",
+          "D": "To the outdoor parking lot."
+        },
+        "correct_answer": "B",
+        "correct_text": "To Studio Control Room A.",
+        "audio_transcript": "\"Speaker: ...Now, please follow me into Studio Control Room A, where our senior engineer will demonstrate...\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Nhà ăn chính không xuất hiện."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng địa điểm tiếp theo là Phòng Điều khiển Studio A (To Studio Control Room A)."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Văn phòng điều hành không xuất hiện."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Bãi đỗ xe ngoài trời không xuất hiện."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "follow me into Studio Control Room A",
+            "paraphrases": ["head to Control Room A", "proceed to Studio Control Room A"],
+            "meaning": "đi theo vào Phòng Điều khiển Studio A"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Directional Cue 'follow me into...' - Bắt câu chuyển hướng ở lượt thoại cuối 'please follow me into...'.",
+          "Bước 2: Match Room Name - Bắt chính xác 'Studio Control Room A'.",
+          "Bước 3: Select Option B - Chọn B ('To Studio Control Room A.')."
+        ]
+      }
+    ]
+  },
+  {
+    "group": 10,
+    "audio": "p4_g10_audio.mp3",
+    "image": "p4_g10_image.png",
+    "questions": [
+      {
+        "id": 28,
+        "question": "Who is the intended audience for the talk?",
+        "options": {
+          "A": "Prospective corporate tenants.",
+          "B": "Residential apartment buyers.",
+          "C": "Construction site workers.",
+          "D": "University students."
+        },
+        "correct_answer": "A",
+        "correct_text": "Prospective corporate tenants.",
+        "audio_transcript": "\"Speaker: Attention prospective corporate tenants! Welcome to Lumina Real Estate Group's commercial property showcase.\"",
+        "analysis": {
+          "A": {
+            "status": "correct",
+            "reason": "Đúng đối tượng khán giả là các khách thuê doanh nghiệp tiềm năng (Prospective corporate tenants)."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Người mua căn hộ nhà ở không phải đối tượng."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "Công nhân công trường không xuất hiện."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Sinh viên đại học không xuất hiện."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "prospective corporate tenants",
+            "paraphrases": ["potential commercial renters", "business tenants"],
+            "meaning": "các khách thuê doanh nghiệp tiềm năng"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Presentation Salutation - Nghe ngay câu mở đầu 'Attention prospective...'.",
+          "Bước 2: Match Corporate Tenant Audience - Bắt cụm 'prospective corporate tenants'.",
+          "Bước 3: Select Option B - Chọn A ('Prospective corporate tenants.')."
+        ]
+      },
+      {
+        "id": 29,
+        "question": "Look at the graphic. Which rate applies to District 2?",
+        "options": {
+          "A": "$45 / sq.ft",
+          "B": "$38 / sq.ft",
+          "C": "$32 / sq.ft",
+          "D": "$22 / sq.ft"
+        },
+        "correct_answer": "B",
+        "correct_text": "$38 / sq.ft",
+        "audio_transcript": "\"Speaker: ...District 2 — the Waterfront Media Park — offers an exceptional balance of prestige and value for modern digital agencies... (Graphic: District 2 — $38 / sq.ft)\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "$45 là giá Quận 1."
+          },
+          "B": {
+            "status": "correct",
+            "reason": "Đúng mức giá $38 / sq.ft áp dụng cho District 2."
+          },
+          "C": {
+            "status": "incorrect",
+            "reason": "$32 là giá Quận 3."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "$22 là giá Quận 4."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "District 2 ($38 / sq.ft)",
+            "paraphrases": ["Waterfront Media Park rate", "District 2 $38 rate"],
+            "meaning": "Quận 2 (Mức giá $38/foot vuông)"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen for District Name & Price - Nghe tên quận 'District 2' đi kèm giá 'thirty-eight dollars'.",
+          "Bước 2: Cross-Reference Graphic Table - Dóng tên District 2 sang cột đơn giá trên bảng biểu ($38 / sq.ft).",
+          "Bước 3: Select Option B - Chọn B ('$38 / sq.ft')."
+        ]
+      },
+      {
+        "id": 30,
+        "question": "How can clients qualify for a 10% rent discount in their first year?",
+        "options": {
+          "A": "By paying the entire rent in cash.",
+          "B": "By recommending another business tenant.",
+          "C": "By signing a 5-year lease before the end of the month.",
+          "D": "By leasing multiple floors."
+        },
+        "correct_answer": "C",
+        "correct_text": "By signing a 5-year lease before the end of the month.",
+        "audio_transcript": "\"Speaker: ...clients signing a 5-year lease before the end of the month will receive a ten percent rent discount for their first year.\"",
+        "analysis": {
+          "A": {
+            "status": "incorrect",
+            "reason": "Trả tiền mặt không được đề cập."
+          },
+          "B": {
+            "status": "incorrect",
+            "reason": "Giới thiệu khách hàng khác không xuất hiện."
+          },
+          "C": {
+            "status": "correct",
+            "reason": "Đúng điều kiện ký hợp đồng 5 năm trước cuối tháng (By signing a 5-year lease before the end of the month)."
+          },
+          "D": {
+            "status": "incorrect",
+            "reason": "Thuê nhiều tầng không xuất hiện."
+          }
+        },
+        "vocabulary": [
+          {
+            "phrase": "signing 5-year lease before end of month",
+            "paraphrases": ["execute 5-year agreement by month end", "5-year contract term for discount"],
+            "meaning": "ký hợp đồng 5 năm trước cuối tháng"
+          }
+        ],
+        "strategy": [
+          "Bước 1: Listen to Discount Condition - Bắt cụm điều kiện trước 'will receive a 10% rent discount'.",
+          "Bước 2: Match 5-Year Lease Requirement - Bắt cụm 'clients signing a 5-year lease before the end of the month'.",
+          "Bước 3: Select Option B - Chọn C ('By signing a 5-year lease before the end of the month.')."
+        ]
+      }
+    ]
+  }
+]

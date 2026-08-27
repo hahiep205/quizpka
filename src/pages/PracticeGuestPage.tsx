@@ -48,7 +48,7 @@ export function PracticeGuestPage({
     const found = examCatalog.find((item) => item.id === payload.examId) ?? null
     if (found) {
       if (payload.toeicScope) {
-        const opt = getToeicScopeOption(payload.toeicScope)
+        const opt = getToeicScopeOption(payload.toeicScope, payload.examId)
         if (opt) {
           return {
             ...found,

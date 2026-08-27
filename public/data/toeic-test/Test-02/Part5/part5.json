@@ -1,0 +1,1502 @@
+[
+  {
+    "id": 1,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The new e-commerce platform experienced a substantial _______ in user engagement following the recent homepage redesign.",
+    "options": {
+      "A": "increase",
+      "B": "increasingly",
+      "C": "increased",
+      "D": "increasing"
+    },
+    "correct_answer": "A",
+    "correct_text": "increase",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng danh từ 'increase' (sự gia tăng) làm tân ngữ cho động từ experienced."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Trạng từ 'increasingly' không đứng sau tính từ bổ nghĩa cho danh từ."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Động từ quá khứ / tính từ 'increased' - chỗ trống cần danh từ."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Hiện tại phân từ 'increasing' - đã có tính từ 'substantial'."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "substantial increase",
+        "paraphrases": ["significant growth", "marked rise"],
+        "meaning": "sự gia tăng đáng kể"
+      },
+      {
+        "phrase": "user engagement",
+        "paraphrases": ["customer interaction", "user participation"],
+        "meaning": "mức độ tương tác của người dùng"
+      }
+    ],
+    "grammar_point": "Noun as object after adjective",
+    "strategy": [
+      "Bước 1: Analyze Sentence Structure - Xác định cấu trúc: S (The new platform) + V (experienced) + O (a substantial [N]).",
+      "Bước 2: Identify Required Word Form - Nhận diện mạo từ 'a' + tính từ 'substantial' ➔ Chỗ trống bắt buộc là danh từ.",
+      "Bước 3: Select Noun Option - Chọn danh từ 'increase' (đáp án A)."
+    ]
+  },
+  {
+    "id": 2,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "All promotional materials for the solar panel installation must be approved by the marketing director prior _______ distribution.",
+    "options": {
+      "A": "for",
+      "B": "to",
+      "C": "with",
+      "D": "at"
+    },
+    "correct_answer": "B",
+    "correct_text": "to",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Giới từ 'for' không đi với 'prior'."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng cụm giới từ cố định 'prior to'."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Giới từ 'with' không đi với 'prior'."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Giới từ 'at' không ghép với 'prior'."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "prior to",
+        "paraphrases": ["before", "in advance of"],
+        "meaning": "trước khi"
+      },
+      {
+        "phrase": "promotional materials",
+        "paraphrases": ["marketing collateral", "advertising documents"],
+        "meaning": "tài liệu quảng bá"
+      }
+    ],
+    "grammar_point": "Preposition (prior to)",
+    "strategy": [
+      "Bước 1: Locate Key Word 'Prior' - Xác định từ chìa khóa đứng trước chỗ trống: 'prior'.",
+      "Bước 2: Recall Fixed Preposition Pair - Nhớ quy tắc cụm giới từ cố định: prior + to.",
+      "Bước 3: Select Option B - Chọn ngay đáp án B ('to')."
+    ]
+  },
+  {
+    "id": 3,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Guests _______ at the Nexus Palm Resort can enjoy complimentary access to the oceanfront fitness center.",
+    "options": {
+      "A": "stay",
+      "B": "stayed",
+      "C": "staying",
+      "D": "will stay"
+    },
+    "correct_answer": "C",
+    "correct_text": "staying",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Động từ nguyên thể 'stay' tạo lỗi hai động từ chia thì."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "'Stayed' là phân từ bị động, nhưng 'stay' là nội động từ."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng dạng rút gọn mệnh đề quan hệ chủ động 'staying'."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Không dùng 'will stay' khi đã có động từ chính 'can enjoy'."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "complimentary access",
+        "paraphrases": ["free entry", "no-cost access"],
+        "meaning": "quyền truy cập/sử dụng miễn phí"
+      },
+      {
+        "phrase": "reduced relative clause (active)",
+        "paraphrases": ["who stay at", "staying at"],
+        "meaning": "rút gọn mệnh đề quan hệ dạng chủ động"
+      }
+    ],
+    "grammar_point": "Reduced relative clause (active)",
+    "strategy": [
+      "Bước 1: Find Main Verb of Sentence - Tìm động từ chính chia thì trong câu: 'can enjoy'.",
+      "Bước 2: Analyze Subject Reduction - Nhận biết chỗ trống bổ nghĩa cho 'Guests' (người tự lưu trú ➔ chủ động).",
+      "Bước 3: Select Active V-ing Participle - Chọn V-ing 'staying' (đáp án C)."
+    ]
+  },
+  {
+    "id": 4,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The BioTech lab requires all research associates to follow strict safety protocols to _______ contamination of clinical samples.",
+    "options": {
+      "A": "promote",
+      "B": "predict",
+      "C": "postpone",
+      "D": "prevent"
+    },
+    "correct_answer": "D",
+    "correct_text": "prevent",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "'Promote' (thúc đẩy) không hợp ngữ cảnh an toàn."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "'Predict' (dự đoán) không phù hợp."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "'Postpone' (hoãn) không dùng cho sự nhiễm bẩn."
+      },
+      "D": {
+        "status": "correct",
+        "reason": "Đúng nghĩa 'prevent' (ngăn ngừa sự nhiễm bẩn)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "prevent contamination",
+        "paraphrases": ["stop pollution", "avoid contamination"],
+        "meaning": "ngăn ngừa sự nhiễm bẩn"
+      },
+      {
+        "phrase": "strict safety protocols",
+        "paraphrases": ["rigorous safety standards"],
+        "meaning": "quy trình an toàn nghiêm ngặt"
+      }
+    ],
+    "grammar_point": "Vocabulary in context",
+    "strategy": [
+      "Bước 1: Analyze Context Clues - Phân tích ngữ cảnh: 'safety protocols' (an toàn) + 'contamination' (nhiễm bẩn).",
+      "Bước 2: Evaluate Verb Meanings - Xét nghĩa 4 đáp án: prevent (ngăn ngừa) hợp lý nhất.",
+      "Bước 3: Select Correct Verb Option - Chọn đáp án D ('prevent')."
+    ]
+  },
+  {
+    "id": 5,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "_______ the IT department backed up the server database yesterday, we would have lost critical transaction logs during the outage.",
+    "options": {
+      "A": "Had not",
+      "B": "Had",
+      "C": "Unless",
+      "D": "If"
+    },
+    "correct_answer": "A",
+    "correct_text": "Had not",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng cấu trúc đảo ngữ phủ định điều kiện loại 3: 'Had not + S + V3'."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Dùng 'Had' sẽ ngược nghĩa logic."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "'Unless' không đi với đảo ngữ."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "'If' phải đi với câu chưa đảo ngữ."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "Had not + S + V3/ed",
+        "paraphrases": ["If S + had not + V3/ed"],
+        "meaning": "nếu... đã không (đảo ngữ điều kiện loại 3)"
+      },
+      {
+        "phrase": "transaction logs",
+        "paraphrases": ["activity audit records"],
+        "meaning": "nhật ký giao dịch"
+      }
+    ],
+    "grammar_point": "Subjunctive (Inverted conditional type 3)",
+    "strategy": [
+      "Bước 1: Identify Main Clause Tense - Nhìn vế sau: 'we would have lost' ➔ Dấu hiệu câu điều kiện loại 3.",
+      "Bước 2: Analyze Front Inversion & Logic - Vế trước có 'backed up' đứng sau S mà thiếu trợ động từ ➔ Cần đảo ngữ 'Had not'.",
+      "Bước 3: Select Option A - Chọn đáp án A ('Had not')."
+    ]
+  },
+  {
+    "id": 6,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The resort's newly renovated banquet hall is _______ located near the central business district.",
+    "options": {
+      "A": "convenient",
+      "B": "convenience",
+      "C": "conveniently",
+      "D": "convenientness"
+    },
+    "correct_answer": "C",
+    "correct_text": "conveniently",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Tính từ 'convenient' không bổ nghĩa cho 'located'."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Danh từ 'convenience' không đứng giữa be và tính từ."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng trạng từ 'conveniently' bổ nghĩa cho tính từ 'located'."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Danh từ giả định 'convenientness' không dùng."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "conveniently located",
+        "paraphrases": ["ideally situated", "favorably located"],
+        "meaning": "tọa lạc ở vị trí thuận tiện"
+      },
+      {
+        "phrase": "banquet hall",
+        "paraphrases": ["reception hall", "event room"],
+        "meaning": "hội trường tiệc"
+      }
+    ],
+    "grammar_point": "Adverb modifying adjective",
+    "strategy": [
+      "Bước 1: Analyze Blank Position - Vị trí chỗ trống: be (is) + _______ + Adj/V-ed (located).",
+      "Bước 2: Apply Adverb Rule - Giữa to be và tính từ bắt buộc là một trạng từ (-ly) bổ nghĩa.",
+      "Bước 3: Select Option C - Chọn 'conveniently' (đáp án C)."
+    ]
+  },
+  {
+    "id": 7,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Customers who purchase digital subscriptions are entitled to a full refund within fourteen days, _______ that the account has not exceeded the usage limit.",
+    "options": {
+      "A": "regarding",
+      "B": "provided",
+      "C": "despite",
+      "D": "in addition"
+    },
+    "correct_answer": "B",
+    "correct_text": "provided",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "'Regarding' là giới từ, không kết hợp thành 'regarding that'."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng liên từ điều kiện 'provided that' đi với mệnh đề."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "'Despite' là giới từ, không đi với 'that + Clause'."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "'In addition' là trạng từ, nếu làm giới từ phải là 'in addition to'."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "provided that",
+        "paraphrases": ["as long as", "on condition that"],
+        "meaning": "với điều kiện là / miễn là"
+      },
+      {
+        "phrase": "entitled to a refund",
+        "paraphrases": ["eligible for a refund"],
+        "meaning": "có quyền được hoàn tiền"
+      }
+    ],
+    "grammar_point": "Conditional conjunction (provided that)",
+    "strategy": [
+      "Bước 1: Locate Word 'That' - Nhìn từ đứng ngay sau chỗ trống: 'that'.",
+      "Bước 2: Identify Conditional Conjunction - Cụm 'provided that' tạo thành liên từ điều kiện (= as long as).",
+      "Bước 3: Select Option B - Chọn đáp án B ('provided')."
+    ]
+  },
+  {
+    "id": 8,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "_______ the unexpected power outage, the solar energy storage batteries maintained electricity supply to the data center without interruption.",
+    "options": {
+      "A": "Although",
+      "B": "Even though",
+      "C": "Whereas",
+      "D": "Despite"
+    },
+    "correct_answer": "D",
+    "correct_text": "Despite",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "'Although' là liên từ, cần mệnh đề S+V."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "'Even though' là liên từ, cần mệnh đề."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "'Whereas' là liên từ so sánh tương phản, cần mệnh đề."
+      },
+      "D": {
+        "status": "correct",
+        "reason": "Đúng giới từ 'Despite' đi với cụm danh từ."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "despite + Noun Phrase",
+        "paraphrases": ["in spite of + Noun Phrase"],
+        "meaning": "mặc dù (đi với cụm danh từ)"
+      },
+      {
+        "phrase": "power outage",
+        "paraphrases": ["blackout", "power failure"],
+        "meaning": "sự cúp điện / mất điện"
+      }
+    ],
+    "grammar_point": "Preposition vs Conjunction",
+    "strategy": [
+      "Bước 1: Analyze Phrase Following Blank - Kiểm tra vế sau chỗ trống: 'the unexpected power outage' (Cụm danh từ, không có V).",
+      "Bước 2: Distinguish Conjunction vs Preposition - Loại bỏ phương án này vì 3 liên từ (Although, Even though, Whereas).",
+      "Bước 3: Select Preposition Option - Chọn giới từ 'Despite' (đáp án D)."
+    ]
+  },
+  {
+    "id": 9,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "To _______ to our monthly BioTech industry newsletter, please enter your corporate email address on our website.",
+    "options": {
+      "A": "subscribe",
+      "B": "submit",
+      "C": "surrender",
+      "D": "substitute"
+    },
+    "correct_answer": "A",
+    "correct_text": "subscribe",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng động từ 'subscribe to' chỉ đăng ký nhận bản tin."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "'Submit to' mang nghĩa nộp/đệ trình, không dùng cho bản tin."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "'Surrender to' mang nghĩa đầu hàng."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "'Substitute' đi với 'for', không với 'to'."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "subscribe to a newsletter",
+        "paraphrases": ["sign up for a newsletter"],
+        "meaning": "đăng ký nhận bản tin"
+      },
+      {
+        "phrase": "corporate email address",
+        "paraphrases": ["business email address"],
+        "meaning": "địa chỉ email doanh nghiệp"
+      }
+    ],
+    "grammar_point": "Collocation (subscribe to)",
+    "strategy": [
+      "Bước 1: Locate Target Object 'Newsletter' - Xác định tân ngữ và giới từ: 'to our monthly... newsletter'.",
+      "Bước 2: Recall Collocation with 'To' - Nhớ cụm từ cố định: subscribe to + newsletter.",
+      "Bước 3: Select Option A - Chọn đáp án A ('subscribe')."
+    ]
+  },
+  {
+    "id": 10,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The resort's event coordination team managed the entire international conference _______ without relying on external agencies.",
+    "options": {
+      "A": "they",
+      "B": "them",
+      "C": "themselves",
+      "D": "their"
+    },
+    "correct_answer": "C",
+    "correct_text": "themselves",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Đại từ chủ ngữ 'they' không đứng sau tân ngữ."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Đại từ tân ngữ 'them' không dùng thừa."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng đại từ phản thân 'themselves' nhấn mạnh tự lực."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Tính từ sở hữu 'their' cần danh từ đi sau."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "managed... themselves",
+        "paraphrases": ["managed... by themselves", "managed... on their own"],
+        "meaning": "tự mình quản lý (không cần trợ giúp)"
+      },
+      {
+        "phrase": "without relying on",
+        "paraphrases": ["without depending on"],
+        "meaning": "mà không dựa vào"
+      }
+    ],
+    "grammar_point": "Reflexive pronoun for emphasis",
+    "strategy": [
+      "Bước 1: Check Clause Completeness - Phân tích câu: S (team) + V (managed) + O (conference) ➔ Cấu trúc đã hoàn chỉnh.",
+      "Bước 2: Identify Emphatic Pronoun Role - Vị trí cuối mệnh đề nhấn mạnh hành động tự làm ➔ Dùng đại từ phản thân.",
+      "Bước 3: Select Option C - Chọn 'themselves' (đáp án C)."
+    ]
+  },
+  {
+    "id": 11,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Nexus Financial offers _______ investment advice tailored to the specific risk tolerance of each corporate client.",
+    "options": {
+      "A": "strategy",
+      "B": "strategic",
+      "C": "strategically",
+      "D": "strategize"
+    },
+    "correct_answer": "B",
+    "correct_text": "strategic",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Danh từ 'strategy' không bổ nghĩa cho 'investment advice'."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng tính từ 'strategic' bổ nghĩa cho cụm danh từ."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Trạng từ 'strategically' không đứng trước danh từ."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Động từ 'strategize' không làm bổ ngữ."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "strategic investment advice",
+        "paraphrases": ["tactical financial guidance"],
+        "meaning": "tư vấn đầu tư mang tính chiến lược"
+      },
+      {
+        "phrase": "risk tolerance",
+        "paraphrases": ["risk capacity", "risk threshold"],
+        "meaning": "khả năng chấp nhận rủi ro"
+      }
+    ],
+    "grammar_point": "Adjective before noun",
+    "strategy": [
+      "Bước 1: Identify Modified Noun Phrase - Nhận diện danh từ đứng sau: 'investment advice'.",
+      "Bước 2: Apply Adjective Modification Rule - Trước danh từ cần một tính từ bổ nghĩa.",
+      "Bước 3: Select Option B - Chọn tính từ 'strategic' (đáp án B)."
+    ]
+  },
+  {
+    "id": 12,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "All BioTech laboratory personnel must strictly _______ with national biosafety standards when handling hazardous materials.",
+    "options": {
+      "A": "observe",
+      "B": "conform",
+      "C": "adhere",
+      "D": "comply"
+    },
+    "correct_answer": "D",
+    "correct_text": "comply",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "'Observe' là ngoại động từ, không đi với giới từ."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "'Conform' đi với 'to'."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "'Adhere' đi với 'to'."
+      },
+      "D": {
+        "status": "correct",
+        "reason": "Đúng 'comply' đi với 'with'."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "comply with standards",
+        "paraphrases": ["adhere to standards", "conform to regulations"],
+        "meaning": "tuân thủ các tiêu chuẩn"
+      },
+      {
+        "phrase": "hazardous materials",
+        "paraphrases": ["dangerous substances"],
+        "meaning": "vật liệu nguy hiểm"
+      }
+    ],
+    "grammar_point": "Collocation (comply with)",
+    "strategy": [
+      "Bước 1: Locate Preposition 'With' - Nhìn từ đứng ngay sau chỗ trống: giới từ 'with'.",
+      "Bước 2: Match Preposition with Verb - Áp dụng mẹo: WITH ➔ chọn COMPLY, TO ➔ chọn ADHERE/CONFORM.",
+      "Bước 3: Select Option D - Chọn 'comply' (đáp án D)."
+    ]
+  },
+  {
+    "id": 13,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The solar panels _______ on the rooftop of the logistics center have reduced monthly energy expenses by twenty percent.",
+    "options": {
+      "A": "install",
+      "B": "installing",
+      "C": "installed",
+      "D": "were installed"
+    },
+    "correct_answer": "C",
+    "correct_text": "installed",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Động từ nguyên thể không dùng khi có động từ chính 'have reduced'."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "'Installing' là chủ động, nhưng tấm pin được lắp đặt (bị động)."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng quá khứ phân từ 'installed' rút gọn bị động."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "'were installed' tạo lỗi hai động từ chia thì."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "installed on the rooftop",
+        "paraphrases": ["mounted on the roof"],
+        "meaning": "được lắp đặt trên mái nhà"
+      },
+      {
+        "phrase": "reduced energy expenses",
+        "paraphrases": ["lowered utility costs"],
+        "meaning": "cắt giảm chi phí năng lượng"
+      }
+    ],
+    "grammar_point": "Reduced relative clause (passive)",
+    "strategy": [
+      "Bước 1: Find Main Verb - Tìm động từ chính chia thì: 'have reduced'.",
+      "Bước 2: Analyze Passive Modifier - Xác định chủ ngữ 'solar panels' nhận tác động bị động ➔ Dùng V-ed.",
+      "Bước 3: Select Option C - Chọn 'installed' (đáp án C)."
+    ]
+  },
+  {
+    "id": 14,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Because of a temporary supply chain disruption, the delivery of custom resort furniture is currently _______ delay.",
+    "options": {
+      "A": "in front of",
+      "B": "subject to",
+      "C": "overall",
+      "D": "prior to"
+    },
+    "correct_answer": "B",
+    "correct_text": "subject to",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "'In front of' chỉ vị trí không gian, không đi với 'delay'."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng cụm tính từ cố định 'subject to' (có khả năng bị chậm trễ)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "'Overall' là trạng từ, không đứng trước danh từ 'delay'."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "'Prior to delay' sai logic."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "subject to delay",
+        "paraphrases": ["prone to delay", "liable to experience delays"],
+        "meaning": "có khả năng bị chậm trễ"
+      },
+      {
+        "phrase": "supply chain disruption",
+        "paraphrases": ["logistical interruption"],
+        "meaning": "sự gián đoạn chuỗi cung ứng"
+      }
+    ],
+    "grammar_point": "Fixed expression (subject to)",
+    "strategy": [
+      "Bước 1: Identify Link Between 'Be' and 'Delay' - Nhìn cấu trúc: be (is) + _______ + N (delay).",
+      "Bước 2: Recall Fixed Expression - Nhớ cụm từ cố định trong thông báo: be subject to delay.",
+      "Bước 3: Select Option B - Chọn đáp án B ('subject to')."
+    ]
+  },
+  {
+    "id": 15,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The IT consultant _______ designed our mobile banking security architecture will deliver the keynote address at tomorrow's seminar.",
+    "options": {
+      "A": "who",
+      "B": "whom",
+      "C": "whose",
+      "D": "which"
+    },
+    "correct_answer": "A",
+    "correct_text": "who",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng đại từ quan hệ 'who' làm chủ ngữ chỉ người."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "'Whom' làm tân ngữ, không đứng trước động từ."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "'Whose' cần danh từ theo sau."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "'Which' chỉ vật, không dùng cho người."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "consultant who designed",
+        "paraphrases": ["consultant designing"],
+        "meaning": "cố vấn người đã thiết kế"
+      },
+      {
+        "phrase": "deliver keynote address",
+        "paraphrases": ["give main speech"],
+        "meaning": "đọc bài phát biểu chính"
+      }
+    ],
+    "grammar_point": "Relative pronoun (who)",
+    "strategy": [
+      "Bước 1: Check Antecedent Type - Xác định danh từ đứng trước: 'The IT consultant' (Người).",
+      "Bước 2: Check Following Word Type - Xem từ đứng sau: động từ 'designed' ➔ Cần chủ ngữ.",
+      "Bước 3: Select Option A - Chọn đại từ quan hệ 'who' (đáp án A)."
+    ]
+  },
+  {
+    "id": 16,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The e-commerce customer service team handled all user inquiries _______ despite the surge in holiday order volumes.",
+    "options": {
+      "A": "efficient",
+      "B": "efficiency",
+      "C": "efficiently",
+      "D": "efficiencies"
+    },
+    "correct_answer": "C",
+    "correct_text": "efficiently",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Tính từ 'efficient' không bổ nghĩa cho động từ 'handled'."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Danh từ 'efficiency' không làm trạng ngữ."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng trạng từ 'efficiently' bổ nghĩa cho động từ 'handled'."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Danh từ số nhiều 'efficiencies' không phù hợp."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "handled inquiries efficiently",
+        "paraphrases": ["processed questions effectively"],
+        "meaning": "xử lý thắc mắc một cách hiệu quả"
+      },
+      {
+        "phrase": "surge in order volumes",
+        "paraphrases": ["spike in orders"],
+        "meaning": "sự tăng vọt về số lượng đơn hàng"
+      }
+    ],
+    "grammar_point": "Adverb modifying verb",
+    "strategy": [
+      "Bước 1: Check Clause Completeness - Cấu trúc: S (team) + V (handled) + O (inquiries) ➔ Đã đầy đủ S-V-O.",
+      "Bước 2: Apply Adverb Modifier Rule - Bổ nghĩa cho động từ hành động 'handled' ➔ Cần trạng từ (-ly).",
+      "Bước 3: Select Option C - Chọn 'efficiently' (đáp án C)."
+    ]
+  },
+  {
+    "id": 17,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The technical team conducted a thorough _______ of the solar inverter to identify the root cause of the power fluctuation.",
+    "options": {
+      "A": "impression",
+      "B": "intention",
+      "C": "instruction",
+      "D": "inspection"
+    },
+    "correct_answer": "D",
+    "correct_text": "inspection",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "'Impression' không phù hợp ngữ cảnh kỹ thuật."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "'Intention' không dùng cho kiểm tra."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "'Instruction' không phù hợp."
+      },
+      "D": {
+        "status": "correct",
+        "reason": "Đúng 'inspection' trong cụm 'conduct a thorough inspection'."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "conduct a thorough inspection",
+        "paraphrases": ["carry out a detailed check"],
+        "meaning": "tiến hành kiểm tra kỹ lưỡng"
+      },
+      {
+        "phrase": "root cause",
+        "paraphrases": ["underlying reason"],
+        "meaning": "nguyên nhân gốc rễ"
+      }
+    ],
+    "grammar_point": "Vocabulary (inspection)",
+    "strategy": [
+      "Bước 1: Analyze Verb-Noun Pair - Nhận diện cụm từ: conduct + a thorough + [N].",
+      "Bước 2: Evaluate Word Meaning in Tech Context - Chọn từ phù hợp với kiểm tra thiết bị hỏng hóc ➔ inspection.",
+      "Bước 3: Select Option D - Chọn 'inspection' (đáp án D)."
+    ]
+  },
+  {
+    "id": 18,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The more streamlined our checkout process becomes, the _______ e-commerce customers are to complete their online purchases.",
+    "options": {
+      "A": "likely",
+      "B": "more likely",
+      "C": "most likely",
+      "D": "likelier"
+    },
+    "correct_answer": "B",
+    "correct_text": "more likely",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Thiếu 'more' trong cấu trúc so sánh kép."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng dạng so sánh kép 'the more likely'."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "'most likely' là so sánh nhất, không dùng trong cấu trúc này."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "'likelier' không dùng trong văn phong trang trọng."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "the more..., the more likely...",
+        "paraphrases": ["the comparative..., the higher probability..."],
+        "meaning": "càng... thì càng có nhiều khả năng..."
+      },
+      {
+        "phrase": "streamlined checkout process",
+        "paraphrases": ["simplified payment workflow"],
+        "meaning": "quy trình thanh toán tối giản"
+      }
+    ],
+    "grammar_point": "Double comparative",
+    "strategy": [
+      "Bước 1: Recognize Double Comparative Pattern - Nhận diện vế 1 mở đầu bằng 'The more streamlined...'.",
+      "Bước 2: Apply Rule for Second Clause - Vế 2 phải có dạng 'the + comparative...' ➔ 'the more likely'.",
+      "Bước 3: Select Option B - Chọn đáp án B ('more likely')."
+    ]
+  },
+  {
+    "id": 19,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Resort guests are advised to keep their valuable items in the room safe, as the hotel management cannot accept _______ for lost personal property.",
+    "options": {
+      "A": "liability",
+      "B": "reliability",
+      "C": "availability",
+      "D": "sustainability"
+    },
+    "correct_answer": "A",
+    "correct_text": "liability",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng 'liability' trong cụm 'accept liability for'."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "'reliability' không phù hợp."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "'availability' không dùng với mất mát."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "'sustainability' không thuộc ngữ cảnh pháp lý."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "accept liability for",
+        "paraphrases": ["assume responsibility for", "take legal responsibility for"],
+        "meaning": "chịu trách nhiệm pháp lý / bồi thường"
+      },
+      {
+        "phrase": "lost personal property",
+        "paraphrases": ["missing belongings"],
+        "meaning": "tài sản cá nhân bị thất lạc"
+      }
+    ],
+    "grammar_point": "Collocation (accept liability for)",
+    "strategy": [
+      "Bước 1: Identify Legal / Hotel Disclaimer Context - Nhận diện ngữ cảnh miễn trừ trách nhiệm khách sạn: 'cannot accept _______ for lost...'.",
+      "Bước 2: Recall Legal Collocation - Nhớ cụm từ cố định: accept liability for.",
+      "Bước 3: Select Option A - Chọn đáp án A ('liability')."
+    ]
+  },
+  {
+    "id": 20,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "When _______ new clinical trial data into the database, researchers must verify every entry for statistical accuracy.",
+    "options": {
+      "A": "enter",
+      "B": "entered",
+      "C": "entering",
+      "D": "enters"
+    },
+    "correct_answer": "C",
+    "correct_text": "entering",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Sau 'When' không dùng nguyên thể không chia."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "'Entered' là bị động, nhưng researchers chủ động nhập."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng dạng rút gọn mệnh đề trạng ngữ chủ động 'entering'."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Thiếu chủ ngữ trước động từ chia."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "When entering data",
+        "paraphrases": ["While inputting data", "Upon submitting data"],
+        "meaning": "khi nhập dữ liệu"
+      },
+      {
+        "phrase": "statistical accuracy",
+        "paraphrases": ["numerical precision"],
+        "meaning": "độ chính xác thống kê"
+      }
+    ],
+    "grammar_point": "Reduced adverbial clause (when + V-ing)",
+    "strategy": [
+      "Bước 1: Locate Temporal Conjunction 'When' - Nhìn vị trí đầu câu: 'When + _______ + Object'.",
+      "Bước 2: Analyze Active Reduction - Các nhà nghiên cứu chủ động nhập dữ liệu ➔ Dùng V-ing.",
+      "Bước 3: Select Option C - Chọn 'entering' (đáp án C)."
+    ]
+  },
+  {
+    "id": 21,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The BioTech startup received official _______ from the regulatory committee to begin Phase II human trials.",
+    "options": {
+      "A": "approve",
+      "B": "approved",
+      "C": "approvingly",
+      "D": "approval"
+    },
+    "correct_answer": "D",
+    "correct_text": "approval",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Động từ 'approve' không làm tân ngữ."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Tính từ 'approved' không dùng."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Trạng từ 'approvingly' không dùng."
+      },
+      "D": {
+        "status": "correct",
+        "reason": "Đúng danh từ 'approval' làm tân ngữ."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "official approval",
+        "paraphrases": ["formal authorization", "regulatory consent"],
+        "meaning": "sự chấp thuận / phê duyệt chính thức"
+      },
+      {
+        "phrase": "regulatory committee",
+        "paraphrases": ["governing board"],
+        "meaning": "ủy ban quản lý / giám sát"
+      }
+    ],
+    "grammar_point": "Noun as object after adjective",
+    "strategy": [
+      "Bước 1: Analyze Sentence Structure - Xác định thành phần: Verb (received) + Adj (official) + _______.",
+      "Bước 2: Apply Noun Target Rule - Sau tính từ cần một danh từ làm tân ngữ.",
+      "Bước 3: Select Option D - Chọn danh từ 'approval' (đáp án D)."
+    ]
+  },
+  {
+    "id": 22,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Please ensure that your digital wallet account is active, as recurring monthly payments will be _______ deducted on the first of each month.",
+    "options": {
+      "A": "accidentally",
+      "B": "automatically",
+      "C": "conditionally",
+      "D": "occasionally"
+    },
+    "correct_answer": "B",
+    "correct_text": "automatically",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "'Accidentally' không phù hợp thanh toán định kỳ."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng 'automatically' bổ nghĩa cho 'deducted'."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "'Conditionally' không phù hợp."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "'Occasionally' mâu thuẫn với 'monthly'."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "automatically deducted",
+        "paraphrases": ["auto-debited", "charged automatically"],
+        "meaning": "được tự động trích nợ / trừ tiền"
+      },
+      {
+        "phrase": "recurring monthly payments",
+        "paraphrases": ["regular monthly charges"],
+        "meaning": "các khoản thanh toán định kỳ hàng tháng"
+      }
+    ],
+    "grammar_point": "Adverb in context",
+    "strategy": [
+      "Bước 1: Identify Payment Context - Nhận diện từ chìa khóa: 'recurring monthly payments' (thanh toán định kỳ hàng tháng).",
+      "Bước 2: Match Adverb Meaning - Hệ thống tự động thực hiện ➔ automatically.",
+      "Bước 3: Select Option B - Chọn 'automatically' (đáp án B)."
+    ]
+  },
+  {
+    "id": 23,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The resort offers custom wedding packages at no extra _______, provided the reservation is made six months in advance.",
+    "options": {
+      "A": "charge",
+      "B": "charging",
+      "C": "charged",
+      "D": "charges"
+    },
+    "correct_answer": "A",
+    "correct_text": "charge",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng cụm 'at no extra charge'."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Không dùng V-ing sau giới từ."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Quá khứ phân từ không dùng."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Danh từ số nhiều không đúng thành ngữ."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "at no extra charge",
+        "paraphrases": ["free of charge", "without additional fee"],
+        "meaning": "không tốn thêm chi phí"
+      },
+      {
+        "phrase": "in advance",
+        "paraphrases": ["ahead of time"],
+        "meaning": "trước (về mặt thời gian)"
+      }
+    ],
+    "grammar_point": "Fixed expression (at no extra charge)",
+    "strategy": [
+      "Bước 1: Recognize Prepositional Phrase - Nhìn cụm từ đứng trước: 'at no extra'.",
+      "Bước 2: Recall Fixed Expression - Nhớ thành ngữ cố định: at no extra charge.",
+      "Bước 3: Select Option A - Chọn 'charge' (đáp án A)."
+    ]
+  },
+  {
+    "id": 24,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The government introduced tax incentives to encourage small business owners to _______ solar energy technology.",
+    "options": {
+      "A": "admit",
+      "B": "adapt",
+      "C": "adept",
+      "D": "adopt"
+    },
+    "correct_answer": "D",
+    "correct_text": "adopt",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "'Admit' không đi với technology."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "'Adapt' cần 'to' nếu có tân ngữ."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "'Adept' là tính từ."
+      },
+      "D": {
+        "status": "correct",
+        "reason": "Đúng 'adopt' (áp dụng công nghệ)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "adopt technology",
+        "paraphrases": ["embrace technology", "implement tech solutions"],
+        "meaning": "áp dụng / ứng dụng công nghệ mới"
+      },
+      {
+        "phrase": "tax incentives",
+        "paraphrases": ["tax breaks", "fiscal benefits"],
+        "meaning": "các ưu đãi thuế"
+      }
+    ],
+    "grammar_point": "Vocabulary (adopt vs adapt)",
+    "strategy": [
+      "Bước 1: Analyze Object Noun Phrase - Nhìn tân ngữ phía sau: 'solar energy technology'.",
+      "Bước 2: Distinguish Adopt vs Adapt - Adopt + N (áp dụng cái gì), Adapt to + N (thích nghi với cái gì).",
+      "Bước 3: Select Option D - Chọn 'adopt' (đáp án D)."
+    ]
+  },
+  {
+    "id": 25,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "To maintain system integrity, it is essential that the IT administrator _______ all server access logs every twenty-four hours.",
+    "options": {
+      "A": "reviews",
+      "B": "review",
+      "C": "reviewed",
+      "D": "reviewing"
+    },
+    "correct_answer": "B",
+    "correct_text": "review",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Trong cấu trúc giả định, không thêm 's'."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng động từ nguyên thể không chia 'review'."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Không dùng quá khứ."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Không dùng V-ing."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "it is essential that S + V-bare",
+        "paraphrases": ["it is imperative that S + V-bare"],
+        "meaning": "điều thiết yếu là ai đó phải làm gì"
+      },
+      {
+        "phrase": "system integrity",
+        "paraphrases": ["system security and stability"],
+        "meaning": "tính toàn vẹn của hệ thống"
+      }
+    ],
+    "grammar_point": "Subjunctive (It is essential that)",
+    "strategy": [
+      "Bước 1: Recognize Subjunctive Trigger - Nhận diện mẫu câu: 'It is essential that...'.",
+      "Bước 2: Apply Bare Infinitive Rule - Nhớ quy tắc: Sau 'essential that', động từ luôn ở dạng nguyên thể (bare) bất kể chủ ngữ số ít hay số nhiều.",
+      "Bước 3: Select Option B - Chọn 'review' (đáp án B)."
+    ]
+  },
+  {
+    "id": 26,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Digital banking clients must update their contact _______ whenever they relocate to a new residential address.",
+    "options": {
+      "A": "inform",
+      "B": "informative",
+      "C": "information",
+      "D": "informed"
+    },
+    "correct_answer": "C",
+    "correct_text": "information",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "'Inform' là động từ, không ghép với 'contact'."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "'Informative' là tính từ."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng danh từ 'information' trong cụm 'contact information'."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "'Informed' là tính từ / phân từ."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "contact information",
+        "paraphrases": ["contact details"],
+        "meaning": "thông tin liên hệ"
+      },
+      {
+        "phrase": "relocate to",
+        "paraphrases": ["move to", "resettle in"],
+        "meaning": "chuyển đến địa điểm mới"
+      }
+    ],
+    "grammar_point": "Compound noun (contact information)",
+    "strategy": [
+      "Bước 1: Identify Compound Noun Pattern - Nhìn từ đứng trước chỗ trống: 'contact'.",
+      "Bước 2: Select Target Noun - Cụm danh từ thông dụng trong dịch vụ ngân hàng: contact information.",
+      "Bước 3: Select Option C - Chọn 'information' (đáp án C)."
+    ]
+  },
+  {
+    "id": 27,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Orders placed after three P.M. on Friday will be processed on the _______ business day.",
+    "options": {
+      "A": "following",
+      "B": "subsequent",
+      "C": "future",
+      "D": "further"
+    },
+    "correct_answer": "A",
+    "correct_text": "following",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng cụm 'the following business day'."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "'Subsequent' ít dùng trong cụm cố định này."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "'Future' không tạo cụm."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "'Further' không đi với 'business day'."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "the following business day",
+        "paraphrases": ["the next working day"],
+        "meaning": "ngày làm việc tiếp theo"
+      },
+      {
+        "phrase": "processed",
+        "paraphrases": ["handled", "fulfilled"],
+        "meaning": "được xử lý"
+      }
+    ],
+    "grammar_point": "Collocation (the following business day)",
+    "strategy": [
+      "Bước 1: Locate Shipping Time Frame - Nhận diện ngữ cảnh đơn hàng đặt sau 3h chiều Thứ 6.",
+      "Bước 2: Recall Standard Collocation - Nhớ cụm từ cố định: the following business day.",
+      "Bước 3: Select Option A - Chọn 'following' (đáp án A)."
+    ]
+  },
+  {
+    "id": 28,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "While OmniHealth's diagnostic software focuses on imaging analysis, _______ is designed specifically for genetic sequencing.",
+    "options": {
+      "A": "our",
+      "B": "us",
+      "C": "we",
+      "D": "ours"
+    },
+    "correct_answer": "D",
+    "correct_text": "ours",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "'Our' là tính từ sở hữu, cần danh từ."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "'Us' là tân ngữ."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "'We' chỉ người, không đi với 'is designed'."
+      },
+      "D": {
+        "status": "correct",
+        "reason": "Đúng đại từ sở hữu 'ours' đại diện cho 'our software'."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "ours",
+        "paraphrases": ["our software", "our product"],
+        "meaning": "phần mềm của chúng tôi"
+      },
+      {
+        "phrase": "genetic sequencing",
+        "paraphrases": ["DNA decoding"],
+        "meaning": "giải mã / giải trình tự gen"
+      }
+    ],
+    "grammar_point": "Possessive pronoun",
+    "strategy": [
+      "Bước 1: Analyze Contrast Structure - So sánh 2 phần mềm: OmniHealth's software vs _______.",
+      "Bước 2: Apply Possessive Pronoun Rule - Dùng Đại từ sở hữu (ours) để thay thế cho [Possessive Adj + Noun] nhằm tránh lặp từ.",
+      "Bước 3: Select Option D - Chọn 'ours' (đáp án D)."
+    ]
+  },
+  {
+    "id": 29,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "The quarterly financial report indicated that online sales contributed _______ to the overall revenue growth.",
+    "options": {
+      "A": "narrowly",
+      "B": "severely",
+      "C": "significantly",
+      "D": "strictly"
+    },
+    "correct_answer": "C",
+    "correct_text": "significantly",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "'Narrowly' không kết hợp với 'contribute to'."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "'Severely' mang nghĩa tiêu cực."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng 'significantly' kết hợp tự nhiên với 'contributed to'."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "'Strictly' đi với quy định, không với revenue."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "contribute significantly to",
+        "paraphrases": ["make a substantial contribution to"],
+        "meaning": "đóng góp đáng kể vào"
+      },
+      {
+        "phrase": "overall revenue growth",
+        "paraphrases": ["total income increase"],
+        "meaning": "sự tăng trưởng doanh thu tổng thể"
+      }
+    ],
+    "grammar_point": "Adverb collocation",
+    "strategy": [
+      "Bước 1: Identify Financial Report Context - Nhận diện ngữ cảnh báo cáo tài chính tăng trưởng doanh thu tích cực.",
+      "Bước 2: Match Collocation - Contribute + significantly + to.",
+      "Bước 3: Select Option C - Chọn 'significantly' (đáp án C)."
+    ]
+  },
+  {
+    "id": 30,
+    "type": "incomplete_sentence",
+    "part": "Reading - Part 5",
+    "question": "Resort guests are reminded that check-out time is eleven A.M. _______ prior arrangements have been made with the front desk.",
+    "options": {
+      "A": "unless",
+      "B": "except",
+      "C": "despite",
+      "D": "without"
+    },
+    "correct_answer": "A",
+    "correct_text": "unless",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng liên từ 'unless' nối hai mệnh đề điều kiện phủ định."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "'Except' là giới từ, cần 'except that' cho mệnh đề."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "'Despite' là giới từ, không nối mệnh đề."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "'Without' là giới từ, cần V-ing."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "unless + Clause",
+        "paraphrases": ["except if + Clause", "if + Clause + not"],
+        "meaning": "trừ khi"
+      },
+      {
+        "phrase": "prior arrangements",
+        "paraphrases": ["advance agreements"],
+        "meaning": "các thỏa thuận / sắp xếp trước"
+      }
+    ],
+    "grammar_point": "Conjunction (unless)",
+    "strategy": [
+      "Bước 1: Check What Follows Blank - Nhìn vế sau: 'prior arrangements (S) + have been made (V)' ➔ Mệnh đề S + V.",
+      "Bước 2: Filter Out Prepositions - Loại trừ B, C, D vì 'except', 'despite', 'without' là Giới từ.",
+      "Bước 3: Select Option A - Chọn liên từ 'unless' (đáp án A)."
+    ]
+  }
+]

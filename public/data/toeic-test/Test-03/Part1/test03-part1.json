@@ -1,0 +1,340 @@
+[
+  {
+    "id": 1,
+    "type": "picture_description",
+    "part": "Listening - Part 1",
+    "prompt": "Look at the picture marked number 1 in your test book.",
+    "audio": "p1_q001.mp3",
+    "image": "p1_q001.webp",
+    "options": {
+      "A": "He is sketching a floor plan on a notepad.",
+      "B": "He is pointing at a blueprint spread out on a table.",
+      "C": "He is folding a large map into a briefcase.",
+      "D": "He is hanging a framed property picture on a wall."
+    },
+    "correct_answer": "B",
+    "correct_text": "He is pointing at a blueprint spread out on a table.",
+    "image_description": "Hình ảnh mô tả người nam dùng ngón tay chỉ vào bản thiết kế mặt bằng mở sẵn trên bàn trước mặt khách hàng.",
+    "audio_transcript": "He is pointing at a blueprint spread out on a table.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Danh từ liên quan floor plan nhưng sai hành động sketching. Bẫy thường gặp: Nhân vật chỉ quan sát và chỉ tay, không cầm bút phác thảo lên sổ."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng hành động chính đang diễn ra là chỉ vào bản thiết kế mặt bằng (pointing at a blueprint spread out on a table)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Sai hành động gấp tài liệu. Bẫy thường gặp: Bản thiết kế đang mở phẳng trên bàn, không có hành động gấp bản đồ vào cặp."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Bối cảnh bất động sản nhưng sai vị trí thao tác. Bẫy thường gặp: Nhân vật đang làm việc tại bàn, không đứng treo tranh lên tường."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "point at",
+        "paraphrases": ["gesture toward", "indicate"],
+        "meaning": "chỉ tay vào"
+      },
+      {
+        "phrase": "blueprint",
+        "paraphrases": ["architectural plan", "floor layout"],
+        "meaning": "bản thiết kế kiến trúc"
+      },
+      {
+        "phrase": "spread out",
+        "paraphrases": ["laid out", "unfolded"],
+        "meaning": "trải rộng ra"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Observe Main Subject & Hands Action - Quan sát kỹ đối tượng chính và vị trí hai bàn tay tương tác với tài liệu trên bàn.",
+      "Bước 2: Distinguish Pointing vs Sketching - Phân biệt hành động chỉ tay (pointing) với phác thảo (sketching) hoặc gấp tài liệu (folding).",
+      "Bước 3: Select Option B - Chọn B ('He is pointing at a blueprint spread out on a table.')."
+    ]
+  },
+  {
+    "id": 2,
+    "type": "picture_description",
+    "part": "Listening - Part 1",
+    "prompt": "Look at the picture marked number 2 in your test book.",
+    "audio": "p1_q002.mp3",
+    "image": "p1_q002.webp",
+    "options": {
+      "A": "People are seated around a conference table in a law office.",
+      "B": "Attorneys are shaking hands after signing a contract.",
+      "C": "Attendees are standing in line to enter a courtroom.",
+      "D": "Presenters are packing up their laptop computers."
+    },
+    "correct_answer": "A",
+    "correct_text": "People are seated around a conference table in a law office.",
+    "image_description": "Trạng thái nhóm luật sư đang ngồi an tọa (seated) làm việc xung quanh bàn họp trong văn phòng luật.",
+    "audio_transcript": "People are seated around a conference table in a law office.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng trạng thái (seated around) và địa điểm (conference table in a law office)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Danh từ ngành luật (attorneys, contract) nhưng sai hành động. Bẫy thường gặp: Mọi người đang ngồi họp, không có hành động bắt tay (shaking hands)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Từ liên quan ngành luật (courtroom) và sai tư thế di chuyển. Bẫy thường gặp: Nhóm người đang ngồi quanh bàn họp, không đứng xếp hàng (standing in line)."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Sai thao tác kết thúc công việc. Bẫy thường gặp: Tài liệu và laptop đang mở sẵn làm việc, không có hành động thu dọn (packing up)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "seated",
+        "paraphrases": ["sitting", "occupying seats"],
+        "meaning": "đang ngồi (trạng thái)"
+      },
+      {
+        "phrase": "conference table",
+        "paraphrases": ["meeting table", "boardroom table"],
+        "meaning": "bàn họp hội nghị"
+      },
+      {
+        "phrase": "attorney",
+        "paraphrases": ["lawyer", "legal counsel"],
+        "meaning": "luật sư, cố vấn pháp lý"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Observe Seated State - Quan sát trạng thái an tọa của nhóm người xung quanh bàn họp thay vì tìm kiếm hành động di chuyển.",
+      "Bước 2: Identify Distractors - Cảnh giác với các câu nhiễu chứa từ vựng ngành luật (attorneys, contract, courtroom) nhưng tả sai tư thế.",
+      "Bước 3: Select Option A - Chọn A ('People are seated around a conference table in a law office.')."
+    ]
+  },
+  {
+    "id": 3,
+    "type": "picture_description",
+    "part": "Listening - Part 1",
+    "prompt": "Look at the picture marked number 3 in your test book.",
+    "audio": "p1_q003.mp3",
+    "image": "p1_q003.webp",
+    "options": {
+      "A": "Camera operators are adjusting lens focus.",
+      "B": "A news anchor is reading from a teleprompter.",
+      "C": "Video cameras are mounted on tripods in a broadcasting studio.",
+      "D": "Recording equipment is being carried into a control room."
+    },
+    "correct_answer": "C",
+    "correct_text": "Video cameras are mounted on tripods in a broadcasting studio.",
+    "image_description": "Tranh tĩnh hoàn toàn không có người: các máy quay phim được lắp cố định trên chân đế ba chân trong phòng thu.",
+    "audio_transcript": "Video cameras are mounted on tripods in a broadcasting studio.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Danh từ chỉ người trong tranh tĩnh. Bẫy thường gặp: Bức tranh hoàn toàn vắng người, không xuất hiện thợ quay phim (camera operators)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Từ vựng chủ đề truyền thông. Bẫy thường gặp: Không có phát thanh viên (news anchor) hay màn hình đọc lời trong tranh."
+      },
+      "C": {
+        "status": "correct",
+        "reason": "Đúng vị trí tĩnh của máy quay (mounted on tripods in a broadcasting studio)."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Bị động tiếp diễn (being) trong tranh tĩnh. Bẫy thường gặp: Cấu trúc is being carried ngụ ý có người đang bê thiết bị. Tranh vắng người nên loại ngay bị động tiếp diễn."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "mount on",
+        "paraphrases": ["attach to", "fix upon"],
+        "meaning": "gắn cố định lên"
+      },
+      {
+        "phrase": "tripod",
+        "paraphrases": ["camera support", "three-legged stand"],
+        "meaning": "chân đế máy ảnh/quay phim"
+      },
+      {
+        "phrase": "broadcasting studio",
+        "paraphrases": ["production studio", "filming stage"],
+        "meaning": "phòng thu truyền hình"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Identify No-Person Static Scene - Xác định bức tranh hoàn toàn là không gian vật tĩnh và vắng bóng người.",
+      "Bước 2: Apply Passive Continuous Rule - Loại ngay phương án D chứa âm 'being' ('is being carried') và phương án A, B nhắc đến người.",
+      "Bước 3: Select Option C - Chọn C ('Video cameras are mounted on tripods in a broadcasting studio.')."
+    ]
+  },
+  {
+    "id": 4,
+    "type": "picture_description",
+    "part": "Listening - Part 1",
+    "prompt": "Look at the picture marked number 4 in your test book.",
+    "audio": "p1_q004.mp3",
+    "image": "p1_q004.webp",
+    "options": {
+      "A": "An instructor is writing on a digital whiteboard.",
+      "B": "A technician is replacing a projector bulb.",
+      "C": "Textbooks are stacked on top of a teacher's desk.",
+      "D": "Students are handing in their exam papers."
+    },
+    "correct_answer": "A",
+    "correct_text": "An instructor is writing on a digital whiteboard.",
+    "image_description": "Hình ảnh giảng viên đang dùng bút cảm ứng trực tiếp viết lên bảng điện tử tương tác trước lớp.",
+    "audio_transcript": "An instructor is writing on a digital whiteboard.",
+    "analysis": {
+      "A": {
+        "status": "correct",
+        "reason": "Đúng hành động chính (writing) và thiết bị giảng dạy (digital whiteboard)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Thiết bị phòng học. Bẫy thường gặp: Không có kỹ thuật viên đang sửa chữa/thay bóng máy chiếu (replacing projector bulb)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Trạng thái đồ vật phụ. Bẫy thường gặp: Sách không được xếp chồng trên bàn giáo viên (textbooks stacked)."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Sai đối tượng và hành động. Bẫy thường gặp: Học sinh không thực hiện hành động nộp bài thi (handing in exam papers)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "instructor",
+        "paraphrases": ["teacher", "lecturer"],
+        "meaning": "giảng viên, người hướng dẫn"
+      },
+      {
+        "phrase": "digital whiteboard",
+        "paraphrases": ["interactive display", "smartboard"],
+        "meaning": "bảng điện tử tương tác"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Observe Instructor Action - Tập trung quan sát thao tác tay của giảng viên ở vị trí trung tâm lớp học.",
+      "Bước 2: Verify Equipment - Xác định rõ loại bảng đang tương tác là bảng điện tử (digital whiteboard).",
+      "Bước 3: Select Option A - Chọn A ('An instructor is writing on a digital whiteboard.')."
+    ]
+  },
+  {
+    "id": 5,
+    "type": "picture_description",
+    "part": "Listening - Part 1",
+    "prompt": "Look at the picture marked number 5 in your test book.",
+    "audio": "p1_q005.mp3",
+    "image": "p1_q005.webp",
+    "options": {
+      "A": "Construction workers are wearing hard hats on a roof.",
+      "B": "Scaffolding has been erected along a building exterior.",
+      "C": "A crane is lifting heavy concrete blocks.",
+      "D": "Windows are being installed by a window cleaner."
+    },
+    "correct_answer": "B",
+    "correct_text": "Scaffolding has been erected along a building exterior.",
+    "image_description": "Tranh tĩnh: Giàn giáo kim loại đã được lắp dựng sẵn hoàn chỉnh bao quanh mặt ngoài của tòa nhà.",
+    "audio_transcript": "Scaffolding has been erected along a building exterior.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Từ vựng công trường xây dựng. Bẫy thường gặp: Không xuất hiện công nhân đứng trên mái nhà (workers on roof)."
+      },
+      "B": {
+        "status": "correct",
+        "reason": "Đúng trạng thái hoàn thành của kết cấu tĩnh (scaffolding has been erected)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Thiết bị công trường. Bẫy thường gặp: Không có cẩu tháp đang nhấc khối bê tông (crane lifting concrete)."
+      },
+      "D": {
+        "status": "incorrect",
+        "reason": "Bị động tiếp diễn (being). Bẫy thường gặp: Mô tả windows are being installed ngụ ý đang có thợ lắp kính, trong khi mặt ngoài công trình đang tĩnh."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "scaffolding",
+        "paraphrases": ["framework", "staging structure"],
+        "meaning": "hệ thống giàn giáo"
+      },
+      {
+        "phrase": "erect",
+        "paraphrases": ["set up", "assemble", "construct"],
+        "meaning": "dựng lên, lắp ráp"
+      },
+      {
+        "phrase": "exterior",
+        "paraphrases": ["outer wall", "facade"],
+        "meaning": "mặt ngoài (tòa nhà)"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Observe Scaffolding Structure - Nhận diện cấu trúc chính của công trình là hệ thống giàn giáo dựng cố định quanh tòa nhà.",
+      "Bước 2: Eliminate Continuous Actions - Loại trừ các câu nhiễu miêu tả hành động đang diễn ra (lifting concrete, installing windows).",
+      "Bước 3: Select Option B - Chọn B ('Scaffolding has been erected along a building exterior.')."
+    ]
+  },
+  {
+    "id": 6,
+    "type": "picture_description",
+    "part": "Listening - Part 1",
+    "prompt": "Look at the picture marked number 6 in your test book.",
+    "audio": "p1_q006.mp3",
+    "image": "p1_q006.webp",
+    "options": {
+      "A": "She is operating a large printing press.",
+      "B": "She is painting a billboard on a ladder.",
+      "C": "She is taking down a banner from a storefront.",
+      "D": "She is attaching a poster to a display panel."
+    },
+    "correct_answer": "D",
+    "correct_text": "She is attaching a poster to a display panel.",
+    "image_description": "Hình ảnh nhà thiết kế đang dùng tay đính/dán tấm poster lên bảng hiển thị triển lãm.",
+    "audio_transcript": "She is attaching a poster to a display panel.",
+    "analysis": {
+      "A": {
+        "status": "incorrect",
+        "reason": "Thiết bị ngành in. Bẫy thường gặp: Nhân vật đang thao tác thủ công với tấm poster, không vận hành máy in công nghiệp (operating printing press)."
+      },
+      "B": {
+        "status": "incorrect",
+        "reason": "Sai hành động và công cụ. Bẫy thường gặp: Nhân vật không đứng trên thang sơn biển quảng cáo (painting billboard on ladder)."
+      },
+      "C": {
+        "status": "incorrect",
+        "reason": "Ngược chiều hành động. Bẫy thường gặp: Attaching là đính/gắn lên, trái ngược với taking down (gỡ/tháo xuống)."
+      },
+      "D": {
+        "status": "correct",
+        "reason": "Đúng hành động (attaching) và vật thể (poster to a display panel)."
+      }
+    },
+    "vocabulary": [
+      {
+        "phrase": "attach",
+        "paraphrases": ["affix", "fasten", "mount"],
+        "meaning": "đính vào, dán vào, gắn vào"
+      },
+      {
+        "phrase": "display panel",
+        "paraphrases": ["exhibition board", "presentation board"],
+        "meaning": "bảng hiển thị triển lãm"
+      }
+    ],
+    "strategy": [
+      "Bước 1: Observe Action Direction - Quan sát kỹ hướng tác động của bàn tay (đang gắn poster lên hay tháo xuống).",
+      "Bước 2: Distinguish Attach vs Take Down - Phân biệt động từ 'attaching' (dán/gắn lên) với 'taking down' (tháo/gỡ xuống).",
+      "Bước 3: Select Option D - Chọn D ('She is attaching a poster to a display panel.')."
+    ]
+  }
+]
