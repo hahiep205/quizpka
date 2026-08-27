@@ -1,0 +1,707 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Triết học Mác - Lênin (3 tín chỉ) - Chương 1",
+  "chapter": "Chương 1",
+  "totalQuestions": 50,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Triết học ra đời sớm nhất ở đâu?",
+      "options": {
+        "A": "Ấn Độ, Châu Phi, Nga.",
+        "B": "Ấn Độ, Trung Quốc, Hy Lạp.",
+        "C": "Ai Cập, Ấn Độ, Trung Quốc.",
+        "D": "Trung Quốc, Ai Cập, Nga."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Ấn Độ, Trung Quốc, Hy Lạp."
+    },
+    {
+      "id": 2,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Theo quan niệm của triết học Mác – Lênin, mục đích của nhận thức là gì?",
+      "options": {
+        "A": "Phục vụ hoạt động lao động sản xuất",
+        "B": "Giúp con người hiểu bản chất của mình",
+        "C": "Thỏa mãn sự hiểu biết của con người",
+        "D": "Phục vụ nhu cầu thực tiễn của con người"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Phục vụ nhu cầu thực tiễn của con người"
+    },
+    {
+      "id": 3,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Quan điểm cho rằng: “ Chúng ta chỉ nhận thức được các cảm giác của chúng ta thôi” của trường phái triết học nào?",
+      "options": {
+        "A": "Chủ nghĩa duy tâm khách quan",
+        "B": "Chủ nghĩa hoài nghi",
+        "C": "Thuyết không thể biết",
+        "D": "Chủ nghĩa duy tâm chủ quan"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Chủ nghĩa duy tâm chủ quan"
+    },
+    {
+      "id": 4,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Triết học nào ở thời kỳ cổ đại được coi là “ khoa học của khoa học ”?",
+      "options": {
+        "A": "Triết học Ai Cập",
+        "B": "Triết học Trung Hoa.",
+        "C": "Triết học Ấn Độ.",
+        "D": "Triết học Hy Lạp."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Triết học Hy Lạp."
+    },
+    {
+      "id": 5,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Tác phẩm nào của Mác và Ăngghen đánh dấu sự hoàn thành về cơ bản triết học Mác nói riêng và chủ nghĩa Mác nói chung?",
+      "options": {
+        "A": "Hệ tư tưởng Đức.",
+        "B": "Tuyên ngôn của Đảng Cộng sản.",
+        "C": "Sự khốn cùng của triết học",
+        "D": "Luận cương về Phoiơbắc."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Hệ tư tưởng Đức."
+    },
+    {
+      "id": 6,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Triết học Mác kế thừa trực tiếp tiền đề lý luận nào?",
+      "options": {
+        "A": "Triết học phương Tây hiện đại.",
+        "B": "Triết học Hy Lạp cổ đại.",
+        "C": "Triết học Tây Âu thời trung cổ.",
+        "D": "Triết học cổ điển Đức."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Triết học cổ điển Đức."
+    },
+    {
+      "id": 7,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Hệ thống quan niệm về thế giới, về con người và vai trò con người trong thế giới đó, gọi là gì?",
+      "options": {
+        "A": "Thế giới quan",
+        "B": "Nhận thức luận",
+        "C": "Nhân sinh quan",
+        "D": "Vũ trụ quan"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Thế giới quan"
+    },
+    {
+      "id": 8,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Chức năng cơ bản nhất cảu triết học Mác - Lênin là gì?",
+      "options": {
+        "A": "Thế giới quan và phương pháp luận",
+        "B": "Trang bị vũ khí lý luận cách mạng",
+        "C": "Nhận thức và cải tạo thực tiễn",
+        "D": "Định hướng tư duy và hành động"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Thế giới quan và phương pháp luận"
+    },
+    {
+      "id": 9,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Chọn phương án trả lời đúng nhất về một trong ba vai trò chính của triết học Mác - Lênin?",
+      "options": {
+        "A": "Định hướng tư tưởng cho con người trong nhận thức và thực tiễn.",
+        "B": "Thế giới quan, phương pháp luận khoa học, cách mạng cho con người trong nhận thức và thực tiễn.",
+        "C": "Giúp con người trong nhận thức và thực tiễn.",
+        "D": "Giáo dục con người trong nhận thức và thực tiễn."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Thế giới quan, phương pháp luận khoa học, cách mạng cho con người trong nhận thức và thực tiễn."
+    },
+    {
+      "id": 10,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Trình tự xuất hiện của các hình thức thế giới quan trong lịch sử là như thế nào?",
+      "options": {
+        "A": "Tôn giáo - huyền thoại - triết học.",
+        "B": "Huyền thoại - tôn giáo - triết học.",
+        "C": "Triết học - tôn giáo - huyền thoại.",
+        "D": "Huyền thoại - triết học - tôn giáo."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Huyền thoại - tôn giáo - triết học."
+    },
+    {
+      "id": 11,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Đâu là hạt nhân của thế giới quan?",
+      "options": {
+        "A": "Luật pháp.",
+        "B": "Chính trị.",
+        "C": "Đạo đức.",
+        "D": "Triết học."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Triết học."
+    },
+    {
+      "id": 12,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Luận điểm của Rơnê Đềcáctơ \"Tôi tư duy vậy tôi tồn tại\" thể hiện khuynh hướng triết học nào?",
+      "options": {
+        "A": "Chủ nghĩa duy tâm khách quan.",
+        "B": "Chủ nghĩa duy vật tầm thường.",
+        "C": "Thuyết hoài nghi.",
+        "D": "Chủ nghĩa duy tâm chủ quan"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Chủ nghĩa duy tâm chủ quan"
+    },
+    {
+      "id": 13,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Hãy xác định đúng hai trường phái chính của triết học?",
+      "options": {
+        "A": "Chủ nghĩa duy cảm và chủ nghĩa duy lý",
+        "B": "Chủ nghĩa tương đối và chủ nghĩa hoài nghi",
+        "C": "Chủ nghĩa duy vật và chủ nghĩa duy tâm",
+        "D": "Chủ nghĩa đa nguyên và chủ nghĩa nhị nguyên"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Chủ nghĩa duy vật và chủ nghĩa duy tâm"
+    },
+    {
+      "id": 14,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Trong các yếu tố sau, yếu tố nào quy định bản chất của thế giới quan tôn giáo?",
+      "options": {
+        "A": "Lý tưởng.",
+        "B": "Tri thức.",
+        "C": "Thái độ.",
+        "D": "Niềm tin."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Niềm tin."
+    },
+    {
+      "id": 15,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Vì sao triết học Mác gọi là hệ thống triết học mở?",
+      "options": {
+        "A": "Mở ra con đường giải phóng con người.",
+        "B": "Mở ra thời kỳ mới.",
+        "C": "Mở ra phương pháp nhận thức và cải tạo thế giới.",
+        "D": "Không phải học thuyết đã xong xuôi, cần tiếp tục bổ sung, hoàn thiện, phát triển."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Không phải học thuyết đã xong xuôi, cần tiếp tục bổ sung, hoàn thiện, phát triển."
+    },
+    {
+      "id": 16,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Vì sao Mác và Ăngghen sáng lập mà triết học được gọi là triết học Mác - Lênin?",
+      "options": {
+        "A": "Mác sáng lập, Lênin bảo vệ và phát triển.",
+        "B": "Mác sáng lập, Lênin vận dụng thành công.",
+        "C": "Mác và Lênin cùng sáng lập.",
+        "D": "Mác sáng lập, Lênin giáo dục, truyền bá."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Mác sáng lập, Lênin bảo vệ và phát triển."
+    },
+    {
+      "id": 17,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Chọn phương án đúng nhất: Những phát minh nào của khoa học tự nhiên làm cơ sở khoa học cho sự ra đời của triết học Mác - Lênin?",
+      "options": {
+        "A": "Phát hiện ra nguyên tử, phát hiện ra điện tử, định luật bảo toàn và chuyển hoá năng lượng.",
+        "B": "Thuyết tiến hoá, phát hiện ra nguyên tử, học thuyết tế bào.",
+        "C": "Định luật bảo toàn và chuyển hoá năng lượng, học thuyết tế bào, học thuyết tiến hoá.",
+        "D": "Thuyết mặt trời là trung tâm của vũ trụ, định luật bảo toàn và chuyển hoá năng lượng, thuyết tiến hoá."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Định luật bảo toàn và chuyển hoá năng lượng, học thuyết tế bào, học thuyết tiến hoá."
+    },
+    {
+      "id": 18,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Nghĩa tổng quát của thuật ngữ “triết học” theo người Hy Lạp cổ đại là gì?",
+      "options": {
+        "A": "Tình yêu thần thánh.",
+        "B": "Yêu quý thiên nhiên.",
+        "C": "Tình yêu cuộc sống.",
+        "D": "Yêu mến sự thông thái."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Yêu mến sự thông thái."
+    },
+    {
+      "id": 19,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Chọn phương án đúng nhất: Triết học nghiên cứu loại quy luật gì?",
+      "options": {
+        "A": "Quy luật của xã hội.",
+        "B": "Quy luật của tư duy.",
+        "C": "Quy luật của tự nhiên.",
+        "D": "Quy luật chung nhất của tự nhiên, xã hội và tư duy."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Quy luật chung nhất của tự nhiên, xã hội và tư duy."
+    },
+    {
+      "id": 20,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Chọn phương án đúng nhất: Đối tượng nghiên cứu của triết học Mác - Lênin là gì?",
+      "options": {
+        "A": "Nghiên cứu về mối quan hệ giữa vật chất và ý thức, về những quy luật vận động, phát triển chung nhất của tự nhiên, xã hội và tư duy.",
+        "B": "Nghiên cứu mối quan hệ giữa vật chất và ý thức.",
+        "C": "Nghiên cứu quy luật xã hội.",
+        "D": "Nghiên cứu con người."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Nghiên cứu về mối quan hệ giữa vật chất và ý thức, về những quy luật vận động, phát triển chung nhất của tự nhiên, xã hội và tư duy."
+    },
+    {
+      "id": 21,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Cơ sở phân chia triết học thành chủ nghĩa duy vật và chủ nghĩa duy tâm là dựa trên cách giải quyết nào?",
+      "options": {
+        "A": "Vấn đề cơ bản của triết học.",
+        "B": "Mặt thứ hai vấn đề cơ bản của triết học.",
+        "C": "Mặt thứ nhất vấn đề cơ bản của triết học.",
+        "D": "Vấn đề phương pháp luận của triết học."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Mặt thứ nhất vấn đề cơ bản của triết học."
+    },
+    {
+      "id": 22,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Học thuyết nào sau đây cho rằng thế giới ra đời từ hai bản nguyên: vật chất và tinh thần?",
+      "options": {
+        "A": "Chủ nghĩa đa nguyên.",
+        "B": "Chủ nghĩa nhị nguyên.",
+        "C": "Chủ nghĩa nhất nguyên.",
+        "D": "Chủ nghĩa hư vô."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Chủ nghĩa nhị nguyên."
+    },
+    {
+      "id": 23,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Mặt thứ hai vấn đề cơ bản của triết học trả lời câu hỏi gì?",
+      "options": {
+        "A": "Mối quan hệ giữa vật chất và ý thức?",
+        "B": "Vật chất có trước hay ý thức có trước?",
+        "C": "Mối quan hệ giữa tư duy và tồn tại?",
+        "D": "Con người có thể nhận thức được thế giới hay không?"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Con người có thể nhận thức được thế giới hay không?"
+    },
+    {
+      "id": 24,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Người đưa ra định nghĩa hoàn chỉnh về vật chất là ai?",
+      "options": {
+        "A": "C.Mác.",
+        "B": "V.I.Lênin.",
+        "C": "L.Phoiơbắc.",
+        "D": "Ph.Ăngghen."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. V.I.Lênin."
+    },
+    {
+      "id": 25,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "\"Con người là động vật chính trị\" là câu nói của triết gia nào?",
+      "options": {
+        "A": "Hêghen.",
+        "B": "Cantơ.",
+        "C": "Arixtốt.",
+        "D": "Đềcáctơ."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Arixtốt."
+    },
+    {
+      "id": 26,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Câu nói: \"Con vật chỉ sản xuất ra bản thân nó, còn con người thì tái sản xuất ra toàn bộ giới tự nhiên\" là của ai?",
+      "options": {
+        "A": "Ph. Ăngghen.",
+        "B": "V.I.Lênin.",
+        "C": "Ph. Hêghen.",
+        "D": "C. Mác."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. C. Mác."
+    },
+    {
+      "id": 27,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Ai là người đầu tiên phát hiện ra quy luật đấu tranh giai cấp?",
+      "options": {
+        "A": "Hêghen",
+        "B": "V.I.Lênin.",
+        "C": "Ph.Ăngghen.",
+        "D": "C.Mác"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. C.Mác"
+    },
+    {
+      "id": 28,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "\"Nhân chi sơ, tính bản thiện\" (người sinh ra, tính vốn thiện) là câu nói của triết gia nào?",
+      "options": {
+        "A": "Tuân Tử.",
+        "B": "Lão Tử.",
+        "C": "Khổng Tử.",
+        "D": "Mạnh Tử."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Mạnh Tử."
+    },
+    {
+      "id": 29,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "\"Nhân chi sơ, tính bản ác\" (người sinh ra, tính vốn ác) là câu nói của triết gia nào?",
+      "options": {
+        "A": "Lão Tử.",
+        "B": "Mạnh Tử.",
+        "C": "Khổng Tử.",
+        "D": "Tuân Tử."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tuân Tử."
+    },
+    {
+      "id": 30,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Luận điểm: \"Cái gì tồn tại thì hợp lý, cái gì hợp lý thì tồn tại\" là của nhà triết học nào?",
+      "options": {
+        "A": "Arixtốt",
+        "B": "Hêghen",
+        "C": "Cantơ",
+        "D": "Phoiơbắc"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Hêghen"
+    },
+    {
+      "id": 31,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Phép biện chứng duy vật do ai xây dựng?",
+      "options": {
+        "A": "Mác và Ăngghen.",
+        "B": "Palaton.",
+        "C": "Hêghen.",
+        "D": "Hêraclit."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Mác và Ăngghen."
+    },
+    {
+      "id": 32,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Ai là người đầu tiên thống nhất giữa chủ nghĩa duy vật với phép biện chứng làm thành chủ nghĩa duy vật biện chứng và phép biện chứng duy vật?",
+      "options": {
+        "A": "Hêghen.",
+        "B": "Phoiơbắc.",
+        "C": "Lênin.",
+        "D": "Mác và Ăngghen."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Mác và Ăngghen."
+    },
+    {
+      "id": 33,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "\"Triết học treo lơ lửng ở ngoài thế giới, cũng như bộ óc không tồn tại bên ngoài con người\" là câu nói của ai?",
+      "options": {
+        "A": "Hêraclit.",
+        "B": "Cantơ.",
+        "C": "Hêghen.",
+        "D": "C. Mác."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. C. Mác."
+    },
+    {
+      "id": 34,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Người đầu tiên trong lịch sử triết học đã đưa nội dung phép biện chứng thành một hệ thống lý luận hoàn chỉnh, diễn đạt thông qua các nguyên lý, quy luật và phạm trù?",
+      "options": {
+        "A": "Lênin.",
+        "B": "Hêghen.",
+        "C": "Ăngghen.",
+        "D": "Mác."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Hêghen."
+    },
+    {
+      "id": 35,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Thời kỳ đầu trong sự phát triển tư tưởng triết học, triết gia nào được C. Mác xem là chân lý?",
+      "options": {
+        "A": "Senlinh.",
+        "B": "Hêghen.",
+        "C": "Cantơ.",
+        "D": "Phoiơbắc."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Phoiơbắc."
+    },
+    {
+      "id": 36,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Mác đã kế thừa trực tiếp những giá trị duy vật của triết gia nào?",
+      "options": {
+        "A": "Senling.",
+        "B": "Phoiơbắc.",
+        "C": "Cantơ.",
+        "D": "Hêghen."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Phoiơbắc."
+    },
+    {
+      "id": 37,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Hãy chỉ ra một trong những đại diện của \"Chủ nghĩa xã hội không tưởng Pháp\"?",
+      "options": {
+        "A": "Đềcactơ.",
+        "B": "Phuriê.",
+        "C": "Vônte.",
+        "D": "Xpinôza."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Phuriê."
+    },
+    {
+      "id": 38,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Hãy chọn phương án đúng nhất: Điều kiện để triết học ra đời khi nào?",
+      "options": {
+        "A": "Khi con người xuất hiện và có nhu cầu tìm hiểu thế giới xung quanh.",
+        "B": "Khi khoa học tự nhiên phát triển và con người cần có tri thức khái quát để nhận thức và cải tạo thế giới.",
+        "C": "Khi xã hội xuất hiện nhà nước, giai cấp và cần có hệ thống tri thức ở trình độ khái quát hóa, trừu tượng hóa cao.",
+        "D": "Khi tri thức con người đạt đến trình độ nhất định, tư duy đạt trình độ khái quát hóa, trừu tượng hóa; xã hội có sự phân công lao động và phân chia giai cấp xuất hiện."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Khi tri thức con người đạt đến trình độ nhất định, tư duy đạt trình độ khái quát hóa, trừu tượng hóa; xã hội có sự phân công lao động và phân chia giai cấp xuất hiện."
+    },
+    {
+      "id": 39,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Chủ nghĩa duy vật thời kỳ cận đại ở phương Tây mang đặc trưng gì?",
+      "options": {
+        "A": "Chất phác.",
+        "B": "Tầm thường.",
+        "C": "Siêu hình.",
+        "D": "Biện chứng."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Siêu hình."
+    },
+    {
+      "id": 40,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Triết học Phoiơbắc thuộc về trường phái triết học nào?",
+      "options": {
+        "A": "Duy tâm chủ quan.",
+        "B": "Duy tâm khách quan.",
+        "C": "Duy vật siêu hình.",
+        "D": "Duy vật biện chứng."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Duy vật siêu hình."
+    },
+    {
+      "id": 41,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "\"Chỉ nhìn thấy cây mà không thấy rừng\" là nhận xét của Ăngghen về phương pháp triết học nào?",
+      "options": {
+        "A": "Phương pháp trừu tượng hóa.",
+        "B": "Phương pháp siêu hình.",
+        "C": "Phương pháp khái quát hóa.",
+        "D": "Phương pháp biện chứng."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Phương pháp siêu hình."
+    },
+    {
+      "id": 42,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Điều gì đã gắn kết hai nhà triết học Phuriê và Xanh Ximông?",
+      "options": {
+        "A": "Đều sáng lập chủ nghĩa xã hội không tưởng",
+        "B": "Đều sáng lập chủ nghĩa xã hội khoa học.",
+        "C": "Đều sáng lập chủ nghĩa duy tâm Pháp.",
+        "D": "Đều sáng lập chủ nghĩa duy lý cận đại."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Đều sáng lập chủ nghĩa xã hội không tưởng"
+    },
+    {
+      "id": 43,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Một trong hai phát minh vĩ đại của Mác là gì?",
+      "options": {
+        "A": "Lý luận nhận thức.",
+        "B": "Chủ nghĩa duy vật lịch sử.",
+        "C": "Chủ nghĩa duy vật biện chứng.",
+        "D": "Phép biện chứng duy vật."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Chủ nghĩa duy vật lịch sử."
+    },
+    {
+      "id": 44,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Triết học ra đời vào khoảng thời gian nào sau đây?",
+      "options": {
+        "A": "Thế kỷ thứ I sau công nguyên.",
+        "B": "Thế kỷ thứ III đến thế kỷ thứ I trước công nguyên.",
+        "C": "Thế kỷ thứ V đến thế kỷ thứ IV trước công nguyên.",
+        "D": "Thế kỷ thứ VIII đến thế kỷ thứ VI trước công nguyên."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Thế kỷ thứ VIII đến thế kỷ thứ VI trước công nguyên."
+    },
+    {
+      "id": 45,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Triết học Mác - Lênin ra đời vào thời gian nào?",
+      "options": {
+        "A": "Những năm 30 thế kỷ XIX.",
+        "B": "Những năm 40 thế kỷ XIX.",
+        "C": "Những năm 60 thế kỷ XIX.",
+        "D": "Những năm 50 thế kỷ XIX."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Những năm 40 thế kỷ XIX."
+    },
+    {
+      "id": 46,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Chủ nghĩa Mác được truyền bá mạnh mẽ vào nước Nga trong giai đoạn nào?",
+      "options": {
+        "A": "Những năm 80 của thế kỷ XIX.",
+        "B": "Những năm 60 của thế kỷ XIX.",
+        "C": "Những năm 90 của thế kỷ XIX.",
+        "D": "Những năm đầu thế kỷ XX."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Những năm 80 của thế kỷ XIX."
+    },
+    {
+      "id": 47,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Tác phẩm nào đánh dấu sự ra đời của chủ nghĩa Mác - Lênin (trong đó có triết học Mác - Lênin)?",
+      "options": {
+        "A": "Luận Cương về Phoiơbắc (1845).",
+        "B": "Hệ tư tưởng Đức (1846).",
+        "C": "Tuyên ngôn của Đảng Cộng sản (1848).",
+        "D": "Bản thảo kinh tế - Triết học (1844)."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tuyên ngôn của Đảng Cộng sản (1848)."
+    },
+    {
+      "id": 48,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "C. Mác và Ph. Ăngghen đề xuất những nguyên lý triết học duy vật biện chứng và duy vật lịch sử trong giai đoạn nào?",
+      "options": {
+        "A": "1841 -1844",
+        "B": "1848 -1893",
+        "C": "1844 -1848",
+        "D": "1848 -1895"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 1844 -1848"
+    },
+    {
+      "id": 49,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Hình thức nào dưới đây được xem là đỉnh cao của phép biện chứng?",
+      "options": {
+        "A": "Phép biện chứng thời cổ đại.",
+        "B": "Logic học của A-ri-xtốt.",
+        "C": "Thuật ngụy biện trong thời kỳ trung cổ.",
+        "D": "Phép biện chứng duy vật Mác - Lênin."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Phép biện chứng duy vật Mác - Lênin."
+    },
+    {
+      "id": 50,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Chọn phương án đúng nhất: Sau khi Mác và Ăngghen qua đời, triết học Mác do ai bổ sung và phát triển?",
+      "options": {
+        "A": "Ăngghen và Lênin.",
+        "B": "Lênin.",
+        "C": "Ăngghen.",
+        "D": "Lênin, các Đảng Cộng sản và công nhân trên thế giới."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Lênin, các Đảng Cộng sản và công nhân trên thế giới."
+    }
+  ]
+}

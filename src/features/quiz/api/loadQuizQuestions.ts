@@ -32,7 +32,16 @@ function combineBanks(banks: BankFile[]): BankFile {
       section: bank.title?.includes("Nghe") ? "Listening" : "Reading",
     }))
   )
-  return { parts }
+  // General banks (questions rather than parts) are merged into one list.
+  // Prefix each question id with its bank index so duplicate source ids across
+  // split files never collide in the quiz UI.
+  const questions = banks.flatMap((bank, bankIndex) =>
+    (bank.questions ?? []).map((question) => ({
+      ...question,
+      id: `${bankIndex}-${question.id}`,
+    }))
+  )
+  return { parts: parts.length ? parts : undefined, questions: questions.length ? questions : undefined }
 }
 
 export type LoadQuizQuestionsInput = {
@@ -48,16 +57,21 @@ export async function loadQuizQuestions({ subject, exam, setup, chapterId, toeic
   let questions: Question[]
   if (subject.id === "toeic" && toeicScope) {
     questions = await loadToeicQuestions(toeicScope, exam.id, setup, signal)
-  } else if (exam.questionBanks?.length) {
-    const banks = await Promise.all(exam.questionBanks.map((url) => fetchBank(url, signal)))
-    questions = mapBankQuestions(combineBanks(banks), exam.id, setup)
-  } else if (exam.questionBank) {
-    const bank = await fetchBank(exam.questionBank, signal)
-    const filteredQuestions = chapterId && chapterId !== "all" && hasChapterSupport(subject.id)
-      ? filterQuestionsBySubjectChapter(subject.id, bank.questions ?? [], chapterId)
-      : bank.questions
-    if (bank.questions && !filteredQuestions?.length) throw new QuestionBankDataError(exam.questionBank, "selected chapter contains no questions")
-    questions = mapBankQuestions({ ...bank, questions: filteredQuestions }, exam.id, setup)
+  } else if (exam.questionBanks?.length || exam.questionBank) {
+    const urls = exam.questionBanks?.length ? exam.questionBanks : [exam.questionBank!]
+    const banks = await Promise.all(urls.map((url) => fetchBank(url, signal)))
+    const combined = combineBanks(banks)
+    if (combined.questions?.length) {
+      const filteredQuestions = chapterId && chapterId !== "all" && hasChapterSupport(subject.id)
+        ? filterQuestionsBySubjectChapter(subject.id, combined.questions, chapterId)
+        : combined.questions
+      if (!filteredQuestions.length) {
+        throw new QuestionBankDataError(exam.questionBank ?? exam.id, "selected chapter contains no questions")
+      }
+      questions = mapBankQuestions({ ...combined, questions: filteredQuestions }, exam.id, setup)
+    } else {
+      questions = mapBankQuestions(combined, exam.id, setup)
+    }
   } else {
     questions = buildFallbackQuestions(exam, setup)
   }

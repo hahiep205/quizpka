@@ -1,0 +1,553 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Tư tưởng Hồ Chí Minh - Câu hỏi sưu tầm",
+  "chapter": "Câu hỏi sưu tầm",
+  "totalQuestions": 39,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Khái niệm Tư tưởng Hồ Chí Minh đã chỉ ra nội dung nào sau đây?",
+      "options": {
+        "A": "Hệ thống quan điểm toàn diện và sâu sắc về những vấn đề cơ bản của cách mạng Việt Nam.",
+        "B": "Hệ thống quan điểm về cách mạng thế giới.",
+        "C": "Hệ thống quan điểm về quá trình xây dựng chủ nghĩa xã hội.",
+        "D": "Hệ thống quan điểm về Đảng Cộng sản Việt Nam."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Hệ thống quan điểm toàn diện và sâu sắc về những vấn đề cơ bản của cách mạng Việt Nam."
+    },
+    {
+      "id": 2,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Đối tượng nghiên cứu của Tư tưởng Hồ Chí Minh là gì?",
+      "options": {
+        "A": "Hệ thống quan điểm lý luận về cách mạng Việt Nam.",
+        "B": "Hệ thống quan điểm được vận động trong thực tiễn.",
+        "C": "Hệ thống quan điểm về quá trình xây dựng chủ nghĩa xã hội.",
+        "D": "Hệ thống quan điểm toàn diện và sâu sắc về những vấn đề cơ bản của cách mạng Việt Nam và hệ thống quan điểm tư tưởng Hồ Chí Minh được vận động trong thực tiễn."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Hệ thống quan điểm toàn diện và sâu sắc về những vấn đề cơ bản của cách mạng Việt Nam và hệ thống quan điểm tư tưởng Hồ Chí Minh được vận động trong thực tiễn."
+    },
+    {
+      "id": 3,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Có mấy phương pháp cụ thể khi nghiên cứu Tư tưởng Hồ Chí Minh?",
+      "options": {
+        "A": "Có 2 phương pháp.",
+        "B": "Có 3 phương pháp.",
+        "C": "Có 4 phương pháp.",
+        "D": "Có 5 phương pháp."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Có 3 phương pháp."
+    },
+    {
+      "id": 4,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Học tập môn Tư tưởng Hồ Chí Minh có ý nghĩa như thế nào đối với sinh viên?",
+      "options": {
+        "A": "Góp phần nâng cao năng lực tư duy lý luận.",
+        "B": "Góp phần nâng cao hiểu biết xã hội.",
+        "C": "Góp phần nâng cao hiểu biết vế cách mạng Việt Nam.",
+        "D": "Góp phần nâng cao hiểu biết về cách mạng thế giới."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Góp phần nâng cao năng lực tư duy lý luận."
+    },
+    {
+      "id": 5,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Luận điểm: \"Tư tưởng Hồ Chí Minh là một hệ thống quan điểm toàn dienj và sâu sắc về những vấn đề cơ bản của cách mạng Việt Nam, là kết quả của sự vận dụng và phát triển sáng tạo chủ nghĩa Mác - Lênin vào điểu kiện cụ thể của nước ta, kế thừa và phát triển các giá trị truyền thống tốt đẹp của dân tộc, tiếp thu tinh hoa văn hóa nhân loại\" được nêu ra tại Văn kiện Đại hội lần thứ mấy của Đảng?",
+      "options": {
+        "A": "Văn kiện Đại hội VII.",
+        "B": "Văn kiện Đại hội VIII.",
+        "C": "Văn kiện Đại hội IX.",
+        "D": "Văn kiện Đại hội X."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Văn kiện Đại hội IX."
+    },
+    {
+      "id": 6,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Khái niệm tư tưởng Hồ Chí Minh được Đảng ta chính thức sử dụng vào thời gian nào?",
+      "options": {
+        "A": "Năm 1986.",
+        "B": "Năm 1991.",
+        "C": "Năm 1996.",
+        "D": "Năm 2001."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Năm 1991."
+    },
+    {
+      "id": 7,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Nguyễn Tất Thành lên con tàu Amiran Latusơ Tơrơvin để ra đi tìm đường cứu nước tại đâu? Vào thời gian nào?",
+      "options": {
+        "A": "5/6/1911 tại Bến cảng Nhà Rồng.",
+        "B": "6/5/1911 tại Bến cảng Nhà Rồng.",
+        "C": "2/6/1911 tại Sài Gòn.",
+        "D": "4/6/1911 tại Bến Nhà Rồng."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 5/6/1911 tại Bến cảng Nhà Rồng."
+    },
+    {
+      "id": 8,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Giá trị truyền thống nào là cơ sở quan trọng nhất giúp Hồ Chí Minh xây dựng hệ thống quan điểm của mình?",
+      "options": {
+        "A": "Tinh thần đoàn kết, cổ kết cộng đồng.",
+        "B": "Chủ nghĩa yêu nước.",
+        "C": "Chủ nghĩa nhân văn của dân tộc.",
+        "D": "Truyền thống cần cù, yêu lao động."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Chủ nghĩa yêu nước."
+    },
+    {
+      "id": 9,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Giai đoạn vượt qua khó khăn thử thách, giữ vững đường lối, phương pháp cách mạng Việt Nam đúng đắn, sáng tạo là giai đoạn nào?",
+      "options": {
+        "A": "Trước năm 1911.",
+        "B": "Giai đoạn 1911 - 1920.",
+        "C": "Giai đoạn 1920 - 1930.",
+        "D": "Giai đoạn 1930 - 1941."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Giai đoạn 1930 - 1941."
+    },
+    {
+      "id": 10,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Tư tưởng Hồ Chí Minh có ý nghĩa như thế nào đối với cách mạng Việt Nam?",
+      "options": {
+        "A": "Tư tưởng Hồ Chí Min mở ra cho các dân tộc thuộc địa con đường giải phóng dân tộc.",
+        "B": "Tư tưởng Hồ Chí Minh góp phần vào cuộc đấu tranh vì độc lập dân tộc, dân chủ và tiến bộ thế giới.",
+        "C": "Tư tưởng Hồ Chí Minh là nền tảng tư tưởng và kim chỉ nam hành động cho cách mạng Việt Nam.",
+        "D": "Tư tưởng Hồ Chí Minh mở ra con đường hợp tác quốc tế."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tư tưởng Hồ Chí Minh là nền tảng tư tưởng và kim chỉ nam hành động cho cách mạng Việt Nam."
+    },
+    {
+      "id": 11,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Tư tưởng Hồ Chí Minh được hình thành và phát triển qua mấy giai đoạn.",
+      "options": {
+        "A": "3.",
+        "B": "4.",
+        "C": "5.",
+        "D": "6."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 5."
+    },
+    {
+      "id": 12,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Nguyễn Ái Quốc gửi \"Bản yêu sách của nhân dân An Nam\" tới Hội nghị Vécxây, đòi chính phủ Pháp thừa nhận các quyền tự do, dân chủ và bình đẳng của nhân dân Việt Nam vào thời gian nào?",
+      "options": {
+        "A": "6/1917.",
+        "B": "6/1918.",
+        "C": "6/1919.",
+        "D": "6/1920."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 6/1919."
+    },
+    {
+      "id": 13,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Theo Hồ Chí Minh cách mạng giải phóng dân tộc muốn giành thắng lợi thì phải?",
+      "options": {
+        "A": "Đi theo con đường của các bậc tiền bối Việt Nam.",
+        "B": "Đi theo con đường cách mạng tư sản.",
+        "C": "Đi theo con đường cách mạng vô sản.",
+        "D": "Dựa vào sự thắng lợi của cách mạng vô sản ở chính quốc."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Đi theo con đường cách mạng vô sản."
+    },
+    {
+      "id": 14,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Theo tư tưởng Hồ Chí Minh, độc lập dân tộc phải gắn với những nội dung nào sau đây?",
+      "options": {
+        "A": "Gắn với tự do của nhân dân.",
+        "B": "Gắn với quyền con người.",
+        "C": "Gắn với hạnh phúc của nhân dân.",
+        "D": "Gắn với tự do và hạnh phúc của nhân dân."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Gắn với tự do và hạnh phúc của nhân dân."
+    },
+    {
+      "id": 15,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Theo Hồ Chí Minh, cách mạng giải phóng dân tộc phải dựa trên lực lượng nào?",
+      "options": {
+        "A": "Giai cấp công nhân.",
+        "B": "Khối đại đoàn kết toàn dân tộc.",
+        "C": "Giai cấp tư sản.",
+        "D": "Giai cấp nông dân."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Khối đại đoàn kết toàn dân tộc."
+    },
+    {
+      "id": 16,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Theo Hồ Chí Minh, đặc điểm lớn nhất của thời kỳ quá độ lên chủ nghĩa xã hội ở Việt Nam là gì?",
+      "options": {
+        "A": "Từ một nước phong kiến đi lên chủ nghĩa xã hội.",
+        "B": "Từ một nước tư bản đi lên chủ nghĩa xã hội.",
+        "C": "Từ một nước nông nghiệp lạc hậu tiến thẳng lên chủ nghĩa xã hội, không trải qua giai đoạn phát triển tư bản chủ nghĩa.",
+        "D": "Từ một nước phát triển đ lên chủ nghĩa xã hội."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Từ một nước nông nghiệp lạc hậu tiến thẳng lên chủ nghĩa xã hội, không trải qua giai đoạn phát triển tư bản chủ nghĩa."
+    },
+    {
+      "id": 17,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Theo Hồ Chí Minh mối quan hệ giữa độc lập dân tộc và chủ nghĩa xã hội được thể hiện như thế nào?",
+      "options": {
+        "A": "Độc lập dân tộc và chủ nghĩa xã hội là 2 phạm trù riêng biệt không liên quan đến nhau.",
+        "B": "Độc lập dân tộc là cơ sở, tiền đề để tiến lên chủ nghĩa xã hội.",
+        "C": "Chủ nghĩa xã hội là cơ sở để giành độc lập dân tộc.",
+        "D": "Độc lập dân tộc là điều kiện đảm bảo cho quá trình xây dựng chủ nghĩa xã hội."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Độc lập dân tộc là cơ sở, tiền đề để tiến lên chủ nghĩa xã hội."
+    },
+    {
+      "id": 18,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Mục tiêu và con đường cách mạng Hồ Chí Minh đã lựa chọn là gì?",
+      "options": {
+        "A": "Độc lập dân tộc.",
+        "B": "Độc lập dân tộc gắn liền với chủ nghĩa xã hội.",
+        "C": "Giải phóng dân tộc.",
+        "D": "Giải phóng giai cấp."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Độc lập dân tộc gắn liền với chủ nghĩa xã hội."
+    },
+    {
+      "id": 19,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Theo Hồ Chí Minh, nền vắn hóa của chủ nghĩa xã hội ở Việt Nam có tính chất như thế nào?",
+      "options": {
+        "A": "Tính dân tộc.",
+        "B": "Tính khoa học.",
+        "C": "Tính tiên tiến.",
+        "D": "Tính dân tộc, khoa học và đại chúng."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tính dân tộc, khoa học và đại chúng."
+    },
+    {
+      "id": 20,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Vận dụng tư tưởng Hồ Chí Min về độc lập dân tộc gắn liền với chủ nghĩa xã hội trong sự nghiệp cách mạng Việt Nam giai đoạn hiện nay, chúng ta phải thực hiện nội dung nào sau đây?",
+      "options": {
+        "A": "Phát huy truyền thống dân tộc.",
+        "B": "Mở rộng quan hệ hợp tác quốc tế.",
+        "C": "Phát huy lòng tự hào dân tộc.",
+        "D": "Phát huy sức mạnh dân chủ xã hội chủ nghĩa."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Phát huy sức mạnh dân chủ xã hội chủ nghĩa."
+    },
+    {
+      "id": 21,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Theo tư tưởng Hồ Chí Minh, Đảng Cộng sản Việt Nam là sản phẩm của sự kết hợp giữa các yếu tố nào sau đây?",
+      "options": {
+        "A": "Chủ nghĩa Mác với phong trào cách mạng Việt Nam.",
+        "B": "Chủ nghĩa Mác - Lênin với phong trào công nhân.",
+        "C": "Chủ nghĩa Mác - Lênin với phong trào yêu nước Việt Nam.",
+        "D": "Chủ nghĩa Mác - Lênin với phong trào công nhân và phong trào yêu nước Việt Nam."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Chủ nghĩa Mác - Lênin với phong trào công nhân và phong trào yêu nước Việt Nam."
+    },
+    {
+      "id": 22,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Theo Hồ Chí Minh, Đảng Cộng sản Việt Nam là Đảng của:",
+      "options": {
+        "A": "Nhân dân lao động.",
+        "B": "Giai cấp công nhân.",
+        "C": "Giai cấp nông dân.",
+        "D": "Giai cấp công nhân, nhân dân lao động và cả dân tộc Việt Nam."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Giai cấp công nhân, nhân dân lao động và cả dân tộc Việt Nam."
+    },
+    {
+      "id": 23,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Theo tư tưởng Hồ Chí Minh, một Đảng văn minh có nghĩa là:",
+      "options": {
+        "A": "Một Đảng cách mạng chân chính.",
+        "B": "Một Đảng hoạt động độc lập với nhà nước.",
+        "C": "Một Đảng cầm quyền.",
+        "D": "Một Đảng mang tính khoa học."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Một Đảng cách mạng chân chính."
+    },
+    {
+      "id": 24,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Theo quan điểm của Hồ Chí Minh, Nhà nước Việt Nam mới mang bản chất gì?",
+      "options": {
+        "A": "Giai cấp công nhân.",
+        "B": "Giai cấp nông dân.",
+        "C": "Giai cấp nông dân và công nhân.",
+        "D": "Giai cấp nông dân, công nhân và trí thức."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Giai cấp công nhân."
+    },
+    {
+      "id": 25,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Theo Hồ Chí Minh, trong công tác xây dựng nhà nước cần xác định rõ cơ chế phân công, phối hợp thi hành quyền lực giữa các cơ quan nào?",
+      "options": {
+        "A": "Lập pháp và hành pháp.",
+        "B": "Lập pháp và tư pháp.",
+        "C": "Lập pháp, hành pháp và tư pháp.",
+        "D": "Hành pháp và tư pháp."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Lập pháp, hành pháp và tư pháp."
+    },
+    {
+      "id": 26,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Nhà nước của nhân dân theo tư tưởng Hồ Chí Minh nghĩa là?",
+      "options": {
+        "A": "Chăm lo mọi mặt đời sống của nhân dân.",
+        "B": "Mọi quyền lực nhà nước và trong xã hội đều thuộc về nhân dân.",
+        "C": "Mọi công việc nhà nước đều do dân quyết định.",
+        "D": "Đại biểu nhà nước do dân bầu ra."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Mọi quyền lực nhà nước và trong xã hội đều thuộc về nhân dân."
+    },
+    {
+      "id": 27,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Một trong những đặc điểm của nhà nước pháp quyền theo Hồ Chí Minh là?",
+      "options": {
+        "A": "Nhà nước thượng tôn pháp luật.",
+        "B": "Nhà nước lấy đạo đức làm nền tảng.",
+        "C": "Nhà nước do nhân dân bầu ra.",
+        "D": "Nhà nước phục vụ lơi ích của nhân dân."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Nhà nước thượng tôn pháp luật."
+    },
+    {
+      "id": 28,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Theo tư tưởng Hồ Chí Minh, có mấy phương thức xây dựng khối đại đoàn kết dân tộc?",
+      "options": {
+        "A": "2.",
+        "B": "3.",
+        "C": "4.",
+        "D": "5."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. 3."
+    },
+    {
+      "id": 29,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Đảng ta có tên gọi là Đảng Lao động Việt Nam từ khi nào?",
+      "options": {
+        "A": "1930.",
+        "B": "1945.",
+        "C": "1951.",
+        "D": "1960."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 1951."
+    },
+    {
+      "id": 30,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Theo tư tưởng Hồ Chí Minh, chủ thể của khối đại đoàn kết là ai?",
+      "options": {
+        "A": "Giai cấp trí thức.",
+        "B": "Giai cấp nông dân.",
+        "C": "Giai cấp công nhân.",
+        "D": "Toàn thể nhân dân Việt Nam."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Toàn thể nhân dân Việt Nam."
+    },
+    {
+      "id": 31,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Theo tư tưởng Hồ Chí Minh, thực hiện đoàn kết quốc tế với những lực lượng nào sau đây?",
+      "options": {
+        "A": "Phong trào cộng sản và công nhân quốc tế.",
+        "B": "Phong trào đấu tranh giải phóng dân tộc.",
+        "C": "Phong trào cộng sản và công nhân quốc tế; Phong trài đấu tranh giải phóng dân tộc.",
+        "D": "Phong trài cộng sản và công nhân quốc tế; Phong trào đấu tranh giải phóng dân tộc, Phong trào hòa bình, dân chủ thế giới."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Phong trài cộng sản và công nhân quốc tế; Phong trào đấu tranh giải phóng dân tộc, Phong trào hòa bình, dân chủ thế giới."
+    },
+    {
+      "id": 32,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Trong giai đoạn hiện nay, để xây dựng được khối đại đoàn kết dân tộc vững chắc, cần dựa trên nền tảng nào?",
+      "options": {
+        "A": "Giai cấp công nhân.",
+        "B": "Giai cấp công nhân và giai cấp nông dân.",
+        "C": "Giai cấp nông dân và tầng lớp trí thức.",
+        "D": "Liên minh công - nông - trí thức."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Liên minh công - nông - trí thức."
+    },
+    {
+      "id": 33,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Theo tư tưởng Hồ Chí Minh, đoàn kết quốc tế dựa trên nguyên tắc nào sau đây?",
+      "options": {
+        "A": "Phụ thuộc vào bên ngoài.",
+        "B": "Độc lập, tự chủ.",
+        "C": "Vì lợi ích dân tộc.",
+        "D": "Nguồn lực bên ngoài giữ vai trò quyết định."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Độc lập, tự chủ."
+    },
+    {
+      "id": 34,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Theo Hồ Chí Minh, văn hóa được đặt ngang hàng với các lĩnh vực nào của đời sông xã hội?",
+      "options": {
+        "A": "Kinh tế và xã hội.",
+        "B": "Chính trị và xã hội.",
+        "C": "Kinh tế và chính trị.",
+        "D": "Kinh tế, chính trị và xã hội."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Kinh tế, chính trị và xã hội."
+    },
+    {
+      "id": 35,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Theo Hồ Chí Minh, thực có mấy nguyên tắc xây dựng đạo đức cách mạng?",
+      "options": {
+        "A": "2.",
+        "B": "3.",
+        "C": "4.",
+        "D": "5."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. 3."
+    },
+    {
+      "id": 36,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Theo Hồ Chí Minh, xây dựng con người cần chú ý trên mấy nội dung?",
+      "options": {
+        "A": "2.",
+        "B": "3.",
+        "C": "4.",
+        "D": "5."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 4."
+    },
+    {
+      "id": 37,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Trong Cương lĩnh xây dựng nước trong thời kỳ quá độ lên chủ nghĩa xã hội bổ sung, phát triển năm 2011 đã khẳng định phải xây dựng một nền văn hóa Việt Nam như thế nào?",
+      "options": {
+        "A": "Nền văn hóa mang tính dân tộc, khoa học, đại chúng.",
+        "B": "Nền văn hóa Việt Nam tiên tiến tiếp thu các giá trị nhân loại.",
+        "C": "Nền văn hóa Việt Nam tiên tiến, đậm đà bản sắc dân tộc.",
+        "D": "Nền văn hóa mang tính nhân văn, dân chủ, tiến bộ."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Nền văn hóa Việt Nam tiên tiến, đậm đà bản sắc dân tộc."
+    },
+    {
+      "id": 38,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Chọn đáp án đúng: Theo quan điểm Hồ Chí Minh, trung với nước có nghĩa là?",
+      "options": {
+        "A": "Trung thành với sự nghiệp dựng nước và giữ nước.",
+        "B": "Trung thành với cán bộ nhà nước.",
+        "C": "Người dân được tự do làm những điều mình thích.",
+        "D": "Trung thành với người đứng đầu nhà nước."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Trung thành với sự nghiệp dựng nước và giữ nước."
+    },
+    {
+      "id": 39,
+      "chapter": "Câu hỏi sưu tầm",
+      "sourceChapter": "Câu Hỏi Trong SLIDE",
+      "question": "Theo quan điểm Hồ Chí Minh, vai trò của con người được thể hiện như thế nào?",
+      "options": {
+        "A": "Con người là chủ thể của sự phát triển.",
+        "B": "Con người giữ vai trò trung tâm của sự phát triển xã hội.",
+        "C": "Con người là mục tiêu, là động lực của sự phát triển.",
+        "D": "Con người là lực lượng chính thúc đẩy sự phát triển xã hội."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Con người là mục tiêu, là động lực của sự phát triển."
+    }
+  ]
+}

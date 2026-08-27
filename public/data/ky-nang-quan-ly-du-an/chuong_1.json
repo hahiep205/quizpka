@@ -1,0 +1,455 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kỹ năng Quản lý Dự án - Chương 1",
+  "chapter": "Chương 1",
+  "totalQuestions": 32,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Quản lý dự án là gì?",
+      "options": {
+        "A": "Quá trình lập kế hoạch, điều phối, thời gian, nguồn lực và giám sát quá trình phát triển của dự án đầu tư",
+        "B": "Quá trình sản xuất sản phẩm hàng loạt.",
+        "C": "Quá trình chỉ tập trung vào lập kế hoạch tài chính.",
+        "D": "Quá trình tập trung vào duy trì hoạt động hàng ngày."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Quá trình lập kế hoạch, điều phối, thời gian, nguồn lực và giám sát quá trình phát triển của dự án đầu tư"
+    },
+    {
+      "id": 2,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Mục tiêu chính của quản lý dự án là gì?",
+      "options": {
+        "A": "Tối đa hóa lợi nhuận cho công ty.",
+        "B": "Hoàn thành các công việc dự án trong phạm vi ngân sách và thời gian đã định.",
+        "C": "Đưa ra những sản phẩm có chất lượng cao nhất.",
+        "D": "Đảm bảo mọi dự án đều thành công tuyệt đối."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Hoàn thành các công việc dự án trong phạm vi ngân sách và thời gian đã định."
+    },
+    {
+      "id": 3,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Đặc điểm nào sau đây KHÔNG phải là đặc điểm của một dự án?",
+      "options": {
+        "A": "Dự án có mục tiêu xác định.",
+        "B": "Dự án được thực hiện trong một khoảng thời gian nhất định.",
+        "C": "Dự án bao gồm các hoạt động lặp đi lặp lại thường xuyên.",
+        "D": "Liên quan đến việc thực hiện một điều mà chưa từng làm được trước đó."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Dự án bao gồm các hoạt động lặp đi lặp lại thường xuyên."
+    },
+    {
+      "id": 4,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Điều nào sau đây không phải là ưu điểm của việc sử dụng quản lý dự án tốt?",
+      "options": {
+        "A": "Rút ngắn thời gian phát triển",
+        "B": "Tinh thần làm việc tốt hơn",
+        "C": "Chi phí vốn thấp hơn",
+        "D": "Lợi nhuận cao hơn"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Chi phí vốn thấp hơn"
+    },
+    {
+      "id": 5,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Điểm nào sau đây là điểm đặc biệt của dự án?",
+      "options": {
+        "A": "Hoạt động lặp lại và có tính thường xuyên.",
+        "B": "Được thực hiện trong khoảng thời gian không xác định.",
+        "C": "Có mục tiêu cụ thể và giới hạn về nguồn lực.",
+        "D": "Không có ràng buộc về chất lượng tiêu chuẩn."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Có mục tiêu cụ thể và giới hạn về nguồn lực."
+    },
+    {
+      "id": 6,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Quản lý rủi ro trong dự án bao gồm nội dung nào?",
+      "options": {
+        "A": "Xác định các rủi ro nguy hiểm và có kế hoạch.",
+        "B": "Phân chia nguồn năng lượng của dự án.",
+        "C": "Quản lý thông tin giữa các liên kết.",
+        "D": "Phân công trách nhiệm cho các thành viên."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Xác định các rủi ro nguy hiểm và có kế hoạch."
+    },
+    {
+      "id": 7,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Dự án và hoạt động thường xuyên điểm nào sau đây KHÔNG phải là điểm khác nhau?",
+      "options": {
+        "A": "Dự án có thời gian bắt đầu và kết thúc duy nhất",
+        "B": "Do con người thực hiện, được lên kế hoạch, thực hiện, kiểm tra (vì đây là điểm giống)",
+        "C": "Hoạt động thường xuyên là hoạt động liên tục có tính chất lặp lại",
+        "D": "Dự án có nguồn lực hạn chế"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Do con người thực hiện, được lên kế hoạch, thực hiện, kiểm tra (vì đây là điểm giống)"
+    },
+    {
+      "id": 8,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Dự án dài hạn thường có mục tiêu gắn với điều gì?",
+      "options": {
+        "A": "Mục tiêu kế hoạch kinh doanh hàng năm của doanh nghiệp",
+        "B": "Chiến lược phát triển trung hạn của doanh nghiệp",
+        "C": "Chiến lược phát triển dài hạn của doanh nghiệp",
+        "D": "Các mục tiêu kinh doanh hàng ngày của doanh nghiệp"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Chiến lược phát triển dài hạn của doanh nghiệp"
+    },
+    {
+      "id": 9,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Điều nào sau đây không phải là ưu điểm của việc sử dụng quản lý dự án tốt? (Slide 60 chương 1)",
+      "options": {
+        "A": "Rút ngắn thời gian phát triển",
+        "B": "Tinh thần làm việc tốt hơn",
+        "C": "Chi phí vốn thấp hơn",
+        "D": "Lợi nhuận cao hơn"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Chi phí vốn thấp hơn"
+    },
+    {
+      "id": 10,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Một dự án xây dựng trung tâm thương mại tại một thành phố lớn với vốn đầu tư hỗn hợp từ cả nguồn vốn tư nhân và ngân sách nhà nước. Dự án này thuộc loại nào theo nguồn vốn đầu tư?",
+      "options": {
+        "A": "Dự án sử dụng vốn Ngân sách Nhà nước",
+        "B": "Dự án sử dụng vốn tín dụng do Nhà nước bảo lãnh",
+        "C": "Dự án sử dụng vốn tư nhân",
+        "D": "Dự án sử dụng vốn hỗn hợp"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Dự án sử dụng vốn hỗn hợp"
+    },
+    {
+      "id": 11,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Dự án mở rộng diện tích canh tác lúa nước tại một vùng đồng bằng để tăng sản lượng sản xuất nông nghiệp thuộc loại dự án nào theo cơ cấu tái sản xuất?",
+      "options": {
+        "A": "Dự án theo chiều rộng",
+        "B": "Dự án theo chiều sâu",
+        "C": "Dự án hỗn hợp",
+        "D": "Dự án đầu tư cơ sở hạ tầng"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Dự án theo chiều rộng"
+    },
+    {
+      "id": 12,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Ai là người chịu trách nhiệm thực hiện các chức năng kỹ thuật trong một dự án?",
+      "options": {
+        "A": "Chủ dự án",
+        "B": "Giám đốc dự án",
+        "C": "Nhà đầu tư",
+        "D": "Ban quản lý dự án"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Giám đốc dự án"
+    },
+    {
+      "id": 13,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Đâu là yêu cầu với một nhà quản lý dự án giỏi?",
+      "options": {
+        "A": "Bản lĩnh chính trị",
+        "B": "Năng lực chuyên môn",
+        "C": "Dám đương đầu",
+        "D": "Tất cả đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả đáp án trên"
+    },
+    {
+      "id": 14,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Loại dự án nào sau đây thuộc dự án chiến lược",
+      "options": {
+        "A": "Dự án nền tảng",
+        "B": "Dự án cải tiến nhỏ",
+        "C": "Dự án bắt buộc thực hiện",
+        "D": "Không có đáp án đúng"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Dự án nền tảng"
+    },
+    {
+      "id": 15,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Một chu kỳ sống dự án gồm mấy giai đoạn?",
+      "options": {
+        "A": "2 giai đoạn",
+        "B": "3 giai đoạn",
+        "C": "4 giai đoạn",
+        "D": "5 giai đoạn"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 4 giai đoạn"
+    },
+    {
+      "id": 16,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Ý tưởng của một dự án có thể xuất phát từ các nguồn nào?",
+      "options": {
+        "A": "CL phát triển KT – XH hay CL phát triển ngành, lĩnh vực",
+        "B": "Thông qua việc phát hiện những bất cập trong việc bố trí và sử dụng các nguồn lực của DN",
+        "C": "Những nhu cầu sản xuất và tiêu dùng chưa được thỏa mãn",
+        "D": "Tất cả phương án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả phương án trên"
+    },
+    {
+      "id": 17,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Đặc điểm nào sau đây KHÔNG thuộc về một dự án?",
+      "options": {
+        "A": "Tính phức tạp và không thường xuyên.",
+        "B": "Các công việc lệ thuộc vào nhau.",
+        "C": "Sử dụng nguồn lực vô hạn để đạt mục tiêu.",
+        "D": "Được thực hiện trong điều kiện ràng buộc về thời gian, ngân sách và chất lượng."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Sử dụng nguồn lực vô hạn để đạt mục tiêu."
+    },
+    {
+      "id": 18,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Mục tiêu dự án cần được xác định theo nguyên tắc nào?",
+      "options": {
+        "A": "SWOT",
+        "B": "SMART",
+        "C": "ROI",
+        "D": "KPI"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. SMART"
+    },
+    {
+      "id": 19,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Chu kì của một dự án thông thường có những giai đoạn:",
+      "options": {
+        "A": "Xây dựng ý tưởng, giai đoạn phát triển, giai đoạn triển khai, giai đoạn kết thúc",
+        "B": "Xác định dự án, lập kế hoạch, thực hiện dự án, bàn giao kết thúc dự án",
+        "C": "Xây dựng ý tưởng, giai đoạn phát triển, giai đoạn triển khai, giai đoạn xem xét đánh giá",
+        "D": "Giai đoạn nêu ý tưởng, xây dựng ý tưởng, giai đoạn phát triển, giai đoạn triển khai."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Xác định dự án, lập kế hoạch, thực hiện dự án, bàn giao kết thúc dự án"
+    },
+    {
+      "id": 20,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Đặc điểm của dự án, ngoại trừ:",
+      "options": {
+        "A": "Thời gian tồn tại vô hạn.",
+        "B": "Sản phẩm của dự án mang tính chất đơn chiếc, độc đáo.",
+        "C": "Môi trường hoạt động “va chạm”.",
+        "D": "Tính bất định và rủi ro cao."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Thời gian tồn tại vô hạn."
+    },
+    {
+      "id": 21,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Đầu tư vào lực lượng lao động, đầu tư xây dựng cơ bản và đầu tư vào tài sản lưu động, thuộc cách phân loại đầu tư:",
+      "options": {
+        "A": "Theo chức năng quản trị vốn",
+        "B": "Theo nguồn vốn",
+        "C": "Theo nội dung kinh tế",
+        "D": "Theo mục tiêu đầu tư"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Theo nội dung kinh tế"
+    },
+    {
+      "id": 22,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Đầu tư gián tiếp là phương thức đầu tư, mà trong đó chủ đầu tư:",
+      "options": {
+        "A": "Trực tiếp tham gia quản trị vốn bỏ ra",
+        "B": "Không trực tiếp tham gia quản trị vốn bỏ ra",
+        "C": "Có khi trực tiếp có khi không trực tiếp quản trị vốn bỏ ra",
+        "D": "Tất cả các câu đều đúng"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Không trực tiếp tham gia quản trị vốn bỏ ra"
+    },
+    {
+      "id": 23,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Các giai đoạn của dự án?",
+      "options": {
+        "A": "Lập kế hoạch dự án, thiết kế dự án, tổ chức thực hiện dự án, giám sát thực hiện dự án, kết thúc dự án",
+        "B": "Tổ chức thực hiện dự án, , thiết kế dự án, lập kế hoạch dự án, giám sát thực hiện dự án, kết thúc dự án",
+        "C": "Thiết kế dự án, lập kế hoạch dự án, tổ chức thực hiện dự án, giám sát thực hiện dự án, kết thúc dự án",
+        "D": "Thiết kế dự án, tổ chức thực hiện dự án, lập kế hoạch dự án, giám sát thực hiện dự án, kết thúc dự án"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Thiết kế dự án, lập kế hoạch dự án, tổ chức thực hiện dự án, giám sát thực hiện dự án, kết thúc dự án"
+    },
+    {
+      "id": 24,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Giám đốc dự án đã khám phá vấn đề với môđun thống kê của dự án. Các số đo đã được ghi rõ cho các đơn vị của Mỹ nhưng các nhà lập trình nước ngoài sử dụng các đơn vị quốc tế. Vấn đề này có thể tránh được ở chỗ nào trong dự án?",
+      "options": {
+        "A": "Lập kế hoạch dự án.",
+        "B": "Kiểm thử dự án.",
+        "C": "Kiểm soát dự án.",
+        "D": "Quay vòng dự án"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Lập kế hoạch dự án."
+    },
+    {
+      "id": 25,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Bản chất cơ bản của một dự án là ______.",
+      "options": {
+        "A": "Vĩnh viễn",
+        "B": "Tạm thời",
+        "C": "A hoặc B",
+        "D": "Cả A và B"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Tạm thời"
+    },
+    {
+      "id": 26,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Một dự án bao gồm các yếu tố như sau: I. Thời điểm bắt đầu và kết thúc; II. Mục đích cụ thể; III. Những điều kiện ràng buộc",
+      "options": {
+        "A": "Chỉ I",
+        "B": "Chỉ II",
+        "C": "Chỉ I và II",
+        "D": "I, II và III"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. I, II và III"
+    },
+    {
+      "id": 27,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Câu nào sau đây thể hiện đúng chu kỳ dự án?",
+      "options": {
+        "A": "Lập kế hoạch → Xác định → Thực hiện → Bàn giao",
+        "B": "Lập kế hoạch → Thực hiện → Xác định → Bàn giao",
+        "C": "Xác định → Lập kế hoạch → Thực hiện → Bàn giao",
+        "D": "Xác định → Thực hiện → Lập kế hoạch → Bàn giao"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Xác định → Lập kế hoạch → Thực hiện → Bàn giao"
+    },
+    {
+      "id": 28,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Đâu là sự khác nhau giữa dự án và hoạt động thường xuyên?",
+      "options": {
+        "A": "Bị giới hạn về nguồn lực",
+        "B": "Được lên kế hoạch, thực hiện và kiểm tra",
+        "C": "Hoạt động thường xuyên có tính chất lặp lại còn dự án thì có thời hạn và là duy nhất.",
+        "D": "Dự án có tính chất lặp lại còn hoạt động thường xuyên thì có thời hạn và là duy nhất"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Hoạt động thường xuyên có tính chất lặp lại còn dự án thì có thời hạn và là duy nhất."
+    },
+    {
+      "id": 29,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Dự án không có đặc điểm nào sau đây?",
+      "options": {
+        "A": "Được thực hiện trong khoảng thời gian nhất định",
+        "B": "Liên quan đến việc thực hiện một điều đã từng làm được trước đó",
+        "C": "Thường liên quan đến nhiều bộ phận trong công ty và lĩnh vực chuyên môn khác nhau",
+        "D": "Đáp ứng các yêu cầu về tiêu chuẩn chất lượng đầu ra, chi phí và thời gian cụ thể."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Liên quan đến việc thực hiện một điều đã từng làm được trước đó"
+    },
+    {
+      "id": 30,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Dự án bao gồm mấy giai đoạn?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 5"
+    },
+    {
+      "id": 31,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Đặc điểm nào sau đây KHÔNG phải là đặc điểm của dự án?",
+      "options": {
+        "A": "Có mục tiêu cụ thể",
+        "B": "Thời gian thực hiện không xác định",
+        "C": "Liên quan đến nhiều bộ phận và lĩnh vực chuyên môn",
+        "D": "Được quản lý trong điều kiện ràng buộc về thời gian và nguồn lực"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Thời gian thực hiện không xác định"
+    },
+    {
+      "id": 32,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Một dự án dự kiến kéo dài 10 tháng với tổng chi phí là 1 tỷ đồng. Nếu chi phí phải tăng thêm 15% và thời gian kéo dài thêm 2 tháng, chi phí tổng cộng là bao nhiêu?",
+      "options": {
+        "A": "1 tỷ đồng",
+        "B": "1,15 tỷ đồng",
+        "C": "1,3 tỷ đồng",
+        "D": "1,45 tỷ đồng"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 1,3 tỷ đồng"
+    }
+  ]
+}

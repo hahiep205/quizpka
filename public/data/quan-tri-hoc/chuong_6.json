@@ -1,0 +1,427 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Quản trị học - Chương 6",
+  "chapter": "Chương 6",
+  "totalQuestions": 30,
+  "questions": [
+    {
+      "id": 203,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Biện pháp khích lệ nhân viên phù hợp nên được xuất phát từ:",
+      "options": {
+        "A": "Ý muốn của nhà lãnh đạo",
+        "B": "Nhu cầu của nhân viên",
+        "C": "Khả năng của doanh nghiệp",
+        "D": "Tất cả các đáp án đều sai"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Nhu cầu của nhân viên"
+    },
+    {
+      "id": 204,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Cảm giác thôi thúc mạnh mẽ do sự thiếu hụt về một mặt nào đó trong đời sống con người được gọi là gì?",
+      "options": {
+        "A": "Động lực.",
+        "B": "Động cơ thúc đẩy.",
+        "C": "Nhu cầu.",
+        "D": "Sự thỏa mãn."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Nhu cầu."
+    },
+    {
+      "id": 205,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Chức năng của nhà lãnh đạo là:",
+      "options": {
+        "A": "Động viên khuyến khích nhân viên",
+        "B": "Bố trí lực lượng thực hiện các mục tiêu của tổ chức",
+        "C": "Tất cả các đáp án đều đúng",
+        "D": "Vạch ra các mục tiêu và phương hướng phát triển tổ chức"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tất cả các đáp án đều đúng"
+    },
+    {
+      "id": 206,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Chọn đáp án SAI khi phân biệt giữa nhà quản trị và nhà lãnh đạo.",
+      "options": {
+        "A": "Người lãnh đạo có thể được bổ nhiệm",
+        "B": "Người lãnh đạo có thể gây ảnh hưởng nằm ngoài các quyền hạn chính thức",
+        "C": "Nhà quản trị được bổ nhiệm",
+        "D": "Nhà quản trị gây ảnh hưởng thông qua các hình thức không chính thức"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Nhà quản trị gây ảnh hưởng thông qua các hình thức không chính thức"
+    },
+    {
+      "id": 207,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Đặc điểm của phong cách lãnh đạo dân chủ là:",
+      "options": {
+        "A": "Tạo được sự đồng thuận, nhất trí trong tập thể",
+        "B": "Giải quyết vấn đề nhanh chóng",
+        "C": "Tất cả các đáp án đều đúng",
+        "D": "Hiệu quả làm việc thấp khi thiếu lãnh đạo"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Tạo được sự đồng thuận, nhất trí trong tập thể"
+    },
+    {
+      "id": 208,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Đặc điểm nào thuộc phong cách chuyên quyền:",
+      "options": {
+        "A": "Tham khảo ý kiến cấp dưới",
+        "B": "Đơn phương đưa ra quyết định, và hạn chế sự tham gia của nhân viên",
+        "C": "Quyết định được đưa ra thường có sự đồng thuận cao từ các thành viên trong tổ chức",
+        "D": "Mức độ tự quyết của cấp dưới cao"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Đơn phương đưa ra quyết định, và hạn chế sự tham gia của nhân viên"
+    },
+    {
+      "id": 209,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Đâu KHÔNG phải là động lực làm việc của nhân viên:",
+      "options": {
+        "A": "Cơ hội thăng tiến",
+        "B": "Sự thách thức và hấp dẫn của công việc",
+        "C": "Phần thưởng",
+        "D": "Tất cả các đáp án đều đúng"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả các đáp án đều đúng"
+    },
+    {
+      "id": 210,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Điền từ thích hợp vào chỗ trống: \"Lãnh đạo là tìm cách gây ảnh hưởng đến người khác nhằm đạt được _____ của tổ chức.\"",
+      "options": {
+        "A": "kê hoạch",
+        "B": "mục tiêu",
+        "C": "lợi nhuận",
+        "D": "môi trường nội bộ tốt"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. mục tiêu"
+    },
+    {
+      "id": 211,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Điều gì có thể xảy ra khi nhà quản trị lạm dụng quyền lực cưỡng chế?",
+      "options": {
+        "A": "Sự tin cậy",
+        "B": "Tất cả các đáp án đều đúng",
+        "C": "Sự thuyết phục",
+        "D": "Sự phản kháng"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Sự phản kháng"
+    },
+    {
+      "id": 212,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Fiedler định nghĩa quan hệ nào dưới đây là mức độ tin tưởng, tin cậy và tôn trọng của nhân viên đối với người lãnh đạo của mình?",
+      "options": {
+        "A": "Quan hệ cấu trúc nhiệm vụ.",
+        "B": "Quan hệ quyền hạn.",
+        "C": "Quan hệ quyền lực.",
+        "D": "Quan hệ lãnh đạo - nhân viên."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Quan hệ lãnh đạo - nhân viên."
+    },
+    {
+      "id": 213,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "McClelland cho rằng con người có mấy nhu cầu cơ bản?",
+      "options": {
+        "A": "3.",
+        "B": "4.",
+        "C": "5.",
+        "D": "6."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 3."
+    },
+    {
+      "id": 214,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Nhà lãnh đạo A phụ trách các thợ may tại một phân xưởng nên sử dụng phong cách lãnh đạo nào?",
+      "options": {
+        "A": "Dân chủ",
+        "B": "Chuyên quyền",
+        "C": "Tất cả các đáp án đều sai",
+        "D": "Tự do"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Chuyên quyền"
+    },
+    {
+      "id": 215,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Nhà quản trị và nhà lãnh đạo ....",
+      "options": {
+        "A": "Là hai cách gọi của cùng một khái niệm",
+        "B": "Tùy trường hợp mà có thể cùng là một người hoặc hai người riêng biệt",
+        "C": "Luôn luôn cùng là một người",
+        "D": "Luôn là hai người khác biệt"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Tùy trường hợp mà có thể cùng là một người hoặc hai người riêng biệt"
+    },
+    {
+      "id": 216,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Những lý thuyết lãnh đạo hành vi tập trung vào xem xét",
+      "options": {
+        "A": "Cách xác định những nhà lãnh đạo hiệu quả",
+        "B": "Những là lãnh đạo hiệu quả là ai",
+        "C": "Những nhà lãnh đạo hiệu quả đã thực hiện những công việc gì",
+        "D": "Những nhà lãnh đạo hiệu quả có đặc điểm nào"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Những nhà lãnh đạo hiệu quả đã thực hiện những công việc gì"
+    },
+    {
+      "id": 217,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Phong cách lãnh đạo hướng dẫn hoặc tạo động lực cho nhân viên làm việc hướng tới mục tiêu bằng cách đưa ra phần thưởng cho hiệu quả làm việc của họ là phong cách nào?",
+      "options": {
+        "A": "Lãnh đạo tầm nhìn.",
+        "B": "Lãnh đạo chuyển đổi.",
+        "C": "Lãnh đạo bằng vật chất.",
+        "D": "Lãnh đạo lôi cuốn."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Lãnh đạo bằng vật chất."
+    },
+    {
+      "id": 218,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Phong cách lãnh đạo mang lại hiệu quả lớn nhất là:",
+      "options": {
+        "A": "Dân chủ",
+        "B": "Tất cả các đáp án đều sai",
+        "C": "Trao quyền",
+        "D": "Chuyên quyền"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Tất cả các đáp án đều sai"
+    },
+    {
+      "id": 219,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Phong cách lãnh đạo nào dưới đây mô tả người lãnh đạo cho phép nhân viên tham gia vào quá trình ra quyết định, giao quyền, và sử dụng phản hồi như là một cơ hội để đào tạo huấn luyện nhân viên?",
+      "options": {
+        "A": "Phong cách tự do",
+        "B": "Phong cách độc đoán",
+        "C": "Phong cách dân chủ",
+        "D": "Phong cách văn hóa"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Phong cách dân chủ"
+    },
+    {
+      "id": 220,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Phong cách lãnh đạo nào sau đây mô tả một nhà lãnh đạo có xu hướng lôi kéo các nhân viên tham gia quá trình ra quyết định, ủy quyền, khuyến khích tham gia việc quyết định phương pháp làm việc và mục tiêu, sử dụng thông tin phản hồi như một cơ hội để huấn luyện nhân viên?",
+      "options": {
+        "A": "Phong cách văn hóa.",
+        "B": "Phong cách chuyên quyền.",
+        "C": "Phong cách dân chủ.",
+        "D": "Phong cách tham vấn."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Phong cách dân chủ."
+    },
+    {
+      "id": 221,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Phong cách lãnh đạo nào sau đây mô tả người lãnh đạo thực hiện cả hành vi vừa hưỡng dẫn, vừa hỗ trợ trong mô hình lãnh đạo của Hersey và Blanchard?",
+      "options": {
+        "A": "Tham gia.",
+        "B": "Điều hành trực tiếp.",
+        "C": "Kèm cặp.",
+        "D": "Ủy quyền."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Kèm cặp."
+    },
+    {
+      "id": 222,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Phong cách lãnh đạo nào sau đây mô tả người lãnh đạo có xu hướng tập trung quyền hạn, chỉ thị các phương pháp làm việc, ra quyết định đơn phương và hạn chế sự tham gia của nhân viên?",
+      "options": {
+        "A": "Phong cách chuyên quyền",
+        "B": "Phong cách tự do",
+        "C": "Phong cách dân chủ",
+        "D": "Phong cách văn hóa"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Phong cách chuyên quyền"
+    },
+    {
+      "id": 223,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Quyền lực cưỡng chế tạo ra ... tạm thời.",
+      "options": {
+        "A": "Sự thuyết phục",
+        "B": "Sự tin cậy",
+        "C": "Sự nghe lời",
+        "D": "Tất cả các đáp án đều đúng"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Sự nghe lời"
+    },
+    {
+      "id": 224,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Quyền lực chuyên gia là:",
+      "options": {
+        "A": "Những quyền và trách nhiệm mà người quản lý có thể dành cho nhân viên.",
+        "B": "Khả năng gây ảnh hưởng dựa trên những kiến thức và kỹ năng cần thiết trong công việc",
+        "C": "Khả năng ép buộc nhân viên tuân thủ mệnh lệnh",
+        "D": "Khả năng động viên nhân viên tuân thủ mệnh lệnh"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Khả năng gây ảnh hưởng dựa trên những kiến thức và kỹ năng cần thiết trong công việc"
+    },
+    {
+      "id": 225,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Quyền lực nào có được từ vị trí quản lý?",
+      "options": {
+        "A": "Quyền lực khen thưởng và Quyền lực cưỡng chế",
+        "B": "Quyền theo dõi",
+        "C": "Quyền lực khen thưởng",
+        "D": "Quyền lực cưỡng chế"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Quyền lực khen thưởng và Quyền lực cưỡng chế"
+    },
+    {
+      "id": 226,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Sức sáng tạo của nhân viên sẽ được phát huy tốt nhất trong môi trường với phong cách lãnh đạo nào?",
+      "options": {
+        "A": "Chuyên quyền",
+        "B": "Tất cả đều ngang nhau",
+        "C": "Trao chuyền",
+        "D": "Dân chủ"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Trao chuyền"
+    },
+    {
+      "id": 227,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Theo nghiên cứu của Đại học Michigan, phong cách lãnh đạo định hướng vào nhân viên có đặc điểm gì?",
+      "options": {
+        "A": "Hướng sự quan tâm đến các nhu cầu của thuộc cấp.",
+        "B": "Quan tâm đến việc hoàn thành các nghiệp vụ của nhóm.",
+        "C": "Chú trọng khía cạnh kỹ thuật và nhiệm vụ của công việc.",
+        "D": "Xem nhân viên như phương tiện để đạt được mục tiêu."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Hướng sự quan tâm đến các nhu cầu của thuộc cấp."
+    },
+    {
+      "id": 228,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Theo quan điểm quản trị hiện đại, nhà lãnh đạo hiện đại là người...... đến người khác để đạt được mục tiêu của tổ chức.",
+      "options": {
+        "A": "Ra lệnh",
+        "B": "Tất cả các đáp án đều đúng",
+        "C": "Truyền cảm hứng",
+        "D": "Bắt buộc"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Truyền cảm hứng"
+    },
+    {
+      "id": 229,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Theo thuyết nhu cầu của Maslow, động lực làm việc của con người xuất phát từ? (Chọn phương án đúng nhất)",
+      "options": {
+        "A": "5 cấp bậc nhu cầu.",
+        "B": "Nhu cầu bậc thấp.",
+        "C": "Nhu cầu bậc cao.",
+        "D": "Nhu cầu chưa được thỏa mãn."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Nhu cầu chưa được thỏa mãn."
+    },
+    {
+      "id": 230,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Theo thuyết về bản chất con người của Mc. Gregor, người thuộc thuyết X là người như thế nào?",
+      "options": {
+        "A": "Không thích làm việc, không thích chịu trách nhiệm.",
+        "B": "Ham thích làm việc, sẵn sàng nhận trách nhiệm.",
+        "C": "Ham thích làm việc, biết tự kiểm soát, có khả sáng tạo.",
+        "D": "Không thích làm việc, nhưng sẵn sàng chịu trách nhiệm."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Không thích làm việc, không thích chịu trách nhiệm."
+    },
+    {
+      "id": 231,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Vấn đề nào dưới đây thuộc chức năng lãnh đạo?",
+      "options": {
+        "A": "Đánh giá",
+        "B": "Lập kế hoạch",
+        "C": "Động viên",
+        "D": "Thông tin"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Động viên"
+    },
+    {
+      "id": 232,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Việc khích lệ các nhân viên dưới quyền thuộc chức năng nào trong quản trị?",
+      "options": {
+        "A": "Lập kế hoạch",
+        "B": "Lãnh đạo",
+        "C": "Tổ chức",
+        "D": "Kiểm soát"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Lãnh đạo"
+    }
+  ]
+}

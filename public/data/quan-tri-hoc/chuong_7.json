@@ -1,0 +1,553 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Quản trị học - Chương 7",
+  "chapter": "Chương 7",
+  "totalQuestions": 39,
+  "questions": [
+    {
+      "id": 233,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Bước đầu tiên của quy trình kiểm tra là?",
+      "options": {
+        "A": "So sánh kết quả thực tế và tiêu chuẩn.",
+        "B": "Thiết lập tiêu chuẩn.",
+        "C": "Thực hiện hành động.",
+        "D": "Thiết lập đo lường."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Thiết lập tiêu chuẩn."
+    },
+    {
+      "id": 234,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Chức năng cuối cùng trong hoạt động quản trị?",
+      "options": {
+        "A": "Lãnh đạo",
+        "B": "Hoạch định/ Lập kế hoạch",
+        "C": "Tổ chức",
+        "D": "Kiểm tra"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Kiểm tra"
+    },
+    {
+      "id": 235,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Chức năng kiểm tra là?",
+      "options": {
+        "A": "Là chức năng bao gồm việc sắp xếp và cấu trúc hóa hoạt động công việc nhằm đạt được các mục tiêu tổ chức.",
+        "B": "Là chức năng bao gồm hoạt động giám sát, so sánh và điều chỉnh kết quả thực hiện công việc.",
+        "C": "Là chức năng quản trị bao gồm việc động viên, định hướng và tạo ảnh hưởng tới người khác để họ thực hiện tốt và đạt được mục tiêu của tổ chức.",
+        "D": "Là chức năng đầu tiên trong quá trình quản lý và liên quan đến việc triển khai thực hiện các chức năng quản lý khác."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Là chức năng bao gồm hoạt động giám sát, so sánh và điều chỉnh kết quả thực hiện công việc."
+    },
+    {
+      "id": 236,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Đâu KHÔNG phải là đặc điểm của hệ thống kiểm tra hiệu quả?",
+      "options": {
+        "A": "Giúp phát triển văn hóa doanh nghiệp, linh hoạt, thích ứng trong mọi hoàn cảnh.",
+        "B": "Khách quan, chính xác, kịp thời.",
+        "C": "Giảm số lượng nhân sự.",
+        "D": "Quy trình kiểm tra được tuân thủ nghiêm ngặt theo tiêu chuẩn rõ ràng."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Giảm số lượng nhân sự."
+    },
+    {
+      "id": 237,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Đâu KHÔNG phải là vai trò của kiểm tra?",
+      "options": {
+        "A": "Giảm chi phí, nâng cao năng suất và tạo giá trị.",
+        "B": "Phát hiện sai lầm và sự việc bất thường.",
+        "C": "Thích nghi với sự thay đổi và những điều không chắc chắn.",
+        "D": "Thúc đẩy làm việc cá nhân."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Thúc đẩy làm việc cá nhân."
+    },
+    {
+      "id": 238,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Đâu là hình thức kiểm tra dễ làm, dễ được chấp nhận, ít tốn kém mà nhận kết quả lại nhanh chóng?",
+      "options": {
+        "A": "Kiểm tra nghiệp vụ.",
+        "B": "Tự kiểm tra.",
+        "C": "Thực hiện thuê 01 tổ chức kiểm tra.",
+        "D": "Thành lập ban kiểm tra"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Tự kiểm tra."
+    },
+    {
+      "id": 239,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Đâu là vai trò của chức năng kiểm tra?",
+      "options": {
+        "A": "Thích nghi với thay đổi và những điều không chắc chắn",
+        "B": "Phát hiện sai lầm và sự việc bất thường",
+        "C": "Tất cả các đáp án đều đúng",
+        "D": "Giảm chi phí, nâng cao năng suất lao động và tạo giá trị"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tất cả các đáp án đều đúng"
+    },
+    {
+      "id": 240,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Đặc điểm của hệ thống kiểm tra hiệu quả là:",
+      "options": {
+        "A": "Quy trình kiểm tra được tuân thủ nghiêm ngặt theo tiêu chuẩn rõ ràng",
+        "B": "Tất cả các đáp án đều đúng",
+        "C": "Chất lượng nguồn nhân lực thuộc hệ thống kiểm tra cao",
+        "D": "Khách quan, chính xác, kịp thời"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Tất cả các đáp án đều đúng"
+    },
+    {
+      "id": 241,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "...... được thực hiện trong khi công việc đang tiến hành, các nhà quản trị có thể khắc phục những vấn ngay khi xảy ra",
+      "options": {
+        "A": "Kiểm tra phòng ngừa",
+        "B": "Kiểm tra thời gian",
+        "C": "Kiểm tra phản hồi",
+        "D": "Kiểm tra song hành"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Kiểm tra song hành"
+    },
+    {
+      "id": 242,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Hạn chế của kiểm tra phản hồi là:",
+      "options": {
+        "A": "Đòi hỏi những thông tin chính xác, mất nhiều thời gian và rất khó thu thập được",
+        "B": "Được áp dụng để làm cơ sở tiến hành khen thưởng và khuyến khích cán bộ, công nhân.",
+        "C": "Cần rất ít thông tin để đưa ra quyết định",
+        "D": "Những vấn đề đã xảy ra và dẫn đến sự lãng phí hoặc thiệt hại"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Những vấn đề đã xảy ra và dẫn đến sự lãng phí hoặc thiệt hại"
+    },
+    {
+      "id": 243,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Hệ thống kiểm tra hiệu quả cần:",
+      "options": {
+        "A": "Khách quan, chính xác, và ít linh hoạt",
+        "B": "Không làm gì",
+        "C": "Thực tế, tích cực, dễ hiểu và khuyến khích tự kiểm tra.",
+        "D": "Mang tính chiến lược và hướng đến nhiều mục tiêu của nhà quản trị."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Thực tế, tích cực, dễ hiểu và khuyến khích tự kiểm tra."
+    },
+    {
+      "id": 244,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Hiếu, giám đốc quản trị rủi ro, yêu cầu làm báo cáo về tỷ lệ sản phẩm sản xuất bị lỗi của lô hàng trước đó. Ông đang thực hiện chức năng kiểm tra:",
+      "options": {
+        "A": "Kiểm tra song hành",
+        "B": "Kiểm tra phòng ngừa",
+        "C": "Kiểm tra thời gian",
+        "D": "Kiểm tra phản hồi"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Kiểm tra phản hồi"
+    },
+    {
+      "id": 245,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Hoạt động đầu tiên của chức năng kiểm tra là:",
+      "options": {
+        "A": "Giám sát",
+        "B": "So sánh kết quả với tiêu chuẩn",
+        "C": "Thực hiện tiêu chuẩn",
+        "D": "Thực thi các hành động điều chỉnh"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Giám sát"
+    },
+    {
+      "id": 246,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Kết quả nào sau đây KHÔNG cần phải có sự thực hiện điều chỉnh ở bước tiếp theo của nhà quản trị:",
+      "options": {
+        "A": "Các bất thường ngoài vùng chấp nhận",
+        "B": "Các kết quả đo lường nhận được nằm ngoài khoảng sai lệch xác định trước",
+        "C": "Các xu hướng bất thường trong vùng chấp nhận",
+        "D": "Các kết quả đo lường nhận được nằm trong khoảng sai lệch chấp nhận được vốn đã được xác định trước đó"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Các kết quả đo lường nhận được nằm trong khoảng sai lệch chấp nhận được vốn đã được xác định trước đó"
+    },
+    {
+      "id": 247,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Khi kết quả bất thường ngoài vùng chấp nhận, nhà quản trị cần:",
+      "options": {
+        "A": "Sa thải nhân viên đã làm sai",
+        "B": "Điều chỉnh tiêu chuẩn",
+        "C": "Không làm gì",
+        "D": "Tổ chức lại bộ máy sản xuất"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Điều chỉnh tiêu chuẩn"
+    },
+    {
+      "id": 248,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Khi một huấn luyện viên bóng đá đang thực hiện hành động thay thế cầu thủ chơi trong một trận đấu là ví dụ của:",
+      "options": {
+        "A": "Điều chỉnh tiêu chuẩn",
+        "B": "Hành động khắc phục cơ bản",
+        "C": "Hành động khắc phục ngay",
+        "D": "Điều chỉnh sai lệch"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Hành động khắc phục ngay"
+    },
+    {
+      "id": 249,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Khi thực hiện đo lường, nhà quản trị thu thập thông tin và đo lường qua:",
+      "options": {
+        "A": "Báo cáo thống kê; Báo cáo miệng; Báo cáo viết",
+        "B": "Quan sát cá nhân; Báo cáo miệng; Báo cáo viết",
+        "C": "Quan sát cá nhân; Báo cáo thống kê; Báo cáo miệng",
+        "D": "Quan sát cá nhân; Báo cáo thống kê; Báo cáo miệng; Báo cáo viết"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Quan sát cá nhân; Báo cáo thống kê; Báo cáo miệng; Báo cáo viết"
+    },
+    {
+      "id": 250,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "\"Kiểm tra đầu ra để khắc phục vấn đề sau khi xảy ra\" là nội dung của kiểm tra:",
+      "options": {
+        "A": "Kiểm tra song hành",
+        "B": "Kiểm tra đầu ra",
+        "C": "Kiểm tra đầu vào",
+        "D": "Kiểm tra phòng ngừa"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Kiểm tra đầu ra"
+    },
+    {
+      "id": 251,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "\"Kiểm tra đầu vào để dự báo vấn đề\" là nội dung của kiểm tra:",
+      "options": {
+        "A": "Kiểm tra phòng ngừa",
+        "B": "Kiểm tra đầu vào",
+        "C": "Kiểm tra song hành",
+        "D": "Kiểm tra phản hồi"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Kiểm tra đầu vào"
+    },
+    {
+      "id": 252,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Kiểm tra là gì?",
+      "options": {
+        "A": "Là quá trình đánh giá hiệu quả tổ chức và đề ra các hành động cần thiết để duy trì hoặc nâng cao hiệu quả.",
+        "B": "Là hoạt động theo dõi, đánh giá hiệu quả tổ chức và đề ra các hành động cần thiết để duy trì hoặc nâng cao hiệu quả.",
+        "C": "Là quá trình theo dõi tổ chức và đề ra các hành động cần thiết để duy trì hoặc nâng cao hiệu quả.",
+        "D": "Là quá trình theo dõi, đánh giá hiệu quả tổ chức và đề ra các hành động cần thiết để duy trì hoặc nâng cao hiệu quả."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Là quá trình theo dõi, đánh giá hiệu quả tổ chức và đề ra các hành động cần thiết để duy trì hoặc nâng cao hiệu quả."
+    },
+    {
+      "id": 253,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Kiểm tra trực tiếp là gì?",
+      "options": {
+        "A": "Nhà quản trị xuống trực tiếp nơi làm việc để tương tác trực tiếp với nhân viên",
+        "B": "Tất cả các đáp án đều sai",
+        "C": "Nhà quản trị kiểm tra đầu vào để dự báo vấn đề",
+        "D": "Nhà quản trị kiểm tra đầu ra để khắc phục hậu quả"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Nhà quản trị xuống trực tiếp nơi làm việc để tương tác trực tiếp với nhân viên"
+    },
+    {
+      "id": 254,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Lợi ích của việc thực hiện chức năng kiểm tra là gì?",
+      "options": {
+        "A": "Giúp nhà quản trị thiết lập mục tiêu",
+        "B": "Giúp nhà quản trị tập trung quyền lực kiểm tra",
+        "C": "Giúp nhà quản trị phát hiện sai lầm và sự việc bất thường",
+        "D": "Tất cả các đáp án đều sai"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Giúp nhà quản trị phát hiện sai lầm và sự việc bất thường"
+    },
+    {
+      "id": 255,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "McDonald's gửi các chuyên gia kiểm tra chất lượng đến những quốc gia nơi công ty của họ mới mở chi nhánh để đảm bảo rằng tất cả các nguyên liệu dùng làm thức ăn đều đạt tiêu chuẩn của công ty. Đây là ví dụ của:",
+      "options": {
+        "A": "Kiểm tra đầu vào",
+        "B": "Kiểm tra song hành",
+        "C": "Kiểm tra phản hồi",
+        "D": "Không có phương án nào đúng"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Kiểm tra đầu vào"
+    },
+    {
+      "id": 256,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Một đốc công trong xưởng đã làm việc riêng trong quá trình giám sát sản xuất dẫn đến sai hỏng lô hàng. Quy trình... đã bị vi phạm trong trường hợp này.",
+      "options": {
+        "A": "Kiểm tra toàn thời gian",
+        "B": "Kiểm tra song hành",
+        "C": "Kiểm tra trước",
+        "D": "Kiểm tra sau"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Kiểm tra song hành"
+    },
+    {
+      "id": 257,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Ngân sách, báo cáo tài chính, báo cáo kết quả kinh doanh, kiểm toán là công cụ kiểm tra nào?",
+      "options": {
+        "A": "Thẻ điểm cân bằng.",
+        "B": "Đối sánh.",
+        "C": "Công cụ tài chính.",
+        "D": "Hệ thống thông tin quản lý."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Công cụ tài chính."
+    },
+    {
+      "id": 258,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Nhà quản trị cấp cao thực hiện kế hoạch kiểm tra nào?",
+      "options": {
+        "A": "Kiểm tra chiến thuật.",
+        "B": "Kiểm tra triển khai.",
+        "C": "Kiểm tra tác nghiệp.",
+        "D": "Kiểm tra chiến lược."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Kiểm tra chiến lược."
+    },
+    {
+      "id": 259,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Nhà quản trị chỉ cần thực hiện kiểm tra khi:",
+      "options": {
+        "A": "Trước khi thực hiện kế hoạch",
+        "B": "Trong khi thực hiện kế hoạch",
+        "C": "Không có câu nào hoàn toàn chính xác",
+        "D": "Sau khi hoàn thành kế hoạch"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Không có câu nào hoàn toàn chính xác"
+    },
+    {
+      "id": 260,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Nhà quản trị kiểm tra hành vi của nhân viên trong quá trình sản xuất. Nhà quản trị đang thực hiện loại kiểm tra nào?",
+      "options": {
+        "A": "Hậu kiểm",
+        "B": "Kiểm tra đầu vào/lường trước",
+        "C": "Kiểm tra phản hồi",
+        "D": "Kiểm tra song hành"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Kiểm tra song hành"
+    },
+    {
+      "id": 261,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Nhà quản trị so sánh kết quả thực hiện với mục tiêu đề ra và thực hiện các biện pháp khắc phục thuộc chức năng quản trị nào?",
+      "options": {
+        "A": "Kiểm tra",
+        "B": "Tổ chức",
+        "C": "Lãnh đạo",
+        "D": "Lập kế hoạch"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Kiểm tra"
+    },
+    {
+      "id": 262,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Phát biểu nào dưới đây không đúng?",
+      "options": {
+        "A": "Kiểm tra đảm bảo rằng các hoạt động và thành quả đạt được phù hợp với các mục tiêu.",
+        "B": "Kiểm tra đảm bảo rằng các hoạt động và thành quả đạt được phù hợp với các kế hoạch.",
+        "C": "Kiểm tra đảm bảo rằng các hoạt động và thành quả đạt được phù hợp với các chuẩn mực của tổ chức.",
+        "D": "Kiểm tra để nhà quản trị khẳng định quyền lực của mình."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Kiểm tra để nhà quản trị khẳng định quyền lực của mình."
+    },
+    {
+      "id": 263,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Quy trình kiểm tra bao gồm những bước nào?",
+      "options": {
+        "A": "Thiết lập tiêu chuẩn; So sánh kết quả thực tế và tiêu chuẩn; Thực hiện hành động khắc phục nếu cần thiết",
+        "B": "Thiết lập tiêu chuẩn; Thực hiện đo lường; So sánh kết quả thực tế và tiêu chuẩn; Thực hiện hành động khắc phục nếu cần thiết",
+        "C": "Thiết lập tiêu chuẩn; Thực hiện đo lường; So sánh kết quả thực tế và tiêu chuẩn;",
+        "D": "Thực hiện đo lường; So sánh kết quả thực tế và tiêu chuẩn; Thực hiện hành động khắc phục nếu cần thiết"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Thiết lập tiêu chuẩn; Thực hiện đo lường; So sánh kết quả thực tế và tiêu chuẩn; Thực hiện hành động khắc phục nếu cần thiết"
+    },
+    {
+      "id": 264,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Quy trình PDCA gồm bao nhiêu bước?",
+      "options": {
+        "A": "3.",
+        "B": "4.",
+        "C": "5.",
+        "D": "6."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. 4."
+    },
+    {
+      "id": 265,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Sau khi thu thập thông tin và đo lường thì bước tiếp theo của quy trình kiểm tra là gì?",
+      "options": {
+        "A": "So sánh kết quả thực tế và tiêu chuẩn.",
+        "B": "Thiết lập tiêu chuẩn.",
+        "C": "Thiết lập đo lường.",
+        "D": "Thực hiện hành động."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. So sánh kết quả thực tế và tiêu chuẩn."
+    },
+    {
+      "id": 266,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Sắp xếp theo thứ tự trước - sau của 3 giai đoạn cuối trong quy trình kiểm tra của tổ chức:",
+      "options": {
+        "A": "Thực thi các hành động điều chỉnh, So sánh kết quả với tiêu chuẩn, Đo lường",
+        "B": "Đo lường, Thực thi các hành động điều chỉnh, So sánh kết quả với tiêu chuẩn",
+        "C": "Đo lường, So sánh kết quả với tiêu chuẩn, Thực thi các hành động điều chỉnh",
+        "D": "So sánh kết quả với tiêu chuẩn, Đo lường, Thực thi các hành động điều chỉnh"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Đo lường, So sánh kết quả với tiêu chuẩn, Thực thi các hành động điều chỉnh"
+    },
+    {
+      "id": 267,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Trong tuyển dụng, các công ty thường yêu cầu ứng viên nộp lý lịch tư pháp trước khi mời đi phỏng vấn. Công ty đang thực hiện loại kiểm tra nào?",
+      "options": {
+        "A": "Kiểm tra song hành",
+        "B": "Kiểm tra phản hồi",
+        "C": "Kiểm tra đầu vào",
+        "D": "Hậu kiểm"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Kiểm tra đầu vào"
+    },
+    {
+      "id": 268,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Trưởng phòng Marketing yêu cầu nhân viên cấp dưới phối hợp với phòng IT để xây dựng các bảng biểu và sơ đồ thể hiện tình hình thực hiện các KPI của phòng. Phương pháp kiểm tra này có nhược điểm nào sau?",
+      "options": {
+        "A": "Thông tin chưa được xử lý",
+        "B": "Có ít hoặc không thể hiện được thông tin về các yếu tố gây ảnh hưởng như bối cảnh",
+        "C": "Thông tin không chỉ ra mối quan hệ giữa các yếu tố",
+        "D": "Bị ảnh hưởng bởi thành kiến cá nhân"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Có ít hoặc không thể hiện được thông tin về các yếu tố gây ảnh hưởng như bối cảnh"
+    },
+    {
+      "id": 269,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Việc dự báo các vấn đề có thể phát sinh để tìm ra cách ngăn ngừa trước là kiểm tra",
+      "options": {
+        "A": "trong hoạt động.",
+        "B": "đầu vào.",
+        "C": "đầu ra.",
+        "D": "sau hoạt động."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. đầu vào."
+    },
+    {
+      "id": 270,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "\"Xác định mức độ chênh lệch giữa kết quả thực tế và tiêu chuẩn\" là nội dung của giai đoạn:",
+      "options": {
+        "A": "So sánh",
+        "B": "Đo lường kết quả thực tế",
+        "C": "Phân công công việc",
+        "D": "Thực thi hành động điều chỉnh"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. So sánh"
+    },
+    {
+      "id": 271,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Yếu tố đầu ra của hệ thống tổ chức cần được:",
+      "options": {
+        "A": "Kiểm tra song hành",
+        "B": "Kiểm tra phòng ngừa",
+        "C": "Kiểm tra thời gian",
+        "D": "Kiểm tra phản hồi"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Kiểm tra phản hồi"
+    }
+  ]
+}

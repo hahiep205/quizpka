@@ -1,0 +1,273 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kỹ năng Quản lý Dự án - Chương 4",
+  "chapter": "Chương 4",
+  "totalQuestions": 19,
+  "questions": [
+    {
+      "id": 105,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Quản lý thời gian và tiến độ dự án có ý nghĩa gì?",
+      "options": {
+        "A": "Giám sát chi phí và nguồn lực dự án",
+        "B": "Hoàn thành dự án trong phạm vi ngân sách và thời gian",
+        "C": "Đảm bảo chất lượng dự án đạt yêu cầu",
+        "D": "Cả ba đáp án trên đều đúng"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Cả ba đáp án trên đều đúng"
+    },
+    {
+      "id": 106,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Đâu là phát biểu đúng về trình bày sơ đồ mạng theo phương pháp AOA (Activity on Arrow)?",
+      "options": {
+        "A": "Công việc được thể hiện trên các nút trên các nút",
+        "B": "Sơ đồ được lập từ trái sang phải",
+        "C": "Có thể xuất hiện đường cụt trên sơ đồ trong một số trường hợp nhất định",
+        "D": "Trên mỗi mũi tên chỉ thể hiện tên công việc"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Sơ đồ được lập từ trái sang phải"
+    },
+    {
+      "id": 107,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Các công việc nằm trên đường găng được gọi là?",
+      "options": {
+        "A": "Công việc đường",
+        "B": "Đường có các công việc găng",
+        "C": "Đường công việc",
+        "D": "Công việc găng"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Công việc găng"
+    },
+    {
+      "id": 108,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Biến giả trong sơ đồ PERT có tác dụng gì?",
+      "options": {
+        "A": "Xác định thời gian của công việc",
+        "B": "Biểu thị mối quan hệ giữa các công việc",
+        "C": "Giúp ước tính chi phí",
+        "D": "Xác định đường găng"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Biểu thị mối quan hệ giữa các công việc"
+    },
+    {
+      "id": 109,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Chọn phát biểu ĐÚNG NHẤT khi xây dựng mạng công việc theo phương pháp AON?",
+      "options": {
+        "A": "Các công việc được trình bày trong một nút (hình chữ nhật)",
+        "B": "Những thông tin trong nút gồm tên công việc, ngày bắt đầu, ngày kết thúc và độ dài thời gian thực hiện công việc",
+        "C": "Các mũi tên chỉ thuần túy xác định thứ tự trước sau của các công việc",
+        "D": "Cả A, B và C đều đúng"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Cả A, B và C đều đúng"
+    },
+    {
+      "id": 110,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Đâu không phải là quy tắc và quy ước khi vẽ sơ đồ mạng lưới PERT/CPM?",
+      "options": {
+        "A": "Tất cả các mũi tên biểu diễn công việc và mối liên hệ phải đều hướng từ trái sang phải",
+        "B": "Bắt đầu bằng 1 sự kiện và cũng chỉ kết thúc bằng 1 sự kiện",
+        "C": "Bắt đầu bằng 1 sự kiện (sự kiện đầu) và kết thúc bằng nhiều sự kiện",
+        "D": "Để thực hiện những công việc song song có tính chất khác nhau thì phải đưa thêm vào sơ đồ mạng công việc giả (biến giả)"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Bắt đầu bằng 1 sự kiện (sự kiện đầu) và kết thúc bằng nhiều sự kiện"
+    },
+    {
+      "id": 111,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Tìm câu sai:",
+      "options": {
+        "A": "Trong sơ đồ PERT chiều dài của mũi tên không cần phải tỷ lệ với độ lớn thời gian của công việc dự án",
+        "B": "Trong sơ đồ PERT có công việc thật và có thể có công việc ảo",
+        "C": "Đường có thời gian dài nhất trong sơ đồ PERT được gọi là đường găng",
+        "D": "Đường có thời gian ngắn nhất trong sơ đồ PERT được gọi là đường găng"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Đường có thời gian ngắn nhất trong sơ đồ PERT được gọi là đường găng"
+    },
+    {
+      "id": 112,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Nếu công việc A phải hoàn thành trước khi bắt đầu công việc B, và công việc B phải hoàn thành trước khi bắt đầu công việc C, thời gian hoàn thành dự án là bao nhiêu nếu thời gian hoàn thành của các công việc A, B, và C lần lượt là 2, 3, và 4 tuần?",
+      "options": {
+        "A": "9 tuần",
+        "B": "5 tuần",
+        "C": "4 tuần",
+        "D": "2 tuần"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 9 tuần"
+    },
+    {
+      "id": 113,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Trong một dự án, công việc A có thời gian hoàn thành là 3 tuần, công việc B là 4 tuần, và công việc C là 2 tuần. Nếu công việc A và B có thể thực hiện đồng thời, nhưng phải hoàn thành trước khi bắt đầu công việc C, thời gian dự trữ của công việc B là bao nhiêu?",
+      "options": {
+        "A": "0 tuần",
+        "B": "1 tuần",
+        "C": "2 tuần",
+        "D": "3 tuần"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 0 tuần"
+    },
+    {
+      "id": 114,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Trong phương pháp AOA, công việc được đặt trên:",
+      "options": {
+        "A": "Nút",
+        "B": "Đường găng",
+        "C": "Mũi tên",
+        "D": "Biến giả"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Mũi tên"
+    },
+    {
+      "id": 115,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Phương pháp AON biểu diễn công việc bằng:",
+      "options": {
+        "A": "Mũi tên",
+        "B": "Nút",
+        "C": "Đường găng",
+        "D": "Biểu đồ"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Nút"
+    },
+    {
+      "id": 116,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Đường găng trong quản lý dự án là gì?",
+      "options": {
+        "A": "Đường nối các công việc quan trọng",
+        "B": "Đường có tổng thời gian dài nhất",
+        "C": "Đường có nhiều nguồn lực nhất",
+        "D": "Đường có tổng chi phí cao nhất"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Đường có tổng thời gian dài nhất"
+    },
+    {
+      "id": 117,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Đường găng là đường qua các sự kiện có thời gian dự trữ bằng:",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "0",
+        "D": "3"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 0"
+    },
+    {
+      "id": 118,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Các thông số thời gian của công việc bao gồm:",
+      "options": {
+        "A": "Thời gian sớm nhất, thời gian muộn nhất",
+        "B": "Thời gian thực hiện, chi phí dự án",
+        "C": "Chi phí tối thiểu, chi phí tối đa",
+        "D": "Thời gian hoàn thành và chất lượng dự án"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Thời gian sớm nhất, thời gian muộn nhất"
+    },
+    {
+      "id": 119,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Thời gian dự trữ là:",
+      "options": {
+        "A": "Thời gian để hoàn thành dự án",
+        "B": "Khoảng thời gian có thể trì hoãn một công việc mà không ảnh hưởng đến dự án",
+        "C": "Thời gian dự tính để hoàn thành các công việc dự án",
+        "D": "Thời gian để kiểm soát dự án"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Khoảng thời gian có thể trì hoãn một công việc mà không ảnh hưởng đến dự án"
+    },
+    {
+      "id": 120,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Biến giả trong sơ đồ PERT có tác dụng gì?",
+      "options": {
+        "A": "Đại diện cho công việc thực sự yêu cầu thời gian và chi phí",
+        "B": "Chỉ rõ mối quan hệ giữa các công việc và sự kiện",
+        "C": "Tăng cường hiệu quả dự án",
+        "D": "Giảm thiểu chi phí của dự án"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Chỉ rõ mối quan hệ giữa các công việc và sự kiện"
+    },
+    {
+      "id": 121,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Quản lý chi phí trong dự án yêu cầu:",
+      "options": {
+        "A": "Giám sát chi phí cho từng công việc và toàn bộ dự án",
+        "B": "Tập trung vào việc giảm thiểu chi phí không quan trọng",
+        "C": "Không quan tâm đến nguồn lực nhân sự",
+        "D": "Đảm bảo không vượt quá ngân sách."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Giám sát chi phí cho từng công việc và toàn bộ dự án"
+    },
+    {
+      "id": 122,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Một công việc có thời gian cực tiểu là 3 ngày, thời gian cực đại là 9 ngày và thời gian trung bình là 6 ngày. Theo phương pháp PERT, thời gian trung bình để hoàn thành công việc là:",
+      "options": {
+        "A": "6.5 ngày",
+        "B": "7.5 ngày",
+        "C": "6 ngày",
+        "D": "5 ngày"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 6 ngày"
+    },
+    {
+      "id": 123,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Một dự án có các công việc A, B và C với thời gian thực hiện tương ứng là 4 ngày, 3 ngày và 2 ngày. Công việc B và C có thể thực hiện song song ngay sau khi A hoàn thành. Vậy thời gian hoàn thành dự án là:",
+      "options": {
+        "A": "7 ngày",
+        "B": "9 ngày",
+        "C": "6 ngày",
+        "D": "5 ngày"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 7 ngày"
+    }
+  ]
+}

@@ -1,0 +1,428 @@
+{
+  "title": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+  "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+  "totalQuestions": 30,
+  "questions": [
+    {
+      "id": 101,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Theo nghĩa rộng, dân tộc bao gồm mấy đặc trưng?",
+      "options": {
+        "A": "Có 1 đặc trưng.",
+        "B": "Có 3 đặc trưng.",
+        "C": "Có 5 đặc trưng.",
+        "D": "Có 7 đặc trưng."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Có 5 đặc trưng."
+    },
+    {
+      "id": 113,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Nước ta có bao nhiêu dân tộc cùng nhau chung sống?",
+      "options": {
+        "A": "56",
+        "B": "54",
+        "C": "50",
+        "D": "52"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: 54"
+    },
+    {
+      "id": 114,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Tính lịch sử của tôn giáo được biểu hiện như thế nào?",
+      "options": {
+        "A": "Tôn giáo không có vận động và phát triển cùng với sự vận động và phát triển của xã hội.",
+        "B": "Tôn giáo chỉ tồn tại trong xã hội có giai cấp.",
+        "C": "Tôn giáo sẽ mất đi hoàn toàn trong xã hội xã hội chủ nghĩa.",
+        "D": "Tôn giáo luôn có vận động và phát triển cùng với sự vận động và phát triển của xã hội."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Tôn giáo luôn có vận động và phát triển cùng với sự vận động và phát triển của xã hội."
+    },
+    {
+      "id": 119,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Luận điểm “vô sản tất cả các nước và các dân tộc bị áp bức đoàn kết lại” là của ai?",
+      "options": {
+        "A": "Ph. Ăngghen.",
+        "B": "C. Mác.",
+        "C": "Hồ Chí Minh.",
+        "D": "V.I. Lênin."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: V.I. Lênin."
+    },
+    {
+      "id": 121,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Chọn phương án đúng",
+      "options": {
+        "A": "Các dân tộc ở Việt Nam có sự phát triển đồng đều nhau",
+        "B": "Các dân tộc ở Việt Nam không có sự chênh lệch về số dân giữa các tộc người",
+        "C": "Các dân tộc thiểu số ở Việt Nam cư trú phân bố chủ yếu ở địa bàn có vị trí chiến lược quan trọng",
+        "D": "Các dân tộc thiểu số ở Việt Nam cư trú chủ yếu ở vùng đồng bằng"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Các dân tộc thiểu số ở Việt Nam cư trú phân bố chủ yếu ở địa bàn có vị trí chiến lược quan trọng"
+    },
+    {
+      "id": 122,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Nội dung nào dưới đây KHÔNG phải là đặc trưng của dân tộc theo nghĩa mở rộng?",
+      "options": {
+        "A": "Có chung một vùng lãnh thổ ổn định",
+        "B": "Có chung nền văn hóa và tâm lý",
+        "C": "Có chung phương thức sinh hoạt kinh tế",
+        "D": "Mỗi vùng miền sử dụng một ngôn ngữ riêng"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Mỗi vùng miền sử dụng một ngôn ngữ riêng"
+    },
+    {
+      "id": 130,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Dân tộc là gì?",
+      "options": {
+        "A": "Là một hình thức cộng đồng người ra đời trên cơ sở hôn nhân.",
+        "B": "Là một hình thức cộng đồng người ra đời trên cơ sở quan hệ lãnh thổ, kinh tế, chính trị, văn hóa, ngôn ngữ...",
+        "C": "Là một hình thức cộng đồng người ra đời trên cơ sở hòa bình giữa người và người.",
+        "D": "Là một hình thức cộng đồng người ra đời trên cơ sở huyết thống."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Là một hình thức cộng đồng người ra đời trên cơ sở quan hệ lãnh thổ, kinh tế, chính trị, văn hóa, ngôn ngữ..."
+    },
+    {
+      "id": 131,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Tôn giáo là gì?",
+      "options": {
+        "A": "Tôn giáo là hiện tượng tự nhiên có trước con người.",
+        "B": "Tôn giáo mang thế giới quan duy vật.",
+        "C": "Tôn giáo là một hiện tượng xã hội – văn hóa do con người sáng tạo ra.",
+        "D": "Tôn giáo phản ánh trung thực thế giới khách quan."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Tôn giáo là một hiện tượng xã hội – văn hóa do con người sáng tạo ra."
+    },
+    {
+      "id": 132,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Đâu KHÔNG phải là nội dung trong cương lĩnh dân tộc của chủ nghĩa Mác – Lênin?",
+      "options": {
+        "A": "Các dân tộc hoàn toàn bình đẳng.",
+        "B": "Liên hiệp công nhân các dân tộc lại.",
+        "C": "Các dân tộc thuộc địa liên hiệp lại với nhau.",
+        "D": "Các dân tộc được quyền tự quyết."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Các dân tộc thuộc địa liên hiệp lại với nhau."
+    },
+    {
+      "id": 133,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Nguyên tắc đầu tiên trong cương lĩnh dân tộc của chủ nghĩa Mác – Lênin là gì?",
+      "options": {
+        "A": "Các dân tộc hoàn toàn bình đẳng.",
+        "B": "Các dân tộc được quyền tự quyết.",
+        "C": "Liên hiệp công nhân các dân tộc lại.",
+        "D": "Các dân tộc thuộc địa liên hiệp lại với nhau."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Các dân tộc hoàn toàn bình đẳng."
+    },
+    {
+      "id": 134,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Đảng Cộng sản Việt Nam xác định rõ: Đoàn kết các dân tộc có vị trí chiến lược trong sự nghiệp cách mạng của nước ta là Đại hội nào dưới đây?",
+      "options": {
+        "A": "Đại hội IX",
+        "B": "Đại hội X",
+        "C": "Đại hội XI",
+        "D": "Đại hội XII"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Đại hội IX"
+    },
+    {
+      "id": 135,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Công tác tôn giáo ở Việt Nam là trách nhiệm của tổ chức nào?",
+      "options": {
+        "A": "Của Đảng Cộng sản Việt Nam",
+        "B": "Của các tổ chức giáo hội",
+        "C": "Của Nhà nước xã hội chủ nghĩa Việt Nam",
+        "D": "Của cả hệ thống chính trị"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Của cả hệ thống chính trị"
+    },
+    {
+      "id": 136,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Tôn giáo ra đời dựa trên những nguồn gốc nào?",
+      "options": {
+        "A": "Nguồn gốc tự nhiên, kinh tế - xã hội; nguồn gốc nhận thức và nguồn gốc tâm lý.",
+        "B": "Nguồn gốc tự nhiên, kinh tế - xã hội; nguồn gốc tâm lý.",
+        "C": "Nguồn gốc nhận thức và nguồn gốc tâm lý.",
+        "D": "Nguồn gốc tự nhiên, kinh tế - xã hội; nguồn gốc nhận thức."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Nguồn gốc tự nhiên, kinh tế - xã hội; nguồn gốc nhận thức và nguồn gốc tâm lý."
+    },
+    {
+      "id": 137,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Nguồn gốc tự nhiên, kinh tế - xã hội của tôn giáo là gì?",
+      "options": {
+        "A": "Từ nhu cầu của các lực lượng chính trị.",
+        "B": "Từ sự bất lực của con người trước các lực lượng tự nhiên và xã hội.",
+        "C": "Từ sự phân chia giai cấp trong xã hội.",
+        "D": "Từ sự xuất hiện của các cộng đồng dân tộc."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Từ sự bất lực của con người trước các lực lượng tự nhiên và xã hội."
+    },
+    {
+      "id": 138,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Đặc điểm của tôn giáo ở Việt Nam được thể hiện như thế nào?",
+      "options": {
+        "A": "Các tôn giáo ở Việt Nam chủ yếu có nguồn gốc từ Việt Nam.",
+        "B": "Việt Nam là quốc gia có nhiều tôn giáo, tín đồ, phần lớn là nhân dân lao động, có lòng yêu nước.",
+        "C": "Các tôn giáo ở Việt Nam độc lập, không có quan hệ với các tổ chức tôn giáo nước ngoài.",
+        "D": "Các tôn giáo ở Việt Nam thường xuyên có mâu thuẫn, xung đột tôn giáo."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Việt Nam là quốc gia có nhiều tôn giáo, tín đồ, phần lớn là nhân dân lao động, có lòng yêu nước."
+    },
+    {
+      "id": 139,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Tăng cường mối quan hệ tốt đẹp giữa dân tộc và tôn giáo ở Việt Nam được Đảng ta xác định như thế nào?",
+      "options": {
+        "A": "Là vấn đề cơ bản và cấp bách của cách mạng Việt Nam.",
+        "B": "Là vấn đề chiến lược lâu dài của cách mạng Việt Nam.",
+        "C": "Là vấn đề chiến lược, cơ bản, lâu dài và cấp bách của cách mạng Việt Nam.",
+        "D": "Là vấn đề cấp bách của cách mạng Việt Nam."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Là vấn đề chiến lược, cơ bản, lâu dài và cấp bách của cách mạng Việt Nam."
+    },
+    {
+      "id": 140,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Hai xu hướng khách quan của sự phát triển dân tộc là gì?",
+      "options": {
+        "A": "Các dân tộc vừa hợp tác vừa đấu tranh với nhau.",
+        "B": "Các dân tộc hòa nhập với nhau và hoàn toàn bình đẳng với nhau.",
+        "C": "Các dân tộc mâu thuẫn với nhau và thống nhất với nhau.",
+        "D": "Các cộng đồng dân cư muốn tách ra để thành lập cộng đồng quốc gia dân tộc độc lập; Các dân tộc trong từng quốc gia, thậm chí các dân tộc ở nhiều quốc gia muốn liên hiệp lại với nhau."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Các cộng đồng dân cư muốn tách ra để thành lập cộng đồng quốc gia dân tộc độc lập; Các dân tộc trong từng quốc gia, thậm chí các dân tộc ở nhiều quốc gia muốn liên hiệp lại với nhau."
+    },
+    {
+      "id": 141,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Theo quan điểm chủ nghĩa Mác – Lênin, quyền bình đẳng dân tộc được thể hiện như thế nào?",
+      "options": {
+        "A": "Các dân tộc đều có nghĩa vụ và quyền lợi ngang nhau về kinh tế.",
+        "B": "Các dân tộc đều có nghĩa vụ và quyền lợi ngang nhau về chính trị.",
+        "C": "Các dân tộc đều có nghĩa vụ và quyền lợi ngang nhau trên tất cả các lĩnh vực của đời sống xã hội, không dân tộc nào được giữ đặc quyền, đặc lợi về kinh tế, chính trị, văn hóa.",
+        "D": "Các dân tộc đều có nghĩa vụ và quyền lợi ngang nhau về kinh tế và chính trị."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Các dân tộc đều có nghĩa vụ và quyền lợi ngang nhau trên tất cả các lĩnh vực của đời sống xã hội, không dân tộc nào được giữ đặc quyền, đặc lợi về kinh tế, chính trị, văn hóa."
+    },
+    {
+      "id": 142,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Một trong những đặc trưng nổi bật trong quan hệ giữa các dân tộc ở nước ta là gì?",
+      "options": {
+        "A": "Các dân tộc ở Việt Nam có sự phát triển đồng đều nhau.",
+        "B": "Các dân tộc ở Việt Nam không có sự chênh lệch về số dân giữa các tộc người.",
+        "C": "Các dân tộc thiểu số ở Việt Nam cư trú phân bố chủ yếu ở địa bàn có vị trí chiến lược quan trọng.",
+        "D": "Các dân tộc thiểu số ở Việt Nam cư trú chủ yếu ở vùng đồng bằng."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Các dân tộc thiểu số ở Việt Nam cư trú phân bố chủ yếu ở địa bàn có vị trí chiến lược quan trọng."
+    },
+    {
+      "id": 143,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Đặc điểm quan hệ dân tộc và tôn giáo ở Việt Nam chịu sự chi phối mạnh mẽ của yếu tố nào?",
+      "options": {
+        "A": "Các tôn giáo bên ngoài.",
+        "B": "Các tổ chức xã hội.",
+        "C": "Các chức sắc tôn giáo.",
+        "D": "Tín ngưỡng truyền thống."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Tín ngưỡng truyền thống."
+    },
+    {
+      "id": 144,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Dân tộc thiểu số nào ở Việt Nam có số lượng ít nhất?",
+      "options": {
+        "A": "B Râu",
+        "B": "Ơ Đu",
+        "C": "Cống",
+        "D": "Si La"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Ơ Đu"
+    },
+    {
+      "id": 145,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Luận điểm: “Dân tộc cách mệnh chưa phân giai cấp nghĩa là sĩ, nông, công thương đều nhất trí chống lại cường quyền” được Hồ Chí Minh khẳng định trong tác phẩm nào?",
+      "options": {
+        "A": "Đường Kách mệnh",
+        "B": "Tuyên ngôn độc lập",
+        "C": "Bản án chế độ thực dân Pháp",
+        "D": "Đông Dương"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Đường Kách mệnh"
+    },
+    {
+      "id": 161,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Chọn phương án đúng ?",
+      "options": {
+        "A": "Đặc điểm quan hệ dân tộc và tôn giáo ở Việt Nam chịu sự chi phối mạnh mẽ của các tôn giáo bên ngoài",
+        "B": "Đặc điểm quan hệ dân tộc và tôn giáo ở Việt Nam chịu sự chi phối mạnh mẽ của tín ngưỡng truyền thống",
+        "C": "Đặc điểm quan hệ dân tộc và tôn giáo ở Việt Nam chịu sự chi phối mạnh mẽ của các tổ chức giáo hội",
+        "D": "Đặc điểm quan hệ dân tộc và tôn giáo ở Việt Nam chịu sự chi phối mạnh mẽ của các chức sắc tôn giáo"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Đặc điểm quan hệ dân tộc và tôn giáo ở Việt Nam chịu sự chi phối mạnh mẽ của tín ngưỡng truyền thống"
+    },
+    {
+      "id": 162,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Luận điểm nào đúng?",
+      "options": {
+        "A": "Việt Nam là một quốc gia đa dân tộc, đa tôn giáo, quan hệ dân tộc và tôn giáo được thiết lập và củng cố trên cơ sở cộng đồng quốc gia – dân tộc thống nhất",
+        "B": "Các tôn giáo ở Việt Nam đều không có quan hệ với các tở chức, cá nhân tôn giáo ở nước ngoài",
+        "C": "Các hiện tượng tôn giáo mới có xu hướng phát triển chậm, không tác động đến đời sôngs cộng đồng và khối đại đoàn kết dân tộc",
+        "D": "Quan hệ dân tộc và tôn giáo ở Việt Nam chịu sự chi phối mạnh mẽ bởi các tôn giáo bên ngoài"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Việt Nam là một quốc gia đa dân tộc, đa tôn giáo, quan hệ dân tộc và tôn giáo được thiết lập và củng cố trên cơ sở cộng đồng quốc gia – dân tộc thống nhất"
+    },
+    {
+      "id": 163,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Theo quan điểm chủ nghĩa Mác – Lênin, giải quyết vấn đề tôn giáo phải dựa trên quan điểm nào sau đây?",
+      "options": {
+        "A": "Quan điểm thực tiễn.",
+        "B": "Quan điểm toàn diện.",
+        "C": "Quan điểm khách quan.",
+        "D": "Quan điểm lịch sử – cụ thể."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Quan điểm lịch sử – cụ thể."
+    },
+    {
+      "id": 171,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Đâu KHÔNG phải là nguồn gốc dẫn tới sự ra đời của tôn giáo?",
+      "options": {
+        "A": "Giáo dục",
+        "B": "Nhận thức",
+        "C": "Tự nhiên, kinh tế - xã hội",
+        "D": "Tâm lý"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Giáo dục"
+    },
+    {
+      "id": 176,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Luận điểm: “Tất cả mọi tôn giáo chẳng qua chỉ là sự phản ánh hư ảo – vào đầu óc của con người…” là của ai?",
+      "options": {
+        "A": "V.I. Lênin.",
+        "B": "C.Mác.",
+        "C": "Ph. Ăngghen.",
+        "D": "Hồ Chí Minh."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Ph. Ăngghen."
+    },
+    {
+      "id": 177,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Luận điểm: “Chỉ có chủ nghĩa xã hội, chủ nghĩa cộng sản mới giải phóng được các dân tộc bị áp bức và những người lao động trên thế giới khỏi ách nô lệ.” là của ai?",
+      "options": {
+        "A": "Ph. Ăngghen.",
+        "B": "Hồ Chí Minh.",
+        "C": "V.I. Lênin.",
+        "D": "C.Mác."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Hồ Chí Minh."
+    },
+    {
+      "id": 183,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Khái niệm dân tộc thường được hiểu theo mấy nghĩa?",
+      "options": {
+        "A": "5",
+        "B": "4",
+        "C": "3",
+        "D": "2",
+        "E": "6"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: 2"
+    },
+    {
+      "id": 185,
+      "chapter": "Chương 6: Vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội",
+      "sourceChapter": "",
+      "question": "Nội dung nào dưới đây KHÔNG phải là đặc điểm cơ bản của tình hình tôn giáo ở Việt Nam?",
+      "options": {
+        "A": "Có quan hệ với các tổ chức, các nhân tôn giáo ở nước ngoià",
+        "B": "Đạ dạng, đan xen, có xung đột, đấu tranh tôn giáo",
+        "C": "Tín đồ các tôn giáo Việt Nam phần lớn là nhân dân lao động, có lòng yêu nước, tinh thần dân tộc",
+        "D": "Đa tôn giáo"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng vì nội dung này phản ánh đúng kiến thức cơ bản trong Chủ nghĩa xã hội khoa học. Cụ thể: Đạ dạng, đan xen, có xung đột, đấu tranh tôn giáo"
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kỹ năng Khởi nghiệp và Lãnh đạo - Chương 5",
+  "chapter": "Chương 5",
+  "totalQuestions": 18,
+  "questions": [
+    {
+      "id": 95,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Ảnh hưởng tới người khác là gì?",
+      "options": {
+        "A": "Là khả năng động viên, khuyến khích người khác.",
+        "B": "Là khả năng kiểm tra, giám sát người khác.",
+        "C": "Là khả năng hướng dẫn, chỉ bảo người khác.",
+        "D": "Là khả năng tác động và thay đổi suy nghĩ, thái độ, niềm tin, hành động... của người khác."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Là khả năng tác động và thay đổi suy nghĩ, thái độ, niềm tin, hành động... của người khác."
+    },
+    {
+      "id": 96,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Chức năng lãnh đạo (leading) là gì?",
+      "options": {
+        "A": "Một chức năng của quản trị hàm ý động viên người khác để hoàn thành các mục tiêu của tổ chức.",
+        "B": "Một chức năng của quản trị hàm ý làm việc với và thông qua người khác để hoàn thành các mục tiêu của tổ chức.",
+        "C": "Một chức năng của quản trị hàm ý kiểm tra người khác để hoàn thành các mục tiêu của tổ chức.",
+        "D": "Một chức năng của quản trị hàm ý yêu cầu người khác để hoàn thành các mục tiêu của tổ chức."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Một chức năng của quản trị hàm ý làm việc với và thông qua người khác để hoàn thành các mục tiêu của tổ chức."
+    },
+    {
+      "id": 97,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Động lực là gì?",
+      "options": {
+        "A": "Những yếu tố/phần thưởng bên trong hoặc bên ngoài của một doanh nghiệp có tác dụng khơi gợi sự nhiệt tình và kiên trì của cá nhân trong doanh nghiệp trong việc theo đuổi/thực hiện những hành động nhất định.",
+        "B": "Những yếu tố/phần thưởng bên trong hoặc bên ngoài của một tổ chức có tác dụng khơi gợi sự nhiệt tình và kiên trì của cá nhân trong tổ chức trong việc theo đuổi/thực hiện những hành động nhất định.",
+        "C": "Những yếu tố/phần thưởng bên trong hoặc bên ngoài của một nhóm có tác dụng khơi gợi sự nhiệt tình và kiên trì của cá nhân trong nhóm việc theo đuổi/thực hiện những hành động nhất định.",
+        "D": "Những yếu tố/phần thưởng bên trong hoặc bên ngoài của một cá nhân có tác dụng khơi gợi..."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Những yếu tố/phần thưởng bên trong hoặc bên ngoài của một cá nhân có tác dụng khơi gợi..."
+    },
+    {
+      "id": 98,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Loại ảnh hưởng có được từ vị trí của một người trong công việc ở tổ chức thường được gọi là ảnh hương gì?",
+      "options": {
+        "A": "Ảnh hưởng phi chính thức.",
+        "B": "Ảnh hưởng chính thức.",
+        "C": "Ảnh hưởng cá nhân.",
+        "D": "Ảnh hưởng công việc."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Ảnh hưởng chính thức."
+    },
+    {
+      "id": 99,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Nội dung nào không nằm trong các bước xây dựng Ma trận hồ sơ kỹ năng?",
+      "options": {
+        "A": "Lập kế hoạch đào tạo các kỹ năng còn thiếu cho các thành viên.",
+        "B": "Liệt kê những kỹ năng quan trọng mà các thành viên sáng lập hiện nay chưa có.",
+        "C": "Liệt kê những kỹ năng quan trọng mà các thành viên sáng lập hiện nay đã có.",
+        "D": "Liệt kê danh sách những kỹ năng quan trọng cho sự thành công của dự án khởi nghiệp theo lĩnh vực/ngành."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Lập kế hoạch đào tạo các kỹ năng còn thiếu cho các thành viên."
+    },
+    {
+      "id": 100,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Nội dung sau đây nói về đối tượng nào? Một hoặc một vài người có ý tưởng ban đầu, có thể tham gia hoặc không vào nhóm sáng lập, có thể điều hành công ty hoặc không.",
+      "options": {
+        "A": "Doanh nhân/Entrepreneur.",
+        "B": "Nhà sáng lập điều hành.",
+        "C": "Đội ngũ sáng lập/Founding team.",
+        "D": "Nhà sáng lập/Founder."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Nhà sáng lập/Founder."
+    },
+    {
+      "id": 101,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Nội dung sau đây nói về đối tượng nào? Người đại diện và điều hành bộ máy quản trị của doanh nghiệp; thường là một trong số những nhà sáng lập hoặc đồng sáng lập; ít khi là người có chuyên môn xuất sắc nhất; nhưng là người có tầm nhìn, kĩ năng truyền đạt, ra quyết định trong điều kiện bất định, ứng phó với rủi ro.",
+      "options": {
+        "A": "Đội ngũ sáng lập/Founding team.",
+        "B": "Nhà sáng lập điều hành.",
+        "C": "Doanh nhân/Entrepreneur.",
+        "D": "Nhà sáng lập/Founder."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Nhà sáng lập điều hành."
+    },
+    {
+      "id": 102,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Nội dung sau đây nói về đối tượng nào? Nhà sáng lập và những người đồng sáng lập (co-founders) được nhà sáng lập tuyển dụng để xây dựng công ty từ những ngày đầu.",
+      "options": {
+        "A": "Nhà sáng lập/Founder.",
+        "B": "Đội ngũ sáng lập/Founding team.",
+        "C": "Doanh nhân/Entrepreneur.",
+        "D": "Nhà sáng lập điều hành."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Đội ngũ sáng lập/Founding team."
+    },
+    {
+      "id": 103,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Phát biểu nào sau đây không đúng với phong cách lãnh đạo có sự tham gia?",
+      "options": {
+        "A": "Quan tâm nhiều hơn tới phân công nhiệm vụ và giám sát thành viên thực hiện.",
+        "B": "Làm việc theo nhóm và xây dựng sự đồng thuận.",
+        "C": "Tốn nhiều thời gian để đạt đồng thuận với vấn đề phức tạp.",
+        "D": "Chia sẻ thông tin với các thành viên; khuyến khích thành viên đưa ra ý kiến."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Quan tâm nhiều hơn tới phân công nhiệm vụ và giám sát thành viên thực hiện."
+    },
+    {
+      "id": 104,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Phát biểu nào sau đây không đúng với phong cách lãnh đạo quyết đoán?",
+      "options": {
+        "A": "Lãnh đạo truyền đạt tầm nhìn của mình tới các thành viên.",
+        "B": "Hoàn thành công việc nhanh.",
+        "C": "Tốn nhiều thời gian để đạt đồng thuận với vấn đề phức tạp.",
+        "D": "Quan tâm nhiều hơn tới phân công nhiệm vụ và giám sát thành viên thực hiện."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tốn nhiều thời gian để đạt đồng thuận với vấn đề phức tạp."
+    },
+    {
+      "id": 105,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Phát biểu nào sau đây phù hợp nhất với tạo động lực theo tiếp cận lãnh đạo?",
+      "options": {
+        "A": "Cung cấp cơ hội cho cá nhân thỏa mãn các nhu cầu nâng cao và trở thành phần thưởng từ bên trong họ.",
+        "B": "Cung cấp cơ hội cho cá nhân thỏa mãn các nhu cầu cơ bản và trở thành phần thưởng từ bên trong họ.",
+        "C": "Cung cấp cơ hội cho cá nhân thỏa mãn các nhu cầu nâng cao và trở thành phần thưởng từ bên ngoài họ.",
+        "D": "Cung cấp cơ hội cho cá nhân thỏa mãn các nhu cầu cơ bản và trở thành phần thưởng từ bên ngoài họ."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Cung cấp cơ hội cho cá nhân thỏa mãn các nhu cầu nâng cao và trở thành phần thưởng từ bên trong họ."
+    },
+    {
+      "id": 106,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Phát biểu nào sau đây phù hợp nhất với tạo động lực theo tiếp cận quản trị?",
+      "options": {
+        "A": "Sử dụng các phần thưởng bên ngoài nhằm thỏa mãn các nhu cầu cơ bản trên cơ sở kiểm soát hành vi.",
+        "B": "Sử dụng các phần thưởng bên ngoài nhằm thỏa mãn các nhu cầu nâng cao trên cơ sở kiểm soát hành vi.",
+        "C": "Sử dụng các phần thưởng bên trong nhằm thỏa mãn các nhu cầu nâng cao trên cơ sở kiểm soát hành vi.",
+        "D": "Sử dụng các phần thưởng bên trong nhằm thỏa mãn các nhu cầu cơ bản trên cơ sở kiểm soát hành vi."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Sử dụng các phần thưởng bên ngoài nhằm thỏa mãn các nhu cầu cơ bản trên cơ sở kiểm soát hành vi."
+    },
+    {
+      "id": 107,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Phát biểu nào sau đây về nhà lãnh đạo (leader) là đúng nhất?",
+      "options": {
+        "A": "Là người có thể ảnh hưởng tới những người khác và có vai trò ra quyết định trong tổ chức.",
+        "B": "Là người có thể ảnh hưởng tới những người khác bất kể vị trí trong tổ chức là gì.",
+        "C": "Là người có thể ảnh hưởng tới những người khác và là người có thẩm quyền quản trị.",
+        "D": "Là người có thể ảnh hưởng tới những người khác và giúp hoàn thành mục tiêu của tổ chức."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Là người có thể ảnh hưởng tới những người khác và là người có thẩm quyền quản trị."
+    },
+    {
+      "id": 108,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Quá trình lãnh đạo (leadership) trong tổ chức là gì?",
+      "options": {
+        "A": "Là quá trình tạo và gây ảnh hưởng lên người khác và để đạt được các mục tiêu của tổ chức.",
+        "B": "Là quá trình hướng dẫn người khác để đạt được các mục tiêu của tổ chức.",
+        "C": "Là quá trình tạo động lực người khác để đạt được các mục tiêu của tổ chức.",
+        "D": "Là quá trình kiểm tra người khác để đạt được các mục tiêu của tổ chức."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Là quá trình tạo và gây ảnh hưởng lên người khác và để đạt được các mục tiêu của tổ chức."
+    },
+    {
+      "id": 109,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Tạo động lực là gì?",
+      "options": {
+        "A": "Là quá trình qua đó các nỗ lực của một doanh nghiệp được tiếp thêm năng lượng, được định hướng, và được duy trì để hướng tới đạt được một mục tiêu.",
+        "B": "Là quá trình qua đó các nỗ lực của một cá nhân được tiếp thêm năng lượng, được định hướng, và được duy trì để hướng tới đạt được một mục tiêu.",
+        "C": "Là quá trình qua đó các nỗ lực của một nhóm được tiếp thêm năng lượng, được định hướng, và được duy trì để hướng tới đạt được một mục tiêu.",
+        "D": "Là quá trình qua đó các nỗ lực của một tổ chức được tiếp thêm năng lượng, được định hướng, và được duy trì để hướng tới đạt được một mục tiêu."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Là quá trình qua đó các nỗ lực của một cá nhân được tiếp thêm năng lượng, được định hướng, và được duy trì để hướng tới đạt được một mục tiêu."
+    },
+    {
+      "id": 110,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Tầm nhìn của doanh nghiệp là gì?",
+      "options": {
+        "A": "Là kế hoạch dài hạn mà doanh nghiệp muốn triển khai.",
+        "B": "Là chiến lược dài hạn mà doanh nghiệp muốn thực hiện.",
+        "C": "Là mục tiêu dài hạn mà doanh nghiệp muốn \"đạt được\" hay \"trở thành\" trong tương lai.",
+        "D": "Là dự án dài hạn mà doanh nghiệp muốn triển khai."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Là mục tiêu dài hạn mà doanh nghiệp muốn \"đạt được\" hay \"trở thành\" trong tương lai."
+    },
+    {
+      "id": 111,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Theo các nghiên cứu, số lượng nhà sáng lập hiệu quả nhất thường là bao nhiêu?",
+      "options": {
+        "A": "2-4 người.",
+        "B": "1 người.",
+        "C": "Trên 5 người.",
+        "D": "3-5 người."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 2-4 người."
+    },
+    {
+      "id": 112,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Việc trả lời các câu hỏi sau đây thuộc nội dung nào: Chúng ta đang làm cái gì? Vì sao chúng ta làm? Làm cái đó để làm gì?",
+      "options": {
+        "A": "Sứ mệnh.",
+        "B": "Tầm nhìn.",
+        "C": "Chiến lược.",
+        "D": "Kế hoạch."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Sứ mệnh."
+    }
+  ]
+}

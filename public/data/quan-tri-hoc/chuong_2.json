@@ -1,0 +1,581 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Quản trị học - Chương 2",
+  "chapter": "Chương 2",
+  "totalQuestions": 41,
+  "questions": [
+    {
+      "id": 43,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Bước đầu tiên trong quy trình ra quyết định là",
+      "options": {
+        "A": "Xác định tiêu chí ra quyết định",
+        "B": "Xác định triệu chứng của vấn đề",
+        "C": "Xác nhận nguyên nhân",
+        "D": "Xác định vấn đề"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Xác định vấn đề"
+    },
+    {
+      "id": 44,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Bước nào là bước đầu tiên của quy trình ra quyết định quản trị?",
+      "options": {
+        "A": "Đánh giá và phản hồi.",
+        "B": "Phát triển các phương án.",
+        "C": "Xác định vấn đề.",
+        "D": "Chuẩn đoán và phân tích nguyên nhân."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Xác định vấn đề."
+    },
+    {
+      "id": 45,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Các quyết định quản trị rất quan trọng vì:",
+      "options": {
+        "A": "Cả hai phương án đều sai",
+        "B": "Cả hai phương án đều đúng",
+        "C": "Không thể thay thế các quyết định quản trị bằng tiền bạc, vốn liếng, sự tự điều chỉnh hoặc bất cứ thứ tự động hóa bằng máy móc tinh xảo nào.",
+        "D": "Là một khâu trong toàn bộ hệ thống các quyết định của một tổ chức có sự tương tác lẫn nhau rất phức tạp."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Cả hai phương án đều đúng"
+    },
+    {
+      "id": 46,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Có được giải pháp sáng tạo là đặc điểm của quyết định nào?",
+      "options": {
+        "A": "Quyết định cá nhân",
+        "B": "Quyết định được chương trình hóa",
+        "C": "Quyết định theo quy trình",
+        "D": "Quyết định không có cấu trúc"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Quyết định không có cấu trúc"
+    },
+    {
+      "id": 47,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Công nhân viên phụ trách bán hàng, được trao thưởng vì thành tích bán hàng xuất sắc trong quý vừa qua. Nhà quản trị đã ra quyết định theo mô hình....",
+      "options": {
+        "A": "Minh chứng",
+        "B": "Cảm xúc",
+        "C": "Trực giác",
+        "D": "Lý trí"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Minh chứng"
+    },
+    {
+      "id": 48,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Đâu KHÔNG phải là nhược điểm của phương pháp ra quyêt định theo nhóm?",
+      "options": {
+        "A": "Mang tính nổi trội, thống trị.",
+        "B": "Trách nhiệm cá nhân không rõ ràng.",
+        "C": "Mất nhiều thời gian hơn quyết định cá nhân.",
+        "D": "Ảnh hưởng của thiểu số."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Mang tính nổi trội, thống trị."
+    },
+    {
+      "id": 49,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Điền từ vào chỗ trống cho câu sau: ......... đề cập đến tiến trình nhận diện vấn đề và sau đó giải quyết chúng.",
+      "options": {
+        "A": "Tổ chức.",
+        "B": "Kiểm tra.",
+        "C": "Ra quyết định.",
+        "D": "Lập kế hoạch."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Ra quyết định."
+    },
+    {
+      "id": 50,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Điều nào KHÔNG phải là một trong các yếu tố của tư duy thiết kế?",
+      "options": {
+        "A": "Thấu cảm.",
+        "B": "Xác định vấn đề.",
+        "C": "Phát triển ý tưởng.",
+        "D": "Sử dụng thói quen."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Sử dụng thói quen."
+    },
+    {
+      "id": 51,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Khi nhà quản trị thực hiện đánh giá kết quả thực hiện mục tiêu của quyết định, hay các sai lệch và nguyên nhân của các sai lệch. Đây là bước nào trong tiến trình ra quyết định?",
+      "options": {
+        "A": "Xác định các tiêu chuẩn của quyết định",
+        "B": "Xác định vấn đề",
+        "C": "Lượng hóa các tiêu chuẩn",
+        "D": "Đánh giá tính hiệu quả của quyết định"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Đánh giá tính hiệu quả của quyết định"
+    },
+    {
+      "id": 52,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Lựa chọn mô hình ra quyết định phụ thuộc vào:",
+      "options": {
+        "A": "Tính cách của nhà quản trị",
+        "B": "Nhiều yếu tố khác nhau",
+        "C": "Năng lực của nhà quản trị",
+        "D": "Ý muốn của đa số nhân viên"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Nhiều yếu tố khác nhau"
+    },
+    {
+      "id": 53,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Mô hình ra quyết định dựa trên cơ sở logic, nhưng bị hạn chế bởi năng lực của người ra quyết định nên thường chọn phương án đủ tốt là mô hình nào?",
+      "options": {
+        "A": "Lý trí (Rational).",
+        "B": "Bán lý trí (Bounded Rationality).",
+        "C": "Minh chứng (Evidence - based).",
+        "D": "Trực giác (Intuition)."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Bán lý trí (Bounded Rationality)."
+    },
+    {
+      "id": 54,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Mô hình ra quyết định nào dựa trên cơ sở hệ thống các minh chứng/ thông tin?",
+      "options": {
+        "A": "Lý trí (Rational).",
+        "B": "Bán lý trí (Bounded Rationality).",
+        "C": "Minh chứng (Evidence based).",
+        "D": "Trực giác (Intuition)."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Minh chứng (Evidence based)."
+    },
+    {
+      "id": 55,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Mô hình ra quyết định theo lý trí là:",
+      "options": {
+        "A": "Ra quyết định dựa vào cảm giác, kinh nghiệm và đánh giá cá nhân.",
+        "B": "Ra quyết định dựa trên cơ sở hệ thống các minh chứng.",
+        "C": "Quyết định đưa ra logic, thống nhất và tối đa hóa giá trị.",
+        "D": "Ra quyết định dựa trên cơ sở logic, nhưng bị hạn chế bởi năng lực của người ra quyết định."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Quyết định đưa ra logic, thống nhất và tối đa hóa giá trị."
+    },
+    {
+      "id": 56,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "\"Một sự lựa chọn được đưa ra trong số hai hoặc nhiều lựa chọn thay thế\". Đây là nội dung của:",
+      "options": {
+        "A": "Thực hành",
+        "B": "Quyết định",
+        "C": "Chi phí cơ hội",
+        "D": "Mục đích"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Quyết định"
+    },
+    {
+      "id": 57,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Một vấn đề thường xuyên xảy ra, lặp đi lặp lại là vấn đề:",
+      "options": {
+        "A": "Có cấu trúc/được chương trình hóa",
+        "B": "Cố định",
+        "C": "Hằng ngày",
+        "D": "Không có cấu trúc/không được chương trình hóa"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Có cấu trúc/được chương trình hóa"
+    },
+    {
+      "id": 58,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Nhà quản trị cần tránh lỗi gì khi ra quyết định?",
+      "options": {
+        "A": "Quá tự tin vào bản thân.",
+        "B": "Xác định được vấn đề.",
+        "C": "Đánh giá đầy rủi ro.",
+        "D": "Thu thập đầy đủ thông tin."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Quá tự tin vào bản thân."
+    },
+    {
+      "id": 59,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Nhà quản trị nên:",
+      "options": {
+        "A": "Chọn mô hình ra quyết định đã thành công trước đó",
+        "B": "Sử dụng mô hình \"độc lập ra quyết định\" để đưa ra giải pháp tốt nhất",
+        "C": "Xem xét nhiều yếu tố để lựa chọn mô hình ra quyết định phù hợp",
+        "D": "Sử dụng mô hình ''ra quyết định tập thể'' vì đây là mô hình tốt nhất"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Xem xét nhiều yếu tố để lựa chọn mô hình ra quyết định phù hợp"
+    },
+    {
+      "id": 60,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Những phẩm chất nào cần có của nhà quản trị để ra quyết định hiệu quả?",
+      "options": {
+        "A": "Óc sáng tạo",
+        "B": "Tất cả các phương án đều đúng",
+        "C": "Kinh nghiệm",
+        "D": "Xét đoán"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Tất cả các phương án đều đúng"
+    },
+    {
+      "id": 61,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Nhược điểm của phương pháp ra quyết định cá nhân là gì?",
+      "options": {
+        "A": "Mất nhiều thời gian.",
+        "B": "Mang tính nổi trội, thống trị.",
+        "C": "Trách nhiệm cá nhân rõ ràng.",
+        "D": "Tranh cãi giữa các thành viên diễn ra gay gắt."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Mang tính nổi trội, thống trị."
+    },
+    {
+      "id": 62,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Phần lớn sự thành bại của một quyết định tùy thuộc ở khâu nào?",
+      "options": {
+        "A": "Kiểm tra điều chỉnh",
+        "B": "Kế hoạch",
+        "C": "Đánh giá",
+        "D": "Tổ chức thực hiện"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tổ chức thực hiện"
+    },
+    {
+      "id": 63,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Ra quyết định là một công việc:",
+      "options": {
+        "A": "Công việc của một nhà quản trị cấp cao",
+        "B": "Lựa chọn giải pháp cho một vấn đề xác định",
+        "C": "Tất cả các đáp án đều sai",
+        "D": "Một công việc mang tính khoa học"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Lựa chọn giải pháp cho một vấn đề xác định"
+    },
+    {
+      "id": 64,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Quá trình ra quyết định chỉ có ý nghĩa và hiệu quả khi:",
+      "options": {
+        "A": "Nhà quản trị lựa chọn đúng tiêu chí ra quyết định",
+        "B": "Nhà quản trị xác định đúng vấn đề",
+        "C": "Nhà quản trị xác định đúng triệu chứng của vấn đề",
+        "D": "Nhà quản trị lựa chọn đúng phương án"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Nhà quản trị xác định đúng vấn đề"
+    },
+    {
+      "id": 65,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Quá trình tuyển dụng của doanh nghiệp là quyết định loại gì?",
+      "options": {
+        "A": "Quyết định không cấu trúc",
+        "B": "Quyết định có cấu trúc",
+        "C": "Quyết định danh nghĩa",
+        "D": "Quyết định chưa được chương trình hóa"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Quyết định có cấu trúc"
+    },
+    {
+      "id": 66,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Quyết định các công việc thiết kế như thế nào nằm trong chức năng nào của nhà quản trị?",
+      "options": {
+        "A": "Lãnh đạo",
+        "B": "Kiểm tra",
+        "C": "Tổ chức",
+        "D": "Lập kế hoạch"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tổ chức"
+    },
+    {
+      "id": 67,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Quyết định quản trị...",
+      "options": {
+        "A": "không liên quan đến xử lý thông tin.",
+        "B": "luôn gắn liền với xử lý thông tin.",
+        "C": "được đưa ra trước khi thu thập thông tin.",
+        "D": "được đưa ra chỉ cần dựa trên kinh nghiệm của nhà quản lý."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. luôn gắn liền với xử lý thông tin."
+    },
+    {
+      "id": 68,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Quyết định chiến lược là do:",
+      "options": {
+        "A": "Quản trị cấp cơ sở ra quyết định",
+        "B": "Quản trị cấp trung ra quyết định",
+        "C": "Tất cả đều đúng",
+        "D": "Quản trị cấp cao ra quyết định"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Quản trị cấp cao ra quyết định"
+    },
+    {
+      "id": 69,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Quyết định quản trị là gì?",
+      "options": {
+        "A": "Là một phương án được lựa chọn trong số các phương án hiện có.",
+        "B": "Là một tiến trình xác định các vấn đề hay cơ hội và giải quyết chúng.",
+        "C": "Là sản phẩm lao động trí óc của nhà quản trị nhằm giải quyết một vấn đề được xác định.",
+        "D": "Là tiến trình làm việc với con người nhằm đạt được mục tiêu."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Là sản phẩm lao động trí óc của nhà quản trị nhằm giải quyết một vấn đề được xác định."
+    },
+    {
+      "id": 70,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Quyết định xem chiến lược nào là tốt cho doanh nghiệp là quyết định thuộc chức năng nào?",
+      "options": {
+        "A": "Kiểm tra",
+        "B": "Lãnh đạo",
+        "C": "Lập kế hoạch",
+        "D": "Tổ chức"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Lập kế hoạch"
+    },
+    {
+      "id": 71,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Quy trình ra quyết định gồm bao nhiêu bước?",
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. 8"
+    },
+    {
+      "id": 72,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Ra quyết định quản trị cần dựa trên cơ sở:",
+      "options": {
+        "A": "Thông tin và khả năng thực hiện của tổ chức",
+        "B": "Tâm tư của nhân viên",
+        "C": "Lợi nhuận cần đạt được",
+        "D": "Mong muốn của nhà quản trị"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Thông tin và khả năng thực hiện của tổ chức"
+    },
+    {
+      "id": 73,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Theo mô hình ra quyết định Minh chứng (Evidence - based), vấn đề \"chi phí cao\" cần giải quyết thì mục tiêu phù hợp là? (Chọn phương án trả lời đúng nhất)",
+      "options": {
+        "A": "Tăng doanh thu.",
+        "B": "Tiết kiệm nguyên vật liệu.",
+        "C": "Tăng cường xúc tiến thương mại.",
+        "D": "Kiểm soát chất lượng sản phẩm."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Tiết kiệm nguyên vật liệu."
+    },
+    {
+      "id": 74,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Tổ chức thực hiện quyết định là:",
+      "options": {
+        "A": "Không có phương án nào đúng",
+        "B": "Một trong các bước trong tiến trình ra quyết định",
+        "C": "Không quan trọng trong tiến trình ra quyết định",
+        "D": "Là bước cuối cùng trong tiến trình ra quyết định"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Một trong các bước trong tiến trình ra quyết định"
+    },
+    {
+      "id": 75,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Vai trò của việc ra quyết định trong quản trị là gì?",
+      "options": {
+        "A": "Công cụ đánh giá năng lực của nhà quản trị",
+        "B": "Tất cả các đáp án đều đúng",
+        "C": "Cơ sở thúc đẩy sự phát triển của tổ chức",
+        "D": "Cơ sở để thực hiện các hoạt động quản trị"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Tất cả các đáp án đều đúng"
+    },
+    {
+      "id": 76,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Ví dụ doanh nghiệp quyết định khen thưởng, kỉ luật là quyết định:",
+      "options": {
+        "A": "Cố định",
+        "B": "Hằng ngày",
+        "C": "Không có cấu trúc/không được chương trình hóa",
+        "D": "Có cấu trúc/được chương trình hóa"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Có cấu trúc/được chương trình hóa"
+    },
+    {
+      "id": 77,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Ví dụ doanh nghiệp quyết định lựa chọn thị trường mục tiêu mới là quyết định",
+      "options": {
+        "A": "Hằng ngày",
+        "B": "Không có cấu trúc/không được chương trình hóa",
+        "C": "Có cấu trúc/được chương trình hóa",
+        "D": "Cố định"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Không có cấu trúc/không được chương trình hóa"
+    },
+    {
+      "id": 78,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Ví dụ như việc mua máy tính, những căn cứ để quyết định mua chiếc máy tính nào gồm giá cả, dịch vụ, thời gian, bảo hành, độ tin cậy, mẫu mã. Bước này là bước gì trong tiến trình ra quyết định?",
+      "options": {
+        "A": "Xây dựng các phương án",
+        "B": "Xác định vấn đề",
+        "C": "Lượng hóa các tiêu chuẩn",
+        "D": "Xác định các tiêu chuẩn của quyết định"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Xác định các tiêu chuẩn của quyết định"
+    },
+    {
+      "id": 79,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Xác định vấn đề có những giai đoạn nào?",
+      "options": {
+        "A": "Nhận biết, giải thích.",
+        "B": "Nhận biết, liên kết.",
+        "C": "Nhận biết, giải thích, liên kết.",
+        "D": "Giải thích, liên kết."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Nhận biết, giải thích, liên kết."
+    },
+    {
+      "id": 80,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Xử lý một sự cố cháy nhỏ trong văn phòng là vấn đề....",
+      "options": {
+        "A": "Không có cấu trúc/không được chương trình hóa",
+        "B": "Có cấu trúc/được chương trình hóa",
+        "C": "Rủi ro",
+        "D": "An toàn"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Có cấu trúc/được chương trình hóa"
+    },
+    {
+      "id": 81,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Yêu cầu đối với một quyết định quản trị:",
+      "options": {
+        "A": "Tính cụ thể, tính thời gian và kịp thời",
+        "B": "Tính thống nhất, tính tối ưu",
+        "C": "Tất cả các đáp án đều đúng",
+        "D": "Tính khoa học, tính pháp lý"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tất cả các đáp án đều đúng"
+    },
+    {
+      "id": 82,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Ý nào sau đây đúng?",
+      "options": {
+        "A": "Ra quyết định quản trị nhằm thảo luận với những người khác và ra quyết định",
+        "B": "Ra quyết định dựa vào trực giác",
+        "C": "Ra quyết định mang tính khoa học và nghệ thuật",
+        "D": "Ra quyết định phụ thuộc hoàn toàn vào ý muốn chủ quan của nhà quản trị"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Ra quyết định mang tính khoa học và nghệ thuật"
+    },
+    {
+      "id": 83,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Ý nào sau đây KHÔNG đúng?",
+      "options": {
+        "A": "Ra quyết định là công việc của các nhà quản trị cấp cao",
+        "B": "Ra quyết định là lựa chọn một giải pháp cho vấn đề đã xác định",
+        "C": "Không có đáp án nào đúng",
+        "D": "Ra quyết định là một hoạt động mang tính khoa học và nghệ thuật"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Ra quyết định là công việc của các nhà quản trị cấp cao"
+    }
+  ]
+}

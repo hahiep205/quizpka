@@ -1,0 +1,567 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Quản trị học - Chương 5",
+  "chapter": "Chương 5",
+  "totalQuestions": 40,
+  "questions": [
+    {
+      "id": 163,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Các chủ doanh nghiệp nhỏ thường phải làm việc với nhiều nhà cung cấp bên ngoài phụ trách các mảng quan trọng trong kinh doanh của họ, bao gồm phát triển, sản xuất, bán hàng hay dịch vụ sẽ lựa cọn cơ cấu tổ chức nào?",
+      "options": {
+        "A": "Quản lý kiểu ma trận.",
+        "B": "Quản lý theo trung tâm lợi nhuận.",
+        "C": "Quản lý ảo.",
+        "D": "Quản lý mạng lưới."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Quản lý mạng lưới."
+    },
+    {
+      "id": 164,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Các hoạt động dưới đây hoạt động nào KHÔNG thuộc chức năng lập kế hoạch",
+      "options": {
+        "A": "Đưa ra các dự kiến công việc thực hiện",
+        "B": "Thiết lập các mục tiêu",
+        "C": "Kiểm tra tiến độ công việc của các bộ phận",
+        "D": "Đưa ra các chiến lược dài hạn"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Kiểm tra tiến độ công việc của các bộ phận"
+    },
+    {
+      "id": 165,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Cấu trúc ma trận và dự án đã phá vỡ:",
+      "options": {
+        "A": "Nguyên tắc thực thi mệnh lệnh",
+        "B": "Nguyên tắc thiết kế tổ chức",
+        "C": "Nguyên tắc giám sát và kiểm tra",
+        "D": "Nguyên tắc thống nhất mệnh lệnh"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Nguyên tắc thống nhất mệnh lệnh"
+    },
+    {
+      "id": 166,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Cấu trúc tổ chức thường được mô tả qua một:",
+      "options": {
+        "A": "Biểu đồ tiến trình",
+        "B": "Bản vẽ kĩ thuật",
+        "C": "Sơ đồ tổ chức",
+        "D": "Quy trình thiết lập mục tiêu"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Sơ đồ tổ chức"
+    },
+    {
+      "id": 167,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Chức năng quản trị nào trong các chức năng sau là chức năng thiết kế cơ cấu. Công việc của chức năng này bao gồm: xác định những việc phải làm, người nào phải làm, phối hợp hoạt động ra sao, bộ phận nào được hình thành, quan hệ giữa các bộ phận được thiết lập thế nào và hệ thống quyền hành trong tổ chức đó được thiết lập ra sao.",
+      "options": {
+        "A": "Chức năng kiểm tra",
+        "B": "Chức năng hoạch định",
+        "C": "Chức năng lãnh đạo",
+        "D": "Chức năng tổ chức"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Chức năng tổ chức"
+    },
+    {
+      "id": 168,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Chức năng tổ chức là gì?",
+      "options": {
+        "A": "Là chức năng bao gồm hoạt động giám sát, so sánh và điều chỉnh kết quả thực hiện công việc.",
+        "B": "Là chức năng quản trị bao gồm việc động viên, định hướng và tạo ảnh hưởng tới người khác để họ thực hiện tốt và đạt được mục tiêu của tổ chức.",
+        "C": "Là chức năng đầu tiên trong quá trình quản lý và liên quan đến việc triển khai thực hiện các chức năng quản lý khác.",
+        "D": "Là chức năng bao gồm việc sắp xếp và cấu trúc hóa hoạt động công việc nhằm đạt được các mục tiêu tổ chức."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Là chức năng bao gồm việc sắp xếp và cấu trúc hóa hoạt động công việc nhằm đạt được các mục tiêu tổ chức."
+    },
+    {
+      "id": 169,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Công ty A thành lập ba trung tâm cho khách hàng cá nhân, khách hàng tổ chức và các cơ quan của chính phủ. Cơ cấu tổ chức như vậy được gọi là kiểu tổ chức theo....",
+      "options": {
+        "A": "Chức năng",
+        "B": "Sản phẩm",
+        "C": "Quá trình",
+        "D": "Khách hàng"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Khách hàng"
+    },
+    {
+      "id": 170,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Cơ cấu tổ chức hiệu quả là...",
+      "options": {
+        "A": "Cơ cấu tổ chức phù hợp với chiến lược của tổ chức.",
+        "B": "Cơ cấu tổ chức theo sản phẩm.",
+        "C": "Cơ cấu tổ chức theo chức năng.",
+        "D": "Cơ cấu tổ chức theo lĩnh vực kinh doanh."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Cơ cấu tổ chức phù hợp với chiến lược của tổ chức."
+    },
+    {
+      "id": 171,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Cơ cấu tổ chức nào phổ biến với các doanh nghiệp nhỏ sử dụng nhiều nhân viên tự do hay lao động tạm thời để hoàn thành dự án?",
+      "options": {
+        "A": "Quản lý kiểu ma trận.",
+        "B": "Quản lý theo trung tâm lợi nhuận.",
+        "C": "Quản lý mạng lưới.",
+        "D": "Quản lý ảo."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Quản lý ảo."
+    },
+    {
+      "id": 172,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Đặc tính cứng nhắc và được kiểm soát chặt chẽ là của cấu trúc:",
+      "options": {
+        "A": "Phi tập trung",
+        "B": "Hiện đại",
+        "C": "Cơ học",
+        "D": "Hữu cơ"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Cơ học"
+    },
+    {
+      "id": 173,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Đâu KHÔNG là cách phân chia theo chức năng:",
+      "options": {
+        "A": "Phòng kỹ thuật",
+        "B": "Phòng sản xuất",
+        "C": "Phòng phụ trách khách hàng bán lẻ",
+        "D": "Phòng tài chính"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Phòng phụ trách khách hàng bán lẻ"
+    },
+    {
+      "id": 174,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Đâu KHÔNG là sự khác nhau giữa quyền hạn và quyền lực?",
+      "options": {
+        "A": "Có thể bị mất đi",
+        "B": "Đặc điểm cá nhân",
+        "C": "Tính hợp pháp",
+        "D": "Tính chính thức"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Có thể bị mất đi"
+    },
+    {
+      "id": 175,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Đâu KHÔNG phải là vai trò của chức năng tổ chức?",
+      "options": {
+        "A": "Nhằm phát huy cao nhất các tiềm năng và khả năng của từng thành viên.",
+        "B": "Xây dựng và hoàn thiện bộ máy quản lý cùng với cơ chế vận hành, phối hợp giữa các bộ phận.",
+        "C": "Đảm bảo tính hiệu lực và hiệu quả của hoạt động quản lý.",
+        "D": "Cung cấp định hướng cho người quản lý và người không quản lý."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Cung cấp định hướng cho người quản lý và người không quản lý."
+    },
+    {
+      "id": 176,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Để trả lời cho câu hỏi một người quản lý bao nhiêu người thì đạt hiệu quả và hiệu suất cao, chúng ta đang nhắc đến yếu tố...trong thiết kế tổ chức.",
+      "options": {
+        "A": "Chuỗi mệnh lệnh",
+        "B": "Phân chia công việc",
+        "C": "Thiết kế năng lực cá nhân",
+        "D": "Phạm vi quản lý"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Phạm vi quản lý"
+    },
+    {
+      "id": 177,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Dưới đây là nguyên tắc thiết kế sơ đồ tổ chức, ngoại trừ:",
+      "options": {
+        "A": "Càng ít cấp bậc càng tốt",
+        "B": "Chỉ ra ai có thẩm quyền đối với ai",
+        "C": "Thể hiện trách nhiệm và thông tin liên lạc",
+        "D": "Bao gồm tầm nhìn và sứ mệnh"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Bao gồm tầm nhìn và sứ mệnh"
+    },
+    {
+      "id": 178,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Đường quyền nào kéo từ các cấp tổ chức cao hơn đến các cấp thấp nhất, làm rõ ai báo cáo cho ai là gì?",
+      "options": {
+        "A": "Chuỗi yêu cầu.",
+        "B": "Cấu trúc liên tục.",
+        "C": "Thứ bậc yêu cầu.",
+        "D": "Chuỗi mệnh lệnh."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Chuỗi mệnh lệnh."
+    },
+    {
+      "id": 179,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Giao phó quyền hạn và trách nhiệm cho người khác để họ thay quyền thực hiện những công việc nhất định là gì?",
+      "options": {
+        "A": "Phân quyền.",
+        "B": "Ủy quyền.",
+        "C": "Tập quyền.",
+        "D": "Dân chủ."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Ủy quyền."
+    },
+    {
+      "id": 180,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Hiệu may quần áo, tiệm bách hóa, tiệm ăn v.v... thuộc mô hình bộ máy tổ chức nào?",
+      "options": {
+        "A": "Mô hình cấu trúc phân ngành.",
+        "B": "Mô hình hỗn hợp trực tuyến chức năng.",
+        "C": "Mô hình cấu trúc đơn giản",
+        "D": "Mô hình cấu trúc chức năng."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Mô hình cấu trúc đơn giản"
+    },
+    {
+      "id": 181,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Hiếu, trưởng phòng kinh doanh, yêu cầu nhân viên làm việc nhưng không chắc chắn họ hiểu nhiệm vụ được giao. Hiếu đã vi phạm nguyên tắc:",
+      "options": {
+        "A": "Nguyên tắc thực thi mệnh lệnh",
+        "B": "Nguyên tắc giao tiếp cơ bản",
+        "C": "Nguyên tắc thống nhất mệnh lệnh",
+        "D": "Tập trung dân chủ"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Nguyên tắc thực thi mệnh lệnh"
+    },
+    {
+      "id": 182,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Khi nào nên thiết kế tổ chức có phạm vi quản lý rộng?",
+      "options": {
+        "A": "Thông tin lưu chuyển chậm",
+        "B": "Cấp dưới không có khả năng thực hiện công việc như chỉ dẫn",
+        "C": "Ra quyết định phi tập trung",
+        "D": "Nhà quản trị phải có năng lực tốt"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Nhà quản trị phải có năng lực tốt"
+    },
+    {
+      "id": 183,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Mô hình cơ cấu nào rất khó phối hợp hoạt động giữa các bộ phận sản phẩm?",
+      "options": {
+        "A": "Theo địa lý.",
+        "B": "Theo khách hàng.",
+        "C": "Theo sản phẩm.",
+        "D": "Theo quá trình."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Theo sản phẩm."
+    },
+    {
+      "id": 184,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Một cơ cấu tổ chức phân công các chuyên gia từ các bộ phận chức năng khác nhau làm việc trên một hoặc nhiều dự án là loại cấu trúc nào?",
+      "options": {
+        "A": "Cấu trúc dự án.",
+        "B": "Cấu trúc ma trận.",
+        "C": "Cấu trúc nhóm.",
+        "D": "Cấu trúc chức năng."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Cấu trúc ma trận."
+    },
+    {
+      "id": 185,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Một tổ chức với đặc điểm là phạm vi hoạt động toàn cầu hay quốc tế thì cơ cấu tổ chức hợp lý là gì?",
+      "options": {
+        "A": "Cơ cấu chức năng.",
+        "B": "Cơ cấu trực tuyến.",
+        "C": "Cơ cấu tổ chức theo khu vực địa lý.",
+        "D": "Cơ cấu tổ chức theo sản phẩm."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Cơ cấu tổ chức theo khu vực địa lý."
+    },
+    {
+      "id": 186,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Mục tiêu của chức năng tổ chức:",
+      "options": {
+        "A": "Khai thác tối đa năng suất của máy móc",
+        "B": "Tất cả các đáp án đều sai.",
+        "C": "Tổ chức phải thích nghi, đáp ứng được với những biến động của bên ngoài.",
+        "D": "Nhằm thiết lập ra một hệ thống các vị trí cho mỗi cá nhân và bộ phận sao cho các cá nhân và bộ phận có thể phối hợp với nhau một cách tốt nhất để thực hiện mục tiêu của tổ chức."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Nhằm thiết lập ra một hệ thống các vị trí cho mỗi cá nhân và bộ phận sao cho các cá nhân và bộ phận có thể phối hợp với nhau một cách tốt nhất để thực hiện mục tiêu của tổ chức."
+    },
+    {
+      "id": 187,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Người quản lý đưa ra các mệnh lệnh với cấp dưới và yêu cầu các mệnh lệnh này được thực hiện. Đây là ví dụ về:",
+      "options": {
+        "A": "Trách nhiệm",
+        "B": "Quyền lực",
+        "C": "Quyền hạn",
+        "D": "Nghĩa vụ"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Quyền hạn"
+    },
+    {
+      "id": 188,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Nguyên tắc thống nhất mệnh lệnh trong chuỗi mệnh lệnh được phát biểu là:",
+      "options": {
+        "A": "Mệnh lệnh đưa ra thì không nên thu hồi lại",
+        "B": "Mỗi người chỉ nên chịu trách nhiệm báo cáo với một và chỉ một người quản trị trực tiếp duy nhất",
+        "C": "Nhiều nhà quản trị quản lý một người là hiệu quả",
+        "D": "Mỗi người nên chịu trách nhiệm báo cáo với nhiều người quản trị"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Mỗi người chỉ nên chịu trách nhiệm báo cáo với một và chỉ một người quản trị trực tiếp duy nhất"
+    },
+    {
+      "id": 189,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Nguyên tắc thực thi mệnh lệnh KHÔNG bao gồm những đặc điểm nào dưới đây:",
+      "options": {
+        "A": "Cấp dưới hiểu mệnh lệnh",
+        "B": "Cấp dưới có khả năng thực hiện công việc như chỉ dẫn",
+        "C": "Một người phải báo cáo với hai nhà quản lý",
+        "D": "Mệnh lệnh không trái với niềm tin cá nhân"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Một người phải báo cáo với hai nhà quản lý"
+    },
+    {
+      "id": 190,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Nhược điểm của cơ cấu tổ chức theo chức năng",
+      "options": {
+        "A": "Vi phạm nguyên tắc thống nhất mệnh lệnh/chỉ huy",
+        "B": "Tất cả các đáp án đều đúng",
+        "C": "Chế độ trách nhiệm không rõ ràng",
+        "D": "Thiếu sự gắn kết giữa các phòng ban chuyên môn"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Thiếu sự gắn kết giữa các phòng ban chuyên môn"
+    },
+    {
+      "id": 191,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Nhược điểm \"Nhân rộng các chức năng trong từng dòng sản phẩm\" là nhược điểm của:",
+      "options": {
+        "A": "Phân khâu theo nhóm sản phẩm",
+        "B": "Phân khâu theo khu vực địa lý",
+        "C": "Phân khâu theo chức năng",
+        "D": "Phân khâu theo nhóm khách hàng"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Phân khâu theo nhóm sản phẩm"
+    },
+    {
+      "id": 192,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Phạm vi quản lý rộng hay hẹp tùy thuộc vào:",
+      "options": {
+        "A": "Công việc",
+        "B": "Trình độ của nhà quản trị",
+        "C": "Trình độ của nhân viên",
+        "D": "Tất cả các đáp án đều đúng"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả các đáp án đều đúng"
+    },
+    {
+      "id": 193,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Phân quyền chỉ hiệu quả khi:",
+      "options": {
+        "A": "Tất cả các đáp án đều đúng",
+        "B": "Gắn liền quyền hạn với trách nhiệm",
+        "C": "Chỉ chú trọng đến kết quả",
+        "D": "Cho các nhân viên cấp dưới tham gia vào quá trình phân quyền"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Gắn liền quyền hạn với trách nhiệm"
+    },
+    {
+      "id": 194,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "\"Phục vụ nhu cầu khác nhau ở các khu vực khác nhau tốt hơn\" là nội dung của cách phân khâu theo:",
+      "options": {
+        "A": "Chức năng",
+        "B": "Vị trí địa lý",
+        "C": "Hạng mục sản phẩm",
+        "D": "Vị trí công việc"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Vị trí địa lý"
+    },
+    {
+      "id": 195,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Quyền hạn ... cho phép nhà quản trị ra quyết định và giám sát trực tiếp đối với cấp dưới.",
+      "options": {
+        "A": "chức năng",
+        "B": "Không có phương án nào đúng",
+        "C": "tham mưu",
+        "D": "trực tuyến"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. trực tuyến"
+    },
+    {
+      "id": 196,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Thách thức khi tổ chức thiết kế theo xu hướng phạm vi quản lý hẹp là:",
+      "options": {
+        "A": "Nhiều tầng lớp quản lý",
+        "B": "Ra quyết định phi tập trung",
+        "C": "Thông tin lưu chuyển nhanh",
+        "D": "Kiểm tra chặt chẽ"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Nhiều tầng lớp quản lý"
+    },
+    {
+      "id": 197,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Thiết kế cơ cấu tổ chức là:",
+      "options": {
+        "A": "Xác định các đơn vị phòng ban",
+        "B": "Xác định phạm vi quản lý",
+        "C": "Phân định quyền hạn và trách nhiệm giữa các cấp trong tổ chức",
+        "D": "Tất cả các đáp án đều đúng"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả các đáp án đều đúng"
+    },
+    {
+      "id": 198,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Tổ chức cơ cấu nào là một thiết kế có tính thích ứng cao và linh hoạt?",
+      "options": {
+        "A": "Tổ chức quá trình.",
+        "B": "Tổ chức chức năng.",
+        "C": "Tổ chức cơ học.",
+        "D": "Tổ chức hữu cơ."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tổ chức hữu cơ."
+    },
+    {
+      "id": 199,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Tổ chức đang gặp khủng hoảng hoặc có nguy cơ gặp thách thức lớn thì nên được thiết kế lại theo hướng:",
+      "options": {
+        "A": "Hỗn hợp nhóm",
+        "B": "Phân quyền",
+        "C": "Tập quyền",
+        "D": "Chuỗi mệnh lệnh đơn giản"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tập quyền"
+    },
+    {
+      "id": 200,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Xu hướng quyền lực nào được sử dụng phổ biến hiện nay trong các cơ cấu tổ chức của một tổ chức?",
+      "options": {
+        "A": "Phân quyền.",
+        "B": "Tập quyền.",
+        "C": "Chuyên quyền.",
+        "D": "Bậc thang."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Phân quyền."
+    },
+    {
+      "id": 201,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Yếu tố nào làm cấu trúc tổ chức thay đổi theo sự gia tăng quy mô sản xuất?",
+      "options": {
+        "A": "Kích thước.",
+        "B": "Công nghệ.",
+        "C": "Sự không chắc chắn về môi trường.",
+        "D": "Chiến lược."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Kích thước."
+    },
+    {
+      "id": 202,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Ý nào sau đây là ưu điểm của mô hình cơ cấu tổ chức theo khu vực địa lý?",
+      "options": {
+        "A": "Nâng cao khả năng phát triển chuyên môn trong bộ phận.",
+        "B": "Tiết kiệm thời gian và các nguồn lực của tổ chức do sự phục vụ sản xuất được thực hiện tại chỗ",
+        "C": "Các nhu cầu và vấn đề của khách hàng có thể được giải quyết bởi các chuyên gia.",
+        "D": "Tất cả các đáp án đều sai"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Tiết kiệm thời gian và các nguồn lực của tổ chức do sự phục vụ sản xuất được thực hiện tại chỗ"
+    }
+  ]
+}

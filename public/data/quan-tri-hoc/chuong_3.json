@@ -1,0 +1,553 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Quản trị học - Chương 3",
+  "chapter": "Chương 3",
+  "totalQuestions": 39,
+  "questions": [
+    {
+      "id": 84,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Ảnh hưởng của môi trường đến hoạt động của doanh nghiệp như thế nào?",
+      "options": {
+        "A": "Ảnh hưởng đến mục tiêu và chiến lược của doanh nghiệp",
+        "B": "Ảnh hưởng đến phạm vi hoạt động của doanh nghiệp",
+        "C": "Tất cả các đáp án đều đúng",
+        "D": "Ảnh hưởng đến kết quả hoạt động của doanh nghiệp"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tất cả các đáp án đều đúng"
+    },
+    {
+      "id": 85,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Bảo vệ vị trí cạnh tranh của doanh nghiệp đối với đối thủ tiềm ẩn bằng việc duy trì những hàng rào hợp pháp nào?",
+      "options": {
+        "A": "Sự đòi hỏi có nguồn tài chính lớn và chi phí chuyển đổi mặt hàng cao",
+        "B": "Lợi thế do sản xuất trên quy mô lớn và đa dạng hoá sản phẩm",
+        "C": "Tất cả các đáp án đều đúng",
+        "D": "Khả năng hạn chế trong việc xâm nhập các kênh tiêu thụ vững vàng và ưu thế về giá thành mà đối thủ cạnh tranh không tạo ra được"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tất cả các đáp án đều đúng"
+    },
+    {
+      "id": 86,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Các chiến lược WT trong phân tích SWOT thể hiện?",
+      "options": {
+        "A": "Vượt qua bất trắc bằng cách tận dụng điểm mạnh",
+        "B": "Sử dụng các điểm mạnh để tận dụng cơ hội",
+        "C": "Hạn chế các mặt yếu để lợi dụng các cơ hội",
+        "D": "Tối thiểu hóa điểm yếu và tránh khỏi mối đe dọa"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tối thiểu hóa điểm yếu và tránh khỏi mối đe dọa"
+    },
+    {
+      "id": 87,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Các công ty điện thoại, dịch vụ Internet có thể áp dụng biện pháp tính giá cước đắt vào thời gian cao điểm và giá rẻ vào ban đêm để hạn chế và khuyến khích lượng sử dụng của khách hàng để cân đối nhu cầu thiết bị là minh họa cho giải pháp quản trị biến động môi trường nào dưới đây?",
+      "options": {
+        "A": "Hợp đồng.",
+        "B": "Quân bình.",
+        "C": "Cấp hạn chế.",
+        "D": "Phòng ngừa."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Quân bình."
+    },
+    {
+      "id": 88,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Các bên liên quan bên ngoài tổ chức gồm những nhân tố nào:",
+      "options": {
+        "A": "Xu hướng kinh tế, xu hướng công nghệ, khách hàng và nhà cung cấp",
+        "B": "Xu hướng công nghệ, hệ thống pháp luật, đối thủ cạnh tranh và nhà phân phối",
+        "C": "Tất cả đều đúng",
+        "D": "Đặc điểm văn hóa xã hội, nhân khẩu học, chính quyền địa phương và các tổ chức đặc biệt"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tất cả đều đúng"
+    },
+    {
+      "id": 89,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Các yếu tố nào sau đây không thuộc yếu tố kinh tế?",
+      "options": {
+        "A": "Chu kỳ kinh doanh",
+        "B": "Sự tăng trưởng kinh tế",
+        "C": "Chu kỳ sống của sản phẩm",
+        "D": "Các chính sách kinh tế"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Chu kỳ sống của sản phẩm"
+    },
+    {
+      "id": 90,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Cấp phát các sản phẩm hoặc dịch vụ trên một căn cứ ưu tiên khi có nhu cầu vượt quá cung ứng là cách mô tả cho giải pháp quản trị biến động môi trường nào dưới đây?",
+      "options": {
+        "A": "Hợp đồng.",
+        "B": "Quân bình.",
+        "C": "Cấp hạn chế.",
+        "D": "Phòng ngừa."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Cấp hạn chế."
+    },
+    {
+      "id": 91,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Công ty Ally's Applesauce đang trong quá trình tuyển dụng sáu mươi công nhân mới. Phòng nhân sự đang gặp khó khăn do việc thiếu nhân sự có kỹ năng tại địa phương. Bối cảnh nào của môi trường bên ngoài liên quan đến trường hợp này?",
+      "options": {
+        "A": "Văn hóa - xã hội",
+        "B": "Thị trường lao động",
+        "C": "Công nghệ",
+        "D": "Đối thủ cạnh tranh"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Thị trường lao động"
+    },
+    {
+      "id": 92,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Cơ sở vật chất, triết lý kinh doanh và nhân sự trong một tổ chức là yếu tố thuộc: (Chọn phương án trả lời đúng nhất).",
+      "options": {
+        "A": "Môi trường quản trị vi mô.",
+        "B": "Môi trường quản trị vĩ mô.",
+        "C": "Môi trường nội bộ.",
+        "D": "Môi trường kinh tế."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Môi trường nội bộ."
+    },
+    {
+      "id": 93,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Đáp án nào sau đây KHÔNG phải là tiêu thức để đo lường sự hiệu quả của tăng trưởng kinh tế?",
+      "options": {
+        "A": "Mức tăng số lượng lao động có việc làm và lương cao",
+        "B": "Mức gia tăng sản lượng theo đầu người và mức tăng mức sống của các cá nhân điển hình trong dân cư",
+        "C": "Sự tăng trưởng kinh tế hiện tại không để lại những nguy cơ trong tương lai cho nền kinh tế",
+        "D": "Mức gia tăng năng suất lao động cao và ổn định"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Mức tăng số lượng lao động có việc làm và lương cao"
+    },
+    {
+      "id": 94,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Đâu KHÔNG phải là cơ hội mà xu hướng toàn cầu hóa mang lại cho tổ chức?",
+      "options": {
+        "A": "Nới lỏng các quy định pháp luật",
+        "B": "Tiếp cận với chi phí lao động thấp",
+        "C": "Nhiều các tập đoàn quốc tế gia nhập thị trường",
+        "D": "Chi phí vận tải thấp"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Nhiều các tập đoàn quốc tế gia nhập thị trường"
+    },
+    {
+      "id": 95,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Đâu không phải là một yếu tố căn bản trong môi trường vi mô?",
+      "options": {
+        "A": "Người cung cấp",
+        "B": "Hàng thay thế",
+        "C": "Khách hàng",
+        "D": "Kỹ thuật công nghệ"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Kỹ thuật công nghệ"
+    },
+    {
+      "id": 96,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Đâu là khía cạnh phản ánh môi trường bên trong của doanh nghiệp:",
+      "options": {
+        "A": "Môi trường chính trị",
+        "B": "Môi trường văn hóa của tổ chức",
+        "C": "Môi trường vĩ mô và môi trường tác nghiệp",
+        "D": "Môi trường công nghệ"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Môi trường văn hóa của tổ chức"
+    },
+    {
+      "id": 97,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Để có được các vật tư, thiết bị, lao động và tài chính, các doanh nghiệp phải liên hệ với ai?",
+      "options": {
+        "A": "Người cung cấp",
+        "B": "Đối thủ tiềm ẩn mới",
+        "C": "Khách hàng",
+        "D": "Đối thủ cạnh tranh"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Người cung cấp"
+    },
+    {
+      "id": 98,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Dịch bệnh COVID-19 làm đứt gãy các chuỗi cung ứng trên thế giới, ảnh hưởng tới việc nhập khẩu nguyên vật liệu phục vụ cho sản xuất của doanh nghiệp là một ví dụ về ảnh hưởng của môi trường nào?",
+      "options": {
+        "A": "Môi trường bên trong",
+        "B": "Môi trường vi mô",
+        "C": "Môi trường kinh tế",
+        "D": "Môi trường vĩ mô"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Môi trường vĩ mô"
+    },
+    {
+      "id": 99,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Đối với Công ty điện tử Samsung; Apple, Xiaomi, Oppo, Vivo là ví dụ minh họa cho yếu tố nào dưới đây?",
+      "options": {
+        "A": "Khách hàng.",
+        "B": "Đối thủ cạnh tranh.",
+        "C": "Nhà phân phối.",
+        "D": "Nhà cung cấp."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Đối thủ cạnh tranh."
+    },
+    {
+      "id": 100,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Đối với siêu thị Big C, sự gia nhập của chuỗi bán lẻ Winmart là một ví dụ về?",
+      "options": {
+        "A": "Khách hàng",
+        "B": "Sản phẩm thay thế",
+        "C": "Nhà cung cấp",
+        "D": "Đối thủ cạnh tranh"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Đối thủ cạnh tranh"
+    },
+    {
+      "id": 101,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Khi chỉ có một nhà cung cấp nguyên liệu đầu vào cho công ty, nhà cung cấp đó sẽ .....với công ty đó.",
+      "options": {
+        "A": "Có sức mạnh đàm phán lớn",
+        "B": "Tăng cường hợp tác",
+        "C": "Có sức mạnh đàm phán yếu",
+        "D": "Giảm giá bán"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Có sức mạnh đàm phán lớn"
+    },
+    {
+      "id": 102,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Khi công nghệ cho phép khách hàng có nhiều cách thức mua sắm trực tuyến khác nhau, thì các nhà sản xuất và nhà bán lẻ truyền thống đang dần trở thành đối thủ cạnh tranh trực tiếp của nhau. Trong tình huống này, nếu trưởng phòng marketing không hiểu...., thì các nhà bán lẻ không thể có những kế hoạch hoạt động cách hiệu quả cho tương lai được",
+      "options": {
+        "A": "Chiến lược của đối thủ cạnh tranh",
+        "B": "Môi trường vi mô",
+        "C": "Môi trường vĩ mô",
+        "D": "Môi trường nội bộ"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Chiến lược của đối thủ cạnh tranh"
+    },
+    {
+      "id": 103,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": ".....là những tổ chức có cùng thị trường mục tiêu nhưng cung cấp các sản phẩm khác nhau để thỏa mãn nhu cầu của thị trường ví dụ như Spotify, Sony, Apple's iPod",
+      "options": {
+        "A": "Nhà cung cấp trực tiếp",
+        "B": "Nhà phân phối gián tiếp",
+        "C": "Đối thủ cạnh tranh trực tiếp",
+        "D": "Đối thủ cạnh tranh gián tiếp"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Đối thủ cạnh tranh gián tiếp"
+    },
+    {
+      "id": 104,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Môi trường ảnh hưởng đến hoạt động của doanh nghiệp bao gồm:",
+      "options": {
+        "A": "Môi trường vi mô và môi trường vĩ mô",
+        "B": "Môi trường tác nghiệp và môi trường nội bộ",
+        "C": "Môi trường vi mô, môi trường ngành và môi trường nội bộ",
+        "D": "Môi trường bên trong, môi trường vi mô và vĩ mô."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Môi trường bên trong, môi trường vi mô và vĩ mô."
+    },
+    {
+      "id": 105,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Môi trường bên ngoài của doanh nghiệp là:",
+      "options": {
+        "A": "Môi trường quốc tế và môi trường vĩ mô",
+        "B": "Các lực lượng kinh tế và xã hội",
+        "C": "Môi trường quốc tế, vĩ mô và tác nghiệp",
+        "D": "Môi trường vĩ mô và môi trường vi mô"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Môi trường vĩ mô và môi trường vi mô"
+    },
+    {
+      "id": 106,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Môi trường nào dưới đây của tổ chức bao gồm các yếu tố: Khách hàng, nhà cung ứng, đối thủ cạnh tranh, các trung gian, công chúng, bản thân doanh nghiệp?",
+      "options": {
+        "A": "Vĩ mô.",
+        "B": "Sơ cấp.",
+        "C": "Thứ cấp.",
+        "D": "Vi mô."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Vi mô."
+    },
+    {
+      "id": 107,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Môi trường nội bộ bao gồm những yếu tố nào?",
+      "options": {
+        "A": "Cơ hội thách thức của doanh nghiệp.",
+        "B": "Tất cả các yếu tố bên trong doanh nghiệp: Chủ sở hữu, nhân viên, môi trường làm việc, triết lý kinh doanh, văn hóa tổ chức.",
+        "C": "Nguồn lực, tài chính của doanh nghiệp.",
+        "D": "Tất cả nhân viên và chiến lược của doanh nghiệp."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Tất cả các yếu tố bên trong doanh nghiệp: Chủ sở hữu, nhân viên, môi trường làm việc, triết lý kinh doanh, văn hóa tổ chức."
+    },
+    {
+      "id": 108,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Môi trường quản trị là:",
+      "options": {
+        "A": "Tổng thể các yếu tố tác động lên tổ chức",
+        "B": "Tổng thể các yếu tố tác động lên và chịu tác động bởi hoạt động của tổ chức",
+        "C": "Tổng thể các yếu tố chịu tác động của tổ chức",
+        "D": "Tổng thể các yếu tố tác động tích cực vào tổ chức"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Tổng thể các yếu tố tác động lên và chịu tác động bởi hoạt động của tổ chức"
+    },
+    {
+      "id": 109,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Người cung cấp có thể tăng thêm lợi nhuận bằng cách nào?",
+      "options": {
+        "A": "Tăng giá, giảm chất lượng sản phẩm, giảm mức độ dịch vụ kèm theo",
+        "B": "Tăng giá, tăng chất lượng sản phẩm, giảm mức độ dịch vụ kèm theo",
+        "C": "Giảm giá, giảm chất lượng sản phẩm, tăng mức độ dịch vụ kèm theo",
+        "D": "Giảm giá, tăng chất lượng sản phẩm, tăng mức độ dịch vụ kèm theo"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Tăng giá, giảm chất lượng sản phẩm, giảm mức độ dịch vụ kèm theo"
+    },
+    {
+      "id": 110,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Nhà cung ứng là yếu tố của môi trường nào sau đây?",
+      "options": {
+        "A": "Không có đáp án nào đúng",
+        "B": "Môi trường vi mô",
+        "C": "Môi trường vĩ mô",
+        "D": "Môi trường bên trong"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Môi trường vi mô"
+    },
+    {
+      "id": 111,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Những nhóm yếu tố nào sau đây không được xem xét khi đánh giá rủi ro chính trị?",
+      "options": {
+        "A": "Bùng nổ dân số",
+        "B": "Xu thế chính trị",
+        "C": "Sự mất ổn định trong nước",
+        "D": "Sự xung đột với nước ngoài"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Bùng nổ dân số"
+    },
+    {
+      "id": 112,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Phát biểu nào sau đây KHÔNG đúng khi nói về sự thay đổi của các yếu tố kỹ thuật công nghệ?",
+      "options": {
+        "A": "Có nhiều cuộc cách mạng công nghệ mới về máy tính, robot và tự động hóa",
+        "B": "Vòng đời sản phẩm ngày càng ngắn hơn",
+        "C": "Công nghệ mới có những ảnh hưởng đối với doanh nghiệp",
+        "D": "Chu kỳ đổi mới công nghệ ngày càng dài hơn"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Chu kỳ đổi mới công nghệ ngày càng dài hơn"
+    },
+    {
+      "id": 113,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Phân tích đối thủ cạnh tranh là phân tích yếu tố của môi trường nào?",
+      "options": {
+        "A": "Vĩ mô.",
+        "B": "Vi mô.",
+        "C": "Nội bộ.",
+        "D": "Kinh tế."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Vi mô."
+    },
+    {
+      "id": 114,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Phân tích môi trường nội bộ của tổ chức giúp trả lời những câu hỏi nào?",
+      "options": {
+        "A": "Thách thức- Cơ hội",
+        "B": "Điểm mạnh- Điểm yếu",
+        "C": "Yếu tố xã hội",
+        "D": "Yếu tố tự nhiên"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Điểm mạnh- Điểm yếu"
+    },
+    {
+      "id": 115,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Tham nhũng là một khía cạnh trong yếu tố môi trường ... mà tổ chức cần quan tâm khi đầu tư.",
+      "options": {
+        "A": "Chính trị",
+        "B": "Xã hội",
+        "C": "Luật pháp",
+        "D": "Văn hóa"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Chính trị"
+    },
+    {
+      "id": 116,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Thay đổi quy định của Nhà nước về điều kiện kinh doanh và sự phụ thuộc nguyên liệu đầu vào của doanh nghiệp là ví dụ về yếu tố môi trường nào trong quản trị?",
+      "options": {
+        "A": "Môi trường kinh tế và nhà cung cấp",
+        "B": "Môi trường luật pháp và đối thủ cạnh tranh",
+        "C": "Môi trường chính trị và khách hàng",
+        "D": "Môi trường pháp luật và nhà cung cấp"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Môi trường pháp luật và nhà cung cấp"
+    },
+    {
+      "id": 117,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Trong các yếu tố sau đây, yếu tố nào KHÔNG thuộc về môi trường vi mô của tổ chức? Chọn phương án trả lời đúng nhất.",
+      "options": {
+        "A": "Đối thủ cạnh tranh.",
+        "B": "Các khách hàng.",
+        "C": "Nhà cung ứng.",
+        "D": "Điều kiện chính trị."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Điều kiện chính trị."
+    },
+    {
+      "id": 118,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Trong môi trường vi mô có những yếu tố cơ bản nào?",
+      "options": {
+        "A": "Đối thủ cạnh tranh",
+        "B": "Tất cả các đáp án đều đúng",
+        "C": "Nhà cung cấp và các đối thủ mới tiềm ẩn",
+        "D": "Khách hàng và hàng thay thế"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Tất cả các đáp án đều đúng"
+    },
+    {
+      "id": 119,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Tỷ giá ngoại hối, lãi suất, thâm hụt, thặng dư ngân sách nhà nước, cán cân thanh toán quốc tế... là các ví dụ minh họa cho yếu tố nào dưới đây?",
+      "options": {
+        "A": "Công nghệ.",
+        "B": "Kinh tế.",
+        "C": "Văn hóa xã hội.",
+        "D": "Tự nhiên."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Kinh tế."
+    },
+    {
+      "id": 120,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Việc tăng sản lượng tiềm năng của một quốc gia trong một giai đoạn nhất định là: (Chọn phương án trả lời đúng nhất)?",
+      "options": {
+        "A": "Tăng trưởng kinh tế.",
+        "B": "Phát triển kinh tế.",
+        "C": "Tăng trưởng GPN.",
+        "D": "Tăng trưởng GDP."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tăng trưởng GPN."
+    },
+    {
+      "id": 121,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Yếu tố nào sau đây thuộc môi trường vĩ mô của tổ chức?",
+      "options": {
+        "A": "Nhà cung cấp.",
+        "B": "Đối thủ.",
+        "C": "Khách hàng.",
+        "D": "Chính trị - pháp luật."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Chính trị - pháp luật."
+    },
+    {
+      "id": 122,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Yếu tố nào trong môi trường vĩ mô của tổ chức thay đổi nhanh nhất?",
+      "options": {
+        "A": "Tự nhiên.",
+        "B": "Kinh tế.",
+        "C": "Văn hóa xã hội.",
+        "D": "Công nghệ."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Công nghệ."
+    }
+  ]
+}

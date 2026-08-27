@@ -1,0 +1,567 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Quản trị học - Chương 4",
+  "chapter": "Chương 4",
+  "totalQuestions": 40,
+  "questions": [
+    {
+      "id": 123,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Bước cuối cùng trong quá trình lập kế hoạch chiến lược là:",
+      "options": {
+        "A": "Triển khai kế hoạch chiến lược",
+        "B": "Triển khai các kế hoạch tác nghiệp",
+        "C": "Lặp lại quá trình lập kế hoạch",
+        "D": "Kiểm tra và đánh giá kết quả"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Kiểm tra và đánh giá kết quả"
+    },
+    {
+      "id": 124,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Bước đầu tiên trong quản trị theo mục tiêu MBO là gì?",
+      "options": {
+        "A": "Đánh giá hiệu quả và thưởng/ phạt trên hiệu quả.",
+        "B": "Xây dụng mục tiêu theo tiêu chí SMART.",
+        "C": "Đánh giá kỳ kiệu suất (sự thi hành).",
+        "D": "Phát triển kế hoạch hành động/ triển khai."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Xây dụng mục tiêu theo tiêu chí SMART."
+    },
+    {
+      "id": 125,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Bước đầu tiên trong quá trình lập kế hoạch chiến lược là:",
+      "options": {
+        "A": "Xác định sứ mệnh và các mục tiêu của tổ chức",
+        "B": "Phân tích các đe dọa và cơ hội môi trường",
+        "C": "Xây dựng các kế hoạch chiến lược để lựa chọn",
+        "D": "Đánh giá điểm mạnh và điểm yếu của tổ chức"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Xác định sứ mệnh và các mục tiêu của tổ chức"
+    },
+    {
+      "id": 126,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Bước thứ ba trong quá trình lập kế hoạch chiến lược là:",
+      "options": {
+        "A": "Xây dựng các kế hoạch chiến lược để lựa chọn",
+        "B": "Phân tích các đe dọa và cơ hội môi trường",
+        "C": "Xác định sứ mệnh và các mục tiêu của tổ chức",
+        "D": "Đánh giá điểm mạnh và điểm yếu của tổ chức"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Đánh giá điểm mạnh và điểm yếu của tổ chức"
+    },
+    {
+      "id": 127,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Câu nào SAI trong những câu sau đây?",
+      "options": {
+        "A": "Các nhà nghiên cứu về quản trị học phân biệt",
+        "B": "Mục tiêu là nền tảng của hoạch định",
+        "C": "Mục tiêu là những mong đợi mà nhà quản trị muốn đạt được trong tương lai cho tổ chức của mình",
+        "D": "Những mục tiêu định tính thường dễ đo lường"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Những mục tiêu định tính thường dễ đo lường"
+    },
+    {
+      "id": 128,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Chu trình lập kế hoạch có hai bước lớn, đó là:",
+      "options": {
+        "A": "(1) Lập kế hoạch, sau đó (2) Đặt ra mục tiêu.",
+        "B": "(1) Đặt ra mục tiêu, sau đó (2) Lập kế hoạch.",
+        "C": "(1) Lập kế hoạch, sau đó (2) nhận phản hồi.",
+        "D": "(1) Xem xét các kế hoạch trước đó, sau đó (2) Đánh giá các kế hoạch."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. (1) Đặt ra mục tiêu, sau đó (2) Lập kế hoạch."
+    },
+    {
+      "id": 129,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Chức năng nào dưới đây là việc xác định trước một chương trình hành động trong tương lai cho tổ chức, bộ phận hay cá nhân trên cơ sở xác định các mục tiêu cần đạt được và phương pháp để đạt được các mục tiêu đó?",
+      "options": {
+        "A": "Ra quyết định.",
+        "B": "Kiểm tra và điều chỉnh.",
+        "C": "Lập kế hoạch.",
+        "D": "Quản lý."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Lập kế hoạch."
+    },
+    {
+      "id": 130,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Công việc nào dưới đây có thể phân biệt lập kế hoạch một cách chính tắc và không chính tắc?",
+      "options": {
+        "A": "Viết các mục tiêu thành văn bản.",
+        "B": "Truyền đạt các bản kế hoạch đến mọi nhân viên quản lý.",
+        "C": "Lập kế hoạch cho 1 năm tiếp theo.",
+        "D": "Thiết lập mục tiêu tổng quát."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Viết các mục tiêu thành văn bản."
+    },
+    {
+      "id": 131,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Đặc tính của quản trị theo mục tiêu (MBO) là mỗi thành viên trong tổ chức... ràng buộc và... hành động trong suốt quá trình quản trị.",
+      "options": {
+        "A": "Chấp nhận, tích cực",
+        "B": "Cam kết, tự nguyện",
+        "C": "Tự nguyện, tích cực",
+        "D": "Tự nguyện, cam kết"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tự nguyện, cam kết"
+    },
+    {
+      "id": 132,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Đâu KHÔNG phải là các thành phần của bản kế hoạch?",
+      "options": {
+        "A": "Mục tiêu.",
+        "B": "Chương trình.",
+        "C": "Ngân quỹ.",
+        "D": "Bản mô tả kế hoạch."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Bản mô tả kế hoạch."
+    },
+    {
+      "id": 133,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Đâu là công cụ hay được sử dụng để xác định các điểm mạnh, điểm yếu, cơ hội và thách thức cho tổ chức trong công việc lập kế hoạch? Chọn đáp án trả lời đúng nhất.",
+      "options": {
+        "A": "KPI (các chỉ số đánh giá kết quả).",
+        "B": "SMART.",
+        "C": "SWOT.",
+        "D": "Sơ đồ Gantt."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. SWOT."
+    },
+    {
+      "id": 134,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Điều nào sau đây KHÔNG được coi là một phần của chức năng lập kế hoạch của nhà quản trị?",
+      "options": {
+        "A": "Xác định mục tiêu",
+        "B": "Đưa ra các chiến lược",
+        "C": "Thúc đẩy/động viên nhân viên",
+        "D": "Ra quyết định"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Thúc đẩy/động viên nhân viên"
+    },
+    {
+      "id": 135,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Kế hoạch dài hạn trong tổ chức thường có thời gian....",
+      "options": {
+        "A": "Từ 1 đến 3 năm",
+        "B": "Trên 5 năm",
+        "C": "Dưới 1 năm",
+        "D": "Từ 3 đến 5 năm"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Trên 5 năm"
+    },
+    {
+      "id": 136,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Kế hoạch sử dụng nhiều lần là những cách thức hành động đã được tiêu chuẩn hóa để giải quyết những tình huống ......và có thể lường trước.",
+      "options": {
+        "A": "Thường xảy ra",
+        "B": "Ít xảy ra",
+        "C": "Phát sinh",
+        "D": "Xuất hiện"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Thường xảy ra"
+    },
+    {
+      "id": 137,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Lập kế hoạch chiến lược do ai đảm nhận?",
+      "options": {
+        "A": "Quản trị cấp cao",
+        "B": "Quản trị cấp cơ sở",
+        "C": "Quản trị cấp trung",
+        "D": "Không đáp án nào đúng"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Quản trị cấp cao"
+    },
+    {
+      "id": 138,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Lập kế hoạch là:",
+      "options": {
+        "A": "Xây dựng các kế hoạch hàng năm",
+        "B": "Xây dựng kế hoạch cho hoạt động của toàn công ty",
+        "C": "Xác định những mục tiêu và các biện pháp thực hiện mục tiêu",
+        "D": "Xây dựng các kế hoạch dài hạn"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Xác định những mục tiêu và các biện pháp thực hiện mục tiêu"
+    },
+    {
+      "id": 139,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Lập kế hoạch là một kế trình",
+      "options": {
+        "A": "không thay đổi.",
+        "B": "được thiết lập sẵn.",
+        "C": "liên tục.",
+        "D": "không linh hoạt."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. liên tục."
+    },
+    {
+      "id": 140,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Ma trận điểm mạnh-điểm yếu với cơ hội-nguy cơ (SWOT) có thể giúp nhà quản trị phát triển bao nhiêu loại chiến lược?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "2",
+        "D": "6"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. 4"
+    },
+    {
+      "id": 141,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "MBO là gì?",
+      "options": {
+        "A": "Công cụ xây dựng chiến lược.",
+        "B": "Phương thức đáng giác mục tiêu quản trị.",
+        "C": "Phương pháp đánh giá kết quả hoàn nhiệm vụ.",
+        "D": "Phương thức quản trị toàn diện."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Phương thức đáng giác mục tiêu quản trị."
+    },
+    {
+      "id": 142,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Mục đích của lập kế hoạch không bao gồm yếu tố nào?",
+      "options": {
+        "A": "Giảm sự chồng chéo",
+        "B": "Phối hợp nỗ lực của toàn bộ tổ chức",
+        "C": "Loại trừ khả năng biến động của môi trường",
+        "D": "Là cơ sở cho hoạt động kiểm soát"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Là cơ sở cho hoạt động kiểm soát"
+    },
+    {
+      "id": 143,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Mục tiêu nào sau đây được diễn đạt tốt nhất theo SMART?",
+      "options": {
+        "A": "Nâng mức thu nhập bình quân của nhân viên bán hàng lên 5 triệu/tháng vào năm 2023",
+        "B": "Thành lập công ty thành công hơn Apple trong 2 năm tới",
+        "C": "Xây dựng thêm một số nhà máy trong thời gian tới",
+        "D": "Đạt doanh số gấp 3 lần vào cuối năm"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Nâng mức thu nhập bình quân của nhân viên bán hàng lên 5 triệu/tháng vào năm 2023"
+    },
+    {
+      "id": 144,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Những người quản lý ở cấp cao hơn trong tổ chức, vai trò lập kế hoạch của họ sẽ hướng tới loại kế hoạch nào?",
+      "options": {
+        "A": "Chiến lược.",
+        "B": "Chiến thuật.",
+        "C": "Sử dụng một lần.",
+        "D": "Định hướng."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Chiến lược."
+    },
+    {
+      "id": 145,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Nhận định nào sau đây SAI?",
+      "options": {
+        "A": "Lập kế hoạch chính thức củng cố thành công, có thể dẫn đến thành bại.",
+        "B": "Các kế hoạch chính thức có thể thay thế trực giác và sự sáng tạo.",
+        "C": "Lập kế hoạch có thể tạo ra sự cứng nhắc.",
+        "D": "Không thể phát triển kế hoạch cho một môi trường năng động."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Các kế hoạch chính thức có thể thay thế trực giác và sự sáng tạo."
+    },
+    {
+      "id": 146,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Mục tiêu nào thường được gọi là mục tiêu chiến lược?",
+      "options": {
+        "A": "Mục tiêu được công bố.",
+        "B": "Mục tiêu tài chính.",
+        "C": "Mục tiêu ngắn hạn.",
+        "D": "Mục tiêu dài hạn."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Mục tiêu dài hạn."
+    },
+    {
+      "id": 147,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Nội dung của hoạch định bao gồm các yếu tố, trừ....",
+      "options": {
+        "A": "Phân tích nội bộ doanh nghiệp",
+        "B": "Phân tích dây chuyền giá trị",
+        "C": "Thiết lập mục tiêu",
+        "D": "Xây dựng hệ thống kiểm soát"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Xây dựng hệ thống kiểm soát"
+    },
+    {
+      "id": 148,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Phân loại kế hoạch dựa trên:",
+      "options": {
+        "A": "Tất cả các đáp án",
+        "B": "Tần suất sử dụng",
+        "C": "Tính cụ thể",
+        "D": "Phạm vi; Độ dài thời gian"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Tất cả các đáp án"
+    },
+    {
+      "id": 149,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Phân tích SWOT là công cụ để xác định điều gì?",
+      "options": {
+        "A": "Lập kế hoạch tiến độ.",
+        "B": "Đánh giá kết quả nhân sự.",
+        "C": "Xây dựng mục tiêu.",
+        "D": "Điểm mạnh, điểm yếu, cơ hội và thách thức."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Điểm mạnh, điểm yếu, cơ hội và thách thức."
+    },
+    {
+      "id": 150,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Quản trị theo mục tiêu (MBO) giúp:",
+      "options": {
+        "A": "Tất cả các đáp án đều đúng",
+        "B": "Góp phần đào tạo và huấn luyện nhân viên cấp dưới",
+        "C": "Tăng tính chủ động sáng tạo của nhân viên cấp dưới",
+        "D": "Động viên khuyến khích nhân viên cấp dưới tốt hơn"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Tất cả các đáp án đều đúng"
+    },
+    {
+      "id": 151,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Quản trị theo mục tiêu MBO là gì?",
+      "options": {
+        "A": "Là cách quản trị thông qua việc mọi thành viên quản lý và thực hiện những mục tiêu doanh nghiệp đề ra",
+        "B": "Là cách quản trị thông qua việc mọi thành viên xác định mục tiêu và thực hiện mục tiêu đó",
+        "C": "Là cách quản trị thông qua việc mọi thành viên tự mình xác định mục tiêu",
+        "D": "Là cách quản trị thông qua việc mọi thành viên xác định mục tiêu, tự mình"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Là cách quản trị thông qua việc mọi thành viên xác định mục tiêu, tự mình"
+    },
+    {
+      "id": 152,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Quyền thương lượng của khách hàng phụ thuộc vào:",
+      "options": {
+        "A": "Tất cả các đáp án đều sai",
+        "B": "Khả năng của họ trong việc tạo ra áp lực giảm giá, chất lượng sản phẩm cao, hay chiết khấu theo số lượng hàng mua",
+        "C": "Khả năng của họ trong việc tạo ra áp lực giảm giá",
+        "D": "Khả năng của họ trong việc yêu cầu được ưu đãi, khuyến mại"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Khả năng của họ trong việc tạo ra áp lực giảm giá, chất lượng sản phẩm cao, hay chiết khấu theo số lượng hàng mua"
+    },
+    {
+      "id": 153,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Theo ma trận tăng trưởng và tham gia thị trường của BCG, khi công ty xác định mục tiêu chiến lược và ngân sách để giao phó cho mỗi đơn vị kinh doanh chiến lược, các mục tiêu cụ thể là:",
+      "options": {
+        "A": "Xây dựng (build), phát triển (improve), duy trì (hold), loại bỏ (divest)",
+        "B": "Phát triển (improve), duy trì (hold), loại bỏ (divest), gặt hái ngay (harvest)",
+        "C": "Xây dựng (build), phát triển (improve), duy trì (hold), gặt hái ngay",
+        "D": "Xây dựng (build), duy trì (hold), gặt hái ngay (harvest), loại bỏ (divest)"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Xây dựng (build), duy trì (hold), gặt hái ngay (harvest), loại bỏ (divest)"
+    },
+    {
+      "id": 154,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Theo quản trị theo mục tiêu (MBO), yếu tố nào sau đây làm tăng hiệu quả quản trị?",
+      "options": {
+        "A": "Lãnh đạo theo phong cách tự do",
+        "B": "Mục tiêu thách thức, cụ thể",
+        "C": "Kiểm soát chặt chẽ",
+        "D": "Mục tiêu đưa từ trên xuống"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Mục tiêu thách thức, cụ thể"
+    },
+    {
+      "id": 155,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Thời gian dành cho chức năng lập kế hoạch sẽ cần nhiều hơn với nhà quản trị....",
+      "options": {
+        "A": "Cấp cao",
+        "B": "Tất cả các nhà quản trị",
+        "C": "Cấp cơ sở",
+        "D": "Cấp trung"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Cấp cao"
+    },
+    {
+      "id": 156,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Thứ tự nào sau đây là đúng?",
+      "options": {
+        "A": "Lập kế hoạch chiến lược, tạo ra một tuyên bố sứ mệnh và tạo ra một tuyên bố tầm nhìn",
+        "B": "Hoạch định chiến lược, lập kế hoạch hoạt động và chuẩn bị tuyên bố tầm nhìn",
+        "C": "Viết tuyên bố sứ mệnh, tạo tuyên bố tầm nhìn và lập kế hoạch chiến lược",
+        "D": "Lập kế hoạch hoạt động, tạo tuyên bố sứ mệnh và phát triển kế hoạch tuyển dụng"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Viết tuyên bố sứ mệnh, tạo tuyên bố tầm nhìn và lập kế hoạch chiến lược"
+    },
+    {
+      "id": 157,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Trong quá trình hoạch định chiến lược, những quá trình nào có thể được tiến hành đồng thời?",
+      "options": {
+        "A": "Xác định sứ mệnh và các mục tiêu của tổ chức, đánh giá những điểm mạnh và điểm yếu của tổ chức",
+        "B": "Xây dựng chiến lược để lựa chọn, triển khai các kế hoạch chiến lược, kiểm tra và đánh giá kết quả",
+        "C": "Tất cả các đáp án đều sai",
+        "D": "Xây dựng chiến lược để lựa chọn, triển"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Xác định sứ mệnh và các mục tiêu của tổ chức, đánh giá những điểm mạnh và điểm yếu của tổ chức"
+    },
+    {
+      "id": 158,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Tuyên bố sứ mệnh và tuyên bố tầm nhìn nhằm trả lời hai câu hỏi nào?",
+      "options": {
+        "A": "Lý do tồn tại của chúng ta là gì?; Chúng ta muốn trở thành gì?",
+        "B": "Chúng ta muốn trở thành gì?; Chúng tôi cung cấp những sản phẩm dịch vụ gì?",
+        "C": "Chúng tôi cung cấp những sản phẩm dịch vụ gì?; Lý do chúng ta tồn tại là gì?",
+        "D": "Chúng ta muốn trở thành gì?; Lý do của chúng ta tồn tại là gì?"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Lý do tồn tại của chúng ta là gì?; Chúng ta muốn trở thành gì?"
+    },
+    {
+      "id": 159,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Việc đánh giá những điểm mạnh và điểm yếu cho phép các nhà quản trị....",
+      "options": {
+        "A": "Tiếp cận gần hơn với những khách hàng tiềm năng",
+        "B": "Tìm được phương pháp kinh doanh phù hợp",
+        "C": "Nhận diện những năng lực cốt lõi của tổ chức",
+        "D": "Tạo ra những cơ hội nâng cao khả năng cho tổ chức"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Nhận diện những năng lực cốt lõi của tổ chức"
+    },
+    {
+      "id": 160,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Yếu tố nào sau đây là cơ sở của việc lập kế hoạch.",
+      "options": {
+        "A": "Các kế hoạch",
+        "B": "Các chiến lược.",
+        "C": "Các chính sách.",
+        "D": "Các mục tiêu."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Các mục tiêu."
+    },
+    {
+      "id": 161,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Xây dựng mục tiêu theo kiểu quản trị theo mục tiêu (MBO) được đặt ra theo cách",
+      "options": {
+        "A": "Cấp trên định hướng và cùng cấp dưới để ra mục tiêu",
+        "B": "Mục tiêu trở thành cam kết",
+        "C": "Từ cấp cao",
+        "D": "Từ cấp dưới"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Cấp trên định hướng và cùng cấp dưới để ra mục tiêu"
+    },
+    {
+      "id": 162,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Yếu tố nào không phải là ưu điểm của việc lập kế hoạch? Chọn phương án trả lời đúng nhất.",
+      "options": {
+        "A": "Lập kế hoạch tránh lãng phí cho tổ chức.",
+        "B": "Giúp cho doanh nghiệp ứng phó tốt hơn với các tình huống bất định.",
+        "C": "Định hướng cho nhà quản trị và nhân viên trong tổ chức.",
+        "D": "Tăng chi phí của tổ chức."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tăng chi phí của tổ chức."
+    }
+  ]
+}

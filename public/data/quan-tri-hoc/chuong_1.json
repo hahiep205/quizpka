@@ -1,0 +1,595 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Quản trị học - Chương 1",
+  "chapter": "Chương 1",
+  "totalQuestions": 42,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Các chức năng cơ bản theo quản trị học hiện đại gồm:",
+      "options": {
+        "A": "4 chức năng",
+        "B": "6 chức năng",
+        "C": "3 chức năng",
+        "D": "5 chức năng"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 4 chức năng"
+    },
+    {
+      "id": 2,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Càng xuống cấp thấp hơn thời gian dành cho chức năng quản trị nào sẽ càng quan trọng?",
+      "options": {
+        "A": "Tổ chức và kiểm tra",
+        "B": "Lãnh đạo",
+        "C": "Tất cả các đáp án",
+        "D": "Lập kế hoạch"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Lãnh đạo"
+    },
+    {
+      "id": 3,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Cấp quản trị nào chịu trách nhiệm chính đối với các hoạt động chức năng? Chọn phương án đúng nhất",
+      "options": {
+        "A": "Cấp cao, cấp trung.",
+        "B": "Cấp trung, cấp cơ sở.",
+        "C": "Cấp cao, cấp trung, cấp cơ sở.",
+        "D": "Nhân viên thừa hành."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Cấp cao, cấp trung, cấp cơ sở."
+    },
+    {
+      "id": 4,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Đâu KHÔNG phải là đặc điểm của tổ chức? Chọn phương án trả lời đúng nhất.",
+      "options": {
+        "A": "Tập hợp hai hay nhiều người.",
+        "B": "Cùng làm việc với nhau và phối hợp các hoạt động.",
+        "C": "Nhằm đạt đến các mục tiêu chung.",
+        "D": "Nhằm đạt đến các mục tiêu riêng của cá nhân."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Nhằm đạt đến các mục tiêu riêng của cá nhân."
+    },
+    {
+      "id": 5,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Để đạt hiệu quả, các nhà quản trị cần phải:",
+      "options": {
+        "A": "Tất cả các đáp án đều chưa chính xác",
+        "B": "Giảm chi phí đầu vào",
+        "C": "Xác định và hoàn thành đúng mục tiêu",
+        "D": "Tăng doanh thu ở đầu ra"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Xác định và hoàn thành đúng mục tiêu"
+    },
+    {
+      "id": 6,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Để tăng hiệu quả, các nhà quản trị có thể thực hiện bằng cách:",
+      "options": {
+        "A": "Giảm chi phí ở đầu vào và kết quả ở đầu ra không thay đổi",
+        "B": "Tất cả các đáp án đều sai",
+        "C": "Chi phí ở đầu vào không đổi và tăng kết quả đầu ra",
+        "D": "Vừa giảm chi phí ở đầu vào và tăng kết quả đầu ra"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Tất cả các đáp án đều sai"
+    },
+    {
+      "id": 7,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Điền vào chỗ trống: Chức năng lập kế hoạch nhằm xác định mục tiêu cần đạt được và đề ra ... hành động để đạt mục tiêu trong từng khoảng thời gian nhất định.",
+      "options": {
+        "A": "Cách thức",
+        "B": "Chương trình",
+        "C": "Giới hạn",
+        "D": "Quan điểm"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Chương trình"
+    },
+    {
+      "id": 8,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Điền vào chỗ trống: Nhà quản trị cấp cơ sở thì kỹ năng ... càng quan trọng.",
+      "options": {
+        "A": "Giao tiếp",
+        "B": "Nhận thức",
+        "C": "Nhân sự",
+        "D": "Chuyên môn"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Chuyên môn"
+    },
+    {
+      "id": 9,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Điền vào chỗ trống: Quản trị hướng tổ chức đạt mục tiêu với ... cao nhất và chi phí thấp nhất",
+      "options": {
+        "A": "Sự thỏa mãn",
+        "B": "Kết quả",
+        "C": "Lợi ích",
+        "D": "Lợi nhuận"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Kết quả"
+    },
+    {
+      "id": 10,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Điền vào chỗ trống: Quản trị là những hoạt động cần thiết khi có nhiều người kết hợp với nhau trong một tổ chức nhằm thực hiện ...... chung.",
+      "options": {
+        "A": "Mục tiêu",
+        "B": "Lợi nhuận",
+        "C": "Lợi ích",
+        "D": "Kế hoạch"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Mục tiêu"
+    },
+    {
+      "id": 11,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Hiệu quả quản trị được hiểu là gì? Chọn phương án đúng nhất.",
+      "options": {
+        "A": "Quan hệ giữa mục tiêu và nguồn lực.",
+        "B": "Quan hệ giữa nguồn lực và kết quả.",
+        "C": "Đạt được các mục tiêu đã đạt ra.",
+        "D": "Hệ thống mục tiêu nhất quán."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Quan hệ giữa mục tiêu và nguồn lực."
+    },
+    {
+      "id": 12,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Hiệu quả và hiệu suất của quản trị chỉ có được khi:",
+      "options": {
+        "A": "Làm đúng việc",
+        "B": "Làm đúng cách",
+        "C": "Tỷ lệ giữa kết quả đạt được/chi phí bỏ ra cao",
+        "D": "Làm đúng cách để đạt được mục tiêu"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Làm đúng cách để đạt được mục tiêu"
+    },
+    {
+      "id": 13,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Hoạt động quản trị thường được thực hiện thông qua bốn chức năng:",
+      "options": {
+        "A": "Kế hoạch, chỉ đạo, tổ chức, kiểm tra",
+        "B": "Lập kế hoạch, tổ chức, phối hợp, báo cáo",
+        "C": "Lập kế hoạch, tổ chức, lãnh đạo, kiểm tra",
+        "D": "Lập kế hoạch, nhân sự, chỉ huy, phối hợp"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Lập kế hoạch, tổ chức, lãnh đạo, kiểm tra"
+    },
+    {
+      "id": 14,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Hiệu suất của quản trị chỉ có được khi:",
+      "options": {
+        "A": "Tất cả các đáp án đều sai",
+        "B": "Làm việc đúng cách",
+        "C": "Làm đúng việc",
+        "D": "Chi phí thấp"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Làm việc đúng cách"
+    },
+    {
+      "id": 15,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Khả năng am hiểu kiến thức và kỹ thuật, thành thạo trong thực hiện các công việc cụ thể là kỹ năng nào?",
+      "options": {
+        "A": "Kỹ năng quản lý.",
+        "B": "Kỹ năng nhân sự.",
+        "C": "Kỹ năng nhận thức.",
+        "D": "Kỹ năng chuyên môn."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Kỹ năng chuyên môn."
+    },
+    {
+      "id": 16,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Kỹ năng nào dưới đây thuộc về nhóm kỹ năng tư duy? Chọn phương án đúng nhất.",
+      "options": {
+        "A": "Hiểu rõ mô hình kinh doanh của doanh nghiệp.",
+        "B": "Kỹ năng huấn luyện và cố vấn.",
+        "C": "Tín nhiệm giữa đồng nghiệp.",
+        "D": "Khả năng nhận dạng cơ hội để đổi mới."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Khả năng nhận dạng cơ hội để đổi mới."
+    },
+    {
+      "id": 17,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Năng lực hành động chiến lược của nhà quản trị được hiểu là gì?",
+      "options": {
+        "A": "Việc thực hiện công việc quản trị trong một tổ chức thông qua việc phối hợp sử dụng các nguồn lực nhân sự, tài chính, thông tin và nguyên liệu từ nhiều quốc gia và đáp ứng nhu cầu thị trường với sự đa dạng về văn hóa.",
+        "B": "Hiểu rõ sứ mệnh tổng quát và các giá trị của tổ chức, đoán chắc rằng các hoạt động của mình và của những thuộc cấp được phân định, phối hợp rõ ràng.",
+        "C": "Khả năng truyền đạt và trao đổi một cách hiệu quả thông tin làm sao để mình và những người khác có thể hiểu rõ.",
+        "D": "Hoàn thành công việc thông qua những nhóm người có cùng trách nhiệm và thực hiện công việc mang tính phụ thuộc lẫn nhau."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Hiểu rõ sứ mệnh tổng quát và các giá trị của tổ chức, đoán chắc rằng các hoạt động của mình và của những thuộc cấp được phân định, phối hợp rõ ràng."
+    },
+    {
+      "id": 18,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Năng lực làm việc nhóm của nhà quản trị được hiểu là gì?",
+      "options": {
+        "A": "Việc thực hiện công việc quản trị trong một tổ chức thông qua việc phối hợp sử dụng các nguồn lực nhân sự, tài chính, thông tin và nguyên liệu từ nhiều quốc gia và đáp ứng nhu cầu thị trường với sự đa dạng về văn hóa.",
+        "B": "Hiểu rõ sứ mệnh tổng quát và các giá trị của tổ chức, đoán chắc rằng các hoạt động của mình và của những thuộc cấp được phân định, phối hợp rõ ràng.",
+        "C": "Khả năng truyền đạt và trao đổi một cách hiệu quả thông tin làm sao để mình và những người khác có thể hiểu rõ.",
+        "D": "Hoàn thành công việc thông qua những nhóm người có cùng trách nhiệm và thực hiện công việc mang tính phụ thuộc lẫn nhau."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Hoàn thành công việc thông qua những nhóm người có cùng trách nhiệm và thực hiện công việc mang tính phụ thuộc lẫn nhau."
+    },
+    {
+      "id": 19,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Năng lực truyền thông của nhà quản trị được hiểu là gì? Chọn phương án trả lời đúng nhất.",
+      "options": {
+        "A": "Cách hoàn thành công việc thông quan những nhóm người có cùng trách nhiệm và thực hiện công việc mang tính phụ thuộc lẫn nhau.",
+        "B": "Hiểu rõ sứ mệnh tổng quát và các giá trị của tổ chức, và đoán chắc rằng các hoạt động của mình và những thuộc cấp.",
+        "C": "Việc quyết định những nhiệm vụ cần phải thực hiện, xác định rõ xem chúng có thể thực hiện như thế nào, phân bổ các nguồn lực để thực hiện các nhiệm vụ đó và giám sát toàn bộ tiến trình để đoán chắc rằng chúng được thực hiện tốt.",
+        "D": "Là khả năng truyền đạt và trao đổi một cách hiệu quả thông tin làm sao để mình và những người khác có thể hiểu rõ."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Là khả năng truyền đạt và trao đổi một cách hiệu quả thông tin làm sao để mình và những người khác có thể hiểu rõ."
+    },
+    {
+      "id": 20,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Nghệ thuật quản trị có được từ:",
+      "options": {
+        "A": "Khả năng bẩm sinh",
+        "B": "Trải nghiệm qua thực hành quản trị",
+        "C": "Các chương trình đào tạo",
+        "D": "Từ cha truyền con nối"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Trải nghiệm qua thực hành quản trị"
+    },
+    {
+      "id": 21,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Nhà quản trị cấp cao cần thiết nhất kỹ năng:",
+      "options": {
+        "A": "Chuyên môn",
+        "B": "Nhận thức",
+        "C": "Kỹ năng nhận thức + nhân sự",
+        "D": "Nhân sự"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Nhận thức"
+    },
+    {
+      "id": 22,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Nhà quản trị cần phân bố thời gian nhiều nhất cho việc thực hiện chức năng:",
+      "options": {
+        "A": "Điều khiển và kiểm tra",
+        "B": "Hoạch định và kiểm tra",
+        "C": "Hoạch định và tổ chức",
+        "D": "Tất cả phương án đều không chính xác"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả phương án đều không chính xác"
+    },
+    {
+      "id": 23,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Nhà quản trị cấp trung",
+      "options": {
+        "A": "Tất cả các đáp án đều không đúng",
+        "B": "Quản lý các nguồn lực tham gia trực tiếp vào quá trình sản xuất, kinh doanh",
+        "C": "Triển khai chiến lược của tổ chức",
+        "D": "Chịu trách nhiệm ra quyết định cao nhất, thiết lập mục tiêu và kế hoạch cho toàn tổ chức"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Triển khai chiến lược của tổ chức"
+    },
+    {
+      "id": 24,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Nhà quản trị cấp cơ sở cần tập trung thời gian nhiều nhất cho chức năng nào sau đây?",
+      "options": {
+        "A": "Lãnh đạo",
+        "B": "Tổ chức và kiểm tra",
+        "C": "Tất cả các chức năng trên",
+        "D": "Lập kế hoạch"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Lãnh đạo"
+    },
+    {
+      "id": 25,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Nhà quản trị phân bố thời gian nhiều nhất cho việc thực hiện chức năng?",
+      "options": {
+        "A": "Tổ chức",
+        "B": "Lập kế hoạch",
+        "C": "Tất cả các đáp án đều không chính xác",
+        "D": "Điểu khiển và kiểm tra"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tất cả các đáp án đều không chính xác"
+    },
+    {
+      "id": 26,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Những người chịu trách nhiệm ra quyết định cao nhất, thiết lập mục tiêu và kế hoạch cho toàn bộ tổ chức là ai?",
+      "options": {
+        "A": "Nhà quản trị cấp cao.",
+        "B": "Nhà quản trị cấp trung.",
+        "C": "Nhà quản trị cấp cơ sở.",
+        "D": "Nhà quản trị chức năng."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Nhà quản trị cấp cao."
+    },
+    {
+      "id": 27,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Phát biểu nào sau đây KHÔNG đúng?",
+      "options": {
+        "A": "Có mối quan hệ biện chứng giữa khoa học và nghệ thuật quản trị",
+        "B": "Khoa học là nền tảng để hình thành nghệ thuật quản trị",
+        "C": "Trực giác là quan trọng để thành công trong quản trị",
+        "D": "Cần vận dụng đúng các nguyên tắc khoa học vào quản trị"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Trực giác là quan trọng để thành công trong quản trị"
+    },
+    {
+      "id": 28,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Phát biểu nào sau đây là KHÔNG đúng?",
+      "options": {
+        "A": "Quản trị cần thiết đối với bệnh viện",
+        "B": "Quản trị chỉ cần thiết đối với tổ chức có quy mô lớn",
+        "C": "Quản trị cần thiết đối với doanh nghiệp",
+        "D": "Quản trị cần thiết đối với trường đại học"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Quản trị chỉ cần thiết đối với tổ chức có quy mô lớn"
+    },
+    {
+      "id": 29,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Phương án nào sau đây đúng nhất với hoạt động quản trị?",
+      "options": {
+        "A": "là một quá trình.",
+        "B": "Được định hướng bởi mục tiêu của tổ chức.",
+        "C": "Đối tượng của quản trị là con người.",
+        "D": "Là quá trính làm việc của con người được định hướng bởi mục tiêu."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Là quá trính làm việc của con người được định hướng bởi mục tiêu."
+    },
+    {
+      "id": 30,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Quan hệ giữa cấp bậc quản trị và các kỹ năng:",
+      "options": {
+        "A": "Tất cả các đáp án đều sai",
+        "B": "Nhà quản trị cần tất cả các kỹ năng, tuy nhiên chức vụ càng cao thì kỹ năng nhận thức càng quan trọng",
+        "C": "Chức vụ càng thấp thì kỹ năng chuyên môn càng quan trọng",
+        "D": "Chức vụ càng cao thì kỹ năng nhận thức càng quan trọng"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Nhà quản trị cần tất cả các kỹ năng, tuy nhiên chức vụ càng cao thì kỹ năng nhận thức càng quan trọng"
+    },
+    {
+      "id": 31,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Quản trị cần thiết cho....",
+      "options": {
+        "A": "Các công ty lớn",
+        "B": "Các đơn vị hành chính sự nghiệp",
+        "C": "Các tổ chức vì lợi nhuận và tổ chức phi lợi nhuận",
+        "D": "Các doanh nghiệp hoạt động sản xuất kinh doanh"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Các tổ chức vì lợi nhuận và tổ chức phi lợi nhuận"
+    },
+    {
+      "id": 32,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Quản trị được thực hiện nhằm mục đích gì?",
+      "options": {
+        "A": "Tối đa hóa lợi nhuận.",
+        "B": "Đạt được mục tiêu.",
+        "C": "Sử dụng có hiệu quả cao nhất các nguồn lực.",
+        "D": "Đạt được mục tiêu đặt ra một cách tốt nhất với hiệu quả cao nhất."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Đạt được mục tiêu đặt ra một cách tốt nhất với hiệu quả cao nhất."
+    },
+    {
+      "id": 33,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Quản trị được thực hiện trong một tổ chức nhằm:",
+      "options": {
+        "A": "Đạt được mục tiêu của tổ chức với hiệu suất cao",
+        "B": "Sử dụng có hiệu quả cao nhất các nguồn lực",
+        "C": "Tối đa hóa lợi nhuận",
+        "D": "Đạt mục tiêu của tổ chức"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Đạt được mục tiêu của tổ chức với hiệu suất cao"
+    },
+    {
+      "id": 34,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Quá trình thiết lập các mục tiêu, xây dựng chiến lược, phát triển kế hoạch điều phối là nội dung của chức năng nào?",
+      "options": {
+        "A": "Lập kế hoạch.",
+        "B": "Tổ chức.",
+        "C": "Lãnh đạo.",
+        "D": "Kiểm tra."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Lập kế hoạch."
+    },
+    {
+      "id": 35,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Quá trình xác định nhiệm vụ, công việc cần thực hiện, phương thức thực hiện và người thực hiện là nội dung của chức năng nào?",
+      "options": {
+        "A": "Lập kế hoạch.",
+        "B": "Tổ chức.",
+        "C": "Lãnh đạo.",
+        "D": "Kiểm tra."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Tổ chức."
+    },
+    {
+      "id": 36,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Theo Henry Minzberg, các nhà quản trị phải thực hiện những vai trò nào?",
+      "options": {
+        "A": "Vai trò quan hệ con người, vai trò thông tin, vai trò ra quyết định.",
+        "B": "Vai trò quan hệ con người, vai trò xử lý các xung đột, vai trò ra quyết định.",
+        "C": "Vai trò liên lạc, vai trò phân bố tài nguyên, vai trò thương thuyết.",
+        "D": "Vai trò lãnh đạo, vai trò thông tin, vai trò ra quyết định."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Vai trò quan hệ con người, vai trò thông tin, vai trò ra quyết định."
+    },
+    {
+      "id": 37,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Thời gian dành cho chức năng hoạch định sẽ cần nhiều hơn đối với nhà quản trị:",
+      "options": {
+        "A": "Tất cả các nhà quản trị",
+        "B": "Cấp cao",
+        "C": "Cấp cơ sở",
+        "D": "Cấp trung"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Cấp cao"
+    },
+    {
+      "id": 38,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Tổ chức chính thức có đặc trưng cơ bản?",
+      "options": {
+        "A": "Có sơ đồ tổ chức rõ ràng và thể hiện các mối liên hệ giữa các cá nhân với nhau.",
+        "B": "Được tạo nên bởi các mối quan hệ chính thức giữa các thành viên của tổ chức.",
+        "C": "Được hình thành thông qua các mối quan hệ cá nhân.",
+        "D": "Được hình thành một cách tự phát."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Có sơ đồ tổ chức rõ ràng và thể hiện các mối liên hệ giữa các cá nhân với nhau."
+    },
+    {
+      "id": 39,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Tổ chức là gì?",
+      "options": {
+        "A": "Tập hợp các cá nhân làm việc tại một địa điểm cụ thể.",
+        "B": "Tập hợp các cá nhân cùng làm việc trong một công ty.",
+        "C": "Tập hợp hai hay nhiều người cùng làm việc với nhau và phối hợp các hoạt động của họ để đạt đến các mục tiêu cụ thể.",
+        "D": "Một nhóm các cá nhân tập trung vào lợi nhuận mang lại cho các cổ đông của họ."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tập hợp hai hay nhiều người cùng làm việc với nhau và phối hợp các hoạt động của họ để đạt đến các mục tiêu cụ thể."
+    },
+    {
+      "id": 40,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Trong một tổ chức, các cấp bậc quản trị thường được chia thành:",
+      "options": {
+        "A": "5 cấp quản trị",
+        "B": "2 cấp quản trị",
+        "C": "4 cấp quản trị",
+        "D": "3 cấp quản trị"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. 3 cấp quản trị"
+    },
+    {
+      "id": 41,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Trong quản trị tổ chức, quan trọng nhất là:",
+      "options": {
+        "A": "Đạt được lợi nhuận",
+        "B": "Chi phí thấp nhất",
+        "C": "Làm đúng việc",
+        "D": "Thực hiện mục tiêu đúng với hiệu suất cao"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Thực hiện mục tiêu đúng với hiệu suất cao"
+    },
+    {
+      "id": 42,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Vai trò nào đã được thực hiện khi nhà quản trị đưa ra một quyết định để phát triển kinh doanh?",
+      "options": {
+        "A": "Vai trò người phân bố tài nguyên",
+        "B": "Vai trò nhà doanh nhân",
+        "C": "Vai trò người đại diện",
+        "D": "Vai trò người lãnh đạo"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Vai trò nhà doanh nhân"
+    }
+  ]
+}

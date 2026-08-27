@@ -1,0 +1,343 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kỹ năng Khởi nghiệp và Lãnh đạo - Chương 4",
+  "chapter": "Chương 4",
+  "totalQuestions": 24,
+  "questions": [
+    {
+      "id": 71,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Bạn định khởi nghiệp kinh doanh sản phẩm tã bỉm cho người già từ độ tuổi 70 trở lên. Tổng số người già trên 70 tuổi ở Việt Nam hiện nay là khoảng trên 3,96 triệu người. Giả định mức chi tiêu mà mỗi người già trên 70 tuổi có thể chi trả cho việc mua tã bỉm hàng năm là 500 ngàn đồng. Hãy tính tổng thị trường có sẵn (TAM).",
+      "options": {
+        "A": "198.000 tỷ đồng.",
+        "B": "19.800 tỷ đồng.",
+        "C": "198 tỷ đồng.",
+        "D": "1.980 tỷ đồng."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. 1.980 tỷ đồng."
+    },
+    {
+      "id": 72,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Bảng ma trận đối thủ cạnh tranh giúp phân tích và so sánh ai với ai?",
+      "options": {
+        "A": "Phân tích và so sánh đối thủ cạnh tranh chiến lược với đối thủ cạnh tranh thông thường.",
+        "B": "Phân tích và so sánh đối thủ cạnh tranh trực tiếp với đối thủ cạnh tranh gián tiếp.",
+        "C": "Phân tích và so sánh doanh nghiệp của bạn với các loại đối thủ cạnh tranh.",
+        "D": "Phân tích và so sánh đối thủ cạnh tranh hiện tại với đối thủ cạnh tranh tiềm ẩn."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Phân tích và so sánh doanh nghiệp của bạn với các loại đối thủ cạnh tranh."
+    },
+    {
+      "id": 73,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Blue Bike là doanh nghiệp khởi nghiệp trong lĩnh vực công nghệ với sản phẩm sáng tạo là xe đạp in 3D. Chi phí đầu tư là 20 triệu USD từ quỹ đầu tư mạo hiểm. Giá bán trung bình là 3.999 USD/xe. Giá vốn hàng bán là 45%. Hỏi doanh nghiệp cần đạt bao nhiêu doanh thu để hòa vốn?",
+      "options": {
+        "A": "Khoảng 46,36 triệu USD.",
+        "B": "Khoảng 66,36 triệu USD.",
+        "C": "Khoảng 36,36 triệu USD.",
+        "D": "Khoảng 56,36 triệu USD."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Khoảng 36,36 triệu USD."
+    },
+    {
+      "id": 74,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Công thức tính điểm hòa vốn theo sản lượng cần có những số liệu nào?",
+      "options": {
+        "A": "Chi phí cố định, giá bán trung bình, chi phí khấu hao.",
+        "B": "Chi phí biến đổi, giá bán trung bình, chi phí bán hàng.",
+        "C": "Chi phí cố định, giá bán trung bình, chi phí bán hàng.",
+        "D": "Chi phí cố định, giá bán tối thiểu, chi phí bán hàng."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Chi phí cố định, giá bán trung bình, chi phí bán hàng."
+    },
+    {
+      "id": 75,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Công ty Blue Bike khởi nghiệp trong lĩnh vực công nghệ với sản phẩm sáng tạo là xe đạp in 3D. Chi phí đầu tư là 20 triệu USD từ quỹ đầu tư mạo hiểm. Giá bán trung bình là 3999 USD/xe. Giá vốn hàng bán là 45%. Hỏi doanh nghiệp cần bán được bao nhiêu xe để hòa vốn?",
+      "options": {
+        "A": "Khoảng 9.093 xe.",
+        "B": "Khoảng 10.093 xe.",
+        "C": "Khoảng 8.093 xe.",
+        "D": "Khoảng 11.093 xe."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Khoảng 9.093 xe."
+    },
+    {
+      "id": 76,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Công ty Blue Bike khởi nghiệp trong lĩnh vực công nghệ với sản phẩm sáng tạo là xe đạp in 3D. Chi phí đầu tư là 20 triệu USD từ quỹ đầu tư mạo hiểm. Giá bán trung bình là 3.999 USD/xe, và mỗi tháng trung bình bán được 100 xe trên toàn thế giới. Giá vốn hàng bán là 45%. Hỏi cần doanh nghiệp bán trong bao năm sẽ hòa vốn?",
+      "options": {
+        "A": "Khoảng 4,6 năm.",
+        "B": "Khoảng 5,6 năm.",
+        "C": "Khoảng 6,6 năm.",
+        "D": "Khoảng 7,6 năm."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Khoảng 7,6 năm."
+    },
+    {
+      "id": 77,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Phần tóm tắt trong kế hoạch kinh doanh thường có đặc điểm gì?",
+      "options": {
+        "A": "Xuất hiện cuối cùng và phải được viết sau cùng.",
+        "B": "Xuất hiện đầu tiên nhưng phải được viết sau cùng.",
+        "C": "Xuất hiện đầu tiên và phải được viết đầu tiên.",
+        "D": "Xuất hiện sau cùng nhưng phải được viết đầu tiên."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Xuất hiện đầu tiên nhưng phải được viết sau cùng."
+    },
+    {
+      "id": 78,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Kế hoạch kinh doanh được sử dụng cho các nhóm đối tượng nào?",
+      "options": {
+        "A": "Chủ hoặc lãnh đạo doanh nghiệp.",
+        "B": "Các đối tác bên ngoài doanh nghiệp.",
+        "C": "Người lao động trong doanh nghiệp.",
+        "D": "Đối tượng bên trong và bên ngoài doanh nghiệp."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Đối tượng bên trong và bên ngoài doanh nghiệp."
+    },
+    {
+      "id": 79,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Kế hoạch kinh doanh là gì?",
+      "options": {
+        "A": "Là một văn bản viết, mô tả sản phẩm mà một doanh nghiệp khởi nghiệp muốn kinh doanh và cách thức mà nó dự định triển khai để sản xuất sản phẩm.",
+        "B": "Là một văn bản viết, mô tả mục tiêu mà một doanh nghiệp khởi nghiệp muốn đạt được và cách thức mà nó dự định triển khai để đạt được mục tiêu đó.",
+        "C": "Là một văn bản viết, mô tả đối thủ mà một doanh nghiệp khởi nghiệp cần cạnh tranh và cách thức mà nó dự định triển khai để cạnh tranh.",
+        "D": "Là một văn bản viết, mô tả khách hàng mà một doanh nghiệp khởi nghiệp muốn phục vụ và cách thức mà nó dự định triển khai để phục vụ."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Là một văn bản viết, mô tả mục tiêu mà một doanh nghiệp khởi nghiệp muốn đạt được và cách thức mà nó dự định triển khai để đạt được mục tiêu đó."
+    },
+    {
+      "id": 80,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Loại kế hoạch kinh doanh thường có độ dài từ 10-15 trang là loại nào?",
+      "options": {
+        "A": "Kế hoạch kinh doanh chi tiết.",
+        "B": "Kế hoạch kinh doanh vắn tắt.",
+        "C": "Kế hoạch kinh doanh đầy đủ.",
+        "D": "Kế hoạch kinh doanh thông thường."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Kế hoạch kinh doanh vắn tắt."
+    },
+    {
+      "id": 81,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Lợi nhuận kỳ vọng là số liệu cần có để sử dụng trong phương pháp định giá nào?",
+      "options": {
+        "A": "Định giá cạnh tranh.",
+        "B": "Định giá dựa vào giá thành.",
+        "C": "Định giá dựa vào giá trị.",
+        "D": "Định giá theo điểm hòa vốn."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Định giá dựa vào giá thành."
+    },
+    {
+      "id": 82,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Ngành (tiếng Anh: industry) trong kinh doanh được hiểu là gì?",
+      "options": {
+        "A": "Là những doanh nghiệp sản xuất, kinh doanh có quy mô tương đương nhau.",
+        "B": "Là những doanh nghiệp sản xuất, kinh doanh có thời gian thành lập và hoạt động tương đương nhau.",
+        "C": "Là những doanh nghiệp sản xuất, kinh doanh những sản phẩm hàng hóa hoặc dịch vụ tương tự nhau.",
+        "D": "Là những doanh nghiệp sản xuất, kinh doanh hướng tới những phân khúc khách hàng tương tự nhau."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Là những doanh nghiệp sản xuất, kinh doanh những sản phẩm hàng hóa hoặc dịch vụ tương tự nhau."
+    },
+    {
+      "id": 83,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Những chi phí mà doanh nghiệp vẫn phải bỏ ra dù có bán được hàng hóa, dịch vụ hay không được gọi là chi phí gì?",
+      "options": {
+        "A": "Chi phí cố định.",
+        "B": "Chi phí gián tiếp.",
+        "C": "Chi phí biến đổi.",
+        "D": "Chi phí trực tiếp."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Chi phí cố định."
+    },
+    {
+      "id": 84,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Nguyên vật liệu đầu vào được xếp vào loại chi phí nào?",
+      "options": {
+        "A": "Chi phí gián tiếp.",
+        "B": "Chi phí biến đổi.",
+        "C": "Chi phí trực tiếp.",
+        "D": "Chi phí cố định."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Chi phí biến đổi."
+    },
+    {
+      "id": 85,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Phân khúc thị trường nghĩa là gì?",
+      "options": {
+        "A": "Là việc phân chia thị trường thành những 'khúc' hay nhóm khách hàng khác nhau theo những tiêu chí nhất định.",
+        "B": "Là việc phân chia đối tác thành những 'khúc' hay 'đoạn' hay nhóm đối tác khác nhau theo những tiêu chí nhất định.",
+        "C": "Là việc phân chia thị trường thành những 'khúc' hay nhóm đối thủ cạnh tranh khác nhau theo những tiêu chí nhất định.",
+        "D": "Là việc phân chia sản phẩm thành những 'khúc' hay 'đoạn' hay nhóm sản phẩm khác nhau theo những tiêu chí nhất định."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Là việc phân chia thị trường thành những 'khúc' hay nhóm khách hàng khác nhau theo những tiêu chí nhất định."
+    },
+    {
+      "id": 86,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Phân tích ngành trong kinh doanh thường tập trung vào những lực lượng nào?",
+      "options": {
+        "A": "Thường phân tích 1 lực lượng là đối thủ cạnh tranh tiềm ẩn.",
+        "B": "Thường phân tích 5 lực lượng là đối thủ cạnh tranh hiện tại, đối thủ cạnh tranh tiềm ẩn, nhà cung ứng, khách hàng, và sản phẩm thay thế.",
+        "C": "Thường phân tích 1 lực lượng là đối thủ cạnh tranh hiện tại.",
+        "D": "Thường phân tích 2 lực lượng là đối thủ cạnh tranh hiện tại và đối thủ cạnh tranh tiềm ẩn."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Thường phân tích 5 lực lượng là đối thủ cạnh tranh hiện tại, đối thủ cạnh tranh tiềm ẩn, nhà cung ứng, khách hàng, và sản phẩm thay thế."
+    },
+    {
+      "id": 87,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Thị trường có thể phục vụ và nắm giữ được có tên viết tắt bằng tiếng Anh là gì?",
+      "options": {
+        "A": "SAM",
+        "B": "TAM",
+        "C": "EGV",
+        "D": "SOM"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. SOM"
+    },
+    {
+      "id": 88,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Thị trường có thể phục vụ được có tên viết tắt bằng tiếng Anh là gì?",
+      "options": {
+        "A": "SOM",
+        "B": "SAM",
+        "C": "EGV",
+        "D": "TAM"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. SAM"
+    },
+    {
+      "id": 89,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Thị trường là một phần của SAM mà doanh nghiệp cho rằng mình có khả năng cạnh tranh với các đối thủ khác được gọi là gì?",
+      "options": {
+        "A": "EGV",
+        "B": "SAM",
+        "C": "SOM",
+        "D": "TAM"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. SOM"
+    },
+    {
+      "id": 90,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Thị trường là một phần của TAM mà doanh nghiệp có thể tiếp cận được với sản phẩm của mình được gọi là gì?",
+      "options": {
+        "A": "Thị trường có thể phục vụ được.",
+        "B": "Thị trường có thể phục vụ và nắm giữ được.",
+        "C": "Thị trường ngách.",
+        "D": "Tổng thị trường có sẵn."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Thị trường có thể phục vụ được."
+    },
+    {
+      "id": 91,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Thị trường mục tiêu là gì?",
+      "options": {
+        "A": "Là một nhóm nhỏ đối tác trong một phân khúc khách hàng nhất định.",
+        "B": "Là một nhóm nhỏ đối thủ cạnh tranh trong một phân khúc khách hàng nhất định.",
+        "C": "Là một nhóm nhỏ khách hàng trong một phân khúc khách hàng nhất định.",
+        "D": "Là một nhóm nhỏ nhà cung ứng trong một phân khúc khách hàng nhất định."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Là một nhóm nhỏ khách hàng trong một phân khúc khách hàng nhất định."
+    },
+    {
+      "id": 92,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Tổng thị trường có sẵn có tên viết tắt bằng tiếng Anh là gì?",
+      "options": {
+        "A": "TAM",
+        "B": "EGV",
+        "C": "SOM",
+        "D": "SAM"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. TAM"
+    },
+    {
+      "id": 93,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Trong quý 2 năm 2023, DigiTrans, một công ty chuyên sản xuất và kinh doanh các loại xe đạp điện thân thiện với môi trường, bán được 1.650 xe với giá bán trung bình là 7 triệu đồng/xe. Giá vốn hàng bán là 55%. Công ty phải trả lãi vay ngân hàng mỗi tháng là 250 triệu đồng. Hãy tính lợi nhuận thuần của công ty này trong quý 2.",
+      "options": {
+        "A": "3,4475 tỷ đồng.",
+        "B": "6,4475 tỷ đồng.",
+        "C": "4,4475 tỷ đồng.",
+        "D": "5,4475 tỷ đồng."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 4,4475 tỷ đồng."
+    },
+    {
+      "id": 94,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Trong quý 2 năm 2023, DigiTrans, một công ty chuyên sản xuất và kinh doanh các loại xe đạp điện thân thiện với môi trường, bán được 1.650 xe với giá bán trung bình là 7 triệu đồng/xe. Giá vốn hàng bán là 55%. Hãy tính lợi nhuận gộp của công ty này trong quý 2.",
+      "options": {
+        "A": "5,1975 tỷ đồng.",
+        "B": "6,1975 tỷ đồng.",
+        "C": "4,1975 tỷ đồng.",
+        "D": "3,1975 tỷ đồng."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 5,1975 tỷ đồng."
+    }
+  ]
+}

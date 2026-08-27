@@ -1,0 +1,372 @@
+{
+  "title": "Đề Thi Nghe Tiếng Anh (Listening Test)",
+  "totalParts": 5,
+  "totalQuestions": 25,
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "PART 1: Short Announcements or Instructions",
+      "instruction": "Directions: In this part, you will hear 5 short announcements or instructions. You will hear each instruction or announcement twice. For each question, choose the correct answer, A, B or C. Before you listen, you have 15 seconds to look at the questions.",
+      "audioUrl": "tadv/tadv2-audio_part_1_listening.mp3",
+      "questions": [
+        {
+          "id": 1,
+          "audioTimestamp": "0:00",
+          "question": "What is the telephone number of the hotel?",
+          "options": {
+            "A": "720 433",
+            "B": "730 433",
+            "C": "720 443"
+          },
+          "answer": "A",
+          "transcript": "Tourist Information: Hello, Winfield Tourist Information. How can I help?\nVisitor: Hello, I'm hoping to come to Winfield for a few days and I'd like some information about places to stay. I'm looking for somewhere in the centre.\nTourist Information: There's the Mill Hotel. That's at 24 Harvest Road.\nVisitor: That's fine. Do you have the phone number?\nTourist Information: It's 720433. You can phone them anytime.",
+          "explainAnswer": "Nhân viên đọc số điện thoại: \"It's 720433\" = 720 433."
+        },
+        {
+          "id": 2,
+          "audioTimestamp": "1:10",
+          "question": "Who can join the camp?",
+          "options": {
+            "A": "Students.",
+            "B": "Employed people.",
+            "C": "People between the age of 18 and 23."
+          },
+          "answer": "C",
+          "transcript": "Presenter: On last week's programme, we interviewed the man behind the idea of the international camps. So I thought that this week you'd be interested to hear more about one of the camps which will be held later this year. Over to you, Michael.\nMichael: Thank you. Yes, the camp is open to everyone between the ages of 18 to 23. You don't have to be a student, you don't even have to be employed, but you must be able to speak one foreign language in addition to your mother tongue.",
+          "explainAnswer": "Michael nói: \"the camp is open to everyone between the ages of 18 to 23. You don't have to be a student, you don't even have to be employed\" — trại mở cho người từ 18-23 tuổi, không cần là học sinh hay đã đi làm."
+        },
+        {
+          "id": 3,
+          "audioTimestamp": "2:23",
+          "question": "What do you have to take to the camp?",
+          "options": {
+            "A": "A tent.",
+            "B": "A map.",
+            "C": "A pillow."
+          },
+          "answer": "C",
+          "transcript": "Presenter: And is there anything you need to take?\nMichael: Well, as I've said, tents are provided, but you'll need to bring your own pillow, knife, fork and spoon. If you get chosen, you're also asked to bring along photographs, postcards, anything that shows some of the traditions and customs of your own country. Everything goes into an exhibition at the start of the camp.",
+          "explainAnswer": "\"tents are provided, but you'll need to bring your own pillow, knife, fork and spoon\" — lều đã được cung cấp sẵn, người tham gia cần tự mang theo gối (pillow)."
+        },
+        {
+          "id": 4,
+          "audioTimestamp": "3:27",
+          "question": "What do they decide to do tonight?",
+          "options": {
+            "A": "Go to the theater.",
+            "B": "Watch a video at home.",
+            "C": "Go to the cinema."
+          },
+          "answer": "B",
+          "transcript": "Person 1: What should we do tonight? Shall we go out somewhere?\nPerson 2: No, I'm tired. I've had a really hard day.\nPerson 1: That's a bit boring. Come on, let's go to a cinema or see that new play at the theatre.\nPerson 2: Not tonight. Why don't we rent a video and stay in?\nPerson 1: Well, I'd rather go out, but if you're tired. Okay.",
+          "explainAnswer": "Sau khi từ chối đi xem phim/kịch vì mệt, một người đề nghị: \"Why don't we rent a video and stay in?\" và người kia đồng ý. Vậy họ quyết định ở nhà xem video."
+        },
+        {
+          "id": 5,
+          "audioTimestamp": "4:31",
+          "question": "What time will the coach leave the coach park?",
+          "options": {
+            "A": "6.15 p.m.",
+            "B": "6.15 a.m.",
+            "C": "8.15 p.m."
+          },
+          "answer": "A",
+          "transcript": "Tour Guide: Ladies and gentlemen, we're arriving at Cambridge now and there are a few important things I need to say. First of all, please remove all valuables from the coach. Thank you. Now it would be a good idea to make a note of the number on the front of the coach so that you can recognise it in the coach park. Finally, ladies and gentlemen, the coach will leave the coach park at 1815. That's 6:15. So please be on time. Have an enjoyable tour. Thank you.",
+          "explainAnswer": "\"the coach will leave the coach park at 1815. That's 6:15\" = 6:15 chiều (18:15 theo giờ 24h)."
+        }
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "PART 2: Short Conversations",
+      "instruction": "Directions: In this part, you will hear five short conversations. You will hear each conversation twice. There is one question for each conversation. Before you listen, you have 15 seconds to look at the questions.",
+      "audioUrl": "tadv/tadv2-audio_part_2_listening.mp3",
+      "questions": [
+        {
+          "id": 6,
+          "audioTimestamp": "0:00",
+          "question": "What will the woman do first?",
+          "options": {
+            "A": "Clean the windows.",
+            "B": "Paint the wall.",
+            "C": "Clean the floor."
+          },
+          "answer": "C",
+          "transcript": "Person 1: This room looks really dirty. I'm going to clean the windows.\nPerson 2: It's better to do that after we finish painting the walls.\nPerson 1: But I must clean the floor before we start painting.\nPerson 2: OK, you do that and I'll get the paint ready.",
+          "explainAnswer": "Người phụ nữ định lau cửa sổ, nhưng người kia nói nên làm sau khi sơn tường xong. Cô nói lại: \"But I must clean the floor before we start painting\" — vậy việc đầu tiên cô làm là lau sàn nhà, trước khi sơn tường."
+        },
+        {
+          "id": 7,
+          "audioTimestamp": "0:52",
+          "question": "How is Susan going to get to the airport?",
+          "options": {
+            "A": "By coach.",
+            "B": "By taxi.",
+            "C": "By train."
+          },
+          "answer": "A",
+          "transcript": "Person 1: How are you going to go to the airport on Tuesday, Susan?\nSusan: I'm going to take the coach. I can get off just outside the airport. Taxi's too expensive.\nPerson 1: There's a train you can get. It's very fast.\nSusan: That's only at the weekends.",
+          "explainAnswer": "Susan nói: \"I'm going to take the coach... Taxi's too expensive.\" Khi được gợi ý đi tàu hỏa, cô từ chối vì \"That's only at the weekends.\" Vậy Susan đi bằng xe khách (coach)."
+        },
+        {
+          "id": 8,
+          "audioTimestamp": "1:44",
+          "question": "What does Joe's father do?",
+          "options": {
+            "A": "A pilot.",
+            "B": "A farmer.",
+            "C": "Photographer."
+          },
+          "answer": "B",
+          "transcript": "Person 1: What's your father's job, Joe?\nJoe: He was a pilot, but now he's a farmer. What about your father?\nPerson 1: He's a photographer.\nJoe: Oh, I want to do that if I don't become a pilot.",
+          "explainAnswer": "\"He was a pilot, but now he's a farmer.\" — bố của Joe từng là phi công, nhưng hiện tại làm nông dân. \"Photographer\" là nghề của bố người bạn kia."
+        },
+        {
+          "id": 9,
+          "audioTimestamp": "2:26",
+          "question": "Which sport does Annie like best?",
+          "options": {
+            "A": "Tennis.",
+            "B": "Swimming.",
+            "C": "Sailing."
+          },
+          "answer": "A",
+          "transcript": "Person 1: What's your favourite sport, Annie?\nAnnie: Well, I like all sports, especially summer sports.\nPerson 1: But which is your favourite? Swimming?\nAnnie: No, tennis, I think. Yes, tennis.",
+          "explainAnswer": "Khi được hỏi có phải bơi lội không, Annie trả lời: \"No, tennis, I think. Yes, tennis.\" — môn thể thao cô thích nhất là tennis."
+        },
+        {
+          "id": 10,
+          "audioTimestamp": "3:09",
+          "question": "Where will they sit?",
+          "options": {
+            "A": "Under the tree.",
+            "B": "By the river.",
+            "C": "In the car."
+          },
+          "answer": "B",
+          "transcript": "Person 1: Do you want to sit under that tree, Granny? It won't be so hot there.\nGranny: I'd prefer to sit in the sun. It looks nice there by the river.\nPerson 1: Shall I put the chairs there, then?\nGranny: Yes, they're in the car. Why don't you go and get them? I'll get the food ready.",
+          "explainAnswer": "Bà từ chối ngồi dưới gốc cây, nói: \"I'd prefer to sit in the sun. It looks nice there by the river.\" — họ sẽ ngồi cạnh bờ sông."
+        }
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "PART 3: Longer Conversation - Message Form",
+      "instruction": "Directions: In this part, you will hear a longer conversation and answer questions 11-15. You will hear the conversation twice. Before you listen, you have 15 seconds to look at the questions.",
+      "audioUrl": "tadv/tadv2-audio_part_3_listening.mp3",
+      "questions": [
+        {
+          "id": 11,
+          "audioTimestamp": "0:00",
+          "question": "Name of shop:",
+          "options": {
+            "A": "Forsters",
+            "B": "Fosters",
+            "C": "Forsterz"
+          },
+          "answer": "A",
+          "transcript": "Bob Watson: Hello, can I speak to Anna Jones, please?\nAnna's Mother: I'm afraid she's out, but you can leave a message with me. I'm her mother.\nBob Watson: Thanks. This is Bob Watson from the shoe shop Forsters.\nAnna's Mother: How do you spell that?\nBob Watson: It's F-O-R-S-T-E-R-S.\nAnna's Mother: OK, I've got that.\nBob Watson: Can you tell her that we now have the boots she wanted in size 38? We only had size 40 when she came into the shop last week, and she'll be pleased to know that they're also in the colour she liked, green. Before we only had black ones.\nAnna's Mother: That's good news.\nBob Watson: Yes, and there's even more good news. We're having a sale, so they're £40 cheaper now. They're £65, which is a good price. They're made of very good leather.\nAnna's Mother: Well, she'll be really pleased. Can she come and get them tomorrow at around 5 o'clock?\nBob Watson: She'll have to come before 2 o'clock, I'm afraid, because that's when we shut tomorrow.\nAnna's Mother: OK, I'll tell her.",
+          "explainAnswer": "Người gọi giới thiệu: \"This is Bob Watson from the shoe shop Forsters\" và đánh vần rõ \"F-O-R-S-T-E-R-S\"."
+        },
+        {
+          "id": 12,
+          "audioTimestamp": "0:31",
+          "question": "Boots size:",
+          "options": {
+            "A": "38",
+            "B": "40",
+            "C": "35"
+          },
+          "answer": "A",
+          "transcript": "Bob Watson: Hello, can I speak to Anna Jones, please?\nAnna's Mother: I'm afraid she's out, but you can leave a message with me. I'm her mother.\nBob Watson: Thanks. This is Bob Watson from the shoe shop Forsters.\nAnna's Mother: How do you spell that?\nBob Watson: It's F-O-R-S-T-E-R-S.\nAnna's Mother: OK, I've got that.\nBob Watson: Can you tell her that we now have the boots she wanted in size 38? We only had size 40 when she came into the shop last week, and she'll be pleased to know that they're also in the colour she liked, green. Before we only had black ones.\nAnna's Mother: That's good news.\nBob Watson: Yes, and there's even more good news. We're having a sale, so they're £40 cheaper now. They're £65, which is a good price. They're made of very good leather.\nAnna's Mother: Well, she'll be really pleased. Can she come and get them tomorrow at around 5 o'clock?\nBob Watson: She'll have to come before 2 o'clock, I'm afraid, because that's when we shut tomorrow.\nAnna's Mother: OK, I'll tell her.",
+          "explainAnswer": "\"we now have the boots she wanted in size 38\" = size 38. Size 40 là size cửa hàng chỉ có trước đó khi Anna đến xem tuần trước."
+        },
+        {
+          "id": 13,
+          "audioTimestamp": "0:42",
+          "question": "Colour:",
+          "options": {
+            "A": "Green",
+            "B": "Black",
+            "C": "Brown"
+          },
+          "answer": "A",
+          "transcript": "Bob Watson: Hello, can I speak to Anna Jones, please?\nAnna's Mother: I'm afraid she's out, but you can leave a message with me. I'm her mother.\nBob Watson: Thanks. This is Bob Watson from the shoe shop Forsters.\nAnna's Mother: How do you spell that?\nBob Watson: It's F-O-R-S-T-E-R-S.\nAnna's Mother: OK, I've got that.\nBob Watson: Can you tell her that we now have the boots she wanted in size 38? We only had size 40 when she came into the shop last week, and she'll be pleased to know that they're also in the colour she liked, green. Before we only had black ones.\nAnna's Mother: That's good news.\nBob Watson: Yes, and there's even more good news. We're having a sale, so they're £40 cheaper now. They're £65, which is a good price. They're made of very good leather.\nAnna's Mother: Well, she'll be really pleased. Can she come and get them tomorrow at around 5 o'clock?\nBob Watson: She'll have to come before 2 o'clock, I'm afraid, because that's when we shut tomorrow.\nAnna's Mother: OK, I'll tell her.",
+          "explainAnswer": "\"they're also in the colour she liked, green. Before we only had black ones.\" — màu Anna thích là xanh lá (green)."
+        },
+        {
+          "id": 14,
+          "audioTimestamp": "0:56",
+          "question": "Sale Price:",
+          "options": {
+            "A": "£65",
+            "B": "£40",
+            "C": "£105"
+          },
+          "answer": "A",
+          "transcript": "Bob Watson: Hello, can I speak to Anna Jones, please?\nAnna's Mother: I'm afraid she's out, but you can leave a message with me. I'm her mother.\nBob Watson: Thanks. This is Bob Watson from the shoe shop Forsters.\nAnna's Mother: How do you spell that?\nBob Watson: It's F-O-R-S-T-E-R-S.\nAnna's Mother: OK, I've got that.\nBob Watson: Can you tell her that we now have the boots she wanted in size 38? We only had size 40 when she came into the shop last week, and she'll be pleased to know that they're also in the colour she liked, green. Before we only had black ones.\nAnna's Mother: That's good news.\nBob Watson: Yes, and there's even more good news. We're having a sale, so they're £40 cheaper now. They're £65, which is a good price. They're made of very good leather.\nAnna's Mother: Well, she'll be really pleased. Can she come and get them tomorrow at around 5 o'clock?\nBob Watson: She'll have to come before 2 o'clock, I'm afraid, because that's when we shut tomorrow.\nAnna's Mother: OK, I'll tell her.",
+          "explainAnswer": "\"they're £40 cheaper now. They're £65\" — giá sau khi giảm là £65."
+        },
+        {
+          "id": 15,
+          "audioTimestamp": "1:14",
+          "question": "Tomorrow shop closes at:",
+          "options": {
+            "A": "2 o'clock",
+            "B": "5 o'clock",
+            "C": "12 o'clock"
+          },
+          "answer": "A",
+          "transcript": "Bob Watson: Hello, can I speak to Anna Jones, please?\nAnna's Mother: I'm afraid she's out, but you can leave a message with me. I'm her mother.\nBob Watson: Thanks. This is Bob Watson from the shoe shop Forsters.\nAnna's Mother: How do you spell that?\nBob Watson: It's F-O-R-S-T-E-R-S.\nAnna's Mother: OK, I've got that.\nBob Watson: Can you tell her that we now have the boots she wanted in size 38? We only had size 40 when she came into the shop last week, and she'll be pleased to know that they're also in the colour she liked, green. Before we only had black ones.\nAnna's Mother: That's good news.\nBob Watson: Yes, and there's even more good news. We're having a sale, so they're £40 cheaper now. They're £65, which is a good price. They're made of very good leather.\nAnna's Mother: Well, she'll be really pleased. Can she come and get them tomorrow at around 5 o'clock?\nBob Watson: She'll have to come before 2 o'clock, I'm afraid, because that's when we shut tomorrow.\nAnna's Mother: OK, I'll tell her.",
+          "explainAnswer": "\"She'll have to come before 2 o'clock, I'm afraid, because that's when we shut tomorrow.\" — cửa hàng đóng cửa lúc 2 giờ chiều ngày mai."
+        }
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "PART 4: Longer Conversation - Travel Agency",
+      "instruction": "Directions: In this part, you will hear a longer conversation and answer questions 16-20. You will hear the conversation twice. Before you listen, you have 15 seconds to look at the questions.",
+      "audioUrl": "tadv/tadv2-audio_part_4_listening.mp3",
+      "questions": [
+        {
+          "id": 16,
+          "audioTimestamp": "0:00",
+          "question": "The plane leaves at……",
+          "options": {
+            "A": "12 a.m.",
+            "B": "2 p.m.",
+            "C": "3 p.m."
+          },
+          "answer": "B",
+          "transcript": "Travel Agent: Hello. Good morning. Can I help you?\nCustomer: Well, I have to go to Argentina next week, so I'd like some information about flying to Buenos Aires.\nTravel Agent: OK, well, there are direct flights on Mondays, Wednesdays and Fridays.\nCustomer: And what time do they leave?\nTravel Agent: At 2pm on all three days.\nCustomer: OK, Wednesday is best for me. Now, how can I get to the airport? Is there a bus?\nTravel Agent: Yes. You'll have to check in at the airport at 12 o'clock. So you could take the 10 o'clock coach from the bus station in Mill Street.\nCustomer: In Mill Street. OK. How long does the coach take?\nTravel Agent: About one and a half hours.\nCustomer: And how much is a single ticket to Buenos Aires?\nTravel Agent: Well, a single to Buenos Aires is 300 pounds. But if you have a student card, there's a 20% reduction.\nCustomer: Yes, I've got a student card. Here it is.\nTravel Agent: OK, so the flight will be £240.\nCustomer: Right.\nTravel Agent: And the coach fare, that's £13.50.\nCustomer: OK, I'll book it, please.",
+          "explainAnswer": "Nhân viên nói máy bay khởi hành: \"At 2pm on all three days.\""
+        },
+        {
+          "id": 17,
+          "audioTimestamp": "0:45",
+          "question": "The bus station is in……",
+          "options": {
+            "A": "Bill Street.",
+            "B": "Hill Street.",
+            "C": "Mill Street."
+          },
+          "answer": "C",
+          "transcript": "Travel Agent: Hello. Good morning. Can I help you?\nCustomer: Well, I have to go to Argentina next week, so I'd like some information about flying to Buenos Aires.\nTravel Agent: OK, well, there are direct flights on Mondays, Wednesdays and Fridays.\nCustomer: And what time do they leave?\nTravel Agent: At 2pm on all three days.\nCustomer: OK, Wednesday is best for me. Now, how can I get to the airport? Is there a bus?\nTravel Agent: Yes. You'll have to check in at the airport at 12 o'clock. So you could take the 10 o'clock coach from the bus station in Mill Street.\nCustomer: In Mill Street. OK. How long does the coach take?\nTravel Agent: About one and a half hours.\nCustomer: And how much is a single ticket to Buenos Aires?\nTravel Agent: Well, a single to Buenos Aires is 300 pounds. But if you have a student card, there's a 20% reduction.\nCustomer: Yes, I've got a student card. Here it is.\nTravel Agent: OK, so the flight will be £240.\nCustomer: Right.\nTravel Agent: And the coach fare, that's £13.50.\nCustomer: OK, I'll book it, please.",
+          "explainAnswer": "\"you could take the 10 o'clock coach from the bus station in Mill Street.\" Khách hàng cũng nhắc lại \"In Mill Street\" để xác nhận."
+        },
+        {
+          "id": 18,
+          "audioTimestamp": "0:59",
+          "question": "The journey to the airport takes……",
+          "options": {
+            "A": "1 hour 15 minutes.",
+            "B": "1 hour 30 minutes.",
+            "C": "1 hour 45 minutes."
+          },
+          "answer": "B",
+          "transcript": "Travel Agent: Hello. Good morning. Can I help you?\nCustomer: Well, I have to go to Argentina next week, so I'd like some information about flying to Buenos Aires.\nTravel Agent: OK, well, there are direct flights on Mondays, Wednesdays and Fridays.\nCustomer: And what time do they leave?\nTravel Agent: At 2pm on all three days.\nCustomer: OK, Wednesday is best for me. Now, how can I get to the airport? Is there a bus?\nTravel Agent: Yes. You'll have to check in at the airport at 12 o'clock. So you could take the 10 o'clock coach from the bus station in Mill Street.\nCustomer: In Mill Street. OK. How long does the coach take?\nTravel Agent: About one and a half hours.\nCustomer: And how much is a single ticket to Buenos Aires?\nTravel Agent: Well, a single to Buenos Aires is 300 pounds. But if you have a student card, there's a 20% reduction.\nCustomer: Yes, I've got a student card. Here it is.\nTravel Agent: OK, so the flight will be £240.\nCustomer: Right.\nTravel Agent: And the coach fare, that's £13.50.\nCustomer: OK, I'll book it, please.",
+          "explainAnswer": "\"How long does the coach take?\" — \"About one and a half hours\" = 1 giờ 30 phút."
+        },
+        {
+          "id": 19,
+          "audioTimestamp": "1:15",
+          "question": "The man's ticket to Buenos Aires will cost……",
+          "options": {
+            "A": "£240.",
+            "B": "£300.",
+            "C": "£320."
+          },
+          "answer": "A",
+          "transcript": "Travel Agent: Hello. Good morning. Can I help you?\nCustomer: Well, I have to go to Argentina next week, so I'd like some information about flying to Buenos Aires.\nTravel Agent: OK, well, there are direct flights on Mondays, Wednesdays and Fridays.\nCustomer: And what time do they leave?\nTravel Agent: At 2pm on all three days.\nCustomer: OK, Wednesday is best for me. Now, how can I get to the airport? Is there a bus?\nTravel Agent: Yes. You'll have to check in at the airport at 12 o'clock. So you could take the 10 o'clock coach from the bus station in Mill Street.\nCustomer: In Mill Street. OK. How long does the coach take?\nTravel Agent: About one and a half hours.\nCustomer: And how much is a single ticket to Buenos Aires?\nTravel Agent: Well, a single to Buenos Aires is 300 pounds. But if you have a student card, there's a 20% reduction.\nCustomer: Yes, I've got a student card. Here it is.\nTravel Agent: OK, so the flight will be £240.\nCustomer: Right.\nTravel Agent: And the coach fare, that's £13.50.\nCustomer: OK, I'll book it, please.",
+          "explainAnswer": "Giá gốc 300 pounds, giảm 20% nhờ thẻ sinh viên: \"the flight will be £240\"."
+        },
+        {
+          "id": 20,
+          "audioTimestamp": "1:32",
+          "question": "The coach costs……",
+          "options": {
+            "A": "£13.50.",
+            "B": "£14.50.",
+            "C": "£30.50."
+          },
+          "answer": "A",
+          "transcript": "Travel Agent: Hello. Good morning. Can I help you?\nCustomer: Well, I have to go to Argentina next week, so I'd like some information about flying to Buenos Aires.\nTravel Agent: OK, well, there are direct flights on Mondays, Wednesdays and Fridays.\nCustomer: And what time do they leave?\nTravel Agent: At 2pm on all three days.\nCustomer: OK, Wednesday is best for me. Now, how can I get to the airport? Is there a bus?\nTravel Agent: Yes. You'll have to check in at the airport at 12 o'clock. So you could take the 10 o'clock coach from the bus station in Mill Street.\nCustomer: In Mill Street. OK. How long does the coach take?\nTravel Agent: About one and a half hours.\nCustomer: And how much is a single ticket to Buenos Aires?\nTravel Agent: Well, a single to Buenos Aires is 300 pounds. But if you have a student card, there's a 20% reduction.\nCustomer: Yes, I've got a student card. Here it is.\nTravel Agent: OK, so the flight will be £240.\nCustomer: Right.\nTravel Agent: And the coach fare, that's £13.50.\nCustomer: OK, I'll book it, please.",
+          "explainAnswer": "\"the coach fare, that's £13.50\"."
+        }
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "PART 5: Short Talk - Competition Announcement",
+      "instruction": "Directions: In this part, you will hear a short talk and answer questions 21-25. You will hear the talk twice. Before you listen, you have 15 seconds to look at the questions.",
+      "audioUrl": "tadv/tadv2-audio_part_5_listening.mp3",
+      "questions": [
+        {
+          "id": 21,
+          "audioTimestamp": "0:00",
+          "question": "How many nights does the winner stay?",
+          "options": {
+            "A": "Two nights",
+            "B": "Three nights",
+            "C": "Four nights"
+          },
+          "answer": "B",
+          "transcript": "Presenter: Here's some good news for all our listeners. Would you like to win a free holiday in Scotland? Well, the lucky winner of the travel programme's holiday competition will win a three-night stay for two people in the wonderful Scottish countryside. We have chosen a fine hotel for you. It's called the Falkirk. That's F-A-L-K-I-R-K, and it's an old castle in the mountains. You won't have to pay for anything during your stay. The hotel has excellent food and the competition winners can even use the beautiful hotel golf course when they are there. All you have to do to win this great holiday is call the travel programme and answer the simple question we will ask you. Don't delay because the competition closes at midnight on Thursday and we'll tell you the name of the winner next Saturday. The number to call is 0208-double-6873. Good luck, everyone.",
+          "explainAnswer": "\"will win a three-night stay for two people\" — người thắng cuộc được ở lại 3 đêm."
+        },
+        {
+          "id": 22,
+          "audioTimestamp": "0:29",
+          "question": "What is the name of the hotel?",
+          "options": {
+            "A": "Falkland Hotel",
+            "B": "Falkirk Hotel",
+            "C": "Fairkirk Hotel"
+          },
+          "answer": "B",
+          "transcript": "Presenter: Here's some good news for all our listeners. Would you like to win a free holiday in Scotland? Well, the lucky winner of the travel programme's holiday competition will win a three-night stay for two people in the wonderful Scottish countryside. We have chosen a fine hotel for you. It's called the Falkirk. That's F-A-L-K-I-R-K, and it's an old castle in the mountains. You won't have to pay for anything during your stay. The hotel has excellent food and the competition winners can even use the beautiful hotel golf course when they are there. All you have to do to win this great holiday is call the travel programme and answer the simple question we will ask you. Don't delay because the competition closes at midnight on Thursday and we'll tell you the name of the winner next Saturday. The number to call is 0208-double-6873. Good luck, everyone.",
+          "explainAnswer": "\"It's called the Falkirk. That's F-A-L-K-I-R-K\" — tên khách sạn được đánh vần rõ ràng."
+        },
+        {
+          "id": 23,
+          "audioTimestamp": "0:51",
+          "question": "At the hotel, you can play……",
+          "options": {
+            "A": "Tennis",
+            "B": "Golf",
+            "C": "Swimming"
+          },
+          "answer": "B",
+          "transcript": "Presenter: Here's some good news for all our listeners. Would you like to win a free holiday in Scotland? Well, the lucky winner of the travel programme's holiday competition will win a three-night stay for two people in the wonderful Scottish countryside. We have chosen a fine hotel for you. It's called the Falkirk. That's F-A-L-K-I-R-K, and it's an old castle in the mountains. You won't have to pay for anything during your stay. The hotel has excellent food and the competition winners can even use the beautiful hotel golf course when they are there. All you have to do to win this great holiday is call the travel programme and answer the simple question we will ask you. Don't delay because the competition closes at midnight on Thursday and we'll tell you the name of the winner next Saturday. The number to call is 0208-double-6873. Good luck, everyone.",
+          "explainAnswer": "\"the competition winners can even use the beautiful hotel golf course\" — người thắng cuộc có thể chơi golf."
+        },
+        {
+          "id": 24,
+          "audioTimestamp": "1:12",
+          "question": "You must phone before midnight on……",
+          "options": {
+            "A": "Wednesday",
+            "B": "Thursday",
+            "C": "Friday"
+          },
+          "answer": "B",
+          "transcript": "Presenter: Here's some good news for all our listeners. Would you like to win a free holiday in Scotland? Well, the lucky winner of the travel programme's holiday competition will win a three-night stay for two people in the wonderful Scottish countryside. We have chosen a fine hotel for you. It's called the Falkirk. That's F-A-L-K-I-R-K, and it's an old castle in the mountains. You won't have to pay for anything during your stay. The hotel has excellent food and the competition winners can even use the beautiful hotel golf course when they are there. All you have to do to win this great holiday is call the travel programme and answer the simple question we will ask you. Don't delay because the competition closes at midnight on Thursday and we'll tell you the name of the winner next Saturday. The number to call is 0208-double-6873. Good luck, everyone.",
+          "explainAnswer": "\"the competition closes at midnight on Thursday\" — hạn chót gọi điện là nửa đêm thứ Năm."
+        },
+        {
+          "id": 25,
+          "audioTimestamp": "1:22",
+          "question": "What is the phone number?",
+          "options": {
+            "A": "020 8668 73",
+            "B": "020 8686 73",
+            "C": "028 8668 73"
+          },
+          "answer": "A",
+          "transcript": "Presenter: Here's some good news for all our listeners. Would you like to win a free holiday in Scotland? Well, the lucky winner of the travel programme's holiday competition will win a three-night stay for two people in the wonderful Scottish countryside. We have chosen a fine hotel for you. It's called the Falkirk. That's F-A-L-K-I-R-K, and it's an old castle in the mountains. You won't have to pay for anything during your stay. The hotel has excellent food and the competition winners can even use the beautiful hotel golf course when they are there. All you have to do to win this great holiday is call the travel programme and answer the simple question we will ask you. Don't delay because the competition closes at midnight on Thursday and we'll tell you the name of the winner next Saturday. The number to call is 0208-double-6873. Good luck, everyone.",
+          "explainAnswer": "\"The number to call is 0208-double-6873\" = 020 8668 73."
+        }
+      ]
+    }
+  ]
+}

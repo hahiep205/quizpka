@@ -1,0 +1,315 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kỹ năng Quản lý Dự án - Chương 6",
+  "chapter": "Chương 6",
+  "totalQuestions": 22,
+  "questions": [
+    {
+      "id": 142,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Điền vào chỗ còn trống về khái niệm của phân phối nguồn lực dự án: Phân phối nguồn lực dự án là việc,....... nguồn lực dự án một cách hợp lý để hoàn thành các ... dự án",
+      "options": {
+        "A": "Bố trí, sắp xếp.....mục tiêu",
+        "B": "Lập kế hoạch, triển khai..... để xuất",
+        "C": "Bố trí, hoàn thành....... giai đoạn dự án",
+        "D": "Sắp xếp, chọn lọc.....mục tiêu"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Bố trí, sắp xếp.....mục tiêu"
+    },
+    {
+      "id": 143,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Các ý sau ý nào KHÔNG phải là kết cấu của biểu đồ phụ tải nguồn lực:",
+      "options": {
+        "A": "Trục tung phản ánh số lượng nguồn lực (lao động hoặc máy móc thiết bị),",
+        "B": "Trục hoành phản ánh thời gian của dự án",
+        "C": "Các công việc được sắp xếp theo đúng mối quan hệ trước sau và phản ánh đúng về nhu cầu nguồn lực cũng như thời gian thực hiện.",
+        "D": "Các công việc không găng được sắp xếp hợp lý trong phạm vi thời gian dự trữ"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Các công việc không găng được sắp xếp hợp lý trong phạm vi thời gian dự trữ"
+    },
+    {
+      "id": 144,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Có mấy công cụ được sử dụng để phân phối nguồn lực",
+      "options": {
+        "A": "2",
+        "B": "5",
+        "C": "3",
+        "D": "6"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 2"
+    },
+    {
+      "id": 145,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Trục tung của biểu đồ phụ tải nguồn lực KHÔNG phản ánh cái gì?",
+      "options": {
+        "A": "Lao động",
+        "B": "Nguyên vật liệu",
+        "C": "Máy móc thiết bị",
+        "D": "Thời gian"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Thời gian"
+    },
+    {
+      "id": 146,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Có bao nhiêu vấn đề cần giải quyết bài toán về phân phối nguồn lực",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 2"
+    },
+    {
+      "id": 147,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Có bao nhiêu cách phân loại nguồn lực?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. 4"
+    },
+    {
+      "id": 148,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Có mấy bước để xây dựng biểu đồ phụ tải nguồn lực?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "5",
+        "D": "4"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. 4"
+    },
+    {
+      "id": 149,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Điều chỉnh đều nguồn lực trong quản lý dự án là gì?",
+      "options": {
+        "A": "Giảm bớt số lượng nguồn lực cần sử dụng để tiết kiệm chi phí cho dự án.",
+        "B": "Dịch chuyển công việc trong phạm vi thời gian dự trữ nhằm mục tiêu không làm thay đổi ngày kết thúc dự án và tối thiểu hóa sự khác biệt về cầu nguồn lực giữa các thời kỳ.",
+        "C": "Tăng cường sử dụng nguồn lực tại các thời điểm cần thiết để đẩy nhanh tiến độ dự án.",
+        "D": "Thay đổi thời gian hoàn thành dự án để tối ưu hóa việc sử dụng nguồn lực trong từng giai đoạn."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Dịch chuyển công việc trong phạm vi thời gian dự trữ nhằm mục tiêu không làm thay đổi ngày kết thúc dự án và tối thiểu hóa sự khác biệt về cầu nguồn lực giữa các thời kỳ."
+    },
+    {
+      "id": 150,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Điều phối nguồn lực trên cơ sở thời gian dự trữ tối thiểu gồm bao nhiêu bước?",
+      "options": {
+        "A": "4 bước",
+        "B": "2 bước",
+        "C": "3 bước",
+        "D": "5 bước"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 4 bước"
+    },
+    {
+      "id": 151,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Nội dung nào KHÔNG thuộc quy trình xây dựng Biểu đồ phụ tải nguồn lực?",
+      "options": {
+        "A": "Xác định cơ cấu phân chia công việc",
+        "B": "Vẽ biểu đồ phụ tải nguồn lực",
+        "C": "Lập biểu đồ PERT/CPM điều chỉnh",
+        "D": "Xây dựng sơ đồ PERT/CPM"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Xác định cơ cấu phân chia công việc"
+    },
+    {
+      "id": 152,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Tìm câu sai trong các câu sau:",
+      "options": {
+        "A": "Phương pháp sơ đồ GANTT chỉ ra được phương thức điều hòa nguồn lực",
+        "B": "Phương pháp sơ đồ GANTT không chỉ ra được làm thế nào để san bằng sự căng thẳng hay nhàn rỗi trong huy động nguồn lực",
+        "C": "Phương pháp sơ đồ GANTT đơn giản, dễ thực hiện",
+        "D": "Phương pháp sơ đồ GANTT áp dụng cho những dự án quy mô nhỏ"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Phương pháp sơ đồ GANTT chỉ ra được phương thức điều hòa nguồn lực"
+    },
+    {
+      "id": 153,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Quy trình bố trí nguồn lực trên sơ đồ GANTT, có:",
+      "options": {
+        "A": "2 bước",
+        "B": "3 bước",
+        "C": "4 bước",
+        "D": "5 bước"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. 3 bước"
+    },
+    {
+      "id": 154,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Tác dụng nào của phân phối nguồn lực dự án giúp đảm bảo rằng dự án không chỉ hoàn thành đúng hạn mà còn trong ngân sách cho phép?",
+      "options": {
+        "A": "Huy động và sử dụng hiệu quả nguồn lực lao động, máy móc thiết bị của đơn vị.",
+        "B": "Góp phần giảm thiểu rủi ro, tiết kiệm chi phí và đảm bảo dự án hoàn thành đúng tiến độ.",
+        "C": "Hạn chế sự biến động về nhu cầu nguồn lực trong quá trình triển khai dự án.",
+        "D": "Có kế hoạch trong đào tạo, tuyển dụng, bố trí lao động cũng như máy móc thiết bị."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Góp phần giảm thiểu rủi ro, tiết kiệm chi phí và đảm bảo dự án hoàn thành đúng tiến độ."
+    },
+    {
+      "id": 155,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Trong phân phối nguồn lực dự án, bài toán nào yêu cầu nhà quản lý phải đảm bảo nhu cầu nguồn lực ổn định trong suốt quá trình thực hiện?",
+      "options": {
+        "A": "Bố trí nguồn lực tối thiểu để hoàn thành dự án.",
+        "B": "Sắp xếp, bố trí nguồn lực ổn định.",
+        "C": "Bố trí nguồn lực hạn chế để hoàn thành dự án.",
+        "D": "Kết hợp các bài toán về chi phí."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Sắp xếp, bố trí nguồn lực ổn định."
+    },
+    {
+      "id": 156,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Tại sao việc phân phối nguồn lực dự án lại cần thiết trong quá trình thực hiện?",
+      "options": {
+        "A": "Để giảm thiểu thời gian thực hiện dự án.",
+        "B": "Để đảm bảo nguồn lực được sắp xếp hợp lý nhằm hoàn thành các mục tiêu của dự án.",
+        "C": "Để tăng cường ngân sách cho dự án.",
+        "D": "Để đánh giá năng lực của nhân viên trong đơn vị."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Để đảm bảo nguồn lực được sắp xếp hợp lý nhằm hoàn thành các mục tiêu của dự án."
+    },
+    {
+      "id": 157,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Có mấy cách phân loại nguồn lực?",
+      "options": {
+        "A": "1",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 4"
+    },
+    {
+      "id": 158,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Đặc điểm nào sau đây của phân phối nguồn lực dự án thể hiện tính chủ quan của nhà quản lý?",
+      "options": {
+        "A": "Phân bổ nguồn lực theo yêu cầu của dự án",
+        "B": "Quyết định cách huy động và sắp xếp nguồn lực",
+        "C": "Đánh giá hiệu quả của nguồn lực",
+        "D": "Theo dõi tiến độ dự án"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Quyết định cách huy động và sắp xếp nguồn lực"
+    },
+    {
+      "id": 159,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Điều hòa nguồn lực là phương pháp nhằm mục đích gì?",
+      "options": {
+        "A": "Tăng chi phí dự án",
+        "B": "Giảm số lượng công việc",
+        "C": "Thay đổi thời gian thực hiện dự án",
+        "D": "Tối thiểu hóa sự khác biệt về nhu cầu nguồn lực giữa các giai đoạn"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tối thiểu hóa sự khác biệt về nhu cầu nguồn lực giữa các giai đoạn"
+    },
+    {
+      "id": 160,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Nguyên tắc ưu tiên nào quyết định thời hạn thực hiện dự án?",
+      "options": {
+        "A": "Ưu tiên các công việc có thời gian thực hiện nhỏ nhất",
+        "B": "Ưu tiên các công việc có dự trữ thời gian nhỏ nhất",
+        "C": "Ưu tiên các công việc găng",
+        "D": "Ưu tiên các công việc theo ý muốn chủ quan"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Ưu tiên các công việc găng"
+    },
+    {
+      "id": 161,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Biểu đồ phụ tải nguồn lực dùng để phản ánh điều gì?",
+      "options": {
+        "A": "Chi phí của dự án",
+        "B": "Số lượng từng loại nguồn lực cần thiết theo kế hoạch",
+        "C": "Thời gian hoàn thành dự án",
+        "D": "Đánh giá hiệu suất làm việc"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Số lượng từng loại nguồn lực cần thiết theo kế hoạch"
+    },
+    {
+      "id": 162,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Phương pháp điều chỉnh đều nguồn lực cho phép dịch chuyển công việc trong phạm vi nào?",
+      "options": {
+        "A": "Thời gian thực hiện",
+        "B": "Thời gian khởi công",
+        "C": "Thời gian hoàn thành",
+        "D": "Thời gian dự trữ"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Thời gian dự trữ"
+    },
+    {
+      "id": 163,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Sau khi điều chỉnh đều nguồn lực, phương pháp này giúp dự án giảm thiểu điều gì?",
+      "options": {
+        "A": "Mức dự trữ vật tư hàng hóa và chi phí nhân công",
+        "B": "Số lượng công việc cần thực hiện",
+        "C": "Thời gian hoàn thành dự án",
+        "D": "Sự hợp tác giữa các thành viên"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Mức dự trữ vật tư hàng hóa và chi phí nhân công"
+    }
+  ]
+}

@@ -1,0 +1,525 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kỹ năng Quản lý Dự án - Chương 2",
+  "chapter": "Chương 2",
+  "totalQuestions": 37,
+  "questions": [
+    {
+      "id": 33,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Giai đoạn thực hiện đầu tư chiếm bao nhiêu tổng số vốn đầu tư?",
+      "options": {
+        "A": "40-45%",
+        "B": "65-75%",
+        "C": "80-95%",
+        "D": "85-99.5%"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. 85-99.5%"
+    },
+    {
+      "id": 34,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Đâu không thuộc Các bước của quá trình soạn thảo dự án đầu tư?",
+      "options": {
+        "A": "Nghiên cứu cơ hội đầu tư",
+        "B": "Nghiên cứu tiền khả thi",
+        "C": "Nghiên cứu khả thi",
+        "D": "Hoàn tất các thủ tục triển khai đầu tư"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Hoàn tất các thủ tục triển khai đầu tư"
+    },
+    {
+      "id": 35,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Chu kỳ của 1 dự án là gì",
+      "options": {
+        "A": "Chu kỳ của một dự án là các giai đoạn mà dự án đó đã lên kế hoạch và soạn thảo trước đó",
+        "B": "Chu kỳ của một dự án là các bước: lên ý tưởng, soạn thảo văn bản, nghiên cứu cơ hội đầu tư, nghiên cứu tài chính...hoàn thành và chấm dứt dự án",
+        "C": "Chu kỳ của một dự án là các bước hoặc các giai đoạn mà một dự án phải trải qua, bắt đầu từ khi dự án mới chỉ là ý tưởng đến khi dự án hoàn thành và chấm dứt hoạt động.",
+        "D": "Chu kỳ của một dự án được tính từ thời điểm bắt đầu đến thời điểm kết thúc dự án đó"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Chu kỳ của một dự án là các bước hoặc các giai đoạn mà một dự án phải trải qua, bắt đầu từ khi dự án mới chỉ là ý tưởng đến khi dự án hoàn thành và chấm dứt hoạt động."
+    },
+    {
+      "id": 36,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Soạn thảo dự án có những bước nào",
+      "options": {
+        "A": "Nghiên cứu đầu tư, nghiên cứu khả thi, nghiên cứu tiền khả thi",
+        "B": "Nghiên cứu cơ hội đầu tư, nghiên cứu tiền khả thi, nghiên cứu khả thi.",
+        "C": "Nghiên cứu cơ hội đầu tư, nghiên cứu tính khả thi, nghiên cứu tài chính",
+        "D": "Nghiên cứu cơ hội đầu tư, nghiên cứu tài chính, nghiên cứu khả thi"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Nghiên cứu cơ hội đầu tư, nghiên cứu tiền khả thi, nghiên cứu khả thi."
+    },
+    {
+      "id": 37,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Bước nào trong quá trình soạn thảo dự án đầu tư giúp xác định tính khả thi của dự án?",
+      "options": {
+        "A": "Đánh giá kỹ thuật",
+        "B": "Đánh giá rủi ro",
+        "C": "Phân tích tài chính",
+        "D": "Nghiên cứu tiền khả thi"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Nghiên cứu tiền khả thi"
+    },
+    {
+      "id": 38,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Mục tiêu chính của giai đoạn lập dự án là gì?",
+      "options": {
+        "A": "Xây dựng kế hoạch thực hiện dự án.",
+        "B": "Đánh giá khả năng thành công của dự án.",
+        "C": "Xác định nguồn vốn cho dự án.",
+        "D": "Tất cả các đáp án trên."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả các đáp án trên."
+    },
+    {
+      "id": 39,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Trong quá trình thẩm định dự án, yếu tố nào sau đây quan trọng nhất?",
+      "options": {
+        "A": "Kinh nghiệm của nhà đầu tư.",
+        "B": "Quy mô của dự án.",
+        "C": "Khả năng sinh lời của dự án.",
+        "D": "Mối quan hệ với các đối tác."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Khả năng sinh lời của dự án."
+    },
+    {
+      "id": 40,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Một phương án đầu tư được coi là thuận lợi được xem xét yếu tố cơ bản nào?",
+      "options": {
+        "A": "Cơ hội đầu tư",
+        "B": "Đầu ra và đầu vào phương án đó",
+        "C": "Tài chính",
+        "D": "Lợi ích kinh tế"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Đầu ra và đầu vào phương án đó"
+    },
+    {
+      "id": 41,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Đâu KHÔNG phải là căn cứ nghiên cứu cơ hội đầu tư",
+      "options": {
+        "A": "Chủ trương, chính sách của Nhà nước",
+        "B": "Bối cảnh chung về kinh tế - xã hội, pháp luật ảnh hưởng đến dự án",
+        "C": "Nhu cầu thị trường trong và ngoài nước",
+        "D": "Những kết quả, hiệu quả sẽ đạt được nếu thực hiện đầu tư"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Bối cảnh chung về kinh tế - xã hội, pháp luật ảnh hưởng đến dự án"
+    },
+    {
+      "id": 42,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Nội dung cơ bản để thẩm định dự án đầu tư về mặt công nghệ và kỹ thuật? Chọn câu trả lời sai",
+      "options": {
+        "A": "Tư cách pháp nhân",
+        "B": "Sự hợp lý về địa điểm xây dựng (quy hoạch xây dựng đảm bảo an ninh quốc phòng)",
+        "C": "Sử dụng đất đai, tài nguyên",
+        "D": "Tính hiện đại hợp lý của công nghệ thiết bị sử dụng theo dự án"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Tư cách pháp nhân"
+    },
+    {
+      "id": 43,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Người thực hiện ý tưởng đầu tư là ai?",
+      "options": {
+        "A": "Ban giám đốc",
+        "B": "Chuyên viên nhân sự của công ty",
+        "C": "Chuyên viên phòng kinh doanh",
+        "D": "Chuyên viên kinh tế của công ty"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Ban giám đốc"
+    },
+    {
+      "id": 44,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Đâu KHÔNG PHẢI là người thực hiện ý tưởng đầu tư",
+      "options": {
+        "A": "Chủ đầu tư",
+        "B": "Ban giám đốc",
+        "C": "Chuyên viên nghiên cứu chiến lược phát triển",
+        "D": "Chuyên viên nhân sự của công ty"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Chuyên viên nhân sự của công ty"
+    },
+    {
+      "id": 45,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Đâu KHÔNG PHẢI mục đích của thẩm định dự án",
+      "options": {
+        "A": "Đánh giá hiệu quả",
+        "B": "Đánh giá cơ cấu tài sản và nguồn vốn",
+        "C": "Đánh giá tính hợp lí",
+        "D": "Đánh giá tính khả thi"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Đánh giá cơ cấu tài sản và nguồn vốn"
+    },
+    {
+      "id": 46,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Để tiếp cận khung Logic cần tiến hành mấy giai đoạn?",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "5"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 2"
+    },
+    {
+      "id": 47,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Tại giai đoạn điều tra, phân tích của Tiếp cận khung Logic gồm công cụ nào?",
+      "options": {
+        "A": "SWOT",
+        "B": "Thảo luận nhóm",
+        "C": "Cây mục tiêu",
+        "D": "Phân tích điều kiện"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. SWOT"
+    },
+    {
+      "id": 48,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Tại giai đoạn Hoạch định/thiết kế của Tiếp cận khung Logic gồm công cụ nào?",
+      "options": {
+        "A": "Cây vấn đề",
+        "B": "Sơ đồ Veen",
+        "C": "Cây mục tiêu",
+        "D": "Ma trận các bên liên quan"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Cây mục tiêu"
+    },
+    {
+      "id": 49,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Nội dung thực hiện của Thông tin chi phí sản xuất kinh doanh (Input) là:",
+      "options": {
+        "A": "Xác định đơn giá sản phẩm",
+        "B": "Xác định thị phần, khả năng tiêu thụ sản phẩm",
+        "C": "Xác định nhà cung cấp, giá cả, chủng loại NVL",
+        "D": "Xác định nhu cầu về trang thiết bị"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Xác định nhà cung cấp, giá cả, chủng loại NVL"
+    },
+    {
+      "id": 50,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Nội dung thực hiện của Thông tin về thị trường (output) là:",
+      "options": {
+        "A": "Xác định thị phần và khả năng tiêu thụ sản phẩm của dự án",
+        "B": "Xác định về lựa chọn công nghệ và quy trình",
+        "C": "Chứng minh bán đấu về tính cần thiết của việc đầu tư",
+        "D": "Xác định mặt trái dự án đi vào hoạt động"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Xác định thị phần và khả năng tiêu thụ sản phẩm của dự án"
+    },
+    {
+      "id": 51,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Giai đoạn nào quyết định sự thành công hay thất bại của toàn bộ dự án?",
+      "options": {
+        "A": "Vận hành kết quả đầu tư",
+        "B": "Chuẩn bị đầu tư",
+        "C": "Thực hiện đầu tư",
+        "D": "Đánh giá đầu tư"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Chuẩn bị đầu tư"
+    },
+    {
+      "id": 52,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Tại sao thẩm định dự án đối với các định chế tài chính là quan trọng?",
+      "options": {
+        "A": "Để đánh giá hiệu quả kinh doanh của nhà đầu tư",
+        "B": "Để quyết định có cho vay vốn hay không",
+        "C": "Để kiểm soát chi phí xây dựng",
+        "D": "Để phát triển thị trường"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Để quyết định có cho vay vốn hay không"
+    },
+    {
+      "id": 53,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Trong quá trình lập dự án, bước nào là quan trọng nhất để đảm bảo sự thành công của dự án?",
+      "options": {
+        "A": "Xác định mục tiêu dự án",
+        "B": "Phân tích rủi ro",
+        "C": "Lập kế hoạch tài chính",
+        "D": "Đánh giá hiệu quả dự án"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Xác định mục tiêu dự án"
+    },
+    {
+      "id": 54,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Khi thẩm định một dự án, yếu tố nào sau đây thường không được xem xét?",
+      "options": {
+        "A": "Tiềm năng sinh lợi của dự án",
+        "B": "Độ khả thi về kỹ thuật",
+        "C": "Sự phù hợp với quy định pháp lý",
+        "D": "Sở thích cá nhân của nhà đầu tư"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Sở thích cá nhân của nhà đầu tư"
+    },
+    {
+      "id": 55,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Một dự án có thể được thẩm định theo quan điểm nào?",
+      "options": {
+        "A": "Tài chính",
+        "B": "Kinh tế",
+        "C": "Xã hội",
+        "D": "Tất cả các đáp án trên đều đúng"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả các đáp án trên đều đúng"
+    },
+    {
+      "id": 56,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Một dự án được gọi là khả thi khi:",
+      "options": {
+        "A": "Dự án đó phải tuân thủ đầy đủ các quy định của pháp luật",
+        "B": "Dự án đó có khả năng thực hiện được",
+        "C": "Dự án đó phải mang lại hiệu quả về tài chính và/hoặc hiệu quả kinh tế xã hội",
+        "D": "Dự án phải thỏa mãn được ba yêu cầu trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Dự án phải thỏa mãn được ba yêu cầu trên"
+    },
+    {
+      "id": 57,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Mục đích chính của việc nghiên cứu tiền khả thi là gì?",
+      "options": {
+        "A": "Nghiên cứu sâu hơn các khía cạnh chưa chắc chắn của cơ hội đầu tư để lựa chọn tiếp.",
+        "B": "Xác định chính xác chi phí đầu tư và lợi nhuận dự kiến của dự án.",
+        "C": "Đánh giá toàn diện tác động của dự án đến môi trường và xã hội.",
+        "D": "Phân tích chi tiết các công nghệ sẽ được áp dụng trong dự án."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Nghiên cứu sâu hơn các khía cạnh chưa chắc chắn của cơ hội đầu tư để lựa chọn tiếp."
+    },
+    {
+      "id": 58,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Đặc điểm của nghiên cứu tiền khả thi là:",
+      "options": {
+        "A": "Nghiên cứu chi tiết, sâu sát từng khía cạnh kỹ thuật, tài chính của dự án.",
+        "B": "Xem xét ở trạng thái tĩnh, ở mức trung bình mọi đầu vào, đầu ra của dự án.",
+        "C": "Đánh giá đầy đủ rủi ro và cơ hội của dự án trong tương lai.",
+        "D": "Xác định chính xác nguồn vốn và đối tác hợp tác cho dự án."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Xem xét ở trạng thái tĩnh, ở mức trung bình mọi đầu vào, đầu ra của dự án."
+    },
+    {
+      "id": 59,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Quá trình hình thành và thực hiện một dự án đầu tư, có:",
+      "options": {
+        "A": "2 giai đoạn",
+        "B": "3 giai đoạn",
+        "C": "4 giai đoạn",
+        "D": "5 giai đoạn"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. 3 giai đoạn"
+    },
+    {
+      "id": 60,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Có mấy bước trong quá trình soạn thảo dự án đầu tư:",
+      "options": {
+        "A": "3 bước",
+        "B": "4 bước",
+        "C": "5 bước",
+        "D": "6 bước"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 3 bước"
+    },
+    {
+      "id": 61,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Điền từ đúng trong thẩm định dự án thì “Tổ chức xem xét .........., khoa học và toàn diện các nội dung cơ bản của dự án”?",
+      "options": {
+        "A": "Chủ quan",
+        "B": "Định tính",
+        "C": "Khách quan",
+        "D": "Định lượng"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Khách quan"
+    },
+    {
+      "id": 62,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Thẩm định dự án là gì?",
+      "options": {
+        "A": "Xem xét một cách chủ quan các nội dung của dự án",
+        "B": "Tổ chức xem xét khách quan, khoa học và toàn diện các nội dung cơ bản của dự án",
+        "C": "Đưa ra quyết định mà không cần xem xét dữ liệu",
+        "D": "Lập kế hoạch cho các hoạt động không liên quan đến dự án"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Tổ chức xem xét khách quan, khoa học và toàn diện các nội dung cơ bản của dự án"
+    },
+    {
+      "id": 63,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Bảng phân công trách nhiệm trong lập dự án không bao gồm nội dung nào?",
+      "options": {
+        "A": "Ý tưởng đầu tư",
+        "B": "Phương án kỹ thuật",
+        "C": "Báo cáo tài chính của chủ đầu tư",
+        "D": "Phân tích thị trường"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Báo cáo tài chính của chủ đầu tư"
+    },
+    {
+      "id": 64,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Trong giai đoạn chuẩn bị đầu tư, nội dung nào là quan trọng nhất?",
+      "options": {
+        "A": "Nghiên cứu kỹ thuật",
+        "B": "Nghiên cứu thị trường",
+        "C": "Nghiên cứu tài chính",
+        "D": "Thiết kế dự án"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Nghiên cứu thị trường"
+    },
+    {
+      "id": 65,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Tình huống nào dẫn đến thất bại trong đầu tư dự án?",
+      "options": {
+        "A": "Không nghiên cứu kỹ địa điểm",
+        "B": "Không đủ vốn đầu tư",
+        "C": "Thiếu nhân lực",
+        "D": "Sai phương pháp tài chính"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Không nghiên cứu kỹ địa điểm"
+    },
+    {
+      "id": 66,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Nghiên cứu tiền khả thi là giai đoạn nào trong quá trình lập dự án?",
+      "options": {
+        "A": "Trước nghiên cứu khả thi",
+        "B": "Sau nghiên cứu khả thi",
+        "C": "Đồng thời với nghiên cứu khả thi",
+        "D": "Không cần thiết thực hiện"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Trước nghiên cứu khả thi"
+    },
+    {
+      "id": 67,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Điểm quan trọng nhất trong nghiên cứu tiền khả thi là gì?",
+      "options": {
+        "A": "Nghiên cứu chi phí dự án",
+        "B": "Xác định các khía cạnh pháp lý",
+        "C": "Phân tích thị trường và xác định tính khả thi sơ bộ",
+        "D": "Nghiên cứu tài chính"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Phân tích thị trường và xác định tính khả thi sơ bộ"
+    },
+    {
+      "id": 68,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Phương pháp thẩm định dựa trên độ nhạy có nghĩa là:",
+      "options": {
+        "A": "Xem xét mức độ thay đổi của dự án khi có yếu tố bất trắc",
+        "B": "So sánh các dự án khác nhau",
+        "C": "Thẩm định từng khía cạnh của dự án",
+        "D": "Thẩm định các yếu tố về công nghệ"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Xem xét mức độ thay đổi của dự án khi có yếu tố bất trắc"
+    },
+    {
+      "id": 69,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Thẩm định các chỉ tiêu tài chính của dự án không bao gồm:",
+      "options": {
+        "A": "BEP",
+        "B": "NPV",
+        "C": "Tỷ lệ lạm phát",
+        "D": "IRR"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tỷ lệ lạm phát"
+    }
+  ]
+}

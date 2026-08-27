@@ -1,0 +1,357 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kỹ năng Khởi nghiệp và Lãnh đạo - Chương 2",
+  "chapter": "Chương 2",
+  "totalQuestions": 25,
+  "questions": [
+    {
+      "id": 16,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Ba nguồn gốc chính của cơ hội kinh doanh theo Barringer và Ireland (2019) là gì?",
+      "options": {
+        "A": "Quan sát các đối thủ cạnh tranh, tìm khoảng trống trên thị trường, và giải quyết một vấn đề.",
+        "B": "Quan sát khách hàng, tìm khoảng trống trên thị trường, và giải quyết một vấn đề.",
+        "C": "Quan sát các đối tác, tìm khoảng trống trên thị trường, và giải quyết một vấn đề.",
+        "D": "Quan sát các xu thế, tìm khoảng trống trên thị trường, và giải quyết một vấn đề."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Quan sát các xu thế, tìm khoảng trống trên thị trường, và giải quyết một vấn đề."
+    },
+    {
+      "id": 17,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Cơ hội kinh doanh là gì?",
+      "options": {
+        "A": "Là những hoạt động tạo ra một loại sản phẩm hàng hóa/dịch vụ mới đáp ứng nhu cầu của phân khúc khách hàng cụ thể.",
+        "B": "Là những tình huống, bối cảnh thuận lợi tạo ra nhu cầu về một loại sản phẩm hàng hóa/dịch vụ mới, hay một dự án kinh doanh mới.",
+        "C": "Là những tình huống, bối cảnh thuận lợi tạo ra một loại sản phẩm hàng hóa/dịch vụ mới, hay một dự án kinh doanh mới.",
+        "D": "Là những phán đoán về một loại sản phẩm hàng hóa/dịch vụ mới, hay một dự án kinh doanh mới."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Là những tình huống, bối cảnh thuận lợi tạo ra nhu cầu về một loại sản phẩm hàng hóa/dịch vụ mới, hay một dự án kinh doanh mới."
+    },
+    {
+      "id": 18,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Hãy sắp xếp thứ tự (từ 1-5) các bước sau trong Tư duy thiết kế: 1. Xác định vấn đề, 2. Thấu cảm, 3. Phát triển giải pháp, 4. Kiểm tra, 5. Xây dựng mẫu thử",
+      "options": {
+        "A": "1. 2. 3. 4. 5.",
+        "B": "2. 1. 3. 5. 4.",
+        "C": "1. 3. 2. 4. 5.",
+        "D": "2. 3. 1. 5. 4."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. 2. 1. 3. 5. 4."
+    },
+    {
+      "id": 19,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Phát triển giải pháp là bước thứ mấy trong tiến trình tư duy thiết kế và nội dung của nó là gì?",
+      "options": {
+        "A": "Phát triển giải pháp là bước 3 trong tiến trình tư duy thiết kế và nội dung là phát triển ý tưởng về giải pháp sáng tạo cho vấn đề chính của khách hàng.",
+        "B": "Phát triển giải pháp là bước 4 trong tiến trình tư duy thiết kế và nội dung là phát triển ý tưởng về giải pháp sáng tạo cho vấn đề chính của đối tác.",
+        "C": "Phát triển giải pháp là bước 3 trong tiến trình tư duy thiết kế và nội dung là phát triển ý tưởng về giải pháp sáng tạo cho vấn đề chính của doanh nghiệp.",
+        "D": "Phát triển giải pháp là bước 4 trong tiến trình tư duy thiết kế và nội dung là phát triển ý tưởng về giải pháp sáng tạo cho vấn đề chính của khách hàng."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Phát triển giải pháp là bước 3 trong tiến trình tư duy thiết kế và nội dung là phát triển ý tưởng về giải pháp sáng tạo cho vấn đề chính của khách hàng."
+    },
+    {
+      "id": 20,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Tiêu chí \"Mang lại giá trị cho khách hàng\" trong xác định cơ hội kinh doanh nghĩa là gì?",
+      "options": {
+        "A": "Bán sản phẩm (hàng hóa hoặc dịch vụ) mà khách hàng chờ đợi; không phải bán thứ bạn có hay có thể tạo ra.",
+        "B": "Bán sản phẩm (hàng hóa hoặc dịch vụ) mà khách hàng mong muốn; không phải bán thứ bạn có hay có thể tạo ra.",
+        "C": "Bán sản phẩm (hàng hóa hoặc dịch vụ) mà khách hàng cần và có thể mua; không phải bán thứ bạn có hay có thể tạo ra.",
+        "D": "Bán sản phẩm (hàng hóa hoặc dịch vụ) mà khách hàng yêu cầu; không phải bán thứ bạn có hay có thể tạo ra."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Bán sản phẩm (hàng hóa hoặc dịch vụ) mà khách hàng cần và có thể mua; không phải bán thứ bạn có hay có thể tạo ra."
+    },
+    {
+      "id": 21,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Tư duy thiết kế là gì?",
+      "options": {
+        "A": "Là một cách tiếp cận giúp phát triển, sáng tạo các sản phẩm mới dựa trên nền tảng thấu cảm khách hàng - xác định và giải quyết các vấn đề mà khách hàng thực sự gặp phải hoặc các đáp ứng các nhu cầu mà họ thực sự mong muốn.",
+        "B": "Là một cách tiếp cận giúp phát triển, sáng tạo các sản phẩm mới dựa trên nền tảng thấu cảm đối thủ cạnh tranh - xác định và giải quyết các vấn đề mà đối thủ cạnh tranh thực sự gặp phải hoặc các đáp ứng các nhu cầu mà họ thực sự mong muốn.",
+        "C": "Là một cách tiếp cận giúp phát triển, sáng tạo các sản phẩm mới dựa trên nền tảng thấu cảm doanh nghiệp - xác định và giải quyết các vấn đề mà doanh nghiệp thực sự gặp phải hoặc các đáp ứng các nhu cầu mà họ thực sự mong muốn.",
+        "D": "Là một cách tiếp cận giúp phát triển, sáng tạo các sản phẩm mới dựa trên nền tảng thấu cảm đối tác - xác định và giải quyết các vấn đề mà đối tác thực sự gặp phải hoặc các đáp ứng các nhu cầu mà họ thực sự mong muốn."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Là một cách tiếp cận giúp phát triển, sáng tạo các sản phẩm mới dựa trên nền tảng thấu cảm khách hàng - xác định và giải quyết các vấn đề mà khách hàng thực sự gặp phải hoặc các đáp ứng các nhu cầu mà họ thực sự mong muốn."
+    },
+    {
+      "id": 22,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Xác định vấn đề là bước thứ mấy trong tiến trình tư duy thiết kế và nội dung của nó là gì?",
+      "options": {
+        "A": "Xác định vấn đề là bước thứ 2 trong tiến trình tư duy thiết kế và nội dung là xác định những vấn đề chính mà đối thủ đang gặp phải và cần giải quyết.",
+        "B": "Xác định vấn đề là bước thứ 3 trong tiến trình tư duy thiết kế và nội dung là xác định những vấn đề chính mà doanh nghiệp đang gặp phải và cần giải quyết.",
+        "C": "Xác định vấn đề là bước 3 trong tiến trình tư duy thiết kế và nội dung là xác định những vấn đề chính mà khách hàng đang gặp phải và cần giải quyết.",
+        "D": "Xác định vấn đề là bước thứ 2 trong tiến trình tư duy thiết kế và nội dung là xác định những vấn đề chính mà khách hàng đang gặp phải và cần giải quyết."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Xác định vấn đề là bước thứ 2 trong tiến trình tư duy thiết kế và nội dung là xác định những vấn đề chính mà khách hàng đang gặp phải và cần giải quyết."
+    },
+    {
+      "id": 23,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Yếu tố \"Nhiệm vụ/Jobs\" thuộc phần nào trong mô hình đề xuất giá trị của Alexander Osterwalder và nội dung của nó là gì?",
+      "options": {
+        "A": "Yếu tố \"Nhiệm vụ/Jobs\" thuộc phần \"Hồ sơ khách hàng\" trong mô hình đề xuất giá trị của Alexander Osterwalder và nội dung của nó là những điều mà doanh nghiệp cụ thể đang cần thực hiện hoặc giải quyết.",
+        "B": "Yếu tố \"Nhiệm vụ/Jobs\" thuộc phần \"Hồ sơ khách hàng\" trong mô hình đề xuất giá trị của Alexander Osterwalder và nội dung của nó là những điều mà phân khúc khách hàng cụ thể đang cần thực hiện hoặc giải quyết trong công việc, cuộc sống.",
+        "C": "Yếu tố \"Nhiệm vụ/Jobs\" thuộc phần \"Hồ sơ khách hàng\" trong mô hình đề xuất giá trị của Alexander Osterwalder và nội dung của nó là những điều mà đối tác cụ thể đang cần thực hiện hoặc giải quyết.",
+        "D": "Yếu tố \"Nhiệm vụ/Jobs\" thuộc phần \"Đề xuất giá trị\" trong mô hình đề xuất giá trị của Alexander Osterwalder và nội dung của nó là những điều mà phân khúc khách hàng cụ thể đang cần thực hiện hoặc giải quyết trong công việc, cuộc sống."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Yếu tố \"Nhiệm vụ/Jobs\" thuộc phần \"Hồ sơ khách hàng\" trong mô hình đề xuất giá trị của Alexander Osterwalder và nội dung của nó là những điều mà phân khúc khách hàng cụ thể đang cần thực hiện hoặc giải quyết trong công việc, cuộc sống."
+    },
+    {
+      "id": 24,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Yếu tố \"Vấn đề/Pains\" thuộc phần nào trong mô hình đề xuất giá trị của Alexander Osterwalder và nội dung của nó là gì?",
+      "options": {
+        "A": "Yếu tố \"Vấn đề/Pains\" thuộc phần \"Hồ sơ khách hàng\" trong mô hình đề xuất giá trị của Alexander Osterwalder và nội dung của nó là những điều khiến phân khúc khách hàng cụ thể lo lắng, bận tâm hoặc cảm thấy bị cản trở khi thực hiện nhiệm vụ của họ trong công việc, cuộc sống.",
+        "B": "Yếu tố \"Vấn đề/Pains\" thuộc phần \"Hồ sơ khách hàng\" trong mô hình đề xuất giá trị của Alexander Osterwalder và nội dung của nó là những điều khiến doanh nghiệp cụ thể lo lắng, bận tâm hoặc cảm thấy bị cản trở khi thực hiện nhiệm vụ của họ trong đáp ứng nhu cầu của khách hàng.",
+        "C": "Yếu tố \"Vấn đề/Pains\" thuộc phần \"Hồ sơ khách hàng\" trong mô hình đề xuất giá trị của Alexander Osterwalder và nội dung của nó là những điều khiến đối tác của doanh nghiệp cụ thể lo lắng, bận tâm hoặc cảm thấy bị cản trở khi thực hiện nhiệm vụ của họ.",
+        "D": "Yếu tố \"Vấn đề/Pains\" thuộc phần \"Đề xuất giá trị\" trong mô hình đề xuất giá trị của Alexander Osterwalder và nội dung của nó là những điều khiến phân khúc khách hàng cụ thể lo lắng, bận tâm hoặc cảm thấy bị cản trở khi thực hiện nhiệm vụ của họ trong công việc, cuộc sống."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Yếu tố \"Vấn đề/Pains\" thuộc phần \"Hồ sơ khách hàng\" trong mô hình đề xuất giá trị của Alexander Osterwalder và nội dung của nó là những điều khiến phân khúc khách hàng cụ thể lo lắng, bận tâm hoặc cảm thấy bị cản trở khi thực hiện nhiệm vụ của họ trong công việc, cuộc sống."
+    },
+    {
+      "id": 25,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Bốn tiêu chí của một cơ hội kinh doanh là gì?",
+      "options": {
+        "A": "Mang lại giá trị cho doanh nghiệp, hấp dẫn, kịp thời, và đủ dài.",
+        "B": "Mang lại giá trị cho khách hàng, sáng tạo, kịp thời, và đủ dài.",
+        "C": "Mang lại giá trị cho khách hàng, hấp dẫn, chắc chắn, và đủ dài.",
+        "D": "Mang lại giá trị cho khách hàng, hấp dẫn, kịp thời, và đủ dài."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Mang lại giá trị cho khách hàng, hấp dẫn, kịp thời, và đủ dài."
+    },
+    {
+      "id": 26,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Kiểm tra là bước thứ mấy trong tiến trình tư duy thiết kế và nội dung của nó là gì?",
+      "options": {
+        "A": "Kiểm tra là bước thứ 3 trong tiến trình tư duy thiết kế và nội dung là phát triển giải pháp tốt nhất để hoàn thiện và kiểm tra trước khi thương mại hóa.",
+        "B": "Kiểm tra là bước thứ 3 trong tiến trình tư duy thiết kế và nội dung là lựa chọn giải pháp tốt nhất trong số các giải pháp từ các mẫu thử để hoàn thiện và kiểm tra trước khi thương mại hóa.",
+        "C": "Kiểm tra là bước thứ 5 trong tiến trình tư duy thiết kế và nội dung là lựa chọn giải pháp tốt nhất trong số các giải pháp từ các mẫu thử để hoàn thiện và kiểm tra trước khi thương mại hóa.",
+        "D": "Kiểm tra là bước thứ 5 trong tiến trình tư duy thiết kế và nội dung là phát triển giải pháp tốt nhất để hoàn thiện và kiểm tra trước khi thương mại hóa."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Kiểm tra là bước thứ 5 trong tiến trình tư duy thiết kế và nội dung là lựa chọn giải pháp tốt nhất trong số các giải pháp từ các mẫu thử để hoàn thiện và kiểm tra trước khi thương mại hóa."
+    },
+    {
+      "id": 27,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Mô hình đề xuất giá trị do Alexander Osterwalder phát triển nhằm mục đích để làm gì?",
+      "options": {
+        "A": "Để thấu cảm các vấn đề và mong muốn của các đối thủ cụ thể và phát triển các giải pháp cho các vấn đề và mong muốn đó.",
+        "B": "Để thấu cảm các vấn đề và mong muốn của các đối tác cụ thể và phát triển các giải pháp cho các vấn đề và mong muốn đó.",
+        "C": "Để thấu cảm các vấn đề và mong muốn của các doanh nghiệp cụ thể và phát triển các giải pháp cho các vấn đề và mong muốn đó.",
+        "D": "Để thấu cảm các vấn đề và mong muốn của các phân khúc khách hàng cụ thể và phát triển các giải pháp cho các vấn đề và mong muốn đó."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Để thấu cảm các vấn đề và mong muốn của các phân khúc khách hàng cụ thể và phát triển các giải pháp cho các vấn đề và mong muốn đó."
+    },
+    {
+      "id": 28,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Phương pháp \"Động thân thể/Body storming\" là gì, dùng để làm gì và được thực hiện như thế nào?",
+      "options": {
+        "A": "Một phương pháp trong tư duy thiết kế, dùng để thấu cảm vấn đề của khách hàng, bằng cách thâm nhập vào môi trường thực tế của khách hàng.",
+        "B": "Một phương pháp trong tư duy thiết kế, dùng để thấu cảm và phát triển giải pháp cho vấn đề của doanh nghiệp, bằng cách thâm nhập vào môi trường thực tế của họ.",
+        "C": "Một phương pháp trong tư duy thiết kế, dùng để thấu cảm và phát triển giải pháp cho vấn đề của khách hàng, bằng cách thâm nhập vào môi trường thực tế của khách hàng.",
+        "D": "Một phương pháp trong tư duy logic, dùng để thấu cảm và phát triển giải pháp cho vấn đề của khách hàng, bằng cách thâm nhập vào môi trường thực tế của khách hàng."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Một phương pháp trong tư duy thiết kế, dùng để thấu cảm và phát triển giải pháp cho vấn đề của khách hàng, bằng cách thâm nhập vào môi trường thực tế của khách hàng."
+    },
+    {
+      "id": 29,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Phương pháp xác định cơ hội kinh doanh bằng cách giải quyết một vấn đề nghĩa là gì?",
+      "options": {
+        "A": "Tìm ra thực trạng của vấn đề mà bản thân nhà khởi nghiệp và/hoặc nhiều người khác gặp phải trong cuộc sống, công việc...",
+        "B": "Tìm ra giải pháp giúp giải quyết hiệu quả vấn đề mà bản thân nhà khởi nghiệp và/hoặc nhiều người khác gặp phải trong cuộc sống, công việc...",
+        "C": "Tìm ra nguyên nhân của vấn đề mà bản thân nhà khởi nghiệp và/hoặc nhiều người khác gặp phải trong cuộc sống, công việc.",
+        "D": "Tìm ra hậu quả của vấn đề mà bản thân nhà khởi nghiệp và/hoặc nhiều người khác gặp phải trong cuộc sống, công việc..."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Tìm ra giải pháp giúp giải quyết hiệu quả vấn đề mà bản thân nhà khởi nghiệp và/hoặc nhiều người khác gặp phải trong cuộc sống, công việc..."
+    },
+    {
+      "id": 30,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Phương pháp xác định cơ hội kinh doanh bằng cách tìm khoảng trống trên thị trường nghĩa là gì?",
+      "options": {
+        "A": "Xác định tình huống trong đó mong muốn hoặc nhu cầu của khách hàng về một loại sản phẩm hàng hóa hoặc dịch vụ nào đó là có nhưng lại không được đáp ứng đầy đủ.",
+        "B": "Xác định tình huống trong đó mong muốn hoặc nhu cầu của doanh nghiệp về một loại sản phẩm hàng hóa hoặc dịch vụ nào đó là có nhưng lại không sản xuất được.",
+        "C": "Xác định tình huống trong đó mong muốn hoặc nhu cầu của khách hàng về một loại sản phẩm hàng hóa hoặc dịch vụ nào đó là có nhưng lại không có khả năng thanh toán.",
+        "D": "Xác định tình huống trong đó mong muốn hoặc nhu cầu của doanh nghiệp về một loại sản phẩm hàng hóa hoặc dịch vụ nào đó là có nhưng lại có quá nhiều đối thủ cạnh tranh."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Xác định tình huống trong đó mong muốn hoặc nhu cầu của khách hàng về một loại sản phẩm hàng hóa hoặc dịch vụ nào đó là có nhưng lại không được đáp ứng đầy đủ."
+    },
+    {
+      "id": 31,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Thấu cảm là bước thứ mấy trong tiến trình tư duy thiết kế và nội dung của nó là gì?",
+      "options": {
+        "A": "Thấu cảm là bước thứ 2 trong tiến trình tư duy thiết kế và nội dung là thấu hiểu và đồng cảm sâu sắc về các nhu cầu, cảm nhận, suy nghĩ, hành vi của khách hàng.",
+        "B": "Thấu cảm là bước thứ 1 trong tiến trình tư duy thiết kế và nội dung là thấu hiểu và đồng cảm sâu sắc về các nhu cầu, cảm nhận, suy nghĩ, hành vi của khách hàng.",
+        "C": "Thấu cảm là bước thứ 1 trong tiến trình tư duy thiết kế và nội dung là thấu hiểu và đồng cảm sâu sắc về các nhu cầu, cảm nhận, suy nghĩ, hành vi của đối thủ cạnh tranh.",
+        "D": "Thấu cảm là bước thứ 1 trong tiến trình tư duy thiết kế và nội dung là thấu hiểu và đồng cảm sâu sắc về các nhu cầu, cảm nhận, suy nghĩ, hành vi của doanh nghiệp."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Thấu cảm là bước thứ 1 trong tiến trình tư duy thiết kế và nội dung là thấu hiểu và đồng cảm sâu sắc về các nhu cầu, cảm nhận, suy nghĩ, hành vi của khách hàng."
+    },
+    {
+      "id": 32,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Thiết kế mẫu là bước thứ mấy trong tiến trình tư duy thiết kế và nội dung của nó là gì?",
+      "options": {
+        "A": "Thiết kế mẫu là bước 4 trong tiến trình tư duy thiết kế và nội dung là xây dựng sản phẩm mẫu để trực quan hóa các giải pháp cho vấn đề của khách hàng và thu thập phản hồi.",
+        "B": "Thiết kế mẫu là bước 3 trong tiến trình tư duy thiết kế và nội dung là xây dựng sản phẩm mẫu để trực quan hóa các giải pháp cho vấn đề của khách hàng và thu thập phản hồi.",
+        "C": "Thiết kế mẫu là bước 4 trong tiến trình tư duy thiết kế và nội dung là xây dựng sản phẩm mẫu để trực quan hóa các giải pháp cho vấn đề của doanh nghiệp và thu thập phản hồi.",
+        "D": "Thiết kế mẫu là bước 3 trong tiến trình tư duy thiết kế và nội dung là xây dựng sản phẩm mẫu để trực quan hóa các giải pháp cho vấn đề của đối tác và thu thập phản hồi."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Thiết kế mẫu là bước 4 trong tiến trình tư duy thiết kế và nội dung là xây dựng sản phẩm mẫu để trực quan hóa các giải pháp cho vấn đề của khách hàng và thu thập phản hồi."
+    },
+    {
+      "id": 33,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Tiêu chí \"Đủ dài\" trong xác định cơ hội kinh doanh nghĩa là gì?",
+      "options": {
+        "A": "Thời gian doanh nghiệp tồn tại đủ dài để khai thác.",
+        "B": "Thời gian sản phẩm tồn tại đủ dài để khai thác.",
+        "C": "Thời gian cơ hội tồn tại đủ dài để khai thác.",
+        "D": "Thời gian khách hàng tồn tại đủ dài để khai thác."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Thời gian cơ hội tồn tại đủ dài để khai thác."
+    },
+    {
+      "id": 34,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Tiêu chí \"Hấp dẫn\" trong xác định cơ hội kinh doanh nghĩa là gì?",
+      "options": {
+        "A": "Thị trường cần phải đủ lớn, bạn có thể đáp ứng nhu cầu thị trường và đạt doanh thu lớn hơn chi phí.",
+        "B": "Th thị trường cần phải tăng trưởng, bạn có thể đáp ứng nhu cầu thị trường và đạt doanh thu lớn hơn chi phí.",
+        "C": "Thị trường cần phải cạnh tranh, bạn có thể đáp ứng nhu cầu thị trường và đạt doanh thu lớn hơn chi phí.",
+        "D": "Thị trường cần phải tập trung, bạn có thể đáp ứng nhu cầu thị trường và đạt doanh thu lớn hơn chi phí."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Thị trường cần phải đủ lớn, bạn có thể đáp ứng nhu cầu thị trường và đạt doanh thu lớn hơn chi phí."
+    },
+    {
+      "id": 35,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Tiêu chí \"Kịp thời\" trong xác định cơ hội kinh doanh nghĩa là gì?",
+      "options": {
+        "A": "Thời điểm thị trường cạnh tranh và thời điểm bạn có thể gia nhập thị trường là khớp nhau.",
+        "B": "Thời điểm thị trường sôi động và thời điểm bạn có thể gia nhập thị trường là khớp nhau.",
+        "C": "Thời điểm thị trường cần và thời điểm bạn có thể gia nhập thị trường là khớp nhau.",
+        "D": "Thời điểm thị trường bão hòa và thời điểm bạn có thể gia nhập thị trường là khớp nhau."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Thời điểm thị trường cần và thời điểm bạn có thể gia nhập thị trường là khớp nhau."
+    },
+    {
+      "id": 36,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Tìm hiểu những thay đổi về kinh tế, chính sách, xã hội, công nghệ và môi trường tự nhiên có dẫn tới sự khác biệt giữa những gì đang có và những gì có thể có hoặc cần có là phương pháp xác định cơ hội kinh doanh nào?",
+      "options": {
+        "A": "Quan sát các xu thế.",
+        "B": "Giải quyết một vấn đề.",
+        "C": "Quan sát thị trường.",
+        "D": "Tìm khoảng trống trên thị trường."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Quan sát các xu thế."
+    },
+    {
+      "id": 37,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Trong Mô hình đề xuất giá trị do Alexander Osterwalder phát triển, cần đạt được sự phù hợp giữa các cặp yếu tố nào sau đây?",
+      "options": {
+        "A": "Sản phẩm/Products - Nhiệm vụ/Jobs; Giải pháp cho mong muốn/Gain Creators - Vấn đề/Pains; Giải pháp cho vấn đề/Pain Relievers - Mong muốn/Gains.",
+        "B": "Sản phẩm/Products - Nhiệm vụ/Jobs; Giải pháp cho vấn đề/Pain Relievers - Vấn đề/Pains; Giải pháp cho mong muốn - Mong muốn/Gain Creators.",
+        "C": "Sản phẩm/Products - Nhiệm vụ/Jobs; Giải pháp /Solutions - Vấn đề/Problems.",
+        "D": "Sản phẩm/Products - Nhiệm vụ/Jobs; Giải pháp cho Vấn đề và Mong muốn/Pain Relievers and Gain Creators - Vấn đề và mong muốn/Pains and Gains."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Sản phẩm/Products - Nhiệm vụ/Jobs; Giải pháp cho vấn đề/Pain Relievers - Vấn đề/Pains; Giải pháp cho mong muốn - Mong muốn/Gain Creators."
+    },
+    {
+      "id": 38,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Tư duy thiết kế có nguồn gốc từ đâu và hiện được vận dụng trong những lĩnh vực nào?",
+      "options": {
+        "A": "Tư duy thiết kế vận dụng nhiều phương pháp, công cụ và quy trình mà các nhà thiết kế sử dụng, và hiện nay bắt đầu được áp dụng vào lĩnh vực kinh doanh.",
+        "B": "Tư duy thiết kế vận dụng nhiều phương pháp, công cụ và quy trình mà các nhà kinh doanh sáng tạo sử dụng, và hiện nay chủ yếu được phát triển và áp dụng vào lĩnh vực kinh doanh.",
+        "C": "Tư duy thiết kế vận dụng nhiều phương pháp, công cụ và quy trình mà các nhà thiết kế sử dụng, nhưng hiện nay đã được phát triển và áp dụng vào nhiều lĩnh vực khác nhau - bao gồm kiến trúc, kỹ thuật và kinh doanh.",
+        "D": "Tư duy thiết kế vận dụng nhiều phương pháp, công cụ và quy trình mà các nhà thiết kế sử dụng, nhưng hiện nay chủ yếu được phát triển và áp dụng vào lĩnh vực kinh doanh."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tư duy thiết kế vận dụng nhiều phương pháp, công cụ và quy trình mà các nhà thiết kế sử dụng, nhưng hiện nay đã được phát triển và áp dụng vào nhiều lĩnh vực khác nhau - bao gồm kiến trúc, kỹ thuật và kinh doanh."
+    },
+    {
+      "id": 39,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Tư duy thiết kế gồm bao nhiêu bước và xếp theo thứ tự ra sao?",
+      "options": {
+        "A": "Tư duy thiết kế bao gồm 05 bước chính theo thứ tự như sau: (1) Xác định vấn đề (2) Thấu cảm (3) Phát triển giải pháp (4) Xây dựng mẫu thử (5) Kiểm tra.",
+        "B": "Tư duy thiết kế bao gồm 05 bước chính theo thứ tự như sau: (1) Xác định vấn đề (2) Phát triển giải pháp (3) Thấu cảm (4) Xây dựng mẫu thử (5) Kiểm tra.",
+        "C": "Tư duy thiết kế bao gồm 05 bước chính theo thứ tự như sau: (1) Thấu cảm (2) Xác định vấn đề (3) Phát triển giải pháp (4) Xây dựng mẫu thử (5) Kiểm tra.",
+        "D": "Tư duy thiết kế bao gồm 05 bước chính theo thứ tự như sau: (1) Kiểm tra (2) Thấu cảm (3) Xác định vấn đề (4) Phát triển giải pháp (5) Xây dựng mẫu thử."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tư duy thiết kế bao gồm 05 bước chính theo thứ tự như sau: (1) Thấu cảm (2) Xác định vấn đề (3) Phát triển giải pháp (4) Xây dựng mẫu thử (5) Kiểm tra."
+    },
+    {
+      "id": 40,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Ý tưởng kinh doanh là gì?",
+      "options": {
+        "A": "Là tình huống giúp đem lại lợi nhuận, và thường gắn với sản phẩm nào đó; có thể đáp ứng hoặc không các tiêu chí của một cơ hội.",
+        "B": "Là hoạt động giúp đem lại lợi nhuận, và thường gắn với sản phẩm nào đó; có thể đáp ứng hoặc không các tiêu chí của một cơ hội.",
+        "C": "Là suy nghĩ, dự định, kế hoạch về hoạt động đem lại lợi nhuận, và thường gắn với sản phẩm nào đó; có thể đáp ứng hoặc không các tiêu chí của một cơ hội.",
+        "D": "Là bối cảnh giúp đem lại lợi nhuận, và thường gắn với sản phẩm nào đó; có thể đáp ứng hoặc không các tiêu chí của một cơ hội."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Là suy nghĩ, dự định, kế hoạch về hoạt động đem lại lợi nhuận, và thường gắn với sản phẩm nào đó; có thể đáp ứng hoặc không các tiêu chí của một cơ hội."
+    }
+  ]
+}

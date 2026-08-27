@@ -1,0 +1,1043 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Triết học Mác - Lênin (3 tín chỉ) - Chương 2",
+  "chapter": "Chương 2",
+  "totalQuestions": 74,
+  "questions": [
+    {
+      "id": 51,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Theo quan điểm cảu chủ nghĩa duy vật biện chứng, vật chất với tư cách là phạm trù triết học có đặc tính gì?",
+      "options": {
+        "A": "Vô hạn, vô tận, tồn tại vĩnh viễn, độc lập với ý thức",
+        "B": "Có giới hạn, có sinh ra và có mất đi",
+        "C": "Vô hạn, vô tận, vĩnh viễn tồn tại",
+        "D": "Vô hạn, có sinh ra và có mất đi"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Vô hạn, vô tận, tồn tại vĩnh viễn, độc lập với ý thức"
+    },
+    {
+      "id": 52,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Trong mối quan hệ giữa vật chất và ý thức, ý thức có vai trò gì?",
+      "options": {
+        "A": "Tác động đến vật chất thông qua hoạt động thực tiễn của con người",
+        "B": "Có khả năng tự chuyển thành hình thức vật chất nhất định để tác động vào hình thức vật chất khác",
+        "C": "Tác động trực tiếp đến ý thức",
+        "D": "Không có vai trò đối với vật chất, vì hoàn toàn phụ thuộc vào vật chất"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Tác động đến vật chất thông qua hoạt động thực tiễn của con người"
+    },
+    {
+      "id": 53,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Ý thức là hình ảnh chủ quan của thế giới khách quan là quan niệm của trường phái triết học nào?",
+      "options": {
+        "A": "Chủ nghĩa duy vật chất phác",
+        "B": "Chủ nghĩa duy vật siêu hình",
+        "C": "Chủ nghĩa duy vật tầm thường",
+        "D": "Chủ nghĩa duy vật biện chứng"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Chủ nghĩa duy vật biện chứng"
+    },
+    {
+      "id": 54,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Hoàn thiện luận điểm của Ph.Ăngghen: \"Phép biện chứng chẳng qua chỉ là môn khoa học về những… của sự vận động và phát triển thế giới\"?",
+      "options": {
+        "A": "Quy luật đặc thù",
+        "B": "Quy luật riêng",
+        "C": "Quy luật phổ biến",
+        "D": "Quy luật chung"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Quy luật phổ biến"
+    },
+    {
+      "id": 55,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Phạm trù triết học nào dùng để chỉ quá trình vận động từ đơn giản đến phức tạp, từ kém hoàn thiện đến hoàn thiện hơn của sự vật?",
+      "options": {
+        "A": "Phát triển",
+        "B": "Mâu thuẫn",
+        "C": "Biện chứng",
+        "D": "Phủ định"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Phát triển"
+    },
+    {
+      "id": 56,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Người đưa ra định nghĩa hoàn chỉnh về vật chất là ai?",
+      "options": {
+        "A": "C.Mác.",
+        "B": "V.I.Lênin.",
+        "C": "Ph.Ăngghen.",
+        "D": "L.Phoiơbắc."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. V.I.Lênin."
+    },
+    {
+      "id": 57,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Nếu sắp xếp các hình thức vận động của vật chất từ thấp đến cao và từ trái qua phải, thì cách sắp xếp nào dưới đây KHÔNG đúng?",
+      "options": {
+        "A": "Cơ học - Vật lý.",
+        "B": "Vật lý - Hóa học.",
+        "C": "Sinh học - Hóa học.",
+        "D": "Sinh học - Xã hội."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Sinh học - Hóa học."
+    },
+    {
+      "id": 58,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Sự tác động qua lại giữa các nguyên tố, quá trình hóa hợp, phân giải thuộc loại hình vận động nào?",
+      "options": {
+        "A": "Sinh học.",
+        "B": "Hóa học.",
+        "C": "Cơ học.",
+        "D": "Vật lý."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Hóa học."
+    },
+    {
+      "id": 59,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Theo cách phân chia của Ph.Ăngghen, hình thức vận động nào dưới đây là thấp nhất?",
+      "options": {
+        "A": "Vận động xã hội.",
+        "B": "Vận động hoá học.",
+        "C": "Vận động vật lý.",
+        "D": "Vận động sinh học."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Vận động vật lý."
+    },
+    {
+      "id": 60,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Theo quan điểm duy vật biện chứng, phản ánh nào dưới đây đạt tới hình thức cao nhất?",
+      "options": {
+        "A": "Sinh vật.",
+        "B": "Tâm lý.",
+        "C": "Vật lý.",
+        "D": "Ý thức."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Ý thức."
+    },
+    {
+      "id": 61,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Khi viết: \"Loài vật giỏi lắm thì cũng chỉ biết hái lượm là cùng, con người thì biết sản xuất, con người chế tạo ra những tư liệu sinh sống\" Ph.Ăngghen nhấn mạnh nhân tố gì đánh dấu sự khác biệt giữa con người với loài vật?",
+      "options": {
+        "A": "Tâm lý.",
+        "B": "Ý thức.",
+        "C": "Ngôn ngữ.",
+        "D": "Bản năng."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Ý thức."
+    },
+    {
+      "id": 62,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Luận điểm \"Ý thức là thuộc tính của một dạng vật chất có tổ chức cao là bộ óc con người\" thuộc trường phái nào?",
+      "options": {
+        "A": "Chủ nghĩa duy vật tầm thường.",
+        "B": "Chủ nghĩa duy tâm khách quan.",
+        "C": "Chủ nghĩa duy vật siêu hình.",
+        "D": "Chủ nghĩa duy vật biện chứng."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Chủ nghĩa duy vật biện chứng."
+    },
+    {
+      "id": 63,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Luận điểm nào dưới đây thể hiện quan điểm duy vật biện chứng về không gian (KG) và thời gian (TG)?",
+      "options": {
+        "A": "KG và TG không phụ thuộc vật chất.",
+        "B": "KG chứa các sự vật, TG chứa các sự kiện.",
+        "C": "KG và TG là hình thức tồn tại của vật chất.",
+        "D": "KG và TG là sản phẩm thuần túy của tư duy."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. KG và TG là hình thức tồn tại của vật chất."
+    },
+    {
+      "id": 64,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Theo Đêmôcrít, khởi nguyên của thế giới là gì?",
+      "options": {
+        "A": "Nguyên tử.",
+        "B": "Nước.",
+        "C": "Không khí.",
+        "D": "Lửa."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Nguyên tử."
+    },
+    {
+      "id": 65,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Theo Talét, khởi nguyên của thế giới là gì?",
+      "options": {
+        "A": "Không khí.",
+        "B": "Lửa.",
+        "C": "Nước.",
+        "D": "Đất."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Nước."
+    },
+    {
+      "id": 66,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Theo triết học Mác - Lênin, sự tác động của ý thức đến vật chất được thể hiện thông qua hoạt động nào?",
+      "options": {
+        "A": "Hoạt động nghiên cứu khoa học.",
+        "B": "Hoạt động lý luận.",
+        "C": "Hoạt động tư duy của con người.",
+        "D": "Hoạt động thực tiễn."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Hoạt động thực tiễn."
+    },
+    {
+      "id": 67,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Nguyên tắc nào KHÔNG phải là ý nghĩa phương pháp luận rút ra từ chủ nghĩa duy vật biện chứng?",
+      "options": {
+        "A": "Trong hoạt động nhận thức và thực tiễn cần phát huy tính năng động chủ quan.",
+        "B": "Trong hoạt động nhận thức và thực tiễn cần tôn trọng quan điểm thực tiễn.",
+        "C": "Trong hoạt động nhận thức và thực tiễn cần xuất phát từ thực tế khách quan.",
+        "D": "Trong hoạt động nhận thức và thực tiễn cần tuyệt đối hóa phương diện lý luận."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Trong hoạt động nhận thức và thực tiễn cần tuyệt đối hóa phương diện lý luận."
+    },
+    {
+      "id": 68,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Trình độ nhận thức nào gián tiếp, trừu tượng, có tính hệ thống trong việc khái quát bản chất, quy luật của các sự vật, hiện tượng?",
+      "options": {
+        "A": "Nhận thức kinh nghiệm.",
+        "B": "Nhận thức lý luận.",
+        "C": "Nhận thức khoa học.",
+        "D": "Nhận thức thông thường."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Nhận thức lý luận."
+    },
+    {
+      "id": 69,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Nhận thức lý tính đem lại cho con người tri thức gì?",
+      "options": {
+        "A": "Thông thường.",
+        "B": "Kinh nghiệm.",
+        "C": "Lý luận.",
+        "D": "Cảm tính."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Lý luận."
+    },
+    {
+      "id": 70,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Theo quan điểm triết học Mác - Lênin, sự ra đời của ý thức có nguồn gốc sâu xa là gì?",
+      "options": {
+        "A": "Sự phát triển của giới tự nhiên.",
+        "B": "Bộ óc con người.",
+        "C": "Ngôn ngữ.",
+        "D": "Lao động."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Sự phát triển của giới tự nhiên."
+    },
+    {
+      "id": 71,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Trong lý luận về mâu thuẫn, quá trình đồng hóa và dị hóa trong cơ thể sống được gọi là gì?",
+      "options": {
+        "A": "Các thuộc tính.",
+        "B": "Hai quá trình.",
+        "C": "Hai mặt đối lập.",
+        "D": "Hai yếu tố."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Hai mặt đối lập."
+    },
+    {
+      "id": 72,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Tính chất đặc trưng của phép biện chứng mác xít là gì?",
+      "options": {
+        "A": "Chất phác.",
+        "B": "Duy vật.",
+        "C": "Chủ quan.",
+        "D": "Duy tâm."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Duy vật."
+    },
+    {
+      "id": 73,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Phạm trù triết học dùng để chỉ những gì đang có, đang tồn tại thực sự, gọi là gì?",
+      "options": {
+        "A": "Nguyên nhân.",
+        "B": "Kết quả.",
+        "C": "Khả năng.",
+        "D": "Hiện thực."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Hiện thực."
+    },
+    {
+      "id": 74,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Khái niệm nào dùng để chỉ sự chuyển hóa về chất do sự biến đổi trước đó về lượng tới giới hạn điểm nút?",
+      "options": {
+        "A": "Bước nhảy",
+        "B": "Độ",
+        "C": "Vận động",
+        "D": "Phát triển"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Bước nhảy"
+    },
+    {
+      "id": 75,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Sự thống nhất giữa lượng và chất trong phép biện chứng duy vật được thể hiện thông qua phạm trù nào?",
+      "options": {
+        "A": "Bước nhảy",
+        "B": "Độ",
+        "C": "Thuộc tính",
+        "D": "Điểm nút"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Độ"
+    },
+    {
+      "id": 76,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Trong quy luật \"Lượng - Chất\", tính quy định phản ánh quy mô, trình độ phát triển của sự vật, hiện tượng được gọi là gì?",
+      "options": {
+        "A": "Chất",
+        "B": "Độ",
+        "C": "Lượng",
+        "D": "Điểm nút."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Lượng"
+    },
+    {
+      "id": 77,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Theo quan điểm của chủ nghĩa duy vật biện chứng, các mặt đối lập do đâu mà có?",
+      "options": {
+        "A": "Do quá trình lao động của con người sinh ra",
+        "B": "Vốn có của thế giới vật chất, không do ai sinh ra",
+        "C": "Do các đấng siêu nhiên tạo ra",
+        "D": "Do ý thức, cảm giác của con người tạo ra"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Vốn có của thế giới vật chất, không do ai sinh ra"
+    },
+    {
+      "id": 78,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Luận điểm của Lênin: \"Muốn thực sự hiểu được sự vật cần phải nhìn bao quát và nghiên cứu tất cả các mặt, tất cả các mối liên hệ và quan hệ gián tiếp của vật đó\", thể hiện quan điểm nào trong nhận thức?",
+      "options": {
+        "A": "Quan điểm phát triển",
+        "B": "Quan điểm toàn diện",
+        "C": "Quan điểm lịch sử - cụ thể",
+        "D": "Quan điểm khách quan"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Quan điểm toàn diện"
+    },
+    {
+      "id": 79,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Những nguyên tắc đòi hỏi trong nhận thức sự vật, cần phải đặt nó trong một không gian, thời gian, bối cảnh nhất định mà sự vật đó tồn tại gọi là gì?",
+      "options": {
+        "A": "Quan điểm phát triển",
+        "B": "Quan điểm duy vật",
+        "C": "Quan điểm lịch sử - cụ thể",
+        "D": "Quan điểm toàn diện"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Quan điểm lịch sử - cụ thể"
+    },
+    {
+      "id": 80,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Theo phép biện chứng duy vật, luận điểm nào dưới đây là KHÔNG đúng?",
+      "options": {
+        "A": "Phát triển bao hàm trong đó cả những bước thụt lùi",
+        "B": "Không phải mọi sự vận động đều là phát triển",
+        "C": "Phát triển là sự tăng lên về lượng, ổn định về chất",
+        "D": "Phát triển là vận động theo hướng từ thấp lên cao"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Phát triển là sự tăng lên về lượng, ổn định về chất"
+    },
+    {
+      "id": 81,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Quan niệm nào là đúng về \"chất\" của sự vật?",
+      "options": {
+        "A": "Trình độ, quy mô của sự vật.",
+        "B": "Thuộc tính cơ bản của sự vật.",
+        "C": "Tổng hợp các thuộc tính cơ bản của sự vật",
+        "D": "Một thuộc tính nổi bật của sự vật."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tổng hợp các thuộc tính cơ bản của sự vật"
+    },
+    {
+      "id": 82,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Theo thứ tự từ trái qua phải, các cấp độ nhận thức từ thấp đến cao, cách sắp xếp nào là đúng?",
+      "options": {
+        "A": "Cảm tính - Lý tính.",
+        "B": "Lý luận - Cảm tính.",
+        "C": "Lý tính - Khoa học.",
+        "D": "Lý luận - Kinh nghiệm."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Cảm tính - Lý tính."
+    },
+    {
+      "id": 83,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Theo quan điểm triết học Mác - Lênin, tiêu chuẩn của chân lý là gì?",
+      "options": {
+        "A": "Thực nghiệm khoa học.",
+        "B": "Hoạt động thực tiễn.",
+        "C": "Hoạt động chính trị.",
+        "D": "Lao động sản xuất."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Hoạt động thực tiễn."
+    },
+    {
+      "id": 84,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Sự vận dụng các khái niệm để khẳng định hoặc phủ định một thuộc tính, một mối liên hệ nào đó của hiện thực khách quan được gọi là gì?",
+      "options": {
+        "A": "Suy luận.",
+        "B": "Phán đoán.",
+        "C": "Tưởng tượng.",
+        "D": "Tổng hợp."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Phán đoán."
+    },
+    {
+      "id": 85,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Hình thức nhận thức nào được hình thành dựa trên sự liên kết các phán đoán?",
+      "options": {
+        "A": "Tri giác.",
+        "B": "Phán đoán.",
+        "C": "Biểu tượng.",
+        "D": "Suy luận."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Suy luận."
+    },
+    {
+      "id": 86,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Hình thái nào KHÔNG thuộc nhận thức lý tính?",
+      "options": {
+        "A": "Phán đoán.",
+        "B": "Khái niệm.",
+        "C": "Suy luận.",
+        "D": "Cảm giác."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Cảm giác."
+    },
+    {
+      "id": 87,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Những yếu tố nào đóng vai trò quyết định trong sự hình thành biểu tượng?",
+      "options": {
+        "A": "Ấn tượng, trí nhớ.",
+        "B": "Trí nhớ, giấc mơ.",
+        "C": "Cảm giác, tri giác.",
+        "D": "Ấn tượng, giấc mơ."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Cảm giác, tri giác."
+    },
+    {
+      "id": 88,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Chủ nghĩa duy vật biện chứng, quan niệm \"khái niệm\" là gì?",
+      "options": {
+        "A": "Một hình thức nhận thức kinh nghiệm.",
+        "B": "Một hình thức nhận thức cảm tính.",
+        "C": "Một hình thức tư duy trừu tượng.",
+        "D": "Một hình thức nhận thức thông thường."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Một hình thức tư duy trừu tượng."
+    },
+    {
+      "id": 89,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Trình độ nhận thức nào được hình thành từ sự quan sát trực tiếp các sự vật, hiện tượng trong giới tự nhiên, xã hội hoặc qua các thí nghiệm khoa học?",
+      "options": {
+        "A": "Nhận thức thông thường.",
+        "B": "Nhận thức kinh nghiệm.",
+        "C": "Nhận thức lý luận.",
+        "D": "Nhận thức khoa học."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Nhận thức kinh nghiệm."
+    },
+    {
+      "id": 90,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Yếu tố nào sau đây KHÔNG phản ánh mối quan hệ giữa chủ thể và khách thể trong quá trình nhận thức?",
+      "options": {
+        "A": "Chủ thể nhận thức.",
+        "B": "Khách thể nhận thức.",
+        "C": "Hình thức nhận thức.",
+        "D": "Đối tượng nhận thức."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Hình thức nhận thức."
+    },
+    {
+      "id": 91,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Bệnh giáo điều là khuynh hướng tư tưởng và hành động cường điệu yếu tố nào?",
+      "options": {
+        "A": "Cường điệu kinh nghiệm cuộc sống.",
+        "B": "Cường điệu lý luận, coi nhẹ thực tiễn.",
+        "C": "Cường điệu thực tiễn, coi nhẹ lý luận.",
+        "D": "Cường điệu nhận thức thông thường."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Cường điệu lý luận, coi nhẹ thực tiễn."
+    },
+    {
+      "id": 92,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Nhận định nào là đúng về phủ định biện chứng (PĐBC)?",
+      "options": {
+        "A": "PĐBC là sự thay thế sự vật này bằng sự vật khác.",
+        "B": "PĐBC là sự phủ định do sự tác động của các sự vật.",
+        "C": "PĐBC có tính khách quan, tính kế thừa, tính phổ biến, tính đa dạng, phong phú.",
+        "D": "PĐBC làm cho sự vật vận động thụt lùi, đi xuống."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. PĐBC có tính khách quan, tính kế thừa, tính phổ biến, tính đa dạng, phong phú."
+    },
+    {
+      "id": 93,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Chọn phương án đúng nhất từ ý nghĩa phương pháp luận phạm trù tất nhiên và ngẫu nhiên?",
+      "options": {
+        "A": "Trong hoạt động thực tiễn, chúng ta cần phải dựa vào cả cái tất nhiên và ngẫu nhiên.",
+        "B": "Trong hoạt động thực tiễn, chúng ta cần phải dựa vào cái tất nhiên.",
+        "C": "Trong hoạt động thực tiễn, chúng ta cần phải dựa vào cái tất nhiên nhưng phải tính tới ngẫu nhiên.",
+        "D": "Trong hoạt động thực tiễn, chúng ta cần phải dựa vào cái ngẫu nhiên."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Trong hoạt động thực tiễn, chúng ta cần phải dựa vào cái tất nhiên nhưng phải tính tới ngẫu nhiên."
+    },
+    {
+      "id": 94,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Quan niệm cho rằng \"Óc tiết ra ý thức như gan tiết ra mật\" là của trường phái triết học nào?",
+      "options": {
+        "A": "Chủ nghĩa duy vật siêu hình.",
+        "B": "Chủ nghĩa duy vật chất phác.",
+        "C": "Chủ nghĩa duy vật biện chứng.",
+        "D": "Chủ nghĩa duy vật tầm thường."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Chủ nghĩa duy vật tầm thường."
+    },
+    {
+      "id": 95,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Nguồn gốc xã hội nào được coi là trực tiếp và quan trọng nhất quyết định sự ra đời của ý thức?",
+      "options": {
+        "A": "Hoạt động thực tiễn.",
+        "B": "Giáo dục.",
+        "C": "Nghiên cứu khoa học.",
+        "D": "Lao động trí óc."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Hoạt động thực tiễn."
+    },
+    {
+      "id": 96,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Theo quan điểm của chủ nghĩa duy vật biện chứng, sự phát triển của các sự vật, hiện tượng có tính chất gì?",
+      "options": {
+        "A": "Tính khách quan, tính phổ biến, tính kế thừa, tính đa dạng, phong phú.",
+        "B": "Tính khách quan, tính phổ biến, tính kế thừa.",
+        "C": "Tính khách quan, đa dạng.",
+        "D": "Tính ngẫu nhiên, chủ quan."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Tính khách quan, tính phổ biến, tính kế thừa, tính đa dạng, phong phú."
+    },
+    {
+      "id": 97,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Nhận định nào về phủ định biện chứng là KHÔNG đúng?",
+      "options": {
+        "A": "Phủ định có tính khách quan, phổ biến.",
+        "B": "Phủ định có tính kế thừa.",
+        "C": "Phủ định là chấm dứt sự phát triển.",
+        "D": "Phủ định đồng thời cũng là khẳng định."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Phủ định là chấm dứt sự phát triển."
+    },
+    {
+      "id": 98,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Sự tự phủ định để đưa sự vật dường như quay lại điểm xuất phát ban đầu trong phép biện chứng được gọi là gì?",
+      "options": {
+        "A": "Phủ định biện chứng.",
+        "B": "Phủ định của phủ định.",
+        "C": "Chuyển hóa.",
+        "D": "Phủ định siêu hình."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Phủ định của phủ định."
+    },
+    {
+      "id": 99,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Với tư cách là một phạm trù triết học, phương diện nào sau đây của bức tranh biểu hiện về mặt nội dung của nó?",
+      "options": {
+        "A": "Màu sắc thể hiện.",
+        "B": "Bố cục khuôn hình.",
+        "C": "Kết cấu họa tiết.",
+        "D": "Chủ đề phản ánh."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Chủ đề phản ánh."
+    },
+    {
+      "id": 100,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Theo lý luận nhận thức của triết học Mác - Lênin, hình ảnh gián tiếp trong giai đoạn nhận thức cảm tính gọi là gì?",
+      "options": {
+        "A": "Cảm giác.",
+        "B": "Khái niệm.",
+        "C": "Biểu tượng.",
+        "D": "Tri giác."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Biểu tượng."
+    },
+    {
+      "id": 101,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Theo quan điểm của chủ nghĩa duy vật biện chứng, khái niệm là gì?",
+      "options": {
+        "A": "Sự liên kết các cảm giác.",
+        "B": "Hình thức tư duy trừu tượng.",
+        "C": "Hình thức nhận thức cảm tính.",
+        "D": "Sự liên kết các tri giác."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Hình thức tư duy trừu tượng."
+    },
+    {
+      "id": 102,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Theo quan niệm của V.I.Lênin: Vật chất là một phạm trù triết học dùng để chỉ cái gì?",
+      "options": {
+        "A": "Thế giới.",
+        "B": "Thực tại khách quan.",
+        "C": "Một khái niệm.",
+        "D": "Đối tượng."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Thực tại khách quan."
+    },
+    {
+      "id": 103,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Sai lầm của chủ nghĩa duy vật cổ đại là ở chỗ đã đồng nhất vật chất nói chung với yếu tố nào?",
+      "options": {
+        "A": "Sự vật cảm tính.",
+        "B": "Nguyên tử.",
+        "C": "Khối lượng.",
+        "D": "Thực thể tinh thần."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Sự vật cảm tính."
+    },
+    {
+      "id": 104,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Chọn phương án đúng: Hoàn thành định nghĩa: \"Cái riêng là phạm trù triết học dùng để chỉ…\"?",
+      "options": {
+        "A": "một nét đặc thù có ở một sự vật.",
+        "B": "một sự vật thuộc về người cụ thể.",
+        "C": "một đặc điểm lặp lại ở các sự vật.",
+        "D": "một sự vật, hiện tượng nhất định."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. một sự vật, hiện tượng nhất định."
+    },
+    {
+      "id": 105,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Theo quan điểm của chủ nghĩa duy vật biện chứng, sự thống nhất giữa các mặt đối lập có những biểu hiện gì?",
+      "options": {
+        "A": "Sự bài trừ, phủ định nhau.",
+        "B": "Sự đồng nhất, có những điểm chung giữa hai mặt đối lập.",
+        "C": "Sự cùng tồn tại, nương tựa nhau.",
+        "D": "Sự tác động ngang bằng nhau."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Sự cùng tồn tại, nương tựa nhau."
+    },
+    {
+      "id": 106,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Trường phái triết học nào cho rằng thực tiễn là cơ sở chủ yếu và trực tiếp nhất của nhận thức?",
+      "options": {
+        "A": "Chủ nghĩa duy vật biện chứng.",
+        "B": "Chủ nghĩa duy tâm chủ quan.",
+        "C": "Chủ nghĩa duy vật siêu hình.",
+        "D": "Chủ nghĩa duy tâm khách quan."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Chủ nghĩa duy vật biện chứng."
+    },
+    {
+      "id": 107,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Quy luật phủ định của phủ định trong phép biện chứng duy vật chỉ ra phương diện nào của sự phát triển?",
+      "options": {
+        "A": "Cách thức của sự phát triển.",
+        "B": "Khuynh hướng của sự phát triển.",
+        "C": "Động lực của sự phát triển.",
+        "D": "Nguồn gốc của sự phát triển."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Khuynh hướng của sự phát triển."
+    },
+    {
+      "id": 108,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Đặc điểm lý luận nhận thức mang tính siêu hình, máy móc là của trường phái triết học nào?",
+      "options": {
+        "A": "Chủ nghĩa duy vật biện chứng.",
+        "B": "Chủ nghĩa duy tâm khách quan.",
+        "C": "Chủ nghĩa duy tâm chủ quan.",
+        "D": "Chủ nghĩa duy vật trước Mác."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Chủ nghĩa duy vật trước Mác."
+    },
+    {
+      "id": 109,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Trong các cặp phạm trù dưới đây cặp phạm trù nào là quan hệ nhân quả?",
+      "options": {
+        "A": "Ngày - Đêm",
+        "B": "Thu - Đông",
+        "C": "Bão - Cây đổ",
+        "D": "Phải - Trái"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Bão - Cây đổ"
+    },
+    {
+      "id": 110,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Trường phái triết học nào cho rằng: Sự vật chỉ là kết quả của sự phức hợp các cảm giác của con người?",
+      "options": {
+        "A": "Chủ nghĩa duy vật biện chứng",
+        "B": "Chủ nghĩa duy tâm khách quan",
+        "C": "Chủ nghĩa duy vật siêu hình",
+        "D": "Chủ nghĩa duy tâm chủ quan"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Chủ nghĩa duy tâm chủ quan"
+    },
+    {
+      "id": 111,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Theo chủ nghĩa duy vật biện chứng, quan điểm nào về chân lý là đúng?",
+      "options": {
+        "A": "Chân lý là tri thức được số đông thừa nhận",
+        "B": "Chân lý là sản phẩm sáng tạo thuần túy của tư duy con người",
+        "C": "Chân lý là tri thức phù hợp với hiện thực khách quan và được thực tiễn kiểm nghiệm",
+        "D": "Chân lý là hình ảnh chủ quan của thế giới khách quan"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Chân lý là tri thức phù hợp với hiện thực khách quan và được thực tiễn kiểm nghiệm"
+    },
+    {
+      "id": 112,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Phạm trù triết học dùng để chỉ tổng hợp sự tác động qua lại giữa các mặt trong một sự vật hoặc giữa các sự vật với nhau, gây nên những biến đổi nhất định, gọi là gì?",
+      "options": {
+        "A": "Nguyên nhân",
+        "B": "Kết quả",
+        "C": "Phủ định",
+        "D": "Phát triển"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Nguyên nhân"
+    },
+    {
+      "id": 113,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Khi đề cập tới vai trò của thực tiễn đối với nhận thức, nhận định nào dưới đây là KHÔNG đúng?",
+      "options": {
+        "A": "Thực tiễn là mục đích của nhận thức",
+        "B": "Thực tiễn là động lực của nhận thức",
+        "C": "Thực tiễn là hình thức của nhận thức",
+        "D": "Thực tiễn là cơ sở của nhận thức"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Thực tiễn là hình thức của nhận thức"
+    },
+    {
+      "id": 114,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "\"Cơ sở của mối liên hệ giữa các sự vật hiện tượng là ở tính thống nhất vật chất của thế giới\". Luận điểm trên thuộc trường phái triết học nào?",
+      "options": {
+        "A": "Chủ nghĩa duy vật chất phác",
+        "B": "Chủ nghĩa duy vật biện chứng",
+        "C": "Chủ nghĩa duy vật siêu hình",
+        "D": "Chủ nghĩa duy tâm khách quan"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Chủ nghĩa duy vật biện chứng"
+    },
+    {
+      "id": 115,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Hoạt động thực tiễn khác với hoạt động nhận thức ở tính chất nào?",
+      "options": {
+        "A": "Tính xã hội.",
+        "B": "Tính lịch sử.",
+        "C": "Tính vật chất.",
+        "D": "Tính mục đích."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tính vật chất."
+    },
+    {
+      "id": 116,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Theo quan điểm của chủ nghĩa duy vật biện chứng, mối liên hệ phổ biến có tính chất gì?",
+      "options": {
+        "A": "Tính khách quan, tính phổ biến, tính kế thừa.",
+        "B": "Tính khách quan, tính đa dạng phong phú, tính kế thừa.",
+        "C": "Tính chủ quan, tính ngẫu nhiên, tính lặp lại.",
+        "D": "Tính khách quan, tính phổ biến, tính đa dạng, phong phú."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tính khách quan, tính phổ biến, tính đa dạng, phong phú."
+    },
+    {
+      "id": 117,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Hạn chế cơ bản trong quan niệm về vật chất của các nhà triết học duy vật cận đại là gì?",
+      "options": {
+        "A": "Coi vật chất là những gì tồn tại khách quan.",
+        "B": "Đồng nhất vật chất với khối lượng.",
+        "C": "Coi vật chất là tự thân vận động.",
+        "D": "Đồng nhất vật chất với sự vật cảm tính."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Đồng nhất vật chất với khối lượng."
+    },
+    {
+      "id": 118,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Theo Heraclitus, khởi nguyên của thế giới là gì?",
+      "options": {
+        "A": "Nước",
+        "B": "Nguyên tử",
+        "C": "Không khí",
+        "D": "Lửa"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Lửa"
+    },
+    {
+      "id": 119,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Theo Anaximenes, khởi nguyên của thế giới là gì?",
+      "options": {
+        "A": "Không khí",
+        "B": "Lửa",
+        "C": "Nước",
+        "D": "Nguyên tử"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Không khí"
+    },
+    {
+      "id": 120,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Theo triết học Mác - Lênin, con người là khái niệm dùng để chỉ cái gì trong bản chất con người của tất cả cá nhân?",
+      "options": {
+        "A": "Tính phổ biến.",
+        "B": "Tính xã hội.",
+        "C": "Tính trừu tượng.",
+        "D": "Tính cá biệt."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Tính phổ biến."
+    },
+    {
+      "id": 121,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Một trong hai phát minh vĩ đại của Mác là gì?",
+      "options": {
+        "A": "Lý luận nhận thức.",
+        "B": "Chủ nghĩa duy vật lịch sử.",
+        "C": "Chủ nghĩa duy vật biện chứng.",
+        "D": "Phép biện chứng duy vật."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Chủ nghĩa duy vật lịch sử."
+    },
+    {
+      "id": 122,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Triết học nào cho rằng: tồn tại xã hội quyết định ý thức xã hội, đồng thời ý thức xã hội có tính độc lập tương đối, nó có thể tác động trở lại tồn tại xã hội?",
+      "options": {
+        "A": "Chủ nghĩa duy vật chất phác.",
+        "B": "Chủ nghĩa duy vật tầm thường.",
+        "C": "Chủ nghĩa duy vật lịch sử.",
+        "D": "Chủ nghĩa duy vật siêu hình."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Chủ nghĩa duy vật lịch sử."
+    },
+    {
+      "id": 123,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Quan điểm toàn diện là ý nghĩa phương pháp luận được rút ra từ cơ sở nào của phép biện chứng duy vật?",
+      "options": {
+        "A": "Quy luật mâu thuẫn.",
+        "B": "Quy luật phủ định của phủ định.",
+        "C": "Nguyên lý về sự phát triển.",
+        "D": "Nguyên lý về mối liên hệ phổ biến."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Nguyên lý về mối liên hệ phổ biến."
+    },
+    {
+      "id": 124,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2",
+      "question": "Quan điểm triết học về nhận thức của chủ nghĩa hoài nghi là như thế nào?",
+      "options": {
+        "A": "Nhận thức của con người về sự vật chỉ là những hình ảnh bên ngoài của chúng chứ không phải là bản thân sự vật.",
+        "B": "Nghi ngờ khả năng nhận thức của con người.",
+        "C": "Con người có khả năng nhận thức được thế giới.",
+        "D": "Con người không có khả năng nhận thức được thế giới."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Nghi ngờ khả năng nhận thức của con người."
+    }
+  ]
+}

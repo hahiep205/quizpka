@@ -1,0 +1,259 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kỹ năng Quản lý Dự án - Chương 5",
+  "chapter": "Chương 5",
+  "totalQuestions": 18,
+  "questions": [
+    {
+      "id": 124,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Dự toán chi phí công việc của dự án là gì?",
+      "options": {
+        "A": "Tính toán tổng chi phí cho toàn bộ dự án",
+        "B": "Xác định ngân sách cho từng giai đoạn của dự án",
+        "C": "Ước lượng chi phí cho từng công việc cụ thể trong dự án",
+        "D": "Dự báo doanh thu dự án"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Ước lượng chi phí cho từng công việc cụ thể trong dự án"
+    },
+    {
+      "id": 125,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Trong giai đoạn xác định tổng dự án, yếu tố nào sau đây không thuộc về quá trình lập kế hoạch?",
+      "options": {
+        "A": "Xác định mục tiêu dự án",
+        "B": "Lập ngân sách",
+        "C": "Đánh giá rủi ro",
+        "D": "Thực hiện dự án"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Thực hiện dự án"
+    },
+    {
+      "id": 126,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Mối quan hệ giữa thời gian và chi phí trong một dự án thường có dạng nào sau đây?",
+      "options": {
+        "A": "Chi phí luôn tăng theo thời gian",
+        "B": "Thời gian càng ngắn, chi phí càng cao",
+        "C": "Chi phí không đổi khi thời gian thay đổi",
+        "D": "Thời gian càng dài, chi phí càng thấp"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Thời gian càng ngắn, chi phí càng cao"
+    },
+    {
+      "id": 127,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Chi phí để rút ngắn thời gian của một hoạt động là $5,000 cho mỗi tháng. Nếu bạn muốn rút ngắn thời gian hoạt động đó 3 tháng, tổng chi phí sẽ là:",
+      "options": {
+        "A": "$5,000",
+        "B": "$10,000",
+        "C": "$15,000",
+        "D": "$20,000"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. $15,000"
+    },
+    {
+      "id": 128,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Nếu bạn có 10 công việc trong dự án và mỗi công việc có chi phí là 5 triệu đồng, chi phí tổng của dự án là bao nhiêu?",
+      "options": {
+        "A": "50 triệu đồng",
+        "B": "40 triệu đồng",
+        "C": "30 triệu đồng",
+        "D": "20 triệu đồng"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 50 triệu đồng"
+    },
+    {
+      "id": 129,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Phương pháp dự toán nào kết hợp cả ước tính tổng chi phí trước, sau đó kiểm tra lại bằng cách phân tích chi phí chi tiết cho một số hạng mục?",
+      "options": {
+        "A": "Phương pháp từ trên xuống",
+        "B": "Phương pháp từ dưới lên",
+        "C": "Phương pháp kết hợp",
+        "D": "Phương pháp theo khoản mục và công việc"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Phương pháp kết hợp"
+    },
+    {
+      "id": 130,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Nhược điểm chính của phương pháp dự toán ngân sách từ trên xuống là gì?",
+      "options": {
+        "A": "Khó kiểm soát chi phí chi tiết từng hạng mục",
+        "B": "Tốn thời gian",
+        "C": "Độ chính xác cao nhưng cần nhiều nguồn lực",
+        "D": "Phù hợp cho các dự án phức tạp"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Khó kiểm soát chi phí chi tiết từng hạng mục"
+    },
+    {
+      "id": 131,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Khi nào là thời điểm lý tưởng để lập ngân sách cho một dự án?",
+      "options": {
+        "A": "Ngay sau khi dự án bắt đầu",
+        "B": "Trước khi dự án bắt đầu",
+        "C": "Trong quá trình thực hiện dự án",
+        "D": "Sau khi dự án kết thúc"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Trước khi dự án bắt đầu"
+    },
+    {
+      "id": 132,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Khi nào là thời điểm thích hợp để cập nhật ngân sách dự án?",
+      "options": {
+        "A": "Sau khi dự án bắt đầu",
+        "B": "Định kỳ hàng tháng",
+        "C": "Khi có sự thay đổi trong phạm vi dự án hoặc các yếu tố quan trọng",
+        "D": "Khi dự án gần kết thúc"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Khi có sự thay đổi trong phạm vi dự án hoặc các yếu tố quan trọng"
+    },
+    {
+      "id": 133,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Phân loại dự toán ngân sách dự án theo thời gian, ngân sách nào xác định tổng ngân sách cho toàn bộ vòng đời của dự án?",
+      "options": {
+        "A": "Ngân sách dài hạn",
+        "B": "Ngân sách ngắn hạn",
+        "C": "Ngân sách dự án",
+        "D": "Ngân sách cho các hoạt động không theo dự án"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Ngân sách dài hạn"
+    },
+    {
+      "id": 134,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Có mấy phương pháp dự toán ngân sách?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 5"
+    },
+    {
+      "id": 135,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Mục tiêu chính của quản lý chi phí dự án là gì?",
+      "options": {
+        "A": "Đảm bảo cho dự án hoàn tất với chi phí ít nhất có thể",
+        "B": "Đảm bảo cho dự án hoàn tất trong ngân sách cho phép",
+        "C": "Cung cấp thông tin chi phí trung thực và chính xác về các dự án",
+        "D": "Để đảm bảo rằng tiền của 1 tổ chức đang được sử dụng 1 cách khôn ngoan"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Đảm bảo cho dự án hoàn tất trong ngân sách cho phép"
+    },
+    {
+      "id": 136,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Mối quan hệ thường xảy ra nhất giữa chi phí với tiến độ thực hiện dự án là:",
+      "options": {
+        "A": "Vượt chi ngân sách dự trù, tiến độ nhanh",
+        "B": "Vượt chi ngân sách đã dự trù, chậm tiến độ",
+        "C": "Chi dưới ngân sách đã dự trù, chậm tiến độ",
+        "D": "Chi dưới ngân sách đã dự trù, vượt tiến độ"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Vượt chi ngân sách đã dự trù, chậm tiến độ"
+    },
+    {
+      "id": 137,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Phương án đẩy nhanh dự án thường tập trung vào mục tiêu nào sau đây?",
+      "options": {
+        "A": "Giảm số lượng lao động",
+        "B": "Tăng tốc độ thực hiện dự án",
+        "C": "Giảm chi phí nguyên vật liệu",
+        "D": "Kéo dài thời gian hoàn thành dự án"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Tăng tốc độ thực hiện dự án"
+    },
+    {
+      "id": 138,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Cùng bảng mô tả công việc như trên, anh/chị hãy xác định tổng chi phí của dự án bình thường là?",
+      "options": {
+        "A": "1.065.000 đồng",
+        "B": "1.274.000 đồng",
+        "C": "1.056.000 đồng",
+        "D": "1.427.000 đồng"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 1.065.000 đồng"
+    },
+    {
+      "id": 139,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Với bảng mô tả dự án trên, đâu là chi phí biên lớn nhất trong tập hợp những công việc găng?",
+      "options": {
+        "A": "Công việc G",
+        "B": "Công việc K",
+        "C": "Công việc B",
+        "D": "Công việc I"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Công việc K"
+    },
+    {
+      "id": 140,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Cùng bảng mô tả các công việc trên, anh/ chị hãy xác định được tổng chi phí tiết kiệm theo kế hoạch giảm tổng chi phí của phương án đẩy nhanh?",
+      "options": {
+        "A": "60 triệu",
+        "B": "90 triệu",
+        "C": "78 triệu",
+        "D": "102 triệu"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 78 triệu"
+    },
+    {
+      "id": 141,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Đường găng mới xuất hiện sau khi thực hiện kế hoạch giảm tổng chi phí của phương án đẩy nhanh:",
+      "options": {
+        "A": "B - E - G - H",
+        "B": "B - E - G - I - K",
+        "C": "A - C - G - H",
+        "D": "B - E - F - K"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. B - E - G - I - K"
+    }
+  ]
+}

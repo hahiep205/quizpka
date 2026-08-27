@@ -1,0 +1,913 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Tư tưởng Hồ Chí Minh - Chương 2",
+  "chapter": "Chương 2",
+  "totalQuestions": 65,
+  "questions": [
+    {
+      "id": 41,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Chí sĩ yêu nước Phan Bội Châu khởi xướng phong trào nào sau đây?",
+      "options": {
+        "A": "Đông du.",
+        "B": "Đông kinh nghĩa thục.",
+        "C": "Chống đi phu, chống thu thuế.",
+        "D": "Duy tân."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Đông du."
+    },
+    {
+      "id": 43,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Cơ sở lý luận nào có vai trò quyết định tới việc hình thành tư tưởng Hồ Chí Minh?",
+      "options": {
+        "A": "Giá trị văn hóa phương Đông.",
+        "B": "Giá trị văn hóa phương Tây.",
+        "C": "Chủ nghĩa Mác - Lênin.",
+        "D": "Giá trị truyền thống của dân tộc Việt Nam."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Chủ nghĩa Mác - Lênin."
+    },
+    {
+      "id": 45,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Đầu năm 1930. Tại Hương Cảng, Trung Quốc, Hồ Chí Minh đã chủ trì Hội nghị sáng lập tổ chức nào sau đây?",
+      "options": {
+        "A": "Đảng Cộng sản Việt Nam.",
+        "B": "Hội Liên hiệp thuộc địa.",
+        "C": "Hội Liên hiệp các dân tộc bị áp bức.",
+        "D": "Hội Việt Nam cách mạng thanh niên."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Đảng Cộng sản Việt Nam."
+    },
+    {
+      "id": 47,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Đối với Hồ Chí Minh, ưu điểm lớn nhất trong chủ nghĩa Mác - Lênin là gì?",
+      "options": {
+        "A": "Chống phong kiến.",
+        "B": "Đấu tranh vì tự do, dân chủ.",
+        "C": "Giải phóng các dân tộc thuộc địa.",
+        "D": "Phương pháp làm việc biện chứng."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Phương pháp làm việc biện chứng."
+    },
+    {
+      "id": 49,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Giá trị truyền thống nào là cơ sở quan trọng nhất giúp Hồ Chí Minh xây dựng hệ thống quan điểm của mình?",
+      "options": {
+        "A": "Tinh thần đoàn kết, cổ kết cộng đồng.",
+        "B": "Chủ nghĩa yêu nước.",
+        "C": "Chủ nghĩa nhân văn của dân tộc.",
+        "D": "Truyền thống cần cù, yêu lao động."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Chủ nghĩa yêu nước."
+    },
+    {
+      "id": 51,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Hồ Chí Minh đã tiếp thu được giá trị tư tưởng nào sau đây trong Đại cách mạng Pháp 1789?",
+      "options": {
+        "A": "Quyền sống, quyền mưu cầu hạnh phúc.",
+        "B": "Tự do - Bình đẳng - Bác ái.",
+        "C": "Quyền bình đẳng.",
+        "D": "Quyền dân chủ."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Tự do - Bình đẳng - Bác ái."
+    },
+    {
+      "id": 53,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Khái niệm Tư tưởng Hồ Chí Minh đã chỉ ra nội dung nào sau đây?",
+      "options": {
+        "A": "Hệ thống quan điểm về cách mạng thế giới.",
+        "B": "Hệ thống quan điểm toàn diện và sâu sắc về những vấn đề cơ bản của cách mạng Việt Nam.",
+        "C": "Hệ thống quan điểm về quá trình xây dựng chủ nghĩa xã hội.",
+        "D": "Hệ thống quan điểm về Đảng Cộng sản Việt Nam."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Hệ thống quan điểm toàn diện và sâu sắc về những vấn đề cơ bản của cách mạng Việt Nam."
+    },
+    {
+      "id": 55,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Khái niệm tư tưởng Hồ Chí Minh: \"Tư tưởng Hồ Chí Minh là một hệ thống quan điểm toàn diện và sâu sắc về những vấn đề cơ bản của cách mạng Việt Nam, kết quả của sự vận dụng và phát triển sáng tạo chủ nghĩa Mác - Lênin vào điều kiện cụ thể của nước ta, kế thừa và phát triển các giá trị truyền thống tốt đẹp của dân tộc, tiếp thu tinh hoa văn hóa nhân loại; là tài sản tinh thần vô cùng to lớn và quý giá của Đảng và dân tộc ta, mãi mãi soi đường cho sự nghiệp cách mạng của nhân dân ta giành thắng lợi\" được nêu ra tại Văn kiện Đại hội lần thứ mấy của Đảng?",
+      "options": {
+        "A": "Văn kiện Đại hội VIII.",
+        "B": "Văn kiện Đại hội IX.",
+        "C": "Văn kiện Đại hội X.",
+        "D": "Văn kiện Đại hội XI."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Văn kiện Đại hội XI."
+    },
+    {
+      "id": 57,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Luận điểm: \"Bây giờ học thuyết nhiều, chủ nghĩa nhiều, nhưng chủ nghĩa chân chính nhất, chắc chắn nhất, cách mệnh nhất là chủ nghĩa Lênin\" được thể hiện trong tác phẩm nào của Hồ Chí Minh?",
+      "options": {
+        "A": "Con đường dẫn tôi đến với chủ nghĩa Lênin.",
+        "B": "Cách mạng Tháng Mười và con đường giải phóng dân tộc.",
+        "C": "Đường Kách mệnh.",
+        "D": "Đời hoạt động của Hồ Chủ tịch."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Đường Kách mệnh."
+    },
+    {
+      "id": 59,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Luận điểm: \"Đảng lấy chủ nghĩa Mác - Lênin và tư tưởng Hồ Chí Minh làm nền tảng tư tưởng, kim chỉ nam cho hành động\" được nêu ra tại Văn kiện Đại hội lần thứ mấy của Đảng?",
+      "options": {
+        "A": "Văn kiện Đại hội VII.",
+        "B": "Văn kiện Đại hội VIII.",
+        "C": "Văn kiện Đại hội IX.",
+        "D": "Văn kiện Đại hội X."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Văn kiện Đại hội VII."
+    },
+    {
+      "id": 61,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Luận điểm: \"Tư tưởng Hồ Chí Minh là một hệ thống quan điểm toàn diện và sâu sắc về những vấn đề cơ bản của cách mạng Việt Nam, là kết quả của sự vận dụngvà phát triển sáng tạo chủ nghĩa Mác - Lênin vào điều kiện cụ thể của nước ta, kế thừa và phát triển các giá trị truyền thống tốt đẹp của dân tộc, tiếp thu tinh hoa văn hóa nhân loại\" được nêu ra tại Văn kiện Đại hội lần thứ mấy của Đảng?",
+      "options": {
+        "A": "Văn kiện Đại hội VII.",
+        "B": "Văn kiện Đại hội VIII.",
+        "C": "Văn kiện Đại hội IX.",
+        "D": "Văn kiện Đại hội X."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Văn kiện Đại hội IX."
+    },
+    {
+      "id": 63,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Một trong những nhân tố chủ quan hình thành nên tư tưởng Hồ Chí Minh là?",
+      "options": {
+        "A": "Khả năng tư duy và trí tuệ Hồ Chí Minh.",
+        "B": "Giá trị truyền thống dân tộc.",
+        "C": "Bối cảnh lịch sử Việt Nam cuối thế kỷ XIX đầu thế kỷ XX.",
+        "D": "Gia đình và quê hương Hồ Chí Minh."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Khả năng tư duy và trí tuệ Hồ Chí Minh."
+    },
+    {
+      "id": 65,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Mục đích tư tưởng Hồ Chí Minh là gì?",
+      "options": {
+        "A": "Xây dựng nước Việt Nam hòa bình, thống nhất, dân chủ và giàu mạnh.",
+        "B": "Giải phóng xã hội.",
+        "C": "Giải phóng dân tộc.",
+        "D": "Xây dựng nước Việt Nam giàu mạnh."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Xây dựng nước Việt Nam hòa bình, thống nhất, dân chủ và giàu mạnh."
+    },
+    {
+      "id": 67,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Nguyễn Ái Quốc hoạt động tại Quảng Châu, Trung Quốc vào thời gian nào?",
+      "options": {
+        "A": "1921 - 1923",
+        "B": "1923 - 1924",
+        "C": "1924 - 1927",
+        "D": "1927 - 1930"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 1924 - 1927"
+    },
+    {
+      "id": 69,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Nguyễn Tất Thành lên con tàu Amiran Latusơ Tơrơvin để ra đi tìm đường cứu nước tại đâu? Vào thời gian nào?",
+      "options": {
+        "A": "5/6/1911 tại Bến cảng Nhà Rồng.",
+        "B": "6/5/1911 tại Bến cảng Nhà Rồng.",
+        "C": "2/6/1911 tại Sài Gòn.",
+        "D": "4/6/1911 tại Bến Nhà Rồng."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 5/6/1911 tại Bến cảng Nhà Rồng."
+    },
+    {
+      "id": 71,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Sự ra đời của Đảng Cộng sản Việt Nam với Cương lĩnh chính trị đầu tiên của Đảng có ý nghĩa như thế nào đối với cách mạng Việt Nam?",
+      "options": {
+        "A": "Chấm dứt chế độ phong kiến Việt Nam.",
+        "B": "Chỉ ra con đường xây dựng chủ nghĩa xã hội ở Việt Nam.",
+        "C": "Chấm dứt cuộc khủng hoảng về đường lối cứu nước và tổ chức lãnh đạo cách mạng Việt Nam cuối thế kỷ XIX đầu thế kỷ XX.",
+        "D": "Tìm thấy con đường cách mạng vô sản."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Chấm dứt cuộc khủng hoảng về đường lối cứu nước và tổ chức lãnh đạo cách mạng Việt Nam cuối thế kỷ XIX đầu thế kỷ XX."
+    },
+    {
+      "id": 73,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Theo Hồ Chí Minh, học chủ nghĩa Mác- Lênin là để làm gì?",
+      "options": {
+        "A": "Để phân tích và giải quyết các vấn đề cụ thể của cách mạng Việt Nam.",
+        "B": "Để có phương pháp làm việc khoa học.",
+        "C": "Học thuộc các luận điểm lý luận.",
+        "D": "Để nâng cao trình độ bản thân."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Để phân tích và giải quyết các vấn đề cụ thể của cách mạng Việt Nam."
+    },
+    {
+      "id": 75,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Thuật ngữ \"tư tưởng Hồ Chí Minh\" được dùng theo nghĩa nào?",
+      "options": {
+        "A": "Là tư tưởng của một lãnh tụ.",
+        "B": "Là tư tưởng của một cá nhân.",
+        "C": "Là tư tưởng của một nhóm người.",
+        "D": "Là tư tưởng của một giai cấp, một dân tộc."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Là tư tưởng của một giai cấp, một dân tộc."
+    },
+    {
+      "id": 77,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Trong sự hình thành và phát triển tư tưởng Hồ Chí Minh, thời kỳ trước năm 1911 có ý nghĩa như thế nào?",
+      "options": {
+        "A": "Thời kỳ vượt qua khó khăn thử thách.",
+        "B": "Thời kỳ tìm đường cứu nước.",
+        "C": "Thời kỳ hình thành tư tưởng yêu nước và chí hướng cứu nước.",
+        "D": "Thời kỳ tiếp cận với chủ nghĩa Mác - Lênin."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Thời kỳ hình thành tư tưởng yêu nước và chí hướng cứu nước."
+    },
+    {
+      "id": 79,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Tư tưởng Hồ Chí Minh có ý nghĩa như thế nào đối với cách mạng Việt Nam?",
+      "options": {
+        "A": "Tư tưởng Hồ Chí Minh mở ra cho các dân tộc thuộc địa con đường giải phóng dân tộc.",
+        "B": "Tư tưởng Hồ Chí Minh góp phần vào cuộc đấu tranh vì độc lập dân tộc, dân chủ và tiến bộ thế giới.",
+        "C": "Tư tưởng Hồ Chí Minh là nền tảng tư tưởng và kim chỉ nam hành động cho cách mạng Việt Nam.",
+        "D": "Tư tưởng Hồ Chí Minh mở ra con đường hợp tác quốc tế."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tư tưởng Hồ Chí Minh là nền tảng tư tưởng và kim chỉ nam hành động cho cách mạng Việt Nam."
+    },
+    {
+      "id": 221,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Ai chủ trì hội nghị hợp nhất 3 tổ chức cộng sản của nước ta?",
+      "options": {
+        "A": "Trịnh Đình Cửu.",
+        "B": "Trần Phú.",
+        "C": "Nguyễn Ái Quốc.",
+        "D": "Lê Hồng Phong."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Nguyễn Ái Quốc."
+    },
+    {
+      "id": 223,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Ai là người bàn nhiều về cuộc đấu tranh chống chủ nghĩa thực dân?",
+      "options": {
+        "A": "C.Mác.",
+        "B": "Ph. Ăngghen.",
+        "C": "V.I.Lênin.",
+        "D": "Hồ Chí Minh."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Hồ Chí Minh."
+    },
+    {
+      "id": 225,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Ai soạn thảo \"Chánh cương vắn tắt\", \"sách lược vắn tắt\", \"chương trình, điều lệ vắn tắt của Đảng\"?",
+      "options": {
+        "A": "Nguyễn Ái Quốc.",
+        "B": "Trịnh Đình Cửu.",
+        "C": "Trần Phú.",
+        "D": "Lê Hồng Phong."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Nguyễn Ái Quốc."
+    },
+    {
+      "id": 227,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Bác Hồ về nước ngày, tháng, năm nào?",
+      "options": {
+        "A": "28/1/1941.",
+        "B": "28/1/1942.",
+        "C": "12/8/1942.",
+        "D": "19/12/1941."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 28/1/1941."
+    },
+    {
+      "id": 229,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Bản \"Yêu sách của nhân dân An Nam\" gửi đến Hội nghị Véc xây được Nguyễn Tất Thành ký tên là:",
+      "options": {
+        "A": "Pon Thành.",
+        "B": "Văn Ba.",
+        "C": "Hồ Chí Minh.",
+        "D": "Nguyễn Ái Quốc."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Nguyễn Ái Quốc."
+    },
+    {
+      "id": 231,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Bộ môn tư tưởng Hồ Chí Minh có mấy nhiệm vụ khi nghiên cứu tư tưởng Hồ Chí Minh?",
+      "options": {
+        "A": "4 nhiệm vụ.",
+        "B": "5 nhiệm vụ.",
+        "C": "6 nhiệm vụ.",
+        "D": "7 nhiệm vụ."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 6 nhiệm vụ."
+    },
+    {
+      "id": 233,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Các bài giảng của Nguyễn Ái Quốc tại các lớp huấn luyện cán bộ được Bộ Tuyên truyền của Hội Liên hiệp các dân tộc bị áp bức tập hợp lại và xuất bản thành tác phẩm nào?",
+      "options": {
+        "A": "Bản án chế độ thực dân Pháp.",
+        "B": "Đường cách mệnh.",
+        "C": "Sửa đổi lề lối làm việc.",
+        "D": "Tuyên Ngôn Độc lập."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Đường cách mệnh."
+    },
+    {
+      "id": 235,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Cách mạng giải phóng dân tộc giành thắng lợi đồng thời với thắng lợi cách mạng vô sản ở chính quốc:",
+      "options": {
+        "A": "Đúng.",
+        "B": "Sai."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Sai."
+    },
+    {
+      "id": 237,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Cách mạng giải phóng dân tộc muốn giành được thắng lợi phải:",
+      "options": {
+        "A": "Tiến hành chủ động và sáng tạo.",
+        "B": "Dựa vào sự thắng lợi của cách mạng ở các nước thuộc địa khác.",
+        "C": "Dựa vào sự thắng lợi của cách mạng vô sản ở chính quốc.",
+        "D": "Dựa vào sự đoàn kết quốc tế."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Tiến hành chủ động và sáng tạo."
+    },
+    {
+      "id": 239,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Cách mạng giải phóng dân tộc ở thuộc địa có khả năng giành được thắng lợi trước cách mạng vô sản ở chính quốc.",
+      "options": {
+        "A": "Đúng.",
+        "B": "Sai."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Đúng."
+    },
+    {
+      "id": 241,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Cách mạng tháng Mười Nga diễn ra năm nào?",
+      "options": {
+        "A": "1915.",
+        "B": "1916.",
+        "C": "1917.",
+        "D": "1918."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 1917."
+    },
+    {
+      "id": 243,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Cách thức Hồ Chí Minh tiếp thu tinh hoa văn hóa nhân lọai - kể cả chủ nghĩa Mác - Lênin - như thế nào?",
+      "options": {
+        "A": "\"Sao y bản chính\".",
+        "B": "Có chọn lọc, phê phán, kế thừa và phát triển.",
+        "C": "Loại bỏ hết các tư tưởng phong kiến, tư sản.",
+        "D": "Loại bỏ hết các tư tưởng tôn giáo."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Có chọn lọc, phê phán, kế thừa và phát triển."
+    },
+    {
+      "id": 245,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Các sự kiện sau đây là điều kiện chính trị góp phần hình thành tư tưởng Hồ Chí Minh, sự kiện nào thuộc về yếu tố thời đại?",
+      "options": {
+        "A": "Các phong trào vũ trang kháng chiến chống Pháp trong nửa cuối thế kỷ XIX dựa trên ý thức hệ phong kiến đều thất bại.",
+        "B": "Các phong trào chống Pháp do các sỹ phu phong kiến có tư tưởng duy tân dẫn dắt cũng không tránh khỏi hạn chế và thất bại.",
+        "C": "Mười năm đầu thế kỷ XX, khi Nguyễn Tất thành lớn lên, phong trào yêu nước của nhân dân ta bị thực dân Pháp thẳng tay đàn áp, đang ở vào thời kỳ khó khăn nhất.",
+        "D": "Cuộc đấu tranh giải phóng dân tộc sang đầu thế kỷ XX đã trở thành cuộc đấu tranh chung của các dân tộc thuộc địa gắn với cuộc đấu tranh của giai cấp vô sản ở chính quốc."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Cuộc đấu tranh giải phóng dân tộc sang đầu thế kỷ XX đã trở thành cuộc đấu tranh chung của các dân tộc thuộc địa gắn với cuộc đấu tranh của giai cấp vô sản ở chính quốc."
+    },
+    {
+      "id": 247,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Câu \"Dù hi sinh tới đâu, dù phải đốt cháy cả dãy Trường Sơn cũng phải kiên quyết giành cho được độc lập\" được Chủ tịch Hồ Chí Minh viết trong thời gian:",
+      "options": {
+        "A": "Tháng 2 năm 1930.",
+        "B": "Tháng 8 năm 1939.",
+        "C": "Tháng 8 năm 1945.",
+        "D": "Tháng 8 năm 1946."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tháng 8 năm 1945."
+    },
+    {
+      "id": 251,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Chọn cụm từ điền vào chỗ trống [......] để hoàn thiện câu: Văn kiện Đại hội XI của Đảng chỉ rõ: Tư tưởng Hồ Chí Minh [......] cho cuộc đấu tranh của nhân dân là giành thắng lợi, là [......] to lớn của Đảng và dân tộc ta.",
+      "options": {
+        "A": "Mở đường; tài sản tinh thần.",
+        "B": "Soi đường; tài sản tinh thần.",
+        "C": "Chỉ đường; tài sản tinh thần.",
+        "D": "Dẫn đường; tài sản tinh thần."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Soi đường; tài sản tinh thần."
+    },
+    {
+      "id": 253,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Chọn cụm từ đúng điền vào chỗ trống [......] theo tư tưởng Hồ Chí Minh: \"Toàn quốc đồng bào hãy đứng dậy [......] mà tự giải phóng cho ta\"",
+      "options": {
+        "A": "Dựa vào sự giúp đỡ quốc tế.",
+        "B": "Dựa vào sự đoàn kết toàn dân.",
+        "C": "Dưới sự lãnh đạo của Đảng.",
+        "D": "Đem sức ta."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Đem sức ta."
+    },
+    {
+      "id": 255,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Chọn cụm từ đúng điền vào chỗ trống [......] theo tư tưởng Hồ Chí Minh: \"Tôi chỉ có một ham muốn, ham muốn tột bậc, là làm sao cho nước ta được [......], dân ta được hoàn toàn tự do, đồng bào ta ai cũng có cơm ăn áo mặc, ai cũng được học hành\".",
+      "options": {
+        "A": "Nhanh chóng độc lập.",
+        "B": "Thắng lợi.",
+        "C": "Hoàn toàn độc lập.",
+        "D": "Giải phóng."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Hoàn toàn độc lập."
+    },
+    {
+      "id": 257,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Chọn cụm từ thích hợp điền vào chỗ trống [......]: Tháng 7 năm 1920, Hồ Chí Minh đọc tác phẩm [......] của Lênin.",
+      "options": {
+        "A": "Tác phẩm \"Làm gì\".",
+        "B": "Sơ thảo lần thứ nhất về Luận cương về các vấn đề dân tộc.",
+        "C": "Sơ thảo lần thứ nhất về các vấn đề dân tộc và thuộc địa.",
+        "D": "Sơ thảo lần thứ nhất về Luận cương về các vấn đề thuộc địa."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Sơ thảo lần thứ nhất về các vấn đề dân tộc và thuộc địa."
+    },
+    {
+      "id": 259,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Chọn cụm từ thích hợp điền vào chỗ trống [......] theo tư tưởng Hồ Chí Minh: \"Muốn người ta giúp cho thì trước hết mình phải [......]\"",
+      "options": {
+        "A": "Giúp người ta trước.",
+        "B": "Tự cố gắng đứng dậy.",
+        "C": "Tự giúp lấy mình đã.",
+        "D": "Kêu gọi sự giúp đỡ."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tự giúp lấy mình đã."
+    },
+    {
+      "id": 261,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Chọn đáp án trả lời đúng cho câu hỏi: \"Dân ta có một lòng nồng nàn yêu nước. Đó là một truyền thống quý báu của ta. Từ xưa đến nay, mỗi khi Tổ quốc bị xâm lăng, thì tinh thần ấy lại sôi nổi, nó kết thành một làn sóng vô cùng mạnh mẽ, to lớn, nó lướt qua mọi sự nguy hiểm, khó khăn, nó nhấn chìm tất cả lũ bán nước và cướp nước\" được trích từ tác phẩm nào của Hồ Chí Minh?",
+      "options": {
+        "A": "Tuyên ngôn Độc lập.",
+        "B": "Lời kêu gọi toàn quốc kháng chiến.",
+        "C": "Báo cáo chính trị tại Đại hội đại biểu toàn quốc lần thứ II của Đảng.",
+        "D": "Diễn văn khai mạc Đại hội đại biểu toán quốc lần thứ III của Đảng Lao động Việt Nam."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Báo cáo chính trị tại Đại hội đại biểu toàn quốc lần thứ II của Đảng."
+    },
+    {
+      "id": 263,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Chọn đáp án trả lời đúng cho câu hỏi: \"Đảng lấy chủ nghĩa Mác - Lênin và tư tưởng Hồ Chí Minh làm nền tảng tư tưởng và kim chỉ nam cho mọi hành động cách mạng\". Quan điểm trên được Đảng ra khẳng định lần đầu tiên tại Đại hội đại biểu toàn quốc lần thứ mấy?",
+      "options": {
+        "A": "Đại hội lần thứ V.",
+        "B": "Đại hội lần thứ VI.",
+        "C": "Đại hội lần thứ VII.",
+        "D": "Đại hội lần thứ VIII."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Đại hội lần thứ VII."
+    },
+    {
+      "id": 265,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Chọn phương án trả lời đúng nhất cho tư tưởng Hồ Chí Minh?",
+      "options": {
+        "A": "Tư tưởng Hồ Chí Minh là kết quả của sự vận dụng phát triển sáng tạo chủ nghĩa Mác - Lênin vào điều kiện thực tế của nước ta.",
+        "B": "Tư tưởng Hồ Chí Minh là kết quả của sự vận dụng và phát triển sáng tạo chủ nghĩa Mác - Lênin vào điều kiện thực tế của nước ta.",
+        "C": "Tư tưởng Hồ Chí Minh là kết quả của sự phát triển sáng tạo chủ nghĩa Mác - Lênin vào điều kiện thực tế của nước ta.",
+        "D": "Tư tưởng Hồ Chí Minh là kết quả của sự sáng tạo chủ nghĩa Mác - Lênin vào điều kiện thực tế của nước ta."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Tư tưởng Hồ Chí Minh là kết quả của sự vận dụng và phát triển sáng tạo chủ nghĩa Mác - Lênin vào điều kiện thực tế của nước ta."
+    },
+    {
+      "id": 267,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Chọn phương án trả lời đúng với tư tưởng Hồ Chí Minh:",
+      "options": {
+        "A": "Từ năm 1890 đến 1911: Thời kỳ nghiên cứu, khảo sát thực tế, đến với chủ nghĩa Mác - Lênin.",
+        "B": "Từ năm 1911 - 1920: Thời kỳ hình thành tư tưởng yêu nước, chí hướng cứu nước.",
+        "C": "Từ năm 1921 đến 1930: Thời kỳ hình thành cơ bản con đường cách mạng Việt Nam.",
+        "D": "Từ năm 1945 đến 1969: Thời kỳ vượt qua khó khăn, kiên trì con đường đã chọn."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Từ năm 1921 đến 1930: Thời kỳ hình thành cơ bản con đường cách mạng Việt Nam."
+    },
+    {
+      "id": 269,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Chủ trương cầu ngoại viện, dùng bạo lực để khôi phục độc lập dân tộc là của nhà cách mạng nào?",
+      "options": {
+        "A": "Hàm Nghi.",
+        "B": "Tôn Thất Thuyết.",
+        "C": "Phan Bội Châu.",
+        "D": "Phan Châu Trinh."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Phan Bội Châu."
+    },
+    {
+      "id": 271,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Có 6 nguyên tắc phương pháp luận khi nghiên cứu, học tập tư tưởng Hồ Chí Minh: Bảo đảm sự thống nhất nguyên tắc tính Đảng và tính khoa học; nguyên tắc lý luận gắn liền với thực tiễn; quan điểm lịch sử - cụ thể; quan điểm toàn diện và hệ thống; kết hợp nghiên cứu tác phẩm với thực tiễn chỉ đạo cách mạng của Hồ Chí Minh. Quan điểm còn lại là gì?",
+      "options": {
+        "A": "Quan điểm toàn diện và hệ thống.",
+        "B": "Quan điểm vận dụng phương pháp liên ngành khoa học.",
+        "C": "Quan điểm phân tích và tổng hợp các sự kiện lịch sử.",
+        "D": "Quan điểm kế thừa và phát triển."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Quan điểm kế thừa và phát triển."
+    },
+    {
+      "id": 273,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "\"Công nông là gốc của cách mệnh, còn học trò, nhà buồn nhỏ, điền chủ nhỏ là bầu bạn cách mệnh của công nông\" được Nguyễn Ái Quốc đề cập đến điều gì?",
+      "options": {
+        "A": "Phương pháp cách mạng.",
+        "B": "Lực lượng cách mạng.",
+        "C": "Nhiệm vụ của cách mạng.",
+        "D": "Mục tiêu của cách mạng."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Lực lượng cách mạng."
+    },
+    {
+      "id": 275,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "\"Công nông là tay không, chân không rồi, nếu thua thì chỉ mất một kiếp khổ, nếu được thì được cả thế giới, cho nên họ gan góc\". Câu trích nêu trên Hồ Chí Minh muốn đề cập đến vấn đề gì trong quan điểm về cách mạng giải phóng dân tộc?",
+      "options": {
+        "A": "Tinh thần cách mạng triệt để của giai cấp công nhân, nông dân ở Việt Nam.",
+        "B": "Ý thức tự giác cách mạng của công nông.",
+        "C": "Nguồn gốc của giai cấp công nhân.",
+        "D": "Công nông là lực lượng cách mạng đông đảo nhất."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Tinh thần cách mạng triệt để của giai cấp công nhân, nông dân ở Việt Nam."
+    },
+    {
+      "id": 279,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Cuộc vận động \"Học tập và làm theo tấm gương đạo đức Hồ Chí Minh\" được Đảng ta phát động cho đối tượng nào?",
+      "options": {
+        "A": "Toàn cán bộ công chức.",
+        "B": "Cho công nhân, nông dân và trí thức.",
+        "C": "Trong toàn đảng và hệ thống chính trị.",
+        "D": "Toàn thể đảng viên."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Trong toàn đảng và hệ thống chính trị."
+    },
+    {
+      "id": 281,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Cuốn \"Đường Cách mệnh\" tập hợp các bài giảng của Nguyễn Ái Quốc tại các khoá huấn luyện chính trị được xuất bản tại đâu?",
+      "options": {
+        "A": "Pháp.",
+        "B": "Liên xô 141.",
+        "C": "Việt Nam.",
+        "D": "Trung Quốc."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Trung Quốc."
+    },
+    {
+      "id": 283,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "\"Dù phải đốt cháy cả đây Trường Sơn cũng phải giành cho được độc lập\" câu nói đó của Hồ Chí Minh vào thời gian nào?",
+      "options": {
+        "A": "Tháng 5-1941.",
+        "B": "Tháng 9-1945.",
+        "C": "Tháng 8-1945.",
+        "D": "Tháng 12-1946."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tháng 8-1945."
+    },
+    {
+      "id": 285,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Dưới đây là tóm tắt một số đoạn trong chánh cương vắn tắt của Đảng cộng sản Việt Nam do Nguyễn Ái Quốc đưa ra ngày 03/02/1930. Hỏi: đoạn tóm tắt nào thể hiện \"con đường mới của phong trào cứu nước\" ở Việt Nam?",
+      "options": {
+        "A": "Tư bản bản xứ bị tư bản Pháp hết sức ngăn trở không thể mở mang được.",
+        "B": "Nông nghiệp khủng hoảng, nông dân thất nghiệp nhiều.",
+        "C": "Chỉ có bọn đại địa chủ mới có thế lực và đứng hẳn về phe đế quốc chủ nghĩa.",
+        "D": "Làm cách mạng tư sản dân quyền và thổ địa cách mạng để đi tới xã hội cộng sản."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Làm cách mạng tư sản dân quyền và thổ địa cách mạng để đi tới xã hội cộng sản."
+    },
+    {
+      "id": 287,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Dưới đây là tóm tắt nội dung trong tài liệu \"Báo cáo về Bắc kỳ, Trung kỳ và Nam kỳ\" của Hồ Chí Minh gửi quốc tế cộng sản. Hãy phát hiện trong đó một câu ghi sai?",
+      "options": {
+        "A": "Chủ nghĩa dân tộc là một động lực lớn của đất nước.",
+        "B": "Quốc tế cộng sản nên nhân danh mình phát động chủ nghĩa dân tộc bản xứ.",
+        "C": "Chủ trương phát động chủ nghĩa dân tộc bản xứ sẽ là một chính sách mang tính hiện thực tuyệt vời.",
+        "D": "Khi chủ nghĩa dân tộc bản xứ thắng lợi thì nó sẽ biến thành chủ nghĩa dân tộc hẹp hòi."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Khi chủ nghĩa dân tộc bản xứ thắng lợi thì nó sẽ biến thành chủ nghĩa dân tộc hẹp hòi."
+    },
+    {
+      "id": 289,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Đại hội nào của Đảng khẳng định: \"Tư tưởng Hồ Chí Minh không chỉ là kết quả của sự vận dụng sáng tạo mà còn phát triển sáng tạo của chủ nghĩa Mác - Lênin vào điều kiện cụ thể của nước ta\"?",
+      "options": {
+        "A": "Đại hội VII (1991).",
+        "B": "Đại hội VIII (1996).",
+        "C": "Đại hội IX (2001).",
+        "D": "Đại hội X (2006)."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Đại hội IX (2001)."
+    },
+    {
+      "id": 291,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Đảng lãnh đạo là nhân tố có ý nghĩa thế nào đối với thắng lợi cách mạng nước ta?",
+      "options": {
+        "A": "Có ý nghĩa quyết định hàng đầu.",
+        "B": "Có ý nghĩa rất quan trọng.",
+        "C": "Có ý nghĩa quan trọng đặc biệt.",
+        "D": "Có ý nghĩa quan trọng."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Có ý nghĩa quyết định hàng đầu."
+    },
+    {
+      "id": 293,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Đảng ta khẳng định: \"trong lúc này, quyền lợi của dân tộc phải đặt lên trên hết, trước hết\" tại Hội Nghị:",
+      "options": {
+        "A": "Hội nghị Trung ương 6.",
+        "B": "Hội nghị Trung ương 7.",
+        "C": "Hội nghị Trung ương 8.",
+        "D": "Hội nghị Trung ương 9."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Hội nghị Trung ương 8."
+    },
+    {
+      "id": 297,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Để có một nhà nước hợp pháp, hợp hiến, việc làm đầu tiên của Hồ Chí Minh sau cách mạng tháng Tám năm 1945 là gì?",
+      "options": {
+        "A": "Thiết kế mô hình nhà nước cách mạng.",
+        "B": "Lựa chọn, sắp xếp cán bộ.",
+        "C": "Tổ chức tổng tuyển cử trong cả nước.",
+        "D": "Kêu gọi thế giới công nhận chính quyền mới"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tổ chức tổng tuyển cử trong cả nước."
+    },
+    {
+      "id": 299,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Định nghĩa tư tưởng Hồ Chí Minh của đại hội IX Đảng cộng sản Việt Nam nêu lên 4 vấn đề: nguồn gốc tư tưởng Hồ Chí Minh, bản chất cách mạng và khoa học của tư tưởng Hồ Chí Minh, nội dung tư tưởng Hồ Chí Minh. Vấn đề thứ 4 là gì?",
+      "options": {
+        "A": "Giá trị của tư tưởng Hồ Chí Minh.",
+        "B": "Mục đích của tư tưởng Hồ Chí Minh.",
+        "C": "Ý nghĩa của tư tưởng Hồ Chí Minh.",
+        "D": "Cả 3 vấn đề trên đều đúng."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Cả 3 vấn đề trên đều đúng."
+    },
+    {
+      "id": 301,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Đoạn trích sau đây thuộc tác phẩm nào của Hồ Chí Minh: \"Bây giờ học thuyết nhiều, chủ nghĩa nhiều, nhưng chủ nghĩa chân chính nhất, chắc chắn nhất, cách mạng nhất là chủ nghĩa Lênin\"?",
+      "options": {
+        "A": "Bản án chế độ thực dân Pháp.",
+        "B": "Đường cách mệnh.",
+        "C": "Con đường dẫn tôi đến chủ nghĩa Lênin.",
+        "D": "Cương lĩnh chính trị đầu tiên."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Đường cách mệnh."
+    },
+    {
+      "id": 303,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Đoạn trích sau được trích trong tác phẩm nào của Hồ Chí Minh: \"Nước Việt Nam có quyền hướng tự do và độc lập, và sự thật đã thành một nước tự do độc lập. Toàn thể dân tộc Việt Nam quyết đem tất cả tinh thần và lực lượng, tính mạng và của cải để giữ vững quyền tự do, độc lập ấy\"?",
+      "options": {
+        "A": "Bản án chế độ thực dân Pháp.",
+        "B": "Đường cách mệnh.",
+        "C": "Tuyên ngôn độc lập.",
+        "D": "Di chúc."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tuyên ngôn độc lập."
+    },
+    {
+      "id": 305,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Đoạn viết dưới đây ghi lại nhận định của Hồ Chí Minh về khổng tử, trong đó nhận định nào chứng tỏ Hồ Chí Minh tiếp nhận giá trị tích cực của tư tưởng Nho giáo?",
+      "options": {
+        "A": "Tư tưởng của Khổng Tử chỉ thích hợp với một xã hội bình yên không bao giờ thay đổi.",
+        "B": "Khổng tử là người phát ngôn bênh vực những người bóc lột chống lại những người bị áp bức.",
+        "C": "Tuy Khổng Tử là phong kiến song những điều hay trong học thuyết của ông thì ta nên học.",
+        "D": "Trong học thuyết của Khổng Tử có nhiều điều không đúng."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tuy Khổng Tử là phong kiến song những điều hay trong học thuyết của ông thì ta nên học."
+    },
+    {
+      "id": 311,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "\"Đưa hổ cửa trước, rước beo cửa sau\"; \"Ỷ pháp cầu tiến bộ\" là nhận xét của Nguyễn Ái Quốc về chủ trương cứu nước sai lầm của ai?",
+      "options": {
+        "A": "Phan Đình Phùng.",
+        "B": "Hoàng Hoa Thám.",
+        "C": "Phan Bội Châu, Phan Chu Trinh",
+        "D": "Phái chủ hòa trong triều đình nhà Nguyễn."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Phan Bội Châu, Phan Chu Trinh"
+    },
+    {
+      "id": 313,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Giai đoạn hình thành cơ bản Tư tưởng về cách mạng Việt Nam của Hồ Chí Minh được tính từ:",
+      "options": {
+        "A": "1911 - 1920.",
+        "B": "1921 - 1930.",
+        "C": "1930 - 1941.",
+        "D": "1945 - 1969."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. 1921 - 1930."
+    },
+    {
+      "id": 315,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Giai đoạn phát triển và thắng lợi của tư tưởng Hồ Chí Minh được tính từ:",
+      "options": {
+        "A": "Từ năm 1920 đến 1930.",
+        "B": "Từ năm 1941 đến 1945.",
+        "C": "Từ năm 1930 đến 1945.",
+        "D": "Từ năm 1945 đến 1969."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Từ năm 1945 đến 1969."
+    },
+    {
+      "id": 317,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Giai đoạn vượt qua khó khăn thử thách, kiên trì con đường đã xác định cho Cách mạng Việt Nam của Hồ Chí Minh được tính từ:",
+      "options": {
+        "A": "Năm 1911 đến 1920.",
+        "B": "Nam 1920 đến 1930.",
+        "C": "Năm 1930 đến 1945.",
+        "D": "Năm 1945 đén 1969."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Năm 1930 đến 1945."
+    },
+    {
+      "id": 319,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2 A+ SSS+",
+      "question": "Giải phóng con người theo tư tưởng Hồ Chí Minh là:",
+      "options": {
+        "A": "Giải phóng con người với tư cách tứng cá nhân.",
+        "B": "Giải phóng con người với tư cách là cả loài người.",
+        "C": "Giải phóng con người với tư cách từng cá nhân và cả loài người.",
+        "D": "Giải phóng con người với tư cách là cả dân tộc."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Giải phóng con người với tư cách từng cá nhân và cả loài người."
+    }
+  ]
+}

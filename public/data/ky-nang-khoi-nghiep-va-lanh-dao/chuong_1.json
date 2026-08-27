@@ -1,0 +1,215 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kỹ năng Khởi nghiệp và Lãnh đạo - Chương 1",
+  "chapter": "Chương 1",
+  "totalQuestions": 15,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Đổi mới sáng tạo trong khởi nghiệp kinh doanh được hiểu là gì?",
+      "options": {
+        "A": "Là việc sáng tạo ra những sản phẩm mới chưa từng có trước đây trên thị trường.",
+        "B": "Là việc thương mại hóa sản phẩm nhằm đáp ứng nhu cầu và giữ chân một nhóm khách hàng nhất định.",
+        "C": "Là sáng tạo được thương mại hóa dưới hình thức sản phẩm nhằm đáp ứng nhu cầu của nhóm khách hàng nhất định.",
+        "D": "Là việc thương mại hóa sản phẩm nào đó cho nhóm khách hàng nhất định."
+      },
+      "answer": "C",
+      "explainAnswer": "Đổi mới sáng tạo trong khởi nghiệp là sáng tạo được thương mại hóa dưới hình thức sản phẩm/dịch vụ nhằm đáp ứng nhu cầu của nhóm khách hàng nhất định. Đáp án C đúng."
+    },
+    {
+      "id": 2,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Khởi nghiệp kinh doanh trong doanh nghiệp đã thành lập trong tiếng Anh được hiểu là gì?",
+      "options": {
+        "A": "Các doanh nghiệp đã thành lập tìm kiếm, đánh giá và khai thác các cơ hội kinh doanh trên cơ sở nhấn mạnh tính chủ động (proactive), đổi mới sáng tạo (innovative) và chấp nhận rủi ro (risk taking).",
+        "B": "Các doanh nghiệp đã thành lập tìm kiếm, đánh giá và khai thác các cơ hội kinh doanh trên cơ sở nhấn mạnh việc chấp nhận rủi ro (risk taking).",
+        "C": "Các doanh nghiệp đã thành lập tìm kiếm, đánh giá và khai thác các cơ hội kinh doanh trên cơ sở nhấn mạnh tính đổi mới sáng tạo (innovative).",
+        "D": "Các doanh nghiệp đã thành lập tìm kiếm, đánh giá và khai thác các cơ hội kinh doanh trên cơ sở nhấn mạnh tính chủ động (proactive)."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Các doanh nghiệp đã thành lập tìm kiếm, đánh giá và khai thác các cơ hội kinh doanh trên cơ sở nhấn mạnh tính chủ động (proactive), đổi mới sáng tạo (innovative) và chấp nhận rủi ro (risk taking)."
+    },
+    {
+      "id": 3,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Khởi nghiệp kinh doanh theo định nghĩa được chấp nhận rộng rãi nhất của Scott Shane và S. Venkataraman (2000) là gì?",
+      "options": {
+        "A": "Là quá trình tìm kiếm, đánh giá và khai thác các cơ hội kinh doanh bằng cách thành lập doanh nghiệp mới.",
+        "B": "Là quá trình tìm kiếm, đánh giá và khai thác các cơ hội kinh doanh bằng cách thành lập doanh nghiệp mới hoặc với doanh nghiệp hiện có.",
+        "C": "Là quá trình tìm kiếm, đánh giá và khai thác các cơ hội kinh doanh với doanh nghiệp thường có quy mô nhỏ.",
+        "D": "Là quá trình tìm kiếm, đánh giá và khai thác các cơ hội kinh doanh với doanh nghiệp hiện có."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Là quá trình tìm kiếm, đánh giá và khai thác các cơ hội kinh doanh bằng cách thành lập doanh nghiệp mới hoặc với doanh nghiệp hiện có."
+    },
+    {
+      "id": 4,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Khởi sự kinh doanh trong tiếng Anh (start-ups) được hiểu là gì?",
+      "options": {
+        "A": "Là việc thành lập doanh nghiệp và đưa sản phẩm mới ra thị trường dựa trên nền tảng đổi mới sáng tạo.",
+        "B": "Là doanh nghiệp mới thành lập và đưa sản phẩm mới ra thị trường dựa trên nền tảng đổi mới sáng tạo.",
+        "C": "Là việc kinh doanh và đưa sản phẩm mới ra thị trường dựa trên nền tảng đổi mới sáng tạo.",
+        "D": "Là doanh nghiệp nhỏ hoạt động dựa trên nền tảng đổi mới sáng tạo."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Là doanh nghiệp mới thành lập và đưa sản phẩm mới ra thị trường dựa trên nền tảng đổi mới sáng tạo."
+    },
+    {
+      "id": 5,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Kỹ năng lãnh đạo là gì?",
+      "options": {
+        "A": "Là những năng lực (ví dụ: xây dựng tầm nhìn, truyền thông, phát triển đội ngũ, tạo động lực, giải quyết xung đột, quản trị sự thay đổi..), qua đó giúp nhà lãnh đạo làm việc với và thông qua người khác để hoàn thành các mục tiêu của tổ chức.",
+        "B": "Là những năng lực (ví dụ: xây dựng tầm nhìn, truyền thông, phát triển đội ngũ, tạo động lực, giải quyết xung đột, quản trị sự thay đổi...), qua đó giúp nhà lãnh đạo làm việc với và thông qua người khác để giúp họ hoàn thành các mục tiêu của mình.",
+        "C": "Là những năng lực (ví dụ: xây dựng tầm nhìn, truyền thông, phát triển đội ngũ, tạo động lực, giải quyết xung đột, quản trị sự thay đổi....), qua đó giúp nhà lãnh đạo làm việc hiệu quả để hoàn thành các mục tiêu của tổ chức.",
+        "D": "Là những năng lực (ví dụ: xây dựng tầm nhìn, truyền thông, phát triển đội ngũ, tạo động lực, giải quyết xung đột, quản trị sự thay đổi....), qua đó giúp nhà lãnh đạo quản lý hiệu quả người khác để hoàn thành các mục tiêu của tổ chức."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Là những năng lực (ví dụ: xây dựng tầm nhìn, truyền thông, phát triển đội ngũ, tạo động lực, giải quyết xung đột, quản trị sự thay đổi..), qua đó giúp nhà lãnh đạo làm việc với và thông qua người khác để hoàn thành các mục tiêu của tổ chức."
+    },
+    {
+      "id": 6,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Kỹ năng lãnh đạo (leadership skills) là yếu tố kết nối Sáng tạo (Creativity) với Đổi mới sáng tạo (Innovation) và Khởi nghiệp kinh doanh (Entrepreneurship).",
+      "options": {
+        "A": "Đúng",
+        "B": "Sai"
+      },
+      "answer": "A",
+      "explainAnswer": "Đúng. Kỹ năng lãnh đạo chính là yếu tố kết nối giữa Sáng tạo, Đổi mới sáng tạo và Khởi nghiệp kinh doanh. Đáp án A đúng."
+    },
+    {
+      "id": 7,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Mối liên hệ giữa kỹ năng lãnh đạo, đổi mới sáng tạo, và khởi nghiệp kinh doanh là gì?",
+      "options": {
+        "A": "Đổi mới sáng tạo (Innovation) là yếu tố kết nối Kỹ năng lãnh đạo (Leadership skills) với Sáng tạo (Creativity) và Khởi nghiệp kinh doanh (Entrepreneurship).",
+        "B": "Khởi nghiệp kinh doanh (Entrepreneurship) là yếu tố kết nối Kỹ năng lãnh đạo (Leadership skills với Sáng tạo (Creativity) và Đổi mới sáng tạo (Innovation).",
+        "C": "Kỹ năng lãnh đạo (Leadership skills) là yếu tố kết nối Sáng tạo (Creativity) với Đổi mới sáng tạo (Innovation) và Khởi nghiệp kinh doanh (Entrepreneurship).",
+        "D": "Sáng tạo (Creativity) là yếu tố kết nối Kỹ năng lãnh đạo (Leadership skills) với Đổi mới sáng tạo (Innovation) và Khởi nghiệp kinh doanh (Entrepreneurship)."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Kỹ năng lãnh đạo (Leadership skills) là yếu tố kết nối Sáng tạo (Creativity) với Đổi mới sáng tạo (Innovation) và Khởi nghiệp kinh doanh (Entrepreneurship)."
+    },
+    {
+      "id": 8,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Những lý do chính của khởi nghiệp kinh doanh của các cá nhân hoặc nhóm khởi nghiệp là gì?",
+      "options": {
+        "A": "Được theo đuổi ý tưởng, cơ hội của riêng mình.",
+        "B": "Được tự mình làm chủ (nghiệp chủ).",
+        "C": "Được tự mình làm chủ (nghiệp chủ), được theo đuổi ý tưởng, cơ hội của riêng mình, được tưởng thưởng về tài chính cho bản thân và gia đình...",
+        "D": "Được tưởng thưởng về tài chính cho bản thân và gia đình."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Được tự mình làm chủ (nghiệp chủ), được theo đuổi ý tưởng, cơ hội của riêng mình, được tưởng thưởng về tài chính cho bản thân và gia đình..."
+    },
+    {
+      "id": 9,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Trong tiếng Việt, khởi nghiệp được hiểu là gì?",
+      "options": {
+        "A": "Là bắt đầu sự nghiệp hay những việc làm có lợi ích quan trọng, ngắn hạn.",
+        "B": "Là bắt đầu sự nghiệp hay những việc làm có lợi ích.",
+        "C": "Là bắt đầu sự nghiệp hay những việc làm quan trọng, vui vẻ.",
+        "D": "Là bắt đầu sự nghiệp hay những việc làm có lợi ích quan trọng, lâu dài."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Là bắt đầu sự nghiệp hay những việc làm có lợi ích quan trọng, lâu dài."
+    },
+    {
+      "id": 10,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Những lý do hay động cơ chính của các cá nhân khi khởi nghiệp kinh doanh là gì?",
+      "options": {
+        "A": "Được tự mình làm chủ (nghiệp chủ).",
+        "B": "Được theo đuổi ý tưởng, cơ hội của riêng mình.",
+        "C": "Được tưởng thưởng về tài chính cho bản thân và gia đình.",
+        "D": "Tất cả đều đúng."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả đều đúng."
+    },
+    {
+      "id": 11,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Sáng tạo trong khởi nghiệp kinh doanh được hiểu là gì?",
+      "options": {
+        "A": "Là năng lực tạo ra những gì mà khách hàng mong muốn có và sẵn sàng trả tiền.",
+        "B": "Là năng lực tạo ra những sản phẩm mới có tính chất sáng tạo.",
+        "C": "Là năng lực vượt qua được những gì nhàm chán để tạo ra những cái vui vẻ.",
+        "D": "Là năng lực vượt qua được những ý tưởng, quy tắc, khuân mẫu, quan hệ và những gì 'truyền thống'/thông thường/'cũ' để tạo ra những cái mới, cái khác biệt."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Là năng lực vượt qua được những ý tưởng, quy tắc, khuân mẫu, quan hệ và những gì 'truyền thống'/thông thường/'cũ' để tạo ra những cái mới, cái khác biệt."
+    },
+    {
+      "id": 12,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Tầm quan trọng của khởi nghiệp kinh doanh đối với sự phát triển kinh tế-xã hội của các quốc gia là gì?",
+      "options": {
+        "A": "Tạo ra hàng hóa, dịch vụ mới; tạo ra việc làm mới; tăng thu nhập và mức sống; khuyến khích đổi mới sáng tạo; đóng góp vào tăng trưởng kinh tế; đóng góp vào giải quyết các vấn đề xã hội, môi trường...",
+        "B": "Đóng góp vào tăng trưởng kinh tế; đóng góp vào giải quyết các vấn đề xã hội, môi trường.",
+        "C": "Tạo ra tạo ra việc làm mới; tăng thu nhập và mức sống.",
+        "D": "Tạo ra hàng hóa, dịch vụ mới."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Tạo ra hàng hóa, dịch vụ mới; tạo ra việc làm mới; tăng thu nhập và mức sống; khuyến khích đổi mới sáng tạo; đóng góp vào tăng trưởng kinh tế; đóng góp vào giải quyết các vấn đề xã hội, môi trường..."
+    },
+    {
+      "id": 13,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Theo Luật Doanh nghiệp số 59/2020 của Việt Nam, kinh doanh là gì?",
+      "options": {
+        "A": "Là việc thực hiện liên tục một, một số hoặc tất cả công đoạn của quá trình từ đầu tư, sản xuất đến tiêu thụ sản phẩm hoặc cung ứng dịch vụ trên thị trường nhằm mục đích phục vụ xã hội.",
+        "B": "Là việc thực hiện một số công đoạn của quá trình từ đầu tư, sản xuất đến tiêu thụ sản phẩm hoặc cung ứng dịch vụ trên thị trường nhằm mục đích tìm kiếm lợi nhuận.",
+        "C": "Là việc thực hiện liên tục một, một số hoặc tất cả công đoạn của quá trình từ đầu tư, sản xuất đến tiêu thụ sản phẩm hoặc cung ứng dịch vụ trên thị trường nhằm mục đích tìm kiếm lợi nhuận.",
+        "D": "Là việc thực hiện một quá trình từ đầu tư, sản xuất đến tiêu thụ sản phẩm hoặc cung ứng dịch vụ trên thị trường nhằm mục đích tìm kiếm lợi nhuận."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Là việc thực hiện liên tục một, một số hoặc tất cả công đoạn của quá trình từ đầu tư, sản xuất đến tiêu thụ sản phẩm hoặc cung ứng dịch vụ trên thị trường nhằm mục đích tìm kiếm lợi nhuận."
+    },
+    {
+      "id": 14,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Trong tiếng Việt, khởi sự được hiểu là gì?",
+      "options": {
+        "A": "Là bắt đầu làm việc để thực hiện một điều gì đó ngay lập tức.",
+        "B": "Là bắt đầu hành động để thực hiện một kế hoạch.",
+        "C": "Là bắt đầu làm việc để thực hiện một chuyến đi chơi.",
+        "D": "Là bắt đầu làm việc để thực hiện một điều gì đó vui vẻ là chính."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Là bắt đầu hành động để thực hiện một kế hoạch."
+    },
+    {
+      "id": 15,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Trong tiếng Việt, khởi nghiệp được hiểu là bắt đầu sự nghiệp hay những việc làm có tính chất hay đặc điểm như thế nào? Hãy chọn phương án đúng:1. Quan trọng 2. Ngắn hạn 3. Có lợi ích 4.Lâu dài 5. Vui vẻ?",
+      "options": {
+        "A": "1,2,3",
+        "B": "3,2,1",
+        "C": "1,3,5",
+        "D": "1,3,4  ( 1. Quan trọng , 3. Có lợi ích , 4. Lâu dài )"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. 1,3,4  ( 1. Quan trọng , 3. Có lợi ích , 4. Lâu dài )"
+    }
+  ]
+}

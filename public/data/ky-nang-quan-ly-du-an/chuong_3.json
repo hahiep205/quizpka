@@ -1,0 +1,497 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kỹ năng Quản lý Dự án - Chương 3",
+  "chapter": "Chương 3",
+  "totalQuestions": 35,
+  "questions": [
+    {
+      "id": 70,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Tác dụng chính của lập kế hoạch dự án là gì?",
+      "options": {
+        "A": "Giảm chi phí",
+        "B": "Tăng cường sự mơ hồ",
+        "C": "Đảm bảo dự án đạt được mục tiêu và yêu cầu",
+        "D": "Tăng cường sự cạnh tranh"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Đảm bảo dự án đạt được mục tiêu và yêu cầu"
+    },
+    {
+      "id": 71,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "\"Mốc thời gian\" trong kế hoạch dự án thường được sử dụng để làm gì?",
+      "options": {
+        "A": "Đánh giá chi phí",
+        "B": "Xác định các thời điểm quan trọng trong tiến trình dự án",
+        "C": "Tăng cường giao tiếp",
+        "D": "Phân chia nhiệm vụ"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Xác định các thời điểm quan trọng trong tiến trình dự án"
+    },
+    {
+      "id": 72,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Nội dung nào không nằm trong kế hoạch quản lý rủi ro?",
+      "options": {
+        "A": "Xác định rủi ro",
+        "B": "Xác định cá nhân hoặc bộ phận chịu trách nhiệm",
+        "C": "Xác định ngân sách",
+        "D": "Dự tính phương pháp phòng ngừa, xử lý rủi ro"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Xác định ngân sách"
+    },
+    {
+      "id": 73,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Lập kế hoạch dự án là gì?",
+      "options": {
+        "A": "Xác định các mục tiêu dài hạn của dự án",
+        "B": "Đưa ra các chiến lược marketing cho dự án",
+        "C": "Xác định các bước, nguồn lực và thời gian cần thiết để hoàn thành dự án",
+        "D": "Đánh giá hiệu quả của dự án sau khi kết thúc"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Xác định các bước, nguồn lực và thời gian cần thiết để hoàn thành dự án"
+    },
+    {
+      "id": 74,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Trong cấu trúc phân tách công việc (WBS), cấp bậc thấp nhất thường biểu thị điều gì?",
+      "options": {
+        "A": "Các mục tiêu chính của dự án",
+        "B": "Các nhiệm vụ cấp cao cần thực hiện",
+        "C": "Các công việc cụ thể, bao gồm ước tính chi phí và thời gian",
+        "D": "Kế hoạch dự phòng cho các rủi ro"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Các công việc cụ thể, bao gồm ước tính chi phí và thời gian"
+    },
+    {
+      "id": 75,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Trong chu trình quản lý dự án, nội dung của phần lập kế hoạch bao gồm",
+      "options": {
+        "A": "Đo lường kết quả, so sánh với mục tiêu, báo cáo, giải quyết các vấn đề",
+        "B": "Phân phối nguồn lực, đo lường kết quả, so sánh với mục tiêu, báo cáo",
+        "C": "Thiết lập mục tiêu, dự tính nguồn lực, xây dựng kết quả",
+        "D": "Khuyến khích và động viên cán bộ- nhân viên, báo cáo, giải quyết các vấn đề"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Thiết lập mục tiêu, dự tính nguồn lực, xây dựng kết quả"
+    },
+    {
+      "id": 76,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Cấu trúc phân chia công việc WBS (Work breakdown structure) là:",
+      "options": {
+        "A": "Dự tính ngân sách",
+        "B": "Xây dựng kế hoạch kiểm soát",
+        "C": "Xác định các công việc dự án làm cơ sở để lập kế hoạch nguồn lực quản lý thời gian",
+        "D": "Xác định thời gian để thực hiện dự án"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Xác định các công việc dự án làm cơ sở để lập kế hoạch nguồn lực quản lý thời gian"
+    },
+    {
+      "id": 77,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Công cụ lập kế hoạch tiến độ KHÔNG bao gồm:",
+      "options": {
+        "A": "Biểu đồ Gantt",
+        "B": "Sơ đồ mạng",
+        "C": "Sơ đồ Pert/CPM",
+        "D": "Sơ đồ phụ tải"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Sơ đồ phụ tải"
+    },
+    {
+      "id": 78,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Trong quá trình lập kế hoạch dự án, biểu đồ Gantt được sử dụng để:",
+      "options": {
+        "A": "Xác định và phân tích rủi ro",
+        "B": "Theo dõi tiến độ và lịch trình của dự án",
+        "C": "Theo dõi tiến độ và lịch trình của dự án",
+        "D": "Phân tích nhu cầu nguồn lực"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Theo dõi tiến độ và lịch trình của dự án"
+    },
+    {
+      "id": 79,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Quy trình lập kế hoạch dự án gồm bao nhiêu bước?",
+      "options": {
+        "A": "4 bước",
+        "B": "5 bước",
+        "C": "6 bước",
+        "D": "7 bước"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 6 bước"
+    },
+    {
+      "id": 80,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Kế hoạch nào tập trung vào việc dự tính tổng vốn đầu tư, chi phí cho các công việc, khoản mục và hạng mục công việc?",
+      "options": {
+        "A": "Kế hoạch chi phí",
+        "B": "Kế hoạch nhân lực",
+        "C": "Kế hoạch tổng thể",
+        "D": "Kế hoạch quản lý chất lượng"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Kế hoạch chi phí"
+    },
+    {
+      "id": 81,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Quá trình lập kế hoạch dự án giúp ích cho việc:",
+      "options": {
+        "A": "Đưa ra quyết định về nhân sự",
+        "B": "Đánh giá hiệu suất của dự án",
+        "C": "Định hướng và kiểm soát công việc",
+        "D": "Tăng cường sự hài lòng của khách hàng"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Định hướng và kiểm soát công việc"
+    },
+    {
+      "id": 82,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Bước “Xác lập mục tiêu dự án” cần hiểu đối tượng nào?",
+      "options": {
+        "A": "Danh sách nhiệm vụ",
+        "B": "Thời gian bắt đầu và kết thúc",
+        "C": "Tài chính",
+        "D": "Khách hàng, người dùng sp, lãnh đạo"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Khách hàng, người dùng sp, lãnh đạo"
+    },
+    {
+      "id": 83,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Kế hoạch nào dưới đây có thể giúp giảm thiểu sự lãng phí nguồn lực và thời gian bằng cách đảm bảo các nguồn lực được phân phối hợp lý và theo tiến độ?",
+      "options": {
+        "A": "Kế hoạch quản lý chất lượng",
+        "B": "Kế hoạch thời gian",
+        "C": "Kế hoạch phân phối nguồn lực",
+        "D": "Kế hoạch nhân lực"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Kế hoạch phân phối nguồn lực"
+    },
+    {
+      "id": 84,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Để mô tả mối quan hệ logic giữa các công việc trong dự án, phương pháp nào sau đây được sử dụng?",
+      "options": {
+        "A": "Phân tích dòng tiền",
+        "B": "Sơ đồ GANTT",
+        "C": "Sơ đồ phân chia công việc (WBS)",
+        "D": "Sơ đồ theo thứ tự công việc (AON)"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Sơ đồ theo thứ tự công việc (AON)"
+    },
+    {
+      "id": 85,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Khi lập kế hoạch nhân lực cho dự án, yếu tố nào KHÔNG được xem xét?",
+      "options": {
+        "A": "Nhu cầu nhân lực theo từng giai đoạn",
+        "B": "Các yêu cầu về kỹ năng và đào tạo",
+        "C": "Ngân sách dự toán chi phí cho các hoạt động",
+        "D": "Kế hoạch tiền lương và tiền công"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Ngân sách dự toán chi phí cho các hoạt động"
+    },
+    {
+      "id": 86,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Nội dung nào dưới đây không phải là phần của kế hoạch chi phí?",
+      "options": {
+        "A": "Dự kiến tổng nhu cầu vốn đầu tư",
+        "B": "Kế hoạch huy động vốn trong từng thời kỳ",
+        "C": "Xác định hình thức tổ chức quản lý dự án",
+        "D": "Kế hoạch phân bổ ngân sách cho các khoản mục chi phí"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Xác định hình thức tổ chức quản lý dự án"
+    },
+    {
+      "id": 87,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Lập kế hoạch dự án là việc tổ chức dự án theo một quy trình ......., xác định mục tiêu của dự án và cụ thể hóa thành các công việc cần làm, các biện pháp, các nguồn lực và thời gian cần thiết nhằm hoàn thành tốt các mục tiêu của dự án.",
+      "options": {
+        "A": "Logic",
+        "B": "Linh hoạt",
+        "C": "Ngẫu nhiên",
+        "D": "Cụ thể"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Logic"
+    },
+    {
+      "id": 88,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Hãy sắp xếp các bước sau theo đúng thứ tự trong quy trình lập kế hoạch dự án:\\n1: Xác lập mục tiêu dự án\\n2: Xây dựng sơ đồ kế hoạch dự án\\n3: Phát triển kế hoạch\\n4: Lập tiến độ thực hiện dự án\\n5: Lập kế hoạch kiểm soát và BC\\n6: Dự toán CP và phân bổ NL",
+      "options": {
+        "A": "1-2-3-4-5-6",
+        "B": "1-3-2-4-6-5",
+        "C": "1-3-2-4-6-5",
+        "D": "1-2-4-3-5-6"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. 1-3-2-4-6-5"
+    },
+    {
+      "id": 89,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Lập kế hoạch dự án gồm mấy nội dung?",
+      "options": {
+        "A": "7",
+        "B": "8",
+        "C": "9",
+        "D": "10"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. 10"
+    },
+    {
+      "id": 90,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Kế hoạch quản lý rủi ro bao gồm những gì?",
+      "options": {
+        "A": "Xác định các loại rủi ro tiềm tàng",
+        "B": "Dự tính phương pháp phòng ngừa",
+        "C": "Xử lý rủi ro",
+        "D": "Tất cả các yếu tố trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả các yếu tố trên"
+    },
+    {
+      "id": 91,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Đâu là kế hoạch dự án?",
+      "options": {
+        "A": "Kế hoạch truyền thông",
+        "B": "Kế hoạch không gian",
+        "C": "Kế hoạch thời gian",
+        "D": "Kế hoạch giai đoạn"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Kế hoạch thời gian"
+    },
+    {
+      "id": 92,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Quy trình lập kế hoạch dự án gồm mấy bước?",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 6"
+    },
+    {
+      "id": 93,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Trong quá trình lập kế hoạch dự án, WBS (Work Breakdown Structure) có vai trò gì?",
+      "options": {
+        "A": "Là công cụ để giám sát chi phí dự án.",
+        "B": "Là phương pháp giúp chia nhỏ dự án thành các công việc cụ thể để quản lý dễ dàng hơn.",
+        "C": "Là kế hoạch dự phòng cho các rủi ro có thể xảy ra.",
+        "D": "Là lịch trình chính để kiểm soát tiến độ dự án."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Là phương pháp giúp chia nhỏ dự án thành các công việc cụ thể để quản lý dễ dàng hơn."
+    },
+    {
+      "id": 94,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Kế hoạch tổng thể của một dự án thường bao gồm những yếu tố nào?",
+      "options": {
+        "A": "Mục tiêu, nhân sự, kinh phí, nguồn lực",
+        "B": "Chỉ tiêu đánh giá, rủi ro, đối thủ cạnh tranh",
+        "C": "Chi phí, thời gian, sản phẩm cuối cùng",
+        "D": "Tất cả các yếu tố trên"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Mục tiêu, nhân sự, kinh phí, nguồn lực"
+    },
+    {
+      "id": 95,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Có mấy bước lập kế hoạch dự án ?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. 6"
+    },
+    {
+      "id": 96,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Dự án D có tổng khối lượng công việc là 5000 giờ. Nếu tỷ lệ hoàn thành sau 6 tháng là 40%, và tổng thời gian dự kiến là 12 tháng, hãy tính số giờ cần hoàn thành mỗi tháng trong 6 tháng còn lại để hoàn thành đúng hạn.",
+      "options": {
+        "A": "600 giờ",
+        "B": "700 giờ",
+        "C": "500 giờ",
+        "D": "900 giờ"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 500 giờ"
+    },
+    {
+      "id": 97,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Lập kế hoạch dự án bao gồm?",
+      "options": {
+        "A": "Xác định nguồn lực và thời gian cần thiết cho từng công việc.",
+        "B": "Xác định cách thức, phân bổ thực hiện từng công việc",
+        "C": "Xác định quy trình logic các công việc cần phải thực hiện",
+        "D": "Xác định mục tiêu và cụ thể hóa thành các công việc dự kiến làm"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Xác định nguồn lực và thời gian cần thiết cho từng công việc."
+    },
+    {
+      "id": 98,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Phát biểu nào sau đây đúng về nội dung B2: “Phát triển kế hoạch”",
+      "options": {
+        "A": "Xác định các nhiệm vụ chính để thực hiện mục tiêu.",
+        "B": "Xác định quy trình cần thiết của các hoạt động",
+        "C": "Xác định các hoạt động quan trọng và chi phí rủi ro",
+        "D": "Xác định sự cân đối giữa thời gian và chi phí"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Xác định các nhiệm vụ chính để thực hiện mục tiêu."
+    },
+    {
+      "id": 99,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Đâu không phải tác dụng của lập kế hoạch dự án?",
+      "options": {
+        "A": "Kế hoạch nhân lực và kế hoạch khác có liên quan là cơ sở tuyển dụng, đào tạo, bố trí nhân lực cho dự án",
+        "B": "Kế hoạch chi phí là căn cứ cơ bản để dự toán tổng vốn đầu tư cho dự án và chi phí cho từng công việc",
+        "C": "Kế hoạch phân phối nguồn lực và kế hoạch thời gian là cơ sở quan trọng để điều phối nguồn lực và quản lý tiến độ các công việc của dự án",
+        "D": "Lập kế hoạch dự án chính xác làm tăng rủi ro của dự án, lãng phí nguồn lực"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Lập kế hoạch dự án chính xác làm tăng rủi ro của dự án, lãng phí nguồn lực"
+    },
+    {
+      "id": 100,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Đâu không phải nội dung của lập kế hoạch dự án?",
+      "options": {
+        "A": "Các mục tiêu của dự án",
+        "B": "Khía cạnh kĩ thuật và quản trị của dự án",
+        "C": "Vấn đề hợp đồng của dự án",
+        "D": "Kiểm soát và báo cáo"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Kiểm soát và báo cáo"
+    },
+    {
+      "id": 101,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Cấu trúc phân tách công việc (WBS) là gì?",
+      "options": {
+        "A": "Công cụ quản lý quan trọng để phân chia dự án thành các nhóm nhiệm vụ và công việc cụ thể",
+        "B": "Phương pháp phân tích thị trường",
+        "C": "Công cụ đánh giá tài chính",
+        "D": "Một phương pháp phân tích rủi ro"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Công cụ quản lý quan trọng để phân chia dự án thành các nhóm nhiệm vụ và công việc cụ thể"
+    },
+    {
+      "id": 102,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Tác dụng của WBS đối với nhà quản lý dự án là gì?",
+      "options": {
+        "A": "Giúp lập kế hoạch công việc và dự toán ngân sách",
+        "B": "Phân tích rủi ro của dự án",
+        "C": "Chỉ rõ các kênh phân phối sản phẩm",
+        "D": "Đánh giá hiệu quả kinh tế của dự án"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Giúp lập kế hoạch công việc và dự toán ngân sách"
+    },
+    {
+      "id": 103,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Dự án A có tổng chi phí đầu tư là 100 tỷ đồng, dự kiến hoàn thành trong 12 tháng. Nếu sau 6 tháng dự án hoàn thành 40% công việc với chi phí là 50 tỷ đồng, chi phí cần thiết để hoàn thành phần còn lại là bao nhiêu?",
+      "options": {
+        "A": "60 tỷ đồng",
+        "B": "50 tỷ đồng",
+        "C": "40 tỷ đồng",
+        "D": "70 tỷ đồng"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. 60 tỷ đồng"
+    },
+    {
+      "id": 104,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Dự án C có tổng vốn đầu tư ban đầu là 500 tỷ đồng. Nếu sau 3 năm, lợi nhuận đạt 600 tỷ đồng, tính tỷ suất sinh lời nội bộ IRR của dự án",
+      "options": {
+        "A": "20%",
+        "B": "30%",
+        "C": "25%",
+        "D": "35%"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 25%"
+    }
+  ]
+}

@@ -1,0 +1,315 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kỹ năng Quản lý Dự án - Chương 8",
+  "chapter": "Chương 8",
+  "totalQuestions": 22,
+  "questions": [
+    {
+      "id": 198,
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8",
+      "question": "Giám sát dự án có thể được hiểu như thế nào?",
+      "options": {
+        "A": "Giám sát dự án là quá trình lập kế hoạch chi tiết cho toàn bộ dự án.",
+        "B": "Giám sát dự án là quá trình ghi chép, kiểm tra và theo dõi tiến độ dự án.",
+        "C": "Giám sát dự án là quá trình đánh giá kết quả của dự án sau khi hoàn thành.",
+        "D": "Giám sát dự án là việc phân tích các rủi ro tiềm ẩn của dự án."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Giám sát dự án là quá trình ghi chép, kiểm tra và theo dõi tiến độ dự án."
+    },
+    {
+      "id": 199,
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8",
+      "question": "Đâu là tác dụng của giám sát dự án?",
+      "options": {
+        "A": "Đảm bảo tài nguyên được phân bổ đúng cách.",
+        "B": "Quản lý tiến độ, giữ chi phí trong phạm vi và phát hiện vấn đề.",
+        "C": "Xác định các mục tiêu dài hạn của dự án.",
+        "D": "Phát triển các chiến lược marketing cho dự án."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Quản lý tiến độ, giữ chi phí trong phạm vi và phát hiện vấn đề."
+    },
+    {
+      "id": 200,
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8",
+      "question": "Bước nào dưới đây không phải là một phần của quy trình giám sát dự án?",
+      "options": {
+        "A": "Xác định các chỉ số cần đạt được",
+        "B": "Phát hiện vấn đề và đề xuất giải pháp",
+        "C": "Ra quyết định về việc kết thúc dự án",
+        "D": "Viết báo cáo giám sát"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Ra quyết định về việc kết thúc dự án"
+    },
+    {
+      "id": 201,
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8",
+      "question": "Chỉ tiêu nào sau đây KHÔNG thuộc nhóm chỉ tiêu phân tích trong bước tính toán và phân tích các chỉ số?",
+      "options": {
+        "A": "Chênh lệch lịch trình.",
+        "B": "Chênh lệch kế hoạch.",
+        "C": "Tỷ lệ hoàn thành công việc.",
+        "D": "Chênh lệch thực tế."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Tỷ lệ hoàn thành công việc."
+    },
+    {
+      "id": 202,
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8",
+      "question": "Mục đích chính của việc viết báo cáo giám sát là gì?",
+      "options": {
+        "A": "Lưu trữ thông tin về dự án.",
+        "B": "Cung cấp thông tin cho các bên liên quan để đưa ra quyết định.",
+        "C": "Đánh giá hiệu quả công việc của nhóm giám sát.",
+        "D": "Thuyết phục các nhà đầu tư rót thêm vốn."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Cung cấp thông tin cho các bên liên quan để đưa ra quyết định."
+    },
+    {
+      "id": 203,
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8",
+      "question": "Để giám sát tài chính dự án hiệu quả, công cụ nào dưới đây thường được sử dụng để theo dõi và ghi chép các vấn đề tài chính?",
+      "options": {
+        "A": "Đường cong chữ S",
+        "B": "Kiểm tra giới hạn",
+        "C": "Kiểm soát thực hiện sơ đồ giá trị thu được",
+        "D": "Cả 3 đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Cả 3 đáp án trên"
+    },
+    {
+      "id": 204,
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8",
+      "question": "Đánh giá dự án được hiểu như thế nào?",
+      "options": {
+        "A": "Là quá trình phân tích chi tiết từng công việc trong dự án.",
+        "B": "Là quá trình xác định, phân tích một cách hệ thống và khách quan các kết quả, hiệu quả và tác động của dự án.",
+        "C": "Là quá trình lập kế hoạch tài chính cho dự án.",
+        "D": "Là quá trình thực hiện các công việc theo kế hoạch đã định."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Là quá trình xác định, phân tích một cách hệ thống và khách quan các kết quả, hiệu quả và tác động của dự án."
+    },
+    {
+      "id": 205,
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8",
+      "question": "Đánh giá nào dưới đây không thuộc vào phân loại đánh giá dự án theo thời điểm thực hiện?",
+      "options": {
+        "A": "Đánh giá giữa kỳ",
+        "B": "Đánh giá nội bộ",
+        "C": "Đánh giá cuối kỳ",
+        "D": "Đánh giá sau dự án"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Đánh giá nội bộ"
+    },
+    {
+      "id": 206,
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8",
+      "question": "Ý nào không phải là nội dung cần đánh giá giữa kỳ?",
+      "options": {
+        "A": "Tiến độ, thời gian, chi phí của từng công việc và toàn bộ dự án",
+        "B": "Xác định các kết quả và mức độ ảnh hưởng lâu dài của dự án",
+        "C": "Tính pháp lý, năng lực, uy tín của các bên có liên quan",
+        "D": "So sánh, đánh giá giữa thực tế thực hiện với kế hoạch của từng loại công việc"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Xác định các kết quả và mức độ ảnh hưởng lâu dài của dự án"
+    },
+    {
+      "id": 207,
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8",
+      "question": "Tiêu chí nào dưới đây không thuộc vào tiêu chí đánh giá dự án?",
+      "options": {
+        "A": "Hiệu suất",
+        "B": "Hiệu quả",
+        "C": "Tính bền vững",
+        "D": "Chi phí đầu vào"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Chi phí đầu vào"
+    },
+    {
+      "id": 208,
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8",
+      "question": "Bước nào dưới đây không phải là một bước trong quy trình đánh giá dự án?",
+      "options": {
+        "A": "Ra quyết định đánh giá dự án",
+        "B": "Thu thập, tổng hợp, phân tích tài liệu phục vụ cho đánh giá dự án",
+        "C": "Xây dựng tiêu chuẩn đánh giá dự án",
+        "D": "Phê duyệt thiết kế dự án"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Phê duyệt thiết kế dự án"
+    },
+    {
+      "id": 209,
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8",
+      "question": "Điểm khác biệt chính giữa giám sát và đánh giá dự án là gì?",
+      "options": {
+        "A": "Giám sát dự án tập trung vào kết quả cuối cùng, trong khi đánh giá dự án tập trung vào quá trình thực hiện.",
+        "B": "Giám sát dự án được thực hiện liên tục, trong khi đánh giá dự án thường được thực hiện tại các thời điểm cụ thể.",
+        "C": "Giám sát dự án do các chuyên gia độc lập thực hiện, trong khi đánh giá dự án do các thành viên trong đội dự án thực hiện.",
+        "D": "Giám sát dự án sử dụng phương pháp định lượng, trong khi đánh giá dự án sử dụng phương pháp định tính."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Giám sát dự án được thực hiện liên tục, trong khi đánh giá dự án thường được thực hiện tại các thời điểm cụ thể."
+    },
+    {
+      "id": 210,
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8",
+      "question": "Mục tiêu chính của giám sát dự án là gì?",
+      "options": {
+        "A": "Đánh giá tiến độ thực hiện dự án",
+        "B": "Đảm bảo tài chính của dự án",
+        "C": "Kiểm soát rủi ro của dự án",
+        "D": "Đảm bảo các bên liên quan hài lòng"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Đánh giá tiến độ thực hiện dự án"
+    },
+    {
+      "id": 211,
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8",
+      "question": "Đánh giá dự án thường được thực hiện vào thời điểm nào?",
+      "options": {
+        "A": "Sau khi dự án kết thúc",
+        "B": "Trước khi bắt đầu dự án",
+        "C": "Trong suốt quá trình thực hiện dự án",
+        "D": "Cả trước, trong và sau khi thực hiện dự án"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Cả trước, trong và sau khi thực hiện dự án"
+    },
+    {
+      "id": 212,
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8",
+      "question": "Có bao nhiêu bước tiến hành giám sát dự án?",
+      "options": {
+        "A": "3",
+        "B": "5",
+        "C": "6",
+        "D": "4"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. 5"
+    },
+    {
+      "id": 213,
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8",
+      "question": "Tại sao cần đánh giá dự án?",
+      "options": {
+        "A": "Khẳng định lại tính khả thi, tính cần thiết, tính hiện thực của dự án",
+        "B": "Đánh giá lại tính hợp lý, hợp pháp của dự án",
+        "C": "Đúc rút ra các bài học, tìm ra các giải pháp để phát huy điểm mạnh, khắc phục điểm yếu cho các giai đoạn tiếp theo",
+        "D": "Tất cả các phương án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả các phương án trên"
+    },
+    {
+      "id": 214,
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8",
+      "question": "Điểm giống nhau giữa giám sát và đánh giá dự án là gì?",
+      "options": {
+        "A": "Cả 2 phương pháp đều liên quan đến đo lường tình hình thực hiện so với mục tiêu để ra",
+        "B": "Cả 2 phương pháp đều liên quan đến đo lường tình hình thực hiện so với sản phẩm để ra",
+        "C": "Cả 2 phương pháp đều liên quan đến đo lường tình hình thực hiện so với mục tiêu và sản phẩm để ra",
+        "D": "Không có đáp án nào đúng"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Cả 2 phương pháp đều liên quan đến đo lường tình hình thực hiện so với mục tiêu và sản phẩm để ra"
+    },
+    {
+      "id": 215,
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8",
+      "question": "Phương pháp nào sau đây thường được sử dụng để thu thập dữ liệu trong giám sát và đánh giá dự án?",
+      "options": {
+        "A": "Phỏng vấn",
+        "B": "Quan sát trực tiếp",
+        "C": "Khảo sát",
+        "D": "Tất cả các phương án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả các phương án trên"
+    },
+    {
+      "id": 216,
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8",
+      "question": "Tiêu chí đánh giá tính bền vững của dự án là gì?",
+      "options": {
+        "A": "Đánh giá khả năng tiếp tục các hoạt động của dự án sau khi dự án kết thúc và được chuyển giao.",
+        "B": "Đánh giá mức độ phù hợp của dự án với mục tiêu phát triển của vùng, ngành, của những người thụ hưởng khác.",
+        "C": "Đánh giá mức độ ảnh hưởng của dự án đến các mặt kinh tế - xã hội và môi trường.",
+        "D": "Xem xét mức độ đạt được các mục tiêu của dự án so với các yếu tố đầu vào."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Đánh giá khả năng tiếp tục các hoạt động của dự án sau khi dự án kết thúc và được chuyển giao."
+    },
+    {
+      "id": 217,
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8",
+      "question": "Khi tiến hành đánh giá giữa kì của dự án, yếu tố nào dưới đây được xem là quan trọng nhất?",
+      "options": {
+        "A": "Đánh giá mức độ hài lòng của nhân sự dự án",
+        "B": "Đánh giá hiệu quả sử dụng nguồn lực",
+        "C": "Đánh giá tác động ngắn hạn của dự án",
+        "D": "Đánh giá rủi ro có thể ảnh hưởng đến thành công của dự án"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Đánh giá rủi ro có thể ảnh hưởng đến thành công của dự án"
+    },
+    {
+      "id": 218,
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8",
+      "question": "Báo cáo tiến độ dự án thường bao gồm những thông tin nào sau đây?",
+      "options": {
+        "A": "Thông tin về chi phí và tiến độ",
+        "B": "Thông tin về rủi ro và quản lý thay đổi",
+        "C": "Thông tin về đội ngũ nhân viên và năng lực",
+        "D": "Tất cả các thông tin trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả các thông tin trên"
+    },
+    {
+      "id": 219,
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8",
+      "question": "Nội dung cơ bản của báo cáo đánh giá dự án gồm:",
+      "options": {
+        "A": "7 nội dung",
+        "B": "10 nội dung",
+        "C": "8 nội dung",
+        "D": "9 nội dung"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. 10 nội dung"
+    }
+  ]
+}

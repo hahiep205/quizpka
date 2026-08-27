@@ -1,0 +1,483 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kỹ năng Quản lý Dự án - Chương 7",
+  "chapter": "Chương 7",
+  "totalQuestions": 34,
+  "questions": [
+    {
+      "id": 164,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Thế nào là quản lý chất lượng dự án?",
+      "options": {
+        "A": "Là tập hợp các hoạt động của chức năng quản lý, là một quá trình nhằm đảm bảo cho dự án thỏa mãn tốt nhất yêu cầu về chất lượng trong mối quan hệ mật thiết với tiến độ và doanh thu của dự án.",
+        "B": "Là sự đạt được và tuân thủ đúng những tiêu chuẩn, yêu cầu kinh tế kỹ thuật đã được thiết kế từ trước.",
+        "C": "Là xác định chất lượng như tổng thể các chi tiết nhỏ của một sản phẩm mà nó phải thoả mãn những quy định đã được đề ra.",
+        "D": "Là tập hợp các hoạt động của chức năng quản lý, là một quá trình nhằm đảm bảo cho dự án thỏa mãn tốt nhất yêu cầu về chất lượng trong mối quan hệ mật thiết với tiến độ và chi phí của dự án."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Là tập hợp các hoạt động của chức năng quản lý, là một quá trình nhằm đảm bảo cho dự án thỏa mãn tốt nhất yêu cầu về chất lượng trong mối quan hệ mật thiết với tiến độ và chi phí của dự án."
+    },
+    {
+      "id": 165,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Đâu không phải là nội dung của quản trị chất lượng dự án?",
+      "options": {
+        "A": "Lập kế hoạch chất lượng",
+        "B": "Đảm bảo chất lượng",
+        "C": "Rả soát rủi ro",
+        "D": "Kiểm soát chất lượng"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Rả soát rủi ro"
+    },
+    {
+      "id": 166,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Tác dụng của quản lý chất lượng dự án là?",
+      "options": {
+        "A": "Đáp ứng được những yêu cầu của chủ đầu tư, của những người hưởng lợi từ dự án.",
+        "B": "Là nhân tố quan trọng đảm bảo thắng lợi trong cạnh tranh, tăng thị phần cho doanh nghiệp.",
+        "C": "Nâng cao chất lượng, góp phần giảm chi phí sản xuất, tăng năng suất lao động, tăng thu nhập cho người lao động.",
+        "D": "Tất cả đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả đáp án trên"
+    },
+    {
+      "id": 167,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Căn cứ nào sau đây không phải là căn cứ để lập kế hoạch chất lượng dự án?",
+      "options": {
+        "A": "Chính sách chất lượng của chủ đầu tư",
+        "B": "Phạm vi dự án",
+        "C": "Các yếu tố thuộc môi trường kinh doanh",
+        "D": "Kế hoạch tài chính của dự án"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Kế hoạch tài chính của dự án"
+    },
+    {
+      "id": 168,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Nội dung nào sau đây không thuộc kế hoạch chất lượng dự án?",
+      "options": {
+        "A": "Xây dựng chương trình chiến lược, chính sách và kế hoạch hóa chất lượng",
+        "B": "Xác định các yêu cầu chất lượng cần phải đạt ở từng thời kỳ",
+        "C": "Lập kế hoạch tài chính chi tiết cho dự án",
+        "D": "Phân tích các ảnh hưởng của các nhân tố tới chất lượng dự án"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Lập kế hoạch tài chính chi tiết cho dự án"
+    },
+    {
+      "id": 169,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Ở mức lập kế hoạch quản lý, yếu tố nào sau đây cần được quyết định?",
+      "options": {
+        "A": "Tiêu chuẩn chất lượng",
+        "B": "Nhóm có trách nhiệm đối",
+        "C": "Các kiểu rà soát thường xuyên",
+        "D": "Tất cả các đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả các đáp án trên"
+    },
+    {
+      "id": 170,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Công cụ nào sau đây không phải là công cụ kiểm soát chất lượng dự án?",
+      "options": {
+        "A": "Biểu đồ Gantt",
+        "B": "Biểu đồ nhân quả",
+        "C": "Biểu đồ Pareto",
+        "D": "Lưu đồ"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Biểu đồ Gantt"
+    },
+    {
+      "id": 171,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Có mấy bước quản lý rủi ro?",
+      "options": {
+        "A": "3 bước",
+        "B": "4 bước",
+        "C": "5 bước",
+        "D": "2 bước"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. 4 bước"
+    },
+    {
+      "id": 172,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Xây dựng kế hoạch quản lý rủi ro KHÔNG bao gồm những nội dung nào sau đây?",
+      "options": {
+        "A": "Xác định rủi ro liên quan đến dự án.",
+        "B": "Xác định khả năng ngăn chặn rủi ro.",
+        "C": "Xác định văn hóa địa phương.",
+        "D": "Dự tính nguồn lực, chi phí."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Xác định văn hóa địa phương."
+    },
+    {
+      "id": 173,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Phân tích, đánh giá rủi ro có thể thực hiện bằng phương pháp nào?",
+      "options": {
+        "A": "Định tính",
+        "B": "Định lượng",
+        "C": "Đáp án A và B đều đúng",
+        "D": "Đáp án A và B đều sai"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Đáp án A và B đều đúng"
+    },
+    {
+      "id": 174,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Đâu không phải là công cụ, kỹ thuật để nhận diện rủi ro?",
+      "options": {
+        "A": "Kỹ thuật Delphi",
+        "B": "Phỏng vấn",
+        "C": "Phân tích SWOT",
+        "D": "Phương pháp CPM"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Phương pháp CPM"
+    },
+    {
+      "id": 175,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Để thực hiện được phương pháp né tránh rủi ro thì chủ đầu tư nên thực hiện ở giai đoạn nào?",
+      "options": {
+        "A": "Giai đoạn xác định",
+        "B": "Giai đoạn lập kế hoạch",
+        "C": "Giai đoạn thực hiện",
+        "D": "Giai đoạn bàn giao"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Giai đoạn lập kế hoạch"
+    },
+    {
+      "id": 176,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Biện pháp nào sau đây có thể giảm thiểu rủi ro khống chế?",
+      "options": {
+        "A": "Đa dạng hóa danh mục đầu tư",
+        "B": "Mua bảo hiểm thiên tai.",
+        "C": "Đào tạo và nâng cao kỹ năng cho nhân viên.",
+        "D": "Theo dõi và dự báo thị trường tài chính."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Đào tạo và nâng cao kỹ năng cho nhân viên."
+    },
+    {
+      "id": 177,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Điều kiện nào sau đây là cần thiết để một rủi ro có thể được bảo hiểm?",
+      "options": {
+        "A": "Tổn thất phải ngẫu nhiên và bất ngờ",
+        "B": "Tổn thất phải đo được và định lượng được về tài chính",
+        "C": "Phải có số đông người tham gia bảo hiểm",
+        "D": "Tất cả các đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả các đáp án trên"
+    },
+    {
+      "id": 178,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Chất lượng được đo bằng gì?",
+      "options": {
+        "A": "Chi phí dự án",
+        "B": "Tiến độ dự án",
+        "C": "Sự thỏa mãn nhu cầu",
+        "D": "Tài nguyên dự án"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Sự thỏa mãn nhu cầu"
+    },
+    {
+      "id": 179,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Theo quan điểm của người tiêu dùng, chất lượng là gì?",
+      "options": {
+        "A": "Sự đạt được các tiêu chuẩn kỹ thuật",
+        "B": "Sự tuân thủ các quy định luật pháp",
+        "C": "Sự phù hợp với yêu cầu và mục đích",
+        "D": "Sự tối ưu về chi phí"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Sự phù hợp với yêu cầu và mục đích"
+    },
+    {
+      "id": 180,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Mục tiêu chính của quản lý chất lượng dự án là gì?",
+      "options": {
+        "A": "Đảm bảo dự án được hoàn thành đúng tiến độ",
+        "B": "Đảm bảo dự án tuân thủ các quy định pháp luật",
+        "C": "Đảm bảo dự án thỏa mãn yêu cầu về chất lượng, chi phí tối ưu",
+        "D": "Đảm bảo sử dụng tài nguyên hiệu quả"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Đảm bảo dự án thỏa mãn yêu cầu về chất lượng, chi phí tối ưu"
+    },
+    {
+      "id": 181,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Quy trình quản lý chất lượng dự án gồm bao nhiêu bước?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. 3"
+    },
+    {
+      "id": 182,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Lập kế hoạch chất lượng dự án bao gồm việc nào sau đây?",
+      "options": {
+        "A": "Đo lường tiến độ",
+        "B": "Xác định các tiêu chuẩn chất lượng",
+        "C": "Giám sát ngân sách",
+        "D": "Phân công nhân sự"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Xác định các tiêu chuẩn chất lượng"
+    },
+    {
+      "id": 183,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Căn cứ nào sau đây là nền tảng để lập kế hoạch chất lượng?",
+      "options": {
+        "A": "Số lượng nhân sự",
+        "B": "Chính sách chất lượng của chủ đầu tư",
+        "C": "Thời gian thực hiện dự án",
+        "D": "Mức độ phức tạp của dự án"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Chính sách chất lượng của chủ đầu tư"
+    },
+    {
+      "id": 184,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Đảm bảo chất lượng trong quản lý dự án là gì?",
+      "options": {
+        "A": "Giám sát tài chính của dự án",
+        "B": "Đánh giá hiệu suất tổng thể để đảm bảo đáp ứng tiêu chuẩn chất lượng liên quan",
+        "C": "Điều chỉnh các quy trình nội bộ",
+        "D": "Đo lường tiến độ và hiệu suất"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Đánh giá hiệu suất tổng thể để đảm bảo đáp ứng tiêu chuẩn chất lượng liên quan"
+    },
+    {
+      "id": 185,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Căn cứ nào sau đây đảm bảo cho chất lượng của dự án?",
+      "options": {
+        "A": "Giảm chi phí nhân sự",
+        "B": "Kéo dài thời gian thực hiện",
+        "C": "Kế hoạch hoàn thiện các quá trình",
+        "D": "Tăng số lượng nguồn nhân lực"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Kế hoạch hoàn thiện các quá trình"
+    },
+    {
+      "id": 186,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Rủi ro nội sinh là gì?",
+      "options": {
+        "A": "Rủi ro do tác động của thiên nhiên",
+        "B": "Rủi ro do các nguyên nhân nội tại của dự án",
+        "C": "Rủi ro do thị trường thay đổi",
+        "D": "Rủi ro do sự thay đổi của chính sách"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Rủi ro do các nguyên nhân nội tại của dự án"
+    },
+    {
+      "id": 187,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Rủi ro ngoại sinh có thể xuất phát từ đâu?",
+      "options": {
+        "A": "Môi trường tự nhiên",
+        "B": "Quy trình quản lý dự án",
+        "C": "Đội ngũ nhân sự",
+        "D": "Các đối tác dự án"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Môi trường tự nhiên"
+    },
+    {
+      "id": 188,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Rủi ro thuần túy là gì?",
+      "options": {
+        "A": "Rủi ro gây thiệt hại về kinh tế, như hỏa hoạn, mất cắp, tai nạn,...",
+        "B": "Rủi ro liên quan đến thay đổi giá cả",
+        "C": "Rủi ro do sự thay đổi của công nghệ",
+        "D": "Rủi ro do sai sót trong quản lý"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Rủi ro gây thiệt hại về kinh tế, như hỏa hoạn, mất cắp, tai nạn,..."
+    },
+    {
+      "id": 189,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Phân loại rủi ro theo môi trường bao gồm rủi ro nào sau đây?",
+      "options": {
+        "A": "Rủi ro về trách nhiệm pháp lý",
+        "B": "Rủi ro do môi trường văn hóa xã hội",
+        "C": "Rủi ro về công nghệ",
+        "D": "Tất cả các đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án D đúng. Tất cả các đáp án trên"
+    },
+    {
+      "id": 190,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Phân loại rủi ro theo lĩnh vực hoạt động bao gồm?",
+      "options": {
+        "A": "Rủi ro về chất lượng",
+        "B": "Rủi ro về thời gian",
+        "C": "Rủi ro trong công nghiệp",
+        "D": "Rủi ro về trách nhiệm pháp lý"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Rủi ro trong công nghiệp"
+    },
+    {
+      "id": 191,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Vai trò của quản lý rủi ro là gì?",
+      "options": {
+        "A": "Giúp chủ đầu tư chủ động ngăn chặn rủi ro, hạn chế tổn thất",
+        "B": "Đảm bảo dự án hoàn thành trước thời hạn",
+        "C": "Giảm chi phí thực hiện dự án",
+        "D": "Tăng số lượng nhân sự cho dự án"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án A đúng. Giúp chủ đầu tư chủ động ngăn chặn rủi ro, hạn chế tổn thất"
+    },
+    {
+      "id": 192,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Quá trình quản lý rủi ro dự án gồm có mấy bước?",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. 6"
+    },
+    {
+      "id": 193,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Biện pháp đối phó với rủi ro thuần túy là gì?",
+      "options": {
+        "A": "Tối ưu hóa chi phí",
+        "B": "Bảo hiểm",
+        "C": "Tăng cường nhân sự",
+        "D": "Giám sát chặt chẽ quy trình"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Bảo hiểm"
+    },
+    {
+      "id": 194,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Rủi ro hệ thống là gì?",
+      "options": {
+        "A": "Rủi ro chỉ ảnh hưởng đến một dự án",
+        "B": "Rủi ro ảnh hưởng đến mọi dự án trong xã hội",
+        "C": "Rủi ro liên quan đến nguồn lực nhân sự",
+        "D": "Rủi ro liên quan đến công nghệ"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Rủi ro ảnh hưởng đến mọi dự án trong xã hội"
+    },
+    {
+      "id": 195,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Rủi ro không thể bảo hiểm được là rủi ro nào?",
+      "options": {
+        "A": "Rủi ro về tài sản",
+        "B": "Rủi ro về nhân lực",
+        "C": "Rủi ro đầu cơ",
+        "D": "Rủi ro do thiên tai"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Rủi ro đầu cơ"
+    },
+    {
+      "id": 196,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Rủi ro có thể tính toán được là gì?",
+      "options": {
+        "A": "Rủi ro không thể đo lường và dự đoán",
+        "B": "Rủi ro mà tần số xuất hiện và mức độ tác động có thể tiên đoán ở một mức tin cậy nhất định",
+        "C": "Rủi ro liên quan đến thay đổi về luật pháp",
+        "D": "Rủi ro liên quan đến môi trường thiên nhiên"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án B đúng. Rủi ro mà tần số xuất hiện và mức độ tác động có thể tiên đoán ở một mức tin cậy nhất định"
+    },
+    {
+      "id": 197,
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7",
+      "question": "Phân loại rủi ro dự án theo đối tượng bao gồm loại nào sau đây?",
+      "options": {
+        "A": "Rủi ro về công nghệ",
+        "B": "Rủi ro về văn hóa xã hội",
+        "C": "Rủi ro về tài sản",
+        "D": "Rủi ro về nguồn tài nguyên"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án C đúng. Rủi ro về tài sản"
+    }
+  ]
+}
