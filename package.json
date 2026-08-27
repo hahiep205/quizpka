@@ -5,12 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run sync:data && npm run validate:data && tsc -b && vite build",
+    "build": "npm run validate:data && tsc -b && vite build",
     "lint": "oxlint",
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc -p tsconfig.app.json --noEmit",
     "preview": "vite preview",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
     "sync:data": "node ./scripts/sync-data.js",
     "validate:data": "node ./scripts/validate-data.js"
   },

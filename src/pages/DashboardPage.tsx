@@ -29,8 +29,7 @@ import { Card } from "@/components/ui/card"
 import { examCatalog, getSubjectById, type ExamCatalogItem } from "@/data/subjects"
 import { cn } from "@/lib/utils"
 import { dashboardCopy as copy } from "@/shared/i18n"
-import { useChapterPractice } from "@/lib/useChapterPractice"
-import { tadvExamOptions } from "@/data/tadvExams"
+import { useExamLaunch } from "@/lib/useExamLaunch"
 import type { Language, Theme } from "@/shared/types/app"
 
 type Lang = Language
@@ -84,41 +83,20 @@ export function DashboardPage({
   const [activeView, setActiveView] = useState<DashboardView>("home")
   const [query, setQuery] = useState("")
   const [filter, setFilter] = useState<"all" | "general" | "major">("all")
-  const [tadvPickerExam, setTadvPickerExam] = useState<ExamCatalogItem | null>(null)
   const {
     pickerExam: hcmPickerExam,
     setupExam,
     pickerSubject,
     setupSubject,
-    handleTryNow: handleChapterTryNow,
     handlePickerSelect,
     handlePickerClose,
     handleSetupClose,
     handleSetupStart,
-    setSetupExam,
-  } = useChapterPractice(lang)
-
-  const handleTryNow = (exam: ExamCatalogItem) => {
-    if (exam.subjectId === "tieng-anh-dau-vao") {
-      setTadvPickerExam(exam)
-    } else {
-      handleChapterTryNow(exam)
-    }
-  }
-
-  const handleTadvSelect = (examId: string) => {
-    const opt = tadvExamOptions.find((o) => o.id === examId)
-    if (!opt || !tadvPickerExam) return
-    const newExam: ExamCatalogItem = {
-      ...tadvPickerExam,
-      id: opt.id,
-      title: opt.title,
-      description: opt.description,
-      questionBanks: opt.questionBanks,
-    }
-    setSetupExam(newExam)
-    setTadvPickerExam(null)
-  }
+    tadvPickerExam,
+    handleTryNow,
+    handleTadvSelect,
+    setTadvPickerExam,
+  } = useExamLaunch(lang)
 
   const filteredExams = useMemo(() => {
     const normalized = query.trim().toLocaleLowerCase(lang)
@@ -406,10 +384,10 @@ function HomeDashboard({
       </section>
 
       <section className="grid grid-cols-2 gap-3 lg:grid-cols-4 lg:gap-4" aria-label="Statistics">
-        <StatCard icon={Flame} value="5" label={t.streak} tone="orange" />
-        <StatCard icon={CheckCircle2} value="0" label={t.completed} tone="green" />
-        <StatCard icon={BarChart3} value="--" label={t.accuracy} tone="blue" />
-        <StatCard icon={Clock3} value="0h" label={t.studyTime} tone="violet" />
+        <DashboardStatCard icon={Flame} value="5" label={t.streak} tone="orange" />
+        <DashboardStatCard icon={CheckCircle2} value="0" label={t.completed} tone="green" />
+        <DashboardStatCard icon={BarChart3} value="--" label={t.accuracy} tone="blue" />
+        <DashboardStatCard icon={Clock3} value="0h" label={t.studyTime} tone="violet" />
       </section>
 
       <section id="dashboard-documents" className="scroll-mt-24">
@@ -477,7 +455,7 @@ function HomeDashboard({
   )
 }
 
-function StatCard({
+function DashboardStatCard({
   icon: Icon,
   value,
   label,

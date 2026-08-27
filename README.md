@@ -16,7 +16,9 @@ npm run typecheck    # TypeScript validation
 npm run lint         # Oxlint, including type-aware rules
 npm run test         # unit tests with Vitest
 npm run validate:data # validate question-bank shapes, counts, answers, and media links
-npm run build        # synchronise source data, typecheck, and build dist/
+npm run sync:data    # manual utility: copy source banks from /data into public/data (no-op without /data)
+npm run clean        # remove the generated dist/ directory
+npm run build        # validate data, typecheck, and build dist/
 npm run preview      # serve dist/ locally
 ```
 
@@ -31,7 +33,7 @@ src/
   pages/              route-level screens
   security/           client-side interaction controls
 public/data/          published question banks and media assets
-scripts/sync-data.js  copies source data into public/data during build
+scripts/validate-data.js  validates published question banks and media links during build
 ```
 
 ## Question-bank conventions

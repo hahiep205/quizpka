@@ -10,15 +10,13 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-import { examCatalog, type ExamCatalogItem } from "@/data/subjects"
+import { examCatalog, getSubjectById, type ExamCatalogItem } from "@/data/subjects"
 import { QuizSetupModal } from "@/components/QuizSetupModal"
 import { HcmChapterPickerModal } from "@/components/HcmChapterPickerModal"
 import { TadvPickerModal } from "@/components/TadvPickerModal"
 import { cn } from "@/lib/utils"
 import { documentsCopy as copy } from "@/shared/i18n"
-import { useChapterPractice } from "@/lib/useChapterPractice"
-import { tadvExamOptions } from "@/data/tadvExams"
-import { getSubjectById } from "@/data/subjects"
+import { useExamLaunch } from "@/lib/useExamLaunch"
 
 type Lang = "en" | "vi"
 type CategoryFilter = "all" | "general" | "major"
@@ -34,41 +32,20 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
   const [query, setQuery] = useState("")
   const [typeFilter, setTypeFilter] = useState<CategoryFilter>("all")
   const [detailExam, setDetailExam] = useState<ExamCatalogItem | null>(null)
-  const [tadvPickerExam, setTadvPickerExam] = useState<ExamCatalogItem | null>(null)
   const {
     pickerExam: hcmPickerExam,
     setupExam,
     pickerSubject,
     setupSubject,
-    handleTryNow: handleChapterTryNow,
     handlePickerSelect,
     handlePickerClose,
     handleSetupClose,
     handleSetupStart,
-    setSetupExam,
-  } = useChapterPractice(lang)
-
-  const handleTryNow = (exam: ExamCatalogItem) => {
-    if (exam.subjectId === "tieng-anh-dau-vao") {
-      setTadvPickerExam(exam)
-    } else {
-      handleChapterTryNow(exam)
-    }
-  }
-
-  const handleTadvSelect = (examId: string) => {
-    const opt = tadvExamOptions.find((o) => o.id === examId)
-    if (!opt || !tadvPickerExam) return
-    const newExam: ExamCatalogItem = {
-      ...tadvPickerExam,
-      id: opt.id,
-      title: opt.title,
-      description: opt.description,
-      questionBanks: opt.questionBanks,
-    }
-    setSetupExam(newExam)
-    setTadvPickerExam(null)
-  }
+    tadvPickerExam,
+    handleTryNow,
+    handleTadvSelect,
+    setTadvPickerExam,
+  } = useExamLaunch(lang)
 
   const filteredExams = useMemo(() => {
     const normalized = query.trim().toLowerCase()
