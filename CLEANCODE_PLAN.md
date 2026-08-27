@@ -1,7 +1,7 @@
 # KẾ HOẠCH CLEAN CODE — QuizQuik (QuizPKA-Test01)
 
 > **Ngày**: 2026-08-28 · **Tác giả**: phân tích toàn bộ source `src/`, `scripts/`, `public/data`, cấu hình build
-> **Trạng thái baseline (đã chạy thực tế tại chỗ)**: ✅ `npm run typecheck` · ✅ `npm run lint` · ✅ `npm test` 30/30 (9 file) · ✅ `npm run validate:data` · ✅ `npm run build`
+> **Trạng thái baseline (đã chạy thực tế tại chỗ)**: ✅ `npm run typecheck` · ✅ `npm run lint` · ✅ `npm test` 48/48 (11 file) · ✅ `npm run validate:data` · ✅ `npm run build`
 > **Nguyên tắc tối thượng**: **KHÔNG đổi hành vi người dùng**. Mỗi phase độc lập, build/test xanh sau mỗi phase, xong phase nào commit phase đó.
 
 ---
@@ -132,6 +132,14 @@ Plan này là **bản nâng cấp/thay thế** — các mục cũ còn giá tr�
 ---
 
 ### PHASE 1 — Hiệu năng render Quiz (P0 · effort ~4) — **ƯU TIÊN CAO NHẤT**
+
+> **✅ TRẠNG THÁI: HOÀN THÀNH (2026-08-28) — commit `8950bdd`** `perf(quiz): extract QuizSidebar, memoize derived data, stable handlers`
+> - 1-A ✅ `useQuizTimer` viết lại (StrictMode-safe, `onTimeout` 1 lần qua guard, reset khi đổi duration) + `useQuizTimer.test.ts` (8 test)
+> - 1-B ✅ `quizGrouping.ts` (hàm thuần) + `quizGrouping.test.ts` (10 test)
+> - 1-C ✅ Memo hoá derived data (dời lên trên early return, đúng rules-of-hooks); `handleAnswer`/`goToQuestion`/`handleFinish`/`handleRetryWrong` = `useCallback`; xoá O(n²) → Map; `QuizQuestionBlock` bọc memo
+> - 1-D ✅ Tách `QuizSidebar` (318 dòng, React.memo, `countAnsweredInRange`)
+> - 1-D.1 ⏸️ Tạm hoãn `QuizTimerBadge` tách tick 1s (theo ghi chú rủi ro trong plan — chấp nhận bước trung gian, cha vẫn re-render theo giây)
+> - Verify: typecheck ✅ lint ✅ 48/48 test ✅ build ✅
 
 **Mục tiêu số**: người dùng chọn đáp án / timer tik 1s không còn re-render toàn bộ 608 dòng + sidebar 200 nút; timeout chạy đúng 1 lần; đổi thời lượng giữa chừng hoạt động đúng.
 
