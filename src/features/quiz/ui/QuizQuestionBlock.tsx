@@ -1,14 +1,14 @@
-import { useState } from "react"
+import { memo, useState } from "react"
 import { cn } from "@/lib/utils"
 import { isAnswerCorrect } from "@/features/quiz/lib/quizHelpers"
 import type { Question, AnswerValue } from "@/features/quiz/model/quiz.types"
 import { DetailedAnalysisContent } from "@/features/quiz/ui/DetailedAnalysisContent"
 import { quizCopy } from "@/shared/i18n"
 
-export function QuizQuestionBlock({
+export const QuizQuestionBlock = memo(function QuizQuestionBlock({
   question,
   questionNumber,
-  answers,
+  selected,
   isPractice,
   compact = false,
   t,
@@ -16,13 +16,12 @@ export function QuizQuestionBlock({
 }: {
   question: Question
   questionNumber: number
-  answers: Record<string, AnswerValue>
+  selected: AnswerValue | undefined
   isPractice: boolean
   compact?: boolean
   t: (typeof quizCopy)["en" | "vi"]
-  onAnswer: (answer: AnswerValue) => void
+  onAnswer: (questionId: string, answer: AnswerValue) => void
 }) {
-  const selected = answers[question.id]
   const isTextResponse = question.options.length === 0
   const textAnswer = typeof selected === "string" ? selected : ""
   const textCorrect = isAnswerCorrect(question, selected)
@@ -35,7 +34,7 @@ export function QuizQuestionBlock({
       <div className={cn("mt-5 flex flex-col gap-3", compact && "mt-3 gap-1.5 sm:grid sm:grid-cols-2 sm:gap-2")}>
         {isTextResponse ? (
           <>
-            <input type="text" value={textAnswer} onChange={(event) => onAnswer(event.target.value)} placeholder={t.typeAnswer} className={cn("w-full rounded-[12px] border-2 bg-white px-4 py-3.5 text-[15px] font-semibold outline-none transition-colors dark:bg-slate-900", compact && "max-w-md px-3 py-2.5 text-[14px] sm:col-span-2", isPractice && textAnswer ? (textCorrect ? "border-emerald-500 text-emerald-800 dark:text-emerald-100" : "border-rose-400 text-rose-800 dark:text-rose-100") : "border-[#E5E5E5] text-[#4B4B4B] focus:border-[#1CB0F6] dark:border-white/10 dark:text-slate-200")} />
+            <input type="text" value={textAnswer} onChange={(event) => onAnswer(question.id, event.target.value)} placeholder={t.typeAnswer} className={cn("w-full rounded-[12px] border-2 bg-white px-4 py-3.5 text-[15px] font-semibold outline-none transition-colors dark:bg-slate-900", compact && "max-w-md px-3 py-2.5 text-[14px] sm:col-span-2", isPractice && textAnswer ? (textCorrect ? "border-emerald-500 text-emerald-800 dark:text-emerald-100" : "border-rose-400 text-rose-800 dark:text-rose-100") : "border-[#E5E5E5] text-[#4B4B4B] focus:border-[#1CB0F6] dark:border-white/10 dark:text-slate-200")} />
             {isPractice && textAnswer ? <p className={cn("rounded-[12px] px-4 py-3 text-[13px] font-semibold", compact && "sm:col-span-2", textCorrect ? "bg-emerald-50 text-emerald-800 dark:bg-emerald-500/10 dark:text-emerald-100" : "bg-rose-50 text-rose-800 dark:bg-rose-500/10 dark:text-rose-100")}>{textCorrect ? t.rightAnswer : `${t.rightAnswer}: ${question.acceptedAnswers?.join(" / ")}`}</p> : null}
           </>
         ) : question.options.map((option, index) => {
@@ -45,7 +44,7 @@ export function QuizQuestionBlock({
           const isRevealCorrect = reveal && isCorrect
           const isRevealWrong = reveal && isSelected && !isCorrect
           return (
-            <button key={`${question.id}-${index}`} type="button" onClick={() => onAnswer(index)} className={cn("flex w-full items-center gap-3 rounded-[12px] border-2 px-4 py-3.5 text-left font-semibold transition-all duration-100", compact && "gap-1.5 rounded-[9px] px-2.5 py-1.5 text-[12px] shadow-none sm:gap-2 sm:px-3 sm:py-2", !reveal && (isSelected ? "border-[#1CB0F6] bg-[#1CB0F6] text-white shadow-[0_3px_0_#189CD8]" : "border-[#E5E5E5] bg-white text-[#4B4B4B] shadow-[0_3px_0_#DCDCDC] hover:-translate-y-px dark:border-white/10 dark:bg-slate-900 dark:text-slate-200"), reveal && isCorrect && "border-emerald-500 bg-emerald-50 text-emerald-800 shadow-[0_3px_0_#86efac] dark:bg-emerald-500/10 dark:text-emerald-100", reveal && isSelected && !isCorrect && "border-rose-400 bg-rose-50 text-rose-800 shadow-[0_3px_0_#fda4af] dark:bg-rose-500/10 dark:text-rose-100", reveal && !isSelected && !isCorrect && "border-[#E5E5E5] bg-white text-[#777777] shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-white/5 dark:text-slate-300")}>
+            <button key={`${question.id}-${index}`} type="button" onClick={() => onAnswer(question.id, index)} className={cn("flex w-full items-center gap-3 rounded-[12px] border-2 px-4 py-3.5 text-left font-semibold transition-all duration-100", compact && "gap-1.5 rounded-[9px] px-2.5 py-1.5 text-[12px] shadow-none sm:gap-2 sm:px-3 sm:py-2", !reveal && (isSelected ? "border-[#1CB0F6] bg-[#1CB0F6] text-white shadow-[0_3px_0_#189CD8]" : "border-[#E5E5E5] bg-white text-[#4B4B4B] shadow-[0_3px_0_#DCDCDC] hover:-translate-y-px dark:border-white/10 dark:bg-slate-900 dark:text-slate-200"), reveal && isCorrect && "border-emerald-500 bg-emerald-50 text-emerald-800 shadow-[0_3px_0_#86efac] dark:bg-emerald-500/10 dark:text-emerald-100", reveal && isSelected && !isCorrect && "border-rose-400 bg-rose-50 text-rose-800 shadow-[0_3px_0_#fda4af] dark:bg-rose-500/10 dark:text-rose-100", reveal && !isSelected && !isCorrect && "border-[#E5E5E5] bg-white text-[#777777] shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-white/5 dark:text-slate-300")}>
               <span
                 className={cn(
                   "flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-full border-2 font-extrabold",
@@ -151,4 +150,4 @@ export function QuizQuestionBlock({
       </div>
     </section>
   )
-}
+})
