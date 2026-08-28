@@ -88,7 +88,7 @@ function validateGeneralMedia(value, file) {
   const visit = (node) => {
     if (Array.isArray(node)) return node.forEach(visit)
     if (!isRecord(node)) return
-    for (const key of ["audioUrl", "imageUrl"]) {
+    for (const key of ["audioUrl", "imageUrl", "image"]) {
       if (typeof node[key] === "string") {
         const assetPath = node[key].startsWith("/") ? join(projectRoot, "public", node[key]) : join(publicDataDirectory, node[key])
         if (!existsSync(assetPath)) fail(file, `referenced ${key} file is missing: ${node[key]}`)

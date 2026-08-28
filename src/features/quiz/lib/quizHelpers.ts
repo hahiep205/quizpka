@@ -32,6 +32,7 @@ export function mapBankItems(
       acceptedAnswers: pairs.length ? undefined : acceptedAnswers,
       explanation: item.explainAnswer,
       audioTimestamp: item.audioTimestamp,
+      imageUrl: item.image ? `/data/${item.image}` : undefined,
       ...context,
     }
   })

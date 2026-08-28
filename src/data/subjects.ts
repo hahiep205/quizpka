@@ -9,6 +9,7 @@ export type SubjectId =
   | "triet-hoc-mac-lenin-3tc"
   | "ky-nang-quan-ly-du-an"
   | "chu-nghia-xa-hoi-khoa-hoc"
+  | "danh-gia-va-kiem-dinh-chat-luong-phan-mem"
   | "ky-nang-khoi-nghiep-va-lanh-dao"
   | "bao-mat-ung-dung-he-thong"
   | "toeic"
@@ -335,6 +336,38 @@ export const subjects: Subject[] = [
       { id: "c3", label: { en: "Chapter 3", vi: "Chương 3" }, count: 30 },
       { id: "c4", label: { en: "Chapter 4", vi: "Chương 4" }, count: 24 },
       { id: "c5", label: { en: "Chapter 5", vi: "Chương 5" }, count: 18 },
+    ],
+  },
+  {
+    id: "danh-gia-va-kiem-dinh-chat-luong-phan-mem",
+    code: "SQA101",
+    name: { en: "Software Quality Assessment and Testing", vi: "Đánh giá và kiểm định chất lượng phần mềm" },
+    category: { en: "General", vi: "Đại cương" },
+    exams: [
+      {
+        id: "software-quality-assessment-final-bank-1", type: "final", year: 2026, questionCount: 299, durationMinutes: 60,
+        title: { en: "Software Quality Assessment and Testing", vi: "Đánh giá và kiểm định chất lượng phần mềm" },
+        description: { en: "299 questions grouped by chapters. Choose a chapter after clicking Try now.", vi: "299 câu hỏi được chia theo chương. Chọn chương sau khi ấn Thử ngay." },
+        questionBanks: [
+          "/data/danh_gia_va_kiem_dinh_chat_luong_phan_mem/chuong_1.json",
+          "/data/danh_gia_va_kiem_dinh_chat_luong_phan_mem/chuong_2.json",
+          "/data/danh_gia_va_kiem_dinh_chat_luong_phan_mem/chuong_3.json",
+          "/data/danh_gia_va_kiem_dinh_chat_luong_phan_mem/chuong_4.json",
+          "/data/danh_gia_va_kiem_dinh_chat_luong_phan_mem/chuong_5.json",
+          "/data/danh_gia_va_kiem_dinh_chat_luong_phan_mem/chuong_6.json",
+        ],
+      },
+    ],
+    chapters: [
+      { id: "all", label: { en: "All chapters", vi: "Toàn bộ (299 câu)" }, count: 299 },
+      { id: "c123_mid", label: { en: "Chapters 1,2,3 - Midterm", vi: "Chương 1,2,3 - Giữa kỳ" }, matches: ["Chương 1","Chương 2","Chương 3"], count: 165 },
+      { id: "c456_final", label: { en: "Chapters 4,5,6 - Final", vi: "Chương 4,5,6 - Cuối kỳ" }, matches: ["Chương 4","Chương 5","Chương 6"], count: 134 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, count: 49 },
+      { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, count: 97 },
+      { id: "c3", label: { en: "Chapter 3", vi: "Chương 3" }, count: 19 },
+      { id: "c4", label: { en: "Chapter 4", vi: "Chương 4" }, count: 20 },
+      { id: "c5", label: { en: "Chapter 5", vi: "Chương 5" }, count: 74 },
+      { id: "c6", label: { en: "Chapter 6", vi: "Chương 6" }, count: 40 },
     ],
   },
   {

@@ -1,0 +1,292 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Đánh giá và kiểm định chất lượng phần mềm - Chương 3",
+  "chapter": "Chương 3",
+  "totalQuestions": 19,
+  "questions": [
+    {
+      "id": 147,
+      "chapter": "Chương 3",
+      "sourceChapter": "Group 3 - KHO - CĐR 1.1",
+      "question": "Ai chịu trách nhiệm trực tiếp kiểm thử đơn vị?",
+      "options": {
+        "A": "Người phân tích yêu cầu",
+        "B": "Người lập trình",
+        "C": "Người thiết kế hệ thống",
+        "D": "Người kiểm thử"
+      },
+      "answer": "B",
+      "explainAnswer": "Kiểm thử đơn vị kiểm tra từng phương thức, hàm, lớp ở mức thấp nhất trong mã nguồn, do đó người chịu trách nhiệm trực tiếp là lập trình viên - người viết và hiểu rõ nhất từng đơn vị mã của mình.",
+      "image": null
+    },
+    {
+      "id": 148,
+      "chapter": "Chương 3",
+      "sourceChapter": "Group 3 - KHO - CĐR 1.1",
+      "question": "Vai trò của việc thiết kế ca kiểm thử (test case)",
+      "options": {
+        "A": "Tạo ra các ca kiểm thử tốt nhất có khả năng phát hiện ra lỗi, sai sót của phần mềm một cách nhiều nhất.",
+        "B": "Tạo ra các ca kiểm thử có chi phí rẻ nhất, đồng thời tốn ít thời gian và công sức nhất.",
+        "C": "Tạo ra các ca kiểm thử chỉ nhằm mục đích tìm ra lỗi.",
+        "D": "Cả A và B"
+      },
+      "answer": "D",
+      "explainAnswer": "Vai trò của thiết kế ca kiểm thử là tạo ra các ca kiểm thử tốt nhất: có khả năng phát hiện nhiều lỗi, sai sót nhất đồng thời có chi phí rẻ, tốn ít thời gian và công sức. Vì vậy cả A và B đều đúng.",
+      "image": null
+    },
+    {
+      "id": 149,
+      "chapter": "Chương 3",
+      "sourceChapter": "Group 3 - KHO - CĐR 1.1",
+      "question": "Khái niệm \"cyclomatic complexity\" (độ phức tạp chu trình) liên quan đến đồ thị chương trình được sử dụng để làm gì?",
+      "options": {
+        "A": "Đo độ phức tạp của mã nguồn dựa trên số lượng biến.",
+        "B": "Đo độ phức tạp của luồng điều khiển dựa trên số lượng đường đi độc lập.",
+        "C": "Đo độ phức tạp của chương trình dựa trên số lượng hàm.",
+        "D": "Đo hiệu suất của chương trình."
+      },
+      "answer": "B",
+      "explainAnswer": "Độ phức tạp chu trình (cyclomatic complexity) được sử dụng để đo độ phức tạp của luồng điều khiển dựa trên số lượng đường đi độc lập (independent paths) trong đồ thị chương trình, giúp xác định số ca kiểm thử tối thiểu.",
+      "image": null
+    },
+    {
+      "id": 150,
+      "chapter": "Chương 3",
+      "sourceChapter": "Group 3 - KHO - CĐR 1.1",
+      "question": "Độ phức tạp chu trình (Cyclomatic Complexity) là gì trong kiểm thử đường đi cơ bản?",
+      "options": {
+        "A": "Số lượng đường đi có thể có trong một chương trình.",
+        "B": "Số lượng nút trong đồ thị luồng điều khiển.",
+        "C": "Số lượng cạnh trong đồ thị luồng điều khiển.",
+        "D": "Một chỉ số đo độ phức tạp của chương trình, tính bằng cách sử dụng số lượng cạnh và nút (đỉnh) trong đồ thị luồng điều khiển (đồ thị chương trình)."
+      },
+      "answer": "D",
+      "explainAnswer": "Cyclomatic Complexity là chỉ số đo độ phức tạp của chương trình, được tính từ số cạnh (E), số nút (N) trong đồ thị luồng điều khiển theo công thức V(G) = E - N + 2. Đáp án D mô tả đầy đủ và đúng nhất.",
+      "image": null
+    },
+    {
+      "id": 151,
+      "chapter": "Chương 3",
+      "sourceChapter": "Group 3 - KHO - CĐR 1.1",
+      "question": "Tại sao kiểm thử luồng dữ liệu lại quan trọng đối với chất lượng phần mềm?",
+      "options": {
+        "A": "Nó giúp tối ưu hóa mã nguồn để giảm độ phức tạp.",
+        "B": "Nó đảm bảo rằng tất cả các biến được xử lý một cách chính xác, từ đó giảm thiểu lỗi logic và thời gian chạy.",
+        "C": "Nó giúp tăng tốc độ chạy của chương trình.",
+        "D": "Nó đảm bảo rằng tất cả các chức năng của giao diện người dùng đều hoạt động đúng."
+      },
+      "answer": "B",
+      "explainAnswer": "Kiểm thử luồng dữ liệu quan trọng vì nó đảm bảo các biến được khai báo, gán giá trị và sử dụng một cách chính xác, từ đó giảm thiểu lỗi logic và lỗi thời gian chạy do dùng biến sai (dùng biến chưa khởi tạo, định nghĩa lại không cần thiết...).",
+      "image": null
+    },
+    {
+      "id": 152,
+      "chapter": "Chương 3",
+      "sourceChapter": "Group 3 - KHO - CĐR 1.1",
+      "question": "Đỉnh hợp nhất được gán nhãn như thế nào trong đồ thị luồng điều khiển:",
+      "options": {
+        "A": "Gán nhãn bởi một số nguyên",
+        "B": "Gán nhãn bởi một tên xác định",
+        "C": "Gán nhãn bởi một ký tự",
+        "D": "Không gán nhãn"
+      },
+      "answer": "D",
+      "explainAnswer": "Trong đồ thị luồng điều khiển, đỉnh hợp nhất (merging node) là nơi các nhánh gặp lại nhau và không được gán nhãn (label); việc gán nhãn chỉ cần cho các nút biểu diễn lệnh khác.",
+      "image": null
+    },
+    {
+      "id": 153,
+      "chapter": "Chương 3",
+      "sourceChapter": "Group 3 - KHO - CĐR 1.1",
+      "question": "Để kiểm tra một chức năng, lập trình viên phải viết một …….., nó gọi chức năng và khai thác nó để kiểm tra?",
+      "options": {
+        "A": "Stub",
+        "B": "Driver",
+        "C": "Proxy",
+        "D": "Không đáp án nào"
+      },
+      "answer": "B",
+      "explainAnswer": "Driver (bộ điều khiển) là module do lập trình viên viết để gọi chức năng cần kiểm thử và khai thác nó; ngược lại Stub là module giả mô phỏng chức năng được gọi khi chưa có sẵn.",
+      "image": null
+    },
+    {
+      "id": 154,
+      "chapter": "Chương 3",
+      "sourceChapter": "Group 3 - KHO - CĐR 1.1",
+      "question": "Thế nào là bao phủ câu lệnh (statement coverage):",
+      "options": {
+        "A": "Thực hiện mọi câu lệnh trong chương trình ít nhất một lần",
+        "B": "Thực hiện ít nhất một câu lệnh trong chương trình",
+        "C": "Thực hiện tất cả các đường đi trong chương trình",
+        "D": "Tất cả đều đúng"
+      },
+      "answer": "A",
+      "explainAnswer": "Bao phủ câu lệnh (statement coverage) yêu cầu mọi câu lệnh trong chương trình được thực hiện ít nhất một lần trong quá trình kiểm thử. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 155,
+      "chapter": "Chương 3",
+      "sourceChapter": "Group 3 - KHO - CĐR 1.1",
+      "question": "Thế nào là bao phủ rẽ nhánh (branch coverage):",
+      "options": {
+        "A": "Thực hiện mọi câu lệnh trong chương trình ít nhất một lần",
+        "B": "Thực hiện tất cả các lệnh rẽ nhánh trong chương trình",
+        "C": "Thực hiện ít nhất một đường đi trong chương trình",
+        "D": "Thực hiện ít nhất một câu lệnh trong chương trình"
+      },
+      "answer": "B",
+      "explainAnswer": "Bao phủ rẽ nhánh (branch coverage) yêu cầu thực hiện tất cả các lệnh rẽ nhánh (mọi nhánh đúng/sai của các quyết định) trong chương trình ít nhất một lần. Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 156,
+      "chapter": "Chương 3",
+      "sourceChapter": "Group 3 - KHO - CĐR 1.1",
+      "question": "Thử nghiệm đủ đã được thực hiện khi:",
+      "options": {
+        "A": "Hết thời gian.",
+        "B": "Mức độ cần thiết của sự tin cậy đã đạt được.",
+        "C": "Không còn lỗi được tìm thấy.",
+        "D": "Người dùng sẽ không tìm thấy bất kỳ lỗi nghiêm trọng."
+      },
+      "answer": "B",
+      "explainAnswer": "Thử nghiệm được coi là đủ khi mức độ tin cậy cần thiết đã đạt được - tiêu chí kết thúc kiểm thử dựa trên mức độ tin cậy, chứ không phải hết thời gian hay không còn tìm thấy lỗi.",
+      "image": null
+    },
+    {
+      "id": 157,
+      "chapter": "Chương 3",
+      "sourceChapter": "Group 3 - KHO - CĐR 1.1",
+      "question": "Điều nào sau đây là sai?",
+      "options": {
+        "A": "Trong hệ thống khác nhau một hai lỗi khác nhau có thể tìm ra ở các môi trường khác nhau.",
+        "B": "Một hệ thống là nhất thiết phải đáng tin cậy hơn sau khi gỡ lỗi cho việc loại bỏ các lỗi.",
+        "C": "Một lỗi cần không ảnh hưởng đến độ tin cậy của hệ thống.",
+        "D": "Không bị phát hiện sai sót có thể dẫn đến lỗi và cuối cùng đến hành vi không chính xác."
+      },
+      "answer": "D",
+      "explainAnswer": "Phát biểu D 'không bị phát hiện sai sót có thể dẫn đến lỗi và cuối cùng đến hành vi không chính xác' là SAI vì ngược lại: sai sót (defect) không được phát hiện mới dẫn đến lỗi (error) và hành vi không đúng khi thực thi. Các phát biểu A, B, C đều đúng.",
+      "image": null
+    },
+    {
+      "id": 158,
+      "chapter": "Chương 3",
+      "sourceChapter": "Group 3 - KHO - CĐR 1.1",
+      "question": "Câu nào là đúng về kiểm thử hộp trắng và đen:",
+      "options": {
+        "A": "Phân hoạch tương đương, Kiểm thử dựa trên bảng quyết định và kiểm thử luồng kiểm soát là kiểm thử hộp trắng.",
+        "B": "Phân hoạch tương đương, Phân tích giá trị bao, kiểm thử luồng dữ liệu là kiểm thử hộp đen.",
+        "C": "Phân hoạch tương đương, Chuyển trạng thái, kiểm thử ca sử dụng là kiểm thử hộp đen.",
+        "D": "Phân hoạch tương đương, Chuyển trạng thái, kiểm thử ca sử dụng và Kiểm thử dựa trên bảng quyết định là kiểm thử hộp trắng."
+      },
+      "answer": "C",
+      "explainAnswer": "Các kỹ thuật hộp đen gồm: phân hoạch tương đương, chuyển trạng thái (state transition), kiểm thử ca sử dụng (use case), bảng quyết định... Phương án C liệt kê đúng các kỹ thuật hộp đen; các phương án khác gán sai nhóm.",
+      "image": null
+    },
+    {
+      "id": 159,
+      "chapter": "Chương 3",
+      "sourceChapter": "Group 3 - KHO - CĐR 1.1",
+      "question": "Chọn quan hệ sai giữa các tiêu chuẩn kiểm thử luồng dữ liệu?",
+      "options": {
+        "A": "All-paths chứa All-du-paths",
+        "B": "All-p-uses chứa All-branches",
+        "C": "All-branches chứa All-statements",
+        "D": "All-defs chứa All-c-uses"
+      },
+      "answer": "D",
+      "explainAnswer": "Quan hệ bao hàm giữa các tiêu chuẩn luồng dữ liệu: All-du-paths chứa All-uses; All-uses chứa All-c-uses và All-p-uses; All-p-uses chứa All-branches; All-branches chứa All-statements. All-defs KHÔNG chứa All-c-uses (ngược lại All-c-uses mới mạnh hơn), nên D sai.",
+      "image": null
+    },
+    {
+      "id": 160,
+      "chapter": "Chương 3",
+      "sourceChapter": "Group 3 - KHO - CĐR 1.1",
+      "question": "Câu nào dưới đây không đúng khi nói về kiểm thử chức năng?",
+      "options": {
+        "A": "Người kiểm thử phần mềm không cần có 1 kiến thức sâu rộng về đặc tả và ngôn ngữ lập trình?",
+        "B": "Mô hình kiểm thử hộp đen chỉ tập chung vào các yêu cầu chức năng của phần mềm mà không quan tâm tới cách thức hoạt động của các mã lệnh bên trong chương trình phần mềm.",
+        "C": "Tất cả các giá trị đầu vào có thể có đều được kiểm tra",
+        "D": "Kiểm thử ngẫu nhiên Mục đích là để lựa chọn một số đầu vào kiểm tra để phát hiện sự thất bại đầu tiên"
+      },
+      "answer": "C",
+      "explainAnswer": "Kiểm thử chức năng không thể kiểm tra TẤT CẢ các giá trị đầu vào có thể có (quá nhiều, không khả thi); nó dựa trên đặc tả và các kỹ thuật chọn mẫu đầu vào đại diện. Phát biểu C không đúng.",
+      "image": null
+    },
+    {
+      "id": 161,
+      "chapter": "Chương 3",
+      "sourceChapter": "Group 3 - KHO - CĐR 1.1",
+      "question": "Các đặc điểm kỹ thuật mô tả các bước cần thiết để vận hành hệ thống và thực hiện các trường hợp thử nghiệm để thực hiện thiết kế thử nghiệm có liên quan?",
+      "options": {
+        "A": "Trường hợp thử nghiệm kỹ thuật",
+        "B": "Kiểm tra thiết kế kỹ thuật",
+        "C": "Thủ tục kiểm tra kỹ thuật",
+        "D": "Không có"
+      },
+      "answer": "C",
+      "explainAnswer": "Các đặc điểm kỹ thuật mô tả các bước cần thiết để vận hành hệ thống và thực hiện các trường hợp thử nghiệm chính là thủ tục kiểm tra (test procedure) - tài liệu hướng dẫn từng bước thực hiện kiểm thử theo thiết kế đã có.",
+      "image": null
+    },
+    {
+      "id": 162,
+      "chapter": "Chương 3",
+      "sourceChapter": "Group 3 - KHO - CĐR 1.1",
+      "question": "Trong kiểm thử hệ thống? Kỹ thuật thiết kế kiểm thử nào sau đây mà các câu bên dưới mô tả đúng nhất một thủ tục để lấy được các ca kiểm thử dựa trên các đặc tả kỹ thuật của một thành phần?",
+      "options": {
+        "A": "Kỹ thuật hộp đen",
+        "B": "Kỹ thuật hộp trắng.",
+        "C": "Kỹ thuật hộp kính.",
+        "D": "Kỹ thuật dựa vào kinh nghiệm."
+      },
+      "answer": "A",
+      "explainAnswer": "Thủ tục lấy các ca kiểm thử dựa trên đặc tả kỹ thuật của một thành phần (không cần biết cấu trúc bên trong) mô tả kỹ thuật hộp đen.",
+      "image": null
+    },
+    {
+      "id": 163,
+      "chapter": "Chương 3",
+      "sourceChapter": "Group 3 - KHO - CĐR 1.1",
+      "question": "Các yếu tố nào cần được xem xét trong quá trình thiết kế hệ thống kiểm thử?",
+      "options": {
+        "A": "Coverage metrics , Effectiveness",
+        "B": "Productivity, Validation",
+        "C": "Maintenance, User skills",
+        "D": "Tất cả các phương án trên."
+      },
+      "answer": "D",
+      "explainAnswer": "Khi thiết kế hệ thống kiểm thử cần xem xét nhiều yếu tố: độ đo bao phủ (coverage metrics) và hiệu quả (effectiveness), năng suất (productivity) và thẩm định (validation), khả năng bảo trì (maintenance) và kỹ năng người dùng (user skills). Cả 3 phương án đều đúng.",
+      "image": null
+    },
+    {
+      "id": 164,
+      "chapter": "Chương 3",
+      "sourceChapter": "Group 3 - KHO - CĐR 1.1",
+      "question": "Điều nào sau đây là đúng về inferred requirement?",
+      "options": {
+        "A": "Inferred requirement là một trong những hệ thống được dự kiến để hỗ trợ, nhưng không được quy định rõ ràng.",
+        "B": "Inferred requirement cần được kiểm tra giống như các yêu cầu được quy định rõ rang",
+        "C": "Inferred requirement là hệ thống những yêu cầu thu thập từ người sư dụng.",
+        "D": "Phương án A và B là đúng"
+      },
+      "answer": "D",
+      "explainAnswer": "Inferred requirement là yêu cầu được suy ra - hệ thống được dự kiến hỗ trợ nhưng không được quy định rõ ràng, và nó cần được kiểm tra giống như các yêu cầu được quy định rõ ràng. Cả A và B đều đúng.",
+      "image": null
+    },
+    {
+      "id": 165,
+      "chapter": "Chương 3",
+      "sourceChapter": "Group 3 - KHO - CĐR 1.1",
+      "question": "Chọn câu sai trong các câu sau?",
+      "options": {
+        "A": "Có 3 loại luồng dữ liệu không bình thường",
+        "B": "Cạnh của đồ thị luồng dữ liệu là các p-use",
+        "C": "Có thể phát hiện luồng dữ liệu không khả thi bằng các khái niệm xác định và sử dụng biến",
+        "D": "Kiểm thử luồng điều khiển có khả năng phát hiện lỗi mạnh hơn kiểm thử luồng dữ liệu"
+      },
+      "answer": "D",
+      "explainAnswer": "Kiểm thử luồng dữ liệu phát hiện lỗi liên quan đến việc dùng biến; kiểm thử luồng điều khiển không có khả năng phát hiện lỗi mạnh hơn kiểm thử luồng dữ liệu - thực tế luồng dữ liệu có thể phát hiện thêm các lỗi mà luồng điều khiển bỏ sót (như dùng biến chưa khởi tạo). Vậy D là câu sai.",
+      "image": null
+    }
+  ]
+}

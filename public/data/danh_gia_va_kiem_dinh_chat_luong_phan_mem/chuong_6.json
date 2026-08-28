@@ -1,0 +1,607 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Đánh giá và kiểm định chất lượng phần mềm - Chương 6",
+  "chapter": "Chương 6",
+  "totalQuestions": 40,
+  "questions": [
+    {
+      "id": 260,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Thành phần nào sau đây không được coi là một đơn vị",
+      "options": {
+        "A": "Hàm",
+        "B": "Lớp",
+        "C": "Module",
+        "D": "Phương thức"
+      },
+      "answer": "C",
+      "explainAnswer": "Trong kiểm thử đơn vị, đơn vị (unit) có thể là hàm, lớp, phương thức - các thành phần mã cụ thể. 'Module' thường được dùng để chỉ một thành phần lớn hơn (bao gồm nhiều đơn vị) nên không được coi là một đơn vị trong ngữ cảnh này.",
+      "image": null
+    },
+    {
+      "id": 261,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Kiểm thử giao diện lập trình ứng dụng - API testing là phương pháp nằm trong chiến lược kiểm thử nào.",
+      "options": {
+        "A": "Kiểm thử hộp đen",
+        "B": "Kiểm thử hộp trắng",
+        "C": "Kiểm thử hộp xám",
+        "D": "Kiểm thử hộp xám và hộp đen"
+      },
+      "answer": "B",
+      "explainAnswer": "API testing kiểm tra trực tiếp các hàm/giao diện lập trình của hệ thống - phải hiểu rõ cấu trúc bên trong mã nguồn nên nằm trong chiến lược kiểm thử hộp trắng (theo đáp án gốc).",
+      "image": null
+    },
+    {
+      "id": 262,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Nêu ra các loại kiểm thử trong intergration test.",
+      "options": {
+        "A": "Kiểm thử cấu trúc",
+        "B": "Kiểm thử chức năng",
+        "C": "Kiểm thử hiệu năng, kiểm thử cấu trúc",
+        "D": "Kiểm thử cấu trúc, kiểm thử chức năng, kiểm thử hiệu năng, kiểm thử khả năng chịu tải."
+      },
+      "answer": "D",
+      "explainAnswer": "Kiểm thử tích hợp (integration test) bao gồm nhiều loại: kiểm thử cấu trúc (kiểm tra liên kết giữa các module), kiểm thử chức năng, kiểm thử hiệu năng và kiểm thử khả năng chịu tải. Cả 4 loại đều thuộc integration test.",
+      "image": null
+    },
+    {
+      "id": 263,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Trong đồ thị chương trình, một đường đi từ điểm nguồn đến điểm đích đại diện cho điều gì?",
+      "options": {
+        "A": "A. Một lỗi trong chương trình.",
+        "B": "B. Một luồng điều khiển có thể xảy ra.",
+        "C": "C. Một chức năng chính của chương trình.",
+        "D": "D. Một luồng dữ liệu."
+      },
+      "answer": "B",
+      "explainAnswer": "Trong đồ thị chương trình, một đường đi từ điểm nguồn (đỉnh vào) đến điểm đích (đỉnh ra) đại diện cho một luồng điều khiển có thể xảy ra khi chương trình thực thi.",
+      "image": null
+    },
+    {
+      "id": 264,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Trong kiểm thử đường đi cơ bản (Basic Path Testing), một đường đi độc lập là gì?",
+      "options": {
+        "A": "Một đường đi bao gồm tất cả các giá trị biên.",
+        "B": "Một đường đi duy nhất từ điểm bắt đầu đến điểm kết thúc mà không lặp lại bất kỳ cạnh nào.",
+        "C": "Một đường đi được thực hiện nhiều lần trong quá trình kiểm thử.",
+        "D": "Một đường đi chứa ít nhất một cạnh hoặc đỉnh mới chưa được đi qua trong bất kỳ đường đi nào trước đó."
+      },
+      "answer": "D",
+      "explainAnswer": "Đường đi độc lập (independent path) là đường đi chứa ít nhất một cạnh hoặc đỉnh mới chưa được đi qua trong bất kỳ đường đi nào trước đó - cơ sở để xác định số ca kiểm thử tối thiểu trong basic path testing.",
+      "image": null
+    },
+    {
+      "id": 265,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Một chương trình có độ phức tạp chu trình bằng 1 có nghĩa là gì?",
+      "options": {
+        "A": "Chương trình có một chu trình duy nhất.",
+        "B": "Chương trình có cấu trúc tuyến tính mà không có bất kỳ đường đi phân nhánh nào.",
+        "C": "Chương trình có một lỗi logic.",
+        "D": "Chương trình có một điểm vào và một điểm ra duy nhất."
+      },
+      "answer": "B",
+      "explainAnswer": "Độ phức tạp chu trình bằng 1 nghĩa là chương trình có cấu trúc tuyến tính, không có bất kỳ đường đi phân nhánh nào (chỉ có một đường thực thi duy nhất), tức V(G) = 1.",
+      "image": null
+    },
+    {
+      "id": 266,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Công thức tính độ phức tạp chu trình (Cyclomatic Complexity) là gì?",
+      "options": {
+        "A": "V(G) = E - N + 2P",
+        "B": "V(G) = E + N - 2P",
+        "C": "V(G) = E - N - 2P",
+        "D": "V(G) = E + N + 2P"
+      },
+      "answer": "A",
+      "explainAnswer": "Công thức tính độ phức tạp chu trình là V(G) = E - N + 2P, trong đó E là số cạnh, N là số nút (đỉnh), P là số thành phần liên thông của đồ thị chương trình.",
+      "image": null
+    },
+    {
+      "id": 267,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Kiểm thử luồng dữ liệu giúp phát hiện loại lỗi nào sau đây?",
+      "options": {
+        "A": "A. Lỗi do sử dụng biến chưa được khởi tạo.",
+        "B": "B. Lỗi do khai báo biến không cần thiết.",
+        "C": "C. Lỗi do sử dụng biến ngoài phạm vi.",
+        "D": "D. Cả A và C."
+      },
+      "answer": "D",
+      "explainAnswer": "Kiểm thử luồng dữ liệu giúp phát hiện lỗi do sử dụng biến chưa được khởi tạo (use-before-def) và lỗi do sử dụng biến ngoài phạm vi định nghĩa - cả A và C đều đúng.",
+      "image": null
+    },
+    {
+      "id": 268,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Tại sao kiểm thử luồng dữ liệu lại quan trọng đối với chất lượng phần mềm?",
+      "options": {
+        "A": "Nó giúp tối ưu hóa mã nguồn để giảm độ phức tạp.",
+        "B": "Nó đảm bảo rằng tất cả các biến được xử lý một cách chính xác, từ đó giảm thiểu lỗi logic và thời gian chạy.",
+        "C": "Nó giúp tăng tốc độ chạy của chương trình.",
+        "D": "Nó đảm bảo rằng tất cả các chức năng của giao diện người dùng đều hoạt động đúng."
+      },
+      "answer": "B",
+      "explainAnswer": "Kiểm thử luồng dữ liệu quan trọng vì nó đảm bảo các biến được khai báo, gán giá trị và sử dụng một cách chính xác, từ đó giảm thiểu lỗi logic và lỗi thời gian chạy của chương trình.",
+      "image": null
+    },
+    {
+      "id": 269,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Để phát hiện lỗi sử dụng biến chưa được khởi tạo, kiểm thử luồng dữ liệu thường kiểm tra điều gì?",
+      "options": {
+        "A": "Các giá trị biên của biến.",
+        "B": "Các đường đi từ điểm khai báo đến điểm sử dụng biến.",
+        "C": "Các đường đi từ điểm gán giá trị đến điểm sử dụng biến.",
+        "D": "Các điều kiện trong bảng quyết định."
+      },
+      "answer": "C",
+      "explainAnswer": "Để phát hiện lỗi sử dụng biến chưa khởi tạo, kiểm thử luồng dữ liệu kiểm tra các đường đi từ điểm gán giá trị (definition) đến điểm sử dụng biến (use) - nếu có use mà không có def-clear path thì biến bị dùng khi chưa có giá trị.",
+      "image": null
+    },
+    {
+      "id": 270,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Một biến chưa được khởi tạo mà đã được sử dụng có thể dẫn đến lỗi nào?",
+      "options": {
+        "A": "Lỗi biên dịch.",
+        "B": "Lỗi logic.",
+        "C": "Lỗi thời gian chạy.",
+        "D": "Lỗi giao diện người dùng."
+      },
+      "answer": "C",
+      "explainAnswer": "Biến chưa được khởi tạo mà đã được sử dụng thường không gây lỗi biên dịch (trình biên dịch vẫn biên dịch được) mà gây lỗi thời gian chạy (runtime) - chương trình chạy và nhận giá trị rác hoặc crash.",
+      "image": null
+    },
+    {
+      "id": 271,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Điều nào sau đây đúng?",
+      "options": {
+        "A": "1 test cho bao phủ câu lệnh; 3 test cho bao phủ rẽ nhánh",
+        "B": "1 test cho bao phủ câu lệnh; 2 test cho bao phủ rẽ nhánh",
+        "C": "1 test cho bao phủ câu lệnh; 1 test cho bao phủ rẽ nhánh",
+        "D": "2 test cho bao phủ câu lệnh; 3 test cho bao phủ rẽ nhánh"
+      },
+      "answer": "D",
+      "explainAnswer": "Dựa trên đoạn code trong ảnh xref171_page45.png: cần 2 test để bao phủ câu lệnh (vì có các nhánh khiến không thể thực hiện mọi lệnh trong 1 lần chạy) và 3 test để bao phủ rẽ nhánh (bao phủ cả nhánh đúng và sai của các quyết định). Đáp án D đúng.",
+      "image": "danh_gia_va_kiem_dinh_chat_luong_phan_mem/images/xref171_page45.png"
+    },
+    {
+      "id": 272,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Có bao nhiêu đường đi trong CFG sau:",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "answer": "D",
+      "explainAnswer": "Đếm các đường đi trong đồ thị CFG trong ảnh xref175_page46.png: có tổng cộng 5 đường đi từ đỉnh bắt đầu đến đỉnh kết thúc (gồm các đường kết hợp khác nhau qua các nhánh và vòng lặp).",
+      "image": "danh_gia_va_kiem_dinh_chat_luong_phan_mem/images/xref175_page46.png"
+    },
+    {
+      "id": 273,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Chi phí của việc sửa lỗi:",
+      "options": {
+        "A": "Không quan trọng.",
+        "B": "Tăng khi chúng ta đưa sản phẩm vào sử dụng thực tế.",
+        "C": "Giảm khi chúng ta không áp dụng nó vào trong thực tế.",
+        "D": "Cao hơn nếu tìm thấy trong các yêu cầu cao hơn so với thiết kế chức năng"
+      },
+      "answer": "D",
+      "explainAnswer": "Chi phí sửa lỗi cao hơn khi lỗi được tìm thấy ở giai đoạn cao hơn (muộn hơn) so với giai đoạn thiết kế chức năng - phát hiện càng muộn thì chi phí sửa chữa càng lớn.",
+      "image": null
+    },
+    {
+      "id": 274,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Nếu thời gian thử nghiệm có giới hạn, chúng ta nên ...",
+      "options": {
+        "A": "Chỉ kiểm tra các khu vực có nguy cơ cao",
+        "B": "Chỉ kiểm tra các khu vực đơn giản",
+        "C": "Chỉ kiểm tra các khu vực có nguy cơ thấp",
+        "D": "Chỉ kiểm tra các khu vực phức tạp"
+      },
+      "answer": "A",
+      "explainAnswer": "Khi thời gian thử nghiệm có giới hạn, chúng ta nên ưu tiên kiểm tra các khu vực có nguy cơ cao (risk-based testing) - nơi lỗi có xác suất và tác động lớn nhất - để tối ưu hiệu quả kiểm thử.",
+      "image": null
+    },
+    {
+      "id": 275,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Kĩ thuật nào là kĩ thuật để biểu diễn các chức năng và luồng dữ liệu bằng các kí hiệu chỉ ra luồng dữ liệu, xử lý (các chức năng), kho dữ liệu và nguồn ngoài (nguồn dữ liệu được sinh ra và gửi đi)? (kĩ thuật này là một trong các phương pháp phân tích có cấu trúc)",
+      "options": {
+        "A": "DFD",
+        "B": "ERD",
+        "C": "Lược đồ NS",
+        "D": "Biểu đồ di chuyển trạng thái"
+      },
+      "answer": "A",
+      "explainAnswer": "DFD (Data Flow Diagram - biểu đồ luồng dữ liệu) là kỹ thuật biểu diễn chức năng và luồng dữ liệu bằng các ký hiệu: luồng dữ liệu, xử lý (chức năng), kho dữ liệu và nguồn ngoài; nó thuộc các phương pháp phân tích có cấu trúc.",
+      "image": null
+    },
+    {
+      "id": 276,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Đâu là mô tả chính xác về dữ liệu kiểm thử để duyệt một chương trình?",
+      "options": {
+        "A": "Các trường hợp kiểm thử được chuẩn bị trước, và dữ liệu kiểm thử có thể đáp ứng yêu cầu được xác định trong trường hợp kiểm thử được chuẩn bị",
+        "B": "Chỉ có dữ liệu kiểm thử mà đã được xử lý đúng mới được chuẩn bị như các tiến trình kiểm thử",
+        "C": "Bởi vì dữ liệu được sử dụng để kiểm thử, cần chuẩn bị khoảng 20% khối lượng dữ liệu cần xử lý trong quá trình vận hành thực tế",
+        "D": "Không cần cung cấp dữ liệu kiểm thử bị loại bỏ vì lỗi trong giai đoạn đưa vào"
+      },
+      "answer": "A",
+      "explainAnswer": "Dữ liệu kiểm thử để duyệt chương trình: các trường hợp kiểm thử được chuẩn bị trước, và dữ liệu kiểm thử có thể đáp ứng yêu cầu được xác định trong trường hợp kiểm thử được chuẩn bị - tức dữ liệu phải khớp với yêu cầu của ca kiểm thử.",
+      "image": null
+    },
+    {
+      "id": 277,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Cho hàm sau Hàm trên có bao nhiêu luồng dữ liệu bất thường?",
+      "options": {
+        "A": "1",
+        "B": "2 (n được khai báo nhưng ko đc dùng, i chưa khai báo nhưng đc dùng)",
+        "C": "3",
+        "D": "4"
+      },
+      "answer": "B",
+      "explainAnswer": "Dựa trên hàm trong ảnh xref179_page47.png, có 2 luồng dữ liệu bất thường: biến n được khai báo nhưng không được dùng, và biến i chưa được khai báo/khởi tạo nhưng lại được dùng. Đáp án B đúng.",
+      "image": "danh_gia_va_kiem_dinh_chat_luong_phan_mem/images/xref179_page47.png"
+    },
+    {
+      "id": 278,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Phát biểu nào dưới đây là đúng về kỹ thuật kiểm thử hộp đen và kiểm thử hộp trắng",
+      "options": {
+        "A": "Phân hoạch tương đương, Bảng quyết định và Luồng điều khiển nằm trong kỹ thuật kiểm thử hộp trắng",
+        "B": "Phân hoạch tương đương, Phân tích giá trị biên, Luồng dữ liệu nằm trong kỹ thuật kiểm thử hộp đen",
+        "C": "Phân hoạch tương đương, bảng quyết định, kiểm thử ca sử dụng nằm trong kỹ thuật kiểm thử hộp đen",
+        "D": "Phân hoạch tương đương, chuyển trạng thái, kiểm thử ca sử dụng và bảng quyết định nằm trong kỹ thuật kiểm thử hộp trắng"
+      },
+      "answer": "C",
+      "explainAnswer": "Các kỹ thuật hộp đen gồm: phân hoạch tương đương, bảng quyết định, kiểm thử ca sử dụng, chuyển trạng thái... Phương án C liệt kê đúng các kỹ thuật thuộc hộp đen; các phương án khác gán sai nhóm.",
+      "image": null
+    },
+    {
+      "id": 279,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Sắp xếp theo mức độ tăng dần các kỹ thuật phát hiện lỗi về số lượng lỗi và chi phí?",
+      "options": {
+        "A": "Random testing, Control-flow-testing, Data-flow-testing",
+        "B": "Control-flow-testing, Data-flow-testing, Random testing",
+        "C": "Data-flow-testing, Control-flow-testing, Random testing",
+        "D": "Data-flow-testing, Random testing, Control-flow-testing"
+      },
+      "answer": "A",
+      "explainAnswer": "Thứ tự tăng dần về số lượng lỗi phát hiện được và chi phí: Random testing (ngẫu nhiên, phát hiện ít nhất) → Control-flow testing (luồng điều khiển) → Data-flow testing (luồng dữ liệu, phát hiện nhiều nhất). Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 280,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Chọn all-defs path với biến tv trong các path sau?",
+      "options": {
+        "A": "1-2-3-4-5-6-3-4-5",
+        "B": "1-2-3-4-5-6-3-7-9-10",
+        "C": "1-2-3-7-9-10",
+        "D": "1-2-3-4-6-3-7-9-10"
+      },
+      "answer": "B",
+      "explainAnswer": "All-defs path với biến tv yêu cầu bao phủ ít nhất một đường đi từ mỗi định nghĩa của tv đến một use của tv. Trong các path, đường 1-2-3-4-5-6-3-7-9-10 đi qua định nghĩa và đầy đủ các điểm sử dụng của tv nên thỏa mãn all-defs (theo đáp án gốc).",
+      "image": null
+    },
+    {
+      "id": 281,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Luồng dữ liệu không bình thường (Data flow anomaly) trong đoạn code sau đây thuộc loại nào:",
+      "options": {
+        "A": "ur",
+        "B": "Không tồn tại luồng dữ liệu không bình thường",
+        "C": "dd",
+        "D": "du"
+      },
+      "answer": "C",
+      "explainAnswer": "Trong đoạn code tại ảnh xref183_page48.png, biến được định nghĩa rồi định nghĩa lại (gán giá trị hai lần liên tiếp trước khi dùng) - đây là luồng dữ liệu không bình thường loại dd (defined-defined). Đáp án C đúng.",
+      "image": "danh_gia_va_kiem_dinh_chat_luong_phan_mem/images/xref183_page48.png"
+    },
+    {
+      "id": 282,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Cho hình vẽ sau, hãy chọn chỉ số của node mà ở node đó có Global c-use của biến tv?",
+      "options": {
+        "A": "4",
+        "B": "9",
+        "C": "6",
+        "D": "8"
+      },
+      "answer": "B",
+      "explainAnswer": "Dựa trên hình vẽ xref188_page49.png, node 9 là nơi có global c-use của biến tv - tại đó tv được sử dụng trong phép tính và được định nghĩa ở một nút đứng trước (theo đáp án gốc).",
+      "image": "danh_gia_va_kiem_dinh_chat_luong_phan_mem/images/xref188_page49.png"
+    },
+    {
+      "id": 283,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Đặc trưng nào cho thấy cái giá của lỗi trong quy trình sản xuất phần mềm?",
+      "options": {
+        "A": "Chúng là rẻ nhất khi tìm thấy trong giai đoạn phát triển, nhưng đắt nhất trong giai đoạn kiểm thử cuối cùng.",
+        "B": "Chúng dễ dàng tìm thấy trong quá trình kiểm thử hệ thống nhưng để sửa những lỗi đó thì rất đắt",
+        "C": "Để tìm được những lỗi trong giai đoạn phát triển thì rất rẻ nhưng để sửa những lỗi đó là rất đắt",
+        "D": "Mặc dù rất đắt để tìm ra lỗi trong giai đoạn phát triển nhưng để sửa những lỗi đó lại rất rẻ"
+      },
+      "answer": "A",
+      "explainAnswer": "Đặc trưng giá của lỗi: lỗi rẻ nhất khi tìm thấy trong giai đoạn phát triển và đắt nhất khi tìm thấy ở giai đoạn kiểm thử cuối cùng - chi phí sửa lỗi tăng theo thời gian phát hiện.",
+      "image": null
+    },
+    {
+      "id": 284,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Có bao nhiêu phần trăm khiếm khuyết liên quan đến xác định yêu cầu của phần mềm?",
+      "options": {
+        "A": "23.9%",
+        "B": "24.3%",
+        "C": "4.3%",
+        "D": "5.2%"
+      },
+      "answer": "A",
+      "explainAnswer": "Theo số liệu thống kê trong bài giảng, khoảng 23.9% khiếm khuyết có liên quan đến việc xác định yêu cầu của phần mềm - yêu cầu là nguồn gốc của nhiều lỗi nếu không được xác định chính xác.",
+      "image": null
+    },
+    {
+      "id": 285,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Cho hình trên, xét biến tv trong đường đi 1 – 2 – 3 – 7 – 8 – 10 thỏa mãn tiêu chí nào?",
+      "options": {
+        "A": "All-c-uses",
+        "B": "All-p-uses",
+        "C": "Cả A và B đều đúng",
+        "D": "Cả A và B đều sai."
+      },
+      "answer": "B",
+      "explainAnswer": "Dựa trên hình vẽ xref192_page50.png, xét biến tv trong đường đi 1-2-3-7-8-10: tv được sử dụng trong điều kiện (predicate) trên cạnh, nên đường đi này thỏa mãn tiêu chí All-p-uses (bao phủ các điểm sử dụng điều kiện của biến).",
+      "image": "danh_gia_va_kiem_dinh_chat_luong_phan_mem/images/xref192_page50.png"
+    },
+    {
+      "id": 286,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Nêu một tập các giá trị hợp lệ của các lớp tương đương cho bài toán sau: thanh toán bằng thẻ tín dụng có thể được với Visa, Master, Amex?",
+      "options": {
+        "A": "Visa, Master, Amex;",
+        "B": "Visa, Master, Amex, Diners, Keycards, và một vài lựa chọn khác",
+        "C": "Visa, Master, Amex, một vài thẻ khác, không có thẻ nào",
+        "D": "Không thẻ, một số thẻ, một trong các thẻ Visa, Master, Amex"
+      },
+      "answer": "D",
+      "explainAnswer": "Các lớp tương đương hợp lệ cho bài toán thanh toán thẻ: không thẻ (thanh toán không dùng thẻ), một số thẻ (các loại thẻ khác), một trong các thẻ Visa/Master/Amex (được chấp nhận). Đáp án D liệt kê đủ các lớp hợp lệ.",
+      "image": null
+    },
+    {
+      "id": 287,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Trong mô hình lỗi quá trình nào không đúng Với các trạng thái N: New, S: Shelved, A: Assigned, W: Watt",
+      "options": {
+        "A": "N -> P",
+        "B": "N -> S",
+        "C": "N -> A",
+        "D": "N -> W"
+      },
+      "answer": "D",
+      "explainAnswer": "Trong mô hình lỗi với các trạng thái N (New), S (Shelved), A (Assigned), W (Wait): chuyển N -> W là không đúng vì lỗi mới (New) không thể chuyển thẳng sang trạng thái chờ (Wait) mà phải qua các bước hợp lệ khác (N -> A hoặc N -> S...).",
+      "image": null
+    },
+    {
+      "id": 288,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Trong mô hình lỗi quá trình nào đúng",
+      "options": {
+        "A": "W -> O",
+        "B": "R -> H",
+        "C": "C -> D",
+        "D": "D -> A"
+      },
+      "answer": "D",
+      "explainAnswer": "Theo mô hình lỗi trong bài giảng, quá trình chuyển trạng thái đúng là D -> A (từ trạng thái đang xử lý/chờ xác minh sang trạng thái được gán cho người xử lý). Các lựa chọn còn lại không phải chuyển hợp lệ trong mô hình.",
+      "image": null
+    },
+    {
+      "id": 289,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Độ ưu tiên (priority) của sai sót được thể hiện ở mấy cấp độ:",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "answer": "C",
+      "explainAnswer": "Độ ưu tiên (priority) của sai sót được thể hiện ở 4 cấp độ: Critical (nghiêm trọng nhất), High (cao), Medium (trung bình) và Low (thấp).",
+      "image": null
+    },
+    {
+      "id": 290,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Ghép các cặp giai đoạn của vòng đời phát triển và vòng đời kiểm thử phần mềm sau đây với nhau: i: Thiết kế mức cao; a: Kiểm thử đơn vị ii: Viết mã nguồn; b: Kiểm thử chấp nhận iii: Thiết kế mức thấp; c: Kiểm thử hệ thống iv. Các yêu cầu công việc; d: Kiểm thử tích hợp",
+      "options": {
+        "A": "i-d, ii-a, iii-c, iv-b.",
+        "B": "i-c, ii-d, iii-a, iv-b.",
+        "C": "i-b, ii-a, iii-d, iv-c.",
+        "D": "i-c, ii-a, iii-d, iv-b."
+      },
+      "answer": "D",
+      "explainAnswer": "Theo mô hình V: Thiết kế mức cao tương ứng kiểm thử hệ thống (i-c); Viết mã nguồn tương ứng kiểm thử đơn vị (ii-a); Thiết kế mức thấp tương ứng kiểm thử tích hợp (iii-d); Các yêu cầu công việc tương ứng kiểm thử chấp nhận (iv-b). Đáp án D đúng.",
+      "image": null
+    },
+    {
+      "id": 291,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Trong biểu đồ chuyển trạng thái dưới đây, trạng thái chuyển nào không đúng",
+      "options": {
+        "A": "ON to OFF",
+        "B": "OFF to ON",
+        "C": "ON to FAULT",
+        "D": "FAULT to ON"
+      },
+      "answer": "D",
+      "explainAnswer": "Trong biểu đồ chuyển trạng thái tại ảnh xref197_page51.jpeg, trạng thái chuyển FAULT to ON (từ lỗi về bật) là không đúng - vì khi hệ thống rơi vào trạng thái FAULT phải qua quá trình sửa/phục hồi chứ không thể quay lại ON trực tiếp (theo đáp án gốc).",
+      "image": "danh_gia_va_kiem_dinh_chat_luong_phan_mem/images/xref197_page51.jpeg"
+    },
+    {
+      "id": 292,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Định nghĩa nào sau đây là đúng cho c-use toàn cục (Global c- use):",
+      "options": {
+        "A": "Một c-use của một biến x trong nút i được gọi là c-use toàn cục nếu x được định nghĩa ở một nút đứng trước nút i.",
+        "B": "Một c-use của một biến x trong nút i được gọi là c-use toàn cục nếu x được định nghĩa ở một nút đứng sau nút i.",
+        "C": "Một c-use của một biến x trong nút i được gọi là c-use toàn cục nếu x được định nghĩa ở nút i.",
+        "D": "Một c-use của một biến x trong nút i được gọi là c-use toàn cục nếu tại đó x chưa được định nghĩa."
+      },
+      "answer": "A",
+      "explainAnswer": "c-use toàn cục (global c-use) của biến x trong nút i xảy ra khi x được định nghĩa ở một nút ĐỨNG TRƯỚC nút i (khác nút i) và được sử dụng trong phép tính tại i - nếu định nghĩa ngay tại nút i thì là c-use cục bộ.",
+      "image": null
+    },
+    {
+      "id": 293,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Cho đồ thị luồng dữ liệu: Xét biến tv trong đường đi 1 – 2 – 3 – 7 – 8 – 10 thỏa mãn tiêu chí nào:",
+      "options": {
+        "A": "All-c-uses.",
+        "B": "All-p-uses.",
+        "C": "Cả a và b đều đúng.",
+        "D": "Cả a và b đều sai."
+      },
+      "answer": "B",
+      "explainAnswer": "Dựa trên hình vẽ xref192_page52.png, xét biến tv trong đường đi 1-2-3-7-8-10: tv chỉ được sử dụng trong điều kiện (predicate), không dùng trong phép tính, nên đường đi thỏa mãn All-p-uses. Đáp án B đúng.",
+      "image": "danh_gia_va_kiem_dinh_chat_luong_phan_mem/images/xref192_page52.png"
+    },
+    {
+      "id": 294,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Cho đồ thị luồng dữ liệu: Xét biến ti trong đường đi 1 – 2 – 3 – 4 – 6 – 3 – 7 – 8 – 10 thỏa mãn tiêu chí nào:",
+      "options": {
+        "A": "All-c-uses.",
+        "B": "All-p-uses.",
+        "C": "Cả a và b đều đúng.",
+        "D": "Cả a và b đều sai."
+      },
+      "answer": "C",
+      "explainAnswer": "Dựa trên hình vẽ xref192_page52.png, xét biến ti trong đường đi 1-2-3-4-6-3-7-8-10: ti được sử dụng cả trong phép tính (c-use) lẫn trong điều kiện (p-use), nên đường đi thỏa mãn cả All-c-uses và All-p-uses. Đáp án C đúng.",
+      "image": "danh_gia_va_kiem_dinh_chat_luong_phan_mem/images/xref192_page52.png"
+    },
+    {
+      "id": 295,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Cho đồ thị luồng dữ liệu: Xét biến tv trong đường đi 1 – 2 – 3 – 7 – 9 – 10 thỏa mãn tiêu chí nào:",
+      "options": {
+        "A": "All-c-uses.",
+        "B": "All-p-uses.",
+        "C": "All-uses.",
+        "D": "Cả 3 ý trên đều sai."
+      },
+      "answer": "C",
+      "explainAnswer": "Dựa trên hình vẽ xref192_page53.png, xét biến tv trong đường đi 1-2-3-7-9-10: tv được sử dụng cả dạng c-use (trong phép tính) lẫn p-use (trong điều kiện), nên đường đi này thỏa mãn cả All-c-uses và All-p-uses, tức All-uses. Đáp án C đúng.",
+      "image": "danh_gia_va_kiem_dinh_chat_luong_phan_mem/images/xref192_page53.png"
+    },
+    {
+      "id": 296,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Một hệ thống tính thuế thu nhập cá nhân: Một nhân viên có lương dưới 4.000$ được miễn thuế. 1500$ tiếp theo bị đánh thuế ở mức 10%. 28000$ tiếp theo sau đó bị đánh thuế ở mức 22%. Mức thu nhập lớn hơn bị đánh thuế ở mức 40%. Nhóm giá trị test nào dưới đây thuộc ba lớp tương đương khác nhau:",
+      "options": {
+        "A": "4000$; 5000$; 5500$",
+        "B": "32001$; 34000$; 36500$",
+        "C": "28000$; 28001$; 32001$",
+        "D": "4000$; 4200$; 5600$"
+      },
+      "answer": "D",
+      "explainAnswer": "Các mốc thuế: dưới 4000$ miễn thuế, 4000-5500$ chịu 10%, 5500$ trở lên chịu 22% (và cao hơn nữa 40%). Nhóm D (4000$; 4200$; 5600$) lần lượt thuộc 3 lớp khác nhau: miễn thuế, thuế 10%, thuế 22% - nên là đáp án đúng cho câu hỏi 'thuộc ba lớp tương đương khác nhau'.",
+      "image": null
+    },
+    {
+      "id": 297,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Nêu một tập các giá trị hợp lệ của các lớp tương đương cho vấn đề sau: thanh toán bằng thẻ tín dụng có thể được với Visa, Master, Amex:",
+      "options": {
+        "A": "Visa, Master, Amex;",
+        "B": "Visa, Master, Amex, Diners, Keycards, và một vài lựa chọn khác",
+        "C": "Visa, Master, Amex, một vài thẻ khác, không có thẻ nào",
+        "D": "không thẻ, một số thẻ,một trong các thẻ Visa, master, amex."
+      },
+      "answer": "D",
+      "explainAnswer": "Các lớp tương đương hợp lệ cho thanh toán thẻ tín dụng: không có thẻ nào, có một số thẻ (khác loại được chấp nhận), và có một trong các thẻ Visa/Master/Amex. Đáp án D liệt kê đúng các giá trị hợp lệ của các lớp này.",
+      "image": null
+    },
+    {
+      "id": 298,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Những câu nào sau đây miêu tả đặc điểm chi phí của lỗi",
+      "options": {
+        "A": "Tốn ít chi phí nhất nếu tìm thấy trong các giai đoạn phát triển ban đầu và mất nhiều chi phí để sửa chữa trong giai đoạn thử nghiệm sau cùng.",
+        "B": "Dễ tìm thấy nhất trong quá trình thử nghiệm hệ thống nhưng mất nhiều chi phí để sửa chữa sau đó.",
+        "C": "Tốn ít chi phí nhất nếu tìm thấy trong các giai đoạn phát triển ban đầu nhưng mất nhiều chi phí để sửa chữa sau đó.",
+        "D": "Tốn nhiều chi phí nếu tìm thấy trong các giai đoạn phát triển ban đầu nhưng lại rẻ nhất để sửa chữa sau đó."
+      },
+      "answer": "A",
+      "explainAnswer": "Đặc điểm chi phí của lỗi: lỗi tốn ít chi phí nhất khi tìm thấy trong các giai đoạn phát triển ban đầu và tốn nhiều chi phí để sửa chữa trong giai đoạn thử nghiệm cuối cùng - chi phí tăng dần theo thời điểm phát hiện.",
+      "image": null
+    },
+    {
+      "id": 299,
+      "chapter": "Chương 6",
+      "sourceChapter": "Group 6 - KHO - CĐR 2.1",
+      "question": "Các bước trong quá trình kiểm thử: I Phân tích và thiết kế, II Kiểm thử các hoạt động, III Đánh giá tiêu chí và báo cáo, IV Kế hoạch và kiểm soát, V Cài đặt và thực hiện. Trình tự thực hiện là thế nào?",
+      "options": {
+        "A": "I, II, III, IV, V.",
+        "B": "IV, I, V, III, II.",
+        "C": "IV, I, V, II, III.",
+        "D": "I, IV, V, III, II."
+      },
+      "answer": "B",
+      "explainAnswer": "Trình tự đúng các bước trong quá trình kiểm thử theo V-model/test process: IV (Kế hoạch và kiểm soát) → I (Phân tích và thiết kế) → V (Cài đặt và thực hiện) → II (Kiểm thử các hoạt động) → III (Đánh giá tiêu chí và báo cáo). Đáp án B đúng.",
+      "image": null
+    }
+  ]
+}
