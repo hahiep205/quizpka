@@ -342,7 +342,7 @@ export const subjects: Subject[] = [
     id: "danh-gia-va-kiem-dinh-chat-luong-phan-mem",
     code: "SQA101",
     name: { en: "Software Quality Assessment and Testing", vi: "Đánh giá và kiểm định chất lượng phần mềm" },
-    category: { en: "General", vi: "Đại cương" },
+    category: { en: "Major", vi: "Chuyên ngành" },
     exams: [
       {
         id: "software-quality-assessment-final-bank-1", type: "final", year: 2026, questionCount: 299, durationMinutes: 60,
