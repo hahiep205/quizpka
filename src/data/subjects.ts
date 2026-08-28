@@ -1,4 +1,4 @@
-export type ExamType = "midterm" | "final"
+type ExamType = "midterm" | "final"
 
 export type SubjectId =
   | "tieng-anh-dau-vao"
@@ -381,15 +381,6 @@ export const subjects: Subject[] = [
           en: "Full ETS 2026 format with 200 questions across Listening and Reading. Choose Full Test, skill-based or per-Part practice.",
           vi: "Chuẩn ETS 2026 với 200 câu Listening & Reading. Chọn Full Test, luyện theo kỹ năng hoặc theo từng Part.",
         },
-        questionBanks: [
-          "/data/toeic-test/Test-01/Part1/test01-part1.json",
-          "/data/toeic-test/Test-01/Part2/part2.json",
-          "/data/toeic-test/Test-01/Part3/part3.json",
-          "/data/toeic-test/Test-01/Part4/part4.json",
-          "/data/toeic-test/Test-01/Part5/part5.json",
-          "/data/toeic-test/Test-01/Part6/part6.json",
-          "/data/toeic-test/Test-01/Part7/part7.json",
-        ],
       },
       {
         id: "toeic-test-02",
@@ -405,15 +396,6 @@ export const subjects: Subject[] = [
           en: "Full ETS 2026 format with 200 questions across Listening and Reading. Choose Full Test, skill-based or per-Part practice.",
           vi: "Chuẩn ETS 2026 với 200 câu Listening & Reading. Chọn Full Test, luyện theo kỹ năng hoặc theo từng Part.",
         },
-        questionBanks: [
-          "/data/toeic-test/Test-02/Part1/test02-part1.json",
-          "/data/toeic-test/Test-02/Part2/part2.json",
-          "/data/toeic-test/Test-02/Part3/part3.json",
-          "/data/toeic-test/Test-02/Part4/part4.json",
-          "/data/toeic-test/Test-02/Part5/part5.json",
-          "/data/toeic-test/Test-02/Part6/part6.json",
-          "/data/toeic-test/Test-02/Part7/part7.json",
-        ],
       },
       {
         id: "toeic-test-03",
@@ -429,15 +411,6 @@ export const subjects: Subject[] = [
           en: "Full ETS 2026 format with 200 questions across Listening and Reading. Choose Full Test, skill-based or per-Part practice.",
           vi: "Chuẩn ETS 2026 với 200 câu Listening & Reading. Chọn Full Test, luyện theo kỹ năng hoặc theo từng Part.",
         },
-        questionBanks: [
-          "/data/toeic-test/Test-03/Part1/test03-part1.json",
-          "/data/toeic-test/Test-03/Part2/part2.json",
-          "/data/toeic-test/Test-03/Part3/part3.json",
-          "/data/toeic-test/Test-03/Part4/part4.json",
-          "/data/toeic-test/Test-03/Part5/part5.json",
-          "/data/toeic-test/Test-03/Part6/part6.json",
-          "/data/toeic-test/Test-03/Part7/part7.json",
-        ],
       },
     ],
   },

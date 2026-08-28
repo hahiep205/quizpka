@@ -8,11 +8,12 @@ import {
   type Subject,
 } from "@/data/subjects"
 import { cn } from "@/lib/utils"
+import { isHardSupported } from "@/features/quiz/lib/quizHard"
 import { quizSetupCopy as copy } from "@/shared/i18n"
 
 type Lang = "en" | "vi"
 
-export type QuizMode = "practice" | "exam"
+export type QuizMode = "practice" | "exam" | "hard"
 export type OrderMode = "original" | "random"
 export type TimeOption = "unlimited" | "midterm30" | "final60"
 
@@ -177,9 +178,16 @@ export function QuizSetupModal({
             >
               {t.examMode}
             </button>
-            <p className="lp-modal-desc basis-full">
-              {mode === "practice" ? t.practiceHint : t.examHint}
-            </p>
+            {isHardSupported(subject.id) ? (
+              <button
+                type="button"
+                className={cn("lp-chip", mode === "hard" && "is-active")}
+                onClick={() => setMode("hard")}
+              >
+                {t.hardMode}
+              </button>
+            ) : null}
+            <p className="lp-modal-desc basis-full">{mode === "practice" ? t.practiceHint : mode === "hard" ? t.hardHint : t.examHint}</p>
           </OptionGroup>
 
           <OptionGroup label={t.time}>
@@ -256,3 +264,5 @@ function OptionGroup({
     </div>
   )
 }
+
+

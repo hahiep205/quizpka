@@ -1,4 +1,5 @@
 import { CheckCircle2, BookOpen, GraduationCap, Lightbulb, Mic, Image as ImageIcon, Award } from "lucide-react"
+import { quizCopy } from "@/shared/i18n"
 
 type ParsedSection =
   | { type: "analysis"; lines: Array<{ key: string; ok: boolean; text: string }> }
@@ -96,7 +97,7 @@ function parseDetailed(content: string): ParsedSection[] {
   return sections
 }
 
-export function DetailedAnalysisContent({ content }: { content: string }) {
+export function DetailedAnalysisContent({ content, t }: { content: string; t: (typeof quizCopy)["en" | "vi"] }) {
   const sections = parseDetailed(content)
 
   return (
@@ -188,7 +189,7 @@ export function DetailedAnalysisContent({ content }: { content: string }) {
                 <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#E8F7FE] text-[#1CB0F6] dark:bg-sky-500/20">
                   <Mic className="h-3.5 w-3.5" />
                 </span>
-                Transcript
+                {t.transcript}
               </div>
               <div className="border-t-2 border-[#E5E5E5] bg-[#F6F7FB] px-4 py-3 dark:border-white/10 dark:bg-white/5">
                 <p className="whitespace-pre-line text-[13px] italic leading-7 text-[#4B4B4B] dark:text-slate-300">“{sec.text}”</p>
@@ -209,7 +210,7 @@ export function DetailedAnalysisContent({ content }: { content: string }) {
         if (sec.type === "answer") {
           return (
             <div key={idx} className="rounded-[12px] border-2 border-emerald-200 bg-emerald-50 px-4 py-3 text-[13px] font-bold text-emerald-800 dark:border-emerald-500/20 dark:bg-emerald-500/10 dark:text-emerald-100">
-              Đáp án: {sec.text}
+              {t.answerLabel} {sec.text}
             </div>
           )
         }

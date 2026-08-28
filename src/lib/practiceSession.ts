@@ -1,5 +1,5 @@
 import type { QuizSetupValues } from "@/components/QuizSetupModal"
-import { getSubjectById, type ExamCatalogItem, type SubjectId } from "@/data/subjects"
+import { getSubjectById, type SubjectId } from "@/data/subjects"
 import type { ToeicScope } from "@/data/toeic"
 import { appRoutes, navigate } from "@/app/navigation"
 import type { Language } from "@/shared/types/app"
@@ -63,7 +63,7 @@ function isRecord(value: unknown): value is Record<string, unknown> {
 }
 
 function isQuizSetupValues(value: Record<string, unknown>): value is QuizSetupValues {
-  return (value.mode === "practice" || value.mode === "exam")
+  return (value.mode === "practice" || value.mode === "exam" || value.mode === "hard")
     && (value.questionOrder === "original" || value.questionOrder === "random")
     && (value.answerOrder === "original" || value.answerOrder === "random")
     && typeof value.timed === "boolean"
@@ -75,4 +75,4 @@ function isToeicScope(value: unknown): value is ToeicScope {
   return typeof value === "string" && ["full", "listening", "reading", "part1", "part2", "part3", "part4", "part5", "part6", "part7"].includes(value)
 }
 
-export type { ExamCatalogItem, QuizSetupValues }
+

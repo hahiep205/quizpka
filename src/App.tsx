@@ -20,6 +20,11 @@ const NotFoundPage = lazy(() => import("@/pages/NotFoundPage").then(({ NotFoundP
 
 type Lang = Language
 
+function getTodayKey() {
+  const d = new Date()
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
 export default function App() {
   const pathname = useAppPath()
   const [contactOpen, setContactOpen] = useState(false)
@@ -56,10 +61,8 @@ export default function App() {
   useEffect(() => {
     if (pathname !== appRoutes.home) return
     try {
-      const d = new Date()
-      const today = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`
       const dismissed = localStorage.getItem("quizpka-toeic-announcement-dismissed")
-      if (dismissed === today) return
+      if (dismissed === getTodayKey()) return
       const timer = window.setTimeout(() => setAnnouncementOpen(true), 1000)
       return () => window.clearTimeout(timer)
     } catch {
@@ -88,9 +91,7 @@ export default function App() {
   const closeAnnouncement = () => setAnnouncementOpen(false)
   const handleDontShowToday = () => {
     try {
-      const d = new Date()
-      const today = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`
-      localStorage.setItem("quizpka-toeic-announcement-dismissed", today)
+      localStorage.setItem("quizpka-toeic-announcement-dismissed", getTodayKey())
     } catch {}
     setAnnouncementOpen(false)
   }

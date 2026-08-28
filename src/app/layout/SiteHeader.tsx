@@ -74,8 +74,6 @@ export function SiteHeader({
         setActiveNav("features")
         return
       }
-      if (hash === "home" || hash === "") {
-      }
 
       const headerOffset = 96
       const docsEl = document.getElementById("docs")

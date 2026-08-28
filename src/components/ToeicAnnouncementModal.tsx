@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { MessageCircle, Sparkles, X, Rocket } from "lucide-react"
 import { Card } from "@/components/ui/card"
+import { GradientBackground } from "@/components/ui/gradient-background"
 import { toeicAnnouncementCopy as copy } from "@/shared/i18n"
 
 type Lang = "en" | "vi"
@@ -64,30 +65,32 @@ export function ToeicAnnouncementModal({ open, lang, onClose, onDontShowToday, o
         data-state={state}
         className="contact-modal-panel relative z-10 w-full max-w-[480px] overflow-hidden shadow-[var(--shadow-3)]"
       >
-        <div className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#E8F7FE] via-white to-[#FFF8E1] dark:from-sky-500/10 dark:via-slate-900 dark:to-amber-500/10" />
-          <div className="absolute -right-6 -top-6 h-28 w-28 rounded-full bg-[#1CB0F6]/10 blur-2xl dark:bg-sky-500/20" />
-          <div className="absolute -left-8 -bottom-8 h-32 w-32 rounded-full bg-[#FFD000]/15 blur-2xl dark:bg-amber-500/15" />
-          <div className="relative px-6 pb-5 pt-6 sm:px-7">
-            <button type="button" onClick={onClose} aria-label={t.close} className="absolute right-3 top-3 rounded-full p-2 text-slate-400 hover:bg-slate-100 hover:text-slate-600 dark:text-slate-400 dark:hover:bg-white/10">
-              <X className="h-4 w-4" strokeWidth={2} />
-            </button>
-            <div className="flex items-start gap-3">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[12px] bg-[#1CB0F6] text-white shadow-[0_3px_0_#189CD8]">
-                <Rocket className="h-5 w-5" />
+        <GradientBackground />
+
+        <div className="relative px-6 pb-5 pt-6 sm:px-7">
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label={t.close}
+            className="absolute right-3 top-3 rounded-full p-2 text-slate-400 hover:bg-slate-100 hover:text-slate-600 dark:text-slate-400 dark:hover:bg-white/10"
+          >
+            <X className="h-4 w-4" strokeWidth={2} />
+          </button>
+          <div className="flex items-start gap-3">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[12px] bg-[#1CB0F6] text-white shadow-[0_3px_0_#189CD8]">
+              <Rocket className="h-5 w-5" />
+            </span>
+            <div className="min-w-0 flex-1">
+              <span className="inline-flex items-center gap-1 rounded-full bg-[#E8F7FE] px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wide text-[#129BDC] dark:bg-sky-500/15 dark:text-sky-300">
+                <Sparkles className="h-3 w-3" /> {t.badge}
               </span>
-              <div className="min-w-0 flex-1">
-                <span className="inline-flex items-center gap-1 rounded-full bg-[#E8F7FE] px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wide text-[#129BDC] dark:bg-sky-500/15 dark:text-sky-300">
-                  <Sparkles className="h-3 w-3" /> {t.badge}
-                </span>
-                <h2 className="lp-modal-title mt-2 text-[20px] leading-6 sm:text-[22px]">{t.title}</h2>
-                <p className="lp-modal-desc mt-2 text-[14px] leading-6">{t.desc}</p>
-              </div>
+              <h2 className="lp-modal-title mt-2 text-[20px] leading-6 sm:text-[22px]">{t.title}</h2>
+              <p className="lp-modal-desc mt-2 text-[14px] leading-6">{t.desc}</p>
             </div>
           </div>
         </div>
 
-        <div className="px-6 pb-6 pt-2 sm:px-7">
+        <div className="relative px-6 pb-6 pt-2 sm:px-7">
           <div className="flex flex-col gap-3 sm:flex-row">
             <button
               type="button"
@@ -106,7 +109,11 @@ export function ToeicAnnouncementModal({ open, lang, onClose, onDontShowToday, o
               {t.feedback}
             </button>
           </div>
-          <button type="button" onClick={onDontShowToday} className="mx-auto mt-4 block text-center text-[12px] font-bold text-slate-400 underline-offset-4 hover:text-slate-600 hover:underline dark:text-slate-400 dark:hover:text-slate-200">
+          <button
+            type="button"
+            onClick={onDontShowToday}
+            className="mx-auto mt-4 block text-center text-[12px] font-bold text-slate-400 underline-offset-4 hover:text-slate-600 hover:underline dark:text-slate-400 dark:hover:text-slate-200"
+          >
             {t.dontShowToday}
           </button>
         </div>

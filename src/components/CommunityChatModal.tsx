@@ -3,6 +3,9 @@ import { MessageCircle, Send, Sparkles, Users, X } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { communityChatCopy as copy } from "@/shared/i18n"
 
+// Mock online count for design preview (real-time chat not wired yet)
+const MOCK_ONLINE_COUNT = 128
+
 type CommunityChatModalProps = {
   open: boolean
   onClose: () => void
@@ -110,7 +113,7 @@ export function CommunityChatModal({ open, onClose, lang = "vi" }: CommunityChat
                 {t.title}
                 <span className="hidden items-center gap-1 rounded-full border border-[#B3E5FC] bg-[#E8F7FE] px-2 py-0.5 text-[11px] font-extrabold leading-none tracking-wide text-[#129BDC] dark:border-sky-500/20 dark:bg-sky-500/10 sm:inline-flex">
                   <Sparkles className="h-3 w-3" strokeWidth={2} />
-                  Beta
+                  {t.beta}
                 </span>
               </h2>
               <p className="lp-modal-desc mt-1 line-clamp-2 text-[13px] leading-5">
@@ -141,7 +144,7 @@ export function CommunityChatModal({ open, onClose, lang = "vi" }: CommunityChat
           <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-[12px] font-bold leading-none text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400">
             <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-500" />
             <Users className="h-3 w-3" strokeWidth={2} />
-            128 {t.online.toLowerCase()}
+            {MOCK_ONLINE_COUNT} {t.online.toLowerCase()}
           </span>
         </div>
 

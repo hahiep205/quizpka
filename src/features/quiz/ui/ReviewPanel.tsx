@@ -5,7 +5,7 @@ import type { Question, AnswerValue } from "@/features/quiz/model/quiz.types"
 import { DetailedAnalysisContent } from "@/features/quiz/ui/DetailedAnalysisContent"
 import { quizCopy } from "@/shared/i18n"
 
-export function ReviewPanel({ t, questions, answers, onClose }: { t: (typeof quizCopy)["en" | "vi"]; questions: Question[]; answers: Record<string, AnswerValue>; onClose: () => void }) {
+export function ReviewPanel({ t, questions, answers, hideExplanation = false, onClose }: { t: (typeof quizCopy)["en" | "vi"]; questions: Question[]; answers: Record<string, AnswerValue>; hideExplanation?: boolean; onClose: () => void }) {
   const [expanded, setExpanded] = useState<Record<string, boolean>>({})
   return (
     <Dialog open onClose={onClose} title={t.review} closeLabel={t.closeReview} className="z-[100]" panelClassName="flex max-h-[min(820px,92vh)] w-full max-w-[760px] flex-col overflow-hidden rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900">
@@ -23,7 +23,7 @@ export function ReviewPanel({ t, questions, answers, onClose }: { t: (typeof qui
                 <div className="mt-3 space-y-2 text-[13px] leading-6">
                   <p className="lp-card-desc"><span className="font-extrabold text-[#100F3E] dark:text-white">{t.yourAnswer}:</span>{" "}{selected === undefined ? t.noAnswer : typeof selected === "string" ? selected : `${String.fromCharCode(65 + selected)}. ${question.options[selected]}`}</p>
                   <p className="font-semibold text-emerald-700 dark:text-emerald-300"><span className="font-extrabold">{t.rightAnswer}:</span>{" "}{question.correctIndex === undefined ? question.acceptedAnswers?.join(" / ") : `${String.fromCharCode(65 + question.correctIndex)}. ${question.options[question.correctIndex]}`}</p>
-                  {question.explanation ? (<p className="lp-modal-desc whitespace-pre-line text-[#100F3E] dark:text-sky-100"><span className="font-extrabold text-[#1CB0F6]">{t.explanation}:</span>{" "}{question.explanation}</p>) : null}
+                  {!hideExplanation && question.explanation ? (<p className="lp-modal-desc whitespace-pre-line text-[#100F3E] dark:text-sky-100"><span className="font-extrabold text-[#1CB0F6]">{t.explanation}:</span>{" "}{question.explanation}</p>) : null}
                   {question.detailedExplanation ? (
                     <div className="overflow-hidden rounded-[16px] border-2 border-[#B3E5FC] bg-white shadow-[0_2px_0_#DCDCDC] dark:border-sky-500/30 dark:bg-slate-900">
                       <button
@@ -48,7 +48,7 @@ export function ReviewPanel({ t, questions, answers, onClose }: { t: (typeof qui
                       </button>
                       {expanded[question.id] ? (
                         <div className="border-t-2 border-[#B3E5FC] bg-[#F6F7FB] px-4 py-4 dark:border-sky-500/20 dark:bg-white/5">
-                          <DetailedAnalysisContent content={question.detailedExplanation} />
+                          <DetailedAnalysisContent content={question.detailedExplanation} t={t} />
                         </div>
                       ) : null}
                     </div>

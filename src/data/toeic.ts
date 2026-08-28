@@ -3,8 +3,6 @@ import type { LocalizedText } from "@/data/subjects"
 export const TOEIC_TEST_ID = "toeic-test-01"
 export const TOEIC_TEST_IDS = ["toeic-test-01", "toeic-test-02", "toeic-test-03"] as const
 export type ToeicTestId = (typeof TOEIC_TEST_IDS)[number]
-export const TOEIC_SUBJECT_ID = "toeic"
-export const TOEIC_SUBJECT_CODE = "TOEIC01"
 
 export type ToeicScope =
   | "full"
@@ -152,36 +150,6 @@ export function getToeicScopeOptions(examId: string = TOEIC_TEST_ID): ToeicScope
   ]
 }
 
-export const toeicScopeOptions = getToeicScopeOptions()
-
-export const toeicPartFiles = PART_FILES_BY_TEST[TOEIC_TEST_ID]
-
 export function getToeicScopeOption(id: string, examId: string = TOEIC_TEST_ID): ToeicScopeOption | null {
   return getToeicScopeOptions(examId).find((o) => o.id === id) ?? null
-}
-
-export function getToeicFilesForScope(scope: ToeicScope, examId: string = TOEIC_TEST_ID): string[] {
-  const opt = getToeicScopeOption(scope, examId)
-  return opt ? opt.files : []
-}
-
-export function isToeicScope(value: string): value is ToeicScope {
-  return toeicScopeOptions.some((o) => o.id === value)
-}
-
-export const toeicTestMeta = {
-  id: TOEIC_TEST_ID,
-  subjectId: TOEIC_SUBJECT_ID,
-  subjectCode: TOEIC_SUBJECT_CODE,
-  year: 2026,
-  title: {
-    en: "TOEIC Practice Set 01",
-    vi: "Bộ tài liệu ôn luyện TOEIC 01",
-  } as LocalizedText,
-  description: {
-    en: "Full ETS 2026 format with 200 questions across Listening and Reading. Choose Full Test, skill-based or per-Part practice.",
-    vi: "Chuẩn ETS 2026 với 200 câu Listening & Reading. Chọn Full Test, luyện theo kỹ năng hoặc theo từng Part.",
-  } as LocalizedText,
-  questionCount: 200,
-  durationMinutes: 120,
 }
