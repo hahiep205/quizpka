@@ -23,6 +23,7 @@ import {
 import brandLogo from "@/assets/logo.png"
 import { QuizSetupModal } from "@/components/QuizSetupModal"
 import { HcmChapterPickerModal } from "@/components/HcmChapterPickerModal"
+import { PdfViewerModal } from "@/components/PdfViewerModal"
 import { TadvPickerModal } from "@/components/TadvPickerModal"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
@@ -90,6 +91,8 @@ export function DashboardPage({
     setupSubject,
     handlePickerSelect,
     handlePickerClose,
+    handlePdfClose,
+    pdfChapter,
     handleSetupClose,
     handleSetupStart,
     tadvPickerExam,
@@ -160,6 +163,14 @@ export function DashboardPage({
         subject={pickerSubject}
         onClose={handlePickerClose}
         onSelect={handlePickerSelect}
+      />
+
+      <PdfViewerModal
+        open={Boolean(pdfChapter)}
+        lang={lang}
+        title={pdfChapter?.title ?? null}
+        pdfUrl={pdfChapter?.url ?? null}
+        onClose={handlePdfClose}
       />
 
       <TadvPickerModal

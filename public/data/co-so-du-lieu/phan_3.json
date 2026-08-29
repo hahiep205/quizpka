@@ -1,0 +1,707 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Cơ sở dữ liệu - Phần 3: Mở rộng (Giao dịch, Tương tranh, Index, Bảo mật, NoSQL)",
+  "chapter": "Phần 3",
+  "totalQuestions": 50,
+  "questions": [
+    {
+      "id": 101,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.1 – Giao dịch (Transaction) & ACID",
+      "question": "Giao dịch (transaction) trong cơ sở dữ liệu được hiểu là gì?",
+      "options": {
+        "A": "Một bảng tạm lưu kết quả",
+        "B": "Một câu lệnh SELECT bất kỳ",
+        "C": "Một chỉ mục trên bảng",
+        "D": "Một chuỗi các thao tác dữ liệu được thực hiện như một đơn vị không thể tách rời (hoặc thực hiện hết, hoặc không thực hiện gì)"
+      },
+      "answer": "D",
+      "explainAnswer": "Giao dịch nhóm các thao tác (INSERT/UPDATE/DELETE...) thành một thao tác logic: nếu một bước lỗi, toàn bộ giao dịch bị hủy (ROLLBACK)."
+    },
+    {
+      "id": 102,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.1 – Giao dịch (Transaction) & ACID",
+      "question": "Tính nguyên tử (Atomicity) của giao dịch nghĩa là gì?",
+      "options": {
+        "A": "Giao dịch chạy độc lập với nhau",
+        "B": "Giao dịch không bao giờ bị lỗi",
+        "C": "Toàn bộ giao dịch hoặc thực hiện trọn vẹn, hoặc không có thao tác nào được ghi nhận",
+        "D": "Dữ liệu được lưu vĩnh viễn sau khi kết thúc"
+      },
+      "answer": "C",
+      "explainAnswer": "Atomicity đảm bảo không có trạng thái “nửa chừng”: hỏng ở bước nào thì mọi bước đều bị hoàn tác."
+    },
+    {
+      "id": 103,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.1 – Giao dịch (Transaction) & ACID",
+      "question": "Tính nhất quán (Consistency) của giao dịch nghĩa là gì?",
+      "options": {
+        "A": "Dữ liệu không bao giờ đổi",
+        "B": "Giao dịch chỉ đọc dữ liệu",
+        "C": "Giao dịch được thực thi nhanh",
+        "D": "Giao dịch đưa cơ sở dữ liệu từ trạng thái nhất quán này sang trạng thái nhất quán khác, mọi ràng buộc toàn vẹn được thoả"
+      },
+      "answer": "D",
+      "explainAnswer": "Sau khi giao dịch kết thúc, mọi ràng buộc (khoá, duy nhất, không NULL...) đều còn được đảm bảo – CSDL nhất quán."
+    },
+    {
+      "id": 104,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.1 – Giao dịch (Transaction) & ACID",
+      "question": "Tính cô lập (Isolation) của giao dịch nghĩa là gì?",
+      "options": {
+        "A": "Hệ thống chỉ cho phép một giao dịch tại một thời điểm",
+        "B": "Mỗi giao dịch dùng một cơ sở dữ liệu riêng",
+        "C": "Các giao dịch thực hiện đồng thời không nhìn thấy dữ liệu trung gian (chưa commit) của nhau, ở mức độ do mức cô lập quy định",
+        "D": "Mỗi giao dịch chạy trên một máy tính riêng"
+      },
+      "answer": "C",
+      "explainAnswer": "Isolation ngăn các giao dịch tương tác theo cách gây hỏng dữ liệu; mức cô lập (isolation level) quyết định mức độ nhìn thấy lẫn nhau."
+    },
+    {
+      "id": 105,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.1 – Giao dịch (Transaction) & ACID",
+      "question": "Tính bền vững (Durability) của giao dịch nghĩa là gì?",
+      "options": {
+        "A": "Sau khi COMMIT, dữ liệu được lưu vĩnh viễn và an toàn kể cả khi hệ thống gặp sự cố",
+        "B": "Giao dịch không thể bị ROLLBACK",
+        "C": "Dữ liệu chỉ tồn tại trong bộ nhớ RAM",
+        "D": "Bảng không thể bị xoá"
+      },
+      "answer": "A",
+      "explainAnswer": "Durability đảm bảo kết quả đã commit không bị mất khi mất điện hay sập hệ thống."
+    },
+    {
+      "id": 106,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.1 – Giao dịch (Transaction) & ACID",
+      "question": "Lệnh nào dùng để xác nhận và lưu vĩnh viễn (commit) giao dịch đang thực hiện?",
+      "options": {
+        "A": "ROLLBACK",
+        "B": "SAVEPOINT",
+        "C": "BEGIN TRANSACTION",
+        "D": "COMMIT"
+      },
+      "answer": "D",
+      "explainAnswer": "COMMIT kết thúc giao dịch thành công và ghi nhận vĩnh viễn mọi thay đổi."
+    },
+    {
+      "id": 107,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.1 – Giao dịch (Transaction) & ACID",
+      "question": "Lệnh nào dùng để hủy bỏ giao dịch và khôi phục dữ liệu về trạng thái trước khi giao dịch bắt đầu?",
+      "options": {
+        "A": "COMMIT",
+        "B": "DELETE",
+        "C": "ROLLBACK",
+        "D": "SAVEPOINT"
+      },
+      "answer": "C",
+      "explainAnswer": "ROLLBACK hoàn tác toàn bộ thay đổi chưa commit của giao dịch hiện tại (hoặc về SAVEPOINT nếu có)."
+    },
+    {
+      "id": 108,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.1 – Giao dịch (Transaction) & ACID",
+      "question": "Giao dịch A cập nhật dữ liệu chưa COMMIT; giao dịch B đọc được giá trị đó. Hiện tượng này gọi là gì?",
+      "options": {
+        "A": "Đọc bóng ma (phantom read)",
+        "B": "Đọc không lặp lại (non-repeatable read)",
+        "C": "Đọc dữ liệu bẩn (dirty read)",
+        "D": "Mất cập nhật (lost update)"
+      },
+      "answer": "C",
+      "explainAnswer": "Dirty read xảy ra khi một giao dịch đọc dữ liệu do giao dịch khác cập nhật nhưng CHƯA commit."
+    },
+    {
+      "id": 109,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.1 – Giao dịch (Transaction) & ACID",
+      "question": "Trong cùng một giao dịch, đọc một dòng hai lần nhưng nhận hai giá trị khác nhau vì giao dịch khác đã sửa và commit. Đây là hiện tượng gì?",
+      "options": {
+        "A": "Bế tắc (deadlock)",
+        "B": "Đọc bóng ma (phantom read)",
+        "C": "Đọc dữ liệu bẩn (dirty read)",
+        "D": "Đọc không lặp lại (non-repeatable read)"
+      },
+      "answer": "D",
+      "explainAnswer": "Non-repeatable read: giá trị của cùng một dòng thay đổi giữa hai lần đọc vì dòng đó bị cập nhật và commit bởi giao dịch khác."
+    },
+    {
+      "id": 110,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.1 – Giao dịch (Transaction) & ACID",
+      "question": "Chạy cùng một truy vấn hai lần trong một giao dịch nhưng số dòng trả về khác nhau vì giao dịch khác đã chèn thêm dòng mới. Hiện tượng này gọi là gì?",
+      "options": {
+        "A": "Đọc dữ liệu bẩn (dirty read)",
+        "B": "Mất cập nhật (lost update)",
+        "C": "Cuốn chiếu hủy (cascading rollback)",
+        "D": "Đọc bóng ma (phantom read)"
+      },
+      "answer": "D",
+      "explainAnswer": "Phantom read: tập dòng kết quả thay đổi (xuất hiện/ biến mất) do giao dịch khác INSERT/DELETE trong lúc thực thi."
+    },
+    {
+      "id": 111,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.1 – Giao dịch (Transaction) & ACID",
+      "question": "Mức cô lập (isolation level) mặc định của MySQL với bộ lưu trữ InnoDB là gì?",
+      "options": {
+        "A": "READ COMMITTED",
+        "B": "READ UNCOMMITTED",
+        "C": "REPEATABLE READ",
+        "D": "SERIALIZABLE"
+      },
+      "answer": "C",
+      "explainAnswer": "InnoDB mặc định dùng REPEATABLE READ: các lần đọc trong giao dịch thấy nhất quán cùng một ảnh dữ liệu."
+    },
+    {
+      "id": 112,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.1 – Giao dịch (Transaction) & ACID",
+      "question": "Mức cô lập nào cao nhất, buộc các giao dịch tuần tự hoá như chạy lần lượt, loại bỏ mọi hiện tượng bất thường?",
+      "options": {
+        "A": "READ COMMITTED",
+        "B": "READ UNCOMMITTED",
+        "C": "SERIALIZABLE",
+        "D": "REPEATABLE READ"
+      },
+      "answer": "C",
+      "explainAnswer": "SERIALIZABLE là mức an toàn nhất (thường khoá phạm vi), đổi lại hiệu năng thấp nhất."
+    },
+    {
+      "id": 113,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.2 – Điều khiển tương tranh & khoá",
+      "question": "Khoá chia sẻ (shared lock – S) cho phép giao dịch làm gì?",
+      "options": {
+        "A": "Chỉ một giao dịch duy nhất được đọc",
+        "B": "Xoá dữ liệu",
+        "C": "Đọc dữ liệu; nhiều giao dịch có thể cùng giữ khoá chia sẻ trên một đối tượng nhưng không ai được ghi",
+        "D": "Đọc và ghi dữ liệu"
+      },
+      "answer": "C",
+      "explainAnswer": "Shared lock tương thích với nhau (nhiều S cùng tồn tại) nhưng không tương thích với exclusive lock."
+    },
+    {
+      "id": 114,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.2 – Điều khiển tương tranh & khoá",
+      "question": "Khoá độc quyền (exclusive lock – X) có đặc điểm gì?",
+      "options": {
+        "A": "Không cần thiết trong thực tế",
+        "B": "Nhiều giao dịch cùng ghi được",
+        "C": "Chỉ cho phép đọc",
+        "D": "Chỉ giao dịch sở hữu khoá được đọc/ ghi; các giao dịch khác phải chờ, kể cả khi chỉ muốn đọc"
+      },
+      "answer": "D",
+      "explainAnswer": "Exclusive lock cấm mọi giao dịch khác truy cập đối tượng đang bị khoá cho đến khi khoá được nhả."
+    },
+    {
+      "id": 115,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.2 – Điều khiển tương tranh & khoá",
+      "question": "Bế tắc (deadlock) xảy ra khi nào?",
+      "options": {
+        "A": "Hai hoặc nhiều giao dịch chờ khoá của nhau, tạo thành vòng chờ không thể kết thúc",
+        "B": "Cơ sở dữ liệu hết dung lượng",
+        "C": "Một giao dịch chạy lâu hơn thời gian quy định",
+        "D": "Một câu lệnh SELECT sai cú pháp"
+      },
+      "answer": "A",
+      "explainAnswer": "Deadlock là trạng thái mỗi giao dịch giữ tài nguyên mà giao dịch khác cần và đều chờ nhau, không ai tiến tới được."
+    },
+    {
+      "id": 116,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.2 – Điều khiển tương tranh & khoá",
+      "question": "Vấn đề “mất cập nhật” (lost update) xảy ra khi nào?",
+      "options": {
+        "A": "Một giao dịch bị ROLLBACK",
+        "B": "Hai giao dịch cùng đọc một giá trị cũ, cùng tính toán và ghi đè; kết quả cập nhật của giao dịch trước bị mất",
+        "C": "Quá trình sao lưu dữ liệu",
+        "D": "Một bảng bị xoá"
+      },
+      "answer": "B",
+      "explainAnswer": "Lost update là trường hợp kinh điển của tương tranh: cập nhật sau ghi đè cập nhật trước vì cả hai dựa trên giá trị ban đầu."
+    },
+    {
+      "id": 117,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.2 – Điều khiển tương tranh & khoá",
+      "question": "Giao thức khoá hai pha (two-phase locking – 2PL) quy định điều gì?",
+      "options": {
+        "A": "Giao dịch được chia làm hai nửa bằng nhau",
+        "B": "Giao dịch trải qua pha tăng trưởng (chỉ xin khoá) rồi pha co (chỉ nhả khoá); không được xin khoá sau khi đã nhả khoá",
+        "C": "Mỗi khoá chỉ được cấp đúng hai lần",
+        "D": "Chỉ được khoá tối đa hai bảng"
+      },
+      "answer": "B",
+      "explainAnswer": "2PL đảm bảo lịch khả tuần tự (serializable); nhờ đó tránh được các hiện tượng bất thường khi tương tranh."
+    },
+    {
+      "id": 118,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.2 – Điều khiển tương tranh & khoá",
+      "question": "Phân biệt điều khiển tương tranh lạc quan (optimistic) và bi quan (pessimistic)?",
+      "options": {
+        "A": "Lạc quan khoá tài nguyên ngay từ đầu",
+        "B": "Lạc quan: giả định ít xung đột, thao tác không khoá và kiểm tra xung đột khi COMMIT; Bi quan: khoá dữ liệu ngay trước khi thao tác",
+        "C": "Hai cách hoàn toàn giống nhau",
+        "D": "Bi quan không sử dụng khoá"
+      },
+      "answer": "B",
+      "explainAnswer": "Optimistic kiểm tra khi commit (thất bại thì thực hiện lại); pessimistic khóa trước để ngăn xung đột từ đầu."
+    },
+    {
+      "id": 119,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.2 – Điều khiển tương tranh & khoá",
+      "question": "Trong MySQL, lệnh nào khoá tường minh một bảng để các phiên khác không ghi được?",
+      "options": {
+        "A": "LOCK DATABASE bang;",
+        "B": "RESERVE TABLE bang;",
+        "C": "BEGIN TRANSACTION ONLY;",
+        "D": "LOCK TABLES bang WRITE;"
+      },
+      "answer": "D",
+      "explainAnswer": "LOCK TABLES ... WRITE/READ khoá bảng theo ý muốn; cần UNLOCK TABLES để nhả khoá; InnoDB thường quản lý khoá tự động."
+    },
+    {
+      "id": 120,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.2 – Điều khiển tương tranh & khoá",
+      "question": "Khi xảy ra deadlock, InnoDB của MySQL xử lý như thế nào?",
+      "options": {
+        "A": "Tắt toàn bộ cơ sở dữ liệu",
+        "B": "Chờ đợi vô hạn đến khi hết bộ nhớ",
+        "C": "Bỏ qua và tiếp tục chạy",
+        "D": "Tự chọn một giao dịch làm “nạn nhân” để ROLLBACK, nhả khoá cho giao dịch còn lại tiếp tục"
+      },
+      "answer": "D",
+      "explainAnswer": "InnoDB phát hiện chu trình chờ và tự động hủy một giao dịch (báo lỗi deadlock) để phá vỡ bế tắc."
+    },
+    {
+      "id": 121,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.3 – Chỉ mục & tối ưu truy vấn",
+      "question": "Chỉ mục (index) trong cơ sở dữ liệu dùng để làm gì?",
+      "options": {
+        "A": "Tăng tốc truy vấn (tìm kiếm, lọc, sắp xếp, nối bảng) nhờ cấu trúc dữ liệu phụ trợ",
+        "B": "Mã hoá dữ liệu",
+        "C": "Lưu trữ dữ liệu chính của bảng",
+        "D": "Giới hạn số dòng của bảng"
+      },
+      "answer": "A",
+      "explainAnswer": "Index giúp MySQL tìm dòng nhanh hơn thay vì quét toàn bộ bảng (full scan), giống mục lục sách."
+    },
+    {
+      "id": 122,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.3 – Chỉ mục & tối ưu truy vấn",
+      "question": "Cấu trúc chỉ mục phổ biến nhất của MySQL InnoDB là gì?",
+      "options": {
+        "A": "Danh sách liên kết",
+        "B": "Đồ thị vô hướng",
+        "C": "Cây B-tree (B+tree)",
+        "D": "Mảng tuyến tính"
+      },
+      "answer": "C",
+      "explainAnswer": "InnoDB dùng cây B+tree cho chỉ mục chính và phụ, hỗ trợ tìm kiếm, phạm vi, sắp xếp hiệu quả."
+    },
+    {
+      "id": 123,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.3 – Chỉ mục & tối ưu truy vấn",
+      "question": "Chỉ mục thường phát huy hiệu quả nhất khi đặt trên cột nào?",
+      "options": {
+        "A": "Cột không bao giờ dùng trong truy vấn",
+        "B": "Cột xuất hiện trong WHERE/JOIN/ORDER BY và có độ chọn lọc cao (nhiều giá trị khác nhau)",
+        "C": "Cột chỉ có vài giá trị khác nhau (ví dụ giới tính)",
+        "D": "Cột kiểu TEXT lớn"
+      },
+      "answer": "B",
+      "explainAnswer": "Cột chọn lọc cao giúp thu hẹp nhanh số dòng phải đọc; cột ít giá trị khác nhau ít khi được dùng chỉ mục."
+    },
+    {
+      "id": 124,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.3 – Chỉ mục & tối ưu truy vấn",
+      "question": "Phân biệt chỉ mục clustered và non-clustered trong InnoDB?",
+      "options": {
+        "A": "Clustered (chỉ mục cụm): dữ liệu được sắp xếp theo khoá chỉ mục, mặc định là khoá chính; Non-clustered: chỉ mục phụ chỉ chứa giá trị khoá trỏ về dòng dữ liệu",
+        "B": "Clustered không tồn tại trong InnoDB",
+        "C": "Hai loại hoàn toàn giống nhau",
+        "D": "Non-clustered lưu trực tiếp dữ liệu"
+      },
+      "answer": "A",
+      "explainAnswer": "InnoDB luôn có một clustered index (thường là PRIMARY KEY); các index khác là secondary, lưu giá trị khoá chính để truy về dòng."
+    },
+    {
+      "id": 125,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.3 – Chỉ mục & tối ưu truy vấn",
+      "question": "Câu lệnh tạo chỉ mục trên cột Ten của bảng SinhVien là gì?",
+      "options": {
+        "A": "ADD INDEX idx_ten TO SinhVien(Ten);",
+        "B": "CREATE INDEX idx_ten ON SinhVien(Ten);",
+        "C": "NEW INDEX idx_ten FOR SinhVien(Ten);",
+        "D": "INDEX TABLE SinhVien(Ten);"
+      },
+      "answer": "B",
+      "explainAnswer": "Cú pháp tạo chỉ mục: CREATE INDEX tên ON bảng(cột); có thể dùng thêm UNIQUE/FULLTEXT."
+    },
+    {
+      "id": 126,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.3 – Chỉ mục & tối ưu truy vấn",
+      "question": "Nhược điểm của việc tạo quá nhiều chỉ mục trên một bảng là gì?",
+      "options": {
+        "A": "Không có nhược điểm nào",
+        "B": "Làm truy vấn luôn nhanh hơn",
+        "C": "Tự động xoá dữ liệu cũ",
+        "D": "Tốn lưu trữ và làm chậm INSERT/UPDATE/DELETE vì mỗi thay đổi phải cập nhật lại các chỉ mục"
+      },
+      "answer": "D",
+      "explainAnswer": "Cân bằng giữa tốc độ đọc (lợi ích của index) và chi phí ghi/ lưu trữ – không nên chỉ mục hoá mọi cột."
+    },
+    {
+      "id": 127,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.3 – Chỉ mục & tối ưu truy vấn",
+      "question": "Với chỉ mục kết hợp (composite index) trên (cotA, cotB, cotC), thứ tự cột có quan trọng không?",
+      "options": {
+        "A": "Chỉ mục kết hợp không tồn tại",
+        "B": "Chỉ cột cuối cùng mới quan trọng",
+        "C": "Không, thứ tự không ảnh hưởng",
+        "D": "Có – chỉ mục phát huy khi điều kiện truy vấn dùng các cột đầu tiên (quy tắc leftmost prefix)"
+      },
+      "answer": "D",
+      "explainAnswer": "MySQL dùng được chỉ mục kết hợp khi WHERE khớp tiền tố trái của chỉ mục, ví dụ (cotA) hoặc (cotA, cotB)."
+    },
+    {
+      "id": 128,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.3 – Chỉ mục & tối ưu truy vấn",
+      "question": "Trường hợp nào MySQL có thể KHÔNG dùng được chỉ mục trên cột dù cột đã được đánh chỉ mục?",
+      "options": {
+        "A": "Bọc hàm lên cột trong điều kiện (WHERE YEAR(ngay) = 2024), so sánh khác kiểu dữ liệu, hoặc LIKE có % ở đầu mẫu",
+        "B": "Khi bảng có ít hơn 10 cột",
+        "C": "Khi câu lệnh có mệnh đề WHERE",
+        "D": "Không có trường hợp nào"
+      },
+      "answer": "A",
+      "explainAnswer": "Áp hàm hoặc đổi kiểu làm mất giá trị so sánh trực tiếp trên chỉ mục; % đứng đầu ngăn dùng index vì không biết tiền tố."
+    },
+    {
+      "id": 129,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.3 – Chỉ mục & tối ưu truy vấn",
+      "question": "Câu lệnh EXPLAIN SELECT ... trong MySQL dùng để làm gì?",
+      "options": {
+        "A": "Sửa dữ liệu của bảng",
+        "B": "Thực thi truy vấn và trả về dữ liệu",
+        "C": "Xoá toàn bộ chỉ mục",
+        "D": "Xem kế hoạch thực thi của truy vấn: bảng nào, có dùng chỉ mục không, cách nối bảng ra sao"
+      },
+      "answer": "D",
+      "explainAnswer": "EXPLAIN không trả về dữ liệu mà cho biết chiến lược thực thi, giúp phát hiện full scan hoặc thiếu index."
+    },
+    {
+      "id": 130,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.3 – Chỉ mục & tối ưu truy vấn",
+      "question": "Khoá chính (PRIMARY KEY) trong InnoDB tự động đi kèm loại chỉ mục nào?",
+      "options": {
+        "A": "Không tạo chỉ mục nào",
+        "B": "Chỉ mục toàn văn (fulltext)",
+        "C": "Chỉ mục cụm (clustered index) sắp xếp dữ liệu theo khoá chính",
+        "D": "Chỉ mục bảng băm (hash table) lưu riêng"
+      },
+      "answer": "C",
+      "explainAnswer": "InnoDB dùng khoá chính làm clustered index – dữ liệu vật lý được tổ chức theo thứ tự khoá chính; nên chọn khoá chính ngắn, ổn định."
+    },
+    {
+      "id": 131,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.4 – An toàn, phân quyền & sao lưu",
+      "question": "Câu lệnh cấp quyền SELECT trên bảng SinhVien cho người dùng 'nhanvien' trong MySQL là gì?",
+      "options": {
+        "A": "ALLOW SELECT TO 'nhanvien';",
+        "B": "ENABLE SELECT FOR 'nhanvien';",
+        "C": "PERMIT 'nhanvien' SELECT SinhVien;",
+        "D": "GRANT SELECT ON csdl.SinhVien TO 'nhanvien'@'localhost';"
+      },
+      "answer": "D",
+      "explainAnswer": "GRANT quyền ON đối_tượng TO người_dùng; sau đó thường dùng FLUSH PRIVILEGES nếu sửa trực tiếp bảng quyền."
+    },
+    {
+      "id": 132,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.4 – An toàn, phân quyền & sao lưu",
+      "question": "Câu lệnh thu hồi quyền SELECT của người dùng 'nhanvien' trên bảng SinhVien là gì?",
+      "options": {
+        "A": "REVOKE SELECT ON csdl.SinhVien FROM 'nhanvien'@'localhost';",
+        "B": "REMOVE SELECT FROM 'nhanvien';",
+        "C": "DROP PRIVILEGE 'nhanvien';",
+        "D": "DISALLOW 'nhanvien' SELECT;"
+      },
+      "answer": "A",
+      "explainAnswer": "REVOKE quyền ON đối_tượng FROM người_dùng dùng để thu hồi quyền đã cấp."
+    },
+    {
+      "id": 133,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.4 – An toàn, phân quyền & sao lưu",
+      "question": "Danh sách tài khoản người dùng của MySQL được lưu trong bảng nào của cơ sở dữ liệu mysql?",
+      "options": {
+        "A": "mysql.accounts",
+        "B": "mysql.user",
+        "C": "mysql.indexes",
+        "D": "mysql.tables"
+      },
+      "answer": "B",
+      "explainAnswer": "Bảng mysql.user lưu tài khoản, mật khẩu (dạng băm) và quyền toàn cục; quyền cấp thấp hơn ở mysql.db, mysql.tables_priv..."
+    },
+    {
+      "id": 134,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.4 – An toàn, phân quyền & sao lưu",
+      "question": "Câu lệnh tạo người dùng mới 'quantri' trong MySQL là gì?",
+      "options": {
+        "A": "ADD USER 'quantri' WITH PASSWORD 'matkhau';",
+        "B": "NEW USER 'quantri' PASSWORD 'matkhau';",
+        "C": "CREATE USER 'quantri'@'localhost' IDENTIFIED BY 'matkhau';",
+        "D": "MAKE USER 'quantri' IDENTIFIED 'matkhau';"
+      },
+      "answer": "C",
+      "explainAnswer": "CREATE USER tạo tài khoản; việc cấp quyền thực hiện sau đó bằng GRANT."
+    },
+    {
+      "id": 135,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.4 – An toàn, phân quyền & sao lưu",
+      "question": "Nguyên tắc “quyền tối thiểu” (least privilege) trong quản trị cơ sở dữ liệu là gì?",
+      "options": {
+        "A": "Chỉ dùng duy nhất tài khoản root",
+        "B": "Cấp toàn quyền cho mọi tài khoản để thuận tiện",
+        "C": "Chỉ cấp cho mỗi người dùng đúng các quyền cần thiết cho công việc của họ",
+        "D": "Không cần phân quyền trong hệ thống nội bộ"
+      },
+      "answer": "C",
+      "explainAnswer": "Cấp quyền tối thiểu giảm thiểu rủi ro lộ, sửa hoặc xoá dữ liệu do tài khoản bị chiếm dụng hay thao tác nhầm."
+    },
+    {
+      "id": 136,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.4 – An toàn, phân quyền & sao lưu",
+      "question": "SQL Injection là gì?",
+      "options": {
+        "A": "Một lỗi do phần cứng lỗi thời",
+        "B": "Kỹ thuật tấn công chèn mã SQL độc hại vào câu truy vấn thông qua dữ liệu nhập của người dùng",
+        "C": "Một tính năng bảo mật của MySQL",
+        "D": "Cách nén cơ sở dữ liệu để tiết kiệm đĩa"
+      },
+      "answer": "B",
+      "explainAnswer": "Nếu dữ liệu nhập được nối thẳng vào câu SQL, kẻ tấn công có thể chèn điều kiện/ câu lệnh để rò rỉ hoặc phá dữ liệu."
+    },
+    {
+      "id": 137,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.4 – An toàn, phân quyền & sao lưu",
+      "question": "Cách phòng chống SQL Injection hiệu quả nhất khi viết truy vấn?",
+      "options": {
+        "A": "Dùng tài khoản root cho mọi truy vấn",
+        "B": "Tắt tính năng SQL của máy chủ",
+        "C": "Dùng câu lệnh chuẩn bị sẵn (prepared statement) với tham số ràng buộc, tránh nối chuỗi nhập liệu trực tiếp",
+        "D": "Xoá toàn bộ dữ liệu người dùng nhập"
+      },
+      "answer": "C",
+      "explainAnswer": "Prepared statement tách tham số khỏi câu lệnh nên dữ liệu nhập không thể thay đổi cú pháp SQL."
+    },
+    {
+      "id": 138,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.4 – An toàn, phân quyền & sao lưu",
+      "question": "Công cụ sao lưu dữ liệu phổ biến đi kèm MySQL là gì?",
+      "options": {
+        "A": "format",
+        "B": "tar",
+        "C": "mysqldump",
+        "D": "cp"
+      },
+      "answer": "C",
+      "explainAnswer": "mysqldump xuất cơ sở dữ liệu ra tệp văn bản chứa câu lệnh CREATE/INSERT để tái tạo lại sau này."
+    },
+    {
+      "id": 139,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.4 – An toàn, phân quyền & sao lưu",
+      "question": "Sao lưu vật lý (physical backup) khác sao lưu logic (logical backup) ở điểm nào?",
+      "options": {
+        "A": "Logic sao chép tập tin dữ liệu",
+        "B": "Hai cách hoàn toàn giống nhau",
+        "C": "Vật lý: sao chép trực tiếp các tập tin dữ liệu; Logic: xuất ra tệp lệnh SQL/ dữ liệu có thể tái tạo lại",
+        "D": "Vật lý xuất ra tệp SQL"
+      },
+      "answer": "C",
+      "explainAnswer": "Physical backup nhanh, sao chép nguyên khối, phải khôi phục trên cùng nền tảng; logical backup (ví dụ mysqldump) linh hoạt, dễ di chuyển."
+    },
+    {
+      "id": 140,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.4 – An toàn, phân quyền & sao lưu",
+      "question": "Để khôi phục cơ sở dữ liệu từ tệp sao lưu backup.sql đã tạo bằng mysqldump, dùng cách nào?",
+      "options": {
+        "A": "load backup.sql",
+        "B": "restore backup.sql",
+        "C": "importtable csdl backup.sql",
+        "D": "mysql -u user -p csdl < backup.sql (hoặc lệnh SOURCE backup.sql trong mysql)"
+      },
+      "answer": "D",
+      "explainAnswer": "mysqldump tạo tệp văn bản; mysql đọc lại tệp để thực thi các câu lệnh tái tạo dữ liệu."
+    },
+    {
+      "id": 141,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.5 – Hệ QT CSDL, NoSQL & ứng dụng",
+      "question": "Hệ quản trị cơ sở dữ liệu (DBMS) là gì?",
+      "options": {
+        "A": "Phần mềm quản lý việc tạo lập, lưu trữ, truy vấn, cập nhật và bảo mật dữ liệu",
+        "B": "Một phần cứng lưu trữ",
+        "C": "Một giao thức mạng",
+        "D": "Một ngôn ngữ lập trình"
+      },
+      "answer": "A",
+      "explainAnswer": "DBMS (ví dụ MySQL, SQL Server, Oracle, PostgreSQL) cung cấp tầng giữa người dùng/ ứng dụng và dữ liệu vật lý."
+    },
+    {
+      "id": 142,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.5 – Hệ QT CSDL, NoSQL & ứng dụng",
+      "question": "Kiến trúc ba mức (3-schema) của DBMS gồm những mức nào?",
+      "options": {
+        "A": "Mức đọc – mức ghi – mức xoá",
+        "B": "Mức trong (internal) – mức khái niệm (conceptual) – mức ngoài (external)",
+        "C": "Mức dữ liệu – mức bảng – mức khoá",
+        "D": "Mức trên – mức giữa – mức dưới"
+      },
+      "answer": "B",
+      "explainAnswer": "Ba mức tách biệt cách nhìn của người dùng, lược đồ logic và biểu diễn vật lý – nền tảng của tính độc lập dữ liệu."
+    },
+    {
+      "id": 143,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.5 – Hệ QT CSDL, NoSQL & ứng dụng",
+      "question": "Tính độc lập dữ liệu (data independence) trong DBMS mang lại lợi ích gì?",
+      "options": {
+        "A": "Mọi chương trình đều dùng chung một bảng",
+        "B": "Dữ liệu không bao giờ thay đổi",
+        "C": "Không cần quản trị viên",
+        "D": "Thay đổi cấu trúc lưu trữ/ lược đồ ở mức thấp không làm hỏng chương trình ứng dụng ở mức cao"
+      },
+      "answer": "D",
+      "explainAnswer": "Nhờ tách các mức, sửa đổi vật lý hoặc logic được che giấu khỏi ứng dụng, giảm chi phí bảo trì."
+    },
+    {
+      "id": 144,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.5 – Hệ QT CSDL, NoSQL & ứng dụng",
+      "question": "NoSQL thường được hiểu là gì?",
+      "options": {
+        "A": "Nhóm hệ cơ sở dữ liệu phi quan hệ, linh hoạt về lược đồ, hướng tới mở rộng ngang và dữ liệu lớn",
+        "B": "Một phiên bản không cần mật khẩu của SQL",
+        "C": "Một loại phần cứng mới",
+        "D": "SQL bỏ mệnh đề SELECT"
+      },
+      "answer": "A",
+      "explainAnswer": "NoSQL (Not Only SQL) gồm các mô hình document, key-value, column-family, graph – phù hợp dữ liệu phi cấu trúc, quy mô lớn."
+    },
+    {
+      "id": 145,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.5 – Hệ QT CSDL, NoSQL & ứng dụng",
+      "question": "MongoDB thuộc loại cơ sở dữ liệu NoSQL nào?",
+      "options": {
+        "A": "Cửa hàng khoá – giá trị thuần tuý",
+        "B": "Cơ sở dữ liệu quan hệ",
+        "C": "Cửa hàng tài liệu (document store) lưu dữ liệu dạng JSON/BSON",
+        "D": "Cơ sở dữ liệu đồ thị"
+      },
+      "answer": "C",
+      "explainAnswer": "MongoDB lưu mỗi bản ghi là một tài liệu (document) dạng JSON/BSON, không cố định lược đồ cột."
+    },
+    {
+      "id": 146,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.5 – Hệ QT CSDL, NoSQL & ứng dụng",
+      "question": "Mô hình NoSQL nào phù hợp nhất để biểu diễn quan hệ phức tạp kiểu mạng xã hội (bạn bè, người theo dõi)?",
+      "options": {
+        "A": "Cửa hàng khoá – giá trị",
+        "B": "Cơ sở dữ liệu quan hệ thuần",
+        "C": "Cửa hàng tài liệu",
+        "D": "Cơ sở dữ liệu đồ thị (graph database) – ví dụ Neo4j"
+      },
+      "answer": "D",
+      "explainAnswer": "Graph database lưu nút (thực thể) và cạnh (quan hệ), truy vấn đường đi sâu hiệu quả – rất hợp mạng xã hội."
+    },
+    {
+      "id": 147,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.5 – Hệ QT CSDL, NoSQL & ứng dụng",
+      "question": "Định lý CAP trong hệ phân tán phát biểu hệ thống chỉ bảo đảm đồng thời tối đa hai trong ba tính chất nào?",
+      "options": {
+        "A": "Mã hoá, nén, lưu trữ",
+        "B": "Nhanh, rẻ, đúng",
+        "C": "Bảo mật, toàn vẹn, khả dụng",
+        "D": "Nhất quán (Consistency), khả dụng (Availability), chịu phân mảnh (Partition tolerance)"
+      },
+      "answer": "D",
+      "explainAnswer": "CAP: khi mạng phân mảnh (P) xảy ra, hệ thống phải chọn giữa nhất quán (C) và khả dụng (A)."
+    },
+    {
+      "id": 148,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.5 – Hệ QT CSDL, NoSQL & ứng dụng",
+      "question": "Tình huống nào thích hợp dùng cơ sở dữ liệu quan hệ (SQL) hơn NoSQL?",
+      "options": {
+        "A": "Cần quét đồ thị quan hệ sâu nhiều tầng",
+        "B": "Chỉ cần lưu cache theo khoá – giá trị tốc độ cao",
+        "C": "Dữ liệu có cấu trúc ổn định, cần giao dịch ACID mạnh và truy vấn nối bảng phức tạp (ngân hàng, hoá đơn)",
+        "D": "Dữ liệu hoàn toàn phi cấu trúc, không biết trước lược đồ"
+      },
+      "answer": "C",
+      "explainAnswer": "SQL mạnh về ràng buộc, chuẩn hoá, ACID và JOIN; NoSQL ưu thế về lược đồ linh hoạt, mở rộng ngang."
+    },
+    {
+      "id": 149,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.5 – Hệ QT CSDL, NoSQL & ứng dụng",
+      "question": "Phân biệt OLTP và OLAP?",
+      "options": {
+        "A": "OLTP là phân tích dữ liệu",
+        "B": "OLAP là xử lý giao dịch ngân hàng",
+        "C": "OLTP: xử lý giao dịch trực tuyến, nhiều thao tác ghi nhỏ, thời gian thực; OLAP: phân tích dữ liệu lớn, chủ yếu đọc, hỗ trợ ra quyết định",
+        "D": "Hai khái niệm giống hệt nhau"
+      },
+      "answer": "C",
+      "explainAnswer": "OLTP (ví dụ bán hàng trực tuyến) tối ưu ghi nhanh; OLAP (kho dữ liệu) tối ưu truy vấn tổng hợp trên dữ liệu lịch sử."
+    },
+    {
+      "id": 150,
+      "chapter": "Phần 3",
+      "sourceChapter": "Nhóm 3.5 – Hệ QT CSDL, NoSQL & ứng dụng",
+      "question": "Kho dữ liệu (data warehouse) thường được thiết kế theo mô hình nào?",
+      "options": {
+        "A": "Mô hình sao (star schema) với bảng sự kiện (fact) và các bảng chiều (dimension)",
+        "B": "Chỉ một bảng duy nhất",
+        "C": "Mô hình phân cấp cây",
+        "D": "Dạng tệp phẳng CSV"
+      },
+      "answer": "A",
+      "explainAnswer": "Star schema tối ưu cho truy vấn tổng hợp: bảng fact chứa số liệu, các bảng dimension chứa ngữ cảnh (thời gian, sản phẩm, khu vực)."
+    }
+  ]
+}

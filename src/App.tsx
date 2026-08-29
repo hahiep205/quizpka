@@ -135,7 +135,14 @@ export default function App() {
     )
   }
 
-  if (pathname !== appRoutes.home) return <Suspense fallback={<RouteLoading />}><NotFoundPage lang={lang} /></Suspense>
+  if (pathname !== appRoutes.home) {
+    return (
+      <>
+        {locked && <SecurityOverlay onClose={() => setLocked(false)} />}
+        <Suspense fallback={<RouteLoading />}><NotFoundPage lang={lang} /></Suspense>
+      </>
+    )
+  }
 
   return (
     <div className={shellClassName}>
@@ -182,4 +189,5 @@ export default function App() {
 function RouteLoading() {
   return <div className="mx-auto flex min-h-svh items-center justify-center px-6"><p className="lp-modal-desc text-[15px]">Loading…</p></div>
 }
+
 

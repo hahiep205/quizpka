@@ -1,5 +1,5 @@
 import { useEffect, useId, useState } from "react"
-import { BookOpen, X } from "lucide-react"
+import { BookOpen, FileText, X } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
 import { getChapterOptionsForSubject } from "@/data/subjectChapters"
@@ -83,11 +83,11 @@ export function HcmChapterPickerModal({ open, lang, exam, subject, onClose, onSe
                   )}
                 >
                   <span className={cn("flex h-11 w-11 shrink-0 items-center justify-center rounded-[12px]", active ? "bg-[#1CB0F6] text-white" : "bg-[#F6F7FB] text-[#1CB0F6] dark:bg-white/5")}>
-                    <BookOpen className="h-5 w-5" />
+                    {chapter.pdfUrl ? <FileText className="h-5 w-5" /> : <BookOpen className="h-5 w-5" />}
                   </span>
                   <span className="min-w-0 flex-1">
                     <span className="block text-[15px] font-extrabold leading-5 text-[#100F3E] dark:text-white">{chapter.label[lang]}</span>
-                    <span className="mt-1 block text-[13px] font-semibold leading-4 text-slate-500 dark:text-slate-400">{chapter.count} {t.questions}</span>
+                    <span className="mt-1 block text-[13px] font-semibold leading-4 text-slate-500 dark:text-slate-400">{chapter.pdfUrl ? t.pdf : `${chapter.count} ${t.questions}`}</span>
                   </span>
                   <span className={cn("flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2", active ? "border-[#1CB0F6] bg-[#1CB0F6] text-white" : "border-[#E5E5E5] bg-white dark:border-white/10")}>
                     {active ? <span className="h-2 w-2 rounded-full bg-white" /> : null}

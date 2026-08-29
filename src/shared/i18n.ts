@@ -403,6 +403,7 @@ export const chapterPickerCopy = {
     cancel: "Cancel",
     continue: "Continue",
     questions: "questions",
+    pdf: "PDF document",
   },
   vi: {
     title: "Chọn chương",
@@ -411,6 +412,20 @@ export const chapterPickerCopy = {
     cancel: "Hủy",
     continue: "Bắt đầu",
     questions: "câu hỏi",
+    pdf: "Tài liệu PDF",
+  },
+} as const
+
+export const pdfViewerCopy = {
+  en: {
+    subtitle: "Collected exams from previous periods as a PDF document. Read it directly or download it.",
+    download: "Download PDF",
+    close: "Close",
+  },
+  vi: {
+    subtitle: "Tài liệu PDF tổng hợp đề thi của các kỳ trước. Bạn có thể đọc trực tiếp hoặc tải về.",
+    download: "Tải PDF",
+    close: "Đóng",
   },
 } as const
 

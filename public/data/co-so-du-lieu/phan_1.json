@@ -1,0 +1,707 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Cơ sở dữ liệu - Phần 1: Lý thuyết (Mô hình ER, Phụ thuộc hàm, Khoá)",
+  "chapter": "Phần 1",
+  "totalQuestions": 50,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.1 – Mô hình thực thể – liên kết (ER)",
+      "question": "Trong mô hình thực thể – liên kết (ER), khái niệm “thực thể” (entity) được hiểu là gì?",
+      "options": {
+        "A": "Một câu truy vấn SQL để lấy dữ liệu",
+        "B": "Một thuộc tính dùng làm khoá chính",
+        "C": "Một bảng lưu dữ liệu trong cơ sở dữ liệu",
+        "D": "Một đối tượng cụ thể hoặc trừu tượng của thế giới thực mà ta cần lưu trữ thông tin"
+      },
+      "answer": "D",
+      "explainAnswer": "Thực thể là đối tượng của thế giới thực (ví dụ Phân xưởng, Linh kiện, Động cơ) cần lưu trữ; “bảng” là cách cài đặt thực thể trong mô hình quan hệ, không phải định nghĩa của thực thể."
+    },
+    {
+      "id": 2,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.1 – Mô hình thực thể – liên kết (ER)",
+      "question": "Tập thực thể (entity set) trong mô hình ER là gì?",
+      "options": {
+        "A": "Tập hợp các thực thể cùng loại, có chung một tập thuộc tính",
+        "B": "Tập hợp các thuộc tính của một thực thể",
+        "C": "Tập hợp các khoá chính của lược đồ",
+        "D": "Tập hợp các mối quan hệ giữa các bảng"
+      },
+      "answer": "A",
+      "explainAnswer": "Ví dụ tập thực thể LINHKIEN gồm tất cả các linh kiện – các thực thể cùng loại, cùng tập thuộc tính."
+    },
+    {
+      "id": 3,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.1 – Mô hình thực thể – liên kết (ER)",
+      "question": "Trong mô hình ER, thuộc tính (attribute) dùng để làm gì?",
+      "options": {
+        "A": "Mô tả các đặc điểm, tính chất của một thực thể hoặc một mối quan hệ",
+        "B": "Lưu trữ kết quả truy vấn",
+        "C": "Xác định số bảng của cơ sở dữ liệu",
+        "D": "Tự động tạo liên kết giữa các bảng"
+      },
+      "answer": "A",
+      "explainAnswer": "Thuộc tính mô tả đặc trưng: ví dụ thực thể Linh kiện có thuộc tính Mã linh kiện, Tên linh kiện."
+    },
+    {
+      "id": 4,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.1 – Mô hình thực thể – liên kết (ER)",
+      "question": "Thuộc tính khoá (key attribute) trong mô hình ER có vai trò gì?",
+      "options": {
+        "A": "Định danh duy nhất mỗi thực thể trong một tập thực thể",
+        "B": "Cho phép lưu nhiều giá trị trùng lặp",
+        "C": "Cho phép giá trị NULL",
+        "D": "Lưu trữ dữ liệu kiểu văn bản dài"
+      },
+      "answer": "A",
+      "explainAnswer": "Ví dụ Mã linh kiện dùng để phân biệt duy nhất từng linh kiện; mỗi thực thể có giá trị thuộc tính khoá khác nhau."
+    },
+    {
+      "id": 5,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.1 – Mô hình thực thể – liên kết (ER)",
+      "question": "Cho mô hình: “Một Phân xưởng sản xuất nhiều Linh kiện; mỗi Linh kiện thuộc về đúng một Phân xưởng”. Bản số của mối quan hệ Phân xưởng – Linh kiện là gì?",
+      "options": {
+        "A": "1 – n",
+        "B": "n – m",
+        "C": "1 – 1",
+        "D": "Không xác định được"
+      },
+      "answer": "A",
+      "explainAnswer": "Một phân xưởng tương ứng nhiều linh kiện, còn mỗi linh kiện thuộc một phân xưởng nên đây là quan hệ 1 – nhiều (1 – n)."
+    },
+    {
+      "id": 6,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.1 – Mô hình thực thể – liên kết (ER)",
+      "question": "Theo đề mẫu: “Một Linh kiện có mặt trong nhiều Động cơ; một Động cơ gồm nhiều Linh kiện”. Kiểu liên kết giữa Linh kiện và Động cơ là gì?",
+      "options": {
+        "A": "Không có liên kết",
+        "B": "n – m (nhiều – nhiều)",
+        "C": "1 – n",
+        "D": "1 – 1"
+      },
+      "answer": "B",
+      "explainAnswer": "Mỗi linh kiện nằm trong nhiều động cơ và mỗi động cơ dùng nhiều linh kiện nên đây là quan hệ nhiều – nhiều (n – m)."
+    },
+    {
+      "id": 7,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.1 – Mô hình thực thể – liên kết (ER)",
+      "question": "Mối quan hệ bộ ba (ternary relationship) khác mối quan hệ nhị phân (binary relationship) ở điểm nào?",
+      "options": {
+        "A": "Liên quan đến ba tập thực thể thay vì hai",
+        "B": "Không có điểm gì khác nhau",
+        "C": "Có ba khoá chính",
+        "D": "Có đúng ba thuộc tính"
+      },
+      "answer": "A",
+      "explainAnswer": "Bậc của mối quan hệ xác định bởi số tập thực thể tham gia: nhị phân là hai, bộ ba là ba tập thực thể."
+    },
+    {
+      "id": 8,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.1 – Mô hình thực thể – liên kết (ER)",
+      "question": "Khi chuyển mối quan hệ nhiều – nhiều (n – m) giữa Linh kiện và Động cơ sang mô hình quan hệ, cách làm đúng là gì?",
+      "options": {
+        "A": "Bỏ qua mối quan hệ này",
+        "B": "Tạo một bảng trung gian gồm khoá chính của cả hai bảng và các thuộc tính riêng của quan hệ (nếu có)",
+        "C": "Đặt khoá ngoại ở một trong hai bảng là đủ",
+        "D": "Ghép tất cả thuộc tính của hai thực thể vào một bảng duy nhất"
+      },
+      "answer": "B",
+      "explainAnswer": "Quan hệ n – m không thể biểu diễn bằng một khoá ngoại đơn thuần; phải tạo bảng trung gian (bảng quan hệ liên kết) chứa khoá chính của cả hai phía."
+    },
+    {
+      "id": 9,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.1 – Mô hình thực thể – liên kết (ER)",
+      "question": "Vì sao khi thiết kế, ta không nên gộp thông tin Linh kiện và Động cơ vào cùng một bảng duy nhất?",
+      "options": {
+        "A": "Vì dữ liệu lưu trên đĩa sẽ quá lớn",
+        "B": "Vì làm dư thừa dữ liệu và gây dị thường khi cập nhật (thêm, sửa, xoá)",
+        "C": "Vì khi đó bảng không có khoá chính",
+        "D": "Vì SQL không cho phép bảng có nhiều cột"
+      },
+      "answer": "B",
+      "explainAnswer": "Gộp hai thực thể có quan hệ n – m vào một bảng làm mỗi linh kiện bị lặp lại cho từng động cơ, gây dư thừa và dị thường cập nhật."
+    },
+    {
+      "id": 10,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.1 – Mô hình thực thể – liên kết (ER)",
+      "question": "Một thuộc tính lặp (multivalued attribute) – ví dụ một động cơ có nhiều “phụ tùng đi kèm” – nên được thiết kế thế nào cho chuẩn?",
+      "options": {
+        "A": "Bỏ qua thuộc tính đó",
+        "B": "Tạo sẵn một số cột cố định, không giới hạn số lượng",
+        "C": "Tách thành một bảng riêng hoặc bảng quan hệ liên kết",
+        "D": "Lưu thành một chuỗi phân cách bởi dấu phẩy trong một cột"
+      },
+      "answer": "C",
+      "explainAnswer": "Chuẩn hoá yêu cầu mỗi ô chỉ chứa một giá trị; thuộc tính đa trị phải được tách thành bảng riêng để tránh dư thừa và khó truy vấn."
+    },
+    {
+      "id": 11,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.1 – Mô hình thực thể – liên kết (ER)",
+      "question": "Thuộc tính kết hợp (composite attribute) là thuộc tính như thế nào?",
+      "options": {
+        "A": "Có kiểu dữ liệu số",
+        "B": "Có thể nhận nhiều giá trị cùng lúc",
+        "C": "Được tạo thành từ nhiều thành phần nhỏ hơn, ví dụ Họ tên gồm Họ, Đệm, Tên",
+        "D": "Là khoá ngoại của bảng khác"
+      },
+      "answer": "C",
+      "explainAnswer": "Thuộc tính kết hợp phân rã được thành các thuộc tính thành phần; khi cài đặt có thể giữ nguyên hoặc tách thành các cột riêng."
+    },
+    {
+      "id": 12,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.1 – Mô hình thực thể – liên kết (ER)",
+      "question": "Với mô hình PHANXUONG(MaPX, TenPX), LINHKIEN(MaLK, TenLK), DONGCO(MaDC, TenDC), để biết “một động cơ gồm những linh kiện nào”, truy vấn phải dựa vào đâu?",
+      "options": {
+        "A": "Bảng PHANXUONG",
+        "B": "Chỉ bảng DONGCO",
+        "C": "Không thể truy vấn được vì thiếu thông tin",
+        "D": "Bảng trung gian liên kết LINHKIEN – DONGCO"
+      },
+      "answer": "D",
+      "explainAnswer": "Thông tin “động cơ gồm linh kiện nào” nằm ở quan hệ n – m, phải có bảng trung gian chứa cặp (MaLK, MaDC)."
+    },
+    {
+      "id": 13,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.1 – Mô hình thực thể – liên kết (ER)",
+      "question": "Quan hệ “Sản xuất” giữa Phân xưởng và Linh kiện cần lưu thêm “Số lượng sản xuất” và “Ngày sản xuất”. Hai thông tin này nên được gán cho đối tượng nào trong mô hình ER?",
+      "options": {
+        "A": "Mối quan hệ Sản xuất (thuộc tính của quan hệ – relationship attribute)",
+        "B": "Không lưu trữ được",
+        "C": "Thực thể Phân xưởng",
+        "D": "Thực thể Linh kiện"
+      },
+      "answer": "A",
+      "explainAnswer": "Số lượng, ngày sản xuất mô tả bản thân sự liên kết giữa phân xưởng và linh kiện, nên là thuộc tính của mối quan hệ."
+    },
+    {
+      "id": 14,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.1 – Mô hình thực thể – liên kết (ER)",
+      "question": "Khái niệm nào sau đây KHÔNG thuộc mô hình thực thể – liên kết?",
+      "options": {
+        "A": "Thực thể",
+        "B": "Chỉ mục (index)",
+        "C": "Mối quan hệ",
+        "D": "Thuộc tính"
+      },
+      "answer": "B",
+      "explainAnswer": "Chỉ mục là kỹ thuật tăng tốc truy vấn ở mức vật lý, không nằm trong mô hình ER (mô hình ở mức khái niệm)."
+    },
+    {
+      "id": 15,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.2 – Mô hình quan hệ, khoá & phụ thuộc hàm",
+      "question": "Mô hình quan hệ (relational model) biểu diễn dữ liệu dưới dạng nào?",
+      "options": {
+        "A": "Cây phân cấp cha – con",
+        "B": "Tập các tài liệu JSON",
+        "C": "Bảng (quan hệ) gồm các dòng và cột",
+        "D": "Đồ thị các nút và cạnh"
+      },
+      "answer": "C",
+      "explainAnswer": "Đơn vị trung tâm của mô hình quan hệ là quan hệ (bảng) – tập hợp các bộ sắp thành dòng, mỗi dòng gồm các cột thuộc tính."
+    },
+    {
+      "id": 16,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.2 – Mô hình quan hệ, khoá & phụ thuộc hàm",
+      "question": "Trong mô hình quan hệ, một “bộ” (tuple) tương ứng với gì?",
+      "options": {
+        "A": "Một chỉ mục",
+        "B": "Một cột của bảng",
+        "C": "Toàn bộ bảng",
+        "D": "Một dòng của bảng"
+      },
+      "answer": "D",
+      "explainAnswer": "Mỗi dòng của quan hệ là một bộ dữ liệu biểu diễn một thực thể hoặc một thể hiện của quan hệ."
+    },
+    {
+      "id": 17,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.2 – Mô hình quan hệ, khoá & phụ thuộc hàm",
+      "question": "Khái niệm “lược đồ quan hệ” (relation schema) được hiểu là gì?",
+      "options": {
+        "A": "Bảng trung gian của quan hệ n – m",
+        "B": "Dữ liệu hiện có trong bảng tại một thời điểm",
+        "C": "Một câu truy vấn SQL",
+        "D": "Tên quan hệ cùng tập hợp các thuộc tính và miền giá trị của chúng"
+      },
+      "answer": "D",
+      "explainAnswer": "Lược đồ quan hệ là phần cấu trúc (mô tả), còn “thể hiện” của quan hệ là dữ liệu thực tế tại một thời điểm."
+    },
+    {
+      "id": 18,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.2 – Mô hình quan hệ, khoá & phụ thuộc hàm",
+      "question": "“Ngôi” (degree) của một quan hệ được xác định bởi yếu tố nào?",
+      "options": {
+        "A": "Số quan hệ trong cơ sở dữ liệu",
+        "B": "Số dòng của quan hệ",
+        "C": "Số khoá ngoại",
+        "D": "Số thuộc tính (cột) của quan hệ"
+      },
+      "answer": "D",
+      "explainAnswer": "Ngôi của quan hệ là số thuộc tính; ví dụ quan hệ LINHKIEN(MaLK, TenLK) có ngôi bằng 2."
+    },
+    {
+      "id": 19,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.2 – Mô hình quan hệ, khoá & phụ thuộc hàm",
+      "question": "“Lực lượng” (cardinality) của một quan hệ là gì?",
+      "options": {
+        "A": "Số khoá chính",
+        "B": "Số dòng (số bộ) của quan hệ",
+        "C": "Số cột của quan hệ",
+        "D": "Kích thước dữ liệu trên đĩa"
+      },
+      "answer": "B",
+      "explainAnswer": "Lực lượng (số bộ) của quan hệ thay đổi theo dữ liệu; ngôi (số thuộc tính) là cố định theo lược đồ."
+    },
+    {
+      "id": 20,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.2 – Mô hình quan hệ, khoá & phụ thuộc hàm",
+      "question": "Phụ thuộc hàm X → Y trên lược đồ quan hệ R có nghĩa là gì?",
+      "options": {
+        "A": "Thuộc tính Y quyết định giá trị của X",
+        "B": "X phải là khoá chính của quan hệ",
+        "C": "X và Y phải có cùng kiểu dữ liệu",
+        "D": "Với mọi cặp bộ t1, t2 bất kỳ, nếu t1[X] = t2[X] thì t1[Y] = t2[Y]"
+      },
+      "answer": "D",
+      "explainAnswer": "X → Y nghĩa là giá trị của X xác định duy nhất giá trị của Y: hai bộ trùng nhau trên X thì phải trùng nhau trên Y."
+    },
+    {
+      "id": 21,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.2 – Mô hình quan hệ, khoá & phụ thuộc hàm",
+      "question": "Phụ thuộc hàm X → Y được gọi là phụ thuộc hàm hiển nhiên (trivial) khi nào?",
+      "options": {
+        "A": "Y ⊆ X",
+        "B": "Y là khoá chính của X",
+        "C": "X không xuất hiện trong quan hệ",
+        "D": "X và Y rời nhau"
+      },
+      "answer": "A",
+      "explainAnswer": "Phụ thuộc hàm hiển nhiên khi vế phải là tập con của vế trái, ví dụ AB → A; nó luôn đúng trong mọi quan hệ."
+    },
+    {
+      "id": 22,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.2 – Mô hình quan hệ, khoá & phụ thuộc hàm",
+      "question": "Cho quan hệ SINHVIEN(MaSV, Ten, Lop). Phụ thuộc hàm nào sau đây là phụ thuộc hàm hiển nhiên?",
+      "options": {
+        "A": "Lop → MaSV",
+        "B": "Ten → Lop",
+        "C": "MaSV, Ten → MaSV",
+        "D": "MaSV → Ten"
+      },
+      "answer": "C",
+      "explainAnswer": "MaSV, Ten → MaSV có vế phải (MaSV) là tập con của vế trái nên là phụ thuộc hàm hiển nhiên, luôn đúng."
+    },
+    {
+      "id": 23,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.2 – Mô hình quan hệ, khoá & phụ thuộc hàm",
+      "question": "Giả sử mỗi MaSV là duy nhất và xác định hoàn toàn Ten, Lop của sinh viên. Phụ thuộc hàm nào đúng với bảng SINHVIEN?",
+      "options": {
+        "A": "Ten → MaSV",
+        "B": "Lop → MaSV",
+        "C": "MaSV → Ten, Lop",
+        "D": "MaSV → Lop và Lop → MaSV"
+      },
+      "answer": "C",
+      "explainAnswer": "Mã sinh viên duy nhất nên biết MaSV ta xác định được Ten và Lop, tức MaSV → Ten, Lop."
+    },
+    {
+      "id": 24,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.2 – Mô hình quan hệ, khoá & phụ thuộc hàm",
+      "question": "Hai tập phụ thuộc hàm F và G được gọi là tương đương khi nào?",
+      "options": {
+        "A": "Các phụ thuộc hàm của F và G có cùng vế trái",
+        "B": "F và G có cùng số lượng phụ thuộc hàm",
+        "C": "F là tập con của G",
+        "D": "Bao đóng của F bằng bao đóng của G (F⁺ = G⁺)"
+      },
+      "answer": "D",
+      "explainAnswer": "F tương đương G khi mọi phụ thuộc hàm suy dẫn được từ F cũng suy dẫn được từ G và ngược lại, tức F⁺ = G⁺."
+    },
+    {
+      "id": 25,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.2 – Mô hình quan hệ, khoá & phụ thuộc hàm",
+      "question": "Cho R(A, B, C, D) với F = {A → B, B → C}. Từ F suy ra được A → C nhờ quy tắc suy diễn nào?",
+      "options": {
+        "A": "Bắc cầu",
+        "B": "Hợp (union)",
+        "C": "Phản xạ",
+        "D": "Tăng trưởng"
+      },
+      "answer": "A",
+      "explainAnswer": "Quy tắc bắc cầu: nếu X → Y và Y → Z thì X → Z. Ở đây A → B, B → C nên A → C."
+    },
+    {
+      "id": 26,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.2 – Mô hình quan hệ, khoá & phụ thuộc hàm",
+      "question": "Trong mô hình quan hệ, “khoá chính” (primary key) là gì?",
+      "options": {
+        "A": "Bất kỳ thuộc tính nào trong quan hệ",
+        "B": "Thuộc tính (hoặc tập thuộc tính) được chọn để định danh duy nhất mỗi bộ và không nhận giá trị NULL",
+        "C": "Thuộc tính có thể chứa nhiều giá trị trùng lặp",
+        "D": "Một khoá ngoại tham chiếu sang bảng khác"
+      },
+      "answer": "B",
+      "explainAnswer": "Khoá chính là tập thuộc tính tối thiểu xác định duy nhất bộ, được hệ quản trị tự động đảm bảo tính duy nhất và không NULL."
+    },
+    {
+      "id": 27,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.2 – Mô hình quan hệ, khoá & phụ thuộc hàm",
+      "question": "Khoá ngoại (foreign key) được dùng với mục đích chính nào?",
+      "options": {
+        "A": "Kiểm tra miền giá trị của thuộc tính",
+        "B": "Tăng tốc độ truy vấn",
+        "C": "Định danh duy nhất các bộ trong cùng một bảng",
+        "D": "Thể hiện mối quan hệ giữa hai bảng bằng cách tham chiếu đến khoá chính của bảng khác"
+      },
+      "answer": "D",
+      "explainAnswer": "Khoá ngoại là tập thuộc tính trong bảng này tham chiếu khoá chính của bảng khác, giúp thực thi tính toàn vẹn tham chiếu."
+    },
+    {
+      "id": 28,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.2 – Mô hình quan hệ, khoá & phụ thuộc hàm",
+      "question": "“Siêu khoá” (superkey) của một quan hệ R là gì?",
+      "options": {
+        "A": "Tập các khoá ngoại của R",
+        "B": "Tập thuộc tính mà giá trị của nó xác định duy nhất các bộ của R (có thể chứa thuộc tính thừa)",
+        "C": "Tập thuộc tính tối thiểu xác định duy nhất bộ",
+        "D": "Một thuộc tính bất kỳ của R"
+      },
+      "answer": "B",
+      "explainAnswer": "Siêu khoá chỉ cần đủ điều kiện xác định duy nhất bộ; nó có thể chứa thuộc tính thừa, ví dụ (MaSV, Ten) vẫn là siêu khoá nếu MaSV là khoá."
+    },
+    {
+      "id": 29,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.2 – Mô hình quan hệ, khoá & phụ thuộc hàm",
+      "question": "Khoá tối thiểu (candidate key) khác siêu khoá ở điểm nào?",
+      "options": {
+        "A": "Không có sự khác biệt nào",
+        "B": "Không chứa thuộc tính thừa: mọi tập con thực sự của nó đều không phải là siêu khoá",
+        "C": "Phải có kiểu dữ liệu số",
+        "D": "Luôn chỉ gồm một thuộc tính"
+      },
+      "answer": "B",
+      "explainAnswer": "Khoá tối thiểu là siêu khoá đồng thời tối tiểu (bỏ bất kỳ thuộc tính nào thì không còn xác định duy nhất bộ)."
+    },
+    {
+      "id": 30,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.2 – Mô hình quan hệ, khoá & phụ thuộc hàm",
+      "question": "Cho lược đồ R(A, B, C, D) với F = {A → B, B → C, C → D}. Khoá tối thiểu của R là tập nào?",
+      "options": {
+        "A": "B",
+        "B": "A",
+        "C": "C",
+        "D": "D"
+      },
+      "answer": "B",
+      "explainAnswer": "A⁺ = {A, B, C, D} = R nên A là siêu khoá; các tập con của A không xác định được gì nên A là khoá tối thiểu duy nhất."
+    },
+    {
+      "id": 31,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.2 – Mô hình quan hệ, khoá & phụ thuộc hàm",
+      "question": "Cho R(A, B, C, D) với F = {A → B, B → A, B → C, C → D}. Phát biểu nào sau đây đúng?",
+      "options": {
+        "A": "Chỉ B là khoá tối thiểu",
+        "B": "Chỉ A là khoá tối thiểu",
+        "C": "R không có khoá tối thiểu nào",
+        "D": "Cả A và B đều là khoá tối thiểu"
+      },
+      "answer": "D",
+      "explainAnswer": "A⁺ = R và B⁺ = R; đồng thời A, B là các tập con thực sự không phải siêu khoá nên cả hai đều là khoá tối thiểu."
+    },
+    {
+      "id": 32,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.2 – Mô hình quan hệ, khoá & phụ thuộc hàm",
+      "question": "Cho quan hệ SANXUAT(MaPX, MaLK, TenLK) với phụ thuộc hàm MaLK → TenLK. Khoá của quan hệ là (MaPX, MaLK). Nhận xét nào đúng?",
+      "options": {
+        "A": "TenLK phụ thuộc bộ phận vào khoá, gây dư thừa dữ liệu khi linh kiện được sản xuất ở nhiều phân xưởng",
+        "B": "TenLK phụ thuộc hàm đầy đủ vào khoá nên dữ liệu hoàn toàn chuẩn",
+        "C": "TenLK không có quan hệ gì với khoá",
+        "D": "Quan hệ không cần khoá ngoại"
+      },
+      "answer": "A",
+      "explainAnswer": "TenLK chỉ phụ thuộc vào MaLK (một phần của khoá) nên bị lặp lại ở mọi dòng của cùng linh kiện – đây là phụ thuộc hàm bộ phận, cần tách bảng."
+    },
+    {
+      "id": 33,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.2 – Mô hình quan hệ, khoá & phụ thuộc hàm",
+      "question": "Điều kiện cần và đủ để tập thuộc tính K là khoá của lược đồ R là gì?",
+      "options": {
+        "A": "K không chứa thuộc tính NULL",
+        "B": "K⁺ = R (bao đóng của K bằng toàn bộ thuộc tính) và K tối thiểu",
+        "C": "K là tập các khoá ngoại",
+        "D": "K có ít nhất hai thuộc tính"
+      },
+      "answer": "B",
+      "explainAnswer": "K phải là siêu khoá (bao đóng bằng R) và tối tiểu – không có tập con thực sự nào cũng là siêu khoá."
+    },
+    {
+      "id": 34,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.2 – Mô hình quan hệ, khoá & phụ thuộc hàm",
+      "question": "Miền giá trị (domain) của một thuộc tính là gì?",
+      "options": {
+        "A": "Khoá chính của bảng chứa thuộc tính",
+        "B": "Số dòng của bảng chứa thuộc tính",
+        "C": "Tập hợp các giá trị hợp lệ mà thuộc tính đó có thể nhận",
+        "D": "Tên của bảng chứa thuộc tính"
+      },
+      "answer": "C",
+      "explainAnswer": "Ví dụ thuộc tính DiemThi có miền giá trị là đoạn [0, 100] hoặc là tập số thực hợp lệ."
+    },
+    {
+      "id": 35,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.2 – Mô hình quan hệ, khoá & phụ thuộc hàm",
+      "question": "Chuyển quan hệ 1 – n giữa PHANXUONG (1) và LINHKIEN (n) sang mô hình quan hệ, cách làm đúng là gì?",
+      "options": {
+        "A": "Đặt khoá ngoại MaPX (khoá chính của bên 1) vào bảng LINHKIEN (bên nhiều)",
+        "B": "Không biểu diễn được quan hệ 1 – n",
+        "C": "Đặt khoá ngoại MaLK vào bảng PHANXUONG",
+        "D": "Tạo thêm bảng trung gian"
+      },
+      "answer": "A",
+      "explainAnswer": "Quan hệ 1 – n thể hiện bằng cách đưa khoá chính của bên “một” làm khoá ngoại sang bảng bên “nhiều”."
+    },
+    {
+      "id": 36,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.2 – Mô hình quan hệ, khoá & phụ thuộc hàm",
+      "question": "Bao đóng X⁺ của tập thuộc tính X đối với tập phụ thuộc hàm F là gì?",
+      "options": {
+        "A": "Tập tất cả các thuộc tính suy dẫn được từ X thông qua F",
+        "B": "Số phụ thuộc hàm có vế trái chứa X",
+        "C": "Tập các khoá ngoại của X",
+        "D": "Tập các bộ dữ liệu có giá trị X"
+      },
+      "answer": "A",
+      "explainAnswer": "X⁺ gồm X và mọi thuộc tính có thể suy ra từ X bằng các phụ thuộc hàm trong F; dùng để kiểm tra X có phải siêu khoá không (X⁺ = R)."
+    },
+    {
+      "id": 37,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.3 – Tiên đề Armstrong, bao đóng & khoá",
+      "question": "Nội dung của tiên đề phản xạ (reflexivity) trong hệ tiên đề Armstrong là gì?",
+      "options": {
+        "A": "Nếu Y ⊆ X thì X → Y",
+        "B": "Nếu X → Y thì XZ → YZ",
+        "C": "Nếu X → Y và Y → Z thì X → Z",
+        "D": "Nếu X → Y thì Y → X"
+      },
+      "answer": "A",
+      "explainAnswer": "Tiên đề phản xạ: mọi tập con của X đều được xác định bởi X, tức Y ⊆ X kéo theo X → Y (đây cũng chính là phụ thuộc hàm hiển nhiên)."
+    },
+    {
+      "id": 38,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.3 – Tiên đề Armstrong, bao đóng & khoá",
+      "question": "Nội dung của tiên đề tăng trưởng (augmentation) trong hệ tiên đề Armstrong là gì?",
+      "options": {
+        "A": "Nếu X → Y thì XZ → YZ",
+        "B": "Nếu Y ⊆ X thì X → Y",
+        "C": "Nếu X → Y thì Y → X",
+        "D": "Nếu X → Y và Y → Z thì X → Z"
+      },
+      "answer": "A",
+      "explainAnswer": "Tiên đề tăng trưởng: khi X xác định Y, thêm cùng một tập thuộc tính Z vào cả hai vế thì XZ vẫn xác định YZ."
+    },
+    {
+      "id": 39,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.3 – Tiên đề Armstrong, bao đóng & khoá",
+      "question": "Nội dung của tiên đề bắc cầu (transitivity) trong hệ tiên đề Armstrong là gì?",
+      "options": {
+        "A": "Nếu Y ⊆ X thì X → Y",
+        "B": "Nếu X → Y và Y → Z thì X → Z",
+        "C": "Nếu X → Y thì Y → X",
+        "D": "Nếu X → Y thì XZ → YZ"
+      },
+      "answer": "B",
+      "explainAnswer": "Tiên đề bắc cầu: phụ thuộc hàm có tính truyền – X xác định Y, Y xác định Z thì X xác định Z."
+    },
+    {
+      "id": 40,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.3 – Tiên đề Armstrong, bao đóng & khoá",
+      "question": "Từ X → Y và X → Z, theo quy tắc suy diễn bổ sung “hợp” (union) ta suy ra được gì?",
+      "options": {
+        "A": "X → YZ",
+        "B": "Y → Z",
+        "C": "XZ → Y",
+        "D": "XY → Z"
+      },
+      "answer": "A",
+      "explainAnswer": "Quy tắc hợp: nếu X xác định Y và X xác định Z thì X xác định hợp của Y và Z, tức X → YZ."
+    },
+    {
+      "id": 41,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.3 – Tiên đề Armstrong, bao đóng & khoá",
+      "question": "Từ X → YZ, theo quy tắc suy diễn bổ sung “phân rã” (decomposition) ta suy ra được gì?",
+      "options": {
+        "A": "Y → X",
+        "B": "Chỉ X → Z",
+        "C": "Cả X → Y và X → Z",
+        "D": "Chỉ X → Y"
+      },
+      "answer": "C",
+      "explainAnswer": "Quy tắc phân rã: nếu X xác định một tập thuộc tính YZ thì X xác định từng tập con của nó, tức X → Y và X → Z."
+    },
+    {
+      "id": 42,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.3 – Tiên đề Armstrong, bao đóng & khoá",
+      "question": "Quy tắc suy diễn “giả bắc cầu” (pseudotransitivity) phát biểu như thế nào?",
+      "options": {
+        "A": "Nếu X → Y và WY → Z thì WX → Z",
+        "B": "Nếu Y ⊆ X thì X → Y",
+        "C": "Nếu X → Y thì Y → X",
+        "D": "Nếu X → Y thì XZ → YZ"
+      },
+      "answer": "A",
+      "explainAnswer": "Giả bắc cầu là dạng tổng quát của bắc cầu: X → Y kết hợp với WY → Z cho ta WX → Z."
+    },
+    {
+      "id": 43,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.3 – Tiên đề Armstrong, bao đóng & khoá",
+      "question": "Hệ tiên đề Armstrong được đánh giá là đúng đắn (sound) và đầy đủ (complete). Ý nghĩa của hai tính chất này là gì?",
+      "options": {
+        "A": "Chỉ áp dụng cho mô hình ER",
+        "B": "Áp dụng được cho mọi hệ quản trị cơ sở dữ liệu",
+        "C": "Mọi phụ thuộc hàm suy ra được đều đúng và mọi phụ thuộc hàm đúng đều suy ra được từ F",
+        "D": "Chỉ cần đúng, không cần đầy đủ"
+      },
+      "answer": "C",
+      "explainAnswer": "Đúng đắn: không suy ra phụ thuộc hàm sai. Đầy đủ: mọi phụ thuộc hàm thuộc bao đóng F⁺ đều suy dẫn được bằng các tiên đề."
+    },
+    {
+      "id": 44,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.3 – Tiên đề Armstrong, bao đóng & khoá",
+      "question": "Cho F = {ZY → C; Y → D; CD → E; CE → GH; G → Z}. Bước đầu tiên để chứng minh ZY → E, ta có thể suy ra ZY → Y nhờ quy tắc nào?",
+      "options": {
+        "A": "Tăng trưởng",
+        "B": "Bắc cầu",
+        "C": "Thay thế từ giả thiết",
+        "D": "Phản xạ (Y ⊆ ZY)"
+      },
+      "answer": "D",
+      "explainAnswer": "Vì Y là tập con của ZY nên theo tiên đề phản xạ ta có ZY → Y."
+    },
+    {
+      "id": 45,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.3 – Tiên đề Armstrong, bao đóng & khoá",
+      "question": "Tiếp tục chứng minh ZY → E với F = {ZY → C; Y → D; CD → E; CE → GH; G → Z}. Từ ZY → Y và Y → D, ta suy ra được gì?",
+      "options": {
+        "A": "ZY → CD",
+        "B": "Không suy ra được gì",
+        "C": "D → ZY",
+        "D": "ZY → D (nhờ bắc cầu)"
+      },
+      "answer": "D",
+      "explainAnswer": "Áp dụng bắc cầu cho ZY → Y và Y → D, ta được ZY → D."
+    },
+    {
+      "id": 46,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.3 – Tiên đề Armstrong, bao đóng & khoá",
+      "question": "Từ ZY → C (giả thiết) và ZY → D (đã chứng minh), ta suy ra được gì?",
+      "options": {
+        "A": "ZY → CD (nhờ quy tắc hợp)",
+        "B": "CD → ZY",
+        "C": "ZY → GH",
+        "D": "C → D"
+      },
+      "answer": "A",
+      "explainAnswer": "Quy tắc hợp: cùng vế trái ZY xác định C và D nên ZY xác định cả CD."
+    },
+    {
+      "id": 47,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.3 – Tiên đề Armstrong, bao đóng & khoá",
+      "question": "Kết thúc chứng minh: từ ZY → CD và CD → E (giả thiết), quy tắc nào cho phép kết luận ZY → E?",
+      "options": {
+        "A": "Hợp",
+        "B": "Bắc cầu",
+        "C": "Phản xạ",
+        "D": "Tăng trưởng"
+      },
+      "answer": "B",
+      "explainAnswer": "Bắc cầu: ZY → CD và CD → E kéo theo ZY → E. Vậy ZY → E thuộc bao đóng của F."
+    },
+    {
+      "id": 48,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.3 – Tiên đề Armstrong, bao đóng & khoá",
+      "question": "Với F = {ZY → C; Y → D; CD → E; CE → GH; G → Z}, hãy tính bao đóng (ZY)⁺. Kết quả là gì?",
+      "options": {
+        "A": "{Z, Y, C, D}",
+        "B": "{Z, Y, D}",
+        "C": "{Z, Y, C, D, E, G, H}",
+        "D": "{Z, Y, G, H}"
+      },
+      "answer": "C",
+      "explainAnswer": "(ZY)⁺ bắt đầu từ {Z, Y}; dùng Y→D được D; ZY→C được C; CD→E được E; CE→GH được G, H. Kết quả {Z, Y, C, D, E, G, H} = R."
+    },
+    {
+      "id": 49,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.3 – Tiên đề Armstrong, bao đóng & khoá",
+      "question": "Với F = {ZY → C; Y → D; CD → E; CE → GH; G → Z}, phát biểu nào đúng về vai trò của ZY?",
+      "options": {
+        "A": "ZY là khoá tối thiểu (candidate key) duy nhất của lược đồ",
+        "B": "Chỉ Y mới là khoá",
+        "C": "ZY là siêu khoá nhưng không phải khoá tối thiểu",
+        "D": "ZY không phải là khoá"
+      },
+      "answer": "A",
+      "explainAnswer": "(ZY)⁺ = R nên ZY là siêu khoá; kiểm tra Z⁺ = {Z} và Y⁺ = {Y, D} đều khác R nên ZY tối tiểu – vậy ZY là khoá tối thiểu (và là khoá duy nhất)."
+    },
+    {
+      "id": 50,
+      "chapter": "Phần 1",
+      "sourceChapter": "Nhóm 1.3 – Tiên đề Armstrong, bao đóng & khoá",
+      "question": "Cho F = {A → BC, B → D, D → E}. So sánh bao đóng A⁺ và B⁺, kết luận nào đúng?",
+      "options": {
+        "A": "Không tính được",
+        "B": "A⁺ = {A, B, C, D, E} và B⁺ = {B, D, E}",
+        "C": "Cả hai bằng nhau",
+        "D": "A⁺ = {A, B, C} và B⁺ = {B, D}"
+      },
+      "answer": "B",
+      "explainAnswer": "A⁺: A→BC được {A,B,C}; B→D được D; D→E được E → {A,B,C,D,E}. B⁺: B→D được {B,D}; D→E được E → {B,D,E}."
+    }
+  ]
+}

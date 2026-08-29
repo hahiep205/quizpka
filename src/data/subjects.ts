@@ -14,6 +14,7 @@ export type SubjectId =
   | "kinh-te-chinh-tri-mac-lenin"
   | "ky-nang-khoi-nghiep-va-lanh-dao"
   | "bao-mat-ung-dung-he-thong"
+  | "co-so-du-lieu"
   | "toeic"
 
 export type LocalizedText = {
@@ -40,6 +41,8 @@ export type ChapterOption = {
   label: LocalizedText
   /** Chapter labels this option accepts (prefix-matched). Defaults to label.vi when omitted. */
   matches?: string[]
+  /** When set, selecting this option opens the document (e.g. a PDF) instead of a quiz. */
+  pdfUrl?: string
   count: number
 }
 
@@ -468,6 +471,31 @@ export const subjects: Subject[] = [
       { id: "c6", label: { en: "Chapter 6", vi: "Chương 6" }, count: 31 },
       { id: "c7", label: { en: "Chapter 7", vi: "Chương 7" }, count: 18 },
       { id: "c8", label: { en: "Chapter 8", vi: "Chương 8" }, count: 16 },
+    ],
+  },
+  {
+    id: "co-so-du-lieu",
+    code: "DB101",
+    name: { en: "Database", vi: "Cơ sở dữ liệu" },
+    category: { en: "Major", vi: "Chuyên ngành" },
+    exams: [
+      {
+        id: "database-final-bank-1", type: "final", year: 2026, questionCount: 150, durationMinutes: 60,
+        title: { en: "Database", vi: "Cơ sở dữ liệu" },
+        description: { en: "150 questions grouped by parts. Choose a part after clicking Try now.", vi: "150 câu hỏi được chia theo phần. Chọn phần sau khi ấn Thử ngay." },
+        questionBanks: [
+          "/data/co-so-du-lieu/phan_1.json",
+          "/data/co-so-du-lieu/phan_2.json",
+          "/data/co-so-du-lieu/phan_3.json",
+        ],
+      },
+    ],
+    chapters: [
+      { id: "all", label: { en: "All parts", vi: "Toàn bộ (150 câu)" }, count: 150 },
+      { id: "c1", label: { en: "Part 1 - CSDL Theory", vi: "Phần 1 - Lý thuyết CSDL (Khi đi thi sẽ là 2 câu Tự luận)" }, matches: ["Phần 1"], count: 50 },
+      { id: "c2", label: { en: "Part 2 - SQL", vi: "Phần 2 - Trắc SQL (Khi đi thi sẽ là 12 câu Trắc nghiệm)" }, matches: ["Phần 2"], count: 50 },
+      { id: "c3", label: { en: "Part 3 - Advanced CSDL & Applications", vi: "Phần 3 - CSDL mở rộng & ứng dụng (Khi đi thi sẽ là 8 câu Tự luận)" }, matches: ["Phần 3"], count: 50 },
+      { id: "de-suutam", label: { en: "Collected exams from previous periods", vi: "Đề sưu tầm của các đợt thi trước" }, pdfUrl: "/data/co-so-du-lieu/De_thi_Co_so_du_lieu.pdf", count: 0 },
     ],
   },
   {

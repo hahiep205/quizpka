@@ -3,6 +3,28 @@
 
 <head>
   <meta charset="UTF-8" />
+  <script>
+    // Chặn Developer Tools toàn bộ trang (chạy ngay từ lần tải đầu tiên).
+    // Bỏ qua localhost để không làm phiền khi phát triển.
+    (function () {
+      if (/^(localhost|127\.0\.0\.1|0\.0\.0\.0|\[::1\])(:\d+)?$/.test(window.location.hostname)) return
+      function block(e) {
+        var k = (e.key || "").toLowerCase()
+        var isDev =
+          e.key === "F12" || e.code === "F12" ||
+          (e.ctrlKey && e.shiftKey && ["i", "j", "c"].indexOf(k) !== -1) ||
+          (e.ctrlKey && ["u", "s"].indexOf(k) !== -1) ||
+          (e.metaKey && e.altKey && ["i", "j", "c"].indexOf(k) !== -1) ||
+          (e.metaKey && ["u", "s"].indexOf(k) !== -1)
+        if (isDev || e.type === "contextmenu") {
+          e.preventDefault()
+          e.stopPropagation()
+        }
+      }
+      document.addEventListener("keydown", block, true)
+      document.addEventListener("contextmenu", block, true)
+    })()
+  </script>
   <link rel="icon" type="image/png" href="/logo.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>QuizPKA</title>

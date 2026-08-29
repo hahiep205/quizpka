@@ -1,0 +1,707 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Cơ sở dữ liệu - Phần 2: Thực hành SQL (SELECT, GROUP BY, JOIN, View, Trigger)",
+  "chapter": "Phần 2",
+  "totalQuestions": 50,
+  "questions": [
+    {
+      "id": 51,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.1 – SELECT cơ bản, toán tử & LIKE",
+      "question": "Câu lệnh SQL nào sau đây KHÔNG thực thi được trong MySQL?",
+      "options": {
+        "A": "SELECT * FROM Lop;",
+        "B": "SELECT COUNT(*) FROM Lop;",
+        "C": "FROM Lop;",
+        "D": "SELECT Lop.cot1 = Lop.cot2 FROM Lop;"
+      },
+      "answer": "C",
+      "explainAnswer": "“FROM Lop;” thiếu mệnh đề SELECT – mệnh đề SELECT là bắt buộc và phải đứng đầu. Hai lệnh còn lại đều hợp lệ (lệnh so sánh cột trả về 1/0 cho từng dòng)."
+    },
+    {
+      "id": 52,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.1 – SELECT cơ bản, toán tử & LIKE",
+      "question": "Câu lệnh SELECT DISTINCT(TenSV) FROM HoTenSinhVien; trả về kết quả như thế nào?",
+      "options": {
+        "A": "Lỗi vì DISTINCT không dùng với hàm",
+        "B": "Các giá trị TenSV chỉ xuất hiện đúng một lần (không trùng lặp)",
+        "C": "Các giá trị TenSV giống hệt nhau (chỉ một giá trị)",
+        "D": "Các giá trị TenSV có thể xuất hiện nhiều lần trong kết quả"
+      },
+      "answer": "B",
+      "explainAnswer": "Từ khoá DISTINCT loại bỏ các giá trị trùng lặp: mỗi giá trị TenSV khác nhau chỉ xuất hiện một lần."
+    },
+    {
+      "id": 53,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.1 – SELECT cơ bản, toán tử & LIKE",
+      "question": "SELECT * FROM offices WHERE country NOT IN ('Vietnam', 'China'); trả về gì?",
+      "options": {
+        "A": "Bảng dữ liệu có cột country chỉ là Vietnam",
+        "B": "Bảng dữ liệu có cột country không phải Vietnam và không phải China",
+        "C": "Bảng dữ liệu có cột country là Vietnam và China",
+        "D": "Bảng dữ liệu có cột country chỉ là China"
+      },
+      "answer": "B",
+      "explainAnswer": "NOT IN ('Vietnam','China') lọc các dòng có giá trị country khác cả hai giá trị đã liệt kê."
+    },
+    {
+      "id": 54,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.1 – SELECT cơ bản, toán tử & LIKE",
+      "question": "SELECT * FROM SinhVien WHERE ten LIKE 'T%G'; trả về các dòng có ten như thế nào?",
+      "options": {
+        "A": "Chỉ đúng chuỗi 'T%G'",
+        "B": "Bắt đầu bằng chữ T và kết thúc bằng chữ G",
+        "C": "Chỉ gồm đúng 3 ký tự T và G",
+        "D": "Bắt đầu bằng T hoặc kết thúc bằng G"
+      },
+      "answer": "B",
+      "explainAnswer": "Ký tự % đại diện cho chuỗi bất kỳ (kể cả rỗng): 'T%G' khớp mọi chuỗi bắt đầu bằng T và kết thúc bằng G."
+    },
+    {
+      "id": 55,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.1 – SELECT cơ bản, toán tử & LIKE",
+      "question": "Trong mệnh đề LIKE, ký tự gạch dưới '_' có ý nghĩa gì?",
+      "options": {
+        "A": "Ký tự 'a' hoặc 'A'",
+        "B": "Chuỗi ký tự bất kỳ (có thể rỗng)",
+        "C": "Đúng một ký tự bất kỳ",
+        "D": "Ký tự gạch dưới"
+      },
+      "answer": "C",
+      "explainAnswer": "'_' khớp đúng một ký tự bất kỳ, ví dụ 'Nguy_n' khớp 'Nguyen' và 'Nguyin'; '%' khớp nhiều ký tự."
+    },
+    {
+      "id": 56,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.1 – SELECT cơ bản, toán tử & LIKE",
+      "question": "WHERE diem BETWEEN 5 AND 7 lọc các dòng có điều kiện gì?",
+      "options": {
+        "A": "diem trong đoạn từ 5 đến 7, bao gồm cả 5 và 7",
+        "B": "diem nhỏ hơn 5",
+        "C": "diem lớn hơn 5 và nhỏ hơn 7",
+        "D": "diem đúng bằng 5 hoặc 7"
+      },
+      "answer": "A",
+      "explainAnswer": "BETWEEN là bao gồm cả hai đầu mút, tương đương (diem >= 5 AND diem <= 7)."
+    },
+    {
+      "id": 57,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.1 – SELECT cơ bản, toán tử & LIKE",
+      "question": "SELECT TenSV FROM SinhVien ORDER BY TenSV DESC; sắp xếp kết quả theo thứ tự nào?",
+      "options": {
+        "A": "Theo mã sinh viên",
+        "B": "Tăng dần theo TenSV",
+        "C": "Giảm dần theo TenSV",
+        "D": "Ngẫu nhiên"
+      },
+      "answer": "C",
+      "explainAnswer": "ORDER BY ... DESC sắp xếp giảm dần (Z→A); mặc định (ASC) là tăng dần."
+    },
+    {
+      "id": 58,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.1 – SELECT cơ bản, toán tử & LIKE",
+      "question": "Kết quả của câu lệnh SELECT 5 > 3; trong MySQL là gì?",
+      "options": {
+        "A": "NULL",
+        "B": "1 (TRUE)",
+        "C": "Lỗi cú pháp",
+        "D": "0 (FALSE)"
+      },
+      "answer": "B",
+      "explainAnswer": "MySQL biểu diễn giá trị đúng là 1, sai là 0; nên 5 > 3 trả về 1."
+    },
+    {
+      "id": 59,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.1 – SELECT cơ bản, toán tử & LIKE",
+      "question": "SELECT Lop.cot1 = Lop.cot2 FROM Lop; trả về gì cho mỗi dòng của bảng Lop?",
+      "options": {
+        "A": "Chuỗi nối giá trị cot1 và cot2",
+        "B": "Chỉ các dòng có cot1 bằng cot2",
+        "C": "Giá trị 1 nếu cot1 bằng cot2, ngược lại 0",
+        "D": "Lỗi vì không so sánh được hai cột"
+      },
+      "answer": "C",
+      "explainAnswer": "Biểu thức so sánh trong mệnh đề SELECT trả về 1 (đúng) hoặc 0 (sai) tương ứng từng dòng – lệnh này hoàn toàn hợp lệ."
+    },
+    {
+      "id": 60,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.1 – SELECT cơ bản, toán tử & LIKE",
+      "question": "Trong MySQL, lấy 10 dòng đầu tiên của bảng SinhVien bằng câu lệnh nào?",
+      "options": {
+        "A": "SELECT FIRST 10 * FROM SinhVien;",
+        "B": "SELECT * FROM SinhVien LIMIT 10;",
+        "C": "SELECT * FROM SinhVien WHERE ROWNUM <= 10;",
+        "D": "SELECT TOP 10 * FROM SinhVien;"
+      },
+      "answer": "B",
+      "explainAnswer": "MySQL dùng LIMIT; TOP thuộc SQL Server, ROWNUM thuộc Oracle, FIRST không phải cú pháp SQL chuẩn."
+    },
+    {
+      "id": 61,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.1 – SELECT cơ bản, toán tử & LIKE",
+      "question": "SELECT TenSV FROM SinhVien WHERE TenSV IS NULL; trả về các dòng như thế nào?",
+      "options": {
+        "A": "TenSV không có giá trị (NULL)",
+        "B": "TenSV bằng chuỗi rỗng ''",
+        "C": "Lỗi vì không so sánh NULL được",
+        "D": "TenSV bằng chuỗi 'NULL'"
+      },
+      "answer": "A",
+      "explainAnswer": "NULL phải kiểm tra bằng IS NULL / IS NOT NULL; không dùng dấu '=' vì NULL không bằng gì kể cả NULL."
+    },
+    {
+      "id": 62,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.1 – SELECT cơ bản, toán tử & LIKE",
+      "question": "WHERE (diem >= 5) AND (diem <= 10) tương đương với điều kiện nào dưới đây?",
+      "options": {
+        "A": "diem NOT BETWEEN 5 AND 10",
+        "B": "diem IN (5, 10)",
+        "C": "diem LIKE '5%'",
+        "D": "diem BETWEEN 5 AND 10"
+      },
+      "answer": "D",
+      "explainAnswer": "BETWEEN 5 AND 10 là cách viết gọn của (diem >= 5) AND (diem <= 10), bao gồm cả hai đầu mút."
+    },
+    {
+      "id": 63,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.2 – Hàm gom nhóm & GROUP BY",
+      "question": "SELECT SUM(officecode) FROM employees; trả về kết quả gì?",
+      "options": {
+        "A": "Tổng các giá trị của cột officecode",
+        "B": "Giá trị lớn nhất của cột officecode",
+        "C": "Giá trị nhỏ nhất của cột officecode",
+        "D": "Số dòng của bảng employees"
+      },
+      "answer": "A",
+      "explainAnswer": "Hàm SUM tính tổng các giá trị số của cột được chỉ định."
+    },
+    {
+      "id": 64,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.2 – Hàm gom nhóm & GROUP BY",
+      "question": "Muốn tính điểm trung bình của cột DiemThi, hàm đúng của MySQL là gì?",
+      "options": {
+        "A": "MEAN(DiemThi)",
+        "B": "AVG(DiemThi)",
+        "C": "Average(DiemThi)",
+        "D": "MEDIAN(DiemThi)"
+      },
+      "answer": "B",
+      "explainAnswer": "Hàm trung bình cộng trong MySQL là AVG (Average không phải tên hàm hợp lệ của MySQL); MEDIAN khác trung bình cộng."
+    },
+    {
+      "id": 65,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.2 – Hàm gom nhóm & GROUP BY",
+      "question": "SELECT COUNT(*) FROM employees; trả về gì?",
+      "options": {
+        "A": "Số giá trị khác NULL của cột đầu tiên",
+        "B": "Tổng các giá trị số trong bảng",
+        "C": "Tổng số cột của bảng employees",
+        "D": "Tổng số dòng của bảng employees"
+      },
+      "answer": "D",
+      "explainAnswer": "COUNT(*) đếm toàn bộ số dòng của bảng, không phân biệt NULL."
+    },
+    {
+      "id": 66,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.2 – Hàm gom nhóm & GROUP BY",
+      "question": "Hàm gom nhóm nào trả về giá trị lớn nhất của một cột?",
+      "options": {
+        "A": "MAX",
+        "B": "COUNT",
+        "C": "AVG",
+        "D": "SUM"
+      },
+      "answer": "A",
+      "explainAnswer": "MAX trả về giá trị lớn nhất; SUM là tổng, COUNT là số lượng, AVG là trung bình."
+    },
+    {
+      "id": 67,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.2 – Hàm gom nhóm & GROUP BY",
+      "question": "Hàm gom nhóm nào trả về giá trị nhỏ nhất của một cột?",
+      "options": {
+        "A": "MAX",
+        "B": "AVG",
+        "C": "MIN",
+        "D": "COUNT"
+      },
+      "answer": "C",
+      "explainAnswer": "MIN trả về giá trị nhỏ nhất trong cột; nếu cột rỗng kết quả là NULL."
+    },
+    {
+      "id": 68,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.2 – Hàm gom nhóm & GROUP BY",
+      "question": "Sự khác nhau giữa COUNT(cot) và COUNT(*) là gì?",
+      "options": {
+        "A": "COUNT(cot) đếm cả giá trị NULL",
+        "B": "COUNT(*) bỏ qua các dòng trùng lặp",
+        "C": "Không có sự khác nhau",
+        "D": "COUNT(cot) đếm số giá trị KHÔNG NULL của cột; COUNT(*) đếm toàn bộ số dòng"
+      },
+      "answer": "D",
+      "explainAnswer": "COUNT(*) đếm mọi dòng; COUNT(cot) chỉ đếm các dòng có giá trị khác NULL ở cột cot."
+    },
+    {
+      "id": 69,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.2 – Hàm gom nhóm & GROUP BY",
+      "question": "SELECT Lop, COUNT(*) FROM SinhVien GROUP BY Lop; cho biết kết quả nào?",
+      "options": {
+        "A": "Số sinh viên của từng lớp",
+        "B": "Lỗi cú pháp",
+        "C": "Tổng số sinh viên toàn trường",
+        "D": "Danh sách chi tiết sinh viên từng lớp"
+      },
+      "answer": "A",
+      "explainAnswer": "GROUP BY Lop chia các dòng thành nhóm theo lớp; COUNT(*) đếm số dòng của từng nhóm, tức số sinh viên mỗi lớp."
+    },
+    {
+      "id": 70,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.2 – Hàm gom nhóm & GROUP BY",
+      "question": "Thứ tự đúng của các mệnh đề trong một câu lệnh SELECT có đầy đủ là gì?",
+      "options": {
+        "A": "HAVING → WHERE → GROUP BY → ORDER BY",
+        "B": "ORDER BY → WHERE → GROUP BY → HAVING",
+        "C": "GROUP BY → WHERE → HAVING → ORDER BY",
+        "D": "WHERE → GROUP BY → HAVING → ORDER BY"
+      },
+      "answer": "D",
+      "explainAnswer": "Thứ tự chuẩn: SELECT ... FROM ... WHERE ... GROUP BY ... HAVING ... ORDER BY ..."
+    },
+    {
+      "id": 71,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.2 – Hàm gom nhóm & GROUP BY",
+      "question": "Câu lệnh SELECT DiemThi1, DiemThi2 FROM MonHoc GROUP BY DiemThi1 WHERE DiemThi1 > 4; có thực thi được không? Vì sao?",
+      "options": {
+        "A": "Không, vì sai tên bảng MonHoc",
+        "B": "Không, vì mệnh đề WHERE phải đứng TRƯỚC GROUP BY",
+        "C": "Có, câu lệnh hoàn toàn đúng",
+        "D": "Không, vì thiếu mệnh đề SELECT"
+      },
+      "answer": "B",
+      "explainAnswer": "Trong MySQL, WHERE phải đứng trước GROUP BY; điều kiện lọc theo nhóm sau khi gom nhóm phải dùng HAVING."
+    },
+    {
+      "id": 72,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.2 – Hàm gom nhóm & GROUP BY",
+      "question": "Mệnh đề HAVING dùng để làm gì?",
+      "options": {
+        "A": "Thay thế hoàn toàn cho WHERE",
+        "B": "Sắp xếp kết quả truy vấn",
+        "C": "Lọc các dòng trước khi gom nhóm",
+        "D": "Lọc các NHÓM sau GROUP BY theo điều kiện (thường chứa hàm gom nhóm)"
+      },
+      "answer": "D",
+      "explainAnswer": "HAVING lọc theo điều kiện của nhóm (ví dụ COUNT(*) > 10), áp dụng sau GROUP BY; WHERE lọc dòng trước khi gom nhóm."
+    },
+    {
+      "id": 73,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.3 – Subquery & JOIN",
+      "question": "Subquery xuất hiện ở mệnh đề FROM trả về kết quả dạng nào?",
+      "options": {
+        "A": "Một cột thuộc tính",
+        "B": "Một kiểu dữ liệu",
+        "C": "Một bảng (derived table – bảng dẫn xuất)",
+        "D": "Một giá trị đơn"
+      },
+      "answer": "C",
+      "explainAnswer": "Subquery trong FROM phải trả về một tập dòng, được MySQL coi như bảng tạm (derived table) để truy vấn tiếp."
+    },
+    {
+      "id": 74,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.3 – Subquery & JOIN",
+      "question": "Subquery dùng với toán tử '=' trong mệnh đề WHERE phải trả về dạng gì?",
+      "options": {
+        "A": "Nhiều cột cùng lúc",
+        "B": "Một bảng nhiều dòng",
+        "C": "Giá trị NULL luôn",
+        "D": "Một giá trị đơn (scalar)"
+      },
+      "answer": "D",
+      "explainAnswer": "Phép so sánh '=' yêu cầu một giá trị duy nhất; nếu subquery trả về nhiều dòng sẽ báo lỗi, phải dùng IN, ANY, ALL..."
+    },
+    {
+      "id": 75,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.3 – Subquery & JOIN",
+      "question": "Subquery dùng với từ khoá IN trong WHERE trả về dạng dữ liệu nào?",
+      "options": {
+        "A": "Một bảng nhiều cột",
+        "B": "Danh sách các giá trị (một cột, nhiều dòng)",
+        "C": "Một giá trị đơn",
+        "D": "Không được phép dùng IN với subquery"
+      },
+      "answer": "B",
+      "explainAnswer": "IN kiểm tra giá trị có nằm trong tập hợp; subquery trả về một cột nhiều dòng là dạng phù hợp nhất."
+    },
+    {
+      "id": 76,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.3 – Subquery & JOIN",
+      "question": "INNER JOIN bảng A với bảng B có ý nghĩa gì?",
+      "options": {
+        "A": "Lấy toàn bộ dòng của B bất kể khớp hay không",
+        "B": "Lấy toàn bộ dòng của cả hai bảng (tích Đề các)",
+        "C": "Lấy toàn bộ dòng của A bất kể khớp hay không",
+        "D": "Trả về phần chung: chỉ các dòng của A và B thoả điều kiện nối"
+      },
+      "answer": "D",
+      "explainAnswer": "INNER JOIN chỉ giữ các cặp dòng thoả điều kiện nối giữa hai bảng; dòng không có cặp tương ứng sẽ bị loại."
+    },
+    {
+      "id": 77,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.3 – Subquery & JOIN",
+      "question": "LEFT JOIN bảng A với bảng B trả về gì?",
+      "options": {
+        "A": "Toàn bộ dòng của B",
+        "B": "Toàn bộ dòng của A, ghép các dòng khớp của B (không khớp thì phần B là NULL)",
+        "C": "Các dòng chỉ có ở B",
+        "D": "Chỉ các dòng khớp giữa A và B"
+      },
+      "answer": "B",
+      "explainAnswer": "LEFT JOIN giữ nguyên toàn bộ dòng bên trái (A); dòng không tìm thấy cặp ở B sẽ có giá trị NULL ở các cột của B."
+    },
+    {
+      "id": 78,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.3 – Subquery & JOIN",
+      "question": "RIGHT JOIN bảng A với bảng B trả về gì?",
+      "options": {
+        "A": "Toàn bộ dòng của B, ghép các dòng khớp của A (không khớp thì phần A là NULL)",
+        "B": "Toàn bộ dòng của A",
+        "C": "Chỉ các dòng khớp giữa A và B",
+        "D": "Các dòng chỉ có ở A"
+      },
+      "answer": "A",
+      "explainAnswer": "RIGHT JOIN giữ toàn bộ dòng bên phải (B); đây là phép đối xứng của LEFT JOIN."
+    },
+    {
+      "id": 79,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.3 – Subquery & JOIN",
+      "question": "CROSS JOIN (tích Đề các) bảng A có m dòng với bảng B có n dòng cho kết quả bao nhiêu dòng?",
+      "options": {
+        "A": "m + n dòng",
+        "B": "max(m, n) dòng",
+        "C": "min(m, n) dòng",
+        "D": "m × n dòng"
+      },
+      "answer": "D",
+      "explainAnswer": "Tích Đề các ghép mỗi dòng của A với mọi dòng của B nên tổng số dòng là tích m × n."
+    },
+    {
+      "id": 80,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.3 – Subquery & JOIN",
+      "question": "SELECT * FROM Lop, SinhVien; (không có mệnh đề WHERE) trả về gì?",
+      "options": {
+        "A": "Tích Đề các của hai bảng (mọi cặp dòng)",
+        "B": "Lỗi cú pháp",
+        "C": "Tổng hợp các dòng giống nhau",
+        "D": "Phần giao của hai bảng"
+      },
+      "answer": "A",
+      "explainAnswer": "Liệt kê nhiều bảng trong FROM không có điều kiện nối tạo ra tích Đề các; thực tế thường phải kèm điều kiện nối trong WHERE."
+    },
+    {
+      "id": 81,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.3 – Subquery & JOIN",
+      "question": "Trong MySQL, có thể JOIN một View với một Table không?",
+      "options": {
+        "A": "Chỉ khi View có chỉ mục",
+        "B": "Không, View không tham gia JOIN được",
+        "C": "Có, vì View là bảng ảo nên dùng được như một bảng trong câu lệnh JOIN",
+        "D": "Chỉ JOIN được View với View"
+      },
+      "answer": "C",
+      "explainAnswer": "View là bảng ảo (lưu câu truy vấn), bản thân nó trả về một tập dòng nên hoàn toàn có thể JOIN với bảng thật."
+    },
+    {
+      "id": 82,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.3 – Subquery & JOIN",
+      "question": "SELECT * FROM Lop WHERE Lop.col1 = SinhVien.col1; (giả sử chỉ có bảng Lop trong FROM) – câu lệnh này thế nào?",
+      "options": {
+        "A": "Thực thi được và tự động thực hiện JOIN",
+        "B": "Thực thi được và trả về các dòng có col1 bằng nhau",
+        "C": "Không thực thi được vì bảng SinhVien không có trong FROM nên cột SinhVien.col1 không tồn tại trong phạm vi truy vấn",
+        "D": "Thực thi được nhưng luôn trả về bảng rỗng"
+      },
+      "answer": "C",
+      "explainAnswer": "MySQL chỉ nhận biết các bảng khai báo trong FROM; SinhVien không có ở đó nên báo lỗi Unknown column 'SinhVien.col1'."
+    },
+    {
+      "id": 83,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.4 – DDL & DML",
+      "question": "Câu lệnh tạo cơ sở dữ liệu tên CSDL là gì?",
+      "options": {
+        "A": "CREATE DATABASE CSDL;",
+        "B": "CREATE TABLE CSDL;",
+        "C": "MAKE DATABASE CSDL;",
+        "D": "NEW DATABASE CSDL;"
+      },
+      "answer": "A",
+      "explainAnswer": "DDL tạo CSDL dùng CREATE DATABASE tên_csdl; còn CREATE TABLE dùng để tạo bảng."
+    },
+    {
+      "id": 84,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.4 – DDL & DML",
+      "question": "Câu lệnh xoá (kể cả toàn bộ dữ liệu bên trong) cơ sở dữ liệu tên CSDL là gì?",
+      "options": {
+        "A": "DROP DATABASE CSDL;",
+        "B": "REMOVE DATABASE CSDL;",
+        "C": "DROP TABLE CSDL;",
+        "D": "DELETE DATABASE CSDL;"
+      },
+      "answer": "A",
+      "explainAnswer": "DROP DATABASE xoá toàn bộ CSDL gồm mọi bảng và dữ liệu; lệnh này không thể hoàn tác."
+    },
+    {
+      "id": 85,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.4 – DDL & DML",
+      "question": "Để thêm dữ liệu vào một bảng, dùng câu lệnh nào?",
+      "options": {
+        "A": "UPDATE ...",
+        "B": "INSERT INTO ...",
+        "C": "DELETE FROM ...",
+        "D": "SELECT ..."
+      },
+      "answer": "B",
+      "explainAnswer": "INSERT dùng để thêm dòng mới; UPDATE sửa dữ liệu; DELETE xoá dữ liệu; SELECT truy vấn."
+    },
+    {
+      "id": 86,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.4 – DDL & DML",
+      "question": "Để sửa giá trị của một số dòng trong bảng theo điều kiện, dùng câu lệnh nào?",
+      "options": {
+        "A": "UPDATE bang SET cot = gia_tri WHERE dieu_kien;",
+        "B": "CREATE TABLE bang ...;",
+        "C": "SELECT cot FROM bang WHERE dieu_kien;",
+        "D": "INSERT INTO bang VALUES (...);"
+      },
+      "answer": "A",
+      "explainAnswer": "UPDATE ... SET ... WHERE ... cập nhật giá trị các dòng thoả điều kiện; thiếu WHERE sẽ sửa toàn bộ bảng."
+    },
+    {
+      "id": 87,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.4 – DDL & DML",
+      "question": "Sự khác nhau giữa DELETE FROM Bang; (không WHERE) và TRUNCATE TABLE Bang; trong MySQL là gì?",
+      "options": {
+        "A": "TRUNCATE không xoá được dữ liệu",
+        "B": "DELETE xoá luôn cấu trúc bảng",
+        "C": "Hai lệnh giống hệt nhau",
+        "D": "TRUNCATE xoá toàn bộ dòng nhanh hơn và không ghi log từng dòng; DELETE xoá từng dòng, có thể kèm WHERE"
+      },
+      "answer": "D",
+      "explainAnswer": "TRUNCATE xoá toàn bộ dòng theo kiểu thả bảng rồi tạo lại – nhanh, không kích hoạt trigger; DELETE xoá từng dòng, có điều kiện và kích hoạt trigger."
+    },
+    {
+      "id": 88,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.4 – DDL & DML",
+      "question": "Khác biệt chính giữa DROP TABLE Bang; và DELETE FROM Bang; là gì?",
+      "options": {
+        "A": "Cả hai đều xoá cấu trúc bảng",
+        "B": "Cả hai đều chỉ xoá dữ liệu",
+        "C": "DROP TABLE xoá toàn bộ cấu trúc và dữ liệu của bảng; DELETE FROM chỉ xoá dữ liệu (dòng), bảng vẫn còn",
+        "D": "DROP TABLE chỉ xoá dữ liệu"
+      },
+      "answer": "C",
+      "explainAnswer": "DROP TABLE là DDL xoá vĩnh viễn bảng; DELETE FROM là DML xoá dòng, bảng và lược đồ vẫn tồn tại."
+    },
+    {
+      "id": 89,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.4 – DDL & DML",
+      "question": "CREATE TABLE temp_SinhVien1 LIKE SinhVien; tạo ra bảng temp_SinhVien1 như thế nào?",
+      "options": {
+        "A": "Lệnh không thực thi được",
+        "B": "Giống hệt cấu trúc bảng SinhVien (kể cả khoá, chỉ mục) nhưng KHÔNG chứa dữ liệu",
+        "C": "Một bảng trống không có cột nào",
+        "D": "Giống cấu trúc và kèm toàn bộ dữ liệu của SinhVien"
+      },
+      "answer": "B",
+      "explainAnswer": "CREATE TABLE ... LIKE ... chỉ sao chép cấu trúc (cột, ràng buộc, chỉ mục), không sao chép dữ liệu."
+    },
+    {
+      "id": 90,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.4 – DDL & DML",
+      "question": "CREATE TABLE temp_SinhVien2 AS (SELECT * FROM SinhVien); tạo ra bảng temp_SinhVien2 như thế nào?",
+      "options": {
+        "A": "Tạo bảng trống không cột",
+        "B": "Không thể tạo bảng bằng cách này",
+        "C": "Tạo bảng mới có cấu trúc theo kết quả SELECT và sao chép toàn bộ dữ liệu vào",
+        "D": "Chỉ tạo cấu trúc, không có dữ liệu"
+      },
+      "answer": "C",
+      "explainAnswer": "CREATE TABLE ... AS SELECT vừa tạo bảng vừa chèn toàn bộ kết quả truy vấn; tuy nhiên nó không tự động sao chép khoá chính/chỉ mục."
+    },
+    {
+      "id": 91,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.4 – DDL & DML",
+      "question": "So sánh hai bảng tạo bởi CREATE TABLE ... LIKE và CREATE TABLE ... AS SELECT từ cùng bảng SinhVien, nhận xét nào đúng?",
+      "options": {
+        "A": "Bảng LIKE có dữ liệu, bảng AS SELECT rỗng",
+        "B": "Cả hai đều rỗng",
+        "C": "Bảng LIKE giữ nguyên khoá chính/ chỉ mục nhưng rỗng; bảng AS SELECT có dữ liệu nhưng không tự động có khoá chính/ chỉ mục",
+        "D": "Cả hai đều có dữ liệu"
+      },
+      "answer": "C",
+      "explainAnswer": "LIKE sao chép cấu trúc đầy đủ (kèm ràng buộc) không dữ liệu; AS SELECT có dữ liệu nhưng không kế thừa ràng buộc khoá."
+    },
+    {
+      "id": 92,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.4 – DDL & DML",
+      "question": "Từ khoá nào dùng để xác định khoá chính của thuộc tính khi tạo bảng trong MySQL?",
+      "options": {
+        "A": "FOREIGN KEY",
+        "B": "UNIQUE",
+        "C": "PRIMARY KEY",
+        "D": "INDEX"
+      },
+      "answer": "C",
+      "explainAnswer": "PRIMARY KEY khai báo khoá chính (duy nhất, không NULL); FOREIGN KEY là khoá ngoại; UNIQUE là ràng buộc duy nhất."
+    },
+    {
+      "id": 93,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.5 – View, Trigger, Stored Procedure & Function",
+      "question": "Trong MySQL, đối tượng nào LUÔN trả về một giá trị khi được gọi?",
+      "options": {
+        "A": "Function",
+        "B": "View",
+        "C": "Trigger",
+        "D": "Stored Procedure"
+      },
+      "answer": "A",
+      "explainAnswer": "Function (hàm) bắt buộc trả về một giá trị (RETURNS ...); Stored Procedure có thể không trả về giá trị, Trigger không được gọi trực tiếp."
+    },
+    {
+      "id": 94,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.5 – View, Trigger, Stored Procedure & Function",
+      "question": "Stored Procedure khác Function ở điểm nào?",
+      "options": {
+        "A": "Function không dùng được trong SELECT",
+        "B": "Procedure luôn trả về một giá trị",
+        "C": "Không có sự khác nhau",
+        "D": "Procedure có thể không trả về giá trị, dùng CALL để gọi; Function luôn trả về một giá trị và dùng trong biểu thức"
+      },
+      "answer": "D",
+      "explainAnswer": "Stored Procedure gọi bằng CALL, có thể nhận tham số IN/OUT/INOUT và không bắt buộc trả về; Function trả về một giá trị và dùng được trong biểu thức SELECT."
+    },
+    {
+      "id": 95,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.5 – View, Trigger, Stored Procedure & Function",
+      "question": "View trong MySQL được hiểu là gì?",
+      "options": {
+        "A": "Một loại chỉ mục",
+        "B": "Bảng ảo được định nghĩa bởi một câu lệnh SELECT, không tự lưu trữ dữ liệu",
+        "C": "Bảng thật lưu dữ liệu trên đĩa",
+        "D": "Một bảng tạm chỉ dùng trong một phiên"
+      },
+      "answer": "B",
+      "explainAnswer": "View không chứa dữ liệu vật lý; mỗi lần truy vấn nó thực thi câu lệnh SELECT định nghĩa nên có thể xem như bảng ảo."
+    },
+    {
+      "id": 96,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.5 – View, Trigger, Stored Procedure & Function",
+      "question": "Tạo View từ bảng SinhVien, sau đó DROP VIEW. Dữ liệu bảng SinhVien có bị mất không?",
+      "options": {
+        "A": "Có, toàn bộ dữ liệu bảng SinhVien bị xoá theo",
+        "B": "Không, nhưng bảng SinhVien bị mất cấu trúc",
+        "C": "Có, chỉ phần dữ liệu mà View hiển thị bị xoá",
+        "D": "Không, vì View chỉ là bảng ảo không lưu dữ liệu; xoá View không ảnh hưởng bảng gốc"
+      },
+      "answer": "D",
+      "explainAnswer": "View chỉ lưu câu truy vấn định nghĩa; DROP VIEW chỉ xoá định nghĩa View, dữ liệu trong bảng gốc vẫn nguyên vẹn."
+    },
+    {
+      "id": 97,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.5 – View, Trigger, Stored Procedure & Function",
+      "question": "Trigger là gì trong cơ sở dữ liệu?",
+      "options": {
+        "A": "Một ràng buộc khoá ngoại",
+        "B": "Một bảng ảo",
+        "C": "Đối tượng tự động thực thi khi xảy ra sự kiện (INSERT, UPDATE, DELETE) trên bảng",
+        "D": "Một hàm trả về giá trị"
+      },
+      "answer": "C",
+      "explainAnswer": "Trigger gắn với bảng và tự động kích hoạt trước/sau các sự kiện DML (BEFORE/AFTER INSERT, UPDATE, DELETE)."
+    },
+    {
+      "id": 98,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.5 – View, Trigger, Stored Procedure & Function",
+      "question": "Trong MySQL, trigger có thể được khai báo kích hoạt vào những thời điểm nào?",
+      "options": {
+        "A": "Chỉ AFTER INSERT",
+        "B": "BEFORE hoặc AFTER các sự kiện INSERT, UPDATE, DELETE",
+        "C": "Bất kỳ lúc nào người dùng muốn",
+        "D": "Chỉ BEFORE SELECT"
+      },
+      "answer": "B",
+      "explainAnswer": "MySQL hỗ trợ trigger BEFORE/AFTER + INSERT/UPDATE/DELETE, tổng cộng 6 kiểu bắt đầu bằng hai tên này."
+    },
+    {
+      "id": 99,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.5 – View, Trigger, Stored Procedure & Function",
+      "question": "Trong trigger BEFORE INSERT, từ khoá NEW dùng để làm gì?",
+      "options": {
+        "A": "Khai báo biến cục bộ",
+        "B": "Gọi một stored procedure",
+        "C": "Tham chiếu đến dòng cũ trước khi sửa",
+        "D": "Tham chiếu đến dòng dữ liệu mới đang được chèn (NEW.cot)"
+      },
+      "answer": "D",
+      "explainAnswer": "NEW cho phép truy cập/ sửa giá trị của dòng mới trong trigger INSERT và UPDATE; OLD dùng cho dòng cũ trong UPDATE/DELETE."
+    },
+    {
+      "id": 100,
+      "chapter": "Phần 2",
+      "sourceChapter": "Nhóm 2.5 – View, Trigger, Stored Procedure & Function",
+      "question": "Cho trigger BEFORE INSERT trên bảng DiemThi: IF NEW.diem < 5 THEN SIGNAL ... END IF. Khi INSERT dòng có diem = 100, điều gì xảy ra?",
+      "options": {
+        "A": "Trigger tự sửa diem thành 5",
+        "B": "INSERT thành công vì 100 không nhỏ hơn 5 nên điều kiện IF không thoả, trigger không chặn",
+        "C": "INSERT thất bại vì 100 vượt ngưỡng",
+        "D": "Trigger báo lỗi vì 100 > 5"
+      },
+      "answer": "B",
+      "explainAnswer": "Điều kiện chặn trong trigger là diem < 5; với diem = 100 điều kiện sai nên SIGNAL không được gọi, dòng được chèn bình thường."
+    }
+  ]
+}

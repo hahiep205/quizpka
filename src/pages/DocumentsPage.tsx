@@ -13,6 +13,7 @@ import { Input } from "@/components/ui/input"
 import { examCatalog, getSubjectById, type ExamCatalogItem } from "@/data/subjects"
 import { QuizSetupModal } from "@/components/QuizSetupModal"
 import { HcmChapterPickerModal } from "@/components/HcmChapterPickerModal"
+import { PdfViewerModal } from "@/components/PdfViewerModal"
 import { TadvPickerModal } from "@/components/TadvPickerModal"
 import { cn } from "@/lib/utils"
 import { documentsCopy as copy } from "@/shared/i18n"
@@ -39,6 +40,8 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
     setupSubject,
     handlePickerSelect,
     handlePickerClose,
+    handlePdfClose,
+    pdfChapter,
     handleSetupClose,
     handleSetupStart,
     tadvPickerExam,
@@ -267,6 +270,14 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
         subject={pickerSubject}
         onClose={handlePickerClose}
         onSelect={handlePickerSelect}
+      />
+
+      <PdfViewerModal
+        open={Boolean(pdfChapter)}
+        lang={lang}
+        title={pdfChapter?.title ?? null}
+        pdfUrl={pdfChapter?.url ?? null}
+        onClose={handlePdfClose}
       />
 
       <TadvPickerModal

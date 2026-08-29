@@ -10,7 +10,7 @@ export function useGlobalSecurity() {
     if (!SECURITY_CONFIG.enabled) return
 
     const cleanupBlock = SECURITY_CONFIG.blockContextMenu || SECURITY_CONFIG.blockShortcuts || SECURITY_CONFIG.blockCopyDrag
-      ? initBlockAll()
+      ? initBlockAll({ blockF12: SECURITY_CONFIG.blockF12 })
       : undefined
 
     let interval: number | undefined

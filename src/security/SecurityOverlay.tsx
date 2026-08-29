@@ -5,8 +5,13 @@ export function SecurityOverlay({ onClose }: { onClose: () => void }) {
         <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-amber-100 text-amber-600 dark:bg-amber-500/20">
           <span className="text-2xl">⚠</span>
         </div>
-        <h2 className="lp-modal-title text-[20px]">Phát hiện Developer Tools</h2>
-        <p className="lp-modal-desc mt-2">Vui lòng đóng Developer Tools để tiếp tục sử dụng hệ thống.</p>
+        <h2 className="lp-modal-title text-[20px]">Không được phép dùng Công cụ cho nhà phát triển trên trang này</h2>
+        <p className="lp-modal-desc mt-2">
+          Tổ chức của bạn đã chặn sử dụng Công cụ cho nhà phát triển trên trang này.
+        </p>
+        <p className="lp-modal-desc mt-1 text-[13px] opacity-70">
+          Vui lòng đóng Developer Tools (F12 / Ctrl+Shift+I) để tiếp tục sử dụng hệ thống.
+        </p>
         <button type="button" className="lp-btn lp-btn--primary lp-btn--sm mt-6" onClick={onClose}>
           Đã đóng - Tiếp tục
         </button>
