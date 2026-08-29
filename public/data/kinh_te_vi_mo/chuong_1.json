@@ -1,0 +1,757 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kinh tế vi mô - Chương 1",
+  "chapter": "Chương 1",
+  "totalQuestions": 50,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Chủ thể cơ bản nhất mà kinh tế học phải giải quyết là:",
+      "options": {
+        "A": "Thị trường.",
+        "B": "Lợi nhuận.",
+        "C": "Giá cả.",
+        "D": "Sự khan hiếm."
+      },
+      "answer": "D",
+      "explainAnswer": "Sự khan hiếm (scarcity) là vấn đề cơ bản nhất mà kinh tế học phải giải quyết: nguồn lực thì có hạn trong khi nhu cầu của con người là vô hạn, nên phải lựa chọn cách sử dụng nguồn lực. Thị trường, lợi nhuận, giá cả chỉ là những phạm trù phát sinh sau khi đã thừa nhận vấn đề khan hiếm, không phải vấn đề gốc.",
+      "image": null
+    },
+    {
+      "id": 2,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Vì nguồn lực của nền kinh tế là khan hiếm nên:",
+      "options": {
+        "A": "Phải thực hiện việc lựa chọn.",
+        "B": "Chính phủ phải trực tiếp phân bổ tài nguyên.",
+        "C": "Chênh lệch giàu nghèo là hiện tượng không tránh khỏi.",
+        "D": "Một nên kinh tế không thể phát triển nếu thiếu một nguồn lực."
+      },
+      "answer": "A",
+      "explainAnswer": "Vì nguồn lực khan hiếm nên con người không thể có tất cả mọi thứ mình muốn, do đó bắt buộc phải lựa chọn phương án sử dụng nguồn lực tốt nhất. Phương án B sai vì việc phân bổ tài nguyên tùy thuộc cơ chế thị trường hay kế hoạch, chính phủ không nhất thiết trực tiếp phân bổ. C, D không phải hệ quả tất yếu của sự khan hiếm.",
+      "image": null
+    },
+    {
+      "id": 3,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Thị trường nào sau đây không phải là một trong ba thị trường chính:",
+      "options": {
+        "A": "Thị trường hàng hóa dịch vụ.",
+        "B": "Thị trường nhân tố sản xuất.",
+        "C": "Thị trường tài chính.",
+        "D": "Thị trường quần áo may sẵn."
+      },
+      "answer": "D",
+      "explainAnswer": "Ba thị trường chính của nền kinh tế là: (1) thị trường hàng hóa – dịch vụ, (2) thị trường nhân tố sản xuất (lao động, đất đai, vốn), (3) thị trường tài chính. Thị trường quần áo may sẵn chỉ là một thị trường hàng hóa cụ thể, không phải một trong ba thị trường chính.",
+      "image": null
+    },
+    {
+      "id": 4,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Nhận định nào sau đây thuộc kinh tế học thực chứng?",
+      "options": {
+        "A": "Thuế suất thuế VAT hiện đang áp dụng là quá cao.",
+        "B": "Lãi suất thấp sẽ kích thích doanh nghiệp đầu tư.",
+        "C": "Mức tiết kiệm của nền kinh tế hiện đang quá thấp.",
+        "D": "Chính phủ cần cắt giảm tỷ lệ thất nghiệp của nền kinh tế."
+      },
+      "answer": "B",
+      "explainAnswer": "Kinh tế học thực chứng mô tả, giải thích các mối quan hệ kinh tế một cách khách quan, có thể kiểm chứng bằng dữ liệu. Câu \"lãi suất thấp sẽ kích thích doanh nghiệp đầu tư\" là phát biểu về quan hệ nhân quả khách quan, thuộc kinh tế học thực chứng. Các phương án A, C, D chứa từ đánh giá/nên hay ('quá cao', 'quá thấp', 'cần cắt giảm') nên là nhận định chuẩn tắc.",
+      "image": null
+    },
+    {
+      "id": 5,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Trong kinh tế học, cụm từ \"phân phối\" đề cập đến:",
+      "options": {
+        "A": "Bán buôn.",
+        "B": "Câu hỏi cái gì.",
+        "C": "Câu hỏi như thế nào.",
+        "D": "Câu hỏi cho ai."
+      },
+      "answer": "D",
+      "explainAnswer": "Trong các câu hỏi cơ bản của kinh tế học, 'phân phối' trả lời câu hỏi 'sản xuất cho ai' (ai sẽ nhận được sản phẩm). 'Bán buôn' là hoạt động thương mại cụ thể; 'cái gì' là vấn đề sản xuất; 'như thế nào' là vấn đề phương pháp sản xuất.",
+      "image": null
+    },
+    {
+      "id": 6,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Vai trò của các giả định trong một lý thuyết kinh tế nhằm:",
+      "options": {
+        "A": "Biểu thị chính xác thực tế.",
+        "B": "Đơn giản hóa thực tế.",
+        "C": "Phức tạp hóa thực tế.",
+        "D": "Không câu nào đúng."
+      },
+      "answer": "B",
+      "explainAnswer": "Vai trò của các giả định trong lý thuyết kinh tế là đơn giản hóa thực tế phức tạp để dễ nhận diện và phân tích mối quan hệ chính giữa các biến số (ví dụ giả định 'các yếu tố khác không đổi'). Giả định không nhằm tái hiện chính xác tuyệt đối mọi chi tiết của thực tế.",
+      "image": null
+    },
+    {
+      "id": 7,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Điều nào sau đây không gây dịch chuyển đường giới hạn khả năng sản xuất:",
+      "options": {
+        "A": "Cải tiến công nghệ sản xuất.",
+        "B": "Sự gia tăng dân số của quốc gia.",
+        "C": "Số người thất nghiệp giảm.",
+        "D": "Một trận lụt hủy hoại đáng kể diện tích đất nông nghiệp."
+      },
+      "answer": "C",
+      "explainAnswer": "Đường PPF chỉ dịch chuyển khi tổng nguồn lực hoặc công nghệ của nền kinh tế thay đổi (cải tiến công nghệ, tăng dân số, thiên tai phá hủy tài nguyên). Khi số người thất nghiệp giảm, nguồn lực và công nghệ không đổi, chỉ là nền kinh tế sử dụng được nhiều nguồn lực hơn — điểm sản xuất dịch chuyển từ bên trong lên gần đường PPF, chứ đường PPF không dịch chuyển.",
+      "image": null
+    },
+    {
+      "id": 8,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Quy luật chi phí cơ hội ngày càng tăng biểu thị:",
+      "options": {
+        "A": "Chính phủ chi tiêu quá nhiều gây ra lạm phát.",
+        "B": "Mức tiền lương đang quá cao.",
+        "C": "Xã hội phải đánh đổi số lượng ngày càng tăng của hàng hóa này để đặt thêm số lượng bằng nhau của hàng hóa khác.",
+        "D": "Không câu nào đúng."
+      },
+      "answer": "C",
+      "explainAnswer": "Quy luật chi phí cơ hội ngày càng tăng: để có thêm một lượng bằng nhau của hàng hóa này, xã hội phải từ bỏ một lượng hàng hóa khác ngày càng lớn hơn (đường PPF lõm về gốc tọa độ). Phương án C diễn đạt đúng nội dung này.",
+      "image": null
+    },
+    {
+      "id": 9,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Khi biểu thị đường giới hạn năng lực sản xuất cần giả định yếu tố nào sau đây không đổi:",
+      "options": {
+        "A": "Tổng mức cung tiền.",
+        "B": "Mức giá bình quân.",
+        "C": "Tổng lượng tài nguyên.",
+        "D": "Số lượng một hàng hóa."
+      },
+      "answer": "C",
+      "explainAnswer": "Đường giới hạn khả năng sản xuất (PPF) được vẽ trong điều kiện nguồn lực (tài nguyên, lao động, vốn) và trình độ công nghệ không đổi. Mức cung tiền, mức giá chung không phải giả định của PPF ở cấp độ vi mô; số lượng một hàng hóa là biến thay đổi dọc theo đường.",
+      "image": null
+    },
+    {
+      "id": 10,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Sự dịch chuyển đường AS ngắn hạn sang trái có thể do:",
+      "options": {
+        "A": "Thay đổi thị hiếu người tiêu dùng.",
+        "B": "Thay đổi trong kết hợp hàng hóa sản xuất ra.",
+        "C": "Thay đổi trong thu nhập của người tiêu dùng.",
+        "D": "Tiến bộ về công nghệ sản xuất."
+      },
+      "answer": "D",
+      "explainAnswer": "Trong các yếu tố nêu ra, chỉ có tiến bộ về công nghệ sản xuất là yếu tố thuộc phía cung (làm thay đổi năng lực/năng suất sản xuất nên đường cung thay đổi); thị hiếu và thu nhập thuộc phía cầu, còn 'thay đổi kết hợp hàng hóa' không phải nhân tố làm dịch chuyển đường cung. Vì vậy phương án đúng nhất là D. (Lưu ý: về mặt kỹ thuật, tiến bộ công nghệ thường làm đường cung dịch sang phải; bộ đề dùng nó để chỉ sự thay đổi của đường cung/AS.)",
+      "image": null
+    },
+    {
+      "id": 11,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Kinh tế học là một môn khoa học xã hội nghiên cứu các cách thức:",
+      "options": {
+        "A": "Phân bổ các nguồn lực khan hiếm cho nhiều khả năng sử dụng khác nhau.",
+        "B": "Tạo ra các vận may cho các cá nhân trên thị trường.",
+        "C": "Quản lý doanh nghiệp sao cho có lãi.",
+        "D": "Nghiên cứu những vấn đề khác."
+      },
+      "answer": "A",
+      "explainAnswer": "Kinh tế học là môn khoa học xã hội nghiên cứu cách xã hội phân bổ các nguồn lực khan hiếm vào những mục đích sử dụng khác nhau để thỏa mãn nhu cầu. Các phương án B, C, D chỉ mô tả hoạt động hẹp hoặc không khái quát đúng bản chất.",
+      "image": null
+    },
+    {
+      "id": 12,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Kinh tế học vi mô nghiên cứu:",
+      "options": {
+        "A": "Các hoạt động diễn ra trong toàn bộ nền kinh tế.",
+        "B": "Hành vi ứng xử của các tế bào kinh tế trong các loại thị trường.",
+        "C": "Mức giá chung của toàn bộ nền kinh tế.",
+        "D": "Cách ứng xử của người tiêu dùng để tối đa sự thỏa mãn."
+      },
+      "answer": "D",
+      "explainAnswer": "Kinh tế học vi mô nghiên cứu hành vi của các tế bào kinh tế (hộ gia đình, doanh nghiệp) và cách họ ra quyết định tối ưu. Ở cấp độ người tiêu dùng, nó nghiên cứu cách lựa chọn tiêu dùng để tối đa hóa sự thỏa mãn với thu nhập giới hạn. A, C là nội dung của kinh tế vĩ mô; B là định nghĩa chung của kinh tế vi mô nhưng chưa đầy đủ bằng D (khía cạnh tối đa thỏa mãn của người tiêu dùng).",
+      "image": null
+    },
+    {
+      "id": 13,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Kinh tế học thực chứng nhằm:",
+      "options": {
+        "A": "Giải thích hoạt động của nền kinh tế một cách khách quan và khoa học, dự báo về hành vi của các chủ thể phản ứng như thế nào trước những biến động.",
+        "B": "Đưa ra những lời chỉ dẫn hoặc những quan điểm của cá nhân.",
+        "C": "Giải thích các hành vi ứng xử của tế bào kinh tế trong các loại thị trường.",
+        "D": "Giải thích hoạt động của nền kinh tế một cách khách quan và khoa học, tuy nhiên có thể đúng sai tuỳ quan điểm."
+      },
+      "answer": "A",
+      "explainAnswer": "Kinh tế học thực chứng mô tả và giải thích hành vi của nền kinh tế một cách khách quan, khoa học, dựa trên các dữ kiện có thể kiểm chứng, đồng thời dự báo phản ứng của các chủ thể khi các biến số thay đổi. B là kinh tế học chuẩn tắc; C mô tả kinh tế vi mô; D sai vì kết luận thực chứng không phụ thuộc 'quan điểm cá nhân'.",
+      "image": null
+    },
+    {
+      "id": 14,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Trong lý thuyết lựa chọn, sự lựa chọn thực hiện được là do:",
+      "options": {
+        "A": "Nguồn lực có thể tăng lên.",
+        "B": "Nguồn lực tuy khan hiếm nhưng lại có thể sử dụng cho các mục đích khác nhau.",
+        "C": "Nguồn lực khan hiếm.",
+        "D": "Nguồn lực là có đủ cho các lựa chọn."
+      },
+      "answer": "B",
+      "explainAnswer": "Lý thuyết lựa chọn dựa trên tiền đề: nguồn lực khan hiếm nhưng có thể chuyển đổi để sử dụng cho nhiều mục đích khác nhau, nhờ đó con người có thể lựa chọn được phương án tối ưu. Nếu nguồn lực không khan hiếm (D) thì không cần lựa chọn; nếu chỉ khan hiếm mà không đa dụng (C) thì không có gì để lựa chọn.",
+      "image": null
+    },
+    {
+      "id": 15,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Vấn đề nào sau đây thuộc kinh tế học chuẩn tắc?",
+      "options": {
+        "A": "Tỷ lệ lạm phát của Việt Nam 2024 dự kiến dưới 10%.",
+        "B": "Mức tăng trưởng GDP của Việt Nam năm 2008 là 6%.",
+        "C": "Giá dầu trên thế giới năm 1974 so với 1973 tăng hơn 3 lần.",
+        "D": "Phải có chế độ bảo hiểm y tế cho người già và trẻ em."
+      },
+      "answer": "D",
+      "explainAnswer": "Kinh tế học chuẩn tắc đưa ra các nhận định mang tính đánh giá, khuyến nghị 'nên/không nên'. Câu 'phải có chế độ bảo hiểm y tế cho người già và trẻ em' là khuyến nghị chính sách → chuẩn tắc. A, B, C là các số liệu/giả thuyết khách quan có thể kiểm chứng → thực chứng.",
+      "image": null
+    },
+    {
+      "id": 16,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Một nền kinh tế tổ chức sản xuất có hiệu quả với nguồn tài nguyên khan hiếm khi:",
+      "options": {
+        "A": "Các đáp án trên đều đúng.",
+        "B": "Sản xuất tại một điểm nằm ngoài đường giới hạn khả năng sản xuất.",
+        "C": "Không thể tăng thêm sản lượng của mặt hàng nào đó nếu không cắt giảm đi những đơn vị sản lượng sản phẩm khác",
+        "D": "Khi tăng thêm sản lượng của mặt hàng này thì không nhất thiết phải giảm đi những đơn vị sản lượng sản phẩm khác."
+      },
+      "answer": "C",
+      "explainAnswer": "Một nền kinh tế sản xuất hiệu quả khi đang nằm TRÊN đường PPF: không thể tăng sản lượng mặt hàng này nếu không cắt giảm sản lượng mặt hàng khác (đánh đổi). B sai vì điểm ngoài PPF là không đạt được; D mô tả điều ngược lại (không hiệu quả vì còn dư nguồn lực).",
+      "image": null
+    },
+    {
+      "id": 17,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Các vấn đề cơ bản của hệ thống kinh tế cần giải quyết là:",
+      "options": {
+        "A": "Sản xuất cái gì? Sản xuất cho ai? Sản xuất như thế nào?",
+        "B": "Sản xuất cái gì? Sản xuất cho ai? Sản xuất ở đâu?",
+        "C": "Sản xuất cái gì? Sản xuất cho ai? Ai sẽ là người mua?",
+        "D": "Sản xuất cái gì? Bán cái gì? Mua bán ở đâu?"
+      },
+      "answer": "A",
+      "explainAnswer": "Ba vấn đề cơ bản của hệ thống kinh tế: sản xuất cái gì, sản xuất như thế nào, sản xuất cho ai. Các phương án còn lại đổi 'như thế nào' hoặc 'cho ai' thành 'ở đâu', 'ai mua', 'bán cái gì' là không đúng.",
+      "image": null
+    },
+    {
+      "id": 18,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Trong các loại thị trường sau, loại nào thuộc về thị trường yếu tố sản xuất?",
+      "options": {
+        "A": "Thị trường lao động; Thị trường tiền tệ.",
+        "B": "Thị trường đất đai; Thị trường sắt thép; Thị trường dầu mỏ.",
+        "C": "Thị trường đất đai; Thị trường vốn; Thị trường sắt thép.",
+        "D": "Thị trường đất đai; Thị trường lao động; Thị trường vốn."
+      },
+      "answer": "D",
+      "explainAnswer": "Thị trường yếu tố sản xuất gồm thị trường đất đai, thị trường lao động, thị trường vốn. Sắt thép, dầu mỏ là hàng hóa trung gian (thị trường hàng hóa); tiền tệ thuộc thị trường tài chính tiền tệ.",
+      "image": null
+    },
+    {
+      "id": 19,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Vấn đề khan hiếm tồn tại:",
+      "options": {
+        "A": "Chỉ trong các nền kinh tế thị trường.",
+        "B": "Trong tất cả các nền kinh tế.",
+        "C": "Chỉ khi con người không tối ưu hoá hành vi.",
+        "D": "Chỉ trong các nền kinh tế kế hoạch hoá tập trung."
+      },
+      "answer": "B",
+      "explainAnswer": "Vấn đề khan hiếm tồn tại trong mọi nền kinh tế bất kể cơ chế (thị trường, kế hoạch hóa hay hỗn hợp) vì nhu cầu luôn vượt quá nguồn lực. A, D loại trừ một số nền kinh tế; C gắn khan hiếm với hành vi tối ưu là sai.",
+      "image": null
+    },
+    {
+      "id": 20,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Chính sách tài khoá của chính phủ là đối tượng nghiên cứu của:",
+      "options": {
+        "A": "Kinh tế học vĩ mô.",
+        "B": "Kinh tế học thực chứng.",
+        "C": "Kinh tế chuẩn tắc.",
+        "D": "Kinh tế học vi mô."
+      },
+      "answer": "A",
+      "explainAnswer": "Chính sách tài khóa (thuế, chi tiêu chính phủ) là công cụ điều tiết của kinh tế vĩ mô, tác động đến tổng cầu, sản lượng và mức giá chung của toàn nền kinh tế.",
+      "image": null
+    },
+    {
+      "id": 21,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Giá trị phương án tốt nhất bị bỏ qua khi đưa ra một lựa chọn kinh tế là:",
+      "options": {
+        "A": "Giá trị kinh tế.",
+        "B": "Chi phí bằng tiền.",
+        "C": "Chi phí cơ hội.",
+        "D": "Chi phí kế toán."
+      },
+      "answer": "C",
+      "explainAnswer": "Chi phí cơ hội là giá trị của phương án tốt nhất bị bỏ qua khi lựa chọn một phương án. Chi phí bằng tiền và chi phí kế toán chỉ tính những khoản chi thực tế, không tính chi phí cơ hội.",
+      "image": null
+    },
+    {
+      "id": 22,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Một nền kinh tế đóng là nền kinh tế:",
+      "options": {
+        "A": "Không có mối quan hệ với các nền kinh tế khác.",
+        "B": "Chỉ có hộ gia đình và doanh nghiệp.",
+        "C": "Không có mối liên hệ giữa Chính phủ và hộ gia đình.",
+        "D": "Xuất khẩu nhiều hơn nhập khẩu."
+      },
+      "answer": "A",
+      "explainAnswer": "Nền kinh tế đóng là nền kinh tế không có quan hệ thương mại - tài chính với các nền kinh tế khác (không xuất nhập khẩu). B, C mô tả thành phần tác nhân; D mô tả cán cân thương mại, không phải bản chất nền kinh tế đóng.",
+      "image": null
+    },
+    {
+      "id": 23,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Mô hình kinh tế giản đơn bao gồm:",
+      "options": {
+        "A": "Tác nhân nước ngoài, Hộ gia đình và doanh nghiệp.",
+        "B": "Chính phủ, Hộ gia đình và doanh nghiệp.",
+        "C": "Hộ gia đình, Doanh nghiệp và Chính phủ.",
+        "D": "Hộ gia đình và doanh nghiệp."
+      },
+      "answer": "D",
+      "explainAnswer": "Mô hình kinh tế giản đơn (đơn giản nhất) chỉ gồm hai tác nhân: hộ gia đình và doanh nghiệp, chưa có chính phủ và nước ngoài. Khi thêm chính phủ là mô hình nền kinh tế đóng mở rộng.",
+      "image": null
+    },
+    {
+      "id": 24,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Thay vì đi học đàn bạn Hương có thể đi học múa hoặc học vẽ, như vậy chi phí cơ hội của việc đi học đàn của bạn Hương là:",
+      "options": {
+        "A": "Giá trị của đi học vẽ.",
+        "B": "Giá trị của đi học múa.",
+        "C": "Giá trị của đi học múa và học vẽ.",
+        "D": "Giá trị của đi học múa hoặc học vẽ."
+      },
+      "answer": "D",
+      "explainAnswer": "Chi phí cơ hội là giá trị của phương án tốt nhất bị bỏ qua. Bạn Hương có hai phương án thay thế (học múa, học vẽ); phương án tốt nhất trong số bị bỏ qua chính là chi phí cơ hội, nhưng câu hỏi không cho biết phương án nào tốt hơn nên chi phí cơ hội là giá trị của một trong hai (học múa hoặc học vẽ) — chọn D. Không phải tổng cả hai (C) vì chi phí cơ hội chỉ tính phương án tốt nhất bị bỏ qua.",
+      "image": null
+    },
+    {
+      "id": 25,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Tất cả các điểm nằm miền bên trong của đường cong năng lực sản xuất (PPF):",
+      "options": {
+        "A": "Là điểm dùng quá nhiều nguồn lực.",
+        "B": "Thể hiện những điểm hiệu quả của nền kinh tế.",
+        "C": "Thể hiện những điểm kém hiệu quả vì chưa sử dụng hết nguồn lực.",
+        "D": "Là không thể đạt tới với nguồn lực và kỹ thuật hiện có."
+      },
+      "answer": "B",
+      "explainAnswer": "Theo đáp án của bộ đề, chọn B. Lưu ý để chính xác về lý thuyết: các điểm nằm TRÊN đường PPF mới là điểm sản xuất hiệu quả; điểm nằm BÊN TRONG là chưa sử dụng hết nguồn lực (kém hiệu quả) — xem câu 27. Ở câu này bộ đề trả lời theo hướng các điểm thuộc đường giới hạn khả năng sản xuất đều hiệu quả.",
+      "image": null
+    },
+    {
+      "id": 26,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Hệ thống kinh tế không có sự giao thương với nên kinh tế khác là:",
+      "options": {
+        "A": "Nền kinh tế hỗn hợp.",
+        "B": "Nền kinh tế kế hoạch hoá tập trung.",
+        "C": "Nền kinh tế đóng.",
+        "D": "Hệ thống kinh tế thị trường."
+      },
+      "answer": "C",
+      "explainAnswer": "Nền kinh tế đóng là nền kinh tế không giao thương với các nền kinh tế khác. Kinh tế thị trường, kinh tế kế hoạch hóa tập trung, kinh tế hỗn hợp đều có thể mở (có giao thương) hoặc đóng, nên không phải đặc trưng của chúng.",
+      "image": null
+    },
+    {
+      "id": 27,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Điểm nằm trong đường giới hạn khả năng sản xuất là:",
+      "options": {
+        "A": "Điểm không thể sản xuất được.",
+        "B": "Điểm sản xuất chưa sử dụng hết nguồn lực.",
+        "C": "Điểm sản xuất hiệu quả nhất.",
+        "D": "Điểm sản xuất tối ưu."
+      },
+      "answer": "B",
+      "explainAnswer": "Điểm nằm trong đường PPF thể hiện nền kinh tế sản xuất chưa sử dụng hết nguồn lực (còn dư lao động, máy móc, nguyên vật liệu...) nên chưa đạt hiệu quả tối ưu. Điểm hiệu quả/tối ưu nằm trên đường PPF; điểm ngoài PPF là không thể đạt tới.",
+      "image": null
+    },
+    {
+      "id": 28,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Bộ phận của kinh tế học nghiên cứu những vấn đề kinh tế cơ bản ở tầm quốc gia và nhấn mạnh đến mối quan hệ tương tác trong nền kinh tế tổng thể gọi là:",
+      "options": {
+        "A": "Kinh tế chuẩn tắc.",
+        "B": "Kinh tế thực chứng.",
+        "C": "Kinh tế vĩ mô.",
+        "D": "Kinh tế vi mô."
+      },
+      "answer": "C",
+      "explainAnswer": "Kinh tế vĩ mô nghiên cứu các vấn đề ở tầm quốc gia: tổng sản lượng, tăng trưởng, lạm phát, thất nghiệp, mối quan hệ tương tác giữa các khu vực trong nền kinh tế tổng thể.",
+      "image": null
+    },
+    {
+      "id": 29,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Vấn đề nào dưới đây không thuộc kinh tế vĩ mô:",
+      "options": {
+        "A": "Các nguyên nhân làm giảm mức giá bình quân.",
+        "B": "Các nguyên nhân làm giá chè giảm.",
+        "C": "Tác động của sự thâm hụt ngân sách đến lạm phát.",
+        "D": "Việc xác định mức thu nhập quốc dân."
+      },
+      "answer": "B",
+      "explainAnswer": "Kinh tế vĩ mô nghiên cứu các biến số tổng hợp: mức giá chung, thâm hụt ngân sách, lạm phát, thu nhập quốc dân. 'Nguyên nhân làm giá chè giảm' là vấn đề của một thị trường hàng hóa cụ thể → thuộc kinh tế vi mô.",
+      "image": null
+    },
+    {
+      "id": 30,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Các cá nhân và các hãng thực hiện sự lựa chọn vì",
+      "options": {
+        "A": "Sự khan hiếm.",
+        "B": "Nhu cầu cá nhân.",
+        "C": "Hiệu suất giảm dần.",
+        "D": "Sự hợp lý."
+      },
+      "answer": "A",
+      "explainAnswer": "Các cá nhân và hãng phải lựa chọn vì nguồn lực khan hiếm so với nhu cầu vô hạn. Nhu cầu cá nhân (B) và sự hợp lý (D) là giả định về hành vi, còn hiệu suất giảm dần (C) là quy luật sản xuất — tất cả đều bắt nguồn từ khan hiếm, và khan hiếm là lý do gốc của lựa chọn.",
+      "image": null
+    },
+    {
+      "id": 31,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Trong thực tế nhu cầu con người không được thỏa mãn đầy đủ với nguồn lực hiện có được gọi là:",
+      "options": {
+        "A": "Vấn đề mong muốn.",
+        "B": "Vấn đề khả năng.",
+        "C": "Vấn đề khan hiếm.",
+        "D": "Vấn đề chi phí cơ hội."
+      },
+      "answer": "C",
+      "explainAnswer": "Khi nhu cầu của con người không được thỏa mãn đầy đủ do nguồn lực có hạn, đó chính là vấn đề khan hiếm — vấn đề trung tâm của kinh tế học.",
+      "image": null
+    },
+    {
+      "id": 32,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Chi phí cơ hội là:",
+      "options": {
+        "A": "Không phải phương án nào nói trên.",
+        "B": "Chi phí để có được cơ hội đó.",
+        "C": "Chi phí của cơ hội đó.",
+        "D": "Giá trị của sự lựa chọn tốt nhất bị bỏ qua khi đưa ra sự lựa chọn giữa các phương án."
+      },
+      "answer": "D",
+      "explainAnswer": "Chi phí cơ hội là giá trị của phương án tốt nhất (đáng giá nhất) bị bỏ qua khi ra quyết định chọn một phương án. A, B, C diễn đạt mơ hồ hoặc sai bản chất.",
+      "image": null
+    },
+    {
+      "id": 33,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Đường giới hạn khả năng sản xuất biểu thị:",
+      "options": {
+        "A": "Những kết hợp hàng hóa mà người tiêu dùng mong muốn.",
+        "B": "Những kết hợp hàng hóa khả thi và hiệu quả của nền kinh tế.",
+        "C": "Những kết hợp hàng hoá mà nền kinh tế phải đối mặt với sự đánh đổi vì sản xuất chưa hiệu quả.",
+        "D": "Những kết hợp hàng hóa mà chính phủ mong muốn."
+      },
+      "answer": "B",
+      "explainAnswer": "Đường PPF biểu thị tất cả các kết hợp hàng hóa khả thi (đạt được với nguồn lực hiện có) và hiệu quả (dùng hết nguồn lực) mà nền kinh tế có thể sản xuất. A, D nói về mong muốn (không phải khả năng); C diễn đạt đánh đổi ở điểm chưa hiệu quả là sai.",
+      "image": null
+    },
+    {
+      "id": 34,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Số lượng người lao động, trình độ lao động, tri thức lao động là loại nguồn lực:",
+      "options": {
+        "A": "Lao động.",
+        "B": "Năng suất lao động.",
+        "C": "Tài nguyên.",
+        "D": "Vốn."
+      },
+      "answer": "A",
+      "explainAnswer": "Nguồn lực lao động bao gồm số lượng người lao động, trình độ, tri thức và kỹ năng của họ. 'Năng suất lao động' là kết quả, 'tài nguyên' và 'vốn' là các loại nguồn lực khác.",
+      "image": null
+    },
+    {
+      "id": 35,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Vấn đề cơ bản của kinh tế học là?",
+      "options": {
+        "A": "Trao đổi, mua bán.",
+        "B": "Thất nghiệp.",
+        "C": "Khan hiếm nguồn lực.",
+        "D": "Lạm phát."
+      },
+      "answer": "C",
+      "explainAnswer": "Vấn đề cơ bản của kinh tế học là sự khan hiếm nguồn lực, từ đó nảy sinh việc phải lựa chọn. Thất nghiệp, lạm phát, trao đổi mua bán là các vấn đề cụ thể phát sinh trong nền kinh tế, không phải vấn đề gốc.",
+      "image": null
+    },
+    {
+      "id": 36,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Mô hình kinh tế được vận hành hiện nay ở Việt Nam là:",
+      "options": {
+        "A": "Kinh tế thị trường.",
+        "B": "Kinh tế bao cấp.",
+        "C": "Kinh tế thực chứng.",
+        "D": "Kinh tế thị trường định hướng xã hội chủ nghĩa."
+      },
+      "answer": "D",
+      "explainAnswer": "Mô hình kinh tế được vận hành hiện nay ở Việt Nam là kinh tế thị trường định hướng xã hội chủ nghĩa (theo Hiến pháp và các văn kiện của Đảng). Kinh tế bao cấp là mô hình cũ trước đổi mới; kinh tế thực chứng không phải mô hình vận hành.",
+      "image": null
+    },
+    {
+      "id": 37,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Tất cả các điểm nằm bên ngoài của đường PPF:",
+      "options": {
+        "A": "Thể hiện những điểm hiệu quả của nền kinh tế.",
+        "B": "Thể hiện những điểm không hiệu quả của nền kinh tế.",
+        "C": "Là những điểm nền kinh tế phải thực hiện sự đánh đổi.",
+        "D": "Là không thể đạt tới với nguồn lực và kỹ thuật hiện có."
+      },
+      "answer": "D",
+      "explainAnswer": "Các điểm nằm bên ngoài đường PPF là những kết hợp không thể đạt tới với nguồn lực và kỹ thuật hiện có. Điểm hiệu quả nằm trên đường; điểm không hiệu quả nằm trong đường.",
+      "image": null
+    },
+    {
+      "id": 38,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Tất cả các điều sau đây đều là yếu tố sản xuất trừ:",
+      "options": {
+        "A": "Lao động.",
+        "B": "Tiền.",
+        "C": "Các tài nguyên thiên nhiên.",
+        "D": "Quy trình sản xuất kinh doanh."
+      },
+      "answer": "B",
+      "explainAnswer": "Các yếu tố sản xuất gồm: lao động, đất đai/tài nguyên thiên nhiên, vốn (tư bản) và năng lực kinh doanh. Tiền KHÔNG phải là yếu tố sản xuất vì tiền chỉ là phương tiện trao đổi, không trực tiếp tạo ra hàng hóa dịch vụ.",
+      "image": null
+    },
+    {
+      "id": 39,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Đường giới hạn khả năng sản xuất không mô tả điều nào dưới đây:",
+      "options": {
+        "A": "Sự thay đổi của nguồn lực của nền kinh tế.",
+        "B": "Chi phí cơ hội.",
+        "C": "Sự khan hiếm.",
+        "D": "Sự lựa chọn bị ràng buộc."
+      },
+      "answer": "A",
+      "explainAnswer": "Đường PPF phản ánh sự khan hiếm, chi phí cơ hội và sự lựa chọn bị ràng buộc bởi nguồn lực. PPF KHÔNG mô tả 'sự thay đổi của nguồn lực' — khi nguồn lực thay đổi thì đường PPF dịch chuyển, còn bản thân đường PPF là hình ảnh tĩnh về các kết hợp khả thi.",
+      "image": null
+    },
+    {
+      "id": 40,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Bộ phận của kinh tế học nghiên cứu các quyết định của hãng và gia đình được gọi là:",
+      "options": {
+        "A": "Kinh tế vi mô.",
+        "B": "Kinh tế vĩ mô.",
+        "C": "Kinh tế thực chứng.",
+        "D": "Kinh tế chuẩn tắc."
+      },
+      "answer": "A",
+      "explainAnswer": "Bộ phận của kinh tế học nghiên cứu quyết định của các hãng và hộ gia đình (các đơn vị kinh tế riêng lẻ) là kinh tế học vi mô. Kinh tế vĩ mô nghiên cứu tổng thể nền kinh tế; thực chứng/chuẩn tắc là cách phân loại theo tính chất nhận định.",
+      "image": null
+    },
+    {
+      "id": 41,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Nhận định nào sau đây thuộc kinh tế học thực chứng?",
+      "options": {
+        "A": "Chính phủ cần có chính sách cắt giảm tỷ lệ thất nghiệp của nền kinh tế.",
+        "B": "Mức tiết kiệm của nền kinh tế hiện đang quá thấp.",
+        "C": "Thuế suất thuế VAT tăng khi mức thuế suất hiện tại quá thấp.",
+        "D": "Lãi suất thấp sẽ kích thích doanh nghiệp đầu tư."
+      },
+      "answer": "D",
+      "explainAnswer": "Câu 'lãi suất thấp sẽ kích thích doanh nghiệp đầu tư' là nhận định mô tả quan hệ khách quan, có thể kiểm chứng → kinh tế học thực chứng. A ('cần cắt giảm'), B ('quá thấp'), C ('quá cao') là những đánh giá chuẩn tắc.",
+      "image": null
+    },
+    {
+      "id": 42,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Phương pháp nghiên cứu kinh tế vi mô bao gồm:",
+      "options": {
+        "A": "Phương pháp chuyên gia.",
+        "B": "Phương pháp bảng hỏi.",
+        "C": "Phương pháp phân tích thống kê mô tả.",
+        "D": "Phương pháp so sánh tĩnh."
+      },
+      "answer": "D",
+      "explainAnswer": "Phương pháp nghiên cứu của kinh tế vi mô gồm: mô hình hóa, phân tích cận biên, so sánh tĩnh. Phương pháp so sánh tĩnh so sánh các trạng thái cân bằng trước và sau khi có biến động. Chuyên gia, bảng hỏi, thống kê mô tả không phải phương pháp đặc trưng của kinh tế vi mô.",
+      "image": null
+    },
+    {
+      "id": 43,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Trong mô hình luân chuyển kinh tế trong nền kinh tế giản đơn, có hai thị trường là:",
+      "options": {
+        "A": "Thị trường hàng hoá và thị trường yếu tố sản xuất.",
+        "B": "Thị trường chứng khoán và thị trường hàng hoá.",
+        "C": "Thị trường hàng hoá và thị trường tài chính.",
+        "D": "Thị trường yếu tố sản xuất và thị trường máy móc."
+      },
+      "answer": "A",
+      "explainAnswer": "Trong mô hình luân chuyển kinh tế giản đơn có hai thị trường: thị trường hàng hóa - dịch vụ (hộ gia đình mua, doanh nghiệp bán) và thị trường yếu tố sản xuất (hộ gia đình bán, doanh nghiệp mua).",
+      "image": null
+    },
+    {
+      "id": 44,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Trong mô hình luân chuyển kinh tế trong nền kinh tế giản đơn, nhận định nào sau đây đúng?",
+      "options": {
+        "A": "Hộ gia đình có thu nhập từ việc bán hàng trên thị trường hàng hoá và chuyển thành chi tiêu trên thị trường các yếu tố sản xuất.",
+        "B": "Nền kinh tế có các tác nhân là doanh nghiệp, hộ gia đình và chính phủ.",
+        "C": "Doanh nghiệp có doanh thu từ thị trường hàng hoá và chuyển hoá thành lợi nhuận và chi tiêu cho yếu tố sản xuất.",
+        "D": "Thị trường chính là Thị trường hàng hoá và Thị trường hàng hoá tiêu dùng."
+      },
+      "answer": "C",
+      "explainAnswer": "Trong mô hình luân chuyển: doanh nghiệp bán hàng hóa trên thị trường hàng hóa thu doanh thu, rồi dùng doanh thu để chi trả (lợi nhuận, tiền công, tiền thuê...) cho các yếu tố sản xuất trên thị trường yếu tố sản xuất. A sai chiều (hộ gia đình bán yếu tố sản xuất, mua hàng hóa); B sai vì mô hình giản đơn không có chính phủ; D sai vì chỉ có hai thị trường nêu ở câu 43.",
+      "image": null
+    },
+    {
+      "id": 45,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Phương pháp cận biên trong nghiên cứu kinh tế học:",
+      "options": {
+        "A": "Giới hạn lại thực tế bằng cách mô hình hoá.",
+        "B": "Luôn sử dụng giả thiết Trong điều kiện các yếu tố khác không đổi.",
+        "C": "Sử dụng đạo hàm và vi phân để phân tích.",
+        "D": "Có công cụ chính là các giả thiết."
+      },
+      "answer": "C",
+      "explainAnswer": "Phương pháp cận biên phân tích sự thay đổi của biến phụ thuộc khi biến độc lập thay đổi thêm một đơn vị, sử dụng công cụ đạo hàm và vi phân (ví dụ MU = đạo hàm của TU). A là mô hình hóa, B là giả định 'ceteris paribus', D là vai trò của giả thiết.",
+      "image": null
+    },
+    {
+      "id": 46,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Trong kinh tế học, đôi khi, chính phủ phải đánh đổi giữa các mục tiêu:",
+      "options": {
+        "A": "Công bằng và Hiệu quả.",
+        "B": "Hiệu quả và Bình đẳng.",
+        "C": "Công bằng và Bình đẳng.",
+        "D": "Hiệu quả và Chi phí cơ hội."
+      },
+      "answer": "A",
+      "explainAnswer": "Chính phủ thường phải đánh đổi giữa mục tiêu hiệu quả (sản xuất tối đa trên PPF) và công bằng (phân phối thu nhập hợp lý). Các cặp còn lại (hiệu quả-bình đẳng là gần nghĩa, công bằng-bình đẳng là trùng, hiệu quả-chi phí cơ hội không phải mục tiêu chính sách) không đúng.",
+      "image": null
+    },
+    {
+      "id": 47,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Người duy lý luôn đưa ra quyết định bằng cách:",
+      "options": {
+        "A": "So sánh phần thưởng và hình phạt.",
+        "B": "So sánh tại điểm cận biên.",
+        "C": "So sánh tổng chi phí và tổng lợi ích.",
+        "D": "Mô hình hoá."
+      },
+      "answer": "B",
+      "explainAnswer": "Người duy lý ra quyết định bằng cách so sánh lợi ích và chi phí tại điểm cận biên: làm thêm một hành động nếu lợi ích biên lớn hơn chi phí biên. So sánh tổng (C) không phải nguyên tắc cận biên; A, D không phải cách ra quyết định của người duy lý.",
+      "image": null
+    },
+    {
+      "id": 48,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Hình dạng đường PPF được quyết định bởi:",
+      "options": {
+        "A": "Quy luật khan hiếm.",
+        "B": "Quy luật tự nhiên.",
+        "C": "Quy luật chi phí cơ hội tăng dần.",
+        "D": "Quy luật lợi suất giảm dần."
+      },
+      "answer": "C",
+      "explainAnswer": "Hình dạng lõm của đường PPF được quyết định bởi quy luật chi phí cơ hội tăng dần: sản xuất thêm mỗi đơn vị hàng hóa này ngày càng phải hy sinh nhiều hàng hóa kia hơn. Quy luật lợi suất giảm dần giải thích nguyên nhân sâu xa nhưng hình dạng PPF là hệ quả của chi phí cơ hội tăng dần (đáp án chuẩn của bộ đề).",
+      "image": null
+    },
+    {
+      "id": 49,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "PPF là đường:",
+      "options": {
+        "A": "Dốc xuống do nền kinh tế phải đối mặt với sự đánh đổi.",
+        "B": "Dốc xuống do quy luật lợi suất giảm dần.",
+        "C": "Dốc xuống do quy luật lựa chọn.",
+        "D": "Dốc xuống do quy luật chi phí cơ hội tăng dần."
+      },
+      "answer": "A",
+      "explainAnswer": "PPF dốc xuống vì nền kinh tế phải đánh đổi: muốn có thêm hàng hóa này phải giảm bớt hàng hóa kia. Độ dốc (lớn dần do lõm) mới do quy luật chi phí cơ hội tăng dần (D), nhưng việc 'dốc xuống' nói chung phản ánh sự đánh đổi.",
+      "image": null
+    },
+    {
+      "id": 50,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Lý thuyết lựa chọn:",
+      "options": {
+        "A": "Sử dụng công cụ là các biện pháp tối ưu hoá.",
+        "B": "Sử dụng công cụ là sự khan hiếm.",
+        "C": "Sử dụng công cụ là chi phí thực.",
+        "D": "Sử dụng công cụ lựa chọn là chi phí cơ hội."
+      },
+      "answer": "D",
+      "explainAnswer": "Lý thuyết lựa chọn sử dụng chi phí cơ hội làm công cụ để so sánh và chọn phương án tối ưu: chi phí thực của một lựa chọn là giá trị phương án tốt nhất bị bỏ qua. Tối ưu hóa là mục tiêu, khan hiếm là tiền đề, không phải 'công cụ' theo nghĩa của bộ đề.",
+      "image": null
+    }
+  ]
+}

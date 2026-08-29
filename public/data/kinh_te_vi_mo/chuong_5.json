@@ -1,0 +1,457 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kinh tế vi mô - Chương 5",
+  "chapter": "Chương 5",
+  "totalQuestions": 30,
+  "questions": [
+    {
+      "id": 152,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Khi có sự kết hợp tối ưu của 2 yếu tố sản xuất, tại đó:",
+      "options": {
+        "A": "Hệ số góc của đường đẳng phí và đường đảng lương bằng nhau.",
+        "B": "Chi phí biến đạt cực tiểu tại mức sản lượng đó.",
+        "C": "Câu (a) và (c) đúng.",
+        "D": "Tỷ lệ thay thế kỹ thuật biên bằng tỷ số giá cả của 2 yếu tố sản xuất."
+      },
+      "answer": "C",
+      "explainAnswer": "Tại kết hợp tối ưu của hai yếu tố sản xuất, đường đẳng phí TIẾP XÚC với đường đẳng lượng: hệ số góc của chúng bằng nhau và MRTS (tỷ lệ thay thế kỹ thuật biên) bằng tỷ số giá cả của hai yếu tố sản xuất. Theo đáp án của bộ đề, chọn C ('Câu (a) và (c) đúng') — bản chất là các điều kiện tiếp xúc/tối ưu nêu trên.",
+      "image": null
+    },
+    {
+      "id": 153,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Giả sử năng suất trung bình của 6 công nhân là 15. Nếu sản phẩm biên (năng suất biên) của người công nhân thứ 7 là 20, thể hiện:",
+      "options": {
+        "A": "Năng suất biên đang tăng.",
+        "B": "Năng suất trung bình đang tăng.",
+        "C": "suất trung bình đang giảm.",
+        "D": "Năng suất biến đang giảm."
+      },
+      "answer": "B",
+      "explainAnswer": "Năng suất trung bình của 6 công nhân: AP = 15 → tổng sản lượng = 6×15 = 90. Thêm công nhân thứ 7 có MP = 20 → tổng sản lượng = 110; AP mới = 110/7 ≈ 15,7 > 15 → năng suất trung bình đang TĂNG (vì MP > AP) → B.",
+      "image": null
+    },
+    {
+      "id": 154,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Giả sử tại mức đầu vào hiện tại, tỷ lệ thay thế kỹ thuật biên là: MRTS = -3. Với vốn được biểu diễn trên trục tung và lao động được biểu ở trên trục hoành thì",
+      "options": {
+        "A": "Năng suất biên của lao động bằng 3 lần năng suất biên của vốn.",
+        "B": "Nếu doanh nghiệp thuê thêm 1 đơn vị vốn thì có thể sản xuất thêm 3 đơn vị sản phẩm.",
+        "C": "Nếu sử dụng thêm 3 đơn vị lao động, doanh nghiệp cần phải sử dụng thêm 3 đơn vị vốn.",
+        "D": "Nếu giảm 1 đơn vị vốn, doanh nghiệp có thể thuê thêm 3 đơn vị lao động mà sản lượng không đổi."
+      },
+      "answer": "A",
+      "explainAnswer": "MRTS = −MPL/MPK (lấy trị tuyệt đối = MPL/MPK). MRTS = −3 → MPL/MPK = 3 → năng suất biên của lao động bằng 3 lần năng suất biên của vốn → A. B, C, D áp dụng sai ý nghĩa của MRTS.",
+      "image": null
+    },
+    {
+      "id": 155,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Trong ngắn hạn, đường chi phí trung bình ngắn hạn ATC có dạng chữ U do:",
+      "options": {
+        "A": "Năng suất trung bình tăng dần.",
+        "B": "Lợi thế kinh tế của sản xuất theo quy mô lớn.",
+        "C": "Hiệu suất tăng dần theo quy mô, sau đó giảm theo quy mô.",
+        "D": "Ảnh hưởng của quy luật năng suất cận biên giảm dần."
+      },
+      "answer": "D",
+      "explainAnswer": "Đường ATC ngắn hạn hình chữ U là do quy luật năng suất cận biên giảm dần: ban đầu năng suất biên tăng (MC giảm) kéo ATC giảm, sau đó năng suất biên giảm làm MC tăng dần và vượt ATC → ATC tăng lên → D.",
+      "image": null
+    },
+    {
+      "id": 156,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Trong ngắn hạn khi sản lượng tăng mà chi phí cận biên MC tăng dần và chi phí biến đổi AVC giảm dần là do",
+      "options": {
+        "A": "MC < AVC.",
+        "B": "MC < ATC.",
+        "C": "MC < AFC.",
+        "D": "MC < AC."
+      },
+      "answer": "A",
+      "explainAnswer": "Quan hệ giữa MC và AVC: AVC giảm chừng nào MC < AVC (đơn vị mới rẻ hơn mức trung bình kéo trung bình xuống). Vì vậy, khi sản lượng tăng mà MC tăng dần trong khi AVC vẫn giảm dần là vì MC đang nhỏ hơn AVC → A.",
+      "image": null
+    },
+    {
+      "id": 157,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Chi phí trung bình để sản xuất 100 sản phẩm X là 15 đvt, chi phí biên không đổi ở mức sản lượng là 10 đvt. Tại mức sản lượng 100 sản phẩm, chi phí trung bình đang:",
+      "options": {
+        "A": "không xác định được xu hướng.",
+        "B": "Giảm dần.",
+        "C": "Không đổi.",
+        "D": "Tăng dần."
+      },
+      "answer": "B",
+      "explainAnswer": "Tại Q = 100: AC = 15; MC = 10 < AC = 15. Khi chi phí biên của đơn vị tiếp theo NHỎ HƠN chi phí trung bình hiện tại, nó kéo chi phí trung bình xuống → AC đang GIẢM DẦN → B.",
+      "image": null
+    },
+    {
+      "id": 158,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Với cùng một số vốn đầu tư, nhà đầu tư dự kiến lợi nhuận kế toán của 3 phướng án lần lượt là 50 triệu, 35 triệu, 30 triệu. Nếu phương án A được chọn thì lợi nhuận kinh tế đạt được là:",
+      "options": {
+        "A": "50 triệu.",
+        "B": "20 triệu.",
+        "C": "35 triệu.",
+        "D": "15 triệu."
+      },
+      "answer": "D",
+      "explainAnswer": "Lợi nhuận kinh tế của phương án A = lợi nhuận kế toán của A − lợi nhuận kế toán của phương án tốt nhất bị bỏ qua = 50 − 35 = 15 triệu (35 triệu là phương án tốt nhất trong các phương án không được chọn) → D.",
+      "image": null
+    },
+    {
+      "id": 159,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Hàm tổng chi phí biến đổi có dạng VC = 5Q + 4. Do vậy đường chi phí biên có dạng",
+      "options": {
+        "A": "Nằm song song với trục hoành.",
+        "B": "Chữ U.",
+        "C": "Đường thẳng dốc lên.",
+        "D": "Đường thẳng dốc đứng."
+      },
+      "answer": "A",
+      "explainAnswer": "VC = 5Q + 4. Chi phí biên MC = d(VC)/dQ = 5 — là HẰNG SỐ. Đường MC là đường nằm NGANG (song song với trục hoành) ở mức 5 → A. (Phần +4 là FC, không ảnh hưởng MC.)",
+      "image": null
+    },
+    {
+      "id": 160,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Một trong số các đường chi phí không có dạng chữ U (hoặc chữ V), đó là:",
+      "options": {
+        "A": "Đường chi phí biên.",
+        "B": "Đường chi phí trung bình.",
+        "C": "Đường chi phí cố định trung bình.",
+        "D": "Đường chi phí biến đổi trung bình."
+      },
+      "answer": "C",
+      "explainAnswer": "AFC = FC/Q luôn giảm dần theo sản lượng và có dạng đường cong hyperbol, KHÔNG có dạng hình chữ U (hoặc chữ V) → C. MC, ATC, AVC đều có dạng chữ U trong ngắn hạn.",
+      "image": null
+    },
+    {
+      "id": 161,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Ngắn hạn và dài hạn trong kinh tế học có nghĩa là:",
+      "options": {
+        "A": "Ngắn hạn là thời hạn dưới 1 năm, dài hạn là khoảng thời gian trên 3 tháng phụ thuộc vào quy mô và hình thức kinh doanh của doanh nghiệp cũng như khả năng thay đổi quy mô dễ hay khó.",
+        "B": "Ngắn hạn là khoảng thời gian mà doanh nghiệp chỉ có một số yếu tố sản xuất thay đổi và thay đổi được quy mô sản xuất; dài hạn là khoảng thời gian đủ để doanh nghiệp thay đổi số lượng tất cả các yếu tố sản xuất và quy mô là không đổi.",
+        "C": "Ngắn hạn là khoảng thời gian mà doanh nghiệp có một số yếu tố sản xuất cố định và những yếu tố khác thì biến đổi; dài hạn là khoảng thời gian đủ để doanh nghiệp thay đổi số lượng tất cả các yếu tố sản xuất.",
+        "D": "Ngắn hạn là thời hạn DN chỉ thay đổi được 1 yếu tố sản xuất và dài hạn là thời gian DN có thể thay đổi số lượng tất cả yếu tố sản xuất, điều này phụ thuộc vào đặc điểm và hàng hóa doanh nghiệp sản xuất kinh doanh."
+      },
+      "answer": "C",
+      "explainAnswer": "Ngắn hạn là khoảng thời gian doanh nghiệp có MỘT SỐ yếu tố sản xuất CỐ ĐỊNH (nhà xưởng, máy móc) và những yếu tố khác BIẾN ĐỔI; dài hạn là khoảng thời gian đủ để doanh nghiệp thay đổi SỐ LƯỢNG TẤT CẢ các yếu tố sản xuất → C. Ngắn hạn/dài hạn không tính theo năm tháng cụ thể (A sai).",
+      "image": null
+    },
+    {
+      "id": 162,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Cho hàm tổng chi phí của DN như sau: TC = Q^2 + 2Q+ 50. Hàm chi phí cố định của doanh nghiệp là:",
+      "options": {
+        "A": "2Q + 50.",
+        "B": "50.",
+        "C": "Q^2 + 2Q.",
+        "D": "Q^2 + 50."
+      },
+      "answer": "B",
+      "explainAnswer": "Chi phí cố định FC là phần chi phí KHÔNG phụ thuộc sản lượng Q. TC = Q² + 2Q + 50 → FC = 50; phần Q² + 2Q là VC → B.",
+      "image": null
+    },
+    {
+      "id": 163,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Chi phí trung bình tăng dần theo sản lượng thì:",
+      "options": {
+        "A": "Chi phí biên bằng chi phí trung bình.",
+        "B": "Chi phí biên nhỏ hơn chi phí trung bình.",
+        "C": "Chi phí biên lớn hơn chi phí trung bình.",
+        "D": "Cả 3 câu trên đều sai."
+      },
+      "answer": "C",
+      "explainAnswer": "Khi AC đang TĂNG, chi phí biên của đơn vị sản xuất thêm phải LỚN HƠN chi phí trung bình hiện tại (MC > AC) — đơn vị mới đắt hơn mức trung bình nên kéo trung bình lên → C.",
+      "image": null
+    },
+    {
+      "id": 164,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Để lắp vào vị trí trống trên dây chuyển sản xuất, bạn sẽ:",
+      "options": {
+        "A": "Quan tâm đến năng suất hiện hơn là năng suất trung bình.",
+        "B": "Dừng ngay việc thuê thêm công nhân nếu tổng sản lượng giảm.",
+        "C": "Câu (a) và (c) đúng.",
+        "D": "Không thuê thêm công nhân nếu năng suất trung bình bắt đầu giảm."
+      },
+      "answer": "B",
+      "explainAnswer": "Nên thuê thêm công nhân chừng nào tổng sản lượng còn TĂNG (năng suất biên dương). Nếu tổng sản lượng BẮT ĐẦU GIẢM nghĩa là năng suất biên âm → phải DỪNG NGAY việc thuê thêm → B. D (dừng khi AP bắt đầu giảm) là quá sớm, chưa tối ưu.",
+      "image": null
+    },
+    {
+      "id": 165,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Chi phí ẩn là loại chi phí nào sau đây:",
+      "options": {
+        "A": "Tiền thuê nhà xưởng.",
+        "B": "Chi phí nguyên vật liệu.",
+        "C": "Tiền lương trả cho công nhân.",
+        "D": "Các cơ hội đầu tư đã từ bỏ."
+      },
+      "answer": "D",
+      "explainAnswer": "Chi phí ẩn là giá trị các nguồn lực do chủ doanh nghiệp tự cung cấp, đo bằng chi phí cơ hội — điển hình là CÁC CƠ HỘI ĐẦU TƯ ĐÃ TỪ BỎ → D. Tiền thuê, nguyên vật liệu, lương công nhân là chi phí hiện (chi phí kế toán).",
+      "image": null
+    },
+    {
+      "id": 166,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Hàm sản xuất Q = K^0,4 L^0,5 là hàm sản xuất có:",
+      "options": {
+        "A": "Hiệu suất không đổi theo qui mô.",
+        "B": "Hiệu suất tăng theo qui mô.",
+        "C": "Hiệu suất giảm theo qui mô.",
+        "D": "Không xác định được."
+      },
+      "answer": "C",
+      "explainAnswer": "Hàm sản xuất Cobb-Douglas Q = K^0,4.L^0,5: hiệu suất theo quy mô xác định bằng tổng số mũ. 0,4 + 0,5 = 0,9 < 1 → hiệu suất GIẢM theo quy mô: tăng gấp đôi mọi đầu vào, sản lượng tăng chưa đến gấp đôi → C.",
+      "image": null
+    },
+    {
+      "id": 167,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Câu nào đúng trong những câu sau đây:",
+      "options": {
+        "A": "Khi năng suất trung bình giảm thì chi phí biến đổi trung bình tăng.",
+        "B": "Khi năng suất biên tăng thì chi phí biên giảm.",
+        "C": "Các cầu trên đều đúng.",
+        "D": "Khi năng suất biên đạt cực đại thì chi phí biên đạt cực tiểu."
+      },
+      "answer": "C",
+      "explainAnswer": "Cả ba phát biểu đều đúng: (1) AP giảm thì AVC tăng (AVC = w/AP, quan hệ nghịch); (2) MP tăng thì MC giảm (MC = w/MP); (3) khi MP đạt cực đại thì MC đạt cực tiểu → C.",
+      "image": null
+    },
+    {
+      "id": 168,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Khi doanh nghiệp nhận được lợi nhuận kinh tế bằng 0, điều này có nghĩa là:",
+      "options": {
+        "A": "Doanh nghiệp đang làm mất chi phí cố định.",
+        "B": "Doanh nghiệp đang không tạo ra lợi nhuận.",
+        "C": "Doanh nghiệp chỉ tạo ra lợi nhuận kế toán, nhưng không tạo ra lợi nhuận kinh tế.",
+        "D": "Doanh nghiệp đang có lợi nhuận kinh tế bằng chi phí cơ hội."
+      },
+      "answer": "D",
+      "explainAnswer": "Lợi nhuận kinh tế = 0 nghĩa là doanh nghiệp chỉ bù đắp vừa đủ mọi chi phí KỂ CẢ chi phí cơ hội (lợi nhuận kế toán đúng bằng chi phí cơ hội đã bỏ ra) — doanh nghiệp không tạo ra lợi nhuận vượt trên mức bình thường. Theo đáp án của bộ đề, chọn D. B là cách diễn đạt tương tự nhưng thiếu chính xác vì DN vẫn có lợi nhuận kế toán dương.",
+      "image": null
+    },
+    {
+      "id": 169,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Một sinh viên quyết định mở một quán cà phê nhỏ sau khi tốt nghiệp. Mỗi tháng, anh ta có thể làm việc tại một công ty với mức lương là 10 triệu VNĐ hoặc có thể điều hành quán cà phê. Mỗi tháng, anh ta thu về lợi nhuận từ quán cà phê là 12 triệu VNĐ. Chi phí cơ hội của anh ta khi quyết định mở quán cà phê là bao nhiêu?",
+      "options": {
+        "A": "22 triệu VNĐ.",
+        "B": "2 triệu VNĐ.",
+        "C": "12 triệu VNĐ.",
+        "D": "10 triệu VNĐ."
+      },
+      "answer": "D",
+      "explainAnswer": "Chi phí cơ hội là giá trị phương án tốt nhất bị bỏ qua. Nếu không mở quán cà phê, anh ta có thể làm công ty với lương 10 triệu/tháng → chi phí cơ hội của việc mở quán là 10 triệu → D. (12 triệu là lợi nhuận kiếm được, không phải chi phí cơ hội; 22 triệu là phép cộng sai.)",
+      "image": null
+    },
+    {
+      "id": 170,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Trong ngắn hạn, tại sao đường ATC dốc xuống, đạt cực tiểu rồi lại dốc lên:",
+      "options": {
+        "A": "a và b đúng.",
+        "B": "Do quy luật năng suất cận biên giảm dần của lao động.",
+        "C": "Do quy luật chi phí cận biên giảm dần của lao động.",
+        "D": "Do ban đầu chi phí AFC lớn, sau đó AVC tăng dần khi lượng sản xuất."
+      },
+      "answer": "A",
+      "explainAnswer": "Đường ATC ngắn hạn dốc xuống, đạt cực tiểu rồi dốc lên vì: ban đầu chi phí cố định trung bình AFC lớn và giảm dần, đồng thời năng suất biên tăng làm MC thấp kéo ATC xuống; sau đó quy luật năng suất cận biên giảm dần làm MC tăng và vượt ATC → ATC tăng lên. Theo đáp án của bộ đề, chọn A ('a và b đúng').",
+      "image": null
+    },
+    {
+      "id": 171,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Tại xưởng sản xuất bánh rán, tổng chi phí sản xuất 100 chiếc bánh hiện tại đang là 1 triệu đồng. Nếu chi phí cố định là 100 nghìn đồng thì:",
+      "options": {
+        "A": "Chi phí cận biên là 10 nghìn đồng/chiếc.",
+        "B": "Chi phí cố định trung bình là 1 nghìn đồng/chiếc.",
+        "C": "Chi phí biến đổi trung bình là 10 nghìn đồng/chiếc.",
+        "D": "Chi phí trung bình là 9000 đồng/chiếc."
+      },
+      "answer": "B",
+      "explainAnswer": "TC(100) = 1.000.000 đồng, FC = 100.000 → AFC = FC/Q = 100.000/100 = 1.000 đồng/chiếc → B đúng. Kiểm tra các phương án khác: VC = 900.000 → AVC = 9.000 đồng/chiếc (C sai: 10.000); AC = TC/Q = 10.000 đồng/chiếc (D sai: 9.000); MC không xác định từ dữ kiện (A sai).",
+      "image": null
+    },
+    {
+      "id": 172,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Khi năng suất trung bình giảm, năng suất biên khi đó:",
+      "options": {
+        "A": "Bằng năng suất trung bình.",
+        "B": "Tăng dần.",
+        "C": "Vượt quá năng suất trung bình.",
+        "D": "Nhỏ hơn năng suất trung bình."
+      },
+      "answer": "D",
+      "explainAnswer": "Quan hệ AP và MP: khi MP > AP thì AP tăng; khi MP < AP thì AP giảm; MP cắt AP tại điểm cực đại của AP. Khi năng suất trung bình GIẢM → MP NHỎ HƠN AP → D.",
+      "image": null
+    },
+    {
+      "id": 173,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Tỷ lệ thay thế kỹ thuật biên (MRTS) thể hiện:",
+      "options": {
+        "A": "Độ dốc của đường tổng sản lượng.",
+        "B": "Độ dốc của đường đồng phí.",
+        "C": "Độ dốc của đường đồng lượng.",
+        "D": "Độ dốc của đường ngân sách."
+      },
+      "answer": "C",
+      "explainAnswer": "Tỷ lệ thay thế kỹ thuật biên MRTS = |ΔK/ΔL| thể hiện độ dốc của ĐƯỜNG ĐỒNG LƯỢNG (isoquant) — lượng vốn phải bỏ đi khi tăng thêm 1 đơn vị lao động để giữ nguyên sản lượng → C.",
+      "image": null
+    },
+    {
+      "id": 174,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Độ dốc (hệ số góc) của đường đồng phí chính là:",
+      "options": {
+        "A": "Tỷ lệ đánh đổi giữa 2 yếu tố sản xuất trên thị trường.",
+        "B": "Tỷ số giá cả của 2 yếu tố sản xuất.",
+        "C": "Tỷ số năng suất biên của 2 yếu tố sản xuất.",
+        "D": "Câu (b) và (c) đều đúng."
+      },
+      "answer": "D",
+      "explainAnswer": "Độ dốc đường đồng phí bằng −(w/r) tức TỶ SỐ GIÁ CẢ của hai yếu tố sản xuất (b đúng); tại điểm tối ưu, độ dốc này cũng bằng tỷ số năng suất biên của hai yếu tố (c đúng) → D.",
+      "image": null
+    },
+    {
+      "id": 175,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Nếu đường đồng lượng là một đường thẳng thì",
+      "options": {
+        "A": "Chỉ có một cách kết hợp các yếu tố đầu vào trong quá trình sản xuất.",
+        "B": "Xuất hiện doanh lợi tăng dần theo quy mô.",
+        "C": "Tỷ lệ thay thế kỹ thuật biên không đổi.",
+        "D": "Chi phí sử dụng các yếu tố đầu vào cố định ở các mức sử dụng khác nhau."
+      },
+      "answer": "C",
+      "explainAnswer": "Đường đồng lượng là một đường thẳng (tuyến tính) nghĩa là MRTS KHÔNG ĐỔI ở mọi điểm — hai yếu tố đầu vào là thay thế hoàn hảo → C. A sai vì có vô số cách kết hợp; B, D không liên quan.",
+      "image": null
+    },
+    {
+      "id": 176,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Tại xưởng sản xuất bánh mỳ, tổng chi phí sản xuất 1000 chiếc bánh mỳ hiện tại đang là 2 triệu đồng. Chi phí cận biên để sản xuất chiếc bánh mỳ thứ 1001 là 2500 đồng. Do đó,",
+      "options": {
+        "A": "Quy luật năng suất cận biên giảm dần chưa xảy ra với xưởng bánh mỳ này.",
+        "B": "Chi phí trung bình để sản xuất 1000 bánh mỳ là khoảng 2000,5 đồng.",
+        "C": "Chi phí trung bình để sản xuất 1001 bánh mỳ là khoảng 2000,5 đồng.",
+        "D": "Chi phí tăng thêm để sản xuất chiếc bánh mỳ thứ 1001 là lớn hơn 2500 đồng."
+      },
+      "answer": "C",
+      "explainAnswer": "TC(1000) = 2.000.000 đồng; MC của chiếc thứ 1001 = 2.500 đồng → TC(1001) = 2.002.500 đồng. AC(1001) = 2.002.500/1001 ≈ 2.000,5 đồng → C đúng. B sai vì AC(1000) = 2.000 đồng (không phải 2000,5); D sai vì chi phí tăng thêm đúng bằng 2.500; A không suy ra được.",
+      "image": null
+    },
+    {
+      "id": 177,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Khi ta cố định sản lượng của một hàm sản xuất, cho số lượng vốn và lao động thay đổi thì đường cong biểu diễn sẽ được gọi là:",
+      "options": {
+        "A": "Đường sản phẩm trung bình.",
+        "B": "Đường chi phí biên.",
+        "C": "Đường tổng sản phẩm.",
+        "D": "Đường đẳng lượng."
+      },
+      "answer": "D",
+      "explainAnswer": "Cố định sản lượng Q, cho vốn K và lao động L thay đổi → đường cong biểu diễn các kết hợp K, L tạo ra cùng một mức sản lượng gọi là ĐƯỜNG ĐẲNG LƯỢNG (đường đồng lượng) → D.",
+      "image": null
+    },
+    {
+      "id": 178,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Sự cải tiến kỹ thuật:",
+      "options": {
+        "A": "Có thể được biểu hiện qua sự dịch chuyển lên trên của đường tổng sản phẩm.",
+        "B": "Có thể che dấu sự tồn tại của tình trạng năng suất biên giảm dẫn.",
+        "C": "Cả 3 câu trên đều đúng.",
+        "D": "Cho phép sản xuất nhiều sản phẩm hơn với cùng số lượng các yếu tố đầu vào so với trước."
+      },
+      "answer": "C",
+      "explainAnswer": "Cải tiến kỹ thuật làm đường tổng sản phẩm dịch chuyển LÊN TRÊN (làm được nhiều hơn với cùng đầu vào), có thể che dấu tình trạng năng suất biên giảm dần, và cho phép sản xuất nhiều sản phẩm hơn với cùng lượng đầu vào. Cả 3 phát biểu đều đúng → C.",
+      "image": null
+    },
+    {
+      "id": 179,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Tổng mức lợi nhuận được tối đa hóa khi:",
+      "options": {
+        "A": "Doanh thu biên vượt quá chi phí biên.",
+        "B": "Doanh thu biên bằng với chi phí biên.",
+        "C": "Lợi nhuận bằng không.",
+        "D": "Lợi nhuận biên bằng vói chi phí biên."
+      },
+      "answer": "B",
+      "explainAnswer": "Lợi nhuận (π = TR − TC) đạt tối đa khi doanh thu biên bằng chi phí biên: MR = MC. Nếu MR > MC thì tăng sản lượng làm tăng lợi nhuận; nếu MR < MC thì giảm sản lượng → điểm tối ưu là MR = MC → B.",
+      "image": null
+    },
+    {
+      "id": 180,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Chi phí nào dưới đây là một loại chi phí chìm:",
+      "options": {
+        "A": "Chi phí biến đổi.",
+        "B": "Chi phí cận biên.",
+        "C": "Chi phí cố định.",
+        "D": "Chi phí trung bình."
+      },
+      "answer": "C",
+      "explainAnswer": "Chi phí chìm (sunk cost) là khoản chi đã bỏ ra, không thể thu hồi và không ảnh hưởng đến quyết định hiện tại. Chi phí CỐ ĐỊNH trong ngắn hạn là chi phí chìm điển hình → C. Chi phí biến đổi, chi phí biên, chi phí trung bình đều thay đổi theo quyết định sản xuất nên không phải chi phí chìm.",
+      "image": null
+    },
+    {
+      "id": 181,
+      "chapter": "Chương 5",
+      "sourceChapter": "Chương 5",
+      "question": "Bạn Hà quyết định khởi nghiệp đầu tư vào nông trại sau khi tốt nghiệp đại học bằng nguồn vốn tiết kiệm của bạn, tương ứng 100 triệu đồng. Lãi suất hiện tại của khoản tiết kiện bạn gửi ngân hàng là 5%/năm và là mức lãi cố định, không thay đổi. Nếu bạn không khởi nghiệp mà đi làm thì sẽ có được khoảng lương là 120 triệu/năm. Trong năm đầu tiên, doanh thu của nông trại của bạn là 250 triệu đồng. Điều nào dưới đây là đúng?",
+      "options": {
+        "A": "Lợi nhuận kinh tế của nông trại là 145 triệu đồng.",
+        "B": "Tổng chi phí ẩn của bạn Hà là 5 triệu đồng.",
+        "C": "Lợi nhuận kinh tế của nông trại là 25 triệu đồng.",
+        "D": "Tổng chi phí hiện (chi phí kế toán) của bạn Hà là 105 triệu đồng."
+      },
+      "answer": "C",
+      "explainAnswer": "Chi phí ẩn của bạn Hà gồm: lãi ngân hàng mất đi = 100 triệu × 5% = 5 triệu + tiền lương bỏ qua = 120 triệu → tổng chi phí ẩn = 125 triệu. Lợi nhuận kinh tế = doanh thu − chi phí kế toán (100 triệu vốn) − chi phí ẩn (125 triệu) = 250 − 100 − 125 = 25 triệu → C. (A: 145 triệu là bỏ sót lương; B: chi phí ẩn là 125 chứ không phải 5; D: chi phí kế toán là 100 triệu chứ không phải 105.)",
+      "image": null
+    }
+  ]
+}

@@ -10,6 +10,8 @@ export type SubjectId =
   | "ky-nang-quan-ly-du-an"
   | "chu-nghia-xa-hoi-khoa-hoc"
   | "danh-gia-va-kiem-dinh-chat-luong-phan-mem"
+  | "kinh-te-vi-mo"
+  | "kinh-te-chinh-tri-mac-lenin"
   | "ky-nang-khoi-nghiep-va-lanh-dao"
   | "bao-mat-ung-dung-he-thong"
   | "toeic"
@@ -371,27 +373,101 @@ export const subjects: Subject[] = [
     ],
   },
   {
+    id: "kinh-te-vi-mo",
+    code: "MAC101",
+    name: { en: "Macroeconomics", vi: "Kinh tế vĩ mô" },
+    category: { en: "General", vi: "Đại cương" },
+    exams: [
+      {
+        id: "macroeconomics-final-bank-1", type: "final", year: 2026, questionCount: 181, durationMinutes: 60,
+        title: { en: "Macroeconomics", vi: "Kinh tế vĩ mô" },
+        description: { en: "181 questions grouped by chapters. Choose a chapter after clicking Try now.", vi: "181 câu hỏi được chia theo chương. Chọn chương sau khi ấn Thử ngay." },
+        questionBanks: [
+          "/data/kinh_te_vi_mo/chuong_1.json",
+          "/data/kinh_te_vi_mo/chuong_2.json",
+          "/data/kinh_te_vi_mo/chuong_3.json",
+          "/data/kinh_te_vi_mo/chuong_4.json",
+          "/data/kinh_te_vi_mo/chuong_5.json",
+        ],
+      },
+    ],
+    chapters: [
+      { id: "all", label: { en: "All chapters", vi: "Toàn bộ (181 câu)" }, count: 181 },
+      { id: "c123_mid", label: { en: "Chapters 1,2,3 - Midterm", vi: "Chương 1,2,3 - Giữa kỳ" }, matches: ["Chương 1","Chương 2","Chương 3"], count: 126 },
+      { id: "c45_final", label: { en: "Chapters 4,5 - Final", vi: "Chương 4,5 - Cuối kỳ" }, matches: ["Chương 4","Chương 5"], count: 55 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, count: 50 },
+      { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, count: 41 },
+      { id: "c3", label: { en: "Chapter 3", vi: "Chương 3" }, count: 35 },
+      { id: "c4", label: { en: "Chapter 4", vi: "Chương 4" }, count: 25 },
+      { id: "c5", label: { en: "Chapter 5", vi: "Chương 5" }, count: 30 },
+    ],
+  },
+  {
+    id: "kinh-te-chinh-tri-mac-lenin",
+    code: "PEC101",
+    name: { en: "Marxist-Leninist Political Economy", vi: "Kinh tế chính trị Mác - Lênin" },
+    category: { en: "General", vi: "Đại cương" },
+    exams: [
+      {
+        id: "political-economy-final-bank-1", type: "final", year: 2026, questionCount: 240, durationMinutes: 60,
+        title: { en: "Marxist-Leninist Political Economy", vi: "Kinh tế chính trị Mác - Lênin" },
+        description: { en: "240 questions grouped by chapters. Choose a chapter after clicking Try now.", vi: "240 câu hỏi được chia theo chương. Chọn chương sau khi ấn Thử ngay." },
+        questionBanks: [
+          "/data/kinh_te_chinh_tri_mac_lenin/chuong_1.json",
+          "/data/kinh_te_chinh_tri_mac_lenin/chuong_2.json",
+          "/data/kinh_te_chinh_tri_mac_lenin/chuong_3.json",
+          "/data/kinh_te_chinh_tri_mac_lenin/chuong_4.json",
+          "/data/kinh_te_chinh_tri_mac_lenin/chuong_5.json",
+          "/data/kinh_te_chinh_tri_mac_lenin/chuong_6.json",
+        ],
+      },
+    ],
+    chapters: [
+      { id: "all", label: { en: "All chapters", vi: "Toàn bộ (240 câu)" }, count: 240 },
+      { id: "c123_mid", label: { en: "Chapters 1,2,3 - Midterm", vi: "Chương 1,2,3 - Giữa kỳ" }, matches: ["Chương 1","Chương 2","Chương 3"], count: 110 },
+      { id: "c456_final", label: { en: "Chapters 4,5,6 - Final", vi: "Chương 4,5,6 - Cuối kỳ" }, matches: ["Chương 4","Chương 5","Chương 6"], count: 130 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, count: 29 },
+      { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, count: 50 },
+      { id: "c3", label: { en: "Chapter 3", vi: "Chương 3" }, count: 31 },
+      { id: "c4", label: { en: "Chapter 4", vi: "Chương 4" }, count: 45 },
+      { id: "c5", label: { en: "Chapter 5", vi: "Chương 5" }, count: 45 },
+      { id: "c6", label: { en: "Chapter 6", vi: "Chương 6" }, count: 40 },
+    ],
+  },
+  {
     id: "bao-mat-ung-dung-he-thong",
     code: "SEC301",
     name: securityName,
     category: { en: "Major", vi: "Chuyên ngành" },
     exams: [
       {
-        id: "sec-final-bank-2",
-        type: "final",
-        year: 2025,
-        questionCount: 150,
-        durationMinutes: 90,
-        title: {
-          en: "Practice Final Exam - Application & System Security – 2026",
-          vi: "Đề tham khảo Cuối kỳ môn Bảo mật ứng dụng và hệ thống – 2026",
-        },
-        description: {
-          en: "Full practice final exam bank with 150 multiple-choice questions on application and system security.",
-          vi: "Bộ tài liệu ôn tập cuối kỳ đầy đủ 150 câu trắc nghiệm về bảo mật ứng dụng và hệ thống.",
-        },
-        questionBank: "/data/bao-mat-ung-dung-va-he-thong/bo_cau_hoi_bao_mat_ung_dung_he_thong_2.json",
+        id: "sec-final-bank-2", type: "final", year: 2026, questionCount: 150, durationMinutes: 90,
+        title: { en: "Application & System Security", vi: "Bảo mật ứng dụng và hệ thống" },
+        description: { en: "150 questions grouped by chapters. Choose a chapter after clicking Try now.", vi: "150 câu hỏi được chia theo chương. Chọn chương sau khi ấn Thử ngay." },
+        questionBanks: [
+          "/data/bao-mat-ung-dung-va-he-thong/chuong_1.json",
+          "/data/bao-mat-ung-dung-va-he-thong/chuong_2.json",
+          "/data/bao-mat-ung-dung-va-he-thong/chuong_3.json",
+          "/data/bao-mat-ung-dung-va-he-thong/chuong_4.json",
+          "/data/bao-mat-ung-dung-va-he-thong/chuong_5.json",
+          "/data/bao-mat-ung-dung-va-he-thong/chuong_6.json",
+          "/data/bao-mat-ung-dung-va-he-thong/chuong_7.json",
+          "/data/bao-mat-ung-dung-va-he-thong/chuong_8.json",
+        ],
       },
+    ],
+    chapters: [
+      { id: "all", label: { en: "All chapters", vi: "Toàn bộ (150 câu)" }, count: 150 },
+      { id: "c1234_mid", label: { en: "Chapters 1,2,3,4 - Midterm", vi: "Chương 1,2,3,4 - Giữa kỳ" }, matches: ["Chương 1","Chương 2","Chương 3","Chương 4"], count: 65 },
+      { id: "c5678_final", label: { en: "Chapters 5,6,7,8 - Final", vi: "Chương 5,6,7,8 - Cuối kỳ" }, matches: ["Chương 5","Chương 6","Chương 7","Chương 8"], count: 85 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, count: 21 },
+      { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, count: 8 },
+      { id: "c3", label: { en: "Chapter 3", vi: "Chương 3" }, count: 17 },
+      { id: "c4", label: { en: "Chapter 4", vi: "Chương 4" }, count: 19 },
+      { id: "c5", label: { en: "Chapter 5", vi: "Chương 5" }, count: 20 },
+      { id: "c6", label: { en: "Chapter 6", vi: "Chương 6" }, count: 31 },
+      { id: "c7", label: { en: "Chapter 7", vi: "Chương 7" }, count: 18 },
+      { id: "c8", label: { en: "Chapter 8", vi: "Chương 8" }, count: 16 },
     ],
   },
   {

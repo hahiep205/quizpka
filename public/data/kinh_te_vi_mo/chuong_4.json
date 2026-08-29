@@ -1,0 +1,382 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kinh tế vi mô - Chương 4",
+  "chapter": "Chương 4",
+  "totalQuestions": 25,
+  "questions": [
+    {
+      "id": 127,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Để tối đa hóa hữu dụng với thu nhập cho trước, người tiêu dùng phân phối các sản phẩm theo nguyên tắc:",
+      "options": {
+        "A": "Độ thỏa dụng biên các sản phẩm phải bằng nhau: MC = MU.",
+        "B": "Lợi ích biên trên một đơn vị tiền tệ của các sản phẩm bằng nhau MUx /Px = MUy /Py =...= MUz /Pz.",
+        "C": "Ưu tiên mua các sản phẩm có mức giá tương đối rẻ.",
+        "D": "Phần chi tiêu cho mỗi sản phẩm là bằng nhau."
+      },
+      "answer": "B",
+      "explainAnswer": "Để tối đa hóa hữu dụng với thu nhập cho trước, người tiêu dùng phân bổ chi tiêu sao cho lợi ích biên trên MỘT ĐƠN VỊ TIỀN TỆ của các sản phẩm bằng nhau: MUx/Px = MUy/Py = ... = MUz/Pz → B. Điều kiện này đảm bảo không thể chuyển chi tiêu từ sản phẩm này sang sản phẩm khác để tăng thêm tổng lợi ích.",
+      "image": null
+    },
+    {
+      "id": 128,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Đường giới hạn ngân sách là:",
+      "options": {
+        "A": "Tập hợp các phối hợp giữa 2 hàng hoá mà người tiêu dùng có thể mua được với thu nhập hiện tại.",
+        "B": "Tập hợp các phối hợp giữa 2 hàng hoá mà người tiêu dùng không thể mua được với thu nhập hiện tại.",
+        "C": "Tập hợp các phối hợp giữa 2 hàng hoá mà người tiêu dùng có cùng mức độ lợi ích khi tiêu dùng.",
+        "D": "Tập hợp các phối hợp giữa 2 hàng hoá mang lại mức độ thoả dụng như nhau cho người tiêu dùng."
+      },
+      "answer": "A",
+      "explainAnswer": "Đường giới hạn ngân sách là tập hợp các phối hợp giữa 2 hàng hóa mà người tiêu dùng CÓ THỂ MUA ĐƯỢC (vừa đủ dùng hết thu nhập hiện tại): Px.X + Py.Y = I → A. C, D mô tả đường bàng quan (cùng mức lợi ích).",
+      "image": null
+    },
+    {
+      "id": 129,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Đường ngân sách có dạng : Y = 100 - 2X. Nếu Py = 10 và :",
+      "options": {
+        "A": "Px = 5, I = 100.",
+        "B": "Px = 10, I = 2000.",
+        "C": "Px 20, I= 2000",
+        "D": "Px = 20, I = 1000."
+      },
+      "answer": "D",
+      "explainAnswer": "Phương trình đường ngân sách: Y = I/Py − (Px/Py).X. So với Y = 100 − 2X: I/Py = 100 và Px/Py = 2. Với Py = 10 → I = 100×10 = 1000 và Px = 2×10 = 20 → D. (Phương án C có lỗi đánh máy 'Px 20' nhưng đáp án đúng là Px = 20, I = 1000.)",
+      "image": null
+    },
+    {
+      "id": 130,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Nếu Px= 5 và Py = 20 và 1 = 1.000 thì dường ngân sách có dạng:",
+      "options": {
+        "A": "Y = 200 - 1/4X.",
+        "B": "Y = 100 + 4X.",
+        "C": "Y= 50 + 1/4X.",
+        "D": "Y = 50 - 1/4X."
+      },
+      "answer": "D",
+      "explainAnswer": "Đường ngân sách: Y = I/Py − (Px/Py).X. Với I = 1000, Px = 5, Py = 20: Y = 1000/20 − (5/20).X = 50 − (1/4).X → D.",
+      "image": null
+    },
+    {
+      "id": 131,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Một người tiêu thụ có thu nhập I = 1.200 đ dùng để mua 2 sản phẩm X và Y với Px = 100 đ/sp; Py = 300 đ/sp. Mức thỏa mãn được thể hiện qua hàm số : TUx = -1/3x² + 10x; TUy = -1/2Y² + 20Y. Lợi ích biên của 2 sản phẩm là :",
+      "options": {
+        "A": "MUx = -1/3X + 10; MUy = -1/2Y + 20.",
+        "B": "MUx = 2/3X + 10; MUy = -Y + 20.",
+        "C": "MUx = -2/3X + 10; MUy = -Y + 20.",
+        "D": "Tất cả đều sai."
+      },
+      "answer": "C",
+      "explainAnswer": "Lợi ích biên là đạo hàm của hàm tổng lợi ích: MUx = (TUx)' = (−1/3X² + 10X)' = −2/3X + 10; MUy = (TUy)' = (−1/2Y² + 20Y)' = −Y + 20 → C.",
+      "image": null
+    },
+    {
+      "id": 132,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Một người tiêu thụ có thu nhập I = 1.200 đ dùng để mua 2 sản phẩm X và Y với Px = 100 đ/sp; Py = 300 đ/sp. Mức thỏa mãn được thể hiện qua hàm số : TUx = -1/3x² + 10x; TUy = -1/2Y² + 20Y. Phương án tiêu dùng tối ưu là:",
+      "options": {
+        "A": "X = 3; Y=3.",
+        "B": "X=6; Y=2.",
+        "C": "X= 9, Y = 1.",
+        "D": "Tất cả đều sai."
+      },
+      "answer": "B",
+      "explainAnswer": "Điều kiện tối ưu: MUx/Px = MUy/Py → (−2/3X+10)/100 = (−Y+20)/300 → nhân chéo: 3(−2/3X+10) = −Y+20 → −2X+30 = −Y+20 → Y = 2X − 10. Kết hợp ngân sách 100X + 300Y = 1200: 100X + 300(2X−10) = 1200 → 100X + 600X − 3000 = 1200 → 700X = 4200 → X = 6; Y = 2×6 − 10 = 2 → B (X=6, Y=2).",
+      "image": null
+    },
+    {
+      "id": 133,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Một người tiêu thụ có thu nhập I = 1.200 đ dùng để mua 2 sản phẩm X và Y với Px = 100 đ/sp; Py = 300 đ/sp. Mức thỏa mãn được thể hiện qua hàm số : TUx = -1/3x² + 10x; TUy = -1/2Y² + 20Y.Tổng hữu dụng tối đa đạt được:",
+      "options": {
+        "A": "TUmax = 86.",
+        "B": "TUmax = 82.",
+        "C": "TUmax= 76.",
+        "D": "TUmax = 96."
+      },
+      "answer": "A",
+      "explainAnswer": "Thay phối hợp tối ưu X=6, Y=2 (từ câu 132) vào hàm lợi ích: TUx(6) = −1/3×36 + 60 = −12 + 60 = 48; TUy(2) = −1/2×4 + 40 = −2 + 40 = 38. TUmax = 48 + 38 = 86 → A.",
+      "image": null
+    },
+    {
+      "id": 134,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Giả thuyết nào sau đây không được đề cập đến khi phân tích sở thích trong lý thuyết về sự lựa chọn của người tiêu dùng:",
+      "options": {
+        "A": "Sở thích là hoàn chỉnh, có nghĩa là có thể so sánh và xếp loại.",
+        "B": "Sở thích có tính bắc cầu.",
+        "C": "Thích nhiều hàng hóa hơn ít hàng hóa (loại hàng hóa mong muốn).",
+        "D": "Không câu nào đúng."
+      },
+      "answer": "D",
+      "explainAnswer": "Ba giả thuyết cơ bản về sở thích của người tiêu dùng là: (1) sở thích hoàn chỉnh (so sánh, xếp loại được), (2) có tính bắc cầu, (3) thích nhiều hàng hóa hơn ít (với hàng hóa mong muốn). Cả A, B, C đều LÀ các giả thuyết được đề cập, nên khi hỏi 'giả thuyết nào KHÔNG được đề cập' thì không có phương án nào đúng → D.",
+      "image": null
+    },
+    {
+      "id": 135,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Thu nhập tăng, giá không thay đổi, khi đó:",
+      "options": {
+        "A": "Độ dốc đường ngân sách thay đổi.",
+        "B": "Đường ngân sách dịch chuyển song song sang phải.",
+        "C": "Đường ngân sách trở nên phẳng hơn.",
+        "D": "Đường ngân sách dịch chuyển song song sang trái."
+      },
+      "answer": "B",
+      "explainAnswer": "Thu nhập tăng, giá cả không đổi → độ dốc đường ngân sách (−Px/Py) không đổi, chỉ có các điểm chặn (I/Px, I/Py) tăng lên → đường ngân sách DỊCH CHUYỂN SONG SANG PHẢI → B.",
+      "image": null
+    },
+    {
+      "id": 136,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Nếu MUx= 1/Qx, Mub = 1/Qb. Giá của X là 50, giá của Y là 400 và thu nhập là 12.000. Để tối đa hóa lợi ích, người dùng sẽ mua",
+      "options": {
+        "A": "X = 120, Y = 15.",
+        "B": "X= 24, Y = 27.",
+        "C": "A = 48, B = 24.",
+        "D": "Không câu nào đúng."
+      },
+      "answer": "A",
+      "explainAnswer": "Điều kiện tối ưu: MUx/Px = MUy/Py → (1/Qx)/50 = (1/Qy)/400 → 1/(50.Qx) = 1/(400.Qy) → 400.Qy = 50.Qx → Qx = 8.Qy. Kết hợp ngân sách 50Qx + 400Qy = 12000: 50(8Qy) + 400Qy = 12000 → 400Qy + 400Qy = 12000 → 800Qy = 12000 → Qy = 15; Qx = 8×15 = 120 → A (X=120, Y=15). (Các phương án B, C có lỗi tráo ký hiệu X/Y, A/B nhưng chỉ A cho kết quả khớp điều kiện và ngân sách.)",
+      "image": null
+    },
+    {
+      "id": 137,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Độ dốc của đẳng ích phản ánh:",
+      "options": {
+        "A": "Sở thích có tính bắc cầu.",
+        "B": "Sở thích là hoàn chỉnh.",
+        "C": "Tỷ lệ thay thế giữa 2 hàng hóa.",
+        "D": "Các trường hợp trên đều sai."
+      },
+      "answer": "C",
+      "explainAnswer": "Độ dốc của đường đẳng ích (bàng quan) phản ánh TỶ LỆ THAY THẾ BIÊN MRS giữa hai hàng hóa — mức sẵn sàng đánh đổi hàng hóa này lấy hàng hóa kia để giữ nguyên mức thỏa mãn → C.",
+      "image": null
+    },
+    {
+      "id": 138,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Sự chênh lệch giữa giá mà người tiêu dùng sẵn sàng trả cho 1 đơn vị hàng hóa và giá thực tế mà người tiêu dùng phải trả khi mua 1 đơn vị hàng hóa, được gọi là:",
+      "options": {
+        "A": "Tổng giá trị nhận được khi tiêu dùng hàng hóa đó.",
+        "B": "Độ co giãn của cầu.",
+        "C": "Độ thỏa dụng tiêu dùng.",
+        "D": "Thặng dư của người tiêu dùng."
+      },
+      "answer": "D",
+      "explainAnswer": "Thặng dư của người tiêu dùng (consumer surplus) là chênh lệch giữa mức giá người tiêu dùng SẴN SÀNG TRẢ và mức giá THỰC TẾ phải trả cho đơn vị hàng hóa → D.",
+      "image": null
+    },
+    {
+      "id": 139,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Phối hợp tối ưu của người tiêu dùng là phối hợp thỏa điều kiện",
+      "options": {
+        "A": "Độ dốc của đường ngân sách bằng độ dốc đường đẳng ích.",
+        "B": "Tỷ lệ thay thế biên giữa các hàng hóa bằng tỷ lệ giá của chúng.",
+        "C": "Đường ngân sách tiếp xúc với đường bàng quan.",
+        "D": "Các câu trên đều đúng."
+      },
+      "answer": "D",
+      "explainAnswer": "Phối hợp tối ưu là điểm đường ngân sách TIẾP XÚC với đường bàng quan, tại đó độ dốc hai đường bằng nhau và MRS bằng tỷ lệ giá. Cả ba cách diễn đạt A, B, C đều đúng → D.",
+      "image": null
+    },
+    {
+      "id": 140,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Giả sử người tiêu dùng dành hết tiền lương để mua hai hàng hóa X và Y. Nếu giá hàng hóa X và Y đều tăng lên gấp 2, đồng thời tiền lương của người tiêu dùng cũng tăng lên gấp 2, thì đường ngân sách của người tiêu dùng sẽ:",
+      "options": {
+        "A": "dịch chuyển song song sang phải.",
+        "B": "xoanh quanh điểm cắt với trục tung sang phải.",
+        "C": "không thay đổi.",
+        "D": "dịch chuyển song song sang trái."
+      },
+      "answer": "C",
+      "explainAnswer": "Giá X, giá Y và thu nhập cùng tăng gấp đôi → các tỷ số I/Px, I/Py và độ dốc −Px/Py đều KHÔNG ĐỔI → đường ngân sách không thay đổi → C.",
+      "image": null
+    },
+    {
+      "id": 141,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Trên đồ thị: trục tung biểu thị số lượng sản phẩm Y; trục hoành biểu thị số lượng sản phẩm X. Độ dốc của đường ngân sách (đường giới hạn tiêu dùng) bằng -3, có nghĩa là:",
+      "options": {
+        "A": "MUx = 3 MUy.",
+        "B": "MUy = 3 MUx.",
+        "C": "Px = 1/3 Py.",
+        "D": "Px = 3Py."
+      },
+      "answer": "D",
+      "explainAnswer": "Độ dốc của đường ngân sách (vẽ Y trên trục tung, X trên trục hoành) bằng −Px/Py. Độ dốc = −3 → Px/Py = 3 → Px = 3Py → D.",
+      "image": null
+    },
+    {
+      "id": 142,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Nếu Minh mua 20 sản phẩm X và 10 sản phẩm Y với giá Px = 100 đvt/SP, Py = 200 đvt/SP. Lợi ích cận biên của chúng là MUx = 5 đv, MUy = 15 đv. Để đạt tổng lợi ích tối đa, Minh nên:",
+      "options": {
+        "A": "Giảm lượng X, tăng lượng Y.",
+        "B": "Giữ nguyên số lượng hai sản phẩm.",
+        "C": "Tăng lượng X, giảm lượng Y.",
+        "D": "Giữ nguyên lượng X, tăng mua lượng Y."
+      },
+      "answer": "A",
+      "explainAnswer": "Tính lợi ích biên trên một đơn vị tiền: MUx/Px = 5/100 = 0,05; MUy/Py = 15/200 = 0,075. Vì MUy/Py > MUx/Px, đồng tiền chi cho Y tạo lợi ích cao hơn → nên GIẢM lượng X, TĂNG lượng Y để tối đa tổng lợi ích → A.",
+      "image": null
+    },
+    {
+      "id": 143,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Khi tổng lợi ích giảm, lợi ích cận biên khi đó:",
+      "options": {
+        "A": "dương và tăng dần.",
+        "B": "âm và giảm dần.",
+        "C": "dương và giảm dần.",
+        "D": "âm và tăng dần."
+      },
+      "answer": "B",
+      "explainAnswer": "Quan hệ TU và MU: khi TU đạt cực đại thì MU = 0; sau đó TU giảm thì MU ÂM và tiếp tục GIẢM DẦN → B.",
+      "image": null
+    },
+    {
+      "id": 144,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Một người tiêu dùng duy lý sẽ mua một hàng hóa cho đến khi:",
+      "options": {
+        "A": "Sự chênh lệch giữa MU và P là tối đa.",
+        "B": "Sự chênh lệch giữa MU và P là bằng không.",
+        "C": "MU bằng với tổng mức thỏa dụng.",
+        "D": "MU bằng với độ thỏa dụng trung bình."
+      },
+      "answer": "B",
+      "explainAnswer": "Người tiêu dùng duy lý mua thêm hàng hóa chừng nào MU > P, và dừng mua khi MU = P (lợi ích biên bằng giá), tức chênh lệch MU − P = 0 → B.",
+      "image": null
+    },
+    {
+      "id": 145,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Bản đồ các đường bàng quan của một người về hai hàng hóa X và Y có dạng tuyến tính và song song thì hai hàng hóa X và Y là:",
+      "options": {
+        "A": "NTD thích hàng hóa X hơn.",
+        "B": "NTD thích hàng hóa Y hơn.",
+        "C": "NTD coi X và Y là hàng hóa thay thế hoàn hảo.",
+        "D": "NTD coi X và Y là hàng hóa bổ sung hoàn hảo."
+      },
+      "answer": "C",
+      "explainAnswer": "Đường bàng quan DẠNG TUYẾN TÍNH (đường thẳng) và song song nghĩa là MRS không đổi ở mọi điểm → người tiêu dùng coi X và Y là hàng hóa THAY THẾ HOÀN HẢO → C.",
+      "image": null
+    },
+    {
+      "id": 146,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Khi đạt tối đa lợi ích, lợi ích cận biên từ đơn vị cuối cùng của các hàng hóa phải bằng nhau (MUx = MUy =... MUn). Điều này:",
+      "options": {
+        "A": "đúng hay sai tùy theo sở thích của NTD.",
+        "B": "đúng hay sai tùy theo thu nhập của NTD.",
+        "C": "đúng khi giá hàng hóa bằng nhau.",
+        "D": "luôn sai."
+      },
+      "answer": "C",
+      "explainAnswer": "Điều kiện tối ưu tổng quát là MUx/Px = MUy/Py = ... = MUn/Pn. Đẳng thức MUx = MUy = ... = MUn chỉ đúng khi CÁC GIÁ BẰNG NHAU (Px = Py = ... = Pn) → C.",
+      "image": null
+    },
+    {
+      "id": 147,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Tỷ lệ thay thế cận biên giữa 2 sản phẩm X và Y (MRSx/y) thể hiện",
+      "options": {
+        "A": "tỷ giá giữa 2 sản phẩm.",
+        "B": "tỷ lệ đánh đổi 2 sản phẩm trong tiêu dùng khi tổng mức thỏa mãn không đổi.",
+        "C": "tỷ lệ đánh đổi giữa 2 sản phẩm trên thị trường.",
+        "D": "tỷ lệ năng suất biên giữa 2 sản phẩm."
+      },
+      "answer": "B",
+      "explainAnswer": "Tỷ lệ thay thế cận biên MRSx/y là lượng Y người tiêu dùng sẵn sàng đánh đổi để có thêm 1 đơn vị X trong khi TỔNG MỨC THỎA MÃN (lợi ích) KHÔNG ĐỔI — chính là độ dốc đường bàng quan → B.",
+      "image": null
+    },
+    {
+      "id": 148,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Độ dốc của đường ngân sách của một người tiêu dùng chỉ tiêu dùng nước đóng chai và bánh mỳ là:",
+      "options": {
+        "A": "Lượng tiêu dùng tương đối của nước đóng chai và bánh mỳ.",
+        "B": "Giá tương đối của nước đóng chai và bánh mỳ.",
+        "C": "Tỷ lệ thay thế cận biên của 2 hàng hoá.",
+        "D": "Tỷ lệ giữa thu nhập và giá của một trong hai hàng hoá."
+      },
+      "answer": "B",
+      "explainAnswer": "Độ dốc của đường ngân sách bằng −Px/Py tức là GIÁ TƯƠNG ĐỐI của hai hàng hóa (tỷ lệ trao đổi giữa chúng trên thị trường) → B. MRS là độ dốc đường bàng quan, không phải đường ngân sách.",
+      "image": null
+    },
+    {
+      "id": 149,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Đường bàng quan:",
+      "options": {
+        "A": "Càng gần gốc toạ độ thể hiện lợi ích càng cao.",
+        "B": "Càng xa gốc toạ độ thể hiện lợi ích càng cao.",
+        "C": "Luôn dốc xuống do ảnh hưởng của quy luật lợi ích tăng dần.",
+        "D": "Càng xa gốc toạ độ thể hiện mức đánh đổi lợi ích càng lớn."
+      },
+      "answer": "B",
+      "explainAnswer": "Đường bàng quan càng XA gốc tọa độ biểu thị mức lợi íc càng CAO (nhiều hàng hóa hơn thường đem lại thỏa mãn cao hơn) → B. A ngược lại; C sai vì đường bàng quan dốc xuống do MU giảm dần chứ không phải tăng.",
+      "image": null
+    },
+    {
+      "id": 150,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Đường ngân sách (Đường giới hạn ngân sách) của một người tiêu dùng dịch chuyển ra ngoài, điều này có thể kết luận là:",
+      "options": {
+        "A": "Thu nhập của người đó giảm và lợi ích tiêu dùng của người đó tăng.",
+        "B": "Thu nhập của người đó tăng và lợi ích tiêu dùng của người đó giảm.",
+        "C": "Thu nhập của người đó tăng và lợi ích tiêu dùng tăng.",
+        "D": "Thu nhập của người đó giảm và lợi ích tiêu dùng tăng."
+      },
+      "answer": "C",
+      "explainAnswer": "Đường ngân sách dịch chuyển ra ngoài (sang phải) cho thấy khả năng mua tăng — do THU NHẬP TĂNG (với giá không đổi) → người tiêu dùng mua được nhiều hơn nên LỢI ÍCH TIÊU DÙNG TĂNG → C.",
+      "image": null
+    },
+    {
+      "id": 151,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Hai hàng hoá bổ sung hoàn hảo cho nhau sẽ có:",
+      "options": {
+        "A": "Đường bàng quan của người tiêu dùng 2 hàng hoá này là đường thẳng dốc xuống.",
+        "B": "Đường bàng quan của người tiêu dùng 2 hàng hoá này là đường thẳng dốc lên.",
+        "C": "Đường bàng quan của người tiêu dùng 2 hàng hoá này là đường có hình dạng chữ L.",
+        "D": "Đường bàng quan của người tiêu dùng 2 hàng hoá này là có hình chữ U."
+      },
+      "answer": "C",
+      "explainAnswer": "Hai hàng hóa BỔ SUNG HOÀN HẢO (dùng theo tỷ lệ cố định, ví dụ giày trái - giày phải) có đường bàng quan hình chữ L: lợi ích chỉ tăng khi tăng đồng thời cả hai hàng hóa đúng tỷ lệ → C.",
+      "image": null
+    }
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Bảo mật Ứng dụng và Hệ thống - Chương 3",
+  "chapter": "Chương 3",
+  "totalQuestions": 17,
+  "questions": [
+    {
+      "id": 2,
+      "question": "Nguyên tắc 'Least Privilege' (Quyền tối thiểu) trong bảo mật hệ thống được hiểu như thế nào?",
+      "options": {
+        "A": "Cấp cho người dùng tất cả các quyền để làm việc dễ dàng.",
+        "B": "Không cấp bất kỳ quyền truy cập nào cho nhân viên thông thường.",
+        "C": "Chỉ cấp đúng các quyền tối thiểu cần thiết để hoàn thành công việc được giao.",
+        "D": "Cấp quyền truy cập dựa trên thâm niên làm việc."
+      },
+      "answer": "C",
+      "explainAnswer": "Least Privilege nghĩa là mỗi người dùng hoặc tiến trình chỉ được cấp đúng quyền cần thiết để làm nhiệm vụ. Đáp án C đúng vì cấp quá nhiều quyền sẽ làm tăng rủi ro khi tài khoản bị lạm dụng hoặc bị chiếm đoạt.",
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3"
+    },
+    {
+      "id": 20,
+      "question": "Trong mô hình AAA bảo mật dữ liệu, 'Accounting' đảm nhận vai trò gì?",
+      "options": {
+        "A": "Xác thực danh tính người dùng.",
+        "B": "Phân quyền truy cập các bảng dữ liệu.",
+        "C": "Ghi nhật ký (Auditing) và giám sát mọi thao tác trên hệ thống.",
+        "D": "Đảm bảo tính sẵn sàng của hệ thống."
+      },
+      "answer": "C",
+      "explainAnswer": "Trong AAA, Accounting là phần ghi nhận ai đã làm gì, lúc nào và trên tài nguyên nào. Đáp án C đúng vì nó phục vụ auditing, giám sát, truy vết và điều tra khi có sự cố.",
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3"
+    },
+    {
+      "id": 21,
+      "question": "Để bảo mật API theo hướng phi trạng thái (Stateless), chuẩn Token nào thường được sử dụng phổ biến nhất hiện nay?",
+      "options": {
+        "A": "Basic Authentication",
+        "B": "Session Cookie",
+        "C": "JWT (JSON Web Token)",
+        "D": "NTLM"
+      },
+      "answer": "C",
+      "explainAnswer": "JWT thường được dùng trong API stateless vì token tự chứa thông tin cần thiết để xác thực yêu cầu. Đáp án C đúng vì server không bắt buộc phải lưu session truyền thống cho từng người dùng.",
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3"
+    },
+    {
+      "id": 22,
+      "question": "Phần 'Signature' trong cấu trúc của một chuỗi JWT dùng để làm gì?",
+      "options": {
+        "A": "Đảm bảo tính toàn vẹn, xác minh Token không bị giả mạo hay thay đổi.",
+        "B": "Nén dung lượng của Token.",
+        "C": "Mã hóa nội dung để người dùng không đọc được payload.",
+        "D": "Quy định thời gian sống của Token."
+      },
+      "answer": "A",
+      "explainAnswer": "Signature trong JWT được tạo từ header, payload và khóa bí mật hoặc khóa riêng. Đáp án A đúng vì nó giúp máy chủ phát hiện token đã bị sửa đổi hoặc bị giả mạo.",
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3"
+    },
+    {
+      "id": 54,
+      "question": "Tấn công 'Brute Force' vào chức năng đăng nhập hoạt động theo nguyên lý nào?",
+      "options": {
+        "A": "Thử nghiệm ngẫu nhiên hoặc tuần tự tất cả các tổ hợp ký tự có thể để tìm ra mật khẩu đúng.",
+        "B": "Sử dụng một đoạn mã SQL để bypass màn hình đăng nhập.",
+        "C": "Đánh cắp cookie phiên làm việc của người dùng.",
+        "D": "Chèn mã JavaScript độc hại vào tên đăng nhập."
+      },
+      "answer": "A",
+      "explainAnswer": "Brute Force thử nhiều tổ hợp mật khẩu hoặc khóa cho đến khi tìm được giá trị đúng. Đáp án A đúng vì phương pháp này dựa vào sức mạnh tính toán và số lần thử lớn, không dựa vào mẹo nghiệp vụ.",
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3"
+    },
+    {
+      "id": 55,
+      "question": "Tấn công 'Dictionary Attack' tối ưu hơn Brute Force thông thường ở điểm nào?",
+      "options": {
+        "A": "Nó bỏ qua bước kiểm tra mật khẩu.",
+        "B": "Chỉ thử các mật khẩu có ý nghĩa, các từ thông dụng từ một danh sách (từ điển) được biên soạn sẵn.",
+        "C": "Nó đánh sập máy chủ nhanh hơn.",
+        "D": "Nó có thể giải mã được thuật toán băm SHA-256."
+      },
+      "answer": "B",
+      "explainAnswer": "Dictionary Attack dùng danh sách mật khẩu phổ biến, từ có nghĩa hoặc dữ liệu rò rỉ trước đó. Đáp án B đúng vì nó hiệu quả hơn vét cạn toàn bộ khi người dùng đặt mật khẩu dễ đoán.",
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3"
+    },
+    {
+      "id": 56,
+      "question": "Lỗ hổng Broken Authentication thường xuất hiện khi hệ thống bỏ qua việc nào sau đây?",
+      "options": {
+        "A": "Sử dụng WAF chặn IP lạ.",
+        "B": "Quản lý phiên làm việc kém an toàn, cho phép mật khẩu yếu, thiếu giới hạn số lần đăng nhập sai.",
+        "C": "Lọc các ký tự nháy đơn (') trong input.",
+        "D": "Sử dụng chứng chỉ HTTPS/SSL."
+      },
+      "answer": "B",
+      "explainAnswer": "Broken Authentication xuất hiện khi cơ chế đăng nhập, quản lý phiên hoặc chính sách mật khẩu yếu. Đáp án B đúng vì thiếu giới hạn đăng nhập sai, cho phép mật khẩu yếu hoặc session không an toàn đều dễ dẫn đến chiếm tài khoản.",
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3"
+    },
+    {
+      "id": 66,
+      "question": "Thành phần nào đóng vai trò như một 'chốt chặn' tập trung để xử lý xác thực, giới hạn lưu lượng (rate limiting) cho các API của hệ thống?",
+      "options": {
+        "A": "Web Server",
+        "B": "Database Server",
+        "C": "API Gateway",
+        "D": "Load Balancer"
+      },
+      "answer": "C",
+      "explainAnswer": "API Gateway là điểm đi vào tập trung cho các API, thường xử lý xác thực, phân quyền, rate limiting và định tuyến. Đáp án C đúng vì nó giúp kiểm soát các request trước khi chuyển đến dịch vụ phía sau.",
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3"
+    },
+    {
+      "id": 67,
+      "question": "Kỹ thuật 'Rate Limiting' trong bảo mật API nhằm ngăn chặn loại tấn công nào hiệu quả nhất?",
+      "options": {
+        "A": "SQL Injection",
+        "B": "Brute Force, DDoS và lạm dụng tài nguyên",
+        "C": "Cross-Site Scripting (XSS)",
+        "D": "Man-in-the-Middle"
+      },
+      "answer": "B",
+      "explainAnswer": "Rate Limiting giới hạn số request trong một khoảng thời gian nhất định. Đáp án B đúng vì nó làm giảm hiệu quả của brute force, DDoS tầng ứng dụng và hành vi lạm dụng tài nguyên.",
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3"
+    },
+    {
+      "id": 68,
+      "question": "OAuth 2.0 là một tiêu chuẩn giao thức được sử dụng chủ yếu cho mục đích gì?",
+      "options": {
+        "A": "Truyền tải file mã hóa an toàn.",
+        "B": "Ủy quyền truy cập (Authorization) an toàn mà không cần chia sẻ mật khẩu gốc.",
+        "C": "Mã hóa kênh truyền mạng vật lý.",
+        "D": "Phát hiện mã độc trong hệ thống Web."
+      },
+      "answer": "B",
+      "explainAnswer": "OAuth 2.0 cho phép ứng dụng bên thứ ba được cấp quyền truy cập giới hạn mà không cần biết mật khẩu gốc của người dùng. Đáp án B đúng vì đây là giao thức ủy quyền, không phải giao thức truyền file hay quét mã độc.",
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3"
+    },
+    {
+      "id": 69,
+      "question": "Sự khác biệt cốt lõi giữa Authentication (Xác thực) và Authorization (Phân quyền) là gì?",
+      "options": {
+        "A": "Authentication kiểm tra 'Bạn là ai?', Authorization kiểm tra 'Bạn được phép làm gì?'.",
+        "B": "Authentication kiểm tra quyền truy cập thư mục, Authorization kiểm tra mật khẩu.",
+        "C": "Cả hai đều cùng một ý nghĩa, chỉ khác tên gọi.",
+        "D": "Authentication bảo vệ CSDL, Authorization bảo vệ giao diện Web."
+      },
+      "answer": "A",
+      "explainAnswer": "Authentication trả lời câu hỏi người dùng có đúng là người họ khai báo hay không. Đáp án A đúng vì Authorization xảy ra sau đó, quyết định người đã xác thực được phép làm gì.",
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3"
+    },
+    {
+      "id": 70,
+      "question": "Lỗ hổng BOLA (Broken Object Level Authorization) trong API thường dẫn đến hậu quả gì?",
+      "options": {
+        "A": "Server API bị ngưng hoạt động.",
+        "B": "Kẻ tấn công có thể truy cập, sửa đổi hoặc xóa tài nguyên của người dùng khác bằng cách thao tác ID trên URL API.",
+        "C": "API trả về thông báo lỗi dạng mã HTML.",
+        "D": "Tất cả các token bị vô hiệu hóa."
+      },
+      "answer": "B",
+      "explainAnswer": "BOLA là lỗi phân quyền ở cấp đối tượng trong API. Đáp án B đúng vì nếu API không kiểm tra quyền với từng object, kẻ tấn công có thể đổi ID để truy cập tài nguyên của người khác.",
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3"
+    },
+    {
+      "id": 92,
+      "question": "Giải pháp nào là hiệu quả nhất để chống lại rủi ro bị bẻ khóa mật khẩu thông qua tấn công Brute Force?",
+      "options": {
+        "A": "Chỉ sử dụng chữ thường để gõ nhanh hơn.",
+        "B": "Áp dụng xác thực đa yếu tố (MFA) kết hợp với chính sách khóa tài khoản (Account Lockout) sau nhiều lần thử sai.",
+        "C": "Lưu trữ mật khẩu dạng Plaintext.",
+        "D": "Khởi động lại máy chủ mỗi ngày."
+      },
+      "answer": "B",
+      "explainAnswer": "MFA yêu cầu thêm yếu tố xác thực ngoài mật khẩu, còn account lockout giảm số lần thử sai liên tiếp. Đáp án B đúng vì kết hợp hai biện pháp này làm Brute Force khó thành công hơn nhiều.",
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3"
+    },
+    {
+      "id": 109,
+      "question": "Xác thực đa yếu tố (MFA - Multi-Factor Authentication) yêu cầu người dùng cung cấp tối thiểu hai yếu tố khác loại. Mã OTP gửi qua SMS thuộc loại yếu tố nào?",
+      "options": {
+        "A": "Something you know (Thứ bạn biết - VD: Mật khẩu)",
+        "B": "Something you have (Thứ bạn có - VD: Điện thoại nhận SMS)",
+        "C": "Something you are (Thứ thuộc về bạn - VD: Sinh trắc học)",
+        "D": "Somewhere you are (Nơi bạn ở - VD: Vị trí GPS)"
+      },
+      "answer": "B",
+      "explainAnswer": "Mã OTP qua SMS phụ thuộc vào việc người dùng có thiết bị hoặc SIM nhận tin nhắn. Đáp án B đúng vì nó thuộc nhóm “Something you have”, khác với mật khẩu là “Something you know”.",
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3"
+    },
+    {
+      "id": 133,
+      "question": "Theo báo cáo của OWASP Top 10, 'Broken Access Control' (Lỗi kiểm soát truy cập) là gì?",
+      "options": {
+        "A": "Người dùng quên mật khẩu.",
+        "B": "Người dùng có thể thực hiện các hành động ngoài quyền hạn thiết kế của họ (ví dụ: người dùng thường xem được trang Admin).",
+        "C": "Hệ thống bị cúp điện.",
+        "D": "Firewall chặn nhầm người dùng hợp pháp."
+      },
+      "answer": "B",
+      "explainAnswer": "Broken Access Control xảy ra khi hệ thống không thực thi đúng giới hạn quyền của người dùng. Đáp án B đúng vì người dùng có thể xem, sửa hoặc thực hiện chức năng ngoài phạm vi được phép, ví dụ truy cập trang admin.",
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3"
+    },
+    {
+      "id": 137,
+      "question": "Tại sao việc dùng mật khẩu có độ dài lớn (ví dụ: Passphrase trên 15 ký tự) lại an toàn hơn là mật khẩu ngắn chứa ký tự đặc biệt?",
+      "options": {
+        "A": "Vì các hệ thống không cho phép nhập ký tự đặc biệt.",
+        "B": "Vì độ dài làm tăng theo cấp số nhân không gian toán học của các trường hợp vét cạn (Brute Force), khiến thời gian bẻ khóa trở nên bất khả thi so với mật khẩu ngắn.",
+        "C": "Vì mật khẩu dài dễ nhớ hơn.",
+        "D": "Vì các công cụ hacker không gõ được chữ cái thường."
+      },
+      "answer": "B",
+      "explainAnswer": "Mật khẩu càng dài thì số khả năng cần thử khi brute force tăng rất nhanh. Đáp án B đúng vì một passphrase dài thường khó bị vét cạn hơn mật khẩu ngắn dù mật khẩu ngắn có thêm vài ký tự đặc biệt.",
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3"
+    },
+    {
+      "id": 139,
+      "question": "Một nhân viên IT rời công ty nhưng tài khoản mạng của người đó không bị khóa ngay lập tức. Đây là lỗ hổng thuộc quy trình nào?",
+      "options": {
+        "A": "Quy trình vá lỗi (Patch Management).",
+        "B": "Quy trình cấp/thu hồi quyền truy cập (Identity and Access Management / Offboarding).",
+        "C": "Quy trình mã hóa dữ liệu.",
+        "D": "Quy trình bảo trì phần cứng."
+      },
+      "answer": "B",
+      "explainAnswer": "Khi nhân viên nghỉ việc, tài khoản và quyền truy cập cần được thu hồi ngay trong quy trình offboarding. Đáp án B đúng vì đây là phần quan trọng của Identity and Access Management để tránh tài khoản cũ bị lạm dụng.",
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3"
+    }
+  ]
+}

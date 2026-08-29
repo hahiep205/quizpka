@@ -1,0 +1,532 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kinh tế vi mô - Chương 3",
+  "chapter": "Chương 3",
+  "totalQuestions": 35,
+  "questions": [
+    {
+      "id": 60,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3",
+      "question": "Hãy sắp xếp các đường cầu ở hình vẽ sau theo trật tự từ độ co giãn lớn nhất đến nhỏ nhất (về giá trị tuyệt đối) tại mức sản lượng cân bằng Q*:\n(Coi D3, D2, D1 lần lượt là A, B, C; S là Q*)",
+      "options": {
+        "A": "A, B, C.",
+        "B": "C, B, A.",
+        "C": "Co giãn bằng nhau.",
+        "D": "Cần có thêm thông tin."
+      },
+      "answer": "A",
+      "explainAnswer": "Hình vẽ cho ba đường cầu D3, D2, D1 (được gọi lần lượt là A, B, C) cùng đi qua mức sản lượng cân bằng Q* và S là đường cung. Tại cùng một mức sản lượng Q*, đường cầu càng thoải (co giãn càng lớn) và đường càng dốc thì kém co giãn hơn; sắp xếp theo độ co giãn giảm dần là D3, D2, D1 tức A, B, C → đáp án A.",
+      "image": "kinh_te_vi_mo/images/do_thi_co_gian_cau.png"
+    },
+    {
+      "id": 61,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3",
+      "question": "Giả sử co giãn của cầu theo giá là 1/3, nếu giá tăng 30% thì lượng cầu sẽ thay đổi:",
+      "options": {
+        "A": "Lượng cầu giảm 90%.",
+        "B": "Lượng cầu giảm 10%.",
+        "C": "Lượng cầu tăng 10%.",
+        "D": "Lượng cầu tăng 90%."
+      },
+      "answer": "B",
+      "explainAnswer": "Độ co giãn của cầu theo giá E = (%ΔQ)/(%ΔP) = 1/3. Giá tăng 30% thì lượng cầu giảm: %ΔQ = E × %ΔP = (1/3) × 30% = 10% → lượng cầu giảm 10% → B.",
+      "image": null
+    },
+    {
+      "id": 62,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3",
+      "question": "Giả sử co giãn của cầu theo giá là 3/2, nếu giá giảm tổng doanh thu sẽ:",
+      "options": {
+        "A": "Không đổi.",
+        "B": "Giảm.",
+        "C": "Tăng 2/3 lần.",
+        "D": "Tăng."
+      },
+      "answer": "D",
+      "explainAnswer": "E = 3/2 > 1 → cầu co giãn nhiều. Khi cầu co giãn nhiều, giảm giá làm lượng cầu tăng theo tỷ lệ lớn hơn, nên tổng doanh thu (TR = P×Q) TĂNG → D đúng.",
+      "image": null
+    },
+    {
+      "id": 63,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3",
+      "question": "Nếu đường cung có dạng thẳng đứng thì co giãn của cung theo giá là:",
+      "options": {
+        "A": "0.",
+        "B": "Nhỏ hơn 1.",
+        "C": "1.",
+        "D": "Lớn hơn 1."
+      },
+      "answer": "A",
+      "explainAnswer": "Đường cung thẳng đứng nghĩa là lượng cung không đổi dù giá thay đổi thế nào → cung hoàn toàn không co giãn, E = 0 → A.",
+      "image": null
+    },
+    {
+      "id": 96,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Nếu Độ co giãn của cầu theo giá là co giãn đơn vị, thì giá giảm:",
+      "options": {
+        "A": "Doanh thu không đổi.",
+        "B": "Doanh thu giảm.",
+        "C": "Doanh thu tăng.",
+        "D": "Giảm chi phí."
+      },
+      "answer": "A",
+      "explainAnswer": "Khi cầu co giãn ĐƠN VỊ (|E| = 1), phần trăm thay đổi lượng cầu đúng bằng phần trăm thay đổi giá nên tổng doanh thu (TR = P×Q) không đổi dù giá tăng hay giảm → A.",
+      "image": null
+    },
+    {
+      "id": 97,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Giá trị âm của hệ số co giãn của cầu the giá thể hiện:",
+      "options": {
+        "A": "Thu nhập tăng sẽ làm giảm lượng cầu.",
+        "B": "Cầu là co giãn theo giá.",
+        "C": "Đường cầu dốc xuống.",
+        "D": "Cầu không co giãn theo giá."
+      },
+      "answer": "C",
+      "explainAnswer": "Độ co giãn của cầu theo giá mang dấu âm vì P và Q có quan hệ NGHỊCH: giá tăng thì lượng cầu giảm — chính là đặc điểm đường cầu dốc xuống → C đúng. Giá trị âm không nói lên cầu co giãn hay không co giãn (điều đó phụ thuộc |E|).",
+      "image": null
+    },
+    {
+      "id": 98,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Nếu cầu co giãn ít theo giá:",
+      "options": {
+        "A": "Tăng giá sẽ làm giảm doanh thu.",
+        "B": "Tăng giá sẽ làm doanh thu không đổi.",
+        "C": "Giảm giá sẽ làm tăng doanh thu.",
+        "D": "Tăng giá sẽ làm tăng doanh thu."
+      },
+      "answer": "D",
+      "explainAnswer": "Cầu co giãn ÍT (|E| < 1): lượng cầu thay đổi theo tỷ lệ nhỏ hơn giá, nên khi TĂNG giá, doanh thu (P×Q) tăng. Giảm giá khi cầu co giãn ít làm doanh thu giảm → D đúng.",
+      "image": null
+    },
+    {
+      "id": 99,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Đường cầu của một sản phẩm sẽ co giãn hơn khi:",
+      "options": {
+        "A": "Người tiêu dùng không phản ứng với sự thay đổi về giá.",
+        "B": "Có nhiều sản phẩm thay thế.",
+        "C": "Lượng thu nhập chi cho sản phẩm là nhỏ.",
+        "D": "Người tiêu dùng không có đủ thời gian để điều chỉnh theo sự thay đổi về giá."
+      },
+      "answer": "B",
+      "explainAnswer": "Đường cầu co giãn hơn khi người tiêu dùng DỄ chuyển sang hàng hóa khác, tức khi có NHIỀU sản phẩm thay thế → B. Các yếu tố còn lại (phản ứng kém, chi tiêu nhỏ, thiếu thời gian điều chỉnh) làm cầu kém co giãn.",
+      "image": null
+    },
+    {
+      "id": 100,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Nếu độ co giãn của cầu theo giá là -2,4, cầu là:",
+      "options": {
+        "A": "Ít co giãn.",
+        "B": "Co giãn hoàn toàn.",
+        "C": "Rất co giãn.",
+        "D": "Co giãn đơn vị."
+      },
+      "answer": "C",
+      "explainAnswer": "Độ co giãn của cầu theo giá là −2,4, lấy trị tuyệt đối |E| = 2,4 > 1 → cầu RẤT CO GIÃN (co giãn nhiều) → C. Co giãn đơn vị khi |E| = 1; co giãn hoàn toàn khi |E| = ∞.",
+      "image": null
+    },
+    {
+      "id": 101,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Nếu độ co giãn giá của cầu là -3, thì:",
+      "options": {
+        "A": "Phần trăm thay đổi về lượng cầu bằng phần trăm thay đổi về giá.",
+        "B": "Không có đủ dữ liệu để kết luận.",
+        "C": "Phần trăm thay đổi về lượng cầu lớn hơn phần trăm thay đổi về giá.",
+        "D": "Phần trăm thay đổi về lượng cầu nhỏ hơn phần trăm thay đổi về giá."
+      },
+      "answer": "C",
+      "explainAnswer": "E = −3 → |E| = 3 > 1 → cầu co giãn nhiều: phần trăm thay đổi của LƯỢNG CẦU LỚN HƠN phần trăm thay đổi của GIÁ (ví dụ giá tăng 10% thì lượng cầu giảm 30%) → C.",
+      "image": null
+    },
+    {
+      "id": 102,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Dọc theo một đường cầu tuyến tính, giá càng cao thì cầu càng:",
+      "options": {
+        "A": "Co giãn đơn vị.",
+        "B": "Co giãn hơn.",
+        "C": "Dốc hơn.",
+        "D": "Ít co giãn hơn."
+      },
+      "answer": "B",
+      "explainAnswer": "Trên một đường cầu tuyến tính, tại mức giá CÀNG CAO (điểm càng gần trục tung) cầu càng CO GIÃN; tại giá càng thấp cầu càng kém co giãn → B. Độ dốc không đổi nhưng độ co giãn thay đổi dọc theo đường cầu.",
+      "image": null
+    },
+    {
+      "id": 103,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Cho đường cầu như sau: Q=10-1,5P. Độ co giãn của cầu theo giá khi P=4 là:",
+      "options": {
+        "A": "-1,5",
+        "B": "Không đủ thông tin để trả lời",
+        "C": "-0,15",
+        "D": "1,5"
+      },
+      "answer": "A",
+      "explainAnswer": "Q = 10 − 1,5P. Tại P = 4: Q = 10 − 6 = 4. Độ co giãn điểm: E = (dQ/dP) × (P/Q) = (−1,5) × (4/4) = −1,5 → A.",
+      "image": null
+    },
+    {
+      "id": 104,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Nếu lượng người chơi trò chơi giảm từ 10.000 xuống 8.000 khi giá vé tăng từ 6USD lên 8USD thì mức độ co giãn của cầu theo giá là:",
+      "options": {
+        "A": "1,29",
+        "B": "2,0",
+        "C": "0,78",
+        "D": "0,50"
+      },
+      "answer": "C",
+      "explainAnswer": "Tính theo công thức điểm giữa: %ΔQ = (8000−10000)/9000 ≈ −22,2%; %ΔP = (8−6)/7 ≈ 28,6%. E = %ΔQ/%ΔP ≈ −22,2%/28,6% ≈ −0,78. Độ lớn |E| ≈ 0,78 → C.",
+      "image": null
+    },
+    {
+      "id": 105,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Giá táo tăng 10% khiến cho số lượng được cầu về táo giảm 5%. Vậy hệ số co giãn của cầu là _, và cầu là .",
+      "options": {
+        "A": "-2; co giãn ít",
+        "B": "2; co dãn",
+        "C": "-0,5; co giãn ít",
+        "D": "0,5; co dãn"
+      },
+      "answer": "C",
+      "explainAnswer": "Hệ số co giãn E = %ΔQ/%ΔP = (−5%)/(10%) = −0,5. |E| = 0,5 < 1 → cầu CO GIÃN ÍT → C.",
+      "image": null
+    },
+    {
+      "id": 106,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Trên một đường cầu tuyến tính, điểm B nằm ở nửa phía trên, điểm A nằm ở nửa phía dưới của đường cầu, điều nào sau đây là đúng?",
+      "options": {
+        "A": "Cầu tại điểm A và B có độ co giãn như nhau",
+        "B": "Cầu tại điểm B co giãn hơn điểm A",
+        "C": "Không có đủ thông tin để trả lời",
+        "D": "Cầu tại điểm A co giãn hơn điểm H"
+      },
+      "answer": "B",
+      "explainAnswer": "Trên đường cầu tuyến tính, điểm B ở nửa phía trên (giá cao hơn) có độ co giãn LỚN HƠN điểm A ở nửa phía dưới (giá thấp) → B đúng. (Tại điểm giữa |E|=1, càng lên trên |E|>1, càng xuống dưới |E|<1.)",
+      "image": null
+    },
+    {
+      "id": 107,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Lượng tiêu thụ một mặt hàng tăng đáng kể, trong khi giá hầu như không thay đổi hoặc thay đổi rất ít, đây là kết quả của:",
+      "options": {
+        "A": "Cung co dãn nhiều và cầu dịch trái.",
+        "B": "Cầu co dãn nhiều và cung dịch phải.",
+        "C": "Cung rất kém co dãn và cầu dịch phải.",
+        "D": "Cầu rất kém co dãn và cung dịch phải."
+      },
+      "answer": "B",
+      "explainAnswer": "Lượng tiêu thụ tăng đáng kể mà giá gần như không đổi xảy ra khi đường cầu rất CO GIÃN (gần nằm ngang) và đường cung dịch sang PHẢI: cung tăng làm lượng tăng mạnh, giá ít biến động → B.",
+      "image": null
+    },
+    {
+      "id": 108,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Một mức tăng giá đáng kể nhưng lượng tiêu thụ tăng rất ít là kết quả của:",
+      "options": {
+        "A": "Cầu co dãn nhiều và cung dịch phải.",
+        "B": "Cầu kém co dãn và cung dịch phải.",
+        "C": "Cung co dãn nhiều và cầu dịch trái.",
+        "D": "Cung rất kém co dãn và cung dịch phải."
+      },
+      "answer": "B",
+      "explainAnswer": "Khi cầu KÉM co giãn (đường cầu dốc) và đường cung dịch chuyển, tác động chủ yếu rơi vào GIÁ (giá biến động đáng kể) còn lượng tiêu thụ chỉ thay đổi rất ít → B đúng (theo đáp án của bộ đề).",
+      "image": null
+    },
+    {
+      "id": 109,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Độ co giãn là ___.",
+      "options": {
+        "A": "thước đo mức độ phản ứng của người mua và người bán khi lạm phát thay đổi.",
+        "B": "chỉ tiêu đo mức độ thay đổi về lợi ích kinh tế của người tiêu dùng.",
+        "C": "thước đo mức độ phản ứng của người tiêu dùng với những thay đổi của môi trường kinh tế.",
+        "D": "chỉ tiêu đo mức độ phản ứng của người mua và người bán với những thay đổi trong điều kiện thị trường."
+      },
+      "answer": "D",
+      "explainAnswer": "Độ co giãn là chỉ tiêu đo mức độ phản ứng của người MUA và người BÁN trước những thay đổi của điều kiện thị trường (giá, thu nhập, giá hàng liên quan...) → D. Các phương án A, B, C nhắc tới lạm phát, lợi ích kinh tế, môi trường kinh tế là không chính xác.",
+      "image": null
+    },
+    {
+      "id": 110,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Khi giá điện tăng:",
+      "options": {
+        "A": "người tiêu dùng giảm lượng cầu của họ như nhau trong dài hạn và ngắn hạn.",
+        "B": "người tiêu dùng thường giảm lượng cầu của họ trong ngắn hạn và tăng lượng cầu trong dài hạn.",
+        "C": "người tiêu dùng thường giảm lượng cầu của họ trong dài hạn hơn trong ngắn hạn.",
+        "D": "người tiêu dùng thường giảm lượng cầu của họ trong ngắn hạn hơn trong dài hạn."
+      },
+      "answer": "C",
+      "explainAnswer": "Hàng hóa thiết yếu như điện: trong NGẮN HẠN khó điều chỉnh thói quen tiêu dùng nên lượng cầu giảm ít; trong DÀI HẠN người tiêu dùng tìm được cách tiết kiệm, thay thế thiết bị... nên giảm lượng cầu NHIỀU HƠN → C.",
+      "image": null
+    },
+    {
+      "id": 111,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Tổng doanh thu:",
+      "options": {
+        "A": "tăng khi giá tăng nếu cầu là co giãn ít.",
+        "B": "tăng khi giá tăng nếu cầu là co giãn đơn vị.",
+        "C": "tăng khi giá tăng nếu cầu là hoàn toàn không co giãn.",
+        "D": "tăng khi giá tăng nếu cầu là co giãn nhiều."
+      },
+      "answer": "A",
+      "explainAnswer": "Tổng doanh thu TR = P×Q. Khi cầu co giãn ÍT, tăng giá làm lượng cầu giảm với tỷ lệ nhỏ hơn mức tăng giá nên TR TĂNG → A. Với cầu co giãn đơn vị TR không đổi; co giãn nhiều thì TR giảm; hoàn toàn không co giãn thì TR tăng theo giá nhưng đây không phải trường hợp tổng quát được ưu tiên.",
+      "image": null
+    },
+    {
+      "id": 112,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Hàng hoá nào dưới đây có đường cầu thoải nhất?",
+      "options": {
+        "A": "Kim cương.",
+        "B": "Căn hộ chung cư.",
+        "C": "Gạo.",
+        "D": "Nước đóng chai."
+      },
+      "answer": "A",
+      "explainAnswer": "Đường cầu thoải nhất tương ứng cầu CO GIÃN NHIỀU NHẤT. Kim cương là hàng hóa xa xỉ, người tiêu dùng rất nhạy cảm với giá (giá thay đổi nhỏ làm lượng cầu thay đổi lớn) → đường cầu thoải nhất → A. Gạo, nước đóng chai, căn hộ là hàng thiết yếu cầu ít co giãn.",
+      "image": null
+    },
+    {
+      "id": 113,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Độ co giãn của cung theo giá bằng ∞, nghĩa là:",
+      "options": {
+        "A": "Cung co giãn ít.",
+        "B": "Cung hoàn toàn co giãn.",
+        "C": "Cung hoàn toàn không co giãn.",
+        "D": "Cung co giãn nhiều."
+      },
+      "answer": "B",
+      "explainAnswer": "Độ co giãn của cung theo giá bằng ∞ nghĩa là lượng cung phản ứng vô hạn với thay đổi nhỏ của giá → cung HOÀN TOÀN CO GIÃN (đường cung nằm ngang) → B.",
+      "image": null
+    },
+    {
+      "id": 114,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Rạp chiếu phim Beta luôn cung cấp số một số lượng không đổi vé xem phim mỗi suất chiếu dù giá vé xem phim biến động thế nào. Độ co giãn của cung theo giá trong trường hợp này là:",
+      "options": {
+        "A": "Hoàn toàn co giãn.",
+        "B": "Hoàn toàn không co giãn.",
+        "C": "Co giãn ít.",
+        "D": "Co giãn nhiều."
+      },
+      "answer": "B",
+      "explainAnswer": "Rạp chiếu phim luôn cung cấp một lượng vé cố định dù giá thế nào → lượng cung không phản ứng với giá → cung HOÀN TOÀN KHÔNG CO GIÃN → B.",
+      "image": null
+    },
+    {
+      "id": 115,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Rạp chiếu phim Beta luôn cung cấp số một số lượng không đổi vé xem phim mỗi suất chiếu dù giá vé xem phim biến động thế nào. Đường cung vé xem phim trong trường hợp này là:",
+      "options": {
+        "A": "Rất dốc",
+        "B": "Thẳng đứng",
+        "C": "Nằm ngang",
+        "D": "Rất thoải"
+      },
+      "answer": "B",
+      "explainAnswer": "Cung hoàn toàn không co giãn được biểu diễn bằng đường cung THẲNG ĐỨNG (lượng cung cố định ở mọi mức giá) → B. Nằm ngang là hoàn toàn co giãn; rất dốc/rất thoải là co giãn ít/nhiều.",
+      "image": null
+    },
+    {
+      "id": 116,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Nếu cầu đối với bánh mỳ là co giãn đơn vị, khi giá tăng:",
+      "options": {
+        "A": "tổng doanh thu biến động ngược chiều với giá.",
+        "B": "tổng doanh thu bán bánh mỳ không đổi.",
+        "C": "tổng doanh thu bán bánh mỳ giảm.",
+        "D": "tổng doanh thu bán bánh mỳ tăng."
+      },
+      "answer": "B",
+      "explainAnswer": "Cầu CO GIÃN ĐƠN VỊ (|E|=1): khi giá tăng, lượng cầu giảm theo đúng tỷ lệ nên TR = P×Q không đổi → B đúng.",
+      "image": null
+    },
+    {
+      "id": 117,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Dọc theo một đường cầu tuyến tính từ trái sang phải:",
+      "options": {
+        "A": "Độ co giãn của cầu theo giá thay đổi từ hoàn toàn co giãn đến hoàn toàn không co giãn.",
+        "B": "Độ co giãn của cầu theo giá giảm dần từ dương sang âm.",
+        "C": "Độ co giãn của cầu theo giá tăng dần.",
+        "D": "Độ co giãn của cầu theo giá không đổi do độ dốc đường cầu là không đổi."
+      },
+      "answer": "A",
+      "explainAnswer": "Dọc theo đường cầu tuyến tính từ trái sang phải (giá giảm dần), độ co giãn thay đổi từ HOÀN TOÀN CO GIÃN (|E| = ∞ tại điểm cắt trục tung) xuống HOÀN TOÀN KHÔNG CO GIÃN (|E| = 0 tại điểm cắt trục hoành) → A. Độ dốc không đổi nhưng độ co giãn khác nhau (D sai).",
+      "image": null
+    },
+    {
+      "id": 118,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Thị trường thanh long có cầu co giãn theo giá nhiều hơn cung, người trồng thanh long chịu phần lớn khoản thuế khi chính phủ đánh vào mặt hàng này do:",
+      "options": {
+        "A": "Người tiêu dùng ít có phản ứng với sự thay đổi của giá do chính phủ đánh thuế.",
+        "B": "Người tiêu dùng dễ dàng chuyển sang tiêu dùng loại hoa quả khác.",
+        "C": "Chính phủ buộc người trồng thanh long phải chịu toàn bộ thuế.",
+        "D": "Người trồng thanh long dễ dàng chuyển đổi sang thị trường khác."
+      },
+      "answer": "B",
+      "explainAnswer": "Gánh nặng thuế rơi vào bên KÉM co giãn hơn. Thanh long có cầu co giãn theo giá nhiều hơn cung → người tiêu dùng nhạy cảm, DỄ DÀNG chuyển sang loại hoa quả khác → người trồng (bên kém co giãn) chịu phần lớn khoản thuế → B.",
+      "image": null
+    },
+    {
+      "id": 119,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Chính phủ nên đánh thuế vào mặt hàng thuốc lá do:",
+      "options": {
+        "A": "Cầu đối với thuốc lá là co giãn nhiều, khi chính phủ đánh thuế, người tiêu dùng chịu phần lớn khoản thuế này.",
+        "B": "Cầu đối với thuốc lá là co giãn ít, khi chính phủ đánh thuế, người sản xuất chịu phần lớn khoản thuế này.",
+        "C": "Cầu đối với thuốc lá là co giãn nhiều, khi chính phủ đánh thuế, người sản xuất chịu phần lớn khoản thuế này.",
+        "D": "Cầu đối với thuốc lá là co giãn ít, khi chính phủ đánh thuế, người tiêu dùng chịu phần lớn khoản thuế này."
+      },
+      "answer": "D",
+      "explainAnswer": "Cầu thuốc lá rất kém co giãn (người hút khó bỏ dù giá tăng). Khi đánh thuế, gánh nặng rơi vào bên kém co giãn hơn là NGƯỜI TIÊU DÙNG → vừa hạn chế tiêu dùng vừa tăng thu ngân sách → D.",
+      "image": null
+    },
+    {
+      "id": 120,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Độ co giãn của gạo theo thu nhập:",
+      "options": {
+        "A": "Mang giá trị dương vì gạo là hàng thông thường.",
+        "B": "Mang giá trị âm vì gạo là hàng xa xỉ.",
+        "C": "Mang giá trị âm vì gạo là hàng thiết yếu.",
+        "D": "Mang giá trị dương vì gạo là hàng thứ cấp."
+      },
+      "answer": "A",
+      "explainAnswer": "Gạo là hàng hóa THIẾT YẾU (thông thường): khi thu nhập tăng, cầu gạo cũng tăng (dù chậm hơn) nên độ co giãn theo thu nhập MANG DẤU DƯƠNG. Hàng thiết yếu không phải hàng xa xỉ (dấu dương lớn) cũng không phải hàng thứ cấp (dấu âm) → A.",
+      "image": null
+    },
+    {
+      "id": 121,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Độ co giãn của ô tô VF3 theo thu nhập là 2, điều này có nghĩa là:",
+      "options": {
+        "A": "Khi thu nhập tăng 10%, lượng cầu đối với ô tô VF3 tăng 2%.",
+        "B": "Khi thu nhập tăng 10%, lượng cầu đối với ô tô VF3 tăng 20%.",
+        "C": "Khi thu nhập tăng 10%, lượng cầu đối với ô tô VF3 giảm 2%.",
+        "D": "Khi thu nhập tăng 10%, lượng cầu đối với ô tô VF3 giảm 20%."
+      },
+      "answer": "B",
+      "explainAnswer": "Độ co giãn của cầu theo thu nhập E = %ΔQ/%ΔI = 2. Thu nhập tăng 10% → lượng cầu ô tô VF3 (hàng xa xỉ) tăng 2×10% = 20% → B.",
+      "image": null
+    },
+    {
+      "id": 122,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Trà sữa và trà chanh là hai hàng hoá thay thế, độ co giãn chéo của trà sữa và trà chanh:",
+      "options": {
+        "A": "Mang dấu âm.",
+        "B": "Lớn hơn 1.",
+        "C": "Mang dấu dương.",
+        "D": "Bằng không."
+      },
+      "answer": "C",
+      "explainAnswer": "Trà sữa và trà chanh là hàng hóa THAY THẾ: giá trà sữa tăng làm cầu trà chanh tăng (cùng chiều) nên độ co giãn chéo MANG DẤU DƯƠNG → C. (Hàng bổ sung có co giãn chéo âm.)",
+      "image": null
+    },
+    {
+      "id": 123,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Cầu đối với hàng hoá nào dưới đây là co giãn ít?",
+      "options": {
+        "A": "Ô tô do ô tô chiếm tỷ trọng lớn trong chi tiêu.",
+        "B": "Máy tính đã qua sử dụng do đây là hàng thứ cấp.",
+        "C": "Trà đá, do trà đá chiếm tỷ trọng nhỏ trong tổng chi tiêu.",
+        "D": "Kim cương do đây là hàng hoá xa xỉ."
+      },
+      "answer": "C",
+      "explainAnswer": "Cầu co giãn ÍT khi hàng hóa chiếm tỷ trọng NHỎ trong chi tiêu và ít khả năng thay thế. Trà đá chiếm tỷ trọng rất nhỏ trong tổng chi tiêu → cầu co giãn ít → C. Ô tô, máy tính cũ, kim cương đều là hàng có tỷ trọng chi tiêu lớn hoặc xa xỉ → dễ co giãn.",
+      "image": null
+    },
+    {
+      "id": 124,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Độ có giãn của bánh mỳ theo giá là:",
+      "options": {
+        "A": "Co giãn nhiều trong ngắn hạn và co giãn ít hơn trong dài hạn.",
+        "B": "Mang dấu dương do bánh mỳ là hàng thiết yếu.",
+        "C": "Co giãn ít trong ngắn hạn và co giãn nhiều hơn trong dài hạn.",
+        "D": "Mang dấu âm trong ngắn hạn và mang dấu dương trong dài hạn."
+      },
+      "answer": "C",
+      "explainAnswer": "Bánh mì là hàng thiết yếu: trong NGẮN HẠN người tiêu dùng khó thay đổi, cầu ít co giãn; trong DÀI HẠN có thể thay thế bằng thực phẩm khác nên co giãn NHIỀU HƠN → C.",
+      "image": null
+    },
+    {
+      "id": 125,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Nếu cung đối với bánh. mỳ là hoàn toàn không co giãn, khi cầu đối với bánh mỳ. tăng:",
+      "options": {
+        "A": "Giá giảm, lượng tiêu thụ bánh mỳ không đổi.",
+        "B": "Giá tăng, lượng tiêu thụ bánh mỳ không đổi.",
+        "C": "Giá tăng, lượng tiêu thụ bánh mỳ giảm.",
+        "D": "Giá tăng, lượng tiêu thụ bánh mỳ tăng."
+      },
+      "answer": "B",
+      "explainAnswer": "Cung hoàn toàn không co giãn: lượng cung cố định, dù giá thế nào lượng bánh mì vẫn không đổi. Khi cầu tăng (dịch phải), giá cân bằng TĂNG còn lượng tiêu thụ KHÔNG ĐỔI → B.",
+      "image": null
+    },
+    {
+      "id": 126,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 2&3 bonus",
+      "question": "Nếu độ co giãn của thịt bò Kobe theo giá là rất co giãn,",
+      "options": {
+        "A": "Đường cầu của thịt bò Kobe rất dốc.",
+        "B": "Đường cầu của thịt bò Kobe thẳng đứng.",
+        "C": "Đường cầu của thịt bò Kobe rất thoải.",
+        "D": "Đường cầu của thịt bò Kobe nằm ngang."
+      },
+      "answer": "C",
+      "explainAnswer": "Cầu rất co giãn → đường cầu rất THOẢI (gần nằm ngang): chỉ cần giá thay đổi nhỏ đã làm lượng cầu thay đổi lớn → C. Đường dốc/ thẳng đứng tương ứng cầu ít co giãn/hoàn toàn không co giãn.",
+      "image": null
+    }
+  ]
+}

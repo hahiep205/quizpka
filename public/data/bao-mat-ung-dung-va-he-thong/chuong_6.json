@@ -1,0 +1,441 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Bảo mật Ứng dụng và Hệ thống - Chương 6",
+  "chapter": "Chương 6",
+  "totalQuestions": 31,
+  "questions": [
+    {
+      "id": 10,
+      "question": "Lỗ hổng SQL Injection xảy ra chủ yếu do nguyên nhân nào?",
+      "options": {
+        "A": "Không lọc dữ liệu đầu vào và nối chuỗi trực tiếp vào câu lệnh SQL.",
+        "B": "Sử dụng cơ chế PreparedStatement.",
+        "C": "Mã hóa mật khẩu yếu.",
+        "D": "Không cấu hình Firewall."
+      },
+      "answer": "A",
+      "explainAnswer": "SQL Injection thường xảy ra khi dữ liệu người dùng nhập vào bị nối trực tiếp vào câu SQL mà không kiểm soát đúng cách. Đáp án A đúng vì kẻ tấn công có thể chèn cú pháp SQL để làm thay đổi ý nghĩa truy vấn.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 11,
+      "question": "Để phòng chống SQL Injection ở mức mã nguồn một cách triệt để nhất, lập trình viên nên sử dụng kỹ thuật nào?",
+      "options": {
+        "A": "Statement kết hợp nối chuỗi ký tự.",
+        "B": "PreparedStatement (Parameterized Queries).",
+        "C": "Mã hóa MD5 cho toàn bộ dữ liệu.",
+        "D": "Kiểm tra dữ liệu bằng JavaScript ở Client."
+      },
+      "answer": "B",
+      "explainAnswer": "PreparedStatement dùng tham số hóa truy vấn, giúp tách dữ liệu đầu vào khỏi cú pháp SQL. Đáp án B đúng vì cơ chế này làm cho dữ liệu người dùng không bị hiểu nhầm thành lệnh SQL độc hại.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 12,
+      "question": "Tấn công XSS (Cross-Site Scripting) được định nghĩa là gì?",
+      "options": {
+        "A": "Chèn mã SQL độc hại vào cơ sở dữ liệu.",
+        "B": "Chèn các đoạn mã kịch bản (JavaScript) độc hại để thực thi trên trình duyệt của người dùng.",
+        "C": "Can thiệp trực tiếp vào bộ nhớ RAM của Server.",
+        "D": "Tấn công từ chối dịch vụ nhằm vào cổng 80."
+      },
+      "answer": "B",
+      "explainAnswer": "XSS là lỗ hổng cho phép chèn mã script, thường là JavaScript, vào trang web để chạy trên trình duyệt nạn nhân. Đáp án B đúng vì tác động chính của XSS nằm ở phía người dùng, như đánh cắp cookie hoặc thao tác thay người dùng.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 13,
+      "question": "Lỗ hổng Stored XSS nguy hiểm hơn Reflected XSS ở điểm nào?",
+      "options": {
+        "A": "Mã độc được lưu vĩnh viễn vào CSDL và tự động tấn công mọi người dùng truy cập trang.",
+        "B": "Nó có thể đánh cắp mật khẩu máy chủ.",
+        "C": "Nó thực thi mã bằng ngôn ngữ C++ thay vì JavaScript.",
+        "D": "Nó bỏ qua được mọi loại Tường lửa phần cứng."
+      },
+      "answer": "A",
+      "explainAnswer": "Stored XSS nguy hiểm vì mã độc được lưu trong hệ thống, ví dụ trong cơ sở dữ liệu bình luận hoặc hồ sơ người dùng. Đáp án A đúng vì mỗi khi người khác mở trang chứa dữ liệu đó, mã độc có thể tự động chạy lại.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 14,
+      "question": "Chính sách bảo mật Same-Origin Policy (SOP) quy định các trang web chỉ được chia sẻ dữ liệu với nhau nếu có cùng yếu tố nào?",
+      "options": {
+        "A": "Giao thức, Tên miền và Địa chỉ IP.",
+        "B": "Giao thức, Tên miền và Cổng kết nối (Port).",
+        "C": "Tên miền, Trình duyệt và Cổng kết nối.",
+        "D": "Hệ điều hành, Giao thức và Tên miền."
+      },
+      "answer": "B",
+      "explainAnswer": "Same-Origin Policy xác định “cùng nguồn” dựa trên giao thức, tên miền và cổng. Đáp án B đúng vì chỉ khi cả ba yếu tố này giống nhau thì trình duyệt mới coi hai tài nguyên là cùng origin.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 15,
+      "question": "Lỗ hổng CSRF (Cross-Site Request Forgery) có cơ chế hoạt động như thế nào?",
+      "options": {
+        "A": "Ép trình duyệt của nạn nhân tải mã độc về máy.",
+        "B": "Lợi dụng phiên đăng nhập hợp lệ của nạn nhân để gửi các yêu cầu HTTP trái phép đến máy chủ.",
+        "C": "Can thiệp vào giao thức HTTPS để lấy cắp gói tin.",
+        "D": "Đánh cắp Cookie bằng mã JavaScript độc hại."
+      },
+      "answer": "B",
+      "explainAnswer": "CSRF lợi dụng việc trình duyệt tự gửi cookie phiên đăng nhập hợp lệ khi tạo request đến website. Đáp án B đúng vì kẻ tấn công không cần biết mật khẩu, chỉ cần dụ nạn nhân đang đăng nhập gửi yêu cầu trái phép.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 16,
+      "question": "Giải pháp hiệu quả nhất để phòng chống tấn công CSRF trên ứng dụng Web là gì?",
+      "options": {
+        "A": "Mã hóa mật khẩu người dùng.",
+        "B": "Sử dụng Anti-CSRF Token duy nhất cho mỗi biểu mẫu (Form).",
+        "C": "Chặn hoàn toàn mã JavaScript chạy trên trình duyệt.",
+        "D": "Chỉ sử dụng phương thức HTTP GET cho mọi yêu cầu."
+      },
+      "answer": "B",
+      "explainAnswer": "Anti-CSRF Token là giá trị bí mật, khó đoán, được gắn vào form hoặc request hợp lệ. Đáp án B đúng vì máy chủ có thể kiểm tra token để phân biệt request thật từ ứng dụng với request giả mạo từ trang khác.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 17,
+      "question": "Công cụ nào sau đây đóng vai trò là Intercepting Proxy phổ biến để kiểm thử lỗ hổng Web?",
+      "options": {
+        "A": "Nmap",
+        "B": "Wireshark",
+        "C": "Burp Suite / OWASP ZAP",
+        "D": "Metasploit"
+      },
+      "answer": "C",
+      "explainAnswer": "Burp Suite và OWASP ZAP cho phép chặn, xem, sửa và gửi lại request/response giữa trình duyệt và máy chủ. Đáp án C đúng vì đây là các Intercepting Proxy phổ biến trong kiểm thử bảo mật web.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 37,
+      "question": "Kỹ thuật tấn công 'Blind SQL Injection' đòi hỏi hacker phải làm gì để trích xuất dữ liệu?",
+      "options": {
+        "A": "Đọc trực tiếp nội dung CSDL in trên màn hình trang web.",
+        "B": "Chờ đợi hệ thống gửi email chứa dữ liệu về máy của hacker.",
+        "C": "Hỏi các câu hỏi logic Đúng/Sai (Boolean) hoặc dựa vào độ trễ thời gian (Time-based) của máy chủ.",
+        "D": "Khởi động lại máy chủ ứng dụng."
+      },
+      "answer": "C",
+      "explainAnswer": "Blind SQL Injection không trả dữ liệu trực tiếp ra màn hình nên phải suy luận qua phản hồi đúng/sai hoặc thời gian phản hồi. Đáp án C đúng vì kẻ kiểm thử cần đặt các điều kiện logic hoặc quan sát độ trễ để xác định dữ liệu.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 38,
+      "question": "Tính năng 'Secure Cookie' trên trình duyệt giúp bảo vệ Cookie khỏi rủi ro nào?",
+      "options": {
+        "A": "Ngăn chặn việc gửi Cookie qua các kết nối HTTP không được mã hóa (chỉ gửi qua HTTPS).",
+        "B": "Ngăn chặn XSS đọc Cookie thông qua thuộc tính HttpOnly.",
+        "C": "Mã hóa giá trị Cookie bằng thuật toán AES-256.",
+        "D": "Vô hiệu hóa việc tạo Cookie mới trên trình duyệt."
+      },
+      "answer": "A",
+      "explainAnswer": "Secure Cookie yêu cầu trình duyệt chỉ gửi cookie qua kết nối HTTPS. Đáp án A đúng vì điều này tránh việc cookie bị truyền qua HTTP không mã hóa và dễ bị nghe lén.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 39,
+      "question": "Tính năng 'HttpOnly' được thiết lập cho Cookie có tác dụng bảo mật gì?",
+      "options": {
+        "A": "Ngăn chặn các truy vấn SQL Injection.",
+        "B": "Chỉ cho phép kết nối qua giao thức HTTPS.",
+        "C": "Ngăn chặn mã JavaScript ở phía Client (bao gồm cả mã độc XSS) truy cập và đọc được nội dung của Cookie.",
+        "D": "Ngăn chặn tấn công CSRF tự động gửi Form."
+      },
+      "answer": "C",
+      "explainAnswer": "HttpOnly ngăn JavaScript phía client đọc giá trị cookie. Đáp án C đúng vì ngay cả khi có XSS, mã script cũng khó lấy trực tiếp cookie được gắn HttpOnly.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 40,
+      "question": "WAF (Web Application Firewall) khác với Network Firewall thông thường ở điểm nào?",
+      "options": {
+        "A": "WAF chuyên phân tích lưu lượng ở tầng ứng dụng (Lớp 7 - HTTP/HTTPS) để chặn các cuộc tấn công như SQLi, XSS.",
+        "B": "WAF hoạt động ở tầng giao vận (Lớp 4) để chặn IP và Port.",
+        "C": "WAF không thể giải mã các kết nối HTTPS.",
+        "D": "WAF chỉ có thể được cài đặt dưới dạng thiết bị phần cứng."
+      },
+      "answer": "A",
+      "explainAnswer": "WAF phân tích request HTTP/HTTPS ở tầng ứng dụng để phát hiện mẫu tấn công web. Đáp án A đúng vì WAF tập trung vào các lỗi như SQL Injection, XSS, path traversal, khác với firewall mạng chủ yếu lọc IP/port.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 41,
+      "question": "Hậu quả nghiêm trọng nhất của việc cấu hình hệ thống sai (Security Misconfiguration) là gì?",
+      "options": {
+        "A": "Giao diện trang web hiển thị sai màu sắc.",
+        "B": "Làm lộ các thư mục ẩn, file cấu hình hoặc cấp quyền truy cập trái phép cho kẻ tấn công bên ngoài.",
+        "C": "Tăng tốc độ truy xuất dữ liệu một cách bất thường.",
+        "D": "Tự động khởi động lại dịch vụ định kỳ."
+      },
+      "answer": "B",
+      "explainAnswer": "Security Misconfiguration có thể làm lộ file cấu hình, thư mục nhạy cảm, tài khoản mặc định hoặc quyền truy cập sai. Đáp án B đúng vì cấu hình sai thường mở đường cho kẻ tấn công truy cập trái phép.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 57,
+      "question": "Lỗ hổng IDOR (Insecure Direct Object References) xảy ra khi nào?",
+      "options": {
+        "A": "Hệ thống hiển thị trực tiếp cấu trúc thư mục của máy chủ.",
+        "B": "Ứng dụng cho phép người dùng truy cập dữ liệu của người khác bằng cách thay đổi giá trị tham số định danh (như id=1 thành id=2) mà không kiểm tra quyền.",
+        "C": "Mã hóa sai đối tượng dữ liệu trong bộ nhớ.",
+        "D": "Cho phép upload file chứa mã độc lên hệ thống."
+      },
+      "answer": "B",
+      "explainAnswer": "IDOR xảy ra khi ứng dụng dùng ID trực tiếp nhưng không kiểm tra người dùng có quyền truy cập đối tượng đó hay không. Đáp án B đúng vì chỉ cần đổi tham số như id=1 sang id=2 đã có thể xem dữ liệu người khác nếu thiếu kiểm soát quyền.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 58,
+      "question": "DOM-based XSS khác biệt với Stored XSS và Reflected XSS ở điểm nào?",
+      "options": {
+        "A": "Mã độc được thực thi ở máy chủ Backend.",
+        "B": "Mã độc lây nhiễm thông qua file đính kèm email.",
+        "C": "Lỗ hổng tồn tại hoàn toàn trong quá trình xử lý mã JavaScript của trình duyệt phía Client (DOM), gói tin HTTP không nhất thiết chứa mã độc.",
+        "D": "Chỉ nhắm vào người dùng có quyền Quản trị viên (Admin)."
+      },
+      "answer": "C",
+      "explainAnswer": "DOM-based XSS nằm trong cách JavaScript phía trình duyệt xử lý DOM và dữ liệu đầu vào. Đáp án C đúng vì mã độc có thể không đi qua máy chủ theo cách rõ ràng như Stored hoặc Reflected XSS.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 59,
+      "question": "Content Security Policy (CSP) là cơ chế bảo mật dùng để phòng chống chủ yếu loại tấn công nào?",
+      "options": {
+        "A": "SQL Injection",
+        "B": "DDoS",
+        "C": "Cross-Site Scripting (XSS)",
+        "D": "Local File Inclusion"
+      },
+      "answer": "C",
+      "explainAnswer": "CSP cho phép website quy định nguồn script, style, image hoặc tài nguyên nào được phép tải và thực thi. Đáp án C đúng vì CSP đặc biệt hữu ích trong việc giảm tác động của XSS bằng cách chặn script không hợp lệ.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 60,
+      "question": "CORS (Cross-Origin Resource Sharing) được sử dụng nhằm mục đích gì?",
+      "options": {
+        "A": "Chặn toàn bộ các yêu cầu HTTP ngoại lai.",
+        "B": "Cho phép một trang web gửi yêu cầu truy cập tài nguyên tới một tên miền khác một cách an toàn và có kiểm soát.",
+        "C": "Mã hóa dữ liệu liên miền.",
+        "D": "Đồng bộ hóa dữ liệu giữa các máy chủ."
+      },
+      "answer": "B",
+      "explainAnswer": "CORS là cơ chế trình duyệt cho phép chia sẻ tài nguyên giữa các origin khác nhau theo chính sách do server khai báo. Đáp án B đúng vì nó không mở tự do mọi truy cập, mà cho phép có kiểm soát.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 61,
+      "question": "Nguy cơ lớn nhất của lỗ hổng File Upload không an toàn là gì?",
+      "options": {
+        "A": "Máy chủ bị cạn kiệt dung lượng đĩa cứng.",
+        "B": "Kẻ tấn công tải lên file mã độc (Web Shell), sau đó thực thi để chiếm toàn quyền kiểm soát máy chủ Web.",
+        "C": "Ứng dụng bị chậm do phải xử lý ảnh độ phân giải cao.",
+        "D": "Thay đổi giao diện của ứng dụng web."
+      },
+      "answer": "B",
+      "explainAnswer": "File Upload không an toàn có thể cho phép tải lên web shell hoặc file thực thi độc hại. Đáp án B đúng vì nếu file đó được chạy trên máy chủ, kẻ tấn công có thể điều khiển hệ thống web.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 62,
+      "question": "Kỹ thuật Directory Traversal (Path Traversal) nhằm mục đích gì?",
+      "options": {
+        "A": "Xóa toàn bộ thư mục web.",
+        "B": "Đọc các file nhạy cảm bên ngoài thư mục gốc của ứng dụng (ví dụ: ../../../etc/passwd).",
+        "C": "Tải các file giao diện về máy cá nhân.",
+        "D": "Đổi tên thư mục trên máy chủ."
+      },
+      "answer": "B",
+      "explainAnswer": "Directory Traversal lợi dụng tham số đường dẫn để đi ra ngoài thư mục cho phép. Đáp án B đúng vì mục tiêu thường là đọc file nhạy cảm như cấu hình, mật khẩu hoặc file hệ thống.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 63,
+      "question": "Tấn công Session Hijacking (Đánh cắp phiên) thường lợi dụng điều kiện nào?",
+      "options": {
+        "A": "Kẻ tấn công biết được Session ID hợp lệ của người dùng qua XSS hoặc bắt gói tin.",
+        "B": "Mật khẩu của người dùng quá yếu.",
+        "C": "Máy chủ không kiểm tra mã CAPTCHA.",
+        "D": "Ứng dụng bị lỗi SQL Injection."
+      },
+      "answer": "A",
+      "explainAnswer": "Session Hijacking xảy ra khi kẻ tấn công lấy được Session ID hợp lệ rồi dùng nó như nạn nhân. Đáp án A đúng vì XSS, nghe lén traffic hoặc lưu trữ cookie kém an toàn đều có thể làm lộ session.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 90,
+      "question": "Sự xuất hiện của 'Web Shell' trên máy chủ chứng tỏ điều gì?",
+      "options": {
+        "A": "Quản trị viên vừa cài đặt giao diện điều khiển mới.",
+        "B": "Hệ thống có thể đã bị xâm nhập thông qua lỗ hổng tải file hoặc RCE, hacker đã đặt một công cụ để điều khiển máy chủ từ xa qua giao diện web.",
+        "C": "Server đang thực hiện backup dữ liệu.",
+        "D": "Cơ sở dữ liệu đang nâng cấp."
+      },
+      "answer": "B",
+      "explainAnswer": "Web Shell là dấu hiệu máy chủ có thể đã bị kẻ tấn công đặt công cụ điều khiển từ xa qua web. Đáp án B đúng vì nó thường xuất hiện sau lỗ hổng upload file, RCE hoặc tài khoản quản trị bị chiếm.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 93,
+      "question": "Logic Flaw (Lỗ hổng Logic) trong ứng dụng web có thể bị phát hiện dễ dàng nhất qua công cụ nào?",
+      "options": {
+        "A": "Trình quét lỗ hổng tự động (Scanner) luôn tìm ra 100%.",
+        "B": "Firewall tự động chặn.",
+        "C": "Thường rất khó phát hiện tự động, yêu cầu kiểm thử viên bảo mật phải rà soát thủ công luồng nghiệp vụ của ứng dụng.",
+        "D": "Antivirus cài trên máy Server."
+      },
+      "answer": "C",
+      "explainAnswer": "Logic Flaw phụ thuộc vào quy trình nghiệp vụ, ví dụ đặt số lượng âm hoặc bỏ qua bước thanh toán. Đáp án C đúng vì scanner tự động thường khó hiểu ngữ cảnh nghiệp vụ, nên cần kiểm thử thủ công kỹ.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 96,
+      "question": "Kỹ thuật 'Sanitization' đối với dữ liệu đầu vào có nghĩa là gì?",
+      "options": {
+        "A": "Chặn hoàn toàn bất kỳ ai có địa chỉ IP lạ tải dữ liệu lên.",
+        "B": "Làm sạch dữ liệu, loại bỏ hoặc mã hóa các ký tự đặc biệt có khả năng thực thi mã độc trước khi hệ thống xử lý (như xóa thẻ <script>).",
+        "C": "Mã hóa MD5 cho toàn bộ dữ liệu người dùng nhập.",
+        "D": "Nén dữ liệu người dùng thành file zip."
+      },
+      "answer": "B",
+      "explainAnswer": "Sanitization là xử lý dữ liệu đầu vào để loại bỏ, mã hóa hoặc vô hiệu hóa phần nguy hiểm. Đáp án B đúng vì ký tự hoặc thẻ có khả năng thực thi mã độc cần được làm sạch trước khi lưu hoặc hiển thị.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 113,
+      "question": "Khi thiết kế ứng dụng cho phép người dùng tải lên hình ảnh (File Upload), biện pháp kiểm tra nào là chưa đủ an toàn và dễ bị qua mặt nhất?",
+      "options": {
+        "A": "Chỉ kiểm tra phần đuôi mở rộng của file ở phía giao diện Client (JavaScript).",
+        "B": "Kiểm tra MIME type ở phía Backend.",
+        "C": "Kiểm tra Magic Bytes ở đầu file.",
+        "D": "Quét virus file bằng công cụ tích hợp trước khi lưu trữ."
+      },
+      "answer": "A",
+      "explainAnswer": "Kiểm tra đuôi file ở phía client bằng JavaScript rất dễ bị bỏ qua hoặc chỉnh sửa. Đáp án A đúng vì kiểm tra an toàn phải thực hiện ở backend, kết hợp MIME type, magic bytes, quét mã độc và chính sách lưu trữ phù hợp.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 114,
+      "question": "Một ứng dụng web hiển thị URL như sau: `http://example.com/download?file=report.pdf`. Lỗ hổng nào có khả năng cao nhất tồn tại nếu lập trình viên không lọc tham số `file`?",
+      "options": {
+        "A": "SQL Injection",
+        "B": "Directory Traversal (LFI - Local File Inclusion)",
+        "C": "Cross-Site Scripting (XSS)",
+        "D": "CSRF"
+      },
+      "answer": "B",
+      "explainAnswer": "Tham số file trong chức năng download nếu không được lọc có thể bị lợi dụng để trỏ ra ngoài thư mục cho phép. Đáp án B đúng vì đây là tình huống điển hình của Directory Traversal hoặc Local File Inclusion.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 119,
+      "question": "Lỗ hổng SSRF (Server-Side Request Forgery) có mức độ nguy hiểm như thế nào?",
+      "options": {
+        "A": "Ép trình duyệt người dùng gửi request.",
+        "B": "Lừa máy chủ Web gửi một yêu cầu mạng tới một hệ thống nội bộ khác mà thông thường không được phép truy cập từ Internet.",
+        "C": "Làm thay đổi giao diện ứng dụng web.",
+        "D": "Xóa cookie phiên làm việc."
+      },
+      "answer": "B",
+      "explainAnswer": "SSRF khiến máy chủ bị lợi dụng để gửi request thay cho kẻ tấn công. Đáp án B đúng vì máy chủ có thể truy cập được tài nguyên nội bộ mà người ngoài Internet bình thường không truy cập trực tiếp được.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 120,
+      "question": "Bảo mật ứng dụng (AppSec) hiện đại không chỉ phụ thuộc vào WAF mà còn cần RASP (Runtime Application Self-Protection). Tính năng của RASP là gì?",
+      "options": {
+        "A": "Hoạt động như một Firewall cứng trước mạng.",
+        "B": "Được gắn trực tiếp vào trong môi trường thực thi của ứng dụng, giúp ứng dụng tự giám sát và chặn hành vi độc hại từ bên trong khi đang chạy.",
+        "C": "Quét mã nguồn tĩnh.",
+        "D": "Quản lý mật khẩu người dùng."
+      },
+      "answer": "B",
+      "explainAnswer": "RASP được tích hợp trong môi trường chạy của ứng dụng để quan sát hành vi từ bên trong. Đáp án B đúng vì nó có thể phát hiện và chặn hành vi bất thường khi ứng dụng đang thực thi.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 129,
+      "question": "Tấn công 'XML External Entity' (XXE) xảy ra ở đâu?",
+      "options": {
+        "A": "Trong bộ nhớ RAM của Server.",
+        "B": "Trong quá trình bộ phân tích cú pháp (Parser) của ứng dụng xử lý file XML có chứa các tham chiếu thực thể mở rộng độc hại.",
+        "C": "Trên các định dạng file ảnh JPEG.",
+        "D": "Trong giao thức mạng TCP."
+      },
+      "answer": "B",
+      "explainAnswer": "XXE xảy ra khi parser XML xử lý các external entity độc hại hoặc không an toàn. Đáp án B đúng vì lỗi này có thể làm lộ file nội bộ, gây SSRF hoặc ảnh hưởng đến hệ thống xử lý XML.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 141,
+      "question": "Để ngăn chặn tấn công từ chối dịch vụ (DoS) vào ứng dụng Web, kỹ thuật cấu hình nào trên Web Server là cần thiết?",
+      "options": {
+        "A": "Mở rộng kích thước file Upload tối đa.",
+        "B": "Thiết lập Timeout (Thời gian chờ) hợp lý và giới hạn kích thước Request Header/Body.",
+        "C": "Cho phép chạy Script với quyền Root.",
+        "D": "Hiển thị thông báo lỗi chi tiết ra màn hình."
+      },
+      "answer": "B",
+      "explainAnswer": "Giới hạn timeout và kích thước request giúp tránh việc máy chủ bị giữ kết nối hoặc xử lý dữ liệu quá lớn quá lâu. Đáp án B đúng vì đây là biện pháp cấu hình web server cần thiết để giảm rủi ro DoS ở tầng ứng dụng.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 144,
+      "question": "Lỗ hổng bảo mật dạng 'Business Logic' (Lỗ hổng nghiệp vụ) khác biệt ở điểm nào?",
+      "options": {
+        "A": "Liên quan đến lỗi phần cứng mạng.",
+        "B": "Không xuất phát từ lỗi cú pháp hay mã hóa, mà do sự sai sót trong thiết kế quy trình nghiệp vụ (ví dụ: thanh toán đơn hàng với số lượng âm).",
+        "C": "Chỉ xảy ra ở các doanh nghiệp lớn.",
+        "D": "Do dùng chung mật khẩu."
+      },
+      "answer": "B",
+      "explainAnswer": "Business Logic không nhất thiết là lỗi cú pháp, mà là lỗi trong cách thiết kế quy trình nghiệp vụ. Đáp án B đúng vì ví dụ số lượng âm, bỏ qua bước thanh toán hoặc dùng mã giảm giá sai đều cần hiểu logic hệ thống mới phát hiện.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    },
+    {
+      "id": 149,
+      "question": "Hành động nào sau đây là nguyên tắc tốt nhất (Best Practice) khi xây dựng các thông báo lỗi (Error Messages) cho ứng dụng?",
+      "options": {
+        "A": "Hiển thị toàn bộ câu truy vấn SQL lỗi để lập trình viên dễ fix bug.",
+        "B": "Hiển thị thông báo chung chung cho người dùng (vd: 'Đã có lỗi xảy ra, vui lòng thử lại'), và ghi lại lỗi chi tiết vào file log an toàn phía máy chủ.",
+        "C": "Hiển thị chi tiết phiên bản hệ điều hành và Framework đang dùng.",
+        "D": "Bỏ qua các lỗi và cho ứng dụng chạy tiếp bình thường."
+      },
+      "answer": "B",
+      "explainAnswer": "Thông báo lỗi cho người dùng không nên lộ chi tiết nhạy cảm như SQL, stack trace hoặc phiên bản hệ thống. Đáp án B đúng vì người dùng chỉ cần thông báo chung, còn chi tiết kỹ thuật nên được ghi vào log an toàn phía máy chủ.",
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6"
+    }
+  ]
+}

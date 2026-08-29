@@ -1,0 +1,273 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Bảo mật Ứng dụng và Hệ thống - Chương 4",
+  "chapter": "Chương 4",
+  "totalQuestions": 19,
+  "questions": [
+    {
+      "id": 29,
+      "question": "Mục đích chính của hệ thống Firewall trong hạ tầng mạng là gì?",
+      "options": {
+        "A": "Mã hóa toàn bộ dữ liệu đi qua mạng LAN.",
+        "B": "Kiểm soát và lọc lưu lượng mạng ra/vào hệ thống dựa trên các bộ quy tắc (Rules) được cấu hình trước.",
+        "C": "Phát hiện mã độc đa hình đang ẩn náu trong RAM.",
+        "D": "Cung cấp kết nối Wi-Fi miễn phí cho người dùng doanh nghiệp."
+      },
+      "answer": "B",
+      "explainAnswer": "Firewall kiểm soát lưu lượng mạng dựa trên quy tắc như địa chỉ IP, cổng, giao thức hoặc ứng dụng. Đáp án B đúng vì chức năng cốt lõi của firewall là cho phép hoặc chặn traffic theo chính sách bảo mật.",
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4"
+    },
+    {
+      "id": 30,
+      "question": "Điểm khác biệt cốt lõi giữa IDS (Intrusion Detection System) và IPS (Intrusion Prevention System) là gì?",
+      "options": {
+        "A": "IDS dùng cho máy chủ Web, IPS dùng cho máy chủ Database.",
+        "B": "IDS chỉ phát hiện và cảnh báo hành vi bất thường, còn IPS có khả năng chủ động can thiệp và ngăn chặn cuộc tấn công.",
+        "C": "IDS là phần cứng, IPS là phần mềm.",
+        "D": "IDS mã hóa đường truyền còn IPS chỉ phân tích log."
+      },
+      "answer": "B",
+      "explainAnswer": "IDS chủ yếu theo dõi và cảnh báo khi phát hiện dấu hiệu bất thường hoặc tấn công. Đáp án B đúng vì IPS nâng cao hơn ở chỗ có thể chủ động chặn, drop gói tin hoặc ngắt kết nối độc hại.",
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4"
+    },
+    {
+      "id": 31,
+      "question": "Công nghệ VPN (Virtual Private Network) bảo vệ dữ liệu truyền tải qua Internet bằng cơ chế nào?",
+      "options": {
+        "A": "Chặn tất cả các gói tin đến từ địa chỉ IP nước ngoài.",
+        "B": "Tạo một đường hầm mã hóa (Encrypted Tunnel) từ điểm cuối tới điểm cuối.",
+        "C": "Quét virus mọi file trước khi gửi đi.",
+        "D": "Tự động đổi mật khẩu đăng nhập mạng liên tục."
+      },
+      "answer": "B",
+      "explainAnswer": "VPN tạo kênh truyền được mã hóa giữa thiết bị người dùng và điểm cuối VPN. Đáp án B đúng vì dữ liệu đi qua Internet được bảo vệ bằng đường hầm mã hóa, giảm nguy cơ bị nghe lén.",
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4"
+    },
+    {
+      "id": 47,
+      "question": "Kiến trúc DMZ (Demilitarized Zone) trong thiết kế mạng có tác dụng gì?",
+      "options": {
+        "A": "Là khu vực chứa các máy chủ nội bộ cực kỳ quan trọng, cách ly hoàn toàn với Internet.",
+        "B": "Là một phân mạng trung gian chứa các dịch vụ công khai (Web, Mail, DNS) đối mặt với Internet, giúp tách biệt và bảo vệ mạng nội bộ.",
+        "C": "Là mạng WiFi dành riêng cho khách truy cập.",
+        "D": "Là trung tâm điều hành SOC."
+      },
+      "answer": "B",
+      "explainAnswer": "DMZ là vùng mạng trung gian đặt các dịch vụ công khai như web, mail hoặc DNS. Đáp án B đúng vì nó tách dịch vụ đối mặt Internet khỏi mạng nội bộ, giảm rủi ro lan truyền khi dịch vụ công khai bị tấn công.",
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4"
+    },
+    {
+      "id": 52,
+      "question": "Tấn công Man-in-the-Middle (MITM) là gì?",
+      "options": {
+        "A": "Kẻ tấn công đánh sập máy chủ trung gian.",
+        "B": "Kẻ tấn công bí mật chen ngang vào giữa luồng giao tiếp của hai bên để nghe lén hoặc sửa đổi dữ liệu.",
+        "C": "Tấn công trực tiếp vào cơ sở dữ liệu của ứng dụng.",
+        "D": "Phát tán mã độc qua một thiết bị USB trung gian."
+      },
+      "answer": "B",
+      "explainAnswer": "MITM xảy ra khi kẻ tấn công đứng giữa hai bên đang giao tiếp để nghe lén hoặc sửa dữ liệu. Đáp án B đúng vì hai bên có thể tưởng đang nói chuyện trực tiếp với nhau nhưng thực tế luồng truyền đã bị chen ngang.",
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4"
+    },
+    {
+      "id": 79,
+      "question": "Stateful Firewall (Tường lửa trạng thái) ưu việt hơn Stateless Firewall (Tường lửa phi trạng thái) nhờ khả năng nào?",
+      "options": {
+        "A": "Xử lý tốc độ mạng Gigabit.",
+        "B": "Theo dõi và ghi nhớ trạng thái của toàn bộ phiên kết nối từ lúc mở đến lúc đóng, ngăn chặn các gói tin giả mạo thuộc về một kết nối không tồn tại.",
+        "C": "Chỉ kiểm tra đơn lẻ từng gói tin độc lập.",
+        "D": "Ngăn chặn được 100% mã độc Zero-day."
+      },
+      "answer": "B",
+      "explainAnswer": "Stateful Firewall theo dõi trạng thái của phiên kết nối, ví dụ kết nối đã được thiết lập hay chưa. Đáp án B đúng vì nhờ nhớ ngữ cảnh phiên, nó có thể chặn gói tin giả mạo không thuộc kết nối hợp lệ.",
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4"
+    },
+    {
+      "id": 80,
+      "question": "Tường lửa thế hệ mới NGFW (Next-Generation Firewall) thường được tích hợp thêm các chức năng nào so với Firewall truyền thống?",
+      "options": {
+        "A": "Nhận diện người dùng cá nhân (Identity-awareness), hệ thống phòng chống xâm nhập (IPS), và kiểm soát tận lớp Ứng dụng (Application Control).",
+        "B": "Chỉ có tính năng lọc địa chỉ IP và Port.",
+        "C": "Chỉ thêm tính năng tăng tốc độ truyền tải nội dung tĩnh.",
+        "D": "Lưu trữ sao lưu CSDL SQL."
+      },
+      "answer": "A",
+      "explainAnswer": "NGFW không chỉ lọc IP và port mà còn hiểu ứng dụng, người dùng và có thể tích hợp IPS. Đáp án A đúng vì đây là các khả năng nâng cao so với firewall truyền thống.",
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4"
+    },
+    {
+      "id": 81,
+      "question": "Cơ chế phát hiện IDS dựa trên 'Signature-based' (Dựa trên chữ ký) hoạt động như thế nào?",
+      "options": {
+        "A": "Sử dụng AI để phán đoán lưu lượng độc hại.",
+        "B": "So sánh mẫu dữ liệu mạng thu được với cơ sở dữ liệu các mẫu mã độc/tấn công đã biết.",
+        "C": "Đo lường băng thông sử dụng của hệ thống.",
+        "D": "Chỉ phân tích lưu lượng HTTPS đã mã hóa."
+      },
+      "answer": "B",
+      "explainAnswer": "Signature-based IDS so sánh traffic hoặc hành vi với các mẫu tấn công đã biết. Đáp án B đúng vì phương pháp này hiệu quả với mối đe dọa đã có chữ ký, nhưng kém hơn với kỹ thuật hoàn toàn mới.",
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4"
+    },
+    {
+      "id": 82,
+      "question": "Cơ chế phát hiện IDS dựa trên 'Anomaly-based' (Dựa trên hành vi/bất thường) có ưu điểm lớn nhất là gì?",
+      "options": {
+        "A": "Hoạt động cực kỳ nhanh, tiêu tốn ít tài nguyên.",
+        "B": "Không bao giờ sinh ra cảnh báo giả (False Positive).",
+        "C": "Có khả năng phát hiện ra các cuộc tấn công Zero-day mới chưa từng có trong cơ sở dữ liệu.",
+        "D": "Tự động vá lỗi hệ điều hành."
+      },
+      "answer": "C",
+      "explainAnswer": "Anomaly-based IDS học hoặc định nghĩa hành vi bình thường rồi cảnh báo khi có sai lệch đáng kể. Đáp án C đúng vì nó có cơ hội phát hiện tấn công mới hoặc Zero-day chưa có chữ ký.",
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4"
+    },
+    {
+      "id": 83,
+      "question": "Giao thức IPsec thường được sử dụng trong giải pháp bảo mật nào để mã hóa ở tầng Network?",
+      "options": {
+        "A": "Cơ sở dữ liệu",
+        "B": "Firewall ứng dụng Web",
+        "C": "Mạng riêng ảo (VPN)",
+        "D": "Hệ thống IDS"
+      },
+      "answer": "C",
+      "explainAnswer": "IPsec hoạt động ở tầng Network và thường dùng để tạo VPN bảo mật. Đáp án C đúng vì nó mã hóa và bảo vệ gói IP giữa các điểm mạng.",
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4"
+    },
+    {
+      "id": 84,
+      "question": "Khác biệt giữa IPsec VPN và SSL/TLS VPN là gì?",
+      "options": {
+        "A": "IPsec chạy trên trình duyệt web, SSL cần cài đặt phần mềm Client phức tạp.",
+        "B": "IPsec cung cấp kết nối mạng (Network-level), còn SSL/TLS VPN thường dễ dàng truy cập linh hoạt qua trình duyệt Web (Application-level).",
+        "C": "SSL VPN an toàn hơn IPsec VPN gấp 10 lần.",
+        "D": "IPsec VPN không hỗ trợ mã hóa."
+      },
+      "answer": "B",
+      "explainAnswer": "IPsec VPN thường cung cấp kết nối ở mức mạng, phù hợp kết nối site-to-site hoặc client-to-network. Đáp án B đúng vì SSL/TLS VPN thường linh hoạt hơn ở mức ứng dụng và có thể truy cập qua trình duyệt.",
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4"
+    },
+    {
+      "id": 85,
+      "question": "Hệ thống 'Honeypot' trong kiến trúc phòng thủ mạng được thiết lập nhằm mục đích gì?",
+      "options": {
+        "A": "Tăng tốc độ truy cập Internet cho nhân viên.",
+        "B": "Là một hệ thống giả mạo được thiết kế cố tình có lỗ hổng để đánh lừa, bẫy hacker tấn công nhằm thu thập thông tin và chiến thuật của chúng.",
+        "C": "Lọc các email rác.",
+        "D": "Chặn người dùng truy cập web đen."
+      },
+      "answer": "B",
+      "explainAnswer": "Honeypot là hệ thống mồi nhử được thiết kế để thu hút kẻ tấn công. Đáp án B đúng vì nó giúp đội phòng thủ quan sát kỹ thuật, công cụ và hành vi của hacker trong môi trường được kiểm soát.",
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4"
+    },
+    {
+      "id": 99,
+      "question": "Giao thức nào cung cấp cơ chế bảo mật (mã hóa và toàn vẹn dữ liệu) cho lớp Giao vận (Transport Layer) trên Internet hiện nay?",
+      "options": {
+        "A": "HTTP",
+        "B": "TLS/SSL (Tạo nên HTTPS)",
+        "C": "FTP",
+        "D": "Telnet"
+      },
+      "answer": "B",
+      "explainAnswer": "TLS/SSL cung cấp mã hóa, xác thực và toàn vẹn dữ liệu cho kết nối ở tầng giao vận/ứng dụng trên Internet. Đáp án B đúng vì HTTPS chính là HTTP chạy trên TLS/SSL.",
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4"
+    },
+    {
+      "id": 110,
+      "question": "Trong hệ thống IDS/IPS, cảnh báo giả (False Positive) nghĩa là gì?",
+      "options": {
+        "A": "Hệ thống bỏ lọt một cuộc tấn công thực sự.",
+        "B": "Hệ thống cảnh báo có tấn công nhưng thực chất đó là lưu lượng mạng hợp lệ của người dùng bình thường.",
+        "C": "Hệ thống bị sập do quá tải.",
+        "D": "Hệ thống chặn thành công một mã độc."
+      },
+      "answer": "B",
+      "explainAnswer": "False Positive là cảnh báo nhầm khi lưu lượng hoặc hành vi hợp lệ bị hệ thống coi là tấn công. Đáp án B đúng vì cảnh báo giả nhiều sẽ làm đội vận hành mất thời gian và dễ bỏ sót cảnh báo thật.",
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4"
+    },
+    {
+      "id": 111,
+      "question": "Ngược lại, hiện tượng bỏ lọt (False Negative) trong hệ thống an ninh mạng có nghĩa là gì?",
+      "options": {
+        "A": "Cảnh báo sai lưu lượng bình thường.",
+        "B": "Cuộc tấn công thực sự xảy ra nhưng hệ thống không phát hiện và không đưa ra cảnh báo nào.",
+        "C": "Mật khẩu bị sai nhiều lần.",
+        "D": "Hệ thống tự động ngắt kết nối Internet."
+      },
+      "answer": "B",
+      "explainAnswer": "False Negative nguy hiểm vì cuộc tấn công thật xảy ra nhưng hệ thống không phát hiện. Đáp án B đúng vì khi không có cảnh báo, đội phòng thủ có thể không phản ứng kịp thời.",
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4"
+    },
+    {
+      "id": 130,
+      "question": "Trong bảo mật mạng, khái niệm 'MAC Spoofing' là hành vi gì?",
+      "options": {
+        "A": "Tấn công máy tính chạy hệ điều hành macOS.",
+        "B": "Giả mạo địa chỉ vật lý (MAC Address) của một thiết bị mạng hợp pháp để qua mặt hệ thống kiểm soát truy cập (như mạng WiFi doanh nghiệp).",
+        "C": "Ngắt cáp mạng vật lý.",
+        "D": "Làm nhiễu sóng Bluetooth."
+      },
+      "answer": "B",
+      "explainAnswer": "MAC Spoofing là giả mạo địa chỉ MAC của thiết bị mạng. Đáp án B đúng vì kẻ tấn công có thể dùng MAC giả để vượt qua kiểm soát truy cập dựa trên địa chỉ vật lý.",
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4"
+    },
+    {
+      "id": 135,
+      "question": "Tấn công 'DNS Spoofing' (Giả mạo DNS) có tác động gì đến người dùng?",
+      "options": {
+        "A": "Làm người dùng không thể truy cập bất kỳ trang web nào.",
+        "B": "Chuyển hướng (Redirect) người dùng từ một tên miền hợp pháp sang một địa chỉ IP chứa trang web giả mạo do hacker kiểm soát.",
+        "C": "Xóa toàn bộ bộ nhớ Cache của trình duyệt.",
+        "D": "Đổi mật khẩu WiFi của người dùng."
+      },
+      "answer": "B",
+      "explainAnswer": "DNS Spoofing làm sai lệch kết quả phân giải tên miền. Đáp án B đúng vì người dùng có thể gõ đúng tên miền thật nhưng bị chuyển đến địa chỉ IP của trang giả mạo.",
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4"
+    },
+    {
+      "id": 138,
+      "question": "Chức năng của 'Jump Server' (Máy chủ nhảy/Bastion Host) trong quản trị mạng là gì?",
+      "options": {
+        "A": "Máy chủ đóng vai trò như router mạng LAN.",
+        "B": "Là một máy chủ duy nhất có độ bảo mật cực cao, được dùng làm điểm kiểm soát trung gian để quản trị viên truy cập vào các hệ thống nhạy cảm bên trong mạng nội bộ.",
+        "C": "Máy chủ chuyên dùng để chơi game.",
+        "D": "Máy chủ tự động nhảy IP để tránh bị tấn công."
+      },
+      "answer": "B",
+      "explainAnswer": "Jump Server hoặc Bastion Host là điểm trung gian được kiểm soát chặt để truy cập hệ thống nội bộ nhạy cảm. Đáp án B đúng vì nó giúp tập trung xác thực, ghi log và giảm việc mở truy cập quản trị trực tiếp từ bên ngoài.",
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4"
+    },
+    {
+      "id": 140,
+      "question": "Giao thức SSH (Secure Shell) thường dùng cổng mặc định nào để quản trị máy chủ từ xa một cách an toàn?",
+      "options": {
+        "A": "Port 80",
+        "B": "Port 443",
+        "C": "Port 22",
+        "D": "Port 21"
+      },
+      "answer": "C",
+      "explainAnswer": "SSH mặc định sử dụng cổng 22 để quản trị máy chủ từ xa an toàn. Đáp án C đúng vì SSH thay thế các giao thức không an toàn hơn như Telnet bằng kết nối được mã hóa.",
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4"
+    }
+  ]
+}

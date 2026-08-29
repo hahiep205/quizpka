@@ -1,0 +1,682 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kinh tế chính trị Mác - Lênin - Chương 4",
+  "chapter": "Chương 4",
+  "totalQuestions": 45,
+  "questions": [
+    {
+      "id": 80,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Biện pháp cạnh tranh mà tổ chức độc quyền áp dụng đối với các xí nghiệp ngoài độc quyền là biện pháp nào?",
+      "options": {
+        "A": "Độc chiếm nguồn nguyên liệu, nhân công, v.v.",
+        "B": "Áp dụng vũ lực.",
+        "C": "Chia nguồn nguyên liệu, nhân công... theo tỷ lệ nhất định.",
+        "D": "Thương lượng."
+      },
+      "answer": "A",
+      "explainAnswer": "Đối với các xí nghiệp ngoài độc quyền, tổ chức độc quyền áp dụng biện pháp cạnh tranh bằng cách độc chiếm nguồn nguyên liệu, nhân công, phương tiện vận tải, tín dụng... B (vũ lực) là biện pháp thô bạo không phải biện pháp cạnh tranh kinh tế chủ yếu; C, D không phải biện pháp đối với bên ngoài.",
+      "image": null
+    },
+    {
+      "id": 81,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Các cuộc xâm chiếm thuộc địa của các nước đế quốc diễn ra mạnh mẽ vào thời gian nào?",
+      "options": {
+        "A": "Cuối thế kỷ XVIII - đầu thế kỷ XIX.",
+        "B": "Thế kỷ XVIII.",
+        "C": "Cuối thế kỷ XIX - đầu thế kỷ XX.",
+        "D": "Thế kỷ XVII."
+      },
+      "answer": "C",
+      "explainAnswer": "Các cuộc xâm chiếm thuộc địa của các nước đế quốc diễn ra mạnh mẽ vào cuối thế kỷ XIX - đầu thế kỷ XX, khi CNTB chuyển sang giai đoạn độc quyền cần thuộc địa để khai thác nguyên liệu, nhân công và thị trường. Các mốc thời gian khác không khớp với giai đoạn đế quốc chủ nghĩa.",
+      "image": null
+    },
+    {
+      "id": 82,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Các hình thức độc quyền phát triển từ thấp đến cao, từ lưu thông đến sản xuất và tái sản xuất. Hãy xác định trình tự phát triển của các hình thức độc quyền đó?",
+      "options": {
+        "A": "Cácten - Xanhđica - Torớt - Côngxoócxiom - Cônggôlômêrát.",
+        "B": "Xanhđica - Cácten - Tơrớt - Công xoóc xiom - Cônggolômêrát.",
+        "C": "Tơrớt - Cácten - Xanhđica - Côngxoócxiom.",
+        "D": "Cácten - Tơrớt - Côngxoócxiom - Xanhđica."
+      },
+      "answer": "A",
+      "explainAnswer": "Trình tự phát triển của các hình thức độc quyền từ thấp đến cao là: Cácten → Xanhđica → Tơrớt → Côngxoócxiom → Cônggôlômêrát, từ lưu thông đến sản xuất và tái sản xuất. Các phương án khác đảo thứ tự sai.",
+      "image": null
+    },
+    {
+      "id": 83,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Các tổ chức độc quyền của các quốc gia cạnh tranh với nhau trên thị trường quốc tế sẽ dẫn đến hiện tượng gì?",
+      "options": {
+        "A": "Thoả hiệp với nhau hình thành các tổ chức độc quyền quốc tế.",
+        "B": "Các tổ chức độc quyền sẽ thôn tính nhau.",
+        "C": "Đấu tranh không khoan nhượng.",
+        "D": "Sẽ có tổ chức độc quyền bị phá sản, còn lại những tổ chức độc quyền mạnh."
+      },
+      "answer": "A",
+      "explainAnswer": "Các tổ chức độc quyền của các quốc gia cạnh tranh gay gắt trên thị trường quốc tế; nếu thế lực tương đương nhau, chúng sẽ thỏa hiệp hình thành các tổ chức độc quyền quốc tế (cácten, xanhđica quốc tế...). B, C, D chỉ mô tả cạnh tranh thuần túy, không phải kết cục thỏa hiệp quốc tế.",
+      "image": null
+    },
+    {
+      "id": 87,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Chế độ tham dự của tư bản tài chính được thiết lập thông qua yếu tố nào?",
+      "options": {
+        "A": "Số cổ phiếu khống chế để nắm công ty mẹ, con, cháu...",
+        "B": "Yêu cầu hành chính của các tổ chức độc quyền công nghiệp.",
+        "C": "Yêu cầu hành chính của các ngân hàng.",
+        "D": "Quyết định hành chính của nhà nước."
+      },
+      "answer": "A",
+      "explainAnswer": "Chế độ tham dự của tư bản tài chính được thiết lập thông qua chế độ cổ phiếu khống chế: nắm đa số cổ phiếu của công ty này để chi phối công ty khác (công ty mẹ, con, cháu) theo hình tháp. B, C, D không phải cơ chế thiết lập chế độ tham dự.",
+      "image": null
+    },
+    {
+      "id": 88,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Chỉ rõ các hình thức cơ bản của địa tô tư bản chủ nghĩa?",
+      "options": {
+        "A": "Địa tô chênh lệch I; địa tô chênh lệch II.",
+        "B": "Địa tô tuyệt đối; địa tô độc quyền.",
+        "C": "Địa tô chênh lệch; địa tô tuyệt đối.",
+        "D": "Địa tô chênh lệch; địa tô độc quyền."
+      },
+      "answer": "C",
+      "explainAnswer": "Hai hình thức cơ bản của địa tô TBCN là địa tô chênh lệch và địa tô tuyệt đối; địa tô độc quyền chỉ là hình thức phát sinh trong những điều kiện đặc biệt. A, B, D chưa phản ánh đúng hai hình thức cơ bản.",
+      "image": null
+    },
+    {
+      "id": 90,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Chỉ rõ điểm giống nhau giữa địa tô chênh lệch và địa tô tuyệt đối?",
+      "options": {
+        "A": "Tư bản bất biến.",
+        "B": "Có nguồn gốc từ giá trị.",
+        "C": "Có nguồn gốc từ giá trị trao đổi.",
+        "D": "Có nguồn gốc từ giá trị thặng dư."
+      },
+      "answer": "D",
+      "explainAnswer": "Điểm giống nhau giữa địa tô chênh lệch và địa tô tuyệt đối là đều có nguồn gốc từ giá trị thặng dư (do lao động làm thuê tạo ra). Chúng khác nhau về nguyên nhân, điều kiện hình thành nhưng cùng từ giá trị thặng dư - không phải từ giá trị hay giá trị trao đổi.",
+      "image": null
+    },
+    {
+      "id": 94,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Chỉ rõ thực chất của địa tô tuyệt đối?",
+      "options": {
+        "A": "Nhà tư bản đi thuê đất phải trả cho chủ đất, khi thuê mướn ruộng đất tốt.",
+        "B": "Nhà tư bản đi thuê đất phải trả cho chủ đất, dù thuê mướn bất kỳ loại ruộng đất nào.",
+        "C": "Nhà tư bản đi thuê đất phải trả cho chủ đất, khi thuê mướn ruộng đất xấu.",
+        "D": "Nhà tư bản đi thuê đất không phải trả cho chủ đất, dù thuê mướn bất kỳ loại ruộng đất nào."
+      },
+      "answer": "B",
+      "explainAnswer": "Thực chất của địa tô tuyệt đối là lợi nhuận siêu ngạch dôi ra ngoài lợi nhuận bình quân mà nhà tư bản kinh doanh nông nghiệp phải trả cho chủ ruộng đất dù thuê bất kỳ loại ruộng đất nào (tốt, xấu hay trung bình). A, C chỉ nói một loại đất; D sai vì phải trả.",
+      "image": null
+    },
+    {
+      "id": 95,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Chủ nghĩa tư bản độc quyền là gì?",
+      "options": {
+        "A": "Một hình thái kinh tế - xã hội.",
+        "B": "Một phương thức sản xuất.",
+        "C": "Thời kỳ quá độ lên chủ nghĩa xã hội.",
+        "D": "Giai đoạn phát triển của phương thức sản xuất tư bản chủ nghĩa."
+      },
+      "answer": "D",
+      "explainAnswer": "Chủ nghĩa tư bản độc quyền là giai đoạn phát triển của phương thức sản xuất tư bản chủ nghĩa (giai đoạn đế quốc chủ nghĩa) chứ không phải một hình thái kinh tế - xã hội hay phương thức sản xuất mới.",
+      "image": null
+    },
+    {
+      "id": 96,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Chủ nghĩa tư bản độc quyền nhà nước là gì?",
+      "options": {
+        "A": "Một phương thức sản xuất mới.",
+        "B": "Giai đoạn đầu của phương thức sản xuất sau Công nguyên.",
+        "C": "Một kiểu tổ chức kinh tế - xã hội.",
+        "D": "Một giai đoạn của phương thức sản xuất tư bản chủ nghĩa."
+      },
+      "answer": "D",
+      "explainAnswer": "Chủ nghĩa tư bản độc quyền nhà nước là một giai đoạn phát triển của phương thức sản xuất tư bản chủ nghĩa, trong đó nhà nước kết hợp với các tổ chức độc quyền để điều tiết nền kinh tế phục vụ lợi ích của tư bản độc quyền. Không phải phương thức sản xuất mới hay kiểu tổ chức kinh tế - xã hội.",
+      "image": null
+    },
+    {
+      "id": 97,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Chủ nghĩa tư bản độc quyền nhà nước thuộc tổ chức nào?",
+      "options": {
+        "A": "Một kiểu tổ chức kinh tế - xã hội.",
+        "B": "Một chính sách trong giai đoạn độc quyền.",
+        "C": "Một quan hệ kinh tế, chính trị, xã hội.",
+        "D": "Một cơ chế điều tiết của Nhà nước tư sản."
+      },
+      "answer": "C",
+      "explainAnswer": "Chủ nghĩa tư bản độc quyền nhà nước là một quan hệ kinh tế, chính trị, xã hội - sự kết hợp sức mạnh của nhà nước với sức mạnh của tổ chức độc quyền. A, B, D chỉ nêu một khía cạnh (tổ chức, chính sách, cơ chế điều tiết).",
+      "image": null
+    },
+    {
+      "id": 98,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Chủ nghĩa tư bản độc quyền xuất hiện vào thời kỳ lịch sử nào?",
+      "options": {
+        "A": "Thế kỷ XVIII - XIX.",
+        "B": "Cuối thế kỷ XIX - đầu thế kỷ XX.",
+        "C": "Giữa thế kỷ XX.",
+        "D": "Thế kỷ XVI - XVII."
+      },
+      "answer": "B",
+      "explainAnswer": "Chủ nghĩa tư bản độc quyền xuất hiện vào cuối thế kỷ XIX - đầu thế kỷ XX, khi tự do cạnh tranh phát triển đến mức dẫn tới tích tụ, tập trung sản xuất hình thành độc quyền. Các mốc thời gian khác không khớp.",
+      "image": null
+    },
+    {
+      "id": 100,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Công thức nào chỉ sự vận động của tư bản cho vay?",
+      "options": {
+        "A": "T-T'.",
+        "B": "H-H'.",
+        "C": "T-T.",
+        "D": "H-T'."
+      },
+      "answer": "A",
+      "explainAnswer": "Tư bản cho vay vận động theo công thức T - T' (tiền cho vay, thu về tiền có lợi tức) không qua sản xuất hay lưu thông hàng hóa. H - H', T - T, H - T' không phải công thức vận động của tư bản cho vay.",
+      "image": null
+    },
+    {
+      "id": 101,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Công ty cổ phần là gì?",
+      "options": {
+        "A": "Một doanh nghiệp được hình thành do sự góp vốn của nhiều người thông qua phát hành cổ phiếu.",
+        "B": "Một doanh nghiệp được hình thành do sự góp vốn của một số người thông qua phát hành trái phiếu.",
+        "C": "Một doanh nghiệp được hình thành do sự góp vốn của nhiều người thông qua phát hành công trái.",
+        "D": "Một doanh nghiệp được hình thành do sự góp vốn của một người thông qua phát hành cổ phiếu."
+      },
+      "answer": "A",
+      "explainAnswer": "Công ty cổ phần là doanh nghiệp được hình thành do sự góp vốn của nhiều người thông qua phát hành cổ phiếu; các cổ đông góp vốn và chia lợi tức theo cổ phần. B, C sai vì phát hành trái phiếu/công trái là hình thức vay vốn; D sai vì nhiều người, không phải một người.",
+      "image": null
+    },
+    {
+      "id": 102,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Địa tô chênh lệch I là gì?",
+      "options": {
+        "A": "Là địa tô thu được trên những loại ruộng đất có điều kiện tự nhiên thuận lợi.",
+        "B": "Là địa tô thu được trên những loại ruộng đất có điều kiện tự nhiên không thuận lợi.",
+        "C": "Là địa tô thu được trên những loại ruộng đất có vị trí thuận lợi.",
+        "D": "Là địa tô thu được trên những loại ruộng đất do thâm canh làm tăng năng suất."
+      },
+      "answer": "A",
+      "explainAnswer": "Địa tô chênh lệch I là địa tô thu được trên những ruộng đất có điều kiện tự nhiên thuận lợi (độ màu mỡ, vị trí gần thị trường...), mang lại năng suất cao hơn ruộng đất xấu nhất. B ngược lại; C nhầm với vị trí - một phần của điều kiện tự nhiên; D là địa tô chênh lệch II (do thâm canh).",
+      "image": null
+    },
+    {
+      "id": 103,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Địa tô tư bản chủ nghĩa là gì?",
+      "options": {
+        "A": "Phần lợi nhuận ngoài lợi nhuận bình quân của nhà tư bản.",
+        "B": "Phần giá trị ngoài lợi nhuận bình quân của nhà tư bản.",
+        "C": "Phần giá trị thặng dư ngoài lợi nhuận bình quân của nhà tư bản.",
+        "D": "Phần giá trị cá biệt ngoài lợi nhuận bình quân của nhà tư bản."
+      },
+      "answer": "C",
+      "explainAnswer": "Địa tô TBCN là phần giá trị thặng dư dôi ra ngoài lợi nhuận bình quân mà nhà tư bản kinh doanh nông nghiệp phải nộp cho địa chủ (do độc quyền sở hữu ruộng đất). A, B, D dùng thuật ngữ chưa chính xác (lợi nhuận, giá trị, giá trị cá biệt thay vì giá trị thặng dư).",
+      "image": null
+    },
+    {
+      "id": 104,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Địa tô tư bản là gì?",
+      "options": {
+        "A": "Phần tỷ suất giá trị thặng dư ngoài lợi nhuận bình quân mà nhà tư bản kinh doanh nông nghiệp phải nộp cho chủ đất.",
+        "B": "Phần lợi nhuận ngoài lợi nhuận bình quân mà nhà tư bản kinh doanh nông nghiệp phải nộp cho chủ đất.",
+        "C": "Phần giá trị thặng dư ngoài lợi nhuận mà nhà tư bản kinh doanh nông nghiệp phải nộp cho chủ đất.",
+        "D": "Phần giá trị thặng dư ngoài lợi nhuận bình quân mà nhà tư bản kinh doanh nông nghiệp phải nộp cho chủ đất."
+      },
+      "answer": "D",
+      "explainAnswer": "Địa tô TBCN là phần giá trị thặng dư ngoài lợi nhuận bình quân mà nhà tư bản kinh doanh nông nghiệp phải nộp cho chủ đất. D diễn đạt đầy đủ nhất; A nhầm tỷ suất giá trị thặng dư; B, C thiếu 'bình quân' hoặc dùng từ chưa chuẩn.",
+      "image": null
+    },
+    {
+      "id": 107,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Giá trị cổ phiếu khi phát hành lần đầu gọi là gì?",
+      "options": {
+        "A": "Mệnh giá trái phiếu.",
+        "B": "Giá thị trường.",
+        "C": "Thị giá.",
+        "D": "Mệnh giá."
+      },
+      "answer": "D",
+      "explainAnswer": "Giá trị của cổ phiếu khi phát hành lần đầu gọi là mệnh giá (giá ghi trên cổ phiếu). Giá thị trường/thị giá là giá cổ phiếu trên thị trường chứng khoán, có thể khác mệnh giá; A là của trái phiếu.",
+      "image": null
+    },
+    {
+      "id": 116,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Kết quả cạnh tranh nội bộ ngành như thế nào?",
+      "options": {
+        "A": "Hình thành tỷ suất lợi nhuận bình quân.",
+        "B": "Hình thành giá cả sản xuất.",
+        "C": "Hình thành giá trị xã hội (giá trị thị trường).",
+        "D": "Hình thành giá cả độc quyền."
+      },
+      "answer": "C",
+      "explainAnswer": "Cạnh tranh nội bộ ngành (giữa các xí nghiệp sản xuất cùng loại hàng hóa) dẫn tới hình thành giá trị xã hội (giá trị thị trường) của hàng hóa - căn cứ vào điều kiện sản xuất trung bình. Tỷ suất lợi nhuận bình quân và giá cả sản xuất là kết quả của cạnh tranh giữa các ngành; giá cả độc quyền là của giai đoạn độc quyền.",
+      "image": null
+    },
+    {
+      "id": 117,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Khi chủ nghĩa tư bản độc quyền ra đời đã có những tác động gì đến nền kinh tế?",
+      "options": {
+        "A": "Phủ định các quy luật trong giai đoạn chủ nghĩa tư bản tự do cạnh tranh.",
+        "B": "Làm cho các quy luật kinh tế của nền sản xuất hàng hoá và của chủ nghĩa tư bản có biểu hiện mới.",
+        "C": "Không làm thay đổi các quy luật của nền sản xuất hàng hoá và của chủ nghĩa tư bản.",
+        "D": "Phủ định các quy luật của nền sản xuất hàng hoá."
+      },
+      "answer": "B",
+      "explainAnswer": "Khi CNTB độc quyền ra đời, các quy luật kinh tế của sản xuất hàng hóa và của CNTB (quy luật giá trị, giá trị thặng dư...) không mất đi mà có biểu hiện mới (thành quy luật giá cả độc quyền, lợi nhuận độc quyền). A, C, D sai vì không phủ định hay không thay đổi gì.",
+      "image": null
+    },
+    {
+      "id": 119,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Lợi nhuận bình quân được xác định như thế nào?",
+      "options": {
+        "A": "Lợi nhuận không bằng nhau của những lượng vốn tư bản đầu tư bằng nhau khi đầu tư vào các ngành khác nhau.",
+        "B": "Lợi nhuận bằng nhau của những lượng vốn tư bản đầu tư không bằng nhau khi đầu tư vào các ngành khác nhau.",
+        "C": "Lợi nhuận bằng nhau của những lượng vốn tư bản đầu tư bằng nhau khi đầu tư vào các ngành khác nhau.",
+        "D": "Lợi nhuận khác nhau của những lượng vốn tư bản đầu tư khác nhau khi đầu tư vào các ngành khác nhau."
+      },
+      "answer": "C",
+      "explainAnswer": "Lợi nhuận bình quân là lợi nhuận bằng nhau của những lượng tư bản đầu tư bằng nhau vào các ngành khác nhau, do cạnh tranh giữa các ngành hình thành tỷ suất lợi nhuận bình quân. A, B, D đều mô tả các trường hợp không phải lợi nhuận bình quân.",
+      "image": null
+    },
+    {
+      "id": 120,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Mối quan hệ giữa cạnh tranh và độc quyền được thể hiện như thế nào?",
+      "options": {
+        "A": "Độc quyền sinh ra từ cạnh tranh, nó không đối lập với cạnh tranh và làm cạnh tranh đa dạng và gay gắt hơn.",
+        "B": "Độc quyền sinh ra từ cạnh tranh, nó đối lập với cạnh tranh và thủ tiêu cạnh tranh.",
+        "C": "Độc quyền đối lập với cạnh tranh, không thủ tiêu cạnh tranh và làm cạnh tranh đa dạng và gay gắt hơn.",
+        "D": "Độc quyền sinh ra từ cạnh tranh, nó đối lập với cạnh tranh nhưng không thủ tiêu cạnh tranh và làm cạnh tranh đa dạng và gay gắt hơn."
+      },
+      "answer": "D",
+      "explainAnswer": "Độc quyền sinh ra từ cạnh tranh tự do; nó đối lập với cạnh tranh nhưng không thủ tiêu được cạnh tranh, ngược lại làm cạnh tranh đa dạng, gay gắt hơn. D diễn đạt đầy đủ nhất; A, B, C thiếu hoặc sai một trong các luận điểm.",
+      "image": null
+    },
+    {
+      "id": 121,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Mục đích cạnh tranh giữa các nhà tư bản trong nội bộ tổ chức độc quyền là gì?",
+      "options": {
+        "A": "Giành thị trường để tiêu thụ hàng hóa nhằm thu được lợi nhuận cao hơn.",
+        "B": "Thôn tính lẫn nhau để tranh giành thị trường tiêu thụ hàng hóa.",
+        "C": "Giành những điều kiện thuận lợi trong sản xuất và tiêu thụ hàng hóa để thu được lợi nhuận cao hơn.",
+        "D": "Giành tỷ lệ cao hơn trong quá trình sản xuất hàng hóa để thu được giá trị cao hơn."
+      },
+      "answer": "C",
+      "explainAnswer": "Mục đích cạnh tranh giữa các nhà tư bản trong nội bộ tổ chức độc quyền là giành những điều kiện thuận lợi trong sản xuất và tiêu thụ hàng hóa để thu lợi nhuận cao hơn (giành tỷ lệ sản xuất, thị trường, giá cả). A, B chỉ một khía cạnh; D không chính xác.",
+      "image": null
+    },
+    {
+      "id": 122,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Mục đích của xuất khẩu tư bản là gì?",
+      "options": {
+        "A": "Chiếm đoạt giá trị và các nguồn lợi ở các nước nhập khẩu tư bản.",
+        "B": "Chiếm đoạt giá trị thặng dư và các nguồn lợi ở các nước nhập khẩu tư bản.",
+        "C": "Tạo điều kiện phát triển cho các nước khác.",
+        "D": "Tạo mối quan hệ tốt đẹp với các nước khác."
+      },
+      "answer": "B",
+      "explainAnswer": "Mục đích của xuất khẩu tư bản là chiếm đoạt giá trị thặng dư và các nguồn lợi ở các nước nhập khẩu tư bản (thu lợi nhuận cao hơn trong nước nhờ giá nhân công, nguyên liệu rẻ). A sai vì chiếm đoạt giá trị thặng dư chứ không phải 'giá trị'; C, D không phải mục đích.",
+      "image": null
+    },
+    {
+      "id": 123,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Mục đích của xuất khẩu tư bản nhà nước là gì?",
+      "options": {
+        "A": "Quân sự.",
+        "B": "Kinh tế - Chính trị.",
+        "C": "Kinh tế - Chính trị - Quân sự.",
+        "D": "Kinh tế."
+      },
+      "answer": "C",
+      "explainAnswer": "Mục đích của xuất khẩu tư bản nhà nước là kinh tế - chính trị - quân sự (vừa mở đường cho xuất khẩu tư bản tư nhân, vừa phục vụ mục tiêu chính trị, quân sự của nước xuất khẩu). A, B, D thiếu các lĩnh vực còn lại.",
+      "image": null
+    },
+    {
+      "id": 124,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Ngày nay, sự can thiệp của nhà nước tư sản thể hiện như thế nào?",
+      "options": {
+        "A": "Vào khâu phân phối - trao đổi.",
+        "B": "Sản xuất - phân phối - trao đổi - tiêu dùng.",
+        "C": "Vào khâu sản xuất - tiêu dùng.",
+        "D": "Vào khâu sản xuất."
+      },
+      "answer": "B",
+      "explainAnswer": "Ngày nay sự can thiệp của nhà nước tư sản bao trùm cả bốn khâu của quá trình tái sản xuất: sản xuất - phân phối - trao đổi - tiêu dùng, không chỉ giới hạn ở một khâu. A, C, D chỉ nêu một số khâu.",
+      "image": null
+    },
+    {
+      "id": 127,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Quy luật giá trị thặng dư biểu hiện như thế nào trong giai đoạn chủ nghĩa tư bản độc quyền?",
+      "options": {
+        "A": "Biểu hiện thành quy luật tỷ suất lợi nhuận bình quân.",
+        "B": "Biểu hiện thành quy luật giá cả sản xuất.",
+        "C": "Biểu hiện thành quy luật lợi nhuận độc quyền cao.",
+        "D": "Biểu hiện thành quy luật giá cả độc quyền cao."
+      },
+      "answer": "C",
+      "explainAnswer": "Trong giai đoạn CNTB độc quyền, quy luật giá trị thặng dư biểu hiện thành quy luật lợi nhuận độc quyền cao - các tổ chức độc quyền thu lợi nhuận độc quyền. Chưa có độc quyền thì biểu hiện qua quy luật giá cả sản xuất (B) hoặc tỷ suất lợi nhuận bình quân (A); D nhầm quy luật giá cả.",
+      "image": null
+    },
+    {
+      "id": 130,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Sự hình thành các tổ chức độc quyền dựa trên cơ sở nào?",
+      "options": {
+        "A": "Sản xuất nhỏ phân tán.",
+        "B": "Tích tụ và tập trung sản xuất.",
+        "C": "Phát triển khoa học - kỹ thuật.",
+        "D": "Sự hoàn thiện quan hệ sản xuất tư bản chủ nghĩa."
+      },
+      "answer": "B",
+      "explainAnswer": "Sự hình thành các tổ chức độc quyền dựa trên cơ sở tích tụ và tập trung sản xuất cao: khi sản xuất tập trung đến mức độ nhất định thì hình thành độc quyền. C (khoa học kỹ thuật) là tiền đề thúc đẩy tập trung sản xuất, không phải cơ sở trực tiếp; A, D sai.",
+      "image": null
+    },
+    {
+      "id": 131,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Sự kết hợp về nhân sự giữa tổ chức độc quyền và nhà nước thể hiện như thế nào?",
+      "options": {
+        "A": "Liên minh giữa tổ chức độc quyền công nghiệp với chính phủ.",
+        "B": "Liên minh giữa tổ chức độc quyền ngân hàng, tổ chức độc quyền công nghiệp và chính phủ.",
+        "C": "Liên minh giữa tổ chức độc quyền ngân hàng với chính phủ.",
+        "D": "Liên minh giữa cá nhân tổ chức độc quyền ngân hàng với tổ chức độc quyền công nghiệp."
+      },
+      "answer": "B",
+      "explainAnswer": "Sự kết hợp về nhân sự giữa tổ chức độc quyền và nhà nước thể hiện qua liên minh giữa tổ chức độc quyền ngân hàng, tổ chức độc quyền công nghiệp và chính phủ (cử người tham gia lẫn nhau vào bộ máy lãnh đạo). A, C, D thiếu một trong các thành phần liên minh.",
+      "image": null
+    },
+    {
+      "id": 132,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Sự phát triển của trình độ xã hội hoá lực lượng sản xuất đòi hỏi điều gì?",
+      "options": {
+        "A": "Nhà nước chỉ can thiệp với vai trò \"người gác cổng\".",
+        "B": "Nhà nước không nên can thiệp vào kinh tế.",
+        "C": "Nhà nước can thiệp vào kinh tế ở cấp độ vi mô.",
+        "D": "Nhà nước can thiệp vào kinh tế với vai trò quản lý chung."
+      },
+      "answer": "D",
+      "explainAnswer": "Trình độ xã hội hóa lực lượng sản xuất phát triển cao đòi hỏi nhà nước can thiệp vào kinh tế với vai trò quản lý chung (điều tiết vĩ mô, khắc phục khuyết tật thị trường). A, B phủ nhận can thiệp; C chỉ can thiệp vi mô là không đủ.",
+      "image": null
+    },
+    {
+      "id": 133,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Sự ra đời chủ nghĩa tư bản độc quyền nhà nước nhằm mục đích gì?",
+      "options": {
+        "A": "Phục vụ lợi ích của nhà nước tư sản và duy trì chủ nghĩa tư bản.",
+        "B": "Phục vụ lợi ích của tổ chức độc quyền tư nhân và tiếp tục duy trì, phát triển chủ nghĩa tư bản.",
+        "C": "Phục vụ lợi ích của tổ chức độc quyền tư nhân và cứu nguy cho chủ nghĩa tư bản.",
+        "D": "Phục vụ lợi ích của nhân dân lao động và phát triển chủ nghĩa tư bản."
+      },
+      "answer": "B",
+      "explainAnswer": "CNTB độc quyền nhà nước ra đời nhằm phục vụ lợi ích của tổ chức độc quyền tư nhân và tiếp tục duy trì, phát triển CNTB (không phải cứu nguy trong lúc khủng hoảng mới ra đời). A sai chủ thể lợi ích; C nói 'cứu nguy' chưa đúng; D hoàn toàn sai.",
+      "image": null
+    },
+    {
+      "id": 136,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Thị trường chứng khoán là gì?",
+      "options": {
+        "A": "Thị trường mua bán các loại chứng khoán chưa niêm yết trên sàn.",
+        "B": "Thị trường mua bán các loại hàng hóa.",
+        "C": "Thị trường mua bán các loại chứng khoán.",
+        "D": "Thị trường mua bán các loại công trái."
+      },
+      "answer": "C",
+      "explainAnswer": "Thị trường chứng khoán là thị trường mua bán các loại chứng khoán (cổ phiếu, trái phiếu...), nơi huy động và luân chuyển vốn dài hạn. A chỉ giới hạn chứng khoán chưa niêm yết; B là thị trường hàng hóa; D chỉ công trái.",
+      "image": null
+    },
+    {
+      "id": 141,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Trong các nhà kinh điển của chủ nghĩa Mác - Lênin, ai là người khái quát về nguyên nhân ra đời của chủ nghĩa tư bản độc quyền bằng câu: \"Tự do cạnh tranh đẻ ra tập trung sản xuất và sự tập trung sản xuất này, khi phát triển tới một mức độ nhất định, lại dẫn tới độc quyền\"?",
+      "options": {
+        "A": "Ph.Ăngghen.",
+        "B": "C.Mác.",
+        "C": "C.Mác và Ph.Ăngghen.",
+        "D": "V.I.Lênin."
+      },
+      "answer": "D",
+      "explainAnswer": "V.I.Lênin là người khái quát nguyên nhân ra đời của CNTB độc quyền bằng nhận định 'Tự do cạnh tranh đẻ ra tập trung sản xuất và sự tập trung sản xuất này, khi phát triển tới một mức độ nhất định, lại dẫn tới độc quyền' (trong tác phẩm Chủ nghĩa đế quốc). C.Mác, Ph.Ăngghen chưa nghiên cứu giai đoạn độc quyền.",
+      "image": null
+    },
+    {
+      "id": 142,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Trong giai đoạn chủ nghĩa tư bản độc quyền, quy luật giá trị biểu hiện thành quy luật nào?",
+      "options": {
+        "A": "Quy luật lợi nhuận bình quân.",
+        "B": "Quy luật giá cả độc quyền.",
+        "C": "Quy luật giá cả sản xuất.",
+        "D": "Quy luật tỷ suất lợi nhuận bình quân."
+      },
+      "answer": "B",
+      "explainAnswer": "Trong giai đoạn CNTB độc quyền, quy luật giá trị biểu hiện thành quy luật giá cả độc quyền - giá cả độc quyền xoay quanh giá trị nhưng chiếm đoạt giá trị thặng dư của các nhà tư bản khác. Ở giai đoạn tự do cạnh tranh, quy luật giá trị biểu hiện thành quy luật giá cả sản xuất (C).",
+      "image": null
+    },
+    {
+      "id": 143,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Tư bản giả là tư bản tồn tại dưới hình thức nào?",
+      "options": {
+        "A": "Công trái có giá.",
+        "B": "Mệnh giá trái phiếu.",
+        "C": "Trái phiếu có giá.",
+        "D": "Chứng khoán có giá."
+      },
+      "answer": "D",
+      "explainAnswer": "Tư bản giả là tư bản tồn tại dưới hình thức chứng khoán có giá (cổ phiếu, trái phiếu) - nó không phải tư bản thực tế mà là giấy chứng nhận quyền sở hữu thu nhập, có giá trị thị trường dao động. A, B, C chỉ nêu một loại chứng khoán cụ thể.",
+      "image": null
+    },
+    {
+      "id": 144,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Tỷ suất lợi tức (z') được xác định như thế nào?",
+      "options": {
+        "A": "Tỷ lệ phần trăm giữa giá trị thặng dư và tổng số tư bản cho vay.",
+        "B": "Tỷ lệ phần trăm giữa tỷ suất lợi nhuận và tổng số tư bản cho vay.",
+        "C": "Tỷ lệ phần trăm giữa lợi tức và tổng số tư bản cho vay.",
+        "D": "Tỷ lệ phần trăm giữa lợi nhuận và tổng số tư bản cho vay."
+      },
+      "answer": "C",
+      "explainAnswer": "Tỷ suất lợi tức (z') là tỷ lệ phần trăm giữa lợi tức và tổng số tư bản cho vay. A nhầm giá trị thặng dư; B, D nhầm tỷ suất lợi nhuận/lợi nhuận với lợi tức.",
+      "image": null
+    },
+    {
+      "id": 145,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Vai trò mới của ngân hàng trong giai đoạn chủ nghĩa tư bản độc quyền là gì?",
+      "options": {
+        "A": "Trung gian thanh toán trong nền kinh tế tư bản chủ nghĩa.",
+        "B": "Đầu tư tư bản trong nền kinh tế tư bản chủ nghĩa.",
+        "C": "Khống chế hoạt động của nền kinh tế tư bản chủ nghĩa.",
+        "D": "Trung gian tín dụng trong nền kinh tế tư bản chủ nghĩa."
+      },
+      "answer": "C",
+      "explainAnswer": "Vai trò mới của ngân hàng trong giai đoạn CNTB độc quyền là khống chế hoạt động của nền kinh tế TBCN (qua khống chế tín dụng, chi phối các xí nghiệp công nghiệp, tham gia điều tiết). Trung gian thanh toán, tín dụng là vai trò cũ từ giai đoạn tự do cạnh tranh.",
+      "image": null
+    },
+    {
+      "id": 146,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Về bản chất lợi nhuận và giá trị thặng dư giống nhau ở điểm nào?",
+      "options": {
+        "A": "Lao động không công của công nhân.",
+        "B": "Lao động trừu tượng của công nhân.",
+        "C": "Lao động phức tạp của công nhân.",
+        "D": "Lao động cụ thể của công nhân."
+      },
+      "answer": "A",
+      "explainAnswer": "Về bản chất, lợi nhuận và giá trị thặng dư giống nhau vì đều là kết quả của lao động không công của công nhân làm thuê (cùng nguồn gốc từ lao động không công). Chúng chỉ khác nhau về hình thức biểu hiện (giá trị thặng dư là nội dung, lợi nhuận là hình thức biến tướng).",
+      "image": null
+    },
+    {
+      "id": 147,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "V.I. Lênin đã phân tích chủ nghĩa tư bản độc quyền bằng các đặc điểm kinh tế cơ bản nào?",
+      "options": {
+        "A": "Tích tụ và tập trung tư bản; sự chi phối của hệ thống tài phiệt; xuất khẩu tư bản; phân chia thị trường thế giới; sự phân định lãnh thổ giữa các cường quốc đế quốc.",
+        "B": "Tập trung sản xuất và các tổ chức độc quyền; tư bản tài chính và bọn đầu sỏ tài chính; xuất khẩu tư bản; phân chia thế giới về kinh tế giữa các tổ chức độc quyền.",
+        "C": "Tập trung sản xuất và các tổ chức độc quyền; tư bản tài chính và bọn đầu sỏ tài chính; xuất khẩu tư bản.",
+        "D": "Tập trung sản xuất và các tổ chức độc quyền; tư bản tài chính và bọn đầu sỏ tài chính."
+      },
+      "answer": "A",
+      "explainAnswer": "Theo V.I.Lênin, năm đặc điểm kinh tế cơ bản của CNTB độc quyền là: (1) tập trung sản xuất và các tổ chức độc quyền; (2) tư bản tài chính và bọn đầu sỏ tài chính; (3) xuất khẩu tư bản; (4) phân chia thế giới về kinh tế giữa các tổ chức độc quyền; (5) phân chia thế giới về lãnh thổ giữa các cường quốc đế quốc. B nêu đầy đủ nhất; A có thuật ngữ chưa chuẩn; C, D thiếu các đặc điểm sau.",
+      "image": null
+    },
+    {
+      "id": 148,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "V.I. Lênin đưa ra luận điểm: \"Hôm nay là bộ trưởng, ngày mai là chủ ngân hàng; hôm nay là chủ ngân hàng, ngày mai là bộ trưởng\" là muốn nhấn mạnh về điều gì?",
+      "options": {
+        "A": "Liên minh giữa tổ chức độc quyền công nghiệp với chính phủ.",
+        "B": "Liên minh giữa tổ chức độc quyền ngân hàng với chính phủ.",
+        "C": "Liên minh giữa cá nhân tổ chức độc quyền ngân hàng với tổ chức độc quyền công nghiệp.",
+        "D": "Liên minh giữa tổ chức độc quyền ngân hàng, tổ chức độc quyền công nghiệp và chính phủ."
+      },
+      "answer": "D",
+      "explainAnswer": "Luận điểm 'Hôm nay là bộ trưởng, ngày mai là chủ ngân hàng...' của Lênin nhấn mạnh sự liên minh chặt chẽ giữa tổ chức độc quyền ngân hàng, tổ chức độc quyền công nghiệp và chính phủ - sự kết hợp về nhân sự. A, B, C chỉ nêu hai trong ba thành phần.",
+      "image": null
+    },
+    {
+      "id": 149,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Xuất khẩu hàng hoá là gì?",
+      "options": {
+        "A": "Xuất khẩu giá trị ra nước ngoài.",
+        "B": "Xuất khẩu máy móc ra nước ngoài.",
+        "C": "Xuất khẩu hàng hoá ra nước ngoài để thực hiện giá trị.",
+        "D": "Xuất khẩu nguyên nhiên, vật liệu ra nước ngoài."
+      },
+      "answer": "C",
+      "explainAnswer": "Xuất khẩu hàng hóa là mang hàng hóa ra nước ngoài (bán ra thị trường nước ngoài) để thực hiện giá trị của hàng hóa. A, B, D chỉ nêu một loại cụ thể (giá trị, máy móc, nguyên vật liệu) - không phải định nghĩa chung.",
+      "image": null
+    },
+    {
+      "id": 150,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Xuất khẩu hàng hoá là một trong các đặc điểm của giai đoạn sản xuất nào?",
+      "options": {
+        "A": "Phương thức sản xuất tư bản chủ nghĩa.",
+        "B": "Giai đoạn chủ nghĩa tư bản tự do cạnh tranh.",
+        "C": "Giai đoạn chủ nghĩa tư bản độc quyền.",
+        "D": "Sản xuất hàng hoá giản đơn."
+      },
+      "answer": "B",
+      "explainAnswer": "Xuất khẩu hàng hóa là đặc điểm của giai đoạn CNTB tự do cạnh tranh (xuất khẩu hàng hóa để thực hiện giá trị thặng dư). Đến giai đoạn độc quyền, bên cạnh xuất khẩu hàng hóa còn có xuất khẩu tư bản trở thành đặc điểm đặc trưng.",
+      "image": null
+    },
+    {
+      "id": 151,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Xuất khẩu tư bản là đặc điểm của nền kinh tế giai đoạn nào?",
+      "options": {
+        "A": "Phương thức sản xuất tư bản chủ nghĩa.",
+        "B": "Chủ nghĩa tư bản giai đoạn tự do cạnh tranh.",
+        "C": "Chủ nghĩa tư bản giai đoạn độc quyền.",
+        "D": "Phương thức sản xuất phong kiến."
+      },
+      "answer": "C",
+      "explainAnswer": "Xuất khẩu tư bản là đặc điểm kinh tế của CNTB giai đoạn độc quyền - đưa tư bản ra nước ngoài đầu tư để bóc lột giá trị thặng dư ở nước nhập khẩu. Ở giai đoạn tự do cạnh tranh chủ yếu là xuất khẩu hàng hóa; phong kiến không có xuất khẩu tư bản.",
+      "image": null
+    },
+    {
+      "id": 152,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Xuất khẩu tư bản là gì?",
+      "options": {
+        "A": "Đầu tư tư bản sang các nước phát triển.",
+        "B": "Đầu tư tư bản sang các nước kém phát triển và đang phát triển.",
+        "C": "Đầu tư tư bản ra nước ngoài nhằm bóc lột giá trị tiêu dùng ở nước nhập khẩu.",
+        "D": "Mang hàng hoá ra nước ngoài để thực hiện giá trị."
+      },
+      "answer": "C",
+      "explainAnswer": "Xuất khẩu tư bản là đầu tư tư bản ra nước ngoài nhằm chiếm đoạt giá trị thặng dư và các nguồn lợi ở nước nhập khẩu, chủ yếu sang nước kém và đang phát triển. A sai hướng; D là xuất khẩu hàng hóa; C diễn đạt chưa chính xác ('giá trị tiêu dùng').",
+      "image": null
+    },
+    {
+      "id": 153,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 3&4",
+      "question": "Xuất khẩu tư bản nhà nước thường hướng vào những ngành kinh tế nào?",
+      "options": {
+        "A": "Ngành có tốc độ chu chuyển vốn nhanh.",
+        "B": "Ngành thu được lợi nhuận cao.",
+        "C": "Ngành thuộc kết cấu hạ tầng.",
+        "D": "Ngành công nghệ mới."
+      },
+      "answer": "C",
+      "explainAnswer": "Xuất khẩu tư bản nhà nước thường hướng vào những ngành thuộc kết cấu hạ tầng (giao thông, năng lượng...) để tạo điều kiện cho xuất khẩu tư bản tư nhân. A, B, D là mục tiêu của tư bản tư nhân, không phải đặc điểm của xuất khẩu tư bản nhà nước.",
+      "image": null
+    }
+  ]
+}

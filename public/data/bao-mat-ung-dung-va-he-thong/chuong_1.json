@@ -1,0 +1,301 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Bảo mật Ứng dụng và Hệ thống - Chương 1",
+  "chapter": "Chương 1",
+  "totalQuestions": 21,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Ba mục tiêu cốt lõi của an toàn thông tin (mô hình CIA) bao gồm những yếu tố nào?",
+      "options": {
+        "A": "Confidentiality (Tính bảo mật) – Integration (Tính tích hợp) – Authentication (Xác thực)",
+        "B": "Confidentiality (Tính bảo mật) – Integrity (Tính toàn vẹn) – Availability (Tính sẵn sàng)",
+        "C": "Control (Kiểm soát) – Integrity (Tính toàn vẹn) – Access (Truy cập)",
+        "D": "Cryptography (Mã hóa) – Integrity (Tính toàn vẹn) – Availability (Tính sẵn sàng)"
+      },
+      "answer": "B",
+      "explainAnswer": "Mô hình CIA là nền tảng của an toàn thông tin, gồm Confidentiality, Integrity và Availability. Đáp án B đúng vì lần lượt nói đến bảo mật dữ liệu, đảm bảo dữ liệu không bị sửa sai trái phép và hệ thống luôn sẵn sàng phục vụ khi cần.",
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1"
+    },
+    {
+      "id": 3,
+      "question": "Chiến lược phòng thủ 'Defense in Depth' (Phòng thủ chiều sâu) có đặc điểm gì?",
+      "options": {
+        "A": "Sử dụng một bức tường lửa thật mạnh ở vòng ngoài.",
+        "B": "Sử dụng nhiều lớp bảo vệ độc lập từ ngoài vào trong.",
+        "C": "Chỉ tập trung bảo mật cho lớp cơ sở dữ liệu cốt lõi.",
+        "D": "Giấu toàn bộ mã nguồn của ứng dụng."
+      },
+      "answer": "B",
+      "explainAnswer": "Defense in Depth không phụ thuộc vào một lớp bảo vệ duy nhất, mà dùng nhiều lớp như firewall, phân quyền, giám sát, mã hóa và kiểm soát truy cập. Đáp án B đúng vì nếu một lớp bị vượt qua thì các lớp khác vẫn tiếp tục bảo vệ hệ thống.",
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1"
+    },
+    {
+      "id": 4,
+      "question": "Yếu tố nào được coi là 'tuyến phòng thủ quan trọng nhất nhưng cũng là mắt xích yếu nhất' trong an ninh mạng?",
+      "options": {
+        "A": "Hệ thống Firewall",
+        "B": "Thuật toán mã hóa",
+        "C": "Con người (Người dùng và Quản trị viên)",
+        "D": "Hệ thống IDS"
+      },
+      "answer": "C",
+      "explainAnswer": "Trong an ninh mạng, con người thường là mục tiêu dễ bị khai thác qua lừa đảo, mật khẩu yếu hoặc cấu hình sai. Đáp án C đúng vì dù hệ thống kỹ thuật mạnh đến đâu, lỗi từ người dùng hoặc quản trị viên vẫn có thể tạo ra lỗ hổng nghiêm trọng.",
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1"
+    },
+    {
+      "id": 5,
+      "question": "Tấn công 'Passive Attack' (Tấn công thụ động) khác với tấn công chủ động ở điểm nào?",
+      "options": {
+        "A": "Làm thay đổi hoặc phá hủy trực tiếp dữ liệu trên hệ thống.",
+        "B": "Chỉ lén lút nghe trộm và thu thập thông tin mà không làm thay đổi dữ liệu.",
+        "C": "Gây ra hiện tượng từ chối dịch vụ.",
+        "D": "Luôn kích hoạt các cảnh báo trên hệ thống IDS."
+      },
+      "answer": "B",
+      "explainAnswer": "Passive Attack chủ yếu là nghe lén, quan sát và thu thập thông tin mà không làm thay đổi dữ liệu hay trạng thái hệ thống. Đáp án B đúng vì tấn công chủ động mới thường gây sửa đổi, phá hoại hoặc làm gián đoạn dịch vụ.",
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1"
+    },
+    {
+      "id": 6,
+      "question": "Hình thức tấn công nào nhằm mục đích làm cạn kiệt tài nguyên hệ thống, khiến dịch vụ ngừng hoạt động?",
+      "options": {
+        "A": "Phishing",
+        "B": "SQL Injection",
+        "C": "DDoS",
+        "D": "Man-in-the-Middle"
+      },
+      "answer": "C",
+      "explainAnswer": "DDoS làm quá tải tài nguyên như băng thông, CPU, RAM hoặc số lượng kết nối khiến dịch vụ không thể phục vụ người dùng hợp lệ. Đáp án C đúng vì mục tiêu chính của DDoS là làm dịch vụ bị gián đoạn hoặc ngừng hoạt động.",
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1"
+    },
+    {
+      "id": 7,
+      "question": "Kỹ thuật tấn công 'Phishing' thường sử dụng phương thức chủ yếu nào?",
+      "options": {
+        "A": "Gửi thông điệp giả mạo các tổ chức uy tín để lừa người dùng cung cấp thông tin.",
+        "B": "Chèn mã độc vào cơ sở dữ liệu.",
+        "C": "Bẻ khóa mật khẩu bằng phương pháp Brute Force.",
+        "D": "Quét các cổng đang mở trên máy chủ."
+      },
+      "answer": "A",
+      "explainAnswer": "Phishing thường giả mạo ngân hàng, công ty, mạng xã hội hoặc tổ chức uy tín để lừa người dùng nhập mật khẩu, OTP hoặc thông tin cá nhân. Đáp án A đúng vì trọng tâm của Phishing là lừa đảo tâm lý thông qua thông điệp giả mạo.",
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1"
+    },
+    {
+      "id": 8,
+      "question": "Mô hình kiến trúc an ninh mạng nào hoạt động theo nguyên tắc 'Không bao giờ tin tưởng, luôn luôn xác minh'?",
+      "options": {
+        "A": "Perimeter Security",
+        "B": "Zero Trust",
+        "C": "Defense in Depth",
+        "D": "SSO Security"
+      },
+      "answer": "B",
+      "explainAnswer": "Zero Trust dựa trên nguyên tắc không mặc định tin tưởng bất kỳ người dùng, thiết bị hay kết nối nào. Đáp án B đúng vì mọi yêu cầu truy cập đều cần được xác minh liên tục, kể cả khi đến từ bên trong mạng nội bộ.",
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1"
+    },
+    {
+      "id": 9,
+      "question": "SOC trong lĩnh vực an toàn thông tin là viết tắt của từ gì?",
+      "options": {
+        "A": "System Operations Control",
+        "B": "Security Operations Center",
+        "C": "Secure Object Configuration",
+        "D": "Standard Operations Checklist"
+      },
+      "answer": "B",
+      "explainAnswer": "SOC là trung tâm vận hành an ninh, nơi theo dõi, phân tích và phản ứng với sự kiện bảo mật. Đáp án B đúng vì SOC viết tắt của Security Operations Center.",
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1"
+    },
+    {
+      "id": 48,
+      "question": "Khái niệm 'Social Engineering' trong các cuộc tấn công mạng nhắm vào yếu tố nào?",
+      "options": {
+        "A": "Lỗ hổng mã nguồn C++.",
+        "B": "Thuật toán băm SHA-256.",
+        "C": "Sự chủ quan, thiếu hiểu biết và lòng tin của con người.",
+        "D": "Tính năng định tuyến của thiết bị Router."
+      },
+      "answer": "C",
+      "explainAnswer": "Social Engineering khai thác tâm lý, lòng tin, sự chủ quan hoặc thiếu hiểu biết của con người. Đáp án C đúng vì nó không nhất thiết cần lỗ hổng kỹ thuật mà dựa vào việc lừa người dùng làm sai.",
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1"
+    },
+    {
+      "id": 51,
+      "question": "Hình thức tấn công 'Spear Phishing' khác với 'Phishing' truyền thống ở điểm nào?",
+      "options": {
+        "A": "Sử dụng mã độc tống tiền thay vì đánh cắp mật khẩu.",
+        "B": "Phân tán quy mô lớn hàng triệu email ngẫu nhiên.",
+        "C": "Nhắm mục tiêu cụ thể vào một cá nhân hoặc tổ chức sau khi đã thu thập thông tin chi tiết về họ.",
+        "D": "Chỉ thực hiện được qua mạng nội bộ LAN."
+      },
+      "answer": "C",
+      "explainAnswer": "Spear Phishing không gửi đại trà mà được cá nhân hóa cho một mục tiêu cụ thể. Đáp án C đúng vì kẻ tấn công thường thu thập thông tin trước để email hoặc tin nhắn trông đáng tin hơn.",
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1"
+    },
+    {
+      "id": 74,
+      "question": "Cuộc tấn công APT (Advanced Persistent Threat) có đặc điểm nổi bật nào?",
+      "options": {
+        "A": "Tấn công ồ ạt, gây sập hệ thống trong vài giây rồi rút lui.",
+        "B": "Cuộc tấn công mục tiêu, tinh vi, diễn ra lén lút, duy trì sự tồn tại trong hệ thống thời gian dài để ăn cắp dữ liệu.",
+        "C": "Chỉ lây nhiễm qua USB.",
+        "D": "Chỉ do những hacker nghiệp dư thực hiện."
+      },
+      "answer": "B",
+      "explainAnswer": "APT là kiểu tấn công có mục tiêu rõ ràng, kỹ thuật tinh vi và duy trì hiện diện lâu dài. Đáp án B đúng vì mục tiêu thường là gián điệp, đánh cắp dữ liệu hoặc phá hoại âm thầm thay vì gây ồn ào ngay lập tức.",
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1"
+    },
+    {
+      "id": 98,
+      "question": "Khái niệm 'Insider Threat' (Mối đe dọa nội bộ) đề cập đến nhóm đối tượng nào?",
+      "options": {
+        "A": "Nhóm tin tặc hoạt động ngoài lãnh thổ.",
+        "B": "Mã độc xâm nhập sâu vào Kernel của hệ điều hành.",
+        "C": "Nhân viên cũ/hiện tại, nhà thầu hoặc đối tác đã có quyền truy cập hợp pháp vào hệ thống, nhưng cố ý hoặc vô ý gây rò rỉ dữ liệu.",
+        "D": "Các công cụ tự động dò quét mật khẩu từ Internet."
+      },
+      "answer": "C",
+      "explainAnswer": "Insider Threat đến từ người đã có quyền truy cập hợp pháp như nhân viên, cựu nhân viên, nhà thầu hoặc đối tác. Đáp án C đúng vì rủi ro có thể do cố ý đánh cắp dữ liệu hoặc vô ý cấu hình, chia sẻ sai.",
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1"
+    },
+    {
+      "id": 103,
+      "question": "Hình thức tấn công 'Whaling' là một biến thể của Phishing, nhưng có đặc điểm gì khác biệt?",
+      "options": {
+        "A": "Sử dụng mạng xã hội để phát tán tin nhắn rác.",
+        "B": "Chỉ nhắm mục tiêu vào các nhân vật cấp cao trong tổ chức (như CEO, CFO).",
+        "C": "Sử dụng mã độc tống tiền thay vì đánh cắp mật khẩu.",
+        "D": "Tấn công qua mạng WiFi công cộng."
+      },
+      "answer": "B",
+      "explainAnswer": "Whaling là biến thể Phishing nhắm vào “cá lớn” như CEO, CFO hoặc lãnh đạo cấp cao. Đáp án B đúng vì nhóm này có quyền hạn lớn và thông tin giá trị nên thường là mục tiêu đặc biệt.",
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1"
+    },
+    {
+      "id": 112,
+      "question": "Kỹ thuật 'Baiting' trong Social Engineering là gì?",
+      "options": {
+        "A": "Gọi điện thoại mạo danh nhân viên IT.",
+        "B": "Cố tình bỏ lại các USB chứa mã độc ở nơi công cộng (như bãi xe) để nạn nhân tò mò nhặt về cắm vào máy tính.",
+        "C": "Đi theo người khác qua cổng an ninh mà không cần quẹt thẻ (Tailgating).",
+        "D": "Đục thùng rác để tìm tài liệu nhạy cảm (Dumpster diving)."
+      },
+      "answer": "B",
+      "explainAnswer": "Baiting dùng “mồi nhử” để kích thích sự tò mò hoặc lòng tham của nạn nhân. Đáp án B đúng vì ví dụ điển hình là bỏ USB chứa mã độc ở nơi công cộng để người khác nhặt và cắm vào máy.",
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1"
+    },
+    {
+      "id": 117,
+      "question": "Mô hình Cyber Kill Chain (Chuỗi tiêu diệt mạng) do Lockheed Martin đề xuất mô tả điều gì?",
+      "options": {
+        "A": "Cách thức viết phần mềm an toàn.",
+        "B": "Các giai đoạn tuần tự mà kẻ tấn công thường thực hiện để xâm nhập và đánh cắp dữ liệu, từ thăm dò đến hành động cuối cùng.",
+        "C": "Cấu trúc mạng của doanh nghiệp.",
+        "D": "Sự phân quyền trong cơ sở dữ liệu."
+      },
+      "answer": "B",
+      "explainAnswer": "Cyber Kill Chain mô tả các bước thường gặp trong một chiến dịch tấn công mạng. Đáp án B đúng vì mô hình này giúp đội phòng thủ hiểu và cắt đứt chuỗi tấn công từ thăm dò đến hành động cuối.",
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1"
+    },
+    {
+      "id": 118,
+      "question": "Trong Cyber Kill Chain, giai đoạn 'Reconnaissance' (Thăm dò) tin tặc thường làm gì?",
+      "options": {
+        "A": "Gửi mã độc vào email.",
+        "B": "Thu thập thông tin tình báo về mục tiêu (như email nhân viên, cấu trúc mạng, loại máy chủ) từ các nguồn mở (OSINT).",
+        "C": "Cài đặt Rootkit vào hệ thống.",
+        "D": "Rút dữ liệu ra ngoài (Exfiltration)."
+      },
+      "answer": "B",
+      "explainAnswer": "Reconnaissance là giai đoạn thu thập thông tin ban đầu về mục tiêu. Đáp án B đúng vì tin tặc thường dùng OSINT để tìm email, nhân sự, công nghệ, tên miền, IP hoặc cấu trúc hệ thống.",
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1"
+    },
+    {
+      "id": 143,
+      "question": "Khi nhận được một email yêu cầu đổi mật khẩu ngân hàng kèm theo đường link, cách hành xử an toàn nhất là gì?",
+      "options": {
+        "A": "Click ngay vào link và đổi mật khẩu để bảo đảm an toàn.",
+        "B": "Bỏ qua email, tự gõ địa chỉ trang web chính thức của ngân hàng vào trình duyệt để kiểm tra.",
+        "C": "Chuyển tiếp email cho bạn bè hỏi ý kiến.",
+        "D": "Nhắn tin phản hồi lại email đó."
+      },
+      "answer": "B",
+      "explainAnswer": "Email yêu cầu đổi mật khẩu kèm link có thể là Phishing nên không nên bấm trực tiếp. Đáp án B đúng vì cách an toàn là tự nhập địa chỉ website chính thức hoặc dùng ứng dụng chính thức để kiểm tra.",
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1"
+    },
+    {
+      "id": 145,
+      "question": "Một chính sách bảo mật tốt trong doanh nghiệp phải đảm bảo được yếu tố nào?",
+      "options": {
+        "A": "Được phổ biến và yêu cầu tuân thủ bởi tất cả mọi người, kể cả ban lãnh đạo.",
+        "B": "Chỉ bộ phận IT mới cần biết.",
+        "C": "Khóa mọi kết nối Internet ra bên ngoài.",
+        "D": "Chỉ áp dụng khi có sự cố xảy ra."
+      },
+      "answer": "A",
+      "explainAnswer": "Chính sách bảo mật chỉ hiệu quả khi được phổ biến, áp dụng và tuân thủ bởi toàn bộ tổ chức. Đáp án A đúng vì nếu lãnh đạo hoặc một nhóm người được miễn tuân thủ, chính sách sẽ có lỗ hổng từ quy trình và con người.",
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1"
+    },
+    {
+      "id": 146,
+      "question": "Khái niệm 'Red Team' trong an toàn thông tin đóng vai trò gì?",
+      "options": {
+        "A": "Đội ngũ chuyên lo về pháp lý doanh nghiệp.",
+        "B": "Đội ngũ đóng giả làm tin tặc thực sự, tiến hành các cuộc tấn công toàn diện để kiểm tra khả năng phòng thủ và phản ứng của tổ chức.",
+        "C": "Đội ngũ bảo trì phần cứng.",
+        "D": "Đội ngũ lập trình giao diện Web."
+      },
+      "answer": "B",
+      "explainAnswer": "Red Team mô phỏng kẻ tấn công thật để kiểm tra năng lực phòng thủ toàn diện của tổ chức. Đáp án B đúng vì họ không chỉ tìm lỗi kỹ thuật mà còn kiểm tra quy trình, con người và khả năng phản ứng.",
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1"
+    },
+    {
+      "id": 147,
+      "question": "Khái niệm 'Blue Team' đối lập với 'Red Team' đảm nhận nhiệm vụ gì?",
+      "options": {
+        "A": "Thiết kế các chiến dịch quảng cáo.",
+        "B": "Là đội ngũ phòng thủ nội bộ, chịu trách nhiệm thiết lập các biện pháp an ninh, giám sát mạng và ngăn chặn các cuộc tấn công.",
+        "C": "Viết mã độc để thử nghiệm hệ thống.",
+        "D": "Kiểm toán tài chính của công ty."
+      },
+      "answer": "B",
+      "explainAnswer": "Blue Team chịu trách nhiệm phòng thủ, giám sát, phát hiện và phản ứng với tấn công. Đáp án B đúng vì họ thiết lập kiểm soát bảo mật, theo dõi log, xử lý cảnh báo và củng cố hệ thống.",
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1"
+    },
+    {
+      "id": 150,
+      "question": "Môn học 'Bảo mật Ứng dụng và Hệ thống' nhấn mạnh thông điệp cốt lõi nào cho sinh viên/kỹ sư tương lai?",
+      "options": {
+        "A": "Bảo mật chỉ là việc cài đặt các phần mềm đắt tiền.",
+        "B": "Bảo mật không bao giờ là một điểm đến tuyệt đối, mà là một quy trình liên tục đòi hỏi sự cảnh giác, nguyên tắc cốt lõi (Security by Design) và cập nhật không ngừng.",
+        "C": "Sau khi tốt nghiệp, chỉ cần quan tâm viết code cho ứng dụng chạy là đủ.",
+        "D": "Bảo mật hệ thống là trách nhiệm duy nhất của đội ngũ Ops."
+      },
+      "answer": "B",
+      "explainAnswer": "Bảo mật không phải trạng thái đạt được một lần rồi kết thúc, vì hệ thống, lỗ hổng và kỹ thuật tấn công luôn thay đổi. Đáp án B đúng vì kỹ sư cần coi bảo mật là quy trình liên tục dựa trên Security by Design, giám sát và cập nhật thường xuyên.",
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1"
+    }
+  ]
+}

@@ -1,0 +1,442 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kinh tế chính trị Mác - Lênin - Chương 1",
+  "chapter": "Chương 1",
+  "totalQuestions": 29,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Ai là người đầu tiên phát triển lý luận kinh tế chính trị thành học thuyết khoa học về phương thức sản xuất tư bản chủ nghĩa?",
+      "options": {
+        "A": "Xmít",
+        "B": "C.Mác",
+        "C": "Ph.Ăngghen",
+        "D": "V.I.Lênin"
+      },
+      "answer": "B",
+      "explainAnswer": "C.Mác là người đầu tiên xây dựng lý luận kinh tế chính trị thành một học thuyết khoa học hoàn chỉnh về phương thức sản xuất tư bản chủ nghĩa, mà đỉnh cao là học thuyết giá trị thặng dư. A.Xmít là nhà kinh tế chính trị cổ điển Anh có công lao to lớn nhưng chưa xây dựng được học thuyết khoa học về PTSX TBCN. Ph.Ăngghen và V.I.Lênin là những người kế tục, phát triển học thuyết Mác chứ không phải người đầu tiên sáng lập.",
+      "image": null
+    },
+    {
+      "id": 6,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Chỉ ra hạn chế lớn nhất trong lý luận kinh tế chính trị của chủ nghĩa trọng nông là gì và cần được thay thế bởi lý luận kinh tế chính trị cổ điển Anh?",
+      "options": {
+        "A": "Chủ nghĩa trọng nông lý giải những đặc điểm của lĩnh vực lưu thông.",
+        "B": "Chủ nghĩa trọng nông cho rằng chỉ có nông nghiệp mới là sản xuất.",
+        "C": "Chủ nghĩa trọng nông luận giải về nhiều phạm trù kinh tế.",
+        "D": "Chủ nghĩa trọng nông lý giải những đặc trưng sản xuất của lĩnh vực nông nghiệp."
+      },
+      "answer": "B",
+      "explainAnswer": "Hạn chế lớn nhất của chủ nghĩa trọng nông là quan niệm sai cho rằng chỉ có lao động trong nông nghiệp mới tạo ra của cải (sản xuất), còn công nghiệp và thương nghiệp không phải là sản xuất. Chính vì vậy cần được kinh tế chính trị cổ điển Anh khắc phục, chuyển sang quan niệm mọi lao động sản xuất đều tạo ra giá trị.",
+      "image": null
+    },
+    {
+      "id": 7,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Chỉ ra những nhà tư tưởng tiêu biểu của kinh tế chính trị tư sản cổ điển Anh (cuối thế kỷ XVIII - đầu thế kỷ thứ XIX)?",
+      "options": {
+        "A": "U.Pétti, A.Xmít, Đ.Ricácđô.",
+        "B": "A.Mông Crêchiên, U.Pétti, Ph.Kênê.",
+        "C": "A.Xmít, Mantuýt, A.Mông Crêchiên.",
+        "D": "Gi.B.Xay, A.Xmít, A.Mông Crêchiên."
+      },
+      "answer": "A",
+      "explainAnswer": "Ba nhà tư tưởng tiêu biểu của kinh tế chính trị tư sản cổ điển Anh là U.Pétti, A.Xmít và Đ.Ricácđô. Ph.Kênê thuộc trường phái trọng nông Pháp, A.Mông Crêchiên và Mantuýt, Gi.B.Xay không thuộc nhóm cổ điển Anh tiêu biểu.",
+      "image": null
+    },
+    {
+      "id": 10,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Chủ nghĩa Mác - Lênin gồm những bộ phận nào hợp thành?",
+      "options": {
+        "A": "Triết học Mác - Lênin, Kinh tế chính trị Mác - Lênin và Chủ nghĩa xã hội khoa học.",
+        "B": "Triết học, Kinh tế chính trị học và Chủ nghĩa xã hội không tưởng.",
+        "C": "Triết học Mác, Kinh tế chính trị và Chủ nghĩa xã hội khoa học.",
+        "D": "Triết học, Kinh tế học và Chủ nghĩa xã hội khoa học."
+      },
+      "answer": "A",
+      "explainAnswer": "Chủ nghĩa Mác - Lênin gồm ba bộ phận hợp thành: Triết học Mác - Lênin, Kinh tế chính trị Mác - Lênin và Chủ nghĩa xã hội khoa học. Các phương án B, C, D thiếu 'Mác - Lênin' hoặc thay bằng thuật ngữ không chính xác (kinh tế chính trị học, kinh tế học, chủ nghĩa xã hội không tưởng).",
+      "image": null
+    },
+    {
+      "id": 11,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Chức năng nhận thức của kinh tế chính trị Mác - Lênin có vai trò quan trọng như thế nào đối với con người trong xã hội?",
+      "options": {
+        "A": "Góp phần làm phong phú tri thức và tư duy lý luận của tất cả những con người trong xã hội.",
+        "B": "Góp phần làm phong phú tri thức, tư duy lý luận của người lao động và toàn xã hội.",
+        "C": "Góp phần làm tăng thêm sự hiểu biết về các quan hệ kinh tế của mỗi con người trong xã hội.",
+        "D": "Góp phần giúp con người hiểu sâu hơn về các quy luật kinh tế trong xã hội."
+      },
+      "answer": "B",
+      "explainAnswer": "Chức năng nhận thức của KTCT Mác - Lênin trang bị tri thức và tư duy lý luận, chủ yếu cho người lao động và toàn xã hội để hiểu đúng bản chất các quan hệ kinh tế. A quá rộng ('tất cả mọi người'), C, D chỉ nêu khía cạnh hẹp về sự hiểu biết quan hệ kinh tế/quy luật chứ chưa nhấn mạnh vai trò đối với người lao động và toàn xã hội như B.",
+      "image": null
+    },
+    {
+      "id": 12,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Chức năng phương pháp luận của kinh tế chính trị Mác - Lênin có vai trò như thế nào đối với sinh viên?",
+      "options": {
+        "A": "Là cơ sở khoa học lý luận làm phong phú tri thức, tư duy lý luận của sinh viên trong quá trình lao động.",
+        "B": "Là cơ sở khoa học lý luận giúp sinh viên hiểu sâu hơn về các quy luật kinh tế trong lao động xã hội.",
+        "C": "Là nền tảng lý luận khoa học để sinh viên nhận diện sâu hơn nội hàm của các khái niệm, phạm trù của các khoa học kinh tế.",
+        "D": "Là cơ sở khoa học lý luận để sinh viên nhận diện định vị vai trò, trách nhiệm sáng tạo cao cả của mình."
+      },
+      "answer": "C",
+      "explainAnswer": "Chức năng phương pháp luận của KTCT Mác - Lênin là nền tảng lý luận khoa học giúp nhận diện sâu sắc nội hàm các khái niệm, phạm trù của các khoa học kinh tế. A, B, D lần lượt mô tả vai trò của các chức năng khác (nhận thức, thực tiễn), không phải chức năng phương pháp luận.",
+      "image": null
+    },
+    {
+      "id": 13,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Chức năng thực tiễn của kinh tế chính trị Mác - Lênin có vai trò quan trọng như thế nào đối với sinh viên?",
+      "options": {
+        "A": "Là cơ sở khoa học lý luận để sinh viên nhận diện định vị vai trò, trách nhiệm sáng tạo cao cả của mình.",
+        "B": "Giúp sinh viên hiểu sâu hơn về các quy luật kinh tế trong lao động xã hội.",
+        "C": "Làm phong phú tri thức, tư duy lý luận của sinh viên trong quá trình lao động.",
+        "D": "Giúp sinh viên cải tạo được thực tiễn trong quá trình học tập của mình."
+      },
+      "answer": "A",
+      "explainAnswer": "Chức năng thực tiễn của KTCT Mác - Lênin giúp sinh viên nhận diện, định vị vai trò và trách nhiệm sáng tạo của bản thân trong hoạt động thực tiễn. B là chức năng nhận thức, C là chức năng nhận thức/phương pháp luận, còn D nói quá về việc 'cải tạo thực tiễn trong học tập'.",
+      "image": null
+    },
+    {
+      "id": 15,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Đâu là phương pháp nghiên cứu chủ yếu của kinh tế chính trị Mác-Lênin?",
+      "options": {
+        "A": "Phương pháp logic kết hợp với lịch sử.",
+        "B": "Phương pháp trừu tượng hóa khoa học.",
+        "C": "Phương pháp khảo sát, tổng kết thực tiễn.",
+        "D": "Phương pháp so sánh thống kê."
+      },
+      "answer": "B",
+      "explainAnswer": "Phương pháp nghiên cứu chủ yếu của KTCT Mác - Lênin là phương pháp trừu tượng hóa khoa học (gạt bỏ những yếu tố ngẫu nhiên, cá biệt để nghiên cứu bản chất). Các phương pháp logic kết hợp lịch sử, khảo sát thực tiễn, so sánh thống kê là phương pháp bổ trợ, không phải phương pháp chủ yếu.",
+      "image": null
+    },
+    {
+      "id": 18,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Đóng góp khoa học lớn nhất của kinh tế chính trị cổ điển Anh vào lĩnh vực lý luận kinh tế chính trị của nhân loại là gì?",
+      "options": {
+        "A": "Kinh tế chính trị cổ điển Anh nghiên cứu các các phạm trù kinh tế chính trị để rút ra các quy luật kinh tế.",
+        "B": "Kinh tế chính trị cổ điển Anh nghiên cứu các quan hệ kinh tế trong quá trình tái sản xuất, trình bày một cách hệ thống.",
+        "C": "Kinh tế chính trị cổ điển Anh tìm ra các quy luật chi phối sự vận động của các hiện tượng và quá trình hoạt động kinh tế.",
+        "D": "Kinh tế chính trị cổ điển Anh đã rút ra được giá trị là do hao phí lao động tạo ra, giá trị khác với của cải."
+      },
+      "answer": "D",
+      "explainAnswer": "Đóng góp khoa học lớn nhất của KTCT cổ điển Anh là xác định được giá trị do hao phí lao động tạo ra và phân biệt giá trị với của cải, khởi nguồn lý luận lao động - giá trị. A, B, C chỉ mô tả cách thức nghiên cứu, không phải đóng góp nội dung khoa học cụ thể và lớn nhất.",
+      "image": null
+    },
+    {
+      "id": 19,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Đối tương nghiên cứu của kinh tế chính trị Mác - Lênin là gì?",
+      "options": {
+        "A": "Nghiên cứu quan hệ xã hội của sản xuất và trao đổi.",
+        "B": "Nghiên cứu quan hệ sản xuất trong xã hội.",
+        "C": "Nghiên cứu về quan hệ sở hữu, tổ chức quản lý và phân phối sản phẩm.",
+        "D": "Nghiên cứu mối quan hệ giữa lực lượng sản xuất và quan hệ sản xuất."
+      },
+      "answer": "A",
+      "explainAnswer": "Đối tượng nghiên cứu của KTCT Mác - Lênin là quan hệ xã hội của sản xuất và trao đổi (quan hệ giữa người với người trong sản xuất và trao đổi). B, C chỉ nêu quan hệ sản xuất đơn thuần hoặc các mặt của quan hệ sản xuất; D là đối tượng của triết học về xã hội, không phải của KTCT.",
+      "image": null
+    },
+    {
+      "id": 20,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Giá trị lịch sử to lớn của \"Học thuyết giá trị thặng dư\" trong hệ thống lý luận Kinh tế chính trị Mác - Lênin là gì?",
+      "options": {
+        "A": "Chỉ ra những đặc điểm kinh tế của chủ nghĩa tư bản độc quyền.",
+        "B": "Luận chứng về sự suy tàn của phương thức sản xuất tư bản chủ nghĩa.",
+        "C": "Tìm ra các quy luật kinh tế cơ bản trong nền kinh tế thị trường tư bản chủ nghĩa.",
+        "D": "Là nền tảng tư tưởng cho giai cấp công nhân và nhân dân lao động."
+      },
+      "answer": "D",
+      "explainAnswer": "Giá trị lịch sử to lớn của học thuyết giá trị thặng dư là trở thành nền tảng tư tưởng của giai cấp công nhân và nhân dân lao động trong cuộc đấu tranh giải phóng. A thuộc lý luận về CNTB độc quyền (sau này Lênin bổ sung), B, C là hệ quả lý luận khác, không phải ý nghĩa lịch sử được nhấn mạnh nhất.",
+      "image": null
+    },
+    {
+      "id": 24,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Học thuyết Mác - Lênin gồm mấy Bộ phận hợp thành?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "answer": "C",
+      "explainAnswer": "Học thuyết Mác - Lênin gồm 3 bộ phận hợp thành: Triết học Mác - Lênin, Kinh tế chính trị Mác - Lênin và Chủ nghĩa xã hội khoa học. Các phương án còn lại không đúng với cấu trúc ba bộ phận của chủ nghĩa Mác - Lênin.",
+      "image": null
+    },
+    {
+      "id": 27,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Khoa học kinh tế chính trị trở thành hệ thống lý luận kinh tế chính trị từ khi nào?",
+      "options": {
+        "A": "Từ thế kỷ XVII.",
+        "B": "Từ thế kỷ XVI.",
+        "C": "Từ thế kỷ XVIII.",
+        "D": "Từ thế kỷ XIX."
+      },
+      "answer": "C",
+      "explainAnswer": "Khoa học kinh tế chính trị trở thành một hệ thống lý luận hoàn chỉnh từ thế kỷ XVIII, đánh dấu bởi học thuyết kinh tế của chủ nghĩa trọng nông và nhất là KTCT tư sản cổ điển Anh (A.Xmít, Đ.Ricácđô). Các mốc thế kỷ XVI, XVII mới là giai đoạn chủ nghĩa trọng thương; thế kỷ XIX là thời kỳ KTCT Mác ra đời.",
+      "image": null
+    },
+    {
+      "id": 28,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Kinh tế chính trị cổ điển Anh tập trung nghiên cứu vấn đề gì trong nền kinh tế tư bản chủ nghĩa?",
+      "options": {
+        "A": "Nghiên cứu các quy luật kinh tế trong nền kinh tế tư bản chủ nghĩa.",
+        "B": "Nghiên cứu lĩnh vực sản xuất trong nền sản xuất tư bản chủ nghĩa.",
+        "C": "Nghiên cứu các quan hệ kinh tế trong quá trình tái sản xuất và các phạm trù kinh tế chính trị.",
+        "D": "Nghiên cứu lĩnh vực lưu thông trong nền sản xuất tư bản chủ nghĩa."
+      },
+      "answer": "C",
+      "explainAnswer": "KTCT cổ điển Anh tập trung nghiên cứu các quan hệ kinh tế trong quá trình tái sản xuất và các phạm trù kinh tế chính trị với phương pháp trừu tượng hóa ngày càng hoàn thiện. A quá chung chung; B, D chỉ nêu một lĩnh vực (sản xuất hoặc lưu thông) - không phản ánh đúng phạm vi nghiên cứu của trường phái này.",
+      "image": null
+    },
+    {
+      "id": 29,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Kinh tế chính trị Mác - Lênin do ai sáng lập?",
+      "options": {
+        "A": "V.I.Lênin",
+        "B": "C.Mác",
+        "C": "Đ.Ricácđô",
+        "D": "Ph.Ăngghen"
+      },
+      "answer": "B",
+      "explainAnswer": "KTCT Mác - Lênin do C.Mác sáng lập, sau đó được Ph.Ăngghen và nhất là V.I.Lênin bổ sung, phát triển. Vì vậy người sáng lập là C.Mác (B). Đ.Ricácđô là nhà KTCT cổ điển Anh đi trước; Lênin và Ăngghen là người kế tục.",
+      "image": null
+    },
+    {
+      "id": 30,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Kinh tế chính trị Mác - Lênin gồm mấy chức năng cơ bản?",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "3",
+        "D": "1"
+      },
+      "answer": "B",
+      "explainAnswer": "KTCT Mác - Lênin có 4 chức năng cơ bản: nhận thức, phương pháp luận, tư tưởng và thực tiễn. Các số 1, 2, 3 không khớp với hệ thống bốn chức năng được trình bày trong giáo trình.",
+      "image": null
+    },
+    {
+      "id": 31,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Kinh tế chính trị Mác - Lênin ra đời dựa trên cơ sở kế thừa trực tiếp từ quan điểm tư tưởng kinh tế chính trị nào?",
+      "options": {
+        "A": "Kinh tế chính trị cổ điển của nước Anh.",
+        "B": "Kinh tế chính trị ở Tây Âu.",
+        "C": "Kinh tế chính trị tiểu tư sản.",
+        "D": "Kinh tế học chính trị của chủ nghĩa xã hội không tưởng."
+      },
+      "answer": "A",
+      "explainAnswer": "KTCT Mác - Lênin kế thừa trực tiếp những thành tựu của KTCT tư sản cổ điển Anh, đặc biệt là lý luận giá trị - lao động của A.Xmít và Đ.Ricácđô, làm cơ sở xây dựng học thuyết giá trị thặng dư. B, C, D không phải là nguồn kế thừa trực tiếp chủ yếu.",
+      "image": null
+    },
+    {
+      "id": 32,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Kinh tế chính trị Mác - Lênin ra đời ở thế kỷ nào?",
+      "options": {
+        "A": "Thế kỷ XX.",
+        "B": "Thế kỷ XVIII.",
+        "C": "Thế kỷ XIX.",
+        "D": "Thế kỷ XVII."
+      },
+      "answer": "C",
+      "explainAnswer": "KTCT Mác - Lênin ra đời vào giữa thế kỷ XIX (những năm 40-60 của thế kỷ XIX, tiêu biểu là tác phẩm Tư bản của C.Mác). Thế kỷ XVIII là thời kỳ KTCT cổ điển; thế kỷ XX là thời kỳ Lênin bổ sung phát triển.",
+      "image": null
+    },
+    {
+      "id": 33,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Kinh tế chính trị Mác - Lênin sử dụng chủ yếu phương pháp nghiên cứu nào?",
+      "options": {
+        "A": "Phương pháp khảo sát, tổng kết thực tiễn.",
+        "B": "Phương pháp so sánh, thống kê.",
+        "C": "Phương pháp trừu tượng hóa khoa học.",
+        "D": "Phương pháp logic kết hợp với lịch sử."
+      },
+      "answer": "C",
+      "explainAnswer": "Phương pháp nghiên cứu chủ yếu của KTCT Mác - Lênin là phương pháp trừu tượng hóa khoa học. Các phương pháp khảo sát, so sánh thống kê, logic kết hợp lịch sử chỉ là những phương pháp bổ trợ trong nghiên cứu.",
+      "image": null
+    },
+    {
+      "id": 34,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "\"Kinh tế chính trị Mácxít\" có nghĩa là gì?",
+      "options": {
+        "A": "Quan điểm của những nhà kinh tế chính trị tiếp cận theo quan điểm kinh tế chính trị của V.I.Lênin.",
+        "B": "Quan điểm của những nhà kinh tế chính trị tiếp cận theo quan điểm kinh tế chính trị của chủ nghĩa Mác - Lênin.",
+        "C": "Quan điểm của những nhà kinh tế chính trị tiếp cận theo quan điểm kinh tế chính trị của Ph.Ăngghen.",
+        "D": "Quan điểm của những nhà kinh tế chính trị tiếp cận theo quan điểm kinh tế chính trị của C.Mác."
+      },
+      "answer": "D",
+      "explainAnswer": "Thuật ngữ 'Kinh tế chính trị Mácxít' dùng để chỉ quan điểm của những nhà kinh tế chính trị tiếp cận theo quan điểm của C.Mác. Các phương án A, B, C nhầm lẫn với V.I.Lênin, Ph.Ăngghen hoặc toàn bộ chủ nghĩa Mác - Lênin.",
+      "image": null
+    },
+    {
+      "id": 39,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Lý luận kinh tế chính trị của chủ nghĩa trọng nông hướng vào nghiên cứu chủ yếu lĩnh vực nào?",
+      "options": {
+        "A": "Lĩnh vực sản xuất trong nền sản xuất tư bản chủ nghĩa.",
+        "B": "Lĩnh vực lưu thông trong nền sản xuất tư bản chủ nghĩa.",
+        "C": "Lĩnh vực sản xuất trong nền kinh tế tư bản chủ nghĩa.",
+        "D": "Lĩnh vực lưu thông trong quá trình tái sản xuất tư bản chủ nghĩa."
+      },
+      "answer": "A",
+      "explainAnswer": "Chủ nghĩa trọng nông là trường phái đầu tiên chuyển đối tượng nghiên cứu từ lĩnh vực lưu thông sang lĩnh vực sản xuất trong nền sản xuất tư bản chủ nghĩa, tuy còn giới hạn trong sản xuất nông nghiệp. B, D về lưu thông là quan điểm của chủ nghĩa trọng thương; C chưa nêu đúng 'nền sản xuất tư bản chủ nghĩa'.",
+      "image": null
+    },
+    {
+      "id": 40,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Lý luận kinh tế chính trị của chủ nghĩa trọng thương đặt trọng tâm vào nghiên cứu lĩnh vực nào?",
+      "options": {
+        "A": "Lĩnh vực lưu thông trong nền sản xuất tư bản chủ nghĩa.",
+        "B": "Lĩnh vực sản xuất trong nền kinh tế tư bản chủ nghĩa.",
+        "C": "Lĩnh vực sản xuất trong nền kinh tế hàng hóa.",
+        "D": "Lĩnh vực lưu thông trong quá trình tái sản xuất tư bản chủ nghĩa."
+      },
+      "answer": "A",
+      "explainAnswer": "Chủ nghĩa trọng thương đặt trọng tâm nghiên cứu lĩnh vực lưu thông, coi lưu thông (thương mại, đặc biệt là ngoại thương) là nguồn gốc duy nhất của của cải. B, C về lĩnh vực sản xuất là quan điểm của chủ nghĩa trọng nông và KTCT cổ điển; D chưa đúng vì trọng thương nghiên cứu lưu thông trong nền sản xuất TBCN nói chung.",
+      "image": null
+    },
+    {
+      "id": 42,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Muốn nhận thức được hiện thực kinh tế khách quan, cần sử dụng phương pháp thích hợp nào của kinh tế chính trị Mác - Lênin?",
+      "options": {
+        "A": "Cần sử dụng phương pháp luận triết học một cách thích hợp như: khảo sát, tổng kết thực tiễn.",
+        "B": "Cần sử dụng nhiều phương pháp nghiên cứu thích hợp như: trừu tượng hóa khoa học, logic kết hợp với lịch sử.",
+        "C": "Cần sử dụng nhiều phương pháp nghiên cứu chuyên ngành thích hợp như: thống kê, so sánh, phân tích tổng hợp.",
+        "D": "Cần sử dụng phương pháp luận biện chứng một cách thích hợp như: quy nap diễn dịch, hệ thống hóa, mô hình hóa."
+      },
+      "answer": "B",
+      "explainAnswer": "Để nhận thức hiện thực kinh tế khách quan, KTCT Mác - Lênin sử dụng nhiều phương pháp thích hợp, trong đó quan trọng nhất là trừu tượng hóa khoa học kết hợp với logic - lịch sử. A chỉ nêu khảo sát, tổng kết thực tiễn (phương pháp đơn lẻ); C là phương pháp chuyên ngành; D là phương pháp triết học nói chung, không đặc trưng cho KTCT.",
+      "image": null
+    },
+    {
+      "id": 43,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Muốn sử dụng tốt phương pháp trừu tượng hóa khoa học của kinh tế chính trị Mác - Lênin cần làm như thế nào?",
+      "options": {
+        "A": "Cần xác định giới hạn của sự trừu tượng hóa phụ thuộc vào đối tượng nghiên cứu.",
+        "B": "Cần loại bỏ yếu tố phản ánh trực tiếp bản chất của đối tượng nghiên cứu.",
+        "C": "Cần có kỹ năng khoa học xác định đúng giới hạn của sự trừu tượng hóa.",
+        "D": "Cần gạt bỏ yếu tố lợi ích ra khỏi quá trình nghiên cứu các quan hệ kinh tế."
+      },
+      "answer": "C",
+      "explainAnswer": "Muốn sử dụng tốt phương pháp trừu tượng hóa khoa học cần có kỹ năng khoa học để xác định đúng giới hạn của sự trừu tượng hóa: gạt bỏ những yếu tố ngẫu nhiên, cá biệt nhưng giữ lại những yếu tố bản chất, điển hình. A nêu giới hạn phụ thuộc đối tượng nhưng không nói đến kỹ năng xác định; B gạt bỏ yếu tố phản ánh bản chất là sai (phải giữ chúng); D không liên quan.",
+      "image": null
+    },
+    {
+      "id": 44,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Nêu chính xác những chức năng cơ bản của kinh tế chính trị Mác - Lênin?",
+      "options": {
+        "A": "Gồm 4 chức năng cơ bản là: nhận thức, thực tiễn, tổng hợp, phương pháp luận.",
+        "B": "Gồm 4 chức năng cơ bản là: giải thích, thực tiễn, tư tưởng, cải tạo xã hội.",
+        "C": "Gồm 4 chức năng cơ bản là: nhận thức, thực tiễn, tư tưởng, phương pháp luận.",
+        "D": "Gồm 4 chức năng cơ bản là: nhận thức, thực tiễn, vận dụng, phương pháp luận."
+      },
+      "answer": "C",
+      "explainAnswer": "Bốn chức năng cơ bản của KTCT Mác - Lênin là: nhận thức, thực tiễn, tư tưởng và phương pháp luận. A thay 'tư tưởng' bằng 'tổng hợp'; B thiếu 'nhận thức' và 'phương pháp luận'; D thay 'tư tưởng' bằng 'vận dụng' - đều không chính xác.",
+      "image": null
+    },
+    {
+      "id": 47,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Nội dung lý luận nào đã tạo ra bước nhảy vọt về chất trong khoa học của kinh tế chính trị Mác - Lênin?",
+      "options": {
+        "A": "Lý luận về tích lũy tư bản.",
+        "B": "Lý luận về quy luật giá trị thặng dư.",
+        "C": "Lý luận về nền kinh tế thị trường tư bản chủ nghĩa.",
+        "D": "Lý luận về tính hai mặt của lao động sản xuất hàng hóa."
+      },
+      "answer": "D",
+      "explainAnswer": "Lý luận về tính hai mặt của lao động sản xuất hàng hóa (lao động cụ thể và lao động trừu tượng) là bước nhảy vọt về chất của KTCT Mác, nhờ đó giải thích khoa học được nguồn gốc giá trị và mở đường cho học thuyết giá trị thặng dư. Chính Hêghen và các nhà cổ điển chưa phát hiện được điểm này; A, B, C là các lý luận quan trọng nhưng dựa trên nền tảng đó.",
+      "image": null
+    },
+    {
+      "id": 50,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Phương pháp nghiên cứu nào thuộc chuyên ngành kinh tế chính trị Mác - Lênin?",
+      "options": {
+        "A": "Phương pháp đối sánh",
+        "B": "Phương pháp chứng thực",
+        "C": "Phương pháp thống kê",
+        "D": "Phương pháp văn bản học"
+      },
+      "answer": "C",
+      "explainAnswer": "Trong các phương pháp nghiên cứu, phương pháp thống kê thuộc nhóm phương pháp chuyên ngành được KTCT Mác - Lênin sử dụng kết hợp. Đối sánh, chứng thực, văn bản học là các thuật ngữ không phải phương pháp đặc trưng của KTCT.",
+      "image": null
+    },
+    {
+      "id": 74,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1&2",
+      "question": "Xét ở cấp độ cao nhất, mục đích nghiên cứu của kinh tế chính trị Mác - Lênin là gì?",
+      "options": {
+        "A": "Nhằm xây dựng đường lối, chính sách phát triển kinh tế - xã hội của một quốc gia.",
+        "B": "Nhằm giải quyết mối quan hệ lợi ích trong sự phát triển của mỗi quốc gia.",
+        "C": "Nhằm phát hiện ra những nguyên lý và quy luật kinh tế trong sản xuất và trao đổi.",
+        "D": "Nhằm phát hiện ra các quy luật chi phối các quan hệ giữa người với người trong sản xuất và trao đổi."
+      },
+      "answer": "D",
+      "explainAnswer": "Ở cấp độ cao nhất, mục đích nghiên cứu của KTCT Mác - Lênin là phát hiện ra các quy luật chi phối các quan hệ giữa người với người trong sản xuất và trao đổi. A là vận dụng chính sách; B là giải quyết lợi ích; C mới dừng ở 'nguyên lý, quy luật kinh tế' nói chung, chưa nhấn mạnh quan hệ giữa người với người như D.",
+      "image": null
+    },
+    {
+      "id": 239,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1->6 loại 0,4 điểm",
+      "question": "Xét ở cấp độ cao nhất, mục đích nghiên cứu của kinh tế chính trị Mác - Lênin là gì?",
+      "options": {
+        "A": "Nhằm phát hiện ra những nguyên lý và quy luật kinh tế trong sản xuất và trao đổi.",
+        "B": "Nhằm xây dựng đường lối, chính sách phát triển kinh tế - xã hội của một quốc gia.",
+        "C": "Nhằm phát hiện ra các quy luật chi phối các quan hệ giữa người với người trong sản xuất và trao đổi.",
+        "D": "Nhằm giải quyết mối quan hệ lợi ích trong sự phát triển của mỗi quốc gia."
+      },
+      "answer": "C",
+      "explainAnswer": "Ở cấp độ cao nhất, mục đích nghiên cứu của kinh tế chính trị Mác - Lênin là phát hiện ra các quy luật chi phối các quan hệ giữa người với người trong sản xuất và trao đổi - tức quan hệ lợi ích kinh tế trong các khâu tái sản xuất xã hội. Phương án A mới dừng ở việc phát hiện nguyên lý, quy luật kinh tế nói chung; B là mục đích của việc vận dụng; D chỉ là một nội dung cụ thể, chưa phải mục đích ở cấp độ cao nhất.",
+      "image": null
+    }
+  ]
+}

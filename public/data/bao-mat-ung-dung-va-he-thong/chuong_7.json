@@ -1,0 +1,259 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Bảo mật Ứng dụng và Hệ thống - Chương 7",
+  "chapter": "Chương 7",
+  "totalQuestions": 18,
+  "questions": [
+    {
+      "id": 32,
+      "question": "Thuật ngữ 'Shift-left Security' trong quy trình phát triển phần mềm an toàn (SSDLC) có nghĩa là gì?",
+      "options": {
+        "A": "Giao toàn bộ công việc kiểm thử cho đội vận hành.",
+        "B": "Chỉ kiểm tra lỗi ở giao diện phía bên trái ứng dụng.",
+        "C": "Tích hợp các hoạt động kiểm thử bảo mật vào càng sớm càng tốt, ngay từ những khâu đầu tiên của quy trình phát triển.",
+        "D": "Thực hiện bảo mật sau khi sản phẩm đã được triển khai (Deploy)."
+      },
+      "answer": "C",
+      "explainAnswer": "Shift-left Security đưa hoạt động bảo mật về sớm trong vòng đời phát triển phần mềm. Đáp án C đúng vì phát hiện lỗi từ giai đoạn yêu cầu, thiết kế hoặc viết code thường rẻ và nhanh hơn sửa sau khi triển khai.",
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7"
+    },
+    {
+      "id": 33,
+      "question": "Trong mô hình DevSecOps, bảo mật được nhìn nhận như thế nào?",
+      "options": {
+        "A": "Là trách nhiệm duy nhất của đội ngũ An ninh mạng (Security Team).",
+        "B": "Là trách nhiệm chung của toàn bộ đội ngũ, được tự động hóa xuyên suốt chuỗi CI/CD.",
+        "C": "Là bước kiểm tra cuối cùng bắt buộc trước khi phát hành sản phẩm.",
+        "D": "Là quy trình thủ công chỉ áp dụng cho mã nguồn Java."
+      },
+      "answer": "B",
+      "explainAnswer": "DevSecOps coi bảo mật là trách nhiệm chung của Dev, Sec và Ops, không phải bước kiểm tra tách biệt cuối cùng. Đáp án B đúng vì bảo mật được tích hợp và tự động hóa trong pipeline CI/CD.",
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7"
+    },
+    {
+      "id": 34,
+      "question": "Phương pháp kiểm thử tĩnh SAST (Static Application Security Testing) có đặc tính nào?",
+      "options": {
+        "A": "Tấn công giả lập vào ứng dụng khi ứng dụng đang chạy ở môi trường thực tế.",
+        "B": "Phân tích và quét mã nguồn (Source Code) để tìm lỗi bảo mật mà không cần thực thi chương trình.",
+        "C": "Chỉ giám sát lưu lượng mạng đi qua tường lửa.",
+        "D": "Phân tích hành vi của người dùng trên ứng dụng Web."
+      },
+      "answer": "B",
+      "explainAnswer": "SAST phân tích mã nguồn, bytecode hoặc cấu hình mà không cần chạy ứng dụng. Đáp án B đúng vì nó là kiểm thử tĩnh, phù hợp để phát hiện lỗi sớm trong quá trình phát triển.",
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7"
+    },
+    {
+      "id": 35,
+      "question": "Phương pháp kiểm thử động DAST (Dynamic Application Security Testing) thường được mô tả là kiểu kiểm thử nào?",
+      "options": {
+        "A": "Kiểm thử hộp trắng (White-box testing).",
+        "B": "Kiểm thử tĩnh qua phân tích mã nguồn.",
+        "C": "Kiểm thử hộp đen (Black-box testing) trên ứng dụng đang chạy (Runtime).",
+        "D": "Kiểm tra phiên bản của các thư viện bên thứ ba."
+      },
+      "answer": "C",
+      "explainAnswer": "DAST kiểm thử ứng dụng khi đang chạy bằng cách quan sát phản hồi từ bên ngoài. Đáp án C đúng vì nó giống kiểm thử hộp đen, không nhất thiết cần biết mã nguồn bên trong.",
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7"
+    },
+    {
+      "id": 36,
+      "question": "Công cụ phân tích cấu phần phần mềm SCA (Software Composition Analysis) được sử dụng để làm gì trong SSDLC?",
+      "options": {
+        "A": "Phát hiện các lỗ hổng đã biết trong các thư viện phụ thuộc mã nguồn mở (Open Source Dependencies) được tích hợp vào ứng dụng.",
+        "B": "Quét cổng (Port scanning) trên máy chủ Production.",
+        "C": "Mã hóa mật khẩu CSDL.",
+        "D": "Chống lại các cuộc tấn công từ chối dịch vụ."
+      },
+      "answer": "A",
+      "explainAnswer": "SCA kiểm tra các thư viện, package và dependency mà dự án sử dụng. Đáp án A đúng vì nhiều rủi ro đến từ thành phần mã nguồn mở đã có CVE hoặc phiên bản lỗi thời.",
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7"
+    },
+    {
+      "id": 49,
+      "question": "Quy trình CI/CD trong phát triển phần mềm là viết tắt của từ gì?",
+      "options": {
+        "A": "Continuous Integration / Continuous Deployment (Tích hợp liên tục / Triển khai liên tục)",
+        "B": "Code Inspection / Code Deployment",
+        "C": "Continuous Inspection / Constant Delivery",
+        "D": "Controlled Integration / Continuous Development"
+      },
+      "answer": "A",
+      "explainAnswer": "CI/CD là quy trình tự động hóa việc tích hợp code và triển khai/phân phối phần mềm liên tục. Đáp án A đúng vì Continuous Integration và Continuous Deployment là cách hiểu phổ biến của CI/CD trong phát triển phần mềm.",
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7"
+    },
+    {
+      "id": 73,
+      "question": "Nguyên tắc 'Security by Design' yêu cầu điều gì trong quá trình phát triển ứng dụng?",
+      "options": {
+        "A": "Thiết kế giao diện người dùng có màu sắc cảnh báo rủi ro.",
+        "B": "Bảo mật phải được tích hợp vào mọi bước của chu kỳ phát triển ngay từ giai đoạn thiết kế kiến trúc ban đầu.",
+        "C": "Bảo mật chỉ dành riêng cho kiến trúc sư phần mềm thiết kế.",
+        "D": "Mua các phần mềm bảo mật đắt tiền về tích hợp sau khi ra mắt."
+      },
+      "answer": "B",
+      "explainAnswer": "Security by Design yêu cầu bảo mật được tính đến từ lúc thiết kế kiến trúc, dữ liệu và luồng nghiệp vụ. Đáp án B đúng vì thêm bảo mật sau khi sản phẩm hoàn thành thường tốn kém và dễ bỏ sót rủi ro.",
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7"
+    },
+    {
+      "id": 86,
+      "question": "Trong quy trình CI/CD an toàn, bước 'SCA (Software Composition Analysis)' thường được tự động hóa để làm gì?",
+      "options": {
+        "A": "Kiểm tra lỗi cú pháp của ngôn ngữ lập trình.",
+        "B": "Phát hiện các lỗ hổng (CVE) có sẵn trong các thư viện Open Source mà dự án đang sử dụng.",
+        "C": "Biên dịch mã nguồn thành file thực thi.",
+        "D": "Đẩy code lên môi trường Production."
+      },
+      "answer": "B",
+      "explainAnswer": "Trong CI/CD an toàn, SCA có thể tự động kiểm tra dependency mỗi lần build hoặc merge code. Đáp án B đúng vì mục tiêu là phát hiện CVE trong thư viện open source trước khi đưa ứng dụng lên môi trường thật.",
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7"
+    },
+    {
+      "id": 87,
+      "question": "Kỹ thuật 'Secret Scanning' trong DevSecOps được sinh ra để ngăn ngừa rủi ro nào?",
+      "options": {
+        "A": "Lập trình viên vô tình commit các khóa API (API Keys), mật khẩu, token lên kho lưu trữ mã nguồn (ví dụ: GitHub, GitLab).",
+        "B": "Lập trình viên sử dụng phần mềm bẻ khóa.",
+        "C": "Ngăn chặn tấn công DDoS vào hệ thống Git.",
+        "D": "Kiểm tra mã độc tống tiền trong máy cá nhân."
+      },
+      "answer": "A",
+      "explainAnswer": "Secret Scanning tìm các chuỗi nhạy cảm như API key, token, mật khẩu hoặc private key trong mã nguồn. Đáp án A đúng vì commit nhầm secret lên Git có thể khiến hệ thống bị truy cập trái phép.",
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7"
+    },
+    {
+      "id": 88,
+      "question": "Trong bảo mật Container (ví dụ Docker/Kubernetes) như được nhắc tới trong bài 8, giải pháp an toàn nào được khuyến nghị?",
+      "options": {
+        "A": "Chạy tất cả các Container bằng quyền Root để đảm bảo tương thích tối đa.",
+        "B": "Thực hiện Image Scanning để tìm lỗ hổng trước khi triển khai và áp dụng Least Privilege (không chạy với quyền root).",
+        "C": "Tắt hoàn toàn Tường lửa để Container giao tiếp nhanh hơn.",
+        "D": "Cài đặt phần mềm Antivirus cá nhân vào từng Container."
+      },
+      "answer": "B",
+      "explainAnswer": "Container an toàn cần được kiểm tra image trước khi chạy và hạn chế quyền bên trong container. Đáp án B đúng vì chạy bằng root hoặc dùng image có lỗ hổng sẽ làm tăng rủi ro khi container bị khai thác.",
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7"
+    },
+    {
+      "id": 89,
+      "question": "Bảo mật trong DevOps truyền thống thường xảy ra ở giai đoạn nào?",
+      "options": {
+        "A": "Thường được xử lý ở cuối vòng đời, chỉ kiểm tra trước khi Release gây chậm trễ tiến độ.",
+        "B": "Tích hợp liên tục vào từng dòng code.",
+        "C": "Chỉ xử lý lúc thiết kế hệ thống ban đầu.",
+        "D": "Hoàn toàn bị bỏ qua."
+      },
+      "answer": "A",
+      "explainAnswer": "Trong DevOps truyền thống, bảo mật thường bị đưa về cuối quy trình trước khi release. Đáp án A đúng vì cách làm này dễ gây chậm trễ, tốn chi phí sửa lỗi và xung đột với tốc độ triển khai.",
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7"
+    },
+    {
+      "id": 97,
+      "question": "Tại sao việc thiết kế hệ thống theo mô hình 'Microservices' (Dịch vụ vi mô) có lợi cho bảo mật DevSecOps?",
+      "options": {
+        "A": "Vì nó làm cho hệ thống chạy chậm hơn, Hacker nản chí.",
+        "B": "Phân tách rõ ràng trách nhiệm, hạn chế bán kính ảnh hưởng (Blast Radius) nếu một dịch vụ nhỏ bị tấn công, các dịch vụ khác vẫn an toàn.",
+        "C": "Không cần sử dụng API Gateway nữa.",
+        "D": "Loại bỏ hoàn toàn lỗ hổng SQL Injection."
+      },
+      "answer": "B",
+      "explainAnswer": "Microservices chia hệ thống thành các dịch vụ nhỏ có ranh giới rõ ràng. Đáp án B đúng vì nếu một dịch vụ bị tấn công, việc phân tách tốt giúp hạn chế phạm vi ảnh hưởng sang các dịch vụ khác.",
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7"
+    },
+    {
+      "id": 101,
+      "question": "Trong quy trình phát triển phần mềm an toàn (SSDLC), kỹ thuật 'Threat Modeling' (Mô hình hóa mối đe dọa) thường được thực hiện ở giai đoạn nào là tốt nhất?",
+      "options": {
+        "A": "Giai đoạn Triển khai (Deployment)",
+        "B": "Giai đoạn Thiết kế kiến trúc (Design)",
+        "C": "Giai đoạn Vận hành (Operations)",
+        "D": "Giai đoạn Xóa bỏ hệ thống"
+      },
+      "answer": "B",
+      "explainAnswer": "Threat Modeling nên thực hiện tốt nhất ở giai đoạn thiết kế kiến trúc. Đáp án B đúng vì lúc này đội phát triển vẫn còn dễ thay đổi thiết kế để giảm rủi ro trước khi viết nhiều code.",
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7"
+    },
+    {
+      "id": 102,
+      "question": "Mục đích chính của 'Threat Modeling' là gì?",
+      "options": {
+        "A": "Dự đoán và xác định các mối đe dọa tiềm ẩn để thiết kế các biện pháp giảm nhẹ trước khi viết code.",
+        "B": "Quét mã nguồn để tìm lỗi cú pháp.",
+        "C": "Mã hóa cơ sở dữ liệu khách hàng.",
+        "D": "Kiểm tra tốc độ tải trang web."
+      },
+      "answer": "A",
+      "explainAnswer": "Threat Modeling giúp trả lời hệ thống có thể bị tấn công ở đâu, bởi ai và bằng cách nào. Đáp án A đúng vì mục tiêu là nhận diện rủi ro sớm để thiết kế biện pháp giảm nhẹ phù hợp.",
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7"
+    },
+    {
+      "id": 123,
+      "question": "Phương pháp 'Fuzzing' (Kiểm thử mờ) trong bảo mật ứng dụng hoạt động như thế nào?",
+      "options": {
+        "A": "Gửi các dữ liệu rác, ngẫu nhiên, không hợp lệ hoặc quá khổ vào ứng dụng với khối lượng lớn để xem ứng dụng có bị crash hoặc sinh lỗi bất thường hay không.",
+        "B": "Đọc từng dòng mã nguồn để tìm lỗi logic.",
+        "C": "Mã hóa đường truyền bằng giao thức SSL.",
+        "D": "Sử dụng AI để tối ưu hóa code."
+      },
+      "answer": "A",
+      "explainAnswer": "Fuzzing đưa vào ứng dụng nhiều dữ liệu bất thường, sai định dạng hoặc quá kích thước. Đáp án A đúng vì mục tiêu là tìm crash, lỗi xử lý input hoặc hành vi không mong muốn.",
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7"
+    },
+    {
+      "id": 126,
+      "question": "Rủi ro chính của việc sử dụng các thành phần bên thứ ba (Third-party Components) đã cũ trong ứng dụng là gì?",
+      "options": {
+        "A": "Làm giao diện kém tương thích với mobile.",
+        "B": "Các thành phần này có thể chứa các lỗ hổng đã được công bố rộng rãi (CVE), khiến ứng dụng trở thành mục tiêu dễ dàng của các mã khai thác có sẵn.",
+        "C": "Làm tăng dung lượng RAM.",
+        "D": "Vi phạm bản quyền hình ảnh."
+      },
+      "answer": "B",
+      "explainAnswer": "Thành phần bên thứ ba cũ có thể chứa lỗ hổng đã được công bố và có mã khai thác sẵn. Đáp án B đúng vì kẻ tấn công thường nhắm vào dependency lỗi thời do nhiều hệ thống sử dụng nhưng không cập nhật kịp.",
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7"
+    },
+    {
+      "id": 131,
+      "question": "Tại sao việc 'Hardcode' (Viết cứng) mật khẩu hoặc API Key trực tiếp vào mã nguồn lại bị coi là thực hành lập trình tồi (Bad Practice)?",
+      "options": {
+        "A": "Vì nó làm cho mã nguồn chạy chậm hơn.",
+        "B": "Vì mã nguồn có thể bị rò rỉ hoặc dịch ngược (Reverse engineering), dẫn đến việc lộ mật khẩu một cách dễ dàng.",
+        "C": "Vì trình biên dịch không hỗ trợ.",
+        "D": "Vì nó làm tăng dung lượng file exe."
+      },
+      "answer": "B",
+      "explainAnswer": "Hardcode mật khẩu hoặc API key trong mã nguồn rất nguy hiểm vì mã có thể bị rò rỉ, bị chia sẻ hoặc bị dịch ngược. Đáp án B đúng vì khi secret nằm trực tiếp trong code, việc thu hồi và xoay vòng cũng khó quản lý hơn.",
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7"
+    },
+    {
+      "id": 132,
+      "question": "Biện pháp thay thế tốt nhất cho việc Hardcode mật khẩu vào mã nguồn là gì?",
+      "options": {
+        "A": "Sử dụng biến môi trường (Environment Variables) hoặc các hệ thống quản lý Secret chuyên dụng (như HashiCorp Vault, AWS Secrets Manager).",
+        "B": "Viết mật khẩu ra một file text lưu trên desktop máy chủ.",
+        "C": "Ghi nhớ trong đầu và nhập bằng tay mỗi lần chạy ứng dụng.",
+        "D": "Sử dụng mật khẩu mặc định của framework."
+      },
+      "answer": "A",
+      "explainAnswer": "Biến môi trường và hệ thống quản lý secret giúp tách thông tin nhạy cảm khỏi mã nguồn. Đáp án A đúng vì các công cụ như Vault hoặc Secrets Manager hỗ trợ lưu trữ, cấp quyền và xoay vòng secret an toàn hơn.",
+      "chapter": "Chương 7",
+      "sourceChapter": "Chương 7"
+    }
+  ]
+}

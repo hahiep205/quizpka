@@ -1,0 +1,622 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kinh tế vi mô - Chương 2",
+  "chapter": "Chương 2",
+  "totalQuestions": 41,
+  "questions": [
+    {
+      "id": 51,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Nếu biết đường cầu của các cá nhân thì có thể xác định đường cầu thị trường bằng cách:",
+      "options": {
+        "A": "Tính lượng cầu trung bình tại mỗi mức giá.",
+        "B": "Tính mức giá trung bình.",
+        "C": "Cộng lượng cầu tại mỗi mức giá.",
+        "D": "Không xác định được."
+      },
+      "answer": "C",
+      "explainAnswer": "Đường cầu thị trường được xác định bằng cách cộng lượng cầu của tất cả cá nhân tại MỖI mức giá (cộng theo chiều ngang các đường cầu cá nhân). Không phải cộng trung bình lượng cầu (A) hay cộng giá (B).",
+      "image": null
+    },
+    {
+      "id": 52,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Khi giá tăng lượng cầu giảm dọc theo đường cầu cá nhân vì:",
+      "options": {
+        "A": "Thu nhập giảm đi.",
+        "B": "Lượng cung tăng lên.",
+        "C": "Cá nhân thay thế bằng hàng hóa khác.",
+        "D": "Cá nhân rời bỏ trong khi lại có một số khác gia nhập thị trường."
+      },
+      "answer": "C",
+      "explainAnswer": "Khi giá một hàng hóa tăng, dọc theo đường cầu cá nhân lượng cầu giảm vì người tiêu dùng chuyển sang dùng hàng hóa thay thế rẻ hơn (hiệu ứng thay thế). Thu nhập danh nghĩa không đổi nên A sai; B, D không giải thích đúng cơ chế dọc theo đường cầu.",
+      "image": null
+    },
+    {
+      "id": 53,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Khi giá tăng lượng cung tăng dọc theo đường cung thị trường vì:",
+      "options": {
+        "A": "Tại mức giá cao hơn nhiều hãng sẵn sàng gia nhập thị trường hơn.",
+        "B": "Mỗi hãng đang hoạt động cũng tìm cách để sản xuất nhiều hơn.",
+        "C": "Cơ hội tìm kiếm lợi nhuận cao hơn.",
+        "D": "Tất cả các yếu tố trên."
+      },
+      "answer": "D",
+      "explainAnswer": "Giá tăng làm lượng cung tăng dọc theo đường cung thị trường vì: giá cao hơn hấp dẫn thêm hãng gia nhập thị trường, hãng đang hoạt động tăng sản lượng, và cơ hội lợi nhuận cao hơn. Cả ba yếu tố cùng đúng nên chọn D.",
+      "image": null
+    },
+    {
+      "id": 54,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Trong thị trường cạnh tranh, giá cân bằng được xác định bởi:",
+      "options": {
+        "A": "Chi phí sản xuất.",
+        "B": "Thu nhập của người tiêu dùng.",
+        "C": "Số lượng người bán và người mua.",
+        "D": "Tất cả các yếu tố trên."
+      },
+      "answer": "D",
+      "explainAnswer": "Giá cân bằng là kết quả tương tác giữa cung và cầu, nên phụ thuộc vào các yếu tố quyết định cung (chi phí sản xuất, số người bán) và quyết định cầu (thu nhập, số người mua...). Vì vậy cả A, B, C đều đúng → D.",
+      "image": null
+    },
+    {
+      "id": 55,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Tăng cung hàng hóa X tại một mức giá xác định có thể do:",
+      "options": {
+        "A": "Tăng giá của các hàng hóa khác.",
+        "B": "Tăng giá của các yếu tố sản xuất.",
+        "C": "Giảm giá của các yếu tố sản xuất.",
+        "D": "Không yếu tố nào trong các yếu tố trên."
+      },
+      "answer": "C",
+      "explainAnswer": "Giảm giá các yếu tố sản xuất làm chi phí sản xuất giảm, doanh nghiệp sẵn sàng cung ứng nhiều hơn ở mọi mức giá → đường cung dịch sang phải. Tăng giá yếu tố sản xuất (B) làm cung giảm; giá hàng hóa khác (A) ảnh hưởng gián tiếp chứ không trực tiếp theo hướng tăng cung X.",
+      "image": null
+    },
+    {
+      "id": 56,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Cho cung về xe máy là cố định, việc giảm giá xăng sẽ dẫn đến:",
+      "options": {
+        "A": "Đường cầu về xăng dịch chuyển sang phải.",
+        "B": "Đường cầu về xe máy dịch chuyển sang trái.",
+        "C": "Đường cầu về xăng dịch chuyển sang trái.",
+        "D": "Giá xe máy tăng."
+      },
+      "answer": "D",
+      "explainAnswer": "Xăng và xe máy là hàng hóa bổ sung cho nhau. Giá xăng giảm làm chi phí sử dụng xe máy rẻ hơn → cầu xe máy tăng (đường cầu xe máy dịch phải). Với cung xe máy cố định, cầu tăng làm giá xe máy tăng → D đúng; hai đáp án về đường cầu xăng không phải phản ứng qua xe máy.",
+      "image": null
+    },
+    {
+      "id": 57,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Sự kiện nào sau đây sẽ không làm dịch chuyển đường cầu về thịt bò:",
+      "options": {
+        "A": "Tăng giá hàng hóa Y được coi là hàng thay thế đối với thịt bò.",
+        "B": "Thu nhập thực tế của người tiêu dùng giảm.",
+        "C": "Thị hiếu của người tiêu dùng thay đổi.",
+        "D": "Tăng giá thịt bò."
+      },
+      "answer": "D",
+      "explainAnswer": "Thay đổi giá của chính hàng hóa đó (tăng giá thịt bò) chỉ làm di chuyển dọc theo đường cầu, không làm DỊCH CHUYỂN đường cầu. Giá hàng thay thế, thu nhập, thị hiếu mới là các yếu tố làm dịch chuyển đường cầu.",
+      "image": null
+    },
+    {
+      "id": 58,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Kết cục thị trường sẽ như thế nào khi cầu giảm:",
+      "options": {
+        "A": "Giá giảm lượng cầu tăng.",
+        "B": "Giá tăng lượng cầu giảm.",
+        "C": "Giá và lượng cân bằng tăng.",
+        "D": "Giá và lượng cân bằng giảm."
+      },
+      "answer": "D",
+      "explainAnswer": "Khi cầu giảm (đường cầu dịch sang trái), tại mọi mức giá lượng cầu thấp hơn nên điểm cân bằng mới có giá thấp hơn và lượng cân bằng thấp hơn → D đúng.",
+      "image": null
+    },
+    {
+      "id": 59,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Tăng giá sẽ dẫn đến lượng cầu thấp hơn vì:",
+      "options": {
+        "A": "Thu nhập thực tế giảm đi.",
+        "B": "Mọi người sẽ giảm bớt lượng mua.",
+        "C": "Người bán dự đoán người mua sẽ tiêu dùng ít hơn.",
+        "D": "Thu nhập thực tế tăng lên."
+      },
+      "answer": "B",
+      "explainAnswer": "Tăng giá làm mọi người giảm bớt lượng mua (di chuyển dọc theo đường cầu theo quy luật cầu). Thu nhập thực tế giảm (A) là một tác động kèm theo nhưng câu hỏi hỏi cơ chế trực tiếp: người mua chủ động giảm lượng mua khi giá cao → B.",
+      "image": null
+    },
+    {
+      "id": 64,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Nếu cả cung và cầu đều tăng thì giá cân bằng sẽ:",
+      "options": {
+        "A": "Tăng.",
+        "B": "Giảm.",
+        "C": "Không đổi.",
+        "D": "Chưa xác định được."
+      },
+      "answer": "D",
+      "explainAnswer": "Khi cả cung và cầu tăng: lượng cân bằng chắc chắn tăng, nhưng hướng thay đổi của giá phụ thuộc mức độ tăng của cung so với cầu (cung tăng mạnh → giá giảm; cầu tăng mạnh → giá tăng) nên chưa xác định được → D.",
+      "image": null
+    },
+    {
+      "id": 65,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Khi giá sầu riêng trên thị trường thế giới tăng, các hộ gia đình trồng sầu riêng sẽ:",
+      "options": {
+        "A": "Áp dụng phương pháp tiên tiến hơn trong việc trồng sầu riêng.",
+        "B": "Áp dụng phương pháp rẻ tiền hơn trong việc trồng sầu riêng.",
+        "C": "Không có phản ứng gì.",
+        "D": "Giảm lượng cung."
+      },
+      "answer": "A",
+      "explainAnswer": "Giá sầu riêng thế giới tăng làm lợi nhuận từ trồng sầu riêng hấp dẫn hơn, các hộ gia đình sẽ áp dụng phương pháp canh tác tiên tiến hơn để tăng sản lượng và lợi nhuận (không dùng phương pháp rẻ tiền/kém hiệu quả, không giảm cung) → A.",
+      "image": null
+    },
+    {
+      "id": 66,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Yếu tố nào sau đây không được coi là yếu tố quyết định cầu hàng hoá:",
+      "options": {
+        "A": "Các yếu tố đầu vào để sản xuất hàng hoá.",
+        "B": "Thu nhập.",
+        "C": "Giá hàng hoá liên quan.",
+        "D": "Thị hiếu, sở thích."
+      },
+      "answer": "A",
+      "explainAnswer": "Các yếu tố quyết định CẦU gồm thu nhập, giá hàng hóa liên quan, thị hiếu, kỳ vọng, số lượng người mua. Các yếu tố đầu vào để sản xuất hàng hóa quyết định CUNG, không phải cầu → A đúng.",
+      "image": null
+    },
+    {
+      "id": 67,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Đường cung của sản phẩm X dịch chuyển do:",
+      "options": {
+        "A": "Giá sản phẩm thay thế giảm.",
+        "B": "Thu nhập người tiêu dùng thay đổi.",
+        "C": "Giá sản phẩm X thay đổi.",
+        "D": "Mức trợ cấp của chính phủ cho nhà sản xuất thay đổi."
+      },
+      "answer": "D",
+      "explainAnswer": "Đường cung của sản phẩm X dịch chuyển khi các yếu tố khác ngoài giá của X thay đổi, trong đó có mức trợ cấp của chính phủ cho nhà sản xuất. Giá sản phẩm thay thế (A) ảnh hưởng cầu; thu nhập (B) ảnh hưởng cầu; giá của X (C) chỉ làm trượt dọc theo đường cung.",
+      "image": null
+    },
+    {
+      "id": 68,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Đường cầu sản phẩm X dịch chuyển khi:",
+      "options": {
+        "A": "Thu nhập của người tiêu thụ thay đổi.",
+        "B": "Chi phí sản xuất sản phẩm thay đổi.",
+        "C": "Các câu trên đều đúng.",
+        "D": "Giá sản phẩm X thay đổi."
+      },
+      "answer": "A",
+      "explainAnswer": "Đường cầu sản phẩm X dịch chuyển khi yếu tố quyết định cầu (ngoài giá X) thay đổi, điển hình là thu nhập của người tiêu dùng. Chi phí sản xuất (B) ảnh hưởng cung; giá X (D) chỉ gây trượt dọc theo đường cầu.",
+      "image": null
+    },
+    {
+      "id": 69,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Khi thu nhập giảm, các yếu tố khác không đổi, giá cả và lượng cân bằng mới của hàng hoá thông thường sẽ:",
+      "options": {
+        "A": "Giá thấp hơn và lượng cân bằng nhỏ hơn.",
+        "B": "Giá cao hơn và lượng cân bằng nhỏ hơn.",
+        "C": "Không thay đổi.",
+        "D": "Giá thấp hơn và lượng cân bằng lớn hơn."
+      },
+      "answer": "A",
+      "explainAnswer": "Hàng hóa thông thường có quan hệ thuận chiều với thu nhập. Thu nhập giảm → cầu giảm (đường cầu dịch trái) → điểm cân bằng mới có giá thấp hơn và lượng cân bằng nhỏ hơn → A.",
+      "image": null
+    },
+    {
+      "id": 70,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Giá trần có hiệu lực luôn dẫn tới:",
+      "options": {
+        "A": "Sự dư cung.",
+        "B": "Sự gia nhập ngành.",
+        "C": "Sự cân bằng thị trường.",
+        "D": "Sự thiếu thụt hàng hóa."
+      },
+      "answer": "D",
+      "explainAnswer": "Giá trần có hiệu lực khi được đặt DƯỚI giá cân bằng, làm lượng cầu lớn hơn lượng cung → dư cầu, tức thiếu hụt hàng hóa trên thị trường → D đúng.",
+      "image": null
+    },
+    {
+      "id": 71,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Đường cầu của sách giá khoa sẽ dịch chuyển sang phải khi:",
+      "options": {
+        "A": "Số lượng sinh viên tăng.",
+        "B": "Giá giấy dùng để in sách giảm.",
+        "C": "Giá sách giáo khoa giảm.",
+        "D": "Giá sách giáo khoa cùng loại giảm."
+      },
+      "answer": "A",
+      "explainAnswer": "Số lượng sinh viên tăng → số người mua sách giáo khoa tăng → cầu sách tăng → đường cầu dịch sang phải. Giá giấy (B) ảnh hưởng cung; giá sách giảm (C, D) chỉ trượt dọc theo đường cầu.",
+      "image": null
+    },
+    {
+      "id": 72,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Hàm số cầu của một hàng hóa là tương quan giữa:",
+      "options": {
+        "A": "Lượng cầu hàng hóa đó với giá cả của nó.",
+        "B": "Lượng cầu hàng hóa đó với tổng số doanh thu của người bán.",
+        "C": "Lượng cầu hàng hóa đó với tổng số chi tiêu của người tiêu dùng.",
+        "D": "Lượng cầu hàng hóa đó với tổng số thu nhập của người tiêu dùng."
+      },
+      "answer": "A",
+      "explainAnswer": "Hàm số cầu thể hiện mối quan hệ giữa lượng cầu của một hàng hóa với giá của chính hàng hóa đó (Qd = f(P)) trong điều kiện các yếu tố khác không đổi. Doanh thu, chi tiêu, thu nhập không phải biến số của hàm cầu.",
+      "image": null
+    },
+    {
+      "id": 73,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Thị trường sản phẩm X có hàm số cung và cầu có dạng: P = 60 - 1/3Qd và P = 1/2Qs+10. Giá cả cân bằng và sản lượng cân bằng sản phẩm X là:",
+      "options": {
+        "A": "P = 20 và Q = 70.",
+        "B": "P = 40 và Q = 60.",
+        "C": "P = 32 và Q = 84.",
+        "D": "P = 30 và Q = 90."
+      },
+      "answer": "B",
+      "explainAnswer": "Cân bằng khi Qd = Qs = Q: 60 − (1/3)Q = (1/2)Q + 10 → 50 = (1/3)Q + (1/2)Q = (5/6)Q → Q = 60. Thế vào: P = 60 − (1/3)×60 = 40. Vậy P = 40, Q = 60 → B.",
+      "image": null
+    },
+    {
+      "id": 74,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Trong trường hợp nào đường cung của xăng sẽ dịch chuyển sang trái?",
+      "options": {
+        "A": "Mức lương của công nhân lọc dầu tăng lên.",
+        "B": "Giá xăng giảm.",
+        "C": "Có sự cải tiến trong công nghệ lọc dầu.",
+        "D": "Giá xăng trong tương lai có khả năng giảm."
+      },
+      "answer": "A",
+      "explainAnswer": "Đường cung xăng dịch sang trái khi chi phí sản xuất tăng. Mức lương công nhân lọc dầu tăng làm chi phí sản xuất tăng → cung giảm → dịch trái (A). Giá xăng giảm (B) chỉ trượt dọc; cải tiến công nghệ (C) làm cung tăng (dịch phải); kỳ vọng giá giảm (D) không trực tiếp làm cung hiện tại giảm.",
+      "image": null
+    },
+    {
+      "id": 75,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Giá của hàng hóa A tăng, do đó đường cầu của hàng hóa B dịch chuyển sang trái, suy ra:",
+      "options": {
+        "A": "B là hàng hóa thứ cấp.",
+        "B": "A là hàng hóa thông thường.",
+        "C": "A và B là 2 hàng hóa thay thế cho nhau.",
+        "D": "A và B là 2 hàng hóa bổ sung cho nhau."
+      },
+      "answer": "D",
+      "explainAnswer": "Giá hàng hóa A tăng mà cầu hàng hóa B giảm (đường cầu B dịch trái) nghĩa là hai hàng hóa được dùng kèm với nhau → A và B là hàng hóa bổ sung cho nhau → D đúng. Nếu là hàng thay thế, giá A tăng sẽ làm cầu B tăng.",
+      "image": null
+    },
+    {
+      "id": 76,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Biểu cầu cho thấy:",
+      "options": {
+        "A": "Lượng cầu về một lọai hàng hóa cụ thể tại các mức giá khác nhau.",
+        "B": "Lượng hàng cụ thể sẽ được cung ứng cho thị trường tại các mức giá khác nhau.",
+        "C": "Lượng cầu về một hàng hóa cụ thể sẽ thay đổi khi giá các hàng hóa liên quan thay đổi.",
+        "D": "Lượng cầu về một lọai hàng hóa cụ thể sẽ thay đổi khi mức thu nhập thay đổi."
+      },
+      "answer": "A",
+      "explainAnswer": "Biểu cầu (bảng cầu) cho thấy lượng cầu về một hàng hóa cụ thể tại các mức giá khác nhau, minh họa quy luật cầu. B mô tả biểu cung; C, D nói về sự dịch chuyển của cầu do giá hàng liên quan/thu nhập.",
+      "image": null
+    },
+    {
+      "id": 77,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Tìm câu sai trong những câu dưới đây:",
+      "options": {
+        "A": "Đường cung biểu diễn mối quan hệ giữa giá và lượng cung.",
+        "B": "Trong điều kiện những yếu tố khác không đổi, giá hàng hóa và dịch vụ tăng sẽ làm lượng cầu với hàng hoá và dịch vụ đó giảm.",
+        "C": "Với mức giá mặt hàng quần áo không đổi, khi thu nhập của người tiêu dùng tăng lên sẽ làm đường cầu mặt hàng này dịch chuyển sang trái.",
+        "D": "Trong điều kiện những yếu tố khác không đổi, giá mặt hàng Tivi tăng lên sẽ làm lượng cầu Tivi giảm."
+      },
+      "answer": "C",
+      "explainAnswer": "Câu C sai vì với giá quần áo không đổi, khi thu nhập tăng thì cầu mặt hàng quần áo (hàng hóa thông thường) TĂNG → đường cầu dịch sang PHẢI, không phải sang trái. A, B, D đều phát biểu đúng quy luật cung - cầu.",
+      "image": null
+    },
+    {
+      "id": 78,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Do nhiều người từ các tỉnh nhập cư vào thành phố Hà Nội, kết quả là đường cầu mặt hàng gạo ở Hà Nội:",
+      "options": {
+        "A": "Trở nên thoải hơn.",
+        "B": "Dịch chuyển sang phải.",
+        "C": "Dịch chuyển sang trái.",
+        "D": "Trở nên dốc hơn."
+      },
+      "answer": "B",
+      "explainAnswer": "Nhiều người nhập cư vào Hà Nội làm dân số (số người tiêu dùng gạo) tăng → cầu mặt hàng gạo tăng → đường cầu dịch sang phải → B đúng.",
+      "image": null
+    },
+    {
+      "id": 79,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Trong điều kiện khác không đổi, khi giá cả các yếu tố sản xuất ra bánh mỳ tăng lên, thì giá cả và sản lượng cân bằng trên thị trường bánh mì sẽ thay đổi như sau:",
+      "options": {
+        "A": "Giá và lượng cân bằng không thay đổi do không có sự thay đổi của trạng thái cân bằng.",
+        "B": "Giá tăng lên và sản lượng cân bằng tăng lên.",
+        "C": "Giá tăng lên và sản lượng cân bằng giảm xuống.",
+        "D": "Giá giảm xuống và sản lượng cân bằng tăng lên."
+      },
+      "answer": "C",
+      "explainAnswer": "Giá các yếu tố sản xuất ra bánh mì tăng → chi phí sản xuất tăng → cung bánh mì giảm (dịch trái) → giá cân bằng TĂNG và sản lượng cân bằng GIẢM → C đúng.",
+      "image": null
+    },
+    {
+      "id": 80,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Giá trần sẽ dẫn đến những điều dưới đây, ngoại trừ:",
+      "options": {
+        "A": "Dư cung hàng hóa đó.",
+        "B": "Hiệu quả về kinh tế giảm.",
+        "C": "Dư cầu về hàng hoá đó.",
+        "D": "Thị trường chợ đen và tham nhũng."
+      },
+      "answer": "A",
+      "explainAnswer": "Giá trần (dưới mức cân bằng) gây dư cầu (lượng cầu > lượng cung → thiếu hụt), hiệu quả kinh tế giảm, thị trường chợ đen nảy sinh. Giá trần KHÔNG gây dư cung (dư cung là hệ quả của giá sàn) → chọn A (câu ngoại lệ).",
+      "image": null
+    },
+    {
+      "id": 81,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Tiến bộ kỹ thuật sẽ làm dịch chuyển:",
+      "options": {
+        "A": "Đường giới hạn khả năng sản xuất về phía gốc tọa độ.",
+        "B": "Cầu lên trên và sang phải.",
+        "C": "Đường cung song song sang phải.",
+        "D": "Đường cung lên trên và sang trái."
+      },
+      "answer": "C",
+      "explainAnswer": "Tiến bộ kỹ thuật giúp sản xuất được nhiều hơn với cùng chi phí/nguồn lực → tại mỗi mức giá lượng cung tăng → đường cung dịch sang PHẢI, thường được vẽ song song sang phải → C đúng. D (lên trên sang trái) là khi cung GIẢM.",
+      "image": null
+    },
+    {
+      "id": 82,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Nếu cả cung và cầu về một bánh mỳ tăng, khi đó:",
+      "options": {
+        "A": "Lượng bánh mỳ tiêu thụ trên thị trường sẽ tăng.",
+        "B": "Lợi nhuận của các doanh nghiệp cạnh tranh sẽ tăng.",
+        "C": "Giá bánh mỳ sẽ tăng.",
+        "D": "Phúc lợi của xã hội sẽ tăng."
+      },
+      "answer": "A",
+      "explainAnswer": "Cả cung và cầu đều tăng → tại mọi mức giá lượng cung và cầu đều cao hơn → lượng bánh mì tiêu thụ trên thị trường chắc chắn TĂNG → A. Giá (C) có thể tăng, giảm hay không đổi tùy mức độ; lợi nhuận, phúc lợi (B, D) không suy ra chắc chắn.",
+      "image": null
+    },
+    {
+      "id": 83,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Đường cầu thị trường có thể được xác định bằng cách:",
+      "options": {
+        "A": "Cộng các đường tổng độ thỏa dụng của các cá nhân.",
+        "B": "Cộng các mức giá trả bởi mỗi cá nhân.",
+        "C": "Cộng theo chiều ngang của các đường cầu cá nhân.",
+        "D": "Cộng theo chiều thẳng đứng của các đường cầu cá nhân."
+      },
+      "answer": "C",
+      "explainAnswer": "Đường cầu thị trường được xác định bằng cách cộng theo chiều NGANG các đường cầu cá nhân: tại mỗi mức giá cộng tất cả lượng cầu của từng cá nhân (Q thị trường = tổng Q cá nhân). Cộng theo chiều dọc/giá là sai.",
+      "image": null
+    },
+    {
+      "id": 84,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Xôi và phở là hai hàng hoá thay thế cho nhau. Tăng giá xôi sẽ có tác động:",
+      "options": {
+        "A": "Giảm lượng cầu đối với phở.",
+        "B": "Tăng cầu đối với phở.",
+        "C": "Giảm cầu đối với phở.",
+        "D": "Tăng lượng cầu đối với phở."
+      },
+      "answer": "B",
+      "explainAnswer": "Xôi và phở là hàng hóa thay thế. Giá xôi tăng làm người tiêu dùng chuyển sang ăn phở nhiều hơn → cầu về phở TĂNG (đường cầu phở dịch phải). Phân biệt: tăng 'cầu' (dịch đường) chứ không phải tăng 'lượng cầu' (trượt dọc) → B.",
+      "image": null
+    },
+    {
+      "id": 85,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Trên thị trường xe đạp, giá cân bằng chắc chắn sẽ giảm nếu:",
+      "options": {
+        "A": "Cầu giảm và cung tăng.",
+        "B": "Cầu tăng và cung giảm.",
+        "C": "Cả cầu và cung đối với xe đạp đều tăng.",
+        "D": "Cả cầu và cung đều giảm."
+      },
+      "answer": "A",
+      "explainAnswer": "Giá cân bằng chắc chắn giảm khi cầu GIẢM (kéo giá xuống) đồng thời cung TĂNG (cũng kéo giá xuống) → hai lực cùng chiều → A chắc chắn. Các phương án còn lại có hai lực ngược chiều nên chưa chắc chắn.",
+      "image": null
+    },
+    {
+      "id": 86,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Nếu thời tiết trở nên rất nóng, điều gì sẽ xảy ra?",
+      "options": {
+        "A": "Giá máy điều hoà sẽ không chịu ảnh hưởng.",
+        "B": "Giá máy điều hoà sẽ giảm.",
+        "C": "Cung về máy điều hòa sẽ tăng.",
+        "D": "Cầu về máy điều hòa sẽ tăng."
+      },
+      "answer": "D",
+      "explainAnswer": "Thời tiết nóng làm nhu cầu làm mát tăng → cầu máy điều hòa TĂNG (đường cầu dịch phải) → D. Cung không tự thay đổi (C sai); giá sẽ tăng chứ không giảm hay không đổi (A, B sai).",
+      "image": null
+    },
+    {
+      "id": 87,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Quy luật cầu thể hiện:",
+      "options": {
+        "A": "Khi giá trà đá tăng, nhu cầu đối với trà đá sẽ giảm, trong điều kiện các yếu tố khác không đổi.",
+        "B": "Khi giá trà đá tăng, nhu cầu đối với trà đá sẽ giảm.",
+        "C": "Khi giá trà đá tăng, nhu cầu đối với trà đá sẽ tăng.",
+        "D": "Khi giá trà đá tăng, nhu cầu đối với trà đá sẽ tăng, trong điều kiện các yếu tố khác không đổi."
+      },
+      "answer": "A",
+      "explainAnswer": "Quy luật cầu: khi giá tăng, lượng cầu giảm TRONG ĐIỀU KIỆN CÁC YẾU TỐ KHÁC KHÔNG ĐỔI (ceteris paribus). Điều kiện 'các yếu tố khác không đổi' là bắt buộc để loại trừ ảnh hưởng của các yếu tố khác; B thiếu điều kiện này, C, D ngược chiều nên sai → A.",
+      "image": null
+    },
+    {
+      "id": 88,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Trên thị trường máy tính, điểm cân bằng trượt dọc theo đường cầu từ trái sang phải, nguyên nhân là do:",
+      "options": {
+        "A": "Cung tăng lên.",
+        "B": "Lượng cầu tăng lên.",
+        "C": "Cầu tăng lên.",
+        "D": "Lượng cung tăng lên."
+      },
+      "answer": "A",
+      "explainAnswer": "Điểm cân bằng trượt dọc theo đường cầu từ trái sang phải nghĩa là giá giảm, lượng tăng — kết quả của việc đường cung dịch sang phải (cung tăng) trong khi đường cầu không đổi → A đúng. Nếu cầu tăng thì chính đường cầu dịch chuyển, không phải trượt dọc.",
+      "image": null
+    },
+    {
+      "id": 89,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Các phương trình cung và cầu về một loại hàng hóa được cho như sau: Qs = -4 + 5P và Qd = 18 - 6P. Mức giá và sản lượng cân bằng sẽ là:",
+      "options": {
+        "A": "P = 3, Q = 6.",
+        "B": "P = 1,3, Q = 2,5.",
+        "C": "P = 2, Q = 6.",
+        "D": "P = 14, Q = 66."
+      },
+      "answer": "C",
+      "explainAnswer": "Cân bằng khi Qs = Qd: −4 + 5P = 18 − 6P → 11P = 22 → P = 2. Thế vào: Q = −4 + 5×2 = 6. Vậy P = 2, Q = 6 → C.",
+      "image": null
+    },
+    {
+      "id": 90,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Các phương trình cung và cầu về một loại hàng hóa được cho như sau: Qs = -4 + 5P và Qd = 18 - 6P. Chính phủ ấn định mức giá sàn là P=2,5, điều này sẽ dẫn đến:",
+      "options": {
+        "A": "Thị trường dư thừa một lượng là 5,5.",
+        "B": "Thị trường thiếu hụt một lượng là 5,5.",
+        "C": "Thị trường dư thừa một lượng là 11,5.",
+        "D": "Thị trường thiếu hụt một lượng là 11,5."
+      },
+      "answer": "A",
+      "explainAnswer": "Tại giá sàn P = 2,5: Qs = −4 + 5×2,5 = 8,5; Qd = 18 − 6×2,5 = 3. Giá sàn > giá cân bằng (P*=2) làm lượng cung vượt lượng cầu → dư thừa: 8,5 − 3 = 5,5 → A.",
+      "image": null
+    },
+    {
+      "id": 91,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Các phương trình cung và cầu về một loại hàng hóa được cho như sau: Qs = -4 + 5P và Qd = 18 - 6P. Chính phủ ấn định mức giá trần là P=1, điều này sẽ dẫn đến:",
+      "options": {
+        "A": "Thị trường thiếu hụt một lượng là 11.",
+        "B": "Thị trường dư thừa một lượng là 11.",
+        "C": "Thị trường thiếu hụt một lượng là 13.",
+        "D": "Thị trường dư thừa một lượng là 13."
+      },
+      "answer": "A",
+      "explainAnswer": "Tại giá trần P = 1: Qs = −4 + 5×1 = 1; Qd = 18 − 6×1 = 12. Giá trần < giá cân bằng (P*=2) làm lượng cầu vượt lượng cung → thiếu hụt: 12 − 1 = 11 → A.",
+      "image": null
+    },
+    {
+      "id": 92,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Giả sử chính phủ đánh thuế là 1 nghìn đồng/bánh mỳ vào người bán bánh mỳ, trong điều kiện khác không đổi, điều gì sẽ xảy ra trên thị trường bánh mỳ?",
+      "options": {
+        "A": "Giá người bán nhận về khi bán bánh mỳ luôn giảm đúng 1 nghìn đồng/ bánh.",
+        "B": "Giá người bán nhận về khi bán bánh mỳ luôn giảm ít hơn 1 nghìn đồng/ bánh.",
+        "C": "Không có gì thay đổi do nhu cầu bánh mỳ không đổi.",
+        "D": "Giá người bán nhận về khi bán bánh mỳ luôn giảm nhiều hơn 1 nghìn đồng/ bánh."
+      },
+      "answer": "B",
+      "explainAnswer": "Khi chính phủ đánh thuế vào người bán, gánh nặng thuế được CHIA SẺ giữa người bán và người mua tùy theo độ co giãn của cung - cầu. Giá người bán nhận về giảm nhưng THƯỜNG giảm ÍT HƠN mức thuế (người mua cũng chịu một phần qua giá cao hơn) → B đúng (giảm đúng 1 nghìn chỉ xảy ra khi cầu hoàn toàn không co giãn — không phải trường hợp chung).",
+      "image": null
+    },
+    {
+      "id": 93,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Các phương trình cung và cầu về một loại hàng hóa được cho như sau: Qs = -4 + 5P và Qd = 18 - 6P. Giả sử trên thị trường có lượng cung là 7 và lượng cầu là 4,8, giá thị trường của hàng hoá đó:",
+      "options": {
+        "A": "Thấp hơn giá cân bằng.",
+        "B": "Bằng với giá cân bằng.",
+        "C": "Sẽ tăng lên.",
+        "D": "Cao hơn giá cân bằng."
+      },
+      "answer": "D",
+      "explainAnswer": "Khi lượng cung (7) > lượng cầu (4,8) → thị trường dư thừa hàng hóa. Tại mức giá tương ứng với cung 7, cầu 4,8, mức giá này đang CAO HƠN giá cân bằng (vì giá cao → người bán muốn bán nhiều, người mua mua ít) → D. Dư thừa sẽ tạo áp lực đẩy giá giảm về mức cân bằng.",
+      "image": null
+    },
+    {
+      "id": 94,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Vào mùa hè, giá kem tăng nhưng lượng tiêu thụ kem cũng tăng. Điều này là do:",
+      "options": {
+        "A": "Luật cung không được áp dụng.",
+        "B": "Nhu cầu đối với kem tăng.",
+        "C": "Các nhà sản xuất tăng cung đối với kem.",
+        "D": "Luật cầu có ngoại lệ."
+      },
+      "answer": "B",
+      "explainAnswer": "Mùa hè nóng làm nhu cầu (cầu) kem tăng → đường cầu kem dịch phải → cả giá lẫn lượng cân bằng đều tăng. Điều này KHÔNG vi phạm luật cầu (vì luật cầu xét khi các yếu tố khác không đổi) mà là do cầu tăng → B đúng.",
+      "image": null
+    },
+    {
+      "id": 95,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 2&3",
+      "question": "Giá thị trường dưới mức cân bằng có khuynh hướng tạo ra:",
+      "options": {
+        "A": "Dư thừa hàng hóa và giá sẻ tăng.",
+        "B": "Dư thừa hàng hóa và giá sẻ giảm.",
+        "C": "Thiếu hụt hàng hoá và giá sẽ giảm.",
+        "D": "Thiếu hụt hàng hóa giá sẽ tăng."
+      },
+      "answer": "D",
+      "explainAnswer": "Khi giá thị trường dưới mức cân bằng → lượng cầu > lượng cung → thiếu hụt hàng hóa. Sự thiếu hụt tạo áp lực đẩy giá TĂNG lên về điểm cân bằng → D đúng.",
+      "image": null
+    }
+  ]
+}

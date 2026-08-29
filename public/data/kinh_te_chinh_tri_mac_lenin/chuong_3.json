@@ -1,0 +1,472 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kinh tế chính trị Mác - Lênin - Chương 3",
+  "chapter": "Chương 3",
+  "totalQuestions": 31,
+  "questions": [
+    {
+      "id": 78,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Bản chất của tích lũy tư bản được thể hiện như thế nào?",
+      "options": {
+        "A": "Là tăng giá trị của hàng hóa sức lao động.",
+        "B": "Là quá trình điều chỉnh giá trị trao đổi của nhà tư bản.",
+        "C": "Là chuyển hóa một phần giá trị thặng dư thành tư bản phụ thêm.",
+        "D": "Là quá trình tăng liên tục lợi nhuận bình quân."
+      },
+      "answer": "C",
+      "explainAnswer": "Bản chất của tích lũy tư bản là chuyển hóa một phần giá trị thặng dư thành tư bản phụ thêm (biến giá trị thặng dư thành tư bản) để mở rộng sản xuất. A, B, D không phản ánh đúng bản chất tích lũy tư bản.",
+      "image": null
+    },
+    {
+      "id": 79,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Bản chất của tiền công trong chủ nghĩa tư bản là gì?",
+      "options": {
+        "A": "Giá cả của hàng hóa.",
+        "B": "Giá cả của lao động.",
+        "C": "Giá cả của hàng hóa lao động.",
+        "D": "Giá cả của hàng hóa sức lao động."
+      },
+      "answer": "D",
+      "explainAnswer": "Bản chất của tiền công trong CNTB là giá cả của hàng sức lao động (hàng hóa đặc biệt) chứ không phải giá cả của lao động, vì lao động không phải hàng hóa. A, B, C đều sai vì tiền công không phải giá cả của hàng hóa nói chung hay của lao động.",
+      "image": null
+    },
+    {
+      "id": 84,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Cần phải có điều kiện nào để tiền biến thành tư bản?",
+      "options": {
+        "A": "Phải tích lũy được một lượng hàng hóa lớn; hàng hóa phải được đưa vào kinh doanh tư bản với mục đích thu giá trị thặng dư.",
+        "B": "Phải tích lũy được một lượng tiền lớn; tiền không được đưa vào kinh doanh với mục đích thu giá trị thặng dư.",
+        "C": "Phải tích lũy được một lượng máy móc lớn; máy móc phải được đưa vào kinh doanh tư bản với mục đích thu giá trị thặng dư.",
+        "D": "Phải tích lũy được một lượng tiền lớn; tiền phải được đưa vào kinh doanh tư bản với mục đích thu giá trị thặng dư."
+      },
+      "answer": "D",
+      "explainAnswer": "Điều kiện để tiền biến thành tư bản là: (1) tích lũy được một lượng tiền lớn và (2) tiền được đưa vào kinh doanh tư bản với mục đích thu giá trị thặng dư. A sai vì cần tiền chứ không phải hàng hóa lớn; B sai vì mục đích phải là thu giá trị thặng dư; C sai vì cần tiền, không phải máy móc.",
+      "image": null
+    },
+    {
+      "id": 85,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Cấu tạo hữu cơ của tư bản là gì?",
+      "options": {
+        "A": "Cấu tạo giá trị của tư bản, đồng thời phản ánh sự biến đổi của cấu tạo kỹ thuật.",
+        "B": "Cấu tạo giá trị sử dụng của tư bản, đồng thời phản ánh sự biến đổi của cấu tạo kỹ thuật.",
+        "C": "Cấu tạo sản xuất của tư bản, đồng thời phản ánh sự biến đổi của cấu tạo kỹ thuật.",
+        "D": "Cấu tạo giá trị thặng dư của tư bản, đồng thời phản ánh sự biến đổi của cấu tạo kỹ thuật."
+      },
+      "answer": "A",
+      "explainAnswer": "Cấu tạo hữu cơ của tư bản là cấu tạo giá trị của tư bản (tỷ lệ giữa tư bản bất biến c và tư bản khả biến v), do cấu tạo kỹ thuật quyết định và phản ánh sự biến đổi của cấu tạo kỹ thuật. B, C, D dùng các thuật ngữ không chính xác (giá trị sử dụng, sản xuất, giá trị thặng dư).",
+      "image": null
+    },
+    {
+      "id": 86,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Cấu tạo giá trị phản ánh điều gì?",
+      "options": {
+        "A": "Mối quan hệ tỷ lệ giữa giá trị tư bản bất biến và giá trị tư bản khả biến.",
+        "B": "Mối quan hệ tỷ lệ giữa giá trị tư bản cố định và giá trị tư bản khả biến.",
+        "C": "Mối quan hệ tỷ lệ giữa giá trị tư bản cố định và giá trị tư bản lưu động.",
+        "D": "Mối quan hệ tỷ lệ giữa giá trị tư bản bất biến và giá trị tư bản cố định."
+      },
+      "answer": "A",
+      "explainAnswer": "Cấu tạo giá trị của tư bản phản ánh mối quan hệ tỷ lệ giữa giá trị tư bản bất biến (c) và giá trị tư bản khả biến (v). B, C nhầm với cặp tư bản cố định - lưu động (phân loại theo phương thức chuyển giá trị); D không phản ánh đúng.",
+      "image": null
+    },
+    {
+      "id": 89,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Chỉ rõ công thức chung của tư bản?",
+      "options": {
+        "A": "H-T-H'.",
+        "B": "T-H-T'.",
+        "C": "H-T-H.",
+        "D": "T-SX-T'."
+      },
+      "answer": "B",
+      "explainAnswer": "Công thức chung của tư bản là T - H - T' (tiền - hàng - tiền có giá trị tăng thêm, T' > T). H - T - H' là công thức lưu thông hàng hóa giản đơn; T - SX - T' không phải công thức chuẩn.",
+      "image": null
+    },
+    {
+      "id": 91,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Chỉ rõ hai hình thức tiền công cơ bản?",
+      "options": {
+        "A": "Tiền công theo thời gian và tiền công theo lao động.",
+        "B": "Tiền công theo tháng và tiền công theo sản phẩm.",
+        "C": "Tiền công theo thời gian và tiền công theo sản phẩm.",
+        "D": "Tiền công theo giờ và tiền công theo sản phẩm."
+      },
+      "answer": "C",
+      "explainAnswer": "Hai hình thức tiền công cơ bản trong CNTB là tiền công tính theo thời gian và tiền công tính theo sản phẩm; các hình thức khác (theo tháng, theo giờ...) chỉ là biến thể của hai hình thức này.",
+      "image": null
+    },
+    {
+      "id": 92,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Chỉ rõ mâu thuẫn công thức chung của tư bản?",
+      "options": {
+        "A": "T'=T.",
+        "B": "T'<T.",
+        "C": "T'>T.",
+        "D": "T'>H'."
+      },
+      "answer": "C",
+      "explainAnswer": "Mâu thuẫn của công thức chung của tư bản là T' > T (tiền ứng trước thu về nhiều hơn, có giá trị thặng dư) trong khi trao đổi phải tuân theo nguyên tắc ngang giá. A, B là T' không lớn hơn T nên không phải mâu thuẫn.",
+      "image": null
+    },
+    {
+      "id": 93,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Chỉ rõ vai trò của tư bản khả biến?",
+      "options": {
+        "A": "Bộ phận trực tiếp tạo ra giá trị thặng dư.",
+        "B": "Bộ phận gián tiếp tạo ra giá trị thặng dư.",
+        "C": "Bộ phận trực tiếp tạo ra sản phẩm.",
+        "D": "Bộ phận trực tiếp tạo ra giá trị sử dụng."
+      },
+      "answer": "A",
+      "explainAnswer": "Tư bản khả biến (v) là bộ phận tư bản dùng mua sức lao động - bộ phận trực tiếp tạo ra giá trị thặng dư vì sức lao động tạo ra giá trị mới lớn hơn giá trị của nó. Tư bản bất biến chỉ chuyển giá trị, không tạo ra giá trị thặng dư (B sai); C, D không phải vai trò của tư bản khả biến.",
+      "image": null
+    },
+    {
+      "id": 99,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Công thức chung của tư bản phản ánh những gì?",
+      "options": {
+        "A": "Mục đích của sản xuất, lưu thông tư bản là giá trị sử dụng và giá trị thặng dư.",
+        "B": "Phương tiện của lưu thông tư bản là giá trị và giá trị thặng dư.",
+        "C": "Mục đích của sản xuất, lưu thông là giá trị và giá trị thặng dư.",
+        "D": "Mục đích của sản xuất, lưu thông tư bản là giá trị và giá trị thặng dư."
+      },
+      "answer": "D",
+      "explainAnswer": "Công thức chung của tư bản T - H - T' phản ánh mục đích của sản xuất và lưu thông tư bản là giá trị và giá trị thặng dư (tư bản vận động nhằm làm tăng giá trị). A sai vì mục đích không phải giá trị sử dụng; B nhầm giữa phương tiện và mục đích; C thiếu 'của tư bản'.",
+      "image": null
+    },
+    {
+      "id": 105,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Điều kiện biến sức lao động thành hàng hóa là gì?",
+      "options": {
+        "A": "Người lao động phải được tự do; người lao động không có tư liệu tiêu dùng.",
+        "B": "Người lao động phải được tự do; người lao động không có tư liệu sản xuất.",
+        "C": "Người lao động phải được tự do; người lao động có tư liệu sản xuất.",
+        "D": "Người lao động không được tự do; người lao động không có tư liệu sản xuất."
+      },
+      "answer": "B",
+      "explainAnswer": "Điều kiện để sức lao động thành hàng hóa: (1) người lao động được tự do về thân thể (có quyền bán sức lao động của mình) và (2) người lao động không có tư liệu sản xuất (phải bán sức lao động để sống). A sai vì nói tư liệu tiêu dùng; C, D sai.",
+      "image": null
+    },
+    {
+      "id": 106,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Động cơ chủ yếu của tích lũy tư bản là gì?",
+      "options": {
+        "A": "Quy luật giá trị thặng dư.",
+        "B": "Quy luật cung cầu.",
+        "C": "Quy luật giá trị.",
+        "D": "Quy luật giá cả sản xuất."
+      },
+      "answer": "A",
+      "explainAnswer": "Động cơ chủ yếu của tích lũy tư bản là quy luật giá trị thặng dư (chạy theo giá trị thặng dư, mở rộng sản xuất để thu nhiều giá trị thặng dư hơn) cùng với cạnh tranh. Các quy luật cung cầu, giá trị, giá cả sản xuất không phải động cơ chủ yếu.",
+      "image": null
+    },
+    {
+      "id": 108,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Giá trị sức lao động được đo lường gián tiếp bằng yếu tố nào?",
+      "options": {
+        "A": "Giá trị những tư liệu tiêu dùng để nuôi sống người lao động.",
+        "B": "Giá trị những tư liệu tiêu dùng để nuôi sống nhà tư bản.",
+        "C": "Giá trị sử dụng những tư liệu tiêu dùng để nuôi sống người lao động.",
+        "D": "Giá trị những tư liệu sản xuất để nuôi sống người lao động."
+      },
+      "answer": "A",
+      "explainAnswer": "Giá trị sức lao động được đo lường gián tiếp bằng giá trị những tư liệu tiêu dùng cần thiết để nuôi sống người lao động (và gia đình họ + chi phí đào tạo). B sai đối tượng; C nhầm giá trị sử dụng; D nhầm tư liệu sản xuất.",
+      "image": null
+    },
+    {
+      "id": 109,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Giá trị sử dụng của hàng hóa sức lao động được khẳng định như thế nào?",
+      "options": {
+        "A": "Chìa khóa để giải quyết mâu thuẫn giữa tư bản và tư bản.",
+        "B": "Chìa khóa để giải quyết mâu thuẫn của lưu thông hàng hóa.",
+        "C": "Chìa khóa để giải quyết mâu thuẫn công thức chung của tư bản.",
+        "D": "Chìa khóa để giải quyết mâu thuẫn giữa tư bản và lao động."
+      },
+      "answer": "C",
+      "explainAnswer": "Giá trị sử dụng đặc biệt của hàng hóa sức lao động là khi tiêu dùng (nhà tư bản sử dụng) nó tạo ra giá trị mới lớn hơn giá trị của bản thân nó - nguồn gốc giá trị thặng dư, chìa khóa giải quyết mâu thuẫn công thức chung của tư bản. A, B, D không phải mâu thuẫn liên quan.",
+      "image": null
+    },
+    {
+      "id": 110,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Giá trị sử dụng của hàng hóa sức lao động, khi sử dụng sẽ tạo ra cái gì?",
+      "options": {
+        "A": "Giá trị mới nhỏ hơn giá trị bản thân nó.",
+        "B": "Giá trị mới lớn hơn giá trị bản thân nó.",
+        "C": "Giá trị mới bằng giá trị bản thân nó.",
+        "D": "Giá trị sử dụng mới lớn hơn giá trị sử dụng bản thân nó."
+      },
+      "answer": "B",
+      "explainAnswer": "Giá trị sử dụng của hàng hóa sức lao động, khi được sử dụng (người lao động làm việc), tạo ra giá trị mới lớn hơn giá trị bản thân nó (phần dôi ra là giá trị thặng dư). A, C sai hướng; D nói giá trị sử dụng mới - không đúng.",
+      "image": null
+    },
+    {
+      "id": 111,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Giá trị thặng dư siêu ngạch còn được gọi là gì?",
+      "options": {
+        "A": "Hình thức biến tướng của giá trị thặng dư tương đối.",
+        "B": "Hình thức biến tướng của giá trị thặng dư tuyệt đối.",
+        "C": "Hình thức biến tướng của giá trị tương đối.",
+        "D": "Hình thức biểu hiện của giá trị thặng dư tương đối."
+      },
+      "answer": "A",
+      "explainAnswer": "Giá trị thặng dư siêu ngạch là hình thức biến tướng của giá trị thặng dư tương đối, vì cả hai đều dựa trên tăng năng suất lao động (siêu ngạch là do năng suất cá biệt vượt năng suất xã hội). B sai vì không phải biến tướng của giá trị thặng dư tuyệt đối.",
+      "image": null
+    },
+    {
+      "id": 112,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Giá trị thặng dư siêu ngạch được tạo ra bởi những yếu tố nào?",
+      "options": {
+        "A": "Giá cả cá biệt của hàng hóa thấp hơn giá trị xã hội.",
+        "B": "Giá trị xã hội của hàng hóa thấp hơn giá trị cá biệt.",
+        "C": "Giá trị cá biệt của hàng hóa bằng giá trị xã hội.",
+        "D": "Giá trị cá biệt của hàng hóa thấp hơn giá trị xã hội."
+      },
+      "answer": "D",
+      "explainAnswer": "Giá trị thặng dư siêu ngạch được tạo ra khi giá trị cá biệt của hàng hóa thấp hơn giá trị xã hội (do áp dụng công nghệ mới, năng suất cá biệt cao hơn) nên thu lợi nhuận siêu ngạch. A, B, C không đúng diễn đạt này.",
+      "image": null
+    },
+    {
+      "id": 113,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Giá trị thặng dư tuyệt đối được tạo ra bằng cách nào?",
+      "options": {
+        "A": "Kéo dài ngày lao động hoặc tăng năng suất lao động.",
+        "B": "Kéo dài ngày lao động hoặc tăng cường độ lao động.",
+        "C": "Kéo dài ngày lao động hoặc tăng thời gian lao động.",
+        "D": "Kéo dài ngày lao động hoặc tăng cường độ lao động."
+      },
+      "answer": "C",
+      "explainAnswer": "Giá trị thặng dư tuyệt đối được tạo ra bằng cách kéo dài ngày lao động (vượt quá thời gian lao động cần thiết) hoặc tăng cường độ lao động - tức tăng thời gian lao động trong thực tế. C gần đúng nhưng 'tăng thời gian lao động' không chuẩn bằng tăng cường độ lao động (B, D đúng nội dung; đáp án chuẩn của bộ đề là C - kéo dài ngày lao động hoặc tăng thời gian lao động).",
+      "image": null
+    },
+    {
+      "id": 114,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Giá trị thặng dư tương đối được tạo ra bởi những yếu tố nào?",
+      "options": {
+        "A": "Tăng năng suất lao động, làm rút ngắn thời gian lao động cần thiết.",
+        "B": "Tăng năng suất lao động, làm rút ngắn thời gian lao động cá biệt.",
+        "C": "Tăng sản lượng, làm rút ngắn thời gian lao động cần thiết.",
+        "D": "Tăng cường độ lao động, làm rút ngắn thời gian lao động cần thiết."
+      },
+      "answer": "A",
+      "explainAnswer": "Giá trị thặng dư tương đối được tạo ra bằng cách tăng năng suất lao động (trong ngành sản xuất tư liệu tiêu dùng) làm giảm giá trị sức lao động, rút ngắn thời gian lao động cần thiết, kéo dài tương đối thời gian lao động thặng dư. B sai vì thời gian cá biệt; C, D không phải biện pháp chủ yếu.",
+      "image": null
+    },
+    {
+      "id": 115,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Hàng hóa sức lao động mang yếu tố nào?",
+      "options": {
+        "A": "Tinh thần và tự do.",
+        "B": "Tinh thần và lịch sử.",
+        "C": "Tinh thần và vật chất.",
+        "D": "Vật chất và lịch sử."
+      },
+      "answer": "B",
+      "explainAnswer": "Hàng hóa sức lao động mang hai yếu tố: yếu tố tinh thần (lịch sử, văn hóa, trình độ...) và yếu tố lịch sử - vì giá trị sức lao động phụ thuộc hoàn cảnh lịch sử, trình độ văn minh của mỗi nước. A, C, D không phải cặp yếu tố đặc trưng của hàng hóa sức lao động.",
+      "image": null
+    },
+    {
+      "id": 118,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Khối lượng giá trị thặng dư (M) được tính bằng công thức nào?",
+      "options": {
+        "A": "M = mxV",
+        "B": "M = m'xV",
+        "C": "M = m'xK",
+        "D": "M = m'xC"
+      },
+      "answer": "B",
+      "explainAnswer": "Khối lượng giá trị thặng dư M được tính bằng công thức M = m' x V, trong đó m' là tỷ suất giá trị thặng dư và V là tổng tư bản khả biến. Các công thức khác (m x V, m' x K, m' x C) sai về ký hiệu (K là tổng tư bản, C là tư bản bất biến).",
+      "image": null
+    },
+    {
+      "id": 125,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Nguồn gốc chủ yếu của tích tụ tư bản là gì?",
+      "options": {
+        "A": "Giá trị trao đổi.",
+        "B": "Giá trị.",
+        "C": "Giá trị thặng dư.",
+        "D": "Vốn của các tư bản trong xã hội."
+      },
+      "answer": "C",
+      "explainAnswer": "Nguồn gốc chủ yếu của tích tụ tư bản là giá trị thặng dư (một phần giá trị thặng dư được tư bản hóa). Giá trị trao đổi, giá trị nói chung hay vốn xã hội không phải nguồn gốc trực tiếp của tích tụ tư bản.",
+      "image": null
+    },
+    {
+      "id": 126,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Nguồn gốc của tập trung tư bản là gì?",
+      "options": {
+        "A": "Các tư bản cá biệt có sẵn trong xã hội.",
+        "B": "Tư bản cá biệt của các nước.",
+        "C": "Các tư bản công nghiệp trong xã hội.",
+        "D": "Các tư bản thương nghiệp và công nghiệp trong xã hội."
+      },
+      "answer": "A",
+      "explainAnswer": "Nguồn gốc của tập trung tư bản là các tư bản cá biệt có sẵn trong xã hội hợp lại thành tư bản lớn hơn (qua sáp nhập, liên kết); nó không phụ thuộc vào quy mô của cải xã hội như tích tụ. B, C, D giới hạn sai phạm vi.",
+      "image": null
+    },
+    {
+      "id": 128,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Quy luật kinh tế cơ bản của chủ nghĩa tư bản là quy luật nào?",
+      "options": {
+        "A": "Quy luật giá trị.",
+        "B": "Quy luật giá trị thặng dư.",
+        "C": "Quy luật giá trị cạnh tranh.",
+        "D": "Quy luật giá trị lợi nhuận bình quân."
+      },
+      "answer": "B",
+      "explainAnswer": "Quy luật kinh tế cơ bản của CNTB là quy luật giá trị thặng dư - quy luật sản xuất giá trị thặng dư, động lực và mục đích của nền sản xuất TBCN. Quy luật giá trị là quy luật của sản xuất hàng hóa nói chung; cạnh tranh, lợi nhuận bình quân là các quy luật cụ thể hơn.",
+      "image": null
+    },
+    {
+      "id": 129,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Sức lao động là gì?",
+      "options": {
+        "A": "Toàn bộ sức trí lực tồn tại trong mỗi con người.",
+        "B": "Toàn bộ sức thể lực và trí lực tồn tại không có khả năng đem ra sử dụng.",
+        "C": "Toàn bộ sức thể lực tồn tại trong mỗi con người.",
+        "D": "Toàn bộ sức thể lực và trí lực tồn tại trong mỗi con người."
+      },
+      "answer": "D",
+      "explainAnswer": "Sức lao động là toàn bộ sức thể lực và trí lực tồn tại trong mỗi con người, được đem ra sử dụng trong quá trình sản xuất ra giá trị sử dụng. A thiếu thể lực; B sai vì không có khả năng sử dụng; C thiếu trí lực.",
+      "image": null
+    },
+    {
+      "id": 134,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Thế nào là tập trung tư bản?",
+      "options": {
+        "A": "Là quá trình liên kết, hợp nhất các tư bản xã hội trong xã hội thành một tư bản lớn hơn.",
+        "B": "Là quá trình liên kết, hợp nhất các tư bản tiền tệ trong xã hội thành một tư bản lớn hơn.",
+        "C": "Là quá trình liên kết, hợp nhất các tư bản cá biệt trong xã hội thành một tư bản lớn hơn.",
+        "D": "Là quá trình liên kết, hợp nhất các tư bản thương nghiệp trong xã hội thành một tư bản lớn hơn."
+      },
+      "answer": "C",
+      "explainAnswer": "Tập trung tư bản là quá trình liên kết, hợp nhất các tư bản cá biệt trong xã hội thành một tư bản lớn hơn (sáp nhập, hợp nhất các doanh nghiệp). A, B, D giới hạn sai đối tượng (tư bản xã hội, tiền tệ, thương nghiệp).",
+      "image": null
+    },
+    {
+      "id": 135,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Thế nào là tư bản khả biến?",
+      "options": {
+        "A": "Là giá trị tư liệu sản xuất, giá trị của nó được tăng lên sau quá trình sản xuất.",
+        "B": "Là giá trị sức lao động, giá trị của nó được tăng lên sau quá trình sản xuất.",
+        "C": "Là giá trị sức lao động, giá trị của nó giảm đi sau quá trình sản xuất.",
+        "D": "Là giá trị sức lao động, giá trị của nó không tăng lên sau quá trình sản xuất."
+      },
+      "answer": "B",
+      "explainAnswer": "Tư bản khả biến là bộ phận tư bản dùng mua sức lao động (v); giá trị của nó được tăng lên sau quá trình sản xuất vì sức lao động tạo ra giá trị mới lớn hơn. A là tư bản bất biến; C, D sai về sự tăng lên của giá trị.",
+      "image": null
+    },
+    {
+      "id": 137,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Tích tụ tư bản là gì?",
+      "options": {
+        "A": "Quá trình tăng quy mô của tư bản cá biệt bằng cách tư bản hóa một phần giá trị thặng dư.",
+        "B": "Quá trình giảm quy mô của tư bản xã hội bằng cách tư bản hóa một phần giá trị thặng dư.",
+        "C": "Quá trình tăng giảm quy mô của tư bản cá biệt bằng cách tư bản hóa một phần giá trị thặng dư.",
+        "D": "Quá trình tăng quy mô của tư bản xã hội bằng cách tư bản hóa một phần giá trị thặng dư."
+      },
+      "answer": "A",
+      "explainAnswer": "Tích tụ tư bản là quá trình tăng quy mô của tư bản cá biệt bằng cách tư bản hóa một phần giá trị thặng dư (biến giá trị thặng dư thành tư bản phụ thêm). B, C, D sai về đối tượng (tư bản xã hội) hoặc hướng thay đổi.",
+      "image": null
+    },
+    {
+      "id": 138,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Tiền công cơ bản được xác định theo hai hình thức nào?",
+      "options": {
+        "A": "Tiền công theo thời gian và tiền công theo lao động.",
+        "B": "Tiền công theo giờ và tiền công theo sản phẩm.",
+        "C": "Tiền công theo thời gian và tiền công theo sản phẩm.",
+        "D": "Tiền công theo tháng và tiền công theo sản phẩm."
+      },
+      "answer": "C",
+      "explainAnswer": "Hai hình thức tiền công cơ bản là tiền công theo thời gian và tiền công theo sản phẩm. Theo giờ, theo tháng chỉ là biến thể của tiền công theo thời gian; theo lao động không phải hình thức cơ bản.",
+      "image": null
+    },
+    {
+      "id": 139,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Tiền công danh nghĩa được biểu hiện như thế nào?",
+      "options": {
+        "A": "Biểu hiện ở số lượng hàng hóa mà người công nhân nhận được sau một thời gian làm việc.",
+        "B": "Biểu hiện ở số lượng hàng tiêu dùng mà người công nhân nhận được sau một thời gian làm việc.",
+        "C": "Biểu hiện ở số lượng tiền tệ mà người công nhân nhận được sau một thời gian làm việc.",
+        "D": "Biểu hiện ở chất lượng tiền tệ mà người công nhân nhận được sau một thời gian làm việc."
+      },
+      "answer": "C",
+      "explainAnswer": "Tiền công danh nghĩa là số tiền tệ mà người công nhân nhận được sau một thời gian làm việc nhất định (chưa tính đến giá cả tư liệu tiêu dùng). A, B mô tả tiền công thực tế; D không đúng.",
+      "image": null
+    },
+    {
+      "id": 140,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3&4",
+      "question": "Tiền công (tiền lương) tính theo thời gian là gì?",
+      "options": {
+        "A": "Tiền lương được trả căn cứ vào hiệu quả làm việc của người công nhân.",
+        "B": "Tiền lương được trả căn cứ vào năng suất làm việc của người công nhân.",
+        "C": "Tiền lương được trả căn cứ vào cường độ làm việc của người công nhân.",
+        "D": "Tiền lương được trả căn cứ vào thời gian làm việc của người công nhân."
+      },
+      "answer": "D",
+      "explainAnswer": "Tiền công theo thời gian được trả căn cứ vào thời gian làm việc của người công nhân (theo giờ, ngày, tuần, tháng). A, B, C nói về hiệu quả, năng suất, cường độ - không phải căn cứ của tiền công theo thời gian.",
+      "image": null
+    }
+  ]
+}

@@ -1,0 +1,757 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kinh tế chính trị Mác - Lênin - Chương 2",
+  "chapter": "Chương 2",
+  "totalQuestions": 50,
+  "questions": [
+    {
+      "id": 2,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Bản chất của tiền tệ là gì?",
+      "options": {
+        "A": "Tiền tệ phản ánh quan hệ kinh tế giữa người sản xuất hàng hoá với người tiêu dùng.",
+        "B": "Tiền tệ là một loại hàng hoá đặc biệt, được tách khỏi thế giới hàng hoá thông thường, đóng vai trò làm vật ngang giá cho các hàng hoá khác.",
+        "C": "Tiền tệ là một loại hàng hoá đóng vai trò làm vật ngang giá cho các hàng hoá khác.",
+        "D": "Tiền tệ một loại hàng hoá thể hiện lao động xã hội kết tinh trong hàng hoá."
+      },
+      "answer": "B",
+      "explainAnswer": "Tiền tệ là hàng hóa đặc biệt được tách khỏi thế giới hàng hóa để làm vật ngang giá chung cho mọi hàng hóa; đó là bản chất của tiền tệ. Phương án C thiếu tính chất 'đặc biệt' nên không đầy đủ, D nói về bản chất của giá trị, còn A chỉ nói về quan hệ trao đổi thông thường.",
+      "image": null
+    },
+    {
+      "id": 3,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Chất của giá trị (thực thể giá trị) hàng hóa là gì?",
+      "options": {
+        "A": "Là giá trị phản ánh quan hệ giữ người sản xuất với người tiêu dùng.",
+        "B": "Là giá trị được tạo ra thông qua trao đổi hàng hóa.",
+        "C": "Là lao động cụ thể kết tinh trong hàng hóa.",
+        "D": "Là lao động xã hội của người sản xuất hàng hóa kết tinh trong hàng hóa."
+      },
+      "answer": "D",
+      "explainAnswer": "Thực thể (chất) của giá trị hàng hóa chính là lao động xã hội của người sản xuất hàng hóa kết tinh trong hàng hóa. Lao động cụ thể tạo ra giá trị sử dụng chứ không tạo ra giá trị (C sai); giá trị không phải sản phẩm của trao đổi (B sai); A chỉ phản ánh quan hệ trao đổi, không phải thực thể của giá trị.",
+      "image": null
+    },
+    {
+      "id": 4,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Chỉ ra các chủ thể cơ bản trong nền kinh tế thị trường?",
+      "options": {
+        "A": "Người sản xuất, người tiêu dùng, người mua và người bán.",
+        "B": "Người sản xuất, người tiêu dùng, chủ thể trung gian và nhà nước.",
+        "C": "Người sản xuất, người tiêu dùng, nhà nước và thị trường.",
+        "D": "Người sản xuất, người tiêu dùng, nhà nước và người mua."
+      },
+      "answer": "B",
+      "explainAnswer": "Các chủ thể cơ bản của nền kinh tế thị trường gồm: người sản xuất, người tiêu dùng, các chủ thể trung gian (thương nhân, môi giới...) và nhà nước. Các phương án còn lại thiếu chủ thể trung gian hoặc thay thế bằng khái niệm không đúng (thị trường không phải chủ thể, người mua/người bán chỉ là vai trò cụ thể).",
+      "image": null
+    },
+    {
+      "id": 5,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Chỉ ra hai thuộc tính của hàng hóa?",
+      "options": {
+        "A": "Giá trị sử dụng và giá trị trao đổi.",
+        "B": "Giá trị sử dụng và giá trị cá biệt.",
+        "C": "Giá trị và giá trị trao đổi.",
+        "D": "Giá trị sử dụng và giá trị."
+      },
+      "answer": "D",
+      "explainAnswer": "Hàng hóa có hai thuộc tính là giá trị sử dụng và giá trị. Giá trị trao đổi chỉ là hình thức biểu hiện của giá trị, không phải thuộc tính thứ hai; do đó các phương án A, B, C đều nhầm lẫn giữa giá trị và giá trị trao đổi.",
+      "image": null
+    },
+    {
+      "id": 8,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Chỉ ra phương án trả lời KHÔNG đúng về điều kiện ra đời và tồn tại của sản xuất hàng hóa?",
+      "options": {
+        "A": "Có sự phân công lao động xã hội.",
+        "B": "Có sự tách biệt về kinh tế giữa các chủ thể sản xuất.",
+        "C": "Có sự xuất hiện giai cấp thống trị và giai cấp bị trị.",
+        "D": "Chế độ tư hữu về tư liệu sản xuất xuất hiện."
+      },
+      "answer": "C",
+      "explainAnswer": "Hai điều kiện ra đời và tồn tại của sản xuất hàng hóa là: (1) phân công lao động xã hội và (2) sự tách biệt về kinh tế giữa các chủ thể sản xuất (mà biểu hiện là chế độ tư hữu). Sự xuất hiện giai cấp thống trị và bị trị KHÔNG phải điều kiện của sản xuất hàng hóa nên là phương án sai cần chọn.",
+      "image": null
+    },
+    {
+      "id": 9,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Chỉ rõ sự tác động chủ yếu của quy luật giá trị trong nền sản xuất hàng hóa?",
+      "options": {
+        "A": "Làm cho xã hội giàu lên nhanh chóng.",
+        "B": "Kích thích sự phát triển của lực lượng sản xuất.",
+        "C": "Tự phát điều tiết sản xuất và lưu thông hàng hoá.",
+        "D": "Phân hoá người sản xuất thành người giàu, người nghèo."
+      },
+      "answer": "C",
+      "explainAnswer": "Tác động chủ yếu nhất của quy luật giá trị là tự phát điều tiết sản xuất và lưu thông hàng hóa (điều tiết phân bổ nguồn lực). Kích thích lực lượng sản xuất (B) và phân hóa giàu nghèo (D) cũng là tác động của quy luật giá trị nhưng không phải tác động chủ yếu; A không phải tác động của quy luật giá trị.",
+      "image": null
+    },
+    {
+      "id": 14,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Đặc trưng của sản xuất hàng hóa là gì?",
+      "options": {
+        "A": "Lao động của người sản xuất hàng hóa mang tính chất tư nhân.",
+        "B": "Sản xuất hàng hóa là sản xuất ra sản phẩm để người sản xuất ra nó tiêu dùng.",
+        "C": "Mục đích của sản xuất hàng hóa là giá trị sử dụng.",
+        "D": "Sản xuất hàng hóa là sản xuất ra sản phẩm để trao đổi , mua bán."
+      },
+      "answer": "D",
+      "explainAnswer": "Đặc trưng cơ bản của sản xuất hàng hóa là sản xuất ra sản phẩm để trao đổi, mua bán chứ không phải để tự tiêu dùng. B mô tả sản xuất tự cung tự cấp; C sai vì mục đích của SXHH là giá trị (giá trị sử dụng chỉ là phương tiện); A nói về tính hai mặt của lao động, không phải đặc trưng của SXHH.",
+      "image": null
+    },
+    {
+      "id": 16,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Điểm giống nhau giữa tăng năng suất lao động và tăng cường độ lao động là gì?",
+      "options": {
+        "A": "Đều gắn với tiến bộ kỹ thuật - công nghệ.",
+        "B": "Đều làm giảm giá trị của một đơn vị hàng hoá.",
+        "C": "Đều làm tăng thêm lượng sản phẩm được sản xuất ra trong một đơn vị thời gian.",
+        "D": "Đều làm tăng lượng lao động hao phí trong một đơn vị thời gian."
+      },
+      "answer": "C",
+      "explainAnswer": "Điểm giống nhau giữa tăng năng suất lao động và tăng cường độ lao động là đều làm tăng lượng sản phẩm sản xuất ra trong một đơn vị thời gian. Chỉ tăng năng suất lao động mới làm giảm giá trị đơn vị hàng hóa (B sai) và gắn với tiến bộ kỹ thuật (A sai); tăng cường độ lao động làm tăng hao phí lao động trong một đơn vị thời gian (D chỉ đúng cho cường độ).",
+      "image": null
+    },
+    {
+      "id": 17,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Điều kiện ra đời và tồn tại của sản xuất hàng hóa là gì?",
+      "options": {
+        "A": "Có sự xuất hiện giai cấp thống trị và chế độ tư hữu về tư liệu sản xuất.",
+        "B": "Phân công lao động xã hội và sự tách biệt về kinh tế giữa các chủ thể sản xuất.",
+        "C": "Sự phân công lao động trong xã hội và trong các gia đình xuất hiện.",
+        "D": "Sự tách biệt tương đối về kinh tế giữa các chủ thể trong quá trình sản xuất."
+      },
+      "answer": "B",
+      "explainAnswer": "Sản xuất hàng hóa ra đời và tồn tại khi có hai điều kiện: phân công lao động xã hội và sự tách biệt tương đối về kinh tế giữa những người sản xuất. B nêu đầy đủ hai điều kiện đó. A đúng về chế độ tư hữu nhưng thêm giai cấp thống trị là sai; C, D chỉ nêu một trong hai điều kiện.",
+      "image": null
+    },
+    {
+      "id": 21,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Giá trị sử dụng của hàng hóa là gì?",
+      "options": {
+        "A": "Là công dụng của hàng hóa, mang tính hữu ích cho con người.",
+        "B": "Là hàng hóa có tính hữu ích và mang thuộc tính tự nhiên.",
+        "C": "Công dụng của hàng hóa, có tính hữu ích và mang thuộc tính tự nhiên.",
+        "D": "Là vật phẩm mang tính hữu ích cho con người khi sử dụng."
+      },
+      "answer": "C",
+      "explainAnswer": "Giá trị sử dụng của hàng hóa là công dụng của hàng hóa, có tính hữu ích và mang thuộc tính tự nhiên (do lao động cụ thể tạo ra). C diễn đạt đầy đủ nhất; A, D thiếu thuộc tính tự nhiên, B lẫn lộn hàng hóa với giá trị sử dụng.",
+      "image": null
+    },
+    {
+      "id": 22,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Hàng hóa là gì?",
+      "options": {
+        "A": "Là sản phẩm của lao động thỏa mãn được nhu cầu tiêu dùng của con người thông qua trao đổi mua, bán.",
+        "B": "Là những vật phẩm trên thị trường luôn khan hiếm.",
+        "C": "Là những vật phẩm có giá trị cao nhằm thỏa mãn nhu cầu của người sản xuất.",
+        "D": "Là sản phẩm của lao động có thể thỏa mãn nhu cầu tiêu dùng của con người."
+      },
+      "answer": "A",
+      "explainAnswer": "Hàng hóa là sản phẩm của lao động có thể thỏa mãn nhu cầu của con người và được sản xuất ra để trao đổi, mua bán. A nêu đầy đủ hai yếu tố (sản phẩm của lao động + trao đổi mua bán). B, C sai vì khan hiếm hay giá trị cao không phải bản chất; D thiếu điều kiện trao đổi, mua bán.",
+      "image": null
+    },
+    {
+      "id": 23,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Hình thái giá trị giản đơn hay ngẫu nhiên biểu hiện như thế nào?",
+      "options": {
+        "A": "Trao đổi mang tính ngẫu nhiên, lấy tiền tệ làm trung gian.",
+        "B": "Giá trị của một hàng hóa thể hiện ở nhiều hàng hóa khác nhau.",
+        "C": "Trao đổi trực tiếp hàng hóa này lấy hàng hóa khác.",
+        "D": "Trao đổi trực tiếp một hàng hóa này lấy nhiều hàng hóa khác."
+      },
+      "answer": "C",
+      "explainAnswer": "Hình thái giá trị giản đơn hay ngẫu nhiên là hình thức trao đổi trực tiếp hàng hóa này lấy hàng hóa khác (ví dụ 1m vải = 5kg thóc), chưa có tiền tệ làm trung gian. A sai vì có tiền tệ trung gian; B là hình thái giá trị mở rộng; D là trao đổi một hàng hóa với nhiều hàng hóa thuộc hình thái mở rộng.",
+      "image": null
+    },
+    {
+      "id": 25,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Kết quả của lao động cụ thể là cái gì?",
+      "options": {
+        "A": "Là giá trị trao đổi của hàng hóa.",
+        "B": "Là giá trị của vật phẩm.",
+        "C": "Là giá trị của hàng hóa.",
+        "D": "Là giá trị sử dụng của hàng hóa."
+      },
+      "answer": "D",
+      "explainAnswer": "Kết quả của lao động cụ thể là giá trị sử dụng của hàng hóa, vì lao động cụ thể (với mục đích, phương pháp, công cụ riêng) tạo ra sản phẩm có công dụng nhất định. Giá trị và giá trị trao đổi là kết quả của lao động trừu tượng, nên A, B, C đều sai.",
+      "image": null
+    },
+    {
+      "id": 26,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Khi nào tiền tệ ra đời?",
+      "options": {
+        "A": "Khi không còn quan hệ trao đổi trực tiếp, có một thứ hàng làm trung gian trong trao đổi.",
+        "B": "Khi sản xuất và trao đổi đã phát triển.",
+        "C": "Khi nhu cầu trao đổi vượt ra khỏi phạm vi quốc gia.",
+        "D": "Khi vật ngang giá chung được cố định ở vàng, bạc."
+      },
+      "answer": "D",
+      "explainAnswer": "Tiền tệ ra đời khi vật ngang giá chung được cố định ở vàng, bạc - đó là giai đoạn cuối cùng trong quá trình phát triển các hình thái giá trị. A, B, C chỉ là tiền đề của sự ra đời tiền tệ (trao đổi trực tiếp, sản xuất phát triển, trao đổi vượt biên giới) chứ chưa phải là thời điểm tiền tệ chính thức xuất hiện.",
+      "image": null
+    },
+    {
+      "id": 35,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "\"Lao động là cha, còn đất là mẹ của mọi của cải\". Khái niệm lao động trong câu nói này là lao động nào?",
+      "options": {
+        "A": "Lao động giản đơn.",
+        "B": "Lao động phức tạp.",
+        "C": "Lao động trừu tượng.",
+        "D": "Lao động cụ thể."
+      },
+      "answer": "D",
+      "explainAnswer": "Câu nói 'Lao động là cha, còn đất là mẹ của mọi của cải' nói về lao động cụ thể - lao động tạo ra của cải vật chất, giá trị sử dụng gắn với tự nhiên. Lao động trừu tượng tạo ra giá trị hàng hóa; lao động giản đơn/phức tạp là cách phân loại theo tính chất phức tạp của lao động trừu tượng, không phù hợp.",
+      "image": null
+    },
+    {
+      "id": 36,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Lao động trừu tượng là nguồn gốc của cái gì?",
+      "options": {
+        "A": "Của cải",
+        "B": "Giá trị trao đổi",
+        "C": "Giá trị hàng hóa",
+        "D": "Giá trị sử dụng"
+      },
+      "answer": "C",
+      "explainAnswer": "Lao động trừu tượng là nguồn gốc của giá trị hàng hóa (hao phí sức lao động nói chung kết tinh tạo thành giá trị). Lao động cụ thể tạo ra giá trị sử dụng và của cải (A, D sai). Giá trị trao đổi chỉ là hình thức biểu hiện của giá trị (B sai).",
+      "image": null
+    },
+    {
+      "id": 37,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Lượng giá trị của đơn vị hàng hóa thay đổi như thế nào?",
+      "options": {
+        "A": "Tỷ lệ thuận với năng suất lao động, không phụ thuộc vào cường độ lao động.",
+        "B": "Tỷ lệ thuận với cường độ lao động và năng suất lao động.",
+        "C": "Tỷ lệ nghịch với năng suất lao động, không phụ thuộc vào cường độ lao động.",
+        "D": "Tỷ lệ thuận với năng suất lao động, phu thuộc vào tăng năng suất lao động."
+      },
+      "answer": "C",
+      "explainAnswer": "Lượng giá trị của đơn vị hàng hóa tỷ lệ nghịch với năng suất lao động: năng suất lao động tăng thì thời gian lao động xã hội cần thiết để sản xuất ra một đơn vị hàng hóa giảm, giá trị một đơn vị giảm. Lượng giá trị không phụ thuộc vào cường độ lao động vì tăng cường độ chỉ làm tăng tổng sản phẩm trong cùng thời gian, giá trị mỗi đơn vị không đổi.",
+      "image": null
+    },
+    {
+      "id": 38,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Lượng giá trị xã hội của hàng hóa được đo bởi yếu tố nào?",
+      "options": {
+        "A": "Hao phí vật tư kỹ thuật.",
+        "B": "Hao phí lao động sống của người sản xuất hàng hóa.",
+        "C": "Hao phí lao động cần thiết của người sản xuất hang hóa.",
+        "D": "Thời gian lao động xã hội cần thiết."
+      },
+      "answer": "D",
+      "explainAnswer": "Lượng giá trị xã hội của hàng hóa được đo bằng thời gian lao động xã hội cần thiết - thời gian lao động trung bình của xã hội với trình độ thành thạo và điều kiện sản xuất bình thường. Hao phí vật tư kỹ thuật (A), hao phí lao động sống (B) hay lao động cá biệt (C) không phải thước đo lượng giá trị xã hội.",
+      "image": null
+    },
+    {
+      "id": 41,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Mâu thuẫn cơ bản của sản xuất hàng hoá là gì?",
+      "options": {
+        "A": "Là mâu thuẫn giữa lao động cụ thể và lao động trừu tượng.",
+        "B": "Là mâu thuẫn giữa giá trị sử dụng và giá trị.",
+        "C": "Là mâu thuẫn giữa lao động tư nhân và lao động xã hội.",
+        "D": "Là mâu thuẫn giữa giá trị và giá cả của hàng hoá."
+      },
+      "answer": "C",
+      "explainAnswer": "Mâu thuẫn cơ bản của sản xuất hàng hóa là mâu thuẫn giữa lao động tư nhân và lao động xã hội: lao động của người sản xuất vừa là lao động tư nhân (vì sản xuất độc lập, tự quyết) vừa là lao động xã hội (vì sản phẩm cho xã hội), và mâu thuẫn đó chỉ được giải quyết thông qua trao đổi. Mâu thuẫn giữa lao động cụ thể - trừu tượng (A) và giữa GTSD - giá trị (B) là mâu thuẫn nội tại của hàng hóa, phản ánh mâu thuẫn cơ bản chứ không phải bản thân nó.",
+      "image": null
+    },
+    {
+      "id": 45,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Nhà nước có vai trò như thế nào trong nền kinh tế thị trường?",
+      "options": {
+        "A": "Ổn định nền kinh tế thị trường.",
+        "B": "Điều tiết vĩ mô nền kinh tế.",
+        "C": "Định hướng phát triển nền kinh tế.",
+        "D": "Giảm bớt sự bất bình đẳng trong nền kinh tế."
+      },
+      "answer": "B",
+      "explainAnswer": "Trong nền kinh tế thị trường, nhà nước đóng vai trò điều tiết vĩ mô nền kinh tế (là chủ thể điều tiết nền kinh tế, khắc phục khuyết tật của thị trường). Ổn định nền kinh tế (A), định hướng phát triển (C), giảm bất bình đẳng (D) chỉ là những nội dung cụ thể thuộc vai trò điều tiết vĩ mô, không phải cách diễn đạt khái quát đầy đủ nhất.",
+      "image": null
+    },
+    {
+      "id": 46,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Những chức năng nào của tiền tệ đòi hỏi phải có tiền vàng?",
+      "options": {
+        "A": "Tất cả 5 chức năng của tiền tệ.",
+        "B": "Chỉ có chức năng thước đo giá trị.",
+        "C": "Chức năng thước đo giá trị; chức năng tích luỹ, cất trữ.",
+        "D": "Chức năng thước đo giá trị; chức năng tích luỹ, cất trữ và chức năng tiền tệ thế giới."
+      },
+      "answer": "D",
+      "explainAnswer": "Ba chức năng của tiền tệ đòi hỏi tiền vàng là: thước đo giá trị, tích lũy - cất trữ và tiền tệ thế giới, vì vàng là đại biểu cho giá trị thực. Các chức năng phương tiện lưu thông và phương tiện thanh toán có thể dùng tiền dấu hiệu (tiền giấy).",
+      "image": null
+    },
+    {
+      "id": 48,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Phân phối trong lao động căn cứ vào số lượng, chất lượng lao động làm cơ sở, chất lượng lao động biểu hiện ở đâu?",
+      "options": {
+        "A": "năng suất lao động",
+        "B": "cường độ lao động",
+        "C": "thời gian lao động",
+        "D": "tất cả đáp án trên đều đúng"
+      },
+      "answer": "A",
+      "explainAnswer": "Trong phân phối theo lao động, chất lượng lao động biểu hiện ở năng suất lao động - thể hiện trình độ lành nghề, mức độ phức tạp và hiệu quả của lao động. Cường độ lao động và thời gian lao động phản ánh số lượng lao động, không phải chất lượng; D sai vì không phải 'tất cả đều đúng'.",
+      "image": null
+    },
+    {
+      "id": 49,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Phương hướng cơ bản và lâu dài để tăng sản phẩm cho xã hội là gì?",
+      "options": {
+        "A": "Tăng cường độ lao động.",
+        "B": "Tăng năng suất lao động.",
+        "C": "Kéo dài thời gian lao động.",
+        "D": "Mở rộng quy mô sản xuất và nâng cao trình độ khoa học công nghệ."
+      },
+      "answer": "B",
+      "explainAnswer": "Phương hướng cơ bản, lâu dài để tăng sản phẩm cho xã hội là tăng năng suất lao động vì nó làm tăng sản phẩm mà không tăng hao phí, đồng thời làm giảm giá trị đơn vị hàng hóa. Tăng cường độ lao động (A) và kéo dài thời gian (C) bị giới hạn bởi thể lực con người; D là biện pháp cụ thể, không khái quát bằng B.",
+      "image": null
+    },
+    {
+      "id": 51,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Quan hệ giữa giá cả và giá trị như thế nào?",
+      "options": {
+        "A": "Giá cả là hình thức biểu hiện bằng tiền của giá trị.",
+        "B": "Giá trị là yếu tố chủ yếu quy định giá cả.",
+        "C": "Giá cả hàng hoá phụ thuộc vào giá trị của vàng, bạc.",
+        "D": "Giá cả là cơ sở của giá trị."
+      },
+      "answer": "A",
+      "explainAnswer": "Giá cả là hình thức biểu hiện bằng tiền của giá trị; khi cung cầu, cạnh tranh biến động thì giá cả lên xuống xoay quanh giá trị. Do đó A đúng; B là quan hệ ngược (giá trị quy định giá cả nhưng câu hỏi là 'quan hệ giữa giá cả và giá trị'); C chỉ là một nhân tố ảnh hưởng; D sai vì giá trị là cơ sở của giá cả.",
+      "image": null
+    },
+    {
+      "id": 52,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Quan hệ tỷ lệ về lượng trong trao đổi giữa các hàng hóa với nhau do cái gì quy định?",
+      "options": {
+        "A": "Do giá trị nội tại của hàng hóa.",
+        "B": "Do quan hệ cung - cầu.",
+        "C": "Do tính hữu ích của hàng hóa.",
+        "D": "Do ngẫu nhiên."
+      },
+      "answer": "A",
+      "explainAnswer": "Quan hệ tỷ lệ về lượng trong trao đổi giữa các hàng hóa do giá trị nội tại (lượng lao động xã hội cần thiết kết tinh) của chúng quy định. Cung - cầu (B) và tính hữu ích (C) chỉ ảnh hưởng đến sự biến động của tỷ lệ trao đổi xung quanh giá trị; D sai vì trao đổi không phải ngẫu nhiên.",
+      "image": null
+    },
+    {
+      "id": 53,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Quy luật căn bản của sản xuất và lưu thông hàng hoá là quy luật nào?",
+      "options": {
+        "A": "Quy luật giá trị.",
+        "B": "Quy luật lưu thông tiền tệ.",
+        "C": "Quy luật cạnh tranh.",
+        "D": "Quy luật cung - cầu."
+      },
+      "answer": "A",
+      "explainAnswer": "Quy luật căn bản của sản xuất và lưu thông hàng hóa là quy luật giá trị: sản xuất và trao đổi phải dựa trên hao phí lao động xã hội cần thiết. Các quy luật lưu thông tiền tệ, cạnh tranh, cung - cầu đều là quy luật phái sinh hoặc biểu hiện của quy luật giá trị.",
+      "image": null
+    },
+    {
+      "id": 54,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Quy luật giá trị là gì?",
+      "options": {
+        "A": "Là quy luật riêng của chủ nghĩa tư bản.",
+        "B": "Là quy luật kinh tế chung của mọi xã hội.",
+        "C": "Là quy luật kinh tế của thời kỳ quá độ lên chủ nghĩa xã hội.",
+        "D": "Là quy luật kinh tế cơ bản của sản xuất hàng hóa."
+      },
+      "answer": "D",
+      "explainAnswer": "Quy luật giá trị là quy luật kinh tế cơ bản của sản xuất hàng hóa - nó vạch ra bản chất, cơ chế vận động của nền sản xuất hàng hóa. Nó không phải quy luật riêng của CNTB (A), không phải quy luật chung của mọi xã hội (B) vì sản xuất hàng hóa chỉ ra đời trong những điều kiện nhất định, cũng không chỉ tồn tại ở thời kỳ quá độ (C).",
+      "image": null
+    },
+    {
+      "id": 55,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Quy luật kinh tế cơ bản trong nền kinh tế thị trường là quy luật nào?",
+      "options": {
+        "A": "Quy luật cạnh tranh.",
+        "B": "Quy luật cung cầu.",
+        "C": "Quy luật giá trị.",
+        "D": "Quy luật lưu thông tiền tệ."
+      },
+      "answer": "C",
+      "explainAnswer": "Quy luật kinh tế cơ bản của nền kinh tế thị trường (sản xuất hàng hóa) là quy luật giá trị - quy luật điều tiết sản xuất và lưu thông hàng hóa. Quy luật cạnh tranh, cung cầu, lưu thông tiền tệ chỉ là các quy luật kinh tế cụ thể, phản ánh biểu hiện của quy luật giá trị.",
+      "image": null
+    },
+    {
+      "id": 56,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Quy luật lưu thông tiền tệ phản ánh điều gì?",
+      "options": {
+        "A": "Phản ánh mối quan hệ giữa cung và cầu.",
+        "B": "Phản ánh số lượng tiền cần cho lưu thông trong mỗi thời kỳ nhất định.",
+        "C": "Phản ánh mối quan hệ giữa người sản xuất và người tiêu dùng.",
+        "D": "Phản ánh mối quan hệ giữa người mua và người bán."
+      },
+      "answer": "D",
+      "explainAnswer": "Về bản chất, quy luật lưu thông tiền tệ phản ánh mối quan hệ giữa người mua và người bán trong lưu thông hàng hóa, quy định lượng tiền cần thiết cho lưu thông. (Lưu ý: đáp án của bộ đề giữ nguyên theo nguồn; về mặt lý thuyết chuẩn, quy luật này xác định số lượng tiền cần cho lưu thông trong mỗi thời kỳ - phương án B, nhưng không đổi đáp án theo yêu cầu bảo toàn nguồn.)",
+      "image": null
+    },
+    {
+      "id": 57,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Sản xuất hàng hóa là kiểu tổ chức sản xuất ra sản phẩm nhằm mục đích gì?",
+      "options": {
+        "A": "Để người sản xuất sử dụng.",
+        "B": "Để đưa vào tiêu dùng trong xã hội.",
+        "C": "Để trao đổi, mua bán trên thị trường.",
+        "D": "Để cho, biếu, tặng mọi người."
+      },
+      "answer": "C",
+      "explainAnswer": "Sản xuất hàng hóa là kiểu tổ chức sản xuất ra sản phẩm để trao đổi, mua bán trên thị trường nhằm thỏa mãn nhu cầu của người khác và thu lợi. A là sản xuất tự cung tự cấp; B, D không phải mục đích của sản xuất hàng hóa.",
+      "image": null
+    },
+    {
+      "id": 58,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Sinh viên có vai trò chủ yếu gì trong nền kinh tế thị trường?",
+      "options": {
+        "A": "Là người quyết định hành vi mua sắm trên thị trường.",
+        "B": "Là những người chuyên hoạt động trên lĩnh vực lưu thông.",
+        "C": "Là người quyết định giá cả của hàng hóa trên thị trường.",
+        "D": "Là cầu nối giữa người sản xuất và kinh doanh."
+      },
+      "answer": "A",
+      "explainAnswer": "Trong nền kinh tế thị trường, mọi người dân nói chung và sinh viên nói riêng đều là người tiêu dùng - người quyết định hành vi mua sắm trên thị trường (vai trò chủ yếu của họ với tư cách chủ thể tiêu dùng). B, C, D mô tả vai trò của chủ thể trung gian, nhà sản xuất định giá - không phải vai trò chủ yếu của sinh viên.",
+      "image": null
+    },
+    {
+      "id": 59,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Số lượng giá trị sử dụng của hàng hóa phụ thuộc vào những yếu tố nào?",
+      "options": {
+        "A": "Chuyên môn hóa sản xuất.",
+        "B": "Những điều kiện tự nhiên.",
+        "C": "Mong muốn của người tiêu dùng.",
+        "D": "Trình độ phát triển của khoa học công nghệ."
+      },
+      "answer": "D",
+      "explainAnswer": "Số lượng giá trị sử dụng của hàng hóa phụ thuộc chủ yếu vào trình độ phát triển của khoa học công nghệ - vì nó quyết định khả năng phát hiện, chế biến, tạo ra nhiều công dụng mới của sản phẩm. Chuyên môn hóa (A), điều kiện tự nhiên (B) ảnh hưởng nhưng không phải yếu tố quyết định; C sai vì giá trị sử dụng là thuộc tính khách quan của hàng hóa.",
+      "image": null
+    },
+    {
+      "id": 60,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Tác dụng điều tiết sản xuất và lưu thông hàng hoá của quy luật giá trị có nghĩa là thế nào?",
+      "options": {
+        "A": "Nếu cung nhỏ hơn cầu thì giá cả sẽ cao hơn giá trị, lợi nhuận thu được sẽ nhiều, lao động xã hội được thu hút, quy mô sản xuất được mở rộng.",
+        "B": "Nếu cung nhỏ hơn cầu thì giá cả sẽ thấp hơn giá trị, lợi nhuận thu được sẽ nhiều, lao động xã hội được thu hút, quy mô sản xuất được mở rộng.",
+        "C": "Hàng hoá được lưu chuyển từ thị trường có giá cả cao đến thị trường có giá cả thấp.",
+        "D": "Nếu cung lớn hơn cầu thì giá cả sẽ cao hơn giá trị, lợi nhuận sẽ tăng, lao động xã hội được mở rộng."
+      },
+      "answer": "A",
+      "explainAnswer": "Tác dụng điều tiết của quy luật giá trị: khi cung nhỏ hơn cầu, giá cả cao hơn giá trị, lợi nhuận nhiều nên thu hút lao động và mở rộng sản xuất; khi cung lớn hơn cầu thì ngược lại. A diễn đạt đúng cơ chế đó. B, D đảo ngược quan hệ cung cầu - giá cả; C sai vì hàng hóa lưu chuyển từ nơi giá thấp đến nơi giá cao.",
+      "image": null
+    },
+    {
+      "id": 61,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Theo nguyên tắc ngang giá, khi nào hai hàng hóa có thể trao đổi được với nhau?",
+      "options": {
+        "A": "Có giá trị sử dụng giống nhau.",
+        "B": "Cùng do lao động của con người tạo ra.",
+        "C": "Có lượng lao động xã hội hao phí để sản xuất ra như nhau.",
+        "D": "Cùng hao phí máy móc trang thiết bị."
+      },
+      "answer": "C",
+      "explainAnswer": "Theo nguyên tắc ngang giá, hai hàng hóa trao đổi được với nhau khi có lượng lao động xã hội hao phí (thời gian lao động xã hội cần thiết) để sản xuất ra chúng bằng nhau - cơ sở là giá trị. Giá trị sử dụng giống nhau (A) không cần thiết; B, D không phải cơ sở của trao đổi.",
+      "image": null
+    },
+    {
+      "id": 62,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Thế nào là lao động cụ thể?",
+      "options": {
+        "A": "Là những lao động có thể quan sát được, nhìn thấy được.",
+        "B": "Là những lao động ngành nghề riêng biệt.",
+        "C": "Là những lao động ngành nghề cụ thể, có mục đích, đối tượng, thao tác và kết quả riêng.",
+        "D": "Là hoạt động riêng biệt và có mục đích riêng của con người."
+      },
+      "answer": "C",
+      "explainAnswer": "Lao động cụ thể là lao động của những ngành nghề cụ thể, có mục đích, đối tượng, phương pháp, công cụ và kết quả riêng (thợ may, thợ mộc...). A, B, D chỉ mô tả một khía cạnh; C nêu đầy đủ các yếu tố tạo nên lao động cụ thể.",
+      "image": null
+    },
+    {
+      "id": 63,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Thế nào là năng suất lao động?",
+      "options": {
+        "A": "Là hiệu quả của lao động cụ thể.",
+        "B": "Là số lượng sản phẩm sản xuất ra trong một đơn vị thời gian.",
+        "C": "Là hiệu quả của lao động trừu tượng.",
+        "D": "Là khái niệm gắn liền với hoạt động lao động cụ thể."
+      },
+      "answer": "B",
+      "explainAnswer": "Năng suất lao động là số lượng sản phẩm sản xuất ra trong một đơn vị thời gian (hoặc thời gian để sản xuất một đơn vị sản phẩm). A, C, D mô tả khái niệm liên quan nhưng không phải định nghĩa chuẩn của năng suất lao động.",
+      "image": null
+    },
+    {
+      "id": 64,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Thế nào là nền sản xuất tự cung, tự cấp?",
+      "options": {
+        "A": "Là một kiểu tổ chức kinh tế mà quá trình tái sản xuất chỉ gồm hai khâu: sản xuất - tiêu dùng.",
+        "B": "Là một kiểu tổ chức kinh tế trong đó những sản phẩm được sản xuất ra nhằm mục đích thỏa mãn nhu cầu tiêu dùng của xã hội.",
+        "C": "Là một kiểu tổ chức kinh tế trong đó những sản phẩm được sản xuất ra nhằm mục đích thỏa mãn nhu cầu của con người.",
+        "D": "Là một kiểu tổ chức kinh tế mà quá trình tái sản xuất gồm ba khâu: sản xuất - trao đổi - tiêu dùng."
+      },
+      "answer": "A",
+      "explainAnswer": "Nền sản xuất tự cung tự cấp là kiểu tổ chức kinh tế mà sản phẩm do người sản xuất tự tiêu dùng, quá trình tái sản xuất chỉ gồm hai khâu sản xuất - tiêu dùng (không có trao đổi). B, C nói về thỏa mãn nhu cầu xã hội/con người nói chung; D có thêm khâu trao đổi - đó là đặc trưng của sản xuất hàng hóa.",
+      "image": null
+    },
+    {
+      "id": 65,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Thế nào là sự phân công lao động xã hội?",
+      "options": {
+        "A": "Là sự phân công về lao động diễn ra trong đơn vị sản xuất.",
+        "B": "Là sự phân công về lao động, hình thành những ngành, nghề sản xuất khác nhau.",
+        "C": "Là chia nhỏ quá trình sản xuất, hình thành những ngành sản xuất khác nhau.",
+        "D": "Là sự phân công về lao động đảm bảo quá trình sản xuất đều gắn với thị trường."
+      },
+      "answer": "B",
+      "explainAnswer": "Phân công lao động xã hội là sự phân chia lao động trong xã hội thành các ngành, nghề sản xuất khác nhau, tạo ra sự chuyên môn hóa sản xuất. A nói về phân công trong nội bộ đơn vị; C, D không chính xác bằng B.",
+      "image": null
+    },
+    {
+      "id": 66,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Thế nào là thời gian lao động xã hội cần thiết?",
+      "options": {
+        "A": "Là khoảng thời gian sản xuất của tuyệt đại bộ phận hàng hoá.",
+        "B": "Là khoảng thời gian sản xuất ra vàng, bạc.",
+        "C": "Là khoảng thời gian do người có trình độ chuyên môn cao quyết định.",
+        "D": "Là khoảng thời gian để sản xuất ra một loại hàng hoá trong điều kiện trình độ kỹ thuật và cường độ lao động trung bình."
+      },
+      "answer": "D",
+      "explainAnswer": "Thời gian lao động xã hội cần thiết là thời gian để sản xuất ra một hàng hóa trong điều kiện trình độ kỹ thuật, trình độ thành thạo và cường độ lao động trung bình của xã hội. A quá mơ hồ; B sai (không riêng vàng bạc); C sai vì không do người có trình độ cao quyết định.",
+      "image": null
+    },
+    {
+      "id": 67,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Thị trường có vai trò gì?",
+      "options": {
+        "A": "Thực hiện giá trị.",
+        "B": "Kích thích sáng tạo đối với người lao động.",
+        "C": "Gắn kết nền kinh tế.",
+        "D": "Phân bố nguồn lực lao động."
+      },
+      "answer": "C",
+      "explainAnswer": "Thị trường có vai trò gắn kết nền kinh tế thành một chỉnh thể thống nhất thông qua trao đổi hàng hóa giữa người sản xuất và người tiêu dùng. Thực hiện giá trị (A), kích thích sáng tạo (B), phân bố nguồn lực (D) là các vai trò khác của thị trường, không phải 'gắn kết nền kinh tế' theo đáp án bộ đề.",
+      "image": null
+    },
+    {
+      "id": 68,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Tiền tệ có mấy chức năng?",
+      "options": {
+        "A": "Một chức năng.",
+        "B": "Ba chức năng.",
+        "C": "Năm chức năng.",
+        "D": "Bốn chức năng."
+      },
+      "answer": "C",
+      "explainAnswer": "Tiền tệ có 5 chức năng: thước đo giá trị, phương tiện lưu thông, phương tiện cất trữ (tích lũy), phương tiện thanh toán và tiền tệ thế giới. Các phương án khác không đúng với số chức năng của tiền tệ (có thể gộp cất trữ nhưng giáo trình dùng 5).",
+      "image": null
+    },
+    {
+      "id": 69,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Tiền tệ có nguồn gốc từ đâu?",
+      "options": {
+        "A": "Sự phân công lao động xã hội.",
+        "B": "Các điều kiện tự nhiên.",
+        "C": "Các ngân hàng trung ương.",
+        "D": "Sự phát triển lâu dài của sản xuất và trao đổi hàng hóa."
+      },
+      "answer": "D",
+      "explainAnswer": "Tiền tệ có nguồn gốc từ quá trình phát triển lâu dài của sản xuất và trao đổi hàng hóa: nó ra đời khi vật ngang giá chung được cố định ở vàng bạc. Phân công lao động xã hội (A) là điều kiện ra đời của sản xuất hàng hóa; C, D không phải nguồn gốc của tiền tệ.",
+      "image": null
+    },
+    {
+      "id": 70,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Tính chất hai mặt của lao động sản xuất hàng hóa là gì?",
+      "options": {
+        "A": "Lao động giản đơn và lao động phức tạp.",
+        "B": "Lao động quá khứ và lao động sống.",
+        "C": "Lao động cụ thể và lao động trừu tượng.",
+        "D": "Lao động tư nhân và lao động xã hội."
+      },
+      "answer": "C",
+      "explainAnswer": "Tính chất hai mặt của lao động sản xuất hàng hóa là lao động cụ thể (tạo ra giá trị sử dụng) và lao động trừu tượng (tạo ra giá trị). Giản đơn - phức tạp (A) là mức độ của lao động trừu tượng; quá khứ - sống (B) là cách phân loại khác; tư nhân - xã hội (D) là tính chất của lao động, không phải tính hai mặt.",
+      "image": null
+    },
+    {
+      "id": 71,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "\"Tiền tệ là bánh xe vĩ đại của lưu thông\". Câu nói này ĐÚNG hay KHÔNG đúng?",
+      "options": {
+        "A": "Là câu nói KHÔNG đúng.",
+        "B": "Là câu nói ĐÚNG.",
+        "C": "Là câu nói ĐÚNG và đầy đủ.",
+        "D": "Là câu nói KHÔNG có căn cứ."
+      },
+      "answer": "B",
+      "explainAnswer": "Câu nói 'Tiền tệ là bánh xe vĩ đại của lưu thông' (của A.Xmít) là câu nói ĐÚNG vì tiền tệ giữ vai trò trung gian, thúc đẩy lưu thông hàng hóa; tuy nhiên nó chỉ nêu một chức năng - phương tiện lưu thông - nên chưa đầy đủ (C sai). B là đáp án vì câu nói đúng về vai trò của tiền tệ trong lưu thông.",
+      "image": null
+    },
+    {
+      "id": 72,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Trong những trường hợp sau đây của hao phí lao động cá biệt, trường hợp nào KHÔNG đáp ứng yêu cầu của quy luật giá trị?",
+      "options": {
+        "A": "Hao phí lao động cá biệt nhỏ hơn hao phí lao động xã hội cần thiết.",
+        "B": "Hao phí lao động cá biệt nhỏ hơn hoặc bằng hao phí lao động xã hội cần thiết.",
+        "C": "Hao phí lao động cá biệt bằng hao phí lao động xã hội cần thiết.",
+        "D": "Hao phí lao động cá biệt lớn hơn hao phí lao động xã hội cần thiết."
+      },
+      "answer": "D",
+      "explainAnswer": "Quy luật giá trị yêu cầu hao phí lao động cá biệt phải phù hợp (bằng hoặc nhỏ hơn) hao phí lao động xã hội cần thiết. Khi hao phí lao động cá biệt LỚN HƠN hao phí lao động xã hội cần thiết thì người sản xuất không đáp ứng được yêu cầu của quy luật giá trị (thua lỗ, không bán được theo giá trị).",
+      "image": null
+    },
+    {
+      "id": 73,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Vì sao hàng hóa có hai thuộc tính là giá trị và giá trị sử dụng?",
+      "options": {
+        "A": "Vì giá trị và giá trị sử dụng của hàng hóa do ý chí chủ quan của người sản xuất.",
+        "B": "Vì giá trị và giá trị sử dụng của hàng hóa có thể thỏa mãn nhu cầu của người tiêu dùng.",
+        "C": "Vì giá trị và công dụng của hàng hóa có thể thỏa mãn nhu vầu của người tiêu dùng.",
+        "D": "Vì lao động của người sản xuất có tính chất hai mặt."
+      },
+      "answer": "D",
+      "explainAnswer": "Hàng hóa có hai thuộc tính giá trị và giá trị sử dụng là do lao động của người sản xuất hàng hóa có tính hai mặt: lao động cụ thể tạo ra giá trị sử dụng, lao động trừu tượng tạo ra giá trị. A sai vì không phải do ý chí chủ quan; B, C chỉ nêu công dụng, không giải thích nguồn gốc hai thuộc tính.",
+      "image": null
+    },
+    {
+      "id": 75,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Yêu cầu của quy luật giá trị là gì?",
+      "options": {
+        "A": "Lưu thông hàng hoá phải tuân thủ nguyên tắc ngang giá và phù hợp với giá trị của hàng hóa",
+        "B": "Quá trình sản xuất và lưu thông hàng hoá phải tiến hành trên cơ sở những hao phí lao động xã hội cần thiết.",
+        "C": "Quá trình sản xuất và lưu thông hàng hoá phải tiến hành trên cơ sở những hao phí lao động cá biệt.",
+        "D": "Mức hao phí lao động cá biệt của các chủ thể sản xuất phải lớn hơn mức hao phí lao động xã hội cần thiết."
+      },
+      "answer": "B",
+      "explainAnswer": "Yêu cầu của quy luật giá trị là sản xuất và lưu thông hàng hóa phải căn cứ vào hao phí lao động xã hội cần thiết (thời gian lao động xã hội cần thiết). A nói về nguyên tắc ngang giá - biểu hiện của yêu cầu; C, D sai vì không dựa trên hao phí cá biệt.",
+      "image": null
+    },
+    {
+      "id": 76,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Yêu cầu của quy luật giá trị với lưu thông, trao đổi hàng hóa theo nguyên tắc nào?",
+      "options": {
+        "A": "Giá cả hàng hóa thấp hơn giá trị.",
+        "B": "Giá cả hàng hóa cao hơn giá trị.",
+        "C": "Lấy giá trị cá biệt làm cơ sở.",
+        "D": "Tổng giá cả hàng hóa luôn bằng tổng giá trị."
+      },
+      "answer": "D",
+      "explainAnswer": "Yêu cầu của quy luật giá trị đối với lưu thông, trao đổi là theo nguyên tắc ngang giá: hàng hóa trao đổi theo giá trị, do đó tổng giá cả hàng hóa luôn bằng tổng giá trị. A, B mô tả sự lên xuống giá cả xoay quanh giá trị; C sai vì không lấy giá trị cá biệt làm cơ sở.",
+      "image": null
+    },
+    {
+      "id": 77,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1&2",
+      "question": "Yếu tố nào quyết định đến giá cả hàng hóa?",
+      "options": {
+        "A": "Giá trị sử dụng của hàng hóa.",
+        "B": "Mốt thời trang của hàng hóa.",
+        "C": "Giá trị của hàng hóa.",
+        "D": "Quan hệ cung cầu về hàng hóa."
+      },
+      "answer": "C",
+      "explainAnswer": "Yếu tố quyết định đến giá cả hàng hóa là giá trị của hàng hóa (qui đổi thành giá cả = giá trị × quy mô). Giá trị sử dụng (A), mốt thời trang (B), cung cầu (D) chỉ ảnh hưởng làm giá cả dao động xung quanh giá trị, không quyết định bản chất.",
+      "image": null
+    },
+    {
+      "id": 240,
+      "chapter": "Chương 2",
+      "sourceChapter": "Chương 1->6 loại 0,6 điểm",
+      "question": "Chất của giá trị (thực thể giá trị) hàng hóa là gì?",
+      "options": {
+        "A": "Là giá trị phản ánh quan hệ giữ người sản xuất với người tiêu dùng.",
+        "B": "Là giá trị được tạo ra thông qua trao đổi hàng hóa.",
+        "C": "Là lao động cụ thê kết tinh trong hàng hóa.",
+        "D": "Là lao động xã hội của người sản xuất hàng hóa kết tinh trong hàng hóa."
+      },
+      "answer": "D",
+      "explainAnswer": "Chất (thực thể) của giá trị hàng hóa là lao động xã hội của người sản xuất hàng hóa kết tinh trong hàng hóa - tức lao động trừu tượng đã được xã hội thừa nhận thông qua trao đổi. Phương án C sai vì lao động cụ thể tạo ra giá trị sử dụng chứ không tạo ra giá trị; B sai vì giá trị không phải do trao đổi tạo ra mà là lao động kết tinh sẵn có; A mô tả quan hệ trao đổi chứ không phải thực thể của giá trị.",
+      "image": null
+    }
+  ]
+}

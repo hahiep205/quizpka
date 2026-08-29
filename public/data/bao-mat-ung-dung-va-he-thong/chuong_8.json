@@ -1,0 +1,231 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Bảo mật Ứng dụng và Hệ thống - Chương 8",
+  "chapter": "Chương 8",
+  "totalQuestions": 16,
+  "questions": [
+    {
+      "id": 18,
+      "question": "Cơ chế 'Data Masking' trong cơ sở dữ liệu nhằm mục đích gì?",
+      "options": {
+        "A": "Mã hóa toàn bộ đĩa cứng lưu trữ.",
+        "B": "Che giấu dữ liệu nhạy cảm (như thay số thẻ thành XXXX) khi hiển thị cho người dùng không có thẩm quyền.",
+        "C": "Ngụy trang máy chủ CSDL dưới một địa chỉ IP giả.",
+        "D": "Xóa vĩnh viễn dữ liệu cũ."
+      },
+      "answer": "B",
+      "explainAnswer": "Data Masking dùng để che bớt dữ liệu nhạy cảm khi hiển thị, ví dụ chỉ hiện bốn số cuối của thẻ. Đáp án B đúng vì nó giảm nguy cơ lộ thông tin cho người không có thẩm quyền nhưng vẫn giữ dữ liệu đủ dùng cho nghiệp vụ.",
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8"
+    },
+    {
+      "id": 19,
+      "question": "Nguyên tắc 'Separation of Duties' (Phân tách nhiệm vụ) trong CSDL có ý nghĩa gì?",
+      "options": {
+        "A": "Giao toàn quyền cho một người quản trị duy nhất.",
+        "B": "Chia nhỏ vai trò để tránh một cá nhân có toàn quyền thực hiện một chuỗi hành động nhạy cảm.",
+        "C": "Chia CSDL thành các bảng nhỏ không liên kết.",
+        "D": "Không cho phép bất kỳ ai truy cập CSDL vào ban đêm."
+      },
+      "answer": "B",
+      "explainAnswer": "Separation of Duties chia trách nhiệm cho nhiều vai trò khác nhau để tránh một cá nhân có thể tự làm toàn bộ thao tác nhạy cảm. Đáp án B đúng vì cách này giảm nguy cơ gian lận, sai sót và lạm dụng quyền.",
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8"
+    },
+    {
+      "id": 46,
+      "question": "Khi quản trị viên phát hiện hệ thống máy chủ vừa bị xâm nhập, hành động ưu tiên đầu tiên cần làm theo quy trình ứng phó là gì?",
+      "options": {
+        "A": "Lập tức tắt nguồn máy chủ bằng cách rút phích cắm.",
+        "B": "Xóa toàn bộ log hệ thống để dọn dẹp.",
+        "C": "Cô lập (Isolate) hệ thống bị nhiễm khỏi mạng nội bộ để ngăn chặn lây lan nhưng vẫn duy trì trạng thái để điều tra.",
+        "D": "Format lại toàn bộ ổ đĩa cứng và cài lại từ đầu."
+      },
+      "answer": "C",
+      "explainAnswer": "Khi phát hiện máy chủ bị xâm nhập, cần cô lập khỏi mạng để ngăn lây lan nhưng vẫn giữ nguyên trạng thái phục vụ điều tra. Đáp án C đúng vì tắt nguồn hoặc xóa dữ liệu ngay có thể làm mất bằng chứng quan trọng.",
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8"
+    },
+    {
+      "id": 53,
+      "question": "Hệ thống SIEM (Security Information and Event Management) có chức năng chính là gì?",
+      "options": {
+        "A": "Ngăn chặn các cuộc tấn công DDoS vào hệ thống Web.",
+        "B": "Thu thập, lưu trữ, phân tích log và sự kiện bảo mật từ nhiều nguồn để phát hiện mối đe dọa.",
+        "C": "Mã hóa toàn bộ cơ sở dữ liệu của doanh nghiệp.",
+        "D": "Tự động vá lỗi hệ điều hành."
+      },
+      "answer": "B",
+      "explainAnswer": "SIEM tập trung log và sự kiện bảo mật từ nhiều hệ thống như firewall, server, ứng dụng và endpoint. Đáp án B đúng vì SIEM giúp phân tích tương quan, phát hiện dấu hiệu tấn công và hỗ trợ điều tra.",
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8"
+    },
+    {
+      "id": 64,
+      "question": "Trong bảo mật CSDL, kỹ thuật Tokenization (Mã hóa thay thế) hoạt động như thế nào?",
+      "options": {
+        "A": "Xóa hoàn toàn dữ liệu nhạy cảm khỏi hệ thống.",
+        "B": "Thay thế dữ liệu nhạy cảm (như số thẻ tín dụng) bằng một chuỗi ký tự vô nghĩa (Token), dữ liệu thật được cất ở hầm chứa an toàn.",
+        "C": "Dùng hàm băm một chiều để băm dữ liệu.",
+        "D": "Mã hóa dữ liệu bằng thuật toán RSA."
+      },
+      "answer": "B",
+      "explainAnswer": "Tokenization thay dữ liệu thật bằng một token không có ý nghĩa nếu đứng riêng lẻ. Đáp án B đúng vì dữ liệu nhạy cảm thật được lưu ở nơi an toàn hơn, giúp giảm rủi ro khi hệ thống xử lý bị lộ token.",
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8"
+    },
+    {
+      "id": 65,
+      "question": "KMS (Key Management Service) trong hạ tầng đám mây có vai trò gì?",
+      "options": {
+        "A": "Lọc các gói tin mạng độc hại.",
+        "B": "Quản lý tập trung vòng đời, tạo và lưu trữ an toàn các khóa mã hóa bảo vệ cơ sở dữ liệu.",
+        "C": "Phát hiện mã độc Ransomware.",
+        "D": "Tự động phân quyền truy cập cho nhân viên."
+      },
+      "answer": "B",
+      "explainAnswer": "KMS quản lý vòng đời khóa mã hóa, gồm tạo, lưu trữ, xoay vòng và kiểm soát truy cập khóa. Đáp án B đúng vì khóa mã hóa cần được bảo vệ tập trung và an toàn để bảo vệ dữ liệu.",
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8"
+    },
+    {
+      "id": 94,
+      "question": "Khái niệm 'Attack Surface' (Bề mặt tấn công) trong bảo mật hệ thống được hiểu là gì?",
+      "options": {
+        "A": "Giao diện trang chủ của Website.",
+        "B": "Tổng số điểm (endpoints), giao diện, API, cổng mạng... có thể bị lợi dụng để xâm nhập vào hệ thống.",
+        "C": "Mức độ thiệt hại đo bằng tiền.",
+        "D": "Số lượng máy tính bị nhiễm virus trong mạng."
+      },
+      "answer": "B",
+      "explainAnswer": "Attack Surface là toàn bộ điểm mà kẻ tấn công có thể tương tác hoặc khai thác. Đáp án B đúng vì endpoint, API, port, giao diện quản trị và dịch vụ công khai đều có thể trở thành cửa vào hệ thống.",
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8"
+    },
+    {
+      "id": 95,
+      "question": "Một trong những phương pháp giảm thiểu 'Attack Surface' hiệu quả là gì?",
+      "options": {
+        "A": "Mở toàn bộ cổng mạng dự phòng.",
+        "B": "Gỡ bỏ các dịch vụ, phần mềm không cần thiết, vô hiệu hóa các API hoặc giao thức cũ (như Telnet, FTP).",
+        "C": "Tăng số lượng tài khoản quản trị viên lên.",
+        "D": "Sử dụng nhiều hệ quản trị CSDL cùng lúc."
+      },
+      "answer": "B",
+      "explainAnswer": "Giảm Attack Surface nghĩa là giảm bớt những thứ không cần thiết có thể bị khai thác. Đáp án B đúng vì gỡ dịch vụ thừa, tắt API cũ và vô hiệu hóa giao thức yếu giúp hệ thống ít điểm bị tấn công hơn.",
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8"
+    },
+    {
+      "id": 100,
+      "question": "Chức năng 'Logging & Monitoring' liên tục trong bảo mật hệ thống giúp đạt được điều kiện gì theo mô hình CIA?",
+      "options": {
+        "A": "Bảo mật tuyệt đối (100% Confidentiality).",
+        "B": "Giúp phát hiện sớm các dị thường, phục vụ truy vết điều tra (Accounting) để duy trì sự Toàn vẹn (Integrity) và Sẵn sàng (Availability).",
+        "C": "Ngăn chặn mọi cuộc tấn công Phishing.",
+        "D": "Tự động đổi mật khẩu CSDL."
+      },
+      "answer": "B",
+      "explainAnswer": "Logging & Monitoring giúp phát hiện bất thường sớm và cung cấp dấu vết để điều tra. Đáp án B đúng vì việc giám sát tốt hỗ trợ duy trì tính toàn vẹn, tính sẵn sàng và khả năng truy vết trong hệ thống.",
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8"
+    },
+    {
+      "id": 115,
+      "question": "Mô hình 'Trách nhiệm chung' (Shared Responsibility Model) trong bảo mật Điện toán đám mây quy định điều gì?",
+      "options": {
+        "A": "Nhà cung cấp Cloud chịu 100% trách nhiệm về bảo mật.",
+        "B": "Người dùng chịu 100% trách nhiệm về bảo mật.",
+        "C": "Nhà cung cấp bảo vệ hạ tầng vật lý và nền tảng; Khách hàng chịu trách nhiệm bảo mật dữ liệu, ứng dụng và cấu hình của họ trên đám mây.",
+        "D": "Công ty bảo hiểm sẽ đền bù mọi rủi ro."
+      },
+      "answer": "C",
+      "explainAnswer": "Shared Responsibility Model chia rõ trách nhiệm bảo mật giữa nhà cung cấp cloud và khách hàng. Đáp án C đúng vì cloud provider bảo vệ hạ tầng nền tảng, còn khách hàng phải bảo vệ dữ liệu, ứng dụng, tài khoản và cấu hình của mình.",
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8"
+    },
+    {
+      "id": 121,
+      "question": "Khái niệm 'Vulnerability Management' (Quản lý lỗ hổng) là một quy trình như thế nào?",
+      "options": {
+        "A": "Là một hoạt động chỉ làm một lần khi mua máy chủ mới.",
+        "B": "Là một chu trình liên tục bao gồm quét định kỳ, phân loại rủi ro, vá lỗi và xác nhận lại.",
+        "C": "Là quá trình viết mã độc giả lập.",
+        "D": "Là quy trình khởi động lại tường lửa."
+      },
+      "answer": "B",
+      "explainAnswer": "Vulnerability Management là quy trình lặp lại liên tục, không phải công việc làm một lần. Đáp án B đúng vì tổ chức cần quét, đánh giá mức độ rủi ro, vá lỗi và kiểm tra lại thường xuyên.",
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8"
+    },
+    {
+      "id": 122,
+      "question": "Trong báo cáo kiểm thử bảo mật (Penetration Testing), lỗ hổng 'Critical' (Nghiêm trọng) có nghĩa là gì?",
+      "options": {
+        "A": "Lỗi cần sự tương tác phức tạp của người dùng mới có thể khai thác.",
+        "B": "Lỗ hổng có thể bị khai thác dễ dàng, trực tiếp từ xa và gây hậu quả thảm khốc (chiếm quyền máy chủ, lộ toàn bộ CSDL).",
+        "C": "Lỗi thiết kế giao diện không đẹp.",
+        "D": "Lỗi cấu hình tiêu chuẩn."
+      },
+      "answer": "B",
+      "explainAnswer": "Lỗ hổng Critical thường có khả năng khai thác cao và tác động rất nghiêm trọng. Đáp án B đúng vì nó có thể dẫn đến chiếm quyền máy chủ, lộ dữ liệu lớn hoặc làm gián đoạn hệ thống quan trọng.",
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8"
+    },
+    {
+      "id": 124,
+      "question": "Để bảo mật dữ liệu lưu trữ (Data at Rest) trên máy chủ cơ sở dữ liệu, giải pháp nào là bắt buộc?",
+      "options": {
+        "A": "Mã hóa ổ đĩa vật lý hoặc mã hóa cấp độ bảng/trường dữ liệu (TDE).",
+        "B": "Sử dụng cáp quang tốc độ cao.",
+        "C": "Sử dụng SSL/TLS.",
+        "D": "Ẩn file dữ liệu."
+      },
+      "answer": "A",
+      "explainAnswer": "Data at Rest là dữ liệu đang được lưu trên ổ đĩa, cơ sở dữ liệu hoặc bản sao lưu. Đáp án A đúng vì mã hóa lưu trữ như TDE hoặc mã hóa ổ đĩa giúp bảo vệ dữ liệu khi thiết bị hoặc file lưu trữ bị lộ.",
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8"
+    },
+    {
+      "id": 127,
+      "question": "Giải pháp 'Disaster Recovery Plan' (Kế hoạch phục hồi sau thảm họa) nhằm giải quyết mục tiêu nào trong CIA?",
+      "options": {
+        "A": "Tính bảo mật (Confidentiality)",
+        "B": "Tính toàn vẹn (Integrity)",
+        "C": "Tính sẵn sàng (Availability)",
+        "D": "Tính xác thực"
+      },
+      "answer": "C",
+      "explainAnswer": "Disaster Recovery Plan giúp hệ thống phục hồi sau sự cố lớn như mất dữ liệu, lỗi hạ tầng hoặc thảm họa. Đáp án C đúng vì mục tiêu chính là duy trì hoặc khôi phục tính sẵn sàng của dịch vụ.",
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8"
+    },
+    {
+      "id": 128,
+      "question": "Backup dữ liệu tuân theo quy tắc 3-2-1 được hiểu như thế nào?",
+      "options": {
+        "A": "Lưu 3 bản copy, vào 2 giờ sáng, bằng 1 phần mềm.",
+        "B": "Có 3 bản sao dữ liệu, lưu trên 2 loại phương tiện lưu trữ khác nhau, với 1 bản sao được lưu ở địa điểm ngoài (Off-site/Cloud).",
+        "C": "Có 3 kỹ sư quản lý, 2 máy chủ dự phòng, 1 đường mạng.",
+        "D": "Sao lưu 3 lần trong 2 tháng cho 1 dự án."
+      },
+      "answer": "B",
+      "explainAnswer": "Quy tắc 3-2-1 yêu cầu có nhiều bản sao trên nhiều loại phương tiện và một bản ở ngoài địa điểm chính. Đáp án B đúng vì cách này giảm nguy cơ mất toàn bộ dữ liệu khi một thiết bị, hệ thống hoặc địa điểm gặp sự cố.",
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8"
+    },
+    {
+      "id": 134,
+      "question": "Kỹ thuật phân tích rủi ro định lượng (Quantitative Risk Analysis) khác với định tính (Qualitative) ở điểm nào?",
+      "options": {
+        "A": "Định lượng chỉ dùng cho công ty nhỏ.",
+        "B": "Định lượng sử dụng các giá trị tài chính và xác suất bằng số liệu thống kê cụ thể (ví dụ: thiệt hại 100.000, xác suất 5%); định tính dùng mức độ (Cao, Trung bình, Thấp).",
+        "C": "Định lượng làm mất thời gian hơn và không chính xác bằng.",
+        "D": "Định lượng không đánh giá hệ thống mạng."
+      },
+      "answer": "B",
+      "explainAnswer": "Phân tích rủi ro định lượng dùng số liệu như tiền thiệt hại, xác suất và giá trị kỳ vọng. Đáp án B đúng vì phân tích định tính chỉ phân loại bằng mức như Cao, Trung bình, Thấp nên ít định lượng tài chính hơn.",
+      "chapter": "Chương 8",
+      "sourceChapter": "Chương 8"
+    }
+  ]
+}
