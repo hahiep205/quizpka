@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { isAnswerCorrect, mapBankQuestions } from "@/features/quiz/lib/quizHelpers"
+import { formatClockTime, isAnswerCorrect, mapBankQuestions } from "@/features/quiz/lib/quizHelpers"
 
 const practiceSetup = { questionOrder: "original", answerOrder: "original", mode: "practice", timed: false, durationMinutes: 0 } as const
 
@@ -19,5 +19,12 @@ describe("quiz helpers", () => {
   it("limits exam mode after mapping groups", () => {
     const questions = mapBankQuestions({ parts: [{ partNumber: 1, partTitle: "Part 1", questions: Array.from({ length: 3 }, (_, index) => ({ id: index, question: "Q", answer: "A" })) }] }, "exam", { ...practiceSetup, mode: "exam", questionLimit: 2 })
     expect(questions).toHaveLength(2)
+  })
+
+  it("formats clock time into HH:MM:SS", () => {
+    expect(formatClockTime(0)).toBe("00:00:00")
+    expect(formatClockTime(7200)).toBe("02:00:00")
+    expect(formatClockTime(3661)).toBe("01:01:01")
+    expect(formatClockTime(-5)).toBe("00:00:00")
   })
 })

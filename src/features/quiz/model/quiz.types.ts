@@ -14,6 +14,10 @@ export type Question = {
   audioUrl?: string
   audioTimestamp?: string
   imageUrl?: string
+  /** Original TOEIC question type (e.g. "picture_description", "question_response", "incomplete_sentence", "sentence_insertion"). */
+  questionType?: string
+  /** Original TOEIC grammar point label (Parts 5 & 6). */
+  grammarPoint?: string
 }
 
 export type BankQuestion = {

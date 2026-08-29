@@ -13,7 +13,7 @@ import {
   type Subject,
 } from "@/data/subjects"
 import type { QuizSetupValues } from "@/components/QuizSetupModal"
-import { quizCopy as copy } from "@/shared/i18n"
+import { quizCopy as copy, toeicResultCopy } from "@/shared/i18n"
 import type { AnswerValue, Question } from "@/features/quiz/model/quiz.types"
 import { shuffle, formatTime, isAnswerCorrect } from "@/features/quiz/lib/quizHelpers"
 import type { ToeicScope } from "@/data/toeic"
@@ -37,6 +37,7 @@ import {
 import { QuizQuestionBlock } from "@/features/quiz/ui/QuizQuestionBlock"
 import { QuizSidebar } from "@/features/quiz/ui/QuizSidebar"
 import { ReviewPanel } from "@/features/quiz/ui/ReviewPanel"
+import { ToeicResultPanel } from "@/features/quiz/ui/toeic-result/ToeicResultPanel"
 import { shouldHideExplanation } from "@/features/quiz/lib/explanationVisibility"
 import { StatCard } from "@/features/quiz/ui/StatCard"
 import { CenterCard } from "@/features/quiz/ui/CenterCard"
@@ -63,6 +64,8 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
   const [finished, setFinished] = useState(false)
   const [confirmOpen, setConfirmOpen] = useState(false)
   const [reviewOpen, setReviewOpen] = useState(false)
+  const [reviewQuestionId, setReviewQuestionId] = useState<string | undefined>(undefined)
+  const [reviewFilteredIds, setReviewFilteredIds] = useState<string[] | undefined>(undefined)
   const [transitionKey, setTransitionKey] = useState(0)
   const [lightboxImage, setLightboxImage] = useState<string | null>(null)
   const [forcePractice, setForcePractice] = useState(false)
@@ -92,6 +95,8 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
     setReviewOpen(false)
     setConfirmOpen(false)
     clearRetryHistory()
+    setReviewQuestionId(undefined)
+    setReviewFilteredIds(undefined)
     setForcePractice(false)
     resetTimer()
     setHardQueue([])
@@ -172,6 +177,18 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
     setTransitionKey((value) => value + 1)
     setForcePractice(true)
   }, [questions, resetTimer, setQuestions, setRetryHistory, stats, wrongQuestions])
+
+  const handleOpenReview = useCallback((questionId?: string) => {
+    setReviewQuestionId(questionId)
+    setReviewFilteredIds(undefined)
+    setReviewOpen(true)
+  }, [])
+
+  const handleOpenQuestionList = useCallback((questionIds: string[]) => {
+    setReviewFilteredIds(questionIds)
+    setReviewQuestionId(undefined)
+    setReviewOpen(true)
+  }, [])
 
   const handleHardAnswer = useCallback((_questionId: string, answer: AnswerValue) => {
     setHardSelected((previous) => (previous === undefined ? answer : previous))
@@ -298,6 +315,50 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
           </div>
           {reviewOpen ? <ReviewPanel t={t} questions={questions} answers={hardFinalAnswers} hideExplanation={hideExplanation} onClose={() => setReviewOpen(false)} /> : null}
         </div>
+      )
+    }
+    if (isTwoLevelToeic) {
+      const isExam = setup.mode === "exam" || forcePractice
+      const modeLabel = setup.mode === "practice" || forcePractice ? t.modePractice : t.modeExam
+      const resultTitle = setup.mode === "practice" || forcePractice ? t.resultTitlePractice : t.resultTitleExam
+      const wrongCount = wrongQuestions.length
+      return (
+        <>
+          <ToeicResultPanel
+            questions={questions}
+            answers={answers}
+            elapsedSeconds={elapsedSeconds}
+            toeicScope={toeicScope}
+            questionNumberMap={questionNumberMap}
+            t={toeicResultCopy[lang]}
+            lang={lang}
+            score10={stats.score10}
+            isExam={isExam}
+            modeLabel={modeLabel}
+            resultTitle={resultTitle}
+            examTitle={getExamTitle(exam, lang)}
+            exitLabel={t.backDocs}
+            reviewLabel={t.review}
+            retryWrongLabel={wrongCount > 0 ? `${t.retryWrong} (${wrongCount})` : t.retryWrong}
+            retryWrongDisabled={wrongCount === 0}
+            onExit={onExit}
+            onRetryWrong={handleRetryWrong}
+            onReview={handleOpenReview}
+            onOpenQuestionList={handleOpenQuestionList}
+          />
+          {reviewOpen ? (
+            <ReviewPanel
+              t={t}
+              questions={questions}
+              answers={answers}
+              hideExplanation={hideExplanation}
+              initialQuestionId={reviewQuestionId}
+              filteredQuestionIds={reviewFilteredIds}
+              numberMap={questionNumberMap}
+              onClose={() => setReviewOpen(false)}
+            />
+          ) : null}
+        </>
       )
     }
     return (

@@ -45,6 +45,8 @@ function toQuestion(examId: string, item: RawToeicQuestion, setup: QuizSetupValu
     options: orderedPairs.map((pair) => pair.text),
     correctIndex: pairs.length ? Math.max(0, orderedPairs.findIndex((pair) => pair.isCorrect)) : undefined,
     acceptedAnswers: pairs.length || !answer ? undefined : [answer.trim().toLowerCase()],
+    questionType: item.type,
+    grammarPoint: item.grammar_point,
     ...explanationFor(item),
     ...context,
   }

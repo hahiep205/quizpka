@@ -5,6 +5,7 @@ export type RawToeicVocabulary = { phrase: string; meaning: string; paraphrases?
 
 export type RawToeicQuestion = {
   id?: string | number
+  type?: string
   question?: string
   prompt?: string
   options?: Partial<Record<ToeicOptionKey, string>>

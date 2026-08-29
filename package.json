@@ -38,5 +38,18 @@
     "typescript": "~6.0.2",
     "vite": "^8.2.0",
     "vitest": "^4.1.11"
-  }
+  },
+  "description": "QuizPKA is a Vite + React application for practice quizzes, chapter-based revision, English placement tests, and TOEIC sets.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hahiep205/quizpka-test01.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hahiep205/quizpka-test01/issues"
+  },
+  "homepage": "https://github.com/hahiep205/quizpka-test01#readme"
 }

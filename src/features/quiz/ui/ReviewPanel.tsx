@@ -1,12 +1,33 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { X } from "lucide-react"
 import { Dialog } from "@/components/ui/dialog"
 import type { Question, AnswerValue } from "@/features/quiz/model/quiz.types"
 import { DetailedAnalysisContent } from "@/features/quiz/ui/DetailedAnalysisContent"
 import { quizCopy } from "@/shared/i18n"
 
-export function ReviewPanel({ t, questions, answers, hideExplanation = false, onClose }: { t: (typeof quizCopy)["en" | "vi"]; questions: Question[]; answers: Record<string, AnswerValue>; hideExplanation?: boolean; onClose: () => void }) {
-  const [expanded, setExpanded] = useState<Record<string, boolean>>({})
+export function ReviewPanel({ t, questions, answers, hideExplanation = false, initialQuestionId, filteredQuestionIds, numberMap, onClose }: {
+  t: (typeof quizCopy)["en" | "vi"]
+  questions: Question[]
+  answers: Record<string, AnswerValue>
+  hideExplanation?: boolean
+  initialQuestionId?: string
+  filteredQuestionIds?: string[]
+  numberMap?: Map<string, number>
+  onClose: () => void
+}) {
+  const visibleQuestions = filteredQuestionIds ? questions.filter((q) => filteredQuestionIds.includes(q.id)) : questions
+  const [expanded, setExpanded] = useState<Record<string, boolean>>(() => {
+    if (!initialQuestionId) return {}
+    const initial: Record<string, boolean> = {}
+    const target = questions.find((q) => q.id === initialQuestionId)
+    if (target?.detailedExplanation) initial[target.id] = true
+    return initial
+  })
+  useEffect(() => {
+    if (!initialQuestionId) return
+    const el = document.getElementById(`review-question-${initialQuestionId}`)
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "center" })
+  }, [initialQuestionId])
   return (
     <Dialog open onClose={onClose} title={t.review} closeLabel={t.closeReview} className="z-[100]" panelClassName="flex max-h-[min(820px,92vh)] w-full max-w-[760px] flex-col overflow-hidden rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900">
         <div className="flex items-center justify-between border-b border-[#E5E5E5] px-5 py-4 dark:border-white/10 sm:px-6">
@@ -14,11 +35,12 @@ export function ReviewPanel({ t, questions, answers, hideExplanation = false, on
           <button type="button" onClick={onClose} className="lp-btn lp-btn--secondary lp-btn--icon"><X className="h-4 w-4" strokeWidth={2} /></button>
         </div>
         <div className="space-y-4 overflow-y-auto px-5 py-5 sm:px-6">
-          {questions.map((question, index) => {
+          {visibleQuestions.map((question, index) => {
             const selected = answers[question.id]
+            const questionNumber = numberMap?.get(question.id) ?? index + 1
             return (
-              <div key={question.id} className="rounded-[12px] border-2 border-[#E5E5E5] bg-[#F6F7FB] p-4 dark:border-white/10 dark:bg-white/5">
-                <p className="lp-label text-[12px] uppercase tracking-[0.12em]">{t.question} {index + 1}</p>
+              <div key={question.id} id={`review-question-${question.id}`} className="rounded-[12px] border-2 border-[#E5E5E5] bg-[#F6F7FB] p-4 dark:border-white/10 dark:bg-white/5">
+                <p className="lp-label text-[12px] uppercase tracking-[0.12em]">{t.question} {questionNumber}</p>
                 <p className="lp-card-title mt-2 text-[15px] leading-6">{question.prompt}</p>
                 <div className="mt-3 space-y-2 text-[13px] leading-6">
                   <p className="lp-card-desc"><span className="font-extrabold text-[#100F3E] dark:text-white">{t.yourAnswer}:</span>{" "}{selected === undefined ? t.noAnswer : typeof selected === "string" ? selected : `${String.fromCharCode(65 + selected)}. ${question.options[selected]}`}</p>
