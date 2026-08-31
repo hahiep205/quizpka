@@ -7,12 +7,15 @@ function QuizPreviewCard() {
     <div className="relative mx-auto w-full max-w-[420px]">
       <div className="absolute -inset-x-4 bottom-0 top-12 rounded-xl bg-primary-100/35 blur-2xl dark:bg-sky-500/10" />
       <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-white px-6 pb-7 pt-5 shadow-[var(--shadow-2)] dark:border-white/10 dark:bg-slate-900 dark:shadow-[var(--shadow-2)] sm:px-7 sm:pb-8 sm:pt-6">
-        <div className="mb-8 flex items-center justify-between">
+        <div className="mb-8 flex items-center justify-between gap-3">
           <div className="flex items-center gap-1.5">
             <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
             <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
             <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
           </div>
+          <span className="min-w-0 truncate text-[11px] font-medium tracking-wide text-slate-400 sm:text-[13px]">
+            quizpka.online
+          </span>
           <span className="text-[13px] font-medium tabular-nums tracking-wide text-slate-400">
             00:45:12
           </span>
