@@ -160,7 +160,7 @@ export function DashboardPage({
           onToggleTheme={onToggleTheme}
         />
 
-        <main className="mx-auto w-full max-w-[1440px] px-4 pb-28 pt-5 sm:px-6 sm:pt-7 lg:px-8 lg:pb-12 lg:pt-8 xl:px-10">
+        <main className="mx-auto w-full max-w-[1440px] px-3 pb-[calc(92px+env(safe-area-inset-bottom))] pt-4 min-[380px]:px-4 sm:px-6 sm:pt-6 md:px-8 lg:px-8 lg:pb-12 lg:pt-8 xl:px-10">
           {activeView === "home" ? (
             <HomeDashboard
               lang={lang}
@@ -296,10 +296,27 @@ function DashboardTopbar({
   const { profile } = useAuth()
   return (
     <header className="sticky top-0 z-30 border-b border-slate-200/80 bg-white/90 backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/90">
-      <div className="mx-auto flex h-[72px] w-full max-w-[1440px] items-center justify-between px-4 sm:px-6 lg:h-[78px] lg:px-8 xl:px-10">
+      <div className="mx-auto flex h-16 w-full max-w-[1440px] items-center justify-between px-4 sm:h-[72px] sm:px-6 md:px-8 lg:h-[78px] lg:px-8 xl:px-10">
         <a href="/" className="lg:hidden" aria-label="QuizPKA">
           <img src={brandLogo} alt="QuizPKA" className="h-7 w-auto" />
         </a>
+
+        <div className="ml-auto flex min-w-0 items-center gap-2 lg:hidden">
+          <div className="hidden items-center gap-2 sm:flex">
+            <TopbarButton label={lang === "vi" ? "Chuyển sang tiếng Anh" : "Switch to Vietnamese"} onClick={onToggleLang}>
+              <span className="text-[11px] font-black text-[#129BDC]">{lang.toUpperCase()}</span>
+            </TopbarButton>
+            <TopbarButton label={theme === "light" ? (lang === "vi" ? "Chuyển sang giao diện tối" : "Switch to dark mode") : (lang === "vi" ? "Chuyển sang giao diện sáng" : "Switch to light mode")} onClick={onToggleTheme}>
+              {theme === "light" ? <Sun className="h-4 w-4" strokeWidth={2} /> : <Moon className="h-4 w-4" strokeWidth={2} />}
+            </TopbarButton>
+          </div>
+          <div className="ml-1 flex min-w-0 items-center gap-2 sm:border-l sm:border-slate-200 sm:pl-3 dark:sm:border-white/10">
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[11px] bg-[#E8F7FE] text-[#129BDC]">
+              {profile?.avatar_url ? <img src={profile.avatar_url} alt="" className="h-9 w-9 rounded-[11px] object-cover" /> : <UserRound className="h-4 w-4" />}
+            </div>
+            <span className="hidden max-w-[150px] truncate text-sm font-extrabold text-[#100F3E] dark:text-white min-[520px]:block">{profile?.display_name ?? profile?.email}</span>
+          </div>
+        </div>
 
         <div className="hidden lg:block">
           <h1 className="text-base font-semibold text-[#100F3E] dark:text-white">
@@ -400,9 +417,21 @@ function HomeDashboard({
   onStartExam: (exam: ExamCatalogItem) => void
 }) {
   const t = copy[lang]
+  const { user } = useAuth()
+  const userId = user?.id
+  const userCreatedAt = user?.created_at
+  const attemptCountsBySubject = useMemo(() => {
+    const counts = new Map<string, number>()
+    if (!userId) return counts
+    for (const attempt of readPracticeHistory(userId, userCreatedAt)) {
+      counts.set(attempt.subjectId, (counts.get(attempt.subjectId) ?? 0) + 1)
+    }
+    return counts
+  }, [userCreatedAt, userId])
+
   return (
-    <div className="space-y-8 dashboard-reveal">
-      <section className="grid grid-cols-2 gap-3 lg:grid-cols-4 lg:gap-4" aria-label="Statistics">
+    <div className="space-y-6 dashboard-reveal sm:space-y-8">
+      <section className="grid grid-cols-2 gap-2.5 sm:gap-3 lg:grid-cols-4 lg:gap-4" aria-label="Statistics">
         <DashboardStatCard icon={Flame} value="0" label={t.streak} tone="orange" />
         <DashboardStatCard icon={CheckCircle2} value="0" label={t.completed} tone="green" />
         <DashboardStatCard icon={BarChart3} value="--" label={t.accuracy} tone="blue" />
@@ -410,12 +439,12 @@ function HomeDashboard({
       </section>
 
       <section id="dashboard-documents" className="scroll-mt-24">
-        <div className="mb-5 flex flex-col gap-4 xl:flex-row xl:items-end xl:justify-between">
+        <div className="mb-4 flex flex-col gap-3 sm:mb-5 sm:gap-4 xl:flex-row xl:items-end xl:justify-between">
           <div>
-            <h2 className="text-2xl font-black tracking-[-0.025em] text-[#100F3E] dark:text-white sm:text-[28px]">
+            <h2 className="text-xl font-black tracking-[-0.025em] text-[#100F3E] dark:text-white sm:text-[26px] lg:text-[28px]">
               {t.documentTitle}
             </h2>
-            <p className="mt-1.5 text-sm font-semibold text-slate-500 dark:text-slate-400">
+            <p className="mt-1 text-[13px] font-semibold leading-5 text-slate-500 dark:text-slate-400 sm:mt-1.5 sm:text-sm">
               {t.documentDesc}
             </p>
           </div>
@@ -446,9 +475,15 @@ function HomeDashboard({
         </div>
 
         {filteredExams.length ? (
-          <div className="grid gap-4 md:grid-cols-2 2xl:grid-cols-3">
+          <div className="grid gap-3 sm:gap-4 md:grid-cols-2 2xl:grid-cols-3">
             {filteredExams.map((exam) => (
-              <ExamCard key={exam.id} exam={exam} lang={lang} onStart={() => onStartExam(exam)} />
+              <ExamCard
+                key={exam.id}
+                exam={exam}
+                lang={lang}
+                attemptCount={attemptCountsBySubject.get(exam.subjectId) ?? 0}
+                onStart={() => onStartExam(exam)}
+              />
             ))}
           </div>
         ) : (
@@ -459,17 +494,6 @@ function HomeDashboard({
         )}
       </section>
 
-      <section>
-        <h2 className="mb-4 text-xl font-black tracking-[-0.02em] text-[#100F3E] dark:text-white">
-          {t.activity}
-        </h2>
-        <div className="flex min-h-32 items-center gap-4 rounded-[16px] border-2 border-dashed border-slate-200 bg-white/65 p-5 dark:border-white/10 dark:bg-slate-900/60">
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[14px] bg-slate-100 text-slate-400 dark:bg-white/5">
-            <History className="h-5 w-5" />
-          </div>
-          <p className="text-sm font-bold leading-6 text-slate-500 dark:text-slate-400">{t.activityEmpty}</p>
-        </div>
-      </section>
     </div>
   )
 }
@@ -492,44 +516,45 @@ function DashboardStatCard({
     violet: "bg-indigo-50 text-indigo-500 dark:bg-indigo-500/10",
   }
   return (
-    <div className="flex min-h-[118px] flex-col justify-between rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)] sm:min-h-0 sm:flex-row sm:items-center sm:gap-4">
-      <div className={cn("flex h-10 w-10 shrink-0 items-center justify-center rounded-[12px] sm:h-12 sm:w-12", tones[tone])}>
+    <div className="flex min-h-[106px] flex-col justify-between rounded-[14px] border-2 border-[#E5E5E5] bg-white p-3.5 shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_3px_0_rgba(0,0,0,0.35)] sm:min-h-0 sm:flex-row sm:items-center sm:gap-4 sm:rounded-[16px] sm:p-4 sm:shadow-[0_4px_0_#DCDCDC] dark:sm:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
+      <div className={cn("flex h-9 w-9 shrink-0 items-center justify-center rounded-[11px] sm:h-12 sm:w-12 sm:rounded-[12px]", tones[tone])}>
         <Icon className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={2.2} />
       </div>
-      <div className="mt-3 min-w-0 sm:mt-0 sm:flex-1">
-        <p className="text-xl font-black tracking-[-0.02em] text-[#100F3E] dark:text-white">{value}</p>
-        <p className="mt-0.5 text-xs font-bold leading-4 text-slate-500 dark:text-slate-400">{label}</p>
+      <div className="mt-2.5 min-w-0 sm:mt-0 sm:flex-1">
+        <p className="text-lg font-black tracking-[-0.02em] text-[#100F3E] dark:text-white sm:text-xl">{value}</p>
+        <p className="mt-0.5 text-[11px] font-bold leading-4 text-slate-500 dark:text-slate-400 sm:text-xs">{label}</p>
       </div>
     </div>
   )
 }
 
-function ExamCard({ exam, lang, onStart }: { exam: ExamCatalogItem; lang: Lang; onStart: () => void }) {
+function ExamCard({ exam, lang, attemptCount, onStart }: { exam: ExamCatalogItem; lang: Lang; attemptCount: number; onStart: () => void }) {
   const t = copy[lang]
   return (
-    <article className="group flex h-full flex-col rounded-[16px] border-2 border-[#E5E5E5] bg-white p-5 shadow-[0_4px_0_#DCDCDC] transition-transform hover:-translate-y-1 dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
+    <article className="group flex h-full flex-col rounded-[15px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] transition-transform hover:-translate-y-1 dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_3px_0_rgba(0,0,0,0.35)] sm:rounded-[16px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:sm:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
       <div className="flex items-start justify-between gap-3">
-        <div className="flex h-12 w-12 items-center justify-center rounded-[14px] bg-[#E8F7FE] text-[#129BDC] dark:bg-sky-500/10 dark:text-sky-300">
-          <BookOpen className="h-6 w-6" strokeWidth={2} />
+        <div className="flex h-10 w-10 items-center justify-center rounded-[12px] bg-[#E8F7FE] text-[#129BDC] dark:bg-sky-500/10 dark:text-sky-300 sm:h-12 sm:w-12 sm:rounded-[14px]">
+          <BookOpen className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={2} />
         </div>
-        <Badge className="border-0 bg-emerald-50 font-extrabold text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300">
+        <Badge className="border-0 bg-[#E8F7FE] font-extrabold text-[#129BDC] dark:bg-sky-500/10 dark:text-sky-300">
           {exam.category.en === "General" ? t.general : t.major}
         </Badge>
       </div>
-      <div className="mt-5 flex-1">
+      <div className="mt-4 flex-1 sm:mt-5">
         <p className="text-xs font-extrabold uppercase tracking-[0.08em] text-[#1CB0F6]">{exam.subjectCode}</p>
-        <h3 className="mt-2 line-clamp-2 text-lg font-black leading-6 tracking-[-0.02em] text-[#100F3E] dark:text-white">
+        <h3 className="mt-1.5 line-clamp-2 text-[17px] font-black leading-6 tracking-[-0.02em] text-[#100F3E] dark:text-white sm:mt-2 sm:text-lg">
           {exam.title[lang]}
         </h3>
         <p className="mt-2 line-clamp-2 text-[13px] font-semibold leading-5 text-slate-500 dark:text-slate-400">
           {exam.description[lang]}
         </p>
       </div>
-      <div className="mt-5 flex items-center gap-4 border-t border-slate-100 pt-4 text-xs font-bold text-slate-500 dark:border-white/10 dark:text-slate-400">
-        <span className="inline-flex items-center gap-1.5"><FileText className="h-4 w-4" />{exam.questionCount} {t.questions}</span>
-        <span className="inline-flex items-center gap-1.5"><Clock3 className="h-4 w-4" />{exam.durationMinutes} {t.minutes}</span>
+      <div className="mt-5 grid grid-cols-3 border-t border-slate-100 pt-4 text-[11px] font-bold text-[#129BDC] dark:border-white/10 dark:text-sky-300 sm:text-xs">
+        <span className="inline-flex min-w-0 items-center justify-center gap-1 whitespace-nowrap px-1"><FileText className="h-3.5 w-3.5 shrink-0" />{exam.questionCount} {t.questions}</span>
+        <span className="inline-flex min-w-0 items-center justify-center gap-1 whitespace-nowrap border-x border-slate-100 px-1 dark:border-white/10"><Clock3 className="h-3.5 w-3.5 shrink-0" />{exam.durationMinutes} {t.minutes}</span>
+        <span className="inline-flex min-w-0 items-center justify-center gap-1 whitespace-nowrap px-1"><CheckCircle2 className="h-3.5 w-3.5 shrink-0" />{attemptCount} {lang === "vi" ? "lượt làm" : attemptCount === 1 ? "attempt" : "attempts"}</span>
       </div>
-      <button type="button" className="lp-btn lp-btn--primary lp-btn--sm lp-btn--block mt-5" onClick={onStart}>
+      <button type="button" className="lp-btn lp-btn--primary lp-btn--sm lp-btn--block mt-4 sm:mt-5" onClick={onStart}>
         {t.start}
         <ArrowRight className="h-4 w-4" />
       </button>
@@ -630,21 +655,21 @@ function HistoryAttemptCard({ item, lang, expanded, onToggle, onShowWrong, onRet
 }) {
   const wrong = item.wrongQuestions ?? []
   return (
-    <article className="overflow-hidden rounded-[16px] border-2 border-slate-200 bg-white shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none">
-      <button type="button" className="flex w-full items-center justify-between gap-4 p-4 text-left" onClick={onToggle} aria-expanded={expanded}>
+    <article className="overflow-hidden rounded-[15px] border-2 border-slate-200 bg-white shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none sm:rounded-[16px]">
+      <button type="button" className="flex w-full items-start justify-between gap-3 p-3.5 text-left sm:items-center sm:gap-4 sm:p-4" onClick={onToggle} aria-expanded={expanded}>
         <div className="min-w-0">
-          <p className="truncate font-extrabold text-[#100F3E] dark:text-white">{item.title}</p>
+          <p className="line-clamp-2 text-sm font-extrabold leading-5 text-[#100F3E] dark:text-white sm:text-base">{item.title}</p>
           <div className="mt-1 flex flex-wrap items-center gap-2 text-xs font-semibold text-slate-400">
             <span>{new Date(item.completedAt).toLocaleString(lang === "vi" ? "vi-VN" : "en-US")} · {item.mode}</span>
           </div>
         </div>
         <div className="shrink-0 text-right">
-          <p className="font-black text-[#1CB0F6]">{item.score.toFixed(1)}/10</p>
-          {item.retryNumber ? <span className="mt-1 inline-block rounded-full bg-[#E8F7FE] px-2 py-1 text-xs font-extrabold text-[#129BDC] dark:bg-sky-500/10 dark:text-sky-300">{lang === "vi" ? `Làm lại lần ${item.retryNumber}` : `Retry ${item.retryNumber}`}</span> : null}
+          <p className="text-sm font-black text-[#1CB0F6] sm:text-base">{item.score.toFixed(1)}/10</p>
+          {item.retryNumber ? <span className="mt-1 inline-block whitespace-nowrap rounded-full bg-[#E8F7FE] px-2 py-1 text-[10px] font-extrabold text-[#129BDC] dark:bg-sky-500/10 dark:text-sky-300 sm:text-xs">{lang === "vi" ? `Làm lại lần ${item.retryNumber}` : `Retry ${item.retryNumber}`}</span> : null}
         </div>
       </button>
-      {expanded ? <div className="border-t border-slate-100 p-4 dark:border-white/10">
-        <div className="grid grid-cols-2 gap-3 text-center sm:grid-cols-4">
+      {expanded ? <div className="border-t border-slate-100 p-3.5 dark:border-white/10 sm:p-4">
+        <div className="grid grid-cols-2 gap-2.5 text-center sm:grid-cols-4 sm:gap-3">
           <HistoryMetric label={lang === "vi" ? "Đúng" : "Correct"} value={String(item.correct)} />
           <HistoryMetric label={lang === "vi" ? "Sai / chưa làm" : "Wrong / skipped"} value={String(wrong.length)} />
           <HistoryMetric label={lang === "vi" ? "Độ chính xác" : "Accuracy"} value={`${item.accuracy}%`} />
@@ -733,10 +758,10 @@ function SettingsView({ lang, theme, onToggleLang, onToggleTheme }: DashboardPag
     <section className="dashboard-reveal mx-auto max-w-5xl">
       <PageHeading title={t.settingsTitle} description={t.settingsDesc} icon={Settings} />
       <div className="grid gap-5 md:grid-cols-2">
-        <div className="rounded-[20px] border border-slate-200 bg-white p-5 shadow-[0_4px_0_rgba(15,23,42,0.06)] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.3)] lg:col-span-2 sm:p-6">
-          <div><h3 className="text-xl font-black text-[#100F3E] dark:text-white">{lang === "vi" ? "Thông tin cá nhân" : "Profile"}</h3><p className="mt-1 text-sm font-semibold text-slate-500 dark:text-slate-400">{lang === "vi" ? "Thông tin tài khoản Google" : "Your Google account"}</p></div>
+        <div className="rounded-[16px] border border-slate-200 bg-white p-4 shadow-[0_3px_0_rgba(15,23,42,0.06)] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_3px_0_rgba(0,0,0,0.3)] sm:rounded-[20px] sm:p-6 sm:shadow-[0_4px_0_rgba(15,23,42,0.06)] dark:sm:shadow-[0_4px_0_rgba(0,0,0,0.3)] lg:col-span-2">
+          <div><h3 className="text-lg font-black text-[#100F3E] dark:text-white sm:text-xl">{lang === "vi" ? "Thông tin cá nhân" : "Profile"}</h3><p className="mt-1 text-[13px] font-semibold text-slate-500 dark:text-slate-400 sm:text-sm">{lang === "vi" ? "Thông tin tài khoản Google" : "Your Google account"}</p></div>
           <div className="mt-6 grid gap-6 md:grid-cols-[200px_minmax(0,1fr)] md:gap-8">
-            <div className="flex flex-col items-center justify-center border-b border-slate-100 pb-6 md:border-b-0 md:border-r md:pb-0 md:pr-8 dark:border-white/10">{profile?.avatar_url ? <img src={profile.avatar_url} alt="" className="h-24 w-24 rounded-3xl object-cover shadow-md" /> : <div className="flex h-24 w-24 items-center justify-center rounded-3xl bg-sky-50 text-sky-500 dark:bg-sky-500/10"><UserRound className="h-9 w-9" /></div>}<p className="mt-4 text-xs font-bold text-slate-400">Email</p><p className="mt-1 max-w-full truncate text-center text-sm font-bold text-slate-700 dark:text-slate-200">{profile?.email}</p></div>
+            <div className="flex flex-col items-center justify-center border-b border-slate-100 pb-6 md:border-b-0 md:border-r md:pb-0 md:pr-8 dark:border-white/10">{profile?.avatar_url ? <img src={profile.avatar_url} alt="" className="h-20 w-20 rounded-[20px] object-cover shadow-md sm:h-24 sm:w-24 sm:rounded-3xl" /> : <div className="flex h-20 w-20 items-center justify-center rounded-[20px] bg-sky-50 text-sky-500 dark:bg-sky-500/10 sm:h-24 sm:w-24 sm:rounded-3xl"><UserRound className="h-8 w-8 sm:h-9 sm:w-9" /></div>}<p className="mt-3 text-xs font-bold text-slate-400 sm:mt-4">Email</p><p className="mt-1 max-w-full truncate text-center text-sm font-bold text-slate-700 dark:text-slate-200">{profile?.email}</p></div>
             <div className="min-w-0 self-center"><label className="block text-sm font-extrabold text-slate-600 dark:text-slate-300">{lang === "vi" ? "Tên hiển thị" : "Display name"}<input value={displayName} onChange={(e) => setDisplayName(e.target.value)} className="mt-2 h-12 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 text-sm font-bold text-slate-800 outline-none transition focus:border-sky-400 focus:bg-white focus:ring-4 focus:ring-sky-100 dark:border-white/10 dark:bg-slate-800 dark:text-white dark:focus:bg-slate-700 dark:focus:ring-sky-500/10" maxLength={80} /></label><button type="button" className="lp-btn lp-btn--primary lp-btn--sm mt-4 w-full sm:w-auto" disabled={saving} onClick={() => void saveProfile()}>{saving ? (lang === "vi" ? "Đang lưu…" : "Saving…") : saved ? (lang === "vi" ? "Đã lưu" : "Saved") : (lang === "vi" ? "Lưu thay đổi" : "Save changes")}</button></div>
           </div>
           {saveError && <p role="alert" className="mt-3 text-sm font-semibold text-red-600">{lang === "vi" ? "Không thể lưu thay đổi. Vui lòng thử lại." : "Could not save changes. Please try again."}</p>}
@@ -768,9 +793,9 @@ function ToggleRow({ label, checked, onChange }: { label: string; checked: boole
 
 function PageHeading({ title, description, icon: Icon }: { title: string; description: string; icon: ComponentType<{ className?: string }> }) {
   return (
-    <div className="mb-7 flex items-center gap-4">
-      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-[16px] bg-[#E8F7FE] text-[#1CB0F6] dark:bg-sky-500/10"><Icon className="h-7 w-7" /></div>
-      <div><h2 className="text-[28px] font-black tracking-[-0.03em] text-[#100F3E] dark:text-white">{title}</h2><p className="mt-1 text-sm font-semibold text-slate-500 dark:text-slate-400">{description}</p></div>
+    <div className="mb-5 flex items-center gap-3 sm:mb-7 sm:gap-4">
+      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[13px] bg-[#E8F7FE] text-[#1CB0F6] dark:bg-sky-500/10 sm:h-14 sm:w-14 sm:rounded-[16px]"><Icon className="h-5 w-5 sm:h-7 sm:w-7" /></div>
+      <div className="min-w-0"><h2 className="text-[22px] font-black leading-7 tracking-[-0.03em] text-[#100F3E] dark:text-white sm:text-[28px]">{title}</h2><p className="mt-0.5 text-[13px] font-semibold leading-5 text-slate-500 dark:text-slate-400 sm:mt-1 sm:text-sm">{description}</p></div>
     </div>
   )
 }
@@ -787,10 +812,10 @@ function SettingRow({ icon: Icon, title, children }: { icon: ComponentType<{ cla
 function MobileNav({ activeView, lang, onNavigate }: { activeView: DashboardView; lang: Lang; onNavigate: (view: DashboardView) => void }) {
   return (
     <nav
-      className="fixed inset-x-0 bottom-0 z-[300] h-[calc(72px+env(safe-area-inset-bottom))] overflow-hidden rounded-t-[24px] border-t-2 border-[#E5E5E5] bg-white/[0.97] pb-[env(safe-area-inset-bottom)] shadow-[0_-4px_20px_rgba(0,0,0,0.06)] backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/[0.97] lg:hidden"
+      className="fixed inset-x-0 bottom-0 z-[300] h-[calc(68px+env(safe-area-inset-bottom))] overflow-hidden rounded-t-[20px] border-t-2 border-[#E5E5E5] bg-white/[0.97] pb-[env(safe-area-inset-bottom)] shadow-[0_-4px_20px_rgba(0,0,0,0.06)] backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/[0.97] sm:h-[calc(72px+env(safe-area-inset-bottom))] sm:rounded-t-[24px] lg:hidden"
       aria-label="Mobile dashboard"
     >
-      <div className="mx-auto flex h-[72px] max-w-lg items-stretch px-1.5">
+      <div className="mx-auto flex h-[68px] max-w-2xl items-stretch px-1.5 sm:h-[72px] sm:px-4">
         {navItems.map((item) => {
           const Icon = item.icon
           const isActive = activeView === item.key
@@ -816,7 +841,7 @@ function MobileNav({ activeView, lang, onNavigate }: { activeView: DashboardView
                 <Icon className="h-[22px] w-[22px]" />
               </span>
               <span
-                className="block max-w-full truncate py-0.5 text-[8.5px] font-bold leading-[1.35] tracking-[0.01em] min-[420px]:text-[9px]"
+                className="block max-w-full truncate py-0.5 text-[10px] font-bold leading-[1.3] tracking-[0.01em] min-[420px]:text-[10.5px] sm:text-[11px]"
                 style={{ fontFamily: '"Be Vietnam Pro", sans-serif' }}
               >
                 {mobileNavLabels[lang][item.key]}
