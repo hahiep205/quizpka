@@ -1,13 +1,12 @@
-import { Check } from "lucide-react"
-import { cn } from "@/lib/utils"
 import { GoogleIcon } from "@/shared/icons/GoogleIcon"
+import type { Theme } from "@/shared/types/app"
 
-function QuizPreviewCard() {
+function QuizPreviewCard({ theme }: { theme: Theme }) {
   return (
     <div className="relative mx-auto w-full max-w-[420px]">
       <div className="absolute -inset-x-4 bottom-0 top-12 rounded-xl bg-primary-100/35 blur-2xl dark:bg-sky-500/10" />
       <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-white px-6 pb-7 pt-5 shadow-[var(--shadow-2)] dark:border-white/10 dark:bg-slate-900 dark:shadow-[var(--shadow-2)] sm:px-7 sm:pb-8 sm:pt-6">
-        <div className="mb-8 flex items-center justify-between gap-3">
+        <div className="mb-6 flex items-center justify-between gap-3">
           <div className="flex items-center gap-1.5">
             <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
             <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
@@ -17,64 +16,27 @@ function QuizPreviewCard() {
             quizpka.online
           </span>
           <span className="text-[13px] font-medium tabular-nums tracking-wide text-slate-400">
-            00:45:12
+            00:31:07
           </span>
         </div>
 
-        <div className="space-y-3">
-          <div className="h-[14px] w-[72%] rounded-md bg-primary-300 dark:bg-sky-400/40" />
-          <div className="h-3 w-full rounded-md bg-primary-100 dark:bg-white/10" />
-          <div className="h-3 w-[84%] rounded-md bg-primary-100 dark:bg-white/10" />
-        </div>
-
-        <div className="mt-10 space-y-3">
-          <OptionRow width="w-[56%]" />
-          <OptionRow width="w-[70%]" selected />
-          <OptionRow width="w-[40%]" />
-        </div>
+        <video
+          className="mt-2 w-full max-h-[340px] rounded-lg object-contain"
+          src={theme === "dark" ? "/animo-column-drift-720p-dark.webm" : "/animo-column-drift-720p.webm"}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden="true"
+          disablePictureInPicture
+        />
       </div>
     </div>
   )
 }
 
-function OptionRow({
-  width,
-  selected = false,
-}: {
-  width: string
-  selected?: boolean
-}) {
-  return (
-    <div
-      className={cn(
-        "flex items-center gap-3 rounded-[14px] border px-4 py-3.5",
-        selected
-          ? "border-[#7ddea4] bg-[#e9f9f0] shadow-[var(--shadow-2)] dark:border-emerald-400/50 dark:bg-emerald-500/10 dark:shadow-[var(--shadow-2)]"
-          : "border-transparent bg-slate-100 dark:bg-white/5"
-      )}
-    >
-      <span
-        className={cn(
-          "flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-full border",
-          selected
-            ? "border-emerald-500 bg-emerald-500 text-white"
-            : "border-slate-300 bg-white dark:border-white/20 dark:bg-transparent"
-        )}
-      >
-        {selected ? <Check className="h-2.5 w-2.5 stroke-[3.5]" /> : null}
-      </span>
-      <span
-        className={cn(
-          "h-2.5 rounded-full",
-          width,
-          selected ? "bg-[#86efac]" : "bg-[#d7dbe5] dark:bg-white/20"
-        )}
-      />
-    </div>
-  )
-}
-
-export function HeroSection({ t, onOpenLogin }: { t: Record<string, string>; onOpenLogin: () => void }) {
+export function HeroSection({ t, onOpenLogin, theme }: { t: Record<string, string>; onOpenLogin: () => void; theme: Theme }) {
   return (
     <section
       id="home"
@@ -165,7 +127,7 @@ export function HeroSection({ t, onOpenLogin }: { t: Record<string, string>; onO
           </div>
 
           <div className="flex items-center justify-center lg:justify-end lg:pr-2">
-            <QuizPreviewCard />
+            <QuizPreviewCard theme={theme} />
           </div>
         </div>
       </div>

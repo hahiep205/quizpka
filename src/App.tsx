@@ -159,7 +159,7 @@ export default function App() {
           }
           onOpenLogin={openLogin}
         />
-        <HeroSection t={t} onOpenLogin={openLogin} />
+        <HeroSection t={t} onOpenLogin={openLogin} theme={theme} />
         <DocumentsPage lang={lang} />
         <ToeicSection lang={lang} />
         <SiteFooter t={t} onOpenContact={openContact} />
