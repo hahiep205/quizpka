@@ -25,8 +25,7 @@ function addStatus(acc: { correct: number; wrong: number; skipped: number }, sta
 
 function toCounts(acc: { correct: number; wrong: number; skipped: number }): ToeicCounts {
   const total = acc.correct + acc.wrong + acc.skipped
-  const attempted = acc.correct + acc.wrong
-  return { ...acc, total, accuracy: attempted === 0 ? 0 : Math.round((acc.correct / attempted) * 100) }
+  return { ...acc, total, accuracy: total === 0 ? 0 : Math.round((acc.correct / total) * 100) }
 }
 
 function statusOf(question: Question, answers: Record<string, AnswerValue>): "correct" | "wrong" | "skipped" {

@@ -15,4 +15,5 @@ export type AuthContextValue = {
   profile: AuthProfile | null
   signInWithGoogle: () => Promise<void>
   signOut: () => Promise<void>
+  updateProfile: (updates: { display_name?: string }) => Promise<void>
 }

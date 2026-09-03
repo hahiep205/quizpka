@@ -1,4 +1,4 @@
-import { useMemo, useState, type ComponentType } from "react"
+import { useEffect, useMemo, useState, type ComponentType } from "react"
 import {
   ArrowRight,
   BarChart3,
@@ -9,13 +9,10 @@ import {
   FileText,
   Flame,
   History,
-  Home,
   Languages,
-  Medal,
   Moon,
   Search,
   Settings,
-  Sparkles,
   Sun,
   Trophy,
   UserRound,
@@ -28,13 +25,17 @@ import { PdfViewerModal } from "@/components/PdfViewerModal"
 import { TadvPickerModal } from "@/components/TadvPickerModal"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
+import { Dialog } from "@/components/ui/dialog"
 import { examCatalog, getSubjectById, type ExamCatalogItem } from "@/data/subjects"
 import { cn } from "@/lib/utils"
 import { dashboardCopy as copy } from "@/shared/i18n"
 import { useExamLaunch } from "@/lib/useExamLaunch"
 import type { Language, Theme } from "@/shared/types/app"
 import { useAuth } from "@/auth/AuthProvider"
-import { navigate, appRoutes } from "@/app/navigation"
+import { navigate, appRoutes, getCurrentPath } from "@/app/navigation"
+import { readStorage, writeStorage } from "@/lib/storage"
+import { goToPractice, readPracticeHistory } from "@/lib/practiceSession"
+import { formatTime } from "@/features/quiz/lib/quizHelpers"
 
 type Lang = Language
 type DashboardView = "home" | "leaderboard" | "history" | "settings"
@@ -48,35 +49,48 @@ type DashboardPageProps = {
 
 const navItems: Array<{
   key: DashboardView
-  icon: ComponentType<{ className?: string; strokeWidth?: number }>
+  icon: ComponentType<{ className?: string }>
 }> = [
-  { key: "home", icon: Home },
-  { key: "leaderboard", icon: Trophy },
-  { key: "history", icon: History },
-  { key: "settings", icon: Settings },
+  { key: "home", icon: SidebarHomeIcon },
+  { key: "leaderboard", icon: SidebarRankingIcon },
+  { key: "history", icon: SidebarHistoryIcon },
+  { key: "settings", icon: SidebarSettingsIcon },
 ]
+
+function SidebarSvg({ className, children }: { className?: string; children: React.ReactNode }) {
+  return <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">{children}</svg>
+}
+
+function SidebarHomeIcon({ className }: { className?: string }) {
+  return <SidebarSvg className={className}><path d="M20 20C20 20.5523 19.5523 21 19 21H5C4.44772 21 4 20.5523 4 20V11H1L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11H20V20ZM11 13V19H13V13H11Z" /></SidebarSvg>
+}
+
+function SidebarRankingIcon({ className }: { className?: string }) {
+  return <SidebarSvg className={className}><path d="M12 7C16.4183 7 20 10.5817 20 15C20 19.4183 16.4183 23 12 23C7.58172 23 4 19.4183 4 15C4 10.5817 7.58172 7 12 7ZM12 10.5L10.6775 13.1797L7.72025 13.6094L9.86012 15.6953L9.35497 18.6406L12 17.25L14.645 18.6406L14.1399 15.6953L16.2798 13.6094L13.3225 13.1797L12 10.5ZM13 1.99902L18 2V5L16.6366 6.13758C15.5305 5.55773 14.3025 5.17887 13.0011 5.04951L13 1.99902ZM11 1.99902L10.9997 5.04943C9.6984 5.17866 8.47046 5.55738 7.36441 6.13706L6 5V2L11 1.99902Z" /></SidebarSvg>
+}
+
+function SidebarHistoryIcon({ className }: { className?: string }) {
+  return <SidebarSvg className={className}><path d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C7.52232 22 3.73057 19.056 2.45404 15H4.58152C5.76829 17.9318 8.64466 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C9.099 4 6.5585 5.54489 5.15596 7.85721L8 10H2V4L3.69098 5.26797C5.52247 3.27193 8.15393 2 12 2ZM13 7V11.5858L16.2426 14.8284L14.8284 16.2426L11 12.4142V7H13Z" /></SidebarSvg>
+}
+
+function SidebarSettingsIcon({ className }: { className?: string }) {
+  return <SidebarSvg className={className}><path d="M12 1L14.09 3.26L17.14 2.82L18.5 5.59L21.27 6.95L20.83 10L23.09 12L20.83 14L21.27 17.05L18.5 18.41L17.14 21.18L14.09 20.74L12 23L9.91 20.74L6.86 21.18L5.5 18.41L2.73 17.05L3.17 14L.91 12L3.17 10L2.73 6.95L5.5 5.59L6.86 2.82L9.91 3.26L12 1ZM12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8ZM12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10Z" /></SidebarSvg>
+}
 
 const mobileNavLabels = {
   vi: {
     home: "TRANG CHỦ",
-    leaderboard: "BẢNG XẾP HẠNG",
+    leaderboard: "XẾP HẠNG",
     history: "LỊCH SỬ",
     settings: "CÀI ĐẶT",
   },
   en: {
     home: "HOME",
-    leaderboard: "LEADERBOARD",
+    leaderboard: "RANKING",
     history: "HISTORY",
     settings: "SETTINGS",
   },
 } as const
-
-const ranking = [
-  { name: "Minh Anh", points: 1280, tone: "bg-amber-100 text-amber-700" },
-  { name: "Quốc Bảo", points: 1160, tone: "bg-slate-200 text-slate-600" },
-  { name: "Thu Hà", points: 1040, tone: "bg-orange-100 text-orange-700" },
-  { name: "Bạn", points: 860, tone: "bg-sky-100 text-sky-700" },
-]
 
 export function DashboardPage({
   lang,
@@ -84,7 +98,7 @@ export function DashboardPage({
   onToggleLang,
   onToggleTheme,
 }: DashboardPageProps) {
-  const [activeView, setActiveView] = useState<DashboardView>("home")
+  const [activeView, setActiveView] = useState<DashboardView>(() => getDashboardView(getCurrentPath()))
   const [query, setQuery] = useState("")
   const [filter, setFilter] = useState<"all" | "general" | "major">("all")
   const {
@@ -104,6 +118,12 @@ export function DashboardPage({
     setTadvPickerExam,
   } = useExamLaunch(lang)
 
+  useEffect(() => {
+    const syncView = () => setActiveView(getDashboardView(getCurrentPath()))
+    window.addEventListener("popstate", syncView)
+    return () => window.removeEventListener("popstate", syncView)
+  }, [])
+
   const filteredExams = useMemo(() => {
     const normalized = query.trim().toLocaleLowerCase(lang)
     return examCatalog.filter((exam) => {
@@ -117,6 +137,14 @@ export function DashboardPage({
 
   const navigate = (view: DashboardView) => {
     setActiveView(view)
+    const paths: Record<DashboardView, string> = {
+      home: appRoutes.dashboard,
+      leaderboard: appRoutes.dashboardLeaderboard,
+      history: appRoutes.dashboardHistory,
+      settings: appRoutes.dashboardSettings,
+    }
+    window.history.pushState(null, "", paths[view])
+    window.dispatchEvent(new PopStateEvent("popstate"))
     window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
@@ -124,7 +152,7 @@ export function DashboardPage({
     <div className="min-h-svh bg-[#F6F7FB] text-[#100F3E] transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
       <DesktopSidebar activeView={activeView} lang={lang} onNavigate={navigate} />
 
-      <div className="lg:pl-[252px]">
+      <div className="lg:pl-[200px]">
         <DashboardTopbar
           lang={lang}
           theme={theme}
@@ -197,6 +225,13 @@ export function DashboardPage({
   )
 }
 
+function getDashboardView(path: string): DashboardView {
+  if (path === appRoutes.dashboardLeaderboard) return "leaderboard"
+  if (path === appRoutes.dashboardHistory) return "history"
+  if (path === appRoutes.dashboardSettings) return "settings"
+  return "home"
+}
+
 function DesktopSidebar({
   activeView,
   lang,
@@ -207,13 +242,15 @@ function DesktopSidebar({
   onNavigate: (view: DashboardView) => void
 }) {
   const t = copy[lang]
+  const { profile, signOut } = useAuth()
+  const handleSignOut = () => { void signOut().then(() => navigate(appRoutes.home, { replace: true })) }
   return (
-    <aside className="fixed inset-y-0 left-0 z-40 hidden w-[252px] border-r border-slate-200 bg-white px-4 py-5 dark:border-white/10 dark:bg-slate-900 lg:flex lg:flex-col">
+    <aside className="fixed inset-y-0 left-0 z-40 hidden w-[200px] border-r border-slate-200 bg-white px-4 py-5 dark:border-white/10 dark:bg-slate-900 lg:flex lg:flex-col">
       <a href="/" className="flex h-12 items-center px-3" aria-label="QuizPKA">
         <img src={brandLogo} alt="QuizPKA" className="h-8 w-auto object-contain" />
       </a>
 
-      <nav className="mt-8 flex flex-1 flex-col gap-2" aria-label="Dashboard">
+      <nav className="mt-7 flex flex-1 flex-col gap-1.5" aria-label="Dashboard">
         {navItems.map((item) => {
           const Icon = item.icon
           const isActive = activeView === item.key
@@ -223,27 +260,27 @@ function DesktopSidebar({
               type="button"
               onClick={() => onNavigate(item.key)}
               className={cn(
-                "group flex h-12 w-full items-center gap-3 rounded-[12px] px-4 text-left text-[15px] font-extrabold transition-all",
+                "group flex w-full items-center gap-3.5 rounded-[var(--radius-sm)] px-[14px] py-[10px] text-left text-[12px] font-bold leading-5 text-[var(--gray-text)] transition-all duration-200",
                 isActive
-                  ? "bg-[#E8F7FE] text-[#129BDC] shadow-[inset_3px_0_0_#1CB0F6] dark:bg-sky-500/10 dark:text-sky-300"
-                  : "text-slate-500 hover:bg-slate-50 hover:text-[#100F3E] dark:text-slate-400 dark:hover:bg-white/5 dark:hover:text-white"
+                  ? "bg-sky-50 text-[#129BDC] dark:bg-sky-500/10 dark:text-sky-300"
+                  : "hover:bg-slate-50 hover:text-[#18181B] dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-white"
               )}
             >
-              <Icon className="h-5 w-5" strokeWidth={isActive ? 2.4 : 2} />
-              {t.nav[item.key]}
+              <span className="flex h-5 w-5 shrink-0 items-center justify-center">
+                <Icon className="h-[19px] w-[19px]" />
+              </span>
+              <span className="sidebar-label font-bold">{t.nav[item.key]}</span>
             </button>
           )
         })}
       </nav>
 
-      <div className="rounded-[16px] border-2 border-[#D9F2FD] bg-[#F3FBFF] p-4 dark:border-sky-400/15 dark:bg-sky-500/5">
-        <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-[10px] bg-[#1CB0F6] text-white shadow-[0_3px_0_#189CD8]">
-          <Sparkles className="h-4 w-4" />
+      <div className="border-t border-slate-200 pt-4 dark:border-white/10">
+        <div className="mb-3 flex items-center gap-3 px-2">
+          {profile?.avatar_url ? <img src={profile.avatar_url} alt="" className="h-9 w-9 rounded-xl object-cover" /> : <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-sky-50 text-sky-500 dark:bg-sky-500/10"><UserRound className="h-4 w-4" /></div>}
+          <div className="min-w-0"><p className="truncate text-sm font-extrabold text-[#100F3E] dark:text-white">{profile?.display_name ?? profile?.email}</p><p className="truncate text-[11px] font-semibold text-slate-400">{profile?.email}</p></div>
         </div>
-        <p className="text-sm font-extrabold text-[#100F3E] dark:text-white">QuizPKA</p>
-        <p className="mt-1 text-xs font-semibold leading-5 text-slate-500 dark:text-slate-400">
-          {lang === "vi" ? "Ôn tập thông minh, thi cử tự tin." : "Practise smarter, test with confidence."}
-        </p>
+        <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm lp-btn--block" onClick={handleSignOut}><LogOut className="h-4 w-4" />{lang === "vi" ? "Đăng xuất" : "Sign out"}</button>
       </div>
     </aside>
   )
@@ -256,8 +293,7 @@ function DashboardTopbar({
   onToggleTheme,
 }: DashboardPageProps) {
   const t = copy[lang]
-  const { profile, signOut } = useAuth()
-  const handleSignOut = () => { void signOut().then(() => navigate(appRoutes.home, { replace: true })) }
+  const { profile } = useAuth()
   return (
     <header className="sticky top-0 z-30 border-b border-slate-200/80 bg-white/90 backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/90">
       <div className="mx-auto flex h-[72px] w-full max-w-[1440px] items-center justify-between px-4 sm:px-6 lg:h-[78px] lg:px-8 xl:px-10">
@@ -266,9 +302,8 @@ function DashboardTopbar({
         </a>
 
         <div className="hidden lg:block">
-          <p className="text-[13px] font-bold text-slate-400">{t.hello},</p>
-          <h1 className="mt-0.5 text-xl font-black tracking-[-0.02em] text-[#100F3E] dark:text-white">
-            {t.student} <span aria-hidden="true">👋</span>
+          <h1 className="text-base font-semibold text-[#100F3E] dark:text-white">
+            {t.hello}, {profile?.display_name ?? t.student}!
           </h1>
         </div>
 
@@ -318,7 +353,6 @@ function DashboardTopbar({
               {profile?.avatar_url ? <img src={profile.avatar_url} alt="" className="h-10 w-10 rounded-[12px] object-cover" /> : <UserRound className="h-5 w-5" strokeWidth={2.2} />}
             </div>
             <div className="max-w-[140px] truncate text-sm font-extrabold text-[#100F3E] dark:text-white">{profile?.display_name ?? profile?.email}</div>
-            <button type="button" className="lp-btn lp-btn--secondary lp-btn--icon" onClick={handleSignOut} aria-label={lang === "vi" ? "Đăng xuất" : "Sign out"} title={lang === "vi" ? "Đăng xuất" : "Sign out"}><LogOut className="h-4 w-4" /></button>
           </div>
         </div>
       </div>
@@ -368,41 +402,8 @@ function HomeDashboard({
   const t = copy[lang]
   return (
     <div className="space-y-8 dashboard-reveal">
-      <section className="relative isolate overflow-hidden rounded-[20px] bg-[#1CB0F6] px-5 py-7 text-white shadow-[0_5px_0_#189CD8] sm:px-8 sm:py-9 lg:px-10 lg:py-10">
-        <div className="absolute -right-10 -top-16 -z-10 h-64 w-64 rounded-full border-[38px] border-white/10" />
-        <div className="absolute -bottom-20 right-48 -z-10 h-44 w-44 rounded-full bg-white/10 blur-sm" />
-        <div className="absolute right-[7%] top-1/2 hidden -translate-y-1/2 lg:block">
-          <div className="relative flex h-44 w-44 rotate-3 items-center justify-center rounded-[36px] border-4 border-white/25 bg-white/15 shadow-2xl backdrop-blur-sm">
-            <Trophy className="h-24 w-24 text-[#FFF38A]" strokeWidth={1.8} />
-            <Sparkles className="absolute -right-3 top-2 h-8 w-8 text-white" />
-            <Medal className="absolute -bottom-4 -left-4 h-14 w-14 -rotate-12 text-[#FFE05C]" />
-          </div>
-        </div>
-
-        <div className="max-w-2xl lg:max-w-[62%]">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1.5 text-xs font-extrabold uppercase tracking-[0.08em]">
-            <Flame className="h-4 w-4 text-[#FFF38A]" fill="currentColor" />
-            {t.bannerEyebrow}
-          </div>
-          <h2 className="max-w-[650px] text-[28px] font-black leading-[1.15] tracking-[-0.035em] sm:text-4xl lg:text-[42px]">
-            {t.bannerTitle}
-          </h2>
-          <p className="mt-4 max-w-xl text-sm font-semibold leading-6 text-white/85 sm:text-[15px]">
-            {t.bannerDesc}
-          </p>
-          <button
-            type="button"
-            onClick={() => document.getElementById("dashboard-documents")?.scrollIntoView({ behavior: "smooth" })}
-            className="mt-6 inline-flex h-11 items-center gap-2 rounded-[12px] bg-white px-5 text-sm font-black uppercase tracking-[0.04em] text-[#129BDC] shadow-[0_4px_0_#CBEFFF] transition-all hover:-translate-y-0.5 active:translate-y-[3px] active:shadow-[0_1px_0_#CBEFFF]"
-          >
-            {t.bannerButton}
-            <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
-          </button>
-        </div>
-      </section>
-
       <section className="grid grid-cols-2 gap-3 lg:grid-cols-4 lg:gap-4" aria-label="Statistics">
-        <DashboardStatCard icon={Flame} value="5" label={t.streak} tone="orange" />
+        <DashboardStatCard icon={Flame} value="0" label={t.streak} tone="orange" />
         <DashboardStatCard icon={CheckCircle2} value="0" label={t.completed} tone="green" />
         <DashboardStatCard icon={BarChart3} value="--" label={t.accuracy} tone="blue" />
         <DashboardStatCard icon={Clock3} value="0h" label={t.studyTime} tone="violet" />
@@ -429,13 +430,13 @@ function HomeDashboard({
                 className="h-11 w-full rounded-[12px] border-2 border-[#E5E5E5] bg-white pl-10 pr-3 text-sm font-bold text-[#100F3E] shadow-[0_3px_0_#DCDCDC] outline-none transition focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-900 dark:text-white dark:shadow-[0_3px_0_rgba(0,0,0,0.35)]"
               />
             </label>
-            <div className="flex gap-2 overflow-x-auto pb-1 sm:pb-0">
+            <div className="grid w-full grid-cols-3 gap-2 sm:w-auto sm:grid-cols-none sm:grid-flow-col">
               {(["all", "general", "major"] as const).map((item) => (
                 <button
                   key={item}
                   type="button"
                   onClick={() => onFilterChange(item)}
-                  className={cn("lp-chip min-h-10", filter === item && "is-active")}
+                  className={cn("lp-chip min-h-10 min-w-0 justify-center whitespace-nowrap px-2 text-xs sm:px-4 sm:text-sm", filter === item && "is-active")}
                 >
                   {t[item]}
                 </button>
@@ -539,19 +540,13 @@ function ExamCard({ exam, lang, onStart }: { exam: ExamCatalogItem; lang: Lang; 
 function LeaderboardView({ lang }: { lang: Lang }) {
   const t = copy[lang]
   return (
-    <section className="dashboard-reveal mx-auto max-w-4xl">
+    <section className="dashboard-reveal mx-auto max-w-5xl">
       <PageHeading title={t.leaderboardTitle} description={t.leaderboardDesc} icon={Trophy} />
-      <div className="overflow-hidden rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
-        <div className="grid grid-cols-[64px_1fr_auto] gap-3 border-b border-slate-100 px-5 py-3 text-xs font-extrabold uppercase tracking-[0.08em] text-slate-400 dark:border-white/10">
-          <span>{t.rank}</span><span>{t.learner}</span><span>{t.points}</span>
-        </div>
-        {ranking.map((item, index) => (
-          <div key={item.name} className={cn("grid grid-cols-[64px_1fr_auto] items-center gap-3 px-5 py-4", index !== ranking.length - 1 && "border-b border-slate-100 dark:border-white/10", item.name === "Bạn" && "bg-sky-50/70 dark:bg-sky-500/5")}>
-            <span className={cn("flex h-8 w-8 items-center justify-center rounded-[10px] text-sm font-black", item.tone)}>#{index + 1}</span>
-            <span className="font-extrabold text-[#100F3E] dark:text-white">{item.name === "Bạn" ? t.you : item.name}</span>
-            <span className="font-black text-[#1CB0F6]">{item.points.toLocaleString()}</span>
-          </div>
-        ))}
+      <div className="flex min-h-[320px] flex-col items-center justify-center rounded-[16px] border-2 border-dashed border-slate-200 bg-white/70 p-8 text-center dark:border-white/10 dark:bg-slate-900/60">
+        <Trophy className="h-12 w-12 text-slate-300 dark:text-slate-600" />
+        <p className="mt-4 max-w-md text-sm font-bold leading-6 text-slate-500 dark:text-slate-400">
+          {lang === "vi" ? "Bảng xếp hạng sẽ được mở khi hệ thống tích lũy điểm học tập." : "The leaderboard will appear when learning points are available."}
+        </p>
       </div>
     </section>
   )
@@ -559,34 +554,216 @@ function LeaderboardView({ lang }: { lang: Lang }) {
 
 function EmptyView({ lang, view }: { lang: Lang; view: "history" }) {
   const t = copy[lang]
+  const { user } = useAuth()
+  const userId = user?.id
+  const userCreatedAt = user?.created_at
+  const [history, setHistory] = useState(() => userId ? readPracticeHistory(userId, userCreatedAt) : [])
+  const [expandedId, setExpandedId] = useState<string | null>(null)
+  const [wrongListItemId, setWrongListItemId] = useState<string | null>(null)
+  const wrongListItem = history.find((item) => item.id === wrongListItemId)
+
+  useEffect(() => {
+    setHistory(userId ? readPracticeHistory(userId, userCreatedAt) : [])
+    setExpandedId(null)
+    setWrongListItemId(null)
+  }, [userCreatedAt, userId])
+
+  const retryWrong = (item: (typeof history)[number]) => {
+    const ids = item.wrongQuestions?.map((question) => question.id) ?? []
+    if (!ids.length) return
+    goToPractice({
+      examId: item.examId,
+      subjectId: item.subjectId,
+      setup: { ...item.setup, mode: "practice", questionLimit: undefined },
+      lang: item.lang,
+      chapterId: item.chapterId,
+      toeicScope: item.toeicScope,
+      questionIds: ids,
+      retryOfHistoryId: item.retryOfHistoryId ?? item.id,
+      retryNumber: (item.retryNumber ?? 0) + 1,
+    }, true)
+  }
   return (
     <section className="dashboard-reveal mx-auto max-w-4xl">
       <PageHeading title={t.historyTitle} description={t.historyDesc} icon={History} />
-      <div className="flex min-h-[360px] flex-col items-center justify-center rounded-[20px] border-2 border-dashed border-slate-200 bg-white/70 p-8 text-center dark:border-white/10 dark:bg-slate-900/60">
+      {history.length ? (
+        <div className="space-y-3">
+          {history.map((item) => (
+            <HistoryAttemptCard
+              key={item.id}
+              item={item}
+              lang={lang}
+              expanded={expandedId === item.id}
+              onToggle={() => setExpandedId(expandedId === item.id ? null : item.id)}
+              onShowWrong={() => setWrongListItemId(item.id)}
+              onRetry={() => retryWrong(item)}
+            />
+          ))}
+        </div>
+      ) : <div className="flex min-h-[360px] flex-col items-center justify-center rounded-[20px] border-2 border-dashed border-slate-200 bg-white/70 p-8 text-center dark:border-white/10 dark:bg-slate-900/60">
         <div className="flex h-16 w-16 items-center justify-center rounded-[18px] bg-[#E8F7FE] text-[#1CB0F6] dark:bg-sky-500/10">
           {view === "history" ? <CalendarDays className="h-8 w-8" /> : null}
         </div>
         <p className="mt-5 max-w-md text-sm font-bold leading-6 text-slate-500 dark:text-slate-400">{t.activityEmpty}</p>
+      </div>}
+      <WrongAnswersDialog
+        item={wrongListItem}
+        lang={lang}
+        onClose={() => setWrongListItemId(null)}
+        onRetry={() => {
+          if (wrongListItem) retryWrong(wrongListItem)
+        }}
+      />
+    </section>
+  )
+}
+
+type HistoryItem = ReturnType<typeof readPracticeHistory>[number]
+
+function HistoryAttemptCard({ item, lang, expanded, onToggle, onShowWrong, onRetry }: {
+  item: HistoryItem
+  lang: Lang
+  expanded: boolean
+  onToggle: () => void
+  onShowWrong: () => void
+  onRetry: () => void
+}) {
+  const wrong = item.wrongQuestions ?? []
+  return (
+    <article className="overflow-hidden rounded-[16px] border-2 border-slate-200 bg-white shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none">
+      <button type="button" className="flex w-full items-center justify-between gap-4 p-4 text-left" onClick={onToggle} aria-expanded={expanded}>
+        <div className="min-w-0">
+          <p className="truncate font-extrabold text-[#100F3E] dark:text-white">{item.title}</p>
+          <div className="mt-1 flex flex-wrap items-center gap-2 text-xs font-semibold text-slate-400">
+            <span>{new Date(item.completedAt).toLocaleString(lang === "vi" ? "vi-VN" : "en-US")} · {item.mode}</span>
+          </div>
+        </div>
+        <div className="shrink-0 text-right">
+          <p className="font-black text-[#1CB0F6]">{item.score.toFixed(1)}/10</p>
+          {item.retryNumber ? <span className="mt-1 inline-block rounded-full bg-[#E8F7FE] px-2 py-1 text-xs font-extrabold text-[#129BDC] dark:bg-sky-500/10 dark:text-sky-300">{lang === "vi" ? `Làm lại lần ${item.retryNumber}` : `Retry ${item.retryNumber}`}</span> : null}
+        </div>
+      </button>
+      {expanded ? <div className="border-t border-slate-100 p-4 dark:border-white/10">
+        <div className="grid grid-cols-2 gap-3 text-center sm:grid-cols-4">
+          <HistoryMetric label={lang === "vi" ? "Đúng" : "Correct"} value={String(item.correct)} />
+          <HistoryMetric label={lang === "vi" ? "Sai / chưa làm" : "Wrong / skipped"} value={String(wrong.length)} />
+          <HistoryMetric label={lang === "vi" ? "Độ chính xác" : "Accuracy"} value={`${item.accuracy}%`} />
+          <HistoryMetric label={lang === "vi" ? "Thời gian" : "Duration"} value={formatTime(item.durationSeconds)} />
+        </div>
+        <div className="mt-4 flex flex-col gap-2 sm:flex-row">
+          <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={!wrong.length} onClick={onShowWrong}>{lang === "vi" ? "Xem danh sách câu sai" : "View wrong answers"}</button>
+          <button type="button" className="lp-btn lp-btn--primary lp-btn--sm" disabled={!wrong.length} onClick={onRetry}>{lang === "vi" ? "Làm lại câu sai" : "Retry wrong answers"}</button>
+        </div>
+      </div> : null}
+    </article>
+  )
+}
+
+function WrongAnswersDialog({ item, lang, onClose, onRetry }: {
+  item?: HistoryItem
+  lang: Lang
+  onClose: () => void
+  onRetry: () => void
+}) {
+  const wrong = item?.wrongQuestions ?? []
+  return (
+    <Dialog
+      open={Boolean(item)}
+      onClose={onClose}
+      title={lang === "vi" ? "Danh sách câu sai" : "Wrong answers"}
+      closeLabel={lang === "vi" ? "Đóng" : "Close"}
+      className="z-[100]"
+      panelClassName="flex max-h-[min(780px,92vh)] w-full max-w-[720px] flex-col overflow-hidden rounded-[18px] border-2 border-[#E5E5E5] bg-white shadow-[0_6px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none"
+    >
+      <div className="flex items-start justify-between gap-4 border-b border-slate-100 px-5 py-4 dark:border-white/10 sm:px-6">
+        <div className="min-w-0">
+          <h2 className="text-lg font-black text-[#100F3E] dark:text-white">{lang === "vi" ? "Danh sách câu sai" : "Wrong answers"}</h2>
+          <p className="mt-1 truncate text-sm font-semibold text-slate-500 dark:text-slate-400">{item?.title}</p>
+        </div>
+        <span className="shrink-0 rounded-full bg-rose-50 px-3 py-1 text-xs font-extrabold text-rose-600 dark:bg-rose-500/10 dark:text-rose-300">{wrong.length} {lang === "vi" ? "câu" : "questions"}</span>
+      </div>
+      <div className="min-h-0 flex-1 space-y-3 overflow-y-auto px-4 py-4 sm:px-6">
+        {wrong.map((question, index) => <div key={question.id} className="rounded-xl border border-slate-100 bg-slate-50 p-3.5 dark:border-white/10 dark:bg-white/5">
+          <div className="flex items-start gap-3">
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-white text-xs font-black text-[#129BDC] shadow-sm dark:bg-slate-800">{index + 1}</span>
+            <div className="min-w-0 flex-1">
+              <div className="flex flex-wrap items-start justify-between gap-2">
+                <p className="min-w-0 flex-1 text-sm font-bold leading-5 text-[#100F3E] dark:text-white">{question.prompt}</p>
+                {question.wasSkipped ? <span className="shrink-0 rounded-full bg-amber-100 px-2 py-1 text-[11px] font-extrabold text-amber-700 dark:bg-amber-500/10 dark:text-amber-300">{lang === "vi" ? "Chưa làm" : "Skipped"}</span> : null}
+              </div>
+              <p className="mt-2 text-xs font-semibold leading-5 text-emerald-600">{lang === "vi" ? "Đáp án đúng" : "Correct answer"}: {question.correctAnswer}</p>
+            </div>
+          </div>
+        </div>)}
+      </div>
+      <div className="flex flex-col-reverse gap-2 border-t border-slate-100 px-5 py-4 dark:border-white/10 sm:flex-row sm:justify-end sm:px-6">
+        <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={onClose}>{lang === "vi" ? "Đóng" : "Close"}</button>
+        <button type="button" className="lp-btn lp-btn--primary lp-btn--sm" disabled={!wrong.length} onClick={onRetry}>{lang === "vi" ? "Làm lại câu sai" : "Retry wrong answers"}</button>
+      </div>
+    </Dialog>
+  )
+}
+
+function HistoryMetric({ label, value }: { label: string; value: string }) {
+  return <div className="rounded-xl bg-slate-50 px-3 py-2 dark:bg-white/5"><p className="text-lg font-black text-[#100F3E] dark:text-white">{value}</p><p className="text-xs font-bold text-slate-400">{label}</p></div>
+}
+
+function SettingsView({ lang, theme, onToggleLang, onToggleTheme }: DashboardPageProps) {
+  const t = copy[lang]
+  const { profile, updateProfile, signOut } = useAuth()
+  const [displayName, setDisplayName] = useState(profile?.display_name ?? "")
+  const [saving, setSaving] = useState(false)
+  const [saved, setSaved] = useState(false)
+  const [saveError, setSaveError] = useState(false)
+  const [soundEnabled, setSoundEnabled] = useState(() => readStorage("quizpka-sound-enabled") !== "false")
+  const [leaderboardVisible, setLeaderboardVisible] = useState(() => readStorage("quizpka-leaderboard-visible") !== "false")
+  const [emailUpdates, setEmailUpdates] = useState(() => readStorage("quizpka-email-updates") === "true")
+
+  useEffect(() => { setDisplayName(profile?.display_name ?? "") }, [profile?.display_name])
+  useEffect(() => { writeStorage("quizpka-sound-enabled", String(soundEnabled)) }, [soundEnabled])
+  useEffect(() => { writeStorage("quizpka-leaderboard-visible", String(leaderboardVisible)) }, [leaderboardVisible])
+  useEffect(() => { writeStorage("quizpka-email-updates", String(emailUpdates)) }, [emailUpdates])
+
+  const saveProfile = async () => {
+    setSaving(true); setSaved(false); setSaveError(false)
+    try { await updateProfile({ display_name: displayName.trim() || undefined }); setSaved(true) } catch { setSaveError(true) } finally { setSaving(false) }
+  }
+
+  return (
+    <section className="dashboard-reveal mx-auto max-w-5xl">
+      <PageHeading title={t.settingsTitle} description={t.settingsDesc} icon={Settings} />
+      <div className="grid gap-5 md:grid-cols-2">
+        <div className="rounded-[20px] border border-slate-200 bg-white p-5 shadow-[0_4px_0_rgba(15,23,42,0.06)] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.3)] lg:col-span-2 sm:p-6">
+          <div><h3 className="text-xl font-black text-[#100F3E] dark:text-white">{lang === "vi" ? "Thông tin cá nhân" : "Profile"}</h3><p className="mt-1 text-sm font-semibold text-slate-500 dark:text-slate-400">{lang === "vi" ? "Thông tin tài khoản Google" : "Your Google account"}</p></div>
+          <div className="mt-6 grid gap-6 md:grid-cols-[200px_minmax(0,1fr)] md:gap-8">
+            <div className="flex flex-col items-center justify-center border-b border-slate-100 pb-6 md:border-b-0 md:border-r md:pb-0 md:pr-8 dark:border-white/10">{profile?.avatar_url ? <img src={profile.avatar_url} alt="" className="h-24 w-24 rounded-3xl object-cover shadow-md" /> : <div className="flex h-24 w-24 items-center justify-center rounded-3xl bg-sky-50 text-sky-500 dark:bg-sky-500/10"><UserRound className="h-9 w-9" /></div>}<p className="mt-4 text-xs font-bold text-slate-400">Email</p><p className="mt-1 max-w-full truncate text-center text-sm font-bold text-slate-700 dark:text-slate-200">{profile?.email}</p></div>
+            <div className="min-w-0 self-center"><label className="block text-sm font-extrabold text-slate-600 dark:text-slate-300">{lang === "vi" ? "Tên hiển thị" : "Display name"}<input value={displayName} onChange={(e) => setDisplayName(e.target.value)} className="mt-2 h-12 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 text-sm font-bold text-slate-800 outline-none transition focus:border-sky-400 focus:bg-white focus:ring-4 focus:ring-sky-100 dark:border-white/10 dark:bg-slate-800 dark:text-white dark:focus:bg-slate-700 dark:focus:ring-sky-500/10" maxLength={80} /></label><button type="button" className="lp-btn lp-btn--primary lp-btn--sm mt-4 w-full sm:w-auto" disabled={saving} onClick={() => void saveProfile()}>{saving ? (lang === "vi" ? "Đang lưu…" : "Saving…") : saved ? (lang === "vi" ? "Đã lưu" : "Saved") : (lang === "vi" ? "Lưu thay đổi" : "Save changes")}</button></div>
+          </div>
+          {saveError && <p role="alert" className="mt-3 text-sm font-semibold text-red-600">{lang === "vi" ? "Không thể lưu thay đổi. Vui lòng thử lại." : "Could not save changes. Please try again."}</p>}
+        </div>
+        <SettingRow icon={Languages} title={t.language}>
+          <button type="button" className="lp-chip is-active min-w-[112px] justify-center" onClick={onToggleLang}>{lang === "vi" ? t.vietnamese : t.english}</button>
+        </SettingRow>
+        <SettingRow icon={theme === "light" ? Sun : Moon} title={t.appearance}>
+          <button type="button" className="lp-chip is-active min-w-[112px] justify-center" onClick={onToggleTheme}>{theme === "light" ? t.light : t.dark}</button>
+        </SettingRow>
+        <div className="space-y-3 rounded-[20px] border-2 border-[#E5E5E5] bg-white p-5 shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)] md:col-span-2">
+          <h3 className="text-lg font-black text-[#100F3E] dark:text-white">{lang === "vi" ? "Thiết lập" : "Settings"}</h3>
+          <ToggleRow label={lang === "vi" ? "Bật âm thanh mặc định" : "Enable sound by default"} checked={soundEnabled} onChange={setSoundEnabled} />
+          <ToggleRow label={lang === "vi" ? "Cho phép hiển thị trên bảng xếp hạng" : "Show me on the leaderboard"} checked={leaderboardVisible} onChange={setLeaderboardVisible} />
+          <ToggleRow label={lang === "vi" ? "Nhận thông báo qua email" : "Receive email updates"} checked={emailUpdates} onChange={setEmailUpdates} />
+        </div>
+        <div className="rounded-[20px] border-2 border-red-100 bg-red-50/60 p-5 dark:border-red-500/20 dark:bg-red-500/5 md:col-span-2 lg:hidden">
+          <h3 className="text-lg font-black text-red-700 dark:text-red-300">{lang === "vi" ? "Tài khoản" : "Account"}</h3>
+          <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm lp-btn--block mt-4" onClick={() => void signOut().then(() => navigate(appRoutes.home, { replace: true }))}><LogOut className="h-4 w-4" />{lang === "vi" ? "Đăng xuất" : "Sign out"}</button>
+        </div>
       </div>
     </section>
   )
 }
 
-function SettingsView({ lang, theme, onToggleLang, onToggleTheme }: DashboardPageProps) {
-  const t = copy[lang]
-  return (
-    <section className="dashboard-reveal mx-auto max-w-4xl">
-      <PageHeading title={t.settingsTitle} description={t.settingsDesc} icon={Settings} />
-      <div className="space-y-4">
-        <SettingRow icon={Languages} title={t.language}>
-          <button type="button" className="lp-chip is-active" onClick={onToggleLang}>{lang === "vi" ? t.vietnamese : t.english}</button>
-        </SettingRow>
-        <SettingRow icon={theme === "light" ? Sun : Moon} title={t.appearance}>
-          <button type="button" className="lp-chip is-active" onClick={onToggleTheme}>{theme === "light" ? t.light : t.dark}</button>
-        </SettingRow>
-      </div>
-    </section>
-  )
+function ToggleRow({ label, checked, onChange }: { label: string; checked: boolean; onChange: (value: boolean) => void }) {
+  return <label className="flex min-h-14 cursor-pointer items-center justify-between gap-4 rounded-xl border border-slate-100 px-3.5 py-3 text-sm font-bold text-slate-600 transition-colors hover:border-sky-200 dark:border-white/10 dark:text-slate-300 dark:hover:border-sky-400/30"><span className="max-w-[80%] leading-5">{label}</span><span className={cn("relative h-6 w-11 shrink-0 rounded-full transition-colors", checked ? "bg-sky-500" : "bg-slate-200 dark:bg-slate-700")}><input type="checkbox" checked={checked} onChange={(event) => onChange(event.target.checked)} className="peer sr-only" /><span className="absolute left-1 top-1 h-4 w-4 rounded-full bg-white shadow-sm transition-transform peer-checked:translate-x-5" /></span></label>
 }
 
 function PageHeading({ title, description, icon: Icon }: { title: string; description: string; icon: ComponentType<{ className?: string }> }) {
@@ -636,7 +813,7 @@ function MobileNav({ activeView, lang, onNavigate }: { activeView: DashboardView
                   isActive && "-translate-y-0.5"
                 )}
               >
-                <Icon className="h-[22px] w-[22px]" strokeWidth={isActive ? 2.7 : 2.2} />
+                <Icon className="h-[22px] w-[22px]" />
               </span>
               <span
                 className="block max-w-full truncate py-0.5 text-[8.5px] font-bold leading-[1.35] tracking-[0.01em] min-[420px]:text-[9px]"

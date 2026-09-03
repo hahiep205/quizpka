@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from "react"
+import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import {
   ArrowLeft,
   ChevronLeft,
@@ -43,6 +43,10 @@ import { StatCard } from "@/features/quiz/ui/StatCard"
 import { CenterCard } from "@/features/quiz/ui/CenterCard"
 import { ResultStamp } from "@/features/quiz/ui/ResultStamp"
 import { Dialog } from "@/components/ui/dialog"
+import { useAuth } from "@/auth/AuthProvider"
+import { appRoutes } from "@/app/navigation"
+import { savePracticeHistory } from "@/lib/practiceSession"
+import { playAnswerFeedback } from "@/features/quiz/lib/answerFeedbackSound"
 
 type Lang = "en" | "vi"
 
@@ -53,11 +57,15 @@ type QuizSessionProps = {
   setup: QuizSetupValues
   chapterId?: string
   toeicScope?: ToeicScope
+  questionIds?: string[]
+  retryOfHistoryId?: string
+  retryNumber?: number
   onExit: () => void
 }
 
-export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope, onExit }: QuizSessionProps) {
+export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope, questionIds, retryOfHistoryId, retryNumber, onExit }: QuizSessionProps) {
   const t = copy[lang]
+  const { status, user } = useAuth()
   const hideExplanation = shouldHideExplanation(subject.id)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [answers, setAnswers] = useState<Record<string, AnswerValue>>({})
@@ -75,8 +83,12 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
   const [hardWrongCounts, setHardWrongCounts] = useState<Record<string, number>>({})
   const [hardSelected, setHardSelected] = useState<AnswerValue | undefined>(undefined)
   const [hardFinalAnswers, setHardFinalAnswers] = useState<Record<string, AnswerValue>>({})
+  const [activeRetryNumber, setActiveRetryNumber] = useState(retryNumber)
+  const historySaved = useRef(false)
+  const retryRootHistoryId = useRef(retryOfHistoryId)
+  const lastSavedHistoryId = useRef<string | undefined>(undefined)
   const retryStorageKey = `quiz-retry-${exam.id}-${chapterId ?? "all"}-${toeicScope ?? "noscope"}`
-  const { questions, setQuestions, loading, error, reload } = useQuizQuestions({ subject, exam, setup, chapterId, toeicScope })
+  const { questions, setQuestions, loading, error, reload } = useQuizQuestions({ subject, exam, setup, chapterId, toeicScope, questionIds })
   const { history: retryHistory, setHistory: setRetryHistory, clear: clearRetryHistory } = useRetryHistory(retryStorageKey)
   const handleTimeout = useCallback(() => setFinished(true), [])
   const { secondsLeft, elapsedSeconds, reset: resetTimer } = useQuizTimer({
@@ -120,6 +132,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
   const progress = questions.length ? Math.round((answeredCount / questions.length) * 100) : 0
   const stats = useMemo(() => getQuizStats(questions, answers), [answers, questions])
   const wrongQuestions = useMemo(() => getIncorrectQuestions(questions, answers), [questions, answers])
+  const questionById = useMemo(() => new Map(questions.map((question) => [question.id, question])), [questions])
 
   // Derived navigation data is memoized (and hoisted above the early returns) so the
   // sidebar tiles and question blocks can skip re-rendering while the timer ticks.
@@ -152,9 +165,52 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
   const hardProgress = questions.length ? Math.round((hardMastered / questions.length) * 100) : 0
   const hardCompletedAll = hardMastered === questions.length
 
+  useEffect(() => {
+    if (!finished) return
+    window.history.replaceState(null, "", status === "authenticated" ? appRoutes.result : appRoutes.resultGuest)
+    if (historySaved.current) return
+    historySaved.current = true
+    if (!user) return
+    const wrong = isHard ? questions.filter((question) => (hardWrongCounts[question.id] ?? 0) > 0) : wrongQuestions
+    const historyId = `${exam.id}-${Date.now()}`
+    const correct = isHard ? hardMastered : stats.correct
+    lastSavedHistoryId.current = historyId
+    savePracticeHistory({
+      id: historyId,
+      examId: exam.id,
+      subjectId: subject.id,
+      title: getExamTitle(exam, lang),
+      mode: setup.mode,
+      score: stats.score10,
+      correct,
+      total: questions.length,
+      accuracy: questions.length ? Math.round((correct / questions.length) * 100) : 0,
+      durationSeconds: elapsedSeconds,
+      completedAt: new Date().toISOString(),
+      setup,
+      lang,
+      chapterId,
+      toeicScope,
+      retryOfHistoryId: activeRetryNumber ? retryRootHistoryId.current : undefined,
+      retryNumber: activeRetryNumber,
+      wrongQuestions: wrong.map((question) => ({
+        id: question.id,
+        prompt: question.prompt,
+        correctAnswer: question.correctIndex === undefined
+          ? question.acceptedAnswers?.join(" / ") ?? ""
+          : `${String.fromCharCode(65 + question.correctIndex)}. ${question.options[question.correctIndex]}`,
+        wasSkipped: !isHard && answers[question.id] === undefined,
+      })),
+    }, user.id)
+  }, [activeRetryNumber, answers, chapterId, elapsedSeconds, exam, finished, hardMastered, hardProgress, hardWrongCounts, isHard, lang, questions, setup, stats.correct, stats.score10, status, subject.id, toeicScope, user, wrongQuestions])
+
   const handleAnswer = useCallback((questionId: string, answer: AnswerValue) => {
+    const question = questionById.get(questionId)
+    if (isPractice && question && typeof answer === "number") {
+      playAnswerFeedback(isAnswerCorrect(question, answer))
+    }
     setAnswers((currentAnswers) => ({ ...currentAnswers, [questionId]: answer }))
-  }, [])
+  }, [isPractice, questionById])
 
   const goToQuestion = useCallback((index: number) => {
     setCurrentIndex(index)
@@ -165,6 +221,10 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
 
   const handleRetryWrong = useCallback(() => {
     if (wrongQuestions.length === 0) return
+    historySaved.current = false
+    retryRootHistoryId.current ??= lastSavedHistoryId.current
+    setActiveRetryNumber((current) => (current ?? 0) + 1)
+    window.history.replaceState(null, "", status === "authenticated" ? appRoutes.practice : appRoutes.practiceGuest)
     setRetryHistory((prev) => [...prev, { correct: stats.correct, total: questions.length, accuracy: stats.accuracy }])
     const subset = wrongQuestions.length === questions.length ? shuffle([...wrongQuestions]) : wrongQuestions
     setQuestions(subset)
@@ -176,7 +236,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
     resetTimer()
     setTransitionKey((value) => value + 1)
     setForcePractice(true)
-  }, [questions, resetTimer, setQuestions, setRetryHistory, stats, wrongQuestions])
+  }, [questions, resetTimer, setQuestions, setRetryHistory, stats, status, wrongQuestions])
 
   const handleOpenReview = useCallback((questionId?: string) => {
     setReviewQuestionId(questionId)
@@ -191,8 +251,11 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
   }, [])
 
   const handleHardAnswer = useCallback((_questionId: string, answer: AnswerValue) => {
+    if (hardSelected === undefined && hardCurrent) {
+      playAnswerFeedback(isAnswerCorrect(hardCurrent, answer))
+    }
     setHardSelected((previous) => (previous === undefined ? answer : previous))
-  }, [])
+  }, [hardCurrent, hardSelected])
 
   const handleHardNext = useCallback(() => {
     const currentHardQuestion = hardQueue[hardPos]
@@ -221,6 +284,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
   }, [hardPos, hardQueue, hardSelected])
 
   const handleHardRestart = useCallback(() => {
+    historySaved.current = false
     setHardQueue(buildHardQueue(questions, setup.questionOrder === "random"))
     setHardPos(0)
     setHardMastered(0)

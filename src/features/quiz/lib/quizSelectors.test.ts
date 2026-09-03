@@ -20,7 +20,7 @@ describe("quiz selectors", () => {
       correct: 1,
       wrong: 1,
       skipped: 1,
-      accuracy: 50,
+      accuracy: 33,
       score10: 3.3,
     })
   })

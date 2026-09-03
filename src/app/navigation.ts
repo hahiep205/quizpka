@@ -3,7 +3,13 @@ import { useEffect, useState } from "react"
 export const appRoutes = {
   home: "/",
   dashboard: "/dashboard",
-  practice: "/practice4guest",
+  dashboardLeaderboard: "/dashboard/leaderboard",
+  dashboardHistory: "/dashboard/history",
+  dashboardSettings: "/dashboard/settings",
+  practice: "/practice",
+  practiceGuest: "/practice4guest",
+  result: "/result",
+  resultGuest: "/result4guest",
   authCallback: "/auth/callback",
 } as const
 

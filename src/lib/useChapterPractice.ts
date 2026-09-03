@@ -1,12 +1,14 @@
 import { useState } from "react"
 import { getSubjectById, type ChapterOption, type ExamCatalogItem } from "@/data/subjects"
 import { hasChapterSupport } from "@/data/subjectChapters"
-import { goToPracticeGuest } from "@/lib/practiceSession"
+import { goToPractice } from "@/lib/practiceSession"
 import type { QuizSetupValues } from "@/components/QuizSetupModal"
+import { useAuth } from "@/auth/AuthProvider"
 
 type Lang = "en" | "vi"
 
 export function useChapterPractice(lang: Lang) {
+  const { status } = useAuth()
   const [pickerExam, setPickerExam] = useState<ExamCatalogItem | null>(null)
   const [setupExam, setSetupExam] = useState<ExamCatalogItem | null>(null)
   const [pendingChapter, setPendingChapter] = useState<string>("all")
@@ -46,13 +48,13 @@ export function useChapterPractice(lang: Lang) {
   const handleSetupStart = (setup: QuizSetupValues) => {
     if (!setupExam) return
     const hasChapter = hasChapterSupport(setupExam.subjectId)
-    goToPracticeGuest({
+    goToPractice({
       examId: setupExam.id,
       subjectId: setupExam.subjectId,
       setup,
       lang,
       chapterId: hasChapter ? pendingChapter : undefined,
-    })
+    }, status === "authenticated")
     setPendingChapter("all")
   }
 

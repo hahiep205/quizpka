@@ -6,6 +6,8 @@ export const appTranslations = {
     openMenu: "Open menu",
     closeMenu: "Close menu",
     loginGoogle: "Log in with Google",
+    dashboardAccess: "Go to Dashboard",
+    quizNow: "Take a quiz now",
     heroTitleLine1: "Speed up your practice",
     heroTitleLine2: "with",
     brand: "QuizPKA",
@@ -32,6 +34,8 @@ export const appTranslations = {
     openMenu: "Mở menu",
     closeMenu: "Đóng menu",
     loginGoogle: "Đăng nhập với Google",
+    dashboardAccess: "Truy cập Dashboard",
+    quizNow: "Làm quiz ngay",
     heroTitleLine1: "Luyện tập nhanh chóng",
     heroTitleLine2: "cùng",
     brand: "QuizPKA",
@@ -100,7 +104,7 @@ export const dashboardCopy = {
   vi: {
     nav: {
       home: "Trang chủ",
-      leaderboard: "Bảng xếp hạng",
+      leaderboard: "Xếp hạng",
       history: "Lịch sử",
       settings: "Cài đặt",
     },
@@ -147,7 +151,7 @@ export const dashboardCopy = {
   en: {
     nav: {
       home: "Home",
-      leaderboard: "Leaderboard",
+      leaderboard: "Ranking",
       history: "History",
       settings: "Settings",
     },

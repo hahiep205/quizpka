@@ -27,12 +27,13 @@ export function getQuizStats(questions: Question[], answers: Record<string, Answ
     else if (isAnswerCorrect(question, answer)) correct += 1
     else wrong += 1
   }
-  const attempted = correct + wrong
   return {
     correct,
     wrong,
     skipped,
-    accuracy: attempted === 0 ? 0 : Math.round((correct / attempted) * 100),
+    // Unanswered questions are still incorrect for scoring, while `skipped`
+    // remains separate so the result screen can explain what happened.
+    accuracy: questions.length === 0 ? 0 : Math.round((correct / questions.length) * 100),
     score10: questions.length === 0 ? 0 : Math.round((correct / questions.length) * 100) / 10,
   }
 }

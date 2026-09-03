@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect, useMemo, useState } from "react"
-import { appRoutes, useAppPath } from "@/app/navigation"
+import { appRoutes, navigate, useAppPath } from "@/app/navigation"
 import type { ContactModalType } from "@/components/ContactModal"
 import { DocumentsPage } from "@/pages/DocumentsPage"
 import { appTranslations as translations } from "@/shared/i18n"
@@ -106,7 +106,10 @@ export default function App() {
 
   if (pathname === appRoutes.authCallback) return <AuthCallbackPage />
 
-  if (pathname === appRoutes.practice) {
+  if ([appRoutes.practice, appRoutes.practiceGuest, appRoutes.result, appRoutes.resultGuest].includes(pathname as typeof appRoutes.practice)) {
+    const authenticatedRoute = pathname === appRoutes.practice || pathname === appRoutes.result
+    if (authenticatedRoute && status === "loading") return <RouteLoading />
+    if (authenticatedRoute && status === "anonymous") return <LoginRequiredScreen onLogin={() => void signInWithGoogle()} />
     return (
       <div className={shellClassName}>
         {locked && <SecurityOverlay onClose={() => setLocked(false)} />}
@@ -116,7 +119,7 @@ export default function App() {
     )
   }
 
-  if (pathname === appRoutes.dashboard) {
+  if (pathname === appRoutes.dashboard || pathname.startsWith(`${appRoutes.dashboard}/`)) {
     if (status === "loading") return <RouteLoading />
     if (status === "anonymous") return <LoginRequiredScreen onLogin={() => void signInWithGoogle()} />
     return (
@@ -158,7 +161,7 @@ export default function App() {
           }
           onOpenLogin={openLogin}
         />
-        <HeroSection t={t} onOpenLogin={openLogin} theme={theme} />
+        <HeroSection t={t} onOpenLogin={openLogin} onOpenDashboard={() => navigate(appRoutes.dashboard)} authenticated={status === "authenticated"} theme={theme} />
         <DocumentsPage lang={lang} />
         <ToeicSection lang={lang} />
         <SiteFooter t={t} onOpenContact={openContact} />

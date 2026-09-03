@@ -11,10 +11,11 @@ type UseQuizQuestionsInput = {
   setup: QuizSetupValues
   chapterId?: string
   toeicScope?: ToeicScope
+  questionIds?: string[]
 }
 
 export function useQuizQuestions(input: UseQuizQuestionsInput) {
-  const { subject, exam, setup, chapterId, toeicScope } = input
+  const { subject, exam, setup, chapterId, toeicScope, questionIds } = input
   const [questions, setQuestions] = useState<Question[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<Error | null>(null)
@@ -28,7 +29,7 @@ export function useQuizQuestions(input: UseQuizQuestionsInput) {
     setError(null)
     void loadQuizQuestions({ subject, exam, setup, chapterId, toeicScope, signal: controller.signal })
       .then((loadedQuestions) => {
-        if (!controller.signal.aborted) setQuestions(loadedQuestions)
+        if (!controller.signal.aborted) setQuestions(questionIds?.length ? loadedQuestions.filter((question) => questionIds.includes(question.id)) : loadedQuestions)
       })
       .catch((loadError: unknown) => {
         if (!controller.signal.aborted) {
@@ -40,7 +41,7 @@ export function useQuizQuestions(input: UseQuizQuestionsInput) {
         if (!controller.signal.aborted) setLoading(false)
       })
     return () => controller.abort()
-  }, [chapterId, exam, reloadToken, setup, subject, toeicScope])
+  }, [chapterId, exam, questionIds, reloadToken, setup, subject, toeicScope])
 
   return { questions, setQuestions, loading, error, reload }
 }

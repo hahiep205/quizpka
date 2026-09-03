@@ -13,9 +13,10 @@ import { QuizSetupModal, type QuizSetupValues } from "@/components/QuizSetupModa
 import { ToeicScopePickerModal } from "@/components/ToeicScopePickerModal"
 import { getSubjectById, type ExamCatalogItem } from "@/data/subjects"
 import { type ToeicScope } from "@/data/toeic"
-import { goToPracticeGuest } from "@/lib/practiceSession"
+import { goToPractice } from "@/lib/practiceSession"
 import { toeicSectionCopy as copy } from "@/shared/i18n"
 import { getToeicScopeOption } from "@/data/toeic"
+import { useAuth } from "@/auth/AuthProvider"
 
 type Lang = "en" | "vi"
 
@@ -29,6 +30,7 @@ function DetailRow({ label, value }: { label: string; value: string }) {
 }
 
 export function ToeicSection({ lang }: { lang: Lang }) {
+  const { status } = useAuth()
   const t = copy[lang]
   const [detailOpen, setDetailOpen] = useState(false)
   const [pickerOpen, setPickerOpen] = useState(false)
@@ -66,13 +68,13 @@ export function ToeicSection({ lang }: { lang: Lang }) {
 
   const handleSetupStart = (setup: QuizSetupValues) => {
     if (!baseExam || !subject) return
-    goToPracticeGuest({
+    goToPractice({
       examId: baseExam.id,
       subjectId: subject.id,
       setup,
       lang,
       toeicScope: selectedScope,
-    })
+    }, status === "authenticated")
   }
 
   // derive display exam for setup modal (override count/duration per scope)

@@ -1,9 +1,11 @@
 import { useEffect, useState, type ReactNode } from "react"
-import { Languages, Menu, MessageCircle, Moon, Sun, X } from "lucide-react"
+import { Languages, LogOut, Menu, MessageCircle, Moon, Sun, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import brandLogo from "@/assets/logo.png"
 import { GoogleIcon } from "@/shared/icons/GoogleIcon"
 import { CommunityChatModal } from "@/components/CommunityChatModal"
+import { useAuth } from "@/auth/AuthProvider"
+import { appRoutes, navigate } from "@/app/navigation"
 
 type Lang = "en" | "vi"
 type Theme = "light" | "dark"
@@ -62,6 +64,8 @@ export function SiteHeader({
   const [menuState, setMenuState] = useState<"open" | "closed">("closed")
   const [activeNav, setActiveNav] = useState<NavKey>("home")
   const [chatOpen, setChatOpen] = useState(false)
+  const { status, signOut } = useAuth()
+  const authenticated = status === "authenticated"
 
   useEffect(() => {
     const resolveActive = () => {
@@ -300,11 +304,13 @@ export function SiteHeader({
                   className="lp-btn lp-btn--secondary lp-btn--sm lp-btn--block w-full min-w-0"
                   onClick={() => {
                     setMobileOpen(false)
-                    onOpenLogin()
+                    if (authenticated) void signOut().then(() => navigate(appRoutes.home, { replace: true }))
+                    else onOpenLogin()
                   }}
+                  disabled={status === "loading"}
                 >
-                  <GoogleIcon className="h-5 w-5 shrink-0" />
-                  {t.loginGoogle}
+                  {authenticated ? <LogOut className="h-5 w-5 shrink-0" /> : <GoogleIcon className="h-5 w-5 shrink-0" />}
+                  {authenticated ? (lang === "vi" ? "Đăng xuất" : "Sign out") : t.loginGoogle}
                 </button>
               </li>
               <li className="mobile-menu-item">

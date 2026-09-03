@@ -21,12 +21,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const currentUser = session?.user ?? null
     setUser(currentUser)
     if (!currentUser) { setProfile(null); setStatus("anonymous"); return }
+
+    // A valid auth session is enough to leave the OAuth callback screen.
+    // Profile data can load independently and must not block navigation.
+    setProfile(createFallbackProfile(currentUser))
+    setStatus("authenticated")
     try {
       await loadProfile(currentUser)
-      setStatus("authenticated")
     } catch {
-      setProfile(null)
-      setStatus("anonymous")
+      // Keep the metadata fallback when the profile row is temporarily unavailable.
     }
   }, [loadProfile])
 
@@ -52,7 +55,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     if (error) throw error
   }, [])
 
-  const value = useMemo<AuthContextValue>(() => ({ status, user, profile, signInWithGoogle, signOut }), [status, user, profile, signInWithGoogle, signOut])
+  const updateProfile = useCallback(async (updates: { display_name?: string }) => {
+    if (!user) return
+    const { data, error } = await supabase.from("profiles").update(updates).eq("id", user.id).select("id,email,display_name,avatar_url,role,status").single()
+    if (error) throw error
+    setProfile(data as AuthProfile)
+  }, [user])
+
+  const value = useMemo<AuthContextValue>(() => ({ status, user, profile, signInWithGoogle, signOut, updateProfile }), [status, user, profile, signInWithGoogle, signOut, updateProfile])
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }
 
@@ -60,4 +70,26 @@ export function useAuth(): AuthContextValue {
   const context = useContext(AuthContext)
   if (!context) throw new Error("useAuth must be used inside AuthProvider")
   return context
+}
+
+function createFallbackProfile(user: User): AuthProfile {
+  const displayName = typeof user.user_metadata.full_name === "string"
+    ? user.user_metadata.full_name
+    : typeof user.user_metadata.name === "string"
+      ? user.user_metadata.name
+      : user.email?.split("@")[0] ?? null
+  const avatarUrl = typeof user.user_metadata.avatar_url === "string"
+    ? user.user_metadata.avatar_url
+    : typeof user.user_metadata.picture === "string"
+      ? user.user_metadata.picture
+      : null
+
+  return {
+    id: user.id,
+    email: user.email ?? null,
+    display_name: displayName,
+    avatar_url: avatarUrl,
+    role: "user",
+    status: "active",
+  }
 }

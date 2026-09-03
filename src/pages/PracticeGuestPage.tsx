@@ -128,6 +128,9 @@ export function PracticeGuestPage({
           setup={payload.setup}
           chapterId={payload.chapterId ?? undefined}
           toeicScope={payload.toeicScope}
+          questionIds={payload.questionIds}
+          retryOfHistoryId={payload.retryOfHistoryId}
+          retryNumber={payload.retryNumber}
           onExit={() => {
             clearPracticeSession()
             goHomeFromPractice()

@@ -1,20 +1,18 @@
-import { useEffect, useState } from "react"
+import { useEffect, useMemo } from "react"
 import { appRoutes, navigate } from "@/app/navigation"
-import { supabase } from "@/lib/supabase"
+import { useAuth } from "@/auth/AuthProvider"
 
 export function AuthCallbackPage() {
-  const [error, setError] = useState<string | null>(null)
-  useEffect(() => {
-    const code = new URLSearchParams(window.location.search).get("code")
-    void (async () => {
-      if (code) {
-        const result = await supabase.auth.exchangeCodeForSession(code)
-        if (result.error) { setError(result.error.message); return }
-      }
-      navigate(appRoutes.dashboard, { replace: true })
-    })().catch((callbackError: unknown) => {
-      setError(callbackError instanceof Error ? callbackError.message : "Không thể hoàn tất đăng nhập.")
-    })
+  const { status } = useAuth()
+  const providerError = useMemo(() => {
+    const params = new URLSearchParams(window.location.search)
+    return params.get("error_description") ?? params.get("error")
   }, [])
+
+  useEffect(() => {
+    if (status === "authenticated") navigate(appRoutes.dashboard, { replace: true })
+  }, [status])
+
+  const error = providerError ?? (status === "anonymous" ? "Không thể hoàn tất đăng nhập. Vui lòng thử lại." : null)
   return <main className="mx-auto flex min-h-svh items-center justify-center px-6"><p role={error ? "alert" : undefined}>{error ?? "Đang hoàn tất đăng nhập…"}</p></main>
 }

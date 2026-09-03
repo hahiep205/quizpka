@@ -36,7 +36,7 @@ function QuizPreviewCard({ theme }: { theme: Theme }) {
   )
 }
 
-export function HeroSection({ t, onOpenLogin, theme }: { t: Record<string, string>; onOpenLogin: () => void; theme: Theme }) {
+export function HeroSection({ t, onOpenLogin, onOpenDashboard, authenticated, theme }: { t: Record<string, string>; onOpenLogin: () => void; onOpenDashboard: () => void; authenticated: boolean; theme: Theme }) {
   return (
     <section
       id="home"
@@ -63,11 +63,9 @@ export function HeroSection({ t, onOpenLogin, theme }: { t: Record<string, strin
             </p>
 
             <div className="lp-cta-row mt-9">
-              <button type="button" className="lp-btn lp-btn--primary" onClick={onOpenLogin}>
-                <span className="flex h-[22px] w-[22px] items-center justify-center rounded-full bg-white/15">
-                  <GoogleIcon className="h-[18px] w-[18px]" />
-                </span>
-                {t.loginGoogle}
+              <button type="button" className="lp-btn lp-btn--primary" onClick={authenticated ? onOpenDashboard : onOpenLogin}>
+                {!authenticated && <span className="flex h-[22px] w-[22px] items-center justify-center rounded-full bg-white/15"><GoogleIcon className="h-[18px] w-[18px]" /></span>}
+                {authenticated ? t.dashboardAccess : t.loginGoogle}
               </button>
               <button
                 type="button"
@@ -76,7 +74,7 @@ export function HeroSection({ t, onOpenLogin, theme }: { t: Record<string, strin
                   document.getElementById("docs")?.scrollIntoView({ behavior: "smooth", block: "start" })
                 }}
               >
-                {t.explore}
+                {authenticated ? t.quizNow : t.explore}
               </button>
             </div>
 
@@ -101,7 +99,7 @@ export function HeroSection({ t, onOpenLogin, theme }: { t: Record<string, strin
               </svg>
               {t.freeNote}
             </div>
-            {t.freeNote2 ? (
+            {!authenticated && t.freeNote2 ? (
               <div className="lp-note mt-2 flex items-center gap-2.5">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

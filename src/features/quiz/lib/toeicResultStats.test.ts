@@ -19,7 +19,7 @@ describe("TOEIC result stats", () => {
     const answers = { q1: 0, q2: 0, q4: 3 }
     const stats = getToeicResultStats(questions, answers)
 
-    expect(stats.total).toMatchObject({ correct: 2, wrong: 1, skipped: 1, total: 4, accuracy: 67 })
+    expect(stats.total).toMatchObject({ correct: 2, wrong: 1, skipped: 1, total: 4, accuracy: 50 })
     expect(stats.listening).toMatchObject({ correct: 1, wrong: 1, skipped: 0, total: 2 })
     expect(stats.reading).toMatchObject({ correct: 1, wrong: 0, skipped: 1, total: 2 })
 
