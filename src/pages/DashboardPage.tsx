@@ -803,7 +803,6 @@ function SettingsView({ lang, theme, onToggleLang, onToggleTheme, onOpenContact 
         <div className="flex flex-col gap-4 rounded-[20px] border-2 border-[#E5E5E5] bg-white p-5 shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)] md:col-span-2 md:flex-row md:items-center md:justify-between md:gap-6 md:p-6">
           <div className="min-w-0">
             <h3 className="text-lg font-black text-[#100F3E] dark:text-white">{t.supportTitle}</h3>
-            <p className="mt-1 text-[13px] font-semibold leading-5 text-slate-500 dark:text-slate-400">{t.supportDesc}</p>
           </div>
           <div className="grid w-full shrink-0 grid-cols-1 gap-2 sm:grid-cols-2 md:w-auto md:min-w-[360px]">
             <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm w-full whitespace-normal text-center" onClick={() => onOpenContact("Contribute")}>{t.contribute}</button>

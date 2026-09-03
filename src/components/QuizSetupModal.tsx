@@ -107,7 +107,7 @@ export function QuizSetupModal({
         aria-modal="true"
         aria-labelledby={titleId}
         data-state={state}
-        className="contact-modal-panel relative z-10 max-h-[min(760px,92vh)] w-full max-w-[480px] overflow-y-auto shadow-[var(--shadow-3)]"
+        className="contact-modal-panel relative z-10 flex max-h-[min(760px,92vh)] w-full max-w-[560px] flex-col overflow-hidden shadow-[var(--shadow-3)]"
       >
         <div className="flex items-start justify-between gap-4 border-b border-[#E5E5E5] px-6 py-5 dark:border-white/10">
           <div>
@@ -128,7 +128,7 @@ export function QuizSetupModal({
           </button>
         </div>
 
-        <div className="space-y-5 px-6 py-6">
+        <div className="flex-1 space-y-5 overflow-y-auto px-4 py-4 sm:px-6">
           <OptionGroup label={t.questionOrder}>
             <button
               type="button"

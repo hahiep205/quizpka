@@ -120,7 +120,6 @@ export const dashboardCopy = {
     accuracy: "Độ chính xác trung bình",
     studyTime: "Tổng thời gian ôn tập",
     supportTitle: "Hỗ trợ",
-    supportDesc: "Chung tay cải thiện QuizPKA bằng tài liệu và góp ý của bạn.",
     contribute: "Đóng góp tài liệu",
     support: "Góp ý",
     documentTitle: "Bộ tài liệu đề thi",
@@ -171,7 +170,6 @@ export const dashboardCopy = {
     accuracy: "Average accuracy",
     studyTime: "Total study time",
     supportTitle: "Support",
-    supportDesc: "Help improve QuizPKA by sharing materials or feedback.",
     contribute: "Contribute materials",
     support: "Send feedback",
     documentTitle: "Exam document sets",
@@ -470,8 +468,8 @@ export const quizSetupCopy = {
     hardHint:
       "Show correct/incorrect immediately. Wrong questions come back at a random position until you answer all of them correctly.",
     unlimited: "Unlimited",
-    midterm30: "30 minutes (Midterm)",
-    final60: "60 minutes (Final)",
+    midterm30: "30 minutes",
+    final60: "60 minutes",
     practiceHint:
       "Show correct/incorrect immediately after each answer. Uses the full question set.",
     examHint:
@@ -495,8 +493,8 @@ export const quizSetupCopy = {
     hardHint:
       "Hiện đúng/sai ngay sau khi chọn đáp án. Câu làm sai sẽ xuất hiện lại ở vị trí ngẫu nhiên cho đến khi bạn trả lời đúng toàn bộ câu hỏi.",
     unlimited: "Không giới hạn",
-    midterm30: "30 phút (Giữa kỳ)",
-    final60: "60 phút (Cuối kỳ)",
+    midterm30: "30 phút",
+    final60: "60 phút",
     practiceHint:
       "Hiện đúng/sai ngay sau khi chọn đáp án. ",
     examHint:
