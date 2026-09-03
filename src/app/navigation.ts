@@ -4,6 +4,7 @@ export const appRoutes = {
   home: "/",
   dashboard: "/dashboard",
   practice: "/practice4guest",
+  authCallback: "/auth/callback",
 } as const
 
 export type AppPath = (typeof appRoutes)[keyof typeof appRoutes]

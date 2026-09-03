@@ -19,6 +19,7 @@ import {
   Sun,
   Trophy,
   UserRound,
+  LogOut,
 } from "lucide-react"
 import brandLogo from "@/assets/logo.png"
 import { QuizSetupModal } from "@/components/QuizSetupModal"
@@ -32,6 +33,8 @@ import { cn } from "@/lib/utils"
 import { dashboardCopy as copy } from "@/shared/i18n"
 import { useExamLaunch } from "@/lib/useExamLaunch"
 import type { Language, Theme } from "@/shared/types/app"
+import { useAuth } from "@/auth/AuthProvider"
+import { navigate, appRoutes } from "@/app/navigation"
 
 type Lang = Language
 type DashboardView = "home" | "leaderboard" | "history" | "settings"
@@ -253,6 +256,8 @@ function DashboardTopbar({
   onToggleTheme,
 }: DashboardPageProps) {
   const t = copy[lang]
+  const { profile, signOut } = useAuth()
+  const handleSignOut = () => { void signOut().then(() => navigate(appRoutes.home, { replace: true })) }
   return (
     <header className="sticky top-0 z-30 border-b border-slate-200/80 bg-white/90 backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/90">
       <div className="mx-auto flex h-[72px] w-full max-w-[1440px] items-center justify-between px-4 sm:px-6 lg:h-[78px] lg:px-8 xl:px-10">
@@ -310,8 +315,10 @@ function DashboardTopbar({
           </TopbarButton>
           <div className="ml-0.5 hidden items-center gap-3 border-l border-slate-200 pl-3 dark:border-white/10 sm:flex">
             <div className="flex h-10 w-10 items-center justify-center rounded-[12px] bg-[#E8F7FE] text-[#129BDC]">
-              <UserRound className="h-5 w-5" strokeWidth={2.2} />
+              {profile?.avatar_url ? <img src={profile.avatar_url} alt="" className="h-10 w-10 rounded-[12px] object-cover" /> : <UserRound className="h-5 w-5" strokeWidth={2.2} />}
             </div>
+            <div className="max-w-[140px] truncate text-sm font-extrabold text-[#100F3E] dark:text-white">{profile?.display_name ?? profile?.email}</div>
+            <button type="button" className="lp-btn lp-btn--secondary lp-btn--icon" onClick={handleSignOut} aria-label={lang === "vi" ? "Đăng xuất" : "Sign out"} title={lang === "vi" ? "Đăng xuất" : "Sign out"}><LogOut className="h-4 w-4" /></button>
           </div>
         </div>
       </div>

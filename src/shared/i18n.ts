@@ -421,13 +421,19 @@ export const contactCopy = {
 export const loginCopy = {
   en: {
     title: "Log in with Google",
-    note: "This feature is under development...",
+    note: "Sign in to save your progress and access your dashboard.",
+    signIn: "Continue with Google",
+    signingIn: "Connecting to Google…",
+    error: "Unable to start Google sign-in. Please try again.",
     close: "Close",
     cancel: "Cancel",
   },
   vi: {
     title: "Đăng nhập với Google",
-    note: "Chức năng này đang trong quá trình phát triển...",
+    note: "Đăng nhập để lưu tiến trình và sử dụng bảng điều khiển cá nhân.",
+    signIn: "Đăng nhập với Google",
+    signingIn: "Đang kết nối với Google…",
+    error: "Không thể bắt đầu đăng nhập Google. Vui lòng thử lại.",
     close: "Đóng",
     cancel: "Hủy",
   },

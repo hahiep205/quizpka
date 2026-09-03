@@ -10,6 +10,9 @@ import { HeroSection } from "@/features/landing/HeroSection"
 import { ToeicSection } from "@/features/landing/ToeicSection"
 import { SiteFooter } from "@/app/layout/SiteFooter"
 import type { Language, Theme } from "@/shared/types/app"
+import { readStorage, writeStorage } from "@/lib/storage"
+import { AuthCallbackPage } from "@/pages/AuthCallbackPage"
+import { useAuth } from "@/auth/AuthProvider"
 
 const ContactModal = lazy(() => import("@/components/ContactModal").then(({ ContactModal: component }) => ({ default: component })))
 const LoginModal = lazy(() => import("@/components/LoginModal").then(({ LoginModal: component }) => ({ default: component })))
@@ -18,25 +21,24 @@ const DashboardPage = lazy(() => import("@/pages/DashboardPage").then(({ Dashboa
 const PracticeGuestPage = lazy(() => import("@/pages/PracticeGuestPage").then(({ PracticeGuestPage: component }) => ({ default: component })))
 const NotFoundPage = lazy(() => import("@/pages/NotFoundPage").then(({ NotFoundPage: component }) => ({ default: component })))
 
-type Lang = Language
-
-function getTodayKey() {
+function getTodayKey(): string {
   const d = new Date()
-  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`
 }
 
 export default function App() {
   const pathname = useAppPath()
+  const { status, signInWithGoogle } = useAuth()
   const [contactOpen, setContactOpen] = useState(false)
   const [contactType, setContactType] = useState<ContactModalType | null>(null)
   const [loginOpen, setLoginOpen] = useState(false)
   const [announcementOpen, setAnnouncementOpen] = useState(false)
-  const [lang, setLang] = useState<Lang>(() => {
-    const saved = localStorage.getItem("quizpka-lang")
+  const [lang, setLang] = useState<Language>(() => {
+    const saved = readStorage("quizpka-lang")
     return saved === "vi" || saved === "en" ? saved : "vi"
   })
   const [theme, setTheme] = useState<Theme>(() => {
-    const saved = localStorage.getItem("quizpka-theme")
+    const saved = readStorage("quizpka-theme")
     if (saved === "light" || saved === "dark") return saved
     return "light"
   })
@@ -49,26 +51,20 @@ export default function App() {
     const root = document.documentElement
     root.classList.toggle("dark", theme === "dark")
     root.style.colorScheme = theme
-    localStorage.setItem("quizpka-theme", theme)
+    writeStorage("quizpka-theme", theme)
   }, [theme])
 
   useEffect(() => {
     document.documentElement.lang = lang
-    localStorage.setItem("quizpka-lang", lang)
+    writeStorage("quizpka-lang", lang)
   }, [lang])
 
   // TOEIC announcement: show after 1s on homepage, "don't show today" persists per day
   useEffect(() => {
     if (pathname !== appRoutes.home) return
-    try {
-      const dismissed = localStorage.getItem("quizpka-toeic-announcement-dismissed")
-      if (dismissed === getTodayKey()) return
-      const timer = window.setTimeout(() => setAnnouncementOpen(true), 1000)
-      return () => window.clearTimeout(timer)
-    } catch {
-      const timer = window.setTimeout(() => setAnnouncementOpen(true), 1000)
-      return () => window.clearTimeout(timer)
-    }
+    if (readStorage("quizpka-toeic-announcement-dismissed") === getTodayKey()) return
+    const timer = window.setTimeout(() => setAnnouncementOpen(true), 1000)
+    return () => window.clearTimeout(timer)
   }, [pathname])
 
   const openContact = (type: ContactModalType) => {
@@ -78,6 +74,7 @@ export default function App() {
 
   const closeContact = () => {
     setContactOpen(false)
+    setContactType(null)
   }
 
   const openLogin = () => {
@@ -90,9 +87,7 @@ export default function App() {
 
   const closeAnnouncement = () => setAnnouncementOpen(false)
   const handleDontShowToday = () => {
-    try {
-      localStorage.setItem("quizpka-toeic-announcement-dismissed", getTodayKey())
-    } catch {}
+    writeStorage("quizpka-toeic-announcement-dismissed", getTodayKey())
     setAnnouncementOpen(false)
   }
   const handleTryNow = () => {
@@ -109,6 +104,8 @@ export default function App() {
   const shellClassName =
     "relative min-h-svh bg-slate-50 transition-colors duration-300 dark:bg-slate-950"
 
+  if (pathname === appRoutes.authCallback) return <AuthCallbackPage />
+
   if (pathname === appRoutes.practice) {
     return (
       <div className={shellClassName}>
@@ -120,6 +117,8 @@ export default function App() {
   }
 
   if (pathname === appRoutes.dashboard) {
+    if (status === "loading") return <RouteLoading />
+    if (status === "anonymous") return <LoginRequiredScreen onLogin={() => void signInWithGoogle()} />
     return (
       <>
         {locked && <SecurityOverlay onClose={() => setLocked(false)} />}
@@ -184,6 +183,10 @@ export default function App() {
       /></Suspense>
     </div>
   )
+}
+
+function LoginRequiredScreen({ onLogin }: { onLogin: () => void }) {
+  return <main className="mx-auto flex min-h-svh max-w-md flex-col items-center justify-center gap-4 px-6 text-center"><h1 className="text-xl font-semibold">Vui lòng đăng nhập để tiếp tục</h1><button type="button" className="lp-btn lp-btn--primary" onClick={onLogin}>Đăng nhập với Google</button></main>
 }
 
 function RouteLoading() {
