@@ -132,6 +132,13 @@ export default function App() {
           onToggleTheme={() =>
             setTheme((current) => (current === "light" ? "dark" : "light"))
           }
+          onOpenContact={openContact}
+        /></Suspense>
+        <Suspense fallback={null}><ContactModal
+          open={contactOpen}
+          type={contactType}
+          onClose={closeContact}
+          lang={lang}
         /></Suspense>
       </>
     )

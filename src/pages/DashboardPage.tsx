@@ -36,6 +36,7 @@ import { navigate, appRoutes, getCurrentPath } from "@/app/navigation"
 import { readStorage, writeStorage } from "@/lib/storage"
 import { goToPractice, readPracticeHistory } from "@/lib/practiceSession"
 import { formatTime } from "@/features/quiz/lib/quizHelpers"
+import type { ContactModalType } from "@/components/ContactModal"
 
 type Lang = Language
 type DashboardView = "home" | "leaderboard" | "history" | "settings"
@@ -45,6 +46,7 @@ type DashboardPageProps = {
   theme: Theme
   onToggleLang: () => void
   onToggleTheme: () => void
+  onOpenContact: (type: ContactModalType) => void
 }
 
 const navItems: Array<{
@@ -97,6 +99,7 @@ export function DashboardPage({
   theme,
   onToggleLang,
   onToggleTheme,
+  onOpenContact,
 }: DashboardPageProps) {
   const [activeView, setActiveView] = useState<DashboardView>(() => getDashboardView(getCurrentPath()))
   const [query, setQuery] = useState("")
@@ -180,6 +183,7 @@ export function DashboardPage({
               theme={theme}
               onToggleLang={onToggleLang}
               onToggleTheme={onToggleTheme}
+              onOpenContact={onOpenContact}
             />
           ) : null}
         </main>
@@ -291,7 +295,7 @@ function DashboardTopbar({
   theme,
   onToggleLang,
   onToggleTheme,
-}: DashboardPageProps) {
+}: Omit<DashboardPageProps, "onOpenContact">) {
   const t = copy[lang]
   const { profile } = useAuth()
   return (
@@ -420,22 +424,38 @@ function HomeDashboard({
   const { user } = useAuth()
   const userId = user?.id
   const userCreatedAt = user?.created_at
+  const history = useMemo(() => userId ? readPracticeHistory(userId, userCreatedAt) : [], [userCreatedAt, userId])
+  const dashboardStats = useMemo(() => {
+    const subjects = new Set<string>()
+    let accuracyTotal = 0
+    let durationTotal = 0
+    for (const attempt of history) {
+      subjects.add(attempt.subjectId)
+      accuracyTotal += Number.isFinite(attempt.accuracy) ? attempt.accuracy : 0
+      durationTotal += Number.isFinite(attempt.durationSeconds) ? Math.max(0, attempt.durationSeconds) : 0
+    }
+    return {
+      subjectsReviewed: subjects.size,
+      attempts: history.length,
+      averageAccuracy: history.length ? Math.round(accuracyTotal / history.length) : 0,
+      totalDurationSeconds: durationTotal,
+    }
+  }, [history])
   const attemptCountsBySubject = useMemo(() => {
     const counts = new Map<string, number>()
-    if (!userId) return counts
-    for (const attempt of readPracticeHistory(userId, userCreatedAt)) {
+    for (const attempt of history) {
       counts.set(attempt.subjectId, (counts.get(attempt.subjectId) ?? 0) + 1)
     }
     return counts
-  }, [userCreatedAt, userId])
+  }, [history])
 
   return (
     <div className="space-y-6 dashboard-reveal sm:space-y-8">
       <section className="grid grid-cols-2 gap-2.5 sm:gap-3 lg:grid-cols-4 lg:gap-4" aria-label="Statistics">
-        <DashboardStatCard icon={Flame} value="0" label={t.streak} tone="orange" />
-        <DashboardStatCard icon={CheckCircle2} value="0" label={t.completed} tone="green" />
-        <DashboardStatCard icon={BarChart3} value="--" label={t.accuracy} tone="blue" />
-        <DashboardStatCard icon={Clock3} value="0h" label={t.studyTime} tone="violet" />
+        <DashboardStatCard icon={Flame} value={String(dashboardStats.subjectsReviewed)} label={t.streak} tone="orange" />
+        <DashboardStatCard icon={CheckCircle2} value={String(dashboardStats.attempts)} label={t.completed} tone="green" />
+        <DashboardStatCard icon={BarChart3} value={`${dashboardStats.averageAccuracy}%`} label={t.accuracy} tone="blue" />
+        <DashboardStatCard icon={Clock3} value={formatDashboardDuration(dashboardStats.totalDurationSeconds)} label={t.studyTime} tone="violet" />
       </section>
 
       <section id="dashboard-documents" className="scroll-mt-24">
@@ -496,6 +516,14 @@ function HomeDashboard({
 
     </div>
   )
+}
+
+function formatDashboardDuration(totalSeconds: number) {
+  const safeSeconds = Math.max(0, Math.round(totalSeconds))
+  const hours = Math.floor(safeSeconds / 3600)
+  const minutes = Math.floor((safeSeconds % 3600) / 60)
+  if (hours > 0) return `${hours}h ${minutes}m`
+  return `${minutes}m`
 }
 
 function DashboardStatCard({
@@ -733,7 +761,7 @@ function HistoryMetric({ label, value }: { label: string; value: string }) {
   return <div className="rounded-xl bg-slate-50 px-3 py-2 dark:bg-white/5"><p className="text-lg font-black text-[#100F3E] dark:text-white">{value}</p><p className="text-xs font-bold text-slate-400">{label}</p></div>
 }
 
-function SettingsView({ lang, theme, onToggleLang, onToggleTheme }: DashboardPageProps) {
+function SettingsView({ lang, theme, onToggleLang, onToggleTheme, onOpenContact }: DashboardPageProps) {
   const t = copy[lang]
   const { profile, updateProfile, signOut } = useAuth()
   const [displayName, setDisplayName] = useState(profile?.display_name ?? "")
@@ -772,6 +800,16 @@ function SettingsView({ lang, theme, onToggleLang, onToggleTheme }: DashboardPag
         <SettingRow icon={theme === "light" ? Sun : Moon} title={t.appearance}>
           <button type="button" className="lp-chip is-active min-w-[112px] justify-center" onClick={onToggleTheme}>{theme === "light" ? t.light : t.dark}</button>
         </SettingRow>
+        <div className="flex flex-col gap-4 rounded-[20px] border-2 border-[#E5E5E5] bg-white p-5 shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)] md:col-span-2 md:flex-row md:items-center md:justify-between md:gap-6 md:p-6">
+          <div className="min-w-0">
+            <h3 className="text-lg font-black text-[#100F3E] dark:text-white">{t.supportTitle}</h3>
+            <p className="mt-1 text-[13px] font-semibold leading-5 text-slate-500 dark:text-slate-400">{t.supportDesc}</p>
+          </div>
+          <div className="grid w-full shrink-0 grid-cols-1 gap-2 sm:grid-cols-2 md:w-auto md:min-w-[360px]">
+            <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm w-full whitespace-normal text-center" onClick={() => onOpenContact("Contribute")}>{t.contribute}</button>
+            <button type="button" className="lp-btn lp-btn--primary lp-btn--sm w-full whitespace-normal text-center" onClick={() => onOpenContact("Support")}>{t.support}</button>
+          </div>
+        </div>
         <div className="space-y-3 rounded-[20px] border-2 border-[#E5E5E5] bg-white p-5 shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)] md:col-span-2">
           <h3 className="text-lg font-black text-[#100F3E] dark:text-white">{lang === "vi" ? "Thiết lập" : "Settings"}</h3>
           <ToggleRow label={lang === "vi" ? "Bật âm thanh mặc định" : "Enable sound by default"} checked={soundEnabled} onChange={setSoundEnabled} />

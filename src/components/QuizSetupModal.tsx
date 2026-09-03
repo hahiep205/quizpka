@@ -132,14 +132,14 @@ export function QuizSetupModal({
           <OptionGroup label={t.questionOrder}>
             <button
               type="button"
-              className={cn("lp-chip", questionOrder === "original" && "is-active")}
+              className={cn("lp-chip min-w-0 flex-1 whitespace-normal text-center leading-4", questionOrder === "original" && "is-active")}
               onClick={() => setQuestionOrder("original")}
             >
               {t.original}
             </button>
             <button
               type="button"
-              className={cn("lp-chip", questionOrder === "random" && "is-active")}
+              className={cn("lp-chip min-w-0 flex-1 whitespace-normal text-center leading-4", questionOrder === "random" && "is-active")}
               onClick={() => setQuestionOrder("random")}
             >
               {t.random}
@@ -149,14 +149,14 @@ export function QuizSetupModal({
           <OptionGroup label={t.answerOrder}>
             <button
               type="button"
-              className={cn("lp-chip", answerOrder === "original" && "is-active")}
+              className={cn("lp-chip min-w-0 flex-1 whitespace-normal text-center leading-4", answerOrder === "original" && "is-active")}
               onClick={() => setAnswerOrder("original")}
             >
               {t.original}
             </button>
             <button
               type="button"
-              className={cn("lp-chip", answerOrder === "random" && "is-active")}
+              className={cn("lp-chip min-w-0 flex-1 whitespace-normal text-center leading-4", answerOrder === "random" && "is-active")}
               onClick={() => setAnswerOrder("random")}
             >
               {t.random}
@@ -166,14 +166,14 @@ export function QuizSetupModal({
           <OptionGroup label={t.mode}>
             <button
               type="button"
-              className={cn("lp-chip", mode === "practice" && "is-active")}
+              className={cn("lp-chip min-w-0 flex-1 whitespace-normal text-center leading-4", mode === "practice" && "is-active")}
               onClick={() => setMode("practice")}
             >
               {t.practice}
             </button>
             <button
               type="button"
-              className={cn("lp-chip", mode === "exam" && "is-active")}
+              className={cn("lp-chip min-w-0 flex-1 whitespace-normal text-center leading-4", mode === "exam" && "is-active")}
               onClick={() => setMode("exam")}
             >
               {t.examMode}
@@ -181,7 +181,7 @@ export function QuizSetupModal({
             {isHardSupported(subject.id) ? (
               <button
                 type="button"
-                className={cn("lp-chip", mode === "hard" && "is-active")}
+                className={cn("lp-chip min-w-0 flex-1 whitespace-normal text-center leading-4", mode === "hard" && "is-active")}
                 onClick={() => setMode("hard")}
               >
                 {t.hardMode}
@@ -193,21 +193,21 @@ export function QuizSetupModal({
           <OptionGroup label={t.time}>
             <button
               type="button"
-              className={cn("lp-chip", timeOption === "unlimited" && "is-active")}
+              className={cn("lp-chip min-w-0 flex-1 whitespace-normal text-center leading-4", timeOption === "unlimited" && "is-active")}
               onClick={() => setTimeOption("unlimited")}
             >
               {t.unlimited}
             </button>
             <button
               type="button"
-              className={cn("lp-chip", timeOption === "midterm30" && "is-active")}
+              className={cn("lp-chip min-w-0 flex-1 whitespace-normal text-center leading-4", timeOption === "midterm30" && "is-active")}
               onClick={() => setTimeOption("midterm30")}
             >
               {t.midterm30}
             </button>
             <button
               type="button"
-              className={cn("lp-chip", timeOption === "final60" && "is-active")}
+              className={cn("lp-chip min-w-0 flex-1 whitespace-normal text-center leading-4", timeOption === "final60" && "is-active")}
               onClick={() => setTimeOption("final60")}
             >
               {t.final60}
