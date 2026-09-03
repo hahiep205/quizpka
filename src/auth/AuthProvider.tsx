@@ -33,7 +33,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     let mounted = true
     void supabase.auth.getSession().then(({ data }) => { if (mounted) void applySession(data.session) })
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => { if (mounted) void applySession(session) })
+    // Supabase recommends deferring follow-up queries from this callback;
+    // querying the database synchronously here can deadlock the auth lock.
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (!mounted) return
+      window.setTimeout(() => { if (mounted) void applySession(session) }, 0)
+    })
     return () => { mounted = false; subscription.unsubscribe() }
   }, [applySession])
 

@@ -12,7 +12,9 @@ export function AuthCallbackPage() {
         if (result.error) { setError(result.error.message); return }
       }
       navigate(appRoutes.dashboard, { replace: true })
-    })()
+    })().catch((callbackError: unknown) => {
+      setError(callbackError instanceof Error ? callbackError.message : "Không thể hoàn tất đăng nhập.")
+    })
   }, [])
   return <main className="mx-auto flex min-h-svh items-center justify-center px-6"><p role={error ? "alert" : undefined}>{error ?? "Đang hoàn tất đăng nhập…"}</p></main>
 }
