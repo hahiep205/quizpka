@@ -8,6 +8,7 @@ import {
 } from "@/lib/practiceSession"
 import { getSubjectById, examCatalog } from "@/data/subjects"
 import { tadvExamOptions } from "@/data/tadvExams"
+import { dsaiExamOptions } from "@/data/dsaiExams"
 import { getToeicScopeOption } from "@/data/toeic"
 
 type Lang = "en" | "vi"
@@ -76,6 +77,25 @@ export function PracticeGuestPage({
         title: tadvOpt.title,
         description: tadvOpt.description,
         questionBanks: tadvOpt.questionBanks,
+        subjectId: subj.id,
+        subjectCode: subj.code,
+        subjectName: subj.name,
+        category: subj.category,
+      }
+    }
+    const dsaiOpt = dsaiExamOptions.find((o) => o.id === payload.examId)
+    if (dsaiOpt) {
+      const subj = getSubjectById(payload.subjectId)
+      if (!subj) return null
+      return {
+        id: dsaiOpt.id,
+        type: "final" as const,
+        year: 2026,
+        questionCount: dsaiOpt.questionCount,
+        durationMinutes: dsaiOpt.durationMinutes,
+        title: dsaiOpt.title,
+        description: dsaiOpt.description,
+        questionBanks: dsaiOpt.questionBanks,
         subjectId: subj.id,
         subjectCode: subj.code,
         subjectName: subj.name,

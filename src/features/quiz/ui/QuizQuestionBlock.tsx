@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils"
 import { isAnswerCorrect } from "@/features/quiz/lib/quizHelpers"
 import type { Question, AnswerValue } from "@/features/quiz/model/quiz.types"
 import { DetailedAnalysisContent } from "@/features/quiz/ui/DetailedAnalysisContent"
+import { MathText } from "@/components/MathText"
 import { quizCopy } from "@/shared/i18n"
 
 export const QuizQuestionBlock = memo(function QuizQuestionBlock({
@@ -34,7 +35,7 @@ export const QuizQuestionBlock = memo(function QuizQuestionBlock({
   return (
     <section className={cn("border-b border-[#E5E5E5] pb-8 last:border-b-0 last:pb-0 dark:border-white/10", compact && "pb-5")}>
       <p className="lp-label mb-2 text-[12px] uppercase tracking-[0.12em]">{t.question} {questionNumber}</p>
-      <h2 className={cn(compact ? "text-[13px] leading-5 font-bold tracking-normal sm:text-[13px]" : "lp-card-title text-[18px] leading-8 sm:text-[20px]")}>{question.prompt}</h2>
+      <h2 className={cn("whitespace-pre-line", compact ? "text-[13px] leading-5 font-bold tracking-normal sm:text-[13px]" : "lp-card-title text-[18px] leading-8 sm:text-[20px]")}><MathText text={question.prompt} /></h2>
       <div className={cn("mt-5 flex flex-col gap-3", compact && "mt-3 gap-1.5 sm:grid sm:grid-cols-2 sm:gap-2")}>
         {isTextResponse ? (
           <>
@@ -93,7 +94,7 @@ export const QuizQuestionBlock = memo(function QuizQuestionBlock({
                   String.fromCharCode(65 + index)
                 )}
               </span>
-              <span className={cn("flex-1 text-[14px] font-bold sm:text-[15px]", compact && "text-[12px] leading-4 sm:text-[12px]")}>{option}</span>
+              <span className={cn("flex-1 text-[14px] font-bold sm:text-[15px]", compact && "text-[12px] leading-4 sm:text-[12px]")}><MathText text={option} /></span>
             </button>
           )
         })}
@@ -102,7 +103,7 @@ export const QuizQuestionBlock = memo(function QuizQuestionBlock({
             {question.explanation ? (
               <div className={cn("lp-modal-desc rounded-[12px] border-2 border-[#B3E5FC] bg-[#E8F7FE] px-4 py-3.5 text-[13px] text-[#100F3E] dark:border-sky-500/20 dark:bg-sky-500/10 dark:text-sky-100", compact && "px-3 py-2.5")}>
                 <span className="font-extrabold text-[#1CB0F6]">{t.explanation}: </span>
-                <span className="whitespace-pre-line">{question.explanation}</span>
+                <span className="whitespace-pre-line"><MathText text={question.explanation} /></span>
               </div>
             ) : null}
             {question.detailedExplanation ? (

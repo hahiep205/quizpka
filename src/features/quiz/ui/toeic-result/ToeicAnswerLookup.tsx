@@ -5,6 +5,7 @@ import { getToeicPartNumber } from "@/features/quiz/lib/toeicCategories"
 import type { ToeicPartRange } from "@/features/quiz/lib/toeicResultStats"
 import { quizCopy } from "@/shared/i18n"
 import { DetailedAnalysisContent } from "@/features/quiz/ui/DetailedAnalysisContent"
+import { MathText } from "@/components/MathText"
 import { getToeicAnswerStatus, getAnswerLabel, type ToeicAnswerStatus, type ToeicResultCopy } from "./toeicResultShared"
 
 type Props = {
@@ -123,7 +124,7 @@ function QuestionModal({
             ) : null}
           </div>
           {question.prompt ? (
-            <p className="whitespace-pre-line text-[13.5px] font-semibold italic leading-6 text-[#100F3E] dark:text-slate-100">{question.prompt}</p>
+            <p className="whitespace-pre-line text-[13.5px] font-semibold italic leading-6 text-[#100F3E] dark:text-slate-100"><MathText text={question.prompt} /></p>
           ) : null}
           {question.options.length > 0 ? (
             <div className="space-y-1.5">
@@ -135,7 +136,7 @@ function QuestionModal({
                 return (
                   <div key={index} className={`flex items-start gap-2.5 rounded-[10px] border-2 px-3 py-2 text-[13px] font-semibold leading-5 ${isCorrect ? "border-emerald-300 bg-emerald-50 text-emerald-900 dark:border-emerald-500/40 dark:bg-emerald-500/10 dark:text-emerald-100" : pickedWrong ? "border-rose-300 bg-rose-50 text-rose-900 dark:border-rose-500/40 dark:bg-rose-500/10 dark:text-rose-100" : "border-[#E5E5E5] bg-white text-[#4B4B4B] dark:border-white/10 dark:bg-slate-900 dark:text-slate-200"}`}>
                     <span className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[11px] font-extrabold ${isCorrect ? "bg-emerald-500 text-white" : pickedWrong ? "bg-rose-500 text-white" : "bg-[#F0F1F5] text-[#777777] dark:bg-white/10 dark:text-slate-300"}`}>{letter}</span>
-                    <span className="flex-1">{option}</span>
+                    <span className="flex-1"><MathText text={option} /></span>
                     {isCorrect ? <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600 dark:text-emerald-400" strokeWidth={3} /> : pickedWrong ? <X className="mt-0.5 h-4 w-4 shrink-0 text-rose-600 dark:text-rose-400" strokeWidth={3} /> : null}
                   </div>
                 )
@@ -145,7 +146,7 @@ function QuestionModal({
           {question.explanation ? (
             <div className="rounded-[12px] border-2 border-[#B3E5FC] bg-[#E8F7FE] px-4 py-3 dark:border-sky-500/20 dark:bg-sky-500/10">
               <p className="text-[11px] font-extrabold uppercase tracking-[0.12em] text-[#129BDC] dark:text-sky-300">{qc.explanation}</p>
-              <p className="mt-1 whitespace-pre-line text-[13px] font-medium leading-6 text-[#100F3E] dark:text-sky-100">{question.explanation}</p>
+              <p className="mt-1 whitespace-pre-line text-[13px] font-medium leading-6 text-[#100F3E] dark:text-sky-100"><MathText text={question.explanation} /></p>
             </div>
           ) : null}
           {question.detailedExplanation ? (

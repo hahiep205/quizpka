@@ -15,6 +15,7 @@ export type SubjectId =
   | "ky-nang-khoi-nghiep-va-lanh-dao"
   | "bao-mat-ung-dung-he-thong"
   | "co-so-du-lieu"
+  | "khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
   | "toeic"
 
 export type LocalizedText = {
@@ -496,6 +497,23 @@ export const subjects: Subject[] = [
       { id: "c2", label: { en: "Part 2 - SQL", vi: "Phần 2 - Trắc SQL (Khi đi thi sẽ là 12 câu Trắc nghiệm)" }, matches: ["Phần 2"], count: 50 },
       { id: "c3", label: { en: "Part 3 - Advanced CSDL & Applications", vi: "Phần 3 - CSDL mở rộng & ứng dụng (Khi đi thi sẽ là 8 câu Tự luận)" }, matches: ["Phần 3"], count: 50 },
       { id: "de-suutam", label: { en: "Collected exams from previous periods", vi: "Đề sưu tầm của các đợt thi trước" }, pdfUrl: "/data/co-so-du-lieu/De_thi_Co_so_du_lieu.pdf", count: 0 },
+    ],
+  },
+  {
+    id: "khoa-hoc-du-lieu-va-tri-tue-nhan-tao",
+    code: "DSAI101",
+    name: { en: "Data Science and Artificial Intelligence", vi: "Khoa học dữ liệu và Trí tuệ nhân tạo" },
+    category: { en: "Major", vi: "Chuyên ngành" },
+    exams: [
+      {
+        id: "data-science-ai-bank-1", type: "final", year: 2026, questionCount: 298, durationMinutes: 60,
+        title: { en: "Data Science and Artificial Intelligence", vi: "Khoa học dữ liệu và Trí tuệ nhân tạo" },
+        description: { en: "2 sets: Midterm (95) & Final (203). Choose one after clicking Try now.", vi: "2 bộ đề: Giữa kỳ (95 câu) & Cuối kỳ (203 câu). Chọn 1 đề sau khi ấn Thử ngay." },
+        questionBanks: [
+          "/data/khoa-hoc-du-lieu-va-tri-tue-nhan-tao/khoa_hoc_du_lieu_va_tri_tue_nhan_tao_midle.json",
+          "/data/khoa-hoc-du-lieu-va-tri-tue-nhan-tao/khoa_hoc_du_lieu_va_tri_tue_nhan_tao_final.json",
+        ],
+      },
     ],
   },
   {

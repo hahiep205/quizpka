@@ -22,6 +22,7 @@ import { QuizSetupModal } from "@/components/QuizSetupModal"
 import { HcmChapterPickerModal } from "@/components/HcmChapterPickerModal"
 import { PdfViewerModal } from "@/components/PdfViewerModal"
 import { TadvPickerModal } from "@/components/TadvPickerModal"
+import { DsaiPickerModal } from "@/components/DsaiPickerModal"
 import { Card } from "@/components/ui/card"
 import { Dialog } from "@/components/ui/dialog"
 import { examCatalog, getSubjectById, type ExamCatalogItem } from "@/data/subjects"
@@ -132,6 +133,9 @@ export function DashboardPage({
     handleTryNow,
     handleTadvSelect,
     setTadvPickerExam,
+    dsaiPickerExam,
+    handleDsaiSelect,
+    setDsaiPickerExam,
   } = useExamLaunch(lang)
 
   useEffect(() => {
@@ -223,6 +227,15 @@ export function DashboardPage({
         subject={tadvPickerExam ? getSubjectById(tadvPickerExam.subjectId) : null}
         onClose={() => setTadvPickerExam(null)}
         onSelect={handleTadvSelect}
+      />
+
+      <DsaiPickerModal
+        open={Boolean(dsaiPickerExam)}
+        lang={lang}
+        exam={dsaiPickerExam}
+        subject={dsaiPickerExam ? getSubjectById(dsaiPickerExam.subjectId) : null}
+        onClose={() => setDsaiPickerExam(null)}
+        onSelect={handleDsaiSelect}
       />
 
       <QuizSetupModal

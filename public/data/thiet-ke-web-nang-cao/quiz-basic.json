@@ -1,0 +1,287 @@
+{
+  "title": "Quiz PHP Cơ bản - Biến, Toán tử & Cấu trúc điều khiển",
+  "chapter": "Quiz PHP Cơ bản",
+  "totalQuestions": 20,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Quiz PHP Cơ bản",
+      "sourceChapter": "",
+      "question": "Giá trị của biến $var là gì?\n```\n$var = 1 / 2;\n```",
+      "options": {
+        "A": "0,5",
+        "B": "0",
+        "C": "2",
+        "D": "1"
+      },
+      "answer": "A",
+      "explainAnswer": "Trong PHP, phép chia 1 / 2 trả về kết quả kiểu số thực (float) là 0.5. Do đó giá trị của $var là 0,5."
+    },
+    {
+      "id": 2,
+      "chapter": "Quiz PHP Cơ bản",
+      "sourceChapter": "",
+      "question": "Trong PHP, sau khi thực hiện đoạn mã kết quả biến $e sẽ là gì?\n```\n$a = 5;\n$b = 12;\n$c = 10;\n$d = 7;\n$e = ($a * $b) + $c * $d / $a;\n```",
+      "options": {
+        "A": "74",
+        "B": "60",
+        "C": "70",
+        "D": "84"
+      },
+      "answer": "A",
+      "explainAnswer": "Tính theo thứ tự ưu tiên: ($a * $b) = 60, $c * $d / $a = 10 * 7 / 5 = 14. Kết quả $e = 60 + 14 = 74."
+    },
+    {
+      "id": 3,
+      "chapter": "Quiz PHP Cơ bản",
+      "sourceChapter": "",
+      "question": "Ký hiệu nào được dùng khi sử dụng biến trong PHP?",
+      "options": {
+        "A": "$",
+        "B": "&",
+        "C": "#",
+        "D": "@"
+      },
+      "answer": "A",
+      "explainAnswer": "Trong PHP, mọi biến đều phải bắt đầu bằng ký hiệu $."
+    },
+    {
+      "id": 4,
+      "chapter": "Quiz PHP Cơ bản",
+      "sourceChapter": "",
+      "question": "Toán tử <=> có ý nghĩa như thế nào?",
+      "options": {
+        "A": "Trả về các giá trị nhỏ hơn không, bằng không hoặc lớn hơn không tùy thuộc vào hai đối số",
+        "B": "Toán tử không tồn tại trong PHP",
+        "C": "So sánh bằng nghiêm ngặt",
+        "D": "So sánh khác"
+      },
+      "answer": "A",
+      "explainAnswer": "Toán tử <=> (spaceship) so sánh hai giá trị và trả về -1, 0 hoặc 1 tương ứng với nhỏ hơn, bằng hoặc lớn hơn."
+    },
+    {
+      "id": 5,
+      "chapter": "Quiz PHP Cơ bản",
+      "sourceChapter": "",
+      "question": "Trong PHP, sau khi thực hiện đoạn mã kết quả hiển thị sẽ là gì? (Nhập đúng cả dấu cách)\n```\nfor ($x = 1; $x <= 2; $x++) {\n  for ($y = 1; $y <= 3; $y++) {\n    if ($x == $y) continue;\n    print(\"x = $x y = $y\");\n  }\n}\n```",
+      "options": {
+        "A": "x = 1 y = 2x = 1 y = 3x = 2 y = 1x = 2 y = 3",
+        "B": "x = 1 y = 1x = 1 y = 2x = 1 y = 3x = 2 y = 1x = 2 y = 2x = 2 y = 3",
+        "C": "x = 1 y = 2 x = 1 y = 3 x = 2 y = 1 x = 2 y = 3",
+        "D": "Không in gì"
+      },
+      "answer": "A",
+      "explainAnswer": "Vòng lặp bỏ qua khi $x == $y nhờ continue. Kết quả in liền nhau không có khoảng trắng giữa các lần print: x = 1 y = 2x = 1 y = 3x = 2 y = 1x = 2 y = 3."
+    },
+    {
+      "id": 6,
+      "chapter": "Quiz PHP Cơ bản",
+      "sourceChapter": "",
+      "question": "Trong PHP, sau khi thực hiện đoạn mã kết quả hiển thị sẽ là gì?\n```\n$x = 25;\nwhile ($x < 10) {\n  $x--;\n}\necho($x);\n```",
+      "options": {
+        "A": "25",
+        "B": "10",
+        "C": "9",
+        "D": "0"
+      },
+      "answer": "A",
+      "explainAnswer": "Điều kiện while ($x < 10) ngay từ đầu đã sai vì $x = 25, nên vòng lặp không chạy và giá trị $x vẫn là 25."
+    },
+    {
+      "id": 7,
+      "chapter": "Quiz PHP Cơ bản",
+      "sourceChapter": "",
+      "question": "Đoạn mã sau, in ra giá trị nào sau đây?\n```\n$a = array();if ($a == null) {  echo 'true';} else { echo 'false';}\n```",
+      "options": {
+        "A": "true",
+        "B": "false",
+        "C": "không in",
+        "D": "lỗi"
+      },
+      "answer": "A",
+      "explainAnswer": "Trong PHP, mảng rỗng so sánh lỏng (==) với null sẽ trả về true, nên chương trình in ra true."
+    },
+    {
+      "id": 8,
+      "chapter": "Quiz PHP Cơ bản",
+      "sourceChapter": "",
+      "question": "Câu lệnh nào sau đây dùng để xuất nội dung ra trình duyệt?",
+      "options": {
+        "A": "echo",
+        "B": "cout<<",
+        "C": "write",
+        "D": "say"
+      },
+      "answer": "A",
+      "explainAnswer": "Trong PHP, lệnh echo (hoặc print) được dùng để xuất nội dung ra trình duyệt."
+    },
+    {
+      "id": 9,
+      "chapter": "Quiz PHP Cơ bản",
+      "sourceChapter": "",
+      "question": "Đoạn mã nào sau đây được sử dụng để chú thích PHP",
+      "options": {
+        "A": "Tất cả đều đúng",
+        "B": "# you are pretty",
+        "C": "/* commented code here */",
+        "D": "// you are handsome"
+      },
+      "answer": "A",
+      "explainAnswer": "PHP hỗ trợ cả ba kiểu chú thích: #, // (một dòng) và /* */ (nhiều dòng). Vì vậy tất cả đều đúng."
+    },
+    {
+      "id": 10,
+      "chapter": "Quiz PHP Cơ bản",
+      "sourceChapter": "",
+      "question": "Trong PHP, sau khi thực hiện đoạn mã kết quả hiển thị sẽ là gì? (Nhập chính xác cả dấu cách)\n```\n$s = '13149';\n$s[$s[1]] = $s[1] + $s[3];\necho($s);\n```",
+      "options": {
+        "A": "13179",
+        "B": "13149",
+        "C": "13449",
+        "D": "13147"
+      },
+      "answer": "A",
+      "explainAnswer": "$s[1] = '3', $s[3] = '4'. Phép cộng '3' + '4' = 7. Gán $s[3] = 7 → chuỗi trở thành '13179'."
+    },
+    {
+      "id": 11,
+      "chapter": "Quiz PHP Cơ bản",
+      "sourceChapter": "",
+      "question": "Đoạn mã sau, in ra giá trị nào sau đây?\n```\n<?php $check='false'; if($check){ echo 'true'; } else{echo 'false';}?>\n```",
+      "options": {
+        "A": "true",
+        "B": "false",
+        "C": "true false",
+        "D": "Không có giá trị"
+      },
+      "answer": "A",
+      "explainAnswer": "Chuỗi không rỗng luôn được xem là true trong điều kiện if, kể cả chuỗi 'false'. Vì vậy kết quả in ra true."
+    },
+    {
+      "id": 12,
+      "chapter": "Quiz PHP Cơ bản",
+      "sourceChapter": "",
+      "question": "Trong PHP, sau khi thực hiện đoạn mã kết quả hiển thị sẽ là gì? (Nhập chính xác cả dấu cách)\n```\nswitch (1) {\n  case 1:\n    print(\"Book Details\");\n  case 2:\n    print(\"Book Author\");\n  default:\n    print(\"Missing Book\");\n}\n```",
+      "options": {
+        "A": "Book DetailsBook AuthorMissing Book",
+        "B": "Book Details",
+        "C": "Book DetailsBook Author",
+        "D": "Missing Book"
+      },
+      "answer": "A",
+      "explainAnswer": "Vì không có break, chương trình sẽ chạy từ case 1 xuống hết các case còn lại, in ra liên tiếp: Book DetailsBook AuthorMissing Book."
+    },
+    {
+      "id": 13,
+      "chapter": "Quiz PHP Cơ bản",
+      "sourceChapter": "",
+      "question": "Đoạn mã sau, in ra giá trị nào sau đây?\n```\n$var = 'a';$VAR = 'b';echo \"$var$VAR\";\n```",
+      "options": {
+        "A": "ab",
+        "B": "aa",
+        "C": "bb",
+        "D": "lỗi không có biến $varb"
+      },
+      "answer": "A",
+      "explainAnswer": "Biến trong PHP phân biệt chữ hoa/thường. $var và $VAR là hai biến khác nhau, nên kết quả là ab."
+    },
+    {
+      "id": 14,
+      "chapter": "Quiz PHP Cơ bản",
+      "sourceChapter": "",
+      "question": "Trong PHP, sau khi thực hiện đoạn mã kết quả hiển thị sẽ là gì? (Nhập chính xác cả dấu cách)\n```\n$string1 = \"ab\";\n$string2 = \"cd\";\n$string1 = $string1 . $string2;\n$string3 = \"abc\";\n$string1 .= $string3;\necho $string1;\n```",
+      "options": {
+        "A": "abcdabc",
+        "B": "ab cd abc",
+        "C": "abcd",
+        "D": "abc"
+      },
+      "answer": "A",
+      "explainAnswer": "$string1 ban đầu là \"ab\", nối với \"cd\" thành \"abcd\", sau đó nối thêm \"abc\" bằng toán tử .= nên kết quả cuối cùng là abcdabc."
+    },
+    {
+      "id": 15,
+      "chapter": "Quiz PHP Cơ bản",
+      "sourceChapter": "",
+      "question": "Toán tử ?? trong biểu thức $x = $y ?? $z có ý nghĩa gì?",
+      "options": {
+        "A": "$x nhận giá trị $y nếu $y tồn tại và có giá trị",
+        "B": "$x nhận giá trị $y nếu $y là đúng (true)",
+        "C": "$x nhận giá trị $y nếu $y > $z",
+        "D": "$x nhận giá trị $y nếu $y là sai (false)"
+      },
+      "answer": "A",
+      "explainAnswer": "Toán tử ?? (null coalescing) gán $x = $y nếu $y tồn tại và khác null, ngược lại gán $x = $z."
+    },
+    {
+      "id": 16,
+      "chapter": "Quiz PHP Cơ bản",
+      "sourceChapter": "",
+      "question": "Trong PHP, sau khi thực hiện đoạn mã kết quả hiển thị sẽ là gì? (Nhập chính xác cả dấu cách)\n```\necho (int) \"1235Jason\";\n```",
+      "options": {
+        "A": "1235",
+        "B": "0",
+        "C": "1235Jason",
+        "D": "Jason"
+      },
+      "answer": "A",
+      "explainAnswer": "Ép kiểu (int) trên chuỗi sẽ lấy phần số ở đầu chuỗi. \"1235Jason\" được chuyển thành số nguyên 1235."
+    },
+    {
+      "id": 17,
+      "chapter": "Quiz PHP Cơ bản",
+      "sourceChapter": "",
+      "question": "Đoạn mã sau, in ra giá trị nào sau đây?\n```\nif (null === false) { echo 'true';} else { echo 'false';}\n```",
+      "options": {
+        "A": "false",
+        "B": "true",
+        "C": "không in",
+        "D": "lỗi"
+      },
+      "answer": "A",
+      "explainAnswer": "Toán tử === so sánh nghiêm ngặt cả giá trị và kiểu. null và false khác kiểu nên kết quả là false."
+    },
+    {
+      "id": 18,
+      "chapter": "Quiz PHP Cơ bản",
+      "sourceChapter": "",
+      "question": "Trong PHP, sau khi thực hiện đoạn mã kết quả hiển thị sẽ là gì? (Nhập chính xác cả dấu cách)\n```\n$a;\nfor ($a = 1; $a <= 9; $a++) {\n  if ($a == 5) continue;\n  echo ($a);\n}\n```",
+      "options": {
+        "A": "12346789",
+        "B": "123456789",
+        "C": "12345",
+        "D": "56789"
+      },
+      "answer": "A",
+      "explainAnswer": "Vòng lặp chạy từ 1 đến 9, khi $a == 5 thì continue bỏ qua. Kết quả in ra là 12346789."
+    },
+    {
+      "id": 19,
+      "chapter": "Quiz PHP Cơ bản",
+      "sourceChapter": "",
+      "question": "Đoạn mã sau, in ra giá trị nào sau đây?\n```\n<?php $RESULT = 11 + 011 + 0x11;echo \"$RESULT\";?>\n```",
+      "options": {
+        "A": "37",
+        "B": "22",
+        "C": "11",
+        "D": "39"
+      },
+      "answer": "A",
+      "explainAnswer": "011 là số bát phân = 9, 0x11 là số thập lục phân = 17. Tổng 11 + 9 + 17 = 37."
+    },
+    {
+      "id": 20,
+      "chapter": "Quiz PHP Cơ bản",
+      "sourceChapter": "",
+      "question": "Mặc định của một biến không có giá trị được thể hiện với từ khóa nào sau đây?",
+      "options": {
+        "A": "null",
+        "B": "none",
+        "C": "undef",
+        "D": "Không có khái niệm như vậy trong PHP"
+      },
+      "answer": "A",
+      "explainAnswer": "Trong PHP, biến chưa được gán giá trị hoặc gán rỗng mặc định có giá trị null."
+    }
+  ]
+}

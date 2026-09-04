@@ -612,6 +612,25 @@ export const tadvPickerCopy = {
   },
 } as const
 
+export const dsaiPickerCopy = {
+  en: {
+    title: "Choose a review set",
+    subtitle: "Select 1 of 2 sets to practice",
+    close: "Close",
+    cancel: "Cancel",
+    continue: "Continue",
+    questions: "questions",
+  },
+  vi: {
+    title: "Chọn bộ đề ôn tập",
+    subtitle: "Chọn 1 trong 2 bộ đề để làm bài",
+    close: "Đóng",
+    cancel: "Hủy",
+    continue: "Bắt đầu",
+    questions: "câu hỏi",
+  },
+} as const
+
 export const toeicSectionCopy = {
   en: {
     title: "TOEIC Preparation with",

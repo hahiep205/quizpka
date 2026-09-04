@@ -8,6 +8,7 @@ import { HcmChapterPickerModal } from "@/components/HcmChapterPickerModal"
 import { LoginNudgeModal, useLoginNudge } from "@/components/LoginNudgeModal"
 import { PdfViewerModal } from "@/components/PdfViewerModal"
 import { TadvPickerModal } from "@/components/TadvPickerModal"
+import { DsaiPickerModal } from "@/components/DsaiPickerModal"
 import { cn, mobileModalHeightClass } from "@/lib/utils"
 import { documentsCopy as copy } from "@/shared/i18n"
 import { useExamLaunch } from "@/lib/useExamLaunch"
@@ -43,6 +44,9 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
     handleTryNow,
     handleTadvSelect,
     setTadvPickerExam,
+    dsaiPickerExam,
+    handleDsaiSelect,
+    setDsaiPickerExam,
   } = useExamLaunch(lang)
   const attemptCountsBySubject = useSubjectAttemptCounts()
   const nudge = useLoginNudge()
@@ -268,6 +272,15 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
         subject={tadvPickerExam ? getSubjectById(tadvPickerExam.subjectId) : null}
         onClose={() => setTadvPickerExam(null)}
         onSelect={handleTadvSelect}
+      />
+
+      <DsaiPickerModal
+        open={Boolean(dsaiPickerExam)}
+        lang={lang}
+        exam={dsaiPickerExam}
+        subject={dsaiPickerExam ? getSubjectById(dsaiPickerExam.subjectId) : null}
+        onClose={() => setDsaiPickerExam(null)}
+        onSelect={handleDsaiSelect}
       />
 
       <QuizSetupModal
