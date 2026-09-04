@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ComponentType } from "react"
-import { Activity, BarChart3, CheckCircle2, Clock3, Download, Flame, History, LayoutGrid, LogOut, RefreshCw, Search, ShieldAlert, UserRound, Users, X, type LucideIcon } from "lucide-react"
+import { Activity, BarChart3, CheckCircle2, Clock3, Download, History, LayoutGrid, LogOut, RefreshCw, Search, ShieldAlert, UserRound, Users, X, type LucideIcon } from "lucide-react"
 import { MobileTabBar } from "@/components/MobileTabBar"
 import brandLogo from "@/assets/logo.png"
 import { useAuth } from "@/auth/AuthProvider"
