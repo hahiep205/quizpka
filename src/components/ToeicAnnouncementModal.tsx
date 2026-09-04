@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react"
-import { Check, MessageCircle, Sparkles, X } from "lucide-react"
+import { Check, FileUp, MessageCircle, Sparkles, X } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { GradientBackground } from "@/components/ui/gradient-background"
 import { toeicAnnouncementCopy as copy } from "@/shared/i18n"
-import { GoogleIcon } from "@/shared/icons/GoogleIcon"
-import { useAuth } from "@/auth/AuthProvider"
 
 type Lang = "en" | "vi"
 
@@ -13,23 +11,19 @@ type Props = {
   lang: Lang
   onClose: () => void
   onDontShowToday: () => void
+  onShare: () => void
   onFeedback: () => void
 }
 
-export function ToeicAnnouncementModal({ open, lang, onClose, onDontShowToday, onFeedback }: Props) {
+export function ToeicAnnouncementModal({ open, lang, onClose, onDontShowToday, onShare, onFeedback }: Props) {
   const [visible, setVisible] = useState(false)
   const [state, setState] = useState<"open" | "closed">("closed")
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
-  const { signInWithGoogle } = useAuth()
   const t = copy[lang]
 
   useEffect(() => {
     if (open) {
       setVisible(true)
       setState("open")
-      setLoading(false)
-      setError(null)
       return
     }
     if (!visible) return
@@ -53,15 +47,6 @@ export function ToeicAnnouncementModal({ open, lang, onClose, onDontShowToday, o
   }, [open, onClose])
 
   if (!visible) return null
-
-  const handleLogin = () => {
-    setLoading(true)
-    setError(null)
-    void signInWithGoogle().catch(() => {
-      setLoading(false)
-      setError(t.loginError)
-    })
-  }
 
   return (
     <div className="fixed inset-0 z-[90] flex items-center justify-center p-4">
@@ -114,24 +99,22 @@ export function ToeicAnnouncementModal({ open, lang, onClose, onDontShowToday, o
               </li>
             ))}
           </ul>
-          {error ? <p role="alert" className="mt-3 text-[13px] font-semibold text-red-600">{error}</p> : null}
         </div>
 
         <div className="relative px-6 pb-6 pt-2 sm:px-7">
-          <div className="flex gap-3">
+          <div className="grid grid-cols-2 gap-3">
             <button
               type="button"
-              onClick={handleLogin}
-              disabled={loading}
-              className="lp-btn lp-btn--primary lp-btn--sm min-w-0 flex-1 justify-center whitespace-normal text-center leading-4"
+              onClick={onShare}
+              className="lp-btn lp-btn--primary lp-btn--sm min-w-0 justify-center whitespace-normal text-center leading-4"
             >
-              <GoogleIcon className="h-4 w-4 shrink-0" />
-              {loading ? t.signingIn : t.loginGoogle}
+              <FileUp className="h-4 w-4 shrink-0" />
+              {t.share}
             </button>
             <button
               type="button"
               onClick={onFeedback}
-              className="lp-btn lp-btn--secondary lp-btn--sm min-w-0 flex-1 justify-center"
+              className="lp-btn lp-btn--secondary lp-btn--sm min-w-0 justify-center whitespace-normal text-center leading-4"
             >
               <MessageCircle className="h-4 w-4 shrink-0" />
               {t.feedback}

@@ -11,6 +11,11 @@ export const appRoutes = {
   result: "/result",
   resultGuest: "/result4guest",
   authCallback: "/auth/callback",
+  admin: "/admin",
+  adminOverview: "/admin/overview",
+  adminUsers: "/admin/users",
+  adminTimeline: "/admin/timeline",
+  adminAttempts: "/admin/attempts",
 } as const
 
 export type AppPath = (typeof appRoutes)[keyof typeof appRoutes]

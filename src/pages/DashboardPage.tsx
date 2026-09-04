@@ -32,6 +32,7 @@ import type { Language, Theme } from "@/shared/types/app"
 import { useAuth } from "@/auth/AuthProvider"
 import { navigate, appRoutes, getCurrentPath } from "@/app/navigation"
 import { readStorage, writeStorage } from "@/lib/storage"
+import { logActivityEvent, backfillPracticeAttempts } from "@/features/activity/lib/activityLog"
 import { computeLearningStats, formatLearningDuration } from "@/lib/learningStats"
 import { goToPractice, readPracticeHistory } from "@/lib/practiceSession"
 import { useSubjectAttemptCounts } from "@/hooks/useSubjectAttemptCounts"
@@ -106,6 +107,14 @@ export function DashboardPage({
   onOpenContact,
 }: DashboardPageProps) {
   const [activeView, setActiveView] = useState<DashboardView>(() => getDashboardView(getCurrentPath()))
+  const { user: dashboardUser } = useAuth()
+
+  useEffect(() => {
+    logActivityEvent(dashboardUser?.id, "view_dashboard", {}, { oncePerSessionKey: `view_dashboard:${dashboardUser?.id ?? "anon"}` })
+    if (dashboardUser?.id) {
+      backfillPracticeAttempts(dashboardUser.id, readPracticeHistory(dashboardUser.id, dashboardUser.created_at))
+    }
+  }, [dashboardUser?.id, dashboardUser?.created_at])
   const [query, setQuery] = useState("")
   const [filter, setFilter] = useState<"all" | "general" | "major">("all")
   const {

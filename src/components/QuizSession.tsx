@@ -46,6 +46,7 @@ import { Dialog } from "@/components/ui/dialog"
 import { useAuth } from "@/auth/AuthProvider"
 import { appRoutes } from "@/app/navigation"
 import { savePracticeHistory } from "@/lib/practiceSession"
+import { endAttemptSession, logActivityEvent, mirrorPracticeAttempt } from "@/features/activity/lib/activityLog"
 import { incrementSubjectAttempt } from "@/lib/subjectAttemptStats"
 import { playAnswerFeedback } from "@/features/quiz/lib/answerFeedbackSound"
 
@@ -177,7 +178,8 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
     const historyId = `${exam.id}-${Date.now()}`
     const correct = isHard ? hardMastered : stats.correct
     lastSavedHistoryId.current = historyId
-    savePracticeHistory({
+    const accuracy = questions.length ? Math.round((correct / questions.length) * 100) : 0
+    const historyItem = {
       id: historyId,
       examId: exam.id,
       subjectId: subject.id,
@@ -186,7 +188,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
       score: stats.score10,
       correct,
       total: questions.length,
-      accuracy: questions.length ? Math.round((correct / questions.length) * 100) : 0,
+      accuracy,
       durationSeconds: elapsedSeconds,
       completedAt: new Date().toISOString(),
       setup,
@@ -203,7 +205,22 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
           : `${String.fromCharCode(65 + question.correctIndex)}. ${question.options[question.correctIndex]}`,
         wasSkipped: !isHard && answers[question.id] === undefined,
       })),
-    }, user.id)
+    }
+    savePracticeHistory(historyItem, user.id)
+    // P2: mirror lên server để /admin xem được + ghi timeline luồng sau active.
+    mirrorPracticeAttempt(historyItem, user.id)
+    logActivityEvent(user.id, activeRetryNumber ? "retry_wrong" : "submit_attempt", {
+      historyId,
+      examId: exam.id,
+      subjectId: subject.id,
+      mode: setup.mode,
+      score: stats.score10,
+      accuracy,
+      durationSeconds: elapsedSeconds,
+      total: questions.length,
+      retryNumber: activeRetryNumber ?? null,
+      sessionId: endAttemptSession(exam.id),
+    })
   }, [activeRetryNumber, answers, chapterId, elapsedSeconds, exam, finished, hardMastered, hardProgress, hardWrongCounts, isHard, lang, questions, setup, stats.correct, stats.score10, status, subject.id, toeicScope, user, wrongQuestions])
 
   const handleAnswer = useCallback((questionId: string, answer: AnswerValue) => {

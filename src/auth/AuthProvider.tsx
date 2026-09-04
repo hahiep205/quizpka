@@ -1,6 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react"
 import type { Session, User } from "@supabase/supabase-js"
 import { supabase } from "@/lib/supabase"
+import { logActivityEvent } from "@/features/activity/lib/activityLog"
 import type { AuthContextValue, AuthProfile, AuthStatus } from "./auth.types"
 
 const AuthContext = createContext<AuthContextValue | null>(null)
@@ -26,6 +27,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     // Profile data can load independently and must not block navigation.
     setProfile(createFallbackProfile(currentUser))
     setStatus("authenticated")
+    logActivityEvent(currentUser.id, "login", { provider: currentUser.app_metadata?.provider ?? "google" }, { oncePerSessionKey: `login:${currentUser.id}` })
     try {
       await loadProfile(currentUser)
     } catch {
@@ -60,6 +62,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const { data, error } = await supabase.from("profiles").update(updates).eq("id", user.id).select("id,email,display_name,avatar_url,role,status").single()
     if (error) throw error
     setProfile(data as AuthProfile)
+    logActivityEvent(user.id, "update_profile", { fields: Object.keys(updates) })
   }, [user])
 
   const value = useMemo<AuthContextValue>(() => ({ status, user, profile, signInWithGoogle, signOut, updateProfile }), [status, user, profile, signInWithGoogle, signOut, updateProfile])

@@ -3,6 +3,7 @@ import { X } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { QuizSetupModal, type QuizSetupValues } from "@/components/QuizSetupModal"
 import { ToeicScopePickerModal } from "@/components/ToeicScopePickerModal"
+import { LoginNudgeModal, useLoginNudge } from "@/components/LoginNudgeModal"
 import { getSubjectById, type ExamCatalogItem } from "@/data/subjects"
 import { type ToeicScope } from "@/data/toeic"
 import { goToPractice } from "@/lib/practiceSession"
@@ -33,6 +34,7 @@ export function ToeicSection({ lang }: { lang: Lang }) {
   const [setupOpen, setSetupOpen] = useState(false)
   const [selectedScope, setSelectedScope] = useState<ToeicScope>("full")
   const [selectedExamId, setSelectedExamId] = useState<string>("toeic-test-01")
+  const nudge = useLoginNudge()
 
   const subject = getSubjectById("toeic")
   const examCatalogItems: ExamCatalogItem[] = subject
@@ -50,6 +52,8 @@ export function ToeicSection({ lang }: { lang: Lang }) {
     setSelectedExamId(examId)
     setPickerOpen(true)
   }
+
+  const tryExam = (examId: string) => nudge.requestNudge(() => handleTryNow(examId))
 
   const handlePickerSelect = (scope: ToeicScope) => {
     setSelectedScope(scope)
@@ -120,7 +124,7 @@ export function ToeicSection({ lang }: { lang: Lang }) {
                 <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm flex-1" onClick={() => { setSelectedExamId(exam.id); setDetailOpen(true) }}>
                   {t.details}
                 </button>
-                <button type="button" className="lp-btn lp-btn--primary lp-btn--sm flex-1" onClick={() => handleTryNow(exam.id)}>
+                <button type="button" className="lp-btn lp-btn--primary lp-btn--sm flex-1" onClick={() => tryExam(exam.id)}>
                   {t.start}
                 </button>
               </div>
@@ -167,7 +171,7 @@ export function ToeicSection({ lang }: { lang: Lang }) {
                 className="lp-btn lp-btn--primary lp-btn--sm"
                 onClick={() => {
                   setDetailOpen(false)
-                  handleTryNow(baseExam.id)
+                  tryExam(baseExam.id)
                 }}
               >
                 {t.start}
@@ -178,6 +182,8 @@ export function ToeicSection({ lang }: { lang: Lang }) {
       ) : null}
 
       <ToeicScopePickerModal open={pickerOpen} lang={lang} examId={selectedExamId} onClose={() => setPickerOpen(false)} onSelect={handlePickerSelect} />
+
+      <LoginNudgeModal open={nudge.nudgeOpen} lang={lang} onSkip={nudge.skipNudge} onClose={nudge.closeNudge} />
 
       <QuizSetupModal open={setupOpen} lang={lang} exam={setupExam} subject={setupSubject} onClose={handleSetupClose} onStart={handleSetupStart} />
     </section>

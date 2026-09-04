@@ -467,6 +467,39 @@ export const loginCopy = {
   },
 } as const
 
+export const loginNudgeCopy = {
+  en: {
+    title: "Sign in for the full experience",
+    subtitle: "You can try it right away as a guest, but signing in unlocks:",
+    benefits: [
+      { title: "Saved history", desc: "Every attempt is kept so you can review anytime." },
+      { title: "Retry wrong answers", desc: "Wrong questions are collected for focused practice." },
+      { title: "Leaderboard", desc: "Earn learning points and compare with others." },
+      { title: "1-tap Google sign-in", desc: "Free, no password needed." },
+    ],
+    signIn: "Sign in now",
+    signingIn: "Connecting to Google…",
+    skip: "Skip",
+    error: "Unable to start Google sign-in. Please try again.",
+    close: "Close",
+  },
+  vi: {
+    title: "Đăng nhập để học trọn vẹn",
+    subtitle: "Bạn có thể làm thử ngay mà không cần login, nhưng đăng nhập sẽ mở:",
+    benefits: [
+      { title: "Lưu lịch sử làm bài", desc: "Mọi lượt làm được giữ lại để xem bất cứ lúc nào." },
+      { title: "Làm lại câu sai", desc: "Tự động gom câu sai để luyện lại trọng tâm." },
+      { title: "Bảng xếp hạng", desc: "Tích điểm học tập và so tài cùng mọi người." },
+      { title: "Login 1 chạm bằng Google", desc: "Nhanh chóng, không cần mật khẩu." },
+    ],
+    signIn: "Đăng nhập ngay",
+    signingIn: "Đang kết nối với Google…",
+    skip: "Bỏ qua",
+    error: "Không thể bắt đầu đăng nhập Google. Vui lòng thử lại.",
+    close: "Đóng",
+  },
+} as const
+
 export const quizSetupCopy = {
   en: {
     title: "Quiz Setup",
@@ -545,11 +578,17 @@ export const pdfViewerCopy = {
   en: {
     subtitle: "Collected exams from previous periods as a PDF document. Read it directly or download it.",
     download: "Download PDF",
+    openNewTab: "Open in new tab",
+    loading: "Loading document…",
+    previewUnavailable: "Your browser can't preview this PDF inline. Open it in a new tab or download it.",
     close: "Close",
   },
   vi: {
     subtitle: "Tài liệu PDF tổng hợp đề thi của các kỳ trước. Bạn có thể đọc trực tiếp hoặc tải về.",
     download: "Tải PDF",
+    openNewTab: "Mở tab mới",
+    loading: "Đang tải tài liệu…",
+    previewUnavailable: "Trình duyệt của bạn không xem trước được PDF này. Hãy mở tab mới hoặc tải về.",
     close: "Đóng",
   },
 } as const
@@ -635,33 +674,29 @@ export const toeicPickerCopy = {
 
 export const toeicAnnouncementCopy = {
   en: {
-    badge: "Now available",
-    title: "Sign-in is ready!",
-    desc: "Google login is live. Sign in to keep your practice history and pick up right where you left off.",
+    badge: "Under construction",
+    title: "QuizPKA is being built!",
+    desc: "This website is a work in progress and gets better every day. Share your documents and exams to grow our shared question bank, or send feedback to help us improve.",
     benefits: [
-      "Save quiz history and results",
-      "Track progress by subject",
-      "Sync across devices",
+      "New exams and documents added every day",
+      "Every piece of feedback is heard",
+      "A community that shares and grows together",
     ],
-    loginGoogle: "Sign in now",
-    signingIn: "Connecting to Google…",
-    loginError: "Unable to start Google sign-in. Please try again.",
+    share: "Share documents",
     feedback: "Feedback",
     dontShowToday: "Don't show again today",
     close: "Close",
   },
   vi: {
-    badge: "Vừa ra mắt",
-    title: "Đăng nhập đã hoàn thành!",
-    desc: "Tính năng đăng nhập Google đã sẵn sàng. Đăng nhập để lưu lịch sử luyện đề và tiếp tục đúng chỗ bạn đang học.",
+    badge: "Đang xây dựng",
+    title: "QuizPKA đang được hoàn thiện!",
+    desc: "QuizPKA đang trong quá trình xây dựng. Mọi chia sẻ và đóng góp của bạn sẽ giúp chúng mình nhanh chóng hoàn thiện kho tài liệu chung này!",
     benefits: [
-      "Lưu lịch sử và kết quả làm bài",
-      "Theo dõi tiến độ theo từng môn",
-      "Đồng bộ trên nhiều thiết bị",
+      "Kho đề và tài liệu được bổ sung mỗi ngày",
+      "Mọi góp ý của bạn đều được lắng nghe",
+      "Tài liệu quiz luôn sẵn sàng, không cần gia hạn",
     ],
-    loginGoogle: "Đăng nhập ngay",
-    signingIn: "Đang kết nối với Google…",
-    loginError: "Không thể bắt đầu đăng nhập Google. Vui lòng thử lại.",
+    share: "Chia sẻ tài liệu",
     feedback: "Góp ý",
     dontShowToday: "Không hiển thị hôm nay",
     close: "Đóng",

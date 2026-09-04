@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input"
 import { examCatalog, getSubjectById, type ExamCatalogItem } from "@/data/subjects"
 import { QuizSetupModal } from "@/components/QuizSetupModal"
 import { HcmChapterPickerModal } from "@/components/HcmChapterPickerModal"
+import { LoginNudgeModal, useLoginNudge } from "@/components/LoginNudgeModal"
 import { PdfViewerModal } from "@/components/PdfViewerModal"
 import { TadvPickerModal } from "@/components/TadvPickerModal"
 import { cn, mobileModalHeightClass } from "@/lib/utils"
@@ -44,6 +45,8 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
     setTadvPickerExam,
   } = useExamLaunch(lang)
   const attemptCountsBySubject = useSubjectAttemptCounts()
+  const nudge = useLoginNudge()
+  const tryExam = (exam: ExamCatalogItem) => nudge.requestNudge(() => handleTryNow(exam))
 
   const filteredExams = useMemo(() => {
     const normalized = query.trim().toLowerCase()
@@ -148,7 +151,7 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
                   <button
                     type="button"
                     className="lp-btn lp-btn--primary lp-btn--sm flex-1"
-                    onClick={() => handleTryNow(exam)}
+                    onClick={() => tryExam(exam)}
                   >
                     {t.start}
                   </button>
@@ -223,7 +226,7 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
                 type="button"
                 className="lp-btn lp-btn--primary lp-btn--sm"
                 onClick={() => {
-                  handleTryNow(detailExam)
+                  tryExam(detailExam)
                   setDetailExam(null)
                 }}
               >
@@ -241,6 +244,13 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
         subject={pickerSubject}
         onClose={handlePickerClose}
         onSelect={handlePickerSelect}
+      />
+
+      <LoginNudgeModal
+        open={nudge.nudgeOpen}
+        lang={lang}
+        onSkip={nudge.skipNudge}
+        onClose={nudge.closeNudge}
       />
 
       <PdfViewerModal

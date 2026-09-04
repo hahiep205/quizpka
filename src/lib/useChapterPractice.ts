@@ -2,19 +2,22 @@ import { useState } from "react"
 import { getSubjectById, type ChapterOption, type ExamCatalogItem } from "@/data/subjects"
 import { hasChapterSupport } from "@/data/subjectChapters"
 import { goToPractice } from "@/lib/practiceSession"
+import { beginAttemptSession, currentAttemptSession, logActivityEvent } from "@/features/activity/lib/activityLog"
 import type { QuizSetupValues } from "@/components/QuizSetupModal"
 import { useAuth } from "@/auth/AuthProvider"
 
 type Lang = "en" | "vi"
 
 export function useChapterPractice(lang: Lang) {
-  const { status } = useAuth()
+  const { status, user } = useAuth()
   const [pickerExam, setPickerExam] = useState<ExamCatalogItem | null>(null)
   const [setupExam, setSetupExam] = useState<ExamCatalogItem | null>(null)
   const [pendingChapter, setPendingChapter] = useState<string>("all")
   const [pdfChapter, setPdfChapter] = useState<{ title: ChapterOption["label"]; url: string } | null>(null)
 
   const handleTryNow = (exam: ExamCatalogItem) => {
+    const sessionId = beginAttemptSession(exam.id)
+    logActivityEvent(user?.id, "open_exam", { examId: exam.id, subjectId: exam.subjectId, sessionId })
     if (hasChapterSupport(exam.subjectId)) {
       setPickerExam(exam)
     } else {
@@ -48,6 +51,13 @@ export function useChapterPractice(lang: Lang) {
   const handleSetupStart = (setup: QuizSetupValues) => {
     if (!setupExam) return
     const hasChapter = hasChapterSupport(setupExam.subjectId)
+    logActivityEvent(user?.id, "start_attempt", {
+      examId: setupExam.id,
+      subjectId: setupExam.subjectId,
+      mode: setup.mode,
+      chapterId: hasChapter ? pendingChapter : undefined,
+      sessionId: currentAttemptSession(setupExam.id) ?? beginAttemptSession(setupExam.id),
+    })
     goToPractice({
       examId: setupExam.id,
       subjectId: setupExam.subjectId,

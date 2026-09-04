@@ -17,6 +17,7 @@ const ContactModal = lazy(() => import("@/components/ContactModal").then(({ Cont
 const LoginModal = lazy(() => import("@/components/LoginModal").then(({ LoginModal: component }) => ({ default: component })))
 const ToeicAnnouncementModal = lazy(() => import("@/components/ToeicAnnouncementModal").then(({ ToeicAnnouncementModal: component }) => ({ default: component })))
 const DashboardPage = lazy(() => import("@/pages/DashboardPage").then(({ DashboardPage: component }) => ({ default: component })))
+const AdminPage = lazy(() => import("@/pages/AdminPage").then(({ AdminPage: component }) => ({ default: component })))
 const PracticeGuestPage = lazy(() => import("@/pages/PracticeGuestPage").then(({ PracticeGuestPage: component }) => ({ default: component })))
 const NotFoundPage = lazy(() => import("@/pages/NotFoundPage").then(({ NotFoundPage: component }) => ({ default: component })))
 
@@ -27,7 +28,7 @@ function getTodayKey(): string {
 
 export default function App() {
   const pathname = useAppPath()
-  const { status, signInWithGoogle } = useAuth()
+  const { status, signInWithGoogle, profile } = useAuth()
   const [contactOpen, setContactOpen] = useState(false)
   const [contactType, setContactType] = useState<ContactModalType | null>(null)
   const [loginOpen, setLoginOpen] = useState(false)
@@ -94,11 +95,24 @@ export default function App() {
     setAnnouncementOpen(false)
     openContact("Support")
   }
+  const handleShare = () => {
+    setAnnouncementOpen(false)
+    openContact("Contribute")
+  }
 
   const shellClassName =
     "relative min-h-svh bg-slate-50 transition-colors duration-300 dark:bg-slate-950"
 
   if (pathname === appRoutes.authCallback) return <AuthCallbackPage />
+
+  if (pathname === appRoutes.admin || pathname.startsWith(`${appRoutes.admin}/`)) {
+    if (status === "loading") return <RouteLoading />
+    if (status === "anonymous") return <LoginRequiredScreen onLogin={() => void signInWithGoogle()} />
+    if (profile?.role !== "admin") return <AccessDeniedScreen />
+    return (
+      <Suspense fallback={<RouteLoading />}><AdminPage lang={lang} /></Suspense>
+    )
+  }
 
   if ([appRoutes.practice, appRoutes.practiceGuest, appRoutes.result, appRoutes.resultGuest].includes(pathname as typeof appRoutes.practice)) {
     const authenticatedRoute = pathname === appRoutes.practice || pathname === appRoutes.result
@@ -178,6 +192,7 @@ export default function App() {
         lang={lang}
         onClose={closeAnnouncement}
         onDontShowToday={handleDontShowToday}
+        onShare={handleShare}
         onFeedback={handleFeedback}
       /></Suspense>
     </div>
@@ -190,6 +205,10 @@ function LoginRequiredScreen({ onLogin }: { onLogin: () => void }) {
 
 function RouteLoading() {
   return <div className="mx-auto flex min-h-svh items-center justify-center px-6"><p className="lp-modal-desc text-[15px]">Loading…</p></div>
+}
+
+function AccessDeniedScreen() {
+  return <main className="mx-auto flex min-h-svh max-w-md flex-col items-center justify-center gap-3 px-6 text-center"><h1 className="text-xl font-semibold">Không có quyền truy cập</h1><p className="text-sm text-slate-500">Trang /admin chỉ dành cho tài khoản admin.</p><a href="/" className="lp-btn lp-btn--secondary">Về trang chủ</a></main>
 }
 
 
