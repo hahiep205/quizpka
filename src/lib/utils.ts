@@ -5,6 +5,9 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-/** Mobile picker-modal height: 128px header + 341px body + 124px footer. */
-export const mobileModalHeightClass =
-  "h-[min(593px,calc(100dvh_-_2rem))] max-h-[min(760px,92dvh)] sm:h-auto"
+/** Canonical mobile toggle-modal layout: 128px header + 341px body + 124px footer. */
+export const modalFrameClass = "lp-modal-frame"
+export const modalHeaderClass = "lp-modal-header"
+export const modalBodyClass = "lp-modal-body"
+export const modalFooterClass = "lp-modal-footer"
+export const mobileModalHeightClass = modalFrameClass

@@ -8,11 +8,13 @@ import {
   FileText,
   Flame,
   History,
+  Home,
   Languages,
   Moon,
   Search,
   Settings,
   Sun,
+  Trophy,
   UserRound,
   LogOut,
   MessageCircle,
@@ -27,7 +29,7 @@ import { DsaiPickerModal } from "@/components/DsaiPickerModal"
 import { Card } from "@/components/ui/card"
 import { Dialog } from "@/components/ui/dialog"
 import { examCatalog, getSubjectById, type ExamCatalogItem } from "@/data/subjects"
-import { cn } from "@/lib/utils"
+import { cn, modalBodyClass, modalFooterClass, modalFrameClass, modalHeaderClass } from "@/lib/utils"
 import { dashboardCopy as copy } from "@/shared/i18n"
 import { useExamLaunch } from "@/lib/useExamLaunch"
 import type { Language, Theme } from "@/shared/types/app"
@@ -38,8 +40,9 @@ import { logActivityEvent, backfillPracticeAttempts } from "@/features/activity/
 import { computeLearningStats, formatLearningDuration } from "@/lib/learningStats"
 import { goToPractice, readPracticeHistory } from "@/lib/practiceSession"
 import { useSubjectAttemptCounts } from "@/hooks/useSubjectAttemptCounts"
+import { MobileTabBar } from "@/components/MobileTabBar"
 import { CatalogExamCard } from "@/components/CatalogExamCard"
-import { DashboardStatCard } from "@/components/DashboardStatCard"
+import { DashboardStatCard, dashboardStatGridClass } from "@/components/DashboardStatCard"
 import { LeaderboardView } from "@/components/LeaderboardView"
 import { CommunityChatModal } from "@/components/CommunityChatModal"
 import { formatTime } from "@/features/quiz/lib/quizHelpers"
@@ -88,17 +91,24 @@ function SidebarSettingsIcon({ className }: { className?: string }) {
 
 const mobileNavLabels = {
   vi: {
-    home: "TRANG CHỦ",
-    leaderboard: "XẾP HẠNG",
-    history: "LỊCH SỬ",
-    settings: "CÀI ĐẶT",
+    home: "Trang chủ",
+    leaderboard: "Xếp hạng",
+    history: "Lịch sử",
+    settings: "Cài đặt",
   },
   en: {
-    home: "HOME",
-    leaderboard: "RANKING",
-    history: "HISTORY",
-    settings: "SETTINGS",
+    home: "Home",
+    leaderboard: "Ranking",
+    history: "History",
+    settings: "Settings",
   },
+} as const
+
+const mobileNavIcons = {
+  home: Home,
+  leaderboard: Trophy,
+  history: History,
+  settings: Settings,
 } as const
 
 export function DashboardPage({
@@ -174,9 +184,9 @@ export function DashboardPage({
       <DesktopSidebar activeView={activeView} lang={lang} onNavigate={navigate} />
 
       <div className="lg:pl-[200px]">
-        <DashboardTopbar lang={lang} />
+        <DashboardTopbar lang={lang} view={activeView} />
 
-        <main className="mx-auto w-full max-w-[1440px] px-3 pb-[calc(92px+env(safe-area-inset-bottom))] pt-4 min-[380px]:px-4 sm:px-6 sm:pt-6 md:px-8 lg:px-8 lg:pb-12 lg:pt-8 xl:px-10">
+        <main className="mx-auto w-full max-w-[1440px] px-3 pb-[calc(108px+env(safe-area-inset-bottom))] pt-4 min-[380px]:px-4 sm:px-6 sm:pt-6 md:px-8 lg:px-8 lg:pb-12 lg:pt-8 xl:px-10">
           {activeView === "home" ? (
             <HomeDashboard
               lang={lang}
@@ -313,18 +323,38 @@ function DesktopSidebar({
   )
 }
 
-function DashboardTopbar({ lang }: Pick<DashboardPageProps, "lang">) {
+function DashboardTopbar({ lang, view }: Pick<DashboardPageProps, "lang"> & { view: DashboardView }) {
   const t = copy[lang]
   const { profile } = useAuth()
   const [chatOpen, setChatOpen] = useState(false)
   const chatLabel = lang === "vi" ? "Chat cộng đồng" : "Community Chat"
+  const pageMeta =
+    view === "leaderboard"
+      ? { icon: Trophy, title: t.leaderboardTitle }
+      : view === "history"
+        ? { icon: History, title: t.historyTitle }
+        : view === "settings"
+          ? { icon: Settings, title: t.settingsTitle }
+          : null
+  const PageIcon = pageMeta?.icon
   return (
     <>
-      <header className="sticky top-0 z-30 border-b border-slate-200/80 bg-white/90 backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/90">
-        <div className="mx-auto flex h-16 w-full max-w-[1440px] items-center justify-between px-4 sm:h-[72px] sm:px-6 md:px-8 lg:h-[78px] lg:px-8 xl:px-10">
-          <a href="/" className="lg:hidden" aria-label="QuizPKA">
-            <img src={brandLogo} alt="QuizPKA" className="h-7 w-auto" />
-          </a>
+      <header className="sticky top-0 z-30 bg-white/80 pt-[env(safe-area-inset-top)] backdrop-blur-2xl dark:bg-[#18191A]/80">
+        <div className="mx-auto flex h-14 w-full max-w-[1440px] items-center justify-between px-3 sm:h-16 sm:px-6 md:px-8 lg:h-[72px] lg:px-8 xl:px-10">
+          {pageMeta && PageIcon ? (
+            <div className="flex min-w-0 items-center gap-3 lg:hidden">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[13px] bg-[#E8F7FE] text-[#1CB0F6] sm:h-14 sm:w-14 sm:rounded-[16px] dark:bg-sky-500/10">
+                <PageIcon className="h-5 w-5 sm:h-7 sm:w-7" />
+              </div>
+              <h2 className="truncate text-[22px] font-black leading-7 tracking-[-0.03em] text-[#100F3E] sm:text-[28px] dark:text-white">
+                {pageMeta.title}
+              </h2>
+            </div>
+          ) : (
+            <a href="/" className="flex items-center lg:hidden" aria-label="QuizPKA">
+              <img src={brandLogo} alt="QuizPKA" className="h-8 w-auto" />
+            </a>
+          )}
 
           <div className="hidden lg:block">
             <h1 className="text-base font-semibold text-[#100F3E] dark:text-white">
@@ -334,7 +364,7 @@ function DashboardTopbar({ lang }: Pick<DashboardPageProps, "lang">) {
 
           <div className="ml-auto">
             <TopbarButton label={chatLabel} onClick={() => setChatOpen(true)}>
-              <MessageCircle className="h-[18px] w-[18px]" strokeWidth={2} />
+              <MessageCircle className="h-5 w-5" strokeWidth={2} />
             </TopbarButton>
           </div>
         </div>
@@ -359,7 +389,7 @@ function TopbarButton({
       aria-label={label}
       title={label}
       onClick={onClick}
-      className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 shadow-[var(--shadow-1)] transition-all duration-200 hover:bg-slate-50 active:scale-[0.98] dark:border-white/10 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-white/10"
+      className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#F0F2F5] text-[#050505] transition-[transform,background-color] duration-150 hover:bg-[#E4E6EB] active:scale-95 dark:bg-[#3A3B3C] dark:text-[#E4E6EB] dark:hover:bg-[#4E4F50]"
     >
       {children}
     </button>
@@ -393,7 +423,7 @@ function HomeDashboard({
 
   return (
     <div className="space-y-6 dashboard-reveal sm:space-y-8">
-      <section className="grid grid-cols-2 gap-2.5 sm:gap-3 lg:grid-cols-4 lg:gap-4" aria-label="Statistics">
+      <section className={dashboardStatGridClass} aria-label="Statistics">
         <DashboardStatCard icon={Flame} value={String(dashboardStats.subjectsReviewed)} label={t.streak} tone="orange" />
         <DashboardStatCard icon={CheckCircle2} value={String(dashboardStats.attempts)} label={t.completed} tone="green" />
         <DashboardStatCard icon={BarChart3} value={`${dashboardStats.averageAccuracy}%`} label={t.accuracy} tone="blue" />
@@ -589,9 +619,9 @@ function WrongAnswersDialog({ item, lang, onClose, onRetry }: {
       title={lang === "vi" ? "Danh sách câu sai" : "Wrong answers"}
       closeLabel={lang === "vi" ? "Đóng" : "Close"}
       className="z-[100]"
-      panelClassName={cn("flex max-h-[calc(100dvh_-_2rem)] w-full max-w-[720px] flex-col overflow-hidden rounded-[18px] border-2 border-[#E5E5E5] bg-white shadow-[0_6px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none h-[min(593px,calc(100dvh_-_2rem))] sm:h-[min(680px,calc(100dvh_-_3rem))] lg:h-[min(760px,calc(100dvh_-_4rem))]")}
+      panelClassName={cn("max-w-[720px] rounded-[18px] border-2 border-[#E5E5E5] bg-white shadow-[0_6px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none", modalFrameClass)}
     >
-      <div className="sticky top-0 z-10 flex items-start justify-between gap-4 border-b border-slate-100 bg-white px-5 py-4 dark:border-white/10 dark:bg-slate-900 sm:px-6">
+      <div className={modalHeaderClass}>
         <div className="min-w-0">
           <h2 className="text-lg font-black text-[#100F3E] dark:text-white">{lang === "vi" ? "Danh sách câu sai" : "Wrong answers"}</h2>
           <p className="mt-1 truncate text-sm font-semibold text-slate-500 dark:text-slate-400">{item?.title}</p>
@@ -603,7 +633,7 @@ function WrongAnswersDialog({ item, lang, onClose, onRetry }: {
           </button>
         </div>
       </div>
-      <div className="min-h-0 flex-1 space-y-3 overflow-y-auto px-4 py-4 sm:px-6">
+      <div className={cn(modalBodyClass, "space-y-3")}>
         {wrong.map((question, index) => <div key={question.id} className="rounded-xl border border-slate-100 bg-slate-50 p-3.5 dark:border-white/10 dark:bg-white/5">
           <div className="flex items-start gap-3">
             <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-white text-xs font-black text-[#129BDC] shadow-sm dark:bg-slate-800">{index + 1}</span>
@@ -617,7 +647,7 @@ function WrongAnswersDialog({ item, lang, onClose, onRetry }: {
           </div>
         </div>)}
       </div>
-      <div className="sticky bottom-0 flex flex-col-reverse gap-2 border-t border-slate-100 bg-white px-5 py-4 dark:border-white/10 dark:bg-slate-900 sm:flex-row sm:justify-end sm:px-6">
+      <div className={modalFooterClass}>
         <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={onClose}>{lang === "vi" ? "Đóng" : "Close"}</button>
         <button type="button" className="lp-btn lp-btn--primary lp-btn--sm" disabled={!wrong.length} onClick={onRetry}>{lang === "vi" ? "Làm lại câu sai" : "Retry wrong answers"}</button>
       </div>
@@ -698,7 +728,7 @@ function ToggleRow({ label, checked, onChange }: { label: string; checked: boole
 
 function PageHeading({ title, description, icon: Icon }: { title: string; description: string; icon: ComponentType<{ className?: string }> }) {
   return (
-    <div className="mb-5 flex items-center gap-3 sm:mb-7 sm:gap-4">
+    <div className="mb-5 hidden items-center gap-3 sm:mb-7 sm:gap-4 lg:flex">
       <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[13px] bg-[#E8F7FE] text-[#1CB0F6] dark:bg-sky-500/10 sm:h-14 sm:w-14 sm:rounded-[16px]"><Icon className="h-5 w-5 sm:h-7 sm:w-7" /></div>
       <div className="min-w-0"><h2 className="text-[22px] font-black leading-7 tracking-[-0.03em] text-[#100F3E] dark:text-white sm:text-[28px]">{title}</h2><p className="mt-0.5 text-[13px] font-semibold leading-5 text-slate-500 dark:text-slate-400 sm:mt-1 sm:text-sm">{description}</p></div>
     </div>
@@ -716,45 +746,16 @@ function SettingRow({ icon: Icon, title, children }: { icon: ComponentType<{ cla
 
 function MobileNav({ activeView, lang, onNavigate }: { activeView: DashboardView; lang: Lang; onNavigate: (view: DashboardView) => void }) {
   return (
-    <nav
-      className="fixed inset-x-0 bottom-0 z-[300] h-[calc(68px+env(safe-area-inset-bottom))] overflow-hidden rounded-t-[20px] border-t-2 border-[#E5E5E5] bg-white/[0.97] pb-[env(safe-area-inset-bottom)] shadow-[0_-4px_20px_rgba(0,0,0,0.06)] backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/[0.97] sm:h-[calc(72px+env(safe-area-inset-bottom))] sm:rounded-t-[24px] lg:hidden"
-      aria-label="Mobile dashboard"
-    >
-      <div className="mx-auto flex h-[68px] max-w-2xl items-stretch px-1.5 sm:h-[72px] sm:px-4">
-        {navItems.map((item) => {
-          const Icon = item.icon
-          const isActive = activeView === item.key
-          return (
-            <button
-              key={item.key}
-              type="button"
-              aria-current={isActive ? "page" : undefined}
-              onClick={() => onNavigate(item.key)}
-              className={cn(
-                "relative flex min-w-0 flex-1 flex-col items-center justify-center gap-0.5 px-0.5 transition-all duration-200",
-                isActive
-                  ? "text-[#1CB0F6] dark:text-sky-300"
-                  : "text-[#AFAFAF] hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-300"
-              )}
-            >
-              <span
-                className={cn(
-                  "flex h-7 items-center justify-center transition-transform duration-200",
-                  isActive && "-translate-y-0.5"
-                )}
-              >
-                <Icon className="h-[22px] w-[22px]" />
-              </span>
-              <span
-                className="block max-w-full truncate py-0.5 text-[10px] font-bold leading-[1.3] tracking-[0.01em] min-[420px]:text-[10.5px] sm:text-[11px]"
-                style={{ fontFamily: '"Be Vietnam Pro", sans-serif' }}
-              >
-                {mobileNavLabels[lang][item.key]}
-              </span>
-            </button>
-          )
-        })}
-      </div>
-    </nav>
+    <MobileTabBar
+      ariaLabel="Mobile dashboard"
+      activeKey={activeView}
+      onNavigate={onNavigate}
+      items={navItems.map((item) => ({
+        key: item.key,
+        icon: mobileNavIcons[item.key],
+        label: mobileNavLabels[lang][item.key],
+      }))}
+    />
   )
 }
+

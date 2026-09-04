@@ -1,8 +1,9 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ComponentType } from "react"
-import { Activity, BarChart3, CheckCircle2, Clock3, Download, Flame, History, LayoutGrid, LogOut, RefreshCw, Search, ShieldAlert, UserRound, Users, X } from "lucide-react"
+import { Activity, BarChart3, CheckCircle2, Clock3, Download, Flame, History, LayoutGrid, LogOut, RefreshCw, Search, ShieldAlert, UserRound, Users, X, type LucideIcon } from "lucide-react"
+import { MobileTabBar } from "@/components/MobileTabBar"
 import brandLogo from "@/assets/logo.png"
 import { useAuth } from "@/auth/AuthProvider"
-import { DashboardStatCard } from "@/components/DashboardStatCard"
+import { DashboardStatCard, dashboardStatGridClass } from "@/components/DashboardStatCard"
 import { Card } from "@/components/ui/card"
 import { fetchAdminUsers } from "@/features/admin/api/adminUsers"
 import { fetchActivityTimeline, fetchPracticeAttempts, fetchUserActivity } from "@/features/admin/api/adminActivity"
@@ -70,7 +71,7 @@ const RANGE_OPTIONS: Array<{ days: number; label: string }> = [
   { days: 0, label: "Tất cả" },
 ]
 
-const SECTION_NAV: Array<{ key: AdminSection; icon: ComponentType<{ className?: string }>; vi: string; en: string }> = [
+const SECTION_NAV: Array<{ key: AdminSection; icon: LucideIcon; vi: string; en: string }> = [
   { key: "overview", icon: LayoutGrid, vi: "Tổng quan", en: "Overview" },
   { key: "users", icon: Users, vi: "Người dùng", en: "Users" },
   { key: "timeline", icon: Activity, vi: "Luồng HĐ", en: "Timeline" },
@@ -343,7 +344,7 @@ export function AdminPage({ lang }: Props) {
       <div className="lg:pl-[200px]">
         <AdminTopbar lang={lang} profileName={profile?.display_name ?? null} live={live} onReload={reload} reloading={loading} onSignOut={handleSignOut} />
 
-        <main className="mx-auto w-full max-w-[1440px] space-y-6 px-3 pb-[calc(92px+env(safe-area-inset-bottom))] pt-4 min-[380px]:px-4 sm:space-y-8 sm:px-6 sm:pt-6 md:px-8 lg:px-8 lg:pb-12 lg:pt-8 xl:px-10">
+        <main className="mx-auto w-full max-w-[1440px] space-y-6 px-3 pb-[calc(108px+env(safe-area-inset-bottom))] pt-4 min-[380px]:px-4 sm:space-y-8 sm:px-6 sm:pt-6 md:px-8 lg:px-8 lg:pb-12 lg:pt-8 xl:px-10">
           <div className="dashboard-reveal space-y-6 sm:space-y-8">
             {error ? (
               <div className="rounded-[16px] border-2 border-amber-200 bg-amber-50 p-4 text-sm font-semibold text-amber-800 shadow-[0_3px_0_#f5d78e] sm:rounded-[20px] sm:p-5 dark:border-amber-500/20 dark:bg-amber-500/10 dark:text-amber-200 dark:shadow-none">
@@ -353,9 +354,9 @@ export function AdminPage({ lang }: Props) {
             ) : null}
             {section === "overview" ? (
             <>
-            <section className="grid grid-cols-2 gap-2.5 sm:gap-3 lg:grid-cols-4 lg:gap-4" aria-label="Statistics">
+            <section className={dashboardStatGridClass} aria-label="Statistics">
               <DashboardStatCard icon={Users} value={String(kpis.totalLogined)} label={lang === "vi" ? `Logined (active acc: ${kpis.activeAccount})` : `Logined (active: ${kpis.activeAccount})`} tone="blue" />
-              <DashboardStatCard icon={Flame} value={`${kpis.active7d}/${kpis.active30d}`} label={lang === "vi" ? "Active 7d / 30d" : "Active 7d / 30d"} tone="orange" />
+              <DashboardStatCard icon={UserRound} value={String(kpis.newToday)} label={lang === "vi" ? "User mới hôm nay" : "New users today"} tone="orange" />
               <DashboardStatCard icon={CheckCircle2} value={String(kpis.totalAttempts)} label={lang === "vi" ? `Lượt làm (TB ${kpis.avgAccuracy}%)` : `Attempts (avg ${kpis.avgAccuracy}%)`} tone="green" />
               <DashboardStatCard icon={Clock3} value={formatAdminDuration(kpis.totalDurationSeconds)} label={lang === "vi" ? `Tổng giờ học (mới 7d: ${kpis.new7d})` : `Study time (new 7d: ${kpis.new7d})`} tone="violet" />
             </section>
@@ -926,10 +927,10 @@ function AdminSidebar({
 
 function AdminTopbar({ lang, profileName, live, onReload, reloading, onSignOut }: { lang: "vi" | "en"; profileName: string | null; live: boolean; onReload: () => void; reloading: boolean; onSignOut: () => void }) {
   return (
-    <header className="sticky top-0 z-30 border-b border-slate-200/80 bg-white/90 backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/90">
-      <div className="mx-auto flex h-16 w-full max-w-[1440px] items-center justify-between gap-3 px-4 sm:h-[72px] sm:px-6 md:px-8 lg:h-[78px] lg:px-8 xl:px-10">
-        <a href="/" className="lg:hidden" aria-label="QuizPKA">
-          <img src={brandLogo} alt="QuizPKA" className="h-7 w-auto" />
+    <header className="sticky top-0 z-30 bg-white/80 pt-[env(safe-area-inset-top)] backdrop-blur-2xl dark:bg-[#18191A]/80">
+      <div className="mx-auto flex h-14 w-full max-w-[1440px] items-center justify-between gap-2 px-3 sm:h-16 sm:px-6 md:px-8 lg:h-[72px] lg:px-8 xl:px-10">
+        <a href="/" className="flex items-center lg:hidden" aria-label="QuizPKA">
+          <img src={brandLogo} alt="QuizPKA" className="h-8 w-auto" />
         </a>
         <div className="hidden min-w-0 lg:block">
           <h1 className="truncate text-base font-semibold text-[#100F3E] dark:text-white">
@@ -938,7 +939,7 @@ function AdminTopbar({ lang, profileName, live, onReload, reloading, onSignOut }
           <p className="text-xs font-semibold text-slate-400">{lang === "vi" ? "Thống kê toàn bộ user đã đăng nhập" : "Stats for all logged-in users"}</p>
         </div>
         <div className="ml-auto flex items-center gap-2">
-          <span className={cn("hidden items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-black sm:inline-flex", live ? "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300" : "bg-slate-100 text-slate-400 dark:bg-white/10 dark:text-slate-400")} title={live ? "Realtime đang bật: event mới tự hiện" : "Realtime chưa kết nối"}>
+          <span className={cn("hidden items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-semibold sm:inline-flex", live ? "bg-[#F0F2F5] text-emerald-600 dark:bg-[#3A3B3C] dark:text-emerald-300" : "bg-[#F0F2F5] text-slate-400 dark:bg-[#3A3B3C] dark:text-slate-400")} title={live ? "Realtime đang bật: event mới tự hiện" : "Realtime chưa kết nối"}>
             <span className={cn("h-2 w-2 rounded-full", live ? "animate-pulse bg-emerald-500" : "bg-slate-300")} />
             {live ? "Live" : lang === "vi" ? "Tĩnh" : "Static"}
           </span>
@@ -947,18 +948,18 @@ function AdminTopbar({ lang, profileName, live, onReload, reloading, onSignOut }
             aria-label={lang === "vi" ? "Tải lại dữ liệu" : "Reload data"}
             title={lang === "vi" ? "Tải lại dữ liệu" : "Reload data"}
             onClick={onReload}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 shadow-[var(--shadow-1)] transition-all duration-200 hover:bg-slate-50 active:scale-[0.98] dark:border-white/10 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-white/10"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#F0F2F5] text-[#050505] transition-[transform,background-color] duration-150 hover:bg-[#E4E6EB] active:scale-95 dark:bg-[#3A3B3C] dark:text-[#E4E6EB] dark:hover:bg-[#4E4F50]"
           >
-            <RefreshCw className={cn("h-[18px] w-[18px]", reloading && "animate-spin")} strokeWidth={2} />
+            <RefreshCw className={cn("h-5 w-5", reloading && "animate-spin")} strokeWidth={2} />
           </button>
           <button
             type="button"
             aria-label={lang === "vi" ? "Đăng xuất" : "Sign out"}
             title={lang === "vi" ? "Đăng xuất" : "Sign out"}
             onClick={onSignOut}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 shadow-[var(--shadow-1)] transition-all duration-200 hover:bg-slate-50 hover:text-red-600 active:scale-[0.98] dark:border-white/10 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-white/10 dark:hover:text-red-400"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#F0F2F5] text-[#050505] transition-[transform,background-color,color] duration-150 hover:bg-[#E4E6EB] hover:text-red-600 active:scale-95 dark:bg-[#3A3B3C] dark:text-[#E4E6EB] dark:hover:bg-[#4E4F50] dark:hover:text-red-400"
           >
-            <LogOut className="h-[18px] w-[18px]" strokeWidth={2} />
+            <LogOut className="h-5 w-5" strokeWidth={2} />
           </button>
         </div>
       </div>
@@ -968,38 +969,16 @@ function AdminTopbar({ lang, profileName, live, onReload, reloading, onSignOut }
 
 function AdminMobileNav({ lang, section, onNavigate }: { lang: "vi" | "en"; section: AdminSection; onNavigate: (key: AdminSection) => void }) {
   return (
-    <nav
-      className="fixed inset-x-0 bottom-0 z-[300] h-[calc(68px+env(safe-area-inset-bottom))] overflow-hidden rounded-t-[20px] border-t-2 border-[#E5E5E5] bg-white/[0.97] pb-[env(safe-area-inset-bottom)] shadow-[0_-4px_20px_rgba(0,0,0,0.06)] backdrop-blur-xl sm:h-[calc(72px+env(safe-area-inset-bottom))] sm:rounded-t-[24px] lg:hidden dark:border-white/10 dark:bg-slate-900/[0.97]"
-      aria-label="Mobile admin"
-    >
-      <div className="mx-auto flex h-[68px] max-w-2xl items-stretch px-1.5 sm:h-[72px] sm:px-4">
-        {SECTION_NAV.map((item) => {
-          const Icon = item.icon
-          const isActive = section === item.key
-          return (
-            <button
-              key={item.key}
-              type="button"
-              aria-current={isActive ? "true" : undefined}
-              onClick={() => onNavigate(item.key)}
-              className={cn(
-                "relative flex min-w-0 flex-1 flex-col items-center justify-center gap-0.5 px-0.5 transition-all duration-200",
-                isActive
-                  ? "text-[#1CB0F6] dark:text-sky-300"
-                  : "text-[#AFAFAF] hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-300",
-              )}
-            >
-              <span className={cn("flex h-7 items-center justify-center transition-transform duration-200", isActive && "-translate-y-0.5")}>
-                <Icon className="h-[22px] w-[22px]" />
-              </span>
-              <span className="block max-w-full truncate py-0.5 text-[10px] font-bold leading-[1.3] tracking-[0.01em] min-[420px]:text-[10.5px] sm:text-[11px]">
-                {lang === "vi" ? item.vi : item.en}
-              </span>
-            </button>
-          )
-        })}
-      </div>
-    </nav>
+    <MobileTabBar
+      ariaLabel="Mobile admin"
+      activeKey={section}
+      onNavigate={onNavigate}
+      items={SECTION_NAV.map((item) => ({
+        key: item.key,
+        icon: item.icon,
+        label: lang === "vi" ? item.vi : item.en,
+      }))}
+    />
   )
 }
 

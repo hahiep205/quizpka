@@ -5,7 +5,7 @@ import type { Question, AnswerValue } from "@/features/quiz/model/quiz.types"
 import { DetailedAnalysisContent } from "@/features/quiz/ui/DetailedAnalysisContent"
 import { MathText } from "@/components/MathText"
 import { quizCopy } from "@/shared/i18n"
-import { cn, mobileModalHeightClass } from "@/lib/utils"
+import { cn, modalBodyClass, modalFooterClass, modalFrameClass, modalHeaderClass } from "@/lib/utils"
 
 export function ReviewPanel({ t, questions, answers, hideExplanation = false, initialQuestionId, filteredQuestionIds, numberMap, onClose }: {
   t: (typeof quizCopy)["en" | "vi"]
@@ -31,12 +31,12 @@ export function ReviewPanel({ t, questions, answers, hideExplanation = false, in
     if (el) el.scrollIntoView({ behavior: "smooth", block: "center" })
   }, [initialQuestionId])
   return (
-    <Dialog open onClose={onClose} title={t.review} closeLabel={t.closeReview} className="z-[100]" panelClassName={cn("flex w-full max-w-[760px] flex-col overflow-hidden rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900", mobileModalHeightClass)}>
-        <div className="flex items-center justify-between border-b border-[#E5E5E5] px-5 py-4 dark:border-white/10 sm:px-6">
+    <Dialog open onClose={onClose} title={t.review} closeLabel={t.closeReview} className="z-[100]" panelClassName={cn("max-w-[760px] rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900", modalFrameClass)}>
+        <div className={modalHeaderClass}>
           <h3 className="lp-modal-title text-[20px]">{t.review}</h3>
           <button type="button" onClick={onClose} className="lp-btn lp-btn--secondary lp-btn--icon"><X className="h-4 w-4" strokeWidth={2} /></button>
         </div>
-        <div className="min-h-0 flex-1 space-y-4 overflow-y-auto px-5 py-5 sm:px-6">
+        <div className={cn(modalBodyClass, "space-y-4")}>
           {visibleQuestions.map((question, index) => {
             const selected = answers[question.id]
             const questionNumber = numberMap?.get(question.id) ?? index + 1
@@ -82,7 +82,7 @@ export function ReviewPanel({ t, questions, answers, hideExplanation = false, in
             )
           })}
         </div>
-        <div className="border-t border-[#E5E5E5] px-5 py-4 dark:border-white/10 sm:px-6">
+        <div className={modalFooterClass}>
           <button type="button" className="lp-btn lp-btn--primary lp-btn--sm lp-btn--block" onClick={onClose}>{t.closeReview}</button>
         </div>
     </Dialog>

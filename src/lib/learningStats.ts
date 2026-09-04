@@ -2,7 +2,7 @@ import type { PracticeHistoryItem } from "@/lib/practiceSession"
 
 export const LEARNING_WEEK_MS = 7 * 24 * 60 * 60 * 1000
 
-export type LearningPeriod = "week" | "all"
+export type LearningPeriod = "week" | "month" | "all"
 export type LearningStats = {
   subjectsReviewed: number
   attempts: number
@@ -15,10 +15,20 @@ export function isWithinLearningWeek(completedAt: string, now = Date.now()): boo
   return Number.isFinite(completed) && now - completed <= LEARNING_WEEK_MS
 }
 
+export function isWithinLearningMonth(completedAt: string, now = Date.now()): boolean {
+  const completed = Date.parse(completedAt)
+  if (!Number.isFinite(completed)) return false
+  const completedDate = new Date(completed)
+  const nowDate = new Date(now)
+  return completedDate.getFullYear() === nowDate.getFullYear() && completedDate.getMonth() === nowDate.getMonth()
+}
+
 export function computeLearningStats(history: PracticeHistoryItem[], period: LearningPeriod = "all", now = Date.now()): LearningStats {
   const items = period === "week"
     ? history.filter((item) => isWithinLearningWeek(item.completedAt, now))
-    : history
+    : period === "month"
+      ? history.filter((item) => isWithinLearningMonth(item.completedAt, now))
+      : history
   const subjects = new Set<string>()
   let accuracyTotal = 0
   let durationTotal = 0

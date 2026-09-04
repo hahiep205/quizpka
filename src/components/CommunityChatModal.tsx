@@ -1,7 +1,7 @@
 import { useEffect, useId, useState } from "react"
 import { MessageCircle, Send, Sparkles, Users, X } from "lucide-react"
 import { Card } from "@/components/ui/card"
-import { cn, mobileModalHeightClass } from "@/lib/utils"
+import { cn, modalBodyClass, modalFooterClass, modalFrameClass, modalHeaderClass } from "@/lib/utils"
 import { communityChatCopy as copy } from "@/shared/i18n"
 
 // Mock online count for design preview (real-time chat not wired yet)
@@ -100,10 +100,10 @@ export function CommunityChatModal({ open, onClose, lang = "vi" }: CommunityChat
         aria-modal="true"
         aria-labelledby={titleId}
         data-state={state}
-        className={cn("contact-modal-panel relative z-10 m-auto flex w-full max-w-[480px] flex-col overflow-hidden rounded-[16px] shadow-[var(--shadow-3)] sm:max-w-[520px] lg:max-w-[560px]", mobileModalHeightClass)}
+        className={cn("contact-modal-panel relative z-10 m-auto max-w-[480px] rounded-[16px] shadow-[var(--shadow-3)] sm:max-w-[520px] lg:max-w-[560px]", modalFrameClass)}
       >
         {/* Header - đồng bộ ContactModal/Landing */}
-        <div className="flex items-start justify-between gap-4 border-b border-slate-200 px-5 py-4 dark:border-white/10 sm:px-6 sm:py-5">
+        <div className={modalHeaderClass}>
           <div className="flex min-w-0 items-start gap-3">
             <span className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#1CB0F6] text-white shadow-[0_3px_0_#189CD8] sm:inline-flex">
               <MessageCircle className="h-5 w-5" strokeWidth={2} />
@@ -133,7 +133,7 @@ export function CommunityChatModal({ open, onClose, lang = "vi" }: CommunityChat
         </div>
 
         {/* Channel + Online bar */}
-        <div className="flex items-center justify-between gap-3 border-b border-slate-100 bg-[#F6F7FB] px-5 py-3 dark:border-white/5 dark:bg-white/[0.03] sm:px-6">
+        <div className="flex shrink-0 items-center justify-between gap-3 border-b border-slate-100 bg-[#F6F7FB] px-5 py-3 dark:border-white/5 dark:bg-white/[0.03] sm:px-6">
           <div className="flex items-center gap-2">
             <span className="inline-flex items-center rounded-full bg-white px-3 py-1 text-[12px] font-extrabold leading-none text-[#100F3E] shadow-[0_1px_0_#E5E5E5] dark:bg-slate-800 dark:text-white dark:shadow-none border border-slate-200 dark:border-white/10">
               # {t.channelGeneral}
@@ -150,7 +150,7 @@ export function CommunityChatModal({ open, onClose, lang = "vi" }: CommunityChat
         </div>
 
         {/* Messages area - mock để design đồng bộ */}
-        <div className="flex-1 overflow-y-auto bg-white px-5 py-4 dark:bg-slate-900 sm:px-6">
+        <div className={cn(modalBodyClass, "bg-white dark:bg-slate-900")}>
           {/* Coming soon banner - style giống instruction box trong QuizSession */}
           <div className="mb-4 rounded-[12px] border-2 border-[#B3E5FC] bg-[#E8F7FE] px-4 py-3 dark:border-sky-500/20 dark:bg-sky-500/10">
             <p className="flex items-center gap-1.5 text-[13px] font-extrabold leading-5 text-[#129BDC]">
@@ -199,7 +199,7 @@ export function CommunityChatModal({ open, onClose, lang = "vi" }: CommunityChat
         </div>
 
         {/* Input footer - đồng bộ lp-btn / Input */}
-        <div className="border-t border-slate-200 bg-white p-3 dark:border-white/10 dark:bg-slate-900 sm:p-4">
+        <div className={cn(modalFooterClass, "bg-white dark:bg-slate-900 sm:flex-col sm:items-stretch")}>
           <div className="flex items-end gap-2">
             <div className="relative flex-1">
               <input

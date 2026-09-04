@@ -37,6 +37,11 @@ type LearningStatsRow = {
   week_average_accuracy: number
   week_total_duration_seconds: number
   week_points: number
+  month_subjects_reviewed: number
+  month_attempts: number
+  month_average_accuracy: number
+  month_total_duration_seconds: number
+  month_points: number
 }
 
 function asInt(value: unknown): number {
@@ -66,25 +71,52 @@ export function parseLearningStatsRows(rows: unknown): LearningStatsRow[] {
       week_average_accuracy: asInt("week_average_accuracy" in row ? row.week_average_accuracy : 0),
       week_total_duration_seconds: asInt("week_total_duration_seconds" in row ? row.week_total_duration_seconds : 0),
       week_points: asInt("week_points" in row ? row.week_points : 0),
+      month_subjects_reviewed: asInt("month_subjects_reviewed" in row ? row.month_subjects_reviewed : 0),
+      month_attempts: asInt("month_attempts" in row ? row.month_attempts : 0),
+      month_average_accuracy: asInt("month_average_accuracy" in row ? row.month_average_accuracy : 0),
+      month_total_duration_seconds: asInt("month_total_duration_seconds" in row ? row.month_total_duration_seconds : 0),
+      month_points: asInt("month_points" in row ? row.month_points : 0),
     })
   }
   return parsed
 }
 
-export function toLeaderboardEntry(row: LearningStatsRow, period: LearningPeriod, currentUserId?: string): LeaderboardEntry {
-  const stats: LearningStats = period === "week"
-    ? {
+function statsForPeriod(row: LearningStatsRow, period: LearningPeriod): { stats: LearningStats; points: number } {
+  if (period === "week") {
+    return {
+      stats: {
         subjectsReviewed: row.week_subjects_reviewed,
         attempts: row.week_attempts,
         averageAccuracy: row.week_average_accuracy,
         totalDurationSeconds: row.week_total_duration_seconds,
-      }
-    : {
-        subjectsReviewed: row.subjects_reviewed,
-        attempts: row.attempts,
-        averageAccuracy: row.average_accuracy,
-        totalDurationSeconds: row.total_duration_seconds,
-      }
+      },
+      points: row.week_points,
+    }
+  }
+  if (period === "month") {
+    return {
+      stats: {
+        subjectsReviewed: row.month_subjects_reviewed,
+        attempts: row.month_attempts,
+        averageAccuracy: row.month_average_accuracy,
+        totalDurationSeconds: row.month_total_duration_seconds,
+      },
+      points: row.month_points,
+    }
+  }
+  return {
+    stats: {
+      subjectsReviewed: row.subjects_reviewed,
+      attempts: row.attempts,
+      averageAccuracy: row.average_accuracy,
+      totalDurationSeconds: row.total_duration_seconds,
+    },
+    points: row.points,
+  }
+}
+
+export function toLeaderboardEntry(row: LearningStatsRow, period: LearningPeriod, currentUserId?: string): LeaderboardEntry {
+  const { stats, points } = statsForPeriod(row, period)
   return {
     userId: row.user_id,
     name: row.display_name?.trim() || "QuizPKA",
@@ -92,7 +124,7 @@ export function toLeaderboardEntry(row: LearningStatsRow, period: LearningPeriod
     visible: row.visible,
     isYou: Boolean(currentUserId && row.user_id === currentUserId),
     stats,
-    points: period === "week" ? row.week_points : row.points,
+    points,
   }
 }
 
@@ -135,6 +167,7 @@ export async function upsertUserLearningStats(input: {
 }): Promise<void> {
   const all = computeLearningStats(input.history, "all")
   const week = computeLearningStats(input.history, "week")
+  const month = computeLearningStats(input.history, "month")
   const payload = {
     user_id: input.userId,
     display_name: input.name,
@@ -150,6 +183,11 @@ export async function upsertUserLearningStats(input: {
     week_average_accuracy: week.averageAccuracy,
     week_total_duration_seconds: week.totalDurationSeconds,
     week_points: computeLearningPoints(week),
+    month_subjects_reviewed: month.subjectsReviewed,
+    month_attempts: month.attempts,
+    month_average_accuracy: month.averageAccuracy,
+    month_total_duration_seconds: month.totalDurationSeconds,
+    month_points: computeLearningPoints(month),
     updated_at: new Date().toISOString(),
   }
   try {
@@ -159,13 +197,19 @@ export async function upsertUserLearningStats(input: {
   }
 }
 
+const LEADERBOARD_SELECT =
+  "user_id, display_name, avatar_url, visible, subjects_reviewed, attempts, average_accuracy, total_duration_seconds, points, week_subjects_reviewed, week_attempts, week_average_accuracy, week_total_duration_seconds, week_points, month_subjects_reviewed, month_attempts, month_average_accuracy, month_total_duration_seconds, month_points"
+const LEADERBOARD_SELECT_LEGACY =
+  "user_id, display_name, avatar_url, visible, subjects_reviewed, attempts, average_accuracy, total_duration_seconds, points, week_subjects_reviewed, week_attempts, week_average_accuracy, week_total_duration_seconds, week_points"
+
 export async function fetchLeaderboard(period: LearningPeriod, currentUserId?: string): Promise<LeaderboardEntry[]> {
   try {
-    const { data, error } = await supabase
-      .from("user_learning_stats")
-      .select("user_id, display_name, avatar_url, visible, subjects_reviewed, attempts, average_accuracy, total_duration_seconds, points, week_subjects_reviewed, week_attempts, week_average_accuracy, week_total_duration_seconds, week_points")
-    if (error) return []
-    return parseLearningStatsRows(data)
+    let query = await supabase.from("user_learning_stats").select(LEADERBOARD_SELECT)
+    if (query.error) {
+      query = await supabase.from("user_learning_stats").select(LEADERBOARD_SELECT_LEGACY)
+    }
+    if (query.error) return []
+    return parseLearningStatsRows(query.data)
       .filter((row) => row.visible || row.user_id === currentUserId)
       .map((row) => toLeaderboardEntry(row, period, currentUserId))
   } catch {

@@ -31,6 +31,7 @@ export type AdminKpis = {
   avgAccuracy: number
   totalDurationSeconds: number
   new7d: number
+  newToday: number
 }
 
 export const ACTIVE_7D_MS = 7 * 24 * 60 * 60 * 1000
@@ -151,6 +152,8 @@ export function computeAdminKpis(users: AdminUser[], now = Date.now()): AdminKpi
   let totalAttempts = 0
   let totalDuration = 0
   let new7d = 0
+  let newToday = 0
+  const todayKey = new Date(now).toISOString().slice(0, 10)
   for (const u of users) {
     totalAttempts += u.attempts
     totalDuration += u.totalDurationSeconds
@@ -161,6 +164,7 @@ export function computeAdminKpis(users: AdminUser[], now = Date.now()): AdminKpi
     if (u.createdAt) {
       const t = Date.parse(u.createdAt)
       if (Number.isFinite(t) && now - t <= ACTIVE_7D_MS) new7d += 1
+      if (Number.isFinite(t) && new Date(t).toISOString().slice(0, 10) === todayKey) newToday += 1
     }
   }
   return {
@@ -173,6 +177,7 @@ export function computeAdminKpis(users: AdminUser[], now = Date.now()): AdminKpi
     avgAccuracy: accuracyCount ? Math.round(accuracySum / accuracyCount) : 0,
     totalDurationSeconds: totalDuration,
     new7d,
+    newToday,
   }
 }
 

@@ -1,7 +1,7 @@
 import { X } from "lucide-react"
 import { Dialog } from "@/components/ui/dialog"
 import { contactCopy as copy } from "@/shared/i18n"
-import { cn, mobileModalHeightClass } from "@/lib/utils"
+import { cn, modalBodyClass, modalFrameClass, modalHeaderClass } from "@/lib/utils"
 
 export type ContactModalType = "Contribute" | "Support"
 
@@ -19,8 +19,8 @@ export function ContactModal({ open, type, onClose, lang = "vi" }: ContactModalP
   const heading = type === "Contribute" ? t.contributeTitle : t.supportTitle
 
   return (
-    <Dialog open={open} onClose={onClose} title={heading} closeLabel={t.closeModal} panelClassName={cn("flex w-full max-w-[520px] flex-col overflow-hidden rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[var(--shadow-3)] dark:border-white/10 dark:bg-slate-900", mobileModalHeightClass)}>
-        <div className="flex items-center justify-between gap-3 border-b border-slate-200 px-5 py-3.5 dark:border-white/10">
+    <Dialog open={open} onClose={onClose} title={heading} closeLabel={t.closeModal} panelClassName={cn("max-w-[520px] rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[var(--shadow-3)] dark:border-white/10 dark:bg-slate-900", modalFrameClass)}>
+        <div className={modalHeaderClass}>
           <h2 className="lp-modal-title text-[17px]">
             {heading}
           </h2>
@@ -29,7 +29,7 @@ export function ContactModal({ open, type, onClose, lang = "vi" }: ContactModalP
           </button>
         </div>
 
-        <div className="min-h-0 flex-1 overflow-hidden bg-[#F6F7FB] p-3 dark:bg-slate-900 sm:p-3.5">
+        <div className={cn(modalBodyClass, "!overflow-hidden bg-[#F6F7FB] p-3 dark:bg-slate-900 sm:p-3.5")}>
           <div className="h-full overflow-hidden rounded-[12px] border-2 border-[#E5E5E5] bg-white shadow-[0_2px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900">
             {type === "Contribute" ? (
               <iframe

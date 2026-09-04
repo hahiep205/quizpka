@@ -49,6 +49,20 @@ describe("learning stats", () => {
     })
   })
 
+  it("filters this calendar month independently from older history", () => {
+    const now = Date.parse("2026-09-20T00:00:00.000Z")
+    const stats = computeLearningStats([
+      item({ id: "this-month", completedAt: "2026-09-02T00:00:00.000Z", accuracy: 90, durationSeconds: 120 }),
+      item({ id: "last-month", completedAt: "2026-08-31T00:00:00.000Z", accuracy: 10, durationSeconds: 3600 }),
+    ], "month", now)
+    expect(stats).toEqual({
+      subjectsReviewed: 1,
+      attempts: 1,
+      averageAccuracy: 90,
+      totalDurationSeconds: 120,
+    })
+  })
+
   it("scores points with accuracy-first weights on a 1000 scale", () => {
     const stats = {
       subjectsReviewed: 10,

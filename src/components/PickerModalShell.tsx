@@ -1,7 +1,7 @@
 import { X } from "lucide-react"
 import type { ReactNode } from "react"
 import { Card } from "@/components/ui/card"
-import { cn, mobileModalHeightClass } from "@/lib/utils"
+import { cn, modalBodyClass, modalFooterClass, modalFrameClass, modalHeaderClass } from "@/lib/utils"
 
 export function PickerModalShell({
   titleId,
@@ -38,9 +38,9 @@ export function PickerModalShell({
         aria-modal="true"
         aria-labelledby={titleId}
         data-state={state}
-        className={cn("contact-modal-panel relative z-10 m-auto flex w-full max-w-[560px] flex-col overflow-hidden shadow-[var(--shadow-3)]", mobileModalHeightClass)}
+        className={cn("contact-modal-panel relative z-10 m-auto max-w-[560px] shadow-[var(--shadow-3)]", modalFrameClass)}
       >
-        <div className="flex min-h-[128px] shrink-0 items-start justify-between gap-4 border-b border-[#E5E5E5] px-6 py-5 dark:border-white/10 sm:min-h-0">
+        <div className={modalHeaderClass}>
           <div>
             <h2 id={titleId} className="lp-modal-title">{title}</h2>
             <p className="lp-modal-desc-spaced">{subtitle}</p>
@@ -49,10 +49,10 @@ export function PickerModalShell({
             <X className="h-4 w-4" strokeWidth={2} />
           </button>
         </div>
-        <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4 sm:px-6">
+        <div className={modalBodyClass}>
           {children}
         </div>
-        <div className="flex min-h-[124px] shrink-0 flex-col-reverse gap-3 border-t border-[#E5E5E5] px-6 py-4 dark:border-white/10 sm:min-h-0 sm:flex-row sm:justify-end">
+        <div className={modalFooterClass}>
           {footer}
         </div>
       </Card>

@@ -4,7 +4,7 @@ import { Dialog } from "@/components/ui/dialog"
 import { loginNudgeCopy as copy } from "@/shared/i18n"
 import { GoogleIcon } from "@/shared/icons/GoogleIcon"
 import { useAuth } from "@/auth/AuthProvider"
-import { cn, mobileModalHeightClass } from "@/lib/utils"
+import { cn, modalBodyClass, modalFooterClass, modalFrameClass, modalHeaderClass } from "@/lib/utils"
 
 type Lang = "en" | "vi"
 
@@ -76,9 +76,9 @@ export function LoginNudgeModal({
       title={t.title}
       closeLabel={t.close}
       className="z-[100]"
-      panelClassName={cn("w-full max-w-[480px] overflow-hidden rounded-[18px] border-2 border-[#E5E5E5] bg-white shadow-[0_6px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none", mobileModalHeightClass)}
+      panelClassName={cn("max-w-[480px] rounded-[18px] border-2 border-[#E5E5E5] bg-white shadow-[0_6px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none", modalFrameClass)}
     >
-      <div className="flex items-start justify-between gap-4 border-b border-slate-100 px-5 py-4 sm:px-6 dark:border-white/10">
+      <div className={modalHeaderClass}>
         <div className="flex min-w-0 items-center gap-3">
           <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[13px] bg-[#E8F7FE] text-[#1CB0F6] dark:bg-sky-500/10">
             <LogIn className="h-5 w-5" strokeWidth={2} />
@@ -93,7 +93,7 @@ export function LoginNudgeModal({
         </button>
       </div>
 
-      <div className="min-h-0 flex-1 space-y-2.5 overflow-y-auto px-5 py-4 sm:px-6">
+      <div className={cn(modalBodyClass, "space-y-2.5")}>
         {t.benefits.map((b, i) => {
           const Icon = BENEFIT_ICONS[i % BENEFIT_ICONS.length] ?? History
           return (
@@ -111,23 +111,23 @@ export function LoginNudgeModal({
         {error ? <p role="alert" className="text-center text-sm font-semibold text-red-600">{error}</p> : null}
       </div>
 
-      <div className="grid grid-cols-2 gap-2 border-t border-slate-100 px-5 py-4 sm:gap-3 sm:px-6 dark:border-white/10">
+      <div className={cn(modalFooterClass, "[&>button]:flex-1 sm:[&>button]:flex-none")}>
         <button
           type="button"
-          className="lp-btn lp-btn--primary lp-btn--sm lp-btn--block"
+          className="lp-btn lp-btn--secondary lp-btn--sm"
+          onClick={onSkip}
+          disabled={loading}
+        >
+          {t.skip}
+        </button>
+        <button
+          type="button"
+          className="lp-btn lp-btn--primary lp-btn--sm"
           onClick={handleLogin}
           disabled={loading}
         >
           <GoogleIcon className="h-4 w-4 shrink-0" />
           {loading ? t.signingIn : t.signIn}
-        </button>
-        <button
-          type="button"
-          className="lp-btn lp-btn--secondary lp-btn--sm lp-btn--block"
-          onClick={onSkip}
-          disabled={loading}
-        >
-          {t.skip}
         </button>
       </div>
     </Dialog>

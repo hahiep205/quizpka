@@ -9,7 +9,7 @@ import { LoginNudgeModal, useLoginNudge } from "@/components/LoginNudgeModal"
 import { PdfViewerModal } from "@/components/PdfViewerModal"
 import { TadvPickerModal } from "@/components/TadvPickerModal"
 import { DsaiPickerModal } from "@/components/DsaiPickerModal"
-import { cn, mobileModalHeightClass } from "@/lib/utils"
+import { cn, modalBodyClass, modalFooterClass, modalFrameClass, modalHeaderClass } from "@/lib/utils"
 import { documentsCopy as copy } from "@/shared/i18n"
 import { useExamLaunch } from "@/lib/useExamLaunch"
 import { useSubjectAttemptCounts } from "@/hooks/useSubjectAttemptCounts"
@@ -178,10 +178,10 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
           <Card
             variant="large"
             padding="none"
-            className={cn("contact-modal-panel relative z-10 flex w-full max-w-[480px] flex-col overflow-hidden shadow-[var(--shadow-3)]", mobileModalHeightClass)}
+            className={cn("contact-modal-panel relative z-10 max-w-[480px] shadow-[var(--shadow-3)]", modalFrameClass)}
             data-state="open"
           >
-            <div className="flex min-h-[128px] shrink-0 items-start justify-between gap-3 border-b border-[#E5E5E5] px-6 py-5 dark:border-white/10 sm:min-h-0">
+            <div className={modalHeaderClass}>
               <div>
                 <h3 className="lp-modal-title">
                   {detailExam.title[lang]}
@@ -197,7 +197,7 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
               </button>
             </div>
 
-            <div className="min-h-0 flex-1 space-y-3 overflow-y-auto px-6 py-4">
+            <div className={cn(modalBodyClass, "space-y-3")}>
               <DetailRow label={t.subject} value={detailExam.subjectName[lang]} />
               <DetailRow
                 label={t.examType}
@@ -218,7 +218,7 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
               </div>
             </div>
 
-            <div className="flex min-h-[124px] shrink-0 flex-col-reverse gap-3 border-t border-[#E5E5E5] px-6 py-4 dark:border-white/10 sm:min-h-0 sm:flex-row sm:justify-end">
+            <div className={modalFooterClass}>
               <button
                 type="button"
                 className="lp-btn lp-btn--secondary lp-btn--sm"

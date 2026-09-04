@@ -14,6 +14,11 @@ create table if not exists public.user_learning_stats (
   week_average_accuracy integer not null default 0,
   week_total_duration_seconds integer not null default 0,
   week_points integer not null default 0,
+  month_subjects_reviewed integer not null default 0,
+  month_attempts integer not null default 0,
+  month_average_accuracy integer not null default 0,
+  month_total_duration_seconds integer not null default 0,
+  month_points integer not null default 0,
   updated_at timestamptz not null default now()
 );
 

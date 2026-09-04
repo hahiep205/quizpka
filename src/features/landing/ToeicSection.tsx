@@ -9,7 +9,7 @@ import { type ToeicScope } from "@/data/toeic"
 import { goToPractice } from "@/lib/practiceSession"
 import { toeicSectionCopy as copy } from "@/shared/i18n"
 import { getToeicScopeOption } from "@/data/toeic"
-import { cn, mobileModalHeightClass } from "@/lib/utils"
+import { cn, modalBodyClass, modalFooterClass, modalFrameClass, modalHeaderClass } from "@/lib/utils"
 import { useAuth } from "@/auth/AuthProvider"
 import { useSubjectAttemptCounts } from "@/hooks/useSubjectAttemptCounts"
 import { CatalogExamCard } from "@/components/CatalogExamCard"
@@ -142,8 +142,8 @@ export function ToeicSection({ lang }: { lang: Lang }) {
             data-state="open"
             onClick={() => setDetailOpen(false)}
           />
-          <Card variant="large" padding="none" className={cn("contact-modal-panel relative z-10 flex w-full max-w-[480px] flex-col overflow-hidden shadow-[var(--shadow-3)]", mobileModalHeightClass)} data-state="open">
-            <div className="flex min-h-[128px] shrink-0 items-start justify-between gap-3 border-b border-[#E5E5E5] px-6 py-5 dark:border-white/10 sm:min-h-0">
+          <Card variant="large" padding="none" className={cn("contact-modal-panel relative z-10 max-w-[480px] shadow-[var(--shadow-3)]", modalFrameClass)} data-state="open">
+            <div className={modalHeaderClass}>
               <div>
                 <h3 className="lp-modal-title">{baseExam.title[lang]}</h3>
               </div>
@@ -152,7 +152,7 @@ export function ToeicSection({ lang }: { lang: Lang }) {
               </button>
             </div>
 
-            <div className="min-h-0 flex-1 space-y-3 overflow-y-auto px-6 py-4">
+            <div className={cn(modalBodyClass, "space-y-3")}>
               <DetailRow label={t.subject} value={lang === "vi" ? "Luyện thi TOEIC" : "TOEIC Preparation"} />
               <DetailRow label={t.examType} value={t.badge} />
               <DetailRow label={t.questions} value={`${baseExam.questionCount}`} />
@@ -162,7 +162,7 @@ export function ToeicSection({ lang }: { lang: Lang }) {
               </div>
             </div>
 
-            <div className="flex min-h-[124px] shrink-0 flex-col-reverse gap-3 border-t border-[#E5E5E5] px-6 py-4 dark:border-white/10 sm:min-h-0 sm:flex-row sm:justify-end">
+            <div className={modalFooterClass}>
               <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={() => setDetailOpen(false)}>
                 {t.close}
               </button>

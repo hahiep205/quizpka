@@ -68,7 +68,7 @@ export function LeaderboardView({ lang }: { lang: Language }) {
   return (
     <section className="dashboard-reveal mx-auto max-w-5xl space-y-5 sm:space-y-6">
       <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-        <div className="flex items-center gap-3 sm:gap-4">
+        <div className="hidden items-center gap-3 sm:gap-4 lg:flex">
           <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[13px] bg-[#E8F7FE] text-[#1CB0F6] sm:h-14 sm:w-14 sm:rounded-[16px] dark:bg-sky-500/10">
             <Trophy className="h-5 w-5 sm:h-7 sm:w-7" />
           </div>
@@ -77,9 +77,10 @@ export function LeaderboardView({ lang }: { lang: Language }) {
             <p className="mt-0.5 text-[13px] font-semibold leading-5 text-slate-500 sm:mt-1 sm:text-sm dark:text-slate-400">{t.leaderboardDesc}</p>
           </div>
         </div>
-        <div className="grid shrink-0 grid-cols-2 gap-1 rounded-[14px] border-2 border-[#E5E5E5] bg-white p-1.5 shadow-[0_3px_0_#DCDCDC] sm:w-[280px] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_3px_0_rgba(0,0,0,0.35)]" role="tablist" aria-label={t.leaderboardTitle}>
+        <div className="grid w-full shrink-0 grid-cols-3 gap-1 rounded-[14px] border-2 border-[#E5E5E5] bg-white p-1.5 shadow-[0_3px_0_#DCDCDC] sm:w-[420px] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_3px_0_rgba(0,0,0,0.35)]" role="tablist" aria-label={t.leaderboardTitle}>
           {([
             ["week", t.leaderboardWeek],
+            ["month", t.leaderboardMonth],
             ["all", t.leaderboardAll],
           ] as const).map(([value, label]) => {
             const active = period === value
@@ -91,7 +92,7 @@ export function LeaderboardView({ lang }: { lang: Language }) {
                 aria-selected={active}
                 onClick={() => setPeriod(value)}
                 className={cn(
-                  "h-10 rounded-[10px] px-3 text-[13px] font-extrabold transition-all duration-200 sm:text-sm",
+                  "h-10 rounded-[10px] px-1.5 text-[12px] font-extrabold transition-all duration-200 sm:px-3 sm:text-sm",
                   active
                     ? "bg-[#1CB0F6] text-white shadow-[0_2px_0_#189CD8]"
                     : "text-slate-400 hover:bg-slate-50 hover:text-slate-600 dark:text-slate-500 dark:hover:bg-white/5 dark:hover:text-slate-300",
