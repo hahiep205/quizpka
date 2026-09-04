@@ -52,16 +52,11 @@ export function mapBankQuestions(bank: BankFile, examId: string, setup: QuizSetu
       })
     )
     const flat = (setup.questionOrder === "random" ? shuffle(partGroups) : partGroups).flat()
-    if (setup.mode === "exam") {
-      const limit = setup.questionLimit ?? 60
-      return flat.slice(0, Math.min(limit, flat.length))
-    }
     return flat
   }
   const mapped = mapBankItems(bank.questions ?? [], examId, setup)
   if (setup.mode === "exam") {
-    const limit = setup.questionLimit ?? 60
-    return shuffle(mapped).slice(0, Math.min(limit, mapped.length))
+    return shuffle(mapped)
   }
   return setup.questionOrder === "random" ? shuffle(mapped) : mapped
 }
@@ -92,8 +87,7 @@ export function buildFallbackQuestions(exam: ExamPaper, setup: QuizSetupValues):
     }
   })
   if (setup.mode === "exam") {
-    const limit = setup.questionLimit ?? (exam.type === "midterm" ? 40 : 60)
-    return shuffle(mapped).slice(0, Math.min(limit, mapped.length))
+    return shuffle(mapped)
   }
   return setup.questionOrder === "random" ? shuffle(mapped) : mapped
 }

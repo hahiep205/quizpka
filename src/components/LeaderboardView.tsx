@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from "react"
-import { BarChart3, CheckCircle2, Clock3, Crown, Flame, Medal, Trophy, UserRound } from "lucide-react"
-import { DashboardStatCard } from "@/components/DashboardStatCard"
+import { Crown, Medal, Trophy, UserRound } from "lucide-react"
 import { useAuth } from "@/auth/AuthProvider"
 import {
   buildLocalLeaderboardEntry,
@@ -105,13 +104,6 @@ export function LeaderboardView({ lang }: { lang: Language }) {
         </div>
       </div>
 
-      <section className="grid grid-cols-2 gap-2.5 sm:gap-3 lg:grid-cols-4 lg:gap-4" aria-label="Statistics">
-        <DashboardStatCard icon={Flame} value={String(you?.stats.subjectsReviewed ?? 0)} label={t.streak} tone="orange" />
-        <DashboardStatCard icon={CheckCircle2} value={String(you?.stats.attempts ?? 0)} label={t.completed} tone="green" />
-        <DashboardStatCard icon={BarChart3} value={`${you?.stats.averageAccuracy ?? 0}%`} label={t.accuracy} tone="blue" />
-        <DashboardStatCard icon={Clock3} value={formatLearningDuration(you?.stats.totalDurationSeconds ?? 0)} label={t.studyTime} tone="violet" />
-      </section>
-
       <div className="relative overflow-hidden rounded-[20px] bg-gradient-to-br from-[#1CB0F6] via-[#1593d6] to-[#0B5ED7] p-5 text-white shadow-[0_4px_0_#0b6cb8] sm:p-6 dark:shadow-[0_4px_0_rgba(0,0,0,0.45)]">
         <div className="pointer-events-none absolute -right-10 -top-14 h-44 w-44 rounded-full bg-white/15" />
         <div className="pointer-events-none absolute -bottom-16 right-24 h-40 w-40 rounded-full bg-white/10" />
@@ -214,7 +206,7 @@ function LeaderboardPodium({
           const place = entry.rank <= 3 ? entry.rank as 1 | 2 | 3 : 2
           const style = PODIUM_STYLE[place]
           return (
-            <div key={entry.userId} className="flex w-full max-w-[190px] flex-col items-center">
+            <div key={entry.userId} className="flex min-w-0 flex-1 flex-col items-center sm:max-w-[190px]">
               <div className={cn("relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl bg-[#E8F7FE] ring-4 sm:h-14 sm:w-14 dark:bg-white/5", style.ring, entry.isYou && "ring-[#7DD3FC]")}>
                 {entry.avatarUrl ? <img src={entry.avatarUrl} alt="" className="h-full w-full object-cover" /> : <UserRound className="h-5 w-5 text-[#1CB0F6] sm:h-6 sm:w-6" />}
               </div>

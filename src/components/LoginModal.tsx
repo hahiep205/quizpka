@@ -29,7 +29,7 @@ export function LoginModal({ open, onClose, lang = "vi" }: LoginModalProps) {
   }
 
   return (
-    <Dialog open={open} onClose={onClose} title={t.title} closeLabel={t.close} panelClassName="w-full max-w-[440px] overflow-hidden rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[var(--shadow-3)] dark:border-white/10 dark:bg-slate-900">
+    <Dialog open={open} onClose={onClose} title={t.title} closeLabel={t.close} panelClassName="max-h-[calc(100dvh_-_2rem)] w-full max-w-[440px] overflow-hidden rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[var(--shadow-3)] dark:border-white/10 dark:bg-slate-900">
         <div className="flex items-start justify-between gap-4 border-b border-slate-200 px-6 py-5 dark:border-white/10">
           <h2 className="lp-modal-title">{t.title}</h2>
           <button type="button" className="lp-btn lp-btn--secondary lp-btn--icon" onClick={onClose} aria-label={t.close}>

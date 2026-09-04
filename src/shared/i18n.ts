@@ -524,7 +524,7 @@ export const quizSetupCopy = {
     practiceHint:
       "Show correct/incorrect immediately after each answer. Uses the full question set.",
     examHint:
-      "Hide answers until submit. Randomly selects 40 questions for midterm or 60 for final.",
+      "Hide answers until submit. Uses the full question set.",
   },
   vi: {
     title: "Cấu hình Quiz",
@@ -562,6 +562,7 @@ export const chapterPickerCopy = {
     continue: "Continue",
     questions: "questions",
     pdf: "PDF document",
+    file: "Attached file",
   },
   vi: {
     title: "Chọn chương",
@@ -571,24 +572,31 @@ export const chapterPickerCopy = {
     continue: "Bắt đầu",
     questions: "câu hỏi",
     pdf: "Tài liệu PDF",
+    file: "File đính kèm",
   },
 } as const
 
 export const pdfViewerCopy = {
   en: {
     subtitle: "Collected exams from previous periods as a PDF document. Read it directly or download it.",
+    fileSubtitle: "Attached file with notes. Read the notes and download the file.",
     download: "Download PDF",
+    downloadFile: "Download file",
     openNewTab: "Open in new tab",
     loading: "Loading document…",
     previewUnavailable: "Your browser can't preview this PDF inline. Open it in a new tab or download it.",
+    notes: "Notes",
     close: "Close",
   },
   vi: {
     subtitle: "Tài liệu PDF tổng hợp đề thi của các kỳ trước. Bạn có thể đọc trực tiếp hoặc tải về.",
+    fileSubtitle: "File đính kèm kèm ghi chú. Đọc ghi chú và tải file về.",
     download: "Tải PDF",
+    downloadFile: "Tải file",
     openNewTab: "Mở tab mới",
     loading: "Đang tải tài liệu…",
     previewUnavailable: "Trình duyệt của bạn không xem trước được PDF này. Hãy mở tab mới hoặc tải về.",
+    notes: "Ghi chú",
     close: "Đóng",
   },
 } as const

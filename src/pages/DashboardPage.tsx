@@ -16,6 +16,7 @@ import {
   UserRound,
   LogOut,
   MessageCircle,
+  X,
 } from "lucide-react"
 import brandLogo from "@/assets/logo.png"
 import { QuizSetupModal } from "@/components/QuizSetupModal"
@@ -26,7 +27,7 @@ import { DsaiPickerModal } from "@/components/DsaiPickerModal"
 import { Card } from "@/components/ui/card"
 import { Dialog } from "@/components/ui/dialog"
 import { examCatalog, getSubjectById, type ExamCatalogItem } from "@/data/subjects"
-import { cn, mobileModalHeightClass } from "@/lib/utils"
+import { cn } from "@/lib/utils"
 import { dashboardCopy as copy } from "@/shared/i18n"
 import { useExamLaunch } from "@/lib/useExamLaunch"
 import type { Language, Theme } from "@/shared/types/app"
@@ -217,6 +218,7 @@ export function DashboardPage({
         lang={lang}
         title={pdfChapter?.title ?? null}
         pdfUrl={pdfChapter?.url ?? null}
+        noteUrl={pdfChapter?.noteUrl ?? null}
         onClose={handlePdfClose}
       />
 
@@ -488,7 +490,7 @@ function EmptyView({ lang, view }: { lang: Lang; view: "history" }) {
     goToPractice({
       examId: item.examId,
       subjectId: item.subjectId,
-      setup: { ...item.setup, mode: "practice", questionLimit: undefined },
+      setup: { ...item.setup, mode: "practice" },
       lang: item.lang,
       chapterId: item.chapterId,
       toeicScope: item.toeicScope,
@@ -587,22 +589,27 @@ function WrongAnswersDialog({ item, lang, onClose, onRetry }: {
       title={lang === "vi" ? "Danh sách câu sai" : "Wrong answers"}
       closeLabel={lang === "vi" ? "Đóng" : "Close"}
       className="z-[100]"
-      panelClassName={cn("flex w-full max-w-[720px] flex-col overflow-hidden rounded-[18px] border-2 border-[#E5E5E5] bg-white shadow-[0_6px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none", mobileModalHeightClass)}
+      panelClassName={cn("flex max-h-[calc(100dvh_-_2rem)] w-full max-w-[720px] flex-col overflow-hidden rounded-[18px] border-2 border-[#E5E5E5] bg-white shadow-[0_6px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none h-[min(593px,calc(100dvh_-_2rem))] sm:h-[min(680px,calc(100dvh_-_3rem))] lg:h-[min(760px,calc(100dvh_-_4rem))]")}
     >
-      <div className="flex items-start justify-between gap-4 border-b border-slate-100 px-5 py-4 dark:border-white/10 sm:px-6">
+      <div className="sticky top-0 z-10 flex items-start justify-between gap-4 border-b border-slate-100 bg-white px-5 py-4 dark:border-white/10 dark:bg-slate-900 sm:px-6">
         <div className="min-w-0">
           <h2 className="text-lg font-black text-[#100F3E] dark:text-white">{lang === "vi" ? "Danh sách câu sai" : "Wrong answers"}</h2>
           <p className="mt-1 truncate text-sm font-semibold text-slate-500 dark:text-slate-400">{item?.title}</p>
         </div>
-        <span className="shrink-0 rounded-full bg-rose-50 px-3 py-1 text-xs font-extrabold text-rose-600 dark:bg-rose-500/10 dark:text-rose-300">{wrong.length} {lang === "vi" ? "câu" : "questions"}</span>
+        <div className="flex shrink-0 items-center gap-2">
+          <span className="rounded-full bg-rose-50 px-3 py-1 text-xs font-extrabold text-rose-600 dark:bg-rose-500/10 dark:text-rose-300">{wrong.length} {lang === "vi" ? "câu" : "questions"}</span>
+          <button type="button" className="lp-btn lp-btn--secondary lp-btn--icon" onClick={onClose} aria-label={lang === "vi" ? "Đóng" : "Close"}>
+            <X className="h-4 w-4" strokeWidth={2} />
+          </button>
+        </div>
       </div>
       <div className="min-h-0 flex-1 space-y-3 overflow-y-auto px-4 py-4 sm:px-6">
         {wrong.map((question, index) => <div key={question.id} className="rounded-xl border border-slate-100 bg-slate-50 p-3.5 dark:border-white/10 dark:bg-white/5">
           <div className="flex items-start gap-3">
             <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-white text-xs font-black text-[#129BDC] shadow-sm dark:bg-slate-800">{index + 1}</span>
             <div className="min-w-0 flex-1">
-              <div className="flex flex-wrap items-start justify-between gap-2">
-                <p className="min-w-0 flex-1 text-sm font-bold leading-5 text-[#100F3E] dark:text-white">{question.prompt}</p>
+              <div className="flex flex-col items-start gap-2 sm:flex-row sm:flex-wrap sm:items-start sm:justify-between">
+                <p className="w-full min-w-0 text-sm font-bold leading-5 text-[#100F3E] dark:text-white sm:flex-1">{question.prompt}</p>
                 {question.wasSkipped ? <span className="shrink-0 rounded-full bg-amber-100 px-2 py-1 text-[11px] font-extrabold text-amber-700 dark:bg-amber-500/10 dark:text-amber-300">{lang === "vi" ? "Chưa làm" : "Skipped"}</span> : null}
               </div>
               <p className="mt-2 text-xs font-semibold leading-5 text-emerald-600">{lang === "vi" ? "Đáp án đúng" : "Correct answer"}: {question.correctAnswer}</p>
@@ -610,7 +617,7 @@ function WrongAnswersDialog({ item, lang, onClose, onRetry }: {
           </div>
         </div>)}
       </div>
-      <div className="flex flex-col-reverse gap-2 border-t border-slate-100 px-5 py-4 dark:border-white/10 sm:flex-row sm:justify-end sm:px-6">
+      <div className="sticky bottom-0 flex flex-col-reverse gap-2 border-t border-slate-100 bg-white px-5 py-4 dark:border-white/10 dark:bg-slate-900 sm:flex-row sm:justify-end sm:px-6">
         <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={onClose}>{lang === "vi" ? "Đóng" : "Close"}</button>
         <button type="button" className="lp-btn lp-btn--primary lp-btn--sm" disabled={!wrong.length} onClick={onRetry}>{lang === "vi" ? "Làm lại câu sai" : "Retry wrong answers"}</button>
       </div>

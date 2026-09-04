@@ -1,0 +1,9 @@
+Trong file nén gồm có:
+
+1. Đề thi
+
+2. File hình ảnh giao diện trang web
+
+3. File danhgia.doc sử dụng để làm Câu 2.
+
+4. Thư mục assets gồm các file ảnh, file colors-fonts chứa thông số màu sắc và font chữ.

@@ -22,11 +22,7 @@ export type QuizSetupValues = {
   mode: QuizMode
   timed: boolean
   durationMinutes: number
-  questionLimit?: number
 }
-
-const EXAM_MIDTERM_LIMIT = 40
-const EXAM_FINAL_LIMIT = 60
 
 type QuizSetupModalProps = {
   open: boolean
@@ -113,12 +109,6 @@ export function QuizSetupModal({
                 mode,
                 timed,
                 durationMinutes,
-                questionLimit:
-                  mode === "exam"
-                    ? exam.type === "midterm"
-                      ? EXAM_MIDTERM_LIMIT
-                      : EXAM_FINAL_LIMIT
-                    : undefined,
               })
             }
           >

@@ -23,7 +23,7 @@ export function PickerModalShell({
   footer: ReactNode
 }) {
   return (
-    <div className="fixed inset-0 z-[90] flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-[90] flex items-center justify-center overflow-y-auto p-4">
       <button
         type="button"
         aria-label={closeLabel}
@@ -38,7 +38,7 @@ export function PickerModalShell({
         aria-modal="true"
         aria-labelledby={titleId}
         data-state={state}
-        className={cn("contact-modal-panel relative z-10 flex w-full max-w-[560px] flex-col overflow-hidden shadow-[var(--shadow-3)]", mobileModalHeightClass)}
+        className={cn("contact-modal-panel relative z-10 m-auto flex w-full max-w-[560px] flex-col overflow-hidden shadow-[var(--shadow-3)]", mobileModalHeightClass)}
       >
         <div className="flex min-h-[128px] shrink-0 items-start justify-between gap-4 border-b border-[#E5E5E5] px-6 py-5 dark:border-white/10 sm:min-h-0">
           <div>

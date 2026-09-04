@@ -16,6 +16,7 @@ export type SubjectId =
   | "bao-mat-ung-dung-he-thong"
   | "co-so-du-lieu"
   | "khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
+  | "xay-dung-web"
   | "toeic"
 
 export type LocalizedText = {
@@ -44,6 +45,8 @@ export type ChapterOption = {
   matches?: string[]
   /** When set, selecting this option opens the document (e.g. a PDF) instead of a quiz. */
   pdfUrl?: string
+  /** Optional plain-text note (e.g. Luu-y.txt) shown above the document with its download. */
+  noteUrl?: string
   count: number
 }
 
@@ -514,6 +517,22 @@ export const subjects: Subject[] = [
           "/data/khoa-hoc-du-lieu-va-tri-tue-nhan-tao/khoa_hoc_du_lieu_va_tri_tue_nhan_tao_final.json",
         ],
       },
+    ],
+  },
+  {
+    id: "xay-dung-web",
+    code: "WEB101",
+    name: { en: "Web Development", vi: "Xây dựng Web" },
+    category: { en: "Major", vi: "Chuyên ngành" },
+    exams: [
+      {
+        id: "web-midterm-2024", type: "midterm", year: 2024, questionCount: 0, durationMinutes: 0,
+        title: { en: "2024 Web Development Midterm Paper", vi: "Đề xây dựng web giữa kỳ 2024" },
+        description: { en: "2024 midterm set with notes and attachments. Choose the document after clicking Try now.", vi: "Bộ đề giữa kỳ 2024 kèm ghi chú và file đính kèm. Chọn tài liệu sau khi ấn Thử ngay." },
+      },
+    ],
+    chapters: [
+      { id: "tai-lieu-giua-ky-2024", label: { en: "2024 Midterm set (ZIP + notes)", vi: "Đề giữa kỳ 2024 (file ZIP + ghi chú)" }, pdfUrl: "/data/xay-dung-web/de-xay-dung-web-2024.zip", noteUrl: "/data/xay-dung-web/Luu-y.txt", count: 0 },
     ],
   },
   {

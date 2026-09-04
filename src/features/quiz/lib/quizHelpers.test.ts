@@ -16,9 +16,11 @@ describe("quiz helpers", () => {
     expect(isAnswerCorrect(question, " WORLD ")).toBe(true)
   })
 
-  it("limits exam mode after mapping groups", () => {
-    const questions = mapBankQuestions({ parts: [{ partNumber: 1, partTitle: "Part 1", questions: Array.from({ length: 3 }, (_, index) => ({ id: index, question: "Q", answer: "A" })) }] }, "exam", { ...practiceSetup, mode: "exam", questionLimit: 2 })
-    expect(questions).toHaveLength(2)
+  it("serves the full set in exam mode without a question limit", () => {
+    const bank = { parts: [{ partNumber: 1, partTitle: "Part 1", questions: Array.from({ length: 3 }, (_, index) => ({ id: index, question: "Q", answer: "A" })) }] }
+    expect(mapBankQuestions(bank, "exam", { ...practiceSetup, mode: "exam" })).toHaveLength(3)
+    const flatBank = { questions: Array.from({ length: 5 }, (_, index) => ({ id: index, question: "Q", answer: "A" })) }
+    expect(mapBankQuestions(flatBank, "exam", { ...practiceSetup, mode: "exam" })).toHaveLength(5)
   })
 
   it("formats clock time into HH:MM:SS", () => {

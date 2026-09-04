@@ -1,4 +1,5 @@
 import { useEffect, useId, useRef, type ReactNode } from "react"
+import { createPortal } from "react-dom"
 import { cn } from "@/lib/utils"
 
 type DialogProps = {
@@ -46,13 +47,18 @@ export function Dialog({ open, onClose, title, closeLabel, children, className, 
   }, [onClose, open])
 
   if (!open) return null
-  return (
-    <div className={cn("fixed inset-0 z-[80] flex items-center justify-center p-4", className)}>
+  // Portal to document.body: an ancestor with a CSS transform (e.g.
+  // .dashboard-reveal keeps translateY(0) after its animation) would
+  // otherwise become the containing block of this fixed overlay and trap
+  // the modal inside that section.
+  return createPortal(
+    <div className={cn("fixed inset-0 z-[80] flex items-center justify-center overflow-y-auto p-4", className)}>
       <button type="button" aria-label={closeLabel} className="contact-modal-overlay absolute inset-0 bg-[rgba(16,15,62,0.45)] backdrop-blur-[2px]" onClick={onClose} />
-      <div ref={panelRef} role="dialog" aria-modal="true" aria-labelledby={titleId} className={cn("contact-modal-panel relative z-10", panelClassName)}>
+      <div ref={panelRef} role="dialog" aria-modal="true" aria-labelledby={titleId} className={cn("contact-modal-panel relative z-10 m-auto", panelClassName)}>
         <span id={titleId} className="sr-only">{title}</span>
         {children}
       </div>
-    </div>
+    </div>,
+    document.body
   )
 }

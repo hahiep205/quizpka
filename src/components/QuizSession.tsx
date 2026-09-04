@@ -561,8 +561,8 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
         </div>
 
         {lightboxImage ? (
-          <Dialog open onClose={() => setLightboxImage(null)} title={t.imagePreviewTitle} closeLabel={t.confirmNo} className="z-[100] bg-black/80 backdrop-blur-sm" panelClassName="max-h-[90vh] max-w-[95vw]">
-            <img src={lightboxImage} alt={t.imagePreviewTitle} className="max-h-[90vh] max-w-[95vw] rounded-lg object-contain shadow-2xl" />
+        <Dialog open onClose={() => setLightboxImage(null)} title={t.imagePreviewTitle} closeLabel={t.confirmNo} className="z-[100] bg-black/80 backdrop-blur-sm" panelClassName="max-h-[90dvh] max-w-[95vw]">
+          <img src={lightboxImage} alt={t.imagePreviewTitle} className="max-h-[90dvh] max-w-[95vw] rounded-lg object-contain shadow-2xl" />
           </Dialog>
         ) : null}
       </div>
@@ -660,7 +660,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
       </div>
 
       {confirmOpen ? (
-        <Dialog open onClose={() => setConfirmOpen(false)} title={t.confirmTitle} closeLabel={t.confirmNo} className="z-[95]" panelClassName="w-full max-w-[420px] rounded-[16px] border-2 border-[#E5E5E5] bg-white p-5 shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 sm:p-6">
+        <Dialog open onClose={() => setConfirmOpen(false)} title={t.confirmTitle} closeLabel={t.confirmNo} className="z-[95]" panelClassName="max-h-[calc(100dvh_-_2rem)] w-full max-w-[420px] rounded-[16px] border-2 border-[#E5E5E5] bg-white p-5 shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 sm:p-6">
             <h3 className="lp-modal-title text-[20px]">{t.confirmTitle}</h3>
             <p className="lp-modal-desc mt-2">{t.confirmDesc}</p>
             <div className="mt-5 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
@@ -671,8 +671,8 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
       ) : null}
 
       {lightboxImage ? (
-        <Dialog open onClose={() => setLightboxImage(null)} title={t.imagePreviewTitle} closeLabel={t.confirmNo} className="z-[100] bg-black/80 backdrop-blur-sm" panelClassName="max-h-[90vh] max-w-[95vw]">
-          <img src={lightboxImage} alt={t.imagePreviewTitle} className="max-h-[90vh] max-w-[95vw] rounded-lg object-contain shadow-2xl" />
+        <Dialog open onClose={() => setLightboxImage(null)} title={t.imagePreviewTitle} closeLabel={t.confirmNo} className="z-[100] bg-black/80 backdrop-blur-sm" panelClassName="max-h-[90dvh] max-w-[95vw]">
+          <img src={lightboxImage} alt={t.imagePreviewTitle} className="max-h-[90dvh] max-w-[95vw] rounded-lg object-contain shadow-2xl" />
         </Dialog>
       ) : null}
     </div>

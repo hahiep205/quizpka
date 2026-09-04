@@ -262,6 +262,7 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
         lang={lang}
         title={pdfChapter?.title ?? null}
         pdfUrl={pdfChapter?.url ?? null}
+        noteUrl={pdfChapter?.noteUrl ?? null}
         onClose={handlePdfClose}
       />
 

@@ -92,6 +92,8 @@ function getAdminView(path: string): AdminSection {
 }
 
 const USER_PAGE_SIZE = 15
+const TIMELINE_PAGE_SIZE = 20
+const ATTEMPTS_PAGE_SIZE = 20
 const FETCH_PAGE = 300
 
 export function AdminPage({ lang }: Props) {
@@ -115,6 +117,8 @@ export function AdminPage({ lang }: Props) {
   const [timelineQuery, setTimelineQuery] = useState("")
   const [rangeDays, setRangeDays] = useState(14)
   const [page, setPage] = useState(0)
+  const [timelinePage, setTimelinePage] = useState(0)
+  const [attemptsPage, setAttemptsPage] = useState(0)
   const [live, setLive] = useState(false)
   const [loadingMore, setLoadingMore] = useState<"events" | "attempts" | null>(null)
   const [section, setSection] = useState<AdminSection>(() => getAdminView(getCurrentPath()))
@@ -185,6 +189,8 @@ export function AdminPage({ lang }: Props) {
 
   // Reset về trang 1 mỗi khi đổi filter/tab/sort.
   useEffect(() => { setPage(0) }, [tab, query, role, status, sortKey, sortDir])
+  useEffect(() => { setTimelinePage(0) }, [eventFilter, timelineQuery, onlyAnomaly, rangeDays, section])
+  useEffect(() => { setAttemptsPage(0) }, [onlyAnomaly, rangeDays, section])
 
   const kpis = useMemo(() => computeAdminKpis(users), [users])
   const tabCounts = useMemo(() => ({
@@ -259,13 +265,38 @@ export function AdminPage({ lang }: Props) {
       if (!q) return true
       const name = (nameById.get(e.userId) ?? e.userId).toLowerCase()
       return name.includes(q) || e.userId.toLowerCase().includes(q)
-    }).slice(0, 150)
+    })
   }, [eventFilter, flagsByEventId, onlyAnomaly, rangedEvents, nameById, timelineQuery])
+
+  const timelinePageCount = Math.max(1, Math.ceil(filteredEvents.length / TIMELINE_PAGE_SIZE))
+  const safeTimelinePage = Math.min(timelinePage, timelinePageCount - 1)
+  const pagedEvents = useMemo(
+    () => filteredEvents.slice(safeTimelinePage * TIMELINE_PAGE_SIZE, safeTimelinePage * TIMELINE_PAGE_SIZE + TIMELINE_PAGE_SIZE),
+    [safeTimelinePage, filteredEvents],
+  )
+
+  const visibleFlags = useMemo(() => {
+    const q = timelineQuery.trim().toLowerCase()
+    return filterByDays(allFlags, (f) => f.createdAt, rangeDays)
+      .filter((f) => {
+        if (!q) return true
+        const name = (nameById.get(f.userId) ?? f.userId).toLowerCase()
+        return name.includes(q) || f.userId.toLowerCase().includes(q)
+      })
+      .sort((a, b) => Date.parse(b.createdAt || "") - Date.parse(a.createdAt || ""))
+  }, [allFlags, nameById, rangeDays, timelineQuery])
 
   const visibleAttempts = useMemo(() => {
     if (!onlyAnomaly) return rangedAttempts
     return rangedAttempts.filter((a) => flagsByAttemptKey.has(`${a.userId}:${a.historyId}`))
   }, [flagsByAttemptKey, onlyAnomaly, rangedAttempts])
+
+  const attemptsPageCount = Math.max(1, Math.ceil(visibleAttempts.length / ATTEMPTS_PAGE_SIZE))
+  const safeAttemptsPage = Math.min(attemptsPage, attemptsPageCount - 1)
+  const pagedAttempts = useMemo(
+    () => visibleAttempts.slice(safeAttemptsPage * ATTEMPTS_PAGE_SIZE, safeAttemptsPage * ATTEMPTS_PAGE_SIZE + ATTEMPTS_PAGE_SIZE),
+    [safeAttemptsPage, visibleAttempts],
+  )
 
   const chartDays = rangeDays === 0 ? 30 : Math.min(rangeDays, 30)
   const dayBuckets = useMemo(() => bucketLast14Days(rangedAttempts, rangedEvents, undefined, chartDays), [rangedAttempts, rangedEvents, chartDays])
@@ -671,7 +702,23 @@ export function AdminPage({ lang }: Props) {
                   <p className="font-black">{eventsError}</p>
                 </div>
               ) : null}
-              {!eventsError && !filteredEvents.length ? (
+              {onlyAnomaly && visibleFlags.length ? (
+                <ol className="space-y-2.5">
+                  {visibleFlags.slice(0, 100).map((f, index) => (
+                    <li key={`${f.code}-${f.userId}-${f.createdAt}-${index}`}>
+                      <button type="button" onClick={() => setSelectedId(f.userId)} title={lang === "vi" ? "Bấm để xem user" : "Click to view user"} className="flex w-full items-center gap-3 rounded-[15px] border-2 border-red-200 bg-white p-3.5 text-left shadow-[0_3px_0_#f3b8b8] transition-all hover:-translate-y-px sm:rounded-[16px] sm:p-4 dark:border-red-500/25 dark:bg-slate-900 dark:shadow-none">
+                        <FlagBadge flag={f} />
+                        <span className="min-w-0 flex-1">
+                          <span className="block truncate text-sm font-extrabold text-[#100F3E] dark:text-white">{ANOMALY_META[f.code].labelVi} · {nameById.get(f.userId) ?? f.userId.slice(0, 8)}</span>
+                          <span className="mt-0.5 block truncate text-xs font-semibold text-slate-400">{f.reasonVi}</span>
+                        </span>
+                        <span className="shrink-0 text-right text-[11px] font-bold leading-4 text-slate-400">{formatTime(f.createdAt, lang)}</span>
+                      </button>
+                    </li>
+                  ))}
+                </ol>
+              ) : null}
+              {!eventsError && !filteredEvents.length && (!onlyAnomaly || !visibleFlags.length) ? (
                 <Card variant="dashed" className="py-14 text-center">
                   <Activity className="mx-auto h-9 w-9 text-slate-300" />
                   <p className="mx-auto mt-3 max-w-md text-sm font-bold leading-6 text-slate-500 dark:text-slate-400">{onlyAnomaly ? "Không có dòng nào dính cờ trong filter hiện tại." : "Chưa có event nào. Hãy làm 1 bài quiz rồi reload — event submit_attempt sẽ hiện ở đây."}</p>
@@ -679,7 +726,7 @@ export function AdminPage({ lang }: Props) {
               ) : null}
               {filteredEvents.length ? (
                 <ol className="space-y-2.5">
-                  {filteredEvents.map((e) => (
+                  {pagedEvents.map((e) => (
                     <li key={e.id}>
                       <button type="button" onClick={() => setSelectedId(e.userId)} className="flex w-full items-center gap-3 rounded-[15px] border-2 border-slate-200 bg-white p-3.5 text-left shadow-[0_3px_0_#DCDCDC] transition-all hover:-translate-y-px hover:border-[#7DD3FC] sm:rounded-[16px] sm:p-4 dark:border-white/10 dark:bg-slate-900 dark:shadow-none dark:hover:border-sky-400/30">
                         <span className={cn("flex h-10 w-10 shrink-0 items-center justify-center rounded-[12px]", EVENT_TONES[e.eventType])}>
@@ -701,6 +748,15 @@ export function AdminPage({ lang }: Props) {
                     </li>
                   ))}
                 </ol>
+              ) : null}
+              {filteredEvents.length > TIMELINE_PAGE_SIZE ? (
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                  <p className="text-sm font-bold text-slate-400">Hiển thị {safeTimelinePage * TIMELINE_PAGE_SIZE + 1}–{Math.min(filteredEvents.length, safeTimelinePage * TIMELINE_PAGE_SIZE + TIMELINE_PAGE_SIZE)} / {filteredEvents.length}</p>
+                  <div className="flex gap-2">
+                    <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safeTimelinePage === 0} onClick={() => setTimelinePage(safeTimelinePage - 1)}>← Trước</button>
+                    <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safeTimelinePage >= timelinePageCount - 1} onClick={() => setTimelinePage(safeTimelinePage + 1)}>Sau →</button>
+                  </div>
+                </div>
               ) : null}
               {rangedEvents.length >= 150 ? (
                 <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={loadingMore === "events"} onClick={loadMoreEvents}>
@@ -753,7 +809,7 @@ export function AdminPage({ lang }: Props) {
               ) : null}
               {visibleAttempts.length ? (
                 <div className="space-y-2.5">
-                  {visibleAttempts.slice(0, 100).map((a) => (
+                  {pagedAttempts.map((a) => (
                     <button key={`${a.userId}:${a.historyId}`} type="button" onClick={() => setSelectedId(a.userId)} className="flex w-full items-center gap-3 rounded-[15px] border-2 border-slate-200 bg-white p-3.5 text-left shadow-[0_3px_0_#DCDCDC] transition-all hover:-translate-y-px hover:border-[#7DD3FC] sm:rounded-[16px] sm:p-4 dark:border-white/10 dark:bg-slate-900 dark:shadow-none dark:hover:border-sky-400/30">
                       <span className="flex h-10 w-10 shrink-0 flex-col items-center justify-center rounded-[12px] bg-sky-50 leading-none text-[#1CB0F6] dark:bg-sky-500/10">
                         <span className="text-sm font-black">{a.score.toFixed(1)}</span>
@@ -772,6 +828,15 @@ export function AdminPage({ lang }: Props) {
                       <span className={cn("shrink-0 rounded-full px-2.5 py-1 text-[11px] font-black", a.accuracy >= 80 ? "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300" : a.accuracy >= 50 ? "bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-300" : "bg-red-50 text-red-600 dark:bg-red-500/10 dark:text-red-300")}>{a.accuracy}%</span>
                     </button>
                   ))}
+                </div>
+              ) : null}
+              {visibleAttempts.length > ATTEMPTS_PAGE_SIZE ? (
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                  <p className="text-sm font-bold text-slate-400">Hiển thị {safeAttemptsPage * ATTEMPTS_PAGE_SIZE + 1}–{Math.min(visibleAttempts.length, safeAttemptsPage * ATTEMPTS_PAGE_SIZE + ATTEMPTS_PAGE_SIZE)} / {visibleAttempts.length}</p>
+                  <div className="flex gap-2">
+                    <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safeAttemptsPage === 0} onClick={() => setAttemptsPage(safeAttemptsPage - 1)}>← Trước</button>
+                    <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safeAttemptsPage >= attemptsPageCount - 1} onClick={() => setAttemptsPage(safeAttemptsPage + 1)}>Sau →</button>
+                  </div>
                 </div>
               ) : null}
               {rangedAttempts.length >= 100 ? (

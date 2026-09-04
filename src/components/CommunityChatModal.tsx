@@ -84,7 +84,7 @@ export function CommunityChatModal({ open, onClose, lang = "vi" }: CommunityChat
   if (!visible) return null
 
   return (
-    <div className="fixed inset-0 z-[80] flex items-center justify-center p-4 sm:p-6">
+    <div className="fixed inset-0 z-[80] flex items-center justify-center overflow-y-auto p-4 sm:p-6">
       <button
         type="button"
         aria-label={t.closeModal}
@@ -100,7 +100,7 @@ export function CommunityChatModal({ open, onClose, lang = "vi" }: CommunityChat
         aria-modal="true"
         aria-labelledby={titleId}
         data-state={state}
-        className={cn("contact-modal-panel relative z-10 flex w-full max-w-[480px] flex-col overflow-hidden rounded-[16px] shadow-[var(--shadow-3)] sm:max-w-[520px] lg:max-w-[560px]", mobileModalHeightClass)}
+        className={cn("contact-modal-panel relative z-10 m-auto flex w-full max-w-[480px] flex-col overflow-hidden rounded-[16px] shadow-[var(--shadow-3)] sm:max-w-[520px] lg:max-w-[560px]", mobileModalHeightClass)}
       >
         {/* Header - đồng bộ ContactModal/Landing */}
         <div className="flex items-start justify-between gap-4 border-b border-slate-200 px-5 py-4 dark:border-white/10 sm:px-6 sm:py-5">

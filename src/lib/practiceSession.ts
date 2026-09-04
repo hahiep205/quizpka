@@ -136,7 +136,6 @@ function isQuizSetupValues(value: Record<string, unknown>): value is QuizSetupVa
     && (value.answerOrder === "original" || value.answerOrder === "random")
     && typeof value.timed === "boolean"
     && typeof value.durationMinutes === "number"
-    && (value.questionLimit === undefined || typeof value.questionLimit === "number")
 }
 
 function isToeicScope(value: unknown): value is ToeicScope {

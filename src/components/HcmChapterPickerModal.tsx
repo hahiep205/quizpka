@@ -26,7 +26,8 @@ export function HcmChapterPickerModal({ open, lang, exam, subject, onClose, onSe
 
   useEffect(() => {
     if (open && exam) {
-      setSelected("all")
+      const options = getChapterOptionsForSubject(exam.subjectId) ?? []
+      setSelected(options.some((option) => option.id === "all") ? "all" : (options[0]?.id ?? "all"))
       setVisible(true)
       setState("open")
       return
@@ -77,7 +78,7 @@ export function HcmChapterPickerModal({ open, lang, exam, subject, onClose, onSe
             active={selected === chapter.id}
             icon={chapter.pdfUrl ? <FileText className="h-5 w-5" /> : <BookOpen className="h-5 w-5" />}
             title={chapter.label[lang]}
-            subtitle={chapter.pdfUrl ? t.pdf : `${chapter.count} ${t.questions}`}
+            subtitle={chapter.pdfUrl ? (/\.pdf($|[?#])/i.test(chapter.pdfUrl) ? t.pdf : t.file) : `${chapter.count} ${t.questions}`}
             onClick={() => setSelected(chapter.id)}
           />
         ))}
