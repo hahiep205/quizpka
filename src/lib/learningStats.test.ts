@@ -25,7 +25,7 @@ describe("learning stats", () => {
   it("aggregates subjects, attempts, accuracy and duration", () => {
     const stats = computeLearningStats([
       item({ id: "a", subjectId: "tieng-anh-dau-vao", accuracy: 80, durationSeconds: 120 }),
-      item({ id: "b", subjectId: "kinh-te-chinh-tri", accuracy: 60, durationSeconds: 180 }),
+      item({ id: "b", subjectId: "kinh-te-chinh-tri-mac-lenin", accuracy: 60, durationSeconds: 180 }),
     ], "all")
     expect(stats).toEqual({
       subjectsReviewed: 2,
