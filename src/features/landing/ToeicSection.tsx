@@ -1,14 +1,6 @@
 import { useState } from "react"
-import { BookOpen, Clock3, FileText, X } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+import { X } from "lucide-react"
+import { Card } from "@/components/ui/card"
 import { QuizSetupModal, type QuizSetupValues } from "@/components/QuizSetupModal"
 import { ToeicScopePickerModal } from "@/components/ToeicScopePickerModal"
 import { getSubjectById, type ExamCatalogItem } from "@/data/subjects"
@@ -16,7 +8,10 @@ import { type ToeicScope } from "@/data/toeic"
 import { goToPractice } from "@/lib/practiceSession"
 import { toeicSectionCopy as copy } from "@/shared/i18n"
 import { getToeicScopeOption } from "@/data/toeic"
+import { cn, mobileModalHeightClass } from "@/lib/utils"
 import { useAuth } from "@/auth/AuthProvider"
+import { useSubjectAttemptCounts } from "@/hooks/useSubjectAttemptCounts"
+import { CatalogExamCard } from "@/components/CatalogExamCard"
 
 type Lang = "en" | "vi"
 
@@ -32,6 +27,7 @@ function DetailRow({ label, value }: { label: string; value: string }) {
 export function ToeicSection({ lang }: { lang: Lang }) {
   const { status } = useAuth()
   const t = copy[lang]
+  const attemptCountsBySubject = useSubjectAttemptCounts()
   const [detailOpen, setDetailOpen] = useState(false)
   const [pickerOpen, setPickerOpen] = useState(false)
   const [setupOpen, setSetupOpen] = useState(false)
@@ -111,45 +107,25 @@ export function ToeicSection({ lang }: { lang: Lang }) {
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         {examCatalogItems.map((exam) => (
-          <Card key={exam.id} variant="interactive" padding="md" className="flex h-full flex-col">
-          <CardHeader>
-            <span className="inline-flex h-11 w-11 items-center justify-center rounded-[12px] bg-[#E8F7FE] text-[#1CB0F6]">
-              <FileText className="h-5 w-5" strokeWidth={1.75} />
-            </span>
-            <Badge className="border-0 bg-[#E8F7FE] font-bold text-[#129BDC]">{t.badge}</Badge>
-          </CardHeader>
-
-          <div className="flex flex-1 flex-col gap-4">
-            <div className="space-y-3">
-              <CardTitle className="lp-card-title">{exam.title[lang]}</CardTitle>
-              <p className="lp-card-meta mt-3 inline-flex items-center gap-1.5">
-                <BookOpen className="h-3.5 w-3.5" strokeWidth={1.75} />
-                {lang === "vi" ? "Luyện thi TOEIC" : "TOEIC Preparation"}
-              </p>
-              <CardDescription className="lp-card-desc line-clamp-2">{exam.description[lang]}</CardDescription>
-            </div>
-
-            <CardContent className="lp-card-desc flex flex-wrap gap-x-4 gap-y-2 !space-y-0">
-              <span className="inline-flex items-center gap-1.5">
-                <FileText className="h-3.5 w-3.5" strokeWidth={1.75} />
-                {exam.questionCount} {t.questions}
-              </span>
-              <span className="inline-flex items-center gap-1.5">
-                <Clock3 className="h-3.5 w-3.5" strokeWidth={1.75} />
-                {exam.durationMinutes} {t.minutes}
-              </span>
-            </CardContent>
-          </div>
-
-          <CardFooter className="mt-6">
-            <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm flex-1" onClick={() => { setSelectedExamId(exam.id); setDetailOpen(true) }}>
-              {t.details}
-            </button>
-            <button type="button" className="lp-btn lp-btn--primary lp-btn--sm flex-1" onClick={() => handleTryNow(exam.id)}>
-              {t.start}
-            </button>
-          </CardFooter>
-          </Card>
+          <CatalogExamCard
+            key={exam.id}
+            exam={exam}
+            lang={lang}
+            attemptCount={attemptCountsBySubject[exam.subjectId] ?? 0}
+            categoryLabel={t.badge}
+            questionsLabel={t.questions}
+            minutesLabel={t.minutes}
+            footer={
+              <div className="mt-4 flex items-center gap-3 sm:mt-5">
+                <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm flex-1" onClick={() => { setSelectedExamId(exam.id); setDetailOpen(true) }}>
+                  {t.details}
+                </button>
+                <button type="button" className="lp-btn lp-btn--primary lp-btn--sm flex-1" onClick={() => handleTryNow(exam.id)}>
+                  {t.start}
+                </button>
+              </div>
+            }
+          />
         ))}
       </div>
 
@@ -162,8 +138,8 @@ export function ToeicSection({ lang }: { lang: Lang }) {
             data-state="open"
             onClick={() => setDetailOpen(false)}
           />
-          <Card variant="large" padding="lg" className="contact-modal-panel relative z-10 w-full max-w-[480px] shadow-[var(--shadow-3)]" data-state="open">
-            <div className="mb-4 flex items-start justify-between gap-3">
+          <Card variant="large" padding="none" className={cn("contact-modal-panel relative z-10 flex w-full max-w-[480px] flex-col overflow-hidden shadow-[var(--shadow-3)]", mobileModalHeightClass)} data-state="open">
+            <div className="flex min-h-[128px] shrink-0 items-start justify-between gap-3 border-b border-[#E5E5E5] px-6 py-5 dark:border-white/10 sm:min-h-0">
               <div>
                 <h3 className="lp-modal-title">{baseExam.title[lang]}</h3>
               </div>
@@ -172,7 +148,7 @@ export function ToeicSection({ lang }: { lang: Lang }) {
               </button>
             </div>
 
-            <div className="space-y-3">
+            <div className="min-h-0 flex-1 space-y-3 overflow-y-auto px-6 py-4">
               <DetailRow label={t.subject} value={lang === "vi" ? "Luyện thi TOEIC" : "TOEIC Preparation"} />
               <DetailRow label={t.examType} value={t.badge} />
               <DetailRow label={t.questions} value={`${baseExam.questionCount}`} />
@@ -182,7 +158,7 @@ export function ToeicSection({ lang }: { lang: Lang }) {
               </div>
             </div>
 
-            <div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
+            <div className="flex min-h-[124px] shrink-0 flex-col-reverse gap-3 border-t border-[#E5E5E5] px-6 py-4 dark:border-white/10 sm:min-h-0 sm:flex-row sm:justify-end">
               <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={() => setDetailOpen(false)}>
                 {t.close}
               </button>

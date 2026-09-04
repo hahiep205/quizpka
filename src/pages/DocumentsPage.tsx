@@ -1,23 +1,17 @@
 import { useMemo, useState } from "react"
-import { BookOpen, Clock3, FileText, Search, X } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+import { Search, X } from "lucide-react"
+import { Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { examCatalog, getSubjectById, type ExamCatalogItem } from "@/data/subjects"
 import { QuizSetupModal } from "@/components/QuizSetupModal"
 import { HcmChapterPickerModal } from "@/components/HcmChapterPickerModal"
 import { PdfViewerModal } from "@/components/PdfViewerModal"
 import { TadvPickerModal } from "@/components/TadvPickerModal"
-import { cn } from "@/lib/utils"
+import { cn, mobileModalHeightClass } from "@/lib/utils"
 import { documentsCopy as copy } from "@/shared/i18n"
 import { useExamLaunch } from "@/lib/useExamLaunch"
+import { useSubjectAttemptCounts } from "@/hooks/useSubjectAttemptCounts"
+import { CatalogExamCard } from "@/components/CatalogExamCard"
 
 type Lang = "en" | "vi"
 type CategoryFilter = "all" | "general" | "major"
@@ -49,6 +43,7 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
     handleTadvSelect,
     setTadvPickerExam,
   } = useExamLaunch(lang)
+  const attemptCountsBySubject = useSubjectAttemptCounts()
 
   const filteredExams = useMemo(() => {
     const normalized = query.trim().toLowerCase()
@@ -133,57 +128,33 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
       ) : (
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {filteredExams.map((exam) => (
-            <Card key={exam.id} variant="interactive" padding="md" className="flex h-full flex-col">
-              <CardHeader>
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-[12px] bg-[#E8F7FE] text-[#1CB0F6]">
-                  <FileText className="h-5 w-5" strokeWidth={1.75} />
-                </span>
-                <Badge className="border-0 bg-[#E8F7FE] font-bold text-[#129BDC]">
-                  {exam.category.en === "General" ? t.general : t.major}
-                </Badge>
-              </CardHeader>
-
-              <div className="flex flex-1 flex-col gap-4">
-                <div className="space-y-3">
-                  <CardTitle className="lp-card-title">{exam.title[lang]}</CardTitle>
-                  <p className="lp-card-meta mt-3 inline-flex items-center gap-1.5">
-                    <BookOpen className="h-3.5 w-3.5" strokeWidth={1.75} />
-                    {exam.subjectName[lang]}
-                  </p>
-                  <CardDescription className="lp-card-desc line-clamp-2">
-                    {exam.description[lang]}
-                  </CardDescription>
+            <CatalogExamCard
+              key={exam.id}
+              exam={exam}
+              lang={lang}
+              attemptCount={attemptCountsBySubject[exam.subjectId] ?? 0}
+              categoryLabel={exam.category.en === "General" ? t.general : t.major}
+              questionsLabel={t.questions}
+              minutesLabel={t.minutes}
+              footer={
+                <div className="mt-4 flex items-center gap-3 sm:mt-5">
+                  <button
+                    type="button"
+                    className="lp-btn lp-btn--secondary lp-btn--sm flex-1"
+                    onClick={() => setDetailExam(exam)}
+                  >
+                    {t.details}
+                  </button>
+                  <button
+                    type="button"
+                    className="lp-btn lp-btn--primary lp-btn--sm flex-1"
+                    onClick={() => handleTryNow(exam)}
+                  >
+                    {t.start}
+                  </button>
                 </div>
-
-                <CardContent className="lp-card-desc flex flex-wrap gap-x-4 gap-y-2 !space-y-0">
-                  <span className="inline-flex items-center gap-1.5">
-                    <FileText className="h-3.5 w-3.5" strokeWidth={1.75} />
-                    {exam.questionCount} {t.questions}
-                  </span>
-                  <span className="inline-flex items-center gap-1.5">
-                    <Clock3 className="h-3.5 w-3.5" strokeWidth={1.75} />
-                    {exam.durationMinutes} {t.minutes}
-                  </span>
-                </CardContent>
-              </div>
-
-              <CardFooter className="mt-6">
-                <button
-                  type="button"
-                  className="lp-btn lp-btn--secondary lp-btn--sm flex-1"
-                  onClick={() => setDetailExam(exam)}
-                >
-                  {t.details}
-                </button>
-                <button
-                  type="button"
-                  className="lp-btn lp-btn--primary lp-btn--sm flex-1"
-                  onClick={() => handleTryNow(exam)}
-                >
-                  {t.start}
-                </button>
-              </CardFooter>
-            </Card>
+              }
+            />
           ))}
         </div>
       )}
@@ -199,11 +170,11 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
           />
           <Card
             variant="large"
-            padding="lg"
-            className="contact-modal-panel relative z-10 w-full max-w-[480px] shadow-[var(--shadow-3)]"
+            padding="none"
+            className={cn("contact-modal-panel relative z-10 flex w-full max-w-[480px] flex-col overflow-hidden shadow-[var(--shadow-3)]", mobileModalHeightClass)}
             data-state="open"
           >
-            <div className="mb-4 flex items-start justify-between gap-3">
+            <div className="flex min-h-[128px] shrink-0 items-start justify-between gap-3 border-b border-[#E5E5E5] px-6 py-5 dark:border-white/10 sm:min-h-0">
               <div>
                 <h3 className="lp-modal-title">
                   {detailExam.title[lang]}
@@ -219,7 +190,7 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
               </button>
             </div>
 
-            <div className="space-y-3">
+            <div className="min-h-0 flex-1 space-y-3 overflow-y-auto px-6 py-4">
               <DetailRow label={t.subject} value={detailExam.subjectName[lang]} />
               <DetailRow
                 label={t.examType}
@@ -240,7 +211,7 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
               </div>
             </div>
 
-            <div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
+            <div className="flex min-h-[124px] shrink-0 flex-col-reverse gap-3 border-t border-[#E5E5E5] px-6 py-4 dark:border-white/10 sm:min-h-0 sm:flex-row sm:justify-end">
               <button
                 type="button"
                 className="lp-btn lp-btn--secondary lp-btn--sm"

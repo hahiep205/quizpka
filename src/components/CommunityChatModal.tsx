@@ -1,6 +1,7 @@
 import { useEffect, useId, useState } from "react"
 import { MessageCircle, Send, Sparkles, Users, X } from "lucide-react"
 import { Card } from "@/components/ui/card"
+import { cn, mobileModalHeightClass } from "@/lib/utils"
 import { communityChatCopy as copy } from "@/shared/i18n"
 
 // Mock online count for design preview (real-time chat not wired yet)
@@ -99,7 +100,7 @@ export function CommunityChatModal({ open, onClose, lang = "vi" }: CommunityChat
         aria-modal="true"
         aria-labelledby={titleId}
         data-state={state}
-        className="contact-modal-panel relative z-10 flex max-h-[85vh] w-full max-w-[480px] flex-col overflow-hidden rounded-[16px] shadow-[var(--shadow-3)] sm:max-w-[520px] sm:max-h-[80vh] lg:max-w-[560px]"
+        className={cn("contact-modal-panel relative z-10 flex w-full max-w-[480px] flex-col overflow-hidden rounded-[16px] shadow-[var(--shadow-3)] sm:max-w-[520px] lg:max-w-[560px]", mobileModalHeightClass)}
       >
         {/* Header - đồng bộ ContactModal/Landing */}
         <div className="flex items-start justify-between gap-4 border-b border-slate-200 px-5 py-4 dark:border-white/10 sm:px-6 sm:py-5">

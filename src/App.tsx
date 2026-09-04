@@ -4,7 +4,6 @@ import type { ContactModalType } from "@/components/ContactModal"
 import { DocumentsPage } from "@/pages/DocumentsPage"
 import { appTranslations as translations } from "@/shared/i18n"
 import { useGlobalSecurity } from "@/hooks/useGlobalSecurity"
-import { SecurityOverlay } from "@/security/SecurityOverlay"
 import { SiteHeader } from "@/app/layout/SiteHeader"
 import { HeroSection } from "@/features/landing/HeroSection"
 import { ToeicSection } from "@/features/landing/ToeicSection"
@@ -45,7 +44,7 @@ export default function App() {
 
   const t = useMemo(() => translations[lang], [lang])
 
-  const { locked, setLocked } = useGlobalSecurity()
+  useGlobalSecurity()
 
   useEffect(() => {
     const root = document.documentElement
@@ -59,13 +58,14 @@ export default function App() {
     writeStorage("quizpka-lang", lang)
   }, [lang])
 
-  // TOEIC announcement: show after 1s on homepage, "don't show today" persists per day
+  // Login announcement: show after 1s on homepage for guests, "don't show today" persists per day
   useEffect(() => {
     if (pathname !== appRoutes.home) return
-    if (readStorage("quizpka-toeic-announcement-dismissed") === getTodayKey()) return
+    if (status === "authenticated") return
+    if (readStorage("quizpka-login-announcement-dismissed") === getTodayKey()) return
     const timer = window.setTimeout(() => setAnnouncementOpen(true), 1000)
     return () => window.clearTimeout(timer)
-  }, [pathname])
+  }, [pathname, status])
 
   const openContact = (type: ContactModalType) => {
     setContactType(type)
@@ -87,14 +87,8 @@ export default function App() {
 
   const closeAnnouncement = () => setAnnouncementOpen(false)
   const handleDontShowToday = () => {
-    writeStorage("quizpka-toeic-announcement-dismissed", getTodayKey())
+    writeStorage("quizpka-login-announcement-dismissed", getTodayKey())
     setAnnouncementOpen(false)
-  }
-  const handleTryNow = () => {
-    setAnnouncementOpen(false)
-    window.setTimeout(() => {
-      document.getElementById("features")?.scrollIntoView({ behavior: "smooth", block: "start" })
-    }, 150)
   }
   const handleFeedback = () => {
     setAnnouncementOpen(false)
@@ -112,7 +106,6 @@ export default function App() {
     if (authenticatedRoute && status === "anonymous") return <LoginRequiredScreen onLogin={() => void signInWithGoogle()} />
     return (
       <div className={shellClassName}>
-        {locked && <SecurityOverlay onClose={() => setLocked(false)} />}
         <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_#ffffff_0%,_rgba(248,250,252,0.55)_45%,_#f8fafc_100%)] dark:bg-[radial-gradient(ellipse_at_top,_rgba(30,58,138,0.25)_0%,_rgba(2,6,23,0.2)_45%,_#020617_100%)]" />
         <Suspense fallback={<RouteLoading />}><PracticeGuestPage lang={lang} /></Suspense>
       </div>
@@ -124,7 +117,6 @@ export default function App() {
     if (status === "anonymous") return <LoginRequiredScreen onLogin={() => void signInWithGoogle()} />
     return (
       <>
-        {locked && <SecurityOverlay onClose={() => setLocked(false)} />}
         <Suspense fallback={<RouteLoading />}><DashboardPage
           lang={lang}
           theme={theme}
@@ -147,7 +139,6 @@ export default function App() {
   if (pathname !== appRoutes.home) {
     return (
       <>
-        {locked && <SecurityOverlay onClose={() => setLocked(false)} />}
         <Suspense fallback={<RouteLoading />}><NotFoundPage lang={lang} /></Suspense>
       </>
     )
@@ -155,7 +146,6 @@ export default function App() {
 
   return (
     <div className={shellClassName}>
-      {locked && <SecurityOverlay onClose={() => setLocked(false)} />}
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_#ffffff_0%,_rgba(248,250,252,0.55)_45%,_#f8fafc_100%)] dark:bg-[radial-gradient(ellipse_at_top,_rgba(30,58,138,0.25)_0%,_rgba(2,6,23,0.2)_45%,_#020617_100%)]" />
       <div className="relative flex min-h-svh flex-col">
         <SiteHeader
@@ -188,7 +178,6 @@ export default function App() {
         lang={lang}
         onClose={closeAnnouncement}
         onDontShowToday={handleDontShowToday}
-        onTryNow={handleTryNow}
         onFeedback={handleFeedback}
       /></Suspense>
     </div>

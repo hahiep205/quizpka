@@ -44,15 +44,15 @@ export function LoginModal({ open, onClose, lang = "vi" }: LoginModalProps) {
 
           {error && <p role="alert" className="text-center text-sm font-semibold text-red-600">{error}</p>}
 
-          <div className="flex justify-end gap-2 pt-1">
-            <button type="button" className="lp-btn lp-btn--primary lp-btn--sm" onClick={handleLogin} disabled={loading}>
-              <GoogleIcon className="h-4 w-4" />
-              {loading ? t.signingIn : t.signIn}
-            </button>
-            <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={onClose}>
-              {t.cancel}
-            </button>
-          </div>
+          <button
+            type="button"
+            className="lp-btn lp-btn--primary min-h-11 w-full justify-center gap-2 px-4 text-center leading-4 sm:min-h-12"
+            onClick={handleLogin}
+            disabled={loading}
+          >
+            <GoogleIcon className="h-4 w-4 shrink-0 sm:h-5 sm:w-5" />
+            <span className="min-w-0">{loading ? t.signingIn : t.signIn}</span>
+          </button>
         </div>
     </Dialog>
   )

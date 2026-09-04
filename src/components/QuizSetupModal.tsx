@@ -1,6 +1,4 @@
 import { useEffect, useId, useState, type ReactNode } from "react"
-import { X } from "lucide-react"
-import { Card } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
 import {
   getExamTitle,
@@ -10,6 +8,7 @@ import {
 import { cn } from "@/lib/utils"
 import { isHardSupported } from "@/features/quiz/lib/quizHard"
 import { quizSetupCopy as copy } from "@/shared/i18n"
+import { PickerModalShell } from "@/components/PickerModalShell"
 
 type Lang = "en" | "vi"
 
@@ -92,43 +91,43 @@ export function QuizSetupModal({
     timeOption === "midterm30" ? 30 : timeOption === "final60" ? 60 : 0
 
   return (
-    <div className="fixed inset-0 z-[90] flex items-center justify-center p-4">
-      <button
-        type="button"
-        aria-label={t.close}
-        data-state={state}
-        className="contact-modal-overlay absolute inset-0 bg-[rgba(16,15,62,0.45)] backdrop-blur-[2px]"
-        onClick={onClose}
-      />
-      <Card
-        variant="large"
-        padding="none"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby={titleId}
-        data-state={state}
-        className="contact-modal-panel relative z-10 flex max-h-[min(760px,92vh)] w-full max-w-[560px] flex-col overflow-hidden shadow-[var(--shadow-3)]"
-      >
-        <div className="flex items-start justify-between gap-4 border-b border-[#E5E5E5] px-6 py-5 dark:border-white/10">
-          <div>
-            <h2 id={titleId} className="lp-modal-title">
-              {t.title}
-            </h2>
-            <p className="lp-modal-desc-spaced">
-              {t.exam}: {getExamTitle(exam, lang)}
-            </p>
-          </div>
+    <PickerModalShell
+      titleId={titleId}
+      title={t.title}
+      subtitle={`${t.exam}: ${getExamTitle(exam, lang)}`}
+      closeLabel={t.close}
+      state={state}
+      onClose={onClose}
+      footer={
+        <>
+          <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={onClose}>
+            {t.cancel}
+          </button>
           <button
             type="button"
-            className="lp-btn lp-btn--secondary lp-btn--icon"
-            onClick={onClose}
-            aria-label={t.close}
+            className="lp-btn lp-btn--primary lp-btn--sm"
+            onClick={() =>
+              onStart({
+                questionOrder,
+                answerOrder,
+                mode,
+                timed,
+                durationMinutes,
+                questionLimit:
+                  mode === "exam"
+                    ? exam.type === "midterm"
+                      ? EXAM_MIDTERM_LIMIT
+                      : EXAM_FINAL_LIMIT
+                    : undefined,
+              })
+            }
           >
-            <X className="h-4 w-4" strokeWidth={2} />
+            {t.start}
           </button>
-        </div>
-
-        <div className="flex-1 space-y-5 overflow-y-auto px-4 py-4 sm:px-6">
+        </>
+      }
+    >
+      <div className="space-y-5">
           <OptionGroup label={t.questionOrder}>
             <button
               type="button"
@@ -214,39 +213,8 @@ export function QuizSetupModal({
             </button>
           </OptionGroup>
 
-          <div className="flex flex-col-reverse gap-3 pt-1 sm:flex-row sm:justify-end">
-            <button
-              type="button"
-              className="lp-btn lp-btn--secondary lp-btn--sm"
-              onClick={onClose}
-            >
-              {t.cancel}
-            </button>
-            <button
-              type="button"
-              className="lp-btn lp-btn--primary lp-btn--sm"
-              onClick={() =>
-                onStart({
-                  questionOrder,
-                  answerOrder,
-                  mode,
-                  timed,
-                  durationMinutes,
-                  questionLimit:
-                    mode === "exam"
-                      ? exam.type === "midterm"
-                        ? EXAM_MIDTERM_LIMIT
-                        : EXAM_FINAL_LIMIT
-                      : undefined,
-                })
-              }
-            >
-              {t.start}
-            </button>
-          </div>
-        </div>
-      </Card>
-    </div>
+      </div>
+    </PickerModalShell>
   )
 }
 

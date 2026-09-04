@@ -1,6 +1,7 @@
 import { X } from "lucide-react"
 import { Dialog } from "@/components/ui/dialog"
 import { contactCopy as copy } from "@/shared/i18n"
+import { cn, mobileModalHeightClass } from "@/lib/utils"
 
 export type ContactModalType = "Contribute" | "Support"
 
@@ -18,7 +19,7 @@ export function ContactModal({ open, type, onClose, lang = "vi" }: ContactModalP
   const heading = type === "Contribute" ? t.contributeTitle : t.supportTitle
 
   return (
-    <Dialog open={open} onClose={onClose} title={heading} closeLabel={t.closeModal} panelClassName="flex max-h-[85vh] w-full max-w-[520px] flex-col overflow-hidden rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[var(--shadow-3)] dark:border-white/10 dark:bg-slate-900">
+    <Dialog open={open} onClose={onClose} title={heading} closeLabel={t.closeModal} panelClassName={cn("flex w-full max-w-[520px] flex-col overflow-hidden rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[var(--shadow-3)] dark:border-white/10 dark:bg-slate-900", mobileModalHeightClass)}>
         <div className="flex items-center justify-between gap-3 border-b border-slate-200 px-5 py-3.5 dark:border-white/10">
           <h2 className="lp-modal-title text-[17px]">
             {heading}
@@ -28,8 +29,8 @@ export function ContactModal({ open, type, onClose, lang = "vi" }: ContactModalP
           </button>
         </div>
 
-        <div className="flex-1 overflow-y-auto bg-[#F6F7FB] p-3 dark:bg-slate-900 sm:p-3.5">
-          <div className="overflow-hidden rounded-[12px] border-2 border-[#E5E5E5] bg-white shadow-[0_2px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900">
+        <div className="min-h-0 flex-1 overflow-hidden bg-[#F6F7FB] p-3 dark:bg-slate-900 sm:p-3.5">
+          <div className="h-full overflow-hidden rounded-[12px] border-2 border-[#E5E5E5] bg-white shadow-[0_2px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900">
             {type === "Contribute" ? (
               <iframe
                 src="https://docs.google.com/forms/d/e/1FAIpQLSfiFx_2AR4a9CKnbTmFXhNYugz1hg9kZJvpVzsh4KQZC94IeA/viewform?embedded=true"
@@ -38,7 +39,7 @@ export function ContactModal({ open, type, onClose, lang = "vi" }: ContactModalP
                 frameBorder="0"
                 marginHeight={0}
                 marginWidth={0}
-                className="h-[600px] w-full sm:h-[650px]"
+                className="h-full min-h-[280px] w-full sm:h-[650px]"
                 loading="lazy"
                 title={lang === "vi" ? "Google Form Chia sẻ tài liệu" : "Share Document Google Form"}
               >
@@ -52,7 +53,7 @@ export function ContactModal({ open, type, onClose, lang = "vi" }: ContactModalP
                 frameBorder="0"
                 marginHeight={0}
                 marginWidth={0}
-                className="h-[520px] w-full sm:h-[520px]"
+                className="h-full min-h-[280px] w-full sm:h-[520px]"
                 loading="lazy"
                 title={lang === "vi" ? "Google Form Góp ý" : "Feedback Google Form"}
               >

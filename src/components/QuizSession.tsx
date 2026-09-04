@@ -46,6 +46,7 @@ import { Dialog } from "@/components/ui/dialog"
 import { useAuth } from "@/auth/AuthProvider"
 import { appRoutes } from "@/app/navigation"
 import { savePracticeHistory } from "@/lib/practiceSession"
+import { incrementSubjectAttempt } from "@/lib/subjectAttemptStats"
 import { playAnswerFeedback } from "@/features/quiz/lib/answerFeedbackSound"
 
 type Lang = "en" | "vi"
@@ -170,6 +171,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
     window.history.replaceState(null, "", status === "authenticated" ? appRoutes.result : appRoutes.resultGuest)
     if (historySaved.current) return
     historySaved.current = true
+    void incrementSubjectAttempt(subject.id)
     if (!user) return
     const wrong = isHard ? questions.filter((question) => (hardWrongCounts[question.id] ?? 0) > 0) : wrongQuestions
     const historyId = `${exam.id}-${Date.now()}`

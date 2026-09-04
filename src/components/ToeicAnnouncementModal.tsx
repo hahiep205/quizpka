@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react"
-import { MessageCircle, Sparkles, X, Rocket } from "lucide-react"
+import { Check, MessageCircle, Sparkles, X } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { GradientBackground } from "@/components/ui/gradient-background"
 import { toeicAnnouncementCopy as copy } from "@/shared/i18n"
+import { GoogleIcon } from "@/shared/icons/GoogleIcon"
+import { useAuth } from "@/auth/AuthProvider"
 
 type Lang = "en" | "vi"
 
@@ -11,19 +13,23 @@ type Props = {
   lang: Lang
   onClose: () => void
   onDontShowToday: () => void
-  onTryNow: () => void
   onFeedback: () => void
 }
 
-export function ToeicAnnouncementModal({ open, lang, onClose, onDontShowToday, onTryNow, onFeedback }: Props) {
+export function ToeicAnnouncementModal({ open, lang, onClose, onDontShowToday, onFeedback }: Props) {
   const [visible, setVisible] = useState(false)
   const [state, setState] = useState<"open" | "closed">("closed")
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const { signInWithGoogle } = useAuth()
   const t = copy[lang]
 
   useEffect(() => {
     if (open) {
       setVisible(true)
       setState("open")
+      setLoading(false)
+      setError(null)
       return
     }
     if (!visible) return
@@ -47,6 +53,15 @@ export function ToeicAnnouncementModal({ open, lang, onClose, onDontShowToday, o
   }, [open, onClose])
 
   if (!visible) return null
+
+  const handleLogin = () => {
+    setLoading(true)
+    setError(null)
+    void signInWithGoogle().catch(() => {
+      setLoading(false)
+      setError(t.loginError)
+    })
+  }
 
   return (
     <div className="fixed inset-0 z-[90] flex items-center justify-center p-4">
@@ -78,9 +93,9 @@ export function ToeicAnnouncementModal({ open, lang, onClose, onDontShowToday, o
           </button>
           <div className="flex items-start gap-3">
             <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[12px] bg-[#1CB0F6] text-white shadow-[0_3px_0_#189CD8]">
-              <Rocket className="h-5 w-5" />
+              <Sparkles className="h-5 w-5" />
             </span>
-            <div className="min-w-0 flex-1">
+            <div className="min-w-0 flex-1 pr-6">
               <span className="inline-flex items-center gap-1 rounded-full bg-[#E8F7FE] px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wide text-[#129BDC] dark:bg-sky-500/15 dark:text-sky-300">
                 <Sparkles className="h-3 w-3" /> {t.badge}
               </span>
@@ -88,24 +103,37 @@ export function ToeicAnnouncementModal({ open, lang, onClose, onDontShowToday, o
               <p className="lp-modal-desc mt-2 text-[14px] leading-6">{t.desc}</p>
             </div>
           </div>
+
+          <ul className="mt-4 space-y-2">
+            {t.benefits.map((benefit) => (
+              <li key={benefit} className="flex items-start gap-2.5 text-[13px] font-semibold leading-5 text-[#100F3E] dark:text-slate-200">
+                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#E8F7FE] text-[#1CB0F6] dark:bg-sky-500/15 dark:text-sky-300">
+                  <Check className="h-3 w-3" strokeWidth={3} />
+                </span>
+                {benefit}
+              </li>
+            ))}
+          </ul>
+          {error ? <p role="alert" className="mt-3 text-[13px] font-semibold text-red-600">{error}</p> : null}
         </div>
 
         <div className="relative px-6 pb-6 pt-2 sm:px-7">
-          <div className="flex flex-col gap-3 sm:flex-row">
+          <div className="flex gap-3">
             <button
               type="button"
-              onClick={onTryNow}
-              className="lp-btn lp-btn--primary lp-btn--sm w-full justify-center !h-auto min-h-[48px] py-3.5 sm:min-h-[44px] sm:py-0 sm:w-auto sm:flex-1"
+              onClick={handleLogin}
+              disabled={loading}
+              className="lp-btn lp-btn--primary lp-btn--sm min-w-0 flex-1 justify-center whitespace-normal text-center leading-4"
             >
-              <Rocket className="h-4 w-4" />
-              {t.tryNow}
+              <GoogleIcon className="h-4 w-4 shrink-0" />
+              {loading ? t.signingIn : t.loginGoogle}
             </button>
             <button
               type="button"
               onClick={onFeedback}
-              className="lp-btn lp-btn--secondary lp-btn--sm w-full justify-center !h-auto min-h-[48px] py-3.5 sm:min-h-[44px] sm:py-0 sm:w-auto sm:flex-1"
+              className="lp-btn lp-btn--secondary lp-btn--sm min-w-0 flex-1 justify-center"
             >
-              <MessageCircle className="h-4 w-4" />
+              <MessageCircle className="h-4 w-4 shrink-0" />
               {t.feedback}
             </button>
           </div>

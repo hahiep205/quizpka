@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState, type ComponentType } from "react"
 import {
   ArrowRight,
   BarChart3,
-  BookOpen,
   CalendarDays,
   CheckCircle2,
   Clock3,
@@ -17,17 +16,17 @@ import {
   Trophy,
   UserRound,
   LogOut,
+  MessageCircle,
 } from "lucide-react"
 import brandLogo from "@/assets/logo.png"
 import { QuizSetupModal } from "@/components/QuizSetupModal"
 import { HcmChapterPickerModal } from "@/components/HcmChapterPickerModal"
 import { PdfViewerModal } from "@/components/PdfViewerModal"
 import { TadvPickerModal } from "@/components/TadvPickerModal"
-import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
 import { Dialog } from "@/components/ui/dialog"
 import { examCatalog, getSubjectById, type ExamCatalogItem } from "@/data/subjects"
-import { cn } from "@/lib/utils"
+import { cn, mobileModalHeightClass } from "@/lib/utils"
 import { dashboardCopy as copy } from "@/shared/i18n"
 import { useExamLaunch } from "@/lib/useExamLaunch"
 import type { Language, Theme } from "@/shared/types/app"
@@ -35,6 +34,9 @@ import { useAuth } from "@/auth/AuthProvider"
 import { navigate, appRoutes, getCurrentPath } from "@/app/navigation"
 import { readStorage, writeStorage } from "@/lib/storage"
 import { goToPractice, readPracticeHistory } from "@/lib/practiceSession"
+import { useSubjectAttemptCounts } from "@/hooks/useSubjectAttemptCounts"
+import { CatalogExamCard } from "@/components/CatalogExamCard"
+import { CommunityChatModal } from "@/components/CommunityChatModal"
 import { formatTime } from "@/features/quiz/lib/quizHelpers"
 import type { ContactModalType } from "@/components/ContactModal"
 
@@ -156,12 +158,7 @@ export function DashboardPage({
       <DesktopSidebar activeView={activeView} lang={lang} onNavigate={navigate} />
 
       <div className="lg:pl-[200px]">
-        <DashboardTopbar
-          lang={lang}
-          theme={theme}
-          onToggleLang={onToggleLang}
-          onToggleTheme={onToggleTheme}
-        />
+        <DashboardTopbar lang={lang} />
 
         <main className="mx-auto w-full max-w-[1440px] px-3 pb-[calc(92px+env(safe-area-inset-bottom))] pt-4 min-[380px]:px-4 sm:px-6 sm:pt-6 md:px-8 lg:px-8 lg:pb-12 lg:pt-8 xl:px-10">
           {activeView === "home" ? (
@@ -290,94 +287,34 @@ function DesktopSidebar({
   )
 }
 
-function DashboardTopbar({
-  lang,
-  theme,
-  onToggleLang,
-  onToggleTheme,
-}: Omit<DashboardPageProps, "onOpenContact">) {
+function DashboardTopbar({ lang }: Pick<DashboardPageProps, "lang">) {
   const t = copy[lang]
   const { profile } = useAuth()
+  const [chatOpen, setChatOpen] = useState(false)
+  const chatLabel = lang === "vi" ? "Chat cộng đồng" : "Community Chat"
   return (
-    <header className="sticky top-0 z-30 border-b border-slate-200/80 bg-white/90 backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/90">
-      <div className="mx-auto flex h-16 w-full max-w-[1440px] items-center justify-between px-4 sm:h-[72px] sm:px-6 md:px-8 lg:h-[78px] lg:px-8 xl:px-10">
-        <a href="/" className="lg:hidden" aria-label="QuizPKA">
-          <img src={brandLogo} alt="QuizPKA" className="h-7 w-auto" />
-        </a>
+    <>
+      <header className="sticky top-0 z-30 border-b border-slate-200/80 bg-white/90 backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/90">
+        <div className="mx-auto flex h-16 w-full max-w-[1440px] items-center justify-between px-4 sm:h-[72px] sm:px-6 md:px-8 lg:h-[78px] lg:px-8 xl:px-10">
+          <a href="/" className="lg:hidden" aria-label="QuizPKA">
+            <img src={brandLogo} alt="QuizPKA" className="h-7 w-auto" />
+          </a>
 
-        <div className="ml-auto flex min-w-0 items-center gap-2 lg:hidden">
-          <div className="hidden items-center gap-2 sm:flex">
-            <TopbarButton label={lang === "vi" ? "Chuyển sang tiếng Anh" : "Switch to Vietnamese"} onClick={onToggleLang}>
-              <span className="text-[11px] font-black text-[#129BDC]">{lang.toUpperCase()}</span>
+          <div className="hidden lg:block">
+            <h1 className="text-base font-semibold text-[#100F3E] dark:text-white">
+              {t.hello}, {profile?.display_name ?? t.student}!
+            </h1>
+          </div>
+
+          <div className="ml-auto">
+            <TopbarButton label={chatLabel} onClick={() => setChatOpen(true)}>
+              <MessageCircle className="h-[18px] w-[18px]" strokeWidth={2} />
             </TopbarButton>
-            <TopbarButton label={theme === "light" ? (lang === "vi" ? "Chuyển sang giao diện tối" : "Switch to dark mode") : (lang === "vi" ? "Chuyển sang giao diện sáng" : "Switch to light mode")} onClick={onToggleTheme}>
-              {theme === "light" ? <Sun className="h-4 w-4" strokeWidth={2} /> : <Moon className="h-4 w-4" strokeWidth={2} />}
-            </TopbarButton>
-          </div>
-          <div className="ml-1 flex min-w-0 items-center gap-2 sm:border-l sm:border-slate-200 sm:pl-3 dark:sm:border-white/10">
-            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[11px] bg-[#E8F7FE] text-[#129BDC]">
-              {profile?.avatar_url ? <img src={profile.avatar_url} alt="" className="h-9 w-9 rounded-[11px] object-cover" /> : <UserRound className="h-4 w-4" />}
-            </div>
-            <span className="hidden max-w-[150px] truncate text-sm font-extrabold text-[#100F3E] dark:text-white min-[520px]:block">{profile?.display_name ?? profile?.email}</span>
           </div>
         </div>
-
-        <div className="hidden lg:block">
-          <h1 className="text-base font-semibold text-[#100F3E] dark:text-white">
-            {t.hello}, {profile?.display_name ?? t.student}!
-          </h1>
-        </div>
-
-        <div className="ml-auto hidden items-center gap-2.5 lg:flex">
-          <TopbarButton
-            label={lang === "vi" ? "Chuyển sang tiếng Anh" : "Switch to Vietnamese"}
-            onClick={onToggleLang}
-          >
-            <span className="relative inline-flex h-4 w-4 items-center justify-center">
-              <Languages className="h-3.5 w-3.5" strokeWidth={2} />
-              <span className="absolute -bottom-1 -right-1 rounded bg-primary-600 px-1 text-[7px] font-bold leading-none text-white dark:bg-white dark:text-slate-900">
-                {lang.toUpperCase()}
-              </span>
-            </span>
-          </TopbarButton>
-          <TopbarButton
-            label={
-              theme === "light"
-                ? lang === "vi" ? "Chuyển sang giao diện tối" : "Switch to dark mode"
-                : lang === "vi" ? "Chuyển sang giao diện sáng" : "Switch to light mode"
-            }
-            onClick={onToggleTheme}
-          >
-            <span className="relative h-4 w-4">
-              <Sun
-                className={cn(
-                  "absolute inset-0 h-4 w-4 transition-all duration-200",
-                  theme === "light"
-                    ? "scale-100 rotate-0 opacity-100"
-                    : "scale-75 -rotate-90 opacity-0"
-                )}
-                strokeWidth={2}
-              />
-              <Moon
-                className={cn(
-                  "absolute inset-0 h-4 w-4 transition-all duration-200",
-                  theme === "dark"
-                    ? "scale-100 rotate-0 opacity-100"
-                    : "scale-75 rotate-90 opacity-0"
-                )}
-                strokeWidth={2}
-              />
-            </span>
-          </TopbarButton>
-          <div className="ml-0.5 hidden items-center gap-3 border-l border-slate-200 pl-3 dark:border-white/10 sm:flex">
-            <div className="flex h-10 w-10 items-center justify-center rounded-[12px] bg-[#E8F7FE] text-[#129BDC]">
-              {profile?.avatar_url ? <img src={profile.avatar_url} alt="" className="h-10 w-10 rounded-[12px] object-cover" /> : <UserRound className="h-5 w-5" strokeWidth={2.2} />}
-            </div>
-            <div className="max-w-[140px] truncate text-sm font-extrabold text-[#100F3E] dark:text-white">{profile?.display_name ?? profile?.email}</div>
-          </div>
-        </div>
-      </div>
-    </header>
+      </header>
+      <CommunityChatModal open={chatOpen} onClose={() => setChatOpen(false)} lang={lang} />
+    </>
   )
 }
 
@@ -441,13 +378,7 @@ function HomeDashboard({
       totalDurationSeconds: durationTotal,
     }
   }, [history])
-  const attemptCountsBySubject = useMemo(() => {
-    const counts = new Map<string, number>()
-    for (const attempt of history) {
-      counts.set(attempt.subjectId, (counts.get(attempt.subjectId) ?? 0) + 1)
-    }
-    return counts
-  }, [history])
+  const attemptCountsBySubject = useSubjectAttemptCounts()
 
   return (
     <div className="space-y-6 dashboard-reveal sm:space-y-8">
@@ -497,12 +428,20 @@ function HomeDashboard({
         {filteredExams.length ? (
           <div className="grid gap-3 sm:gap-4 md:grid-cols-2 2xl:grid-cols-3">
             {filteredExams.map((exam) => (
-              <ExamCard
+              <CatalogExamCard
                 key={exam.id}
                 exam={exam}
                 lang={lang}
-                attemptCount={attemptCountsBySubject.get(exam.subjectId) ?? 0}
-                onStart={() => onStartExam(exam)}
+                attemptCount={attemptCountsBySubject[exam.subjectId] ?? 0}
+                categoryLabel={exam.category.en === "General" ? t.general : t.major}
+                questionsLabel={t.questions}
+                minutesLabel={t.minutes}
+                footer={
+                  <button type="button" className="lp-btn lp-btn--primary lp-btn--sm lp-btn--block mt-4 sm:mt-5" onClick={() => onStartExam(exam)}>
+                    {t.start}
+                    <ArrowRight className="h-4 w-4" />
+                  </button>
+                }
               />
             ))}
           </div>
@@ -553,40 +492,6 @@ function DashboardStatCard({
         <p className="mt-0.5 text-[11px] font-bold leading-4 text-slate-500 dark:text-slate-400 sm:text-xs">{label}</p>
       </div>
     </div>
-  )
-}
-
-function ExamCard({ exam, lang, attemptCount, onStart }: { exam: ExamCatalogItem; lang: Lang; attemptCount: number; onStart: () => void }) {
-  const t = copy[lang]
-  return (
-    <article className="group flex h-full flex-col rounded-[15px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] transition-transform hover:-translate-y-1 dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_3px_0_rgba(0,0,0,0.35)] sm:rounded-[16px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:sm:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
-      <div className="flex items-start justify-between gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-[12px] bg-[#E8F7FE] text-[#129BDC] dark:bg-sky-500/10 dark:text-sky-300 sm:h-12 sm:w-12 sm:rounded-[14px]">
-          <BookOpen className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={2} />
-        </div>
-        <Badge className="border-0 bg-[#E8F7FE] font-extrabold text-[#129BDC] dark:bg-sky-500/10 dark:text-sky-300">
-          {exam.category.en === "General" ? t.general : t.major}
-        </Badge>
-      </div>
-      <div className="mt-4 flex-1 sm:mt-5">
-        <p className="text-xs font-extrabold uppercase tracking-[0.08em] text-[#1CB0F6]">{exam.subjectCode}</p>
-        <h3 className="mt-1.5 line-clamp-2 text-[17px] font-black leading-6 tracking-[-0.02em] text-[#100F3E] dark:text-white sm:mt-2 sm:text-lg">
-          {exam.title[lang]}
-        </h3>
-        <p className="mt-2 line-clamp-2 text-[13px] font-semibold leading-5 text-slate-500 dark:text-slate-400">
-          {exam.description[lang]}
-        </p>
-      </div>
-      <div className="mt-5 grid grid-cols-3 border-t border-slate-100 pt-4 text-[11px] font-bold text-[#129BDC] dark:border-white/10 dark:text-sky-300 sm:text-xs">
-        <span className="inline-flex min-w-0 items-center justify-center gap-1 whitespace-nowrap px-1"><FileText className="h-3.5 w-3.5 shrink-0" />{exam.questionCount} {t.questions}</span>
-        <span className="inline-flex min-w-0 items-center justify-center gap-1 whitespace-nowrap border-x border-slate-100 px-1 dark:border-white/10"><Clock3 className="h-3.5 w-3.5 shrink-0" />{exam.durationMinutes} {t.minutes}</span>
-        <span className="inline-flex min-w-0 items-center justify-center gap-1 whitespace-nowrap px-1"><CheckCircle2 className="h-3.5 w-3.5 shrink-0" />{attemptCount} {lang === "vi" ? "lượt làm" : attemptCount === 1 ? "attempt" : "attempts"}</span>
-      </div>
-      <button type="button" className="lp-btn lp-btn--primary lp-btn--sm lp-btn--block mt-4 sm:mt-5" onClick={onStart}>
-        {t.start}
-        <ArrowRight className="h-4 w-4" />
-      </button>
-    </article>
   )
 }
 
@@ -726,7 +631,7 @@ function WrongAnswersDialog({ item, lang, onClose, onRetry }: {
       title={lang === "vi" ? "Danh sách câu sai" : "Wrong answers"}
       closeLabel={lang === "vi" ? "Đóng" : "Close"}
       className="z-[100]"
-      panelClassName="flex max-h-[min(780px,92vh)] w-full max-w-[720px] flex-col overflow-hidden rounded-[18px] border-2 border-[#E5E5E5] bg-white shadow-[0_6px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none"
+      panelClassName={cn("flex w-full max-w-[720px] flex-col overflow-hidden rounded-[18px] border-2 border-[#E5E5E5] bg-white shadow-[0_6px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none", mobileModalHeightClass)}
     >
       <div className="flex items-start justify-between gap-4 border-b border-slate-100 px-5 py-4 dark:border-white/10 sm:px-6">
         <div className="min-w-0">
