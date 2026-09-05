@@ -1,0 +1,9 @@
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
+const encoder = new TextEncoder()
+async function signature(body: string, secret: string) { const key = await crypto.subtle.importKey("raw", encoder.encode(secret), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]); const bytes = new Uint8Array(await crypto.subtle.sign("HMAC", key, encoder.encode(body))); return [...bytes].map((b) => b.toString(16).padStart(2, "0")).join("") }
+Deno.serve(async (req) => {
+  if (req.method !== "POST") return new Response("Method Not Allowed", { status: 405 })
+  const body = await req.text(); const expected = await signature(body, Deno.env.get("SEPAY_WEBHOOK_SECRET")!); const received = req.headers.get("x-sepay-signature") ?? req.headers.get("x-signature")
+  if (!received || received !== expected) return new Response("Invalid signature", { status: 401 })
+  try { const payload = JSON.parse(body); const orderId = payload.order_invoice_number ?? payload.order_id; const status = String(payload.status ?? payload.transaction_status ?? "").toLowerCase(); if (!orderId || !["success", "paid", "completed"].includes(status)) return Response.json({ ok: true }); const match = /^DSAI-/.test(orderId); if (!match) return new Response("Unknown order", { status: 400 }); const admin = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!); const { data: order } = await admin.from("orders").select("user_id").eq("order_id", orderId).maybeSingle(); if (!order) return new Response("Order not found", { status: 404 }); await admin.from("purchases").upsert({ user_id: order.user_id, product_id: "dsai101", order_id: orderId, status: "paid" }, { onConflict: "user_id,product_id" }); return Response.json({ ok: true }) } catch { return new Response("Webhook processing failed", { status: 400 }) }
+})

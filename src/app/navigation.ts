@@ -6,6 +6,7 @@ export const appRoutes = {
   dashboardLeaderboard: "/dashboard/leaderboard",
   dashboardHistory: "/dashboard/history",
   dashboardSettings: "/dashboard/settings",
+  dashboardPurchased: "/dashboard/purchased",
   practice: "/practice",
   practiceGuest: "/practice4guest",
   result: "/result",

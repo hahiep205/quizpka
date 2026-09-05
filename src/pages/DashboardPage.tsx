@@ -13,6 +13,7 @@ import {
   Moon,
   Search,
   Settings,
+  ShoppingBag,
   Sun,
   Trophy,
   UserRound,
@@ -47,10 +48,11 @@ import { LeaderboardView } from "@/components/LeaderboardView"
 import { CommunityChatModal } from "@/components/CommunityChatModal"
 import { NotificationCenter } from "@/components/NotificationCenter"
 import { formatTime } from "@/features/quiz/lib/quizHelpers"
+import { createDsaiCheckout, hasDsaiPurchase } from "@/lib/purchases"
 import type { ContactModalType } from "@/components/ContactModal"
 
 type Lang = Language
-type DashboardView = "home" | "leaderboard" | "history" | "settings"
+type DashboardView = "home" | "leaderboard" | "history" | "settings" | "purchased"
 
 type DashboardPageProps = {
   lang: Lang
@@ -68,6 +70,7 @@ const navItems: Array<{
   { key: "leaderboard", icon: SidebarRankingIcon },
   { key: "history", icon: SidebarHistoryIcon },
   { key: "settings", icon: SidebarSettingsIcon },
+  { key: "purchased", icon: SidebarSettingsIcon },
 ]
 
 function SidebarSvg({ className, children }: { className?: string; children: React.ReactNode }) {
@@ -96,12 +99,14 @@ const mobileNavLabels = {
     leaderboard: "Xếp hạng",
     history: "Lịch sử",
     settings: "Cài đặt",
+    purchased: "Đã mua",
   },
   en: {
     home: "Home",
     leaderboard: "Ranking",
     history: "History",
     settings: "Settings",
+    purchased: "Purchased",
   },
 } as const
 
@@ -110,6 +115,7 @@ const mobileNavIcons = {
   leaderboard: Trophy,
   history: History,
   settings: Settings,
+  purchased: ShoppingBag,
 } as const
 
 export function DashboardPage({
@@ -121,6 +127,18 @@ export function DashboardPage({
 }: DashboardPageProps) {
   const [activeView, setActiveView] = useState<DashboardView>(() => getDashboardView(getCurrentPath()))
   const { user: dashboardUser } = useAuth()
+  const handlePaidTryNow = async (exam: ExamCatalogItem) => {
+    try {
+    if (exam.subjectCode !== "DSAI101") return handleTryNow(exam)
+    if (dashboardUser?.id && await hasDsaiPurchase(dashboardUser.id)) return handleTryNow(exam)
+    const result = await createDsaiCheckout()
+    if (result.owned) return handleTryNow(exam)
+    if (!result.checkoutUrl || !result.fields) throw new Error("Không tạo được link thanh toán")
+    const form = document.createElement("form"); form.method = "POST"; form.action = result.checkoutUrl
+    Object.entries(result.fields).forEach(([name, value]) => { const input = document.createElement("input"); input.type = "hidden"; input.name = name; input.value = String(value); form.appendChild(input) })
+    document.body.appendChild(form); form.submit()
+    } catch (error) { window.alert(error instanceof Error ? error.message : "Không thể tạo thanh toán. Vui lòng thử lại.") }
+  }
 
   useEffect(() => {
     logActivityEvent(dashboardUser?.id, "view_dashboard", {}, { oncePerSessionKey: `view_dashboard:${dashboardUser?.id ?? "anon"}` })
@@ -174,6 +192,7 @@ export function DashboardPage({
       leaderboard: appRoutes.dashboardLeaderboard,
       history: appRoutes.dashboardHistory,
       settings: appRoutes.dashboardSettings,
+      purchased: appRoutes.dashboardPurchased,
     }
     window.history.pushState(null, "", paths[view])
     window.dispatchEvent(new PopStateEvent("popstate"))
@@ -196,11 +215,12 @@ export function DashboardPage({
               filteredExams={filteredExams}
               onQueryChange={setQuery}
               onFilterChange={setFilter}
-              onStartExam={handleTryNow}
+              onStartExam={(exam) => void handlePaidTryNow(exam)}
             />
           ) : null}
           {activeView === "leaderboard" ? <LeaderboardView lang={lang} /> : null}
           {activeView === "history" ? <EmptyView lang={lang} view="history" /> : null}
+          {activeView === "purchased" ? <section className="rounded-2xl border-2 border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-slate-900"><h2 className="text-2xl font-black">{lang === "vi" ? "Đã mua" : "Purchased"}</h2><p className="mt-2 text-sm text-slate-500">{lang === "vi" ? "Các bộ tài liệu bạn đã mua sẽ hiển thị tại đây." : "Your purchased materials will appear here."}</p></section> : null}
           {activeView === "settings" ? (
             <SettingsView
               lang={lang}
@@ -267,6 +287,7 @@ function getDashboardView(path: string): DashboardView {
   if (path === appRoutes.dashboardLeaderboard) return "leaderboard"
   if (path === appRoutes.dashboardHistory) return "history"
   if (path === appRoutes.dashboardSettings) return "settings"
+  if (path === appRoutes.dashboardPurchased) return "purchased"
   return "home"
 }
 
@@ -504,7 +525,7 @@ function HomeDashboard({
                 hideDurationOnMobile
                 footer={
                   <button type="button" className="lp-btn lp-btn--primary lp-btn--sm lp-btn--block mt-3 px-2 text-[12px] sm:mt-5 sm:px-4 sm:text-sm" onClick={() => onStartExam(exam)}>
-                    {t.start}
+                    {exam.subjectCode === "DSAI101" ? "10.000 VND" : t.start}
                     <ArrowRight className="hidden h-4 w-4 sm:inline" />
                   </button>
                 }
@@ -779,7 +800,7 @@ function MobileNav({ activeView, lang, onNavigate }: { activeView: DashboardView
       items={navItems.map((item) => ({
         key: item.key,
         icon: mobileNavIcons[item.key],
-        label: mobileNavLabels[lang][item.key],
+        label: mobileNavLabels[lang][item.key as keyof typeof mobileNavLabels["vi"]],
       }))}
     />
   )

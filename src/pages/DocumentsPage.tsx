@@ -14,6 +14,8 @@ import { documentsCopy as copy } from "@/shared/i18n"
 import { useExamLaunch } from "@/lib/useExamLaunch"
 import { useSubjectAttemptCounts } from "@/hooks/useSubjectAttemptCounts"
 import { CatalogExamCard } from "@/components/CatalogExamCard"
+import { createDsaiCheckout, hasDsaiPurchase } from "@/lib/purchases"
+import { useAuth } from "@/auth/AuthProvider"
 
 type Lang = "en" | "vi"
 type CategoryFilter = "all" | "general" | "major"
@@ -50,7 +52,16 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
   } = useExamLaunch(lang)
   const attemptCountsBySubject = useSubjectAttemptCounts()
   const nudge = useLoginNudge()
-  const tryExam = (exam: ExamCatalogItem) => nudge.requestNudge(() => handleTryNow(exam))
+  const { user } = useAuth()
+  const tryExam = (exam: ExamCatalogItem) => nudge.requestNudge(async () => { try {
+    if (exam.subjectCode !== "DSAI101" || (user?.id && await hasDsaiPurchase(user.id))) return handleTryNow(exam)
+    const result = await createDsaiCheckout(); if (result.owned) return handleTryNow(exam)
+    if (!result.checkoutUrl || !result.fields) return
+    const form = document.createElement("form"); form.method = "POST"; form.action = result.checkoutUrl
+    Object.entries(result.fields).forEach(([name, value]) => { const input = document.createElement("input"); input.type = "hidden"; input.name = name; input.value = String(value); form.appendChild(input) })
+    document.body.appendChild(form); form.submit()
+    } catch (error) { window.alert(error instanceof Error ? error.message : "Không thể tạo thanh toán. Vui lòng thử lại.") }
+  })
 
   const filteredExams = useMemo(() => {
     const normalized = query.trim().toLowerCase()
@@ -157,7 +168,7 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
                     className="lp-btn lp-btn--primary lp-btn--sm flex-1"
                     onClick={() => tryExam(exam)}
                   >
-                    {t.start}
+                    {exam.subjectCode === "DSAI101" ? "10.000 VND" : t.start}
                   </button>
                 </div>
               }
