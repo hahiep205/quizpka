@@ -57,6 +57,8 @@ export async function loadQuizQuestions({ subject, exam, setup, chapterId, toeic
   let questions: Question[]
   if (subject.id === "toeic" && toeicScope) {
     questions = await loadToeicQuestions(toeicScope, exam.id, setup, signal)
+  } else if (subject.id === "khoa-hoc-du-lieu-va-tri-tue-nhan-tao") {
+    throw new QuestionBankDataError(exam.id, "DSAI requires a server quiz session")
   } else if (exam.questionBanks?.length || exam.questionBank) {
     const urls = exam.questionBanks?.length ? exam.questionBanks : [exam.questionBank!]
     const banks = await Promise.all(urls.map((url) => fetchBank(url, signal)))

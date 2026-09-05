@@ -13,6 +13,6 @@ export function AuthCallbackPage() {
     if (status === "authenticated") navigate(appRoutes.dashboard, { replace: true })
   }, [status])
 
-  const error = providerError ?? (status === "anonymous" ? "Không thể hoàn tất đăng nhập. Vui lòng thử lại." : null)
+  const error = providerError ?? (status === "anonymous" ? "Không thể hoàn tất đăng nhập. Vui lòng thử lại." : status === "blocked" ? "Tài khoản đã bị khóa. Vui lòng liên hệ quản trị viên." : null)
   return <main className="mx-auto flex min-h-svh items-center justify-center px-6"><p role={error ? "alert" : undefined}>{error ?? "Đang hoàn tất đăng nhập…"}</p></main>
 }

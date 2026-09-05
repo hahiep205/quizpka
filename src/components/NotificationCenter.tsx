@@ -1,19 +1,22 @@
 import { Bell, Check, X } from "lucide-react"
 import { useEffect, useState } from "react"
 import { cn } from "@/lib/utils"
+import { useAuth } from "@/auth/AuthProvider"
 
 type Notification = { id: string; title: string; message: string; createdAt: string; read: boolean }
-const KEY = "quizpka-notifications"
 const seed: Notification[] = [{ id: "welcome-v2", title: "Chào mừng đến với Quizpka!", message: "Chào mừng bạn đến với Quizpka - Trang làm quiz ôn thi dành riêng cho sinh viên Phenikaa!", createdAt: new Date().toISOString(), read: false }]
 
-function load(): Notification[] { try { const value = JSON.parse(localStorage.getItem(KEY) || "null"); return Array.isArray(value) ? value.filter((item: Notification) => item.id !== "welcome") : seed } catch { return seed } }
+function load(key: string): Notification[] { try { const value = JSON.parse(localStorage.getItem(key) || "null"); return Array.isArray(value) ? value.filter((item: Notification) => item.id !== "welcome") : seed } catch { return seed } }
 
 export function NotificationCenter({ lang }: { lang: "vi" | "en" }) {
+  const { user } = useAuth()
+  const key = `quizpka-notifications:${user?.id ?? "anonymous"}`
   const [open, setOpen] = useState(false)
-  const [items, setItems] = useState<Notification[]>(load)
+  const [items, setItems] = useState<Notification[]>(() => load(key))
   const unread = items.filter((item) => !item.read).length
-  useEffect(() => { localStorage.setItem(KEY, JSON.stringify(items)) }, [items])
-  useEffect(() => { const refresh = () => setItems(load()); window.addEventListener("quizpka-notification-created", refresh); return () => window.removeEventListener("quizpka-notification-created", refresh) }, [])
+  useEffect(() => { setItems(load(key)) }, [key])
+  useEffect(() => { try { localStorage.setItem(key, JSON.stringify(items)) } catch { /* Storage is optional. */ } }, [items, key])
+  useEffect(() => { const refresh = () => setItems(load(key)); window.addEventListener("quizpka-notification-created", refresh); return () => window.removeEventListener("quizpka-notification-created", refresh) }, [key])
   const markAll = () => setItems((current) => current.map((item) => ({ ...item, read: true })))
   return <div className="relative">
     <button type="button" aria-label={lang === "vi" ? "Thông báo" : "Notifications"} title={lang === "vi" ? "Thông báo" : "Notifications"} onClick={() => setOpen((value) => !value)} className="relative inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#F0F2F5] text-[#050505] transition-[transform,background-color] duration-150 hover:bg-[#E4E6EB] active:scale-95 dark:bg-[#3A3B3C] dark:text-[#E4E6EB] dark:hover:bg-[#4E4F50]">

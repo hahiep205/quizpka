@@ -1,5 +1,4 @@
 import { supabase } from "@/lib/supabase"
-import type { PracticeHistoryItem } from "@/lib/practiceSession"
 
 export type ActivityEventType =
   | "login"
@@ -86,42 +85,7 @@ export function logActivityEvent(
   })()
 }
 
-/** Mirror 1 history item (localStorage) lên bảng server để admin xem được. */
-export function mirrorPracticeAttempt(item: PracticeHistoryItem, userId: string): void {
-  void (async () => {
-    try {
-      await supabase.from("practice_attempts").upsert(
-        {
-          user_id: userId,
-          history_id: item.id,
-          exam_id: item.examId,
-          subject_id: item.subjectId,
-          title: item.title,
-          mode: item.mode,
-          score: item.score,
-          correct: item.correct,
-          total: item.total,
-          accuracy: item.accuracy,
-          duration_seconds: item.durationSeconds,
-          retry_of: item.retryOfHistoryId ?? null,
-          retry_number: item.retryNumber ?? null,
-          completed_at: item.completedAt,
-        },
-        { onConflict: "user_id,history_id" },
-      )
-    } catch {
-      // Best-effort.
-    }
-  })()
-}
-
-const BACKFILL_KEY_PREFIX = "quizpka-attempt-backfill:"
 const ATTEMPT_SESSION_PREFIX = "quizpka-attempt-session:"
-
-function todayKey(): string {
-  const d = new Date()
-  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`
-}
 
 /**
  * sessionId nối chuỗi open_exam -> start_attempt -> submit_attempt của cùng 1 lượt.
@@ -154,49 +118,6 @@ export function endAttemptSession(examId: string): string | null {
   } catch {
     return null
   }
-}
-
-/**
- * Đẩy toàn bộ lịch sử localStorage cũ lên server (1 lần/ngày/user).
- * Nhờ unique(user_id, history_id) nên gọi lại cũng không trùng.
- */
-export function backfillPracticeAttempts(userId: string | undefined, history: PracticeHistoryItem[]): void {
-  if (!userId || history.length === 0) return
-  try {
-    if (localStorage.getItem(BACKFILL_KEY_PREFIX + userId) === todayKey()) return
-  } catch {
-    return
-  }
-  void (async () => {
-    try {
-      await supabase.from("practice_attempts").upsert(
-        history.map((item) => ({
-          user_id: userId,
-          history_id: item.id,
-          exam_id: item.examId,
-          subject_id: item.subjectId,
-          title: item.title,
-          mode: item.mode,
-          score: item.score,
-          correct: item.correct,
-          total: item.total,
-          accuracy: item.accuracy,
-          duration_seconds: item.durationSeconds,
-          retry_of: item.retryOfHistoryId ?? null,
-          retry_number: item.retryNumber ?? null,
-          completed_at: item.completedAt,
-        })),
-        { onConflict: "user_id,history_id" },
-      )
-      try {
-        localStorage.setItem(BACKFILL_KEY_PREFIX + userId, todayKey())
-      } catch {
-        // ignore
-      }
-    } catch {
-      // Best-effort.
-    }
-  })()
 }
 
 function asRecord(value: unknown): Record<string, unknown> {

@@ -2,14 +2,12 @@ import { useEffect, useMemo, useState } from "react"
 import { Crown, Medal, Trophy, UserRound } from "lucide-react"
 import { useAuth } from "@/auth/AuthProvider"
 import {
-  buildLocalLeaderboardEntry,
   fetchLeaderboard,
   rankLeaderboard,
-  upsertUserLearningStats,
+  type LeaderboardEntry,
   type RankedLeaderboardEntry,
 } from "@/lib/leaderboard"
 import { formatLearningDuration, type LearningPeriod } from "@/lib/learningStats"
-import { readPracticeHistory } from "@/lib/practiceSession"
 import { readStorage } from "@/lib/storage"
 import { cn } from "@/lib/utils"
 import { dashboardCopy as copy } from "@/shared/i18n"
@@ -17,51 +15,29 @@ import type { Language } from "@/shared/types/app"
 
 export function LeaderboardView({ lang }: { lang: Language }) {
   const t = copy[lang]
-  const { user, profile } = useAuth()
+  const { user } = useAuth()
   const userId = user?.id
   const [period, setPeriod] = useState<LearningPeriod>("week")
-  const [remoteEntries, setRemoteEntries] = useState<ReturnType<typeof buildLocalLeaderboardEntry>[]>([])
-  const visible = readStorage("quizpka-leaderboard-visible") !== "false"
-  const history = useMemo(
-    () => (userId ? readPracticeHistory(userId, user?.created_at) : []),
-    [user?.created_at, userId],
-  )
-
-  const you = useMemo(() => {
-    if (!userId) return null
-    return buildLocalLeaderboardEntry({
-      userId,
-      name: profile?.display_name?.trim() || profile?.email || (lang === "vi" ? "Bạn" : "You"),
-      avatarUrl: profile?.avatar_url ?? null,
-      visible,
-      history,
-      period,
-    })
-  }, [history, lang, period, profile?.avatar_url, profile?.display_name, profile?.email, userId, visible])
+  const [remoteEntries, setRemoteEntries] = useState<LeaderboardEntry[]>([])
+  const visible = readStorage(`quizpka:${userId ?? "anonymous"}:leaderboard-visible`) !== "false"
+  const you = remoteEntries.find((entry) => entry.userId === userId)
 
   useEffect(() => {
-    if (!userId || !you) return
+    if (!userId) return
     let cancelled = false
-    void upsertUserLearningStats({
-      userId,
-      name: you.name,
-      avatarUrl: you.avatarUrl,
-      visible,
-      history,
-    }).then(() => fetchLeaderboard(period, userId)).then((rows) => {
+    void fetchLeaderboard(period, userId).then((rows) => {
       if (!cancelled) setRemoteEntries(rows)
     })
     return () => {
       cancelled = true
     }
-  }, [history, period, userId, visible, you])
+  }, [period, userId])
 
   const ranked = useMemo(() => {
     const byId = new Map(remoteEntries.map((entry) => [entry.userId, entry]))
-    if (you && you.visible) byId.set(you.userId, you)
     const publicEntries = [...byId.values()].filter((entry) => entry.visible && (entry.points > 0 || entry.stats.attempts > 0))
     return rankLeaderboard(publicEntries, "points")
-  }, [remoteEntries, you])
+  }, [remoteEntries])
 
   const yourRank = ranked.find((entry) => entry.isYou)?.rank
 

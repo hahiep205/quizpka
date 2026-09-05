@@ -3,9 +3,10 @@ import { createRoot } from "react-dom/client"
 import "./index.css"
 import App from "./App.tsx"
 import { AuthProvider } from "@/auth/AuthProvider"
+import { AppErrorBoundary } from "@/components/AppErrorBoundary"
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <AuthProvider><App /></AuthProvider>
+    <AppErrorBoundary><AuthProvider><App /></AuthProvider></AppErrorBoundary>
   </StrictMode>
 )

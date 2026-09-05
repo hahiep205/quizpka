@@ -118,6 +118,8 @@ export function AdminPage({ lang }: Props) {
   const [timelineQuery, setTimelineQuery] = useState("")
   const [rangeDays, setRangeDays] = useState(14)
   const [page, setPage] = useState(0)
+  const [serverUserPage, setServerUserPage] = useState(0)
+  const [serverUserHasMore, setServerUserHasMore] = useState(false)
   const [timelinePage, setTimelinePage] = useState(0)
   const [attemptsPage, setAttemptsPage] = useState(0)
   const [live, setLive] = useState(false)
@@ -133,9 +135,11 @@ export function AdminPage({ lang }: Props) {
 
   const reload = useCallback(() => {
     setLoading(true)
-    void fetchAdminUsers().then((res) => {
+    setServerUserPage(0)
+    void fetchAdminUsers(0, 100).then((res) => {
       if (!mountedRef.current) return
       setUsers(res.users)
+      setServerUserHasMore(res.ok && res.hasMore)
       setError(res.ok ? null : res.error)
       setLoading(false)
     })
@@ -150,6 +154,20 @@ export function AdminPage({ lang }: Props) {
       setAttemptsError(res.ok ? null : res.error)
     })
   }, [])
+
+  const loadMoreUsers = useCallback(() => {
+    if (!serverUserHasMore || loading) return
+    const nextPage = serverUserPage + 1
+    setLoading(true)
+    void fetchAdminUsers(nextPage, 100).then((res) => {
+      if (!mountedRef.current) return
+      setUsers((current) => [...current, ...res.users])
+      setServerUserPage(nextPage)
+      setServerUserHasMore(res.ok && res.hasMore)
+      setError(res.ok ? null : res.error)
+      setLoading(false)
+    })
+  }, [loading, serverUserHasMore, serverUserPage])
 
   useEffect(() => { reload() }, [reload])
 
@@ -626,7 +644,12 @@ export function AdminPage({ lang }: Props) {
                   <p className="text-sm font-bold text-slate-400">Hiển thị {safePage * USER_PAGE_SIZE + 1}–{Math.min(visible.length, safePage * USER_PAGE_SIZE + USER_PAGE_SIZE)} / {visible.length}</p>
                   <div className="flex gap-2">
                     <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safePage === 0} onClick={() => setPage(safePage - 1)}>← Trước</button>
-                    <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safePage >= pageCount - 1} onClick={() => setPage(safePage + 1)}>Sau →</button>
+                    <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safePage >= pageCount - 1 && !serverUserHasMore} onClick={() => {
+                      if (safePage >= pageCount - 1 && serverUserHasMore) {
+                        loadMoreUsers()
+                        setPage(0)
+                      } else setPage(safePage + 1)
+                    }}>Sau →</button>
                   </div>
                 </div>
               ) : null}

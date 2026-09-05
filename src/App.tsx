@@ -105,6 +105,8 @@ export default function App() {
 
   if (pathname === appRoutes.authCallback) return <AuthCallbackPage />
 
+  if (status === "blocked") return <BlockedAccountScreen />
+
   if (pathname === appRoutes.admin || pathname.startsWith(`${appRoutes.admin}/`)) {
     if (status === "loading") return <RouteLoading />
     if (status === "anonymous") return <LoginRequiredScreen onLogin={() => void signInWithGoogle()} />
@@ -209,6 +211,10 @@ function RouteLoading() {
 
 function AccessDeniedScreen() {
   return <main className="mx-auto flex min-h-svh max-w-md flex-col items-center justify-center gap-3 px-6 text-center"><h1 className="text-xl font-semibold">Không có quyền truy cập</h1><p className="text-sm text-slate-500">Trang /admin chỉ dành cho tài khoản admin.</p><a href="/" className="lp-btn lp-btn--secondary">Về trang chủ</a></main>
+}
+
+function BlockedAccountScreen() {
+  return <main className="mx-auto flex min-h-svh max-w-md flex-col items-center justify-center gap-3 px-6 text-center"><h1 className="text-xl font-semibold">Tài khoản đã bị khóa</h1><p className="text-sm text-slate-500">Vui lòng liên hệ quản trị viên để được hỗ trợ.</p><a href="/" className="lp-btn lp-btn--secondary">Về trang chủ</a></main>
 }
 
 

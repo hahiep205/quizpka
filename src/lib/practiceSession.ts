@@ -4,7 +4,7 @@ import type { ToeicScope } from "@/data/toeic"
 import { appRoutes, navigate } from "@/app/navigation"
 import type { Language } from "@/shared/types/app"
 
-export const PRACTICE_SESSION_KEY = "quizpka-practice-session-v1"
+export const PRACTICE_SESSION_KEY = "quizpka-practice-session-v2"
 export const PRACTICE_HISTORY_KEY = "quizpka-practice-history-v1"
 export type PracticeHistoryItem = {
   id: string
@@ -73,7 +73,7 @@ export type PracticeSessionPayload = {
 }
 
 export function savePracticeSession(payload: PracticeSessionPayload) {
-  sessionStorage.setItem(PRACTICE_SESSION_KEY, JSON.stringify(payload))
+  try { sessionStorage.setItem(PRACTICE_SESSION_KEY, JSON.stringify(payload)) } catch { /* Session resume is best-effort. */ }
 }
 
 export function readPracticeSession(): PracticeSessionPayload | null {
@@ -87,7 +87,7 @@ export function readPracticeSession(): PracticeSessionPayload | null {
 }
 
 export function clearPracticeSession() {
-  sessionStorage.removeItem(PRACTICE_SESSION_KEY)
+  try { sessionStorage.removeItem(PRACTICE_SESSION_KEY) } catch { /* Storage is optional. */ }
 }
 
 export function goToPracticeGuest(payload: PracticeSessionPayload) {

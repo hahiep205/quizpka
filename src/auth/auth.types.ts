@@ -1,6 +1,6 @@
 import type { User } from "@supabase/supabase-js"
 
-export type AuthStatus = "loading" | "authenticated" | "anonymous"
+export type AuthStatus = "loading" | "authenticated" | "blocked" | "anonymous"
 export type AuthProfile = {
   id: string
   email: string | null

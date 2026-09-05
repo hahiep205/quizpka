@@ -35,9 +35,9 @@ import { dashboardCopy as copy } from "@/shared/i18n"
 import { useExamLaunch } from "@/lib/useExamLaunch"
 import type { Language, Theme } from "@/shared/types/app"
 import { useAuth } from "@/auth/AuthProvider"
-import { navigate, appRoutes, getCurrentPath } from "@/app/navigation"
+import { navigate as navigateApp, appRoutes, getCurrentPath, type AppPath } from "@/app/navigation"
 import { readStorage, writeStorage } from "@/lib/storage"
-import { logActivityEvent, backfillPracticeAttempts } from "@/features/activity/lib/activityLog"
+import { logActivityEvent } from "@/features/activity/lib/activityLog"
 import { computeLearningStats, formatLearningDuration } from "@/lib/learningStats"
 import { goToPractice, readPracticeHistory } from "@/lib/practiceSession"
 import { useSubjectAttemptCounts } from "@/hooks/useSubjectAttemptCounts"
@@ -142,9 +142,6 @@ export function DashboardPage({
 
   useEffect(() => {
     logActivityEvent(dashboardUser?.id, "view_dashboard", {}, { oncePerSessionKey: `view_dashboard:${dashboardUser?.id ?? "anon"}` })
-    if (dashboardUser?.id) {
-      backfillPracticeAttempts(dashboardUser.id, readPracticeHistory(dashboardUser.id, dashboardUser.created_at))
-    }
   }, [dashboardUser?.id, dashboardUser?.created_at])
   const [query, setQuery] = useState("")
   const [filter, setFilter] = useState<"all" | "general" | "major">("all")
@@ -187,15 +184,14 @@ export function DashboardPage({
 
   const navigate = (view: DashboardView) => {
     setActiveView(view)
-    const paths: Record<DashboardView, string> = {
+    const paths: Record<DashboardView, AppPath> = {
       home: appRoutes.dashboard,
       leaderboard: appRoutes.dashboardLeaderboard,
       history: appRoutes.dashboardHistory,
       settings: appRoutes.dashboardSettings,
       purchased: appRoutes.dashboardPurchased,
     }
-    window.history.pushState(null, "", paths[view])
-    window.dispatchEvent(new PopStateEvent("popstate"))
+    navigateApp(paths[view])
     window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
@@ -302,7 +298,7 @@ function DesktopSidebar({
 }) {
   const t = copy[lang]
   const { profile, signOut } = useAuth()
-  const handleSignOut = () => { void signOut().then(() => navigate(appRoutes.home, { replace: true })) }
+  const handleSignOut = () => { void signOut().then(() => navigateApp(appRoutes.home, { replace: true })) }
   return (
     <aside className="fixed inset-y-0 left-0 z-40 hidden w-[200px] border-r border-slate-200 bg-white px-4 py-5 dark:border-white/10 dark:bg-slate-900 lg:flex lg:flex-col">
       <a href="/" className="flex h-12 items-center px-3" aria-label="QuizPKA">
@@ -708,19 +704,25 @@ function HistoryMetric({ label, value }: { label: string; value: string }) {
 
 function SettingsView({ lang, theme, onToggleLang, onToggleTheme, onOpenContact }: DashboardPageProps) {
   const t = copy[lang]
-  const { profile, updateProfile, signOut } = useAuth()
+  const { profile, updateProfile, signOut, user } = useAuth()
   const [displayName, setDisplayName] = useState(profile?.display_name ?? "")
   const [saving, setSaving] = useState(false)
   const [saved, setSaved] = useState(false)
   const [saveError, setSaveError] = useState(false)
-  const [soundEnabled, setSoundEnabled] = useState(() => readStorage("quizpka-sound-enabled") !== "false")
-  const [leaderboardVisible, setLeaderboardVisible] = useState(() => readStorage("quizpka-leaderboard-visible") !== "false")
-  const [emailUpdates, setEmailUpdates] = useState(() => readStorage("quizpka-email-updates") === "true")
+  const [soundEnabled, setSoundEnabled] = useState(() => readStorage(`quizpka:${user?.id ?? "anonymous"}:sound-enabled`) !== "false")
+  const [leaderboardVisible, setLeaderboardVisible] = useState(() => readStorage(`quizpka:${user?.id ?? "anonymous"}:leaderboard-visible`) !== "false")
+  const [emailUpdates, setEmailUpdates] = useState(() => readStorage(`quizpka:${user?.id ?? "anonymous"}:email-updates`) === "true")
 
   useEffect(() => { setDisplayName(profile?.display_name ?? "") }, [profile?.display_name])
-  useEffect(() => { writeStorage("quizpka-sound-enabled", String(soundEnabled)) }, [soundEnabled])
-  useEffect(() => { writeStorage("quizpka-leaderboard-visible", String(leaderboardVisible)) }, [leaderboardVisible])
-  useEffect(() => { writeStorage("quizpka-email-updates", String(emailUpdates)) }, [emailUpdates])
+  useEffect(() => {
+    writeStorage(`quizpka:${user?.id ?? "anonymous"}:sound-enabled`, String(soundEnabled))
+  }, [soundEnabled, user?.id])
+  useEffect(() => {
+    writeStorage(`quizpka:${user?.id ?? "anonymous"}:leaderboard-visible`, String(leaderboardVisible))
+  }, [leaderboardVisible, user?.id])
+  useEffect(() => {
+    writeStorage(`quizpka:${user?.id ?? "anonymous"}:email-updates`, String(emailUpdates))
+  }, [emailUpdates, user?.id])
 
   const saveProfile = async () => {
     setSaving(true); setSaved(false); setSaveError(false)
@@ -762,7 +764,7 @@ function SettingsView({ lang, theme, onToggleLang, onToggleTheme, onOpenContact 
         </div>
         <div className="rounded-[20px] border-2 border-red-100 bg-red-50/60 p-5 dark:border-red-500/20 dark:bg-red-500/5 md:col-span-2 lg:hidden">
           <h3 className="text-lg font-black text-red-700 dark:text-red-300">{lang === "vi" ? "Tài khoản" : "Account"}</h3>
-          <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm lp-btn--block mt-4" onClick={() => void signOut().then(() => navigate(appRoutes.home, { replace: true }))}><LogOut className="h-4 w-4" />{lang === "vi" ? "Đăng xuất" : "Sign out"}</button>
+          <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm lp-btn--block mt-4" onClick={() => void signOut().then(() => navigateApp(appRoutes.home, { replace: true }))}><LogOut className="h-4 w-4" />{lang === "vi" ? "Đăng xuất" : "Sign out"}</button>
         </div>
       </div>
     </section>

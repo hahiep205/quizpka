@@ -1,0 +1,84 @@
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
+
+const cors = (req: Request) => ({
+  "Access-Control-Allow-Origin": req.headers.get("origin") ?? Deno.env.get("SITE_URL") ?? "",
+  "Access-Control-Allow-Headers": "authorization, content-type",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
+  "Vary": "Origin",
+})
+
+const json = (body: unknown, status: number, req: Request) => Response.json(body, { status, headers: cors(req) })
+const examFiles: Record<string, string> = {
+  "data-science-ai-midterm-1": "dsai101/khoa_hoc_du_lieu_va_tri_tue_nhan_tao_midle.json",
+  "data-science-ai-final-1": "dsai101/khoa_hoc_du_lieu_va_tri_tue_nhan_tao_final.json",
+}
+
+Deno.serve(async (req) => {
+  if (req.method === "OPTIONS") return new Response("ok", { headers: cors(req) })
+  if (req.method !== "POST") return json({ error: "Method not allowed" }, 405, req)
+
+  try {
+    const authorization = req.headers.get("Authorization")
+    if (!authorization) return json({ error: "Authentication required" }, 401, req)
+    const projectUrl = Deno.env.get("SUPABASE_URL")!
+    const userClient = createClient(projectUrl, Deno.env.get("SUPABASE_ANON_KEY")!, {
+      global: { headers: { Authorization: authorization } },
+    })
+    const { data: { user }, error: userError } = await userClient.auth.getUser()
+    if (userError || !user) return json({ error: "Authentication required" }, 401, req)
+
+    const input = await req.json().catch(() => null) as { sessionId?: unknown } | null
+    const sessionId = typeof input?.sessionId === "string" ? input.sessionId : ""
+    if (!sessionId) return json({ error: "Invalid session" }, 400, req)
+
+    const admin = createClient(projectUrl, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!)
+    const { data: profile, error: profileError } = await admin.from("profiles").select("status").eq("id", user.id).single()
+    if (profileError) return json({ error: "Unable to verify account" }, 500, req)
+    if (profile.status !== "active") return json({ error: "Account is blocked" }, 403, req)
+
+    const { data: session, error: sessionError } = await admin
+      .from("quiz_sessions")
+      .select("id,exam_id,subject_id,status,started_at,expires_at,result")
+      .eq("id", sessionId)
+      .eq("user_id", user.id)
+      .single()
+    if (sessionError || !session) return json({ error: "Quiz session not found" }, 404, req)
+
+    let status = session.status
+    if (status === "active" && Date.parse(session.expires_at) <= Date.now()) {
+      const { error: expireError } = await admin
+        .from("quiz_sessions")
+        .update({ status: "expired", last_seen_at: new Date().toISOString() })
+        .eq("id", session.id)
+        .eq("status", "active")
+      if (expireError) throw expireError
+      status = "expired"
+    } else {
+      const { error: seenError } = await admin.from("quiz_sessions").update({ last_seen_at: new Date().toISOString() }).eq("id", session.id)
+      if (seenError) throw seenError
+    }
+
+    let questions = null
+    if (status === "active") {
+      const objectPath = examFiles[session.exam_id]
+      if (!objectPath) return json({ error: "Unknown exam" }, 400, req)
+      const { data: file, error: downloadError } = await admin.storage.from("paid-question-banks").download(objectPath)
+      if (downloadError || !file) return json({ error: "Question bank unavailable" }, 503, req)
+      const bank = await file.json() as { questions?: Array<{ id: string | number; question: string; options?: Record<string, string>; explainAnswer?: string }> }
+      questions = (bank.questions ?? []).map((question) => ({ id: String(question.id), prompt: question.question, options: Object.keys(question.options ?? {}).sort().map((key) => question.options?.[key] ?? ""), explanation: question.explainAnswer }))
+    }
+    return json({
+      sessionId: session.id,
+      examId: session.exam_id,
+      subjectId: session.subject_id,
+      status,
+      startedAt: session.started_at,
+      expiresAt: session.expires_at,
+      result: session.result,
+      questions,
+    }, 200, req)
+  } catch (error) {
+    console.error("Get quiz session failed", error)
+    return json({ error: "Unable to load quiz session" }, 500, req)
+  }
+})

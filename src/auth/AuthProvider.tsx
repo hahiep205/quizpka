@@ -12,10 +12,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [profile, setProfile] = useState<AuthProfile | null>(null)
 
   const loadProfile = useCallback(async (currentUser: User | null) => {
-    if (!currentUser) { setProfile(null); return }
+    if (!currentUser) { setProfile(null); return null }
     const { data, error } = await supabase.from("profiles").select("id,email,display_name,avatar_url,role,status").eq("id", currentUser.id).single()
     if (error) throw error
-    setProfile(data as AuthProfile)
+    const nextProfile = data as AuthProfile
+    setProfile(nextProfile)
+    return nextProfile
   }, [])
 
   const applySession = useCallback(async (session: Session | null) => {
@@ -23,15 +25,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setUser(currentUser)
     if (!currentUser) { setProfile(null); setStatus("anonymous"); return }
 
-    // A valid auth session is enough to leave the OAuth callback screen.
-    // Profile data can load independently and must not block navigation.
     setProfile(createFallbackProfile(currentUser))
-    setStatus("authenticated")
-    logActivityEvent(currentUser.id, "login", { provider: currentUser.app_metadata?.provider ?? "google" }, { oncePerSessionKey: `login:${currentUser.id}` })
     try {
-      await loadProfile(currentUser)
+      const nextProfile = await loadProfile(currentUser)
+      setStatus(nextProfile?.status === "blocked" ? "blocked" : "authenticated")
+      if (nextProfile?.status !== "blocked") {
+        logActivityEvent(currentUser.id, "login", { provider: currentUser.app_metadata?.provider ?? "google" }, { oncePerSessionKey: `login:${currentUser.id}` })
+      }
     } catch {
-      // Keep the metadata fallback when the profile row is temporarily unavailable.
+      // Fail closed when authorization data cannot be verified.
+      setProfile(null)
+      setStatus("blocked")
     }
   }, [loadProfile])
 
@@ -59,7 +63,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const updateProfile = useCallback(async (updates: { display_name?: string }) => {
     if (!user) return
-    const { data, error } = await supabase.from("profiles").update(updates).eq("id", user.id).select("id,email,display_name,avatar_url,role,status").single()
+    const { data, error } = await supabase.rpc("update_my_profile", {
+      p_display_name: updates.display_name ?? null,
+    })
     if (error) throw error
     setProfile(data as AuthProfile)
     logActivityEvent(user.id, "update_profile", { fields: Object.keys(updates) })

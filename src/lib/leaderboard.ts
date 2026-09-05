@@ -158,45 +158,6 @@ export function buildLocalLeaderboardEntry(input: {
   }
 }
 
-export async function upsertUserLearningStats(input: {
-  userId: string
-  name: string
-  avatarUrl: string | null
-  visible: boolean
-  history: PracticeHistoryItem[]
-}): Promise<void> {
-  const all = computeLearningStats(input.history, "all")
-  const week = computeLearningStats(input.history, "week")
-  const month = computeLearningStats(input.history, "month")
-  const payload = {
-    user_id: input.userId,
-    display_name: input.name,
-    avatar_url: input.avatarUrl,
-    visible: input.visible,
-    subjects_reviewed: all.subjectsReviewed,
-    attempts: all.attempts,
-    average_accuracy: all.averageAccuracy,
-    total_duration_seconds: all.totalDurationSeconds,
-    points: computeLearningPoints(all),
-    week_subjects_reviewed: week.subjectsReviewed,
-    week_attempts: week.attempts,
-    week_average_accuracy: week.averageAccuracy,
-    week_total_duration_seconds: week.totalDurationSeconds,
-    week_points: computeLearningPoints(week),
-    month_subjects_reviewed: month.subjectsReviewed,
-    month_attempts: month.attempts,
-    month_average_accuracy: month.averageAccuracy,
-    month_total_duration_seconds: month.totalDurationSeconds,
-    month_points: computeLearningPoints(month),
-    updated_at: new Date().toISOString(),
-  }
-  try {
-    await supabase.from("user_learning_stats").upsert(payload, { onConflict: "user_id" })
-  } catch {
-    // Ranking sync is best-effort until the stats table is available.
-  }
-}
-
 const LEADERBOARD_SELECT =
   "user_id, display_name, avatar_url, visible, subjects_reviewed, attempts, average_accuracy, total_duration_seconds, points, week_subjects_reviewed, week_attempts, week_average_accuracy, week_total_duration_seconds, week_points, month_subjects_reviewed, month_attempts, month_average_accuracy, month_total_duration_seconds, month_points"
 const LEADERBOARD_SELECT_LEGACY =

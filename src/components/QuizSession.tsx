@@ -46,7 +46,7 @@ import { Dialog } from "@/components/ui/dialog"
 import { useAuth } from "@/auth/AuthProvider"
 import { appRoutes } from "@/app/navigation"
 import { savePracticeHistory } from "@/lib/practiceSession"
-import { endAttemptSession, logActivityEvent, mirrorPracticeAttempt } from "@/features/activity/lib/activityLog"
+import { endAttemptSession, logActivityEvent } from "@/features/activity/lib/activityLog"
 import { incrementSubjectAttempt } from "@/lib/subjectAttemptStats"
 import { playAnswerFeedback } from "@/features/quiz/lib/answerFeedbackSound"
 
@@ -207,8 +207,6 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
       })),
     }
     savePracticeHistory(historyItem, user.id)
-    // P2: mirror lên server để /admin xem được + ghi timeline luồng sau active.
-    mirrorPracticeAttempt(historyItem, user.id)
     logActivityEvent(user.id, activeRetryNumber ? "retry_wrong" : "submit_attempt", {
       historyId,
       examId: exam.id,

@@ -512,10 +512,6 @@ export const subjects: Subject[] = [
         id: "data-science-ai-bank-1", type: "final", year: 2026, questionCount: 298, durationMinutes: 60,
         title: { en: "Data Science and Artificial Intelligence", vi: "Khoa học dữ liệu và Trí tuệ nhân tạo" },
         description: { en: "2 sets: Midterm (95) & Final (203). Choose one after clicking Try now.", vi: "2 bộ đề: Giữa kỳ (95 câu) & Cuối kỳ (203 câu). Chọn 1 đề sau khi ấn Thử ngay." },
-        questionBanks: [
-          "/data/khoa-hoc-du-lieu-va-tri-tue-nhan-tao/khoa_hoc_du_lieu_va_tri_tue_nhan_tao_midle.json",
-          "/data/khoa-hoc-du-lieu-va-tri-tue-nhan-tao/khoa_hoc_du_lieu_va_tri_tue_nhan_tao_final.json",
-        ],
       },
     ],
   },
@@ -610,7 +606,6 @@ export function getExamTitle(
 ) {
   return exam.title[lang]
 }
-
 
 
 

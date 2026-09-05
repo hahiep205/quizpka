@@ -54,7 +54,6 @@ export function useExamLaunch(lang: Lang) {
       id: opt.id,
       title: opt.title,
       description: opt.description,
-      questionBanks: opt.questionBanks,
       questionCount: opt.questionCount,
       durationMinutes: opt.durationMinutes,
     }

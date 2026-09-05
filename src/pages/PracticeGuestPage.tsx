@@ -10,6 +10,7 @@ import { getSubjectById, examCatalog } from "@/data/subjects"
 import { tadvExamOptions } from "@/data/tadvExams"
 import { dsaiExamOptions } from "@/data/dsaiExams"
 import { getToeicScopeOption } from "@/data/toeic"
+import { DsaiServerQuizSession } from "@/features/quiz/ui/DsaiServerQuizSession"
 
 type Lang = "en" | "vi"
 
@@ -95,7 +96,6 @@ export function PracticeGuestPage({
         durationMinutes: dsaiOpt.durationMinutes,
         title: dsaiOpt.title,
         description: dsaiOpt.description,
-        questionBanks: dsaiOpt.questionBanks,
         subjectId: subj.id,
         subjectCode: subj.code,
         subjectName: subj.name,
@@ -137,6 +137,20 @@ export function PracticeGuestPage({
       </div>
     )
   }
+
+  if (subject.id === "khoa-hoc-du-lieu-va-tri-tue-nhan-tao") return (
+    <div className={themeClassName}>
+      <DsaiServerQuizSession
+        lang={payload.lang ?? lang}
+        subject={subject}
+        exam={exam}
+        onExit={() => {
+          clearPracticeSession()
+          goHomeFromPractice()
+        }}
+      />
+    </div>
+  )
 
   return (
     <div className={themeClassName}>

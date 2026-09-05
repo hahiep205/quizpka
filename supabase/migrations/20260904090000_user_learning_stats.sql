@@ -1,6 +1,6 @@
--- Legacy compatibility script. The canonical, versioned definition is now
--- supabase/migrations/20260904090000_user_learning_stats.sql.
--- Keep this script idempotent for existing production setup instructions.
+-- Canonical schema for the shared learning statistics table.
+-- The table already exists in production; IF NOT EXISTS keeps this migration safe there.
+
 create table if not exists public.user_learning_stats (
   user_id uuid primary key references auth.users(id) on delete cascade,
   display_name text,
