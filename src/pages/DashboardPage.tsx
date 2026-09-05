@@ -216,7 +216,7 @@ export function DashboardPage({
           ) : null}
           {activeView === "leaderboard" ? <LeaderboardView lang={lang} /> : null}
           {activeView === "history" ? <EmptyView lang={lang} view="history" /> : null}
-          {activeView === "purchased" ? <section className="rounded-2xl border-2 border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-slate-900"><h2 className="text-2xl font-black">{lang === "vi" ? "Đã mua" : "Purchased"}</h2><p className="mt-2 text-sm text-slate-500">{lang === "vi" ? "Các bộ tài liệu bạn đã mua sẽ hiển thị tại đây." : "Your purchased materials will appear here."}</p></section> : null}
+          {activeView === "purchased" ? <PurchasedView lang={lang} onStartExam={(exam) => void handlePaidTryNow(exam)} /> : null}
           {activeView === "settings" ? (
             <SettingsView
               lang={lang}
@@ -285,6 +285,60 @@ function getDashboardView(path: string): DashboardView {
   if (path === appRoutes.dashboardSettings) return "settings"
   if (path === appRoutes.dashboardPurchased) return "purchased"
   return "home"
+}
+
+function PurchasedView({ lang, onStartExam }: { lang: Lang; onStartExam: (exam: ExamCatalogItem) => void }) {
+  const { user } = useAuth()
+  const [loading, setLoading] = useState(true)
+  const [owned, setOwned] = useState(false)
+  const [error, setError] = useState(false)
+  const purchasedExam = examCatalog.find((exam) => exam.subjectCode === "DSAI101")
+
+  useEffect(() => {
+    let mounted = true
+    if (!user?.id) {
+      setLoading(false)
+      return
+    }
+    void hasDsaiPurchase(user.id)
+      .then((value) => {
+        if (mounted) setOwned(value)
+      })
+      .catch(() => {
+        if (mounted) setError(true)
+      })
+      .finally(() => {
+        if (mounted) setLoading(false)
+      })
+    return () => {
+      mounted = false
+    }
+  }, [user?.id])
+
+  return (
+    <section className="space-y-5">
+      <div>
+        <h2 className="text-2xl font-black text-[#100F3E] dark:text-white">{lang === "vi" ? "Đã mua" : "Purchased"}</h2>
+        <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">{lang === "vi" ? "Các bộ tài liệu bạn đã mua." : "Materials you have purchased."}</p>
+      </div>
+      {loading ? <Card variant="dashed" className="py-12 text-center"><p className="text-sm font-bold text-slate-500">{lang === "vi" ? "Đang kiểm tra giao dịch…" : "Checking purchases…"}</p></Card> : null}
+      {!loading && error ? <Card variant="dashed" className="py-12 text-center"><p className="text-sm font-bold text-red-500">{lang === "vi" ? "Không thể tải danh sách tài liệu đã mua." : "Could not load purchased materials."}</p></Card> : null}
+      {!loading && !error && owned && purchasedExam ? (
+        <article className="rounded-2xl border-2 border-emerald-200 bg-white p-5 shadow-[0_4px_0_rgba(16,185,129,0.12)] dark:border-emerald-500/20 dark:bg-slate-900 dark:shadow-none sm:p-6">
+          <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+            <div className="min-w-0">
+              <span className="inline-flex rounded-full bg-emerald-50 px-3 py-1 text-xs font-black text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300">{lang === "vi" ? "Đã thanh toán" : "Purchased"}</span>
+              <h3 className="mt-3 text-xl font-black text-[#100F3E] dark:text-white">{purchasedExam.subjectName[lang]}</h3>
+              <p className="mt-1 text-sm font-semibold text-slate-500 dark:text-slate-400">{purchasedExam.description[lang]}</p>
+              <p className="mt-3 text-sm font-bold text-slate-600 dark:text-slate-300">{purchasedExam.questionCount} {lang === "vi" ? "câu hỏi" : "questions"} · {purchasedExam.durationMinutes} {lang === "vi" ? "phút" : "minutes"}</p>
+            </div>
+            <button type="button" className="lp-btn lp-btn--primary lp-btn--sm shrink-0" onClick={() => onStartExam(purchasedExam)}>{lang === "vi" ? "Ôn tập ngay" : "Practice now"}<ArrowRight className="h-4 w-4" /></button>
+          </div>
+        </article>
+      ) : null}
+      {!loading && !error && (!owned || !purchasedExam) ? <Card variant="dashed" className="py-12 text-center"><ShoppingBag className="mx-auto h-9 w-9 text-slate-300" /><p className="mt-3 text-sm font-bold text-slate-500">{lang === "vi" ? "Bạn chưa mua tài liệu nào." : "You have not purchased any materials yet."}</p></Card> : null}
+    </section>
+  )
 }
 
 function DesktopSidebar({

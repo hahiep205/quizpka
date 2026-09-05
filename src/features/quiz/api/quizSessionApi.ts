@@ -45,7 +45,22 @@ function newIdempotencyKey() {
 
 async function invoke<T>(functionName: string, body: Record<string, unknown>): Promise<T> {
   const { data, error } = await supabase.functions.invoke(functionName, { body })
-  if (error) throw new QuizSessionApiError(error.message)
+  if (error) {
+    let message = error.message
+    const context = "context" in error && error.context instanceof Response ? error.context : undefined
+    if (context instanceof Response) {
+      try {
+        const payload = await context.clone().json() as { error?: unknown; message?: unknown }
+        if (typeof payload.error === "string") message = payload.error
+        else if (typeof payload.message === "string") message = payload.message
+      } catch {
+        // Keep the SDK error when the function did not return JSON.
+      }
+      throw new QuizSessionApiError(message, context.status)
+    }
+    if (error.name === "FunctionsRelayError") message = `${message} (Edge Function unavailable)`
+    throw new QuizSessionApiError(message)
+  }
   return data as T
 }
 

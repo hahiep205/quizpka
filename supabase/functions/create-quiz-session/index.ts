@@ -6,7 +6,7 @@ const examFiles: Record<string, string> = {
 }
 
 function headers(req: Request) {
-  return { "Access-Control-Allow-Origin": req.headers.get("origin") ?? Deno.env.get("SITE_URL") ?? "", "Access-Control-Allow-Headers": "authorization, content-type", "Access-Control-Allow-Methods": "POST, OPTIONS", "Vary": "Origin" }
+  return { "Access-Control-Allow-Origin": req.headers.get("origin") ?? Deno.env.get("SITE_URL") ?? "", "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type", "Access-Control-Allow-Methods": "POST, OPTIONS", "Vary": "Origin" }
 }
 function json(body: unknown, status: number, req: Request) { return Response.json(body, { status, headers: headers(req) }) }
 

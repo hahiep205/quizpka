@@ -21,10 +21,10 @@ Deno.serve(async (req) => {
 
   try {
     const payload = await req.json() as Record<string, unknown>
-    const order = payload.order as Record<string, unknown> | undefined
+    const payloadOrder = payload.order as Record<string, unknown> | undefined
     const transaction = payload.transaction as Record<string, unknown> | undefined
-    const orderId = text(order?.order_invoice_number)
-    const status = text(order?.order_status ?? transaction?.transaction_status).toUpperCase()
+    const orderId = text(payloadOrder?.order_invoice_number)
+    const status = text(payloadOrder?.order_status ?? transaction?.transaction_status).toUpperCase()
     if (!orderId || !/^DSAI-[A-Z0-9]+$/.test(orderId)) return new Response("Invalid order", { status: 400 })
     if (payload.notification_type !== "ORDER_PAID" || !["CAPTURED", "APPROVED", "PAID"].includes(status)) return Response.json({ success: true }, { headers: cors })
 
@@ -37,9 +37,9 @@ Deno.serve(async (req) => {
     if (orderError) throw orderError
     if (!order) return new Response("Order not found", { status: 404 })
 
-    const receivedAmount = amount(transaction?.transaction_amount ?? order?.order_amount)
+    const receivedAmount = amount(transaction?.transaction_amount ?? payloadOrder?.order_amount)
     if (receivedAmount === null || receivedAmount !== Number(order.amount_vnd)) return new Response("Amount mismatch", { status: 422 })
-    const receivedCurrency = text(transaction?.transaction_currency ?? order?.order_currency).toUpperCase()
+    const receivedCurrency = text(transaction?.transaction_currency ?? payloadOrder?.order_currency).toUpperCase()
     if (receivedCurrency && receivedCurrency !== order.currency) return new Response("Currency mismatch", { status: 422 })
     if (order.status === "canceled" || order.status === "refunded" || order.status === "failed") return new Response("Order state conflict", { status: 409 })
 
