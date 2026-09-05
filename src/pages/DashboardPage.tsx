@@ -45,6 +45,7 @@ import { CatalogExamCard } from "@/components/CatalogExamCard"
 import { DashboardStatCard, dashboardStatGridClass } from "@/components/DashboardStatCard"
 import { LeaderboardView } from "@/components/LeaderboardView"
 import { CommunityChatModal } from "@/components/CommunityChatModal"
+import { NotificationCenter } from "@/components/NotificationCenter"
 import { formatTime } from "@/features/quiz/lib/quizHelpers"
 import type { ContactModalType } from "@/components/ContactModal"
 
@@ -325,7 +326,19 @@ function DesktopSidebar({
 
 function DashboardTopbar({ lang, view }: Pick<DashboardPageProps, "lang"> & { view: DashboardView }) {
   const t = copy[lang]
-  const { profile } = useAuth()
+  const { profile, status } = useAuth()
+  useEffect(() => {
+    if (status !== "authenticated") return
+    const key = "quizpka-notifications"
+    const current = JSON.parse(localStorage.getItem(key) || "[]") as Array<{ id?: string }>
+    const existing = (Array.isArray(current) ? current : []).filter((item) => item.id !== "welcome")
+    const welcome = { id: "welcome-v2", title: "Chào mừng đến với Quizpka!", message: "Chào mừng bạn đến với Quizpka - Trang làm quiz ôn thi dành riêng cho sinh viên Phenikaa!", createdAt: new Date().toISOString(), read: false }
+    const withoutWelcome = existing.filter((item) => item.id !== "welcome-v2")
+    if (existing.length !== withoutWelcome.length || !current.some((item) => item.id === "welcome-v2")) {
+      localStorage.setItem(key, JSON.stringify([...withoutWelcome, welcome]))
+      window.dispatchEvent(new Event("quizpka-notification-created"))
+    }
+  }, [status])
   const [chatOpen, setChatOpen] = useState(false)
   const chatLabel = lang === "vi" ? "Chat cộng đồng" : "Community Chat"
   const pageMeta =
@@ -363,9 +376,12 @@ function DashboardTopbar({ lang, view }: Pick<DashboardPageProps, "lang"> & { vi
           </div>
 
           <div className="ml-auto">
+            <div className="flex items-center gap-2">
             <TopbarButton label={chatLabel} onClick={() => setChatOpen(true)}>
               <MessageCircle className="h-5 w-5" strokeWidth={2} />
             </TopbarButton>
+            <NotificationCenter lang={lang} />
+            </div>
           </div>
         </div>
       </header>

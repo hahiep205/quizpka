@@ -87,7 +87,7 @@ describe("learning stats", () => {
     expect(normalizeTimeEfficiency(stats)).toBe(100)
     expect(normalizeSubjectsReviewed(stats)).toBe(0)
     expect(normalizeAttempts(stats)).toBe(20)
-    expect(computeLearningPoints(stats)).toBe(Math.round((80 * 0.5 + 100 * 0.25 + 0 * 0.15 + 20 * 0.1) * 10))
+    expect(computeLearningPoints(stats)).toBe(Math.round((80 * 0.5 + 100 * 0.25 + 20 * 0.1) * 10))
   })
 
   it("does not reward rushing or empty practice", () => {
