@@ -351,8 +351,8 @@ function DashboardTopbar({ lang, view }: Pick<DashboardPageProps, "lang"> & { vi
               </h2>
             </div>
           ) : (
-            <a href="/" className="flex items-center lg:hidden" aria-label="QuizPKA">
-              <img src={brandLogo} alt="QuizPKA" className="h-8 w-auto" />
+            <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label="Quiz for PKAers">
+              <span className="name-logo">Quiz for PKAers</span>
             </a>
           )}
 
@@ -396,6 +396,24 @@ function TopbarButton({
   )
 }
 
+function LearningStatsGrid({ lang, className }: { lang: Lang; className?: string }) {
+  const t = copy[lang]
+  const { user } = useAuth()
+  const userId = user?.id
+  const userCreatedAt = user?.created_at
+  const history = useMemo(() => userId ? readPracticeHistory(userId, userCreatedAt) : [], [userCreatedAt, userId])
+  const stats = useMemo(() => computeLearningStats(history, "all"), [history])
+
+  return (
+    <section className={cn(dashboardStatGridClass, className)} aria-label="Statistics">
+      <DashboardStatCard icon={Flame} value={String(stats.subjectsReviewed)} label={t.streak} tone="orange" />
+      <DashboardStatCard icon={CheckCircle2} value={String(stats.attempts)} label={t.completed} tone="green" />
+      <DashboardStatCard icon={BarChart3} value={`${stats.averageAccuracy}%`} label={t.accuracy} tone="blue" />
+      <DashboardStatCard icon={Clock3} value={formatLearningDuration(stats.totalDurationSeconds)} label={t.studyTime} tone="violet" />
+    </section>
+  )
+}
+
 function HomeDashboard({
   lang,
   query,
@@ -414,25 +432,15 @@ function HomeDashboard({
   onStartExam: (exam: ExamCatalogItem) => void
 }) {
   const t = copy[lang]
-  const { user } = useAuth()
-  const userId = user?.id
-  const userCreatedAt = user?.created_at
-  const history = useMemo(() => userId ? readPracticeHistory(userId, userCreatedAt) : [], [userCreatedAt, userId])
-  const dashboardStats = useMemo(() => computeLearningStats(history, "all"), [history])
   const attemptCountsBySubject = useSubjectAttemptCounts()
 
   return (
     <div className="space-y-6 dashboard-reveal sm:space-y-8">
-      <section className={dashboardStatGridClass} aria-label="Statistics">
-        <DashboardStatCard icon={Flame} value={String(dashboardStats.subjectsReviewed)} label={t.streak} tone="orange" />
-        <DashboardStatCard icon={CheckCircle2} value={String(dashboardStats.attempts)} label={t.completed} tone="green" />
-        <DashboardStatCard icon={BarChart3} value={`${dashboardStats.averageAccuracy}%`} label={t.accuracy} tone="blue" />
-        <DashboardStatCard icon={Clock3} value={formatLearningDuration(dashboardStats.totalDurationSeconds)} label={t.studyTime} tone="violet" />
-      </section>
+      <LearningStatsGrid lang={lang} className="hidden sm:grid" />
 
       <section id="dashboard-documents" className="scroll-mt-24">
         <div className="mb-4 flex flex-col gap-3 sm:mb-5 sm:gap-4 xl:flex-row xl:items-end xl:justify-between">
-          <div>
+          <div className="hidden sm:block">
             <h2 className="text-xl font-black tracking-[-0.025em] text-[#100F3E] dark:text-white sm:text-[26px] lg:text-[28px]">
               {t.documentTitle}
             </h2>
@@ -467,7 +475,7 @@ function HomeDashboard({
         </div>
 
         {filteredExams.length ? (
-          <div className="grid gap-3 sm:gap-4 md:grid-cols-2 2xl:grid-cols-3">
+          <div className="grid grid-cols-2 gap-2.5 sm:gap-4 md:grid-cols-2 2xl:grid-cols-3">
             {filteredExams.map((exam) => (
               <CatalogExamCard
                 key={exam.id}
@@ -477,10 +485,11 @@ function HomeDashboard({
                 categoryLabel={exam.category.en === "General" ? t.general : t.major}
                 questionsLabel={t.questions}
                 minutesLabel={t.minutes}
+                hideDurationOnMobile
                 footer={
-                  <button type="button" className="lp-btn lp-btn--primary lp-btn--sm lp-btn--block mt-4 sm:mt-5" onClick={() => onStartExam(exam)}>
+                  <button type="button" className="lp-btn lp-btn--primary lp-btn--sm lp-btn--block mt-3 px-2 text-[12px] sm:mt-5 sm:px-4 sm:text-sm" onClick={() => onStartExam(exam)}>
                     {t.start}
-                    <ArrowRight className="h-4 w-4" />
+                    <ArrowRight className="hidden h-4 w-4 sm:inline" />
                   </button>
                 }
               />
@@ -532,6 +541,7 @@ function EmptyView({ lang, view }: { lang: Lang; view: "history" }) {
   return (
     <section className="dashboard-reveal mx-auto max-w-4xl">
       <PageHeading title={t.historyTitle} description={t.historyDesc} icon={History} />
+      <LearningStatsGrid lang={lang} className="mb-4 sm:hidden" />
       {history.length ? (
         <div className="space-y-3">
           {history.map((item) => (

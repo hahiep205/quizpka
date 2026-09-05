@@ -12,6 +12,7 @@ export function ExamMetaRow({
   minutesLabel,
   lang,
   className,
+  hideDurationOnMobile = false,
 }: {
   questionCount: number
   durationMinutes: number
@@ -20,6 +21,7 @@ export function ExamMetaRow({
   minutesLabel: string
   lang: Lang
   className?: string
+  hideDurationOnMobile?: boolean
 }) {
   return (
     <div className={cn("flex flex-wrap gap-x-4 gap-y-2", className)}>
@@ -30,7 +32,7 @@ export function ExamMetaRow({
         </span>
       ) : null}
       {durationMinutes > 0 ? (
-        <span className="inline-flex items-center gap-1.5">
+        <span className={cn("inline-flex items-center gap-1.5", hideDurationOnMobile && "hidden sm:inline-flex")}>
           <Clock3 className="h-3.5 w-3.5 shrink-0" strokeWidth={1.75} />
           {durationMinutes} {minutesLabel}
         </span>
