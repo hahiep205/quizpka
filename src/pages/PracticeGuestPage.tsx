@@ -10,7 +10,6 @@ import { getSubjectById, examCatalog } from "@/data/subjects"
 import { tadvExamOptions } from "@/data/tadvExams"
 import { dsaiExamOptions } from "@/data/dsaiExams"
 import { getToeicScopeOption } from "@/data/toeic"
-import { DsaiServerQuizSession } from "@/features/quiz/ui/DsaiServerQuizSession"
 
 type Lang = "en" | "vi"
 
@@ -37,9 +36,6 @@ export function PracticeGuestPage({
   themeClassName?: string
 }) {
   const t = copy[lang]
-  const resultSessionId = typeof window !== "undefined" && window.location.pathname === "/result"
-    ? new URLSearchParams(window.location.search).get("sessionId") ?? undefined
-    : undefined
   const [payload, setPayload] = useState<PracticeSessionPayload | null | undefined>(
     undefined
   )
@@ -140,22 +136,6 @@ export function PracticeGuestPage({
       </div>
     )
   }
-
-  if (subject.id === "khoa-hoc-du-lieu-va-tri-tue-nhan-tao") return (
-    <div className={themeClassName}>
-      <DsaiServerQuizSession
-        lang={payload.lang ?? lang}
-        subject={subject}
-        exam={exam}
-        setup={payload.setup}
-        initialSessionId={resultSessionId}
-        onExit={() => {
-          clearPracticeSession()
-          goHomeFromPractice()
-        }}
-      />
-    </div>
-  )
 
   return (
     <div className={themeClassName}>

@@ -15,6 +15,8 @@ export const appRoutes = {
   admin: "/admin",
   adminOverview: "/admin/overview",
   adminUsers: "/admin/users",
+  adminNotifications: "/admin/notifications",
+  adminPayment: "/admin/payment",
   adminTimeline: "/admin/timeline",
   adminAttempts: "/admin/attempts",
 } as const

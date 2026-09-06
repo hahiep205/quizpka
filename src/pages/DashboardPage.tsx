@@ -50,6 +50,7 @@ import { DashboardStatCard, dashboardStatGridClass } from "@/components/Dashboar
 import { LeaderboardView } from "@/components/LeaderboardView"
 import { CommunityChatModal } from "@/components/CommunityChatModal"
 import { NotificationCenter } from "@/components/NotificationCenter"
+import { DirectNotificationPopup } from "@/components/DirectNotificationPopup"
 import { formatTime } from "@/features/quiz/lib/quizHelpers"
 import { createDsaiCheckout, hasDsaiPurchase } from "@/lib/purchases"
 import type { ContactModalType } from "@/components/ContactModal"
@@ -260,6 +261,7 @@ export function DashboardPage({
 
   return (
     <div className="min-h-svh bg-[#F6F7FB] text-[#100F3E] transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
+      <DirectNotificationPopup lang={lang} />
       <DesktopSidebar activeView={activeView} lang={lang} onNavigate={navigate} />
 
       <div className="lg:pl-[200px]">
@@ -489,19 +491,7 @@ function DesktopSidebar({
 
 function DashboardTopbar({ lang, view }: Pick<DashboardPageProps, "lang"> & { view: DashboardView }) {
   const t = copy[lang]
-  const { profile, status } = useAuth()
-  useEffect(() => {
-    if (status !== "authenticated") return
-    const key = "quizpka-notifications"
-    const current = JSON.parse(localStorage.getItem(key) || "[]") as Array<{ id?: string }>
-    const existing = (Array.isArray(current) ? current : []).filter((item) => item.id !== "welcome")
-    const welcome = { id: "welcome-v2", title: "Chào mừng đến với Quizpka!", message: "Chào mừng bạn đến với Quizpka - Trang làm quiz ôn thi dành riêng cho sinh viên Phenikaa!", createdAt: new Date().toISOString(), read: false }
-    const withoutWelcome = existing.filter((item) => item.id !== "welcome-v2")
-    if (existing.length !== withoutWelcome.length || !current.some((item) => item.id === "welcome-v2")) {
-      localStorage.setItem(key, JSON.stringify([...withoutWelcome, welcome]))
-      window.dispatchEvent(new Event("quizpka-notification-created"))
-    }
-  }, [status])
+  const { profile } = useAuth()
   const [chatOpen, setChatOpen] = useState(false)
   const chatLabel = lang === "vi" ? "Chat cộng đồng" : "Community Chat"
   const pageMeta =

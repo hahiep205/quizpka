@@ -15,12 +15,6 @@ type PaymentModalProps = {
   onPaid: () => void
 }
 
-const BANK_ACCOUNT = "0001230986723"
-
-function getField(fields: Record<string, string | number>, name: string) {
-  return String(fields[name] ?? "")
-}
-
 export function PaymentModal({ open, lang, checkoutUrl, fields, userId, onClose, onPaid }: PaymentModalProps) {
   const frameName = useId().replace(/:/g, "")
   const [paid, setPaid] = useState(false)
@@ -73,14 +67,10 @@ export function PaymentModal({ open, lang, checkoutUrl, fields, userId, onClose,
   if (!open || !checkoutUrl || !fields) return null
 
   const isVietnamese = lang === "vi"
-  const orderId = getField(fields, "order_invoice_number")
-  const transferContent = getField(fields, "order_id") || orderId
-  const amount = Number(getField(fields, "order_amount")) || 0
-  const qrUrl = `https://img.vietqr.io/image/MB-${BANK_ACCOUNT}-compact2.png?amount=${amount}&addInfo=${encodeURIComponent(transferContent)}&accountName=MBBank`
   const copy = isVietnamese
     ? {
-        title: "Quét QR để thanh toán",
-        hint: "Sử dụng ứng dụng ngân hàng/ví điện tử hỗ trợ VietQR để quét mã QR và thanh toán nhanh chóng.",
+        title: "Thanh toán",
+        hint: "Quét mã QR và thanh toán trực tiếp trên cổng SePay.",
         cancel: "Hủy giao dịch",
         waiting: "Đang chờ xác nhận thanh toán…",
         success: "Thanh toán thành công!",
@@ -89,8 +79,8 @@ export function PaymentModal({ open, lang, checkoutUrl, fields, userId, onClose,
         retry: "Kiểm tra lại",
       }
     : {
-        title: "Scan QR to pay",
-        hint: "Use a bank app or e-wallet that supports VietQR to scan and pay quickly.",
+        title: "Payment",
+        hint: "Scan the QR code and pay directly through SePay.",
         cancel: "Cancel transaction",
         waiting: "Waiting for payment confirmation…",
         success: "Payment successful!",
@@ -144,11 +134,8 @@ export function PaymentModal({ open, lang, checkoutUrl, fields, userId, onClose,
           <button type="button" className="lp-btn lp-btn--secondary lp-btn--icon shrink-0" onClick={onClose} aria-label={copy.cancel}><X className="h-4 w-4" /></button>
         </header>
 
-        <div className="flex min-h-0 flex-1 items-center justify-center px-3 py-3 sm:px-5 sm:py-4">
-          <iframe name={frameName} title="SePay checkout" className="pointer-events-none absolute h-px w-px opacity-0" />
-          <div className="rounded-xl border border-slate-200 bg-white p-1.5 shadow-sm dark:border-white/10">
-            <img src={qrUrl} alt={copy.title} className="h-[min(58svh,360px)] w-[min(58svh,360px)] object-contain" />
-          </div>
+        <div className="min-h-0 flex-1 bg-slate-50 p-2 sm:p-3 dark:bg-slate-950">
+          <iframe name={frameName} title="SePay checkout" className="h-full min-h-[440px] w-full rounded-xl border border-slate-200 bg-white dark:border-white/10" />
         </div>
 
         <footer className="flex shrink-0 flex-col gap-2 border-t border-slate-100 px-3 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-5 dark:border-white/10">

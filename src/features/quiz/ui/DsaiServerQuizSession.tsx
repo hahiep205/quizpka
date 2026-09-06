@@ -8,6 +8,8 @@ import { MathText } from "@/components/MathText"
 import { useQuizSession } from "@/features/quiz/hooks/useQuizSession"
 import { formatTime } from "@/features/quiz/lib/quizHelpers"
 import { savePracticeHistory } from "@/lib/practiceSession"
+import { StatCard } from "@/features/quiz/ui/StatCard"
+import { ResultStamp } from "@/features/quiz/ui/ResultStamp"
 
 type Props = {
   lang: "vi" | "en"
@@ -49,9 +51,16 @@ export function DsaiServerQuizSession({ lang, subject, exam, setup, initialSessi
         previous: "Câu trước",
         next: "Câu tiếp theo",
         submit: "Nộp bài",
-        result: "Kết quả",
-        correct: "Đúng",
-        accuracy: "Độ chính xác",
+         result: "Kết quả",
+         score: "Điểm số",
+         correct: "Đúng",
+         wrong: "Sai",
+         skipped: "Bỏ qua",
+         accuracy: "Độ chính xác",
+         duration: "Thời gian hoàn thành",
+         review: "Xem lại bài làm",
+         backDocs: "Về danh sách bộ đề",
+         mode: "Exam Mode",
         expired: "Phiên đã hết thời gian.",
         retry: "Thử lại",
         syncPending: "Kết quả đang được đồng bộ. Vui lòng thử lại sau ít phút.",
@@ -70,9 +79,16 @@ export function DsaiServerQuizSession({ lang, subject, exam, setup, initialSessi
         previous: "Previous",
         next: "Next question",
         submit: "Submit",
-        result: "Result",
-        correct: "Correct",
-        accuracy: "Accuracy",
+         result: "Result",
+         score: "Score",
+         correct: "Correct",
+         wrong: "Wrong",
+         skipped: "Skipped",
+         accuracy: "Accuracy",
+         duration: "Time spent",
+         review: "Review answers",
+         backDocs: "Back to documents",
+         mode: "Exam Mode",
         expired: "The session expired.",
         retry: "Retry",
         syncPending: "Your result is being synchronized. Please retry in a few minutes.",
@@ -185,18 +201,43 @@ export function DsaiServerQuizSession({ lang, subject, exam, setup, initialSessi
   if (session?.status === "expired" && !result) return <div className="mx-auto flex min-h-svh max-w-3xl flex-col items-center justify-center gap-4 px-6 text-center"><p role="alert">{copy.expired}</p><button type="button" className="lp-btn lp-btn--secondary" onClick={onExit}>{copy.exit}</button></div>
 
   if (result) return (
-    <main className="mx-auto flex w-full max-w-[980px] flex-1 flex-col px-4 pb-10 pt-4 sm:px-6 lg:px-8">
+    <main className="mx-auto flex w-full max-w-[860px] flex-1 flex-col px-4 pb-10 pt-4 sm:px-6 lg:px-8">
       <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
         <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={onExit}><ArrowLeft className="h-4 w-4" />{copy.exit}</button>
         <div className="rounded-full border-2 border-[#E5E5E5] bg-white px-4 py-2 text-sm font-extrabold shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900">{copy.result}: {result.score.toFixed(1)}/10 · {result.correct}/{result.total} {copy.correct} · {result.accuracy}%</div>
       </div>
       <div className="quiz-result-card rounded-[16px] border-2 border-[#E5E5E5] bg-white p-5 shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 sm:p-6">
-        <div className="space-y-5">
-          {questions.map((question, index) => {
-            const review = reviewById.get(question.id)
-            const correctOption = review?.correctAnswer === null || review?.correctAnswer === undefined ? "" : question.options[review.correctAnswer]
-            return <section key={question.id} className="border-b border-[#E5E5E5] pb-5 last:border-b-0 last:pb-0 dark:border-white/10"><p className="lp-label mb-2">{copy.question} {index + 1}</p><p className="whitespace-pre-line text-[15px] font-bold leading-6"><MathText text={question.prompt} /></p><p className={review?.isCorrect ? "mt-2 font-bold text-emerald-600" : "mt-2 font-bold text-rose-600"}>{review?.isCorrect ? "✓" : "✗"} <MathText text={correctOption ?? ""} /></p></section>
-          })}
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="min-w-0 flex-1 text-center sm:text-left">
+            <p className="lp-label text-[12px] uppercase tracking-[0.12em]">{setup.mode === "practice" ? copy.practiceMode : copy.mode}</p>
+            <h1 className="lp-section-heading mt-2 text-[28px]">{copy.result}</h1>
+            <p className="lp-modal-desc mt-2">{getExamTitle(exam, lang)}</p>
+          </div>
+          <div className="mx-auto flex min-h-[112px] w-full max-w-[220px] flex-col items-center justify-center rounded-[16px] bg-[#F6F7FB] px-5 py-4 text-center dark:bg-white/5 sm:mx-0">
+            <p className="lp-label text-[12px]">{copy.score}</p>
+            <p className="mt-1 text-[36px] font-extrabold tracking-[-0.04em] text-[#100F3E] dark:text-white">{result.score.toFixed(1)}<span className="text-[18px] font-bold text-[#777777]">/10</span></p>
+          </div>
+        </div>
+        <div className="relative mt-6">
+          <div className="grid grid-cols-2 grid-rows-3 gap-3">
+            <StatCard label={copy.correct} value={`${result.correct}`} />
+            <StatCard label={copy.wrong} value={`${result.total - result.correct}`} />
+            <StatCard label={copy.skipped} value={`${result.questions.filter((item) => item.selectedAnswer === null).length}`} />
+            <StatCard label={copy.accuracy} value={`${result.accuracy}%`} />
+            <StatCard label={copy.duration} value={formatTime(result.durationSeconds)} />
+            <StatCard label={copy.progress} value="100%" />
+          </div>
+          {(setup.mode === "exam") && <ResultStamp score={result.score} />}
+        </div>
+        <div className="mt-6 border-t border-[#E5E5E5] pt-6 dark:border-white/10">
+          <p className="lp-label mb-4">{copy.review}</p>
+          <div className="space-y-5">
+            {questions.map((question, index) => {
+              const review = reviewById.get(question.id)
+              const correctOption = review?.correctAnswer === null || review?.correctAnswer === undefined ? "" : question.options[review.correctAnswer]
+              return <section key={question.id} className="border-b border-[#E5E5E5] pb-5 last:border-b-0 last:pb-0 dark:border-white/10"><p className="lp-label mb-2">{copy.question} {index + 1}</p><p className="whitespace-pre-line text-[15px] font-bold leading-6"><MathText text={question.prompt} /></p><p className={review?.isCorrect ? "mt-2 font-bold text-emerald-600" : "mt-2 font-bold text-rose-600"}>{review?.isCorrect ? "✓" : "✗"} <MathText text={correctOption ?? ""} /></p></section>
+            })}
+          </div>
         </div>
       </div>
     </main>

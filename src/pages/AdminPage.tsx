@@ -1,12 +1,12 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ComponentType } from "react"
-import { Activity, BarChart3, CheckCircle2, Clock3, Download, History, LayoutGrid, LogOut, RefreshCw, Search, ShieldAlert, UserRound, Users, X, type LucideIcon } from "lucide-react"
+import { Activity, Banknote, BarChart3, CheckCircle2, Clock3, Download, History, LayoutGrid, LogOut, Megaphone, RefreshCw, Search, Send, ShieldAlert, UserRound, Users, WalletCards, X, type LucideIcon } from "lucide-react"
 import { MobileTabBar } from "@/components/MobileTabBar"
 import brandLogo from "@/assets/logo.png"
 import { useAuth } from "@/auth/AuthProvider"
 import { DashboardStatCard, dashboardStatGridClass } from "@/components/DashboardStatCard"
 import { Card } from "@/components/ui/card"
-import { fetchAdminUsers } from "@/features/admin/api/adminUsers"
-import { fetchActivityTimeline, fetchPracticeAttempts, fetchUserActivity } from "@/features/admin/api/adminActivity"
+import { fetchAllAdminUsers } from "@/features/admin/api/adminUsers"
+import { fetchAllActivityTimeline, fetchAllPracticeAttempts, fetchPracticeAttempts, fetchUserActivity } from "@/features/admin/api/adminActivity"
 import { ACTIVITY_LABELS, parseActivityRows, parseAttemptRows, toAttemptsCsv, toTimelineCsv, type ActivityEvent, type ActivityEventType, type PracticeAttemptRow } from "@/features/activity/lib/activityLog"
 import { bucketLast14Days, eventsByType, filterByDays, topLearners, topSubjects } from "@/features/admin/lib/adminOverview"
 import { ANOMALY_META, detectAllAnomalies, detectUserAnomalies, riskScore, type AnomalyFlag, type AnomalySeverity } from "@/features/admin/lib/anomalyDetectors"
@@ -24,6 +24,8 @@ import {
 } from "@/features/admin/lib/adminStats"
 import { appRoutes, getCurrentPath, navigate, type AppPath } from "@/app/navigation"
 import { cn } from "@/lib/utils"
+import { fetchNotificationRecipients, sendAdminNotifications, type NotificationRecipient } from "@/features/notifications/api/notifications"
+import { fetchAllAdminPayments, type AdminPayment, type PaymentStatus } from "@/features/admin/api/adminPayments"
 
 function formatAdminDuration(totalSeconds: number): string {
   const s = Math.max(0, Math.round(totalSeconds))
@@ -40,8 +42,24 @@ function formatTime(v: string | null, lang: "vi" | "en"): string {
   return new Date(v).toLocaleString(lang === "vi" ? "vi-VN" : "en-US")
 }
 
+function formatVnd(value: number): string {
+  return new Intl.NumberFormat("vi-VN", { style: "currency", currency: "VND" }).format(value)
+}
+
+function PaymentStatusBadge({ status }: { status: PaymentStatus }) {
+  const labels: Record<PaymentStatus, string> = { paid: "Đã thanh toán", pending: "Đang chờ", failed: "Thất bại", refunded: "Đã hoàn tiền", canceled: "Đã hủy" }
+  const tones: Record<PaymentStatus, string> = { paid: "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300", pending: "bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-300", failed: "bg-red-50 text-red-600 dark:bg-red-500/10 dark:text-red-300", refunded: "bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-300", canceled: "bg-slate-100 text-slate-500 dark:bg-white/10 dark:text-slate-300" }
+  return <span className={cn("whitespace-nowrap rounded-full px-2.5 py-1 text-[11px] font-black", tones[status])}>{labels[status]}</span>
+}
+
+function toPaymentCsv(payments: AdminPayment[]): string {
+  const header = ["order_id", "user_id", "product_id", "product_name", "amount_vnd", "status", "transaction_id", "paid_at", "created_at"]
+  const escape = (value: unknown) => `"${String(value ?? "").replaceAll('"', '""')}"`
+  return [header, ...payments.map((p) => [p.orderId, p.userId, p.productId, p.productName, p.amountVnd, p.status, p.transactionId, p.paidAt, p.createdAt])].map((row) => row.map(escape).join(",")).join("\n")
+}
+
 type Props = { lang: "vi" | "en" }
-type AdminSection = "overview" | "users" | "timeline" | "attempts"
+type AdminSection = "overview" | "users" | "notifications" | "payment" | "timeline" | "attempts"
 
 const tabs: Array<{ key: AdminTab; vi: string; en: string }> = [
   { key: "logined", vi: "Đã login", en: "Logined" },
@@ -74,6 +92,8 @@ const RANGE_OPTIONS: Array<{ days: number; label: string }> = [
 const SECTION_NAV: Array<{ key: AdminSection; icon: LucideIcon; vi: string; en: string }> = [
   { key: "overview", icon: LayoutGrid, vi: "Tổng quan", en: "Overview" },
   { key: "users", icon: Users, vi: "Người dùng", en: "Users" },
+  { key: "notifications", icon: Megaphone, vi: "Thông báo", en: "Notifications" },
+  { key: "payment", icon: WalletCards, vi: "Giao dịch", en: "Payments" },
   { key: "timeline", icon: Activity, vi: "Luồng HĐ", en: "Timeline" },
   { key: "attempts", icon: History, vi: "Lịch sử", en: "History" },
 ]
@@ -81,12 +101,16 @@ const SECTION_NAV: Array<{ key: AdminSection; icon: LucideIcon; vi: string; en: 
 const SECTION_PATHS: Record<AdminSection, AppPath> = {
   overview: appRoutes.adminOverview,
   users: appRoutes.adminUsers,
+  notifications: appRoutes.adminNotifications,
+  payment: appRoutes.adminPayment,
   timeline: appRoutes.adminTimeline,
   attempts: appRoutes.adminAttempts,
 }
 
 function getAdminView(path: string): AdminSection {
   if (path === appRoutes.adminUsers) return "users"
+  if (path === appRoutes.adminNotifications) return "notifications"
+  if (path === appRoutes.adminPayment) return "payment"
   if (path === appRoutes.adminTimeline) return "timeline"
   if (path === appRoutes.adminAttempts) return "attempts"
   return "overview"
@@ -95,11 +119,12 @@ function getAdminView(path: string): AdminSection {
 const USER_PAGE_SIZE = 15
 const TIMELINE_PAGE_SIZE = 20
 const ATTEMPTS_PAGE_SIZE = 20
-const FETCH_PAGE = 300
+const PAYMENT_PAGE_SIZE = 20
 
 export function AdminPage({ lang }: Props) {
   const { profile, signOut } = useAuth()
   const [users, setUsers] = useState<AdminUser[]>([])
+  const [userCounts, setUserCounts] = useState({ total: 0, active: 0, blocked: 0 })
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [tab, setTab] = useState<AdminTab>("logined")
@@ -109,6 +134,18 @@ export function AdminPage({ lang }: Props) {
   const [sortKey, setSortKey] = useState<AdminSortKey | "risk">("lastActive")
   const [sortDir, setSortDir] = useState<"asc" | "desc">("desc")
   const [selectedId, setSelectedId] = useState<string | null>(null)
+  const [notificationRecipients, setNotificationRecipients] = useState<NotificationRecipient[]>([])
+  const [notificationRecipientQuery, setNotificationRecipientQuery] = useState("")
+  const [notificationTitle, setNotificationTitle] = useState("")
+  const [notificationMessage, setNotificationMessage] = useState("")
+  const [notificationRecipientIds, setNotificationRecipientIds] = useState<string[]>([])
+  const [notificationSending, setNotificationSending] = useState(false)
+  const [notificationResult, setNotificationResult] = useState<string | null>(null)
+  const [payments, setPayments] = useState<AdminPayment[]>([])
+  const [paymentsError, setPaymentsError] = useState<string | null>(null)
+  const [paymentQuery, setPaymentQuery] = useState("")
+  const [paymentStatus, setPaymentStatus] = useState<"all" | PaymentStatus>("all")
+  const [paymentPage, setPaymentPage] = useState(0)
 
   const [events, setEvents] = useState<ActivityEvent[]>([])
   const [eventsError, setEventsError] = useState<string | null>(null)
@@ -118,12 +155,9 @@ export function AdminPage({ lang }: Props) {
   const [timelineQuery, setTimelineQuery] = useState("")
   const [rangeDays, setRangeDays] = useState(14)
   const [page, setPage] = useState(0)
-  const [serverUserPage, setServerUserPage] = useState(0)
-  const [serverUserHasMore, setServerUserHasMore] = useState(false)
   const [timelinePage, setTimelinePage] = useState(0)
   const [attemptsPage, setAttemptsPage] = useState(0)
   const [live, setLive] = useState(false)
-  const [loadingMore, setLoadingMore] = useState<"events" | "attempts" | null>(null)
   const [section, setSection] = useState<AdminSection>(() => getAdminView(getCurrentPath()))
   const [onlyAnomaly, setOnlyAnomaly] = useState(false)
   const mountedRef = useRef(true)
@@ -135,41 +169,34 @@ export function AdminPage({ lang }: Props) {
 
   const reload = useCallback(() => {
     setLoading(true)
-    setServerUserPage(0)
-    void fetchAdminUsers(0, 100).then((res) => {
+      void fetchAllAdminUsers().then((res) => {
       if (!mountedRef.current) return
-      setUsers(res.users)
-      setServerUserHasMore(res.ok && res.hasMore)
+       setUsers(res.users)
+       setUserCounts({ total: res.totalUsers, active: res.activeUsers, blocked: res.blockedUsers })
       setError(res.ok ? null : res.error)
       setLoading(false)
     })
-    void fetchActivityTimeline(FETCH_PAGE, 0).then((res) => {
+     void fetchAllActivityTimeline().then((res) => {
       if (!mountedRef.current) return
       setEvents(res.events)
       setEventsError(res.ok ? null : res.error)
     })
-    void fetchPracticeAttempts(undefined, FETCH_PAGE, 0).then((res) => {
+     void fetchAllPracticeAttempts().then((res) => {
       if (!mountedRef.current) return
       setAttempts(res.attempts)
       setAttemptsError(res.ok ? null : res.error)
-    })
+     })
+     void fetchAllAdminPayments().then((res) => {
+       if (!mountedRef.current) return
+       setPayments(res.payments)
+       setPaymentsError(res.ok ? null : res.error)
+     })
   }, [])
 
-  const loadMoreUsers = useCallback(() => {
-    if (!serverUserHasMore || loading) return
-    const nextPage = serverUserPage + 1
-    setLoading(true)
-    void fetchAdminUsers(nextPage, 100).then((res) => {
-      if (!mountedRef.current) return
-      setUsers((current) => [...current, ...res.users])
-      setServerUserPage(nextPage)
-      setServerUserHasMore(res.ok && res.hasMore)
-      setError(res.ok ? null : res.error)
-      setLoading(false)
-    })
-  }, [loading, serverUserHasMore, serverUserPage])
-
   useEffect(() => { reload() }, [reload])
+  useEffect(() => {
+    void fetchNotificationRecipients().then(setNotificationRecipients).catch(() => setNotificationRecipients([]))
+  }, [])
 
   // Đồng bộ tab đang xem với URL (back/forward, link trực tiếp /admin/users...).
   useEffect(() => {
@@ -210,8 +237,9 @@ export function AdminPage({ lang }: Props) {
   useEffect(() => { setPage(0) }, [tab, query, role, status, sortKey, sortDir])
   useEffect(() => { setTimelinePage(0) }, [eventFilter, timelineQuery, onlyAnomaly, rangeDays, section])
   useEffect(() => { setAttemptsPage(0) }, [onlyAnomaly, rangeDays, section])
+  useEffect(() => { setPaymentPage(0) }, [paymentQuery, paymentStatus])
 
-  const kpis = useMemo(() => computeAdminKpis(users), [users])
+  const kpis = useMemo(() => ({ ...computeAdminKpis(users), totalLogined: userCounts.total, activeAccount: userCounts.active, blockedAccount: userCounts.blocked }), [userCounts, users])
   const tabCounts = useMemo(() => ({
     logined: filterByTab(users, "logined").length,
     "active-account": filterByTab(users, "active-account").length,
@@ -271,6 +299,27 @@ export function AdminPage({ lang }: Props) {
     for (const u of users) m.set(u.id, u.displayName ?? u.email ?? u.id.slice(0, 8))
     return m
   }, [users])
+
+  const userById = useMemo(() => new Map(users.map((user) => [user.id, user])), [users])
+  const filteredPayments = useMemo(() => {
+    const q = paymentQuery.trim().toLowerCase()
+    return payments.filter((payment) => {
+      if (paymentStatus !== "all" && payment.status !== paymentStatus) return false
+      if (!q) return true
+      const user = userById.get(payment.userId)
+      return [payment.orderId, payment.transactionId, payment.productName, payment.productId, payment.userId, user?.displayName, user?.email]
+        .some((value) => value?.toLowerCase().includes(q))
+    })
+  }, [paymentQuery, paymentStatus, payments, userById])
+  const paymentKpis = useMemo(() => ({
+    revenue: payments.filter((payment) => payment.status === "paid").reduce((sum, payment) => sum + payment.amountVnd, 0),
+    paid: payments.filter((payment) => payment.status === "paid").length,
+    pending: payments.filter((payment) => payment.status === "pending").length,
+    unsuccessful: payments.filter((payment) => ["failed", "refunded", "canceled"].includes(payment.status)).length,
+  }), [payments])
+  const paymentPageCount = Math.max(1, Math.ceil(filteredPayments.length / PAYMENT_PAGE_SIZE))
+  const safePaymentPage = Math.min(paymentPage, paymentPageCount - 1)
+  const pagedPayments = useMemo(() => filteredPayments.slice(safePaymentPage * PAYMENT_PAGE_SIZE, safePaymentPage * PAYMENT_PAGE_SIZE + PAYMENT_PAGE_SIZE), [filteredPayments, safePaymentPage])
 
   // Khoảng ngày áp dụng chung cho overview + timeline + bảng attempts.
   const rangedEvents = useMemo(() => filterByDays(events, (e) => e.createdAt, rangeDays), [events, rangeDays])
@@ -335,25 +384,24 @@ export function AdminPage({ lang }: Props) {
 
   const handleSignOut = () => { void signOut().then(() => navigate(appRoutes.home, { replace: true })) }
 
-  const loadMoreEvents = () => {
-    setLoadingMore("events")
-    void fetchActivityTimeline(FETCH_PAGE, events.length).then((res) => {
-      if (!mountedRef.current) return
-      if (res.ok) setEvents((prev) => [...prev, ...res.events.filter((e) => !prev.some((p) => p.id === e.id))])
-      else setEventsError(res.error)
-      setLoadingMore(null)
-    })
+  const handleSendNotification = () => {
+    setNotificationResult(null)
+    if (!notificationTitle.trim() || !notificationMessage.trim()) {
+      setNotificationResult("Vui lòng nhập đủ tiêu đề và nội dung.")
+      return
+    }
+    setNotificationSending(true)
+    void sendAdminNotifications({ title: notificationTitle, message: notificationMessage, recipientIds: notificationRecipientIds })
+      .then((count) => { setNotificationResult(`Đã gửi thông báo tới ${count} user.`); setNotificationTitle(""); setNotificationMessage(""); setNotificationRecipientIds([]) })
+      .catch((err: unknown) => setNotificationResult(err instanceof Error ? err.message : "Không thể gửi thông báo."))
+      .finally(() => setNotificationSending(false))
   }
 
-  const loadMoreAttempts = () => {
-    setLoadingMore("attempts")
-    void fetchPracticeAttempts(undefined, FETCH_PAGE, attempts.length).then((res) => {
-      if (!mountedRef.current) return
-      if (res.ok) setAttempts((prev) => [...prev, ...res.attempts.filter((a) => !prev.some((p) => p.historyId === a.historyId && p.userId === a.userId))])
-      else setAttemptsError(res.error)
-      setLoadingMore(null)
-    })
-  }
+  const filteredNotificationRecipients = notificationRecipients.filter((recipient) => {
+    const query = notificationRecipientQuery.trim().toLowerCase()
+    if (!query) return true
+    return [recipient.displayName, recipient.email, recipient.id].some((value) => value?.toLowerCase().includes(query))
+  })
 
   return (
     <div className="min-h-svh bg-[#F6F7FB] text-[#100F3E] transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
@@ -363,13 +411,71 @@ export function AdminPage({ lang }: Props) {
         <AdminTopbar lang={lang} profileName={profile?.display_name ?? null} live={live} onReload={reload} reloading={loading} onSignOut={handleSignOut} />
 
         <main className="mx-auto w-full max-w-[1440px] space-y-6 px-3 pb-[calc(108px+env(safe-area-inset-bottom))] pt-4 min-[380px]:px-4 sm:space-y-8 sm:px-6 sm:pt-6 md:px-8 lg:px-8 lg:pb-12 lg:pt-8 xl:px-10">
-          <div className="dashboard-reveal space-y-6 sm:space-y-8">
+           <div className="dashboard-reveal space-y-6 sm:space-y-8">
             {error ? (
               <div className="rounded-[16px] border-2 border-amber-200 bg-amber-50 p-4 text-sm font-semibold text-amber-800 shadow-[0_3px_0_#f5d78e] sm:rounded-[20px] sm:p-5 dark:border-amber-500/20 dark:bg-amber-500/10 dark:text-amber-200 dark:shadow-none">
                 <p className="font-black">Chưa đọc được full data: {error}</p>
                 <p className="mt-1">Hãy chạy file <code>supabase/migrations/*_admin_read.sql</code> trong Supabase SQL editor để mở policy cho role=admin.</p>
               </div>
             ) : null}
+            {section === "notifications" ? (
+            <section className="scroll-mt-24 space-y-4 sm:space-y-5">
+              <AdminSectionHeading icon={Megaphone} title={lang === "vi" ? "Gửi thông báo" : "Send notifications"} description={lang === "vi" ? "Gửi tới tất cả user đang hoạt động hoặc một user được chọn" : "Send to all active users or one selected user"} />
+              <Card className="max-w-3xl space-y-5 p-5 sm:p-6">
+                <div>
+                  <label className="text-sm font-black">Đối tượng nhận</label>
+                  <label className="relative mt-2 block">
+                    <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+                    <input value={notificationRecipientQuery} onChange={(e) => setNotificationRecipientQuery(e.target.value)} placeholder="Tìm theo tên, email hoặc ID..." className="h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white pl-9 pr-3 text-sm font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" />
+                  </label>
+                  <div className="mt-2 max-h-64 overflow-y-auto rounded-xl border-2 border-[#E5E5E5] bg-white p-2 dark:border-white/10 dark:bg-slate-800">
+                    <label className="flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-sm font-black hover:bg-sky-50 dark:hover:bg-white/5">
+                      <input type="checkbox" checked={notificationRecipientIds.length === 0} onChange={() => setNotificationRecipientIds([])} className="h-4 w-4 accent-[#1CB0F6]" />
+                      Tất cả user active ({notificationRecipients.length})
+                    </label>
+                    {filteredNotificationRecipients.map((u) => <label key={u.id} className="flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-sm font-semibold hover:bg-sky-50 dark:hover:bg-white/5"><input type="checkbox" checked={notificationRecipientIds.includes(u.id)} onChange={() => setNotificationRecipientIds((current) => current.includes(u.id) ? current.filter((id) => id !== u.id) : [...current, u.id])} className="h-4 w-4 accent-[#1CB0F6]" /><span className="min-w-0 truncate">{u.displayName ?? "(chưa đặt tên)"} <span className="text-xs text-slate-400">· {u.email ?? u.id.slice(0, 8)}</span></span></label>)}
+                  </div>
+                  <p className="mt-1 text-xs font-semibold text-slate-400">{notificationRecipientIds.length ? `Đã chọn ${notificationRecipientIds.length} user` : `Tất cả user active (${notificationRecipients.length})`} · Hiển thị {filteredNotificationRecipients.length}/{notificationRecipients.length}</p>
+                </div>
+                <div>
+                  <label htmlFor="notification-title" className="text-sm font-black">Tiêu đề</label>
+                  <input id="notification-title" maxLength={120} value={notificationTitle} onChange={(e) => setNotificationTitle(e.target.value)} placeholder="Ví dụ: Lịch thi sắp tới" className="mt-2 h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" />
+                  <p className="mt-1 text-right text-xs font-semibold text-slate-400">{notificationTitle.length}/120</p>
+                </div>
+                <div>
+                  <label htmlFor="notification-message" className="text-sm font-black">Nội dung</label>
+                  <textarea id="notification-message" maxLength={2000} rows={6} value={notificationMessage} onChange={(e) => setNotificationMessage(e.target.value)} placeholder="Nhập nội dung thông báo..." className="mt-2 w-full resize-y rounded-xl border-2 border-[#E5E5E5] bg-white px-3 py-3 text-sm font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" />
+                  <p className="mt-1 text-right text-xs font-semibold text-slate-400">{notificationMessage.length}/2000</p>
+                </div>
+                {notificationResult ? <p className="rounded-xl bg-sky-50 px-3 py-2 text-sm font-bold text-sky-700 dark:bg-sky-500/10 dark:text-sky-300">{notificationResult}</p> : null}
+                <button type="button" disabled={notificationSending} onClick={handleSendNotification} className="lp-btn lp-btn--primary"><Send className="h-4 w-4" />{notificationSending ? "Đang gửi..." : "Gửi thông báo"}</button>
+              </Card>
+            </section>
+            ) : null}
+
+            {section === "payment" ? (
+            <section className="scroll-mt-24 space-y-4 sm:space-y-5">
+              <AdminSectionHeading icon={WalletCards} title={lang === "vi" ? "Giao dịch" : "Payments"} description={lang === "vi" ? "Theo dõi toàn bộ đơn hàng và giao dịch mua môn học trả phí của user" : "Track all paid course orders and user transactions"} action={payments.length ? <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={() => downloadCsv(`admin-payments-${new Date().toISOString().slice(0, 10)}.csv`, toPaymentCsv(filteredPayments))}><Download className="h-4 w-4" />CSV</button> : undefined} />
+              <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+                <DashboardStatCard icon={Banknote} value={formatVnd(paymentKpis.revenue)} label="Doanh thu đã thu" tone="green" />
+                <DashboardStatCard icon={CheckCircle2} value={String(paymentKpis.paid)} label="Giao dịch thành công" tone="blue" />
+                <DashboardStatCard icon={Clock3} value={String(paymentKpis.pending)} label="Đang chờ thanh toán" tone="orange" />
+                <DashboardStatCard icon={ShieldAlert} value={String(paymentKpis.unsuccessful)} label="Thất bại / hoàn tiền" tone="violet" />
+              </div>
+              <Card className="space-y-3 p-4 sm:p-5">
+                <div className="flex flex-col gap-3 sm:flex-row">
+                  <label className="relative block flex-1"><Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" /><input value={paymentQuery} onChange={(e) => setPaymentQuery(e.target.value)} placeholder="Tìm tên, email, mã đơn hoặc mã giao dịch..." className="h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white pl-10 pr-3 text-sm font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" /></label>
+                  <select value={paymentStatus} onChange={(e) => setPaymentStatus(e.target.value as typeof paymentStatus)} className="h-11 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="all">Tất cả trạng thái</option><option value="paid">Đã thanh toán</option><option value="pending">Đang chờ</option><option value="failed">Thất bại</option><option value="refunded">Đã hoàn tiền</option><option value="canceled">Đã hủy</option></select>
+                </div>
+                <p className="text-xs font-semibold text-slate-400">Hiển thị {filteredPayments.length}/{payments.length} giao dịch</p>
+              </Card>
+              {paymentsError ? <Card variant="dashed" className="p-5 text-sm font-bold text-red-600">{paymentsError}</Card> : null}
+              {!paymentsError && !filteredPayments.length ? <Card variant="dashed" className="py-14 text-center"><WalletCards className="mx-auto h-9 w-9 text-slate-300" /><p className="mt-3 text-sm font-bold text-slate-500">Chưa có giao dịch phù hợp.</p></Card> : null}
+              {pagedPayments.length ? <div className="overflow-x-auto rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none"><table className="w-full min-w-[900px] text-left text-sm"><thead><tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-wide text-slate-400 dark:bg-white/5"><th className="px-4 py-3">User</th><th className="px-4 py-3">Môn học</th><th className="px-4 py-3">Mã đơn</th><th className="px-4 py-3 text-right">Số tiền</th><th className="px-4 py-3">Trạng thái</th><th className="px-4 py-3">Thời gian</th></tr></thead><tbody>{pagedPayments.map((payment) => { const user = userById.get(payment.userId); return <tr key={payment.orderId} className="border-t border-slate-100 dark:border-white/5"><td className="px-4 py-3"><p className="font-extrabold text-[#100F3E] dark:text-white">{user?.displayName ?? "(chưa đặt tên)"}</p><p className="text-xs font-semibold text-slate-400">{user?.email ?? payment.userId}</p></td><td className="max-w-[240px] px-4 py-3 font-bold text-slate-600 dark:text-slate-300">{payment.productName}</td><td className="px-4 py-3 font-mono text-xs text-slate-500">{payment.orderId}<span className="block text-[10px] text-slate-400">{payment.transactionId ?? "Chưa có mã giao dịch"}</span></td><td className="px-4 py-3 text-right font-black text-[#129BDC]">{formatVnd(payment.amountVnd)}</td><td className="px-4 py-3"><PaymentStatusBadge status={payment.status} /></td><td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(payment.paidAt ?? payment.createdAt, lang)}</td></tr> })}</tbody></table></div> : null}
+              {filteredPayments.length > PAYMENT_PAGE_SIZE ? <div className="flex items-center justify-between"><p className="text-sm font-bold text-slate-400">Hiển thị {safePaymentPage * PAYMENT_PAGE_SIZE + 1}–{Math.min(filteredPayments.length, safePaymentPage * PAYMENT_PAGE_SIZE + PAYMENT_PAGE_SIZE)} / {filteredPayments.length}</p><div className="flex gap-2"><button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safePaymentPage === 0} onClick={() => setPaymentPage(safePaymentPage - 1)}>← Trước</button><button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safePaymentPage >= paymentPageCount - 1} onClick={() => setPaymentPage(safePaymentPage + 1)}>Sau →</button></div></div> : null}
+            </section>
+            ) : null}
+
             {section === "overview" ? (
             <>
             <section className={dashboardStatGridClass} aria-label="Statistics">
@@ -644,12 +750,7 @@ export function AdminPage({ lang }: Props) {
                   <p className="text-sm font-bold text-slate-400">Hiển thị {safePage * USER_PAGE_SIZE + 1}–{Math.min(visible.length, safePage * USER_PAGE_SIZE + USER_PAGE_SIZE)} / {visible.length}</p>
                   <div className="flex gap-2">
                     <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safePage === 0} onClick={() => setPage(safePage - 1)}>← Trước</button>
-                    <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safePage >= pageCount - 1 && !serverUserHasMore} onClick={() => {
-                      if (safePage >= pageCount - 1 && serverUserHasMore) {
-                        loadMoreUsers()
-                        setPage(0)
-                      } else setPage(safePage + 1)
-                    }}>Sau →</button>
+                    <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safePage >= pageCount - 1} onClick={() => setPage(safePage + 1)}>Sau →</button>
                   </div>
                 </div>
               ) : null}
@@ -782,11 +883,6 @@ export function AdminPage({ lang }: Props) {
                   </div>
                 </div>
               ) : null}
-              {rangedEvents.length >= 150 ? (
-                <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={loadingMore === "events"} onClick={loadMoreEvents}>
-                  {loadingMore === "events" ? "Đang tải…" : `Tải thêm (đã có ${events.length} events)`}
-                </button>
-              ) : null}
             </section>
             </>
             ) : null}
@@ -862,11 +958,6 @@ export function AdminPage({ lang }: Props) {
                     <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safeAttemptsPage >= attemptsPageCount - 1} onClick={() => setAttemptsPage(safeAttemptsPage + 1)}>Sau →</button>
                   </div>
                 </div>
-              ) : null}
-              {rangedAttempts.length >= 100 ? (
-                <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={loadingMore === "attempts"} onClick={loadMoreAttempts}>
-                  {loadingMore === "attempts" ? "Đang tải…" : `Tải thêm (đã có ${attempts.length} lượt)`}
-                </button>
               ) : null}
             </section>
             </>

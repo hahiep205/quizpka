@@ -30,7 +30,7 @@ export function mapBankItems(
       options: finalPairs.map((pair) => pair.text),
       correctIndex: pairs.length ? Math.max(0, finalPairs.findIndex((pair) => pair.isCorrect)) : undefined,
       acceptedAnswers: pairs.length ? undefined : acceptedAnswers,
-      explanation: item.explainAnswer,
+      explanation: item.explainAnswer ?? item.explanation ?? item.explain_answer ?? item.explanation_text ?? item.reason,
       audioTimestamp: item.audioTimestamp,
       imageUrl: item.image ? `/data/${item.image}` : undefined,
       ...context,

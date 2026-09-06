@@ -6,6 +6,7 @@ import { buildFallbackQuestions, mapBankQuestions } from "@/features/quiz/lib/qu
 import { parseQuestionBank, QuestionBankDataError } from "@/features/quiz/lib/questionBankSchema"
 import { loadToeicQuestions } from "@/features/quiz/lib/toeicHelpers"
 import type { BankFile, BankPart, Question } from "@/features/quiz/model/quiz.types"
+import { supabase } from "@/lib/supabase"
 
 async function fetchBank(url: string, signal: AbortSignal): Promise<BankFile> {
   let response: Response
@@ -58,7 +59,11 @@ export async function loadQuizQuestions({ subject, exam, setup, chapterId, toeic
   if (subject.id === "toeic" && toeicScope) {
     questions = await loadToeicQuestions(toeicScope, exam.id, setup, signal)
   } else if (subject.id === "khoa-hoc-du-lieu-va-tri-tue-nhan-tao") {
-    throw new QuestionBankDataError(exam.id, "DSAI requires a server quiz session")
+    const { data, error } = await supabase.functions.invoke("get-paid-question-bank", { body: { examId: exam.id } })
+    if (signal.aborted) throw new DOMException("Aborted", "AbortError")
+    if (error) throw new QuestionBankDataError(exam.id, error.message)
+    const bank = parseQuestionBank(data, exam.id)
+    questions = mapBankQuestions(bank, exam.id, setup)
   } else if (exam.questionBanks?.length || exam.questionBank) {
     const urls = exam.questionBanks?.length ? exam.questionBanks : [exam.questionBank!]
     const banks = await Promise.all(urls.map((url) => fetchBank(url, signal)))

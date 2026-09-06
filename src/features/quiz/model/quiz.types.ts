@@ -26,6 +26,10 @@ export type BankQuestion = {
   options?: Record<string, string>
   answer: string
   explainAnswer?: string
+  explanation?: string
+  explain_answer?: string
+  explanation_text?: string
+  reason?: string
   transcript?: string
   audioTimestamp?: string
   chapter?: string

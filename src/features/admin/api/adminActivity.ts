@@ -29,6 +29,18 @@ export async function fetchActivityTimeline(limit = 300, offset = 0): Promise<Ad
   }
 }
 
+export async function fetchAllActivityTimeline(): Promise<AdminTimelineResult> {
+  const events: ActivityEvent[] = []
+  let offset = 0
+  while (true) {
+    const result = await fetchActivityTimeline(1000, offset)
+    if (!result.ok) return result
+    events.push(...result.events)
+    if (result.events.length < 1000) return { ok: true, events }
+    offset += result.events.length
+  }
+}
+
 export async function fetchUserActivity(userId: string, limit = 100): Promise<AdminTimelineResult> {
   try {
     const { data, error } = await supabase
@@ -57,5 +69,17 @@ export async function fetchPracticeAttempts(userId?: string, limit = 300, offset
     return { ok: true, attempts: parseAttemptRows(data) }
   } catch (err) {
     return { ok: false, attempts: [], error: err instanceof Error ? err.message : "Unknown error" }
+  }
+}
+
+export async function fetchAllPracticeAttempts(userId?: string): Promise<AdminAttemptsResult> {
+  const attempts: PracticeAttemptRow[] = []
+  let offset = 0
+  while (true) {
+    const result = await fetchPracticeAttempts(userId, 1000, offset)
+    if (!result.ok) return result
+    attempts.push(...result.attempts)
+    if (result.attempts.length < 1000) return { ok: true, attempts }
+    offset += result.attempts.length
   }
 }
