@@ -85,6 +85,38 @@ export function logActivityEvent(
   })()
 }
 
+/** Mirror a completed client quiz for admin history. Scores remain unverified. */
+export async function submitClientReportedAttempt(input: {
+  historyId: string
+  examId: string
+  subjectId: string
+  title: string
+  mode: string
+  score: number
+  correct: number
+  total: number
+  accuracy: number
+  durationSeconds: number
+  retryOf?: string
+  retryNumber?: number
+}): Promise<void> {
+  const { error } = await supabase.rpc("submit_free_attempt", {
+    p_history_id: input.historyId,
+    p_exam_id: input.examId,
+    p_subject_id: input.subjectId,
+    p_title: input.title,
+    p_mode: input.mode,
+    p_score: input.score,
+    p_correct: input.correct,
+    p_total: input.total,
+    p_accuracy: input.accuracy,
+    p_duration_seconds: input.durationSeconds,
+    p_retry_of: input.retryOf ?? null,
+    p_retry_number: input.retryNumber ?? null,
+  })
+  if (error) throw error
+}
+
 const ATTEMPT_SESSION_PREFIX = "quizpka-attempt-session:"
 
 /**

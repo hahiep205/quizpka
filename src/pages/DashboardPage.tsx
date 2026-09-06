@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState, type ComponentType } from "react"
 import {
   ArrowRight,
   BarChart3,
+  Bell,
   CalendarDays,
   CheckCircle2,
   Clock3,
@@ -49,14 +50,15 @@ import { PaymentModal } from "@/components/PaymentModal"
 import { DashboardStatCard, dashboardStatGridClass } from "@/components/DashboardStatCard"
 import { LeaderboardView } from "@/components/LeaderboardView"
 import { CommunityChatModal } from "@/components/CommunityChatModal"
-import { NotificationCenter } from "@/components/NotificationCenter"
 import { DirectNotificationPopup } from "@/components/DirectNotificationPopup"
 import { formatTime } from "@/features/quiz/lib/quizHelpers"
 import { createPaidCheckout, getPaidProductId, hasProductPurchase } from "@/lib/purchases"
 import type { ContactModalType } from "@/components/ContactModal"
+import { fetchNotifications, markAllNotificationsRead, markNotificationRead, type UserNotification } from "@/features/notifications/api/notifications"
+import { supabase } from "@/lib/supabase"
 
 type Lang = Language
-type DashboardView = "home" | "leaderboard" | "history" | "settings" | "purchased"
+type DashboardView = "home" | "leaderboard" | "history" | "purchased" | "notifications" | "settings"
 
 type DashboardPageProps = {
   lang: Lang
@@ -74,6 +76,7 @@ const navItems: Array<{
   { key: "leaderboard", icon: SidebarRankingIcon },
   { key: "history", icon: SidebarHistoryIcon },
   { key: "purchased", icon: ShoppingBag },
+  { key: "notifications", icon: Bell },
   { key: "settings", icon: SidebarSettingsIcon },
 ]
 
@@ -104,6 +107,7 @@ const mobileNavLabels = {
     history: "Lịch sử",
     settings: "Cài đặt",
     purchased: "Đã mua",
+    notifications: "Thông báo",
   },
   en: {
     home: "Home",
@@ -111,6 +115,7 @@ const mobileNavLabels = {
     history: "History",
     settings: "Settings",
     purchased: "Purchased",
+    notifications: "Notifications",
   },
 } as const
 
@@ -120,6 +125,7 @@ const mobileNavIcons = {
   history: History,
   settings: Settings,
   purchased: ShoppingBag,
+  notifications: Bell,
 } as const
 
 export function DashboardPage({
@@ -131,6 +137,7 @@ export function DashboardPage({
 }: DashboardPageProps) {
   const [activeView, setActiveView] = useState<DashboardView>(() => getDashboardView(getCurrentPath()))
   const { user: dashboardUser, status: dashboardStatus } = useAuth()
+  const [unreadNotificationCount, setUnreadNotificationCount] = useState(0)
   const [payment, setPayment] = useState<{ payment: { qrUrl: string } } | null>(null)
   const [paymentProductId, setPaymentProductId] = useState("dsai101")
   const handlePaidTryNow = async (exam: ExamCatalogItem) => {
@@ -149,6 +156,23 @@ export function DashboardPage({
   useEffect(() => {
     logActivityEvent(dashboardUser?.id, "view_dashboard", {}, { oncePerSessionKey: `view_dashboard:${dashboardUser?.id ?? "anon"}` })
   }, [dashboardUser?.id, dashboardUser?.created_at])
+  useEffect(() => {
+    if (dashboardStatus !== "authenticated") {
+      setUnreadNotificationCount(0)
+      return
+    }
+    const reloadUnreadCount = () => {
+      void fetchNotifications().then((items) => setUnreadNotificationCount(items.filter((item) => !item.readAt).length)).catch(() => undefined)
+    }
+    reloadUnreadCount()
+    const channel = supabase
+      .channel("dashboard-mobile-notification-badge")
+      .on("postgres_changes", { event: "INSERT", schema: "public", table: "notifications" }, reloadUnreadCount)
+      .subscribe()
+    return () => {
+      void supabase.removeChannel(channel)
+    }
+  }, [dashboardStatus, dashboardUser?.id])
   const [query, setQuery] = useState("")
   const [filter, setFilter] = useState<"all" | "general" | "major" | "free" | "paid" | "toeic">("all")
   const [toeicPickerExam, setToeicPickerExam] = useState<ExamCatalogItem | null>(null)
@@ -209,9 +233,10 @@ export function DashboardPage({
     const paths: Record<DashboardView, AppPath> = {
       home: appRoutes.dashboard,
       leaderboard: appRoutes.dashboardLeaderboard,
-      history: appRoutes.dashboardHistory,
-      settings: appRoutes.dashboardSettings,
-      purchased: appRoutes.dashboardPurchased,
+        history: appRoutes.dashboardHistory,
+        purchased: appRoutes.dashboardPurchased,
+        notifications: appRoutes.dashboardNotifications,
+        settings: appRoutes.dashboardSettings,
     }
     navigateApp(paths[view])
     window.scrollTo({ top: 0, behavior: "smooth" })
@@ -265,7 +290,7 @@ export function DashboardPage({
   return (
     <div className="min-h-svh bg-[#F6F7FB] text-[#100F3E] transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
       <DirectNotificationPopup lang={lang} />
-      <DesktopSidebar activeView={activeView} lang={lang} onNavigate={navigate} />
+      <DesktopSidebar activeView={activeView} lang={lang} unreadNotificationCount={unreadNotificationCount} onNavigate={navigate} />
 
       <div className="lg:pl-[200px]">
         <DashboardTopbar lang={lang} view={activeView} />
@@ -285,6 +310,7 @@ export function DashboardPage({
           {activeView === "leaderboard" ? <LeaderboardView lang={lang} /> : null}
           {activeView === "history" ? <EmptyView lang={lang} view="history" /> : null}
           {activeView === "purchased" ? <PurchasedView lang={lang} onStartExam={(exam) => void handlePaidTryNow(exam)} /> : null}
+          {activeView === "notifications" ? <NotificationsView lang={lang} onUnreadChange={setUnreadNotificationCount} /> : null}
           {activeView === "settings" ? (
             <SettingsView
               lang={lang}
@@ -297,7 +323,7 @@ export function DashboardPage({
         </main>
       </div>
 
-      <MobileNav activeView={activeView} lang={lang} onNavigate={navigate} />
+      <MobileNav activeView={activeView} lang={lang} unreadNotificationCount={unreadNotificationCount} onNavigate={navigate} />
 
       <HcmChapterPickerModal
         open={Boolean(hcmPickerExam)}
@@ -383,8 +409,9 @@ export function DashboardPage({
 function getDashboardView(path: string): DashboardView {
   if (path === appRoutes.dashboardLeaderboard) return "leaderboard"
   if (path === appRoutes.dashboardHistory) return "history"
-  if (path === appRoutes.dashboardSettings) return "settings"
   if (path === appRoutes.dashboardPurchased) return "purchased"
+  if (path === appRoutes.dashboardNotifications) return "notifications"
+  if (path === appRoutes.dashboardSettings) return "settings"
   return "home"
 }
 
@@ -436,13 +463,100 @@ function PurchasedView({ lang, onStartExam }: { lang: Lang; onStartExam: (exam: 
   )
 }
 
+function NotificationsView({ lang, onUnreadChange }: { lang: Lang; onUnreadChange: (count: number) => void }) {
+  const t = copy[lang]
+  const [items, setItems] = useState<UserNotification[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
+  const [filter, setFilter] = useState<"all" | "unread">("all")
+  const unread = items.filter((item) => !item.readAt).length
+
+  useEffect(() => {
+    onUnreadChange(unread)
+  }, [onUnreadChange, unread])
+
+  const reload = () => {
+    setLoading(true)
+    setError(false)
+    void fetchNotifications()
+      .then(setItems)
+      .catch(() => {
+        setItems([])
+        setError(true)
+      })
+      .finally(() => setLoading(false))
+  }
+
+  useEffect(() => {
+    reload()
+    const channel = supabase
+      .channel("dashboard-notifications")
+      .on("postgres_changes", { event: "INSERT", schema: "public", table: "notifications" }, reload)
+      .subscribe()
+    return () => {
+      void supabase.removeChannel(channel)
+    }
+  }, [])
+
+  const markAll = () => {
+    void markAllNotificationsRead()
+      .then(() => setItems((current) => current.map((item) => ({ ...item, readAt: item.readAt ?? new Date().toISOString() }))))
+      .catch(() => undefined)
+  }
+
+  const markRead = (id: number) => {
+    void markNotificationRead(id)
+      .then(() => setItems((current) => current.map((item) => item.id === id ? { ...item, readAt: item.readAt ?? new Date().toISOString() } : item)))
+      .catch(() => undefined)
+  }
+
+  const visibleItems = filter === "unread" ? items.filter((item) => !item.readAt) : items
+
+  return (
+    <section className="dashboard-reveal mx-auto max-w-4xl">
+      <div className="mb-4 flex flex-nowrap items-center justify-between gap-1.5 sm:gap-3">
+        <div className="flex min-w-0 gap-1.5 sm:gap-2">
+          <button type="button" className={cn("lp-chip min-w-0 shrink px-2 text-[11px] sm:px-3 sm:text-[13px]", filter === "all" && "is-active")} onClick={() => setFilter("all")}>{t.allNotifications}</button>
+          <button type="button" className={cn("lp-chip min-w-0 shrink px-2 text-[11px] sm:px-3 sm:text-[13px]", filter === "unread" && "is-active")} onClick={() => setFilter("unread")}>{t.unreadNotifications}{unread ? ` (${unread})` : ""}</button>
+        </div>
+        {unread > 0 ? <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm shrink-0 gap-1 px-2 text-[11px] sm:gap-2 sm:px-[18px] sm:text-[13px]" onClick={markAll}><CheckCircle2 className="h-4 w-4" /><span className="sm:hidden">{lang === "vi" ? "Đã đọc tất cả" : "Mark all read"}</span><span className="hidden sm:inline">{t.markAllRead}</span></button> : null}
+      </div>
+
+      {loading ? <div className="space-y-3" aria-busy="true"><NotificationSkeleton /><NotificationSkeleton /><NotificationSkeleton /></div> : null}
+      {!loading && error ? <Card variant="dashed" className="py-12 text-center"><Bell className="mx-auto h-9 w-9 text-slate-300" /><p className="mt-3 text-sm font-bold text-red-500">{t.notificationLoadError}</p><button type="button" className="lp-btn lp-btn--secondary lp-btn--sm mt-4" onClick={reload}>{lang === "vi" ? "Thử lại" : "Try again"}</button></Card> : null}
+      {!loading && !error && !visibleItems.length ? <Card variant="dashed" className="py-14 text-center"><Bell className="mx-auto h-9 w-9 text-slate-300" /><p className="mt-3 text-sm font-bold text-slate-500">{filter === "unread" ? (lang === "vi" ? "Bạn đã đọc tất cả thông báo." : "You have read all notifications.") : t.noNotifications}</p></Card> : null}
+      {!loading && !error && visibleItems.length ? <div className="space-y-3">{visibleItems.map((item) => <NotificationCard key={item.id} item={item} lang={lang} onRead={() => markRead(item.id)} />)}</div> : null}
+    </section>
+  )
+}
+
+function NotificationSkeleton() {
+  return <div className="h-[116px] animate-pulse rounded-[16px] border-2 border-slate-100 bg-white p-5 dark:border-white/5 dark:bg-slate-900"><div className="h-4 w-2/5 rounded bg-slate-100 dark:bg-white/10" /><div className="mt-3 h-3 w-full rounded bg-slate-100 dark:bg-white/10" /><div className="mt-2 h-3 w-4/5 rounded bg-slate-100 dark:bg-white/10" /></div>
+}
+
+function NotificationCard({ item, lang, onRead }: { item: UserNotification; lang: Lang; onRead: () => void }) {
+  const date = new Date(item.createdAt)
+  const formattedDate = Number.isNaN(date.getTime()) ? "" : date.toLocaleString(lang === "vi" ? "vi-VN" : "en-US", { dateStyle: "medium", timeStyle: "short" })
+  return <article className={cn("relative overflow-hidden rounded-[16px] border-2 bg-white p-4 shadow-[0_3px_0_#DCDCDC] transition-shadow hover:shadow-[0_5px_0_#DCDCDC] dark:bg-slate-900 dark:shadow-none sm:p-5", item.readAt ? "border-slate-200 dark:border-white/10" : "border-sky-200 bg-sky-50/40 dark:border-sky-500/30 dark:bg-sky-500/5")}>
+    {!item.readAt ? <span className="absolute inset-y-0 left-0 w-1 bg-[#1CB0F6]" /> : null}
+    <button type="button" className="block w-full text-left" onClick={onRead} aria-label={lang === "vi" ? `Đánh dấu đã đọc: ${item.title}` : `Mark as read: ${item.title}`}>
+      <div className="flex items-start gap-3">
+        <span className={cn("mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl", item.isDirect ? "bg-violet-50 text-violet-500 dark:bg-violet-500/10 dark:text-violet-300" : "bg-sky-50 text-sky-500 dark:bg-sky-500/10 dark:text-sky-300")}><Bell className="h-4 w-4" /></span>
+        <div className="min-w-0 flex-1"><div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4"><h2 className="text-sm font-black leading-5 text-[#100F3E] dark:text-white sm:text-base">{item.title}</h2>{!item.readAt ? <span className="w-fit shrink-0 rounded-full bg-sky-100 px-2 py-1 text-[10px] font-black uppercase tracking-wide text-sky-600 dark:bg-sky-500/10 dark:text-sky-300">{lang === "vi" ? "Mới" : "New"}</span> : null}</div><p className="mt-2 whitespace-pre-wrap text-sm font-semibold leading-6 text-slate-500 dark:text-slate-400">{item.message}</p><p className="mt-3 text-xs font-bold text-slate-400">{formattedDate}{item.isDirect ? ` · ${lang === "vi" ? "Thông báo riêng" : "Personal notification"}` : ""}</p></div>
+      </div>
+    </button>
+  </article>
+}
+
 function DesktopSidebar({
   activeView,
   lang,
+  unreadNotificationCount,
   onNavigate,
 }: {
   activeView: DashboardView
   lang: Lang
+  unreadNotificationCount: number
   onNavigate: (view: DashboardView) => void
 }) {
   const t = copy[lang]
@@ -464,7 +578,7 @@ function DesktopSidebar({
               type="button"
               onClick={() => onNavigate(item.key)}
               className={cn(
-                "group flex w-full items-center gap-3.5 rounded-[var(--radius-sm)] px-[14px] py-[10px] text-left text-[12px] font-bold leading-5 text-[var(--gray-text)] transition-all duration-200",
+                "group relative flex w-full items-center gap-3.5 rounded-[var(--radius-sm)] px-[14px] py-[10px] text-left text-[12px] font-bold leading-5 text-[var(--gray-text)] transition-all duration-200",
                 isActive
                   ? "bg-sky-50 text-[#129BDC] dark:bg-sky-500/10 dark:text-sky-300"
                   : "hover:bg-slate-50 hover:text-[#18181B] dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-white"
@@ -473,6 +587,7 @@ function DesktopSidebar({
               <span className="flex h-5 w-5 shrink-0 items-center justify-center">
                 <Icon className="h-[19px] w-[19px]" />
               </span>
+              {item.key === "notifications" && unreadNotificationCount > 0 ? <span className="absolute right-2 top-1 min-w-5 rounded-full bg-red-500 px-1 text-center text-[10px] font-black leading-5 text-white shadow-sm ring-2 ring-white dark:ring-slate-900">{unreadNotificationCount > 99 ? "99+" : unreadNotificationCount}</span> : null}
               <span className="sidebar-label font-bold">{t.nav[item.key]}</span>
             </button>
           )
@@ -498,22 +613,26 @@ function DashboardTopbar({ lang, view }: Pick<DashboardPageProps, "lang"> & { vi
       ? t.leaderboardTitle
       : view === "history"
         ? t.historyTitle
-        : view === "settings"
-          ? t.settingsTitle
-          : view === "purchased"
-            ? t.purchasedTitle
-            : lang === "vi" ? "Quiz dành cho PKAers" : "Quiz for PKAers"
+        : view === "notifications"
+          ? t.notificationsTitle
+          : view === "settings"
+            ? t.settingsTitle
+            : view === "purchased"
+              ? t.purchasedTitle
+              : lang === "vi" ? "Quiz dành cho PKAers" : "Quiz for PKAers"
   const chatLabel = lang === "vi" ? "Chat cộng đồng" : "Community Chat"
   const pageMeta =
     view === "leaderboard"
       ? { icon: Trophy, title: t.leaderboardTitle }
       : view === "history"
         ? { icon: History, title: t.historyTitle }
-        : view === "settings"
-          ? { icon: Settings, title: t.settingsTitle }
-          : view === "purchased"
-            ? { icon: ShoppingBag, title: lang === "vi" ? "Quiz đã mua" : "Purchased quizzes" }
-            : null
+        : view === "notifications"
+          ? { icon: Bell, title: t.notificationsTitle }
+          : view === "settings"
+            ? { icon: Settings, title: t.settingsTitle }
+            : view === "purchased"
+              ? { icon: ShoppingBag, title: lang === "vi" ? "Quiz đã mua" : "Purchased quizzes" }
+              : null
   const PageIcon = pageMeta?.icon
   return (
     <>
@@ -529,6 +648,10 @@ function DashboardTopbar({ lang, view }: Pick<DashboardPageProps, "lang"> & { vi
                 <span className="name-logo">{lang === "vi" ? "Lịch sử làm quiz" : pageMeta.title}</span>
               </a>
             ) : view === "purchased" ? (
+              <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={pageMeta.title}>
+                <span className="name-logo">{pageMeta.title}</span>
+              </a>
+            ) : view === "notifications" ? (
               <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={pageMeta.title}>
                 <span className="name-logo">{pageMeta.title}</span>
               </a>
@@ -561,7 +684,6 @@ function DashboardTopbar({ lang, view }: Pick<DashboardPageProps, "lang"> & { vi
             <TopbarButton label={chatLabel} onClick={() => setChatOpen(true)}>
               <MessageCircle className="h-5 w-5" strokeWidth={2} />
             </TopbarButton>
-            <NotificationCenter lang={lang} />
             </div>
           </div>
         </div>
@@ -936,7 +1058,7 @@ function SettingRow({ icon: Icon, title, children }: { icon: ComponentType<{ cla
   )
 }
 
-function MobileNav({ activeView, lang, onNavigate }: { activeView: DashboardView; lang: Lang; onNavigate: (view: DashboardView) => void }) {
+function MobileNav({ activeView, lang, unreadNotificationCount, onNavigate }: { activeView: DashboardView; lang: Lang; unreadNotificationCount: number; onNavigate: (view: DashboardView) => void }) {
   return (
     <MobileTabBar
       ariaLabel="Mobile dashboard"
@@ -946,6 +1068,7 @@ function MobileNav({ activeView, lang, onNavigate }: { activeView: DashboardView
         key: item.key,
         icon: mobileNavIcons[item.key],
         label: mobileNavLabels[lang][item.key as keyof typeof mobileNavLabels["vi"]],
+        badge: item.key === "notifications" ? unreadNotificationCount : undefined,
       }))}
     />
   )

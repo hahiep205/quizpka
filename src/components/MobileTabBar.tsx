@@ -5,6 +5,7 @@ export type MobileTabItem<K extends string> = {
   key: K
   icon: LucideIcon
   label: string
+  badge?: number
 }
 
 export function MobileTabBar<K extends string>({
@@ -34,7 +35,7 @@ export function MobileTabBar<K extends string>({
               aria-current={isActive ? "page" : undefined}
               aria-label={item.label}
               onClick={() => onNavigate(item.key)}
-              className="flex min-w-0 flex-1 items-center justify-center [-webkit-tap-highlight-color:transparent] select-none"
+              className="relative flex min-w-0 flex-1 items-center justify-center [-webkit-tap-highlight-color:transparent] select-none"
             >
               <span
                 className={cn(
@@ -53,6 +54,7 @@ export function MobileTabBar<K extends string>({
                   strokeLinejoin="round"
                 />
               </span>
+              {item.badge ? <span className="absolute -right-1 -top-1 min-w-5 rounded-full bg-red-500 px-1 text-center text-[10px] font-black leading-5 text-white ring-2 ring-white dark:ring-[#2C2C2E]">{item.badge > 99 ? "99+" : item.badge}</span> : null}
             </button>
           )
         })}

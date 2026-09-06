@@ -46,7 +46,7 @@ import { Dialog } from "@/components/ui/dialog"
 import { useAuth } from "@/auth/AuthProvider"
 import { appRoutes } from "@/app/navigation"
 import { savePracticeHistory } from "@/lib/practiceSession"
-import { endAttemptSession, logActivityEvent } from "@/features/activity/lib/activityLog"
+import { endAttemptSession, logActivityEvent, submitClientReportedAttempt } from "@/features/activity/lib/activityLog"
 import { incrementSubjectAttempt } from "@/lib/subjectAttemptStats"
 import { playAnswerFeedback } from "@/features/quiz/lib/answerFeedbackSound"
 
@@ -218,6 +218,22 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
       total: questions.length,
       retryNumber: activeRetryNumber ?? null,
       sessionId: endAttemptSession(exam.id),
+    })
+    void submitClientReportedAttempt({
+      historyId,
+      examId: exam.id,
+      subjectId: subject.id,
+      title: getExamTitle(exam, lang),
+      mode: setup.mode,
+      score: stats.score10,
+      correct,
+      total: questions.length,
+      accuracy,
+      durationSeconds: elapsedSeconds,
+      retryOf: activeRetryNumber ? retryRootHistoryId.current : undefined,
+      retryNumber: activeRetryNumber,
+    }).catch(() => {
+      // The server mirror is best-effort and must not block the result screen.
     })
   }, [activeRetryNumber, answers, chapterId, elapsedSeconds, exam, finished, hardMastered, hardProgress, hardWrongCounts, isHard, lang, questions, setup, stats.correct, stats.score10, status, subject.id, toeicScope, user, wrongQuestions])
 
