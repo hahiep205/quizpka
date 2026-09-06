@@ -31,7 +31,7 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
   const t = copy[lang]
   const [query, setQuery] = useState("")
   const [typeFilter, setTypeFilter] = useState<CategoryFilter>("all")
-  const [payment, setPayment] = useState<{ checkoutUrl: string; fields: Record<string, string | number> } | null>(null)
+  const [payment, setPayment] = useState<{ payment: { qrUrl: string } } | null>(null)
   const {
     pickerExam: hcmPickerExam,
     setupExam,
@@ -57,8 +57,8 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
   const tryExam = (exam: ExamCatalogItem) => nudge.requestNudge(async () => { try {
     if (exam.subjectCode !== "DSAI101" || (user?.id && await hasDsaiPurchase(user.id))) return handleTryNow(exam)
     const result = await createDsaiCheckout(); if (result.owned) return handleTryNow(exam)
-    if (!result.checkoutUrl || !result.fields) return
-    setPayment({ checkoutUrl: result.checkoutUrl, fields: result.fields })
+    if (!result.payment) return
+    setPayment({ payment: result.payment })
     } catch (error) { window.alert(error instanceof Error ? error.message : "Không thể tạo thanh toán. Vui lòng thử lại.") }
   })
 
@@ -243,8 +243,7 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
       <PaymentModal
         open={Boolean(payment)}
         lang={lang}
-        checkoutUrl={payment?.checkoutUrl ?? null}
-        fields={payment?.fields ?? null}
+        payment={payment?.payment ?? null}
         userId={user?.id}
         onClose={() => setPayment(null)}
         onPaid={() => {

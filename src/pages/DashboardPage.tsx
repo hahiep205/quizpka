@@ -131,15 +131,15 @@ export function DashboardPage({
 }: DashboardPageProps) {
   const [activeView, setActiveView] = useState<DashboardView>(() => getDashboardView(getCurrentPath()))
   const { user: dashboardUser, status: dashboardStatus } = useAuth()
-  const [payment, setPayment] = useState<{ checkoutUrl: string; fields: Record<string, string | number> } | null>(null)
+  const [payment, setPayment] = useState<{ payment: { qrUrl: string } } | null>(null)
   const handlePaidTryNow = async (exam: ExamCatalogItem) => {
     try {
     if (exam.subjectCode !== "DSAI101") return handleTryNow(exam)
     if (dashboardUser?.id && await hasDsaiPurchase(dashboardUser.id)) return handleTryNow(exam)
     const result = await createDsaiCheckout()
     if (result.owned) return handleTryNow(exam)
-    if (!result.checkoutUrl || !result.fields) throw new Error("Không tạo được link thanh toán")
-    setPayment({ checkoutUrl: result.checkoutUrl, fields: result.fields })
+    if (!result.payment) throw new Error("Chưa cấu hình thông tin tài khoản thanh toán")
+    setPayment({ payment: result.payment })
     } catch (error) { window.alert(error instanceof Error ? error.message : "Không thể tạo thanh toán. Vui lòng thử lại.") }
   }
 
@@ -344,8 +344,7 @@ export function DashboardPage({
       <PaymentModal
         open={Boolean(payment)}
         lang={lang}
-        checkoutUrl={payment?.checkoutUrl ?? null}
-        fields={payment?.fields ?? null}
+        payment={payment?.payment ?? null}
         userId={dashboardUser?.id}
         onClose={() => setPayment(null)}
         onPaid={() => {
@@ -905,9 +904,10 @@ function SettingsView({ lang, theme, onToggleLang, onToggleTheme, onOpenContact 
           <div className="min-w-0">
             <h3 className="text-lg font-black text-[#100F3E] dark:text-white">{t.supportTitle}</h3>
           </div>
-          <div className="grid w-full shrink-0 grid-cols-1 gap-2 sm:grid-cols-2 md:w-auto md:min-w-[360px]">
-            <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm w-full whitespace-normal text-center" onClick={() => onOpenContact("Contribute")}>{t.contribute}</button>
-            <button type="button" className="lp-btn lp-btn--primary lp-btn--sm w-full whitespace-normal text-center" onClick={() => onOpenContact("Support")}>{t.support}</button>
+           <div className="grid w-full shrink-0 grid-cols-1 gap-2 sm:grid-cols-3 md:w-auto md:min-w-[540px]">
+             <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm w-full whitespace-normal text-center" onClick={() => onOpenContact("Contribute")}>{t.contribute}</button>
+             <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm w-full whitespace-normal text-center" onClick={() => onOpenContact("Support")}>{t.support}</button>
+             <button type="button" className="lp-btn lp-btn--primary lp-btn--sm w-full whitespace-normal text-center" onClick={() => onOpenContact("Report")}>Báo lỗi</button>
           </div>
         </div>
         <div className="space-y-3 rounded-[20px] border-2 border-[#E5E5E5] bg-white p-5 shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)] md:col-span-2">

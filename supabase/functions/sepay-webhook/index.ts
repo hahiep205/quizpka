@@ -15,7 +15,7 @@ Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: cors })
   if (req.method !== "POST") return new Response("Method Not Allowed", { status: 405 })
 
-  const receivedSecret = req.headers.get("x-secret-key")
+  const receivedSecret = req.headers.get("x-secret-key") ?? req.headers.get("authorization")?.replace(/^Apikey\s+/i, "")
   const expectedSecret = Deno.env.get("SEPAY_SECRET_KEY") ?? ""
   if (!receivedSecret || !expectedSecret || receivedSecret !== expectedSecret) return new Response("Invalid secret", { status: 401 })
 
@@ -23,28 +23,41 @@ Deno.serve(async (req) => {
     const payload = await req.json() as Record<string, unknown>
     const payloadOrder = payload.order as Record<string, unknown> | undefined
     const transaction = payload.transaction as Record<string, unknown> | undefined
-    const orderId = text(payloadOrder?.order_invoice_number)
+    const suppliedOrderId = text(payloadOrder?.order_invoice_number ?? payload.order_invoice_number)
+    const transactionContent = text(transaction?.transaction_content ?? transaction?.transaction_description ?? transaction?.description ?? payload.content ?? payload.transaction_content ?? payload.description ?? payload.code)
+    const transferContent = transactionContent.match(/PAY[A-Z0-9]+/i)?.[0]?.toUpperCase() ?? ""
     const status = text(payloadOrder?.order_status ?? transaction?.transaction_status).toUpperCase()
-    if (!orderId || !/^DSAI-[A-Z0-9]+$/.test(orderId)) return new Response("Invalid order", { status: 400 })
-    if (payload.notification_type !== "ORDER_PAID" || !["CAPTURED", "APPROVED", "PAID"].includes(status)) return Response.json({ success: true }, { headers: cors })
+    const transferType = text(payload.transferType).toLowerCase()
+    const isBankIn = transferType === "in"
+    const isPaidCheckout = payload.notification_type === "ORDER_PAID" && ["CAPTURED", "APPROVED", "PAID"].includes(status)
+    // SePay's "Send test" payload may not contain an order created by QuizPKA.
+    // Acknowledge unrelated transactions so SePay does not retry them forever.
+    if ((!suppliedOrderId || !/^DSAI-[A-Z0-9]+$/.test(suppliedOrderId)) && !transferContent) {
+      console.info("Ignored webhook without QuizPKA payment code")
+      return Response.json({ success: true, ignored: true }, { headers: cors })
+    }
+    if (!isBankIn && !isPaidCheckout) return Response.json({ success: true }, { headers: cors })
 
     const admin = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!)
-    const { data: order, error: orderError } = await admin
-      .from("orders")
-      .select("order_id,user_id,product_id,amount_vnd,currency,status,provider_transaction_id,provider_event_id")
-      .eq("order_id", orderId)
-      .maybeSingle()
+    let orderQuery = admin.from("orders").select("order_id,user_id,product_id,amount_vnd,currency,status,provider_transaction_id,provider_event_id,transfer_content")
+    if (transferContent) orderQuery = orderQuery.eq("transfer_content", transferContent)
+    else orderQuery = orderQuery.eq("order_id", suppliedOrderId)
+    const { data: order, error: orderError } = await orderQuery.maybeSingle()
     if (orderError) throw orderError
-    if (!order) return new Response("Order not found", { status: 404 })
+    if (!order) {
+      console.info("Ignored webhook for unknown QuizPKA payment code", transferContent || suppliedOrderId)
+      return Response.json({ success: true, ignored: true }, { headers: cors })
+    }
+    const orderId = order.order_id
 
-    const receivedAmount = amount(transaction?.transaction_amount ?? payloadOrder?.order_amount)
+    const receivedAmount = amount(transaction?.transaction_amount ?? payloadOrder?.order_amount ?? payload.transferAmount)
     if (receivedAmount === null || receivedAmount !== Number(order.amount_vnd)) return new Response("Amount mismatch", { status: 422 })
-    const receivedCurrency = text(transaction?.transaction_currency ?? payloadOrder?.order_currency).toUpperCase()
+    const receivedCurrency = text(transaction?.transaction_currency ?? payloadOrder?.order_currency ?? payload.currency).toUpperCase()
     if (receivedCurrency && receivedCurrency !== order.currency) return new Response("Currency mismatch", { status: 422 })
     if (order.status === "canceled" || order.status === "refunded" || order.status === "failed") return new Response("Order state conflict", { status: 409 })
 
-    const transactionId = text(transaction?.transaction_id ?? transaction?.id) || null
-    const eventId = text(transaction?.id ?? payload.timestamp) || null
+    const transactionId = text(transaction?.transaction_id ?? transaction?.id ?? payload.referenceCode) || null
+    const eventId = text(transaction?.id ?? payload.id ?? payload.timestamp) || null
     const { data: paymentEvent, error: eventError } = await admin.from("payment_events").insert({
       provider: "sepay",
       event_id: eventId,

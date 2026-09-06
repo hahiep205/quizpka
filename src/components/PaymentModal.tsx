@@ -1,5 +1,5 @@
-import { useEffect, useId, useState } from "react"
-import { Check, ExternalLink, LoaderCircle, RefreshCw, X } from "lucide-react"
+import { useEffect, useState } from "react"
+import { Check, LoaderCircle, RefreshCw, X } from "lucide-react"
 import { hasDsaiPurchase } from "@/lib/purchases"
 import { cn } from "@/lib/utils"
 
@@ -8,37 +8,16 @@ type Lang = "en" | "vi"
 type PaymentModalProps = {
   open: boolean
   lang: Lang
-  checkoutUrl: string | null
-  fields: Record<string, string | number> | null
+  payment?: { qrUrl: string } | null
   userId?: string
   onClose: () => void
   onPaid: () => void
 }
 
-export function PaymentModal({ open, lang, checkoutUrl, fields, userId, onClose, onPaid }: PaymentModalProps) {
-  const frameName = useId().replace(/:/g, "")
+export function PaymentModal({ open, lang, payment, userId, onClose, onPaid }: PaymentModalProps) {
   const [paid, setPaid] = useState(false)
   const [checking, setChecking] = useState(false)
   const [error, setError] = useState(false)
-
-  useEffect(() => {
-    if (!open || !checkoutUrl || !fields) return
-    const form = document.createElement("form")
-    form.method = "POST"
-    form.action = checkoutUrl
-    form.target = frameName
-    form.style.display = "none"
-    Object.entries(fields).forEach(([name, value]) => {
-      const input = document.createElement("input")
-      input.type = "hidden"
-      input.name = name
-      input.value = String(value)
-      form.appendChild(input)
-    })
-    document.body.appendChild(form)
-    form.submit()
-    form.remove()
-  }, [checkoutUrl, fields, frameName, open])
 
   useEffect(() => {
     if (!open || !userId) return
@@ -64,47 +43,28 @@ export function PaymentModal({ open, lang, checkoutUrl, fields, userId, onClose,
     }
   }, [onPaid, open, userId])
 
-  if (!open || !checkoutUrl || !fields) return null
+  if (!open || !payment) return null
 
   const isVietnamese = lang === "vi"
   const copy = isVietnamese
     ? {
-        title: "Thanh toán",
-        hint: "Quét mã QR và thanh toán trực tiếp trên cổng SePay.",
+        title: "Quét QR để thanh toán",
+        hint: "Sử dụng ứng dụng ngân hàng/ví điện tử hỗ trợ VietQR để quét mã QR và thanh toán nhanh chóng.",
         cancel: "Hủy giao dịch",
         waiting: "Đang chờ xác nhận thanh toán…",
         success: "Thanh toán thành công!",
         check: "Tôi đã thanh toán",
-        fallback: "Mở trang mới",
         retry: "Kiểm tra lại",
       }
     : {
-        title: "Payment",
-        hint: "Scan the QR code and pay directly through SePay.",
+        title: "Scan QR to pay",
+        hint: "Use a banking app or e-wallet that supports VietQR to pay quickly.",
         cancel: "Cancel transaction",
         waiting: "Waiting for payment confirmation…",
         success: "Payment successful!",
         check: "I have paid",
-        fallback: "Open new page",
         retry: "Check again",
       }
-
-  const openInNewTab = () => {
-    const form = document.createElement("form")
-    form.method = "POST"
-    form.action = checkoutUrl
-    form.target = "_blank"
-    Object.entries(fields).forEach(([name, value]) => {
-      const input = document.createElement("input")
-      input.type = "hidden"
-      input.name = name
-      input.value = String(value)
-      form.appendChild(input)
-    })
-    document.body.appendChild(form)
-    form.submit()
-    form.remove()
-  }
 
   const checkNow = async () => {
     if (!userId) return
@@ -134,8 +94,10 @@ export function PaymentModal({ open, lang, checkoutUrl, fields, userId, onClose,
           <button type="button" className="lp-btn lp-btn--secondary lp-btn--icon shrink-0" onClick={onClose} aria-label={copy.cancel}><X className="h-4 w-4" /></button>
         </header>
 
-        <div className="min-h-0 flex-1 bg-slate-50 p-2 sm:p-3 dark:bg-slate-950">
-          <iframe name={frameName} title="SePay checkout" className="h-full min-h-[440px] w-full rounded-xl border border-slate-200 bg-white dark:border-white/10" />
+        <div className="min-h-0 flex-1 overflow-y-auto bg-slate-50 p-4 sm:p-6 dark:bg-slate-950">
+          <div className="flex flex-col items-center">
+            <img src={payment.qrUrl} alt="VietQR thanh toán" className="h-64 w-64 rounded-xl bg-white p-2 shadow-sm" />
+          </div>
         </div>
 
         <footer className="flex shrink-0 flex-col gap-2 border-t border-slate-100 px-3 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-5 dark:border-white/10">
@@ -143,10 +105,7 @@ export function PaymentModal({ open, lang, checkoutUrl, fields, userId, onClose,
             {checking ? <LoaderCircle className="h-3.5 w-3.5 shrink-0 animate-spin" /> : paid ? <Check className="h-3.5 w-3.5 shrink-0" /> : <RefreshCw className="h-3.5 w-3.5 shrink-0" />}
             <span className="truncate">{paid ? copy.success : error ? copy.retry : copy.waiting}</span>
           </p>
-          <div className="grid w-full grid-cols-2 gap-2 sm:w-auto">
-            <button type="button" className={cn("lp-btn lp-btn--secondary lp-btn--sm min-w-0 px-2 text-[10px] sm:px-3 sm:text-xs", paid && "col-span-2")} onClick={openInNewTab}><ExternalLink className="h-3.5 w-3.5 shrink-0" /><span className="truncate">{copy.fallback}</span></button>
-            {!paid ? <button type="button" className="lp-btn lp-btn--primary lp-btn--sm min-w-0 px-2 text-[10px] sm:px-3 sm:text-xs" onClick={() => void checkNow()} disabled={checking}>{copy.check}</button> : null}
-          </div>
+          {!paid ? <button type="button" className="lp-btn lp-btn--primary lp-btn--sm" onClick={() => void checkNow()} disabled={checking}>{copy.check}</button> : null}
         </footer>
       </section>
     </div>

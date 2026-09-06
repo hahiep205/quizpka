@@ -27,6 +27,7 @@ import { cn } from "@/lib/utils"
 import { fetchAdminNotificationHistory, fetchNotificationRecipients, revokeAdminNotification, sendAdminNotifications, type AdminNotificationHistory, type NotificationRecipient } from "@/features/notifications/api/notifications"
 import { fetchAllAdminPayments, type AdminPayment, type PaymentStatus } from "@/features/admin/api/adminPayments"
 import { grantAdminPurchase, fetchAdminProducts, type AdminProduct } from "@/features/admin/api/adminEntitlements"
+import { fetchSupportReports, updateSupportStatus, type SupportReport, type SupportStatus } from "@/features/support/api/supportReports"
 
 function formatAdminDuration(totalSeconds: number): string {
   const s = Math.max(0, Math.round(totalSeconds))
@@ -60,7 +61,7 @@ function toPaymentCsv(payments: AdminPayment[]): string {
 }
 
 type Props = { lang: "vi" | "en" }
-type AdminSection = "overview" | "users" | "notifications" | "payment" | "sendquiz" | "timeline" | "attempts"
+type AdminSection = "overview" | "users" | "notifications" | "payment" | "sendquiz" | "supports" | "timeline" | "attempts"
 
 const tabs: Array<{ key: AdminTab; vi: string; en: string }> = [
   { key: "logined", vi: "Đã login", en: "Logined" },
@@ -96,6 +97,7 @@ const SECTION_NAV: Array<{ key: AdminSection; icon: LucideIcon; vi: string; en: 
   { key: "notifications", icon: Megaphone, vi: "Thông báo", en: "Notifications" },
   { key: "payment", icon: WalletCards, vi: "Giao dịch", en: "Payments" },
   { key: "sendquiz", icon: Send, vi: "Cấp môn học", en: "Grant access" },
+  { key: "supports", icon: ShieldAlert, vi: "Báo lỗi", en: "Support" },
   { key: "timeline", icon: Activity, vi: "Luồng HĐ", en: "Timeline" },
   { key: "attempts", icon: History, vi: "Lịch sử", en: "History" },
 ]
@@ -106,6 +108,7 @@ const SECTION_PATHS: Record<AdminSection, AppPath> = {
   notifications: appRoutes.adminNotifications,
   payment: appRoutes.adminPayment,
   sendquiz: appRoutes.adminSendQuiz,
+  supports: appRoutes.adminSupports,
   timeline: appRoutes.adminTimeline,
   attempts: appRoutes.adminAttempts,
 }
@@ -115,6 +118,7 @@ function getAdminView(path: string): AdminSection {
   if (path === appRoutes.adminNotifications) return "notifications"
   if (path === appRoutes.adminPayment) return "payment"
   if (path === appRoutes.adminSendQuiz) return "sendquiz"
+  if (path === appRoutes.adminSupports) return "supports"
   if (path === appRoutes.adminTimeline) return "timeline"
   if (path === appRoutes.adminAttempts) return "attempts"
   return "overview"
@@ -159,6 +163,11 @@ export function AdminPage({ lang }: Props) {
   const [grantProductId, setGrantProductId] = useState("")
   const [grantSending, setGrantSending] = useState(false)
   const [grantResult, setGrantResult] = useState<{ ok: boolean; message: string } | null>(null)
+  const [supportReports, setSupportReports] = useState<SupportReport[]>([])
+  const [supportsError, setSupportsError] = useState<string | null>(null)
+  const [supportQuery, setSupportQuery] = useState("")
+  const [supportStatus, setSupportStatus] = useState<"all" | SupportStatus>("all")
+  const [updatingSupportId, setUpdatingSupportId] = useState<string | null>(null)
 
   const [events, setEvents] = useState<ActivityEvent[]>([])
   const [eventsError, setEventsError] = useState<string | null>(null)
@@ -211,6 +220,7 @@ export function AdminPage({ lang }: Props) {
   useEffect(() => {
     void fetchNotificationRecipients().then(setNotificationRecipients).catch(() => setNotificationRecipients([]))
     void fetchAdminProducts().then(setAdminProducts).catch(() => setAdminProducts([]))
+    void fetchSupportReports().then((reports) => { setSupportReports(reports); setSupportsError(null) }).catch((error: unknown) => setSupportsError(error instanceof Error ? error.message : "Không đọc được báo lỗi."))
   }, [])
 
   // Đồng bộ tab đang xem với URL (back/forward, link trực tiếp /admin/users...).
@@ -443,6 +453,21 @@ export function AdminPage({ lang }: Props) {
     return [recipient.displayName, recipient.email, recipient.id].some((value) => value?.toLowerCase().includes(query))
   })
 
+  const filteredSupportReports = supportReports.filter((report) => {
+    if (supportStatus !== "all" && report.status !== supportStatus) return false
+    const query = supportQuery.trim().toLowerCase()
+    if (!query) return true
+    return [report.subject, report.description, report.displayName, report.email, report.userId].some((value) => value?.toLowerCase().includes(query))
+  })
+
+  const handleSupportStatus = (reportId: string, status: SupportStatus) => {
+    setUpdatingSupportId(reportId)
+    void updateSupportStatus(reportId, status)
+      .then(() => setSupportReports((reports) => reports.map((report) => report.id === reportId ? { ...report, status, updatedAt: new Date().toISOString() } : report)))
+      .catch((error: unknown) => setSupportsError(error instanceof Error ? error.message : "Không thể cập nhật báo lỗi."))
+      .finally(() => setUpdatingSupportId(null))
+  }
+
   const grantUsers = users.filter((user) => {
     if (user.role === "admin") return false
     const query = grantUserQuery.trim().toLowerCase()
@@ -568,7 +593,28 @@ export function AdminPage({ lang }: Props) {
              </section>
              ) : null}
 
-            {section === "overview" ? (
+             {section === "supports" ? (
+             <section className="scroll-mt-24 space-y-4 sm:space-y-5">
+               <AdminSectionHeading icon={ShieldAlert} title="Báo lỗi từ user" description="Theo dõi và cập nhật trạng thái các lỗi được người dùng gửi" />
+               <Card className="space-y-3 p-4 sm:p-5">
+                 <div className="flex flex-col gap-3 sm:flex-row">
+                   <label className="relative block flex-1"><Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" /><input value={supportQuery} onChange={(event) => setSupportQuery(event.target.value)} placeholder="Tìm tiêu đề, nội dung, tên, email hoặc ID..." className="h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white pl-10 pr-3 text-sm font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" /></label>
+                   <select value={supportStatus} onChange={(event) => setSupportStatus(event.target.value as typeof supportStatus)} className="h-11 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="all">Tất cả trạng thái</option><option value="pending">Đang chờ</option><option value="resolved">Đã xử lý</option><option value="unresolvable">Không xử lý được</option></select>
+                 </div>
+                 <p className="text-xs font-semibold text-slate-400">Hiển thị {filteredSupportReports.length}/{supportReports.length} báo lỗi</p>
+               </Card>
+               {supportsError ? <Card variant="dashed" className="p-5 text-sm font-bold text-red-600">{supportsError}</Card> : null}
+               {filteredSupportReports.length ? filteredSupportReports.map((report) => (
+                 <Card key={report.id} className="space-y-3 p-4 sm:p-5">
+                   <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between"><div className="min-w-0"><h3 className="text-base font-black text-[#100F3E] dark:text-white">{report.subject}</h3><p className="mt-1 text-xs font-semibold text-slate-400">{report.displayName ?? "(chưa đặt tên)"} · {report.email ?? report.userId} · {formatTime(report.createdAt, lang)}</p></div><select value={report.status} disabled={updatingSupportId === report.id} onChange={(event) => handleSupportStatus(report.id, event.target.value as SupportStatus)} className="h-10 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-xs font-black outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="pending">Đang chờ</option><option value="resolved">Đã xử lý</option><option value="unresolvable">Không xử lý được</option></select></div>
+                   <p className="whitespace-pre-wrap text-sm font-semibold leading-6 text-slate-600 dark:text-slate-300">{report.description}</p>
+                   {report.pageUrl?.startsWith("https://") || report.pageUrl?.startsWith("http://") ? <a href={report.pageUrl} target="_blank" rel="noreferrer" className="block truncate text-xs font-bold text-[#129BDC] hover:underline">Trang báo lỗi: {report.pageUrl}</a> : null}
+                 </Card>
+               )) : <Card variant="dashed" className="py-14 text-center"><ShieldAlert className="mx-auto h-9 w-9 text-slate-300" /><p className="mt-3 text-sm font-bold text-slate-500">Chưa có báo lỗi phù hợp.</p></Card>}
+             </section>
+             ) : null}
+
+             {section === "overview" ? (
             <>
             <section className={dashboardStatGridClass} aria-label="Statistics">
               <DashboardStatCard icon={Users} value={String(kpis.totalLogined)} label={lang === "vi" ? `Logined (active acc: ${kpis.activeAccount})` : `Logined (active: ${kpis.activeAccount})`} tone="blue" />
