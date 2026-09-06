@@ -48,6 +48,16 @@ function formatVnd(value: number): string {
   return new Intl.NumberFormat("vi-VN", { style: "currency", currency: "VND" }).format(value)
 }
 
+function isToday(value: string | null): boolean {
+  if (!value) return false
+  const date = new Date(value)
+  const today = new Date()
+  return Number.isFinite(date.getTime())
+    && date.getFullYear() === today.getFullYear()
+    && date.getMonth() === today.getMonth()
+    && date.getDate() === today.getDate()
+}
+
 function PaymentStatusBadge({ status }: { status: PaymentStatus }) {
   const labels: Record<PaymentStatus, string> = { paid: "Đã thanh toán", pending: "Đang chờ", failed: "Thất bại", refunded: "Đã hoàn tiền", canceled: "Đã hủy" }
   const tones: Record<PaymentStatus, string> = { paid: "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300", pending: "bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-300", failed: "bg-red-50 text-red-600 dark:bg-red-500/10 dark:text-red-300", refunded: "bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-300", canceled: "bg-slate-100 text-slate-500 dark:bg-white/10 dark:text-slate-300" }
@@ -343,6 +353,10 @@ export function AdminPage({ lang }: Props) {
     pending: payments.filter((payment) => payment.status === "pending").length,
     unsuccessful: payments.filter((payment) => ["failed", "refunded", "canceled"].includes(payment.status)).length,
   }), [payments])
+  const todayKpis = useMemo(() => ({
+    purchases: payments.filter((payment) => payment.status === "paid" && isToday(payment.paidAt)).length,
+    completedQuizzes: attempts.filter((attempt) => isToday(attempt.completedAt)).length,
+  }), [attempts, payments])
   const paymentPageCount = Math.max(1, Math.ceil(filteredPayments.length / PAYMENT_PAGE_SIZE))
   const safePaymentPage = Math.min(paymentPage, paymentPageCount - 1)
   const pagedPayments = useMemo(() => filteredPayments.slice(safePaymentPage * PAYMENT_PAGE_SIZE, safePaymentPage * PAYMENT_PAGE_SIZE + PAYMENT_PAGE_SIZE), [filteredPayments, safePaymentPage])
@@ -620,10 +634,10 @@ export function AdminPage({ lang }: Props) {
              {section === "overview" ? (
             <>
             <section className={dashboardStatGridClass} aria-label="Statistics">
-              <DashboardStatCard icon={Users} value={String(kpis.totalLogined)} label={lang === "vi" ? `Logined (active acc: ${kpis.activeAccount})` : `Logined (active: ${kpis.activeAccount})`} tone="blue" />
+              <DashboardStatCard icon={Users} value={String(kpis.totalLogined)} label={lang === "vi" ? "Người dùng" : "Users"} tone="blue" />
               <DashboardStatCard icon={UserRound} value={String(kpis.newToday)} label={lang === "vi" ? "User mới hôm nay" : "New users today"} tone="orange" />
-              <DashboardStatCard icon={CheckCircle2} value={String(kpis.totalAttempts)} label={lang === "vi" ? `Lượt làm (TB ${kpis.avgAccuracy}%)` : `Attempts (avg ${kpis.avgAccuracy}%)`} tone="green" />
-              <DashboardStatCard icon={Clock3} value={formatAdminDuration(kpis.totalDurationSeconds)} label={lang === "vi" ? `Tổng giờ học (mới 7d: ${kpis.new7d})` : `Study time (new 7d: ${kpis.new7d})`} tone="violet" />
+              <DashboardStatCard icon={CheckCircle2} value={String(todayKpis.purchases)} label={lang === "vi" ? "Lượt mua hôm nay" : "Purchases today"} tone="green" />
+              <DashboardStatCard icon={Clock3} value={String(todayKpis.completedQuizzes)} label={lang === "vi" ? "Lượt hoàn thành quiz hôm nay" : "Completed quizzes today"} tone="violet" />
             </section>
 
             {kpis.blockedAccount > 0 ? (
