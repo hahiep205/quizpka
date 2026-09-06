@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useMemo, useRef, useState, type ComponentType } from "react"
-import { Activity, Banknote, BarChart3, CheckCircle2, Clock3, Download, History, LayoutGrid, LogOut, Megaphone, RefreshCw, Search, Send, ShieldAlert, UserRound, Users, WalletCards, X, type LucideIcon } from "lucide-react"
+import { useCallback, useEffect, useMemo, useRef, useState } from "react"
+import { Activity, Banknote, BarChart3, CheckCircle2, Clock3, History, LayoutGrid, LogOut, Megaphone, RefreshCw, Search, Send, ShieldAlert, UserRound, Users, WalletCards, X, type LucideIcon } from "lucide-react"
 import { MobileTabBar } from "@/components/MobileTabBar"
 import brandLogo from "@/assets/logo.png"
 import { useAuth } from "@/auth/AuthProvider"
@@ -7,19 +7,16 @@ import { DashboardStatCard, dashboardStatGridClass } from "@/components/Dashboar
 import { Card } from "@/components/ui/card"
 import { fetchAllAdminUsers } from "@/features/admin/api/adminUsers"
 import { fetchAllActivityTimeline, fetchAllPracticeAttempts, fetchPracticeAttempts, fetchUserActivity } from "@/features/admin/api/adminActivity"
-import { ACTIVITY_LABELS, parseActivityRows, parseAttemptRows, toAttemptsCsv, toTimelineCsv, type ActivityEvent, type ActivityEventType, type PracticeAttemptRow } from "@/features/activity/lib/activityLog"
-import { bucketLast14Days, eventsByType, filterByDays, topLearners, topSubjects } from "@/features/admin/lib/adminOverview"
+import { ACTIVITY_LABELS, parseActivityRows, parseAttemptRows, type ActivityEvent, type ActivityEventType, type PracticeAttemptRow } from "@/features/activity/lib/activityLog"
+import { bucketLast14Days, eventsByType, filterByDays, topSubjects } from "@/features/admin/lib/adminOverview"
 import { ANOMALY_META, detectAllAnomalies, detectUserAnomalies, riskScore, type AnomalyFlag, type AnomalySeverity } from "@/features/admin/lib/anomalyDetectors"
 import { supabase } from "@/lib/supabase"
 import {
   computeAdminKpis,
-  downloadCsv,
   filterAdminUsers,
   filterByTab,
   sortAdminUsers,
-  toAdminCsv,
   type AdminSortKey,
-  type AdminTab,
   type AdminUser,
 } from "@/features/admin/lib/adminStats"
 import { appRoutes, getCurrentPath, navigate, type AppPath } from "@/app/navigation"
@@ -48,6 +45,33 @@ function formatVnd(value: number): string {
   return new Intl.NumberFormat("vi-VN", { style: "currency", currency: "VND" }).format(value)
 }
 
+// Mỗi ô ngày chia 2 nửa: trên = Nộp bài (xanh thương hiệu), dưới = Events (tím).
+// Thang màu riêng cho từng chỉ số vì events thường lớn hơn lượt nộp hàng chục lần.
+const ATTEMPT_TONES = [
+  "bg-slate-100 dark:bg-white/10",
+  "bg-[#D6EFFF] dark:bg-[#143a52]",
+  "bg-[#8ED4FB] dark:bg-[#155e85]",
+  "bg-[#1CB0F6] dark:bg-[#1d9bd7]",
+  "bg-[#0A4FD6] dark:bg-[#4C9AFF]",
+]
+
+const HEAT_EVENT_TONES = [
+  "bg-slate-100 dark:bg-white/10",
+  "bg-[#EDE9FE] dark:bg-[#2a2350]",
+  "bg-[#C4B5FD] dark:bg-[#4c3a9e]",
+  "bg-[#8B5CF6] dark:bg-[#7c5cf0]",
+  "bg-[#5B21B6] dark:bg-[#a78bfa]",
+]
+
+function contributionLevel(total: number, max: number): number {
+  if (total <= 0 || max <= 0) return 0
+  const ratio = total / max
+  if (ratio <= 0.25) return 1
+  if (ratio <= 0.5) return 2
+  if (ratio <= 0.75) return 3
+  return 4
+}
+
 function isToday(value: string | null): boolean {
   if (!value) return false
   const date = new Date(value)
@@ -64,21 +88,9 @@ function PaymentStatusBadge({ status }: { status: PaymentStatus }) {
   return <span className={cn("whitespace-nowrap rounded-full px-2.5 py-1 text-[11px] font-black", tones[status])}>{labels[status]}</span>
 }
 
-function toPaymentCsv(payments: AdminPayment[]): string {
-  const header = ["order_id", "user_id", "product_id", "product_name", "amount_vnd", "status", "transaction_id", "paid_at", "created_at"]
-  const escape = (value: unknown) => `"${String(value ?? "").replaceAll('"', '""')}"`
-  return [header, ...payments.map((p) => [p.orderId, p.userId, p.productId, p.productName, p.amountVnd, p.status, p.transactionId, p.paidAt, p.createdAt])].map((row) => row.map(escape).join(",")).join("\n")
-}
 
 type Props = { lang: "vi" | "en" }
 type AdminSection = "overview" | "users" | "notifications" | "payment" | "sendquiz" | "supports" | "timeline" | "attempts"
-
-const tabs: Array<{ key: AdminTab; vi: string; en: string }> = [
-  { key: "logined", vi: "Đã login", en: "Logined" },
-  { key: "active-account", vi: "Active (tài khoản)", en: "Active account" },
-  { key: "active-7d", vi: "Active 7 ngày", en: "Active 7d" },
-  { key: "active-30d", vi: "Active 30 ngày", en: "Active 30d" },
-]
 
 const EVENT_FILTERS: Array<"all" | ActivityEventType> = ["all", "login", "open_exam", "start_attempt", "submit_attempt", "retry_wrong", "view_dashboard", "view_leaderboard", "update_profile"]
 
@@ -92,14 +104,6 @@ const EVENT_TONES: Record<ActivityEventType, string> = {
   view_leaderboard: "bg-yellow-50 text-yellow-600 dark:bg-yellow-500/10",
   update_profile: "bg-slate-100 text-slate-500 dark:bg-white/10",
 }
-
-const RANGE_OPTIONS: Array<{ days: number; label: string }> = [
-  { days: 7, label: "7 ngày" },
-  { days: 14, label: "14 ngày" },
-  { days: 30, label: "30 ngày" },
-  { days: 90, label: "90 ngày" },
-  { days: 0, label: "Tất cả" },
-]
 
 const SECTION_NAV: Array<{ key: AdminSection; icon: LucideIcon; vi: string; en: string }> = [
   { key: "overview", icon: LayoutGrid, vi: "Tổng quan", en: "Overview" },
@@ -145,7 +149,6 @@ export function AdminPage({ lang }: Props) {
   const [userCounts, setUserCounts] = useState({ total: 0, active: 0, blocked: 0 })
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
-  const [tab, setTab] = useState<AdminTab>("logined")
   const [query, setQuery] = useState("")
   const [role, setRole] = useState<"all" | "user" | "admin">("all")
   const [status, setStatus] = useState<"all" | "active" | "blocked">("all")
@@ -186,7 +189,7 @@ export function AdminPage({ lang }: Props) {
   const [attemptsError, setAttemptsError] = useState<string | null>(null)
   const [eventFilter, setEventFilter] = useState<"all" | ActivityEventType>("all")
   const [timelineQuery, setTimelineQuery] = useState("")
-  const [rangeDays, setRangeDays] = useState(14)
+  const [rangeDays] = useState(7)
   const [page, setPage] = useState(0)
   const [timelinePage, setTimelinePage] = useState(0)
   const [attemptsPage, setAttemptsPage] = useState(0)
@@ -269,20 +272,13 @@ export function AdminPage({ lang }: Props) {
     }
   }, [])
 
-  // Reset về trang 1 mỗi khi đổi filter/tab/sort.
-  useEffect(() => { setPage(0) }, [tab, query, role, status, sortKey, sortDir])
+  // Reset về trang 1 mỗi khi đổi filter/sort.
+  useEffect(() => { setPage(0) }, [query, role, status, sortKey, sortDir])
   useEffect(() => { setTimelinePage(0) }, [eventFilter, timelineQuery, onlyAnomaly, rangeDays, section])
   useEffect(() => { setAttemptsPage(0) }, [onlyAnomaly, rangeDays, section])
   useEffect(() => { setPaymentPage(0) }, [paymentQuery, paymentStatus])
 
   const kpis = useMemo(() => ({ ...computeAdminKpis(users), totalLogined: userCounts.total, activeAccount: userCounts.active, blockedAccount: userCounts.blocked }), [userCounts, users])
-  const tabCounts = useMemo(() => ({
-    logined: filterByTab(users, "logined").length,
-    "active-account": filterByTab(users, "active-account").length,
-    "active-7d": filterByTab(users, "active-7d").length,
-    "active-30d": filterByTab(users, "active-30d").length,
-  }), [users])
-
   // Flags bất thường trên toàn bộ dữ liệu đã tải (A1/A2/A3/A6/A7).
   const allFlags = useMemo(() => detectAllAnomalies(attempts, events), [attempts, events])
   const flagCountByUser = useMemo(() => {
@@ -312,7 +308,7 @@ export function AdminPage({ lang }: Props) {
   const anomalyUserCount = flagCountByUser.size
 
   const visible = useMemo(() => {
-    const byTab = filterByTab(users, tab)
+    const byTab = filterByTab(users, "logined")
     const byFilter = filterAdminUsers(byTab, { query, role, status })
     if (sortKey === "risk") {
       return [...byFilter].sort((a, b) =>
@@ -321,7 +317,7 @@ export function AdminPage({ lang }: Props) {
       )
     }
     return sortAdminUsers(byFilter, sortKey, sortDir)
-  }, [flagCountByUser, query, role, sortDir, sortKey, status, tab, users])
+  }, [flagCountByUser, query, role, sortDir, sortKey, status, users])
 
   const pageCount = Math.max(1, Math.ceil(visible.length / USER_PAGE_SIZE))
   const safePage = Math.min(page, pageCount - 1)
@@ -408,11 +404,23 @@ export function AdminPage({ lang }: Props) {
 
   const chartDays = rangeDays === 0 ? 30 : Math.min(rangeDays, 30)
   const dayBuckets = useMemo(() => bucketLast14Days(rangedAttempts, rangedEvents, undefined, chartDays), [rangedAttempts, rangedEvents, chartDays])
-  const dayMax = useMemo(() => Math.max(1, ...dayBuckets.map((b) => Math.max(b.attempts, b.events))), [dayBuckets])
+  const attemptsMax = useMemo(() => Math.max(1, ...dayBuckets.map((b) => b.attempts)), [dayBuckets])
+  const eventsMax = useMemo(() => Math.max(1, ...dayBuckets.map((b) => b.events)), [dayBuckets])
+  const contributionTotals = useMemo(() => ({
+    attempts: dayBuckets.reduce((sum, b) => sum + b.attempts, 0),
+    events: dayBuckets.reduce((sum, b) => sum + b.events, 0),
+  }), [dayBuckets])
+  const contributionPeak = useMemo(() => {
+    let peak = dayBuckets[0] ?? null
+    for (const b of dayBuckets) {
+      if (b.attempts + b.events > (peak ? peak.attempts + peak.events : -1)) peak = b
+    }
+    return peak
+  }, [dayBuckets])
+  const todayKey = new Date().toISOString().slice(0, 10)
   const evTypeCounts = useMemo(() => eventsByType(rangedEvents), [rangedEvents])
   const evTypeMax = useMemo(() => Math.max(1, ...evTypeCounts.map((c) => c.count)), [evTypeCounts])
   const subjectTops = useMemo(() => topSubjects(rangedAttempts), [rangedAttempts])
-  const learnerTops = useMemo(() => topLearners(rangedAttempts), [rangedAttempts])
 
   const selected = users.find((u) => u.id === selectedId) ?? null
 
@@ -491,12 +499,29 @@ export function AdminPage({ lang }: Props) {
     return [user.displayName, user.email, user.id].some((value) => value?.toLowerCase().includes(query))
   })
 
+  const adminTopbarTitle =
+    section === "users"
+      ? lang === "vi" ? "Người dùng" : "Users"
+      : section === "notifications"
+        ? lang === "vi" ? "Gửi thông báo" : "Send notifications"
+        : section === "payment"
+          ? lang === "vi" ? "Giao dịch" : "Payments"
+          : section === "sendquiz"
+            ? lang === "vi" ? "Cấp quyền môn học" : "Grant access"
+            : section === "supports"
+              ? lang === "vi" ? "Báo lỗi từ user" : "Support"
+              : section === "timeline"
+                ? lang === "vi" ? "Luồng hoạt động" : "Activity"
+                : section === "attempts"
+                  ? lang === "vi" ? "Lịch sử làm bài" : "Attempts"
+                  : lang === "vi" ? "Tổng quan" : "Overview"
+
   return (
     <div className="min-h-svh bg-[#F6F7FB] text-[#100F3E] transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
       <AdminSidebar lang={lang} section={section} live={live} profileName={profile?.display_name ?? profile?.email ?? null} profileEmail={profile?.email ?? null} avatarUrl={profile?.avatar_url ?? null} onNavigate={goSection} onSignOut={handleSignOut} />
 
       <div className="lg:pl-[200px]">
-        <AdminTopbar lang={lang} profileName={profile?.display_name ?? null} live={live} onReload={reload} reloading={loading} onSignOut={handleSignOut} />
+        <AdminTopbar lang={lang} section={section} title={adminTopbarTitle} live={live} onReload={reload} reloading={loading} onSignOut={handleSignOut} />
 
         <main className="mx-auto w-full max-w-[1440px] space-y-6 px-3 pb-[calc(108px+env(safe-area-inset-bottom))] pt-4 min-[380px]:px-4 sm:space-y-8 sm:px-6 sm:pt-6 md:px-8 lg:px-8 lg:pb-12 lg:pt-8 xl:px-10">
            <div className="dashboard-reveal space-y-6 sm:space-y-8">
@@ -508,55 +533,66 @@ export function AdminPage({ lang }: Props) {
             ) : null}
             {section === "notifications" ? (
             <section className="scroll-mt-24 space-y-4 sm:space-y-5">
-              <AdminSectionHeading icon={Megaphone} title={lang === "vi" ? "Gửi thông báo" : "Send notifications"} description={lang === "vi" ? "Gửi tới tất cả user đang hoạt động hoặc một user được chọn" : "Send to all active users or one selected user"} />
-              <Card className="max-w-3xl space-y-5 p-5 sm:p-6">
-                <div>
-                  <label className="text-sm font-black">Đối tượng nhận</label>
-                  <label className="relative mt-2 block">
-                    <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
-                    <input value={notificationRecipientQuery} onChange={(e) => setNotificationRecipientQuery(e.target.value)} placeholder="Tìm theo tên, email hoặc ID..." className="h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white pl-9 pr-3 text-sm font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" />
-                  </label>
-                  <div className="mt-2 max-h-64 overflow-y-auto rounded-xl border-2 border-[#E5E5E5] bg-white p-2 dark:border-white/10 dark:bg-slate-800">
-                    <label className="flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-sm font-black hover:bg-sky-50 dark:hover:bg-white/5">
-                      <input type="checkbox" checked={notificationRecipientIds.length === 0} onChange={() => setNotificationRecipientIds([])} className="h-4 w-4 accent-[#1CB0F6]" />
-                      Tất cả user active ({notificationRecipients.length})
+              <Card className="space-y-5 p-4 sm:p-5">
+                <div className="grid gap-5 lg:grid-cols-2">
+                  <div>
+                    <label className="text-sm font-black">Đối tượng nhận</label>
+                    <label className="relative mt-2 block">
+                      <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+                      <input value={notificationRecipientQuery} onChange={(e) => setNotificationRecipientQuery(e.target.value)} placeholder="Tìm theo tên, email hoặc ID..." className="h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white pl-9 pr-3 text-sm font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" />
                     </label>
-                    {filteredNotificationRecipients.map((u) => <label key={u.id} className="flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-sm font-semibold hover:bg-sky-50 dark:hover:bg-white/5"><input type="checkbox" checked={notificationRecipientIds.includes(u.id)} onChange={() => setNotificationRecipientIds((current) => current.includes(u.id) ? current.filter((id) => id !== u.id) : [...current, u.id])} className="h-4 w-4 accent-[#1CB0F6]" /><span className="min-w-0 truncate">{u.displayName ?? "(chưa đặt tên)"} <span className="text-xs text-slate-400">· {u.email ?? u.id.slice(0, 8)}</span></span></label>)}
+                    <div className="mt-2 max-h-64 overflow-y-auto rounded-xl border-2 border-[#E5E5E5] bg-white p-2 lg:max-h-72 dark:border-white/10 dark:bg-slate-800">
+                      <label className="flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-sm font-black hover:bg-sky-50 dark:hover:bg-white/5">
+                        <input type="checkbox" checked={notificationRecipientIds.length === 0} onChange={() => setNotificationRecipientIds([])} className="h-4 w-4 accent-[#1CB0F6]" />
+                        Tất cả user active ({notificationRecipients.length})
+                      </label>
+                      {filteredNotificationRecipients.map((u) => <label key={u.id} className="flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-sm font-semibold hover:bg-sky-50 dark:hover:bg-white/5"><input type="checkbox" checked={notificationRecipientIds.includes(u.id)} onChange={() => setNotificationRecipientIds((current) => current.includes(u.id) ? current.filter((id) => id !== u.id) : [...current, u.id])} className="h-4 w-4 accent-[#1CB0F6]" /><span className="min-w-0 truncate">{u.displayName ?? "(chưa đặt tên)"} <span className="text-xs text-slate-400">· {u.email ?? u.id.slice(0, 8)}</span></span></label>)}
+                    </div>
+                    <p className="mt-1 text-xs font-semibold text-slate-400">{notificationRecipientIds.length ? `Đã chọn ${notificationRecipientIds.length} user` : `Tất cả user active (${notificationRecipients.length})`} · Hiển thị {filteredNotificationRecipients.length}/{notificationRecipients.length}</p>
                   </div>
-                  <p className="mt-1 text-xs font-semibold text-slate-400">{notificationRecipientIds.length ? `Đã chọn ${notificationRecipientIds.length} user` : `Tất cả user active (${notificationRecipients.length})`} · Hiển thị {filteredNotificationRecipients.length}/{notificationRecipients.length}</p>
-                </div>
-                <div>
-                  <label htmlFor="notification-title" className="text-sm font-black">Tiêu đề</label>
-                  <input id="notification-title" maxLength={120} value={notificationTitle} onChange={(e) => setNotificationTitle(e.target.value)} placeholder="Ví dụ: Lịch thi sắp tới" className="mt-2 h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" />
-                  <p className="mt-1 text-right text-xs font-semibold text-slate-400">{notificationTitle.length}/120</p>
-                </div>
-                <div>
-                  <label htmlFor="notification-message" className="text-sm font-black">Nội dung</label>
-                  <textarea id="notification-message" maxLength={2000} rows={6} value={notificationMessage} onChange={(e) => setNotificationMessage(e.target.value)} placeholder="Nhập nội dung thông báo..." className="mt-2 w-full resize-y rounded-xl border-2 border-[#E5E5E5] bg-white px-3 py-3 text-sm font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" />
-                  <p className="mt-1 text-right text-xs font-semibold text-slate-400">{notificationMessage.length}/2000</p>
+                  <div className="space-y-5">
+                    <div>
+                      <label htmlFor="notification-title" className="text-sm font-black">Tiêu đề</label>
+                      <input id="notification-title" maxLength={120} value={notificationTitle} onChange={(e) => setNotificationTitle(e.target.value)} placeholder="Ví dụ: Lịch thi sắp tới" className="mt-2 h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" />
+                      <p className="mt-1 text-right text-xs font-semibold text-slate-400">{notificationTitle.length}/120</p>
+                    </div>
+                    <div>
+                      <label htmlFor="notification-message" className="text-sm font-black">Nội dung</label>
+                      <textarea id="notification-message" maxLength={2000} rows={8} value={notificationMessage} onChange={(e) => setNotificationMessage(e.target.value)} placeholder="Nhập nội dung thông báo..." className="mt-2 w-full resize-y rounded-xl border-2 border-[#E5E5E5] bg-white px-3 py-3 text-sm font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" />
+                      <p className="mt-1 text-right text-xs font-semibold text-slate-400">{notificationMessage.length}/2000</p>
+                    </div>
+                  </div>
                 </div>
                 {notificationResult ? <p className="rounded-xl bg-sky-50 px-3 py-2 text-sm font-bold text-sky-700 dark:bg-sky-500/10 dark:text-sky-300">{notificationResult}</p> : null}
-                <button type="button" disabled={notificationSending} onClick={handleSendNotification} className="lp-btn lp-btn--primary"><Send className="h-4 w-4" />{notificationSending ? "Đang gửi..." : "Gửi thông báo"}</button>
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                  <p className="text-xs font-semibold text-slate-400">{notificationRecipientIds.length ? `Sẽ gửi tới ${notificationRecipientIds.length} user đã chọn` : `Sẽ gửi tới tất cả ${notificationRecipients.length} user active`}</p>
+                  <button type="button" disabled={notificationSending} onClick={handleSendNotification} className="lp-btn lp-btn--primary w-full sm:w-auto"><Send className="h-4 w-4" />{notificationSending ? "Đang gửi..." : "Gửi thông báo"}</button>
+                </div>
               </Card>
               <div className="space-y-3">
-                <AdminSectionHeading icon={History} title="Lịch sử đã gửi" description="Các thông báo đã gửi tới user, bao gồm cả thông báo broadcast và gửi riêng" />
-                {notificationHistory.length ? notificationHistory.map((notification) => (
-                  <Card key={notification.id} onClick={() => setSelectedNotification(notification)} className={cn("flex cursor-pointer flex-col gap-4 p-4 transition hover:-translate-y-px hover:border-[#7DD3FC] sm:flex-row sm:items-start sm:justify-between sm:p-5", notification.revokedAt && "opacity-60")}>
-                    <div className="min-w-0">
-                      <div className="flex flex-wrap items-center gap-2"><h3 className="text-sm font-black text-[#100F3E] dark:text-white">{notification.title}</h3><span className={cn("rounded-full px-2 py-0.5 text-[10px] font-black", notification.isDirect ? "bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-300" : "bg-sky-50 text-sky-600 dark:bg-sky-500/10 dark:text-sky-300")}>{notification.isDirect ? "Gửi riêng" : "Tất cả user"}</span>{notification.revokedAt ? <span className="rounded-full bg-red-50 px-2 py-0.5 text-[10px] font-black text-red-600 dark:bg-red-500/10 dark:text-red-300">Đã thu hồi</span> : null}</div>
-                      <p className="mt-2 whitespace-pre-wrap text-sm font-semibold text-slate-600 dark:text-slate-300">{notification.message}</p>
-                      <p className="mt-2 text-xs font-bold text-slate-400">{notification.recipientCount} user · {formatTime(notification.createdAt, lang)}</p>
-                    </div>
-                    {!notification.revokedAt ? <button type="button" disabled={revokingNotificationId === notification.id} onClick={(event) => { event.stopPropagation(); handleRevokeNotification(notification) }} className="lp-btn lp-btn--secondary lp-btn--sm shrink-0 text-red-600">{revokingNotificationId === notification.id ? "Đang thu hồi..." : "Thu hồi"}</button> : null}
-                  </Card>
-                )) : <Card variant="dashed" className="py-10 text-center"><p className="text-sm font-bold text-slate-500">Chưa có lịch sử thông báo.</p></Card>}
+                <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Lịch sử đã gửi ({notificationHistory.length})</p>
+                {notificationHistory.length ? (
+                  <div className="overflow-x-auto rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none">
+                    <table className="w-full min-w-[900px] text-left text-sm">
+                      <thead><tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-wide text-slate-400 dark:bg-white/5"><th className="px-4 py-3">Tiêu đề</th><th className="px-4 py-3">Phạm vi</th><th className="px-4 py-3 text-right">Người nhận</th><th className="px-4 py-3">Thời gian</th><th className="px-4 py-3"><span className="sr-only">Thao tác</span></th></tr></thead>
+                      <tbody>{notificationHistory.map((notification) => (
+                        <tr key={notification.id} onClick={() => setSelectedNotification(notification)} className={cn("cursor-pointer border-t border-slate-100 transition-colors hover:bg-sky-50/60 dark:border-white/5 dark:hover:bg-white/5", notification.revokedAt && "opacity-60")}>
+                          <td className="max-w-[380px] px-4 py-3"><p className="truncate font-extrabold text-[#100F3E] dark:text-white" title={notification.title}>{notification.title}</p><p className="mt-1 line-clamp-1 truncate text-xs font-semibold text-slate-500 dark:text-slate-400" title={notification.message}>{notification.message}</p></td>
+                          <td className="px-4 py-3"><span className={cn("whitespace-nowrap rounded-full px-2.5 py-1 text-[11px] font-black", notification.isDirect ? "bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-300" : "bg-sky-50 text-sky-600 dark:bg-sky-500/10 dark:text-sky-300")}>{notification.isDirect ? "Gửi riêng" : "Tất cả user"}</span>{notification.revokedAt ? <span className="ml-1.5 whitespace-nowrap rounded-full bg-red-50 px-2.5 py-1 text-[11px] font-black text-red-600 dark:bg-red-500/10 dark:text-red-300">Đã thu hồi</span> : null}</td>
+                          <td className="px-4 py-3 text-right font-extrabold text-[#100F3E] dark:text-white">{notification.recipientCount}</td>
+                          <td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(notification.createdAt, lang)}</td>
+                          <td className="px-4 py-3 text-right">{!notification.revokedAt ? <button type="button" disabled={revokingNotificationId === notification.id} onClick={(event) => { event.stopPropagation(); handleRevokeNotification(notification) }} className="lp-btn lp-btn--secondary lp-btn--sm shrink-0 text-red-600">{revokingNotificationId === notification.id ? "Đang thu hồi..." : "Thu hồi"}</button> : null}</td>
+                        </tr>
+                      ))}</tbody>
+                    </table>
+                  </div>
+                ) : <Card variant="dashed" className="py-10 text-center"><p className="text-sm font-bold text-slate-500">Chưa có lịch sử thông báo.</p></Card>}
               </div>
             </section>
             ) : null}
 
              {section === "payment" ? (
             <section className="scroll-mt-24 space-y-4 sm:space-y-5">
-              <AdminSectionHeading icon={WalletCards} title={lang === "vi" ? "Giao dịch" : "Payments"} description={lang === "vi" ? "Theo dõi toàn bộ đơn hàng và giao dịch mua môn học trả phí của user" : "Track all paid course orders and user transactions"} action={payments.length ? <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={() => downloadCsv(`admin-payments-${new Date().toISOString().slice(0, 10)}.csv`, toPaymentCsv(filteredPayments))}><Download className="h-4 w-4" />CSV</button> : undefined} />
               <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
                 <DashboardStatCard icon={Banknote} value={formatVnd(paymentKpis.revenue)} label="Doanh thu đã thu" tone="green" />
                 <DashboardStatCard icon={CheckCircle2} value={String(paymentKpis.paid)} label="Giao dịch thành công" tone="blue" />
@@ -579,8 +615,7 @@ export function AdminPage({ lang }: Props) {
 
              {section === "sendquiz" ? (
              <section className="scroll-mt-24 space-y-4 sm:space-y-5">
-               <AdminSectionHeading icon={Send} title="Cấp quyền môn học" description="Xử lý trường hợp user đã thanh toán thành công nhưng hệ thống chưa ghi nhận quyền truy cập" />
-               <Card className="max-w-3xl space-y-5 p-5 sm:p-6">
+                <Card className="max-w-3xl space-y-5 p-5 sm:p-6">
                  <div className="rounded-xl bg-amber-50 p-4 text-sm font-semibold leading-6 text-amber-800 dark:bg-amber-500/10 dark:text-amber-200">
                    Chỉ sử dụng sau khi đã đối soát thanh toán. Thao tác này ghi nhận quyền mua trực tiếp, không tạo doanh thu hoặc giao dịch thanh toán mới.
                  </div>
@@ -611,8 +646,7 @@ export function AdminPage({ lang }: Props) {
 
              {section === "supports" ? (
              <section className="scroll-mt-24 space-y-4 sm:space-y-5">
-               <AdminSectionHeading icon={ShieldAlert} title="Báo lỗi từ user" description="Theo dõi và cập nhật trạng thái các lỗi được người dùng gửi" />
-               <Card className="space-y-3 p-4 sm:p-5">
+                <Card className="space-y-3 p-4 sm:p-5">
                  <div className="flex flex-col gap-3 sm:flex-row">
                    <label className="relative block flex-1"><Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" /><input value={supportQuery} onChange={(event) => setSupportQuery(event.target.value)} placeholder="Tìm tiêu đề, nội dung, tên, email hoặc ID..." className="h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white pl-10 pr-3 text-sm font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" /></label>
                    <select value={supportType} onChange={(event) => setSupportType(event.target.value as typeof supportType)} className="h-11 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="all">Tất cả loại</option><option value="contribute">Đóng góp tài liệu</option><option value="feedback">Góp ý</option><option value="report">Báo lỗi</option></select>
@@ -621,13 +655,22 @@ export function AdminPage({ lang }: Props) {
                  <p className="text-xs font-semibold text-slate-400">Hiển thị {filteredSupportReports.length}/{supportReports.length} báo lỗi</p>
                </Card>
                {supportsError ? <Card variant="dashed" className="p-5 text-sm font-bold text-red-600">{supportsError}</Card> : null}
-               {filteredSupportReports.length ? filteredSupportReports.map((report) => (
-                 <Card key={report.id} className="space-y-3 p-4 sm:p-5">
-                   <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between"><div className="min-w-0"><div className="mb-1 inline-flex rounded-full bg-sky-50 px-2.5 py-1 text-[11px] font-black text-sky-700 dark:bg-sky-500/10 dark:text-sky-300">{report.type === "contribute" ? "Đóng góp tài liệu" : report.type === "feedback" ? "Góp ý" : "Báo lỗi"}</div><h3 className="text-base font-black text-[#100F3E] dark:text-white">{report.subject}</h3><p className="mt-1 text-xs font-semibold text-slate-400">{report.displayName ?? "(chưa đặt tên)"} · {report.email ?? report.userId} · {formatTime(report.createdAt, lang)}</p></div><select value={report.status} disabled={updatingSupportId === report.id} onChange={(event) => handleSupportStatus(report.id, event.target.value as SupportStatus)} className="h-10 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-xs font-black outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="pending">Đang chờ</option><option value="resolved">Đã xử lý</option><option value="unresolvable">Không xử lý được</option></select></div>
-                   <p className="whitespace-pre-wrap text-sm font-semibold leading-6 text-slate-600 dark:text-slate-300">{report.description}</p>
-                   {report.pageUrl?.startsWith("https://") || report.pageUrl?.startsWith("http://") ? <a href={report.pageUrl} target="_blank" rel="noreferrer" className="block truncate text-xs font-bold text-[#129BDC] hover:underline">Trang báo lỗi: {report.pageUrl}</a> : null}
-                 </Card>
-               )) : <Card variant="dashed" className="py-14 text-center"><ShieldAlert className="mx-auto h-9 w-9 text-slate-300" /><p className="mt-3 text-sm font-bold text-slate-500">Chưa có báo lỗi phù hợp.</p></Card>}
+                {filteredSupportReports.length ? (
+                  <div className="overflow-x-auto rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none">
+                    <table className="w-full min-w-[900px] text-left text-sm">
+                      <thead><tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-wide text-slate-400 dark:bg-white/5"><th className="px-4 py-3">User</th><th className="px-4 py-3">Loại</th><th className="px-4 py-3">Nội dung</th><th className="px-4 py-3">Trạng thái</th><th className="px-4 py-3">Thời gian</th></tr></thead>
+                      <tbody>{filteredSupportReports.map((report) => (
+                        <tr key={report.id} className="border-t border-slate-100 dark:border-white/5">
+                          <td className="px-4 py-3"><p className="font-extrabold text-[#100F3E] dark:text-white">{report.displayName ?? "(chưa đặt tên)"}</p><p className="text-xs font-semibold text-slate-400">{report.email ?? report.userId}</p></td>
+                          <td className="px-4 py-3"><span className={cn("whitespace-nowrap rounded-full px-2.5 py-1 text-[11px] font-black", report.type === "contribute" ? "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300" : report.type === "feedback" ? "bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-300" : "bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-300")}>{report.type === "contribute" ? "Đóng góp tài liệu" : report.type === "feedback" ? "Góp ý" : "Báo lỗi"}</span></td>
+                          <td className="max-w-[380px] px-4 py-3"><p className="font-extrabold text-[#100F3E] dark:text-white">{report.subject}</p><p className="mt-1 line-clamp-2 whitespace-pre-wrap text-xs font-semibold text-slate-500 dark:text-slate-400" title={report.description}>{report.description}</p></td>
+                          <td className="px-4 py-3"><select value={report.status} disabled={updatingSupportId === report.id} onChange={(event) => handleSupportStatus(report.id, event.target.value as SupportStatus)} className="h-10 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-xs font-black outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="pending">Đang chờ</option><option value="resolved">Đã xử lý</option><option value="unresolvable">Không xử lý được</option></select></td>
+                          <td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(report.createdAt, lang)}</td>
+                        </tr>
+                      ))}</tbody>
+                    </table>
+                  </div>
+                ) : <Card variant="dashed" className="py-14 text-center"><ShieldAlert className="mx-auto h-9 w-9 text-slate-300" /><p className="mt-3 text-sm font-bold text-slate-500">Chưa có báo lỗi phù hợp.</p></Card>}
              </section>
              ) : null}
 
@@ -646,45 +689,43 @@ export function AdminPage({ lang }: Props) {
 
             {/* Tổng quan */}
             <section id="admin-overview" className="scroll-mt-24 space-y-4 sm:space-y-5">
-              <AdminSectionHeading
-                icon={BarChart3}
-                title={lang === "vi" ? `Tổng quan ${rangeDays === 0 ? "tất cả" : `${chartDays} ngày`}` : `Overview ${rangeDays === 0 ? "(all)" : `${chartDays}d`}`}
-                description={lang === "vi" ? "Nhịp độ học tập, phễu sự kiện, top môn và top learner" : "Learning pace, event funnel, top subjects and learners"}
-              />
-              <div className="flex flex-wrap gap-2">
-                {RANGE_OPTIONS.map((r) => (
-                  <button
-                    key={r.days}
-                    type="button"
-                    onClick={() => setRangeDays(r.days)}
-                    className={cn("lp-chip min-h-10 justify-center px-3 text-xs sm:px-4 sm:text-sm", rangeDays === r.days && "is-active")}
-                  >
-                    {r.label}
-                  </button>
-                ))}
-              </div>
               <div className="grid gap-3 sm:gap-4 lg:grid-cols-5">
                 <div className="rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] lg:col-span-3 dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
                   <div className="flex flex-wrap items-center gap-2">
-                    <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Lượt nộp bài + events theo ngày</p>
+                    <div className="min-w-0">
+                      <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Nhịp hoạt động · {chartDays} ngày</p>
+                      <p className="mt-1 text-sm font-black text-[#100F3E] dark:text-white">
+                        {contributionTotals.attempts} nộp · {contributionTotals.events} events
+                      </p>
+                    </div>
                     <div className="ml-auto flex items-center gap-3 text-[11px] font-bold text-slate-400">
-                      <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-full bg-[#1CB0F6]" />Nộp bài</span>
-                      <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-full bg-slate-300 dark:bg-slate-600" />Events</span>
+                      <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-[4px] bg-[#1CB0F6] ring-1 ring-black/5 dark:ring-white/10" />Nộp bài</span>
+                      <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-[4px] bg-[#8B5CF6] ring-1 ring-black/5 dark:ring-white/10" />Events</span>
                     </div>
                   </div>
-                  <div className="mt-4 overflow-x-auto pb-1">
-                    <div className="flex h-36 min-w-[520px] items-end gap-1 sm:h-40 sm:gap-1.5">
-                    {dayBuckets.map((b) => (
-                      <div key={b.date} className="flex min-w-0 flex-1 flex-col items-center gap-1.5" title={`${b.label}: ${b.attempts} lượt nộp, ${b.events} events`}>
-                        <div className="flex h-28 w-full items-end justify-center gap-1 sm:h-32">
-                          <div className="w-full max-w-3.5 rounded-t-full bg-[#1CB0F6]" style={{ height: `${Math.max(4, Math.round((b.attempts / dayMax) * 100))}%`, opacity: b.attempts ? 1 : 0.25 }} />
-                          <div className="w-full max-w-3.5 rounded-t-full bg-slate-300 dark:bg-slate-600" style={{ height: `${Math.max(4, Math.round((b.events / dayMax) * 100))}%`, opacity: b.events ? 1 : 0.25 }} />
+                  <div className="mt-4 grid grid-cols-7 gap-1.5 sm:gap-2">
+                    {dayBuckets.map((b) => {
+                      const isTodayCell = b.date === todayKey
+                      return (
+                        <div key={b.date} className="min-w-0" title={`${b.label}: ${b.attempts} lượt nộp, ${b.events} events`}>
+                          <div className={`grid aspect-square grid-rows-2 overflow-hidden rounded-[10px] ring-1 ring-black/5 dark:ring-white/10 ${isTodayCell ? "outline outline-2 outline-offset-1 outline-[#1CB0F6]" : ""}`}>
+                            <div className={`flex items-center justify-center text-[10px] font-black sm:text-xs ${ATTEMPT_TONES[contributionLevel(b.attempts, attemptsMax)]} ${contributionLevel(b.attempts, attemptsMax) >= 3 ? "text-white" : "text-[#100F3E] dark:text-white"}`}>
+                              {b.attempts > 0 ? b.attempts : ""}
+                            </div>
+                            <div className={`flex items-center justify-center text-[10px] font-black sm:text-xs ${HEAT_EVENT_TONES[contributionLevel(b.events, eventsMax)]} ${contributionLevel(b.events, eventsMax) >= 3 ? "text-white" : "text-[#100F3E] dark:text-white"}`}>
+                              {b.events > 0 ? (b.events >= 1000 ? `${(b.events / 1000).toFixed(1).replace(".", ",")}k` : b.events) : ""}
+                            </div>
+                          </div>
+                          <p className="mt-1 truncate text-center text-[9px] font-bold text-slate-400 sm:text-[10px]">{b.label}</p>
                         </div>
-                        <span className="text-[9px] font-bold text-slate-400 sm:text-[10px]">{b.label.slice(0, 2)}</span>
-                      </div>
-                    ))}
-                    </div>
+                      )
+                    })}
                   </div>
+                  <p className="mt-3 border-t border-slate-100 pt-3 text-[11px] font-bold text-slate-400 dark:border-white/10">
+                    {contributionPeak
+                      ? `Cao điểm ${contributionPeak.label}: ${contributionPeak.attempts} lượt nộp · ${contributionPeak.events} events`
+                      : "Chưa có dữ liệu trong khoảng này."}
+                  </p>
                 </div>
                 <div className="space-y-2.5 rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] lg:col-span-2 dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
                   <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Events theo loại</p>
@@ -699,34 +740,18 @@ export function AdminPage({ lang }: Props) {
                   )) : <p className="text-xs font-semibold text-slate-400">Chưa có event nào.</p>}
                 </div>
               </div>
-              <div className="grid gap-3 sm:gap-4 md:grid-cols-2">
-                <div className="rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
-                  <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Top môn (lượt nộp server)</p>
-                  <div className="mt-3 space-y-2">
-                    {subjectTops.length ? subjectTops.map((s) => (
-                      <div key={s.key} className="flex items-center gap-2.5 text-xs font-bold">
-                        <span className="w-36 shrink-0 truncate text-slate-600 sm:w-40 dark:text-slate-300">{s.key}</span>
-                        <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-slate-100 dark:bg-white/10">
-                          <div className="h-full rounded-full bg-emerald-400" style={{ width: `${Math.round((s.count / Math.max(1, subjectTops[0]?.count ?? 1)) * 100)}%` }} />
-                        </div>
-                        <span className="w-8 shrink-0 text-right font-black text-[#100F3E] dark:text-white">{s.count}</span>
+              <div className="rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
+                <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Top môn (lượt nộp server)</p>
+                <div className="mt-3 space-y-2">
+                  {subjectTops.length ? subjectTops.map((s) => (
+                    <div key={s.key} className="flex items-center gap-2.5 text-xs font-bold">
+                      <span className="w-36 shrink-0 truncate text-slate-600 sm:w-40 dark:text-slate-300">{s.key}</span>
+                      <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-slate-100 dark:bg-white/10">
+                        <div className="h-full rounded-full bg-emerald-400" style={{ width: `${Math.round((s.count / Math.max(1, subjectTops[0]?.count ?? 1)) * 100)}%` }} />
                       </div>
-                    )) : <p className="text-xs font-semibold text-slate-400">Chưa có.</p>}
-                  </div>
-                </div>
-                <div className="rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
-                  <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Top learner (lượt nộp server)</p>
-                  <div className="mt-3 space-y-2">
-                    {learnerTops.length ? learnerTops.map((l) => (
-                      <button key={l.userId} type="button" className="flex w-full items-center gap-2.5 text-left text-xs font-bold text-slate-600 transition-colors hover:text-[#129BDC] dark:text-slate-300" onClick={() => setSelectedId(l.userId)}>
-                        <span className="w-36 shrink-0 truncate sm:w-40">{nameById.get(l.userId) ?? l.userId.slice(0, 8)}</span>
-                        <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-slate-100 dark:bg-white/10">
-                          <div className="h-full rounded-full bg-violet-400" style={{ width: `${Math.round((l.attempts / Math.max(1, learnerTops[0]?.attempts ?? 1)) * 100)}%` }} />
-                        </div>
-                        <span className="w-16 shrink-0 text-right font-black text-[#100F3E] dark:text-white">{l.attempts} · {l.avgAccuracy}%</span>
-                      </button>
-                    )) : <p className="text-xs font-semibold text-slate-400">Chưa có.</p>}
-                  </div>
+                      <span className="w-8 shrink-0 text-right font-black text-[#100F3E] dark:text-white">{s.count}</span>
+                    </div>
+                  )) : <p className="text-xs font-semibold text-slate-400">Chưa có.</p>}
                 </div>
               </div>
             </section>
@@ -737,33 +762,6 @@ export function AdminPage({ lang }: Props) {
             <>
             {/* Người dùng */}
             <section id="admin-users" className="scroll-mt-24 space-y-4 sm:space-y-5">
-              <AdminSectionHeading
-                icon={Users}
-                title={lang === "vi" ? "Người dùng" : "Users"}
-                description={lang === "vi" ? "Danh sách logined, active theo tài khoản và theo mức độ học tập" : "Logined list, account-active and engagement-active users"}
-                action={visible.length ? (
-                  <button
-                    type="button"
-                    className="lp-btn lp-btn--secondary lp-btn--sm"
-                    onClick={() => downloadCsv(`admin-users-${new Date().toISOString().slice(0, 10)}.csv`, toAdminCsv(visible))}
-                  >
-                    <Download className="h-4 w-4" />CSV ({visible.length})
-                  </button>
-                ) : undefined}
-              />
-              <div className="flex flex-wrap gap-2">
-                {tabs.map((t) => (
-                  <button
-                    key={t.key}
-                    type="button"
-                    onClick={() => setTab(t.key)}
-                    className={cn("lp-chip min-h-10 justify-center px-3 text-xs sm:px-4 sm:text-sm", tab === t.key && "is-active")}
-                  >
-                    {(lang === "vi" ? t.vi : t.en)} ({tabCounts[t.key]})
-                  </button>
-                ))}
-              </div>
-
               <div className="rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
                 <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
                   <label className="relative block flex-1">
@@ -917,23 +915,9 @@ export function AdminPage({ lang }: Props) {
             <>
             {/* Timeline luồng hoạt động sau active */}
             <section id="admin-timeline" className="scroll-mt-24 space-y-4 sm:space-y-5">
-              <AdminSectionHeading
-                icon={Activity}
-                title={lang === "vi" ? `Luồng hoạt động (${filteredEvents.length}/${rangedEvents.length})` : `Activity (${filteredEvents.length}/${rangedEvents.length})`}
-                description={lang === "vi" ? "Mọi luồng của user sau khi active: mở đề, làm bài, nộp, làm lại, xem hạng" : "Every post-activation flow: open, attempt, submit, retry, ranking"}
-                action={filteredEvents.length ? (
-                  <button
-                    type="button"
-                    className="lp-btn lp-btn--secondary lp-btn--sm"
-                    onClick={() => downloadCsv(`admin-timeline-${new Date().toISOString().slice(0, 10)}.csv`, toTimelineCsv(filteredEvents))}
-                  >
-                    <Download className="h-4 w-4" />CSV
-                  </button>
-                ) : undefined}
-              />
               <div className="rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap items-center gap-2">
                     <button
                       type="button"
                       onClick={() => setOnlyAnomaly((v) => !v)}
@@ -942,16 +926,11 @@ export function AdminPage({ lang }: Props) {
                     >
                       🚩 Bất thường{allFlags.length ? ` (${allFlags.length})` : ""}
                     </button>
-                    {EVENT_FILTERS.map((f) => (
-                      <button
-                        key={f}
-                        type="button"
-                        onClick={() => setEventFilter(f)}
-                        className={cn("lp-chip min-h-9 justify-center px-3 text-xs", eventFilter === f && "is-active")}
-                      >
-                        {f === "all" ? "Tất cả" : ACTIVITY_LABELS[f]}
-                      </button>
-                    ))}
+                    <select value={eventFilter} onChange={(e) => setEventFilter(e.target.value as typeof eventFilter)} className="h-11 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none dark:border-white/10 dark:bg-slate-800 dark:text-white" aria-label="Loại event">
+                      {EVENT_FILTERS.map((f) => (
+                        <option key={f} value={f}>{f === "all" ? "Tất cả event" : ACTIVITY_LABELS[f]}</option>
+                      ))}
+                    </select>
                   </div>
                   <label className="relative block sm:ml-auto sm:w-[220px]">
                     <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
@@ -983,20 +962,19 @@ export function AdminPage({ lang }: Props) {
                 </div>
               ) : null}
               {onlyAnomaly && visibleFlags.length ? (
-                <ol className="space-y-2.5">
-                  {visibleFlags.slice(0, 100).map((f, index) => (
-                    <li key={`${f.code}-${f.userId}-${f.createdAt}-${index}`}>
-                      <button type="button" onClick={() => setSelectedId(f.userId)} title={lang === "vi" ? "Bấm để xem user" : "Click to view user"} className="flex w-full items-center gap-3 rounded-[15px] border-2 border-red-200 bg-white p-3.5 text-left shadow-[0_3px_0_#f3b8b8] transition-all hover:-translate-y-px sm:rounded-[16px] sm:p-4 dark:border-red-500/25 dark:bg-slate-900 dark:shadow-none">
-                        <FlagBadge flag={f} />
-                        <span className="min-w-0 flex-1">
-                          <span className="block truncate text-sm font-extrabold text-[#100F3E] dark:text-white">{ANOMALY_META[f.code].labelVi} · {nameById.get(f.userId) ?? f.userId.slice(0, 8)}</span>
-                          <span className="mt-0.5 block truncate text-xs font-semibold text-slate-400">{f.reasonVi}</span>
-                        </span>
-                        <span className="shrink-0 text-right text-[11px] font-bold leading-4 text-slate-400">{formatTime(f.createdAt, lang)}</span>
-                      </button>
-                    </li>
-                  ))}
-                </ol>
+                <div className="overflow-x-auto rounded-[16px] border-2 border-red-200 bg-white shadow-[0_3px_0_#f3b8b8] dark:border-red-500/25 dark:bg-slate-900 dark:shadow-none">
+                  <table className="w-full min-w-[900px] text-left text-sm">
+                    <thead><tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-wide text-slate-400 dark:bg-white/5"><th className="px-4 py-3">User</th><th className="px-4 py-3">Cờ</th><th className="px-4 py-3">Lý do</th><th className="px-4 py-3">Thời gian</th></tr></thead>
+                    <tbody>{visibleFlags.slice(0, 100).map((f, index) => (
+                      <tr key={`${f.code}-${f.userId}-${f.createdAt}-${index}`} className="border-t border-slate-100 dark:border-white/5">
+                        <td className="px-4 py-3"><button type="button" onClick={() => setSelectedId(f.userId)} title={lang === "vi" ? "Bấm để xem user" : "Click to view user"} className="text-left font-extrabold text-[#100F3E] transition-colors hover:text-[#129BDC] dark:text-white"><p>{nameById.get(f.userId) ?? f.userId.slice(0, 8)}</p><p className="text-xs font-semibold text-slate-400">{f.userId.slice(0, 8)}</p></button></td>
+                        <td className="px-4 py-3"><FlagBadge flag={f} /><p className="mt-1 text-xs font-bold text-slate-500 dark:text-slate-400">{ANOMALY_META[f.code].labelVi}</p></td>
+                        <td className="max-w-[420px] px-4 py-3 text-xs font-semibold text-slate-500 dark:text-slate-400" title={f.reasonVi}>{f.reasonVi}</td>
+                        <td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(f.createdAt, lang)}</td>
+                      </tr>
+                    ))}</tbody>
+                  </table>
+                </div>
               ) : null}
               {!eventsError && !filteredEvents.length && (!onlyAnomaly || !visibleFlags.length) ? (
                 <Card variant="dashed" className="py-14 text-center">
@@ -1005,29 +983,19 @@ export function AdminPage({ lang }: Props) {
                 </Card>
               ) : null}
               {filteredEvents.length ? (
-                <ol className="space-y-2.5">
-                  {pagedEvents.map((e) => (
-                    <li key={e.id}>
-                      <button type="button" onClick={() => setSelectedId(e.userId)} className="flex w-full items-center gap-3 rounded-[15px] border-2 border-slate-200 bg-white p-3.5 text-left shadow-[0_3px_0_#DCDCDC] transition-all hover:-translate-y-px hover:border-[#7DD3FC] sm:rounded-[16px] sm:p-4 dark:border-white/10 dark:bg-slate-900 dark:shadow-none dark:hover:border-sky-400/30">
-                        <span className={cn("flex h-10 w-10 shrink-0 items-center justify-center rounded-[12px]", EVENT_TONES[e.eventType])}>
-                          <Activity className="h-5 w-5" strokeWidth={2.2} />
-                        </span>
-                        <span className="min-w-0 flex-1">
-                          <span className="block truncate text-sm font-extrabold text-[#100F3E] dark:text-white">{nameById.get(e.userId) ?? e.userId.slice(0, 8)}</span>
-                          <span className="mt-0.5 block truncate text-xs font-semibold text-slate-400">{ACTIVITY_LABELS[e.eventType]} · {summarizeMetadata(e)}</span>
-                          {(flagsByEventId.get(e.id) ?? []).length ? (
-                            <span className="mt-1 flex flex-wrap gap-1">
-                              {(flagsByEventId.get(e.id) ?? []).map((f) => (
-                                <FlagBadge key={`${f.code}-${e.id}`} flag={f} />
-                              ))}
-                            </span>
-                          ) : null}
-                        </span>
-                        <span className="shrink-0 text-right text-[11px] font-bold leading-4 text-slate-400">{formatTime(e.createdAt, lang)}</span>
-                      </button>
-                    </li>
-                  ))}
-                </ol>
+                <div className="overflow-x-auto rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none">
+                  <table className="w-full min-w-[900px] text-left text-sm">
+                    <thead><tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-wide text-slate-400 dark:bg-white/5"><th className="px-4 py-3">User</th><th className="px-4 py-3">Sự kiện</th><th className="px-4 py-3">Chi tiết</th><th className="px-4 py-3">Thời gian</th></tr></thead>
+                    <tbody>{pagedEvents.map((e) => (
+                      <tr key={e.id} className="border-t border-slate-100 dark:border-white/5">
+                        <td className="px-4 py-3"><button type="button" onClick={() => setSelectedId(e.userId)} className="text-left font-extrabold text-[#100F3E] transition-colors hover:text-[#129BDC] dark:text-white"><p>{nameById.get(e.userId) ?? e.userId.slice(0, 8)}</p><p className="text-xs font-semibold text-slate-400">{e.userId.slice(0, 8)}</p></button></td>
+                        <td className="px-4 py-3"><span className="flex items-center gap-2.5"><span className={cn("flex h-9 w-9 shrink-0 items-center justify-center rounded-[11px]", EVENT_TONES[e.eventType])}><Activity className="h-4 w-4" strokeWidth={2.2} /></span><span className="font-bold text-slate-600 dark:text-slate-300">{ACTIVITY_LABELS[e.eventType]}</span></span>{(flagsByEventId.get(e.id) ?? []).length ? (<span className="mt-1.5 flex flex-wrap gap-1">{(flagsByEventId.get(e.id) ?? []).map((f) => (<FlagBadge key={`${f.code}-${e.id}`} flag={f} />))}</span>) : null}</td>
+                        <td className="max-w-[380px] px-4 py-3 text-xs font-semibold text-slate-500 dark:text-slate-400" title={summarizeMetadata(e)}>{summarizeMetadata(e)}</td>
+                        <td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(e.createdAt, lang)}</td>
+                      </tr>
+                    ))}</tbody>
+                  </table>
+                </div>
               ) : null}
               {filteredEvents.length > TIMELINE_PAGE_SIZE ? (
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
@@ -1046,31 +1014,6 @@ export function AdminPage({ lang }: Props) {
             <>
             {/* Lịch sử làm bài trên server */}
             <section id="admin-attempts" className="scroll-mt-24 space-y-4 sm:space-y-5">
-              <AdminSectionHeading
-                icon={History}
-                title={lang === "vi" ? `Lịch sử làm bài (${visibleAttempts.length})` : `Attempts (${visibleAttempts.length})`}
-                description={lang === "vi" ? "Mọi lượt nộp đã mirror lên server, mới nhất trước" : "Every mirrored submission, newest first"}
-                action={
-                  <div className="flex gap-2">
-                    <button
-                      type="button"
-                      onClick={() => setOnlyAnomaly((v) => !v)}
-                      className={cn("lp-btn lp-btn--secondary lp-btn--sm", onlyAnomaly && "!border-[#1CB0F6] !text-[#129BDC]")}
-                      title="Chỉ hiện lượt có dấu hiệu bất thường"
-                    >
-                      🚩
-                    </button>
-                    <button
-                      type="button"
-                      className="lp-btn lp-btn--secondary lp-btn--sm"
-                      disabled={!visibleAttempts.length}
-                      onClick={() => downloadCsv(`admin-attempts-${new Date().toISOString().slice(0, 10)}.csv`, toAttemptsCsv(visibleAttempts))}
-                    >
-                      <Download className="h-4 w-4" />CSV
-                    </button>
-                  </div>
-                }
-              />
               {attemptsError ? (
                 <div className="rounded-[16px] border-2 border-amber-200 bg-amber-50 p-4 text-sm font-semibold text-amber-800 shadow-[0_3px_0_#f5d78e] sm:p-5 dark:border-amber-500/20 dark:bg-amber-500/10 dark:text-amber-200 dark:shadow-none">
                   <p className="font-black">{attemptsError}</p>
@@ -1083,26 +1026,20 @@ export function AdminPage({ lang }: Props) {
                 </Card>
               ) : null}
               {visibleAttempts.length ? (
-                <div className="space-y-2.5">
-                  {pagedAttempts.map((a) => (
-                    <button key={`${a.userId}:${a.historyId}`} type="button" onClick={() => setSelectedId(a.userId)} className="flex w-full items-center gap-3 rounded-[15px] border-2 border-slate-200 bg-white p-3.5 text-left shadow-[0_3px_0_#DCDCDC] transition-all hover:-translate-y-px hover:border-[#7DD3FC] sm:rounded-[16px] sm:p-4 dark:border-white/10 dark:bg-slate-900 dark:shadow-none dark:hover:border-sky-400/30">
-                      <span className="flex h-10 w-10 shrink-0 flex-col items-center justify-center rounded-[12px] bg-sky-50 leading-none text-[#1CB0F6] dark:bg-sky-500/10">
-                        <span className="text-sm font-black">{a.score.toFixed(1)}</span>
-                      </span>
-                      <span className="min-w-0 flex-1">
-                        <span className="block truncate text-sm font-extrabold text-[#100F3E] dark:text-white">{a.title || a.examId}</span>
-                        <span className="mt-0.5 block truncate text-xs font-semibold text-slate-400">{nameById.get(a.userId) ?? a.userId.slice(0, 8)} · {a.mode}{a.retryNumber ? ` · retry ${a.retryNumber}` : ""} · {a.accuracy}% · {formatTime(a.completedAt, lang)}</span>
-                        {(flagsByAttemptKey.get(`${a.userId}:${a.historyId}`) ?? []).length ? (
-                          <span className="mt-1 flex flex-wrap gap-1">
-                            {(flagsByAttemptKey.get(`${a.userId}:${a.historyId}`) ?? []).map((f) => (
-                              <FlagBadge key={`${f.code}-${a.historyId}`} flag={f} />
-                            ))}
-                          </span>
-                        ) : null}
-                      </span>
-                      <span className={cn("shrink-0 rounded-full px-2.5 py-1 text-[11px] font-black", a.accuracy >= 80 ? "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300" : a.accuracy >= 50 ? "bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-300" : "bg-red-50 text-red-600 dark:bg-red-500/10 dark:text-red-300")}>{a.accuracy}%</span>
-                    </button>
-                  ))}
+                <div className="overflow-x-auto rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none">
+                  <table className="w-full min-w-[900px] text-left text-sm">
+                    <thead><tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-wide text-slate-400 dark:bg-white/5"><th className="px-4 py-3 text-right">Điểm</th><th className="px-4 py-3">Bài làm</th><th className="px-4 py-3">User</th><th className="px-4 py-3 text-right">Đúng</th><th className="px-4 py-3 text-right">Chính xác</th><th className="px-4 py-3">Thời gian</th></tr></thead>
+                    <tbody>{pagedAttempts.map((a) => (
+                      <tr key={`${a.userId}:${a.historyId}`} onClick={() => setSelectedId(a.userId)} className="cursor-pointer border-t border-slate-100 transition-colors hover:bg-sky-50/60 dark:border-white/5 dark:hover:bg-white/5">
+                        <td className="px-4 py-3 text-right font-black text-[#1CB0F6]">{a.score.toFixed(1)}</td>
+                        <td className="max-w-[320px] px-4 py-3"><p className="truncate font-extrabold text-[#100F3E] dark:text-white" title={a.title || a.examId}>{a.title || a.examId}</p><p className="mt-0.5 truncate text-xs font-semibold text-slate-400">{a.mode}{a.retryNumber ? ` · retry ${a.retryNumber}` : ""}</p>{(flagsByAttemptKey.get(`${a.userId}:${a.historyId}`) ?? []).length ? (<span className="mt-1.5 flex flex-wrap gap-1">{(flagsByAttemptKey.get(`${a.userId}:${a.historyId}`) ?? []).map((f) => (<FlagBadge key={`${f.code}-${a.historyId}`} flag={f} />))}</span>) : null}</td>
+                        <td className="px-4 py-3"><p className="font-extrabold text-[#100F3E] dark:text-white">{nameById.get(a.userId) ?? a.userId.slice(0, 8)}</p><p className="text-xs font-semibold text-slate-400">{a.userId.slice(0, 8)}</p></td>
+                        <td className="px-4 py-3 text-right font-extrabold text-[#100F3E] dark:text-white">{a.correct}/{a.total}</td>
+                        <td className="px-4 py-3 text-right"><span className={cn("whitespace-nowrap rounded-full px-2.5 py-1 text-[11px] font-black", a.accuracy >= 80 ? "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300" : a.accuracy >= 50 ? "bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-300" : "bg-red-50 text-red-600 dark:bg-red-500/10 dark:text-red-300")}>{a.accuracy}%</span></td>
+                        <td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(a.completedAt, lang)}</td>
+                      </tr>
+                    ))}</tbody>
+                  </table>
                 </div>
               ) : null}
               {visibleAttempts.length > ATTEMPTS_PAGE_SIZE ? (
@@ -1195,18 +1132,17 @@ function AdminSidebar({
   )
 }
 
-function AdminTopbar({ lang, profileName, live, onReload, reloading, onSignOut }: { lang: "vi" | "en"; profileName: string | null; live: boolean; onReload: () => void; reloading: boolean; onSignOut: () => void }) {
+function AdminTopbar({ lang, section, title, live, onReload, reloading, onSignOut }: { lang: "vi" | "en"; section: AdminSection; title: string; live: boolean; onReload: () => void; reloading: boolean; onSignOut: () => void }) {
+  const sectionLabel = SECTION_NAV.find((item) => item.key === section)
+  const sectionTitle = sectionLabel ? (lang === "vi" ? sectionLabel.vi : sectionLabel.en) : "Admin"
   return (
     <header className="sticky top-0 z-30 bg-white/80 pt-[env(safe-area-inset-top)] backdrop-blur-2xl dark:bg-[#18191A]/80">
       <div className="mx-auto flex h-14 w-full max-w-[1440px] items-center justify-between gap-2 px-3 sm:h-16 sm:px-6 md:px-8 lg:h-[72px] lg:px-8 xl:px-10">
-        <a href="/" className="flex items-center lg:hidden" aria-label="QuizPKA">
-          <img src={brandLogo} alt="QuizPKA" className="h-8 w-auto" />
+        <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={sectionTitle}>
+          <span className="name-logo">{sectionTitle}</span>
         </a>
         <div className="hidden min-w-0 lg:block">
-          <h1 className="truncate text-base font-semibold text-[#100F3E] dark:text-white">
-            {lang === "vi" ? "Xin chào" : "Hello"}, {profileName ?? "Admin"}!
-          </h1>
-          <p className="text-xs font-semibold text-slate-400">{lang === "vi" ? "Thống kê toàn bộ user đã đăng nhập" : "Stats for all logged-in users"}</p>
+          <h2 className="truncate bg-gradient-to-r from-[#7DD3FC] via-[#1CB0F6] to-[#0A4FD6] bg-clip-text text-[22px] font-black leading-7 tracking-[-0.03em] text-transparent sm:text-[28px]">{title}</h2>
         </div>
         <div className="ml-auto flex items-center gap-2">
           <span className={cn("hidden items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-semibold sm:inline-flex", live ? "bg-[#F0F2F5] text-emerald-600 dark:bg-[#3A3B3C] dark:text-emerald-300" : "bg-[#F0F2F5] text-slate-400 dark:bg-[#3A3B3C] dark:text-slate-400")} title={live ? "Realtime đang bật: event mới tự hiện" : "Realtime chưa kết nối"}>
@@ -1249,19 +1185,6 @@ function AdminMobileNav({ lang, section, onNavigate }: { lang: "vi" | "en"; sect
         label: lang === "vi" ? item.vi : item.en,
       }))}
     />
-  )
-}
-
-function AdminSectionHeading({ title, description, icon: Icon, action }: { title: string; description: string; icon: ComponentType<{ className?: string }>; action?: React.ReactNode }) {
-  return (
-    <div className="flex flex-wrap items-center gap-3 sm:gap-4">
-      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[13px] bg-[#E8F7FE] text-[#1CB0F6] sm:h-14 sm:w-14 sm:rounded-[16px] dark:bg-sky-500/10"><Icon className="h-5 w-5 sm:h-7 sm:w-7" /></div>
-      <div className="min-w-0 flex-1">
-        <h2 className="text-[22px] font-black leading-7 tracking-[-0.03em] text-[#100F3E] sm:text-[28px] dark:text-white">{title}</h2>
-        <p className="mt-0.5 text-[13px] font-semibold leading-5 text-slate-500 sm:mt-1 sm:text-sm dark:text-slate-400">{description}</p>
-      </div>
-      {action ? <div className="shrink-0">{action}</div> : null}
-    </div>
   )
 }
 

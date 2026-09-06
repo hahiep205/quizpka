@@ -492,8 +492,17 @@ function DesktopSidebar({
 
 function DashboardTopbar({ lang, view }: Pick<DashboardPageProps, "lang"> & { view: DashboardView }) {
   const t = copy[lang]
-  const { profile } = useAuth()
   const [chatOpen, setChatOpen] = useState(false)
+  const topbarTitle =
+    view === "leaderboard"
+      ? t.leaderboardTitle
+      : view === "history"
+        ? t.historyTitle
+        : view === "settings"
+          ? t.settingsTitle
+          : view === "purchased"
+            ? t.purchasedTitle
+            : lang === "vi" ? "Quiz dành cho PKAers" : "Quiz for PKAers"
   const chatLabel = lang === "vi" ? "Chat cộng đồng" : "Community Chat"
   const pageMeta =
     view === "leaderboard"
@@ -543,11 +552,9 @@ function DashboardTopbar({ lang, view }: Pick<DashboardPageProps, "lang"> & { vi
             </a>
           )}
 
-          <div className="hidden lg:block">
-            <h1 className="text-base font-semibold text-[#100F3E] dark:text-white">
-              {t.hello}, {profile?.display_name ?? t.student}!
-            </h1>
-          </div>
+          <a href="/" className="hidden min-w-0 flex-1 sm:block" aria-label={topbarTitle}>
+            <h2 className="truncate bg-gradient-to-r from-[#7DD3FC] via-[#1CB0F6] to-[#0A4FD6] bg-clip-text text-2xl font-black tracking-[-0.025em] text-transparent sm:text-[32px] lg:text-[36px]">{topbarTitle}</h2>
+          </a>
 
           <div className="ml-auto">
             <div className="flex items-center gap-2">
@@ -629,18 +636,9 @@ function HomeDashboard({
       <LearningStatsGrid lang={lang} className="hidden sm:grid" />
 
       <section id="dashboard-documents" className="scroll-mt-24">
-        <div className="mb-4 flex flex-col gap-3 sm:mb-5 sm:gap-4 xl:flex-row xl:items-end xl:justify-between">
-          <div className="hidden sm:block">
-            <h2 className="text-xl font-black tracking-[-0.025em] text-[#100F3E] dark:text-white sm:text-[26px] lg:text-[28px]">
-              {t.documentTitle}
-            </h2>
-            <p className="mt-1 text-[13px] font-semibold leading-5 text-slate-500 dark:text-slate-400 sm:mt-1.5 sm:text-sm">
-              {t.documentDesc}
-            </p>
-          </div>
-
+        <div className="mb-4 flex flex-col gap-3 sm:mb-5 sm:gap-4">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <label className="relative block sm:w-[250px]">
+            <label className="relative block sm:min-w-0 sm:flex-1">
               <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
               <input
                 value={query}
@@ -728,7 +726,6 @@ function EmptyView({ lang, view }: { lang: Lang; view: "history" }) {
   }
   return (
     <section className="dashboard-reveal mx-auto max-w-4xl">
-      <PageHeading title={t.historyTitle} description={t.historyDesc} icon={History} />
       <LearningStatsGrid lang={lang} className="mb-4 sm:hidden" />
       {history.length ? (
         <div className="space-y-3">
@@ -886,7 +883,6 @@ function SettingsView({ lang, theme, onToggleLang, onToggleTheme, onOpenContact 
 
   return (
     <section className="dashboard-reveal mx-auto max-w-5xl">
-      <PageHeading title={t.settingsTitle} description={t.settingsDesc} icon={Settings} />
       <div className="grid gap-5 md:grid-cols-2">
         <div className="rounded-[16px] border border-slate-200 bg-white p-4 shadow-[0_3px_0_rgba(15,23,42,0.06)] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_3px_0_rgba(0,0,0,0.3)] sm:rounded-[20px] sm:p-6 sm:shadow-[0_4px_0_rgba(15,23,42,0.06)] dark:sm:shadow-[0_4px_0_rgba(0,0,0,0.3)] lg:col-span-2">
           <div><h3 className="text-lg font-black text-[#100F3E] dark:text-white sm:text-xl">{lang === "vi" ? "Thông tin cá nhân" : "Profile"}</h3><p className="mt-1 text-[13px] font-semibold text-slate-500 dark:text-slate-400 sm:text-sm">{lang === "vi" ? "Thông tin tài khoản Google" : "Your Google account"}</p></div>
@@ -929,15 +925,6 @@ function SettingsView({ lang, theme, onToggleLang, onToggleTheme, onOpenContact 
 
 function ToggleRow({ label, checked, onChange }: { label: string; checked: boolean; onChange: (value: boolean) => void }) {
   return <label className="flex min-h-14 cursor-pointer items-center justify-between gap-4 rounded-xl border border-slate-100 px-3.5 py-3 text-sm font-bold text-slate-600 transition-colors hover:border-sky-200 dark:border-white/10 dark:text-slate-300 dark:hover:border-sky-400/30"><span className="max-w-[80%] leading-5">{label}</span><span className={cn("relative h-6 w-11 shrink-0 rounded-full transition-colors", checked ? "bg-sky-500" : "bg-slate-200 dark:bg-slate-700")}><input type="checkbox" checked={checked} onChange={(event) => onChange(event.target.checked)} className="peer sr-only" /><span className="absolute left-1 top-1 h-4 w-4 rounded-full bg-white shadow-sm transition-transform peer-checked:translate-x-5" /></span></label>
-}
-
-function PageHeading({ title, description, icon: Icon }: { title: string; description: string; icon: ComponentType<{ className?: string }> }) {
-  return (
-    <div className="mb-5 hidden items-center gap-3 sm:mb-7 sm:gap-4 lg:flex">
-      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[13px] bg-[#E8F7FE] text-[#1CB0F6] dark:bg-sky-500/10 sm:h-14 sm:w-14 sm:rounded-[16px]"><Icon className="h-5 w-5 sm:h-7 sm:w-7" /></div>
-      <div className="min-w-0"><h2 className="text-[22px] font-black leading-7 tracking-[-0.03em] text-[#100F3E] dark:text-white sm:text-[28px]">{title}</h2><p className="mt-0.5 text-[13px] font-semibold leading-5 text-slate-500 dark:text-slate-400 sm:mt-1 sm:text-sm">{description}</p></div>
-    </div>
-  )
 }
 
 function SettingRow({ icon: Icon, title, children }: { icon: ComponentType<{ className?: string }>; title: string; children: React.ReactNode }) {
