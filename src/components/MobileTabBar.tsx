@@ -47,7 +47,8 @@ export function MobileTabBar<K extends string>({
                 <Icon
                   className="h-[26px] w-[26px]"
                   strokeWidth={2}
-                  fill={isActive ? "currentColor" : "none"}
+                  fill="none"
+                  stroke="currentColor"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />

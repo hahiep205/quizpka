@@ -49,7 +49,7 @@ export function PaymentModal({ open, lang, payment, userId, onClose, onPaid }: P
   const copy = isVietnamese
     ? {
         title: "Quét QR để thanh toán",
-        hint: "Sử dụng ứng dụng ngân hàng/ví điện tử hỗ trợ VietQR để quét mã QR và thanh toán nhanh chóng.",
+        hint: "Sử dụng ứng dụng ngân hàng/ví điện tử hỗ trợ VietQR để quét mã QR và thanh toán nhanh chóng. TUYỆT ĐỐI KHÔNG CHỈNH SỬA NỘI DUNG CHUYỂN KHOẢN!",
         cancel: "Hủy giao dịch",
         waiting: "Đang chờ xác nhận thanh toán…",
         success: "Thanh toán thành công!",

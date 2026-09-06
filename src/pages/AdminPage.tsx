@@ -27,7 +27,7 @@ import { cn } from "@/lib/utils"
 import { fetchAdminNotificationHistory, fetchNotificationRecipients, revokeAdminNotification, sendAdminNotifications, type AdminNotificationHistory, type NotificationRecipient } from "@/features/notifications/api/notifications"
 import { fetchAllAdminPayments, type AdminPayment, type PaymentStatus } from "@/features/admin/api/adminPayments"
 import { grantAdminPurchase, fetchAdminProducts, type AdminProduct } from "@/features/admin/api/adminEntitlements"
-import { fetchSupportReports, updateSupportStatus, type SupportReport, type SupportStatus } from "@/features/support/api/supportReports"
+import { fetchSupportReports, updateSupportStatus, type SupportReport, type SupportStatus, type SupportType } from "@/features/support/api/supportReports"
 
 function formatAdminDuration(totalSeconds: number): string {
   const s = Math.max(0, Math.round(totalSeconds))
@@ -167,6 +167,7 @@ export function AdminPage({ lang }: Props) {
   const [supportsError, setSupportsError] = useState<string | null>(null)
   const [supportQuery, setSupportQuery] = useState("")
   const [supportStatus, setSupportStatus] = useState<"all" | SupportStatus>("all")
+  const [supportType, setSupportType] = useState<"all" | SupportType>("all")
   const [updatingSupportId, setUpdatingSupportId] = useState<string | null>(null)
 
   const [events, setEvents] = useState<ActivityEvent[]>([])
@@ -455,6 +456,7 @@ export function AdminPage({ lang }: Props) {
 
   const filteredSupportReports = supportReports.filter((report) => {
     if (supportStatus !== "all" && report.status !== supportStatus) return false
+    if (supportType !== "all" && report.type !== supportType) return false
     const query = supportQuery.trim().toLowerCase()
     if (!query) return true
     return [report.subject, report.description, report.displayName, report.email, report.userId].some((value) => value?.toLowerCase().includes(query))
@@ -599,6 +601,7 @@ export function AdminPage({ lang }: Props) {
                <Card className="space-y-3 p-4 sm:p-5">
                  <div className="flex flex-col gap-3 sm:flex-row">
                    <label className="relative block flex-1"><Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" /><input value={supportQuery} onChange={(event) => setSupportQuery(event.target.value)} placeholder="Tìm tiêu đề, nội dung, tên, email hoặc ID..." className="h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white pl-10 pr-3 text-sm font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" /></label>
+                   <select value={supportType} onChange={(event) => setSupportType(event.target.value as typeof supportType)} className="h-11 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="all">Tất cả loại</option><option value="contribute">Đóng góp tài liệu</option><option value="feedback">Góp ý</option><option value="report">Báo lỗi</option></select>
                    <select value={supportStatus} onChange={(event) => setSupportStatus(event.target.value as typeof supportStatus)} className="h-11 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="all">Tất cả trạng thái</option><option value="pending">Đang chờ</option><option value="resolved">Đã xử lý</option><option value="unresolvable">Không xử lý được</option></select>
                  </div>
                  <p className="text-xs font-semibold text-slate-400">Hiển thị {filteredSupportReports.length}/{supportReports.length} báo lỗi</p>
@@ -606,7 +609,7 @@ export function AdminPage({ lang }: Props) {
                {supportsError ? <Card variant="dashed" className="p-5 text-sm font-bold text-red-600">{supportsError}</Card> : null}
                {filteredSupportReports.length ? filteredSupportReports.map((report) => (
                  <Card key={report.id} className="space-y-3 p-4 sm:p-5">
-                   <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between"><div className="min-w-0"><h3 className="text-base font-black text-[#100F3E] dark:text-white">{report.subject}</h3><p className="mt-1 text-xs font-semibold text-slate-400">{report.displayName ?? "(chưa đặt tên)"} · {report.email ?? report.userId} · {formatTime(report.createdAt, lang)}</p></div><select value={report.status} disabled={updatingSupportId === report.id} onChange={(event) => handleSupportStatus(report.id, event.target.value as SupportStatus)} className="h-10 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-xs font-black outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="pending">Đang chờ</option><option value="resolved">Đã xử lý</option><option value="unresolvable">Không xử lý được</option></select></div>
+                   <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between"><div className="min-w-0"><div className="mb-1 inline-flex rounded-full bg-sky-50 px-2.5 py-1 text-[11px] font-black text-sky-700 dark:bg-sky-500/10 dark:text-sky-300">{report.type === "contribute" ? "Đóng góp tài liệu" : report.type === "feedback" ? "Góp ý" : "Báo lỗi"}</div><h3 className="text-base font-black text-[#100F3E] dark:text-white">{report.subject}</h3><p className="mt-1 text-xs font-semibold text-slate-400">{report.displayName ?? "(chưa đặt tên)"} · {report.email ?? report.userId} · {formatTime(report.createdAt, lang)}</p></div><select value={report.status} disabled={updatingSupportId === report.id} onChange={(event) => handleSupportStatus(report.id, event.target.value as SupportStatus)} className="h-10 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-xs font-black outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="pending">Đang chờ</option><option value="resolved">Đã xử lý</option><option value="unresolvable">Không xử lý được</option></select></div>
                    <p className="whitespace-pre-wrap text-sm font-semibold leading-6 text-slate-600 dark:text-slate-300">{report.description}</p>
                    {report.pageUrl?.startsWith("https://") || report.pageUrl?.startsWith("http://") ? <a href={report.pageUrl} target="_blank" rel="noreferrer" className="block truncate text-xs font-bold text-[#129BDC] hover:underline">Trang báo lỗi: {report.pageUrl}</a> : null}
                  </Card>

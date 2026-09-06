@@ -78,7 +78,7 @@ const navItems: Array<{
 ]
 
 function SidebarSvg({ className, children }: { className?: string; children: React.ReactNode }) {
-  return <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">{children}</svg>
+  return <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{children}</svg>
 }
 
 function SidebarHomeIcon({ className }: { className?: string }) {
