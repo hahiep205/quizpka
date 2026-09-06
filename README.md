@@ -22,6 +22,26 @@ npm run build        # validate data, typecheck, and build dist/
 npm run preview      # serve dist/ locally
 ```
 
+## AI codebase memory
+
+This repository includes a project-scoped OpenCode MCP configuration for
+[`codebase-memory-mcp`](https://github.com/DeusData/codebase-memory-mcp). It
+indexes the code locally and gives the AI agent structural search, call-graph,
+architecture, and impact-analysis tools without uploading source code.
+
+Requirements:
+
+- Node.js 22 or later
+- npm 10 or later
+- OpenCode with MCP support
+
+Start OpenCode from the repository root, then restart it after changing
+`opencode.json`. On first use, ask the agent to index the project. The local
+index is stored in the git-ignored `.codebase-memory/` directory.
+
+The MCP server is restricted to this repository through `CBM_ALLOWED_ROOT`.
+If the repository is moved, update that path in `opencode.json`.
+
 ## Project structure
 
 ```text
@@ -55,4 +75,3 @@ Tests are colocated with the logic they protect. The suite covers answer mapping
 ## Deployment
 
 Vercel builds with `npm run build` and serves `dist/`; SPA rewrites are configured in `vercel.json`. Static question banks and media are public assets, so they must not contain secrets or access-controlled material. Use a backend and authenticated URLs if protected content is required.
-

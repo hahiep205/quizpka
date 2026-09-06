@@ -37,6 +37,9 @@ export function PracticeGuestPage({
   themeClassName?: string
 }) {
   const t = copy[lang]
+  const resultSessionId = typeof window !== "undefined" && window.location.pathname === "/result"
+    ? new URLSearchParams(window.location.search).get("sessionId") ?? undefined
+    : undefined
   const [payload, setPayload] = useState<PracticeSessionPayload | null | undefined>(
     undefined
   )
@@ -144,6 +147,8 @@ export function PracticeGuestPage({
         lang={payload.lang ?? lang}
         subject={subject}
         exam={exam}
+        setup={payload.setup}
+        initialSessionId={resultSessionId}
         onExit={() => {
           clearPracticeSession()
           goHomeFromPractice()

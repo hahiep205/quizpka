@@ -64,7 +64,7 @@ Deno.serve(async (req) => {
       if (!objectPath) return json({ error: "Unknown exam" }, 400, req)
       const { data: file, error: downloadError } = await admin.storage.from("paid-question-banks").download(objectPath)
       if (downloadError || !file) return json({ error: "Question bank unavailable" }, 503, req)
-      const bank = await file.json() as { questions?: Array<{ id: string | number; question: string; options?: Record<string, string>; explainAnswer?: string }> }
+      const bank = JSON.parse(await file.text()) as { questions?: Array<{ id: string | number; question: string; options?: Record<string, string>; explainAnswer?: string }> }
       questions = (bank.questions ?? []).map((question) => ({ id: String(question.id), prompt: question.question, options: Object.keys(question.options ?? {}).sort().map((key) => question.options?.[key] ?? ""), explanation: question.explainAnswer }))
     }
     return json({

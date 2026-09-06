@@ -1,0 +1,7 @@
+{
+  "extra_extensions": {
+    ".tsx": "typescript",
+    ".ts": "typescript",
+    ".mjs": "javascript"
+  }
+}

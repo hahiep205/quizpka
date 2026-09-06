@@ -37,13 +37,13 @@ Deno.serve(async (req) => {
     if (existing) {
       const { data: existingFile, error: existingDownloadError } = await admin.storage.from("paid-question-banks").download(objectPath)
       if (existingDownloadError || !existingFile) return json({ error: "Question bank unavailable" }, 503, req)
-      const existingBank = await existingFile.json() as { questions?: Array<{ id: string | number; question: string; options?: Record<string, string>; explainAnswer?: string }> }
+      const existingBank = JSON.parse(await existingFile.text()) as { questions?: Array<{ id: string | number; question: string; options?: Record<string, string>; explainAnswer?: string }> }
       const existingQuestions = (existingBank.questions ?? []).map((question) => ({ id: String(question.id), prompt: question.question, options: Object.keys(question.options ?? {}).sort().map((key) => question.options?.[key] ?? ""), explanation: question.explainAnswer }))
       return json({ sessionId: existing.id, examId: existing.exam_id, subjectId: existing.subject_id, startedAt: existing.started_at, expiresAt: existing.expires_at, status: existing.status, result: existing.result, questions: existingQuestions }, 200, req)
     }
     const { data: file, error: downloadError } = await admin.storage.from("paid-question-banks").download(objectPath)
     if (downloadError || !file) return json({ error: "Question bank unavailable" }, 503, req)
-    const bank = await file.json() as { questions?: Array<{ id: string | number; question: string; options?: Record<string, string>; answer: string; explainAnswer?: string }> }
+    const bank = JSON.parse(await file.text()) as { questions?: Array<{ id: string | number; question: string; options?: Record<string, string>; answer: string; explainAnswer?: string }> }
     const sourceQuestions = Array.isArray(bank.questions) ? bank.questions : []
     const sessionId = crypto.randomUUID()
     const durationMinutes = 60

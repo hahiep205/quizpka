@@ -30,8 +30,8 @@ export function isAppPath(path: string): path is AppPath {
   return Object.values(appRoutes).includes(path as AppPath)
 }
 
-export function navigate(path: AppPath, options: { replace?: boolean; hash?: string } = {}) {
-  const target = `${path}${options.hash ?? ""}`
+export function navigate(path: AppPath, options: { replace?: boolean; search?: string; hash?: string } = {}) {
+  const target = `${path}${options.search ?? ""}${options.hash ?? ""}`
   window.history[options.replace ? "replaceState" : "pushState"](null, "", target)
   window.dispatchEvent(new PopStateEvent("popstate"))
 }
