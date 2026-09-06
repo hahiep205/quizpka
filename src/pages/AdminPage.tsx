@@ -24,8 +24,9 @@ import {
 } from "@/features/admin/lib/adminStats"
 import { appRoutes, getCurrentPath, navigate, type AppPath } from "@/app/navigation"
 import { cn } from "@/lib/utils"
-import { fetchNotificationRecipients, sendAdminNotifications, type NotificationRecipient } from "@/features/notifications/api/notifications"
+import { fetchAdminNotificationHistory, fetchNotificationRecipients, revokeAdminNotification, sendAdminNotifications, type AdminNotificationHistory, type NotificationRecipient } from "@/features/notifications/api/notifications"
 import { fetchAllAdminPayments, type AdminPayment, type PaymentStatus } from "@/features/admin/api/adminPayments"
+import { grantAdminPurchase, fetchAdminProducts, type AdminProduct } from "@/features/admin/api/adminEntitlements"
 
 function formatAdminDuration(totalSeconds: number): string {
   const s = Math.max(0, Math.round(totalSeconds))
@@ -59,7 +60,7 @@ function toPaymentCsv(payments: AdminPayment[]): string {
 }
 
 type Props = { lang: "vi" | "en" }
-type AdminSection = "overview" | "users" | "notifications" | "payment" | "timeline" | "attempts"
+type AdminSection = "overview" | "users" | "notifications" | "payment" | "sendquiz" | "timeline" | "attempts"
 
 const tabs: Array<{ key: AdminTab; vi: string; en: string }> = [
   { key: "logined", vi: "Đã login", en: "Logined" },
@@ -94,6 +95,7 @@ const SECTION_NAV: Array<{ key: AdminSection; icon: LucideIcon; vi: string; en: 
   { key: "users", icon: Users, vi: "Người dùng", en: "Users" },
   { key: "notifications", icon: Megaphone, vi: "Thông báo", en: "Notifications" },
   { key: "payment", icon: WalletCards, vi: "Giao dịch", en: "Payments" },
+  { key: "sendquiz", icon: Send, vi: "Cấp môn học", en: "Grant access" },
   { key: "timeline", icon: Activity, vi: "Luồng HĐ", en: "Timeline" },
   { key: "attempts", icon: History, vi: "Lịch sử", en: "History" },
 ]
@@ -103,6 +105,7 @@ const SECTION_PATHS: Record<AdminSection, AppPath> = {
   users: appRoutes.adminUsers,
   notifications: appRoutes.adminNotifications,
   payment: appRoutes.adminPayment,
+  sendquiz: appRoutes.adminSendQuiz,
   timeline: appRoutes.adminTimeline,
   attempts: appRoutes.adminAttempts,
 }
@@ -111,6 +114,7 @@ function getAdminView(path: string): AdminSection {
   if (path === appRoutes.adminUsers) return "users"
   if (path === appRoutes.adminNotifications) return "notifications"
   if (path === appRoutes.adminPayment) return "payment"
+  if (path === appRoutes.adminSendQuiz) return "sendquiz"
   if (path === appRoutes.adminTimeline) return "timeline"
   if (path === appRoutes.adminAttempts) return "attempts"
   return "overview"
@@ -141,11 +145,20 @@ export function AdminPage({ lang }: Props) {
   const [notificationRecipientIds, setNotificationRecipientIds] = useState<string[]>([])
   const [notificationSending, setNotificationSending] = useState(false)
   const [notificationResult, setNotificationResult] = useState<string | null>(null)
+  const [notificationHistory, setNotificationHistory] = useState<AdminNotificationHistory[]>([])
+  const [selectedNotification, setSelectedNotification] = useState<AdminNotificationHistory | null>(null)
+  const [revokingNotificationId, setRevokingNotificationId] = useState<number | null>(null)
   const [payments, setPayments] = useState<AdminPayment[]>([])
   const [paymentsError, setPaymentsError] = useState<string | null>(null)
   const [paymentQuery, setPaymentQuery] = useState("")
   const [paymentStatus, setPaymentStatus] = useState<"all" | PaymentStatus>("all")
   const [paymentPage, setPaymentPage] = useState(0)
+  const [adminProducts, setAdminProducts] = useState<AdminProduct[]>([])
+  const [grantUserId, setGrantUserId] = useState("")
+  const [grantUserQuery, setGrantUserQuery] = useState("")
+  const [grantProductId, setGrantProductId] = useState("")
+  const [grantSending, setGrantSending] = useState(false)
+  const [grantResult, setGrantResult] = useState<{ ok: boolean; message: string } | null>(null)
 
   const [events, setEvents] = useState<ActivityEvent[]>([])
   const [eventsError, setEventsError] = useState<string | null>(null)
@@ -186,6 +199,7 @@ export function AdminPage({ lang }: Props) {
       setAttempts(res.attempts)
       setAttemptsError(res.ok ? null : res.error)
      })
+     void fetchAdminNotificationHistory().then(setNotificationHistory).catch(() => setNotificationHistory([]))
      void fetchAllAdminPayments().then((res) => {
        if (!mountedRef.current) return
        setPayments(res.payments)
@@ -196,6 +210,7 @@ export function AdminPage({ lang }: Props) {
   useEffect(() => { reload() }, [reload])
   useEffect(() => {
     void fetchNotificationRecipients().then(setNotificationRecipients).catch(() => setNotificationRecipients([]))
+    void fetchAdminProducts().then(setAdminProducts).catch(() => setAdminProducts([]))
   }, [])
 
   // Đồng bộ tab đang xem với URL (back/forward, link trực tiếp /admin/users...).
@@ -392,15 +407,47 @@ export function AdminPage({ lang }: Props) {
     }
     setNotificationSending(true)
     void sendAdminNotifications({ title: notificationTitle, message: notificationMessage, recipientIds: notificationRecipientIds })
-      .then((count) => { setNotificationResult(`Đã gửi thông báo tới ${count} user.`); setNotificationTitle(""); setNotificationMessage(""); setNotificationRecipientIds([]) })
+      .then((count) => { setNotificationResult(`Đã gửi thông báo tới ${count} user.`); setNotificationTitle(""); setNotificationMessage(""); setNotificationRecipientIds([]); return fetchAdminNotificationHistory() })
+      .then(setNotificationHistory)
       .catch((err: unknown) => setNotificationResult(err instanceof Error ? err.message : "Không thể gửi thông báo."))
       .finally(() => setNotificationSending(false))
+  }
+
+  const handleRevokeNotification = (notification: AdminNotificationHistory) => {
+    if (notification.revokedAt || !window.confirm(`Thu hồi thông báo này khỏi ${notification.recipientCount} user?`)) return
+    setRevokingNotificationId(notification.id)
+    void revokeAdminNotification(notification.id).then(() => fetchAdminNotificationHistory()).then(setNotificationHistory).catch((err: unknown) => setNotificationResult(err instanceof Error ? err.message : "Không thể thu hồi thông báo.")).finally(() => setRevokingNotificationId(null))
+  }
+
+  const handleGrantPurchase = () => {
+    setGrantResult(null)
+    if (!grantUserId || !grantProductId) {
+      setGrantResult({ ok: false, message: "Vui lòng chọn user và môn học." })
+      return
+    }
+    if (!window.confirm("Xác nhận đánh dấu user này đã mua môn học? Thao tác sẽ cấp quyền truy cập ngay lập tức.")) return
+    setGrantSending(true)
+    void grantAdminPurchase({ userId: grantUserId, productId: grantProductId })
+      .then((result) => {
+        setGrantResult({ ok: true, message: result.alreadyGranted ? "User đã có quyền môn học này. Không có thay đổi mới." : "Đã cấp quyền truy cập môn học cho user." })
+        return fetchAllAdminPayments()
+      })
+      .then((result) => { setPayments(result.payments); setPaymentsError(result.ok ? null : result.error) })
+      .catch((err: unknown) => setGrantResult({ ok: false, message: err instanceof Error ? err.message : "Không thể cấp quyền môn học." }))
+      .finally(() => setGrantSending(false))
   }
 
   const filteredNotificationRecipients = notificationRecipients.filter((recipient) => {
     const query = notificationRecipientQuery.trim().toLowerCase()
     if (!query) return true
     return [recipient.displayName, recipient.email, recipient.id].some((value) => value?.toLowerCase().includes(query))
+  })
+
+  const grantUsers = users.filter((user) => {
+    if (user.role === "admin") return false
+    const query = grantUserQuery.trim().toLowerCase()
+    if (!query) return true
+    return [user.displayName, user.email, user.id].some((value) => value?.toLowerCase().includes(query))
   })
 
   return (
@@ -450,10 +497,23 @@ export function AdminPage({ lang }: Props) {
                 {notificationResult ? <p className="rounded-xl bg-sky-50 px-3 py-2 text-sm font-bold text-sky-700 dark:bg-sky-500/10 dark:text-sky-300">{notificationResult}</p> : null}
                 <button type="button" disabled={notificationSending} onClick={handleSendNotification} className="lp-btn lp-btn--primary"><Send className="h-4 w-4" />{notificationSending ? "Đang gửi..." : "Gửi thông báo"}</button>
               </Card>
+              <div className="space-y-3">
+                <AdminSectionHeading icon={History} title="Lịch sử đã gửi" description="Các thông báo đã gửi tới user, bao gồm cả thông báo broadcast và gửi riêng" />
+                {notificationHistory.length ? notificationHistory.map((notification) => (
+                  <Card key={notification.id} onClick={() => setSelectedNotification(notification)} className={cn("flex cursor-pointer flex-col gap-4 p-4 transition hover:-translate-y-px hover:border-[#7DD3FC] sm:flex-row sm:items-start sm:justify-between sm:p-5", notification.revokedAt && "opacity-60")}>
+                    <div className="min-w-0">
+                      <div className="flex flex-wrap items-center gap-2"><h3 className="text-sm font-black text-[#100F3E] dark:text-white">{notification.title}</h3><span className={cn("rounded-full px-2 py-0.5 text-[10px] font-black", notification.isDirect ? "bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-300" : "bg-sky-50 text-sky-600 dark:bg-sky-500/10 dark:text-sky-300")}>{notification.isDirect ? "Gửi riêng" : "Tất cả user"}</span>{notification.revokedAt ? <span className="rounded-full bg-red-50 px-2 py-0.5 text-[10px] font-black text-red-600 dark:bg-red-500/10 dark:text-red-300">Đã thu hồi</span> : null}</div>
+                      <p className="mt-2 whitespace-pre-wrap text-sm font-semibold text-slate-600 dark:text-slate-300">{notification.message}</p>
+                      <p className="mt-2 text-xs font-bold text-slate-400">{notification.recipientCount} user · {formatTime(notification.createdAt, lang)}</p>
+                    </div>
+                    {!notification.revokedAt ? <button type="button" disabled={revokingNotificationId === notification.id} onClick={(event) => { event.stopPropagation(); handleRevokeNotification(notification) }} className="lp-btn lp-btn--secondary lp-btn--sm shrink-0 text-red-600">{revokingNotificationId === notification.id ? "Đang thu hồi..." : "Thu hồi"}</button> : null}
+                  </Card>
+                )) : <Card variant="dashed" className="py-10 text-center"><p className="text-sm font-bold text-slate-500">Chưa có lịch sử thông báo.</p></Card>}
+              </div>
             </section>
             ) : null}
 
-            {section === "payment" ? (
+             {section === "payment" ? (
             <section className="scroll-mt-24 space-y-4 sm:space-y-5">
               <AdminSectionHeading icon={WalletCards} title={lang === "vi" ? "Giao dịch" : "Payments"} description={lang === "vi" ? "Theo dõi toàn bộ đơn hàng và giao dịch mua môn học trả phí của user" : "Track all paid course orders and user transactions"} action={payments.length ? <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={() => downloadCsv(`admin-payments-${new Date().toISOString().slice(0, 10)}.csv`, toPaymentCsv(filteredPayments))}><Download className="h-4 w-4" />CSV</button> : undefined} />
               <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
@@ -474,7 +534,39 @@ export function AdminPage({ lang }: Props) {
               {pagedPayments.length ? <div className="overflow-x-auto rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none"><table className="w-full min-w-[900px] text-left text-sm"><thead><tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-wide text-slate-400 dark:bg-white/5"><th className="px-4 py-3">User</th><th className="px-4 py-3">Môn học</th><th className="px-4 py-3">Mã đơn</th><th className="px-4 py-3 text-right">Số tiền</th><th className="px-4 py-3">Trạng thái</th><th className="px-4 py-3">Thời gian</th></tr></thead><tbody>{pagedPayments.map((payment) => { const user = userById.get(payment.userId); return <tr key={payment.orderId} className="border-t border-slate-100 dark:border-white/5"><td className="px-4 py-3"><p className="font-extrabold text-[#100F3E] dark:text-white">{user?.displayName ?? "(chưa đặt tên)"}</p><p className="text-xs font-semibold text-slate-400">{user?.email ?? payment.userId}</p></td><td className="max-w-[240px] px-4 py-3 font-bold text-slate-600 dark:text-slate-300">{payment.productName}</td><td className="px-4 py-3 font-mono text-xs text-slate-500">{payment.orderId}<span className="block text-[10px] text-slate-400">{payment.transactionId ?? "Chưa có mã giao dịch"}</span></td><td className="px-4 py-3 text-right font-black text-[#129BDC]">{formatVnd(payment.amountVnd)}</td><td className="px-4 py-3"><PaymentStatusBadge status={payment.status} /></td><td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(payment.paidAt ?? payment.createdAt, lang)}</td></tr> })}</tbody></table></div> : null}
               {filteredPayments.length > PAYMENT_PAGE_SIZE ? <div className="flex items-center justify-between"><p className="text-sm font-bold text-slate-400">Hiển thị {safePaymentPage * PAYMENT_PAGE_SIZE + 1}–{Math.min(filteredPayments.length, safePaymentPage * PAYMENT_PAGE_SIZE + PAYMENT_PAGE_SIZE)} / {filteredPayments.length}</p><div className="flex gap-2"><button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safePaymentPage === 0} onClick={() => setPaymentPage(safePaymentPage - 1)}>← Trước</button><button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safePaymentPage >= paymentPageCount - 1} onClick={() => setPaymentPage(safePaymentPage + 1)}>Sau →</button></div></div> : null}
             </section>
-            ) : null}
+             ) : null}
+
+             {section === "sendquiz" ? (
+             <section className="scroll-mt-24 space-y-4 sm:space-y-5">
+               <AdminSectionHeading icon={Send} title="Cấp quyền môn học" description="Xử lý trường hợp user đã thanh toán thành công nhưng hệ thống chưa ghi nhận quyền truy cập" />
+               <Card className="max-w-3xl space-y-5 p-5 sm:p-6">
+                 <div className="rounded-xl bg-amber-50 p-4 text-sm font-semibold leading-6 text-amber-800 dark:bg-amber-500/10 dark:text-amber-200">
+                   Chỉ sử dụng sau khi đã đối soát thanh toán. Thao tác này ghi nhận quyền mua trực tiếp, không tạo doanh thu hoặc giao dịch thanh toán mới.
+                 </div>
+                 <div>
+                   <label htmlFor="grant-user" className="text-sm font-black">User nhận quyền</label>
+                   <label className="relative mt-2 block">
+                     <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+                     <input value={grantUserQuery} onChange={(e) => setGrantUserQuery(e.target.value)} placeholder="Tìm theo tên, email hoặc ID..." className="h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white pl-9 pr-3 text-sm font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" />
+                   </label>
+                   <select id="grant-user" value={grantUserId} onChange={(e) => setGrantUserId(e.target.value)} className="mt-2 h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white">
+                     <option value="">Chọn user...</option>
+                     {grantUsers.map((user) => <option key={user.id} value={user.id}>{user.displayName ?? "(chưa đặt tên)"} · {user.email ?? user.id}</option>)}
+                   </select>
+                   <p className="mt-1 text-xs font-semibold text-slate-400">Hiển thị {grantUsers.length}/{users.filter((user) => user.role !== "admin").length} user.</p>
+                 </div>
+                 <div>
+                   <label htmlFor="grant-product" className="text-sm font-black">Môn học trả phí</label>
+                   <select id="grant-product" value={grantProductId} onChange={(e) => setGrantProductId(e.target.value)} className="mt-2 h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white">
+                     <option value="">Chọn môn học...</option>
+                     {adminProducts.map((product) => <option key={product.id} value={product.id}>{product.name} · {formatVnd(product.priceVnd)}</option>)}
+                   </select>
+                 </div>
+                 {grantResult ? <p className={cn("rounded-xl px-3 py-2 text-sm font-bold", grantResult.ok ? "bg-emerald-50 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300" : "bg-red-50 text-red-700 dark:bg-red-500/10 dark:text-red-300")}>{grantResult.message}</p> : null}
+                 <button type="button" disabled={grantSending || !grantUserId || !grantProductId} onClick={handleGrantPurchase} className="lp-btn lp-btn--primary"><Send className="h-4 w-4" />{grantSending ? "Đang cấp quyền..." : "Đánh dấu đã mua và cấp quyền"}</button>
+               </Card>
+             </section>
+             ) : null}
 
             {section === "overview" ? (
             <>
@@ -969,6 +1061,7 @@ export function AdminPage({ lang }: Props) {
       <AdminMobileNav lang={lang} section={section} onNavigate={goSection} />
 
       {selected ? <UserDrawer user={selected} lang={lang} onClose={() => setSelectedId(null)} /> : null}
+      {selectedNotification ? <NotificationHistoryDetail notification={selectedNotification} lang={lang} onClose={() => setSelectedNotification(null)} /> : null}
     </div>
   )
 }
@@ -1229,6 +1322,22 @@ function UserDrawer({ user, lang, onClose }: { user: AdminUser; lang: "vi" | "en
       </aside>
     </div>
   )
+}
+
+function NotificationHistoryDetail({ notification, lang, onClose }: { notification: AdminNotificationHistory; lang: "vi" | "en"; onClose: () => void }) {
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent) => { if (event.key === "Escape") onClose() }
+    window.addEventListener("keydown", onKey)
+    return () => window.removeEventListener("keydown", onKey)
+  }, [onClose])
+  const readCount = notification.recipients.filter((recipient) => recipient.readAt).length
+  return <div className="fixed inset-0 z-[90] flex items-center justify-center p-3 sm:p-6">
+    <button type="button" aria-label="Đóng" className="contact-modal-overlay absolute inset-0 bg-[rgba(16,15,62,0.45)] backdrop-blur-[2px]" onClick={onClose} />
+    <aside role="dialog" aria-modal="true" className="contact-modal-panel relative z-10 flex max-h-[92dvh] w-full max-w-[620px] flex-col overflow-hidden rounded-[18px] border-2 border-[#E5E5E5] bg-white shadow-[0_6px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none">
+      <div className="flex items-start justify-between gap-4 border-b border-slate-100 px-5 py-4 sm:px-6 sm:py-5 dark:border-white/10"><div className="min-w-0"><p className="text-xs font-black uppercase tracking-wide text-[#129BDC]">Chi tiết thông báo</p><h2 className="mt-1 truncate text-xl font-black text-[#100F3E] dark:text-white">{notification.title}</h2><p className="mt-1 text-xs font-semibold text-slate-400">{notification.isDirect ? "Gửi riêng" : "Tất cả user"} · {formatTime(notification.createdAt, lang)}</p></div><button type="button" className="lp-btn lp-btn--secondary lp-btn--icon shrink-0" onClick={onClose} aria-label="Đóng"><X className="h-4 w-4" /></button></div>
+      <div className="min-h-0 flex-1 space-y-4 overflow-y-auto px-5 py-4 sm:px-6"><div className="rounded-xl bg-slate-50 p-3.5 text-sm font-semibold leading-6 text-slate-600 dark:bg-white/5 dark:text-slate-300">{notification.message}</div><div className="grid grid-cols-2 gap-2 sm:grid-cols-3"><DrawerMetric label="Tổng người nhận" value={String(notification.recipientCount)} /><DrawerMetric label="Đã đọc" value={`${readCount}`} /><DrawerMetric label="Chưa đọc" value={`${notification.recipientCount - readCount}`} /></div><div><p className="text-xs font-black uppercase tracking-wide text-slate-400">Danh sách người nhận</p><div className="mt-2 space-y-1.5">{notification.recipients.map((recipient) => <div key={recipient.id} className="flex items-center justify-between gap-3 rounded-xl bg-slate-50 px-3 py-2.5 dark:bg-white/5"><div className="min-w-0"><p className="truncate text-sm font-black text-[#100F3E] dark:text-white">{recipient.displayName ?? "(chưa đặt tên)"}</p><p className="truncate text-xs font-semibold text-slate-400">{recipient.email ?? recipient.id}</p></div><span className={cn("shrink-0 rounded-full px-2 py-1 text-[10px] font-black", recipient.readAt ? "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300" : "bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-300")}>{recipient.readAt ? "Đã đọc" : "Chưa đọc"}</span></div>)}</div></div></div>
+    </aside>
+  </div>
 }
 
 function MobileUserStat({ value, label, accent }: { value: string; label: string; accent?: boolean }) {
