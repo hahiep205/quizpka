@@ -22,11 +22,13 @@ import {
   X,
 } from "lucide-react"
 import brandLogo from "@/assets/logo.png"
-import { QuizSetupModal } from "@/components/QuizSetupModal"
+import { QuizSetupModal, type QuizSetupValues } from "@/components/QuizSetupModal"
 import { HcmChapterPickerModal } from "@/components/HcmChapterPickerModal"
 import { PdfViewerModal } from "@/components/PdfViewerModal"
 import { TadvPickerModal } from "@/components/TadvPickerModal"
 import { DsaiPickerModal } from "@/components/DsaiPickerModal"
+import { ToeicScopePickerModal } from "@/components/ToeicScopePickerModal"
+import { getToeicScopeOption, type ToeicScope } from "@/data/toeic"
 import { Card } from "@/components/ui/card"
 import { Dialog } from "@/components/ui/dialog"
 import { examCatalog, getSubjectById, type ExamCatalogItem } from "@/data/subjects"
@@ -43,6 +45,7 @@ import { goToPractice, readPracticeHistory } from "@/lib/practiceSession"
 import { useSubjectAttemptCounts } from "@/hooks/useSubjectAttemptCounts"
 import { MobileTabBar } from "@/components/MobileTabBar"
 import { CatalogExamCard } from "@/components/CatalogExamCard"
+import { PaymentModal } from "@/components/PaymentModal"
 import { DashboardStatCard, dashboardStatGridClass } from "@/components/DashboardStatCard"
 import { LeaderboardView } from "@/components/LeaderboardView"
 import { CommunityChatModal } from "@/components/CommunityChatModal"
@@ -69,8 +72,8 @@ const navItems: Array<{
   { key: "home", icon: SidebarHomeIcon },
   { key: "leaderboard", icon: SidebarRankingIcon },
   { key: "history", icon: SidebarHistoryIcon },
+  { key: "purchased", icon: ShoppingBag },
   { key: "settings", icon: SidebarSettingsIcon },
-  { key: "purchased", icon: SidebarSettingsIcon },
 ]
 
 function SidebarSvg({ className, children }: { className?: string; children: React.ReactNode }) {
@@ -126,7 +129,8 @@ export function DashboardPage({
   onOpenContact,
 }: DashboardPageProps) {
   const [activeView, setActiveView] = useState<DashboardView>(() => getDashboardView(getCurrentPath()))
-  const { user: dashboardUser } = useAuth()
+  const { user: dashboardUser, status: dashboardStatus } = useAuth()
+  const [payment, setPayment] = useState<{ checkoutUrl: string; fields: Record<string, string | number> } | null>(null)
   const handlePaidTryNow = async (exam: ExamCatalogItem) => {
     try {
     if (exam.subjectCode !== "DSAI101") return handleTryNow(exam)
@@ -134,9 +138,7 @@ export function DashboardPage({
     const result = await createDsaiCheckout()
     if (result.owned) return handleTryNow(exam)
     if (!result.checkoutUrl || !result.fields) throw new Error("Không tạo được link thanh toán")
-    const form = document.createElement("form"); form.method = "POST"; form.action = result.checkoutUrl
-    Object.entries(result.fields).forEach(([name, value]) => { const input = document.createElement("input"); input.type = "hidden"; input.name = name; input.value = String(value); form.appendChild(input) })
-    document.body.appendChild(form); form.submit()
+    setPayment({ checkoutUrl: result.checkoutUrl, fields: result.fields })
     } catch (error) { window.alert(error instanceof Error ? error.message : "Không thể tạo thanh toán. Vui lòng thử lại.") }
   }
 
@@ -144,7 +146,10 @@ export function DashboardPage({
     logActivityEvent(dashboardUser?.id, "view_dashboard", {}, { oncePerSessionKey: `view_dashboard:${dashboardUser?.id ?? "anon"}` })
   }, [dashboardUser?.id, dashboardUser?.created_at])
   const [query, setQuery] = useState("")
-  const [filter, setFilter] = useState<"all" | "general" | "major">("all")
+  const [filter, setFilter] = useState<"all" | "general" | "major" | "free" | "paid" | "toeic">("all")
+  const [toeicPickerExam, setToeicPickerExam] = useState<ExamCatalogItem | null>(null)
+  const [toeicScope, setToeicScope] = useState<ToeicScope>("full")
+  const [toeicSetupOpen, setToeicSetupOpen] = useState(false)
   const {
     pickerExam: hcmPickerExam,
     setupExam,
@@ -174,9 +179,22 @@ export function DashboardPage({
   const filteredExams = useMemo(() => {
     const normalized = query.trim().toLocaleLowerCase(lang)
     return examCatalog.filter((exam) => {
-      if (exam.subjectId === "toeic") return false
+      const isToeic = exam.subjectId === "toeic"
+      if (filter === "toeic") {
+        if (!isToeic) return false
+      } else if (isToeic) {
+        return false
+      }
       const categoryKey = exam.category.en === "General" ? "general" : "major"
-      const matchesFilter = filter === "all" || categoryKey === filter
+      const isPaid = exam.subjectCode === "DSAI101"
+      const matchesFilter =
+        filter === "all" || filter === "toeic"
+          ? true
+          : filter === "free"
+            ? !isPaid
+            : filter === "paid"
+              ? isPaid
+              : categoryKey === filter
       const haystack = `${exam.title[lang]} ${exam.subjectName[lang]} ${exam.subjectCode}`.toLocaleLowerCase(lang)
       return matchesFilter && (!normalized || haystack.includes(normalized))
     })
@@ -195,6 +213,51 @@ export function DashboardPage({
     window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
+  const handleDashboardStart = (exam: ExamCatalogItem) => {
+    if (exam.subjectId === "toeic") {
+      setToeicScope("full")
+      setToeicSetupOpen(false)
+      setToeicPickerExam(exam)
+      return
+    }
+    void handlePaidTryNow(exam)
+  }
+
+  const handleToeicPickerSelect = (scope: ToeicScope) => {
+    setToeicScope(scope)
+    setToeicSetupOpen(true)
+  }
+
+  const toeicScopeOption = toeicPickerExam ? getToeicScopeOption(toeicScope, toeicPickerExam.id) : null
+  const toeicSetupExam: ExamCatalogItem | null = toeicPickerExam
+    ? {
+        ...toeicPickerExam,
+        questionCount: toeicScopeOption?.count ?? toeicPickerExam.questionCount,
+        durationMinutes: toeicScopeOption?.durationMinutes ?? toeicPickerExam.durationMinutes,
+        title: toeicScopeOption
+          ? {
+              en: `${toeicPickerExam.title.en} - ${toeicScopeOption.label.en}`,
+              vi: `${toeicPickerExam.title.vi} - ${toeicScopeOption.label.vi}`,
+            }
+          : toeicPickerExam.title,
+      }
+    : null
+  const toeicSetupSubject = toeicPickerExam ? getSubjectById(toeicPickerExam.subjectId) : null
+
+  const handleToeicSetupStart = (setup: QuizSetupValues) => {
+    if (!toeicPickerExam) return
+    goToPractice(
+      {
+        examId: toeicPickerExam.id,
+        subjectId: toeicPickerExam.subjectId,
+        setup,
+        lang,
+        toeicScope,
+      },
+      dashboardStatus === "authenticated",
+    )
+  }
+
   return (
     <div className="min-h-svh bg-[#F6F7FB] text-[#100F3E] transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
       <DesktopSidebar activeView={activeView} lang={lang} onNavigate={navigate} />
@@ -211,7 +274,7 @@ export function DashboardPage({
               filteredExams={filteredExams}
               onQueryChange={setQuery}
               onFilterChange={setFilter}
-              onStartExam={(exam) => void handlePaidTryNow(exam)}
+              onStartExam={handleDashboardStart}
             />
           ) : null}
           {activeView === "leaderboard" ? <LeaderboardView lang={lang} /> : null}
@@ -275,6 +338,39 @@ export function DashboardPage({
         onClose={handleSetupClose}
         onStart={handleSetupStart}
       />
+
+      <PaymentModal
+        open={Boolean(payment)}
+        lang={lang}
+        checkoutUrl={payment?.checkoutUrl ?? null}
+        fields={payment?.fields ?? null}
+        userId={dashboardUser?.id}
+        onClose={() => setPayment(null)}
+        onPaid={() => {
+          setPayment(null)
+          navigate("purchased")
+        }}
+      />
+
+      <ToeicScopePickerModal
+        open={Boolean(toeicPickerExam) && !toeicSetupOpen}
+        lang={lang}
+        examId={toeicPickerExam?.id ?? "toeic-test-01"}
+        onClose={() => setToeicPickerExam(null)}
+        onSelect={handleToeicPickerSelect}
+      />
+
+      <QuizSetupModal
+        open={toeicSetupOpen && Boolean(toeicSetupExam)}
+        lang={lang}
+        exam={toeicSetupExam}
+        subject={toeicSetupSubject}
+        onClose={() => {
+          setToeicSetupOpen(false)
+          setToeicPickerExam(null)
+        }}
+        onStart={handleToeicSetupStart}
+      />
     </div>
   )
 }
@@ -317,10 +413,6 @@ function PurchasedView({ lang, onStartExam }: { lang: Lang; onStartExam: (exam: 
 
   return (
     <section className="space-y-5">
-      <div>
-        <h2 className="text-2xl font-black text-[#100F3E] dark:text-white">{lang === "vi" ? "Đã mua" : "Purchased"}</h2>
-        <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">{lang === "vi" ? "Các bộ tài liệu bạn đã mua." : "Materials you have purchased."}</p>
-      </div>
       {loading ? <Card variant="dashed" className="py-12 text-center"><p className="text-sm font-bold text-slate-500">{lang === "vi" ? "Đang kiểm tra giao dịch…" : "Checking purchases…"}</p></Card> : null}
       {!loading && error ? <Card variant="dashed" className="py-12 text-center"><p className="text-sm font-bold text-red-500">{lang === "vi" ? "Không thể tải danh sách tài liệu đã mua." : "Could not load purchased materials."}</p></Card> : null}
       {!loading && !error && owned && purchasedExam ? (
@@ -419,21 +511,41 @@ function DashboardTopbar({ lang, view }: Pick<DashboardPageProps, "lang"> & { vi
         ? { icon: History, title: t.historyTitle }
         : view === "settings"
           ? { icon: Settings, title: t.settingsTitle }
-          : null
+          : view === "purchased"
+            ? { icon: ShoppingBag, title: lang === "vi" ? "Quiz đã mua" : "Purchased quizzes" }
+            : null
   const PageIcon = pageMeta?.icon
   return (
     <>
       <header className="sticky top-0 z-30 bg-white/80 pt-[env(safe-area-inset-top)] backdrop-blur-2xl dark:bg-[#18191A]/80">
         <div className="mx-auto flex h-14 w-full max-w-[1440px] items-center justify-between px-3 sm:h-16 sm:px-6 md:px-8 lg:h-[72px] lg:px-8 xl:px-10">
           {pageMeta && PageIcon ? (
-            <div className="flex min-w-0 items-center gap-3 lg:hidden">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[13px] bg-[#E8F7FE] text-[#1CB0F6] sm:h-14 sm:w-14 sm:rounded-[16px] dark:bg-sky-500/10">
-                <PageIcon className="h-5 w-5 sm:h-7 sm:w-7" />
+            view === "leaderboard" ? (
+              <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={pageMeta.title}>
+                <span className="name-logo">{pageMeta.title}</span>
+              </a>
+            ) : view === "history" ? (
+              <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={lang === "vi" ? "Lịch sử làm quiz" : pageMeta.title}>
+                <span className="name-logo">{lang === "vi" ? "Lịch sử làm quiz" : pageMeta.title}</span>
+              </a>
+            ) : view === "purchased" ? (
+              <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={pageMeta.title}>
+                <span className="name-logo">{pageMeta.title}</span>
+              </a>
+            ) : view === "settings" ? (
+              <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={pageMeta.title}>
+                <span className="name-logo">{pageMeta.title}</span>
+              </a>
+            ) : (
+              <div className="flex min-w-0 items-center gap-3 lg:hidden">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[13px] bg-[#E8F7FE] text-[#1CB0F6] sm:h-14 sm:w-14 sm:rounded-[16px] dark:bg-sky-500/10">
+                  <PageIcon className="h-5 w-5 sm:h-7 sm:w-7" />
+                </div>
+                <h2 className="truncate text-[22px] font-black leading-7 tracking-[-0.03em] text-[#100F3E] sm:text-[28px] dark:text-white">
+                  {pageMeta.title}
+                </h2>
               </div>
-              <h2 className="truncate text-[22px] font-black leading-7 tracking-[-0.03em] text-[#100F3E] sm:text-[28px] dark:text-white">
-                {pageMeta.title}
-              </h2>
-            </div>
+            )
           ) : (
             <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label="Quiz for PKAers">
               <span className="name-logo">Quiz for PKAers</span>
@@ -512,10 +624,10 @@ function HomeDashboard({
 }: {
   lang: Lang
   query: string
-  filter: "all" | "general" | "major"
+  filter: "all" | "general" | "major" | "free" | "paid" | "toeic"
   filteredExams: ExamCatalogItem[]
   onQueryChange: (value: string) => void
-  onFilterChange: (value: "all" | "general" | "major") => void
+  onFilterChange: (value: "all" | "general" | "major" | "free" | "paid" | "toeic") => void
   onStartExam: (exam: ExamCatalogItem) => void
 }) {
   const t = copy[lang]
@@ -547,7 +659,7 @@ function HomeDashboard({
               />
             </label>
             <div className="grid w-full grid-cols-3 gap-2 sm:w-auto sm:grid-cols-none sm:grid-flow-col">
-              {(["all", "general", "major"] as const).map((item) => (
+              {(["all", "general", "major", "free", "paid", "toeic"] as const).map((item) => (
                 <button
                   key={item}
                   type="button"
@@ -569,10 +681,8 @@ function HomeDashboard({
                 exam={exam}
                 lang={lang}
                 attemptCount={attemptCountsBySubject[exam.subjectId] ?? 0}
-                categoryLabel={exam.category.en === "General" ? t.general : t.major}
+                categoryLabel={exam.subjectId === "toeic" ? "TOEIC" : exam.category.en === "General" ? t.general : t.major}
                 questionsLabel={t.questions}
-                minutesLabel={t.minutes}
-                hideDurationOnMobile
                 footer={
                   <button type="button" className="lp-btn lp-btn--primary lp-btn--sm lp-btn--block mt-3 px-2 text-[12px] sm:mt-5 sm:px-4 sm:text-sm" onClick={() => onStartExam(exam)}>
                     {exam.subjectCode === "DSAI101" ? "10.000 VND" : t.start}

@@ -1,6 +1,4 @@
 import { useState } from "react"
-import { X } from "lucide-react"
-import { Card } from "@/components/ui/card"
 import { QuizSetupModal, type QuizSetupValues } from "@/components/QuizSetupModal"
 import { ToeicScopePickerModal } from "@/components/ToeicScopePickerModal"
 import { LoginNudgeModal, useLoginNudge } from "@/components/LoginNudgeModal"
@@ -9,27 +7,16 @@ import { type ToeicScope } from "@/data/toeic"
 import { goToPractice } from "@/lib/practiceSession"
 import { toeicSectionCopy as copy } from "@/shared/i18n"
 import { getToeicScopeOption } from "@/data/toeic"
-import { cn, modalBodyClass, modalFooterClass, modalFrameClass, modalHeaderClass } from "@/lib/utils"
 import { useAuth } from "@/auth/AuthProvider"
 import { useSubjectAttemptCounts } from "@/hooks/useSubjectAttemptCounts"
 import { CatalogExamCard } from "@/components/CatalogExamCard"
 
 type Lang = "en" | "vi"
 
-function DetailRow({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="flex items-start justify-between gap-4 rounded-[12px] bg-[#F6F7FB] px-4 py-3 dark:bg-white/5">
-      <dt className="lp-label text-slate-500">{label}</dt>
-      <dd className="text-right text-sm font-extrabold text-[#100F3E] dark:text-white">{value}</dd>
-    </div>
-  )
-}
-
 export function ToeicSection({ lang }: { lang: Lang }) {
   const { status } = useAuth()
   const t = copy[lang]
   const attemptCountsBySubject = useSubjectAttemptCounts()
-  const [detailOpen, setDetailOpen] = useState(false)
   const [pickerOpen, setPickerOpen] = useState(false)
   const [setupOpen, setSetupOpen] = useState(false)
   const [selectedScope, setSelectedScope] = useState<ToeicScope>("full")
@@ -109,7 +96,7 @@ export function ToeicSection({ lang }: { lang: Lang }) {
         </div>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-2 xl:grid-cols-3">
         {examCatalogItems.map((exam) => (
           <CatalogExamCard
             key={exam.id}
@@ -118,68 +105,14 @@ export function ToeicSection({ lang }: { lang: Lang }) {
             attemptCount={attemptCountsBySubject[exam.subjectId] ?? 0}
             categoryLabel={t.badge}
             questionsLabel={t.questions}
-            minutesLabel={t.minutes}
             footer={
-              <div className="mt-4 flex items-center gap-3 sm:mt-5">
-                <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm flex-1" onClick={() => { setSelectedExamId(exam.id); setDetailOpen(true) }}>
-                  {t.details}
-                </button>
-                <button type="button" className="lp-btn lp-btn--primary lp-btn--sm flex-1" onClick={() => tryExam(exam.id)}>
-                  {t.start}
-                </button>
-              </div>
+              <button type="button" className="lp-btn lp-btn--primary lp-btn--sm lp-btn--block mt-4 sm:mt-5" onClick={() => tryExam(exam.id)}>
+                {t.start}
+              </button>
             }
           />
         ))}
       </div>
-
-      {detailOpen && baseExam ? (
-        <div className="fixed inset-0 z-[80] flex items-center justify-center p-4">
-          <button
-            type="button"
-            aria-label={t.close}
-            className="contact-modal-overlay absolute inset-0 bg-[rgba(16,15,62,0.45)] backdrop-blur-[2px]"
-            data-state="open"
-            onClick={() => setDetailOpen(false)}
-          />
-          <Card variant="large" padding="none" className={cn("contact-modal-panel relative z-10 max-w-[480px] shadow-[var(--shadow-3)]", modalFrameClass)} data-state="open">
-            <div className={modalHeaderClass}>
-              <div>
-                <h3 className="lp-modal-title">{baseExam.title[lang]}</h3>
-              </div>
-              <button type="button" className="lp-btn lp-btn--secondary lp-btn--icon" onClick={() => setDetailOpen(false)} aria-label={t.close}>
-                <X className="h-4 w-4" strokeWidth={2} />
-              </button>
-            </div>
-
-            <div className={cn(modalBodyClass, "space-y-3")}>
-              <DetailRow label={t.subject} value={lang === "vi" ? "Luyện thi TOEIC" : "TOEIC Preparation"} />
-              <DetailRow label={t.examType} value={t.badge} />
-              <DetailRow label={t.questions} value={`${baseExam.questionCount}`} />
-              <DetailRow label={t.expectedTime} value={`${baseExam.durationMinutes} ${t.minutes}`} />
-              <div>
-                <p className="lp-modal-desc">{baseExam.description[lang]}</p>
-              </div>
-            </div>
-
-            <div className={modalFooterClass}>
-              <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={() => setDetailOpen(false)}>
-                {t.close}
-              </button>
-              <button
-                type="button"
-                className="lp-btn lp-btn--primary lp-btn--sm"
-                onClick={() => {
-                  setDetailOpen(false)
-                  tryExam(baseExam.id)
-                }}
-              >
-                {t.start}
-              </button>
-            </div>
-          </Card>
-        </div>
-      ) : null}
 
       <ToeicScopePickerModal open={pickerOpen} lang={lang} examId={selectedExamId} onClose={() => setPickerOpen(false)} onSelect={handlePickerSelect} />
 

@@ -12,18 +12,14 @@ export function CatalogExamCard({
   attemptCount,
   categoryLabel,
   questionsLabel,
-  minutesLabel,
   footer,
-  hideDurationOnMobile = false,
 }: {
   exam: ExamCatalogItem
   lang: Lang
   attemptCount: number
   categoryLabel: string
   questionsLabel: string
-  minutesLabel: string
   footer: ReactNode
-  hideDurationOnMobile?: boolean
 }) {
   return (
     <article className="group flex h-full flex-col rounded-[15px] border-2 border-[#E5E5E5] bg-white p-3 shadow-[0_3px_0_#DCDCDC] transition-transform hover:-translate-y-1 dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_3px_0_rgba(0,0,0,0.35)] sm:rounded-[16px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:sm:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
@@ -35,7 +31,6 @@ export function CatalogExamCard({
           <Badge className="h-6 max-w-[70%] shrink-0 truncate border-0 bg-[#E8F7FE] px-2 text-[10px] font-extrabold text-[#129BDC] dark:bg-sky-500/10 dark:text-sky-300 sm:h-7 sm:max-w-none sm:px-3 sm:text-[12px]">
             {categoryLabel}
           </Badge>
-          <p className="min-w-0 truncate text-[10px] font-extrabold uppercase leading-none tracking-[0.08em] text-[#1CB0F6] sm:hidden">{exam.subjectCode}</p>
         </div>
       </div>
       <div className="mt-3 min-w-0 flex-1 sm:mt-5">
@@ -49,12 +44,9 @@ export function CatalogExamCard({
       </div>
       <ExamMetaRow
         questionCount={exam.questionCount}
-        durationMinutes={exam.durationMinutes}
         attemptCount={attemptCount}
         questionsLabel={questionsLabel}
-        minutesLabel={minutesLabel}
         lang={lang}
-        hideDurationOnMobile={hideDurationOnMobile}
         className="mt-3 gap-x-2.5 border-t border-slate-100 pt-3 text-[10px] font-bold text-[#129BDC] dark:border-white/10 dark:text-sky-300 sm:mt-5 sm:gap-x-4 sm:pt-4 sm:text-xs"
       />
       {footer}
