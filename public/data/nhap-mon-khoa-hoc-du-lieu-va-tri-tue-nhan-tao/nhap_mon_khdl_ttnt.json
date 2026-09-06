@@ -1,0 +1,1792 @@
+{
+  "title": "Câu hỏi cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và Trí tuệ nhân tạo",
+  "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+  "totalQuestions": 119,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Nhãn chỉ có hai lớp được gọi là gì?",
+      "options": {
+        "A": "Mode",
+        "B": "Multiclass label",
+        "C": "Mean",
+        "D": "Binary class label"
+      },
+      "answer": "D",
+      "explainAnswer": "Nhãn chỉ có hai lớp (ví dụ: 0/1, Yes/No, Spam/Not Spam) được gọi là Binary class label. Đáp án D đúng.",
+      "image": null
+    },
+    {
+      "id": 2,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Biểu đồ thể hiện trung vị, tứ phân vị và giá trị ngoại lệ được gọi là gì?",
+      "options": {
+        "A": "Bar plot",
+        "B": "Scatter plot",
+        "C": "Histogram",
+        "D": "Box plot"
+      },
+      "answer": "D",
+      "explainAnswer": "Box plot (biểu đồ hộp) thể hiện trung vị (median), tứ phân vị (quartiles) và các giá trị ngoại lệ (outliers). Đáp án D đúng.",
+      "image": null
+    },
+    {
+      "id": 3,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Độ đo độ phân tán bằng căn bậc hai của phương sai được gọi là gì?",
+      "options": {
+        "A": "Median (trung vị)",
+        "B": "Variance (phương sai)",
+        "C": "Standard deviation (độ lệch chuẩn)",
+        "D": "Mean (giá trị trung bình)"
+      },
+      "answer": "C",
+      "explainAnswer": "Độ lệch chuẩn (Standard deviation) được định nghĩa là căn bậc hai của phương sai. Đáp án C đúng.",
+      "image": null
+    },
+    {
+      "id": 4,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Bình phương của độ lệch chuẩn được gọi là gì?",
+      "options": {
+        "A": "Mean",
+        "B": "MAE",
+        "C": "Standard deviation (độ lệch chuẩn)",
+        "D": "Variance (phương sai)"
+      },
+      "answer": "D",
+      "explainAnswer": "Phương sai (Variance) chính là bình phương của độ lệch chuẩn. Đáp án D đúng.",
+      "image": null
+    },
+    {
+      "id": 5,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Học từ dữ liệu có nhãn được gọi là gì?",
+      "options": {
+        "A": "Supervised learning",
+        "B": "Unsupervised learning",
+        "C": "Strong AI",
+        "D": "Narrow AI"
+      },
+      "answer": "A",
+      "explainAnswer": "Học từ dữ liệu có nhãn (labeled data) được gọi là Supervised learning (học có giám sát). Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 6,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Học từ dữ liệu không có nhãn được gọi là gì?",
+      "options": {
+        "A": "Narrow AI",
+        "B": "Unsupervised learning",
+        "C": "Data mining",
+        "D": "Supervised learning"
+      },
+      "answer": "B",
+      "explainAnswer": "Học từ dữ liệu không có nhãn (unlabeled data) được gọi là Unsupervised learning (học không giám sát). Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 7,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Trí tuệ nhân tạo hẹp (chỉ giải quyết một tác vụ cụ thể) được gọi là gì?",
+      "options": {
+        "A": "Strong AI",
+        "B": "Data mining",
+        "C": "Supervised learning",
+        "D": "Narrow AI"
+      },
+      "answer": "D",
+      "explainAnswer": "Trí tuệ nhân tạo hẹp (chỉ giải quyết một hoặc vài tác vụ cụ thể) được gọi là Narrow AI (hay Weak AI). Đáp án D đúng.",
+      "image": null
+    },
+    {
+      "id": 8,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Kỹ thuật hồi quy nào được sử dụng để dự đoán xác suất của một biến Y mang giá trị nhị phân?",
+      "options": {
+        "A": "Hồi quy tuyến tính (Linear Regression)",
+        "B": "Hồi quy Ridge (Ridge Regression)",
+        "C": "Hồi quy phi tuyến (Nonlinear Regression)",
+        "D": "Hồi quy Logistic (Logistic Regression)"
+      },
+      "answer": "D",
+      "explainAnswer": "Hồi quy Logistic (Logistic Regression) được dùng để dự đoán xác suất của biến phụ thuộc mang giá trị nhị phân (0/1). Đáp án D đúng.",
+      "image": null
+    },
+    {
+      "id": 9,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Hồi quy tuyến tính (Linear regression) dự đoán loại giá trị nào cho Y?",
+      "options": {
+        "A": "Một danh mục hoặc nhãn (category)",
+        "B": "Một giá trị liên tục",
+        "C": "Một xác suất (probability)",
+        "D": "Một giá trị nhị phân (0 hoặc 1)"
+      },
+      "answer": "B",
+      "explainAnswer": "Hồi quy tuyến tính dự đoán giá trị liên tục (continuous value) cho biến phụ thuộc Y. Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 10,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Hồi quy tuyến tính được mô tả là phương pháp học máy nào?",
+      "options": {
+        "A": "Học máy có giám sát (Supervised learning)",
+        "B": "Học máy không giám sát (Unsupervised learning)",
+        "C": "Học tăng cường (Reinforcement learning)",
+        "D": "Học máy bán giám sát (Semi-supervised learning)"
+      },
+      "answer": "A",
+      "explainAnswer": "Hồi quy tuyến tính thuộc nhóm học máy có giám sát (Supervised learning) vì sử dụng dữ liệu có nhãn. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 11,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Hồi quy tuyến tính đơn biến (Simple linear regression) có bao nhiêu biến độc lập (X)?",
+      "options": {
+        "A": "Một biến",
+        "B": "Nhiều biến (hai hoặc nhiều hơn)",
+        "C": "Hai biến",
+        "D": "Không có biến nào"
+      },
+      "answer": "A",
+      "explainAnswer": "Hồi quy tuyến tính đơn biến (Simple Linear Regression) chỉ có một biến độc lập X. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 12,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Phương trình nào biểu diễn mô hình hồi quy tuyến tính đơn giản?",
+      "options": {
+        "A": "Y = β₀ + β₁X + ε",
+        "B": "Y = β₀ + β₁X^2 + ε",
+        "C": "Y = 1/ (β₀ + β₁X + ε)",
+        "D": "Y = β₀ + β₁X1 + β₂X2 + ... + βₙXₙ + ε"
+      },
+      "answer": "A",
+      "explainAnswer": "Phương trình hồi quy tuyến tính đơn giản là Y = β₀ + β₁X + ε, trong đó β₀ là hệ số chặn, β₁ là hệ số góc, ε là sai số. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 13,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Nhiệm vụ chính khi xây dựng mô hình hồi quy tuyến tính (đa biến) là gì?",
+      "options": {
+        "A": "Biến đổi Y thành một biến nhị phân",
+        "B": "Tối đa hóa giá trị của lỗi ngẫu nhiên",
+        "C": "Loại bỏ tất cả các biến độc lập X",
+        "D": "Ước lượng các hệ số"
+      },
+      "answer": "D",
+      "explainAnswer": "Nhiệm vụ chính khi xây dựng mô hình hồi quy tuyến tính là ước lượng các hệ số (β₀, β₁, ..., βₙ). Đáp án D đúng.",
+      "image": null
+    },
+    {
+      "id": 14,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Khái niệm \"The line of best fit\" (đường phù hợp nhất) có nghĩa là gì?",
+      "options": {
+        "A": "Đường thẳng giảm tối đa sự mở rộng của các lỗi (sai số).",
+        "B": "Đường thẳng có hệ số góc lớn nhất có thể.",
+        "C": "Đường thẳng có hệ số chặn .",
+        "D": "Đường thẳng chạy qua tất cả các điểm dữ liệu một cách chính xác."
+      },
+      "answer": "A",
+      "explainAnswer": "\"The line of best fit\" là đường thẳng làm giảm tối đa tổng bình phương sai số giữa giá trị dự đoán và giá trị thực tế (Least Squares). Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 15,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Trí tuệ nhân tạo tổng quát (có khả năng như con người trên mọi lĩnh vực) được gọi là gì?",
+      "options": {
+        "A": "Narrow AI",
+        "B": "Linear regression",
+        "C": "Strong AI",
+        "D": "Unsupervised learning"
+      },
+      "answer": "C",
+      "explainAnswer": "Trí tuệ nhân tạo tổng quát (có khả năng tương đương hoặc vượt con người trên nhiều lĩnh vực) được gọi là Strong AI (hay General AI / AGI). Đáp án C đúng.",
+      "image": null
+    },
+    {
+      "id": 16,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Quá trình khám phá mẫu và quan hệ trong dữ liệu lớn được gọi là gì?",
+      "options": {
+        "A": "Standard deviation",
+        "B": "Narrow AI",
+        "C": "Supervised learning",
+        "D": "Data mining"
+      },
+      "answer": "D",
+      "explainAnswer": "Quá trình khám phá mẫu, quy luật và quan hệ ẩn trong dữ liệu lớn được gọi là Data mining. Đáp án D đúng.",
+      "image": null
+    },
+    {
+      "id": 17,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Biểu đồ đường (theo dõi xu hướng theo thời gian) được gọi là gì?",
+      "options": {
+        "A": "Line plot",
+        "B": "Bar plot",
+        "C": "Scatter plot",
+        "D": "Histogram"
+      },
+      "answer": "A",
+      "explainAnswer": "Biểu đồ đường dùng để theo dõi xu hướng thay đổi theo thời gian được gọi là Line plot. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 18,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Cho tập dữ liệu x = [2, 4, 6]. Giá trị phương sai mẫu (sample variance) là?\nGợi ý: s² = Σ(xᵢ - x̄)² / (n - 1)",
+      "options": {
+        "A": "2.67",
+        "B": "4",
+        "C": "8",
+        "D": "2"
+      },
+      "answer": "B",
+      "explainAnswer": "Trung bình x̄ = (2+4+6)/3 = 4. Tổng bình phương sai số = (2-4)² + (4-4)² + (6-4)² = 4 + 0 + 4 = 8. Phương sai mẫu s² = 8 / (3-1) = 4. Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 19,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "AI mạnh (General AI) là gì?",
+      "options": {
+        "A": "AI có thể học mọi thứ như con người",
+        "B": "AI chỉ giải quyết được một nhiệm vụ",
+        "C": "AI không thể tự học",
+        "D": "AI chỉ dành cho trò chơi điện tử"
+      },
+      "answer": "A",
+      "explainAnswer": "AI mạnh (Strong AI / General AI) là AI có khả năng học và thực hiện mọi nhiệm vụ trí tuệ như con người. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 20,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Khái niệm \"Machine Learning\" liên quan đến AI như thế nào?",
+      "options": {
+        "A": "Một lĩnh vực con của AI",
+        "B": "Một hệ thống mạng máy tính",
+        "C": "Một loại phần mềm điều khiển robot",
+        "D": "Một dạng hệ điều hành"
+      },
+      "answer": "A",
+      "explainAnswer": "Machine Learning là một lĩnh vực con (subfield) của Artificial Intelligence. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 21,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Machine Learning là gì?",
+      "options": {
+        "A": "Khả năng của máy móc để thực hiện các nhiệm vụ một cách tự động mà không cần sự can thiệp của con người",
+        "B": "Khả năng của máy móc để học và cải thiện hiệu suất thông qua dữ liệu",
+        "C": "Một hệ thống tìm kiếm thông tin",
+        "D": "Phần mềm kiểm tra lỗi"
+      },
+      "answer": "B",
+      "explainAnswer": "Machine Learning là khả năng của máy móc học hỏi và cải thiện hiệu suất thông qua dữ liệu mà không cần được lập trình tường minh cho từng trường hợp. Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 22,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Trong Machine Learning, học có giám sát (Supervised Learning) là gì?",
+      "options": {
+        "A": "Máy học từ các dữ liệu không gán nhãn",
+        "B": "Máy học từ các cặp dữ liệu đầu vào và đầu ra đã được gán nhãn",
+        "C": "Máy tự điều chỉnh hành vi dựa trên phần thưởng và hình phạt",
+        "D": "Máy học dựa trên tương tác thực tế"
+      },
+      "answer": "B",
+      "explainAnswer": "Supervised Learning là phương pháp học từ các cặp dữ liệu đầu vào – đầu ra đã được gán nhãn. Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 23,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Học không giám sát (Unsupervised Learning) là gì?",
+      "options": {
+        "A": "Máy học từ các cặp dữ liệu đầu vào - đầu ra",
+        "B": "Máy học từ dữ liệu không có nhãn",
+        "C": "Máy tự chơi với nó để tìm ra giải pháp tối ưu",
+        "D": "Máy học từ các dữ liệu không liên quan"
+      },
+      "answer": "B",
+      "explainAnswer": "Unsupervised Learning là phương pháp học từ dữ liệu không có nhãn, nhằm tìm cấu trúc hoặc mẫu ẩn trong dữ liệu. Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 24,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Phương pháp nào thuộc học không giám sát (Unsupervised Learning)?",
+      "options": {
+        "A": "Phân cụm (Clustering)",
+        "B": "Hồi quy (Regression)",
+        "C": "Phân loại (Classification)",
+        "D": "Học tăng cường (Reinforcement Learning)"
+      },
+      "answer": "A",
+      "explainAnswer": "Phân cụm (Clustering) là phương pháp điển hình của học không giám sát. Regression và Classification thuộc học có giám sát. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 25,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Học bán giám sát (Semi-supervised Learning) là gì?",
+      "options": {
+        "A": "Máy học từ dữ liệu không có nhãn hoàn toàn",
+        "B": "Máy học từ dữ liệu phần lớn không có nhãn, chỉ một phần có nhãn",
+        "C": "Máy học từ dữ liệu hoàn toàn có nhãn",
+        "D": "Máy học mà không cần tương tác với con người"
+      },
+      "answer": "B",
+      "explainAnswer": "Semi-supervised Learning sử dụng dữ liệu phần lớn không có nhãn kết hợp với một phần nhỏ dữ liệu có nhãn. Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 26,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Ví dụ nào sau đây là ứng dụng của Supervised Learning?",
+      "options": {
+        "A": "Phân loại email thành thư rác và không phải thư rác",
+        "B": "Phân cụm khách hàng dựa trên hành vi mua sắm",
+        "C": "Nhận diện các đối tượng trong hình ảnh mà không có nhãn",
+        "D": "Tự động điều chỉnh chiến lược trong trò chơi"
+      },
+      "answer": "A",
+      "explainAnswer": "Phân loại email spam/not spam là bài toán Classification điển hình của Supervised Learning (có nhãn). Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 27,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Bài toán hồi quy (Regression) trong học có giám sát nhằm dự đoán điều gì?",
+      "options": {
+        "A": "Dự đoán giá trị liên tục",
+        "B": "Dự đoán phân loại rời rạc",
+        "C": "Dự đoán dữ liệu không có nhãn",
+        "D": "Dự đoán phần thưởng trong trò chơi"
+      },
+      "answer": "A",
+      "explainAnswer": "Bài toán Regression nhằm dự đoán giá trị liên tục (continuous value). Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 28,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Bài toán phân loại (Classification) trong học có giám sát nhằm dự đoán điều gì?",
+      "options": {
+        "A": "Dự đoán phân loại rời rạc",
+        "B": "Dự đoán giá trị liên tục",
+        "C": "Dự đoán hành vi tương tác của người dùng",
+        "D": "Dự đoán kết quả trò chơi"
+      },
+      "answer": "A",
+      "explainAnswer": "Bài toán Classification nhằm dự đoán nhãn phân loại rời rạc (discrete class labels). Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 29,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Reinforcement Learning là gì?",
+      "options": {
+        "A": "Học từ các cặp dữ liệu đã được gán nhãn",
+        "B": "Máy tự học từ các phần thưởng và hình phạt khi tương tác với môi trường",
+        "C": "Phân loại dữ liệu dựa trên các đặc trưng",
+        "D": "Phân tích và phân cụm các đối tượng trong dữ liệu không có nhãn"
+      },
+      "answer": "B",
+      "explainAnswer": "Reinforcement Learning là phương pháp máy học thông qua tương tác với môi trường, nhận phần thưởng (reward) hoặc hình phạt (penalty) để tối ưu hành vi. Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 30,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Ví dụ nào là ứng dụng của Reinforcement Learning?",
+      "options": {
+        "A": "AlphaGo thắng nhà vô địch cờ vây",
+        "B": "Phân loại ảnh thành ảnh chó và mèo",
+        "C": "Dự đoán giá nhà dựa trên diện tích",
+        "D": "Phân nhóm khách hàng theo hành vi"
+      },
+      "answer": "A",
+      "explainAnswer": "AlphaGo là ví dụ kinh điển của Reinforcement Learning (học qua tự chơi và nhận thưởng/phạt). Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 31,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Bài toán phân loại ung thư dựa vào kích thước khối u (Ác tính - malignant hoặc lành tính - benign) thuộc loại bài toán nào?",
+      "options": {
+        "A": "Hồi quy",
+        "B": "Phân loại",
+        "C": "Phân cụm",
+        "D": "Tăng cường"
+      },
+      "answer": "B",
+      "explainAnswer": "Đây là bài toán phân loại nhị phân (malignant/benign) → Classification. Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 32,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Bài toán xác định số lượng sản phẩm được bán ra trong một ngày dựa trên các yếu tố như giá cả, đánh giá của khách hàng, thời tiết là bài toán loại nào?",
+      "options": {
+        "A": "Hồi quy",
+        "B": "Phân loại",
+        "C": "Phân cụm",
+        "D": "Tăng cường"
+      },
+      "answer": "A",
+      "explainAnswer": "Số lượng sản phẩm bán ra là giá trị liên tục → bài toán Hồi quy (Regression). Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 33,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Bài toán xác định loại người dùng (ví dụ: Thường, VIP, Premium) dựa trên hành vi mua sắm là bài toán thuộc loại nào?",
+      "options": {
+        "A": "Hồi quy",
+        "B": "Phân loại",
+        "C": "Phân cụm",
+        "D": "Tăng cường"
+      },
+      "answer": "B",
+      "explainAnswer": "Xác định loại người dùng (Thường/VIP/Premium) là bài toán phân loại đa lớp (multi-class classification). Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 34,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Đặc trưng (feature) trong Machine Learning là gì?",
+      "options": {
+        "A": "Các biến đầu vào mà máy học từ dữ liệu",
+        "B": "Các nhãn đầu ra của bài toán",
+        "C": "Các thuật toán được sử dụng để học",
+        "D": "Các thông tin không liên quan đến bài toán"
+      },
+      "answer": "A",
+      "explainAnswer": "Feature (đặc trưng) là các biến đầu vào (input variables) mà mô hình học từ dữ liệu. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 35,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Hồi quy tuyến tính (Linear Regression) nhằm mục đích gì trong Machine Learning?",
+      "options": {
+        "A": "Dự đoán một giá trị liên tục từ dữ liệu",
+        "B": "Phân loại dữ liệu thành các nhóm",
+        "C": "Phân cụm dữ liệu không có nhãn",
+        "D": "Tìm kiếm giải pháp tối ưu trong trò chơi"
+      },
+      "answer": "A",
+      "explainAnswer": "Linear Regression nhằm dự đoán giá trị liên tục dựa trên mối quan hệ tuyến tính giữa các biến. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 36,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Trong học không giám sát (Unsupervised Learning), phương pháp nào sau đây được dùng để tìm các nhóm trong dữ liệu?",
+      "options": {
+        "A": "Clustering",
+        "B": "Regression",
+        "C": "Classification",
+        "D": "Reinforcement Learning"
+      },
+      "answer": "A",
+      "explainAnswer": "Clustering (phân cụm) là phương pháp chính của Unsupervised Learning để tìm các nhóm tương đồng trong dữ liệu. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 37,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Ví dụ nào là một bài toán phân loại trong Machine Learning?",
+      "options": {
+        "A": "Phân loại thư điện tử thành thư rác và thư chính",
+        "B": "Dự đoán giá cổ phiếu trong tương lai",
+        "C": "Phân nhóm khách hàng dựa trên dữ liệu mua sắm",
+        "D": "Xác định cụm khách hàng"
+      },
+      "answer": "A",
+      "explainAnswer": "Phân loại thư rác / thư chính là bài toán Classification điển hình. Các lựa chọn còn lại thuộc Regression hoặc Clustering. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 38,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Trong phân cụm (Clustering), thuật toán phổ biến nhất là gì?",
+      "options": {
+        "A": "K-Means",
+        "B": "Decision Tree",
+        "C": "Random Forest",
+        "D": "Naive Bayes"
+      },
+      "answer": "A",
+      "explainAnswer": "K-Means là thuật toán phân cụm phổ biến và được sử dụng rộng rãi nhất. Decision Tree, Random Forest, Naive Bayes thuộc nhóm supervised. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 39,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Ví dụ nào sau đây thuộc bài toán hồi quy?",
+      "options": {
+        "A": "Dự đoán giá nhà dựa trên diện tích và vị trí",
+        "B": "Phân loại các loại hoa dựa trên màu sắc và kích thước",
+        "C": "Phân cụm khách hàng dựa trên hành vi mua hàng",
+        "D": "Xác định chiến lược tối ưu trong trò chơi"
+      },
+      "answer": "A",
+      "explainAnswer": "Dự đoán giá nhà (giá trị liên tục) là bài toán Regression. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 40,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Trong học bán giám sát (Semi-supervised Learning), dữ liệu được sử dụng là loại nào?",
+      "options": {
+        "A": "Một phần có nhãn và phần còn lại không có nhãn",
+        "B": "Tất cả dữ liệu đều có nhãn",
+        "C": "Tất cả dữ liệu đều không có nhãn",
+        "D": "Không sử dụng dữ liệu nào"
+      },
+      "answer": "A",
+      "explainAnswer": "Semi-supervised Learning sử dụng hỗn hợp dữ liệu: một phần có nhãn và phần lớn còn lại không có nhãn. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 41,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Linear Regression là gì?",
+      "options": {
+        "A": "Một phương pháp phân tích thống kê xác định mối quan hệ giữa hai biến số",
+        "B": "Một phương pháp phân loại dữ liệu",
+        "C": "Một thuật toán không giám sát",
+        "D": "Một kỹ thuật học tăng cường"
+      },
+      "answer": "A",
+      "explainAnswer": "Linear Regression là phương pháp phân tích thống kê dùng để xác định mối quan hệ tuyến tính giữa biến độc lập và biến phụ thuộc. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 42,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Trong Simple Linear Regression, biến nào được dự đoán?",
+      "options": {
+        "A": "Biến độc lập",
+        "B": "Biến phụ thuộc",
+        "C": "Biến ngẫu nhiên",
+        "D": "Biến thống kê"
+      },
+      "answer": "B",
+      "explainAnswer": "Trong Simple Linear Regression, biến được dự đoán là biến phụ thuộc (dependent variable / Y). Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 43,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Multiple Linear Regression sử dụng bao nhiêu biến độc lập?",
+      "options": {
+        "A": "Một",
+        "B": "Nhiều hơn một",
+        "C": "Không có",
+        "D": "Không xác định"
+      },
+      "answer": "B",
+      "explainAnswer": "Multiple Linear Regression sử dụng từ hai biến độc lập trở lên. Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 44,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Giả định nào sau đây là đúng trong Linear Regression?",
+      "options": {
+        "A": "Các biến độc lập phải có mối quan hệ tuyến tính với biến phụ thuộc",
+        "B": "Các biến độc lập phải có mối quan hệ phi tuyến tính với biến phụ thuộc",
+        "C": "Dữ liệu không cần phải có mối quan hệ",
+        "D": "Mô hình phải bao gồm nhiều biến phụ thuộc"
+      },
+      "answer": "A",
+      "explainAnswer": "Giả định quan trọng của Linear Regression là tồn tại mối quan hệ tuyến tính giữa các biến độc lập và biến phụ thuộc. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 45,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Phương trình hồi quy tuyến tính có dạng:",
+      "options": {
+        "A": "Y = mX + b",
+        "B": "Y = bX + c",
+        "C": "X = mY + b",
+        "D": "Y = X^2 + c"
+      },
+      "answer": "A",
+      "explainAnswer": "Phương trình hồi quy tuyến tính đơn giản có dạng Y = mX + b (hoặc Y = β₀ + β₁X), trong đó m là độ dốc, b là tung độ gốc. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 46,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Slope (độ dốc) trong hồi quy tuyến tính biểu thị điều gì?",
+      "options": {
+        "A": "Mức độ thay đổi của biến phụ thuộc theo biến độc lập",
+        "B": "Mức độ thay đổi của biến độc lập theo biến phụ thuộc",
+        "C": "Điểm giao của đường hồi quy và trục tung",
+        "D": "Giá trị dự đoán của mô hình"
+      },
+      "answer": "A",
+      "explainAnswer": "Slope (độ dốc) biểu thị mức độ thay đổi của biến phụ thuộc Y khi biến độc lập X thay đổi một đơn vị. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 47,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Trong bài toán hồi quy tuyến tính, điểm giao của đường hồi quy và trục tung được gọi là gì?",
+      "options": {
+        "A": "Độ dốc (slope)",
+        "B": "Tung độ gốc (intercept)",
+        "C": "Gradient",
+        "D": "Hệ số hồi quy"
+      },
+      "answer": "B",
+      "explainAnswer": "Điểm giao của đường hồi quy với trục tung (khi X = 0) được gọi là tung độ gốc (intercept / β₀). Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 48,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Mục tiêu của Least Squares Regression là gì?",
+      "options": {
+        "A": "Tối thiểu hóa tổng bình phương sai số giữa giá trị dự đoán và giá trị thực",
+        "B": "Tối đa hóa sai số giữa giá trị dự đoán và giá trị thực",
+        "C": "Tìm giá trị lớn nhất của biến độc lập",
+        "D": "Giảm sai số ngẫu nhiên trong dữ liệu"
+      },
+      "answer": "A",
+      "explainAnswer": "Least Squares Regression nhằm tối thiểu hóa tổng bình phương sai số (Sum of Squared Errors) giữa giá trị dự đoán và giá trị thực tế. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 49,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Overfitting xảy ra khi nào trong Linear Regression?",
+      "options": {
+        "A": "Mô hình hoạt động tốt trên tập huấn luyện nhưng kém trên tập kiểm tra",
+        "B": "Mô hình hoạt động tốt trên cả tập huấn luyện và kiểm tra",
+        "C": "Mô hình quá đơn giản để dự đoán kết quả",
+        "D": "Mô hình không thể học từ dữ liệu"
+      },
+      "answer": "A",
+      "explainAnswer": "Overfitting xảy ra khi mô hình học quá khớp với dữ liệu huấn luyện (bao gồm cả nhiễu) nên hiệu suất kém trên dữ liệu mới (test set). Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 50,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Underfitting xảy ra khi nào?",
+      "options": {
+        "A": "Mô hình quá đơn giản để nắm bắt sự phức tạp của dữ liệu",
+        "B": "Mô hình ghi nhớ quá nhiều thông tin từ tập huấn luyện",
+        "C": "Mô hình dự đoán giá trị quá chính xác",
+        "D": "Mô hình không tương thích với tập dữ liệu"
+      },
+      "answer": "A",
+      "explainAnswer": "Underfitting xảy ra khi mô hình quá đơn giản, không đủ khả năng nắm bắt được cấu trúc phức tạp của dữ liệu, dẫn đến hiệu suất kém cả trên train và test. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 51,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Gradient Descent trong hồi quy tuyến tính là phương pháp gì?",
+      "options": {
+        "A": "Một thuật toán tối ưu hóa để giảm thiểu hàm mất mát",
+        "B": "Một kỹ thuật phân loại",
+        "C": "Một phương pháp kiểm tra sai số",
+        "D": "Một phương pháp để phân cụm dữ liệu"
+      },
+      "answer": "A",
+      "explainAnswer": "Gradient Descent là thuật toán tối ưu hóa dùng để tìm các tham số làm giảm thiểu hàm mất mát (loss function). Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 52,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Learning rate (tốc độ học) trong Gradient Descent có ý nghĩa gì?",
+      "options": {
+        "A": "Xác định kích thước của bước di chuyển trong quá trình tối ưu",
+        "B": "Xác định số vòng lặp tối đa",
+        "C": "Xác định dữ liệu huấn luyện",
+        "D": "Xác định mô hình nào sẽ được sử dụng"
+      },
+      "answer": "A",
+      "explainAnswer": "Learning rate quyết định kích thước bước (step size) mà thuật toán di chuyển theo hướng gradient trong mỗi lần cập nhật tham số. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 53,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Regularization được sử dụng để giải quyết vấn đề nào?",
+      "options": {
+        "A": "Overfitting",
+        "B": "Underfitting",
+        "C": "Thiếu dữ liệu",
+        "D": "Phân loại sai"
+      },
+      "answer": "A",
+      "explainAnswer": "Regularization (L1, L2...) được sử dụng chủ yếu để giảm overfitting bằng cách phạt các hệ số lớn. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 54,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "L1 Regularization được gọi là gì?",
+      "options": {
+        "A": "Lasso Regression",
+        "B": "Ridge Regression",
+        "C": "Linear Regression",
+        "D": "Logistic Regression"
+      },
+      "answer": "A",
+      "explainAnswer": "L1 Regularization tương ứng với Lasso Regression, trong khi L2 Regularization tương ứng với Ridge Regression. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 55,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Đáp án đầy đủ nhất khi nói về khía cạnh chính của khoa học dữ liệu?",
+      "options": {
+        "A": "Tiền xử lý dữ liệu",
+        "B": "Phân tích dữ liệu",
+        "C": "Tất cả các lựa chọn còn lại",
+        "D": "Thu thập dữ liệu"
+      },
+      "answer": "C",
+      "explainAnswer": "Khía cạnh chính của khoa học dữ liệu bao gồm thu thập, tiền xử lý và phân tích dữ liệu. Đáp án C đúng.",
+      "image": null
+    },
+    {
+      "id": 56,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Đại lượng nào sau đây KHÔNG được coi là đặc trưng thống kê về cân nặng của gà trong một trang trại?",
+      "options": {
+        "A": "Giá trị trung vị (median)",
+        "B": "Giá trị trung bình (mean)",
+        "C": "Phương sai (Variance)",
+        "D": "Tên chủ trang trại"
+      },
+      "answer": "D",
+      "explainAnswer": "Tên chủ trang trại không phải là đặc trưng thống kê. Các đại lượng mean, median, variance mới là đặc trưng thống kê. Đáp án D đúng.",
+      "image": null
+    },
+    {
+      "id": 57,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Mục đích của trực quan hóa dữ liệu trong khoa học dữ liệu là gì?",
+      "options": {
+        "A": "Để chuẩn bị dữ liệu cho việc xây dựng các thuật toán học máy",
+        "B": "Để tìm kiếm các quy luật trong dữ liệu",
+        "C": "Để làm sạch và xử lý dữ liệu",
+        "D": "Để thực hiện việc trình bày thông tin bằng ngôn ngữ hình ảnh phục vụ việc trao đổi thông điệp và dữ liệu với các bên liên quan"
+      },
+      "answer": "D",
+      "explainAnswer": "Trực quan hóa dữ liệu nhằm trình bày thông tin bằng ngôn ngữ hình ảnh để trao đổi thông điệp với các bên liên quan. Đáp án D đúng.",
+      "image": null
+    },
+    {
+      "id": 58,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Việc chuẩn hóa dữ liệu là gì?",
+      "options": {
+        "A": "Là quá trình biến đổi dữ liệu theo phân phối Gaussian",
+        "B": "Là quá trình biến đổi dữ liệu sang một định dạng (format) chuẩn",
+        "C": "Là quá trình loại bỏ những điểm dữ liệu bất thường",
+        "D": "Là quá trình thay đổi lại thang đo của các đại lượng trong tập dữ liệu để dùng trong học máy"
+      },
+      "answer": "D",
+      "explainAnswer": "Chuẩn hóa dữ liệu (normalization/scaling) là quá trình thay đổi thang đo của các đại lượng để phù hợp với thuật toán học máy. Đáp án D đúng.",
+      "image": null
+    },
+    {
+      "id": 59,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Cho tập dữ liệu sau: X = [-1.444, -1.467, -1.224, -1.151, -1.402]. Giá trị độ lệch chuẩn (std) của tập dữ liệu trên là?",
+      "options": {
+        "A": "0.712",
+        "B": "0.127",
+        "C": "-0.127",
+        "D": "0.712"
+      },
+      "answer": "B",
+      "explainAnswer": "Độ lệch chuẩn mẫu của tập dữ liệu trên xấp xỉ 0.127. Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 60,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Cho tập dữ liệu sau: X = [-0.044, -0.314, -0.03, -0.01, -0.205]. Giá trị trung vị (median) của tập dữ liệu trên là?",
+      "options": {
+        "A": "-0.044",
+        "B": "-0.030",
+        "C": "-0.205",
+        "D": "-0.314"
+      },
+      "answer": "A",
+      "explainAnswer": "Sắp xếp tăng dần: -0.314, -0.205, -0.044, -0.03, -0.01. Trung vị là giá trị giữa = -0.044. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 61,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Cho tập dữ liệu sau: X = [-0.426, -0.428, -0.464, -0.207, -0.276]. Giá trị trung vị (median) của tập dữ liệu trên là?",
+      "options": {
+        "A": "-0.426",
+        "B": "-0.207",
+        "C": "0.428",
+        "D": "-0.276"
+      },
+      "answer": "A",
+      "explainAnswer": "Sắp xếp tăng dần: -0.464, -0.428, -0.426, -0.276, -0.207. Trung vị = -0.426. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 62,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Một hãng ô tô muốn nghiên cứu khả năng mua một loại xe mới của khách hàng, đối tượng nghiên cứu phù hợp nhất là:",
+      "options": {
+        "A": "Tất cả các công nhân Việt Nam",
+        "B": "Những người trưởng thành có độ tuổi từ 18 đến 60",
+        "C": "Tất cả người dân sống tại TP.HCM",
+        "D": "Tất cả những người dân sống tại TP Hà Nội"
+      },
+      "answer": "B",
+      "explainAnswer": "Đối tượng nghiên cứu phù hợp nhất là những người trưởng thành trong độ tuổi có khả năng mua xe (18-60). Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 63,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Cho tập dữ liệu sau: X = [0.929, -1.656, -2.281, -4.177, 1.712]. Giá trị trung bình của tập dữ liệu trên là?",
+      "options": {
+        "A": "1.095",
+        "B": "-1.095",
+        "C": "-0.995",
+        "D": "2.092"
+      },
+      "answer": "B",
+      "explainAnswer": "Tổng = 0.929 -1.656 -2.281 -4.177 +1.712 = -5.473. Trung bình = -5.473 / 5 ≈ -1.0946 ≈ -1.095. Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 64,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Mệnh đề nào sau đây ĐÚNG?",
+      "options": {
+        "A": "Trí tuệ nhân tạo là khả năng thích nghi của các loài động vật",
+        "B": "Trí tuệ nhân tạo là khả năng của con người có thể xây dựng các chương trình máy tính có thể học",
+        "C": "Trí tuệ nhân tạo có thể được xem như một chương trình máy tính có thể khái quát hóa tri thức từ dữ liệu để thực hiện một chức năng nào đó giống con người",
+        "D": "Trí tuệ nhân tạo là trí tuệ tự nhiên của con người"
+      },
+      "answer": "C",
+      "explainAnswer": "Định nghĩa đúng về AI là chương trình máy tính có thể khái quát hóa tri thức từ dữ liệu để thực hiện chức năng giống con người. Đáp án C đúng.",
+      "image": null
+    },
+    {
+      "id": 65,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Biểu đồ tần suất (histogram) là gì?",
+      "options": {
+        "A": "Là biểu đồ thể hiện sự phân phối của các điểm",
+        "B": "Là biểu đồ thể hiện tần suất xuất hiện của các điểm dữ liệu",
+        "C": "Là biểu đồ thể hiện giá trị trung bình của tập dữ liệu",
+        "D": "Là biểu đồ thể hiện mối quan hệ giữa các biến"
+      },
+      "answer": "B",
+      "explainAnswer": "Histogram thể hiện tần suất xuất hiện của các điểm dữ liệu trong các khoảng. Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 66,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Cho tập dữ liệu sau: X = [-0.703, -0.344, -0.669, -0.636, -0.913]. Giá trị trung bình của tập dữ liệu trên là?",
+      "options": {
+        "A": "0.653",
+        "B": "-0.365",
+        "C": "0.365",
+        "D": "-0.653"
+      },
+      "answer": "D",
+      "explainAnswer": "Tổng = -0.703 -0.344 -0.669 -0.636 -0.913 = -3.265. Trung bình = -3.265 / 5 = -0.653. Đáp án D đúng.",
+      "image": null
+    },
+    {
+      "id": 67,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Cho tập dữ liệu sau: X = [-1.217, -2.059, -0.868, -0.341, -1.237]. Giá trị trung bình là?",
+      "options": {
+        "A": "-0.615",
+        "B": "-0.651",
+        "C": "0.615",
+        "D": "-1.144"
+      },
+      "answer": "D",
+      "explainAnswer": "Tổng ≈ -5.722. Trung bình ≈ -1.144. Đáp án D đúng.",
+      "image": null
+    },
+    {
+      "id": 68,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Phát biểu nào sau đây không chính xác?",
+      "options": {
+        "A": "Giá trị trung bình của một tập dữ liệu luôn lớn hơn giá trị nhỏ nhất",
+        "B": "Phương sai là đại lượng đặc trưng cho độ phân tán của tập dữ liệu",
+        "C": "Giá trị trung bình của một tập dữ liệu luôn nhỏ hơn giá trị lớn nhất",
+        "D": "Phương sai là đại lượng đo lường dữ liệu"
+      },
+      "answer": "A",
+      "explainAnswer": "Phát biểu A không luôn đúng (trường hợp tất cả giá trị bằng nhau thì trung bình = giá trị nhỏ nhất). Các phát biểu khác đúng. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 69,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Đặc trưng thuộc tính của dữ liệu là gì?",
+      "options": {
+        "A": "Vector có số thành phần bằng tổng số điểm dữ liệu và số thuộc tính",
+        "B": "Là số đối tượng nghiên cứu trong tập dữ liệu",
+        "C": "Vector trong không gian 3 chiều",
+        "D": "Là tập hợp các thuộc tính của các đối tượng nghiên cứu"
+      },
+      "answer": "D",
+      "explainAnswer": "Đặc trưng thuộc tính là tập hợp các thuộc tính của các đối tượng nghiên cứu. Đáp án D đúng.",
+      "image": null
+    },
+    {
+      "id": 70,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Một tập dữ liệu là gì?",
+      "options": {
+        "A": "Tập hợp các thuật toán",
+        "B": "Tập hợp các công cụ để lưu trữ dữ liệu",
+        "C": "Tập hợp các mô hình toán học",
+        "D": "Tập hợp thông tin nguyên thủy của các đối tượng thỏa mãn một điều kiện nghiên cứu nào đó"
+      },
+      "answer": "D",
+      "explainAnswer": "Tập dữ liệu là tập hợp thông tin nguyên thủy của các đối tượng thỏa mãn điều kiện nghiên cứu. Đáp án D đúng.",
+      "image": null
+    },
+    {
+      "id": 71,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Một tập dữ liệu thường được coi là một bảng, trong đó:",
+      "options": {
+        "A": "Số hàng bằng số điểm dữ liệu, số cột là số thuộc tính của các đối tượng dữ liệu",
+        "B": "Số hàng luôn bằng số cột và bằng số điểm dữ liệu",
+        "C": "Số hàng bằng số điểm dữ liệu, số cột là một đặc trưng (thuộc tính) của các điểm dữ liệu",
+        "D": "Số hàng bằng số cột"
+      },
+      "answer": "A",
+      "explainAnswer": "Trong bảng dữ liệu: hàng = mẫu (điểm dữ liệu), cột = thuộc tính. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 72,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Để nghiên cứu khả năng mua hàng của một khách hàng thì các đặc trưng nào về khách hàng là phù hợp?",
+      "options": {
+        "A": "Tuổi, giới tính, thu nhập, địa chỉ, nghề nghiệp",
+        "B": "Địa chỉ, địa chỉ email, chiều cao, cân nặng",
+        "C": "Địa chỉ, số điện thoại, nhóm máu, nghề nghiệp",
+        "D": "Địa chỉ email, tên, giới tính, nhóm máu"
+      },
+      "answer": "A",
+      "explainAnswer": "Các đặc trưng liên quan đến khả năng mua hàng: tuổi, giới tính, thu nhập, địa chỉ, nghề nghiệp. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 73,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Cho tập dữ liệu sau: X = [-1.217, -2.059, -0.868, -0.342, -1.237]. Giá trị độ lệch chuẩn (std) của tập dữ liệu trên là?",
+      "options": {
+        "A": "-0.615",
+        "B": "-0.651",
+        "C": "0.615",
+        "D": "0.561"
+      },
+      "answer": "D",
+      "explainAnswer": "Độ lệch chuẩn mẫu của tập dữ liệu trên xấp xỉ 0.561. Đáp án D đúng.",
+      "image": null
+    },
+    {
+      "id": 74,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Mục đích chính của khoa học dữ liệu là gì?",
+      "options": {
+        "A": "Nghiên cứu để trích xuất các giá trị ẩn trong dữ liệu phục vụ việc đưa ra các quyết định để giải quyết một bài toán nghiệp vụ nào đó",
+        "B": "Tất cả các đáp án khác đều đúng",
+        "C": "Nghiên cứu để lưu trữ và quản lý dữ liệu",
+        "D": "Để trực quan hóa dữ liệu và xây dựng báo cáo"
+      },
+      "answer": "A",
+      "explainAnswer": "Mục đích chính là trích xuất giá trị ẩn trong dữ liệu để hỗ trợ ra quyết định nghiệp vụ. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 75,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Phần mềm nào sau đây KHÔNG phải là công cụ chính của khoa học dữ liệu?",
+      "options": {
+        "A": "Ngôn ngữ lập trình R",
+        "B": "Các phần mềm xử lý bảng tính (spreadsheet - Excel)",
+        "C": "Microsoft Word",
+        "D": "Ngôn ngữ lập trình Python"
+      },
+      "answer": "C",
+      "explainAnswer": "Microsoft Word không phải công cụ chính của khoa học dữ liệu. Python, R, Excel mới là công cụ phổ biến. Đáp án C đúng.",
+      "image": null
+    },
+    {
+      "id": 76,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Định nghĩa của khoa học dữ liệu là gì?",
+      "options": {
+        "A": "Là việc sử dụng các mô hình thống kê để phân tích dữ liệu",
+        "B": "Là quá trình thu thập lưu trữ và quản lý dữ liệu",
+        "C": "Là lĩnh vực nghiên cứu liên ngành kết hợp toán thống kê, khoa học máy tính và một số kiến thức chuyên môn sâu để tìm kiếm các quy luật từ các tập dữ liệu",
+        "D": "Là việc tạo ra các biểu đồ trực quan hóa dữ liệu để trình bày các quy luật trong dữ liệu"
+      },
+      "answer": "C",
+      "explainAnswer": "Khoa học dữ liệu là lĩnh vực liên ngành kết hợp toán thống kê, khoa học máy tính và kiến thức chuyên môn để tìm quy luật từ dữ liệu. Đáp án C đúng.",
+      "image": null
+    },
+    {
+      "id": 77,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Vai trò của nhà khoa học dữ liệu là gì?",
+      "options": {
+        "A": "Xây dựng các mô hình dự báo và thuật toán",
+        "B": "Tất cả các phương án khác",
+        "C": "Thu thập và làm sạch dữ liệu",
+        "D": "Xây dựng các phương thức trao đổi thông tin tóm tắt bản chất của dữ liệu liên quan"
+      },
+      "answer": "B",
+      "explainAnswer": "Nhà khoa học dữ liệu đảm nhận nhiều vai trò: thu thập, làm sạch, xây dựng mô hình và trình bày thông tin. Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 78,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Mục đích chính trong công việc của các nhà khoa học dữ liệu là gì?",
+      "options": {
+        "A": "Cung cấp các gợi ý cho việc phát triển sản phẩm và dịch vụ mới",
+        "B": "Cải tiến quá trình xây dựng các quyết định trong kinh doanh",
+        "C": "Tất cả các phương án trên",
+        "D": "Hỗ trợ các nghiên cứu khoa học"
+      },
+      "answer": "C",
+      "explainAnswer": "Mục đích bao gồm hỗ trợ ra quyết định kinh doanh, phát triển sản phẩm và nghiên cứu khoa học. Đáp án C đúng.",
+      "image": null
+    },
+    {
+      "id": 79,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Các kỹ năng cần có của một nhà phân tích dữ liệu là gì?",
+      "options": {
+        "A": "Kỹ năng phân tích thống kê dữ liệu",
+        "B": "Kỹ năng lập trình",
+        "C": "Kỹ năng giao tiếp và trình bày",
+        "D": "Tất cả các kỹ năng được liệt kê"
+      },
+      "answer": "D",
+      "explainAnswer": "Nhà phân tích dữ liệu cần kỹ năng thống kê, lập trình và giao tiếp trình bày. Đáp án D đúng.",
+      "image": null
+    },
+    {
+      "id": 80,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Các hàng trong một bảng dữ liệu thường chứa các thông tin gì?",
+      "options": {
+        "A": "Là một tập con thuộc các thuộc tính của một dữ liệu",
+        "B": "Là một tập con của các trường thông tin",
+        "C": "Là một trường thông tin chứa giá trị của một thuộc tính của các mẫu (đối tượng) dữ liệu",
+        "D": "Là các mẫu (đối tượng) trong tập dữ liệu"
+      },
+      "answer": "D",
+      "explainAnswer": "Mỗi hàng trong bảng dữ liệu tương ứng với một mẫu (đối tượng). Đáp án D đúng.",
+      "image": null
+    },
+    {
+      "id": 81,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Một đặc trưng của các mẫu (đối tượng) trong tập dữ liệu là gì?",
+      "options": {
+        "A": "Là một thuộc tính của các mẫu dữ liệu",
+        "B": "Là một đối tượng trong tập dữ liệu",
+        "C": "Là một hàng trong bảng dữ liệu",
+        "D": "Là một tập hợp các đối tượng được nghiên cứu"
+      },
+      "answer": "A",
+      "explainAnswer": "Đặc trưng là một thuộc tính của các mẫu dữ liệu. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 82,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Công cụ nào sau đây không dùng để biểu diễn trực quan hóa dữ liệu?",
+      "options": {
+        "A": "Các mô hình hồi quy tuyến tính",
+        "B": "Box plot",
+        "C": "Bar plot",
+        "D": "Scatter plot"
+      },
+      "answer": "A",
+      "explainAnswer": "Mô hình hồi quy tuyến tính không phải là công cụ trực quan hóa. Box plot, Bar plot, Scatter plot mới là. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 83,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Đại lượng trung vị là gì?",
+      "options": {
+        "A": "Là đại lượng chia đôi tập dữ liệu",
+        "B": "Là trung bình cộng của tập dữ liệu",
+        "C": "Là giá trị có tần suất xuất hiện nhiều nhất",
+        "D": "Là giá trị trung bình của tập dữ liệu"
+      },
+      "answer": "A",
+      "explainAnswer": "Trung vị (median) là giá trị chia đôi tập dữ liệu đã sắp xếp. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 84,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Bước đầu tiên trong một quá trình làm khoa học dữ liệu là gì?",
+      "options": {
+        "A": "Phân tích dữ liệu",
+        "B": "Trực quan hóa dữ liệu",
+        "C": "Làm sạch dữ liệu",
+        "D": "Thu thập dữ liệu"
+      },
+      "answer": "D",
+      "explainAnswer": "Bước đầu tiên là thu thập dữ liệu. Đáp án D đúng.",
+      "image": null
+    },
+    {
+      "id": 85,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Mục tiêu chính của việc làm sạch dữ liệu là gì?",
+      "options": {
+        "A": "Để loại bỏ những điểm dữ liệu bị thiếu và không phù hợp",
+        "B": "Để bảo đảm tính chính xác và tương thích của dữ liệu",
+        "C": "Cả 2 đáp án trên",
+        "D": "Không có đáp án đúng"
+      },
+      "answer": "C",
+      "explainAnswer": "Làm sạch dữ liệu nhằm loại bỏ dữ liệu thiếu/không phù hợp và đảm bảo tính chính xác, tương thích. Đáp án C đúng.",
+      "image": null
+    },
+    {
+      "id": 86,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Chương trình máy tính nào sau đây KHÔNG được coi là một ứng dụng của trí tuệ nhân tạo?",
+      "options": {
+        "A": "Chương trình điều khiển xe tự lái",
+        "B": "Chương trình quản lý sinh viên",
+        "C": "Chương trình gợi ý các sản phẩm hoặc dịch vụ cho khách hàng",
+        "D": "Chương trình nhận diện khuôn mặt"
+      },
+      "answer": "B",
+      "explainAnswer": "Chương trình quản lý sinh viên thông thường không phải ứng dụng AI. Các lựa chọn còn lại đều là ứng dụng AI. Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 87,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Hệ số tương quan của 2 biến là gì?",
+      "options": {
+        "A": "Là đại lượng biểu diễn mối quan hệ giữa các giá trị trung bình của hai biến được chuẩn hóa",
+        "B": "Là đại lượng biểu diễn mối quan hệ giữa các giá trị của hai biến đã được chuẩn hóa",
+        "C": "Là đại lượng biểu diễn mối quan hệ giữa các giá trị trung bình của hai biến",
+        "D": "Là đại lượng biểu diễn mối quan hệ giữa hai biến"
+      },
+      "answer": "B",
+      "explainAnswer": "Hệ số tương quan (Pearson) biểu diễn mối quan hệ tuyến tính giữa các giá trị của hai biến đã được chuẩn hóa. Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 88,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Chức năng của tập huấn luyện trong học máy là gì?",
+      "options": {
+        "A": "Dùng để huấn luyện mô hình",
+        "B": "Dùng để so sánh với các mô hình khác",
+        "C": "Dùng để đánh giá mô hình",
+        "D": "Dùng để kiểm tra độ chính xác của mô hình"
+      },
+      "answer": "A",
+      "explainAnswer": "Tập huấn luyện (training set) dùng để huấn luyện mô hình. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 89,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Quá trình xây dựng một mô hình học máy thường gồm các bước nào?",
+      "options": {
+        "A": "Tiền xử lý dữ liệu",
+        "B": "Huấn luyện mô hình",
+        "C": "Thu thập dữ liệu",
+        "D": "Tất cả các bước trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Quá trình bao gồm thu thập dữ liệu, tiền xử lý và huấn luyện mô hình. Đáp án D đúng.",
+      "image": null
+    },
+    {
+      "id": 90,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Trong quá trình kiểm định một mô hình học máy, phần trăm dữ liệu dành cho tập kiểm tra thường là bao nhiêu?",
+      "options": {
+        "A": "10-20%",
+        "B": "40-50%",
+        "C": "30-40%",
+        "D": "20-30%"
+      },
+      "answer": "D",
+      "explainAnswer": "Tỷ lệ phổ biến cho tập kiểm tra là 20-30%. Đáp án D đúng.",
+      "image": null
+    },
+    {
+      "id": 91,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Một mô hình hồi quy tuyến tính thường được sử dụng để làm gì?",
+      "options": {
+        "A": "Tìm ra mối quan hệ phi tuyến tính giữa các biến",
+        "B": "Tìm ra các mẫu trong tập dữ liệu",
+        "C": "Dự đoán một biến phụ thuộc từ một hoặc nhiều biến độc lập",
+        "D": "Phân loại các điểm dữ liệu vào các nhóm khác nhau"
+      },
+      "answer": "C",
+      "explainAnswer": "Hồi quy tuyến tính dùng để dự đoán biến phụ thuộc từ một hoặc nhiều biến độc lập. Đáp án C đúng.",
+      "image": null
+    },
+    {
+      "id": 92,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Hệ số hồi quy trong một mô hình hồi quy tuyến tính thể hiện điều gì?",
+      "options": {
+        "A": "Mối quan hệ giữa biến phụ thuộc khi biến độc lập thay đổi",
+        "B": "Mức độ biến động của biến phụ thuộc khi biến độc lập thay đổi",
+        "C": "Giá trị trung bình của biến phụ thuộc",
+        "D": "Giá trị trung bình của biến độc lập"
+      },
+      "answer": "B",
+      "explainAnswer": "Hệ số hồi quy thể hiện mức độ thay đổi của biến phụ thuộc khi biến độc lập thay đổi một đơn vị. Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 93,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Phát biểu nào sau đây đúng về quá trình tiền xử lý dữ liệu?",
+      "options": {
+        "A": "Là bước không quan trọng trong quá trình làm khoa học dữ liệu",
+        "B": "Là bước cuối cùng trong quá trình làm khoa học dữ liệu",
+        "C": "Là bước đầu tiên trong quá trình làm khoa học dữ liệu",
+        "D": "Là bước có thể bỏ qua trong quá trình làm khoa học dữ liệu"
+      },
+      "answer": "C",
+      "explainAnswer": "Tiền xử lý dữ liệu là bước quan trọng ngay sau khi thu thập (thường được coi là bước đầu trong pipeline). Đáp án C đúng.",
+      "image": null
+    },
+    {
+      "id": 94,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Mô hình hồi quy tuyến tính có thể được kiểm tra bằng cách nào?",
+      "options": {
+        "A": "Bằng cách kiểm tra giá trị trung bình của biến phụ thuộc",
+        "B": "Bằng cách kiểm tra hệ số tương quan giữa giá trị thực và giá trị dự đoán",
+        "C": "Bằng cách kiểm tra phương sai của các biến độc lập",
+        "D": "Bằng cách kiểm tra hệ số hồi quy của các biến độc lập"
+      },
+      "answer": "B",
+      "explainAnswer": "Một cách kiểm tra là xem hệ số tương quan giữa giá trị thực và giá trị dự đoán. Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 95,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Độ chính xác của một mô hình học máy là gì?",
+      "options": {
+        "A": "Độ lệch chuẩn của các giá trị dự đoán",
+        "B": "Tỷ lệ phần trăm các dự đoán đúng so với tổng số dự đoán",
+        "C": "Tỷ lệ phần trăm các dự đoán so với tổng số dự đoán",
+        "D": "Sai số trung bình giữa các giá trị thực và giá trị dự đoán"
+      },
+      "answer": "B",
+      "explainAnswer": "Độ chính xác (Accuracy) là tỷ lệ phần trăm dự đoán đúng trên tổng số dự đoán. Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 96,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Phương pháp nào sau đây được sử dụng để kiểm định độ chính xác của một mô hình học máy?",
+      "options": {
+        "A": "K-fold validation",
+        "B": "Tất cả các phương pháp trên",
+        "C": "Holdout validation",
+        "D": "Cross-validation"
+      },
+      "answer": "B",
+      "explainAnswer": "K-fold, Holdout và Cross-validation đều là các phương pháp kiểm định phổ biến. Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 97,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Với mô hình: y = 2x + 3. Hệ số góc là số nào?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "answer": "A",
+      "explainAnswer": "Trong phương trình y = mx + b, hệ số góc m = 2. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 98,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "MAE là gì?",
+      "options": {
+        "A": "Giá trị trung bình của absolute error",
+        "B": "Bình phương của error",
+        "C": "Căn bậc 2 của lỗi",
+        "D": "Không có phương án trả lời đúng"
+      },
+      "answer": "A",
+      "explainAnswer": "MAE (Mean Absolute Error) là giá trị trung bình của sai số tuyệt đối. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 99,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Tính phương sai chuỗi số: 7, 3, 9, 2, 8, 6",
+      "options": {
+        "A": "0",
+        "B": "6.75",
+        "C": "6.5",
+        "D": "6.47"
+      },
+      "answer": "D",
+      "explainAnswer": "Trung bình = 5.833. Phương sai mẫu ≈ 6.47. Đáp án D đúng.",
+      "image": null
+    },
+    {
+      "id": 100,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Mục tiêu chính của Data Science là gì?",
+      "options": {
+        "A": "Tạo ra các mô hình 3D chân thực",
+        "B": "Thiết kế các trang web hấp dẫn",
+        "C": "Khám phá các khuôn mẫu (patterns), thông tin hữu ích và đưa ra quyết định dựa trên dữ liệu",
+        "D": "Phát triển các ứng dụng di động"
+      },
+      "answer": "C",
+      "explainAnswer": "Mục tiêu chính là khám phá patterns và đưa ra quyết định dựa trên dữ liệu. Đáp án C đúng.",
+      "image": null
+    },
+    {
+      "id": 101,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Quá trình Data Science bao gồm các bước nào?",
+      "options": {
+        "A": "Thiết kế đồ họa, tạo hoạt ảnh",
+        "B": "Quảng cáo, bán hàng, tiếp thị",
+        "C": "Thu thập dữ liệu, làm sạch dữ liệu, phân tích dữ liệu, trực quan hóa dữ liệu",
+        "D": "Lập trình, gỡ lỗi, triển khai"
+      },
+      "answer": "C",
+      "explainAnswer": "Các bước chính: thu thập, làm sạch, phân tích và trực quan hóa dữ liệu. Đáp án C đúng.",
+      "image": null
+    },
+    {
+      "id": 102,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Ứng dụng của Data Science trong lĩnh vực chăm sóc sức khỏe là gì?",
+      "options": {
+        "A": "Chẩn đoán bệnh, phát hiện thuốc mới, y học cá nhân hóa",
+        "B": "Thiết kế các công trình kiến trúc",
+        "C": "Phát triển trò chơi điện tử",
+        "D": "Tạo hiệu ứng hình ảnh cho phim"
+      },
+      "answer": "A",
+      "explainAnswer": "Data Science được ứng dụng mạnh trong chẩn đoán, phát hiện thuốc và y học cá nhân hóa. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 103,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Loại AI nào tập trung vào việc thực hiện các nhiệm vụ cụ thể?",
+      "options": {
+        "A": "AI hẹp (Narrow AI)",
+        "B": "AI siêu việt (Super AI)",
+        "C": "AI đa nhiệm (Multitask AI)",
+        "D": "AI tổng quát (General AI)"
+      },
+      "answer": "A",
+      "explainAnswer": "Narrow AI (Weak AI) tập trung vào các nhiệm vụ cụ thể. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 104,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Phương pháp học có giám sát (supervised learning) có đặc điểm gì?",
+      "options": {
+        "A": "Chỉ yêu cầu output",
+        "B": "Yêu cầu cả input và output label",
+        "C": "Chỉ yêu cầu input",
+        "D": "Tự học được theo thời gian"
+      },
+      "answer": "B",
+      "explainAnswer": "Supervised learning yêu cầu cả dữ liệu đầu vào và nhãn đầu ra. Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 105,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Phương pháp học AI nào sau đây có đặc điểm là dễ thu thập dữ liệu huấn luyện nhất?",
+      "options": {
+        "A": "Supervised learning",
+        "B": "Reinforcement learning",
+        "C": "Unsupervised learning",
+        "D": "Semi-supervised learning"
+      },
+      "answer": "C",
+      "explainAnswer": "Unsupervised learning không cần nhãn nên dễ thu thập dữ liệu hơn. Đáp án C đúng.",
+      "image": null
+    },
+    {
+      "id": 106,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Công nghệ nhận diện khuôn mặt trong ứng dụng chuyển tiền ngân hàng thuộc phân loại AI nào?",
+      "options": {
+        "A": "Generative AI",
+        "B": "Narrow AI",
+        "C": "Artificial Superintelligence",
+        "D": "General AI"
+      },
+      "answer": "B",
+      "explainAnswer": "Nhận diện khuôn mặt là ứng dụng điển hình của Narrow AI. Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 107,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Dữ liệu âm thanh thuộc loại dữ liệu gì?",
+      "options": {
+        "A": "Phi cấu trúc",
+        "B": "Bán cấu trúc",
+        "C": "Có cấu trúc",
+        "D": "Dữ liệu hỗn hợp"
+      },
+      "answer": "A",
+      "explainAnswer": "Dữ liệu âm thanh là dữ liệu phi cấu trúc (unstructured data). Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 108,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Dữ liệu điểm danh lớp học là loại dữ liệu gì?",
+      "options": {
+        "A": "Có cấu trúc",
+        "B": "Bán cấu trúc",
+        "C": "Phi cấu trúc",
+        "D": "Dữ liệu hỗn hợp"
+      },
+      "answer": "A",
+      "explainAnswer": "Dữ liệu điểm danh thường được lưu dưới dạng bảng có cấu trúc rõ ràng. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 109,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Phần mềm nào sau đây ít có khả năng được sử dụng nhất trong khoa học dữ liệu?",
+      "options": {
+        "A": "Ngôn ngữ lập trình Python",
+        "B": "Phần mềm Excel",
+        "C": "Phần mềm Photoshop",
+        "D": "Ngôn ngữ lập trình C"
+      },
+      "answer": "C",
+      "explainAnswer": "Photoshop ít được dùng trong khoa học dữ liệu so với Python, Excel hay C. Đáp án C đúng.",
+      "image": null
+    },
+    {
+      "id": 110,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Một mẫu trong cơ sở dữ liệu là gì?",
+      "options": {
+        "A": "Một ô trong bảng",
+        "B": "Một hàng trong bảng",
+        "C": "Một cột trong bảng",
+        "D": "Một bảng dữ liệu"
+      },
+      "answer": "B",
+      "explainAnswer": "Một mẫu (record/instance) tương ứng với một hàng trong bảng. Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 111,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Thuộc tính của mẫu dữ liệu là gì?",
+      "options": {
+        "A": "Là hàng trong bảng",
+        "B": "Là thông tin về cột trong bảng",
+        "C": "Là ô giá trị trong bảng",
+        "D": "Là bảng dữ liệu"
+      },
+      "answer": "B",
+      "explainAnswer": "Thuộc tính (feature/attribute) tương ứng với thông tin của cột. Đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 112,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Câu nào sau đây đúng về hồi quy tuyến tính?",
+      "options": {
+        "A": "Hồi quy tuyến tính mô hình hóa mối quan hệ giữa 1 biến phụ thuộc và 1 hoặc nhiều biến độc lập",
+        "B": "Hồi quy tuyến tính mô hình hóa mối quan hệ giữa 1 biến phụ thuộc và 1 biến độc lập",
+        "C": "Hồi quy tuyến tính mô hình hóa mối quan hệ giữa 1 biến độc lập và nhiều biến phụ thuộc",
+        "D": "Hồi quy tuyến tính mô hình hóa mối quan hệ giữa nhiều biến phụ thuộc"
+      },
+      "answer": "A",
+      "explainAnswer": "Hồi quy tuyến tính mô hình hóa quan hệ giữa một biến phụ thuộc và một hoặc nhiều biến độc lập. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 113,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Ai là người đề ra thuật ngữ \"Trí tuệ nhân tạo\"?",
+      "options": {
+        "A": "John McCarthy",
+        "B": "Alan Turing",
+        "C": "Elon Musk",
+        "D": "Bill Gates"
+      },
+      "answer": "A",
+      "explainAnswer": "John McCarthy là người đề xuất thuật ngữ Artificial Intelligence năm 1956. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 114,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Turing test là gì?",
+      "options": {
+        "A": "Bài toán kiểm tra khả năng trí tuệ của máy tính",
+        "B": "Bài toán kiểm tra khả năng giải thuật",
+        "C": "Bộ câu hỏi lý thuyết về trí tuệ nhân tạo",
+        "D": "Bộ câu hỏi lý thuyết về khoa học máy tính"
+      },
+      "answer": "A",
+      "explainAnswer": "Turing test là bài kiểm tra khả năng trí tuệ của máy tính (khả năng bắt chước hành vi thông minh của con người). Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 115,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Những mô hình tính toán có cách thức suy nghĩ giống con người được gọi là gì?",
+      "options": {
+        "A": "Mô hình mạng nơ-ron",
+        "B": "Mô hình hồi quy tuyến tính",
+        "C": "Mô hình cây quyết định",
+        "D": "Mô hình hồi quy logistic"
+      },
+      "answer": "A",
+      "explainAnswer": "Mạng nơ-ron nhân tạo được lấy cảm hứng từ cách hoạt động của bộ não con người. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 116,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Đâu là ứng dụng của trí tuệ nhân tạo?",
+      "options": {
+        "A": "Thị giác máy tính",
+        "B": "Xử lý ngôn ngữ tự nhiên",
+        "C": "Học máy",
+        "D": "Tất cả đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Thị giác máy tính, NLP và học máy đều là các lĩnh vực/ứng dụng của AI. Đáp án D đúng.",
+      "image": null
+    },
+    {
+      "id": 117,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Hàm đánh giá dùng để làm gì?",
+      "options": {
+        "A": "Tính toán mức độ tốt/xấu, khả năng về đích của trạng thái",
+        "B": "Tính toán thời gian của thuật toán",
+        "C": "Tính toán độ lớn của thuật toán",
+        "D": "Tính toán sự sai lệch giữa trạng thái đầu và trạng thái đích của thuật toán"
+      },
+      "answer": "A",
+      "explainAnswer": "Hàm đánh giá (heuristic/evaluation function) dùng để ước lượng mức độ tốt của một trạng thái. Đáp án A đúng.",
+      "image": null
+    },
+    {
+      "id": 118,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Có mấy phép kết nối logic trong mệnh đề?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "answer": "D",
+      "explainAnswer": "Các phép kết nối logic cơ bản gồm: phủ định (¬), hội (∧), tuyển (∨), kéo theo (→), tương đương (↔) → 5 phép. Đáp án D đúng.",
+      "image": null
+    },
+    {
+      "id": 119,
+      "chapter": "Cơ bản về Machine Learning, Thống kê, Khoa học dữ liệu và AI",
+      "sourceChapter": "",
+      "question": "Câu nào dưới đây KHÔNG là một mệnh đề?",
+      "options": {
+        "A": "An là sinh viên khoa CNTT",
+        "B": "An không phải học Trí tuệ nhân tạo",
+        "C": "X là sinh viên không phải học Trí tuệ nhân tạo",
+        "D": "An là sinh viên CNTT nhưng không phải học Trí tuệ nhân tạo"
+      },
+      "answer": "C",
+      "explainAnswer": "Mệnh đề phải có giá trị chân lý xác định (đúng hoặc sai). Câu C chứa biến X nên không phải mệnh đề logic. Đáp án C đúng.",
+      "image": null
+    }
+  ]
+}

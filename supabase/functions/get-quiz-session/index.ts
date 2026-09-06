@@ -11,8 +11,12 @@ const json = (body: unknown, status: number, req: Request) => Response.json(body
 const examFiles: Record<string, string> = {
   "data-science-ai-midterm-1": "dsai101/khoa_hoc_du_lieu_va_tri_tue_nhan_tao_midle.json",
   "data-science-ai-final-1": "dsai101/khoa_hoc_du_lieu_va_tri_tue_nhan_tao_final.json",
+  "intro-data-science-ai-bank-1": "idsai101/nhap_mon_khdl_ttnt.json",
 }
 const sqaFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json", "chuong_6.json"]
+const marFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json"]
+const sqaExamId = "software-quality-assessment-final-bank-1"
+const marExamId = "marketing-final-bank-1"
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: cors(req) })
@@ -62,11 +66,13 @@ Deno.serve(async (req) => {
     let questions = null
     if (status === "active") {
       const objectPath = examFiles[session.exam_id]
-      if (!objectPath && session.exam_id !== "software-quality-assessment-final-bank-1") return json({ error: "Unknown exam" }, 400, req)
+      if (!objectPath && session.exam_id !== sqaExamId && session.exam_id !== marExamId) return json({ error: "Unknown exam" }, 400, req)
       let bank: { questions?: Array<{ id: string | number; question: string; options?: Record<string, string>; explainAnswer?: string }> }
-      if (session.exam_id === "software-quality-assessment-final-bank-1") {
-        const banks = await Promise.all(sqaFiles.map(async (fileName) => {
-          const { data: file, error } = await admin.storage.from("paid-question-banks").download(`sqa101/${fileName}`)
+      if (session.exam_id === sqaExamId || session.exam_id === marExamId) {
+        const directory = session.exam_id === marExamId ? "mar101" : "sqa101"
+        const files = session.exam_id === marExamId ? marFiles : sqaFiles
+        const banks = await Promise.all(files.map(async (fileName) => {
+          const { data: file, error } = await admin.storage.from("paid-question-banks").download(`${directory}/${fileName}`)
           if (error || !file) throw new Error("Question bank unavailable")
           return await file.json() as { questions?: Array<{ id: string | number; question: string; options?: Record<string, string>; explainAnswer?: string }> }
         }))

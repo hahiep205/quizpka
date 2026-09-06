@@ -36,6 +36,7 @@ export type AdminKpis = {
 
 export const ACTIVE_7D_MS = 7 * 24 * 60 * 60 * 1000
 export const ACTIVE_30D_MS = 30 * 24 * 60 * 60 * 1000
+const ADMIN_TIME_ZONE = "Asia/Ho_Chi_Minh"
 
 function asInt(value: unknown): number {
   const n = typeof value === "number" ? value : Number(value)
@@ -44,6 +45,21 @@ function asInt(value: unknown): number {
 
 function asStringOrNull(value: unknown): string | null {
   return typeof value === "string" && value.length > 0 ? value : null
+}
+
+function calendarDayInAdminTimeZone(value: string, timeZone = ADMIN_TIME_ZONE): string | null {
+  const timestamp = Date.parse(value)
+  if (!Number.isFinite(timestamp)) return null
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(timestamp)
+  const dateParts = Object.fromEntries(parts.map(({ type, value: partValue }) => [type, partValue]))
+  return dateParts.year && dateParts.month && dateParts.day
+    ? `${dateParts.year}-${dateParts.month}-${dateParts.day}`
+    : null
 }
 
 type RecordLike = Record<string, unknown>
@@ -153,7 +169,7 @@ export function computeAdminKpis(users: AdminUser[], now = Date.now()): AdminKpi
   let totalDuration = 0
   let new7d = 0
   let newToday = 0
-  const todayKey = new Date(now).toISOString().slice(0, 10)
+  const todayKey = calendarDayInAdminTimeZone(new Date(now).toISOString())
   for (const u of users) {
     totalAttempts += u.attempts
     totalDuration += u.totalDurationSeconds
@@ -164,7 +180,7 @@ export function computeAdminKpis(users: AdminUser[], now = Date.now()): AdminKpi
     if (u.createdAt) {
       const t = Date.parse(u.createdAt)
       if (Number.isFinite(t) && now - t <= ACTIVE_7D_MS) new7d += 1
-      if (Number.isFinite(t) && new Date(t).toISOString().slice(0, 10) === todayKey) newToday += 1
+      if (Number.isFinite(t) && calendarDayInAdminTimeZone(new Date(t).toISOString()) === todayKey) newToday += 1
     }
   }
   return {

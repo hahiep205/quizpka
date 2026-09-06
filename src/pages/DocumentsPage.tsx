@@ -70,7 +70,7 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
     const matches = examCatalog.filter((exam) => {
       if (exam.subjectId === "toeic") return false
       const categoryKey = exam.category.en === "General" ? "general" : "major"
-      const isPaid = exam.subjectCode === "DSAI101" || exam.subjectCode === "SQA101" || exam.subjectCode === "SEC301"
+      const isPaid = getPaidProductId(exam.subjectCode) !== null
       const matchType =
         typeFilter === "all"
           ? true
@@ -183,7 +183,7 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
                   className="lp-btn lp-btn--primary lp-btn--sm lp-btn--block mt-4 sm:mt-5"
                   onClick={() => tryExam(exam)}
                 >
-                  {exam.subjectCode === "DSAI101" || exam.subjectCode === "SQA101" || exam.subjectCode === "SEC301" ? "10.000 VND" : t.start}
+                  {getPaidProductId(exam.subjectCode) !== null ? "10.000 VND" : t.start}
                 </button>
               }
             />

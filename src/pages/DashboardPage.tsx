@@ -119,7 +119,7 @@ const mobileNavLabels = {
   },
 } as const
 
-const mobileNavIcons = {
+const mobileNavIcons: Record<DashboardView, ComponentType<{ className?: string }>> = {
   home: Home,
   leaderboard: Trophy,
   history: History,
@@ -214,7 +214,7 @@ export function DashboardPage({
         return false
       }
       const categoryKey = exam.category.en === "General" ? "general" : "major"
-        const isPaid = exam.subjectCode === "DSAI101" || exam.subjectCode === "SQA101" || exam.subjectCode === "SEC301"
+        const isPaid = getPaidProductId(exam.subjectCode) !== null
       const matchesFilter =
         filter === "all" || filter === "toeic"
           ? true
@@ -420,7 +420,7 @@ function PurchasedView({ lang, onStartExam }: { lang: Lang; onStartExam: (exam: 
   const [loading, setLoading] = useState(true)
   const [ownedIds, setOwnedIds] = useState<string[]>([])
   const [error, setError] = useState(false)
-  const purchasedExams = examCatalog.filter((exam) => exam.subjectCode === "DSAI101" || exam.subjectCode === "SQA101" || exam.subjectCode === "SEC301")
+  const purchasedExams = examCatalog.filter((exam) => getPaidProductId(exam.subjectCode) !== null)
 
   useEffect(() => {
     let mounted = true
@@ -796,7 +796,7 @@ function HomeDashboard({
                 questionsLabel={t.questions}
                 footer={
                   <button type="button" className="lp-btn lp-btn--primary lp-btn--sm lp-btn--block mt-3 px-2 text-[12px] sm:mt-5 sm:px-4 sm:text-sm" onClick={() => onStartExam(exam)}>
-                    {exam.subjectCode === "DSAI101" || exam.subjectCode === "SQA101" || exam.subjectCode === "SEC301" ? "10.000 VND" : t.start}
+                    {getPaidProductId(exam.subjectCode) !== null ? "10.000 VND" : t.start}
                     <ArrowRight className="hidden h-4 w-4 sm:inline" />
                   </button>
                 }

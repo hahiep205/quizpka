@@ -1,9 +1,9 @@
-import type { LucideIcon } from "lucide-react"
+import type { ComponentType } from "react"
 import { cn } from "@/lib/utils"
 
 export type MobileTabItem<K extends string> = {
   key: K
-  icon: LucideIcon
+  icon: ComponentType<{ className?: string }>
   label: string
   badge?: number
 }
@@ -47,11 +47,6 @@ export function MobileTabBar<K extends string>({
               >
                 <Icon
                   className="h-[26px] w-[26px]"
-                  strokeWidth={2}
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
                 />
               </span>
               {item.badge ? <span className="absolute -right-1 -top-1 min-w-5 rounded-full bg-red-500 px-1 text-center text-[10px] font-black leading-5 text-white ring-2 ring-white dark:ring-[#2C2C2E]">{item.badge > 99 ? "99+" : item.badge}</span> : null}

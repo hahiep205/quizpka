@@ -3,8 +3,10 @@ import { supabase } from "@/lib/supabase"
 
 export function getPaidProductId(subjectCode: string): string | null {
   if (subjectCode === "DSAI101") return "dsai101"
+  if (subjectCode === "IDSAI101") return "idsai101"
   if (subjectCode === "SQA101") return "sqa101"
   if (subjectCode === "SEC301") return "sec301"
+  if (subjectCode === "MAR101") return "mar101"
   return null
 }
 

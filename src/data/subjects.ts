@@ -14,8 +14,10 @@ export type SubjectId =
   | "kinh-te-chinh-tri-mac-lenin"
   | "ky-nang-khoi-nghiep-va-lanh-dao"
   | "bao-mat-ung-dung-he-thong"
+  | "marketing-can-ban"
   | "co-so-du-lieu"
   | "khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
+  | "nhap-mon-khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
   | "xay-dung-web"
   | "toeic"
 
@@ -458,6 +460,27 @@ export const subjects: Subject[] = [
     ],
   },
   {
+    id: "marketing-can-ban",
+    code: "MAR101",
+    name: { en: "Principles of Marketing", vi: "Marketing căn bản" },
+    category: { en: "Major", vi: "Chuyên ngành" },
+    exams: [
+      {
+        id: "marketing-final-bank-1", type: "final", year: 2026, questionCount: 257, durationMinutes: 60,
+        title: { en: "Principles of Marketing", vi: "Marketing căn bản" },
+        description: { en: "257 questions grouped by chapters. Choose a chapter after clicking Try now.", vi: "257 câu hỏi chia theo 5 chương. Chọn chương sau khi ấn Thử ngay." },
+      },
+    ],
+    chapters: [
+      { id: "all", label: { en: "Principles of Marketing - Final", vi: "Marketing căn bản - Cuối kỳ" }, count: 257 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương I" }, matches: ["Chương I"], count: 61 },
+      { id: "c2", label: { en: "Chapter 2", vi: "Chương II" }, matches: ["Chương II"], count: 36 },
+      { id: "c3", label: { en: "Chapter 3", vi: "Chương III" }, matches: ["Chương III"], count: 35 },
+      { id: "c4", label: { en: "Chapter 4", vi: "Chương IV" }, matches: ["Chương IV"], count: 55 },
+      { id: "c5", label: { en: "Chapter 5", vi: "Chương V" }, matches: ["Chương V"], count: 70 },
+    ],
+  },
+  {
     id: "co-so-du-lieu",
     code: "DB101",
     name: { en: "Database", vi: "Cơ sở dữ liệu" },
@@ -492,6 +515,19 @@ export const subjects: Subject[] = [
         id: "data-science-ai-bank-1", type: "final", year: 2026, questionCount: 298, durationMinutes: 60,
         title: { en: "Data Science and Artificial Intelligence", vi: "Khoa học dữ liệu và Trí tuệ nhân tạo" },
         description: { en: "2 sets: Midterm (95) & Final (203). Choose one after clicking Try now.", vi: "2 bộ đề: Giữa kỳ (95 câu) & Cuối kỳ (203 câu). Chọn 1 đề sau khi ấn Thử ngay." },
+      },
+    ],
+  },
+  {
+    id: "nhap-mon-khoa-hoc-du-lieu-va-tri-tue-nhan-tao",
+    code: "IDSAI101",
+    name: { en: "Intro Data Science & AI Practice Bank", vi: "Nhập môn Khoa học dữ liệu và Trí tuệ nhân tạo" },
+    category: { en: "Major", vi: "Chuyên ngành" },
+    exams: [
+      {
+        id: "intro-data-science-ai-bank-1", type: "final", year: 2026, questionCount: 119, durationMinutes: 60,
+        title: { en: "Intro Data Science & AI Practice Bank", vi: "Nhập môn Khoa học dữ liệu và Trí tuệ nhân tạo" },
+        description: { en: "119 final review questions for Intro to Data Science and Artificial Intelligence.", vi: "119 câu hỏi ôn tập Cuối kỳ môn Nhập môn Khoa học dữ liệu và Trí tuệ nhân tạo." },
       },
     ],
   },

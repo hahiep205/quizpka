@@ -53,6 +53,17 @@ describe("adminStats P0", () => {
     expect(kpis.totalAttempts).toBe(15)
   })
 
+  it("counts new users by the admin calendar day in Vietnam time", () => {
+    const now = Date.parse("2026-09-07T03:00:00.000Z") // 10:00 on Sep 7 in Vietnam
+    const users = parseAdminUsers([
+      { id: "before-vn-day", email: null, display_name: null, avatar_url: null, role: "user", status: "active", created_at: "2026-09-06T16:59:59.999Z" },
+      { id: "inside-vn-day", email: null, display_name: null, avatar_url: null, role: "user", status: "active", created_at: "2026-09-06T17:00:00.000Z" },
+      { id: "after-vn-day", email: null, display_name: null, avatar_url: null, role: "user", status: "active", created_at: "2026-09-07T16:59:59.999Z" },
+    ], [])
+
+    expect(computeAdminKpis(users, now).newToday).toBe(2)
+  })
+
   it("exports csv with header", () => {
     const users = parseAdminUsers(profiles, stats)
     const csv = toAdminCsv(users)
