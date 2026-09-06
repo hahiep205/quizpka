@@ -1,7 +1,14 @@
 import { FunctionsHttpError } from "@supabase/supabase-js"
 import { supabase } from "@/lib/supabase"
 
-export async function createDsaiCheckout() {
+export function getPaidProductId(subjectCode: string): string | null {
+  if (subjectCode === "DSAI101") return "dsai101"
+  if (subjectCode === "SQA101") return "sqa101"
+  if (subjectCode === "SEC301") return "sec301"
+  return null
+}
+
+export async function createPaidCheckout(productId = "dsai101") {
   const { data: sessionData, error: sessionError } = await supabase.auth.getSession()
   if (sessionError) throw sessionError
   let session = sessionData.session
@@ -15,6 +22,7 @@ export async function createDsaiCheckout() {
   const { data: verifiedSession, error: verifyError } = await supabase.auth.getUser(accessToken)
   if (verifyError || !verifiedSession.user) throw new Error("Phiên đăng nhập không hợp lệ. Vui lòng đăng xuất và đăng nhập lại.")
   const { data, error } = await supabase.functions.invoke("create-sepay-checkout", {
+    body: { productId },
     headers: { Authorization: `Bearer ${accessToken}` },
   })
   if (error) {
@@ -37,8 +45,12 @@ export async function createDsaiCheckout() {
   }
 }
 
-export async function hasDsaiPurchase(userId: string) {
-  const { data, error } = await supabase.from("purchases").select("id").eq("user_id", userId).eq("product_id", "dsai101").eq("status", "paid").maybeSingle()
+export const createDsaiCheckout = () => createPaidCheckout("dsai101")
+
+export async function hasProductPurchase(userId: string, productId: string) {
+  const { data, error } = await supabase.from("purchases").select("id").eq("user_id", userId).eq("product_id", productId).eq("status", "paid").maybeSingle()
   if (error) throw error
   return Boolean(data)
 }
+
+export const hasDsaiPurchase = (userId: string) => hasProductPurchase(userId, "dsai101")

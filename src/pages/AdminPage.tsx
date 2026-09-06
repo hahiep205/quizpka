@@ -155,7 +155,7 @@ export function AdminPage({ lang }: Props) {
   const [payments, setPayments] = useState<AdminPayment[]>([])
   const [paymentsError, setPaymentsError] = useState<string | null>(null)
   const [paymentQuery, setPaymentQuery] = useState("")
-  const [paymentStatus, setPaymentStatus] = useState<"all" | PaymentStatus>("all")
+  const [paymentStatus, setPaymentStatus] = useState<"latest" | "all" | PaymentStatus>("latest")
   const [paymentPage, setPaymentPage] = useState(0)
   const [adminProducts, setAdminProducts] = useState<AdminProduct[]>([])
   const [grantUserId, setGrantUserId] = useState("")
@@ -330,7 +330,7 @@ export function AdminPage({ lang }: Props) {
   const filteredPayments = useMemo(() => {
     const q = paymentQuery.trim().toLowerCase()
     return payments.filter((payment) => {
-      if (paymentStatus !== "all" && payment.status !== paymentStatus) return false
+      if (paymentStatus !== "latest" && paymentStatus !== "all" && payment.status !== paymentStatus) return false
       if (!q) return true
       const user = userById.get(payment.userId)
       return [payment.orderId, payment.transactionId, payment.productName, payment.productId, payment.userId, user?.displayName, user?.email]
@@ -552,7 +552,7 @@ export function AdminPage({ lang }: Props) {
               <Card className="space-y-3 p-4 sm:p-5">
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <label className="relative block flex-1"><Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" /><input value={paymentQuery} onChange={(e) => setPaymentQuery(e.target.value)} placeholder="Tìm tên, email, mã đơn hoặc mã giao dịch..." className="h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white pl-10 pr-3 text-sm font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" /></label>
-                  <select value={paymentStatus} onChange={(e) => setPaymentStatus(e.target.value as typeof paymentStatus)} className="h-11 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="all">Tất cả trạng thái</option><option value="paid">Đã thanh toán</option><option value="pending">Đang chờ</option><option value="failed">Thất bại</option><option value="refunded">Đã hoàn tiền</option><option value="canceled">Đã hủy</option></select>
+                   <select value={paymentStatus} onChange={(e) => setPaymentStatus(e.target.value as typeof paymentStatus)} className="h-11 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="latest">Mới nhất</option><option value="all">Tất cả trạng thái</option><option value="paid">Đã thanh toán</option><option value="pending">Đang chờ</option><option value="failed">Thất bại</option><option value="refunded">Đã hoàn tiền</option><option value="canceled">Đã hủy</option></select>
                 </div>
                 <p className="text-xs font-semibold text-slate-400">Hiển thị {filteredPayments.length}/{payments.length} giao dịch</p>
               </Card>

@@ -4,6 +4,11 @@ const examFiles: Record<string, string> = {
   "data-science-ai-midterm-1": "dsai101/khoa_hoc_du_lieu_va_tri_tue_nhan_tao_midle.json",
   "data-science-ai-final-1": "dsai101/khoa_hoc_du_lieu_va_tri_tue_nhan_tao_final.json",
 }
+const examProducts: Record<string, string> = {
+  "data-science-ai-midterm-1": "dsai101",
+  "data-science-ai-final-1": "dsai101",
+  "software-quality-assessment-final-bank-1": "sqa101",
+}
 
 function headers(req: Request) {
   return { "Access-Control-Allow-Origin": req.headers.get("origin") ?? Deno.env.get("SITE_URL") ?? "", "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type", "Access-Control-Allow-Methods": "POST, OPTIONS", "Vary": "Origin" }
@@ -24,12 +29,13 @@ Deno.serve(async (req) => {
     const examId = typeof input?.examId === "string" ? input.examId : ""
     const idempotencyKey = typeof input?.idempotencyKey === "string" && input.idempotencyKey.length >= 16 && input.idempotencyKey.length <= 100 ? input.idempotencyKey : ""
     const objectPath = examFiles[examId]
-    if (!objectPath || !idempotencyKey) return json({ error: "Invalid session request" }, 400, req)
+    const productId = examProducts[examId]
+    if ((!objectPath && examId !== "software-quality-assessment-final-bank-1") || !productId || !idempotencyKey) return json({ error: "Invalid session request" }, 400, req)
     const admin = createClient(projectUrl, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!)
     const { data: profile, error: profileError } = await admin.from("profiles").select("status").eq("id", user.id).single()
     if (profileError) return json({ error: "Unable to verify account" }, 500, req)
     if (profile.status !== "active") return json({ error: "Account is blocked" }, 403, req)
-    const { data: purchase, error: purchaseError } = await admin.from("purchases").select("id").eq("user_id", user.id).eq("product_id", "dsai101").eq("status", "paid").maybeSingle()
+    const { data: purchase, error: purchaseError } = await admin.from("purchases").select("id").eq("user_id", user.id).eq("product_id", productId).eq("status", "paid").maybeSingle()
     if (purchaseError) return json({ error: "Unable to verify entitlement" }, 500, req)
     if (!purchase) return json({ error: "Purchase required" }, 403, req)
     const { data: existing, error: existingError } = await admin.from("quiz_sessions").select("id,exam_id,subject_id,started_at,expires_at,status,result").eq("user_id", user.id).eq("exam_id", examId).eq("idempotency_key", idempotencyKey).maybeSingle()
@@ -41,9 +47,20 @@ Deno.serve(async (req) => {
       const existingQuestions = (existingBank.questions ?? []).map((question) => ({ id: String(question.id), prompt: question.question, options: Object.keys(question.options ?? {}).sort().map((key) => question.options?.[key] ?? ""), explanation: question.explainAnswer }))
       return json({ sessionId: existing.id, examId: existing.exam_id, subjectId: existing.subject_id, startedAt: existing.started_at, expiresAt: existing.expires_at, status: existing.status, result: existing.result, questions: existingQuestions }, 200, req)
     }
-    const { data: file, error: downloadError } = await admin.storage.from("paid-question-banks").download(objectPath)
-    if (downloadError || !file) return json({ error: "Question bank unavailable" }, 503, req)
-    const bank = JSON.parse(await file.text()) as { questions?: Array<{ id: string | number; question: string; options?: Record<string, string>; answer: string; explainAnswer?: string }> }
+    let bank: { questions?: Array<{ id: string | number; question: string; options?: Record<string, string>; answer: string; explainAnswer?: string }> }
+    if (examId === "software-quality-assessment-final-bank-1") {
+      const files = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json", "chuong_6.json"]
+      const banks = await Promise.all(files.map(async (fileName) => {
+        const { data: file, error } = await admin.storage.from("paid-question-banks").download(`sqa101/${fileName}`)
+        if (error || !file) throw new Error("Question bank unavailable")
+        return await file.json() as { questions?: Array<{ id: string | number; question: string; options?: Record<string, string>; answer: string; explainAnswer?: string }> }
+      }))
+      bank = { questions: banks.flatMap((item, bankIndex) => (item.questions ?? []).map((question) => ({ ...question, id: `${bankIndex}-${String(question.id)}` }))) }
+    } else {
+      const { data: file, error: downloadError } = await admin.storage.from("paid-question-banks").download(objectPath)
+      if (downloadError || !file) return json({ error: "Question bank unavailable" }, 503, req)
+      bank = JSON.parse(await file.text())
+    }
     const sourceQuestions = Array.isArray(bank.questions) ? bank.questions : []
     const sessionId = crypto.randomUUID()
     const durationMinutes = 60
@@ -60,12 +77,13 @@ Deno.serve(async (req) => {
     })
     const startedAt = new Date().toISOString()
     const expiresAt = new Date(Date.now() + durationMinutes * 60_000).toISOString()
-    const { error: sessionError } = await admin.from("quiz_sessions").insert({ id: sessionId, user_id: user.id, exam_id: examId, subject_id: "khoa-hoc-du-lieu-va-tri-tue-nhan-tao", duration_minutes: durationMinutes, idempotency_key: idempotencyKey, started_at: startedAt, expires_at: expiresAt })
+    const subjectId = productId === "sqa101" ? "danh-gia-va-kiem-dinh-chat-luong-phan-mem" : "khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
+    const { error: sessionError } = await admin.from("quiz_sessions").insert({ id: sessionId, user_id: user.id, exam_id: examId, subject_id: subjectId, duration_minutes: durationMinutes, idempotency_key: idempotencyKey, started_at: startedAt, expires_at: expiresAt })
     if (sessionError) throw sessionError
     const { error: questionsError } = await admin.from("quiz_session_questions").insert(sessionQuestions)
     if (questionsError) throw questionsError
     const displayQuestions = sourceQuestions.map((question) => ({ id: String(question.id), prompt: question.question, options: Object.keys(question.options ?? {}).sort().map((key) => question.options?.[key] ?? ""), explanation: question.explainAnswer }))
-    return json({ sessionId, examId, subjectId: "khoa-hoc-du-lieu-va-tri-tue-nhan-tao", startedAt, expiresAt, status: "active", questions: displayQuestions }, 200, req)
+    return json({ sessionId, examId, subjectId, startedAt, expiresAt, status: "active", questions: displayQuestions }, 200, req)
   } catch (error) {
     console.error("Create quiz session failed", error)
     return json({ error: "Unable to create quiz session" }, 500, req)

@@ -16,14 +16,16 @@ Deno.serve(async (req) => {
     const { data: profile, error: profileError } = await admin.from("profiles").select("status").eq("id", user.id).single()
     if (profileError) throw new Error("Unable to verify account status")
     if (profile.status !== "active") return Response.json({ error: "Account is blocked" }, { status: 403, headers: cors(req) })
-    const { data: product, error: productError } = await admin.from("products").select("id,name,price_vnd,active").eq("id", "dsai101").single()
+    const input = await req.json().catch(() => null) as { productId?: unknown } | null
+    const productId = input?.productId === "sqa101" ? "sqa101" : input?.productId === "sec301" ? "sec301" : "dsai101"
+    const { data: product, error: productError } = await admin.from("products").select("id,name,price_vnd,active").eq("id", productId).single()
     if (productError || !product || !product.active) return Response.json({ error: "Product unavailable" }, { status: 503, headers: cors(req) })
     const { data: existing, error: purchaseError } = await admin.from("purchases").select("id").eq("user_id", user.id).eq("product_id", product.id).eq("status", "paid").maybeSingle()
     if (purchaseError) throw new Error("Unable to verify purchase")
     if (existing) return Response.json({ owned: true }, { headers: cors(req) })
     const { data: pending, error: pendingError } = await admin.from("orders").select("order_id,transfer_content").eq("user_id", user.id).eq("product_id", product.id).eq("status", "pending").maybeSingle()
     if (pendingError) throw new Error("Unable to verify pending order")
-    let orderId = pending?.order_id ?? `DSAI-${crypto.randomUUID().replaceAll("-", "").slice(0, 20).toUpperCase()}`
+    let orderId = pending?.order_id ?? `${productId === "sqa101" ? "SQA" : productId === "sec301" ? "SEC" : "DSAI"}-${crypto.randomUUID().replaceAll("-", "").slice(0, 20).toUpperCase()}`
     let transferContent = pending?.transfer_content ?? ""
     if (!pending) {
       transferContent = `PAY${crypto.randomUUID().replaceAll("-", "").slice(0, 18).toUpperCase()}`

@@ -58,12 +58,15 @@ export async function loadQuizQuestions({ subject, exam, setup, chapterId, toeic
   let questions: Question[]
   if (subject.id === "toeic" && toeicScope) {
     questions = await loadToeicQuestions(toeicScope, exam.id, setup, signal)
-  } else if (subject.id === "khoa-hoc-du-lieu-va-tri-tue-nhan-tao") {
-    const { data, error } = await supabase.functions.invoke("get-paid-question-bank", { body: { examId: exam.id } })
+  } else if (subject.id === "khoa-hoc-du-lieu-va-tri-tue-nhan-tao" || subject.id === "danh-gia-va-kiem-dinh-chat-luong-phan-mem" || subject.id === "bao-mat-ung-dung-he-thong") {
+    const { data, error } = await supabase.functions.invoke("get-paid-question-bank", { body: { examId: exam.id, subjectId: subject.id } })
     if (signal.aborted) throw new DOMException("Aborted", "AbortError")
     if (error) throw new QuestionBankDataError(exam.id, error.message)
     const bank = parseQuestionBank(data, exam.id)
-    questions = mapBankQuestions(bank, exam.id, setup)
+    const filteredBank = chapterId && chapterId !== "all" && bank.questions && hasChapterSupport(subject.id)
+      ? { ...bank, questions: filterQuestionsBySubjectChapter(subject.id, bank.questions, chapterId) }
+      : bank
+    questions = mapBankQuestions(filteredBank, exam.id, setup)
   } else if (exam.questionBanks?.length || exam.questionBank) {
     const urls = exam.questionBanks?.length ? exam.questionBanks : [exam.questionBank!]
     const banks = await Promise.all(urls.map((url) => fetchBank(url, signal)))

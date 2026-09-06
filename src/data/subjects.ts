@@ -356,21 +356,11 @@ export const subjects: Subject[] = [
       {
         id: "software-quality-assessment-final-bank-1", type: "final", year: 2026, questionCount: 299, durationMinutes: 60,
         title: { en: "Software Quality Assessment and Testing", vi: "Đánh giá và kiểm định chất lượng phần mềm" },
-        description: { en: "299 questions grouped by chapters. Choose a chapter after clicking Try now.", vi: "299 câu hỏi được chia theo chương. Chọn chương sau khi ấn Thử ngay." },
-        questionBanks: [
-          "/data/danh_gia_va_kiem_dinh_chat_luong_phan_mem/chuong_1.json",
-          "/data/danh_gia_va_kiem_dinh_chat_luong_phan_mem/chuong_2.json",
-          "/data/danh_gia_va_kiem_dinh_chat_luong_phan_mem/chuong_3.json",
-          "/data/danh_gia_va_kiem_dinh_chat_luong_phan_mem/chuong_4.json",
-          "/data/danh_gia_va_kiem_dinh_chat_luong_phan_mem/chuong_5.json",
-          "/data/danh_gia_va_kiem_dinh_chat_luong_phan_mem/chuong_6.json",
-        ],
+        description: { en: "299 questions for the final exam. Start after clicking Try now.", vi: "299 câu hỏi cho bài thi cuối kỳ. Ấn Thử ngay để bắt đầu." },
       },
     ],
     chapters: [
-      { id: "all", label: { en: "All chapters", vi: "Toàn bộ (299 câu)" }, count: 299 },
-      { id: "c123_mid", label: { en: "Chapters 1,2,3 - Midterm", vi: "Chương 1,2,3 - Giữa kỳ" }, matches: ["Chương 1","Chương 2","Chương 3"], count: 165 },
-      { id: "c456_final", label: { en: "Chapters 4,5,6 - Final", vi: "Chương 4,5,6 - Cuối kỳ" }, matches: ["Chương 4","Chương 5","Chương 6"], count: 134 },
+      { id: "all", label: { en: "Software Quality Assessment and Testing - Final", vi: "Đánh giá và kiểm định chất lượng phần mềm - Cuối kỳ" }, count: 299 },
       { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, count: 49 },
       { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, count: 97 },
       { id: "c3", label: { en: "Chapter 3", vi: "Chương 3" }, count: 19 },
@@ -451,16 +441,6 @@ export const subjects: Subject[] = [
         id: "sec-final-bank-2", type: "final", year: 2026, questionCount: 150, durationMinutes: 90,
         title: { en: "Application & System Security", vi: "Bảo mật ứng dụng và hệ thống" },
         description: { en: "150 questions grouped by chapters. Choose a chapter after clicking Try now.", vi: "150 câu hỏi được chia theo chương. Chọn chương sau khi ấn Thử ngay." },
-        questionBanks: [
-          "/data/bao-mat-ung-dung-va-he-thong/chuong_1.json",
-          "/data/bao-mat-ung-dung-va-he-thong/chuong_2.json",
-          "/data/bao-mat-ung-dung-va-he-thong/chuong_3.json",
-          "/data/bao-mat-ung-dung-va-he-thong/chuong_4.json",
-          "/data/bao-mat-ung-dung-va-he-thong/chuong_5.json",
-          "/data/bao-mat-ung-dung-va-he-thong/chuong_6.json",
-          "/data/bao-mat-ung-dung-va-he-thong/chuong_7.json",
-          "/data/bao-mat-ung-dung-va-he-thong/chuong_8.json",
-        ],
       },
     ],
     chapters: [
@@ -606,6 +586,4 @@ export function getExamTitle(
 ) {
   return exam.title[lang]
 }
-
-
 

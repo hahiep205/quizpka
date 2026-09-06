@@ -52,7 +52,7 @@ import { CommunityChatModal } from "@/components/CommunityChatModal"
 import { NotificationCenter } from "@/components/NotificationCenter"
 import { DirectNotificationPopup } from "@/components/DirectNotificationPopup"
 import { formatTime } from "@/features/quiz/lib/quizHelpers"
-import { createDsaiCheckout, hasDsaiPurchase } from "@/lib/purchases"
+import { createPaidCheckout, getPaidProductId, hasProductPurchase } from "@/lib/purchases"
 import type { ContactModalType } from "@/components/ContactModal"
 
 type Lang = Language
@@ -132,13 +132,16 @@ export function DashboardPage({
   const [activeView, setActiveView] = useState<DashboardView>(() => getDashboardView(getCurrentPath()))
   const { user: dashboardUser, status: dashboardStatus } = useAuth()
   const [payment, setPayment] = useState<{ payment: { qrUrl: string } } | null>(null)
+  const [paymentProductId, setPaymentProductId] = useState("dsai101")
   const handlePaidTryNow = async (exam: ExamCatalogItem) => {
     try {
-    if (exam.subjectCode !== "DSAI101") return handleTryNow(exam)
-    if (dashboardUser?.id && await hasDsaiPurchase(dashboardUser.id)) return handleTryNow(exam)
-    const result = await createDsaiCheckout()
+    const productId = getPaidProductId(exam.subjectCode)
+    if (!productId) return handleTryNow(exam)
+    if (dashboardUser?.id && await hasProductPurchase(dashboardUser.id, productId)) return handleTryNow(exam)
+    const result = await createPaidCheckout(productId)
     if (result.owned) return handleTryNow(exam)
     if (!result.payment) throw new Error("Chưa cấu hình thông tin tài khoản thanh toán")
+    setPaymentProductId(productId)
     setPayment({ payment: result.payment })
     } catch (error) { window.alert(error instanceof Error ? error.message : "Không thể tạo thanh toán. Vui lòng thử lại.") }
   }
@@ -187,7 +190,7 @@ export function DashboardPage({
         return false
       }
       const categoryKey = exam.category.en === "General" ? "general" : "major"
-      const isPaid = exam.subjectCode === "DSAI101"
+        const isPaid = exam.subjectCode === "DSAI101" || exam.subjectCode === "SQA101" || exam.subjectCode === "SEC301"
       const matchesFilter =
         filter === "all" || filter === "toeic"
           ? true
@@ -345,6 +348,7 @@ export function DashboardPage({
         open={Boolean(payment)}
         lang={lang}
         payment={payment?.payment ?? null}
+        productId={paymentProductId}
         userId={dashboardUser?.id}
         onClose={() => setPayment(null)}
         onPaid={() => {
@@ -387,9 +391,9 @@ function getDashboardView(path: string): DashboardView {
 function PurchasedView({ lang, onStartExam }: { lang: Lang; onStartExam: (exam: ExamCatalogItem) => void }) {
   const { user } = useAuth()
   const [loading, setLoading] = useState(true)
-  const [owned, setOwned] = useState(false)
+  const [ownedIds, setOwnedIds] = useState<string[]>([])
   const [error, setError] = useState(false)
-  const purchasedExam = examCatalog.find((exam) => exam.subjectCode === "DSAI101")
+  const purchasedExams = examCatalog.filter((exam) => exam.subjectCode === "DSAI101" || exam.subjectCode === "SQA101" || exam.subjectCode === "SEC301")
 
   useEffect(() => {
     let mounted = true
@@ -397,10 +401,8 @@ function PurchasedView({ lang, onStartExam }: { lang: Lang; onStartExam: (exam: 
       setLoading(false)
       return
     }
-    void hasDsaiPurchase(user.id)
-      .then((value) => {
-        if (mounted) setOwned(value)
-      })
+    void Promise.all(purchasedExams.map(async (exam) => (await hasProductPurchase(user.id, getPaidProductId(exam.subjectCode) ?? "") ? exam.id : null)))
+      .then((values) => { if (mounted) setOwnedIds(values.filter((value): value is string => value !== null)) })
       .catch(() => {
         if (mounted) setError(true)
       })
@@ -416,7 +418,7 @@ function PurchasedView({ lang, onStartExam }: { lang: Lang; onStartExam: (exam: 
     <section className="space-y-5">
       {loading ? <Card variant="dashed" className="py-12 text-center"><p className="text-sm font-bold text-slate-500">{lang === "vi" ? "Đang kiểm tra giao dịch…" : "Checking purchases…"}</p></Card> : null}
       {!loading && error ? <Card variant="dashed" className="py-12 text-center"><p className="text-sm font-bold text-red-500">{lang === "vi" ? "Không thể tải danh sách tài liệu đã mua." : "Could not load purchased materials."}</p></Card> : null}
-      {!loading && !error && owned && purchasedExam ? (
+      {!loading && !error && ownedIds.length ? purchasedExams.filter((exam) => ownedIds.includes(exam.id)).map((purchasedExam) => (
         <article className="rounded-2xl border-2 border-emerald-200 bg-white p-5 shadow-[0_4px_0_rgba(16,185,129,0.12)] dark:border-emerald-500/20 dark:bg-slate-900 dark:shadow-none sm:p-6">
           <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
             <div className="min-w-0">
@@ -428,8 +430,8 @@ function PurchasedView({ lang, onStartExam }: { lang: Lang; onStartExam: (exam: 
             <button type="button" className="lp-btn lp-btn--primary lp-btn--sm shrink-0" onClick={() => onStartExam(purchasedExam)}>{lang === "vi" ? "Ôn tập ngay" : "Practice now"}<ArrowRight className="h-4 w-4" /></button>
           </div>
         </article>
-      ) : null}
-      {!loading && !error && (!owned || !purchasedExam) ? <Card variant="dashed" className="py-12 text-center"><ShoppingBag className="mx-auto h-9 w-9 text-slate-300" /><p className="mt-3 text-sm font-bold text-slate-500">{lang === "vi" ? "Bạn chưa mua tài liệu nào." : "You have not purchased any materials yet."}</p></Card> : null}
+      )) : null}
+      {!loading && !error && !ownedIds.length ? <Card variant="dashed" className="py-12 text-center"><ShoppingBag className="mx-auto h-9 w-9 text-slate-300" /><p className="mt-3 text-sm font-bold text-slate-500">{lang === "vi" ? "Bạn chưa mua tài liệu nào." : "You have not purchased any materials yet."}</p></Card> : null}
     </section>
   )
 }
@@ -674,7 +676,7 @@ function HomeDashboard({
                 questionsLabel={t.questions}
                 footer={
                   <button type="button" className="lp-btn lp-btn--primary lp-btn--sm lp-btn--block mt-3 px-2 text-[12px] sm:mt-5 sm:px-4 sm:text-sm" onClick={() => onStartExam(exam)}>
-                    {exam.subjectCode === "DSAI101" ? "10.000 VND" : t.start}
+                    {exam.subjectCode === "DSAI101" || exam.subjectCode === "SQA101" || exam.subjectCode === "SEC301" ? "10.000 VND" : t.start}
                     <ArrowRight className="hidden h-4 w-4 sm:inline" />
                   </button>
                 }

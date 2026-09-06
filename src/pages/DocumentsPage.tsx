@@ -15,7 +15,7 @@ import { useExamLaunch } from "@/lib/useExamLaunch"
 import { useSubjectAttemptCounts } from "@/hooks/useSubjectAttemptCounts"
 import { CatalogExamCard } from "@/components/CatalogExamCard"
 import { PaymentModal } from "@/components/PaymentModal"
-import { createDsaiCheckout, hasDsaiPurchase } from "@/lib/purchases"
+import { createPaidCheckout, getPaidProductId, hasProductPurchase } from "@/lib/purchases"
 import { useAuth } from "@/auth/AuthProvider"
 
 type Lang = "en" | "vi"
@@ -32,6 +32,7 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
   const [query, setQuery] = useState("")
   const [typeFilter, setTypeFilter] = useState<CategoryFilter>("all")
   const [payment, setPayment] = useState<{ payment: { qrUrl: string } } | null>(null)
+  const [paymentProductId, setPaymentProductId] = useState("dsai101")
   const {
     pickerExam: hcmPickerExam,
     setupExam,
@@ -55,9 +56,11 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
   const nudge = useLoginNudge()
   const { user } = useAuth()
   const tryExam = (exam: ExamCatalogItem) => nudge.requestNudge(async () => { try {
-    if (exam.subjectCode !== "DSAI101" || (user?.id && await hasDsaiPurchase(user.id))) return handleTryNow(exam)
-    const result = await createDsaiCheckout(); if (result.owned) return handleTryNow(exam)
+    const productId = getPaidProductId(exam.subjectCode)
+    if (!productId || (user?.id && await hasProductPurchase(user.id, productId))) return handleTryNow(exam)
+    const result = await createPaidCheckout(productId); if (result.owned) return handleTryNow(exam)
     if (!result.payment) return
+    setPaymentProductId(productId)
     setPayment({ payment: result.payment })
     } catch (error) { window.alert(error instanceof Error ? error.message : "Không thể tạo thanh toán. Vui lòng thử lại.") }
   })
@@ -67,7 +70,7 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
     const matches = examCatalog.filter((exam) => {
       if (exam.subjectId === "toeic") return false
       const categoryKey = exam.category.en === "General" ? "general" : "major"
-      const isPaid = exam.subjectCode === "DSAI101"
+      const isPaid = exam.subjectCode === "DSAI101" || exam.subjectCode === "SQA101" || exam.subjectCode === "SEC301"
       const matchType =
         typeFilter === "all"
           ? true
@@ -180,7 +183,7 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
                   className="lp-btn lp-btn--primary lp-btn--sm lp-btn--block mt-4 sm:mt-5"
                   onClick={() => tryExam(exam)}
                 >
-                  {exam.subjectCode === "DSAI101" ? "10.000 VND" : t.start}
+                  {exam.subjectCode === "DSAI101" || exam.subjectCode === "SQA101" || exam.subjectCode === "SEC301" ? "10.000 VND" : t.start}
                 </button>
               }
             />
@@ -244,6 +247,7 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
         open={Boolean(payment)}
         lang={lang}
         payment={payment?.payment ?? null}
+        productId={paymentProductId}
         userId={user?.id}
         onClose={() => setPayment(null)}
         onPaid={() => {

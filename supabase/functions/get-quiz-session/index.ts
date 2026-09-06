@@ -12,6 +12,7 @@ const examFiles: Record<string, string> = {
   "data-science-ai-midterm-1": "dsai101/khoa_hoc_du_lieu_va_tri_tue_nhan_tao_midle.json",
   "data-science-ai-final-1": "dsai101/khoa_hoc_du_lieu_va_tri_tue_nhan_tao_final.json",
 }
+const sqaFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json", "chuong_6.json"]
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: cors(req) })
@@ -61,10 +62,20 @@ Deno.serve(async (req) => {
     let questions = null
     if (status === "active") {
       const objectPath = examFiles[session.exam_id]
-      if (!objectPath) return json({ error: "Unknown exam" }, 400, req)
-      const { data: file, error: downloadError } = await admin.storage.from("paid-question-banks").download(objectPath)
-      if (downloadError || !file) return json({ error: "Question bank unavailable" }, 503, req)
-      const bank = JSON.parse(await file.text()) as { questions?: Array<{ id: string | number; question: string; options?: Record<string, string>; explainAnswer?: string }> }
+      if (!objectPath && session.exam_id !== "software-quality-assessment-final-bank-1") return json({ error: "Unknown exam" }, 400, req)
+      let bank: { questions?: Array<{ id: string | number; question: string; options?: Record<string, string>; explainAnswer?: string }> }
+      if (session.exam_id === "software-quality-assessment-final-bank-1") {
+        const banks = await Promise.all(sqaFiles.map(async (fileName) => {
+          const { data: file, error } = await admin.storage.from("paid-question-banks").download(`sqa101/${fileName}`)
+          if (error || !file) throw new Error("Question bank unavailable")
+          return await file.json() as { questions?: Array<{ id: string | number; question: string; options?: Record<string, string>; explainAnswer?: string }> }
+        }))
+        bank = { questions: banks.flatMap((item) => item.questions ?? []) }
+      } else {
+        const { data: file, error: downloadError } = await admin.storage.from("paid-question-banks").download(objectPath)
+        if (downloadError || !file) return json({ error: "Question bank unavailable" }, 503, req)
+        bank = JSON.parse(await file.text())
+      }
       questions = (bank.questions ?? []).map((question) => ({ id: String(question.id), prompt: question.question, options: Object.keys(question.options ?? {}).sort().map((key) => question.options?.[key] ?? ""), explanation: question.explainAnswer }))
     }
     return json({
