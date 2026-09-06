@@ -1,0 +1,2752 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kinh tế vĩ mô",
+  "chapter": "Kinh tế vĩ mô",
+  "totalQuestions": 183,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Kinh tế vĩ mô nghiên cứu:",
+      "options": {
+        "A": "Hành vi doanh nghiệp",
+        "B": "Hành vi người tiêu dùng",
+        "C": "Tổng thể nền kinh tế",
+        "D": "Thị trường riêng lẻ"
+      },
+      "answer": "C",
+      "explainAnswer": "Kinh tế vĩ mô nghiên cứu toàn bộ nền kinh tế như sản lượng quốc gia, lạm phát, thất nghiệp và tăng trưởng. Hành vi của từng doanh nghiệp hay thị trường riêng lẻ thuộc phạm vi kinh tế vi mô.",
+      "image": null
+    },
+    {
+      "id": 2,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Mục tiêu của kinh tế vĩ mô không bao gồm:",
+      "options": {
+        "A": "Tăng trưởng kinh tế",
+        "B": "Thất nghiệp thấp",
+        "C": "Giá cả ổn định",
+        "D": "Lợi nhuận doanh nghiệp tối đa"
+      },
+      "answer": "D",
+      "explainAnswer": "Các mục tiêu chính của kinh tế vĩ mô gồm tăng trưởng kinh tế, việc làm cao (thất nghiệp thấp) và ổn định giá cả. Tối đa hóa lợi nhuận là mục tiêu của doanh nghiệp riêng lẻ, không phải mục tiêu vĩ mô.",
+      "image": null
+    },
+    {
+      "id": 3,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "GDP là:",
+      "options": {
+        "A": "Tổng thu nhập quốc dân",
+        "B": "Tổng giá trị sản xuất trong lãnh thổ",
+        "C": "Tổng giá trị xuất khẩu",
+        "D": "Tổng thu nhập của chính phủ"
+      },
+      "answer": "B",
+      "explainAnswer": "GDP (Tổng sản phẩm quốc nội) là tổng giá trị thị trường của tất cả hàng hóa và dịch vụ cuối cùng được sản xuất trong phạm vi lãnh thổ một quốc gia trong một khoảng thời gian nhất định.",
+      "image": null
+    },
+    {
+      "id": 4,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "GDP danh nghĩa được tính theo:",
+      "options": {
+        "A": "Giá cố định",
+        "B": "Giá hiện hành",
+        "C": "Giá quốc tế",
+        "D": "Giá xuất khẩu"
+      },
+      "answer": "B",
+      "explainAnswer": "GDP danh nghĩa được tính theo giá hiện hành của năm đang xét. Vì vậy chỉ tiêu này có thể tăng do giá tăng dù sản lượng thực tế không đổi.",
+      "image": null
+    },
+    {
+      "id": 5,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "GDP thực tế được tính theo:",
+      "options": {
+        "A": "Giá năm gốc",
+        "B": "Giá hiện hành",
+        "C": "Giá xuất khẩu",
+        "D": "Giá nhập khẩu"
+      },
+      "answer": "A",
+      "explainAnswer": "GDP thực tế định giá sản lượng bằng giá của năm gốc, nhờ đó loại bỏ ảnh hưởng của biến động giá và phản ánh rõ hơn sự thay đổi về sản lượng thực.",
+      "image": null
+    },
+    {
+      "id": 6,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "GNP khác GDP chủ yếu ở yếu tố nào sau đây?",
+      "options": {
+        "A": "Xuất khẩu",
+        "B": "Thu nhập ròng từ nước ngoài",
+        "C": "Thuế gián thu",
+        "D": "Chi tiêu chính phủ"
+      },
+      "answer": "B",
+      "explainAnswer": "GNP = GDP + thu nhập yếu tố ròng từ nước ngoài. Sự khác biệt chính nằm ở thu nhập mà cư dân trong nước nhận từ nước ngoài và thu nhập người nước ngoài nhận trong nước.",
+      "image": null
+    },
+    {
+      "id": 7,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Hàng hóa cuối cùng là:",
+      "options": {
+        "A": "Hàng dùng cho sản xuất tiếp",
+        "B": "Hàng bán cho người tiêu dùng cuối cùng",
+        "C": "Hàng xuất khẩu",
+        "D": "Hàng nhập khẩu"
+      },
+      "answer": "B",
+      "explainAnswer": "Hàng hóa cuối cùng là hàng hóa được bán cho người sử dụng cuối cùng và không còn được dùng làm đầu vào để sản xuất hàng hóa khác. Chỉ tính hàng cuối cùng giúp tránh cộng trùng giá trị trong GDP.",
+      "image": null
+    },
+    {
+      "id": 8,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Nếu tính cả sản phẩm trung gian trong GDP sẽ dẫn đến:",
+      "options": {
+        "A": "Tăng trưởng kinh tế",
+        "B": "Tính trùng lặp",
+        "C": "Tăng xuất khẩu",
+        "D": "Tăng nhập khẩu"
+      },
+      "answer": "B",
+      "explainAnswer": "Giá trị của hàng trung gian đã nằm trong giá bán của hàng cuối cùng. Nếu cộng thêm lần nữa sẽ làm GDP bị tính trùng và cao hơn giá trị sản xuất thực tế.",
+      "image": null
+    },
+    {
+      "id": 9,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Chỉ tiêu phản ánh mức sống tốt nhất là:",
+      "options": {
+        "A": "GDP danh nghĩa",
+        "B": "GDP thực tế",
+        "C": "GDP thực tế bình quân đầu người",
+        "D": "Thuế"
+      },
+      "answer": "C",
+      "explainAnswer": "GDP thực tế bình quân đầu người vừa loại bỏ ảnh hưởng của biến động giá, vừa tính đến quy mô dân số. Đây là chỉ tiêu phản ánh mức sống trung bình tốt nhất trong các lựa chọn.",
+      "image": null
+    },
+    {
+      "id": 10,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Nếu dân số tăng nhanh hơn GDP thì:",
+      "options": {
+        "A": "Mức sống tăng",
+        "B": "Mức sống giảm",
+        "C": "Không đổi",
+        "D": "Xuất khẩu tăng"
+      },
+      "answer": "B",
+      "explainAnswer": "Nếu dân số tăng nhanh hơn GDP thì GDP thực tế bình quân đầu người giảm. Sản lượng tính trên mỗi người thấp hơn nên mức sống bình quân có xu hướng giảm.",
+      "image": null
+    },
+    {
+      "id": 11,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Tổng cầu được xác định bằng:",
+      "options": {
+        "A": "C + I",
+        "B": "C + I + G",
+        "C": "C + I + G + (X – M)",
+        "D": "C + G"
+      },
+      "answer": "C",
+      "explainAnswer": "Trong nền kinh tế mở, tổng cầu gồm tiêu dùng (C), đầu tư (I), chi tiêu chính phủ (G) và xuất khẩu ròng (X – M). Công thức chuẩn: AD = C + I + G + (X – M).",
+      "image": null
+    },
+    {
+      "id": 12,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Yếu tố nào làm AD tăng?",
+      "options": {
+        "A": "Thuế tăng",
+        "B": "Chi tiêu chính phủ tăng",
+        "C": "Xuất khẩu giảm",
+        "D": "Lãi suất tăng"
+      },
+      "answer": "B",
+      "explainAnswer": "Chi tiêu chính phủ là thành phần trực tiếp của tổng cầu. Khi G tăng (các yếu tố khác không đổi), đường tổng cầu dịch sang phải.",
+      "image": null
+    },
+    {
+      "id": 13,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "AD dốc xuống vì:",
+      "options": {
+        "A": "Hiệu ứng của cải",
+        "B": "Hiệu ứng lãi suất",
+        "C": "Hiệu ứng tỷ giá",
+        "D": "Tất cả"
+      },
+      "answer": "D",
+      "explainAnswer": "Đường AD dốc xuống do ba hiệu ứng: hiệu ứng của cải (sức mua tăng), hiệu ứng lãi suất (lãi suất giảm kích thích đầu tư) và hiệu ứng tỷ giá (xuất khẩu ròng tăng).",
+      "image": null
+    },
+    {
+      "id": 14,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Khi lãi suất giảm:",
+      "options": {
+        "A": "Đầu tư tăng",
+        "B": "Đầu tư giảm",
+        "C": "Tiêu dùng giảm",
+        "D": "Xuất khẩu giảm"
+      },
+      "answer": "A",
+      "explainAnswer": "Lãi suất thấp làm chi phí vay vốn giảm, doanh nghiệp có thêm động lực thực hiện dự án đầu tư. Vì vậy đầu tư tăng khi lãi suất giảm.",
+      "image": null
+    },
+    {
+      "id": 15,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Câu 15: Thuế giảm sẽ làm:",
+      "options": {
+        "A": "AD giảm",
+        "B": "AD tăng",
+        "C": "AS tăng",
+        "D": "AS giảm"
+      },
+      "answer": "B",
+      "explainAnswer": "Giảm thuế làm thu nhập khả dụng của hộ gia đình tăng → tiêu dùng tăng → tổng cầu tăng. Đường AD dịch sang phải.",
+      "image": null
+    },
+    {
+      "id": 16,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Khi thu nhập tăng:",
+      "options": {
+        "A": "Tiêu dùng tăng",
+        "B": "Tiêu dùng giảm",
+        "C": "Đầu tư giảm",
+        "D": "Thuế giảm"
+      },
+      "answer": "A",
+      "explainAnswer": "Khi thu nhập tăng, hộ gia đình thường tăng chi tiêu tiêu dùng. Tuy nhiên mức tăng tiêu dùng thường nhỏ hơn mức tăng thu nhập vì một phần được tiết kiệm.",
+      "image": null
+    },
+    {
+      "id": 17,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Xuất khẩu tăng sẽ làm:",
+      "options": {
+        "A": "AD tăng",
+        "B": "AD giảm",
+        "C": "AS tăng",
+        "D": "AS giảm"
+      },
+      "answer": "A",
+      "explainAnswer": "Xuất khẩu là thành phần của xuất khẩu ròng. Xuất khẩu tăng (nhập khẩu không đổi) làm NX tăng → AD tăng.",
+      "image": null
+    },
+    {
+      "id": 18,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Nhập khẩu tăng sẽ làm:",
+      "options": {
+        "A": "AD tăng",
+        "B": "AD giảm",
+        "C": "AS tăng",
+        "D": "Không đổi"
+      },
+      "answer": "B",
+      "explainAnswer": "Nhập khẩu được trừ trong NX = X – M. Nhập khẩu tăng làm xuất khẩu ròng và tổng cầu giảm.",
+      "image": null
+    },
+    {
+      "id": 19,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "AD dịch chuyển khi:",
+      "options": {
+        "A": "Giá thay đổi",
+        "B": "Thuế thay đổi",
+        "C": "Mức giá chung thay đổi",
+        "D": "Chi phí sản xuất thay đổi"
+      },
+      "answer": "B",
+      "explainAnswer": "Các yếu tố ngoài mức giá chung (thuế, chi tiêu chính phủ, xuất khẩu…) làm đường AD dịch chuyển. Thay đổi mức giá chung chỉ gây di chuyển dọc theo đường AD.",
+      "image": null
+    },
+    {
+      "id": 20,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Khi mức giá chung giảm, điều gì xảy ra?",
+      "options": {
+        "A": "Lượng tổng cầu tăng",
+        "B": "Lượng cầu tổng hợp giảm",
+        "C": "Tổng cung giảm",
+        "D": "Đường AD dịch trái"
+      },
+      "answer": "A",
+      "explainAnswer": "Khi mức giá chung giảm, sức mua tăng và lãi suất thường giảm → lượng tổng cầu tăng. Đây là di chuyển dọc theo đường AD.",
+      "image": null
+    },
+    {
+      "id": 21,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Trong dài hạn, ASLR phụ thuộc vào:",
+      "options": {
+        "A": "Giá cả",
+        "B": "Lãi suất",
+        "C": "Nguồn lực và công nghệ",
+        "D": "Thuế"
+      },
+      "answer": "C",
+      "explainAnswer": "Trong dài hạn, sản lượng tiềm năng phụ thuộc vào nguồn lực (lao động, vốn, đất đai) và công nghệ. Mức giá không quyết định giới hạn sản xuất dài hạn.",
+      "image": null
+    },
+    {
+      "id": 22,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Khi công nghệ cải tiến:",
+      "options": {
+        "A": "AS dịch trái",
+        "B": "AS dịch phải",
+        "C": "AD dịch trái",
+        "D": "AD dịch phải"
+      },
+      "answer": "B",
+      "explainAnswer": "Công nghệ cải tiến làm năng suất tăng, chi phí trên mỗi đơn vị sản phẩm giảm. Doanh nghiệp cung ứng nhiều hơn tại mỗi mức giá → AS dịch sang phải.",
+      "image": null
+    },
+    {
+      "id": 23,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Khi chi phí sản xuất tăng:",
+      "options": {
+        "A": "AS giảm",
+        "B": "AS tăng",
+        "C": "AD tăng",
+        "D": "AD giảm"
+      },
+      "answer": "A",
+      "explainAnswer": "Chi phí sản xuất tăng làm lợi nhuận tại mỗi mức giá giảm. Doanh nghiệp thu hẹp sản lượng → đường tổng cung ngắn hạn dịch sang trái.",
+      "image": null
+    },
+    {
+      "id": 24,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Khi lực lượng lao động tăng:",
+      "options": {
+        "A": "AS tăng",
+        "B": "AS giảm",
+        "C": "AD giảm",
+        "D": "AD tăng"
+      },
+      "answer": "A",
+      "explainAnswer": "Lực lượng lao động tăng làm năng lực sản xuất của nền kinh tế lớn hơn → tổng cung tăng, AS dịch sang phải.",
+      "image": null
+    },
+    {
+      "id": 25,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Cân bằng vĩ mô ngắn hạn đạt khi:",
+      "options": {
+        "A": "AD = AS",
+        "B": "AD > AS",
+        "C": "AD < AS",
+        "D": "AD = I"
+      },
+      "answer": "A",
+      "explainAnswer": "Cân bằng vĩ mô ngắn hạn đạt được khi tổng lượng cầu bằng tổng lượng cung (AD = AS) tại cùng một mức giá chung.",
+      "image": null
+    },
+    {
+      "id": 26,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Tiết kiệm được tính bằng:",
+      "options": {
+        "A": "Y – C",
+        "B": "C – Y",
+        "C": "Y + C",
+        "D": "Y × C"
+      },
+      "answer": "A",
+      "explainAnswer": "Tiết kiệm là phần thu nhập chưa dùng cho tiêu dùng. Công thức: S = Y – C.",
+      "image": null
+    },
+    {
+      "id": 27,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Xu hướng tiêu dùng cận biên (MPC):",
+      "options": {
+        "A": "ΔC / ΔYd",
+        "B": "ΔY / ΔC",
+        "C": "C / Y",
+        "D": "Y / C"
+      },
+      "answer": "A",
+      "explainAnswer": "Xu hướng tiêu dùng cận biên (MPC) đo phần thu nhập khả dụng tăng thêm được dùng cho tiêu dùng: MPC = ΔC / ΔYd.",
+      "image": null
+    },
+    {
+      "id": 28,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "MPC + MPS =",
+      "options": {
+        "A": "1",
+        "B": "0",
+        "C": "2",
+        "D": "10"
+      },
+      "answer": "A",
+      "explainAnswer": "Thu nhập khả dụng tăng thêm chỉ có hai cách sử dụng: tiêu dùng hoặc tiết kiệm. Vì vậy MPC + MPS = 1.",
+      "image": null
+    },
+    {
+      "id": 29,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Nếu MPC = 0.75 thì số nhân chi tiêu:",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "answer": "C",
+      "explainAnswer": "Số nhân chi tiêu = 1/(1 – MPC). Với MPC = 0,75 thì 1/0,25 = 4.",
+      "image": null
+    },
+    {
+      "id": 30,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "số nhân chi tiêu được tính:",
+      "options": {
+        "A": "1/MPC",
+        "B": "1/(1 – MPC)",
+        "C": "MPC/1",
+        "D": "MPC × MPS"
+      },
+      "answer": "B",
+      "explainAnswer": "Trong mô hình giản đơn không có thuế và nhập khẩu, số nhân chi tiêu = 1/(1 – MPC). Vì MPS = 1 – MPC nên cũng bằng 1/MPS.",
+      "image": null
+    },
+    {
+      "id": 31,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Chính sách tài khóa bao gồm:",
+      "options": {
+        "A": "Thuế và chi tiêu",
+        "B": "Lãi suất",
+        "C": "Tỷ giá",
+        "D": "Xuất khẩu"
+      },
+      "answer": "A",
+      "explainAnswer": "Chính sách tài khóa sử dụng hai công cụ chính là chi tiêu chính phủ và thuế. Lãi suất và cung tiền thuộc phạm vi chính sách tiền tệ.",
+      "image": null
+    },
+    {
+      "id": 32,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Chính sách tài khóa mở rộng nhằm:",
+      "options": {
+        "A": "Tăng sản lượng",
+        "B": "Giảm sản lượng",
+        "C": "Giảm đầu tư",
+        "D": "Giảm tiêu dùng"
+      },
+      "answer": "A",
+      "explainAnswer": "Chính sách tài khóa mở rộng (tăng G hoặc giảm thuế) nhằm kích thích tổng cầu, từ đó tăng sản lượng và việc làm trong ngắn hạn.",
+      "image": null
+    },
+    {
+      "id": 33,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Tăng chi tiêu chính phủ sẽ:",
+      "options": {
+        "A": "Tăng AD",
+        "B": "Giảm AD",
+        "C": "Giảm AS",
+        "D": "Không đổi"
+      },
+      "answer": "B",
+      "explainAnswer": "Chi tiêu chính phủ là thành phần trực tiếp của AD. Khi G tăng, tổng cầu tăng theo số tiền ban đầu và còn tạo hiệu ứng lan tỏa qua số nhân.",
+      "image": null
+    },
+    {
+      "id": 34,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Giảm thuế sẽ:",
+      "options": {
+        "A": "Tăng tiêu dùng",
+        "B": "Giảm tiêu dùng",
+        "C": "Không làm thay đổi tiêu dùng",
+        "D": "Giảm tiêu dùng"
+      },
+      "answer": "A",
+      "explainAnswer": "Giảm thuế làm tăng thu nhập khả dụng. Với MPC dương, hộ gia đình sẽ tăng tiêu dùng, nên lựa chọn phù hợp là tiêu dùng tăng.",
+      "image": null
+    },
+    {
+      "id": 35,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Thâm hụt ngân sách xảy ra khi:",
+      "options": {
+        "A": "Thu > Chi",
+        "B": "Chi > Thu",
+        "C": "Thu = Chi",
+        "D": "Thu > Xuất"
+      },
+      "answer": "A",
+      "explainAnswer": "Thâm hụt ngân sách xuất hiện khi chi tiêu chính phủ lớn hơn thu ngân sách. Nói cách khác, Chi > Thu.",
+      "image": null
+    },
+    {
+      "id": 36,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Ngân hàng trung ương kiểm soát:",
+      "options": {
+        "A": "Thuế",
+        "B": "Cung tiền",
+        "C": "Xuất khẩu",
+        "D": "Nhập khẩu"
+      },
+      "answer": "D",
+      "explainAnswer": "Ngân hàng trung ương điều tiết cung tiền, lãi suất và tín dụng. Thuế là công cụ của Chính phủ, còn xuất nhập khẩu thuộc khu vực đối ngoại.",
+      "image": null
+    },
+    {
+      "id": 37,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Chính sách tiền tệ mở rộng nhằm mục tiêu:",
+      "options": {
+        "A": "Tăng cung tiền và kích thích tăng trưởng kinh tế",
+        "B": "Giảm cung tiền",
+        "C": "Kiểm soát lạm phát cao",
+        "D": "Giảm đầu tư"
+      },
+      "answer": "C",
+      "explainAnswer": "Tiền tệ mở rộng làm cung tiền tăng và lãi suất giảm, qua đó hỗ trợ tín dụng, đầu tư và tiêu dùng. Đây là chính sách thường dùng để kích thích hoạt động kinh tế.",
+      "image": null
+    },
+    {
+      "id": 38,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Ngân hàng trung ương mua trái phiếu sẽ:",
+      "options": {
+        "A": "Tăng cung tiền",
+        "B": "Giảm cung tiền",
+        "C": "Giảm đầu tư",
+        "D": "Tăng thuế"
+      },
+      "answer": "C",
+      "explainAnswer": "NHTW mua trái phiếu bằng cách đưa tiền vào hệ thống ngân hàng. Dự trữ tăng tạo điều kiện cho ngân hàng mở rộng cho vay và làm cung tiền tăng.",
+      "image": null
+    },
+    {
+      "id": 39,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Bán trái phiếu sẽ:",
+      "options": {
+        "A": "Tăng cung tiền",
+        "B": "Giảm cung tiền",
+        "C": "Tăng đầu tư",
+        "D": "Tăng tiêu dùng"
+      },
+      "answer": "A",
+      "explainAnswer": "NHTW bán trái phiếu thu tiền về, làm dự trữ của ngân hàng thương mại giảm. Khả năng tạo tiền giảm nên cung tiền giảm.",
+      "image": null
+    },
+    {
+      "id": 40,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Lãi suất giảm sẽ:",
+      "options": {
+        "A": "Tăng đầu tư",
+        "B": "Giảm đầu tư",
+        "C": "Giảm tiêu dùng",
+        "D": "Giảm AD"
+      },
+      "answer": "D",
+      "explainAnswer": "Lãi suất giảm làm chi phí sử dụng vốn thấp hơn. Doanh nghiệp có xu hướng mở rộng các khoản đầu tư có lợi suất phù hợp.",
+      "image": null
+    },
+    {
+      "id": 41,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Thất nghiệp tự nhiên gồm:",
+      "options": {
+        "A": "Thất nghiệp cơ cấu",
+        "B": "Thất nghiệp tạm thời",
+        "C": "và B",
+        "D": "Thất nghiệp chu kỳ"
+      },
+      "answer": "C",
+      "explainAnswer": "Thất nghiệp tự nhiên gồm thất nghiệp tạm thời và cơ cấu. Thất nghiệp chu kỳ phát sinh do suy thoái và không thuộc thành phần tự nhiên.",
+      "image": null
+    },
+    {
+      "id": 42,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Thất nghiệp chu kỳ xảy ra khi:",
+      "options": {
+        "A": "Kinh tế suy thoái",
+        "B": "Công nghệ thay đổi",
+        "C": "Lương tăng",
+        "D": "Lương giảm"
+      },
+      "answer": "C",
+      "explainAnswer": "Thất nghiệp chu kỳ tăng khi tổng cầu và sản lượng giảm trong suy thoái. Đây không phải là thất nghiệp do người lao động thiếu kỹ năng phù hợp.",
+      "image": null
+    },
+    {
+      "id": 43,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Thất nghiệp cơ cấu do:",
+      "options": {
+        "A": "Thiếu kỹ năng phù hợp",
+        "B": "Lạm phát",
+        "C": "Lãi suất",
+        "D": "Thuế"
+      },
+      "answer": "C",
+      "explainAnswer": "Thất nghiệp cơ cấu xuất hiện khi kỹ năng hoặc nơi làm việc của người lao động không khớp với nhu cầu mới của nền kinh tế.",
+      "image": null
+    },
+    {
+      "id": 44,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Lực lượng lao động gồm:",
+      "options": {
+        "A": "Có việc làm",
+        "B": "Thất nghiệp đang tìm việc",
+        "C": "và B",
+        "D": "Toàn bộ dân số"
+      },
+      "answer": "B",
+      "explainAnswer": "Lực lượng lao động gồm người đang có việc và người không có việc nhưng đang tích cực tìm việc. Người không muốn hoặc không thể làm việc không được tính vào lực lượng lao động.",
+      "image": null
+    },
+    {
+      "id": 45,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Tỷ lệ thất nghiệp =",
+      "options": {
+        "A": "Thất nghiệp / dân số",
+        "B": "Thất nghiệp / lực lượng lao động",
+        "C": "Thất nghiệp / người trưởng thành",
+        "D": "Thất nghiệp / người có việc"
+      },
+      "answer": "A",
+      "explainAnswer": "Tỷ lệ thất nghiệp lấy số người thất nghiệp chia cho lực lượng lao động, rồi nhân 100%. Mẫu số không phải toàn bộ dân số.",
+      "image": null
+    },
+    {
+      "id": 46,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Lạm phát là:",
+      "options": {
+        "A": "Giá giảm",
+        "B": "Giá tăng liên tục",
+        "C": "Thu nhập tăng",
+        "D": "Chi tiêu tăng"
+      },
+      "answer": "A",
+      "explainAnswer": "Lạm phát là sự tăng lên liên tục của mức giá chung, làm sức mua của tiền giảm. Một vài mặt hàng tăng giá riêng lẻ chưa đủ để kết luận có lạm phát.",
+      "image": null
+    },
+    {
+      "id": 47,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Chỉ số phổ biến đo lạm phát:",
+      "options": {
+        "A": "GDP",
+        "B": "CPI",
+        "C": "GNP",
+        "D": "Thuế"
+      },
+      "answer": "B",
+      "explainAnswer": "CPI đo chi phí của một rổ hàng hóa và dịch vụ tiêu dùng điển hình. Đây là chỉ số phổ biến để theo dõi lạm phát từ góc nhìn người tiêu dùng.",
+      "image": null
+    },
+    {
+      "id": 48,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "CPI đo:",
+      "options": {
+        "A": "Giá tiêu dùng",
+        "B": "Giá sản xuất",
+        "C": "Giá xuất khẩu",
+        "D": "Giá nhập khẩu"
+      },
+      "answer": "C",
+      "explainAnswer": "CPI phản ánh mức thay đổi giá của hàng hóa và dịch vụ mà hộ gia đình tiêu dùng, không phải giá của toàn bộ sản phẩm sản xuất trong nền kinh tế.",
+      "image": null
+    },
+    {
+      "id": 49,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Lạm phát cầu kéo do:",
+      "options": {
+        "A": "Tổng cầu tăng",
+        "B": "Chi phí tăng",
+        "C": "Thuế tăng",
+        "D": "Lãi suất giảm"
+      },
+      "answer": "D",
+      "explainAnswer": "Lạm phát cầu kéo xảy ra khi tổng cầu tăng nhanh hơn khả năng cung ứng. Cầu vượt cung tạo áp lực tăng mức giá chung.",
+      "image": null
+    },
+    {
+      "id": 50,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Lạm phát chi phí đẩy do:",
+      "options": {
+        "A": "Thuế và chi tiêu chính phủ",
+        "B": "Lãi suất",
+        "C": "Tỷ giá",
+        "D": "Xuất khẩu"
+      },
+      "answer": "A",
+      "explainAnswer": "Lạm phát chi phí đẩy bắt nguồn từ chi phí đầu vào hoặc chi phí sản xuất tăng. Doanh nghiệp giảm cung và tăng giá bán để bù đắp chi phí.",
+      "image": null
+    },
+    {
+      "id": 51,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Tỉ giá là",
+      "options": {
+        "A": "1/MPC",
+        "B": "1/(1-MPC)",
+        "C": "MPC",
+        "D": "MPC x MPS"
+      },
+      "answer": "A",
+      "explainAnswer": "Tỷ giá là giá của một đồng tiền được biểu thị bằng đồng tiền khác. Ví dụ, VND/USD cho biết cần bao nhiêu đồng Việt Nam để mua một USD.",
+      "image": null
+    },
+    {
+      "id": 52,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Thị trường ngoại hối là nơi:",
+      "options": {
+        "A": "Trao đổi tiền tệ",
+        "B": "Trao đổi hàng hóa",
+        "C": "Trao đổi lao động",
+        "D": "Trao đổi vốn"
+      },
+      "answer": "A",
+      "explainAnswer": "Thị trường ngoại hối là nơi các đồng tiền được mua bán và trao đổi. Giao dịch trên thị trường này hình thành tỷ giá hối đoái.",
+      "image": null
+    },
+    {
+      "id": 53,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Nội tệ giảm giá sẽ:",
+      "options": {
+        "A": "Tăng xuất khẩu",
+        "B": "Giảm xuất khẩu",
+        "C": "Tăng nhập khẩu",
+        "D": "Giảm đầu tư"
+      },
+      "answer": "A",
+      "explainAnswer": "Nội tệ mất giá làm hàng trong nước rẻ tương đối với người nước ngoài, nên xuất khẩu có xu hướng tăng; hàng nhập khẩu trở nên đắt hơn.",
+      "image": null
+    },
+    {
+      "id": 54,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Nội tệ tăng giá sẽ:",
+      "options": {
+        "A": "Xuất khẩu giảm",
+        "B": "Xuất khẩu tăng",
+        "C": "Nhập khẩu giảm",
+        "D": "Không đổi"
+      },
+      "answer": "A",
+      "explainAnswer": "Nội tệ lên giá làm hàng xuất khẩu đắt hơn đối với người nước ngoài. Vì vậy xuất khẩu có xu hướng giảm, trong khi nhập khẩu rẻ hơn.",
+      "image": null
+    },
+    {
+      "id": 55,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Cung ngoại tệ chủ yếu từ:",
+      "options": {
+        "A": "Xuất khẩu",
+        "B": "Nhập khẩu",
+        "C": "Thuế",
+        "D": "Tiêu dùng"
+      },
+      "answer": "D",
+      "explainAnswer": "Xuất khẩu tạo ra dòng thu ngoại tệ từ nước ngoài vào trong nước. Vì vậy xuất khẩu là nguồn cung ngoại tệ chủ yếu trong cách tiếp cận cơ bản.",
+      "image": null
+    },
+    {
+      "id": 56,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Tăng trưởng kinh tế đo bằng:",
+      "options": {
+        "A": "GDP thực",
+        "B": "GDP danh nghĩa",
+        "C": "CPI",
+        "D": "Thuế"
+      },
+      "answer": "D",
+      "explainAnswer": "Tăng trưởng kinh tế được đo bằng mức tăng của GDP thực, vì chỉ tiêu này loại ảnh hưởng của thay đổi giá và tập trung vào sản lượng.",
+      "image": null
+    },
+    {
+      "id": 57,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Nếu GDP thực tăng 5% thì:",
+      "options": {
+        "A": "Sản lượng tăng",
+        "B": "Giá tăng",
+        "C": "Thuế tăng",
+        "D": "Xuất khẩu tăng"
+      },
+      "answer": "B",
+      "explainAnswer": "GDP thực tăng phản ánh sản lượng hàng hóa và dịch vụ tăng, không chỉ đơn thuần là giá cả tăng. Vì vậy kết luận phù hợp là sản lượng tăng.",
+      "image": null
+    },
+    {
+      "id": 58,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Khi AD > AS thì:",
+      "options": {
+        "A": "Lạm phát",
+        "B": "Thất nghiệp tăng",
+        "C": "Sản lượng giảm",
+        "D": "Thuế tăng"
+      },
+      "answer": "C",
+      "explainAnswer": "AD lớn hơn AS nghĩa là người mua muốn mua nhiều hơn lượng doanh nghiệp đang cung ứng. Áp lực dư cầu làm mức giá tăng và tạo lạm phát.",
+      "image": null
+    },
+    {
+      "id": 59,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Khi AS > AD thì:",
+      "options": {
+        "A": "Suy thoái",
+        "B": "Lạm phát",
+        "C": "Tăng trưởng",
+        "D": "Xuất khẩu tăng"
+      },
+      "answer": "C",
+      "explainAnswer": "AS lớn hơn AD nghĩa là sản phẩm làm ra chưa bán hết. Doanh nghiệp giảm sản xuất, tạo áp lực suy giảm hoạt động kinh tế và suy thoái.",
+      "image": null
+    },
+    {
+      "id": 60,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Mục tiêu chính sách vĩ mô là:",
+      "options": {
+        "A": "Tăng trưởng",
+        "B": "Ổn định giá",
+        "C": "Việc làm",
+        "D": "Tất cả"
+      },
+      "answer": "B",
+      "explainAnswer": "Ba mục tiêu vĩ mô cơ bản là tăng trưởng kinh tế, ổn định giá cả và việc làm cao. Vì vậy phương án tổng hợp cả ba là đầy đủ nhất.",
+      "image": null
+    },
+    {
+      "id": 62,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Khoản mục nào sau đây ĐƯỢC tính trực tiếp vào GDP của năm hiện hành?",
+      "options": {
+        "A": "Tiền mua một căn nhà cũ được xây dựng từ 5 năm trước",
+        "B": "Tiền trợ cấp thất nghiệp mà Chính phủ chi cho người dân",
+        "C": "Số tiền mua cổ phiếu trên thị trường chứng khoán",
+        "D": "Giá trị của một chiếc máy tính mới được sản xuất và bán trong năm"
+      },
+      "answer": "D",
+      "explainAnswer": "GDP chỉ ghi nhận giá trị của hàng hóa và dịch vụ cuối cùng được sản xuất trong lãnh thổ trong năm hiện hành. Vì vậy, chiếc máy tính mới được sản xuất và bán trong năm được tính vào GDP; nhà cũ, cổ phiếu và trợ cấp không phải là sản lượng mới của năm đó.",
+      "image": null
+    },
+    {
+      "id": 63,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Nếu GDP danh nghĩa tăng 10% và chỉ số điều chỉnh GDP (Deflator) tăng 4% thì GDP thực tế tăng khoảng bao nhiêu?",
+      "options": {
+        "A": "14%",
+        "B": "6%",
+        "C": "2.5%",
+        "D": "4%"
+      },
+      "answer": "B",
+      "explainAnswer": "GDP thực bằng GDP danh nghĩa chia cho chỉ số điều chỉnh GDP. Tốc độ tăng chính xác là 1,10/1,04 - 1 = 5,77%, nên xấp xỉ 6%.",
+      "image": null
+    },
+    {
+      "id": 64,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Phương pháp tính GDP theo luồng chi tiêu tính tổng của các yếu tố nào?",
+      "options": {
+        "A": "Tiền lương, Tiền thuế, Tiền lãi, Lợi nhuận",
+        "B": "Tiêu dùng, Đầu tư, Chi tiêu chính phủ, Xuất khẩu ròng",
+        "C": "Giá trị gia tăng của tất cả các ngành sản xuất trong nước",
+        "D": "Thu nhập ròng từ nước ngoài và thuế gián thu"
+      },
+      "answer": "B",
+      "explainAnswer": "Theo phương pháp chi tiêu, GDP được tính bằng C + I + G + NX. Bốn thành phần lần lượt là tiêu dùng, đầu tư, chi tiêu chính phủ và xuất khẩu ròng.",
+      "image": null
+    },
+    {
+      "id": 65,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Yếu tố nào sau đây được tính vào GNP của Việt Nam nhưng không được tính vào GDP của Việt Nam?",
+      "options": {
+        "A": "Thu nhập từ yếu tố sản xuất do một người cư trú tại Việt Nam nhận được khi làm việc tại Mỹ",
+        "B": "Khoản kiều hối một hộ gia đình tại Việt Nam nhận từ thân nhân ở Hàn Quốc",
+        "C": "Doanh thu của một khách sạn nước ngoài mở ở Đà Nẵng",
+        "D": "Thuế giá trị gia tăng đánh vào hàng hóa tiêu dùng trong nước"
+      },
+      "answer": "A",
+      "explainAnswer": "GNP bằng GDP cộng thu nhập yếu tố ròng từ nước ngoài, nên thu nhập yếu tố do người cư trú tại Việt Nam tạo ra ở Mỹ thuộc GNP nhưng không thuộc GDP Việt Nam. Kiều hối là khoản chuyển giao, không phải thu nhập yếu tố trong nước, nên không tự động được cộng vào GNP hay GDP; cách phân loại dựa vào nơi cư trú kinh tế, không dựa vào quốc tịch.",
+      "image": null
+    },
+    {
+      "id": 66,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Chỉ số điều chỉnh GDP (GDP Deflator) khác chỉ số giá tiêu dùng (CPI) ở chỗ nào?",
+      "options": {
+        "A": "GDP Deflator chỉ tính giá hàng nhập khẩu, CPI tính giá hàng trong nước",
+        "B": "GDP Deflator phản ánh giá của tất cả hàng hóa được sản xuất trong nước, còn CPI phản ánh giá của rổ hàng hóa được người tiêu dùng điển hình mua",
+        "C": "GDP Deflator sử dụng quyền số cố định của năm gốc, CPI sử dụng quyền số thay đổi",
+        "D": "Không có sự khác biệt nào giữa hai chỉ số này"
+      },
+      "answer": "B",
+      "explainAnswer": "GDP deflator đo mức giá của toàn bộ hàng hóa và dịch vụ cuối cùng sản xuất trong nước, với quyền số thay đổi theo sản lượng hiện hành. CPI đo giá của một rổ hàng hóa và dịch vụ tiêu dùng điển hình, có thể bao gồm hàng nhập khẩu.",
+      "image": null
+    },
+    {
+      "id": 67,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Đường tổng cầu (AD) dịch chuyển sang bên TRÁI khi:",
+      "options": {
+        "A": "Chính phủ tăng chi tiêu cho xây dựng cơ sở hạ tầng",
+        "B": "Ngân hàng trung ương cắt giảm lãi suất điều hành",
+        "C": "Niềm tin của người tiêu dùng sụt giảm khiến họ cắt giảm chi tiêu",
+        "D": "Nhu cầu mua hàng xuất khẩu của nước ngoài tăng mạnh"
+      },
+      "answer": "C",
+      "explainAnswer": "Niềm tin giảm làm tiêu dùng dự kiến giảm, nên tổng cầu dịch sang trái khi các yếu tố khác không đổi. Tăng chi tiêu hạ tầng, giảm lãi suất hoặc cầu xuất khẩu tăng đều tạo lực đẩy tổng cầu sang phải.",
+      "image": null
+    },
+    {
+      "id": 68,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Theo hiệu ứng của cải (Hiệu ứng Pigou), khi mức giá chung trong nền kinh tế giảm xuống thì:",
+      "options": {
+        "A": ": A. Giá trị thực của tiền tăng, người dân cảm thấy giàu hơn và tăng tiêu dùng",
+        "B": "Lãi suất tăng làm giảm đầu tư tư nhân",
+        "C": "Tỷ giá hối đoái tăng làm giảm xuất khẩu ròng",
+        "D": "Thu nhập danh nghĩa tăng khiến người dân đóng thuế nhiều hơn"
+      },
+      "answer": "A",
+      "explainAnswer": "Khi mức giá chung giảm, giá trị thực của số dư tiền mặt M/P tăng. Hiệu ứng của cải làm hộ gia đình cảm thấy có sức mua lớn hơn và có xu hướng tăng tiêu dùng.",
+      "image": null
+    },
+    {
+      "id": 69,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Đường tổng cung dài hạn (AS_LR) có dạng:",
+      "options": {
+        "A": "Dốc lên từ trái sang phải",
+        "B": "Nằm ngang song song với trục sản lượng",
+        "C": "Thẳng đứng tại mức sản lượng tiềm năng (Yp)",
+        "D": "Dốc xuống từ trái sang phải"
+      },
+      "answer": "C",
+      "explainAnswer": "Trong dài hạn, sản lượng được quyết định bởi nguồn lực và công nghệ, tức sản lượng tiềm năng Yp. Vì vậy, đường tổng cung dài hạn là đường thẳng đứng tại Yp, không phụ thuộc vào mức giá chung.",
+      "image": null
+    },
+    {
+      "id": 70,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Sự kiện nào sau đây gây ra một \"cú sốc cung tiêu cực\" làm đường tổng cung ngắn hạn (AS_SR) dịch chuyển sang TRÁI?",
+      "options": {
+        "A": "Giá dầu thô và nguyên liệu thô trên thế giới tăng vọt",
+        "B": "Lực lượng lao động tăng nhanh do di cư",
+        "C": "Chính phủ giảm thuế thu nhập doanh nghiệp",
+        "D": "Một công nghệ sản xuất tiên tiến mới được áp dụng rộng rãi."
+      },
+      "answer": "A",
+      "explainAnswer": "Giá dầu và nguyên liệu tăng làm chi phí biên của doanh nghiệp tăng. Ở mỗi mức giá, doanh nghiệp cung ứng ít sản lượng hơn, nên AS ngắn hạn dịch sang trái và tạo cú sốc cung tiêu cực.",
+      "image": null
+    },
+    {
+      "id": 71,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Trong mô hình AD - AS, nếu nền kinh tế đang ở trạng thái cân bằng dài hạn, một cú sốc cầu tích cực (AD dịch phải) trong ngắn hạn sẽ làm:",
+      "options": {
+        "A": "Sản lượng tăng và mức giá chung tăng",
+        "B": "Sản lượng giảm và mức giá chung giảm",
+        "C": "Sản lượng không đổi và mức giá chung giảm",
+        "D": "Sản lượng tăng và mức giá chung giảm"
+      },
+      "answer": "A",
+      "explainAnswer": "Với AS ngắn hạn dốc lên, AD dịch sang phải làm điểm cân bằng ngắn hạn di chuyển đến sản lượng và mức giá cao hơn. Kết quả này khác dài hạn, khi sản lượng có thể quay về mức tiềm năng sau điều chỉnh.",
+      "image": null
+    },
+    {
+      "id": 72,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Đồng nhất thức vĩ mô nào sau đây đúng với một nền kinh tế đóng?",
+      "options": {
+        "A": "S = I",
+        "B": "S = I + NX",
+        "C": "S = C + I",
+        "D": "S = Y"
+      },
+      "answer": "A",
+      "explainAnswer": "Trong nền kinh tế đóng, không có tiết kiệm nước ngoài hay xuất khẩu ròng để tài trợ đầu tư. Đồng nhất thức tiết kiệm - đầu tư vì thế là S = I.",
+      "image": null
+    },
+    {
+      "id": 73,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Tiết kiệm chính phủ (S_g) được xác định bằng công thức nào? (Với T là thuế ròng, G là chi tiêu chính phủ)",
+      "options": {
+        "A": "S_g = T + G",
+        "B": "S_g = T - G",
+        "C": "S_g = G - T",
+        "D": "S_g = Y - T - C"
+      },
+      "answer": "B",
+      "explainAnswer": "Tiết kiệm chính phủ là phần thu ngân sách còn lại sau khi chi tiêu chính phủ. Do đó, Sg = T - G; giá trị âm thể hiện thâm hụt ngân sách.",
+      "image": null
+    },
+    {
+      "id": 74,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Trong mô hình thị trường vốn vay, trục tung và trục hoành lần lượt biểu diễn các chỉ tiêu nào?",
+      "options": {
+        "A": "Mức giá chung và Sản lượng",
+        "B": "Lãi suất thực tế và Lượng vốn vay",
+        "C": "Lãi suất danh nghĩa và Khối lượng tiền",
+        "D": "Tỷ giá hối đoái và Xuất khẩu ròng"
+      },
+      "answer": "B",
+      "explainAnswer": "Mô hình thị trường vốn vay mô tả việc tiết kiệm cung ứng vốn và đầu tư cầu vốn. Trục tung là lãi suất thực tế, còn trục hoành là lượng vốn vay.",
+      "image": null
+    },
+    {
+      "id": 75,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Khi Chính phủ rơi vào tình trạng thâm hụt ngân sách lớn và phải vay thêm, điều này tác động thế nào đến thị trường vốn vay?",
+      "options": {
+        "A": "Đường cung vốn vay dịch phải, làm giảm lãi suất",
+        "B": "Đường cầu vốn vay dịch trái, làm giảm lãi suất",
+        "C": "Đường cung vốn vay dịch trái, làm tăng lãi suất và làm giảm đầu tư tư nhân",
+        "D": "Không ảnh hưởng gì đến thị trường vốn vay."
+      },
+      "answer": "C",
+      "explainAnswer": "Thâm hụt lớn làm tiết kiệm chính phủ giảm, nên cung vốn vay dịch sang trái. Lãi suất thực tế tăng, làm chi phí vốn cao hơn và có xu hướng giảm đầu tư tư nhân.",
+      "image": null
+    },
+    {
+      "id": 76,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Hiện tượng \"lấn át\" (Crowding-out) xảy ra khi:",
+      "options": {
+        "A": "Đầu tư tư nhân tăng làm giảm chi tiêu của chính phủ",
+        "B": "Chính phủ tăng vay nợ làm lãi suất tăng, từ đó làm giảm đầu tư tư nhân",
+        "C": "Ngân hàng tăng lãi suất khiến người dân gửi tiền tiết kiệm nhiều hơn",
+        "D": "Dòng vốn đầu tư nước ngoài ồ ạt chảy vào trong nước."
+      },
+      "answer": "B",
+      "explainAnswer": "Lấn át xảy ra trong mô hình vốn vay khi Chính phủ vay nhiều hơn, đẩy lãi suất thực tế lên. Lãi suất cao làm một phần đầu tư tư nhân giảm do chi phí vay tăng.",
+      "image": null
+    },
+    {
+      "id": 77,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Tổ chức nào sau đây là một trung gian tài chính, nhận tiền gửi và cho người đi vay vay lại?",
+      "options": {
+        "A": "Thị trường chứng khoán",
+        "B": "Ngân hàng thương mại",
+        "C": "Thị trường phiếu chính phủ",
+        "D": "Sở giao dịch hàng hóa"
+      },
+      "answer": "B",
+      "explainAnswer": "Ngân hàng thương mại huy động tiền gửi từ người tiết kiệm rồi chuyển vốn cho người đi vay thông qua các khoản cho vay. Đây là hoạt động trung gian tài chính, khác với thị trường chứng khoán nơi người mua và người phát hành giao dịch trực tiếp hơn.",
+      "image": null
+    },
+    {
+      "id": 78,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Trong một nền kinh tế đóng có thuế độc lập với thu nhập, nếu xu hướng tiêu dùng cận biên MPC = 0,8, số nhân thuế ròng (m_t) sẽ bằng:",
+      "options": {
+        "A": "-4",
+        "B": "5",
+        "C": "-5",
+        "D": "4"
+      },
+      "answer": "A",
+      "explainAnswer": "Với thuế độc lập với thu nhập, số nhân thuế là mt = -MPC/(1-MPC). Thay MPC = 0,8 được -0,8/0,2 = -4, thể hiện tăng thuế làm sản lượng giảm.",
+      "image": null
+    },
+    {
+      "id": 79,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Nếu sản lượng thực tế thấp hơn sản lượng tiềm năng là 200 tỷ, và số nhân chi tiêu m = 4. Chính phủ cần tăng chi tiêu (G) thêm bao nhiêu để đưa nền kinh tế về mức sản lượng tiềm năng?",
+      "options": {
+        "A": "800 tỷ",
+        "B": "200 tỷ",
+        "C": "50 tỷ",
+        "D": "100 tỷ"
+      },
+      "answer": "C",
+      "explainAnswer": "Khoảng cách sản lượng cần bù là 200 tỷ và số nhân chi tiêu là 4. Vì ΔY = mΔG, nên ΔG = 200/4 = 50 tỷ.",
+      "image": null
+    },
+    {
+      "id": 80,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Theo định lý về ngân sách cân bằng, nếu Chính phủ tăng chi tiêu (G) thêm 100 tỷ và đồng thời tăng thuế độc lập (T) thêm 100 tỷ thì sản lượng cân bằng (Y) sẽ thay đổi như thế nào?",
+      "options": {
+        "A": "Không thay đổi",
+        "B": "Tăng đúng 100 tỷ",
+        "C": "Giảm đúng 100 tỷ",
+        "D": "Tăng 400 tỷ"
+      },
+      "answer": "B",
+      "explainAnswer": "Tăng G thêm 100 tỷ làm sản lượng tăng 100mG, còn tăng thuế 100 tỷ làm sản lượng giảm 100(-mt) theo phần tiêu dùng bị giảm. Với mô hình Keynes chuẩn, số nhân ngân sách cân bằng bằng 1, nên sản lượng tăng đúng 100 tỷ.",
+      "image": null
+    },
+    {
+      "id": 81,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Khi nền kinh tế đang rơi vào tình trạng lạm phát do cầu kéo tăng quá cao, Chính phủ nên áp dụng chính sách tài khóa nào?",
+      "options": {
+        "A": "Tăng chi tiêu công và giảm thuế",
+        "B": "Giảm chi tiêu công và tăng thuế",
+        "C": "Giảm lãi suất và tăng cung tiền",
+        "D": "Giữ nguyên chi tiêu và tăng trợ cấp xã hội"
+      },
+      "answer": "B",
+      "explainAnswer": "Lạm phát do cầu kéo phản ánh tổng cầu vượt quá năng lực sản xuất hiện tại. Giảm G và tăng T làm tổng cầu giảm, qua đó hạ áp lực tăng giá.",
+      "image": null
+    },
+    {
+      "id": 82,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Yếu tố nào sau đây được coi là một \"bộ ổn định tự động\" của chính sách tài khóa?",
+      "options": {
+        "A": "Các dự án xây dựng đường cao tốc của Chính phủ",
+        "B": "Thuế thu nhập lũy tiến và trợ cấp thất nghiệp",
+        "C": "Quyết định thay đổi mức lương cơ sở của Quốc hội",
+        "D": "Việc Ngân hàng trung ương mua bán trái phiếu chính phủ"
+      },
+      "answer": "B",
+      "explainAnswer": "Bộ ổn định tự động hoạt động mà không cần một quyết định chính sách mới cho từng chu kỳ. Thuế thu nhập lũy tiến giảm gánh nặng khi thu nhập giảm, còn trợ cấp thất nghiệp hỗ trợ thu nhập trong suy thoái.",
+      "image": null
+    },
+    {
+      "id": 83,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Theo định nghĩa M1 của giáo trình này, M1 gồm tiền mặt lưu thông ngoài hệ thống ngân hàng, tiền gửi không kỳ hạn và séc du lịch. Thành phần nào sau đây không thuộc M1?",
+      "options": {
+        "A": "Tiền mặt lưu thông ngoài hệ thống ngân hàng",
+        "B": "Tiền gửi không kỳ hạn tại các ngân hàng thương mại",
+        "C": "Tiền gửi tiết kiệm có kỳ hạn của dân cư tại ngân hàng",
+        "D": "Séc du lịch"
+      },
+      "answer": "C",
+      "explainAnswer": "Theo định nghĩa giáo trình đã nêu, M1 gồm tiền mặt, tiền gửi không kỳ hạn và séc du lịch vì các khoản này có tính thanh khoản rất cao. Tiền gửi tiết kiệm có kỳ hạn không thuộc M1 theo quy ước này, dù có thể được đưa vào các khối tiền rộng hơn.",
+      "image": null
+    },
+    {
+      "id": 84,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Nếu tỷ lệ tiền mặt so với tiền gửi là c = 10%, tỷ lệ dự trữ bắt buộc là r = 10% (giả định các ngân hàng không có dự trữ tùy ý). Số nhân tiền (m_m) bằng bao nhiêu?",
+      "options": {
+        "A": "10",
+        "B": "5.5",
+        "C": "5",
+        "D": "2"
+      },
+      "answer": "B",
+      "explainAnswer": "Với tỷ lệ tiền mặt trên tiền gửi c và tỷ lệ dự trữ r, số nhân tiền là m = (1+c)/(r+c) khi không có dự trữ tùy ý. Thay c = r = 0,1 được m = 1,1/0,2 = 5,5, nên đáp án là B.",
+      "image": null
+    },
+    {
+      "id": 85,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Cơ sở tiền tệ (MB - hay tiền mạnh) bao gồm:",
+      "options": {
+        "A": "Tiền mặt lưu thông ngoài ngân hàng và Tiền gửi không kỳ hạn",
+        "B": "Tiền mặt do công chúng và ngân hàng thương mại nắm giữ (kể cả tiền mặt tại két ngân hàng) và tiền dự trữ của các ngân hàng thương mại tại NHTW",
+        "C": "Toàn bộ lượng tiền gửi có kỳ hạn tại các ngân hàng",
+        "D": "Tiền vàng và ngoại tệ mạnh lưu trữ tại kho bạc"
+      },
+      "answer": "B",
+      "explainAnswer": "Cơ sở tiền tệ gồm toàn bộ tiền mặt do công chúng và ngân hàng thương mại nắm giữ, kể cả tiền tại két ngân hàng, cùng với dự trữ của ngân hàng thương mại tại ngân hàng trung ương. Dự trữ này bao gồm số dư dự trữ theo quy định và dự trữ vượt mức, không phải tiền gửi của công chúng.",
+      "image": null
+    },
+    {
+      "id": 86,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Khi Ngân hàng Trung ương mua trái phiếu chính phủ từ các ngân hàng thương mại trên thị trường mở, hành động này sẽ:",
+      "options": {
+        "A": "Làm giảm dự trữ của các ngân hàng thương mại và giảm cung tiền",
+        "B": "Làm tăng dự trữ của các ngân hàng thương mại và tăng cung tiền",
+        "C": "Làm tăng lãi suất thị trường ngay lập tức",
+        "D": "Không làm thay đổi lượng tiền mạnh (MB)"
+      },
+      "answer": "B",
+      "explainAnswer": "Khi ngân hàng trung ương mua trái phiếu từ ngân hàng thương mại, tài sản dự trữ của ngân hàng thương mại tăng. Cơ sở tiền tệ tăng tạo điều kiện cho hệ thống ngân hàng mở rộng tiền gửi và làm cung tiền tăng, nếu các điều kiện khác không đổi.",
+      "image": null
+    },
+    {
+      "id": 87,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Để thu hẹp lượng cung tiền nhằm thắt chặt tiền tệ, Ngân hàng Trung ương có thể sử dụng biện pháp nào?",
+      "options": {
+        "A": "Hạ tỷ lệ dự trữ bắt buộc",
+        "B": "Tăng lãi suất chiết khấu",
+        "C": "Mua vào trái phiếu chính phủ",
+        "D": "Khuyến khích các ngân hàng thương mại cho vay nhiều hơn"
+      },
+      "answer": "B",
+      "explainAnswer": "Tăng lãi suất chiết khấu làm chi phí vay dự trữ từ ngân hàng trung ương cao hơn. Ngân hàng thương mại có xu hướng giảm vay và cho vay, qua đó hạn chế tăng trưởng cơ sở tiền tệ và cung tiền.",
+      "image": null
+    },
+    {
+      "id": 88,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Theo lý thuyết thị trường tiền tệ, khi Ngân hàng Trung ương thực hiện chính sách tiền tệ mở rộng (tăng MS), lãi suất cân bằng trên thị trường sẽ thay đổi thế nào?",
+      "options": {
+        "A": "Giảm",
+        "B": "Tăng",
+        "C": "Không thay đổi",
+        "D": "Biến động liên tục, không xác định"
+      },
+      "answer": "A",
+      "explainAnswer": "Với cầu tiền không đổi, cung tiền tăng tạo ra dư cung tiền tại lãi suất ban đầu. Người dân mua tài sản tài chính bằng số tiền dư, đẩy giá tài sản lên và lãi suất cân bằng giảm.",
+      "image": null
+    },
+    {
+      "id": 89,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Một công nhân ngành dệt may bị mất việc do nhà máy đóng cửa vì chuyển sang sử dụng dây chuyền robot tự động hóa hoàn toàn. Người công nhân này thuộc loại thất nghiệp nào?",
+      "options": {
+        "A": "Thất nghiệp tạm thời",
+        "B": "Thất nghiệp chu kỳ",
+        "C": "Thất nghiệp cơ cấu",
+        "D": "Thất nghiệp tự nguyện"
+      },
+      "answer": "C",
+      "explainAnswer": "Việc tự động hóa làm kỹ năng hoặc loại công việc cũ không còn phù hợp với nhu cầu tuyển dụng. Thất nghiệp do sự lệch pha giữa kỹ năng người lao động và cơ cấu việc làm là thất nghiệp cơ cấu.",
+      "image": null
+    },
+    {
+      "id": 90,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Nền kinh tế có 45 triệu người có việc làm và 5 triệu người thất nghiệp đang tích cực tìm việc. Tỷ lệ thất nghiệp của quốc gia này là:",
+      "options": {
+        "A": "10%",
+        "B": "11.1%",
+        "C": "5%",
+        "D": "12.5%"
+      },
+      "answer": "A",
+      "explainAnswer": "Lực lượng lao động bằng số người có việc làm cộng số người thất nghiệp đang tìm việc, tức 45 + 5 = 50 triệu. Tỷ lệ thất nghiệp là 5/50 = 10%.",
+      "image": null
+    },
+    {
+      "id": 91,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Một người quyết định nghỉ việc ở công ty cũ và dành ra 2 tháng để nộp hồ sơ, phỏng vấn tìm một công việc mới có mức lương cao hơn. Trong thời gian 2 tháng đó, người này được xếp vào nhóm:",
+      "options": {
+        "A": "Thất nghiệp cơ cấu",
+        "B": "Thất nghiệp chu kỳ",
+        "C": "Thất nghiệp tạm thời",
+        "D": "Không nắm trong lực lượng lao động"
+      },
+      "answer": "C",
+      "explainAnswer": "Người này chủ động rời việc cũ nhưng vẫn tìm việc và sẵn sàng làm việc. Khoảng thời gian chuyển tiếp để tìm công việc phù hợp được xếp vào thất nghiệp tạm thời và vẫn thuộc lực lượng lao động.",
+      "image": null
+    },
+    {
+      "id": 92,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Khi nền kinh tế đạt mức sản lượng tiềm năng (Yp), tỷ lệ thất nghiệp thực tế sẽ:",
+      "options": {
+        "A": "Bằng 0%",
+        "B": "Bằng tỷ lệ thất nghiệp tự nhiên",
+        "C": "Cao hơn tỷ lệ thất nghiệp tự nhiên",
+        "D": "Bằng tỷ lệ thất nghiệp chu kỳ"
+      },
+      "answer": "B",
+      "explainAnswer": "Sản lượng tiềm năng tương ứng với trạng thái không có khoảng cách sản lượng theo chu kỳ. Tuy nhiên, thất nghiệp tạm thời và cơ cấu vẫn tồn tại, nên thất nghiệp thực tế bằng tỷ lệ thất nghiệp tự nhiên chứ không bằng 0%.",
+      "image": null
+    },
+    {
+      "id": 93,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Đường cong Phillips trong ngắn hạn thể hiện mối quan hệ đánh đổi giữa:",
+      "options": {
+        "A": "Sản lượng và Thất nghiệp",
+        "B": "Lạm phát và Thất nghiệp",
+        "C": "Lãi suất và Lạm phát",
+        "D": "Chi tiêu chính phủ và Thuế"
+      },
+      "answer": "B",
+      "explainAnswer": "Đường Phillips ngắn hạn mô tả sự đánh đổi giữa lạm phát và thất nghiệp trong điều kiện kỳ vọng lạm phát và các yếu tố khác chưa điều chỉnh đầy đủ. Trong ngắn hạn, cầu tăng thường làm lạm phát cao hơn và thất nghiệp thấp hơn.",
+      "image": null
+    },
+    {
+      "id": 94,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Đường cong Phillips trong dài hạn có dạng:",
+      "options": {
+        "A": "Dốc xuống từ trái sang phải",
+        "B": "Là một đường thẳng đứng tại mức thất nghiệp tự nhiên",
+        "C": "Nằm ngang song song với trục thất nghiệp",
+        "D": "Dốc lên từ trái sang phải"
+      },
+      "answer": "B",
+      "explainAnswer": "Trong dài hạn, kỳ vọng lạm phát điều chỉnh và thất nghiệp quay về tỷ lệ tự nhiên. Vì vậy, không có đánh đổi dài hạn giữa lạm phát và thất nghiệp, thể hiện bằng đường thẳng đứng tại tỷ lệ thất nghiệp tự nhiên.",
+      "image": null
+    },
+    {
+      "id": 95,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Tác hại chính của lạm phát không dự tính trước đối với nền kinh tế là:",
+      "options": {
+        "A": "Làm tăng chi phí mòn giày của người dân",
+        "B": "Làm tăng chi phí thực đơn của doanh nghiệp",
+        "C": "Phân phối lại của cải một cách ngẫu nhiên và bất công giữa người đi vay và người cho vay",
+        "D": "Làm giảm nguồn thu từ thuế Chính phủ"
+      },
+      "answer": "C",
+      "explainAnswer": "Lạm phát không dự tính trước làm thay đổi bất ngờ giá trị thực của các khoản nợ danh nghĩa. Vì vậy, nó có thể phân phối lại của cải một cách ngẫu nhiên giữa người đi vay và người cho vay, tùy bên nào được lợi từ giá trị thực của khoản nợ thay đổi.",
+      "image": null
+    },
+    {
+      "id": 96,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Theo quy ước ghi có (+) và ghi nợ (-), cán cân thanh toán quốc tế luôn cân bằng về mặt kế toán vì lý do nào sau đây?",
+      "options": {
+        "A": "Xuất khẩu luôn luôn bằng Nhập khẩu",
+        "B": "Tổng số dư tài khoản vãng lai, tài khoản vốn, tài khoản tài chính và khoản sai số thống kê bằng không",
+        "C": "Quốc gia không bao giờ vay nợ nước ngoài",
+        "D": "Ngân hàng trung ương không can thiệp vào tỷ giá"
+      },
+      "answer": "B",
+      "explainAnswer": "Mỗi giao dịch quốc tế được ghi hai lần, một bên ghi có và một bên ghi nợ. Vì thế, theo đồng nhất thức kế toán, CA + KA + FA + sai số thống kê = 0; điều này không có nghĩa xuất khẩu luôn bằng nhập khẩu.",
+      "image": null
+    },
+    {
+      "id": 97,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Giao dịch nào sau đây được ghi vào bên CÓ (+) của Tài khoản vãng lai (CA) trong cán cân thanh toán của Việt Nam?",
+      "options": {
+        "A": "Doanh nghiệp Việt Nam nhập khẩu linh kiện điện tử từ Nhật Bản",
+        "B": "Một khách du lịch nước ngoài chi tiêu tiền để thuê phòng khách sạn tại Nha Trang",
+        "C": "Một tập đoàn Việt Nam đầu tư xây dựng nhà máy tại liên bang Nga",
+        "D": "Chính phủ Việt Nam trả nợ lại vay cho Ngân hàng Thế giới"
+      },
+      "answer": "B",
+      "explainAnswer": "Khách nước ngoài mua dịch vụ lưu trú tại Nha Trang được ghi là xuất khẩu dịch vụ của Việt Nam. Đây là khoản thu thuộc bên có của tài khoản vãng lai, còn nhập khẩu hàng hóa và các giao dịch tài chính là bên nợ hoặc không thuộc CA.",
+      "image": null
+    },
+    {
+      "id": 98,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Nếu giá một chiếc áo ở Việt Nam là 500.000 VND, ở Mỹ là 20 USD và tỷ giá danh nghĩa e = 25.000 VND/USD, quy ước tỷ giá thực tế q = (giá áo Việt Nam quy đổi sang USD)/(giá áo Mỹ), thì q bằng bao nhiêu?",
+      "options": {
+        "A": "1",
+        "B": "0.8",
+        "C": "1.2",
+        "D": "1,5"
+      },
+      "answer": "A",
+      "explainAnswer": "Giá áo Việt Nam quy đổi sang USD là 500.000/25.000 = 20 USD. Theo quy ước đã nêu, q = 20/20 = 1; nếu dùng quy ước nghịch đảo thì kết quả cũng là 1 trong trường hợp này, nhưng công thức và đơn vị phải được xác định trước.",
+      "image": null
+    },
+    {
+      "id": 99,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Theo lý thuyết ngang giá sức mua (PPP), nếu Ngân hàng Trung ương một nước in thêm rất nhiều tiền gây ra lạm phát cao trong nước, đồng nội tệ của nước đó trên thị trường thế giới sẽ:",
+      "options": {
+        "A": "Tăng giá mạnh (lên giá)",
+        "B": "Giảm giá mạnh (mất giá)",
+        "C": "Giữ nguyên giá trị không đổi",
+        "D": "Biến động phụ thuộc vào giá vàng"
+      },
+      "answer": "B",
+      "explainAnswer": "Theo PPP, nếu lượng tiền tăng quá mạnh và làm mức giá trong nước tăng nhanh hơn ở nước ngoài, sức mua của đồng nội tệ giảm. Do đó, đồng nội tệ có xu hướng mất giá so với ngoại tệ.",
+      "image": null
+    },
+    {
+      "id": 100,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Trong chế độ tỷ giá hối đoái cố định, khi đồng nội tệ có xu hướng giảm giá mạnh dưới mức cam kết, Ngân hàng Trung ương phải can thiệp bằng cách nào?",
+      "options": {
+        "A": "Mua nội tệ vào và bán ngoại tệ từ quỹ dự trữ ra",
+        "B": "Bán nội tệ ra và mua ngoại tệ vào",
+        "C": "In thêm nội tệ để đưa vào lưu thông",
+        "D": "Hạ lãi suất trong nước xuống thấp"
+      },
+      "answer": "A",
+      "explainAnswer": "Để ngăn nội tệ mất giá dưới mức cam kết, ngân hàng trung ương phải mua nội tệ trên thị trường ngoại hối. Việc bán ngoại tệ từ dự trữ để đổi lấy nội tệ làm giảm cung nội tệ và hỗ trợ tỷ giá cố định.",
+      "image": null
+    },
+    {
+      "id": 101,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Trong một nền kinh tế mở, nếu đồng nội tệ mất giá danh nghĩa, giả định điều kiện Marshall-Lerner được thỏa mãn và các yếu tố khác không đổi, hiện tượng nào có xu hướng xảy ra?",
+      "options": {
+        "A": "Xuất khẩu ròng (NX) tăng, dẫn đến tổng cầu (AD) dịch sang phải",
+        "B": "Xuất khẩu ròng (NX) giảm, dẫn đến tổng cầu (AD) dịch sang trái",
+        "C": "Nhập khẩu tăng mạnh và xuất khẩu giảm",
+        "D": "Tổng cầu sụt giảm nghiêm trọng trong nền kinh tế"
+      },
+      "answer": "A",
+      "explainAnswer": "Mất giá làm hàng hóa trong nước rẻ hơn tương đối đối với người nước ngoài và hàng nhập khẩu đắt hơn đối với người trong nước. Khi điều kiện Marshall-Lerner được thỏa mãn, xuất khẩu ròng tăng, làm tổng cầu dịch sang phải.",
+      "image": null
+    },
+    {
+      "id": 102,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Nếu thu nhập ròng từ các yếu tố sản xuất ở nước ngoài (NFIA) của một quốc gia là số âm, điều đó có nghĩa là:",
+      "options": {
+        "A": "GDP của quốc gia đó lớn hơn GNP",
+        "B": "GNP của quốc gia đó lớn hơn GDP",
+        "C": "Quốc gia đó đang bị thâm hụt cán cân thương mại",
+        "D": "Người dân trong nước kiếm được nhiều thu nhập ở nước ngoài hơn người nước ngoài ở quốc gia đó"
+      },
+      "answer": "A",
+      "explainAnswer": "NFIA bằng thu nhập yếu tố cư dân trong nước nhận từ nước ngoài trừ thu nhập yếu tố người nước ngoài nhận trong nước. NFIA âm nên GNP = GDP + NFIA nhỏ hơn GDP, vì vậy GDP lớn hơn GNP.",
+      "image": null
+    },
+    {
+      "id": 103,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Khi nền kinh tế gặp cú sốc cung tiêu cực làm dịch chuyển đường AS_SR sang trái gây ra hiện tượng \"lạm phát kèm suy thoái\" (Stagflation), sản lượng và mức giá chung thay đổi như thế nào?",
+      "options": {
+        "A": "Sản lượng giảm, giá tăng",
+        "B": "Sản lượng tăng, giá giảm",
+        "C": "Sản lượng tăng, giá giảm",
+        "D": "Sản lượng giảm, giá giảm"
+      },
+      "answer": "A",
+      "explainAnswer": "Cú sốc cung tiêu cực làm chi phí sản xuất tăng và AS ngắn hạn dịch sang trái. Điểm cân bằng mới có sản lượng thấp hơn nhưng mức giá chung cao hơn, tạo ra stagflation.",
+      "image": null
+    },
+    {
+      "id": 104,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Hàm tiêu dùng của một nền kinh tế có dạng C = 100 + 0.8Yd. Khi thu nhập khả dụng (Yd) tăng thêm 1.000 đơn vị, mức tiết kiệm (S) của hộ gia đình sẽ tăng thêm bao nhiêu?",
+      "options": {
+        "A": "800 đơn vị",
+        "B": "200 đơn vị",
+        "C": "1000 đơn vị",
+        "D": "1.200 đơn vị"
+      },
+      "answer": "B",
+      "explainAnswer": "Khi Yd tăng 1.000, tiêu dùng tăng MPC x 1.000 = 0,8 x 1.000 = 800. Vì S = Yd - C, tiết kiệm tăng 1.000 - 800 = 200 đơn vị; số hạng tự định 100 không ảnh hưởng đến mức thay đổi này.",
+      "image": null
+    },
+    {
+      "id": 105,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Nếu một người rút 10 triệu đồng tiền mặt từ dưới gối để gửi vào tài khoản tiền gửi không kỳ hạn tại một ngân hàng thương mại, hành động này thay đổi ngay lập tức khối tiền M1 như thế nào?",
+      "options": {
+        "A": "M1 tăng thêm 10 triệu đồng",
+        "B": "M1 giảm đi 10 triệu đồng",
+        "C": "Tổng M1 không thay đổi nhưng cơ cấu thay đổi: tiền mặt giảm 10 triệu và tiền gửi không kỳ hạn tăng 10 triệu",
+        "D": "Cơ sở tiền tệ MB giảm đi một nửa"
+      },
+      "answer": "C",
+      "explainAnswer": "Tiền mặt nằm dưới gối và tiền gửi không kỳ hạn đều thuộc M1. Giao dịch chỉ chuyển 10 triệu từ dạng tiền mặt sang dạng tiền gửi, nên tổng M1 giữ nguyên nhưng thành phần của M1 thay đổi; nó cũng không làm MB giảm.",
+      "image": null
+    },
+    {
+      "id": 106,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Theo quy luật Okun, có mối quan hệ tỷ lệ nghịch giữa các yếu tố nào sau đây?",
+      "options": {
+        "A": "Tỷ lệ lạm phát và Tỷ lệ thất nghiệp",
+        "B": "Sự thay đổi của tỷ lệ thất nghiệp chu kỳ và Tốc độ tăng trưởng GDP thực tế",
+        "C": "Lãi suất thực tế và Tốc độ tăng cung tiền",
+        "D": "Thâm hụt ngân sách và Thâm hụt thương mại"
+      },
+      "answer": "B",
+      "explainAnswer": "Quy luật Okun liên hệ nghịch biến giữa biến động thất nghiệp chu kỳ và tăng trưởng GDP thực tế. Khi thất nghiệp chu kỳ giảm, sản lượng thường tăng nhanh hơn mức xu hướng, với các yếu tố khác không đổi.",
+      "image": null
+    },
+    {
+      "id": 107,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Khi dòng vốn đầu tư gián tiếp nước ngoài (FII) chảy mạnh vào Việt Nam để mua cổ phiếu trên thị trường chứng khoán, điều này làm thay đổi cung - cầu trên thị trường ngoại hối ra sao?",
+      "options": {
+        "A": "Cung ngoại tệ (USD) tăng, tạo áp lực làm giảm giá USD và tăng giá VND",
+        "B": "Cầu ngoại tệ (USD) tăng, tạo áp lực làm tăng giá USD",
+        "C": "Cung nội tệ (VND) tăng đột biến làm giảm giá VND",
+        "D": "Không ảnh hưởng gì đến tỷ giá hối đoái"
+      },
+      "answer": "A",
+      "explainAnswer": "Nhà đầu tư nước ngoài cần đổi USD lấy VND để mua cổ phiếu trong nước. Giao dịch này làm cung USD tăng và cầu VND tăng, tạo áp lực USD giảm giá và VND lên giá nếu ngân hàng trung ương không trung hòa dòng vốn.",
+      "image": null
+    },
+    {
+      "id": 108,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Chỉ số giá tiêu dùng (CPI) của năm 2025 là 120, và năm 2026 là 126. Tỷ lệ lạm phát của năm 2026 là bao nhiêu?",
+      "options": {
+        "A": "6%",
+        "B": "5%",
+        "C": "26%",
+        "D": "20%"
+      },
+      "answer": "B",
+      "explainAnswer": "Lạm phát năm 2026 được tính bằng mức tăng CPI chia cho CPI năm 2025. Cụ thể, (126 - 120)/120 x 100% = 5%, nên đáp án B đúng.",
+      "image": null
+    },
+    {
+      "id": 109,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Nếu lãi suất danh nghĩa là 8% và tỷ lệ lạm phát thực tế là 3%, lãi suất thực tế mà người cho vay nhận được là:",
+      "options": {
+        "A": "11%",
+        "B": "5%",
+        "C": "2.4%",
+        "D": "8%"
+      },
+      "answer": "B",
+      "explainAnswer": "Lãi suất thực xấp xỉ bằng lãi suất danh nghĩa trừ lạm phát, theo phương trình Fisher gần đúng. Do đó, 8% - 3% = 5%; người cho vay nhận mức sinh lợi thực khoảng 5%.",
+      "image": null
+    },
+    {
+      "id": 110,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Trong mô hình kinh tế mở, hàm tổng cầu có dạng AD = C + I + G + X - IM. Khi xu hướng nhập khẩu cận biên (MPM) tăng lên thì số nhân chi tiêu của nền kinh tế mở sẽ:",
+      "options": {
+        "A": "Tăng lên",
+        "B": "Giảm xuống",
+        "C": "Không thay đổi",
+        "D": "Bằng 1"
+      },
+      "answer": "B",
+      "explainAnswer": "Khi MPM tăng, mỗi vòng chi tiêu tạo ra nhiều khoản mua hàng nhập khẩu hơn và ít thu nhập được chi cho sản phẩm trong nước hơn. Khoản rò rỉ lớn hơn làm mẫu số của số nhân tăng, nên số nhân chi tiêu của nền kinh tế mở giảm.",
+      "image": null
+    },
+    {
+      "id": 111,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Thuật ngữ \"nới lỏng định lượng\" (Quantitative Easing - QE) được hiểu là chính sách tiền tệ trong đó Ngân hàng Trung ương:",
+      "options": {
+        "A": "Giảm mạnh tỷ lệ dự trữ bắt buộc xuống mức bằng không",
+        "B": "Mua một lượng lớn tài sản tài chính dài hạn và trái phiếu để bơm tiền vào nền kinh tế khi lãi suất điều hành đã gần bằng 0%",
+        "C": "Cho doanh nghiệp vay tiền trực tiếp mà không thông qua ngân hàng thương mại",
+        "D": "Thắt chặt kiểm soát hoạt động tín dụng của toàn hệ thống"
+      },
+      "answer": "B",
+      "explainAnswer": "QE là việc ngân hàng trung ương mua quy mô lớn các tài sản, thường là trái phiếu dài hạn, để hạ lãi suất dài hạn và tăng thanh khoản. Công cụ này thường được dùng khi lãi suất ngắn hạn đã ở gần mức 0% và việc giảm thêm khó thực hiện.",
+      "image": null
+    },
+    {
+      "id": 112,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Lạm phát do chi phí đẩy thường đi kèm với tình trạng nào sau đây?",
+      "options": {
+        "A": "Sản xuất kinh tế bùng nổ vượt mức tăng trưởng bền vững",
+        "B": "Tỷ lệ thất nghiệp tăng cao và kinh tế suy thoái",
+        "C": "Thuế thu nhập doanh nghiệp được cắt giảm mạnh",
+        "D": "Thặng dư ngân sách nhà nước tăng cao"
+      },
+      "answer": "B",
+      "explainAnswer": "Chi phí đầu vào tăng làm tổng cung ngắn hạn dịch sang trái, khiến giá tăng nhưng sản lượng giảm. Sản lượng thấp hơn làm thất nghiệp tăng, tạo ra tình trạng đình lạm.",
+      "image": null
+    },
+    {
+      "id": 113,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Theo lý thuyết Mundell-Fleming, trong nền kinh tế mở với vốn di chuyển hoàn toàn và tỷ giá hối đoái thả nổi, chính sách nào có hiệu quả mạnh nhất trong việc kích thích sản lượng?",
+      "options": {
+        "A": "Chính sách tài khóa mở rộng",
+        "B": "Chính sách tiền tệ mở rộng",
+        "C": "Chính sách bảo hộ thương mại bằng cách đánh thuế nhập khẩu",
+        "D": "Chính sách tài khóa thắt chặt"
+      },
+      "answer": "B",
+      "explainAnswer": "Trong chế độ tỷ giá thả nổi và vốn di chuyển hoàn toàn, tiền tệ mở rộng làm lãi suất trong nước giảm, gây dòng vốn chảy ra và đồng nội tệ mất giá. Đồng tiền yếu hơn làm xuất khẩu ròng tăng, nên chính sách tiền tệ có tác động mạnh đến sản lượng; ngược lại, tài khóa mở rộng bị triệt tiêu đáng kể bởi sự lên giá của nội tệ.",
+      "image": null
+    },
+    {
+      "id": 114,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Khoản chi nào sau đây của Chính phủ được tính vào cấu phần chi tiêu chính phủ (G) khi tính GDP?",
+      "options": {
+        "A": "Chi trả tiền lương cho giáo viên trường công lập và công an",
+        "B": "Chi tiền trợ cấp cho người nghèo ăn Tết",
+        "C": "Chi tiền đóng bảo hiểm xã hội cho người có hoàn cảnh khó khăn",
+        "D": "Chi tiền mua lại trái phiếu chính phủ đã phát hành"
+      },
+      "answer": "A",
+      "explainAnswer": "Tiền lương trả cho giáo viên và công an là khoản Chính phủ mua dịch vụ lao động hiện tại, nên được tính vào G. Trợ cấp và giao dịch mua lại trái phiếu chỉ là chuyển giao hoặc giao dịch tài chính, không trực tiếp phản ánh sản lượng hiện hành.",
+      "image": null
+    },
+    {
+      "id": 115,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Đường tổng cung ngắn hạn (AS_SR) có xu hướng dốc lên từ trái sang phải vì lý do nào sau đây?",
+      "options": {
+        "A": "Tiền lương hoặc giá cả cứng nhắc trong ngắn hạn",
+        "B": "Mọi nguồn lực trong nền kinh tế đã được sử dụng tối đa",
+        "C": "Giá cả hàng hóa luôn linh hoạt tuyệt đối",
+        "D": "Người tiêu dùng luôn muốn mua nhiều hơn khi giá tăng"
+      },
+      "answer": "A",
+      "explainAnswer": "Khi giá bán tăng nhưng tiền lương và một số chi phí chưa điều chỉnh ngay, lợi nhuận biên của doanh nghiệp tăng. Doanh nghiệp vì thế có động cơ mở rộng sản lượng, làm AS_SR dốc lên.",
+      "image": null
+    },
+    {
+      "id": 116,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Nếu nền kinh tế có hàm tiêu dùng C = 50 + 0,75(Y - T), đầu tư I = 100, chi tiêu chính phủ G = 150 và thuế T = 100, mức sản lượng cân bằng Y là bao nhiêu?",
+      "options": {
+        "A": "900",
+        "B": "1.200",
+        "C": "300",
+        "D": "600"
+      },
+      "answer": "A",
+      "explainAnswer": "Tại cân bằng, Y = C + I + G = 50 + 0,75(Y - 100) + 100 + 150. Suy ra 0,25Y = 225 và Y = 900.",
+      "image": null
+    },
+    {
+      "id": 117,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Hành vi nào sau đây của các ngân hàng thương mại sẽ làm giảm khả năng tạo tiền và số nhân tiền của nền kinh tế?",
+      "options": {
+        "A": "Giảm bớt dự trữ tùy ý để cho vay tối đa",
+        "B": "Giữ lại một lượng lớn dự trữ vượt mức do lo sợ rủi ro hệ thống",
+        "C": "Hạ tỷ lệ dự trữ bắt buộc đối với tiền gửi",
+        "D": "Tăng tốc độ quay vòng các khoản cho vay mới"
+      },
+      "answer": "B",
+      "explainAnswer": "Dự trữ vượt mức làm giảm phần tiền gửi mà ngân hàng có thể chuyển thành khoản vay. Vì vậy, quá trình tạo tiền bị hạn chế và số nhân tiền thực tế giảm.",
+      "image": null
+    },
+    {
+      "id": 118,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Khi Chính phủ quy định mức lương tối thiểu cao hơn mức lương cân bằng của thị trường lao động cạnh tranh, điều này sẽ dẫn đến:",
+      "options": {
+        "A": "Thất nghiệp tạm thời giảm xuống",
+        "B": "Thất nghiệp cổ điển tăng lên do cung lao động vượt quá cầu lao động",
+        "C": "Thị trường lao động đạt toàn dụng nhân lực tốt hơn",
+        "D": "Nhu cầu tuyển dụng của doanh nghiệp tăng mạnh"
+      },
+      "answer": "B",
+      "explainAnswer": "Mức lương tối thiểu cao hơn mức cân bằng làm lượng lao động muốn làm việc vượt lượng lao động doanh nghiệp muốn thuê. Phần cung lao động dư thừa này là thất nghiệp cổ điển trong mô hình thị trường lao động cạnh tranh.",
+      "image": null
+    },
+    {
+      "id": 119,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Nếu cán cân vãng lai (CA) của một quốc gia đang thâm hụt nặng, điều này có nghĩa là quốc gia đó đang:",
+      "options": {
+        "A": "Xuất khẩu nhiều hơn nhập khẩu hàng hóa và dịch vụ",
+        "B": "Chi tiêu nhiều hơn thu nhập và phải đi vay ròng hoặc bán tài sản cho nước ngoài để bù đắp",
+        "C": "Tích lũy thêm rất nhiều dự trữ ngoại hối tại ngân hàng trung ương",
+        "D": "Có nguồn thu nhập ròng từ nước ngoài rất lớn"
+      },
+      "answer": "B",
+      "explainAnswer": "Thâm hụt CA cho thấy quốc gia chi tiêu cho nước ngoài nhiều hơn thu nhập nhận từ nước ngoài. Khoảng thiếu hụt phải được tài trợ bằng dòng vốn vào, tức vay ròng hoặc bán tài sản cho người nước ngoài.",
+      "image": null
+    },
+    {
+      "id": 120,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Khi nền kinh tế đang ở mức sản lượng tiềm năng, việc Chính phủ tiếp tục thực hiện chính sách cầu, chẳng hạn tài khóa mở rộng quá mức, trong dài hạn sẽ dẫn đến hệ quả gì?",
+      "options": {
+        "A": "Sản lượng thực tế tăng mãi mãi không dừng",
+        "B": "Sản lượng quay về mức tiềm năng, nhưng mức giá chung cao hơn",
+        "C": "Tỷ lệ thất nghiệp giảm xuống 0% vĩnh viễn",
+        "D": "Đường tổng cung dài hạn dịch chuyển sang trái"
+      },
+      "answer": "B",
+      "explainAnswer": "Trong dài hạn, tiền lương và giá cả điều chỉnh nên sản lượng trở về mức tiềm năng, không tăng vĩnh viễn bởi kích thích cầu. Tuy nhiên, tổng cầu cao hơn làm mức giá chung tăng, tạo lạm phát kéo dài nếu chính sách tiếp tục mở rộng.",
+      "image": null
+    },
+    {
+      "id": 121,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Để đối phó với suy thoái kinh tế nghiêm trọng, khi sản lượng giảm và thất nghiệp tăng cao, phối hợp chính sách nào sau đây hiệu quả nhất?",
+      "options": {
+        "A": "Tài khóa thắt chặt phối hợp tiền tệ thắt chặt",
+        "B": "Tài khóa mở rộng phối hợp tiền tệ mở rộng",
+        "C": "Tài khóa thắt chặt phối hợp tiền tệ mở rộng",
+        "D": "Tài khóa mở rộng phối hợp tiền tệ thắt chặt"
+      },
+      "answer": "B",
+      "explainAnswer": "Tài khóa mở rộng làm tăng chi tiêu tự định hoặc thu nhập khả dụng, còn tiền tệ mở rộng hạ lãi suất và hỗ trợ tín dụng. Cả hai cùng đẩy tổng cầu lên, giúp phục hồi sản lượng và việc làm trong suy thoái.",
+      "image": null
+    },
+    {
+      "id": 122,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Khi tính GDP theo phương pháp thu nhập, yếu tố nào sau đây không được cộng vào?",
+      "options": {
+        "A": "Tiền lương và tiền công của người lao động",
+        "B": "Lợi nhuận trước thuế của các doanh nghiệp",
+        "C": "Chi phí mua sắm hàng hóa trung gian của doanh nghiệp",
+        "D": "Khấu hao tài sản cố định"
+      },
+      "answer": "C",
+      "explainAnswer": "Phương pháp thu nhập cộng các khoản thu nhập tạo ra từ sản xuất, cùng khấu hao và các khoản điều chỉnh phù hợp. Chi phí hàng hóa trung gian là đầu vào đã được phản ánh trong giá trị sản phẩm cuối cùng nên không cộng riêng, tránh tính trùng.",
+      "image": null
+    },
+    {
+      "id": 123,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Nếu chỉ số giá tiêu dùng (CPI) năm nay là 150 so với năm gốc là 100, điều này có nghĩa là:",
+      "options": {
+        "A": "Giá của tất cả các mặt hàng trong nền kinh tế đều tăng đúng 50%",
+        "B": "Chi phí của rổ hàng hóa tiêu dùng điển hình đã tăng 50% so với năm gốc",
+        "C": "Thu nhập thực tế của người dân đã tăng 50%",
+        "D": "GDP thực tế của quốc gia đã tăng gấp 1,5 lần năm gốc"
+      },
+      "answer": "B",
+      "explainAnswer": "CPI bằng 150 khi năm gốc bằng 100 cho biết chi phí của rổ hàng hóa đại diện tăng 50%. Chỉ số này không khẳng định mọi giá riêng lẻ, thu nhập thực tế hay GDP thực tế đều tăng cùng tỷ lệ.",
+      "image": null
+    },
+    {
+      "id": 124,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Đường tổng cung ngắn hạn (AS_SR) dịch chuyển sang phải khi:",
+      "options": {
+        "A": "Mức giá chung trong nền kinh tế tăng lên",
+        "B": "Giá các yếu tố đầu vào như xăng dầu và than đá giảm",
+        "C": "Chính phủ tăng thuế bảo vệ môi trường đối với nhiên liệu",
+        "D": "Công đoàn các ngành đồng loạt đòi tăng lương cơ bản"
+      },
+      "answer": "B",
+      "explainAnswer": "Giá đầu vào giảm làm chi phí biên của doanh nghiệp thấp hơn tại mỗi mức giá, nên doanh nghiệp sẵn sàng cung ứng nhiều sản lượng hơn. Đây là sự dịch phải của AS_SR, không phải chỉ là di chuyển dọc theo đường do mức giá chung đổi.",
+      "image": null
+    },
+    {
+      "id": 125,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Trong mô hình AD-AS, nếu đường tổng cầu dịch sang trái do cú sốc cầu tiêu cực và Chính phủ không can thiệp, nền kinh tế trong ngắn hạn sẽ đối mặt với:",
+      "options": {
+        "A": "Lạm phát và sản lượng tăng",
+        "B": "Suy thoái, với sản lượng giảm và mức giá giảm",
+        "C": "Lạm phát kèm suy thoái",
+        "D": "Sản lượng không đổi nhưng giá tăng"
+      },
+      "answer": "B",
+      "explainAnswer": "AD dịch trái làm điểm cân bằng ngắn hạn có sản lượng thấp hơn và mức giá chung thấp hơn, khi AS_SR dốc lên. Vì vậy nền kinh tế trải qua suy thoái kèm áp lực giảm phát.",
+      "image": null
+    },
+    {
+      "id": 126,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Sự khác biệt cốt lõi giữa đường tổng cung ngắn hạn (AS_SR) và đường tổng cung dài hạn (AS_LR) là gì?",
+      "options": {
+        "A": "AS_SR dốc xuống còn AS_LR thẳng đứng",
+        "B": "Trong ngắn hạn giá cả và tiền lương có thể cứng nhắc, còn trong dài hạn chúng linh hoạt hơn",
+        "C": "AS_SR phụ thuộc vào công nghệ còn AS_LR thì không",
+        "D": "AS_SR do Chính phủ kiểm soát còn AS_LR do Ngân hàng Trung ương kiểm soát"
+      },
+      "answer": "B",
+      "explainAnswer": "Trong ngắn hạn, tiền lương và một số giá chưa điều chỉnh đầy đủ nên sản lượng phản ứng với mức giá, khiến AS_SR dốc lên. Trong dài hạn, các giá điều chỉnh và sản lượng bị quyết định bởi nguồn lực, công nghệ và sản lượng tiềm năng, nên AS_LR thường thẳng đứng.",
+      "image": null
+    },
+    {
+      "id": 127,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Nếu một người mua một trái phiếu mới phát hành của công ty VinFast bằng khoản tiết kiệm hiện tại, hành động này được gọi là:",
+      "options": {
+        "A": "Đầu tư vĩ mô (I)",
+        "B": "Tiết kiệm tư nhân (S_p) thông qua kênh tài chính trực tiếp",
+        "C": "Tiêu dùng hàng hóa",
+        "D": "Chi chuyển giao thu nhập của Chính phủ"
+      },
+      "answer": "B",
+      "explainAnswer": "Đối với người mua, việc dùng tiết kiệm hiện tại để mua trái phiếu là tiết kiệm tư nhân qua kênh tài chính trực tiếp. Trong hạch toán vĩ mô, mua một tài sản tài chính không tự nó là đầu tư I; I chỉ ghi nhận chi tiêu cho vốn vật chất mới.",
+      "image": null
+    },
+    {
+      "id": 128,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Một sự gia tăng trong thặng dư ngân sách của Chính phủ sẽ làm thay đổi thị trường vốn vay như thế nào?",
+      "options": {
+        "A": "Làm giảm tiết kiệm quốc gia và tăng lãi suất",
+        "B": "Làm tăng cung vốn vay, dịch đường cung sang phải, giảm lãi suất thực tế và khuyến khích đầu tư tư nhân",
+        "C": "Làm đường cầu vốn vay dịch sang phải",
+        "D": "Gây ra hiện tượng lấn át đầu tư tư nhân mạnh mẽ"
+      },
+      "answer": "B",
+      "explainAnswer": "Thặng dư ngân sách làm tiết kiệm công tăng, nên tiết kiệm quốc gia và cung vốn vay tăng. Cung vốn vay dịch phải, làm lãi suất thực tế giảm và thường khuyến khích đầu tư tư nhân.",
+      "image": null
+    },
+    {
+      "id": 129,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Rủi ro đạo đức (Moral Hazard) là một hiện tượng bất cân xứng thông tin xảy ra khi:",
+      "options": {
+        "A": "Người đi vay giấu thông tin xấu trước khi ký hợp đồng vay tiền",
+        "B": "Sau khi nhận tiền vay, người đi vay sử dụng tiền vào các dự án mạo hiểm hơn cam kết ban đầu",
+        "C": "Ngân hàng phá sản do không có đủ tiền mặt dự trữ",
+        "D": "Người gửi tiền đồng loạt rút tiền cùng một lúc"
+      },
+      "answer": "B",
+      "explainAnswer": "Rủi ro đạo đức phát sinh sau khi hợp đồng được ký, khi bên được bảo vệ hoặc đã nhận vốn thay đổi hành vi theo hướng rủi ro hơn. Người vay đầu tư mạo hiểm hơn cam kết làm tăng rủi ro mà người cho vay phải gánh.",
+      "image": null
+    },
+    {
+      "id": 130,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Trong nền kinh tế có hàm tiêu dùng C = 200 + 0,75(Y - T), nếu Chính phủ muốn tăng sản lượng cân bằng thêm 200 tỷ bằng cách giảm thuế độc lập T, cần giảm bao nhiêu tiền thuế?",
+      "options": {
+        "A": "66,67 tỷ",
+        "B": "100 tỷ",
+        "C": "75 tỷ",
+        "D": "300 tỷ"
+      },
+      "answer": "A",
+      "explainAnswer": "Số nhân thuế là -MPC/(1-MPC) = -0,75/0,25 = -3. Muốn ΔY = 200 tỷ thì cần ΔT = -200/3, tức giảm thuế khoảng 66,67 tỷ.",
+      "image": null
+    },
+    {
+      "id": 131,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Khi nền kinh tế đang ở trạng thái toàn dụng (Y = Yp), nếu Chính phủ tăng chi tiêu công G và tài trợ bằng cách vay nợ trên thị trường, điều gì sẽ xảy ra trong dài hạn?",
+      "options": {
+        "A": "Sản lượng thực tế tăng vượt trội so với Yp",
+        "B": "Sản lượng không đổi, lãi suất tăng và đầu tư tư nhân bị lấn át hoàn toàn",
+        "C": "Mức giá chung giảm nhờ cơ sở hạ tầng tốt hơn",
+        "D": "Tiêu dùng của hộ gia đình tăng mạnh"
+      },
+      "answer": "B",
+      "explainAnswer": "Với giả định nền kinh tế ở toàn dụng và xét dài hạn, sản lượng thực tế bị neo tại Yp nên chi tiêu công không làm Y tăng bền vững. Vay nợ làm cầu vốn vay tăng, lãi suất tăng và đầu tư tư nhân bị lấn át hoàn toàn trong mô hình cổ điển.",
+      "image": null
+    },
+    {
+      "id": 132,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Biện pháp nào sau đây thuộc chính sách tài khóa thắt chặt tự động khi nền kinh tế đang bùng nổ quá nóng?",
+      "options": {
+        "A": "Thuế thu nhập doanh nghiệp thu được nhiều hơn do lợi nhuận các công ty tăng cao",
+        "B": "Số tiền Chính phủ chi trả cho trợ cấp thất nghiệp tăng lên",
+        "C": "Ngân hàng Trung ương chủ động tăng tỷ lệ dự trữ bắt buộc",
+        "D": "Quốc hội họp và ra nghị quyết cắt giảm ngân sách quốc phòng"
+      },
+      "answer": "A",
+      "explainAnswer": "Khi nền kinh tế bùng nổ, lợi nhuận tăng làm số thuế doanh nghiệp tăng mà không cần quyết định mới. Khoản thu tự động cao hơn làm giảm thu nhập khả dụng và tổng cầu, có tác dụng hãm nền kinh tế.",
+      "image": null
+    },
+    {
+      "id": 133,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Giả sử hệ thống ngân hàng thương mại có tỷ lệ dự trữ thực tế đúng bằng tỷ lệ dự trữ bắt buộc rr = 5% và người dân không nắm giữ tiền mặt (cr = 0). Số nhân tiền lý thuyết bằng bao nhiêu?",
+      "options": {
+        "A": "5",
+        "B": "20",
+        "C": "10",
+        "D": "50"
+      },
+      "answer": "B",
+      "explainAnswer": "Khi cr = 0 và không có dự trữ vượt mức, số nhân tiền lý thuyết bằng 1/rr. Với rr = 0,05, số nhân là 1/0,05 = 20.",
+      "image": null
+    },
+    {
+      "id": 134,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Khi Ngân hàng Trung ương tăng lãi suất chiết khấu, hành động này nhằm mục đích:",
+      "options": {
+        "A": "Khuyến khích các ngân hàng thương mại vay tiền của Ngân hàng Trung ương nhiều hơn",
+        "B": "Thắt chặt tiền tệ, làm giảm khả năng mở rộng tín dụng của các ngân hàng thương mại",
+        "C": "Làm tăng mạnh số nhân tiền và cung tiền",
+        "D": "Làm giảm chi phí vay khẩn cấp của các ngân hàng thương mại"
+      },
+      "answer": "B",
+      "explainAnswer": "Lãi suất chiết khấu cao hơn làm chi phí vay từ Ngân hàng Trung ương tăng. Ngân hàng thương mại vì thế giảm vay và giảm mở rộng tín dụng, khiến cung tiền có xu hướng giảm.",
+      "image": null
+    },
+    {
+      "id": 135,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Bẫy thanh khoản (Liquidity Trap) là trạng thái kinh tế trong đó:",
+      "options": {
+        "A": "Các ngân hàng thương mại hoàn toàn hết tiền mặt để khách hàng rút",
+        "B": "Lãi suất thị trường gần bằng 0 và việc NHTW tiếp tục bơm tiền hầu như không làm giảm thêm lãi suất hoặc kích thích đầu tư",
+        "C": "Người dân không gửi tiền vào ngân hàng mà chỉ mua vàng",
+        "D": "Cung tiền giảm nghiêm trọng vì số nhân tiền bằng 0"
+      },
+      "answer": "B",
+      "explainAnswer": "Trong bẫy thanh khoản, lãi suất đã ở mức rất thấp nên người dân sẵn sàng giữ thêm tiền thay vì mua trái phiếu. Do đó, tăng cung tiền theo cách thông thường hầu như không hạ thêm lãi suất và không kích thích tổng cầu đáng kể.",
+      "image": null
+    },
+    {
+      "id": 136,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Tỷ lệ thất nghiệp tự nhiên của một nền kinh tế tăng lên khi yếu tố nào sau đây xảy ra?",
+      "options": {
+        "A": "Nền kinh tế bước vào suy thoái theo chu kỳ kinh doanh",
+        "B": "Chính phủ tăng và kéo dài trợ cấp thất nghiệp, làm giảm động lực tìm việc của người lao động",
+        "C": "Ngân hàng Trung ương thực hiện thắt chặt tiền tệ",
+        "D": "Giá cả hàng hóa đột ngột giảm mạnh"
+      },
+      "answer": "B",
+      "explainAnswer": "Thất nghiệp tự nhiên gồm thất nghiệp tạm thời và cơ cấu, không phải thất nghiệp chu kỳ. Trợ cấp cao hơn hoặc kéo dài hơn có thể làm người thất nghiệp tìm việc chậm hơn, kéo dài thời gian thất nghiệp và nâng tỷ lệ tự nhiên.",
+      "image": null
+    },
+    {
+      "id": 137,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Nếu tỷ lệ tìm được việc làm của người thất nghiệp là f = 0,20 mỗi tháng và tỷ lệ mất việc của người đang có việc là s = 0,02 mỗi tháng, tỷ lệ thất nghiệp ở trạng thái dừng là bao nhiêu?",
+      "options": {
+        "A": "10%",
+        "B": "9,09%",
+        "C": "2%",
+        "D": "20%"
+      },
+      "answer": "B",
+      "explainAnswer": "Ở trạng thái dừng, tỷ lệ thất nghiệp bằng s/(f+s). Thay số được 0,02/(0,20+0,02) = 0,0909, tương đương khoảng 9,09%.",
+      "image": null
+    },
+    {
+      "id": 138,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Theo lý thuyết số lượng tiền tệ của trường phái cổ điển, trong dài hạn, nếu cung tiền tăng nhanh hơn sản lượng thực thì hệ quả trực tiếp là:",
+      "options": {
+        "A": "Tỷ lệ thất nghiệp giảm xuống 0%",
+        "B": "Tỷ lệ lạm phát xấp xỉ tốc độ tăng cung tiền trừ tốc độ tăng sản lượng thực, khi tốc độ lưu thông tiền ổn định",
+        "C": "Lãi suất thực giảm mạnh xuống mức âm",
+        "D": "Sản lượng tiềm năng dịch sang phải nhanh hơn"
+      },
+      "answer": "B",
+      "explainAnswer": "Từ phương trình MV = PY, nếu tốc độ lưu thông tiền và năng suất không đổi đáng kể thì lạm phát xấp xỉ tốc độ tăng tiền trừ tốc độ tăng sản lượng thực. Vì vậy tiền tăng nhanh hơn sản lượng tạo ra lạm phát, chứ không làm sản lượng tiềm năng tăng tương ứng.",
+      "image": null
+    },
+    {
+      "id": 139,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Sự dịch chuyển đường Phillips ngắn hạn sang phải hoặc lên trên, làm lạm phát và thất nghiệp cùng cao hơn tại mỗi mức, thường do nguyên nhân nào?",
+      "options": {
+        "A": "Chính phủ áp dụng chính sách tài khóa mở rộng",
+        "B": "Kỳ vọng lạm phát tăng hoặc xảy ra cú sốc cung tiêu cực như giá dầu tăng",
+        "C": "Ngân hàng Trung ương cắt giảm cung tiền",
+        "D": "Năng suất lao động tăng mạnh do công nghệ mới"
+      },
+      "answer": "B",
+      "explainAnswer": "Kỳ vọng lạm phát cao làm tiền lương và giá được điều chỉnh cao hơn, khiến đường Phillips ngắn hạn dịch lên. Cú sốc cung tiêu cực cũng làm chi phí tăng, đồng thời đẩy lạm phát và thất nghiệp lên.",
+      "image": null
+    },
+    {
+      "id": 140,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Nếu cán cân tài chính và vốn (KA) của một quốc gia có số dư dương rất lớn, điều này phản ánh:",
+      "options": {
+        "A": "Quốc gia đó đang xuất khẩu hàng hóa nhiều hơn nhập khẩu",
+        "B": "Người nước ngoài đang mua tài sản trong nước và đầu tư vào nước này nhiều hơn lượng vốn trong nước đầu tư ra nước ngoài",
+        "C": "Dự trữ ngoại hối của ngân hàng trung ương bị sụt giảm nghiêm trọng",
+        "D": "Thu nhập từ du lịch nước ngoài tăng đột biến"
+      },
+      "answer": "B",
+      "explainAnswer": "KA dương biểu thị dòng vốn ròng chảy vào, nghĩa là người nước ngoài mua tài sản hoặc cho vay trong nước nhiều hơn cư dân trong nước đầu tư ra nước ngoài. Đây là tài khoản tài chính, không đồng nhất với xuất khẩu ròng hàng hóa hay thu nhập du lịch.",
+      "image": null
+    },
+    {
+      "id": 141,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Khi đồng đô la Mỹ (USD) giảm giá so với đồng Euro (EUR) trên thị trường quốc tế, điều này sẽ làm cho:",
+      "options": {
+        "A": "Hàng hóa của Mỹ rẻ hơn tương đối đối với người châu Âu, giúp xuất khẩu của Mỹ tăng",
+        "B": "Hàng hóa của Mỹ trở nên đắt hơn đối với người châu Âu",
+        "C": "Xuất khẩu của các nước châu Âu vào Mỹ tăng mạnh",
+        "D": "Cán cân thương mại của Mỹ chắc chắn thâm hụt nặng hơn"
+      },
+      "answer": "A",
+      "explainAnswer": "USD mất giá làm cùng một lượng hàng hóa Mỹ cần ít EUR hơn để mua, nên hàng Mỹ rẻ tương đối với người châu Âu. Điều này có xu hướng làm cầu và xuất khẩu của Mỹ tăng, dù mức thay đổi cán cân thương mại còn phụ thuộc độ co giãn.",
+      "image": null
+    },
+    {
+      "id": 142,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Giả định một quốc gia áp dụng chế độ tỷ giá hối đoái cố định và cho phép tự do lưu chuyển vốn. Nếu Ngân hàng Trung ương cắt giảm lãi suất trong nước thấp hơn lãi suất quốc tế, điều gì sẽ xảy ra?",
+      "options": {
+        "A": "Vốn tháo chạy ra nước ngoài, gây áp lực giảm giá nội tệ; NHTW phải bán ngoại tệ để giữ tỷ giá, làm cung tiền giảm và lãi suất tăng trở lại",
+        "B": "Cung tiền trong nước tăng mãi mãi và sản lượng bùng nổ",
+        "C": "Đồng nội tệ tự động lên giá mạnh trên thị trường tự do",
+        "D": "Cán cân thương mại lập tức chuyển sang thặng dư lớn"
+      },
+      "answer": "A",
+      "explainAnswer": "Lãi suất trong nước thấp hơn quốc tế khuyến khích vốn chảy ra, tạo áp lực mất giá nội tệ. Để bảo vệ tỷ giá cố định, NHTW bán ngoại tệ và hút nội tệ về, làm cung tiền giảm cho đến khi lãi suất quay về mức phù hợp quốc tế.",
+      "image": null
+    },
+    {
+      "id": 143,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Nếu trong một năm khối lượng sản xuất hàng hóa không đổi so với năm trước nhưng giá cả của tất cả mặt hàng đều tăng gấp đôi, khi đó:",
+      "options": {
+        "A": "GDP thực tế tăng gấp đôi, GDP danh nghĩa không đổi",
+        "B": "GDP danh nghĩa tăng gấp đôi, GDP thực tế không đổi",
+        "C": "Cả GDP danh nghĩa và GDP thực tế đều tăng gấp đôi",
+        "D": "GDP Deflator giảm đi một nửa"
+      },
+      "answer": "B",
+      "explainAnswer": "GDP danh nghĩa dùng giá hiện hành nên tăng gấp đôi khi sản lượng giữ nguyên và mọi giá tăng gấp đôi. GDP thực tế dùng giá cố định của năm gốc nên chỉ phản ánh sản lượng, vì vậy không đổi.",
+      "image": null
+    },
+    {
+      "id": 144,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Trong một nền kinh tế đóng, khi thu nhập quốc dân tăng thêm 500 tỷ và tiêu dùng tăng thêm 350 tỷ, xu hướng tiết kiệm cận biên (MPS) là:",
+      "options": {
+        "A": "0,70",
+        "B": "0,30",
+        "C": "0,50",
+        "D": "0,15"
+      },
+      "answer": "B",
+      "explainAnswer": "Phần thu nhập tăng thêm không dùng cho tiêu dùng sẽ được tiết kiệm: ΔS = ΔY - ΔC = 500 - 350 = 150 tỷ. Vì vậy MPS = ΔS/ΔY = 150/500 = 0,30.",
+      "image": null
+    },
+    {
+      "id": 145,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Khi ngân hàng thương mại cho khách hàng vay bằng cách ghi có vào tài khoản tiền gửi của họ, hành động này làm:",
+      "options": {
+        "A": "Tăng lượng cơ sở tiền tệ (MB) của nền kinh tế",
+        "B": "Tạo ra tiền gửi mới và làm tăng khối lượng tiền (MS) trong lưu thông",
+        "C": "Giảm tỷ lệ dự trữ bắt buộc của chính ngân hàng đó",
+        "D": "Làm khối tiền M1 giảm đi đáng kể"
+      },
+      "answer": "B",
+      "explainAnswer": "Khoản vay được ghi có vào tài khoản tạo ra một khoản tiền gửi mới, làm tăng tiền ngân hàng và thường làm MS tăng. Giao dịch này không tự làm thay đổi tỷ lệ dự trữ bắt buộc hay làm M1 giảm.",
+      "image": null
+    },
+    {
+      "id": 146,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Thuật ngữ chi phí thực đơn (Menu Costs) của lạm phát ám chỉ:",
+      "options": {
+        "A": "Chi phí người dân phải bỏ ra để đổi tiền tại ngân hàng khi có lạm phát",
+        "B": "Chi phí doanh nghiệp phải chịu để thay đổi giá và in lại bảng giá khi lạm phát xảy ra",
+        "C": "Việc người nghèo phải cắt giảm khẩu phần ăn hàng ngày",
+        "D": "Khoản thuế bổ sung mà doanh nghiệp phải nộp cho Chính phủ"
+      },
+      "answer": "B",
+      "explainAnswer": "Chi phí thực đơn là chi phí nguồn lực phát sinh khi doanh nghiệp phải cập nhật, in ấn và niêm yết lại giá. Nó không phải là chi phí đổi tiền hay một loại thuế do lạm phát tạo ra.",
+      "image": null
+    },
+    {
+      "id": 147,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Nếu tỷ giá danh nghĩa giữa VND và USD tăng từ 25.000 VND/USD lên 25.500 VND/USD trong khi giá hàng hóa không đổi, ta nói:",
+      "options": {
+        "A": "Đồng VND lên giá, đồng USD giảm giá",
+        "B": "Đồng VND giảm giá, đồng USD lên giá",
+        "C": "Sức mua của đồng VND tăng trên thị trường quốc tế",
+        "D": "Hàng hóa nhập khẩu từ Mỹ vào Việt Nam rẻ hơn trước"
+      },
+      "answer": "B",
+      "explainAnswer": "Tỷ giá VND/USD tăng nghĩa là cần nhiều VND hơn để mua một USD. Vì vậy VND mất giá so với USD; hàng nhập khẩu từ Mỹ trở nên đắt hơn nếu các yếu tố khác không đổi.",
+      "image": null
+    },
+    {
+      "id": 148,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Khi nền kinh tế vừa có tỷ lệ thất nghiệp rất cao do suy thoái vừa bị thâm hụt ngân sách nghiêm trọng, chính sách tài khóa mở rộng sẽ gặp trở ngại lớn nào?",
+      "options": {
+        "A": "Làm giảm bớt lạm phát trong nước",
+        "B": "Làm trầm trọng thêm thâm hụt ngân sách và có rủi ro đẩy nợ công lên mức không an toàn",
+        "C": "Làm lãi suất thị trường giảm quá sâu trong mọi trường hợp",
+        "D": "Khiến các ngân hàng thương mại không thể cho vay tín dụng"
+      },
+      "answer": "B",
+      "explainAnswer": "Tăng G hoặc giảm T khi ngân sách đã thâm hụt sẽ làm nhu cầu vay của Chính phủ tăng thêm. Gánh nặng nợ và chi phí trả nợ có thể trở nên không bền vững, dù chính sách vẫn có tác dụng hỗ trợ tổng cầu.",
+      "image": null
+    },
+    {
+      "id": 149,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Hiện tượng độ trễ của chính sách (Policy Lags) là lý do vì sao các nhà kinh tế khuyến cáo:",
+      "options": {
+        "A": "Chính phủ nên thay đổi thuế suất hàng tuần để theo kịp thị trường",
+        "B": "Điều hành chính sách vĩ mô quá tức thời và giật cục có thể gây bất ổn vì chính sách phát huy tác dụng sai thời điểm",
+        "C": "Ngân hàng Trung ương không nên công bố các quyết định về lãi suất",
+        "D": "Chính sách tài khóa luôn có tác dụng nhanh hơn chính sách tiền tệ"
+      },
+      "answer": "B",
+      "explainAnswer": "Từ lúc nhận diện vấn đề đến lúc quyết định và phát huy tác dụng, chính sách thường có độ trễ. Nếu phản ứng liên tục và quá mạnh, biện pháp có thể tác động khi điều kiện kinh tế đã đổi, làm dao động kinh tế lớn hơn.",
+      "image": null
+    },
+    {
+      "id": 150,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Mục tiêu tối thượng mang tính dài hạn của các chính sách kinh tế vĩ mô đối với một quốc gia là:",
+      "options": {
+        "A": "Duy trì tỷ lệ lạm phát bằng 0% vĩnh viễn",
+        "B": "Đạt tăng trưởng kinh tế bền vững gắn với ổn định giá cả và giảm thiểu các biến động cực đoan của chu kỳ kinh doanh",
+        "C": "Triệt tiêu hoàn toàn mọi loại thất nghiệp, kể cả thất nghiệp tạm thời",
+        "D": "Đóng cửa nền kinh tế để tránh các cú sốc từ thị trường thế giới"
+      },
+      "answer": "B",
+      "explainAnswer": "Mục tiêu vĩ mô dài hạn là tăng phúc lợi và khả năng sản xuất bền vững, đồng thời duy trì ổn định giá và hạn chế suy thoái nghiêm trọng. Lạm phát bằng đúng 0%, thất nghiệp bằng 0% hoặc đóng cửa nền kinh tế đều không phải mục tiêu khả thi và toàn diện.",
+      "image": null
+    },
+    {
+      "id": 151,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
+      "question": "Khi sản lượng thực tế Y của nền kinh tế lớn hơn sản lượng tiềm năng Yp, nền kinh tế sẽ xuất hiện:",
+      "options": {
+        "A": "Áp lực giảm phát và thất nghiệp chu kỳ tăng cao",
+        "B": "Áp lực lạm phát do cầu kéo, khoảng trống lạm phát và thị trường lao động căng thẳng do thiếu nhân lực",
+        "C": "Suy thoái kinh tế trầm trọng",
+        "D": "Sự dịch chuyển sang trái của đường tổng cầu dài hạn"
+      },
+      "answer": "B",
+      "explainAnswer": "Y > Yp nghĩa là tổng cầu đang đẩy sản lượng vượt mức bền vững của nền kinh tế. Doanh nghiệp tranh giành lao động khan hiếm và giá cả chịu áp lực tăng, tạo ra lạm phát do cầu kéo cùng tình trạng thiếu nhân lực.",
+      "image": null
+    },
+    {
+      "id": 61,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Tỷ lệ dự trữ thực tế của một ngân hàng thương mại được xác định như thế nào?",
+      "options": {
+        "A": "Tổng tiền mặt tại quỹ chia cho tổng tài sản của ngân hàng",
+        "B": "Tổng dự trữ thực tế, gồm tiền mặt tại quỹ và tiền gửi tại ngân hàng trung ương, chia cho tổng tiền gửi",
+        "C": "Tổng tiền gửi chia cho tổng dư nợ cho vay",
+        "D": "Tổng dự trữ bắt buộc chia cho vốn chủ sở hữu"
+      },
+      "answer": "B",
+      "explainAnswer": "Tỷ lệ dự trữ thực tế bằng tổng dự trữ mà ngân hàng đang nắm giữ chia cho tiền gửi. Dự trữ thực tế gồm tiền mặt trong két và tiền gửi dự trữ tại ngân hàng trung ương, không chỉ gồm tiền mặt tại quỹ.",
+      "image": null
+    },
+    {
+      "id": 152,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Trong mô hình AD-AS, đường tổng cầu phản ánh mối quan hệ giữa những đại lượng nào?",
+      "options": {
+        "A": "Lãi suất và lượng tiền thực tế",
+        "B": "Tiền lương danh nghĩa và việc làm",
+        "C": "Mức giá chung và tổng lượng cầu",
+        "D": "Tiết kiệm và đầu tư"
+      },
+      "answer": "C",
+      "explainAnswer": "Đường AD biểu diễn lượng sản phẩm và dịch vụ mà các tác nhân muốn mua tại mỗi mức giá chung. Vì vậy, nó mô tả quan hệ giữa mức giá chung và sản lượng được cầu, hay tổng lượng cầu.",
+      "image": null
+    },
+    {
+      "id": 153,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Trong nền kinh tế mở, MPC = 0,75, thuế suất tỷ lệ t = 0,2 và khuynh hướng nhập khẩu cận biên MPM = 0,14. Nếu xuất khẩu tăng thêm 80 tỷ đồng thì sản lượng cân bằng tăng thêm bao nhiêu?",
+      "options": {
+        "A": "148,15 tỷ đồng",
+        "B": "160 tỷ đồng",
+        "C": "200 tỷ đồng",
+        "D": "80 tỷ đồng"
+      },
+      "answer": "A",
+      "explainAnswer": "Số nhân chi tiêu trong nền kinh tế mở là (1/[1 - MPC(1-t) + MPM]) = (1/(1 - 0,75 x 0,8 + 0,14) = 1/0,54). Do đó, sản lượng tăng (80/0,54 = 148,15) tỷ đồng, xấp xỉ.",
+      "image": null
+    },
+    {
+      "id": 154,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Nếu ngân hàng trung ương giảm lãi suất chiết khấu, tác động có thể xảy ra là gì?",
+      "options": {
+        "A": "Lượng tiền cơ sở giảm nhưng cung tiền tăng",
+        "B": "Cung tiền giảm do các ngân hàng tăng dự trữ bắt buộc",
+        "C": "Lãi suất thị trường tăng và đầu tư giảm",
+        "D": "Lượng tiền cơ sở và mức cung tiền đều tăng"
+      },
+      "answer": "D",
+      "explainAnswer": "Lãi suất chiết khấu thấp hơn làm giảm chi phí vay trực tiếp từ ngân hàng trung ương. Nếu ngân hàng thương mại tăng vay và dự trữ, tiền cơ sở tăng; qua cơ chế tạo tiền, cung tiền cũng có thể tăng.",
+      "image": null
+    },
+    {
+      "id": 155,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Từ điểm cân bằng ban đầu, một sự dịch chuyển đường IS sang phải sẽ dẫn đến kết quả nào trong mô hình IS-LM chuẩn?",
+      "options": {
+        "A": "Sản lượng giảm và lãi suất giảm",
+        "B": "Sản lượng gia tăng và lãi suất tăng",
+        "C": "Sản lượng tăng nhưng lãi suất không đổi",
+        "D": "Sản lượng không đổi và lãi suất tăng"
+      },
+      "answer": "B",
+      "explainAnswer": "IS dịch phải thể hiện tổng chi tiêu hoặc đầu tư dự kiến tăng tại mỗi mức lãi suất. Với LM giữ nguyên và có độ dốc thông thường, điểm giao mới có sản lượng cao hơn và lãi suất cao hơn.",
+      "image": null
+    },
+    {
+      "id": 156,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Khoản mục nào sau đây không được xem là chi tiêu của chính phủ để mua hàng hóa và dịch vụ?",
+      "options": {
+        "A": "Chính phủ mua máy tính cho trường công",
+        "B": "Nhà nước xây dựng một tuyến đường",
+        "C": "Bộ Lao động trợ cấp cho những người có công với nước",
+        "D": "Cơ quan nhà nước thuê dịch vụ bảo trì trụ sở"
+      },
+      "answer": "C",
+      "explainAnswer": "Trợ cấp cho người có công là khoản chuyển giao, vì chính phủ không nhận trực tiếp hàng hóa hay dịch vụ hiện tại để đổi lại khoản chi đó. Chi mua máy tính, xây đường và thuê bảo trì đều là chi tiêu chính phủ cho hàng hóa hoặc dịch vụ.",
+      "image": null
+    },
+    {
+      "id": 157,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Trong nền kinh tế mở, nếu số nhân chi tiêu bằng 2, MPC = 0,8 và thuế suất tỷ lệ t = 0,25 thì MPM bằng bao nhiêu?",
+      "options": {
+        "A": "0,05",
+        "B": "0,14",
+        "C": "0,20",
+        "D": "0,10"
+      },
+      "answer": "D",
+      "explainAnswer": "Từ số nhân (m = 1/[1 - MPC(1-t) + MPM]), mẫu số phải bằng 1/2 = 0,5. Vì (1 - 0,8 x 0,75 = 0,4), nên MPM = 0,5 - 0,4 = 0,10.",
+      "image": null
+    },
+    {
+      "id": 158,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Hoạt động nào sau đây của ngân hàng trung ương làm cho mức cung tiền giảm xuống?",
+      "options": {
+        "A": "Mua trái phiếu chính phủ trên thị trường mở",
+        "B": "Giảm tỷ lệ dự trữ bắt buộc",
+        "C": "Bán trái phiếu chính phủ trên thị trường mở",
+        "D": "Giảm lãi suất chiết khấu"
+      },
+      "answer": "C",
+      "explainAnswer": "Khi bán trái phiếu, ngân hàng trung ương thu tiền từ hệ thống ngân hàng và làm giảm dự trữ của các ngân hàng thương mại. Khả năng cho vay và tạo tiền giảm, nên cung tiền có xu hướng giảm.",
+      "image": null
+    },
+    {
+      "id": 159,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Trên thị trường tiền tệ, trong đồ thị thể hiện quan hệ giữa cầu tiền và lãi suất, nếu lãi suất thay đổi thì điều gì xảy ra?",
+      "options": {
+        "A": "Có sự trượt dọc theo đường cầu tiền",
+        "B": "Đường cầu tiền dịch chuyển sang phải",
+        "C": "Đường cung tiền dịch chuyển sang trái",
+        "D": "Cả đường cầu và đường cung tiền đều dịch chuyển"
+      },
+      "answer": "A",
+      "explainAnswer": "Lãi suất là một biến nằm trên trục của quan hệ cầu tiền, nên thay đổi lãi suất làm thay đổi lượng tiền được cầu tại đường cầu hiện có. Sự thay đổi này là di chuyển dọc theo đường, còn dịch chuyển đường cầu thường do thu nhập hoặc các yếu tố khác.",
+      "image": null
+    },
+    {
+      "id": 160,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Nếu Quốc hội thông qua một đạo luật kiểm soát ô nhiễm không khí, trong điều kiện chi phí tuân thủ của doanh nghiệp tăng, điều gì có thể xảy ra?",
+      "options": {
+        "A": "Chi phí sản xuất giảm và tổng cung ngắn hạn dịch phải",
+        "B": "Giá thành sản phẩm tăng và tổng cung ngắn hạn dịch trái",
+        "C": "Tổng cầu dịch phải do năng suất tăng ngay lập tức",
+        "D": "Mức giá giảm và sản lượng tăng vì ô nhiễm thấp hơn"
+      },
+      "answer": "B",
+      "explainAnswer": "Quy định môi trường có thể làm tăng chi phí tuân thủ và chi phí sản xuất trong ngắn hạn. Khi đó, tại mỗi mức giá doanh nghiệp cung ứng ít hơn, nên đường tổng cung ngắn hạn dịch sang trái.",
+      "image": null
+    },
+    {
+      "id": 161,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Một sự gia tăng trong tổng cầu sẽ làm tăng cả sản lượng cân bằng và mức giá nếu nền kinh tế đối diện với dạng đường tổng cung nào?",
+      "options": {
+        "A": "Đường tổng cung thẳng đứng hoàn toàn",
+        "B": "Đường tổng cung nằm ngang hoàn toàn",
+        "C": "Đường tổng cung dốc xuống",
+        "D": "Đường tổng cung dốc lên"
+      },
+      "answer": "D",
+      "explainAnswer": "Với tổng cung dốc lên, cú hích tổng cầu làm doanh nghiệp tăng sản lượng nhưng cũng tạo áp lực tăng mức giá. Nếu tổng cung nằm ngang thì chủ yếu sản lượng tăng, còn nếu thẳng đứng thì chủ yếu mức giá tăng.",
+      "image": null
+    },
+    {
+      "id": 162,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Nếu giá cả của nguyên vật liệu nhập khẩu tăng thì tác động trực tiếp đến tổng cung là gì?",
+      "options": {
+        "A": "Tổng cung dịch chuyển sang phải",
+        "B": "Tổng cầu dịch chuyển sang trái",
+        "C": "Tổng cung dịch chuyển sang trái",
+        "D": "Không có đường nào dịch chuyển"
+      },
+      "answer": "C",
+      "explainAnswer": "Nguyên vật liệu nhập khẩu đắt hơn làm tăng chi phí biên và chi phí sản xuất của doanh nghiệp. Doanh nghiệp cung ứng ít hơn ở mỗi mức giá, nên đường tổng cung dịch chuyển sang trái.",
+      "image": null
+    },
+    {
+      "id": 163,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Trong nền kinh tế đóng, với thuế cố định và MPC = 0,75, Chính phủ phải giảm thuế bao nhiêu để sản lượng cân bằng tăng thêm 150 tỷ đồng?",
+      "options": {
+        "A": "37,5 tỷ đồng",
+        "B": "50 tỷ đồng",
+        "C": "75 tỷ đồng",
+        "D": "150 tỷ đồng"
+      },
+      "answer": "B",
+      "explainAnswer": "Số nhân thuế với thuế cố định là (-MPC/(1-MPC) = -0,75/0,25 = -3). Muốn sản lượng tăng 150 tỷ đồng, cần giảm thuế 50 tỷ đồng, vì (-3 x -50 = 150).",
+      "image": null
+    },
+    {
+      "id": 164,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Việc cô Y ở nhà trông em khi bố mẹ đi làm không được tính trong GDP bởi vì lý do nào?",
+      "options": {
+        "A": "Đó là dịch vụ không được trả công và không giao dịch qua thị trường",
+        "B": "Hoạt động chăm sóc trẻ em không tạo ra ích lợi kinh tế",
+        "C": "GDP chỉ tính hàng hóa hữu hình",
+        "D": "Thu nhập của gia đình luôn bị loại khỏi GDP"
+      },
+      "answer": "A",
+      "explainAnswer": "GDP đo giá trị thị trường của hàng hóa và dịch vụ cuối cùng được sản xuất trong kỳ. Dịch vụ trông em trong gia đình không có giao dịch và giá thị trường quan sát được, dù nó vẫn tạo ra ích lợi thực tế.",
+      "image": null
+    },
+    {
+      "id": 165,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Khi nền kinh tế tiến gần đến mức sản lượng tiềm năng, đường tổng cung ngắn hạn thường có xu hướng như thế nào?",
+      "options": {
+        "A": "Trở nên thoải hơn",
+        "B": "Dịch chuyển hoàn toàn sang phải",
+        "C": "Trở nên dốc hơn",
+        "D": "Trở thành đường nằm ngang"
+      },
+      "answer": "C",
+      "explainAnswer": "Khi nền kinh tế gần toàn dụng nguồn lực, việc tăng thêm sản lượng khó hơn và dễ gây áp lực lên chi phí, tiền lương và giá cả. Vì vậy, tổng cung ngắn hạn thường trở nên dốc hơn khi tiến gần sản lượng tiềm năng.",
+      "image": null
+    },
+    {
+      "id": 166,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Giả sử thị trường tiền tệ có dư cầu do thu nhập thực tế tăng lên. Trong ngắn hạn, điều gì đang diễn ra trên thị trường trái phiếu?",
+      "options": {
+        "A": "Giá trái phiếu tăng và có dư cầu trái phiếu",
+        "B": "Giá trái phiếu giảm và có dư cung trái phiếu",
+        "C": "Giá trái phiếu và lãi suất cùng tăng",
+        "D": "Không có giao dịch nào trên thị trường trái phiếu"
+      },
+      "answer": "B",
+      "explainAnswer": "Dư cầu tiền khiến các tác nhân bán tài sản tài chính, trong đó có trái phiếu, để lấy tiền. Áp lực bán làm giá trái phiếu giảm và tạo dư cung trái phiếu; theo quan hệ ngược chiều, lãi suất tăng.",
+      "image": null
+    },
+    {
+      "id": 167,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Hành động nào sau đây là một ví dụ của chính sách tài khóa mở rộng?",
+      "options": {
+        "A": "Cắt giảm tỷ suất thuế thu nhập doanh nghiệp",
+        "B": "Tăng thuế tiêu dùng để giảm thâm hụt",
+        "C": "Giảm chi đầu tư công",
+        "D": "Bán trái phiếu chính phủ của ngân hàng trung ương"
+      },
+      "answer": "A",
+      "explainAnswer": "Giảm thuế thu nhập doanh nghiệp có thể làm tăng lợi nhuận sau thuế, đầu tư và tổng chi tiêu. Đây là biện pháp tài khóa mở rộng vì nó kích thích tổng cầu, khác với bán trái phiếu là công cụ tiền tệ thắt chặt.",
+      "image": null
+    },
+    {
+      "id": 168,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Một ví dụ về chuyển giao thu nhập trong hệ thống tài khoản quốc gia là gì?",
+      "options": {
+        "A": "Chính phủ mua xe cứu hộ",
+        "B": "Doanh nghiệp trả lương cho công nhân",
+        "C": "Hộ gia đình mua thực phẩm",
+        "D": "Trợ cấp cho đồng bào miền Trung sau một cơn bão"
+      },
+      "answer": "D",
+      "explainAnswer": "Khoản chuyển giao phân phối lại thu nhập nhưng không phải là khoản thanh toán cho hàng hóa hay dịch vụ hiện tại. Trợ cấp sau bão là khoản tiền hoặc hỗ trợ được trao cho người nhận, nên là chuyển giao.",
+      "image": null
+    },
+    {
+      "id": 169,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Giả thiết người dân không giữ tiền mặt, quá trình mở rộng tiền tệ có thể tiếp tục đến khi điều kiện nào xảy ra?",
+      "options": {
+        "A": "Ngân hàng trung ương ngừng phát hành tiền",
+        "B": "Các ngân hàng thương mại không còn dự trữ dôi ra",
+        "C": "Tất cả hộ gia đình chuyển sang giữ trái phiếu",
+        "D": "Tỷ lệ tiền mặt trên tiền gửi tăng lên"
+      },
+      "answer": "B",
+      "explainAnswer": "Khi không có rò rỉ tiền mặt, dự trữ dôi ra là cơ sở để ngân hàng thương mại tiếp tục cho vay và tạo tiền gửi. Quá trình tạo tiền bị giới hạn khi các ngân hàng sử dụng hết dự trữ dôi ra và chỉ còn mức dự trữ bắt buộc.",
+      "image": null
+    },
+    {
+      "id": 170,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Một nền kinh tế có MPC = 0,8 và MPM = 0,05. Nếu đầu tư tăng thêm 250 và xuất khẩu tăng thêm 650, thu nhập quốc dân tăng thêm bao nhiêu?",
+      "options": {
+        "A": "1.800",
+        "B": "2.250",
+        "C": "3.600",
+        "D": "4.000"
+      },
+      "answer": "C",
+      "explainAnswer": "Số nhân của nền kinh tế mở là (1/(1-MPC+MPM) = 1/(1-0,8+0,05) = 4). Thay đổi chi tiêu tự định là (250+650=900), nên thu nhập quốc dân tăng (4 x 900 = 3.600).",
+      "image": null
+    },
+    {
+      "id": 171,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Việc ngân hàng trung ương bán trái phiếu của Chính phủ sẽ làm thay đổi điều gì trước hết?",
+      "options": {
+        "A": "Tăng dự trữ của các ngân hàng thương mại",
+        "B": "Tăng tiền mặt trong lưu thông",
+        "C": "Giảm dự trữ tiền của các ngân hàng thương mại",
+        "D": "Giảm lãi suất thị trường ngay lập tức"
+      },
+      "answer": "C",
+      "explainAnswer": "Người mua trái phiếu thanh toán cho ngân hàng trung ương, làm tiền rút khỏi tài khoản dự trữ của hệ thống ngân hàng. Vì thế dự trữ của các ngân hàng thương mại giảm, tạo áp lực làm cung tiền và khả năng cho vay giảm.",
+      "image": null
+    },
+    {
+      "id": 172,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Nếu ngân hàng trung ương gia tăng cung ứng tiền tệ, điều gì xảy ra trong mô hình IS-LM?",
+      "options": {
+        "A": "Có sự di chuyển dọc theo đường IS còn đường LM dịch chuyển",
+        "B": "Đường IS dịch phải còn đường LM không đổi",
+        "C": "Cả IS và LM đều dịch trái",
+        "D": "Có sự di chuyển dọc theo đường LM còn đường IS dịch chuyển"
+      },
+      "answer": "A",
+      "explainAnswer": "Cung tiền tăng làm đường LM dịch sang phải hoặc xuống dưới vì cân bằng tiền tệ đạt được tại lãi suất thấp hơn. Thị trường hàng hóa chưa bị thay đổi trực tiếp, nên điểm cân bằng mới là một di chuyển dọc theo đường IS cố định.",
+      "image": null
+    },
+    {
+      "id": 173,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Việc thực hiện chính sách tài khóa thắt chặt làm cho điều gì xảy ra với đường tổng cầu?",
+      "options": {
+        "A": "Đường AD dịch chuyển sang phải",
+        "B": "Đường AD dịch chuyển sang trái",
+        "C": "Đường AS ngắn hạn dịch chuyển sang phải",
+        "D": "Đường AD trở nên dốc hơn nhưng không dịch chuyển"
+      },
+      "answer": "B",
+      "explainAnswer": "Tài khóa thắt chặt, chẳng hạn giảm chi tiêu chính phủ hoặc tăng thuế, làm tổng chi tiêu kế hoạch giảm. Do đó tổng cầu tại mỗi mức giá thấp hơn và đường AD dịch sang trái.",
+      "image": null
+    },
+    {
+      "id": 174,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Số nhân tiền tăng lên nếu tỷ lệ tiền mặt mà hộ gia đình và doanh nghiệp muốn giữ hoặc tỷ lệ dự trữ thực tế của ngân hàng thương mại thay đổi như thế nào?",
+      "options": {
+        "A": "Tỷ lệ tiền mặt tăng hoặc tỷ lệ dự trữ tăng",
+        "B": "Cả hai tỷ lệ đều tăng",
+        "C": "Tỷ lệ tiền mặt giảm hoặc tỷ lệ dự trữ thực tế giảm",
+        "D": "Tỷ lệ tiền mặt tăng còn tỷ lệ dự trữ giảm"
+      },
+      "answer": "C",
+      "explainAnswer": "Tiền mặt của công chúng và dự trữ của ngân hàng là các dạng rò rỉ làm giảm số vòng tạo tiền gửi. Khi một trong hai tỷ lệ giảm, mỗi đơn vị tiền cơ sở hỗ trợ nhiều tiền gửi hơn, nên số nhân tiền tăng.",
+      "image": null
+    },
+    {
+      "id": 175,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Chính sách tiền tệ thắt chặt làm giảm sản lượng chủ yếu thông qua cơ chế nào?",
+      "options": {
+        "A": "Làm giảm lãi suất và tăng đầu tư",
+        "B": "Làm tăng lãi suất và giảm đầu tư",
+        "C": "Làm tăng cung tiền và giảm tiêu dùng",
+        "D": "Làm giảm giá cả và tăng chi tiêu chính phủ"
+      },
+      "answer": "B",
+      "explainAnswer": "Chính sách tiền tệ thắt chặt làm giảm cung tiền và dịch LM sang trái. Lãi suất cân bằng tăng, khiến đầu tư nhạy cảm với lãi suất giảm; tổng cầu và sản lượng cân bằng vì vậy giảm.",
+      "image": null
+    },
+    {
+      "id": 176,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Trong một nền kinh tế đóng, tiết kiệm quốc dân trừ đi cán cân ngân sách của Chính phủ bằng đại lượng nào?",
+      "options": {
+        "A": "Tiết kiệm tư nhân",
+        "B": "Đầu tư tư nhân",
+        "C": "Tiết kiệm của Chính phủ",
+        "D": "Thâm hụt thương mại"
+      },
+      "answer": "A",
+      "explainAnswer": "Gọi cán cân ngân sách là (T-G), tiết kiệm quốc dân bằng tiết kiệm tư nhân cộng (T-G). Vì vậy, lấy tiết kiệm quốc dân trừ cán cân ngân sách sẽ còn lại tiết kiệm tư nhân.",
+      "image": null
+    },
+    {
+      "id": 177,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Tiêu dùng tự định là mức tiêu dùng như thế nào?",
+      "options": {
+        "A": "Mức tiêu dùng chỉ phát sinh khi thu nhập khả dụng bằng không",
+        "B": "Mức tiêu dùng không phụ thuộc vào thu nhập khả dụng",
+        "C": "Mức tiêu dùng luôn bằng MPC nhân thu nhập khả dụng",
+        "D": "Mức tiêu dùng bằng toàn bộ thu nhập khả dụng"
+      },
+      "answer": "B",
+      "explainAnswer": "Trong hàm tiêu dùng tuyến tính, tiêu dùng thường được viết là (C=C_0+MPC x Y_d). Thành phần (C_0) là tiêu dùng tự định, tức phần không thay đổi theo thu nhập khả dụng trong phạm vi mô hình.",
+      "image": null
+    },
+    {
+      "id": 178,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Trong nền kinh tế đóng, thuế suất tỷ lệ ban đầu là t = 0,25 và MPC = 0,8. Nếu Chính phủ tăng thuế suất lên gấp ba lần, số nhân chi tiêu giảm đi mấy lần?",
+      "options": {
+        "A": "1,5 lần",
+        "B": "2 lần",
+        "C": "2,5 lần",
+        "D": "3 lần"
+      },
+      "answer": "B",
+      "explainAnswer": "Ban đầu số nhân là (1/[1-0,8(1-0,25)] = 2,5). Thuế suất mới là 0,75, nên số nhân là (1/[1-0,8(1-0,75)] = 1,25); do đó số nhân giảm (2,5/1,25=2) lần.",
+      "image": null
+    },
+    {
+      "id": 179,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Nếu Chính phủ sử dụng chính sách tiền tệ nới lỏng thì điều gì xảy ra trong mô hình IS-LM?",
+      "options": {
+        "A": "Đường LM dịch sang trái",
+        "B": "Đường IS dịch sang trái",
+        "C": "Đường LM dịch sang phải",
+        "D": "Cả IS và LM đều dịch sang phải"
+      },
+      "answer": "C",
+      "explainAnswer": "Tiền tệ nới lỏng làm cung tiền tăng. Với mỗi mức sản lượng, thị trường tiền tệ cân bằng tại lãi suất thấp hơn, nên đường LM dịch sang phải hoặc xuống dưới; IS không đổi nếu không có tác động trực tiếp lên chi tiêu tự định.",
+      "image": null
+    },
+    {
+      "id": 180,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Nếu thu nhập thực tế tăng, trong điều kiện các yếu tố khác không đổi, điều gì xảy ra với đường cầu tiền?",
+      "options": {
+        "A": "Đường cầu tiền dịch chuyển sang phải",
+        "B": "Đường cầu tiền dịch chuyển sang trái",
+        "C": "Có sự trượt dọc xuống theo đường cầu tiền",
+        "D": "Đường cung tiền dịch chuyển sang phải"
+      },
+      "answer": "A",
+      "explainAnswer": "Thu nhập thực tế cao hơn làm tăng số lượng giao dịch và nhu cầu nắm giữ tiền tại mỗi mức lãi suất. Vì vậy toàn bộ đường cầu tiền dịch chuyển sang phải, thay vì chỉ có một điểm di chuyển dọc theo đường.",
+      "image": null
+    },
+    {
+      "id": 181,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Cho phương trình lãi suất trên đường IS là i = 25 - 0,04Y và đường LM là Y = 300 + 40i. Lãi suất và sản lượng cân bằng trên cả hai thị trường là bao nhiêu?",
+      "options": {
+        "A": "i = 4, Y = 460",
+        "B": "i = 5, Y = 500",
+        "C": "i = 6, Y = 540",
+        "D": "i = 10, Y = 700"
+      },
+      "answer": "B",
+      "explainAnswer": "Thế (i=25-0,04Y) vào LM: (Y=300+40(25-0,04Y)=1300-1,6Y), nên (2,6Y=1300) và Y = 500. Thay vào IS cho i = 25 - 0,04 x 500 = 5.",
+      "image": null
+    },
+    {
+      "id": 182,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Nếu đường tổng cung dịch chuyển sang phải, trong điều kiện các yếu tố khác không đổi, điều gì xảy ra?",
+      "options": {
+        "A": "Mức giá tăng và sản lượng thực tế giảm",
+        "B": "Mức giá và sản lượng thực tế cùng giảm",
+        "C": "Mức giá giảm và sản lượng thực tế tăng",
+        "D": "Tổng cầu dịch chuyển sang trái"
+      },
+      "answer": "C",
+      "explainAnswer": "Tổng cung dịch phải nghĩa là doanh nghiệp sẵn sàng cung ứng nhiều sản lượng hơn tại mỗi mức giá. Khi tổng cầu không đổi, điểm cân bằng mới thường có sản lượng thực tế cao hơn và mức giá thấp hơn.",
+      "image": null
+    },
+    {
+      "id": 183,
+      "chapter": "Kinh tế vĩ mô",
+      "sourceChapter": "Câu hỏi bổ sung từ ktvm.txt",
+      "question": "Mất cân bằng kinh tế vĩ mô xảy ra khi điều kiện nào đúng?",
+      "options": {
+        "A": "Tổng cung bằng tổng cầu tại mức giá cân bằng",
+        "B": "Tiết kiệm bằng đầu tư trong nền kinh tế đóng",
+        "C": "Cán cân ngân sách bằng không",
+        "D": "Tổng cung không bằng tổng cầu"
+      },
+      "answer": "D",
+      "explainAnswer": "Cân bằng vĩ mô trên thị trường hàng hóa đòi hỏi lượng sản phẩm được cung ứng bằng lượng được cầu tại mức giá tương ứng. Khi tổng cung khác tổng cầu, nền kinh tế có dư cung hoặc dư cầu và đang ở trạng thái mất cân bằng.",
+      "image": null
+    }
+  ]
+}

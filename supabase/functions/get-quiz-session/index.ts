@@ -12,6 +12,8 @@ const examFiles: Record<string, string> = {
   "data-science-ai-midterm-1": "dsai101/khoa_hoc_du_lieu_va_tri_tue_nhan_tao_midle.json",
   "data-science-ai-final-1": "dsai101/khoa_hoc_du_lieu_va_tri_tue_nhan_tao_final.json",
   "intro-data-science-ai-bank-1": "idsai101/nhap_mon_khdl_ttnt.json",
+  "kinh-te-vi-mo-macro-bank-1": "mac102/kinh_te_vi_mo.json",
+  "office-it-final-bank-1": "oit101/tin_hoc_van_phong.json",
 }
 const sqaFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json", "chuong_6.json"]
 const marFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json"]

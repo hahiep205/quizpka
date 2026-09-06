@@ -26,7 +26,7 @@ export function HcmChapterPickerModal({ open, lang, exam, subject, onClose, onSe
 
   useEffect(() => {
     if (open && exam) {
-      const options = getChapterOptionsForSubject(exam.subjectId) ?? []
+      const options = (getChapterOptionsForSubject(exam.subjectId) ?? []).filter((option) => !option.hidden)
       setSelected(options.some((option) => option.id === "all") ? "all" : (options[0]?.id ?? "all"))
       setVisible(true)
       setState("open")
@@ -54,7 +54,7 @@ export function HcmChapterPickerModal({ open, lang, exam, subject, onClose, onSe
 
   if (!visible || !exam || !subject) return null
 
-  const chapterOptions = getChapterOptionsForSubject(subject.id) ?? []
+  const chapterOptions = (getChapterOptionsForSubject(subject.id) ?? []).filter((chapter) => !chapter.hidden)
 
   return (
     <PickerModalShell

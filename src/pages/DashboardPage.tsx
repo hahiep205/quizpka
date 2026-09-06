@@ -5,6 +5,7 @@ import {
   Bell,
   CalendarDays,
   CheckCircle2,
+  ChevronDown,
   Clock3,
   FileText,
   Flame,
@@ -759,8 +760,8 @@ function HomeDashboard({
 
       <section id="dashboard-documents" className="scroll-mt-24">
         <div className="mb-4 flex flex-col gap-3 sm:mb-5 sm:gap-4">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <label className="relative block sm:min-w-0 sm:flex-1">
+          <div className="flex flex-row items-center gap-2 sm:gap-3">
+            <label className="relative block min-w-0 flex-[3] sm:flex-1">
               <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
               <input
                 value={query}
@@ -769,7 +770,20 @@ function HomeDashboard({
                 className="h-11 w-full rounded-[12px] border-2 border-[#E5E5E5] bg-white pl-10 pr-3 text-sm font-bold text-[#100F3E] shadow-[0_3px_0_#DCDCDC] outline-none transition focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-900 dark:text-white dark:shadow-[0_3px_0_rgba(0,0,0,0.35)]"
               />
             </label>
-            <div className="grid w-full grid-cols-3 gap-2 sm:w-auto sm:grid-cols-none sm:grid-flow-col">
+            <label className="relative block min-w-0 flex-[1] sm:hidden">
+              <span className="sr-only">{lang === "vi" ? "Lọc bộ đề" : "Filter exam sets"}</span>
+              <select
+                value={filter}
+                onChange={(event) => onFilterChange(event.target.value as "all" | "general" | "major" | "free" | "paid" | "toeic")}
+                className="h-11 w-full appearance-none rounded-[12px] border-2 border-[#E5E5E5] bg-white pl-3 pr-10 text-sm font-bold text-[#100F3E] shadow-[0_3px_0_#DCDCDC] outline-none transition focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-900 dark:text-white dark:shadow-[0_3px_0_rgba(0,0,0,0.35)]"
+              >
+                {(["all", "general", "major", "free", "paid", "toeic"] as const).map((item) => (
+                  <option key={item} value={item}>{t[item]}</option>
+                ))}
+              </select>
+              <ChevronDown className="pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+            </label>
+            <div className="hidden w-full grid-cols-3 gap-2 sm:grid sm:w-auto sm:grid-cols-none sm:grid-flow-col">
               {(["all", "general", "major", "free", "paid", "toeic"] as const).map((item) => (
                 <button
                   key={item}

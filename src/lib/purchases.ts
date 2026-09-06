@@ -7,6 +7,8 @@ export function getPaidProductId(subjectCode: string): string | null {
   if (subjectCode === "SQA101") return "sqa101"
   if (subjectCode === "SEC301") return "sec301"
   if (subjectCode === "MAR101") return "mar101"
+  if (subjectCode === "MAC102") return "mac102"
+  if (subjectCode === "OIT101") return "oit101"
   return null
 }
 

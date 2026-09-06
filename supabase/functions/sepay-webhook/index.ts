@@ -32,7 +32,7 @@ Deno.serve(async (req) => {
     const isPaidCheckout = payload.notification_type === "ORDER_PAID" && ["CAPTURED", "APPROVED", "PAID"].includes(status)
     // SePay's "Send test" payload may not contain an order created by QuizPKA.
     // Acknowledge unrelated transactions so SePay does not retry them forever.
-    if ((!suppliedOrderId || !/^(DSAI|IDSAI|SQA|SEC|MAR)-[A-Z0-9]+$/.test(suppliedOrderId)) && !transferContent) {
+    if ((!suppliedOrderId || !/^(DSAI|IDSAI|SQA|SEC|MAR|MAC|OIT)-[A-Z0-9]+$/.test(suppliedOrderId)) && !transferContent) {
       console.info("Ignored webhook without QuizPKA payment code")
       return Response.json({ success: true, ignored: true }, { headers: cors })
     }

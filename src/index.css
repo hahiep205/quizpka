@@ -520,11 +520,27 @@ html.dark .lp-modal-desc {
   padding: 1rem 1.5rem;
 }
 
+/* Footers with two side-by-side actions share one row on mobile
+   so stacked buttons no longer stretch the modal. */
+.lp-modal-footer:has(> button + button) {
+  min-height: 0;
+  flex-direction: row;
+}
+
+.lp-modal-footer:has(> button + button) > button {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
 @media (min-width: 640px) {
   .lp-modal-footer {
     min-height: 0;
     flex-direction: row;
     justify-content: flex-end;
+  }
+
+  .lp-modal-footer:has(> button + button) > button {
+    flex: none;
   }
 }
 

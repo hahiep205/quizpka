@@ -1,0 +1,1807 @@
+{
+  "title": "Bộ câu hỏi Tin học văn phòng",
+  "chapter": "Tin học văn phòng",
+  "totalQuestions": 120,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phần cứng máy tính là gì?",
+      "options": {
+        "A": "Cấu tạo của phần mềm về mặt logic",
+        "B": "Cấu tạo của máy tính về mặt logic",
+        "C": "Cấu tạo của máy tính về mặt vật lý",
+        "D": "Cấu tạo của phần mềm về mặt vật lý"
+      },
+      "answer": "C",
+      "explainAnswer": "Phần cứng bao gồm tất cả các thành phần vật lý có thể nhìn thấy và sờ được của máy tính như màn hình, bàn phím, chuột, ổ cứng, CPU… Đây là nền tảng vật chất để phần mềm hoạt động.",
+      "image": null
+    },
+    {
+      "id": 2,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Trong máy tính, PC có nghĩa là gì?",
+      "options": {
+        "A": "Personal Computer",
+        "B": "Private Computer",
+        "C": "Public Computer",
+        "D": "Portable Computer"
+      },
+      "answer": "A",
+      "explainAnswer": "PC là viết tắt của Personal Computer – máy tính cá nhân. Đây là thuật ngữ dùng để chỉ máy tính dùng cho cá nhân, khác với máy tính lớn (mainframe) hay máy trạm chuyên dụng.",
+      "image": null
+    },
+    {
+      "id": 3,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Thiết bị nào của máy tính là thiết bị ngoại vi?",
+      "options": {
+        "A": "CPU",
+        "B": "RAM",
+        "C": "Máy in",
+        "D": "Mainboard"
+      },
+      "answer": "C",
+      "explainAnswer": "Thiết bị ngoại vi là các thiết bị nằm ngoài khối hệ thống chính, dùng để nhập hoặc xuất dữ liệu. Máy in là thiết bị xuất điển hình, trong khi CPU, RAM, mainboard là thành phần nội bộ.",
+      "image": null
+    },
+    {
+      "id": 4,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Những thiết bị nào sau đây được xếp vào nhóm thiết bị ngoại vi?",
+      "options": {
+        "A": "CPU, RAM, Mainboard",
+        "B": "Bàn phím, chuột, màn hình, máy in",
+        "C": "Ổ cứng, nguồn điện, quạt tản nhiệt",
+        "D": "Card đồ họa, card âm thanh"
+      },
+      "answer": "B",
+      "explainAnswer": "Thiết bị ngoại vi gồm các thiết bị nhập (bàn phím, chuột) và xuất (màn hình, máy in). Các thành phần còn lại thuộc phần cứng nội bộ hoặc card mở rộng gắn trên mainboard.",
+      "image": null
+    },
+    {
+      "id": 5,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Thuật ngữ \"RAM\" là từ viết tắt của cụm từ?",
+      "options": {
+        "A": "Read Access Memory",
+        "B": "Random Access Memory",
+        "C": "Rewrite Access Memory",
+        "D": "Rapid Access Memory"
+      },
+      "answer": "B",
+      "explainAnswer": "RAM là Random Access Memory – bộ nhớ truy cập ngẫu nhiên. Đây là bộ nhớ tạm thời, cho phép CPU đọc/ghi dữ liệu nhanh theo vị trí bất kỳ, dữ liệu sẽ mất khi mất điện.",
+      "image": null
+    },
+    {
+      "id": 6,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Một loại máy tính có màn hình cảm ứng, khi sử dụng người dùng có thể dùng bút hoặc công cụ chọn để chạm vào, lựa chọn đối tượng hoặc nhập thông tin qua bàn phím ảo tích hợp trong máy là?",
+      "options": {
+        "A": "Máy tính để bàn",
+        "B": "Máy tính xách tay",
+        "C": "Máy tính bảng",
+        "D": "Máy chủ"
+      },
+      "answer": "C",
+      "explainAnswer": "Máy tính bảng (tablet) được thiết kế với màn hình cảm ứng làm giao diện chính, hỗ trợ thao tác bằng ngón tay hoặc bút cảm ứng và có bàn phím ảo tích hợp sẵn.",
+      "image": null
+    },
+    {
+      "id": 7,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "ROM là bộ nhớ gì?",
+      "options": {
+        "A": "Bộ nhớ chỉ đọc",
+        "B": "Bộ nhớ đọc ghi",
+        "C": "Bộ nhớ tạm thời",
+        "D": "Bộ nhớ ảo"
+      },
+      "answer": "A",
+      "explainAnswer": "ROM (Read Only Memory) là bộ nhớ chỉ đọc, chứa các chương trình cơ bản của hệ thống (như BIOS). Dữ liệu trong ROM không bị mất khi tắt máy và người dùng thông thường không ghi được vào.",
+      "image": null
+    },
+    {
+      "id": 8,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "ROM viết tắt của từ gì?",
+      "options": {
+        "A": "Random Only Memory",
+        "B": "Read Only Memory",
+        "C": "Rewrite Only Memory",
+        "D": "Rapid Only Memory"
+      },
+      "answer": "B",
+      "explainAnswer": "ROM là viết tắt của Read Only Memory – bộ nhớ chỉ đọc. Tên gọi phản ánh đúng đặc tính quan trọng nhất của loại bộ nhớ này.",
+      "image": null
+    },
+    {
+      "id": 9,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Bit là gì?",
+      "options": {
+        "A": "Đơn vị nhỏ nhất của thông tin, mang giá trị 0 hoặc 1",
+        "B": "Đơn vị bằng 8 byte",
+        "C": "Đơn vị đo dung lượng ổ cứng",
+        "D": "Đơn vị đo tốc độ xử lý của CPU"
+      },
+      "answer": "A",
+      "explainAnswer": "Bit (binary digit) là đơn vị thông tin nhỏ nhất trong máy tính. Mỗi bit chỉ có thể mang một trong hai giá trị nhị phân: 0 hoặc 1.",
+      "image": null
+    },
+    {
+      "id": 10,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "1 byte bằng bao nhiêu bit?",
+      "options": {
+        "A": "4 bit",
+        "B": "8 bit",
+        "C": "16 bit",
+        "D": "32 bit"
+      },
+      "answer": "B",
+      "explainAnswer": "1 byte luôn bằng 8 bit. Đây là quy ước chuẩn trong tin học, dùng để biểu diễn một ký tự cơ bản hoặc một đơn vị dữ liệu nhỏ.",
+      "image": null
+    },
+    {
+      "id": 11,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "1KB bằng bao nhiêu byte?",
+      "options": {
+        "A": "1000 byte",
+        "B": "1024 byte",
+        "C": "100 byte",
+        "D": "2048 byte"
+      },
+      "answer": "B",
+      "explainAnswer": "Trong hệ thống máy tính, 1KB (Kilobyte) bằng 2^10 = 1024 byte. Đây là quy ước dựa trên lũy thừa của 2, khác với hệ thập phân thường dùng trong đời sống.",
+      "image": null
+    },
+    {
+      "id": 12,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Kể tên các loại bộ nhớ trong?",
+      "options": {
+        "A": "Ổ cứng và thẻ nhớ",
+        "B": "RAM và ROM",
+        "C": "CD và DVD",
+        "D": "USB và ổ cứng ngoài"
+      },
+      "answer": "B",
+      "explainAnswer": "Bộ nhớ trong gồm hai loại chính: RAM (bộ nhớ truy cập ngẫu nhiên – đọc/ghi) và ROM (bộ nhớ chỉ đọc). Đây là các bộ nhớ gắn trực tiếp trên mainboard, phục vụ CPU xử lý.",
+      "image": null
+    },
+    {
+      "id": 13,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Lựa chọn nào cho thấy máy tính xách tay có lợi thế hơn so với máy tính để bàn?",
+      "options": {
+        "A": "Hiệu năng xử lý cao hơn",
+        "B": "Máy tính xách tay có thể mang đi bất kỳ đâu",
+        "C": "Dễ nâng cấp phần cứng hơn",
+        "D": "Giá thành rẻ hơn"
+      },
+      "answer": "B",
+      "explainAnswer": "Ưu điểm nổi bật nhất của laptop so với máy để bàn là tính di động. Người dùng có thể mang máy đi làm việc ở nhiều nơi khác nhau nhờ thiết kế gọn nhẹ và tích hợp pin.",
+      "image": null
+    },
+    {
+      "id": 14,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "CPU là gì?",
+      "options": {
+        "A": "Bộ nhớ tạm thời",
+        "B": "Bộ xử lý trung tâm của máy tính",
+        "C": "Thiết bị lưu trữ ngoài",
+        "D": "Card đồ họa"
+      },
+      "answer": "B",
+      "explainAnswer": "CPU (Central Processing Unit) là bộ xử lý trung tâm, được ví như “bộ não” của máy tính. Nó thực hiện mọi phép tính và điều khiển hoạt động của các thành phần khác.",
+      "image": null
+    },
+    {
+      "id": 15,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Cấu trúc chung của máy tính gồm có những khối chức năng nào?",
+      "options": {
+        "A": "Bộ xử lý trung tâm, bộ nhớ, thiết bị nhập xuất",
+        "B": "Chỉ có CPU và RAM",
+        "C": "Màn hình và bàn phím",
+        "D": "Ổ cứng và nguồn điện"
+      },
+      "answer": "A",
+      "explainAnswer": "Mô hình cơ bản của máy tính gồm ba khối chức năng chính: khối xử lý (CPU), khối nhớ (RAM/ROM) và khối nhập/xuất (các thiết bị ngoại vi). Đây là kiến trúc von Neumann cổ điển.",
+      "image": null
+    },
+    {
+      "id": 16,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Các thành phần cơ bản của một máy tính?",
+      "options": {
+        "A": "Chỉ có CPU và màn hình",
+        "B": "CPU, các thiết bị lưu trữ, bộ nhớ, các thiết bị nhập và các thiết bị xuất dữ liệu",
+        "C": "Chỉ có phần mềm hệ điều hành",
+        "D": "Chỉ có bàn phím và chuột"
+      },
+      "answer": "B",
+      "explainAnswer": "Một máy tính hoàn chỉnh cần có CPU để xử lý, bộ nhớ để lưu tạm, thiết bị lưu trữ để lưu dài hạn, cùng các thiết bị nhập (bàn phím, chuột) và xuất (màn hình, loa) để giao tiếp với người dùng.",
+      "image": null
+    },
+    {
+      "id": 17,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phát biểu nào là đúng khi nói đến bộ nhớ RAM và ROM?",
+      "options": {
+        "A": "Cả hai đều là bộ nhớ chỉ đọc",
+        "B": "RAM là bộ nhớ đọc và ghi, ROM là bộ nhớ chỉ đọc",
+        "C": "ROM là bộ nhớ đọc và ghi, RAM là bộ nhớ chỉ đọc",
+        "D": "Cả hai đều mất dữ liệu khi tắt máy"
+      },
+      "answer": "B",
+      "explainAnswer": "RAM cho phép đọc và ghi dữ liệu liên tục trong quá trình làm việc, dữ liệu sẽ mất khi mất điện. ROM chỉ cho phép đọc, dữ liệu được giữ nguyên kể cả khi tắt máy.",
+      "image": null
+    },
+    {
+      "id": 18,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Khi đọc các thông số cấu hình của một máy tính thông thường: 2GHz-320GB-4.00GB, con số 4.00GB chỉ điều gì?",
+      "options": {
+        "A": "Tốc độ CPU",
+        "B": "Dung lượng ổ cứng",
+        "C": "Dung lượng bộ nhớ truy cập ngẫu nhiên RAM",
+        "D": "Dung lượng card đồ họa"
+      },
+      "answer": "C",
+      "explainAnswer": "Trong chuỗi thông số cấu hình, 2GHz là tốc độ CPU, 320GB thường là dung lượng ổ cứng, còn 4.00GB là dung lượng RAM – bộ nhớ tạm thời của máy.",
+      "image": null
+    },
+    {
+      "id": 19,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Nhóm nào sau đây bao gồm các thiết bị được xếp vào cùng loại?",
+      "options": {
+        "A": "CPU, RAM, Mainboard",
+        "B": "Đĩa cứng trong, đĩa cứng ngoài, các loại đĩa quang (CD, DVD), thẻ nhớ, ổ nhớ di động",
+        "C": "Bàn phím, chuột, loa",
+        "D": "Màn hình, máy in, máy chiếu"
+      },
+      "answer": "B",
+      "explainAnswer": "Tất cả các thiết bị trong phương án B đều thuộc nhóm thiết bị lưu trữ (storage devices), dùng để lưu dữ liệu lâu dài, khác với thiết bị nhập/xuất hay bộ nhớ trong.",
+      "image": null
+    },
+    {
+      "id": 20,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Máy Scanner được kết nối với máy tính thông qua cổng nào sau đây?",
+      "options": {
+        "A": "VGA",
+        "B": "HDMI",
+        "C": "USB",
+        "D": "PS/2"
+      },
+      "answer": "C",
+      "explainAnswer": "Hầu hết máy quét (scanner) hiện nay kết nối với máy tính qua cổng USB vì tốc độ truyền dữ liệu cao, dễ sử dụng và được hỗ trợ rộng rãi trên mọi hệ điều hành.",
+      "image": null
+    },
+    {
+      "id": 21,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Thiết bị nào thực hiện thao tác nhập dữ liệu trong số các thiết bị sau: Màn hình, máy in, máy vẽ, bàn phím, ổ đĩa cứng, ổ đĩa mềm, chuột, loa, máy quét?",
+      "options": {
+        "A": "Màn hình, máy in, loa",
+        "B": "Bàn phím, chuột, máy quét",
+        "C": "Ổ đĩa cứng, ổ đĩa mềm",
+        "D": "Máy vẽ, loa"
+      },
+      "answer": "B",
+      "explainAnswer": "Thiết bị nhập là những thiết bị đưa dữ liệu từ bên ngoài vào máy tính. Bàn phím, chuột và máy quét (scanner) đều thuộc nhóm này, trong khi màn hình, máy in, loa là thiết bị xuất.",
+      "image": null
+    },
+    {
+      "id": 22,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Các thiết bị: chuột, bàn phím, máy quét thuộc khối chức năng nào?",
+      "options": {
+        "A": "Thiết bị xuất",
+        "B": "Thiết bị nhập",
+        "C": "Khối xử lý",
+        "D": "Bộ nhớ"
+      },
+      "answer": "B",
+      "explainAnswer": "Chuột, bàn phím và máy quét đều có chức năng đưa thông tin từ người dùng hoặc từ tài liệu giấy vào máy tính, do đó chúng thuộc khối thiết bị nhập.",
+      "image": null
+    },
+    {
+      "id": 23,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Thiết bị nào thực hiện thao tác xuất ra dữ liệu trong số các thiết bị sau?",
+      "options": {
+        "A": "Bàn phím, chuột",
+        "B": "Màn hình, máy in, máy chiếu, loa",
+        "C": "Ổ cứng, USB",
+        "D": "CPU, RAM"
+      },
+      "answer": "B",
+      "explainAnswer": "Thiết bị xuất có nhiệm vụ đưa kết quả xử lý ra ngoài cho người dùng nhận biết. Màn hình, máy in, máy chiếu và loa đều thực hiện chức năng này.",
+      "image": null
+    },
+    {
+      "id": 24,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Thiết bị nào không thể thiếu trong một máy tính?",
+      "options": {
+        "A": "Máy in",
+        "B": "CPU",
+        "C": "Loa",
+        "D": "Webcam"
+      },
+      "answer": "B",
+      "explainAnswer": "CPU là bộ xử lý trung tâm, không có CPU thì máy tính không thể thực hiện bất kỳ phép tính hay lệnh nào. Các thiết bị khác có thể thiếu tùy theo nhu cầu sử dụng.",
+      "image": null
+    },
+    {
+      "id": 25,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phần mềm Windows, Linux có đặc điểm gì chung?",
+      "options": {
+        "A": "Đều là phần mềm ứng dụng văn phòng",
+        "B": "Đều là phần mềm hệ điều hành",
+        "C": "Đều là phần mềm diệt virus",
+        "D": "Đều là phần mềm mã nguồn đóng"
+      },
+      "answer": "B",
+      "explainAnswer": "Windows và Linux đều thuộc nhóm phần mềm hệ điều hành (Operating System). Chúng quản lý phần cứng và cung cấp môi trường để các phần mềm ứng dụng chạy trên đó.",
+      "image": null
+    },
+    {
+      "id": 26,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Thiết bị xuất để đưa ra kết quả đã xử lý cho người sử dụng. Các thiết bị xuất thông dụng hiện nay là?",
+      "options": {
+        "A": "Bàn phím, chuột, máy quét",
+        "B": "Màn hình, màn hình cảm ứng, máy in, loa, tai nghe",
+        "C": "Ổ cứng, USB, thẻ nhớ",
+        "D": "CPU, RAM, ROM"
+      },
+      "answer": "B",
+      "explainAnswer": "Các thiết bị xuất phổ biến hiện nay gồm màn hình (hiển thị hình ảnh), máy in (in ấn), loa và tai nghe (phát âm thanh). Màn hình cảm ứng vừa là nhập vừa là xuất.",
+      "image": null
+    },
+    {
+      "id": 27,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Hãy chọn nhóm có thiết bị không cùng với những thiết bị còn lại?",
+      "options": {
+        "A": "Bàn phím, chuột, máy quét",
+        "B": "Màn hình, máy in, loa",
+        "C": "CPU, RAM, Mainboard",
+        "D": "USB, ổ cứng ngoài, thẻ nhớ"
+      },
+      "answer": "B",
+      "explainAnswer": "Màn hình, máy in và loa đều là thiết bị xuất, trong khi các nhóm còn lại lần lượt là thiết bị nhập, linh kiện nội bộ và thiết bị lưu trữ. Câu hỏi yêu cầu tìm nhóm không đồng nhất về chức năng với ngữ cảnh thường gặp.",
+      "image": null
+    },
+    {
+      "id": 28,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Hệ điều hành nào sau đây không sử dụng cho máy tính?",
+      "options": {
+        "A": "Windows",
+        "B": "Linux",
+        "C": "macOS",
+        "D": "Android"
+      },
+      "answer": "D",
+      "explainAnswer": "Android chủ yếu được thiết kế cho thiết bị di động (điện thoại, máy tính bảng). Mặc dù có thể cài trên một số máy tính nhưng không phải hệ điều hành dành cho máy tính để bàn/laptop thông thường.",
+      "image": null
+    },
+    {
+      "id": 29,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Thông tin nào bắt buộc phải có trong địa chỉ email?",
+      "options": {
+        "A": "Số điện thoại",
+        "B": "Địa chỉ email",
+        "C": "Họ tên đầy đủ",
+        "D": "Ngày sinh"
+      },
+      "answer": "B",
+      "explainAnswer": "Để gửi thư điện tử thành công, địa chỉ email của người nhận là thông tin bắt buộc. Các thông tin khác như họ tên, số điện thoại chỉ là tùy chọn.",
+      "image": null
+    },
+    {
+      "id": 30,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phát biểu nào sau đây là đúng?",
+      "options": {
+        "A": "Phần mềm là một tập hợp những câu lệnh được viết bằng một ngôn ngữ lập trình và các dữ liệu hay tài liệu liên quan nhằm tự động thực hiện một số nhiệm vụ",
+        "B": "Phần mềm chỉ bao gồm hệ điều hành",
+        "C": "Phần mềm không cần phần cứng để chạy",
+        "D": "Phần mềm chỉ tồn tại dưới dạng mã nguồn mở"
+      },
+      "answer": "A",
+      "explainAnswer": "Định nghĩa chuẩn của phần mềm là tập hợp các câu lệnh (chương trình) cùng dữ liệu và tài liệu liên quan, được viết bằng ngôn ngữ lập trình để máy tính thực hiện các nhiệm vụ cụ thể.",
+      "image": null
+    },
+    {
+      "id": 31,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Chương trình điều khiển thiết bị trong các đĩa CD kèm theo khi gắn thêm thiết bị ngoại vi cho máy tính thường gọi là gì?",
+      "options": {
+        "A": "Firmware",
+        "B": "Driver",
+        "C": "Application",
+        "D": "Utility"
+      },
+      "answer": "B",
+      "explainAnswer": "Driver (trình điều khiển) là phần mềm cho phép hệ điều hành giao tiếp và điều khiển thiết bị phần cứng mới được gắn vào. Thường đi kèm đĩa CD/DVD hoặc tải từ trang web nhà sản xuất.",
+      "image": null
+    },
+    {
+      "id": 32,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phần mềm nào dưới đây được cài đặt đầu tiên trong máy tính?",
+      "options": {
+        "A": "Microsoft Word",
+        "B": "Trình duyệt web",
+        "C": "MS Windows",
+        "D": "Phần mềm diệt virus"
+      },
+      "answer": "C",
+      "explainAnswer": "Hệ điều hành (MS Windows) phải được cài đặt đầu tiên vì nó là nền tảng để quản lý phần cứng và cho phép các phần mềm ứng dụng khác chạy được.",
+      "image": null
+    },
+    {
+      "id": 33,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Hệ điều hành là?",
+      "options": {
+        "A": "Phần mềm quản lý và phân phối tài nguyên máy tính phục vụ cho các ứng dụng",
+        "B": "Phần mềm soạn thảo văn bản",
+        "C": "Phần mềm diệt virus",
+        "D": "Phần mềm chơi game"
+      },
+      "answer": "A",
+      "explainAnswer": "Hệ điều hành đóng vai trò trung gian giữa phần cứng và phần mềm ứng dụng. Nó quản lý CPU, bộ nhớ, thiết bị nhập/xuất và phân phối tài nguyên cho các chương trình khác.",
+      "image": null
+    },
+    {
+      "id": 34,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Trong các phần mềm sau, phần mềm nào là phần mềm ứng dụng?",
+      "options": {
+        "A": "Windows 10",
+        "B": "Linux",
+        "C": "Microsoft Word",
+        "D": "BIOS"
+      },
+      "answer": "C",
+      "explainAnswer": "Microsoft Word là phần mềm ứng dụng (application software) dùng để soạn thảo văn bản. Windows và Linux là hệ điều hành, BIOS là firmware.",
+      "image": null
+    },
+    {
+      "id": 35,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phát biểu sau đây là sai?",
+      "options": {
+        "A": "Phần mềm mã nguồn mở là phần mềm phải mua bản quyền để sử dụng",
+        "B": "Phần mềm mã nguồn mở cho phép người dùng xem và sửa mã nguồn",
+        "C": "Linux là một hệ điều hành mã nguồn mở",
+        "D": "Phần mềm mã nguồn mở thường miễn phí"
+      },
+      "answer": "A",
+      "explainAnswer": "Phát biểu A sai vì phần mềm mã nguồn mở (open source) thường miễn phí và cho phép người dùng tự do sử dụng, nghiên cứu, sửa đổi và phân phối lại. Không bắt buộc phải mua bản quyền như phần mềm thương mại.",
+      "image": null
+    },
+    {
+      "id": 36,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phát biểu sau đây là đúng?",
+      "options": {
+        "A": "Phần mềm mã nguồn mở luôn có bảo hành chính hãng",
+        "B": "Phần mềm mã nguồn mở không có bảo hành",
+        "C": "Tất cả phần mềm mã nguồn mở đều mất phí",
+        "D": "Phần mềm mã nguồn mở không thể sửa đổi"
+      },
+      "answer": "B",
+      "explainAnswer": "Phần mềm mã nguồn mở thường không đi kèm dịch vụ bảo hành chính thức như phần mềm thương mại. Người dùng tự chịu trách nhiệm hoặc dựa vào cộng đồng hỗ trợ.",
+      "image": null
+    },
+    {
+      "id": 37,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Tùy chọn nào cho phép cải thiện hiệu năng của máy tính?",
+      "options": {
+        "A": "Cài thêm nhiều phần mềm hơn",
+        "B": "Nâng cấp RAM, CPU của máy tính",
+        "C": "Xóa hệ điều hành",
+        "D": "Tắt toàn bộ bảo mật"
+      },
+      "answer": "B",
+      "explainAnswer": "Nâng cấp RAM giúp máy chạy nhiều chương trình cùng lúc mượt hơn, nâng cấp CPU tăng khả năng xử lý. Đây là hai cách phổ biến và hiệu quả để cải thiện hiệu năng.",
+      "image": null
+    },
+    {
+      "id": 38,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Mạng LAN viết tắt của?",
+      "options": {
+        "A": "Large Area Network",
+        "B": "Local Area Network",
+        "C": "Long Area Network",
+        "D": "Logical Area Network"
+      },
+      "answer": "B",
+      "explainAnswer": "LAN là Local Area Network – mạng cục bộ, kết nối các máy tính trong phạm vi nhỏ như văn phòng, trường học, tòa nhà.",
+      "image": null
+    },
+    {
+      "id": 39,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Mạng WAN là viết tắt của?",
+      "options": {
+        "A": "Wide Area Network",
+        "B": "Wireless Area Network",
+        "C": "World Area Network",
+        "D": "Web Area Network"
+      },
+      "answer": "A",
+      "explainAnswer": "WAN là Wide Area Network – mạng diện rộng, kết nối các mạng máy tính trên phạm vi lớn (thành phố, quốc gia, toàn cầu). Internet là ví dụ điển hình của WAN.",
+      "image": null
+    },
+    {
+      "id": 40,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Trong Internet Explorer phiên bản 7 hoặc mới hơn, phím tắt để thêm một Tab?",
+      "options": {
+        "A": "Ctrl + T",
+        "B": "Ctrl + N",
+        "C": "Ctrl + Tab",
+        "D": "Alt + T"
+      },
+      "answer": "A",
+      "explainAnswer": "Phím tắt chuẩn để mở tab mới trong hầu hết trình duyệt (kể cả Internet Explorer từ phiên bản 7 trở lên) là Ctrl + T. Ctrl + Tab dùng để chuyển giữa các tab.",
+      "image": null
+    },
+    {
+      "id": 41,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Trong PowerPoint để sao chép đối tượng họa từ định dạng này sang dạng khác ta sử dụng công cụ nào?",
+      "options": {
+        "A": "Copy",
+        "B": "Paste Special",
+        "C": "Format Painter",
+        "D": "Duplicate"
+      },
+      "answer": "B",
+      "explainAnswer": "Paste Special cho phép người dùng chọn định dạng cụ thể khi dán đối tượng (ví dụ dán dưới dạng ảnh, giữ định dạng nguồn, hoặc chỉ lấy văn bản thuần).",
+      "image": null
+    },
+    {
+      "id": 42,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "MBps là đơn vị đo gì?",
+      "options": {
+        "A": "Dung lượng ổ cứng",
+        "B": "Tốc độ truyền dữ liệu",
+        "C": "Tốc độ xử lý CPU",
+        "D": "Dung lượng RAM"
+      },
+      "answer": "B",
+      "explainAnswer": "MBps (Megabyte per second) là đơn vị đo tốc độ truyền dữ liệu, thường dùng để biểu diễn tốc độ đọc/ghi của ổ cứng, USB hoặc tốc độ mạng.",
+      "image": null
+    },
+    {
+      "id": 43,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Hãy kể tên các dịch vụ kết nối Internet phổ biến?",
+      "options": {
+        "A": "Chỉ có Wi-Fi",
+        "B": "Dial-up, ADSL, FTTH",
+        "C": "Chỉ có 4G",
+        "D": "Chỉ có cáp quang"
+      },
+      "answer": "B",
+      "explainAnswer": "Các dịch vụ kết nối Internet phổ biến qua thời gian gồm: Dial-up (quay số), ADSL (đường dây thuê bao số bất đối xứng) và FTTH (cáp quang đến tận nhà) – hiện là công nghệ phổ biến nhất.",
+      "image": null
+    },
+    {
+      "id": 44,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Cấu trúc một địa chỉ email là?",
+      "options": {
+        "A": "<Tên_người_dùng>@<Tên_miền>",
+        "B": "<Tên_miền>@<Tên_người_dùng>",
+        "C": "<Tên_người_dùng>#<Tên_miền>",
+        "D": "<Tên_người_dùng>/<Tên_miền>"
+      },
+      "answer": "A",
+      "explainAnswer": "Địa chỉ email chuẩn có dạng tên_người_dùng@tên_miền (ví dụ: nguyenvana@gmail.com). Ký tự @ phân tách phần tên người dùng và tên miền.",
+      "image": null
+    },
+    {
+      "id": 45,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Điều nào sau đây là đúng liên quan đến hệ thống chuyển giọng nói trên giao thức IP?",
+      "options": {
+        "A": "Yêu cầu bắt buộc đường dây điện thoại truyền thống",
+        "B": "Không yêu cầu một đường dây điện thoại truyền thống",
+        "C": "Chỉ hoạt động trên mạng LAN",
+        "D": "Không thể gọi quốc tế"
+      },
+      "answer": "B",
+      "explainAnswer": "VoIP (Voice over IP) truyền giọng nói qua mạng Internet, do đó không cần đường dây điện thoại cố định truyền thống. Người dùng chỉ cần kết nối Internet.",
+      "image": null
+    },
+    {
+      "id": 46,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Nơi để cho người dùng Internet trao đổi thảo luận và tán gẫu với nhau là gì?",
+      "options": {
+        "A": "Email",
+        "B": "Forum",
+        "C": "FTP",
+        "D": "DNS"
+      },
+      "answer": "B",
+      "explainAnswer": "Forum (diễn đàn) là không gian trực tuyến cho phép nhiều người thảo luận, trao đổi ý kiến theo chủ đề. Đây là hình thức giao tiếp cộng đồng phổ biến trên Internet.",
+      "image": null
+    },
+    {
+      "id": 47,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Công dụng của việc tái chế các bộ phận của máy tính?",
+      "options": {
+        "A": "Tăng tốc độ máy tính",
+        "B": "Giảm ô nhiễm môi trường",
+        "C": "Tăng dung lượng ổ cứng",
+        "D": "Cải thiện bảo mật"
+      },
+      "answer": "B",
+      "explainAnswer": "Tái chế linh kiện máy tính giúp giảm lượng rác thải điện tử độc hại ra môi trường, đồng thời thu hồi được các kim loại quý và vật liệu có thể tái sử dụng.",
+      "image": null
+    },
+    {
+      "id": 48,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Loại mã độc nào không có chức năng tự sao chép nhưng lại có chức năng hủy hoại tương tự virus?",
+      "options": {
+        "A": "Worm",
+        "B": "Trojan",
+        "C": "Spyware",
+        "D": "Adware"
+      },
+      "answer": "B",
+      "explainAnswer": "Trojan (mã độc Trojan) không tự nhân bản như virus hay worm, nhưng khi được người dùng vô tình cài đặt, nó có thể thực hiện các hành vi phá hoại, đánh cắp dữ liệu hoặc mở cửa sau cho tin tặc.",
+      "image": null
+    },
+    {
+      "id": 49,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Luật Công nghệ thông tin ra đời và chính thức có hiệu lực từ ngày tháng năm nào?",
+      "options": {
+        "A": "Ngày 29/06/2006 và có hiệu lực 01/01/2007",
+        "B": "Ngày 01/01/2006 và có hiệu lực 29/06/2006",
+        "C": "Ngày 15/08/2005 và có hiệu lực 01/01/2006",
+        "D": "Ngày 30/12/2006 và có hiệu lực 01/07/2007"
+      },
+      "answer": "A",
+      "explainAnswer": "Luật Công nghệ thông tin số 67/2006/QH11 được Quốc hội thông qua ngày 29/06/2006 và chính thức có hiệu lực thi hành từ ngày 01/01/2007.",
+      "image": null
+    },
+    {
+      "id": 50,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Tùy chọn nào là mô tả tốt nhất về phần mềm mã nguồn mở?",
+      "options": {
+        "A": "Phần mềm phải mua bản quyền và không được sửa đổi",
+        "B": "Phần mềm với mã nguồn có sẵn và có thể được sửa đổi bởi bất kỳ ai",
+        "C": "Phần mềm chỉ chạy trên Windows",
+        "D": "Phần mềm chỉ dành cho doanh nghiệp lớn"
+      },
+      "answer": "B",
+      "explainAnswer": "Đặc điểm cốt lõi của phần mềm mã nguồn mở là mã nguồn được công khai, cho phép bất kỳ ai cũng có thể xem, sửa đổi, cải tiến và phân phối lại theo giấy phép tương ứng.",
+      "image": null
+    },
+    {
+      "id": 51,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Quy trình tắt máy tính nào sau đây đảm bảo an toàn cho chương trình và dữ liệu?",
+      "options": {
+        "A": "Rút nguồn điện đột ngột",
+        "B": "Ghi dữ liệu vào đĩa, đóng các file chương trình, chọn nút Start/Shut down",
+        "C": "Nhấn giữ nút nguồn 10 giây",
+        "D": "Đóng nắp laptop"
+      },
+      "answer": "B",
+      "explainAnswer": "Cách tắt máy an toàn là lưu toàn bộ dữ liệu đang làm việc, đóng các chương trình, sau đó sử dụng lệnh Shut down từ menu Start. Việc rút điện đột ngột có thể làm hỏng dữ liệu hoặc hệ thống.",
+      "image": null
+    },
+    {
+      "id": 52,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Trong hệ điều hành Windows 7 khi người dùng muốn rời khỏi máy tính có thể dùng cách nào sau đây để khóa máy tính tạm thời?",
+      "options": {
+        "A": "Bấm Ctrl + Alt + Del, chọn Lock this computer",
+        "B": "Bấm Alt + F4",
+        "C": "Bấm Ctrl + Shift + Esc",
+        "D": "Bấm Windows + D"
+      },
+      "answer": "A",
+      "explainAnswer": "Tổ hợp Ctrl + Alt + Del mở màn hình bảo mật, từ đó người dùng có thể chọn Lock this computer để khóa máy mà không cần đăng xuất, bảo vệ dữ liệu khi tạm thời rời đi.",
+      "image": null
+    },
+    {
+      "id": 53,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phím tắt nào dùng để đóng cửa sổ hiện hành?",
+      "options": {
+        "A": "Ctrl + W",
+        "B": "Alt + F4",
+        "C": "Ctrl + F4",
+        "D": "Shift + F4"
+      },
+      "answer": "B",
+      "explainAnswer": "Alt + F4 là phím tắt chuẩn trong Windows để đóng cửa sổ đang được kích hoạt. Nếu đang ở màn hình Desktop, tổ hợp này sẽ mở hộp thoại Shut down.",
+      "image": null
+    },
+    {
+      "id": 54,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phím tắt để cắt một đối tượng vào clipboard là gì?",
+      "options": {
+        "A": "Ctrl + C",
+        "B": "Ctrl + X",
+        "C": "Ctrl + V",
+        "D": "Ctrl + Z"
+      },
+      "answer": "B",
+      "explainAnswer": "Ctrl + X thực hiện lệnh Cut – cắt đối tượng đang chọn và đưa vào bộ nhớ tạm (clipboard). Sau đó có thể dán (Ctrl + V) sang vị trí khác.",
+      "image": null
+    },
+    {
+      "id": 55,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phím tắt được sử dụng để hiển thị thực đơn Start?",
+      "options": {
+        "A": "Ctrl + Esc",
+        "B": "Alt + Esc",
+        "C": "Shift + Esc",
+        "D": "Windows + Esc"
+      },
+      "answer": "A",
+      "explainAnswer": "Ctrl + Esc mở menu Start (tương đương nhấn phím Windows). Đây là phím tắt hữu ích khi phím Windows trên bàn phím bị hỏng.",
+      "image": null
+    },
+    {
+      "id": 56,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phím tắt nào để chuyển đổi giữa các cửa sổ trong Windows 7?",
+      "options": {
+        "A": "Alt + Tab",
+        "B": "Ctrl + Tab",
+        "C": "Shift + Tab",
+        "D": "Windows + Tab"
+      },
+      "answer": "A",
+      "explainAnswer": "Alt + Tab cho phép chuyển nhanh giữa các cửa sổ đang mở. Giữ Alt và nhấn Tab nhiều lần để chọn cửa sổ mong muốn.",
+      "image": null
+    },
+    {
+      "id": 57,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Tổ hợp phím Ctrl + C có chức năng gì?",
+      "options": {
+        "A": "Cắt văn bản",
+        "B": "Sao chép văn bản được chọn và đưa vào bộ nhớ đệm",
+        "C": "Dán văn bản",
+        "D": "Hoàn tác thao tác"
+      },
+      "answer": "B",
+      "explainAnswer": "Ctrl + C thực hiện lệnh Copy – sao chép nội dung đang chọn vào clipboard mà không xóa nội dung gốc. Sau đó dùng Ctrl + V để dán.",
+      "image": null
+    },
+    {
+      "id": 58,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Trong PowerPoint cách nào để xóa bỏ một slide đã chọn?",
+      "options": {
+        "A": "Nhấn Delete trên bàn phím",
+        "B": "Kích chuột phải tại slide đã chọn / Delete Slide",
+        "C": "Cả A và B đều đúng",
+        "D": "Chỉ dùng lệnh Cut"
+      },
+      "answer": "C",
+      "explainAnswer": "Người dùng có thể nhấn phím Delete hoặc chuột phải vào slide và chọn Delete Slide để xóa slide đang được chọn trong PowerPoint.",
+      "image": null
+    },
+    {
+      "id": 59,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Để thay đổi kiểu hiển thị ngày tháng năm trong Windows được thiết lập ở đâu?",
+      "options": {
+        "A": "Control Panel / Region and Language",
+        "B": "Control Panel / Date and Time",
+        "C": "Control Panel / Display",
+        "D": "Control Panel / Sound"
+      },
+      "answer": "A",
+      "explainAnswer": "Trong Control Panel → Region and Language (hoặc Region), người dùng có thể thay đổi định dạng ngày, tháng, năm, giờ theo chuẩn quốc gia mong muốn.",
+      "image": null
+    },
+    {
+      "id": 60,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Trong Control Panel để gỡ bỏ một phần mềm ta chọn?",
+      "options": {
+        "A": "Programs and Features",
+        "B": "System",
+        "C": "Devices and Printers",
+        "D": "Network and Sharing Center"
+      },
+      "answer": "A",
+      "explainAnswer": "Programs and Features (Chương trình và Tính năng) là nơi liệt kê tất cả phần mềm đã cài đặt, cho phép người dùng gỡ cài đặt hoặc thay đổi các chương trình.",
+      "image": null
+    },
+    {
+      "id": 61,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Chức năng của Control Panel là?",
+      "options": {
+        "A": "Chỉ để thay đổi hình nền",
+        "B": "Thiết lập cấu hình Windows như thay đổi ngày giờ, cài đặt thêm thiết bị, gỡ bỏ các chương trình ứng dụng",
+        "C": "Chỉ để quản lý mạng",
+        "D": "Chỉ để cài driver"
+      },
+      "answer": "B",
+      "explainAnswer": "Control Panel là trung tâm điều khiển cho phép người dùng cấu hình hầu hết các thiết lập của Windows: ngày giờ, ngôn ngữ, thiết bị, phần mềm, bảo mật, mạng…",
+      "image": null
+    },
+    {
+      "id": 62,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Ứng dụng có thể đọc các file có phần mở rộng là PPT, PPTX là?",
+      "options": {
+        "A": "Microsoft Word",
+        "B": "Microsoft Excel",
+        "C": "Microsoft Office PowerPoint",
+        "D": "Notepad"
+      },
+      "answer": "C",
+      "explainAnswer": "File .ppt và .pptx là định dạng của Microsoft PowerPoint. Chỉ có PowerPoint (hoặc phần mềm tương thích) mới mở và chỉnh sửa được đầy đủ các tính năng của file này.",
+      "image": null
+    },
+    {
+      "id": 63,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Trong MS Windows, biểu tượng của thư mục thường có màu gì?",
+      "options": {
+        "A": "Xanh dương",
+        "B": "Đỏ",
+        "C": "Vàng",
+        "D": "Xanh lá"
+      },
+      "answer": "C",
+      "explainAnswer": "Theo mặc định, biểu tượng thư mục (folder) trong Windows có màu vàng, giúp người dùng dễ phân biệt với các loại file khác.",
+      "image": null
+    },
+    {
+      "id": 64,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phát biểu nào sau đây là đúng?",
+      "options": {
+        "A": "Tệp có thể chứa thư mục khác bên trong",
+        "B": "Tệp là đơn vị lưu trữ thông tin nhỏ nhất, không thể chứa tệp hay thư mục khác",
+        "C": "Thư mục không thể chứa tệp",
+        "D": "Tệp và thư mục là như nhau"
+      },
+      "answer": "B",
+      "explainAnswer": "Tệp (file) là đơn vị lưu trữ nhỏ nhất. Thư mục (folder) có thể chứa nhiều tệp và thư mục con, nhưng bản thân một tệp không thể chứa tệp hay thư mục khác.",
+      "image": null
+    },
+    {
+      "id": 65,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phần mềm Text Document dùng để tạo tệp có phần mở rộng là?",
+      "options": {
+        "A": ".doc",
+        "B": ".txt",
+        "C": ".xls",
+        "D": ".ppt"
+      },
+      "answer": "B",
+      "explainAnswer": "Text Document (Notepad) tạo ra các tệp văn bản thuần túy với phần mở rộng .txt, không chứa định dạng phức tạp như Word.",
+      "image": null
+    },
+    {
+      "id": 66,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Trong Windows, muốn tạo một thư mục mới trên ổ đĩa D ta thực hiện?",
+      "options": {
+        "A": "Chuột phải chọn New → Folder",
+        "B": "Nhấn Ctrl + N",
+        "C": "Vào Control Panel",
+        "D": "Nhấn Alt + F4"
+      },
+      "answer": "A",
+      "explainAnswer": "Cách nhanh nhất để tạo thư mục mới là chuột phải vào vùng trống trong thư mục hoặc ổ đĩa, chọn New → Folder, sau đó đặt tên.",
+      "image": null
+    },
+    {
+      "id": 67,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Tên tệp trong hệ điều hành Windows gồm mấy phần?",
+      "options": {
+        "A": "1 phần",
+        "B": "2 phần",
+        "C": "3 phần",
+        "D": "4 phần"
+      },
+      "answer": "B",
+      "explainAnswer": "Tên tệp trong Windows gồm hai phần: tên chính và phần mở rộng (extension), được ngăn cách bởi dấu chấm (ví dụ: baocao.docx).",
+      "image": null
+    },
+    {
+      "id": 68,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Tệp hoặc thư mục có thuộc tính chỉ đọc là thuộc tính nào?",
+      "options": {
+        "A": "Hidden",
+        "B": "Read Only",
+        "C": "Archive",
+        "D": "System"
+      },
+      "answer": "B",
+      "explainAnswer": "Thuộc tính Read Only (Chỉ đọc) ngăn không cho người dùng chỉnh sửa hoặc xóa nội dung của tệp/thư mục, giúp bảo vệ dữ liệu quan trọng.",
+      "image": null
+    },
+    {
+      "id": 69,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Trong hệ điều hành Windows muốn sao chép các tệp đang chọn vào bộ nhớ đệm ta thực hiện?",
+      "options": {
+        "A": "Nhấn tổ hợp Ctrl + C hoặc nhấp chuột phải chọn Copy",
+        "B": "Nhấn Ctrl + X",
+        "C": "Nhấn Ctrl + V",
+        "D": "Nhấn Delete"
+      },
+      "answer": "A",
+      "explainAnswer": "Ctrl + C hoặc chuột phải → Copy sẽ đưa bản sao của các tệp đang chọn vào clipboard, sẵn sàng để dán sang vị trí khác.",
+      "image": null
+    },
+    {
+      "id": 70,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Trong các mô tả sau, nơi lưu trữ nào chứa các tệp tin và thư mục trước khi bị xóa hoàn toàn?",
+      "options": {
+        "A": "Documents",
+        "B": "Recycle Bin",
+        "C": "Downloads",
+        "D": "Desktop"
+      },
+      "answer": "B",
+      "explainAnswer": "Recycle Bin (Thùng rác) là nơi tạm chứa các tệp/thư mục đã xóa. Người dùng có thể khôi phục hoặc xóa vĩnh viễn từ đây.",
+      "image": null
+    },
+    {
+      "id": 71,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phát biểu nào sau đây là sai?",
+      "options": {
+        "A": "Có thể lấy lại dữ liệu sau khi xóa bằng nhấn tổ hợp phím Shift + Delete",
+        "B": "Shift + Delete xóa vĩnh viễn, không đưa vào Recycle Bin",
+        "C": "Delete thông thường đưa tệp vào Recycle Bin",
+        "D": "Có thể khôi phục từ Recycle Bin"
+      },
+      "answer": "A",
+      "explainAnswer": "Phát biểu A sai vì Shift + Delete xóa vĩnh viễn, không còn cơ hội khôi phục dễ dàng từ Recycle Bin. Đây là thao tác cần thận trọng.",
+      "image": null
+    },
+    {
+      "id": 72,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Muốn xóa vĩnh viễn thư mục ra khỏi máy tính ta thao tác thế nào?",
+      "options": {
+        "A": "Chọn thư mục và nhấn Delete",
+        "B": "Chọn thư mục và nhấn tổ hợp phím Shift + Delete",
+        "C": "Chỉ cần đưa vào Recycle Bin",
+        "D": "Đổi tên thư mục"
+      },
+      "answer": "B",
+      "explainAnswer": "Tổ hợp Shift + Delete sẽ xóa đối tượng vĩnh viễn, bỏ qua Recycle Bin. Cần xác nhận trước khi thực hiện vì dữ liệu khó khôi phục.",
+      "image": null
+    },
+    {
+      "id": 73,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Khi tìm kiếm tập tin thư mục, ký tự * dùng để làm gì?",
+      "options": {
+        "A": "Thay thế cho một ký tự duy nhất",
+        "B": "Thay thế cho một số ký tự (chuỗi ký tự bất kỳ)",
+        "C": "Tìm kiếm chính xác",
+        "D": "Loại trừ kết quả"
+      },
+      "answer": "B",
+      "explainAnswer": "Ký tự đại diện * (wildcard) thay thế cho bất kỳ chuỗi ký tự nào (kể cả rỗng). Ví dụ: *.docx sẽ tìm tất cả file có phần mở rộng .docx.",
+      "image": null
+    },
+    {
+      "id": 74,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Lựa chọn nào chỉ ra tiện ích của tệp tin nén?",
+      "options": {
+        "A": "Tệp tin nén có kích thước nhỏ hơn kích thước của tệp tin ban đầu và thông tin ban đầu không bị mất",
+        "B": "Tệp tin nén luôn lớn hơn tệp gốc",
+        "C": "Nén làm mất dữ liệu vĩnh viễn",
+        "D": "Tệp nén không thể giải nén"
+      },
+      "answer": "A",
+      "explainAnswer": "Nén dữ liệu giúp giảm dung lượng lưu trữ và truyền tải mà vẫn giữ nguyên thông tin gốc (nén không mất dữ liệu – lossless). Khi giải nén sẽ khôi phục đầy đủ.",
+      "image": null
+    },
+    {
+      "id": 75,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phông chữ quy định trong TT03/2014/TT-BTTTT khi soạn thảo văn bản là?",
+      "options": {
+        "A": "Arial",
+        "B": "Times New Roman",
+        "C": "Tahoma",
+        "D": "Calibri"
+      },
+      "answer": "B",
+      "explainAnswer": "Theo Thông tư 03/2014/TT-BTTTT của Bộ Thông tin và Truyền thông, phông chữ quy định để soạn thảo văn bản hành chính là Times New Roman.",
+      "image": null
+    },
+    {
+      "id": 76,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phát biểu nào sau đây là sai?",
+      "options": {
+        "A": "Internet là mạng toàn cầu",
+        "B": "Internet là dịch vụ do công ty Internet tại Mỹ điều hành và thu phí",
+        "C": "Internet kết nối hàng triệu mạng máy tính",
+        "D": "Internet cung cấp nhiều dịch vụ như web, email, chat"
+      },
+      "answer": "B",
+      "explainAnswer": "Phát biểu B sai. Internet không thuộc sở hữu hay điều hành bởi một công ty nào tại Mỹ. Đây là mạng lưới toàn cầu do nhiều tổ chức và quốc gia cùng duy trì.",
+      "image": null
+    },
+    {
+      "id": 77,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "WWW là viết tắt của?",
+      "options": {
+        "A": "World Wide Web",
+        "B": "World Web Wide",
+        "C": "Wide World Web",
+        "D": "Web World Wide"
+      },
+      "answer": "A",
+      "explainAnswer": "WWW là World Wide Web – hệ thống thông tin toàn cầu dựa trên siêu văn bản, cho phép người dùng truy cập các trang web qua trình duyệt.",
+      "image": null
+    },
+    {
+      "id": 78,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "\"Link\" trên trang web có nghĩa là gì?",
+      "options": {
+        "A": "Hình ảnh",
+        "B": "Liên kết đến một trang hoặc tài nguyên khác",
+        "C": "Video",
+        "D": "Âm thanh"
+      },
+      "answer": "B",
+      "explainAnswer": "Link (hyperlink) là liên kết siêu văn bản cho phép người dùng nhấp vào để chuyển đến trang web, tài liệu hoặc vị trí khác trên cùng trang.",
+      "image": null
+    },
+    {
+      "id": 79,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Thuật ngữ nào dùng để chỉ các trang tin tức trên mạng?",
+      "options": {
+        "A": "Website",
+        "B": "Browser",
+        "C": "Server",
+        "D": "Protocol"
+      },
+      "answer": "A",
+      "explainAnswer": "Website là tập hợp các trang web liên kết với nhau, thường dùng để cung cấp thông tin, tin tức, dịch vụ trên Internet.",
+      "image": null
+    },
+    {
+      "id": 80,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Mozilla Firefox là gì?",
+      "options": {
+        "A": "Hệ điều hành",
+        "B": "Trình duyệt web",
+        "C": "Phần mềm diệt virus",
+        "D": "Phần mềm văn phòng"
+      },
+      "answer": "B",
+      "explainAnswer": "Mozilla Firefox là một trình duyệt web mã nguồn mở phổ biến, cạnh tranh với Chrome, Edge, Safari…",
+      "image": null
+    },
+    {
+      "id": 81,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Muốn xem được trang web, máy tính của bạn cần phải cài đặt?",
+      "options": {
+        "A": "Phần mềm diệt virus",
+        "B": "Một chương trình duyệt web",
+        "C": "Microsoft Office",
+        "D": "Phần mềm nén"
+      },
+      "answer": "B",
+      "explainAnswer": "Trình duyệt web (browser) là phần mềm bắt buộc để truy cập và hiển thị nội dung các trang web trên Internet.",
+      "image": null
+    },
+    {
+      "id": 82,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phần mềm nào sau đây không phải là trình duyệt Web?",
+      "options": {
+        "A": "Google Chrome",
+        "B": "Mozilla Firefox",
+        "C": "FireBug",
+        "D": "Microsoft Edge"
+      },
+      "answer": "C",
+      "explainAnswer": "FireBug là tiện ích (extension) dùng để gỡ lỗi và kiểm tra mã nguồn trang web, không phải trình duyệt độc lập.",
+      "image": null
+    },
+    {
+      "id": 83,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Tường lửa là gì?",
+      "options": {
+        "A": "Phần mềm soạn thảo",
+        "B": "Thiết bị phần cứng và/hoặc phần mềm chống lại sự xâm nhập trái phép từ Internet",
+        "C": "Phần mềm diệt virus",
+        "D": "Trình duyệt web"
+      },
+      "answer": "B",
+      "explainAnswer": "Tường lửa (firewall) kiểm soát luồng dữ liệu vào/ra mạng, ngăn chặn các kết nối trái phép từ bên ngoài, bảo vệ máy tính và mạng nội bộ.",
+      "image": null
+    },
+    {
+      "id": 84,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Các thành phần của tên miền được phân cách bằng ký tự gì?",
+      "options": {
+        "A": "Dấu phẩy",
+        "B": "Dấu chấm",
+        "C": "Dấu gạch ngang",
+        "D": "Dấu gạch chéo"
+      },
+      "answer": "B",
+      "explainAnswer": "Tên miền được phân cấp bằng dấu chấm, ví dụ: www.google.com.vn trong đó .vn là tên miền cấp cao nhất, .com là cấp hai…",
+      "image": null
+    },
+    {
+      "id": 85,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Nút nào trên thanh công cụ của trình duyệt Web cho phép tải lại một trang Web?",
+      "options": {
+        "A": "Back",
+        "B": "Forward",
+        "C": "Refresh / Reload",
+        "D": "Stop"
+      },
+      "answer": "C",
+      "explainAnswer": "Nút Refresh (hoặc Reload) yêu cầu trình duyệt tải lại nội dung mới nhất của trang web hiện tại từ máy chủ.",
+      "image": null
+    },
+    {
+      "id": 86,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Nút Stop trên cửa sổ trình duyệt dùng để làm gì?",
+      "options": {
+        "A": "Tải lại trang",
+        "B": "Ngừng tải nội dung trang Web",
+        "C": "Quay lại trang trước",
+        "D": "Đi tới trang sau"
+      },
+      "answer": "B",
+      "explainAnswer": "Nút Stop cho phép người dùng dừng quá trình tải trang web đang diễn ra, hữu ích khi trang tải quá lâu hoặc không cần thiết.",
+      "image": null
+    },
+    {
+      "id": 87,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Để xem lại lịch sử duyệt Web ta dùng tổ hợp phím trên trình duyệt Internet Explorer?",
+      "options": {
+        "A": "Ctrl + H",
+        "B": "Ctrl + J",
+        "C": "Ctrl + D",
+        "D": "Ctrl + T"
+      },
+      "answer": "A",
+      "explainAnswer": "Ctrl + H mở khung Lịch sử (History) trong hầu hết trình duyệt, cho phép xem lại các trang đã truy cập trước đó.",
+      "image": null
+    },
+    {
+      "id": 88,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Nút Forward trên thanh công cụ của trình duyệt web có tác dụng gì?",
+      "options": {
+        "A": "Quay lại trang trước",
+        "B": "Đi đến trang Web tiếp theo",
+        "C": "Tải lại trang",
+        "D": "Dừng tải trang"
+      },
+      "answer": "B",
+      "explainAnswer": "Nút Forward (Tiến) cho phép chuyển đến trang kế tiếp trong lịch sử duyệt nếu người dùng đã từng nhấn Back trước đó.",
+      "image": null
+    },
+    {
+      "id": 89,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Nút Back trên thanh công cụ của trình duyệt Web có tác dụng gì?",
+      "options": {
+        "A": "Đi đến trang tiếp theo",
+        "B": "Quay trở lại trang Web trước đó",
+        "C": "Tải lại trang",
+        "D": "Mở tab mới"
+      },
+      "answer": "B",
+      "explainAnswer": "Nút Back (Lùi) đưa người dùng trở về trang web đã xem ngay trước trang hiện tại trong lịch sử duyệt.",
+      "image": null
+    },
+    {
+      "id": 90,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Đâu là tùy chọn cho phép lưu trang Web mà không có ảnh?",
+      "options": {
+        "A": "Webpage, complete",
+        "B": "Web Archive",
+        "C": "Webpage, HTML only",
+        "D": "Text File"
+      },
+      "answer": "C",
+      "explainAnswer": "Khi lưu trang web, tùy chọn “Webpage, HTML only” chỉ lưu mã HTML, bỏ qua hình ảnh và các tài nguyên khác, giúp file nhẹ hơn.",
+      "image": null
+    },
+    {
+      "id": 91,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Sau khi hoàn thành một biểu mẫu trên Web cần thao tác thế nào để gửi?",
+      "options": {
+        "A": "Chọn Submit / Gửi",
+        "B": "Đóng trình duyệt",
+        "C": "Nhấn Back",
+        "D": "Làm mới trang"
+      },
+      "answer": "A",
+      "explainAnswer": "Nút Submit (hoặc Gửi, Đăng ký…) trên biểu mẫu web sẽ gửi dữ liệu người dùng đã nhập lên máy chủ để xử lý.",
+      "image": null
+    },
+    {
+      "id": 92,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Khách nước ngoài muốn biết thông tin về các khách sạn tại Hà Nội, dịch vụ nào dưới đây được sử dụng?",
+      "options": {
+        "A": "Chỉ hỏi người thân",
+        "B": "Trang web hỗ trợ tìm kiếm thông tin Internet miễn phí như Google",
+        "C": "Chỉ dùng thư điện tử",
+        "D": "Chỉ xem ti vi"
+      },
+      "answer": "B",
+      "explainAnswer": "Công cụ tìm kiếm như Google cho phép tìm nhanh thông tin về khách sạn, địa điểm, đánh giá… một cách miễn phí và tiện lợi.",
+      "image": null
+    },
+    {
+      "id": 93,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Trang tìm kiếm Google có thể cho ra kết quả tìm kiếm theo?",
+      "options": {
+        "A": "Chỉ văn bản",
+        "B": "Hình ảnh, video, website",
+        "C": "Chỉ hình ảnh",
+        "D": "Chỉ video"
+      },
+      "answer": "B",
+      "explainAnswer": "Google hỗ trợ tìm kiếm đa dạng: trang web, hình ảnh, video, tin tức, bản đồ… giúp người dùng lọc kết quả theo nhu cầu.",
+      "image": null
+    },
+    {
+      "id": 94,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Trong trình duyệt Internet Explorer, để lưu lại một bức ảnh về máy tính, ta thực hiện thao tác?",
+      "options": {
+        "A": "Nhấn chuột phải vào ảnh, chọn Save picture as",
+        "B": "Nhấn Ctrl + S",
+        "C": "Kéo thả ảnh ra Desktop",
+        "D": "Cả A và C đều đúng"
+      },
+      "answer": "A",
+      "explainAnswer": "Cách chuẩn và an toàn nhất là chuột phải vào ảnh → Save picture as… để chọn vị trí và tên file lưu trên máy.",
+      "image": null
+    },
+    {
+      "id": 95,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Dịch vụ thư điện tử được dùng để làm gì?",
+      "options": {
+        "A": "Chỉ gửi file lớn",
+        "B": "Trao đổi thư thông qua môi trường Internet",
+        "C": "Chỉ chat trực tuyến",
+        "D": "Chỉ xem video"
+      },
+      "answer": "B",
+      "explainAnswer": "Thư điện tử (email) cho phép gửi và nhận thư, tài liệu, hình ảnh… qua mạng Internet một cách nhanh chóng và tiện lợi.",
+      "image": null
+    },
+    {
+      "id": 96,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Bộ nhớ RAM và ROM là bộ nhớ gì?",
+      "options": {
+        "A": "Random access memory và Receive memory",
+        "B": "Primary memory (bộ nhớ chính)",
+        "C": "Secondary memory",
+        "D": "Cache memory"
+      },
+      "answer": "B",
+      "explainAnswer": "Cả RAM và ROM đều thuộc bộ nhớ chính (primary memory) của máy tính, gắn trực tiếp trên mainboard và phục vụ CPU xử lý dữ liệu.",
+      "image": null
+    },
+    {
+      "id": 97,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Bộ nhớ truy nhập trực tiếp RAM được viết tắt từ cụm từ nào sau đây?",
+      "options": {
+        "A": "Read Access Memory",
+        "B": "Random Access Memory",
+        "C": "Rewrite Access Memory",
+        "D": "Không đáp án nào đúng"
+      },
+      "answer": "B",
+      "explainAnswer": "RAM là Random Access Memory – bộ nhớ truy cập ngẫu nhiên, cho phép đọc/ghi dữ liệu tại vị trí bất kỳ với tốc độ cao.",
+      "image": null
+    },
+    {
+      "id": 98,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Các thành phần tạo nên mạng máy tính là gì? (Chọn các phương án đúng)",
+      "options": {
+        "A": "Các thiết bị mạng như Hub, Switch, Router",
+        "B": "Giao thức mạng",
+        "C": "Các máy tính, hệ thống đường truyền vật lý",
+        "D": "Tất cả A, B, C"
+      },
+      "answer": "D",
+      "explainAnswer": "Một mạng máy tính hoàn chỉnh cần có: các máy tính (nút mạng), đường truyền vật lý, thiết bị mạng (switch, router…) và giao thức để các thiết bị hiểu nhau.",
+      "image": null
+    },
+    {
+      "id": 99,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Các thiết bị: màn hình, loa, máy in thuộc khối chức năng nào?",
+      "options": {
+        "A": "Thiết bị xuất",
+        "B": "Thiết bị nhập",
+        "C": "Khối xử lý",
+        "D": "Bộ nhớ"
+      },
+      "answer": "A",
+      "explainAnswer": "Màn hình hiển thị hình ảnh, loa phát âm thanh, máy in tạo bản cứng – đều là thiết bị xuất dữ liệu ra bên ngoài.",
+      "image": null
+    },
+    {
+      "id": 100,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Các thiết bị nào thông dụng nhất hiện nay dùng để cung cấp dữ liệu cho máy xử lý?",
+      "options": {
+        "A": "Bàn phím (Keyboard), Chuột (Mouse) và Máy quét ảnh (Scanner)",
+        "B": "Máy quét ảnh (Scanner)",
+        "C": "Bàn phím, chuột, máy in",
+        "D": "Máy quét ảnh, chuột"
+      },
+      "answer": "A",
+      "explainAnswer": "Ba thiết bị nhập phổ biến nhất hiện nay là bàn phím, chuột và máy quét (scanner), dùng để đưa dữ liệu từ người dùng hoặc tài liệu giấy vào máy tính.",
+      "image": null
+    },
+    {
+      "id": 101,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Có thể hồi phục (restore) các tệp tin bị xóa sau khi nhấn phím Delete bằng cách nào?",
+      "options": {
+        "A": "Mở Documents",
+        "B": "Mở Recycle Bin → Nháy chuột phải vào tệp → Restore",
+        "C": "Mở Recycle Bin → Cut",
+        "D": "Mở Internet Explorer"
+      },
+      "answer": "B",
+      "explainAnswer": "Tệp bị xóa bằng Delete sẽ được đưa vào Recycle Bin. Từ đây người dùng có thể chuột phải và chọn Restore để khôi phục về vị trí cũ.",
+      "image": null
+    },
+    {
+      "id": 102,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Công dụng của phím Print Screen là gì?",
+      "options": {
+        "A": "In màn hình hiện hành ra máy in",
+        "B": "Chụp màn hình hiện hành",
+        "C": "In văn bản hiện hành ra máy in",
+        "D": "Không có công dụng gì khi sử dụng một mình"
+      },
+      "answer": "B",
+      "explainAnswer": "Phím Print Screen (PrtSc) chụp toàn bộ màn hình hiện tại và đưa vào clipboard. Người dùng có thể dán (Ctrl + V) vào phần mềm chỉnh sửa ảnh hoặc Word để lưu lại.",
+      "image": null
+    },
+    {
+      "id": 103,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Danh sách các mục chọn trong thực đơn (menu) gọi là gì?",
+      "options": {
+        "A": "Menu pad",
+        "B": "Menu bar",
+        "C": "Menu options",
+        "D": "Tất cả đều sai"
+      },
+      "answer": "B",
+      "explainAnswer": "Menu bar là thanh thực đơn nằm ngang trên cửa sổ chương trình, chứa các mục như File, Edit, View… Khi nhấp vào sẽ hiện danh sách lệnh.",
+      "image": null
+    },
+    {
+      "id": 104,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Dữ liệu trong thiết bị nhớ nào sau đây sẽ mất khi mất điện?",
+      "options": {
+        "A": "ROM",
+        "B": "RAM",
+        "C": "Đĩa mềm",
+        "D": "Đĩa cứng"
+      },
+      "answer": "B",
+      "explainAnswer": "RAM là bộ nhớ volatile – dữ liệu chỉ tồn tại khi còn điện. Khi mất điện, toàn bộ nội dung trong RAM sẽ bị xóa sạch.",
+      "image": null
+    },
+    {
+      "id": 105,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Đặc điểm nào sau đây không phải là tính chất của virus máy tính?",
+      "options": {
+        "A": "Virus máy tính có khả năng lây nhiễm qua nguồn điện",
+        "B": "Có khả năng lây lan và tự nhân bản",
+        "C": "Có thể gây nhiễu chương trình hệ thống hoặc phá hỏng dữ liệu",
+        "D": "Thường có cơ chế chống phát hiện"
+      },
+      "answer": "A",
+      "explainAnswer": "Virus không thể lây nhiễm qua nguồn điện. Chúng lây lan qua file, email, USB, mạng… chứ không phải qua dòng điện.",
+      "image": null
+    },
+    {
+      "id": 106,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Hệ thống nhớ của máy tính bao gồm những thành phần nào sau đây?",
+      "options": {
+        "A": "Cache, Bộ nhớ ngoài",
+        "B": "Đĩa quang, Bộ nhớ trong",
+        "C": "Bộ nhớ ngoài, ROM",
+        "D": "Bộ nhớ trong, Bộ nhớ ngoài"
+      },
+      "answer": "D",
+      "explainAnswer": "Hệ thống nhớ máy tính gồm bộ nhớ trong (RAM, ROM, Cache) và bộ nhớ ngoài (ổ cứng, USB, đĩa quang, thẻ nhớ…).",
+      "image": null
+    },
+    {
+      "id": 107,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Khái niệm hệ điều hành là gì?",
+      "options": {
+        "A": "Là một phần mềm chạy trên máy tính, dùng để điều hành, quản lý các thiết bị phần cứng và các tài nguyên phần mềm trên máy tính",
+        "B": "Nghiên cứu phương pháp, kỹ thuật xử lý thông tin bằng máy tính điện tử",
+        "C": "Nghiên cứu về công nghệ phần cứng và phần mềm",
+        "D": "Cung cấp và xử lý các phần cứng và phần mềm"
+      },
+      "answer": "A",
+      "explainAnswer": "Hệ điều hành là phần mềm hệ thống quan trọng nhất, đóng vai trò trung gian giữa người dùng, phần mềm ứng dụng và phần cứng máy tính.",
+      "image": null
+    },
+    {
+      "id": 108,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Một hệ điều hành cho phép tạo nhiều tài khoản người dùng đăng nhập vào hệ thống, được gọi là gì?",
+      "options": {
+        "A": "Hệ điều hành đa xử lý",
+        "B": "Hệ điều hành đa người dùng",
+        "C": "Hệ điều hành đa nhiệm",
+        "D": "Hệ điều hành đa kết nối"
+      },
+      "answer": "B",
+      "explainAnswer": "Hệ điều hành đa người dùng (multi-user) cho phép nhiều tài khoản người dùng khác nhau đăng nhập và sử dụng hệ thống, mỗi người có không gian làm việc riêng.",
+      "image": null
+    },
+    {
+      "id": 109,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Muốn mở một tệp tin, thư mục hay chương trình trong Windows theo mặc định thì bạn KHÔNG sử dụng được cách làm nào sau đây?",
+      "options": {
+        "A": "Nháy kép chuột trái",
+        "B": "Nháy chuột phải và chọn lệnh Open",
+        "C": "Nháy chuột trái để chọn và nhấn phím Enter",
+        "D": "Nháy kép chuột phải"
+      },
+      "answer": "D",
+      "explainAnswer": "Nháy kép chuột phải không phải là thao tác chuẩn để mở đối tượng trong Windows. Các cách còn lại đều hoạt động bình thường.",
+      "image": null
+    },
+    {
+      "id": 110,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Những thiết bị nào sau đây là thiết bị xuất của máy tính?",
+      "options": {
+        "A": "Bàn phím, màn hình, loa",
+        "B": "Bàn phím, màn hình, chuột",
+        "C": "Màn hình, máy in",
+        "D": "Chuột, màn hình, CPU"
+      },
+      "answer": "C",
+      "explainAnswer": "Màn hình và máy in là hai thiết bị xuất điển hình. Bàn phím và chuột là thiết bị nhập, CPU là khối xử lý.",
+      "image": null
+    },
+    {
+      "id": 111,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Thành phần giao diện đồ họa nào trong Windows cho phép người dùng thiết lập hệ thống bằng cách thêm phần cứng mới, thêm hoặc gỡ bỏ chương trình và chỉnh sửa tài khoản người dùng?",
+      "options": {
+        "A": "Bảng điều khiển (Control Panel)",
+        "B": "Phần mềm người dùng",
+        "C": "Windows Explorer",
+        "D": "Task Manager"
+      },
+      "answer": "A",
+      "explainAnswer": "Control Panel là nơi tập trung các công cụ cấu hình hệ thống: thêm/gỡ phần mềm, quản lý thiết bị, tài khoản người dùng, ngày giờ, âm thanh…",
+      "image": null
+    },
+    {
+      "id": 112,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Thiết bị nào sau đây là thiết bị nhập thông tin vào máy tính?",
+      "options": {
+        "A": "Máy in",
+        "B": "Máy quét và máy in",
+        "C": "Máy quét",
+        "D": "Loa"
+      },
+      "answer": "C",
+      "explainAnswer": "Máy quét (scanner) đưa hình ảnh hoặc tài liệu giấy vào máy tính dưới dạng số, do đó là thiết bị nhập. Máy in và loa là thiết bị xuất.",
+      "image": null
+    },
+    {
+      "id": 113,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Trình tự nào sau đây là trình tự xử lý thông tin của máy tính điện tử?",
+      "options": {
+        "A": "Nhập thông tin → Xử lý thông tin → Xuất thông tin",
+        "B": "Màn hình → Máy in → CPU",
+        "C": "Đĩa cứng → Màn hình → CPU",
+        "D": "Màn hình → CPU → Đĩa cứng"
+      },
+      "answer": "A",
+      "explainAnswer": "Quy trình chuẩn của máy tính: nhận dữ liệu từ thiết bị nhập → CPU xử lý → đưa kết quả ra thiết bị xuất hoặc lưu trữ.",
+      "image": null
+    },
+    {
+      "id": 114,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Trong hệ thống máy tính, 1 Kbyte bằng bao nhiêu byte?",
+      "options": {
+        "A": "1000 bytes",
+        "B": "1024 bytes",
+        "C": "1036 bytes",
+        "D": "1012 bytes"
+      },
+      "answer": "B",
+      "explainAnswer": "1 Kilobyte (KB) trong máy tính bằng 2^10 = 1024 byte, theo quy ước nhị phân.",
+      "image": null
+    },
+    {
+      "id": 115,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Trong máy tính, thiết bị nào sau đây dùng để xử lý dữ liệu và hệ điều hành trên máy tính?",
+      "options": {
+        "A": "Đĩa cứng",
+        "B": "CPU",
+        "C": "RAM",
+        "D": "ROM"
+      },
+      "answer": "B",
+      "explainAnswer": "CPU (bộ xử lý trung tâm) thực hiện mọi phép tính và lệnh của hệ điều hành cũng như các chương trình ứng dụng.",
+      "image": null
+    },
+    {
+      "id": 116,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Về bộ nhớ RAM của máy tính, phát biểu nào sau đây là đúng?",
+      "options": {
+        "A": "Là bộ nhớ truy xuất ngẫu nhiên",
+        "B": "Là bộ nhớ chỉ xử lý thông tin",
+        "C": "Là bộ nhớ chỉ đọc",
+        "D": "Là bộ nhớ chỉ ghi"
+      },
+      "answer": "A",
+      "explainAnswer": "RAM là Random Access Memory – bộ nhớ truy xuất ngẫu nhiên, cho phép CPU đọc và ghi dữ liệu ở vị trí bất kỳ với tốc độ cao.",
+      "image": null
+    },
+    {
+      "id": 117,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Việc làm nào sau đây không phải là nguyên nhân có thể làm cho máy tính của bạn bị nhiễm virus và phần mềm độc hại qua Internet?",
+      "options": {
+        "A": "Mở các thư điện tử hoặc tin nhắn chứa liên kết dẫn đến website lạ",
+        "B": "Truy cập vào các website có cài đặt sẵn virus",
+        "C": "Bình luận trên trang cá nhân của một người bạn trên mạng xã hội Facebook mà máy tính cá nhân của họ bị nhiễm virus",
+        "D": "Tải các tệp tin tài liệu hoặc phần mềm từ Internet"
+      },
+      "answer": "C",
+      "explainAnswer": "Việc bình luận trên mạng xã hội của người khác không làm lây virus sang máy của bạn. Virus lây qua file đính kèm, liên kết độc hại, phần mềm tải về… chứ không qua hành động bình luận thông thường.",
+      "image": null
+    },
+    {
+      "id": 118,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Ý nghĩa cơ bản nhất của mạng máy tính là gì?",
+      "options": {
+        "A": "Phát triển ứng dụng trên máy tính",
+        "B": "Trao đổi và chia sẻ thông tin",
+        "C": "Nâng cao độ tin cậy của hệ thống máy tính",
+        "D": "Nâng cao chất lượng khai thác thông tin"
+      },
+      "answer": "B",
+      "explainAnswer": "Mục đích cốt lõi của mạng máy tính là cho phép các máy tính trao đổi và chia sẻ dữ liệu, tài nguyên với nhau một cách nhanh chóng và hiệu quả.",
+      "image": null
+    },
+    {
+      "id": 119,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Tên miền nào hợp lệ?",
+      "options": {
+        "A": "phenikaa,edu.vn",
+        "B": "phenikaa;edu;vn",
+        "C": "phenikaa.edu.vn",
+        "D": "phenikaa,edu;vn"
+      },
+      "answer": "C",
+      "explainAnswer": "Tên miền hợp lệ chỉ sử dụng chữ cái, số, dấu gạch ngang và được phân cấp bằng dấu chấm. Dấu phẩy hoặc dấu chấm phẩy không được phép.",
+      "image": null
+    },
+    {
+      "id": 120,
+      "chapter": "Tin học văn phòng",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Khi đặt mật khẩu cho Gmail của mình, nên đặt mật khẩu như thế nào để đảm bảo tính bảo mật?",
+      "options": {
+        "A": "Mật khẩu là ngày sinh của mình",
+        "B": "Mật khẩu là dãy số từ 0 đến 9 và chữ cái",
+        "C": "Mật khẩu có ít nhất 8 ký tự và có đủ các chữ thường, in hoa, số và các ký tự đặc biệt (~!@#$%^&*())",
+        "D": "Mật khẩu giống tên của địa chỉ thư"
+      },
+      "answer": "C",
+      "explainAnswer": "Mật khẩu mạnh cần đủ dài (tối thiểu 8 ký tự) và kết hợp nhiều loại ký tự: chữ hoa, chữ thường, số và ký tự đặc biệt để tăng độ khó khi bị tấn công dò mật khẩu.",
+      "image": null
+    }
+  ]
+}

@@ -58,7 +58,7 @@ export async function loadQuizQuestions({ subject, exam, setup, chapterId, toeic
   let questions: Question[]
   if (subject.id === "toeic" && toeicScope) {
     questions = await loadToeicQuestions(toeicScope, exam.id, setup, signal)
-  } else if (subject.id === "khoa-hoc-du-lieu-va-tri-tue-nhan-tao" || subject.id === "nhap-mon-khoa-hoc-du-lieu-va-tri-tue-nhan-tao" || subject.id === "danh-gia-va-kiem-dinh-chat-luong-phan-mem" || subject.id === "bao-mat-ung-dung-he-thong" || subject.id === "marketing-can-ban") {
+  } else if (subject.id === "khoa-hoc-du-lieu-va-tri-tue-nhan-tao" || subject.id === "nhap-mon-khoa-hoc-du-lieu-va-tri-tue-nhan-tao" || subject.id === "danh-gia-va-kiem-dinh-chat-luong-phan-mem" || subject.id === "bao-mat-ung-dung-he-thong" || subject.id === "marketing-can-ban" || subject.id === "kinh-te-vi-mo-macro" || subject.id === "tin-hoc-van-phong") {
     const { data, error } = await supabase.functions.invoke("get-paid-question-bank", { body: { examId: exam.id, subjectId: subject.id } })
     if (signal.aborted) throw new DOMException("Aborted", "AbortError")
     if (error) throw new QuestionBankDataError(exam.id, error.message)

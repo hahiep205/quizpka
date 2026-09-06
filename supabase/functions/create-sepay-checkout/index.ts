@@ -18,7 +18,7 @@ Deno.serve(async (req) => {
     if (profile.status !== "active") return Response.json({ error: "Account is blocked" }, { status: 403, headers: cors(req) })
     const input = await req.json().catch(() => null) as { productId?: unknown } | null
     const rawProductId = typeof input?.productId === "string" ? input.productId : ""
-    if (rawProductId !== "dsai101" && rawProductId !== "idsai101" && rawProductId !== "sqa101" && rawProductId !== "sec301" && rawProductId !== "mar101") return Response.json({ error: "Product unavailable" }, { status: 400, headers: cors(req) })
+    if (rawProductId !== "dsai101" && rawProductId !== "idsai101" && rawProductId !== "sqa101" && rawProductId !== "sec301" && rawProductId !== "mar101" && rawProductId !== "mac102" && rawProductId !== "oit101") return Response.json({ error: "Product unavailable" }, { status: 400, headers: cors(req) })
     const productId = rawProductId
     const { data: product, error: productError } = await admin.from("products").select("id,name,price_vnd,active").eq("id", productId).single()
     if (productError || !product || !product.active) return Response.json({ error: "Product unavailable" }, { status: 503, headers: cors(req) })
@@ -27,7 +27,7 @@ Deno.serve(async (req) => {
     if (existing) return Response.json({ owned: true }, { headers: cors(req) })
     const { data: pending, error: pendingError } = await admin.from("orders").select("order_id,transfer_content").eq("user_id", user.id).eq("product_id", product.id).eq("status", "pending").maybeSingle()
     if (pendingError) throw new Error("Unable to verify pending order")
-    let orderId = pending?.order_id ?? `${productId === "sqa101" ? "SQA" : productId === "sec301" ? "SEC" : productId === "idsai101" ? "IDSAI" : productId === "mar101" ? "MAR" : "DSAI"}-${crypto.randomUUID().replaceAll("-", "").slice(0, 20).toUpperCase()}`
+    let orderId = pending?.order_id ?? `${productId === "sqa101" ? "SQA" : productId === "sec301" ? "SEC" : productId === "idsai101" ? "IDSAI" : productId === "mar101" ? "MAR" : productId === "mac102" ? "MAC" : productId === "oit101" ? "OIT" : "DSAI"}-${crypto.randomUUID().replaceAll("-", "").slice(0, 20).toUpperCase()}`
     let transferContent = pending?.transfer_content ?? ""
     if (!pending) {
       transferContent = `PAY${crypto.randomUUID().replaceAll("-", "").slice(0, 18).toUpperCase()}`

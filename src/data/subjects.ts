@@ -11,10 +11,12 @@ export type SubjectId =
   | "chu-nghia-xa-hoi-khoa-hoc"
   | "danh-gia-va-kiem-dinh-chat-luong-phan-mem"
   | "kinh-te-vi-mo"
+  | "kinh-te-vi-mo-macro"
   | "kinh-te-chinh-tri-mac-lenin"
   | "ky-nang-khoi-nghiep-va-lanh-dao"
   | "bao-mat-ung-dung-he-thong"
   | "marketing-can-ban"
+  | "tin-hoc-van-phong"
   | "co-so-du-lieu"
   | "khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
   | "nhap-mon-khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
@@ -49,6 +51,8 @@ export type ChapterOption = {
   pdfUrl?: string
   /** Optional plain-text note (e.g. Luu-y.txt) shown above the document with its download. */
   noteUrl?: string
+  /** When true, the option stays available for filtering/counts but is hidden from the chapter picker. */
+  hidden?: boolean
   count: number
 }
 
@@ -70,7 +74,7 @@ export type ExamCatalogItem = ExamPaper & {
 
 const securityName: LocalizedText = {
   en: "Application & System Security",
-  vi: "Bảo mật ứng dụng và hệ thống",
+  vi: "Quiz ôn tập Giữa và Cuối kỳ - Bảo mật ứng dụng và hệ thống",
 }
 
 const toeicName: LocalizedText = {
@@ -352,12 +356,12 @@ export const subjects: Subject[] = [
   {
     id: "danh-gia-va-kiem-dinh-chat-luong-phan-mem",
     code: "SQA101",
-    name: { en: "Software Quality Assessment and Testing", vi: "Đánh giá và kiểm định chất lượng phần mềm" },
+    name: { en: "Software Quality Assessment and Testing", vi: "Quiz ôn tập Cuối kỳ - Đánh giá và kiểm định chất lượng phần mềm" },
     category: { en: "Major", vi: "Chuyên ngành" },
     exams: [
       {
         id: "software-quality-assessment-final-bank-1", type: "final", year: 2026, questionCount: 299, durationMinutes: 60,
-        title: { en: "Software Quality Assessment and Testing", vi: "Đánh giá và kiểm định chất lượng phần mềm" },
+        title: { en: "Software Quality Assessment and Testing", vi: "Quiz ôn tập Cuối kỳ - Đánh giá và kiểm định chất lượng phần mềm" },
         description: { en: "299 questions for the final exam. Start after clicking Try now.", vi: "299 câu hỏi cho bài thi cuối kỳ. Ấn Thử ngay để bắt đầu." },
       },
     ],
@@ -374,12 +378,12 @@ export const subjects: Subject[] = [
   {
     id: "kinh-te-vi-mo",
     code: "MAC101",
-    name: { en: "Macroeconomics", vi: "Kinh tế vĩ mô" },
+    name: { en: "Microeconomics", vi: "Kinh tế vi mô" },
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
         id: "macroeconomics-final-bank-1", type: "final", year: 2026, questionCount: 181, durationMinutes: 60,
-        title: { en: "Macroeconomics", vi: "Kinh tế vĩ mô" },
+        title: { en: "Microeconomics", vi: "Kinh tế vi mô" },
         description: { en: "181 questions grouped by chapters. Choose a chapter after clicking Try now.", vi: "181 câu hỏi được chia theo chương. Chọn chương sau khi ấn Thử ngay." },
         questionBanks: [
           "/data/kinh_te_vi_mo/chuong_1.json",
@@ -399,6 +403,23 @@ export const subjects: Subject[] = [
       { id: "c3", label: { en: "Chapter 3", vi: "Chương 3" }, count: 35 },
       { id: "c4", label: { en: "Chapter 4", vi: "Chương 4" }, count: 25 },
       { id: "c5", label: { en: "Chapter 5", vi: "Chương 5" }, count: 30 },
+    ],
+  },
+  {
+    id: "kinh-te-vi-mo-macro",
+    code: "MAC102",
+    name: { en: "Macroeconomics", vi: "Quiz ôn tập Cuối kỳ - Kinh tế vĩ mô" },
+    category: { en: "Major", vi: "Chuyên ngành" },
+    exams: [
+      {
+        id: "kinh-te-vi-mo-macro-bank-1", type: "final", year: 2026, questionCount: 183, durationMinutes: 60,
+        title: { en: "Macroeconomics", vi: "Quiz ôn tập Cuối kỳ - Kinh tế vĩ mô" },
+        description: { en: "183 questions. Choose a chapter after clicking Try now.", vi: "183 câu hỏi. Chọn chương sau khi ấn Thử ngay." },
+      },
+    ],
+    chapters: [
+      { id: "all", label: { en: "Macroeconomics - Final", vi: "Kinh tế vĩ mô - Cuối kỳ" }, count: 183 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Kinh tế vĩ mô"], count: 183 },
     ],
   },
   {
@@ -441,7 +462,7 @@ export const subjects: Subject[] = [
     exams: [
       {
         id: "sec-final-bank-2", type: "final", year: 2026, questionCount: 150, durationMinutes: 90,
-        title: { en: "Application & System Security", vi: "Bảo mật ứng dụng và hệ thống" },
+        title: { en: "Application & System Security", vi: "Quiz ôn tập Giữa và Cuối kỳ - Bảo mật ứng dụng và hệ thống" },
         description: { en: "150 questions grouped by chapters. Choose a chapter after clicking Try now.", vi: "150 câu hỏi được chia theo chương. Chọn chương sau khi ấn Thử ngay." },
       },
     ],
@@ -462,12 +483,12 @@ export const subjects: Subject[] = [
   {
     id: "marketing-can-ban",
     code: "MAR101",
-    name: { en: "Principles of Marketing", vi: "Marketing căn bản" },
+    name: { en: "Principles of Marketing", vi: "Quiz ôn tập Cuối kỳ - Marketing căn bản" },
     category: { en: "Major", vi: "Chuyên ngành" },
     exams: [
       {
         id: "marketing-final-bank-1", type: "final", year: 2026, questionCount: 257, durationMinutes: 60,
-        title: { en: "Principles of Marketing", vi: "Marketing căn bản" },
+        title: { en: "Principles of Marketing", vi: "Quiz ôn tập Cuối kỳ - Marketing căn bản" },
         description: { en: "257 questions grouped by chapters. Choose a chapter after clicking Try now.", vi: "257 câu hỏi chia theo 5 chương. Chọn chương sau khi ấn Thử ngay." },
       },
     ],
@@ -478,6 +499,23 @@ export const subjects: Subject[] = [
       { id: "c3", label: { en: "Chapter 3", vi: "Chương III" }, matches: ["Chương III"], count: 35 },
       { id: "c4", label: { en: "Chapter 4", vi: "Chương IV" }, matches: ["Chương IV"], count: 55 },
       { id: "c5", label: { en: "Chapter 5", vi: "Chương V" }, matches: ["Chương V"], count: 70 },
+    ],
+  },
+  {
+    id: "tin-hoc-van-phong",
+    code: "OIT101",
+    name: { en: "Office Information Technology", vi: "Quiz ôn tập Cuối kỳ - Tin học văn phòng" },
+    category: { en: "General", vi: "Đại cương" },
+    exams: [
+      {
+        id: "office-it-final-bank-1", type: "final", year: 2026, questionCount: 120, durationMinutes: 60,
+        title: { en: "Office Information Technology", vi: "Quiz ôn tập Cuối kỳ - Tin học văn phòng" },
+        description: { en: "120 questions. Choose a chapter after clicking Try now.", vi: "120 câu hỏi. Chọn chương sau khi ấn Thử ngay." },
+      },
+    ],
+    chapters: [
+      { id: "all", label: { en: "Office Computing - Final", vi: "Tin học văn phòng - Cuối kỳ" }, count: 120 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Tin học văn phòng"], hidden: true, count: 120 },
     ],
   },
   {
@@ -508,12 +546,12 @@ export const subjects: Subject[] = [
   {
     id: "khoa-hoc-du-lieu-va-tri-tue-nhan-tao",
     code: "DSAI101",
-    name: { en: "Data Science and Artificial Intelligence", vi: "Khoa học dữ liệu và Trí tuệ nhân tạo" },
+    name: { en: "Data Science and Artificial Intelligence", vi: "Quiz ôn tập Giữa và Cuối kỳ - Khoa học dữ liệu và Trí tuệ nhân tạo" },
     category: { en: "Major", vi: "Chuyên ngành" },
     exams: [
       {
         id: "data-science-ai-bank-1", type: "final", year: 2026, questionCount: 298, durationMinutes: 60,
-        title: { en: "Data Science and Artificial Intelligence", vi: "Khoa học dữ liệu và Trí tuệ nhân tạo" },
+        title: { en: "Data Science and Artificial Intelligence", vi: "Quiz ôn tập Giữa và Cuối kỳ - Khoa học dữ liệu và Trí tuệ nhân tạo" },
         description: { en: "2 sets: Midterm (95) & Final (203). Choose one after clicking Try now.", vi: "2 bộ đề: Giữa kỳ (95 câu) & Cuối kỳ (203 câu). Chọn 1 đề sau khi ấn Thử ngay." },
       },
     ],
@@ -521,12 +559,12 @@ export const subjects: Subject[] = [
   {
     id: "nhap-mon-khoa-hoc-du-lieu-va-tri-tue-nhan-tao",
     code: "IDSAI101",
-    name: { en: "Intro Data Science & AI Practice Bank", vi: "Nhập môn Khoa học dữ liệu và Trí tuệ nhân tạo" },
+    name: { en: "Intro Data Science & AI Practice Bank", vi: "Quiz ôn tập Cuối kỳ - Nhập môn Khoa học dữ liệu và Trí tuệ nhân tạo" },
     category: { en: "Major", vi: "Chuyên ngành" },
     exams: [
       {
         id: "intro-data-science-ai-bank-1", type: "final", year: 2026, questionCount: 119, durationMinutes: 60,
-        title: { en: "Intro Data Science & AI Practice Bank", vi: "Nhập môn Khoa học dữ liệu và Trí tuệ nhân tạo" },
+        title: { en: "Intro Data Science & AI Practice Bank", vi: "Quiz ôn tập Cuối kỳ - Nhập môn Khoa học dữ liệu và Trí tuệ nhân tạo" },
         description: { en: "119 final review questions for Intro to Data Science and Artificial Intelligence.", vi: "119 câu hỏi ôn tập Cuối kỳ môn Nhập môn Khoa học dữ liệu và Trí tuệ nhân tạo." },
       },
     ],
@@ -622,4 +660,3 @@ export function getExamTitle(
 ) {
   return exam.title[lang]
 }
-
