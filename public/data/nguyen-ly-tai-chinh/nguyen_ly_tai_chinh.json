@@ -1,0 +1,2572 @@
+{
+  "title": "Bộ câu hỏi Nguyên lý Tài chính",
+  "chapter": "Nguyên lý Tài chính",
+  "totalQuestions": 171,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Lạm phát gắn với tình trạng nào sau đây?",
+      "options": {
+        "A": "Lượng tiền phát hành cân bằng với nhu cầu lưu thông",
+        "B": "Lượng tiền phát hành quá dư thừa so với nhu cầu lưu thông",
+        "C": "Sức mua tiền giảm sút mạnh",
+        "D": "Sức mua tiền tăng"
+      },
+      "answer": "B",
+      "explainAnswer": "Lạm phát gắn với tình trạng lượng tiền phát hành vượt quá nhu cầu lưu thông, dẫn đến sức mua của tiền giảm sút.",
+      "image": null
+    },
+    {
+      "id": 2,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Tín dụng là quan hệ giữa 2 chủ thể trong việc:",
+      "options": {
+        "A": "Cho mượn một lượng giá trị tài sản",
+        "B": "Sử dụng tạm thời một lượng giá trị tài sản",
+        "C": "Tài sản cho mượn có thời hạn và có hoàn trả",
+        "D": "Cả 3 câu trên đều đúng"
+      },
+      "answer": "D",
+      "explainAnswer": "Tín dụng là quan hệ chuyển giao quyền sử dụng tạm thời một lượng giá trị trên nguyên tắc có thời hạn và hoàn trả. Cả ba đặc điểm đều đúng.",
+      "image": null
+    },
+    {
+      "id": 3,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Quan hệ tín dụng phát sinh khi:",
+      "options": {
+        "A": "Có sự chuyển giao quyền sử dụng một lượng giá trị trên nguyên tắc có hoàn trả",
+        "B": "Có sự chuyển dịch tài sản",
+        "C": "Quan hệ giữa 2 chủ thể tham gia là quan hệ phân phối",
+        "D": "Có ít nhất 3 chủ thể tham gia: bên giao, bên nhận và bên trung gian"
+      },
+      "answer": "A",
+      "explainAnswer": "Quan hệ tín dụng phát sinh khi có sự chuyển giao quyền sử dụng một lượng giá trị trên nguyên tắc hoàn trả có thời hạn.",
+      "image": null
+    },
+    {
+      "id": 4,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Vai trò của tín dụng gồm:",
+      "options": {
+        "A": "Là trung gian/cầu nối trong luân chuyển vốn",
+        "B": "Huy động vốn cho các chủ thể nền kinh tế",
+        "C": "Quản lý hiệu quả sử dụng vốn",
+        "D": "Cả (a) và (b) đều đúng"
+      },
+      "answer": "D",
+      "explainAnswer": "Tín dụng đóng vai trò cầu nối luân chuyển vốn và huy động vốn nhàn rỗi cho các chủ thể trong nền kinh tế.",
+      "image": null
+    },
+    {
+      "id": 5,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Điểm khác nhau giữa Tín dụng ngân hàng và tín dụng nhà nước là:",
+      "options": {
+        "A": "Lãi suất cho vay tín dụng ngân hàng cao hơn so với tín dụng nhà nước",
+        "B": "Ngân hàng là trung gian trong tín dụng ngân hàng, tổ chức chính phủ là trung gian trong tín dụng nhà nước",
+        "C": "Tín dụng ngân hàng cung ứng vốn cho nền kinh tế nói chung, tín dụng nhà nước chủ yếu phục vụ điều hành vĩ mô",
+        "D": "Cả 3 câu trên đều đúng"
+      },
+      "answer": "D",
+      "explainAnswer": "Tín dụng ngân hàng và tín dụng nhà nước khác nhau về chủ thể trung gian, lãi suất và mục tiêu sử dụng vốn.",
+      "image": null
+    },
+    {
+      "id": 6,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Quan hệ nào sau đây không phải là quan hệ tín dụng?",
+      "options": {
+        "A": "Ngân hàng cho vay mua xe ô tô",
+        "B": "Người hoàn trả tiền vay ngân hàng",
+        "C": "Cơ quan tài chính giải ngân vốn cho dự án đầu tư công",
+        "D": "Cả 3 câu trên đều sai"
+      },
+      "answer": "C",
+      "explainAnswer": "Giải ngân vốn đầu tư công từ ngân sách là quan hệ phân phối ngân sách, không phải quan hệ tín dụng (không có hoàn trả theo nguyên tắc tín dụng).",
+      "image": null
+    },
+    {
+      "id": 7,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Nội dung nào sau đây không thuộc vai trò của tín dụng?",
+      "options": {
+        "A": "Là cầu nối luân chuyển vốn và cung ứng vốn cho nền kinh tế",
+        "B": "Thúc đẩy huy động vốn nhàn rỗi từ các tổ chức, dân cư",
+        "C": "Phân phối nguồn lực ngân sách quốc gia",
+        "D": "Hỗ trợ điều hòa vốn giữa các chủ thể"
+      },
+      "answer": "C",
+      "explainAnswer": "Phân phối nguồn lực ngân sách quốc gia thuộc chức năng của tài chính công/ngân sách nhà nước, không phải vai trò của tín dụng.",
+      "image": null
+    },
+    {
+      "id": 8,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Mục đích của tín dụng nhà nước:",
+      "options": {
+        "A": "Bù đắp thiếu hụt Ngân sách nhà nước",
+        "B": "Tài trợ cho dự án đầu tư công",
+        "C": "Kiểm soát lạm phát",
+        "D": "Cả 3 câu trên đều đúng"
+      },
+      "answer": "D",
+      "explainAnswer": "Tín dụng nhà nước phục vụ nhiều mục tiêu: bù đắp thiếu hụt ngân sách, tài trợ đầu tư công và hỗ trợ ổn định kinh tế vĩ mô.",
+      "image": null
+    },
+    {
+      "id": 9,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Hình thức tín dụng nào sau đây không phải tín dụng ngân hàng?",
+      "options": {
+        "A": "Phát hành trái phiếu Kho bạc Nhà nước",
+        "B": "Chính quyền địa phương vay vốn của quỹ đầu tư phát triển địa phương",
+        "C": "Chính quyền địa phương bảo lãnh vay vốn cho dự án đầu tư trên địa bàn",
+        "D": "Cả 3 câu trên đều đúng"
+      },
+      "answer": "D",
+      "explainAnswer": "Các hình thức trên thuộc tín dụng nhà nước hoặc bảo lãnh của chính quyền, không phải tín dụng ngân hàng thương mại.",
+      "image": null
+    },
+    {
+      "id": 10,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Hình thức tín dụng nào sau đây là tín dụng ngân hàng?",
+      "options": {
+        "A": "Phát hành trái phiếu Kho bạc Nhà nước",
+        "B": "Chính quyền địa phương vay vốn của quỹ đầu tư phát triển địa phương",
+        "C": "Ngân hàng bảo lãnh vay vốn cho dự án đầu tư",
+        "D": "Chính phủ phát hành tín phiếu kho bạc"
+      },
+      "answer": "C",
+      "explainAnswer": "Ngân hàng bảo lãnh vay vốn là một hình thức tín dụng ngân hàng (tín dụng cam kết).",
+      "image": null
+    },
+    {
+      "id": 11,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Các trường hợp nào sau đây thuộc tín dụng ngân hàng?",
+      "options": {
+        "A": "Doanh nghiệp vay vốn lưu động cho sản xuất kinh doanh",
+        "B": "Doanh nghiệp rút vốn vay tín dụng ưu đãi Nhà nước",
+        "C": "Ngân sách địa phương vay vốn ODA cho vay lại của Chính phủ",
+        "D": "Cả A và B"
+      },
+      "answer": "A",
+      "explainAnswer": "Vay vốn lưu động từ ngân hàng thương mại là tín dụng ngân hàng điển hình. Các khoản vay ưu đãi nhà nước hoặc ODA thuộc tín dụng nhà nước.",
+      "image": null
+    },
+    {
+      "id": 12,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Tín dụng ngân hàng bao gồm các loại tín dụng:",
+      "options": {
+        "A": "Tín dụng ngắn hạn, trung-dài hạn",
+        "B": "Tín dụng cho tiêu dùng, cho sản xuất kinh doanh",
+        "C": "Cả 2 câu (a) và (b)",
+        "D": "Chỉ tín dụng ngắn hạn"
+      },
+      "answer": "C",
+      "explainAnswer": "Tín dụng ngân hàng được phân loại theo thời hạn (ngắn, trung, dài hạn) và theo mục đích sử dụng (tiêu dùng, sản xuất kinh doanh).",
+      "image": null
+    },
+    {
+      "id": 13,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Tín dụng ngân hàng bao gồm các loại tín dụng:",
+      "options": {
+        "A": "Tín dụng ngắn hạn, trung-dài hạn",
+        "B": "Cho vay chiết khấu, tín dụng tiêu dùng, cho thuê tài chính",
+        "C": "Cả 2 câu (a) và (b)",
+        "D": "Chỉ cho vay chiết khấu"
+      },
+      "answer": "C",
+      "explainAnswer": "Tín dụng ngân hàng bao gồm nhiều hình thức: phân theo thời hạn và theo nghiệp vụ cụ thể như chiết khấu, tiêu dùng, thuê tài chính.",
+      "image": null
+    },
+    {
+      "id": 14,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Khi ngân hàng thương mại bị phá sản thì người gửi tiền được:",
+      "options": {
+        "A": "Rút lại toàn bộ số tiền gửi theo điều kiện gửi",
+        "B": "Rút lại toàn bộ số tiền gửi với lãi suất không kỳ hạn",
+        "C": "Nhận lại số tiền do Bảo hiểm tiền gửi chi trả và từ thanh lý tài sản của ngân hàng",
+        "D": "Cả (b) và (c) đúng"
+      },
+      "answer": "C",
+      "explainAnswer": "Khi ngân hàng phá sản, người gửi tiền được bảo vệ bởi tổ chức Bảo hiểm tiền gửi trong hạn mức quy định, phần còn lại phụ thuộc vào quá trình thanh lý tài sản.",
+      "image": null
+    },
+    {
+      "id": 15,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Tín dụng thương mại là loại hình tín dụng khi:",
+      "options": {
+        "A": "Tiêu thụ hàng hóa có mua bán chịu giữa người mua và bán",
+        "B": "Người vay vay vốn ngân hàng để bổ sung vốn lưu động",
+        "C": "Hộ gia đình vay vốn ngân hàng để phục vụ tiêu dùng",
+        "D": "Sinh viên vay vốn ngân hàng để đóng học phí"
+      },
+      "answer": "A",
+      "explainAnswer": "Tín dụng thương mại là quan hệ mua bán chịu giữa các doanh nghiệp, trong đó người bán cho người mua sử dụng hàng hóa trước và thanh toán sau.",
+      "image": null
+    },
+    {
+      "id": 16,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Công cụ nào sau đây thuộc tín dụng thương mại?",
+      "options": {
+        "A": "Thương phiếu",
+        "B": "Trái phiếu, tín phiếu",
+        "C": "Cả (a) và (b)",
+        "D": "Chỉ trái phiếu chính phủ"
+      },
+      "answer": "A",
+      "explainAnswer": "Thương phiếu (hối phiếu, lệnh phiếu) là công cụ điển hình của tín dụng thương mại. Trái phiếu, tín phiếu chủ yếu thuộc tín dụng nhà nước hoặc thị trường vốn.",
+      "image": null
+    },
+    {
+      "id": 17,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Công cụ tín dụng nào sau đây không phải thuộc tín dụng thương mại?",
+      "options": {
+        "A": "Hối phiếu",
+        "B": "Lệnh phiếu",
+        "C": "Trái phiếu",
+        "D": "Bảo lãnh L/C"
+      },
+      "answer": "C",
+      "explainAnswer": "Trái phiếu là công cụ của thị trường vốn/tín dụng dài hạn, không phải công cụ của tín dụng thương mại (mua bán chịu ngắn hạn).",
+      "image": null
+    },
+    {
+      "id": 18,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Đặc điểm của tín dụng thương mại:",
+      "options": {
+        "A": "Cả người đi vay và cho vay đều là doanh nghiệp",
+        "B": "Vốn cho vay là hàng hóa",
+        "C": "Giá trị giao dịch thường nhỏ",
+        "D": "Cả 3 câu trên đều đúng"
+      },
+      "answer": "D",
+      "explainAnswer": "Tín dụng thương mại diễn ra giữa các doanh nghiệp, đối tượng cho vay là hàng hóa, và quy mô từng giao dịch thường không lớn.",
+      "image": null
+    },
+    {
+      "id": 19,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Đặc điểm nào sau đây không phải thuộc tín dụng thương mại?",
+      "options": {
+        "A": "Ngân hàng cho cá nhân vay vốn sửa chữa nhà cửa",
+        "B": "Công ty cho thuê cho thuê tài sản là máy móc thiết bị",
+        "C": "Chính phủ vay vốn ODA để đầu tư công",
+        "D": "Cả 3 câu trên đều đúng"
+      },
+      "answer": "D",
+      "explainAnswer": "Cả ba trường hợp đều không phải tín dụng thương mại: vay tiêu dùng là tín dụng ngân hàng, thuê tài chính là tín dụng thuê mua, ODA là tín dụng nhà nước.",
+      "image": null
+    },
+    {
+      "id": 20,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Câu nào sai trong các câu trả lời sau: Thanh toán mua bán hàng hóa thông qua thương phiếu là hình thức thanh toán:",
+      "options": {
+        "A": "Có sử dụng tiền mặt",
+        "B": "Không dùng tiền mặt",
+        "C": "Qua ngân hàng",
+        "D": "Cả (b) và (c)"
+      },
+      "answer": "A",
+      "explainAnswer": "Thanh toán bằng thương phiếu là hình thức không dùng tiền mặt và thường được thực hiện qua ngân hàng. Câu A là sai.",
+      "image": null
+    },
+    {
+      "id": 21,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Tín dụng thuê mua là loại hình tín dụng liên quan đến hoạt động:",
+      "options": {
+        "A": "Thuê và cho thuê lô nguyên vật liệu cho sản xuất",
+        "B": "Thuê và cho thuê máy móc thiết bị phục vụ sản xuất",
+        "C": "Cho vay bổ sung vốn lưu động cho doanh nghiệp",
+        "D": "Cho vay tiêu dùng cá nhân"
+      },
+      "answer": "B",
+      "explainAnswer": "Tín dụng thuê mua (leasing) gắn với việc thuê và cho thuê máy móc, thiết bị phục vụ sản xuất kinh doanh.",
+      "image": null
+    },
+    {
+      "id": 22,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Đặc điểm của tín dụng thuê mua là:",
+      "options": {
+        "A": "Người thuê không là chủ sở hữu tài sản tại thời điểm thuê",
+        "B": "Người thuê được làm chủ tài sản tạm thời trong thời gian thuê",
+        "C": "Người cho thuê phải chuyển giao quyền sở hữu tài sản cho người thuê khi hết hạn thuê",
+        "D": "Cả 3 câu trên đều đúng"
+      },
+      "answer": "A",
+      "explainAnswer": "Trong thuê mua, người cho thuê vẫn là chủ sở hữu tài sản trong suốt thời gian thuê. Người thuê chỉ có quyền sử dụng.",
+      "image": null
+    },
+    {
+      "id": 23,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Đối với tín dụng thuê mua thì:",
+      "options": {
+        "A": "Người cho thuê không phải là chủ tài sản cho thuê",
+        "B": "Người cho thuê và người thuê đều không là chủ sở hữu tài sản thuê",
+        "C": "Người cho thuê là chủ sở hữu tài sản cho thuê",
+        "D": "Người thuê là chủ sở hữu ngay từ đầu"
+      },
+      "answer": "C",
+      "explainAnswer": "Người cho thuê (công ty leasing) là chủ sở hữu tài sản trong suốt thời gian thuê. Người thuê chỉ có quyền sử dụng.",
+      "image": null
+    },
+    {
+      "id": 24,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Lãi suất thị trường liên ngân hàng là lãi suất:",
+      "options": {
+        "A": "Gửi tiền giữa các ngân hàng",
+        "B": "Gửi tiền của doanh nghiệp vào ngân hàng",
+        "C": "Cho vay của ngân hàng cho doanh nghiệp lớn",
+        "D": "Cả (a) và (c) là đúng"
+      },
+      "answer": "A",
+      "explainAnswer": "Lãi suất liên ngân hàng là lãi suất các ngân hàng cho nhau vay trên thị trường liên ngân hàng.",
+      "image": null
+    },
+    {
+      "id": 25,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Lãi suất thực bao gồm:",
+      "options": {
+        "A": "Lãi suất danh nghĩa trừ (-) tỷ lệ lạm phát",
+        "B": "Lãi suất danh nghĩa cộng (+) tỷ lệ lạm phát",
+        "C": "Lãi suất danh nghĩa cộng (+) phí ngân hàng",
+        "D": "Cả (b) và (c) đều đúng"
+      },
+      "answer": "A",
+      "explainAnswer": "Lãi suất thực ≈ lãi suất danh nghĩa – tỷ lệ lạm phát. Đây là mức lãi suất phản ánh sức mua thực của tiền.",
+      "image": null
+    },
+    {
+      "id": 26,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Lãi suất chiết khấu là lãi suất áp dụng khi:",
+      "options": {
+        "A": "Ngân hàng Trung ương nhận tiền gửi của các tổ chức tín dụng",
+        "B": "Ngân hàng Trung ương cho các ngân hàng thương mại vay tiền",
+        "C": "Ngân hàng thương mại cho các doanh nghiệp lớn vay tiền",
+        "D": "Doanh nghiệp cho nhau vay"
+      },
+      "answer": "B",
+      "explainAnswer": "Lãi suất chiết khấu (tái chiết khấu) là lãi suất Ngân hàng Trung ương áp dụng khi cho các ngân hàng thương mại vay tái cấp vốn.",
+      "image": null
+    },
+    {
+      "id": 27,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Lãi suất đơn là mức lãi suất:",
+      "options": {
+        "A": "Tính bằng lãi 1 kỳ chia cho dư nợ cuối kỳ trước",
+        "B": "Tính bằng lãi 1 kỳ chia cho dư nợ cuối kỳ khi lãi kỳ trước không nhập gốc kỳ này",
+        "C": "Là lãi suất áp dụng khi hợp đồng vay có quy định lãi không nhập vào gốc",
+        "D": "Cả (b) và (c) đều đúng"
+      },
+      "answer": "D",
+      "explainAnswer": "Lãi suất đơn được tính trên số dư gốc ban đầu, lãi kỳ trước không được nhập vào gốc để tính lãi kỳ sau.",
+      "image": null
+    },
+    {
+      "id": 28,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Lãi suất kép là lãi suất tính trên cơ sở:",
+      "options": {
+        "A": "Lãi kỳ trước được nhập vào gốc cuối kỳ trước thành gốc kỳ sau",
+        "B": "Lãi kỳ trước bằng gốc cuối kỳ trước nhân với lãi suất vay theo hợp đồng",
+        "C": "Lãi suất kỳ sau cao hơn lãi suất kỳ trước",
+        "D": "Cả (a) và (b) đều đúng"
+      },
+      "answer": "D",
+      "explainAnswer": "Lãi kép (lãi suất kép) tính lãi trên cả gốc và lãi đã phát sinh của các kỳ trước (lãi nhập gốc).",
+      "image": null
+    },
+    {
+      "id": 29,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Công thức nào sau đây là công thức tính số dư nợ vay cuối kỳ n theo lãi kép?",
+      "options": {
+        "A": "Cn = Co (1+i)^n",
+        "B": "Cn = Co (1+i) × n",
+        "C": "Cn = Co (1+i)^(1/n)",
+        "D": "Cn = Co / ((1+i)^n)"
+      },
+      "answer": "A",
+      "explainAnswer": "Công thức lãi kép chuẩn: Cn = Co × (1+i)^n, trong đó Co là gốc ban đầu, i là lãi suất, n là số kỳ.",
+      "image": null
+    },
+    {
+      "id": 30,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "10 triệu VNĐ gửi vào ngân hàng ngày 1/1/2025 với lãi suất 8%/năm, sau 20 năm sẽ thu được bao nhiêu tiền theo phương pháp lãi kép (rút cả gốc và lãi cuối kỳ)?",
+      "options": {
+        "A": "36 triệu đồng",
+        "B": "46,6 triệu đồng",
+        "C": "26 triệu đồng",
+        "D": "25,2 triệu đồng"
+      },
+      "answer": "B",
+      "explainAnswer": "Theo công thức lãi kép: 10 × (1+0,08)^20 ≈ 10 × 4,66 = 46,6 triệu đồng.",
+      "image": null
+    },
+    {
+      "id": 31,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "50 triệu VNĐ gửi vào ngân hàng ngày 1/1/2025 với lãi suất 8%/năm, sau 20 năm sẽ thu được bao nhiêu tiền theo phương pháp lãi đơn (rút cả gốc và lãi cuối kỳ)?",
+      "options": {
+        "A": "180 triệu đồng",
+        "B": "233 triệu đồng",
+        "C": "130 triệu đồng",
+        "D": "126 triệu đồng"
+      },
+      "answer": "C",
+      "explainAnswer": "Lãi đơn: 50 + 50×0,08×20 = 50 + 80 = 130 triệu đồng.",
+      "image": null
+    },
+    {
+      "id": 32,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Khi phát hành trái phiếu chiết khấu thì tại thời điểm phát hành tổ chức phát hành nhận được số tiền:",
+      "options": {
+        "A": "Ít hơn mệnh giá trái phiếu",
+        "B": "Bằng mệnh giá trái phiếu",
+        "C": "Nhiều hơn mệnh giá trái phiếu",
+        "D": "Ít hơn hay nhiều hơn mệnh giá tùy vào mức lãi suất coupon"
+      },
+      "answer": "A",
+      "explainAnswer": "Trái phiếu chiết khấu được bán với giá thấp hơn mệnh giá. Người mua nhận chênh lệch giữa mệnh giá và giá mua khi đáo hạn.",
+      "image": null
+    },
+    {
+      "id": 33,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Trái phiếu coupon là loại trái phiếu khi mà:",
+      "options": {
+        "A": "Người đi vay nhận lãi 1 lần vào cuối kỳ đáo hạn",
+        "B": "Người sở hữu nhận lãi định kỳ với số tiền bằng nhau",
+        "C": "Người đi vay nhận lãi định kỳ với số tiền tăng dần",
+        "D": "Không có câu trả lời nào trên đúng"
+      },
+      "answer": "B",
+      "explainAnswer": "Trái phiếu coupon (trái phiếu có lãi suất định kỳ) trả lãi định kỳ với số tiền cố định (coupon) cho đến khi đáo hạn.",
+      "image": null
+    },
+    {
+      "id": 34,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Thị trường tài chính là:",
+      "options": {
+        "A": "Nơi thực hiện giao dịch mua bán chứng khoán",
+        "B": "Nơi gặp gỡ của người có nhu cầu vốn và người dư vốn",
+        "C": "Nơi hình thành giá cả thị trường của các loại chứng khoán",
+        "D": "Cả 3 câu trên đều đúng"
+      },
+      "answer": "D",
+      "explainAnswer": "Thị trường tài chính là nơi người thừa vốn và người thiếu vốn gặp nhau, giao dịch các công cụ tài chính và hình thành giá cả thị trường.",
+      "image": null
+    },
+    {
+      "id": 35,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Thị trường tài chính:",
+      "options": {
+        "A": "Là nơi thực hiện giao dịch để chuyển dịch vốn trực tiếp từ nơi thừa sang nơi thiếu",
+        "B": "Là nơi giao dịch các loại nguyên vật liệu",
+        "C": "Hoạt động dựa trên nguyên tắc tín dụng",
+        "D": "Hoạt động theo nguyên tắc thanh toán không dùng tiền mặt"
+      },
+      "answer": "A",
+      "explainAnswer": "Thị trường tài chính thực hiện chức năng chuyển dịch vốn trực tiếp từ nơi thừa sang nơi thiếu thông qua các công cụ tài chính.",
+      "image": null
+    },
+    {
+      "id": 36,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Hàng hóa giao dịch trên thị trường tài chính là:",
+      "options": {
+        "A": "Chứng khoán các loại",
+        "B": "Trái phiếu, chứng từ có giá",
+        "C": "Cả (a) và (b)",
+        "D": "Hàng hóa vật chất thông thường"
+      },
+      "answer": "C",
+      "explainAnswer": "Hàng hóa trên thị trường tài chính là các công cụ tài chính: cổ phiếu, trái phiếu, chứng từ có giá và các công cụ phái sinh.",
+      "image": null
+    },
+    {
+      "id": 37,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Giá cả hình thành trên thị trường tài chính là:",
+      "options": {
+        "A": "Giá cả các loại vốn đầu tư (lãi suất, giá chứng khoán)",
+        "B": "Giá hàng hóa, sức lao động",
+        "C": "Giá của bên bán và giá bên mua",
+        "D": "Giá cả hàng hóa tiêu dùng"
+      },
+      "answer": "A",
+      "explainAnswer": "Giá cả trên thị trường tài chính thể hiện qua lãi suất, giá cổ phiếu, giá trái phiếu – tức giá của quyền sử dụng vốn.",
+      "image": null
+    },
+    {
+      "id": 38,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Chức năng của thị trường tài chính là:",
+      "options": {
+        "A": "Kênh trực tiếp chuyển dịch vốn",
+        "B": "Kênh gián tiếp chuyển dịch vốn",
+        "C": "Cả (a) và (b)",
+        "D": "Chỉ kênh trực tiếp"
+      },
+      "answer": "C",
+      "explainAnswer": "Thị trường tài chính thực hiện cả kênh trực tiếp (phát hành chứng khoán) và kênh gián tiếp (qua định chế tài chính trung gian).",
+      "image": null
+    },
+    {
+      "id": 39,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Thị trường tài chính bao gồm:",
+      "options": {
+        "A": "Thị trường tiền tệ và thị trường vốn",
+        "B": "Thị trường hàng hóa",
+        "C": "Thị trường lao động",
+        "D": "Thị trường bất động sản"
+      },
+      "answer": "A",
+      "explainAnswer": "Thị trường tài chính được chia thành thị trường tiền tệ (ngắn hạn) và thị trường vốn (trung – dài hạn).",
+      "image": null
+    },
+    {
+      "id": 40,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Thị trường tiền tệ khác cơ bản với thị trường vốn ở các yếu tố:",
+      "options": {
+        "A": "Tính lỏng trong luân chuyển vốn",
+        "B": "Thời hạn chuyển giao vốn",
+        "C": "Loại hàng hóa tài chính tham gia giao dịch",
+        "D": "Cả 3 câu trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Thị trường tiền tệ và thị trường vốn khác nhau về thời hạn, tính thanh khoản và loại công cụ tài chính được giao dịch.",
+      "image": null
+    },
+    {
+      "id": 41,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Vai trò cơ bản của thị trường tiền tệ là:",
+      "options": {
+        "A": "Tạo sự linh hoạt về luân chuyển vốn trong hoạt động các chủ thể nền kinh tế",
+        "B": "Bù đắp thiếu hụt tạm thời về vốn trong hoạt động các doanh nghiệp",
+        "C": "Bổ sung nguồn vốn đầu tư dài hạn cho doanh nghiệp",
+        "D": "Cả (a) và (b) đều đúng"
+      },
+      "answer": "D",
+      "explainAnswer": "Thị trường tiền tệ giúp các chủ thể điều hòa vốn ngắn hạn và bù đắp thiếu hụt tạm thời một cách linh hoạt.",
+      "image": null
+    },
+    {
+      "id": 42,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Chính sách tiền tệ là chính sách do:",
+      "options": {
+        "A": "Bộ Tài chính ban hành và quản lý",
+        "B": "Ngân hàng Trung ương ban hành và quản lý",
+        "C": "Các Bộ, ngành liên quan ban hành và quản lý",
+        "D": "Chính phủ trực tiếp ban hành"
+      },
+      "answer": "B",
+      "explainAnswer": "Chính sách tiền tệ do Ngân hàng Trung ương ban hành và điều hành nhằm kiểm soát cung tiền, lãi suất và ổn định giá trị đồng tiền.",
+      "image": null
+    },
+    {
+      "id": 43,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Tác động trực tiếp của chính sách tiền tệ thắt chặt là:",
+      "options": {
+        "A": "Làm lãi suất giảm xuống",
+        "B": "Cung tiền tăng lên",
+        "C": "Cung tiền giảm",
+        "D": "Làm tăng tổng cầu"
+      },
+      "answer": "C",
+      "explainAnswer": "Chính sách tiền tệ thắt chặt nhằm giảm cung tiền, từ đó thường làm lãi suất tăng và kiềm chế tổng cầu.",
+      "image": null
+    },
+    {
+      "id": 44,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Khi NHTW gia tăng phát hành tín phiếu ngân hàng thì hậu quả là:",
+      "options": {
+        "A": "Lãi suất trên thị trường liên ngân hàng tăng lên",
+        "B": "Lãi suất tín dụng trên thị trường tăng lên",
+        "C": "Thắt chặt chính sách tiền tệ",
+        "D": "Cả 3 câu trên đều đúng"
+      },
+      "answer": "D",
+      "explainAnswer": "Phát hành tín phiếu NHNN hút tiền về, làm giảm dự trữ của các ngân hàng thương mại → lãi suất tăng và chính sách tiền tệ thắt chặt.",
+      "image": null
+    },
+    {
+      "id": 45,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Mục tiêu thực hiện chính sách tiền tệ của ngân hàng Trung ương là:",
+      "options": {
+        "A": "Điều chỉnh lượng tiền dự trữ của ngân hàng thương mại",
+        "B": "Điều chỉnh lãi suất trên thị trường",
+        "C": "Cả (a) và (b) đều đúng",
+        "D": "Chỉ điều chỉnh tỷ giá"
+      },
+      "answer": "C",
+      "explainAnswer": "NHTW sử dụng các công cụ để điều chỉnh dự trữ của hệ thống ngân hàng và lãi suất thị trường, từ đó tác động đến cung tiền.",
+      "image": null
+    },
+    {
+      "id": 46,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Mục tiêu cuối cùng của việc thực hiện chính sách tiền tệ của NHTW là:",
+      "options": {
+        "A": "Ổn định giá trị đồng tiền, ổn định lãi suất, tỷ giá",
+        "B": "Đáp ứng mục tiêu tăng trưởng việc làm",
+        "C": "Thực hiện mục tiêu tăng trưởng nền kinh tế",
+        "D": "Cả A, B, C tùy theo ưu tiên chính sách"
+      },
+      "answer": "A",
+      "explainAnswer": "Mục tiêu cuối cùng cốt lõi của chính sách tiền tệ là ổn định giá trị đồng tiền (kiểm soát lạm phát), tạo nền tảng cho các mục tiêu tăng trưởng và việc làm.",
+      "image": null
+    },
+    {
+      "id": 47,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Công cụ nào sau đây không thuộc công cụ chính sách tiền tệ?",
+      "options": {
+        "A": "Công cụ trên thị trường tài chính do cơ quan thuộc Bộ Tài chính phát hành",
+        "B": "Công cụ chiết khấu và tái chiết khấu do NHNN phát hành",
+        "C": "Lãi suất trần huy động tiền gửi dưới 6 tháng tại các ngân hàng",
+        "D": "Tỷ giá tham chiếu do NHNN ban hành"
+      },
+      "answer": "A",
+      "explainAnswer": "Các công cụ do Bộ Tài chính phát hành (trái phiếu chính phủ…) thuộc chính sách tài khóa, không phải công cụ chính sách tiền tệ của NHNN.",
+      "image": null
+    },
+    {
+      "id": 48,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Công cụ nào sau đây không thuộc công cụ chính sách tiền tệ?",
+      "options": {
+        "A": "Trái phiếu Chính phủ do KBNN phát hành",
+        "B": "Công cụ chiết khấu và tái chiết khấu do NHNN phát hành",
+        "C": "Tỷ giá tham chiếu do NHNN ban hành",
+        "D": "Tỷ lệ dự trữ bắt buộc áp dụng cho các tổ chức ngân hàng"
+      },
+      "answer": "A",
+      "explainAnswer": "Trái phiếu Chính phủ do Kho bạc Nhà nước phát hành thuộc công cụ tài khóa, không phải công cụ chính sách tiền tệ.",
+      "image": null
+    },
+    {
+      "id": 49,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Khi NHNN cho vay tái cấp vốn cho các ngân hàng thương mại thì NHNN áp dụng công cụ:",
+      "options": {
+        "A": "Tỷ giá tham chiếu",
+        "B": "Chiết khấu và tái chiết khấu",
+        "C": "Dự trữ bắt buộc",
+        "D": "Hạn mức tín dụng"
+      },
+      "answer": "B",
+      "explainAnswer": "Cho vay tái cấp vốn là việc NHNN áp dụng công cụ chiết khấu/tái chiết khấu để cung ứng thanh khoản cho các ngân hàng thương mại.",
+      "image": null
+    },
+    {
+      "id": 50,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Trong số các công cụ của chính sách tiền tệ, công cụ nào sau đây có tác động tức thời và công bằng lên thị trường tài chính-tiền tệ?",
+      "options": {
+        "A": "Chiết khấu và tái chiết khấu",
+        "B": "Hạn mức tín dụng",
+        "C": "Dự trữ bắt buộc",
+        "D": "Tỷ giá hành chính"
+      },
+      "answer": "C",
+      "explainAnswer": "Dự trữ bắt buộc tác động đồng đều và tương đối nhanh đến khả năng tạo tiền của toàn bộ hệ thống ngân hàng thương mại.",
+      "image": null
+    },
+    {
+      "id": 51,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Trong số các công cụ của chính sách tiền tệ, công cụ nào sau đây có tác động trực tiếp và đồng đều đến lãi suất cho vay của các ngân hàng thương mại?",
+      "options": {
+        "A": "Hạn mức tín dụng",
+        "B": "Dự trữ bắt buộc",
+        "C": "Tỷ giá",
+        "D": "Nghiệp vụ thị trường mở"
+      },
+      "answer": "B",
+      "explainAnswer": "Thay đổi tỷ lệ dự trữ bắt buộc ảnh hưởng trực tiếp đến chi phí vốn và khả năng cho vay của mọi ngân hàng, từ đó tác động đồng đều đến lãi suất cho vay.",
+      "image": null
+    },
+    {
+      "id": 52,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Tiền tệ ra đời gắn liền với:",
+      "options": {
+        "A": "Sự phát triển của ngân hàng",
+        "B": "Quá trình sản xuất và lưu thông hàng hóa",
+        "C": "Sự phát triển của thị trường chứng khoán",
+        "D": "Sự ra đời của tài chính"
+      },
+      "answer": "B",
+      "explainAnswer": "Tiền tệ ra đời gắn liền với quá trình sản xuất và lưu thông hàng hóa. Khi sản xuất hàng hóa phát triển, nhu cầu trao đổi tăng lên và đòi hỏi một vật trung gian được thừa nhận rộng rãi.",
+      "image": null
+    },
+    {
+      "id": 53,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Theo Karl Marx, bản chất của tiền tệ là:",
+      "options": {
+        "A": "Một loại hàng hóa đặc biệt",
+        "B": "Một công cụ thanh toáns",
+        "C": "Một loại giấy bạc do nhà nước phát hành",
+        "D": "Một phương tiện cất trữ giá trị"
+      },
+      "answer": "A",
+      "explainAnswer": "Theo Karl Marx, tiền tệ là một loại hàng hóa đặc biệt đóng vai trò vật ngang giá chung, phản ánh quan hệ sản xuất trong nền kinh tế hàng hóa.",
+      "image": null
+    },
+    {
+      "id": 54,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Hình thức trao đổi hàng hóa nào có trước khi xuất hiện tiền tệ?",
+      "options": {
+        "A": "Hàng đổi hàng trực tiếp",
+        "B": "Trao đổi qua trung gian",
+        "C": "Giao dịch bằng tín dụng",
+        "D": "Giao dịch qua ngân hàng"
+      },
+      "answer": "A",
+      "explainAnswer": "Trước khi có tiền tệ, hình thức trao đổi phổ biến là hàng đổi hàng trực tiếp (barter). Hình thức này gặp nhiều hạn chế về nhu cầu kép trùng khớp.",
+      "image": null
+    },
+    {
+      "id": 55,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Tiền tệ có sức mạnh phụ thuộc vào:",
+      "options": {
+        "A": "Mệnh giá được in trên tờ tiền",
+        "B": "Giá trị sử dụng của hàng hóa",
+        "C": "Sức mua của nó",
+        "D": "Quyết định của ngân hàng trung ương"
+      },
+      "answer": "C",
+      "explainAnswer": "Sức mạnh của tiền tệ phụ thuộc vào sức mua của nó – khả năng đổi lấy hàng hóa và dịch vụ trong nền kinh tế.",
+      "image": null
+    },
+    {
+      "id": 56,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Hoá tệ là:",
+      "options": {
+        "A": "Một loại tiền có giá trị nội tại",
+        "B": "Một hình thức của tiền giấy",
+        "C": "Một loại tiền không có giá trị thực tế",
+        "D": "Tiền điện tử do ngân hàng phát hành"
+      },
+      "answer": "A",
+      "explainAnswer": "Hóa tệ là loại tiền có giá trị nội tại, tức bản thân vật mang tiền (vàng, bạc…) đã có giá trị sử dụng và giá trị trao đổi.",
+      "image": null
+    },
+    {
+      "id": 57,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Loại hoá tệ phổ biến nhất trong lịch sử là:",
+      "options": {
+        "A": "Vàng",
+        "B": "Đồng",
+        "C": "Sắt",
+        "D": "Giấy"
+      },
+      "answer": "A",
+      "explainAnswer": "Trong lịch sử, vàng là loại hóa tệ phổ biến và được chấp nhận rộng rãi nhất nhờ tính bền, dễ chia nhỏ, đồng nhất và giá trị ổn định.",
+      "image": null
+    },
+    {
+      "id": 58,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Nhược điểm của hoá tệ kim loại là:",
+      "options": {
+        "A": "Không đồng nhất",
+        "B": "Khó vận chuyển",
+        "C": "Không thể chia nhỏ dễ dàng",
+        "D": "Tất cả các đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Hóa tệ kim loại có nhiều nhược điểm: khó vận chuyển số lượng lớn, chi phí đúc cao, và không phải lúc nào cũng dễ chia nhỏ hay đồng nhất tuyệt đối.",
+      "image": null
+    },
+    {
+      "id": 59,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Tín tệ được chấp nhận dựa trên:",
+      "options": {
+        "A": "Giá trị sử dụng thực tế",
+        "B": "Niềm tin của xã hội",
+        "C": "Hàm lượng kim loại quý",
+        "D": "Nguồn cung tiền mặt"
+      },
+      "answer": "B",
+      "explainAnswer": "Tín tệ (tiền dựa trên tín nhiệm) được chấp nhận dựa trên niềm tin của xã hội vào tổ chức phát hành và vào việc nó sẽ được chấp nhận thanh toán.",
+      "image": null
+    },
+    {
+      "id": 60,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Tiền giấy là loại tiền:",
+      "options": {
+        "A": "Được đảm bảo bằng vàng",
+        "B": "Pháp định và do Nhà nước ban hành",
+        "C": "Chỉ có giá trị tại ngân hàng",
+        "D": "Phát hành bởi các công ty tư nhân"
+      },
+      "answer": "B",
+      "explainAnswer": "Tiền giấy hiện đại là tiền pháp định do Nhà nước ban hành và cưỡng chế lưu thông, không còn được đảm bảo trực tiếp bằng vàng.",
+      "image": null
+    },
+    {
+      "id": 61,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Nhược điểm của tiền giấy là:",
+      "options": {
+        "A": "Dễ bị làm giả",
+        "B": "Không có giá trị nội tại",
+        "C": "Khó kiểm soát số lượng lưu thông",
+        "D": "Cả A, B, C"
+      },
+      "answer": "D",
+      "explainAnswer": "Tiền giấy dễ bị làm giả, bản thân không có giá trị nội tại, và việc kiểm soát số lượng lưu thông phụ thuộc hoàn toàn vào chính sách của ngân hàng trung ương.",
+      "image": null
+    },
+    {
+      "id": 62,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Chức năng nào sau đây không phải của tiền tệ?",
+      "options": {
+        "A": "Thước đo giá trị",
+        "B": "Phương tiện lưu thông",
+        "C": "Công cụ đầu tư chứng khoán",
+        "D": "Phương tiện thanh toán"
+      },
+      "answer": "C",
+      "explainAnswer": "Công cụ đầu tư chứng khoán không phải là chức năng cơ bản của tiền tệ. Các chức năng cổ điển gồm thước đo giá trị, phương tiện lưu thông, phương tiện thanh toán và cất trữ giá trị.",
+      "image": null
+    },
+    {
+      "id": 63,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Chức năng thước đo giá trị của tiền có nghĩa là:",
+      "options": {
+        "A": "Xác định giá trị của hàng hóa, dịch vụ",
+        "B": "Giúp cất trữ tài sản",
+        "C": "Là phương tiện trung gian trao đổi",
+        "D": "Được dùng để thanh toán nợ"
+      },
+      "answer": "A",
+      "explainAnswer": "Chức năng thước đo giá trị cho phép biểu hiện và so sánh giá trị của các hàng hóa, dịch vụ khác nhau thông qua đơn vị tiền tệ.",
+      "image": null
+    },
+    {
+      "id": 64,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Khi tiền tệ làm phương tiện cất trữ giá trị, điều này có nghĩa là:",
+      "options": {
+        "A": "Tiền có thể giữ lại để dùng trong tương lai",
+        "B": "Tiền có thể đổi lấy vàng",
+        "C": "Tiền được ngân hàng giữ hộ",
+        "D": "Tiền không bị mất giá"
+      },
+      "answer": "A",
+      "explainAnswer": "Khi tiền thực hiện chức năng cất trữ giá trị, nó được giữ lại để sử dụng trong tương lai, cho phép người nắm giữ chuyển sức mua qua thời gian.",
+      "image": null
+    },
+    {
+      "id": 65,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Khi nào tiền thực hiện chức năng phương tiện thanh toán?",
+      "options": {
+        "A": "Khi dùng để mua bán hàng hóa",
+        "B": "Khi dùng để trả nợ hoặc nộp thuế",
+        "C": "Khi dùng để tiết kiệm",
+        "D": "Khi được chuyển đổi sang ngoại tệ"
+      },
+      "answer": "B",
+      "explainAnswer": "Tiền thực hiện chức năng phương tiện thanh toán khi được dùng để trả nợ, nộp thuế, thanh toán các nghĩa vụ không gắn trực tiếp với mua bán hàng hóa ngay lập tức.",
+      "image": null
+    },
+    {
+      "id": 66,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Trong nền kinh tế hiện đại, tiền tệ còn thực hiện chức năng:",
+      "options": {
+        "A": "Hỗ trợ giao dịch thương mại điện tử",
+        "B": "Chỉ để mua hàng hóa vật lý",
+        "C": "Không có tác động gì đến nền kinh tế",
+        "D": "Chỉ được sử dụng trong giao dịch ngân hàng"
+      },
+      "answer": "A",
+      "explainAnswer": "Trong nền kinh tế hiện đại, tiền tệ còn hỗ trợ các giao dịch thương mại điện tử và thanh toán không dùng tiền mặt trên phạm vi rộng.",
+      "image": null
+    },
+    {
+      "id": 67,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Lạm phát là:",
+      "options": {
+        "A": "Sự tăng giá liên tục của hàng hóa và dịch vụ",
+        "B": "Sự tăng trưởng của nền kinh tế",
+        "C": "Sự giảm giá trị của đồng tiền",
+        "D": "Cả A và C"
+      },
+      "answer": "D",
+      "explainAnswer": "Lạm phát là hiện tượng giá cả hàng hóa và dịch vụ tăng liên tục, đồng nghĩa với sức mua của đồng tiền giảm sút.",
+      "image": null
+    },
+    {
+      "id": 68,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Lạm phát có thể xảy ra do:",
+      "options": {
+        "A": "Nguồn cung tiền tăng quá nhanh",
+        "B": "Chi phí sản xuất tăng",
+        "C": "Cầu hàng hóa tăng mạnh",
+        "D": "Tất cả các nguyên nhân trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Lạm phát có thể xuất phát từ nhiều nguyên nhân: cung tiền tăng quá nhanh, chi phí sản xuất tăng (lạm phát chi phí đẩy), hoặc tổng cầu tăng mạnh (lạm phát cầu kéo).",
+      "image": null
+    },
+    {
+      "id": 69,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Giảm phát là hiện tượng:",
+      "options": {
+        "A": "Giá cả hàng hóa liên tục giảm",
+        "B": "Giá cả hàng hóa tăng nhanh",
+        "C": "Đồng tiền mất giá trị",
+        "D": "Không liên quan đến nền kinh tế"
+      },
+      "answer": "A",
+      "explainAnswer": "Giảm phát là hiện tượng mức giá chung liên tục giảm trong một khoảng thời gian. Đây là hiện tượng ngược với lạm phát.",
+      "image": null
+    },
+    {
+      "id": 70,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Ngân hàng trung ương có thể kiểm soát lạm phát bằng cách:",
+      "options": {
+        "A": "Giảm cung tiền",
+        "B": "Tăng lãi suất",
+        "C": "Kiểm soát giá cả hàng hóa",
+        "D": "Cả A và B"
+      },
+      "answer": "D",
+      "explainAnswer": "Ngân hàng trung ương kiểm soát lạm phát chủ yếu bằng cách giảm cung tiền và/hoặc tăng lãi suất, làm giảm tổng cầu.",
+      "image": null
+    },
+    {
+      "id": 71,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Lạm phát gây ảnh hưởng tiêu cực đến:",
+      "options": {
+        "A": "Người gửi tiết kiệm",
+        "B": "Nhà đầu tư",
+        "C": "Người lao động có thu nhập cố định",
+        "D": "Tất cả các nhóm trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Lạm phát làm xói mòn sức mua của tiền tiết kiệm, ảnh hưởng đến nhà đầu tư và đặc biệt bất lợi cho người lao động có thu nhập cố định.",
+      "image": null
+    },
+    {
+      "id": 72,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Tài chính là gì?",
+      "options": {
+        "A": "Hệ thống các quan hệ phân phối thông qua quỹ tiền tệ",
+        "B": "Việc quản lý ngân hàng",
+        "C": "Chỉ liên quan đến thị trường chứng khoán",
+        "D": "Không liên quan đến nền kinh tế"
+      },
+      "answer": "A",
+      "explainAnswer": "Tài chính là hệ thống các quan hệ phân phối thông qua việc tạo lập và sử dụng các quỹ tiền tệ giữa các chủ thể trong nền kinh tế.",
+      "image": null
+    },
+    {
+      "id": 73,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Các loại quan hệ tài chính chủ yếu gồm:",
+      "options": {
+        "A": "Tín dụng",
+        "B": "Bảo hiểm",
+        "C": "Ngân sách nhà nước",
+        "D": "Cả A, B, C"
+      },
+      "answer": "D",
+      "explainAnswer": "Các quan hệ tài chính chủ yếu gồm quan hệ tín dụng, bảo hiểm và ngân sách nhà nước – đều gắn với sự vận động của quỹ tiền tệ.",
+      "image": null
+    },
+    {
+      "id": 74,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Chức năng quan trọng nhất của tài chính là:",
+      "options": {
+        "A": "Phân phối nguồn lực tài chính",
+        "B": "Hỗ trợ tăng trưởng kinh tế",
+        "C": "Đảm bảo tính thanh khoản",
+        "D": "Giúp cá nhân tiết kiệm"
+      },
+      "answer": "A",
+      "explainAnswer": "Chức năng phân phối nguồn lực tài chính là chức năng quan trọng nhất của tài chính, quyết định việc phân bổ vốn giữa các chủ thể và lĩnh vực.",
+      "image": null
+    },
+    {
+      "id": 75,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Hệ thống tài chính bao gồm:",
+      "options": {
+        "A": "Thị trường tài chính",
+        "B": "Các định chế tài chính",
+        "C": "Cơ quan quản lý tài chính",
+        "D": "Cả A, B, C"
+      },
+      "answer": "D",
+      "explainAnswer": "Hệ thống tài chính bao gồm thị trường tài chính, các định chế tài chính (ngân hàng, bảo hiểm…) và các cơ quan quản lý, giám sát.",
+      "image": null
+    },
+    {
+      "id": 76,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Tài chính có vai trò quan trọng trong việc:",
+      "options": {
+        "A": "Huy động và phân phối nguồn vốn",
+        "B": "Tăng trưởng kinh tế",
+        "C": "Ổn định kinh tế vĩ mô",
+        "D": "Tất cả các đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Tài chính đóng vai trò then chốt trong huy động và phân phối nguồn vốn, hỗ trợ tăng trưởng và ổn định kinh tế vĩ mô.",
+      "image": null
+    },
+    {
+      "id": 77,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Hệ thống tài chính có vai trò:",
+      "options": {
+        "A": "Cung cấp vốn cho nền kinh tế",
+        "B": "Giúp phân bổ nguồn lực hiệu quả",
+        "C": "Hỗ trợ quản lý rủi ro tài chính",
+        "D": "Tất cả các đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Hệ thống tài chính cung cấp vốn, phân bổ nguồn lực hiệu quả và hỗ trợ quản lý rủi ro thông qua các công cụ tài chính và bảo hiểm.",
+      "image": null
+    },
+    {
+      "id": 78,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Trong hệ thống tài chính, ngân hàng thương mại thực hiện chức năng:",
+      "options": {
+        "A": "Huy động vốn từ dân cư",
+        "B": "Cung cấp tín dụng cho doanh nghiệp và cá nhân",
+        "C": "Trung gian thanh toán",
+        "D": "Tất cả các đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Ngân hàng thương mại thực hiện ba chức năng cốt lõi: huy động vốn, cấp tín dụng và trung gian thanh toán.",
+      "image": null
+    },
+    {
+      "id": 79,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Thị trường tài chính bao gồm:",
+      "options": {
+        "A": "Thị trường tiền tệ và thị trường vốn",
+        "B": "Thị trường chứng khoán",
+        "C": "Thị trường ngoại hối",
+        "D": "Tất cả các đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Thị trường tài chính bao gồm thị trường tiền tệ, thị trường vốn, thị trường chứng khoán và thị trường ngoại hối.",
+      "image": null
+    },
+    {
+      "id": 80,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Loại hình tài chính nào giúp phân tán rủi ro?",
+      "options": {
+        "A": "Bảo hiểm",
+        "B": "Tín dụng",
+        "C": "Thuế",
+        "D": "A và B"
+      },
+      "answer": "D",
+      "explainAnswer": "Bảo hiểm và tín dụng đều có vai trò phân tán hoặc chuyển giao rủi ro giữa các chủ thể trong nền kinh tế.",
+      "image": null
+    },
+    {
+      "id": 81,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Tín dụng ngân hàng có đặc điểm:",
+      "options": {
+        "A": "Tạo ra tiền gửi mới",
+        "B": "Giúp tăng trưởng kinh tế",
+        "C": "Là nguồn vốn quan trọng cho doanh nghiệp",
+        "D": "Tất cả các đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Tín dụng ngân hàng vừa tạo tiền gửi mới (tạo tiền), vừa là nguồn vốn quan trọng thúc đẩy hoạt động sản xuất kinh doanh.",
+      "image": null
+    },
+    {
+      "id": 82,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Chức năng của ngân hàng trung ương là:",
+      "options": {
+        "A": "Phát hành tiền",
+        "B": "Điều tiết cung tiền",
+        "C": "Quản lý lãi suất",
+        "D": "Tất cả các đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Ngân hàng trung ương có chức năng phát hành tiền, điều tiết cung tiền và quản lý lãi suất thông qua các công cụ chính sách tiền tệ.",
+      "image": null
+    },
+    {
+      "id": 83,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Công cụ nào sau đây không thuộc chính sách tiền tệ của ngân hàng trung ương?",
+      "options": {
+        "A": "Dự trữ bắt buộc",
+        "B": "Lãi suất tái chiết khấu",
+        "C": "Thuế doanh nghiệp",
+        "D": "Nghiệp vụ thị trường mở"
+      },
+      "answer": "C",
+      "explainAnswer": "Thuế doanh nghiệp thuộc chính sách tài khóa (do Bộ Tài chính quản lý), không phải công cụ chính sách tiền tệ của ngân hàng trung ương.",
+      "image": null
+    },
+    {
+      "id": 84,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Nghiệp vụ thị trường mở là gì?",
+      "options": {
+        "A": "Hoạt động mua bán chứng khoán của ngân hàng trung ương",
+        "B": "Công cụ điều tiết cung tiền trong nền kinh tế",
+        "C": "Hoạt động đầu tư vào doanh nghiệp tư nhân",
+        "D": "Không liên quan đến chính sách tiền tệ"
+      },
+      "answer": "B",
+      "explainAnswer": "Nghiệp vụ thị trường mở là hoạt động mua/bán chứng khoán của ngân hàng trung ương nhằm điều tiết lượng tiền dự trữ và cung tiền trong nền kinh tế.",
+      "image": null
+    },
+    {
+      "id": 85,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Lãi suất tăng sẽ tác động như thế nào đến nền kinh tế?",
+      "options": {
+        "A": "Làm giảm tổng cầu",
+        "B": "Làm tăng chi phí vay vốn",
+        "C": "Giảm khả năng mở rộng kinh doanh",
+        "D": "Tất cả các đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Khi lãi suất tăng, chi phí vay vốn tăng → tổng cầu giảm, doanh nghiệp hạn chế mở rộng đầu tư và sản xuất.",
+      "image": null
+    },
+    {
+      "id": 86,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Lãi suất thấp thường dẫn đến:",
+      "options": {
+        "A": "Khuyến khích vay vốn và đầu tư",
+        "B": "Giảm chi tiêu tiêu dùng",
+        "C": "Hạn chế sự tăng trưởng của nền kinh tế",
+        "D": "Giảm cung tiền trong nền kinh tế"
+      },
+      "answer": "A",
+      "explainAnswer": "Lãi suất thấp làm giảm chi phí vay vốn, khuyến khích doanh nghiệp và hộ gia đình vay để đầu tư và tiêu dùng.",
+      "image": null
+    },
+    {
+      "id": 87,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Tiền điện tử là:",
+      "options": {
+        "A": "Giá trị tiền tệ được lưu trữ trên thiết bị điện tử",
+        "B": "Được sử dụng để thanh toán hàng hóa, dịch vụ",
+        "C": "Được đảm bảo bởi tiền pháp định",
+        "D": "Tất cả các đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Tiền điện tử là giá trị tiền tệ được lưu trữ và giao dịch trên thiết bị điện tử, thường được đảm bảo bởi tiền pháp định.",
+      "image": null
+    },
+    {
+      "id": 88,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Tiền điện tử có nhược điểm nào sau đây?",
+      "options": {
+        "A": "Yêu cầu cao về bảo mật và an toàn thông tin",
+        "B": "Dễ bị tấn công mạng",
+        "C": "Cần có hệ thống pháp lý phù hợp",
+        "D": "Tất cả các đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Tiền điện tử đòi hỏi bảo mật cao, dễ bị tấn công mạng và cần khung pháp lý rõ ràng để hoạt động an toàn.",
+      "image": null
+    },
+    {
+      "id": 89,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Tiền điện tử của ngân hàng trung ương (CBDC) có ưu điểm gì?",
+      "options": {
+        "A": "Giảm chi phí phát hành tiền giấy",
+        "B": "Minh bạch trong giao dịch",
+        "C": "Giúp kiểm soát chính sách tiền tệ tốt hơn",
+        "D": "Tất cả các đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "CBDC giúp giảm chi phí phát hành tiền giấy, tăng tính minh bạch giao dịch và hỗ trợ điều hành chính sách tiền tệ hiệu quả hơn.",
+      "image": null
+    },
+    {
+      "id": 90,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Nhược điểm lớn nhất của tiền điện tử ngân hàng trung ương (CBDC) là:",
+      "options": {
+        "A": "Ảnh hưởng đến hoạt động của ngân hàng thương mại",
+        "B": "Yêu cầu đầu tư lớn vào hạ tầng công nghệ",
+        "C": "Đòi hỏi thay đổi quy định pháp lý",
+        "D": "Tất cả các đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "CBDC có thể ảnh hưởng đến mô hình hoạt động của ngân hàng thương mại, đòi hỏi đầu tư hạ tầng lớn và điều chỉnh quy định pháp lý.",
+      "image": null
+    },
+    {
+      "id": 91,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Bitcoin thuộc loại hình tiền tệ nào?",
+      "options": {
+        "A": "Tiền pháp định",
+        "B": "Tiền mã hóa phi tập trung",
+        "C": "Tiền tệ do ngân hàng trung ương phát hành",
+        "D": "Tiền gửi ngân hàng"
+      },
+      "answer": "B",
+      "explainAnswer": "Bitcoin là tiền mã hóa phi tập trung, không do bất kỳ ngân hàng trung ương hay chính phủ nào phát hành hay kiểm soát.",
+      "image": null
+    },
+    {
+      "id": 92,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Điểm khác biệt giữa tiền mã hóa và tiền điện tử là:",
+      "options": {
+        "A": "Tiền mã hóa hoạt động trên blockchain, còn tiền điện tử có thể được ngân hàng quản lý",
+        "B": "Tiền mã hóa không được quản lý bởi chính phủ",
+        "C": "Tiền điện tử có thể là tiền pháp định lưu trữ trên thiết bị điện tử",
+        "D": "Tất cả các đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Tiền mã hóa thường vận hành trên blockchain và mang tính phi tập trung, trong khi tiền điện tử có thể do ngân hàng quản lý và gắn với tiền pháp định.",
+      "image": null
+    },
+    {
+      "id": 93,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Stablecoin là gì?",
+      "options": {
+        "A": "Loại tiền mã hóa có giá trị ổn định nhờ gắn với tài sản thực (như USD, vàng)",
+        "B": "Một dạng tiền điện tử pháp định",
+        "C": "Một loại cổ phiếu trên thị trường tài chính",
+        "D": "Tiền kỹ thuật số của ngân hàng trung ương"
+      },
+      "answer": "A",
+      "explainAnswer": "Stablecoin là loại tiền mã hóa được thiết kế để giữ giá trị ổn định bằng cách gắn với tài sản thực như USD hoặc vàng.",
+      "image": null
+    },
+    {
+      "id": 94,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Chính sách tiền tệ mở rộng có tác dụng gì?",
+      "options": {
+        "A": "Tăng cung tiền, giảm lãi suất để kích thích kinh tế",
+        "B": "Giảm cung tiền, tăng lãi suất để kiềm chế lạm phát",
+        "C": "Hạn chế vay nợ và đầu tư",
+        "D": "Giảm tỷ lệ dự trữ bắt buộc để giảm lạm phát"
+      },
+      "answer": "A",
+      "explainAnswer": "Chính sách tiền tệ mở rộng tăng cung tiền và/hoặc giảm lãi suất nhằm kích thích tổng cầu và hỗ trợ tăng trưởng kinh tế.",
+      "image": null
+    },
+    {
+      "id": 95,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Khi ngân hàng trung ương muốn kiểm soát lạm phát, họ sẽ:",
+      "options": {
+        "A": "Giảm cung tiền và tăng lãi suất",
+        "B": "Tăng cung tiền và giảm lãi suất",
+        "C": "Khuyến khích vay vốn nhiều hơn",
+        "D": "Giảm tỷ lệ dự trữ bắt buộc"
+      },
+      "answer": "A",
+      "explainAnswer": "Để kiểm soát lạm phát, ngân hàng trung ương thường giảm cung tiền và tăng lãi suất, làm giảm tổng cầu.",
+      "image": null
+    },
+    {
+      "id": 96,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Chính sách tài khóa bao gồm:",
+      "options": {
+        "A": "Chính sách thuế",
+        "B": "Chính sách chi tiêu công",
+        "C": "Chính sách đầu tư công",
+        "D": "Tất cả các đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Chính sách tài khóa bao gồm chính sách thuế, chi tiêu công và đầu tư công – do Chính phủ thực hiện qua ngân sách nhà nước.",
+      "image": null
+    },
+    {
+      "id": 97,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Thuế có tác động đến nền kinh tế như thế nào?",
+      "options": {
+        "A": "Ảnh hưởng đến thu nhập khả dụng của người dân",
+        "B": "Giúp Nhà nước điều tiết nền kinh tế",
+        "C": "Có thể tác động đến tốc độ tăng trưởng kinh tế",
+        "D": "Tất cả các đáp án trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Thuế ảnh hưởng trực tiếp đến thu nhập khả dụng, là công cụ điều tiết quan trọng và có thể tác động đến tốc độ tăng trưởng.",
+      "image": null
+    },
+    {
+      "id": 98,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Chi tiêu công tác động đến nền kinh tế bằng cách:",
+      "options": {
+        "A": "Tạo việc làm và kích thích tổng cầu",
+        "B": "Giảm thu nhập người dân",
+        "C": "Hạn chế tiêu dùng và đầu tư",
+        "D": "Giảm cung tiền trong nền kinh tế"
+      },
+      "answer": "A",
+      "explainAnswer": "Chi tiêu công tạo việc làm, tăng tổng cầu và có thể kích thích hoạt động kinh tế trong ngắn hạn.",
+      "image": null
+    },
+    {
+      "id": 99,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Một trong những rủi ro của thâm hụt ngân sách nhà nước là:",
+      "options": {
+        "A": "Làm tăng nợ công",
+        "B": "Giúp giảm lạm phát",
+        "C": "Giảm cung tiền trong nền kinh tế",
+        "D": "Không có tác động đáng kể"
+      },
+      "answer": "A",
+      "explainAnswer": "Thâm hụt ngân sách kéo dài thường dẫn đến gia tăng nợ công và có thể tạo áp lực lên lãi suất cũng như lạm phát.",
+      "image": null
+    },
+    {
+      "id": 100,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Nếu chính phủ muốn giảm bội chi ngân sách, họ có thể:",
+      "options": {
+        "A": "Tăng thuế và cắt giảm chi tiêu công",
+        "B": "Tăng chi tiêu công để kích thích kinh tế",
+        "C": "Giảm thuế để khuyến khích đầu tư",
+        "D": "Tăng lãi suất để giảm vay nợ"
+      },
+      "answer": "A",
+      "explainAnswer": "Để giảm bội chi, chính phủ thường kết hợp tăng thu (thuế) và cắt giảm chi tiêu công không cần thiết.",
+      "image": null
+    },
+    {
+      "id": 101,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Vai trò của chính sách tài chính - tiền tệ là:",
+      "options": {
+        "A": "Ổn định kinh tế vĩ mô",
+        "B": "Tạo việc làm",
+        "C": "Kiểm soát lạm phát và tăng trưởng kinh tế",
+        "D": "Tất cả các đáp án trên"
+      },
+      "answer": "A",
+      "explainAnswer": "Chính sách tài chính – tiền tệ nhằm ổn định kinh tế vĩ mô, kiểm soát lạm phát, hỗ trợ tăng trưởng và tạo việc làm.",
+      "image": null
+    },
+    {
+      "id": 102,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Đặc điểm nào dưới đây về tiền điện tử là đúng?",
+      "options": {
+        "A": "Không có cơ chế đảm bảo tiền tệ của NHTW",
+        "B": "Không bị quốc gia nào kiểm soát",
+        "C": "Được lưu trữ trên các thiết bị điện tử hoặc các ví lạnh",
+        "D": "Có đầy đủ chức năng của tiền tệ"
+      },
+      "answer": "C",
+      "explainAnswer": "Tiền điện tử được lưu trữ trên thiết bị điện tử hoặc ví lạnh (cold wallet). Không phải tất cả tiền điện tử đều thiếu sự kiểm soát của nhà nước hay thiếu đầy đủ chức năng tiền tệ.",
+      "image": null
+    },
+    {
+      "id": 103,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Loại chứng khoán nào dưới đây là chứng khoán phái sinh?",
+      "options": {
+        "A": "Chứng chỉ quỹ đầu tư",
+        "B": "Trái phiếu chính phủ",
+        "C": "Hợp đồng tương lai",
+        "D": "Cổ phiếu doanh nghiệp"
+      },
+      "answer": "C",
+      "explainAnswer": "Hợp đồng tương lai (futures) là chứng khoán phái sinh, giá trị phụ thuộc vào tài sản cơ sở. Cổ phiếu, trái phiếu và chứng chỉ quỹ là chứng khoán cơ sở.",
+      "image": null
+    },
+    {
+      "id": 104,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Căn cứ vào quá trình phát hành và lưu thông công cụ tài chính, thị trường tài chính được phân loại gồm:",
+      "options": {
+        "A": "Thị trường tiền tệ và thị trường vốn",
+        "B": "Thị trường nợ và thị trường vốn cổ phần",
+        "C": "Thị trường sơ cấp và thứ cấp",
+        "D": "Thị trường chính thức và thị trường phi chính thức"
+      },
+      "answer": "C",
+      "explainAnswer": "Theo quá trình phát hành và lưu thông, thị trường tài chính chia thành thị trường sơ cấp (phát hành mới) và thị trường thứ cấp (giao dịch lại).",
+      "image": null
+    },
+    {
+      "id": 105,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Chính sách tỷ giá hối đoái nào đang được Việt Nam áp dụng?",
+      "options": {
+        "A": "Tỷ giá hối đoái thả nổi có quản lý",
+        "B": "Thả nổi tỷ giá hối đoái theo quan hệ cung cầu ngoại hối",
+        "C": "Tỷ giá hối đoái cố định nhưng có thể điều chỉnh khi cần thiết",
+        "D": "Tỷ giá hối đoái cố định"
+      },
+      "answer": "A",
+      "explainAnswer": "Việt Nam đang áp dụng cơ chế tỷ giá thả nổi có quản lý, trong đó NHNN công bố tỷ giá trung tâm và cho phép biến động trong biên độ nhất định.",
+      "image": null
+    },
+    {
+      "id": 106,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Công cụ chính sách tiền tệ nào dưới đây linh hoạt nhất và thường được NHNN sử dụng nhất?",
+      "options": {
+        "A": "Lãi suất",
+        "B": "Công cụ chiết khấu",
+        "C": "Nghiệp vụ thị trường mở",
+        "D": "Hạn mức tín dụng"
+      },
+      "answer": "C",
+      "explainAnswer": "Nghiệp vụ thị trường mở (mua/bán giấy tờ có giá) là công cụ linh hoạt, nhanh và được NHNN sử dụng thường xuyên nhất để điều tiết thanh khoản.",
+      "image": null
+    },
+    {
+      "id": 107,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Công cụ chính sách tiền tệ nào dưới đây có tác động mạnh mẽ nhất đến nền kinh tế?",
+      "options": {
+        "A": "Lãi suất",
+        "B": "Tỷ lệ dự trữ bắt buộc",
+        "C": "Công cụ chiết khấu",
+        "D": "Tỷ giá"
+      },
+      "answer": "B",
+      "explainAnswer": "Tỷ lệ dự trữ bắt buộc tác động trực tiếp và mạnh đến khả năng tạo tiền của toàn hệ thống ngân hàng, do đó có ảnh hưởng mạnh mẽ đến cung tiền và nền kinh tế.",
+      "image": null
+    },
+    {
+      "id": 108,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Nguồn thu nào của nhà nước đóng vai trò quan trọng nhất?",
+      "options": {
+        "A": "Phí và lệ phí",
+        "B": "Thuế",
+        "C": "Viện trợ không hoàn lại và các khoản đóng góp",
+        "D": "Nộp ngân sách từ hoạt động kinh tế"
+      },
+      "answer": "B",
+      "explainAnswer": "Thuế là nguồn thu chủ yếu và ổn định nhất của ngân sách nhà nước ở hầu hết các quốc gia.",
+      "image": null
+    },
+    {
+      "id": 109,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Thị trường tài chính là nơi huy động vốn:",
+      "options": {
+        "A": "Trung hạn",
+        "B": "Ngắn hạn",
+        "C": "Ngắn hạn, trung hạn và dài hạn",
+        "D": "Dài hạn"
+      },
+      "answer": "C",
+      "explainAnswer": "Thị trường tài chính bao gồm cả thị trường tiền tệ (ngắn hạn) và thị trường vốn (trung – dài hạn), nên huy động được vốn ở mọi kỳ hạn.",
+      "image": null
+    },
+    {
+      "id": 110,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Công cụ nào dưới đây thuộc thị trường tiền tệ?",
+      "options": {
+        "A": "Trái phiếu",
+        "B": "Chứng khoán phái sinh",
+        "C": "Thương phiếu",
+        "D": "Cổ phiếu"
+      },
+      "answer": "C",
+      "explainAnswer": "Thương phiếu là công cụ ngắn hạn thuộc thị trường tiền tệ. Trái phiếu và cổ phiếu thuộc thị trường vốn.",
+      "image": null
+    },
+    {
+      "id": 111,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Đặc điểm của cổ phiếu ưu đãi cổ tức là:",
+      "options": {
+        "A": "Cổ tức phụ thuộc kết quả kinh doanh của doanh nghiệp",
+        "B": "Được hoàn vốn sau cổ phiếu thường",
+        "C": "Được chia cổ tức sau cổ phiếu thường",
+        "D": "Không có quyền biểu quyết"
+      },
+      "answer": "D",
+      "explainAnswer": "Cổ phiếu ưu đãi thường được ưu tiên nhận cổ tức cố định nhưng không có (hoặc hạn chế) quyền biểu quyết so với cổ phiếu thường.",
+      "image": null
+    },
+    {
+      "id": 112,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Mục đích sau cùng của bảo hiểm là gì?",
+      "options": {
+        "A": "Huy động vốn cho nền kinh tế",
+        "B": "Đảm bảo an toàn cho quá trình sản xuất và đời sống của con người trước những rủi ro, tai nạn có thể xảy ra",
+        "C": "Ổn định tài chính của các tổ chức, cá nhân tham gia bảo hiểm",
+        "D": "Thúc đẩy hội nhập kinh tế"
+      },
+      "answer": "B",
+      "explainAnswer": "Mục đích cốt lõi của bảo hiểm là bảo vệ người tham gia trước những rủi ro và tổn thất có thể xảy ra trong sản xuất và đời sống.",
+      "image": null
+    },
+    {
+      "id": 113,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Loại hình tổ chức tài chính nào dưới đây KHÔNG được phép nhận tiền gửi của khách hàng?",
+      "options": {
+        "A": "Công ty chứng khoán",
+        "B": "Ngân hàng đầu tư",
+        "C": "Công ty bảo hiểm",
+        "D": "Ngân hàng thương mại"
+      },
+      "answer": "A",
+      "explainAnswer": "Công ty chứng khoán không được nhận tiền gửi như ngân hàng thương mại. Ngân hàng thương mại là tổ chức được phép nhận tiền gửi công chúng.",
+      "image": null
+    },
+    {
+      "id": 114,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Thất bại của thị trường xảy ra khi:",
+      "options": {
+        "A": "Thị trường chứng khoán chứng kiến một đợt suy giảm mạnh khiến các nhà đầu tư thua lỗ",
+        "B": "Sự thiếu kiểm soát của nền kinh tế thị trường dẫn đến quá ít hoặc quá nhiều nguồn lực chảy vào một hoạt động kinh tế cụ thể",
+        "C": "Hàng hóa của một sản phẩm trở nên quá đắt đỏ",
+        "D": "Thường xảy ra khi nhà nước can thiệp vào nền kinh tế"
+      },
+      "answer": "B",
+      "explainAnswer": "Thất bại thị trường là tình trạng thị trường tự do không phân bổ nguồn lực một cách hiệu quả (quá nhiều hoặc quá ít nguồn lực vào một lĩnh vực).",
+      "image": null
+    },
+    {
+      "id": 115,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Về mặt định nghĩa, sức mua của đồng tiền luôn luôn giảm khi:",
+      "options": {
+        "A": "Suy thoái kinh tế xảy ra",
+        "B": "Giảm phát xảy ra",
+        "C": "Giai đoạn bầu cử",
+        "D": "Lạm phát xảy ra"
+      },
+      "answer": "D",
+      "explainAnswer": "Lạm phát làm mức giá chung tăng → sức mua của một đơn vị tiền tệ giảm. Đây là định nghĩa cơ bản.",
+      "image": null
+    },
+    {
+      "id": 116,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Để thực hiện tốt chức năng cất trữ giá trị thì tiền cần có đặc điểm nào sau đây?",
+      "options": {
+        "A": "Tiền phải có giá trị ổn định",
+        "B": "Phải là ngoại tệ",
+        "C": "Tiền phải có giá trị ổn định và phải là tiền vàng",
+        "D": "Phải là tiền vàng"
+      },
+      "answer": "A",
+      "explainAnswer": "Để cất trữ giá trị hiệu quả, tiền cần giữ được sức mua ổn định theo thời gian. Không bắt buộc phải là vàng hay ngoại tệ.",
+      "image": null
+    },
+    {
+      "id": 117,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Công cụ nào dưới đây thuộc chính sách tài khóa?",
+      "options": {
+        "A": "Lãi suất",
+        "B": "Chính sách thuế",
+        "C": "Tỷ giá",
+        "D": "Dự trữ ngoại hối"
+      },
+      "answer": "B",
+      "explainAnswer": "Chính sách thuế thuộc chính sách tài khóa (do Chính phủ/Bộ Tài chính thực hiện). Lãi suất, tỷ giá, dự trữ ngoại hối thuộc chính sách tiền tệ.",
+      "image": null
+    },
+    {
+      "id": 118,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Khi doanh nghiệp lập bảng cân đối kế toán thì tiền tệ phát huy chức năng nào?",
+      "options": {
+        "A": "Trao đổi",
+        "B": "Cất trữ",
+        "C": "Thước đo giá trị",
+        "D": "Thanh toán"
+      },
+      "answer": "C",
+      "explainAnswer": "Khi lập bảng cân đối kế toán, các tài sản và nguồn vốn được biểu hiện bằng đơn vị tiền tệ → tiền thực hiện chức năng thước đo giá trị.",
+      "image": null
+    },
+    {
+      "id": 119,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Trong giai đoạn suy thoái kinh tế, một số quốc gia thực hiện chính sách thắt chặt tài khóa để:",
+      "options": {
+        "A": "Thúc đẩy tăng trưởng",
+        "B": "Kiểm soát lạm phát",
+        "C": "Kiểm soát thâm hụt ngân sách và nợ công",
+        "D": "Kích thích nền kinh tế trở về trạng thái toàn dụng lao động"
+      },
+      "answer": "C",
+      "explainAnswer": "Thắt chặt tài khóa (giảm chi hoặc tăng thuế) trong suy thoái thường nhằm kiểm soát thâm hụt ngân sách và nợ công, dù có thể làm suy thoái nặng hơn.",
+      "image": null
+    },
+    {
+      "id": 120,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Chính sách tiền tệ do cơ quan nào dưới đây trực tiếp đảm trách?",
+      "options": {
+        "A": "Quốc hội",
+        "B": "Ngân hàng trung ương",
+        "C": "Chính phủ",
+        "D": "Ban kinh tế trung ương"
+      },
+      "answer": "B",
+      "explainAnswer": "Ngân hàng Trung ương là cơ quan trực tiếp xây dựng và thực thi chính sách tiền tệ.",
+      "image": null
+    },
+    {
+      "id": 121,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Đặc điểm nào dưới đây KHÔNG phải là đặc điểm của tài chính công?",
+      "options": {
+        "A": "Sinh lợi cho ngân sách nhà nước",
+        "B": "Chứa đựng lợi ích chung, lợi ích công cộng",
+        "C": "Phạm vi hoạt động rộng",
+        "D": "Gắn liền với sở hữu của nhà nước"
+      },
+      "answer": "A",
+      "explainAnswer": "Tài chính công không đặt mục tiêu sinh lợi như tài chính doanh nghiệp. Đặc điểm chính là phục vụ lợi ích công cộng và gắn với sở hữu nhà nước.",
+      "image": null
+    },
+    {
+      "id": 122,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Hiệu quả chi tiêu tài chính công được đo lường thông qua chỉ số tài chính nào sau đây?",
+      "options": {
+        "A": "Hiệu quả chi tiêu tài chính công không lượng hóa được",
+        "B": "Tỷ lệ nguồn thu thuế trên GDP",
+        "C": "Chênh lệch giữa thu và chi ngân sách nhà nước",
+        "D": "Tỷ lệ tăng trưởng GDP"
+      },
+      "answer": "A",
+      "explainAnswer": "Hiệu quả chi tiêu công khó lượng hóa trực tiếp bằng một chỉ số tài chính đơn giản vì nhiều kết quả mang tính xã hội, dài hạn.",
+      "image": null
+    },
+    {
+      "id": 123,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Đặc điểm của thuế trực thu là:",
+      "options": {
+        "A": "Ảnh hưởng trực tiếp đến giá cả thị trường vì thuế được cộng vào giá bán hàng hóa, dịch vụ",
+        "B": "Dễ thu và khó trốn thuế",
+        "C": "Người nộp thuế không phải là người chịu thuế",
+        "D": "Đảm bảo công bằng giữa những người chịu thuế"
+      },
+      "answer": "D",
+      "explainAnswer": "Thuế trực thu (thuế thu nhập…) đánh vào thu nhập/tài sản, người nộp thuế đồng thời là người chịu thuế, dễ điều tiết theo khả năng và đảm bảo công bằng hơn.",
+      "image": null
+    },
+    {
+      "id": 124,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Theo Luật ngân sách, chi thường xuyên là nhiệm vụ chi của ngân sách nhà nước nhằm mục đích nào sau đây?",
+      "options": {
+        "A": "Sinh lợi cho ngân sách nhà nước",
+        "B": "Đầu tư xây dựng cơ bản",
+        "C": "Dự trữ vật tư hàng hóa nhằm thực hiện mục tiêu ổn định, thúc đẩy tăng trưởng kinh tế và phát triển xã hội",
+        "D": "Đảm bảo hoạt động của bộ máy nhà nước và tổ chức chính trị - xã hội"
+      },
+      "answer": "D",
+      "explainAnswer": "Chi thường xuyên nhằm duy trì hoạt động thường xuyên của bộ máy nhà nước và các tổ chức chính trị – xã hội.",
+      "image": null
+    },
+    {
+      "id": 125,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Bội chi ngân sách nhà nước được bù đắp bởi nguồn nào sau đây?",
+      "options": {
+        "A": "Tăng lãi suất chiết khấu",
+        "B": "Vay từ các nguồn trong và ngoài nước",
+        "C": "Thực hiện chính sách tiền tệ mở rộng",
+        "D": "Thực hiện chính sách tài khóa mở rộng"
+      },
+      "answer": "B",
+      "explainAnswer": "Bội chi ngân sách được bù đắp chủ yếu bằng vay trong nước và vay nước ngoài (phát hành trái phiếu, vay ODA…).",
+      "image": null
+    },
+    {
+      "id": 126,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Chức năng nào KHÔNG phải là chức năng của Tài chính?",
+      "options": {
+        "A": "Chức năng kiểm tra",
+        "B": "Chức năng huy động nguồn tài chính",
+        "C": "Chức năng phân bổ nguồn tài chính",
+        "D": "Chức năng tạo ra hàng hóa"
+      },
+      "answer": "D",
+      "explainAnswer": "Tài chính có chức năng huy động, phân phối và kiểm tra giám sát. Tạo ra hàng hóa là chức năng của quá trình sản xuất, không phải của tài chính.",
+      "image": null
+    },
+    {
+      "id": 127,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Căn cứ theo đối tượng bảo hiểm, loại hình bảo hiểm nào dưới đây là sai?",
+      "options": {
+        "A": "Bảo hiểm trách nhiệm dân sự",
+        "B": "Bảo hiểm tài sản",
+        "C": "Bảo hiểm xã hội",
+        "D": "Bảo hiểm con người"
+      },
+      "answer": "C",
+      "explainAnswer": "Theo đối tượng bảo hiểm, các loại chính là bảo hiểm tài sản, bảo hiểm con người và bảo hiểm trách nhiệm dân sự. Bảo hiểm xã hội thuộc hệ thống an sinh xã hội.",
+      "image": null
+    },
+    {
+      "id": 128,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Lãi suất danh nghĩa bị ảnh hưởng bởi yếu tố nào sau đây?",
+      "options": {
+        "A": "Rủi ro",
+        "B": "Cung cầu tín dụng",
+        "C": "Lạm phát",
+        "D": "Lạm phát, rủi ro và cung cầu tín dụng"
+      },
+      "answer": "D",
+      "explainAnswer": "Lãi suất danh nghĩa chịu ảnh hưởng đồng thời của kỳ vọng lạm phát, mức độ rủi ro và quan hệ cung – cầu trên thị trường tín dụng.",
+      "image": null
+    },
+    {
+      "id": 129,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Tín dụng thương mại là gì?",
+      "options": {
+        "A": "Hình thức tài trợ tín dụng trung và dài hạn thông qua việc cho thuê tài sản",
+        "B": "Quan hệ tín dụng giữa ngân hàng và các chủ thể khác",
+        "C": "Hình thức tài trợ tín dụng ngắn hạn thông qua việc cho thuê tài sản",
+        "D": "Quan hệ tín dụng giữa các nhà kinh doanh dựa trên hình thức mua bán chịu hàng hóa"
+      },
+      "answer": "D",
+      "explainAnswer": "Tín dụng thương mại là quan hệ mua bán chịu hàng hóa giữa các doanh nghiệp, trong đó người bán cho người mua sử dụng hàng trước và thanh toán sau.",
+      "image": null
+    },
+    {
+      "id": 130,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Loại trái phiếu nào dưới đây có lợi tức thấp nhất?",
+      "options": {
+        "A": "Trái phiếu doanh nghiệp nhỏ",
+        "B": "Trái phiếu doanh nghiệp lớn",
+        "C": "Trái phiếu chính phủ",
+        "D": "Trái phiếu ngân hàng"
+      },
+      "answer": "C",
+      "explainAnswer": "Trái phiếu chính phủ thường có rủi ro thấp nhất nên lãi suất (lợi tức) cũng thấp nhất so với trái phiếu doanh nghiệp.",
+      "image": null
+    },
+    {
+      "id": 131,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Nhà nước tham gia vào quá trình phân phối tài chính với tư cách nào dưới đây?",
+      "options": {
+        "A": "Không tham gia",
+        "B": "Là chủ thể tham gia phân phối lại",
+        "C": "Là chủ thể tham gia phân phối lần đầu",
+        "D": "Là chủ thể tham gia phân phối lần đầu và phân phối lại"
+      },
+      "answer": "D",
+      "explainAnswer": "Nhà nước vừa tham gia phân phối lần đầu (thu thuế từ thu nhập) vừa thực hiện phân phối lại thông qua chi ngân sách.",
+      "image": null
+    },
+    {
+      "id": 132,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Thị trường tiền tệ gắn liền với nhu cầu về vốn trong:",
+      "options": {
+        "A": "Ngắn hạn",
+        "B": "Trung hạn",
+        "C": "Trung và dài hạn",
+        "D": "Dài hạn"
+      },
+      "answer": "A",
+      "explainAnswer": "Thị trường tiền tệ chuyên giao dịch các công cụ tài chính ngắn hạn (thường dưới 1 năm).",
+      "image": null
+    },
+    {
+      "id": 133,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Phương án nào dưới đây KHÔNG phải là điều kiện để một hàng hóa được chấp nhận là tiền tệ trong nền kinh tế?",
+      "options": {
+        "A": "Có thể chia nhỏ và sử dụng lâu dài mà không bị hư hỏng",
+        "B": "Thuận lợi trong việc sản xuất ra hàng loạt và dễ dàng trong việc xác định giá trị",
+        "C": "Được sử dụng để làm trang sức",
+        "D": "Được chấp nhận rộng rãi"
+      },
+      "answer": "C",
+      "explainAnswer": "Điều kiện quan trọng là được chấp nhận rộng rãi, bền, chia nhỏ được và dễ định giá. Việc dùng làm trang sức không phải điều kiện bắt buộc.",
+      "image": null
+    },
+    {
+      "id": 134,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Hình thức nào dưới đây là lý tưởng nhất để đối phó với hậu quả tổn thất do rủi ro gây ra?",
+      "options": {
+        "A": "Né tránh rủi ro",
+        "B": "Chuyển giao rủi ro",
+        "C": "Kiểm soát rủi ro",
+        "D": "Chấp nhận rủi ro"
+      },
+      "answer": "B",
+      "explainAnswer": "Chuyển giao rủi ro (thông qua bảo hiểm) là cách hiệu quả để đối phó với hậu quả tổn thất khi rủi ro đã xảy ra, trong khi vẫn duy trì hoạt động.",
+      "image": null
+    },
+    {
+      "id": 135,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Lợi ích thực tế của khoản tiền gửi tiết kiệm là bao nhiêu nếu lãi suất danh nghĩa 9%/năm và tỷ lệ lạm phát 4%?",
+      "options": {
+        "A": "9%",
+        "B": "13%",
+        "C": "5%",
+        "D": "4%"
+      },
+      "answer": "C",
+      "explainAnswer": "Lãi suất thực ≈ lãi suất danh nghĩa – lạm phát = 9% – 4% = 5%.",
+      "image": null
+    },
+    {
+      "id": 136,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Tiền giấy của NHNN Việt Nam thuộc loại hình phát triển tiền tệ nào?",
+      "options": {
+        "A": "Hóa tệ",
+        "B": "Tín tệ (tiền giấy pháp định)",
+        "C": "Tiền hàng hóa",
+        "D": "Tiền kim loại"
+      },
+      "answer": "B",
+      "explainAnswer": "Tiền giấy do NHNN phát hành là tín tệ pháp định, được chấp nhận dựa trên uy tín và quy định của nhà nước, không còn giá trị nội tại như hóa tệ.",
+      "image": null
+    },
+    {
+      "id": 137,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Với số tiền gửi ban đầu là 10 tỷ, tỷ lệ dự trữ bắt buộc là 10%. Số tiền gửi tối đa có thể mở rộng trong hệ thống là:",
+      "options": {
+        "A": "10 tỷ",
+        "B": "100 tỷ",
+        "C": "90 tỷ",
+        "D": "110 tỷ"
+      },
+      "answer": "B",
+      "explainAnswer": "Số nhân tiền = 1 / tỷ lệ dự trữ bắt buộc = 1/0,1 = 10. Tổng tiền gửi tối đa = 10 tỷ × 10 = 100 tỷ.",
+      "image": null
+    },
+    {
+      "id": 138,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Khách hàng A gửi 1 tỷ vào ngân hàng X kỳ hạn 3 năm, lãi suất 8%/năm. Sau 3 năm số tiền lãi theo lãi suất đơn là:",
+      "options": {
+        "A": "230 triệu đồng",
+        "B": "200 triệu đồng",
+        "C": "240 triệu đồng",
+        "D": "220 triệu đồng"
+      },
+      "answer": "C",
+      "explainAnswer": "Lãi đơn = Gốc × lãi suất × thời gian = 1.000 × 0,08 × 3 = 240 triệu đồng.",
+      "image": null
+    },
+    {
+      "id": 139,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Trái phiếu chiết khấu là:",
+      "options": {
+        "A": "Trái phiếu có giá phát hành bằng mệnh giá",
+        "B": "Trái phiếu có giá phát hành cao hơn mệnh giá",
+        "C": "Trái phiếu có giá phát hành thấp hơn mệnh giá",
+        "D": "Trái phiếu có mệnh giá cố định 10.000"
+      },
+      "answer": "C",
+      "explainAnswer": "Trái phiếu chiết khấu được bán với giá thấp hơn mệnh giá; phần chênh lệch chính là lợi tức của người nắm giữ.",
+      "image": null
+    },
+    {
+      "id": 140,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Định nghĩa nào sau đây là chính xác về năm ngân sách?",
+      "options": {
+        "A": "Năm ngân sách ở các nước trên thế giới có thể có thời điểm bắt đầu và kết thúc không giống nhau nhưng đều có độ dài bằng nhau",
+        "B": "Năm ngân sách ở tất cả các nước trên thế giới đều có thời điểm bắt đầu và kết thúc giống nhau",
+        "C": "Năm ngân sách ở Việt Nam trùng với năm âm lịch",
+        "D": "Năm ngân sách luôn bắt đầu từ tháng 1"
+      },
+      "answer": "A",
+      "explainAnswer": "Năm ngân sách có độ dài 12 tháng nhưng thời điểm bắt đầu có thể khác nhau giữa các quốc gia (Việt Nam bắt đầu từ 01/01).",
+      "image": null
+    },
+    {
+      "id": 141,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Thị trường phi chính thức có đặc điểm:",
+      "options": {
+        "A": "Ít rủi ro hơn",
+        "B": "Có cả 3 phương án đều đúng",
+        "C": "Khó khăn trong việc tiếp cận vốn",
+        "D": "Ít chịu sự quản lý của nhà nước"
+      },
+      "answer": "D",
+      "explainAnswer": "Thị trường phi chính thức (OTC, chợ đen vốn…) ít chịu sự quản lý chặt chẽ của nhà nước so với thị trường chính thức.",
+      "image": null
+    },
+    {
+      "id": 142,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Khi NHTW giảm lãi suất chiết khấu, điều nào KHÔNG đúng?",
+      "options": {
+        "A": "Giảm lượng tiền cung ứng trong nền kinh tế",
+        "B": "Khuyến khích các NHTM vay vốn từ NHTW",
+        "C": "Tăng lượng tiền cung ứng trong nền kinh tế",
+        "D": "Tăng cường khả năng cho vay của ngân hàng"
+      },
+      "answer": "A",
+      "explainAnswer": "Giảm lãi suất chiết khấu khuyến khích NHTM vay từ NHTW → tăng dự trữ → tăng khả năng cho vay và cung tiền. Do đó phương án A sai.",
+      "image": null
+    },
+    {
+      "id": 143,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Việc mua ngoại tệ trên thị trường ngoại hối tác động như thế nào đến giá của đồng nội tệ?",
+      "options": {
+        "A": "Tăng giá nội tệ",
+        "B": "Tăng hay giảm còn phụ thuộc vào loại ngoại tệ mua vào",
+        "C": "Giảm giá nội tệ",
+        "D": "Giá trị đồng nội tệ không thay đổi"
+      },
+      "answer": "C",
+      "explainAnswer": "Khi NHTW hoặc tác nhân mua ngoại tệ (bán nội tệ), cung nội tệ tăng → giá trị đồng nội tệ có xu hướng giảm (đồng nội tệ mất giá).",
+      "image": null
+    },
+    {
+      "id": 144,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Công cụ nào sau đây của chính sách tiền tệ có độ trễ hành động lớn nhất?",
+      "options": {
+        "A": "Dự trữ bắt buộc",
+        "B": "Tỷ giá",
+        "C": "Lãi suất",
+        "D": "Nghiệp vụ thị trường mở"
+      },
+      "answer": "A",
+      "explainAnswer": "Thay đổi tỷ lệ dự trữ bắt buộc có tác động mạnh nhưng thường có độ trễ và ít được sử dụng thường xuyên hơn nghiệp vụ thị trường mở.",
+      "image": null
+    },
+    {
+      "id": 145,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Để một hàng hoá có thể trở thành tiền, hàng hoá đó phải:",
+      "options": {
+        "A": "Do chính phủ sản xuất ra",
+        "B": "Được chấp nhận rộng rãi làm phương tiện thanh toán",
+        "C": "Được đảm bảo bằng vàng hoặc bạc",
+        "D": "Có giá trị nội tại cao"
+      },
+      "answer": "B",
+      "explainAnswer": "Điều kiện quan trọng nhất để một hàng hóa trở thành tiền là được xã hội chấp nhận rộng rãi làm phương tiện thanh toán.",
+      "image": null
+    },
+    {
+      "id": 146,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Tài sản nào sau đây có tính lỏng cao nhất?",
+      "options": {
+        "A": "Nguyên liệu, vật liệu trong kho",
+        "B": "Chứng khoán",
+        "C": "Khoản phải thu khách hàng",
+        "D": "Ngoại tệ gửi ngân hàng"
+      },
+      "answer": "D",
+      "explainAnswer": "Ngoại tệ gửi ngân hàng có tính thanh khoản rất cao, dễ dàng chuyển đổi thành tiền mặt hoặc sử dụng để thanh toán.",
+      "image": null
+    },
+    {
+      "id": 147,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Sức mua của đồng Việt Nam bị giảm sút khi:",
+      "options": {
+        "A": "Giá hàng hoá lương thực, thực phẩm tăng",
+        "B": "Lạm phát xảy ra",
+        "C": "Cả A và B",
+        "D": "Giảm phát xảy ra"
+      },
+      "answer": "C",
+      "explainAnswer": "Khi giá hàng hóa tăng hoặc lạm phát xảy ra, cùng một lượng tiền mua được ít hàng hơn → sức mua giảm.",
+      "image": null
+    },
+    {
+      "id": 148,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Tính thanh khoản của một tài sản là:",
+      "options": {
+        "A": "Mức độ dễ dàng mà tài sản đó có thể chuyển đổi thành tiền",
+        "B": "Khả năng tài sản đó có thể sinh lời",
+        "C": "Mức độ dễ dàng mà tài sản đó có thể chuyển đổi thành cổ phiếu thường",
+        "D": "Số tiền mà tài sản đó có thể bán được"
+      },
+      "answer": "A",
+      "explainAnswer": "Tính thanh khoản (liquidity) đo mức độ dễ dàng và nhanh chóng chuyển một tài sản thành tiền mặt mà không bị mất giá đáng kể.",
+      "image": null
+    },
+    {
+      "id": 149,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Hiện tượng “nền kinh tế tiền mặt”:",
+      "options": {
+        "A": "Có lợi cho nền kinh tế",
+        "B": "Có nguồn gốc từ tỷ lệ dự trữ bắt buộc cao",
+        "C": "Có hại cho nền kinh tế",
+        "D": "Làm tăng tính minh bạch"
+      },
+      "answer": "C",
+      "explainAnswer": "Nền kinh tế tiền mặt (ưu tiên sử dụng tiền mặt) gây khó khăn cho quản lý, tăng chi phí giao dịch và tạo điều kiện cho hoạt động phi chính thức.",
+      "image": null
+    },
+    {
+      "id": 150,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Tiền giấy lưu hành ở Việt Nam ngày nay:",
+      "options": {
+        "A": "Vẫn có thể đổi ra vàng theo một tỷ lệ nhất định do Ngân hàng nhà nước quy định",
+        "B": "Có giá trị danh nghĩa lớn hơn nhiều so với giá trị thực của nó",
+        "C": "Cả A và B",
+        "D": "Có giá trị nội tại bằng giá trị danh nghĩa"
+      },
+      "answer": "B",
+      "explainAnswer": "Tiền giấy hiện nay là tiền pháp định, giá trị danh nghĩa do nhà nước quy định và lớn hơn rất nhiều so với chi phí in ấn (giá trị thực).",
+      "image": null
+    },
+    {
+      "id": 151,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Hình thức thanh toán nào sau đây cho phép người sử dụng “tiêu tiền trước, trả tiền sau”?",
+      "options": {
+        "A": "Thanh toán bằng thẻ ghi nợ (debit card)",
+        "B": "Thanh toán bằng thẻ tín dụng (credit card)",
+        "C": "Thanh toán bằng séc doanh nghiệp",
+        "D": "Thanh toán bằng séc du lịch"
+      },
+      "answer": "B",
+      "explainAnswer": "Thẻ tín dụng cho phép chủ thẻ chi tiêu trước và thanh toán sau trong thời hạn nhất định (thường có ân hạn).",
+      "image": null
+    },
+    {
+      "id": 152,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Hoạt động thanh toán thẻ phát triển làm cho:",
+      "options": {
+        "A": "Tỷ lệ nắm giữ tiền mặt tăng lên",
+        "B": "Tỷ lệ nắm giữ tiền mặt giảm",
+        "C": "Tốc độ lưu thông tiền tệ giảm",
+        "D": "Cung tiền giảm"
+      },
+      "answer": "B",
+      "explainAnswer": "Khi thanh toán thẻ phổ biến, nhu cầu giữ tiền mặt giảm vì người dân có thể thanh toán không dùng tiền mặt dễ dàng hơn.",
+      "image": null
+    },
+    {
+      "id": 153,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Tiền pháp định là:",
+      "options": {
+        "A": "Không thể chuyển đổi sang kim loại quý hiếm",
+        "B": "Thẻ tín dụng",
+        "C": "Tiền xu",
+        "D": "Tiền được đảm bảo 100% bằng vàng"
+      },
+      "answer": "A",
+      "explainAnswer": "Tiền pháp định (fiat money) được chấp nhận theo luật định và không còn được đảm bảo bằng kim loại quý có thể đổi được.",
+      "image": null
+    },
+    {
+      "id": 154,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Thẻ ghi nợ (debit card):",
+      "options": {
+        "A": "Có thể dùng để thanh toán thay tiền mặt tại các điểm chấp nhận thẻ",
+        "B": "Là phương tiện để vay nợ ngân hàng",
+        "C": "Cả A và B",
+        "D": "Chỉ dùng để rút tiền ATM"
+      },
+      "answer": "A",
+      "explainAnswer": "Thẻ ghi nợ trừ trực tiếp tiền từ tài khoản của chủ thẻ, dùng để thanh toán thay tiền mặt. Không phải công cụ vay nợ như thẻ tín dụng.",
+      "image": null
+    },
+    {
+      "id": 155,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Hoá tệ là loại tiền:",
+      "options": {
+        "A": "Có thể sử dụng như là một hàng hoá thông thường",
+        "B": "Không chứa đầy đủ giá trị trong nó",
+        "C": "Được pháp luật bảo hộ",
+        "D": "Không có phương án đúng"
+      },
+      "answer": "A",
+      "explainAnswer": "Hóa tệ có giá trị nội tại, bản thân nó có thể được sử dụng như hàng hóa thông thường (ví dụ vàng dùng làm trang sức).",
+      "image": null
+    },
+    {
+      "id": 156,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Thẻ credit là loại thẻ:",
+      "options": {
+        "A": "Phải nạp tiền vào tài khoản mới sử dụng được",
+        "B": "Chỉ cho phép rút tiền tại máy ATM",
+        "C": "Cho phép mua hàng rồi trả sau",
+        "D": "Không liên quan đến tín dụng"
+      },
+      "answer": "C",
+      "explainAnswer": "Thẻ tín dụng (credit card) cho phép chủ thẻ mua hàng trước và thanh toán sau theo hạn mức tín dụng được cấp.",
+      "image": null
+    },
+    {
+      "id": 157,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Giá trị lưu thông của tiền giấy có được là nhờ:",
+      "options": {
+        "A": "Giá trị nội tại của đồng tiền",
+        "B": "Sự khan hiếm của tiền giấy",
+        "C": "Pháp luật quy định",
+        "D": "Cả A và B"
+      },
+      "answer": "C",
+      "explainAnswer": "Tiền giấy lưu thông chủ yếu nhờ quy định của pháp luật (tiền pháp định), không phải nhờ giá trị nội tại.",
+      "image": null
+    },
+    {
+      "id": 158,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Trong các chế độ tiền tệ, chế độ lưu thông tiền giấy:",
+      "options": {
+        "A": "Ra đời sớm nhất",
+        "B": "Ra đời muộn nhất",
+        "C": "Có tính ổn định cao nhất",
+        "D": "Không có lạm phát"
+      },
+      "answer": "B",
+      "explainAnswer": "Chế độ lưu thông tiền giấy (tiền pháp định) ra đời muộn nhất trong lịch sử phát triển các chế độ tiền tệ.",
+      "image": null
+    },
+    {
+      "id": 159,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Hoá tệ khác tiền dấu hiệu ở đặc điểm:",
+      "options": {
+        "A": "Hoá tệ có giá trị sử dụng lớn hơn giá trị",
+        "B": "Hiện nay hoá tệ không còn tồn tại",
+        "C": "Hoá tệ phải là kim loại",
+        "D": "Hoá tệ có thể tự động rút khỏi lưu thông"
+      },
+      "answer": "D",
+      "explainAnswer": "Hóa tệ có giá trị nội tại nên khi giá trị nội tại cao hơn mệnh giá, nó có thể được rút khỏi lưu thông để sử dụng vào mục đích khác (tự điều tiết).",
+      "image": null
+    },
+    {
+      "id": 160,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Khi thực hiện chức năng nào sau đây, tiền KHÔNG cần hiện diện thực tế?",
+      "options": {
+        "A": "Thước đo giá trị",
+        "B": "Phương tiện thanh toán",
+        "C": "Phương tiện trao đổi",
+        "D": "Phương tiện cất trữ"
+      },
+      "answer": "A",
+      "explainAnswer": "Khi thực hiện chức năng thước đo giá trị, tiền chỉ cần tồn tại trong ý niệm để định giá hàng hóa, không cần hiện diện vật chất.",
+      "image": null
+    },
+    {
+      "id": 161,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Khi doanh nghiệp thanh toán tiền mua hàng thì tiền tệ đã phát huy chức năng:",
+      "options": {
+        "A": "Trao đổi",
+        "B": "Thước đo giá trị",
+        "C": "Cất trữ",
+        "D": "Phương tiện thanh toán"
+      },
+      "answer": "A",
+      "explainAnswer": "Khi dùng tiền để mua hàng ngay, tiền thực hiện chức năng phương tiện trao đổi (lưu thông).",
+      "image": null
+    },
+    {
+      "id": 162,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Nền kinh tế cần tiền để thỏa mãn nhu cầu:",
+      "options": {
+        "A": "Giao dịch",
+        "B": "Dự phòng",
+        "C": "Đầu tư",
+        "D": "Cả A, B và C"
+      },
+      "answer": "D",
+      "explainAnswer": "Theo lý thuyết cầu tiền, nền kinh tế cần tiền cho mục đích giao dịch, dự phòng và đầu tư (đầu cơ).",
+      "image": null
+    },
+    {
+      "id": 163,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Khái niệm “chi phí giao dịch do không có sự trùng khớp về nhu cầu”:",
+      "options": {
+        "A": "Cao hơn khi có sự xuất hiện của tiền",
+        "B": "Thấp hơn khi có sự xuất hiện của tiền",
+        "C": "Do các bên giao dịch quy định",
+        "D": "Do pháp luật quy định"
+      },
+      "answer": "B",
+      "explainAnswer": "Tiền ra đời giúp giảm chi phí giao dịch do không cần sự trùng khớp kép về nhu cầu như trong trao đổi hàng đổi hàng.",
+      "image": null
+    },
+    {
+      "id": 164,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Các quan hệ tài chính:",
+      "options": {
+        "A": "Xuất hiện chủ yếu trong khâu phân phối lại",
+        "B": "Gắn liền với việc phân bổ các nguồn vốn tiền tệ trong nền kinh tế",
+        "C": "Cả A và B",
+        "D": "Chỉ xuất hiện trong sản xuất"
+      },
+      "answer": "C",
+      "explainAnswer": "Quan hệ tài chính gắn với việc phân bổ nguồn vốn tiền tệ và xuất hiện cả trong phân phối lần đầu lẫn phân phối lại.",
+      "image": null
+    },
+    {
+      "id": 165,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Tín dụng thuộc loại:",
+      "options": {
+        "A": "Quan hệ tài chính hoàn trả có điều kiện",
+        "B": "Quan hệ tài chính có hoàn trả",
+        "C": "Quan hệ tài chính nội bộ",
+        "D": "Quan hệ tài chính không hoàn trả"
+      },
+      "answer": "B",
+      "explainAnswer": "Tín dụng là quan hệ tài chính có hoàn trả (có thời hạn và phải trả gốc + lãi).",
+      "image": null
+    },
+    {
+      "id": 166,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Bảo hiểm thuộc loại:",
+      "options": {
+        "A": "Quan hệ tài chính hoàn trả có điều kiện",
+        "B": "Quan hệ tài chính có hoàn trả",
+        "C": "Quan hệ tài chính không hoàn trả",
+        "D": "Quan hệ tài chính nội bộ"
+      },
+      "answer": "A",
+      "explainAnswer": "Bảo hiểm là quan hệ hoàn trả có điều kiện: chỉ chi trả khi xảy ra sự kiện bảo hiểm theo hợp đồng.",
+      "image": null
+    },
+    {
+      "id": 167,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Tài chính là quan hệ:",
+      "options": {
+        "A": "Trao đổi hàng hoá trực tiếp",
+        "B": "Phân phối trong kênh mua bán hàng hoá",
+        "C": "Phân phối nguồn lực giữa các chủ thể kinh tế",
+        "D": "Cả A, B và C"
+      },
+      "answer": "C",
+      "explainAnswer": "Tài chính là hệ thống quan hệ phân phối nguồn lực (thông qua quỹ tiền tệ) giữa các chủ thể trong nền kinh tế.",
+      "image": null
+    },
+    {
+      "id": 168,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Quan hệ nào dưới đây là quan hệ tài chính?",
+      "options": {
+        "A": "Vay nợ",
+        "B": "Nộp thuế",
+        "C": "Vận tải",
+        "D": "Cả A và B"
+      },
+      "answer": "D",
+      "explainAnswer": "Vay nợ (tín dụng) và nộp thuế đều là quan hệ phân phối gắn với quỹ tiền tệ, thuộc quan hệ tài chính. Vận tải là quan hệ trao đổi dịch vụ.",
+      "image": null
+    },
+    {
+      "id": 169,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Tài chính không thể ra đời nếu thiếu:",
+      "options": {
+        "A": "Nền kinh tế hàng hoá",
+        "B": "Nền kinh tế hàng hoá tiền tệ",
+        "C": "Nền kinh tế tri thức",
+        "D": "Nền kinh tế thị trường"
+      },
+      "answer": "B",
+      "explainAnswer": "Tài chính gắn với sự vận động của quỹ tiền tệ, do đó chỉ ra đời trong nền kinh tế hàng hóa – tiền tệ.",
+      "image": null
+    },
+    {
+      "id": 170,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Trong các loại quan hệ sau, quan hệ nào KHÔNG phải là quan hệ tài chính?",
+      "options": {
+        "A": "Nộp tiền học phí",
+        "B": "Chuyển nhượng hoá đơn thương mại",
+        "C": "Mua bảo hiểm nhân thọ",
+        "D": "Cả A và B"
+      },
+      "answer": "B",
+      "explainAnswer": "Chuyển nhượng hóa đơn thương mại mang tính trao đổi hàng hóa/dịch vụ nhiều hơn. Nộp học phí và mua bảo hiểm là quan hệ phân phối gắn quỹ tiền tệ.",
+      "image": null
+    },
+    {
+      "id": 171,
+      "chapter": "Nguyên lý Tài chính",
+      "sourceChapter": "Nguyên lý Tài chính",
+      "question": "Vai trò của tài chính Nhà nước trong hệ thống tài chính là:",
+      "options": {
+        "A": "Nền tảng",
+        "B": "Tạo tính thanh khoản",
+        "C": "Chủ đạo",
+        "D": "Phụ trợ"
+      },
+      "answer": "C",
+      "explainAnswer": "Tài chính nhà nước giữ vai trò chủ đạo trong hệ thống tài chính, định hướng và điều tiết các quan hệ tài chính khác.",
+      "image": null
+    }
+  ]
+}

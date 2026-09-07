@@ -17,6 +17,7 @@ export type SubjectId =
   | "bao-mat-ung-dung-he-thong"
   | "marketing-can-ban"
   | "tin-hoc-van-phong"
+  | "nguyen-ly-tai-chinh"
   | "co-so-du-lieu"
   | "khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
   | "nhap-mon-khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
@@ -419,7 +420,7 @@ export const subjects: Subject[] = [
     ],
     chapters: [
       { id: "all", label: { en: "Macroeconomics - Final", vi: "Kinh tế vĩ mô - Cuối kỳ" }, count: 183 },
-      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Kinh tế vĩ mô"], count: 183 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Kinh tế vĩ mô"], hidden: true, count: 183 },
     ],
   },
   {
@@ -516,6 +517,23 @@ export const subjects: Subject[] = [
     chapters: [
       { id: "all", label: { en: "Office Computing - Final", vi: "Tin học văn phòng - Cuối kỳ" }, count: 120 },
       { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Tin học văn phòng"], hidden: true, count: 120 },
+    ],
+  },
+  {
+    id: "nguyen-ly-tai-chinh",
+    code: "FIN101",
+    name: { en: "Principles of Finance", vi: "Quiz ôn tập Cuối kỳ - Nguyên lý tài chính" },
+    category: { en: "Major", vi: "Chuyên ngành" },
+    exams: [
+      {
+        id: "finance-final-bank-1", type: "final", year: 2026, questionCount: 171, durationMinutes: 60,
+        title: { en: "Principles of Finance", vi: "Quiz ôn tập Cuối kỳ - Nguyên lý tài chính" },
+        description: { en: "171 questions. Choose a chapter after clicking Try now.", vi: "171 câu hỏi. Chọn chương sau khi ấn Thử ngay." },
+      },
+    ],
+    chapters: [
+      { id: "all", label: { en: "Principles of Finance - Final", vi: "Nguyên lý tài chính - Cuối kỳ" }, count: 171 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Nguyên lý Tài chính"], hidden: true, count: 171 },
     ],
   },
   {
