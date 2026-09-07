@@ -12,6 +12,7 @@ import type { Language, Theme } from "@/shared/types/app"
 import { readStorage, writeStorage } from "@/lib/storage"
 import { AuthCallbackPage } from "@/pages/AuthCallbackPage"
 import { useAuth } from "@/auth/AuthProvider"
+import { useOnlinePresence } from "@/hooks/useOnlinePresence"
 
 const ContactModal = lazy(() => import("@/components/ContactModal").then(({ ContactModal: component }) => ({ default: component })))
 const LoginModal = lazy(() => import("@/components/LoginModal").then(({ LoginModal: component }) => ({ default: component })))
@@ -28,7 +29,8 @@ function getTodayKey(): string {
 
 export default function App() {
   const pathname = useAppPath()
-  const { status, signInWithGoogle, profile } = useAuth()
+  const { status, signInWithGoogle, profile, user } = useAuth()
+  const onlineCount = useOnlinePresence(user?.id)
   const [contactOpen, setContactOpen] = useState(false)
   const [contactType, setContactType] = useState<ContactModalType | null>(null)
   const [loginOpen, setLoginOpen] = useState(false)
@@ -136,6 +138,7 @@ export default function App() {
         <Suspense fallback={<RouteLoading />}><DashboardPage
           lang={lang}
           theme={theme}
+          onlineCount={onlineCount}
           onToggleLang={() => setLang((current) => (current === "en" ? "vi" : "en"))}
           onToggleTheme={() =>
             setTheme((current) => (current === "light" ? "dark" : "light"))

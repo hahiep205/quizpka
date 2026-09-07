@@ -7,7 +7,7 @@ import {
   type LeaderboardEntry,
   type RankedLeaderboardEntry,
 } from "@/lib/leaderboard"
-import { formatLearningDuration, type LearningPeriod } from "@/lib/learningStats"
+import { formatLearningDuration } from "@/lib/learningStats"
 import { readStorage } from "@/lib/storage"
 import { cn } from "@/lib/utils"
 import { dashboardCopy as copy } from "@/shared/i18n"
@@ -17,7 +17,6 @@ export function LeaderboardView({ lang }: { lang: Language }) {
   const t = copy[lang]
   const { user } = useAuth()
   const userId = user?.id
-  const [period, setPeriod] = useState<LearningPeriod>("week")
   const [remoteEntries, setRemoteEntries] = useState<LeaderboardEntry[]>([])
   const visible = readStorage(`quizpka:${userId ?? "anonymous"}:leaderboard-visible`) !== "false"
   const you = remoteEntries.find((entry) => entry.userId === userId)
@@ -25,21 +24,22 @@ export function LeaderboardView({ lang }: { lang: Language }) {
   useEffect(() => {
     if (!userId) return
     let cancelled = false
-    void fetchLeaderboard(period, userId).then((rows) => {
+    void fetchLeaderboard("all", userId).then((rows) => {
       if (!cancelled) setRemoteEntries(rows)
     })
     return () => {
       cancelled = true
     }
-  }, [period, userId])
+  }, [userId])
 
-  const ranked = useMemo(() => {
+  const fullRanked = useMemo(() => {
     const byId = new Map(remoteEntries.map((entry) => [entry.userId, entry]))
     const publicEntries = [...byId.values()].filter((entry) => entry.visible && (entry.points > 0 || entry.stats.attempts > 0))
     return rankLeaderboard(publicEntries, "points")
   }, [remoteEntries])
 
-  const yourRank = ranked.find((entry) => entry.isYou)?.rank
+  const ranked = fullRanked.slice(0, 10)
+  const yourRank = fullRanked.find((entry) => entry.isYou)?.rank
 
   return (
     <section className="dashboard-reveal mx-auto max-w-5xl space-y-5 sm:space-y-6">
@@ -57,32 +57,6 @@ export function LeaderboardView({ lang }: { lang: Language }) {
               <p className="text-2xl font-black leading-none sm:text-3xl">{you ? you.points : 0}</p>
               <p className="mt-1 text-xs font-bold uppercase tracking-wider text-white/80">{t.points}</p>
             </div>
-          </div>
-          <div className="mt-4 grid w-full shrink-0 grid-cols-3 gap-1 rounded-[14px] border-2 border-[#E5E5E5] bg-white p-1.5 shadow-[0_3px_0_#DCDCDC] sm:w-[420px] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_3px_0_rgba(0,0,0,0.35)]" role="tablist" aria-label={t.leaderboardTitle}>
-            {([
-              ["week", t.leaderboardWeek],
-              ["month", t.leaderboardMonth],
-              ["all", t.leaderboardAll],
-            ] as const).map(([value, label]) => {
-              const active = period === value
-              return (
-                <button
-                  key={value}
-                  type="button"
-                  role="tab"
-                  aria-selected={active}
-                  onClick={() => setPeriod(value)}
-                  className={cn(
-                    "h-10 rounded-[10px] px-1.5 text-[12px] font-extrabold transition-all duration-200 sm:px-3 sm:text-sm",
-                    active
-                      ? "bg-[#1CB0F6] text-white shadow-[0_2px_0_#189CD8]"
-                      : "text-slate-400 hover:bg-slate-50 hover:text-slate-600 dark:text-slate-500 dark:hover:bg-white/5 dark:hover:text-slate-300",
-                  )}
-                >
-                  {label}
-                </button>
-              )
-            })}
           </div>
         </div>
       </div>

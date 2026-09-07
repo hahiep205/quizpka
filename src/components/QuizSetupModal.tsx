@@ -45,7 +45,6 @@ export function QuizSetupModal({
   const [visible, setVisible] = useState(false)
   const [state, setState] = useState<"open" | "closed">("closed")
   const [questionOrder, setQuestionOrder] = useState<OrderMode>("original")
-  const [answerOrder, setAnswerOrder] = useState<OrderMode>("original")
   const [mode, setMode] = useState<QuizMode>("practice")
   const [timeOption, setTimeOption] = useState<TimeOption>("final60")
   const t = copy[lang]
@@ -53,7 +52,6 @@ export function QuizSetupModal({
   useEffect(() => {
     if (open && exam) {
       setQuestionOrder("original")
-      setAnswerOrder("original")
       setMode("practice")
       setTimeOption(exam.type === "midterm" ? "midterm30" : "final60")
       setVisible(true)
@@ -105,7 +103,7 @@ export function QuizSetupModal({
             onClick={() =>
               onStart({
                 questionOrder,
-                answerOrder,
+                answerOrder: "random",
                 mode,
                 timed,
                 durationMinutes,
@@ -130,23 +128,6 @@ export function QuizSetupModal({
               type="button"
               className={cn("lp-chip min-w-0 flex-1 whitespace-normal text-center leading-4", questionOrder === "random" && "is-active")}
               onClick={() => setQuestionOrder("random")}
-            >
-              {t.random}
-            </button>
-          </OptionGroup>
-
-          <OptionGroup label={t.answerOrder}>
-            <button
-              type="button"
-              className={cn("lp-chip min-w-0 flex-1 whitespace-normal text-center leading-4", answerOrder === "original" && "is-active")}
-              onClick={() => setAnswerOrder("original")}
-            >
-              {t.original}
-            </button>
-            <button
-              type="button"
-              className={cn("lp-chip min-w-0 flex-1 whitespace-normal text-center leading-4", answerOrder === "random" && "is-active")}
-              onClick={() => setAnswerOrder("random")}
             >
               {t.random}
             </button>

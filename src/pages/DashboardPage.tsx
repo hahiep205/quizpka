@@ -20,7 +20,6 @@ import {
   Trophy,
   UserRound,
   LogOut,
-  MessageCircle,
   X,
 } from "lucide-react"
 import brandLogo from "@/assets/logo.png"
@@ -50,7 +49,6 @@ import { CatalogExamCard } from "@/components/CatalogExamCard"
 import { PaymentModal } from "@/components/PaymentModal"
 import { DashboardStatCard, dashboardStatGridClass } from "@/components/DashboardStatCard"
 import { LeaderboardView } from "@/components/LeaderboardView"
-import { CommunityChatModal } from "@/components/CommunityChatModal"
 import { DirectNotificationPopup } from "@/components/DirectNotificationPopup"
 import { formatTime } from "@/features/quiz/lib/quizHelpers"
 import { createPaidCheckout, getPaidProductId, hasProductPurchase } from "@/lib/purchases"
@@ -60,10 +58,12 @@ import { useNotifications } from "@/features/notifications/useNotifications"
 
 type Lang = Language
 type DashboardView = "home" | "leaderboard" | "history" | "purchased" | "notifications" | "settings"
+const paidExams = examCatalog.filter((exam) => getPaidProductId(exam.subjectCode) !== null)
 
 type DashboardPageProps = {
   lang: Lang
   theme: Theme
+  onlineCount?: number
   onToggleLang: () => void
   onToggleTheme: () => void
   onOpenContact: (type: ContactModalType) => void
@@ -132,6 +132,7 @@ const mobileNavIcons: Record<DashboardView, ComponentType<{ className?: string }
 export function DashboardPage({
   lang,
   theme,
+  onlineCount = 0,
   onToggleLang,
   onToggleTheme,
   onOpenContact,
@@ -141,17 +142,41 @@ export function DashboardPage({
   const { unreadCount: unreadNotificationCount } = useNotifications()
   const [payment, setPayment] = useState<{ payment: { qrUrl: string } } | null>(null)
   const [paymentProductId, setPaymentProductId] = useState("dsai101")
+  const [purchaseExam, setPurchaseExam] = useState<ExamCatalogItem | null>(null)
+  const [purchaseLoading, setPurchaseLoading] = useState(false)
+  const [purchaseError, setPurchaseError] = useState<string | null>(null)
   const handlePaidTryNow = async (exam: ExamCatalogItem) => {
     try {
-    const productId = getPaidProductId(exam.subjectCode)
-    if (!productId) return handleTryNow(exam)
-    if (dashboardUser?.id && await hasProductPurchase(dashboardUser.id, productId)) return handleTryNow(exam)
-    const result = await createPaidCheckout(productId)
-    if (result.owned) return handleTryNow(exam)
-    if (!result.payment) throw new Error("Chưa cấu hình thông tin tài khoản thanh toán")
-    setPaymentProductId(productId)
-    setPayment({ payment: result.payment })
+      const productId = getPaidProductId(exam.subjectCode)
+      if (!productId) return handleTryNow(exam)
+      if (dashboardUser?.id && await hasProductPurchase(dashboardUser.id, productId)) return handleTryNow(exam)
+      setPurchaseError(null)
+      setPurchaseExam(exam)
     } catch (error) { window.alert(error instanceof Error ? error.message : "Không thể tạo thanh toán. Vui lòng thử lại.") }
+  }
+
+  const confirmPurchase = async () => {
+    if (!purchaseExam || purchaseLoading) return
+    const productId = getPaidProductId(purchaseExam.subjectCode)
+    if (!productId) return
+    setPurchaseLoading(true)
+    setPurchaseError(null)
+    try {
+      const result = await createPaidCheckout(productId)
+      if (result.owned) {
+        setPurchaseExam(null)
+        handleTryNow(purchaseExam)
+        return
+      }
+      if (!result.payment) throw new Error("Chưa cấu hình thông tin tài khoản thanh toán")
+      setPaymentProductId(productId)
+      setPurchaseExam(null)
+      setPayment({ payment: result.payment })
+    } catch (error) {
+      setPurchaseError(error instanceof Error ? error.message : "Không thể tạo thanh toán. Vui lòng thử lại.")
+    } finally {
+      setPurchaseLoading(false)
+    }
   }
 
   useEffect(() => {
@@ -277,7 +302,7 @@ export function DashboardPage({
       <DesktopSidebar activeView={activeView} lang={lang} unreadNotificationCount={unreadNotificationCount} onNavigate={navigate} />
 
       <div className="lg:pl-[200px]">
-        <DashboardTopbar lang={lang} view={activeView} />
+        <DashboardTopbar lang={lang} view={activeView} onlineCount={onlineCount} />
 
         <main className="mx-auto w-full max-w-[1440px] px-3 pb-[calc(108px+env(safe-area-inset-bottom))] pt-4 min-[380px]:px-4 sm:px-6 sm:pt-6 md:px-8 lg:px-8 lg:pb-12 lg:pt-8 xl:px-10">
           {activeView === "home" ? (
@@ -367,6 +392,15 @@ export function DashboardPage({
         }}
       />
 
+      <PurchaseDetailDialog
+        exam={purchaseExam}
+        lang={lang}
+        loading={purchaseLoading}
+        error={purchaseError}
+        onClose={() => { if (!purchaseLoading) { setPurchaseExam(null); setPurchaseError(null) } }}
+        onConfirm={() => void confirmPurchase()}
+      />
+
       <ToeicScopePickerModal
         open={Boolean(toeicPickerExam) && !toeicSetupOpen}
         lang={lang}
@@ -399,20 +433,66 @@ function getDashboardView(path: string): DashboardView {
   return "home"
 }
 
+function PurchaseDetailDialog({ exam, lang, loading, error, onClose, onConfirm }: {
+  exam: ExamCatalogItem | null
+  lang: Lang
+  loading: boolean
+  error: string | null
+  onClose: () => void
+  onConfirm: () => void
+}) {
+  const isVietnamese = lang === "vi"
+  return <Dialog
+    open={Boolean(exam)}
+    onClose={onClose}
+    title={isVietnamese ? "Thông tin môn học" : "Subject details"}
+    closeLabel={isVietnamese ? "Hủy" : "Cancel"}
+    className="z-[85]"
+    panelClassName="w-full max-w-[560px] overflow-hidden rounded-[20px] border-2 border-[#E5E5E5] bg-white shadow-[0_7px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none"
+  >
+    <header className="flex min-h-[100px] items-start justify-between gap-4 border-b border-slate-100 px-4 py-4 sm:px-6 sm:py-5 dark:border-white/10">
+      <div className="min-w-0">
+        <p className="text-[10px] font-black uppercase tracking-[0.12em] text-[#129BDC]">{isVietnamese ? "Quiz dành cho PKAers" : "Quiz for PKAers"}</p>
+        <h2 className="mt-1 text-xl font-black leading-7 text-[#100F3E] dark:text-white sm:text-2xl">{exam?.subjectName[lang]}</h2>
+      </div>
+      <button type="button" className="lp-btn lp-btn--secondary lp-btn--icon shrink-0" onClick={onClose} disabled={loading} aria-label={isVietnamese ? "Hủy" : "Cancel"}><X className="h-4 w-4" /></button>
+    </header>
+    <div className="max-h-[min(60dvh,480px)] overflow-y-auto p-4 sm:p-6">
+      <div className="rounded-[16px] border border-sky-100 bg-[#F4FBFF] p-4 dark:border-sky-500/15 dark:bg-sky-500/[0.06]">
+        <p className="text-xs font-black uppercase tracking-[0.08em] text-slate-400">{isVietnamese ? "Ghi chú" : "Note"}</p>
+        <p className="mt-2 text-sm font-semibold leading-6 text-slate-600 dark:text-slate-300">{exam?.description[lang]}</p>
+      </div>
+      <div className="mt-4 grid grid-cols-2 gap-3">
+        <div className="rounded-[14px] bg-slate-50 p-4 dark:bg-white/5">
+          <p className="text-xs font-bold text-slate-400">{isVietnamese ? "Số câu hỏi" : "Questions"}</p>
+          <p className="mt-1 text-xl font-black text-[#100F3E] dark:text-white">{exam?.questionCount ?? 0}</p>
+        </div>
+        <div className="rounded-[14px] bg-slate-50 p-4 dark:bg-white/5">
+          <p className="text-xs font-bold text-slate-400">{isVietnamese ? "Thời lượng" : "Duration"}</p>
+          <p className="mt-1 text-xl font-black text-[#100F3E] dark:text-white">{exam?.durationMinutes ?? 0} {isVietnamese ? "phút" : "min"}</p>
+        </div>
+      </div>
+      {error ? <p role="alert" className="mt-4 rounded-xl bg-red-50 px-3 py-2 text-sm font-bold text-red-600 dark:bg-red-500/10 dark:text-red-300">{error}</p> : null}
+    </div>
+    <footer className="grid grid-cols-2 gap-2 border-t border-slate-100 p-4 sm:px-6 dark:border-white/10">
+      <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={onClose} disabled={loading}>{isVietnamese ? "Hủy" : "Cancel"}</button>
+      <button type="button" className="lp-btn lp-btn--primary lp-btn--sm" onClick={onConfirm} disabled={loading}>{loading ? (isVietnamese ? "Đang tạo đơn..." : "Creating...") : "10.000 VND"}</button>
+    </footer>
+  </Dialog>
+}
+
 function PurchasedView({ lang, onStartExam }: { lang: Lang; onStartExam: (exam: ExamCatalogItem) => void }) {
   const { user } = useAuth()
   const [loading, setLoading] = useState(true)
   const [ownedIds, setOwnedIds] = useState<string[]>([])
   const [error, setError] = useState(false)
-  const purchasedExams = examCatalog.filter((exam) => getPaidProductId(exam.subjectCode) !== null)
-
   useEffect(() => {
     let mounted = true
     if (!user?.id) {
       setLoading(false)
       return
     }
-    void Promise.all(purchasedExams.map(async (exam) => (await hasProductPurchase(user.id, getPaidProductId(exam.subjectCode) ?? "") ? exam.id : null)))
+    void Promise.all(paidExams.map(async (exam) => (await hasProductPurchase(user.id, getPaidProductId(exam.subjectCode) ?? "") ? exam.id : null)))
       .then((values) => { if (mounted) setOwnedIds(values.filter((value): value is string => value !== null)) })
       .catch(() => {
         if (mounted) setError(true)
@@ -429,16 +509,40 @@ function PurchasedView({ lang, onStartExam }: { lang: Lang; onStartExam: (exam: 
     <section className="space-y-5">
       {loading ? <Card variant="dashed" className="py-12 text-center"><p className="text-sm font-bold text-slate-500">{lang === "vi" ? "Đang kiểm tra giao dịch…" : "Checking purchases…"}</p></Card> : null}
       {!loading && error ? <Card variant="dashed" className="py-12 text-center"><p className="text-sm font-bold text-red-500">{lang === "vi" ? "Không thể tải danh sách tài liệu đã mua." : "Could not load purchased materials."}</p></Card> : null}
-      {!loading && !error && ownedIds.length ? purchasedExams.filter((exam) => ownedIds.includes(exam.id)).map((purchasedExam) => (
-        <article className="rounded-2xl border-2 border-emerald-200 bg-white p-5 shadow-[0_4px_0_rgba(16,185,129,0.12)] dark:border-emerald-500/20 dark:bg-slate-900 dark:shadow-none sm:p-6">
-          <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-            <div className="min-w-0">
-              <span className="inline-flex rounded-full bg-emerald-50 px-3 py-1 text-xs font-black text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300">{lang === "vi" ? "Đã thanh toán" : "Purchased"}</span>
-              <h3 className="mt-3 text-xl font-black text-[#100F3E] dark:text-white">{purchasedExam.subjectName[lang]}</h3>
-              <p className="mt-1 text-sm font-semibold text-slate-500 dark:text-slate-400">{purchasedExam.description[lang]}</p>
-              <p className="mt-3 text-sm font-bold text-slate-600 dark:text-slate-300">{purchasedExam.questionCount} {lang === "vi" ? "câu hỏi" : "questions"} · {purchasedExam.durationMinutes} {lang === "vi" ? "phút" : "minutes"}</p>
+      {!loading && !error && ownedIds.length ? paidExams.filter((exam) => ownedIds.includes(exam.id)).map((purchasedExam) => (
+        <article key={purchasedExam.id} className="group relative overflow-hidden rounded-[20px] border-2 border-emerald-200 bg-white shadow-[0_4px_0_rgba(16,185,129,0.14)] transition-transform hover:-translate-y-0.5 dark:border-emerald-500/20 dark:bg-slate-900 dark:shadow-none">
+          <div aria-hidden="true" className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-emerald-400 to-[#1CB0F6]" />
+          <div aria-hidden="true" className="pointer-events-none absolute -right-12 -top-16 h-44 w-44 rounded-full bg-emerald-100/60 blur-2xl dark:bg-emerald-500/10" />
+          <div className="relative p-4 pl-5 sm:p-6 sm:pl-7">
+            <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between md:gap-8">
+              <div className="min-w-0 flex-1">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px] bg-emerald-500 text-white shadow-[0_3px_0_#059669] dark:shadow-none sm:h-12 sm:w-12">
+                    <CheckCircle2 className="h-6 w-6" strokeWidth={2.5} />
+                  </span>
+                  <div className="min-w-0">
+                    <span className="inline-flex rounded-full bg-emerald-50 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.06em] text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300">{lang === "vi" ? "Đã mở khóa" : "Unlocked"}</span>
+                    <p className="mt-1 text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#129BDC]">{purchasedExam.subjectCode}</p>
+                  </div>
+                </div>
+                <h3 className="mt-4 text-lg font-black leading-7 tracking-[-0.02em] text-[#100F3E] dark:text-white sm:text-xl">{purchasedExam.subjectName[lang]}</h3>
+                <p className="mt-1.5 line-clamp-2 text-sm font-semibold leading-6 text-slate-500 dark:text-slate-400">{purchasedExam.description[lang]}</p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  <span className="inline-flex items-center gap-1.5 rounded-[10px] bg-[#E8F7FE] px-3 py-2 text-xs font-extrabold text-[#129BDC] dark:bg-sky-500/10 dark:text-sky-300">
+                    <FileText className="h-3.5 w-3.5" />{purchasedExam.questionCount} {lang === "vi" ? "câu hỏi" : "questions"}
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 rounded-[10px] bg-violet-50 px-3 py-2 text-xs font-extrabold text-violet-600 dark:bg-violet-500/10 dark:text-violet-300">
+                    <Clock3 className="h-3.5 w-3.5" />{purchasedExam.durationMinutes} {lang === "vi" ? "phút" : "minutes"}
+                  </span>
+                </div>
+              </div>
+              <div className="md:w-44 md:shrink-0">
+                <button type="button" className="lp-btn lp-btn--primary lp-btn--block min-h-11 shadow-[0_3px_0_#0786C2] md:w-full" onClick={() => onStartExam(purchasedExam)}>
+                  {lang === "vi" ? "Ôn tập ngay" : "Practice now"}<ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                </button>
+                <p className="mt-2 hidden text-center text-[10px] font-bold text-slate-400 md:block">{lang === "vi" ? "Truy cập không giới hạn" : "Unlimited access"}</p>
+              </div>
             </div>
-            <button type="button" className="lp-btn lp-btn--primary lp-btn--sm shrink-0" onClick={() => onStartExam(purchasedExam)}>{lang === "vi" ? "Ôn tập ngay" : "Practice now"}<ArrowRight className="h-4 w-4" /></button>
           </div>
         </article>
       )) : null}
@@ -551,9 +655,8 @@ function DesktopSidebar({
   )
 }
 
-function DashboardTopbar({ lang, view }: Pick<DashboardPageProps, "lang"> & { view: DashboardView }) {
+function DashboardTopbar({ lang, view, onlineCount = 0 }: Pick<DashboardPageProps, "lang" | "onlineCount"> & { view: DashboardView }) {
   const t = copy[lang]
-  const [chatOpen, setChatOpen] = useState(false)
   const topbarTitle =
     view === "leaderboard"
       ? t.leaderboardTitle
@@ -566,7 +669,6 @@ function DashboardTopbar({ lang, view }: Pick<DashboardPageProps, "lang"> & { vi
             : view === "purchased"
               ? t.purchasedTitle
               : lang === "vi" ? "Quiz dành cho PKAers" : "Quiz for PKAers"
-  const chatLabel = lang === "vi" ? "Chat cộng đồng" : "Community Chat"
   const pageMeta =
     view === "leaderboard"
       ? { icon: Trophy, title: t.leaderboardTitle }
@@ -581,7 +683,6 @@ function DashboardTopbar({ lang, view }: Pick<DashboardPageProps, "lang"> & { vi
               : null
   const PageIcon = pageMeta?.icon
   return (
-    <>
       <header className="sticky top-0 z-30 bg-white/80 pt-[env(safe-area-inset-top)] backdrop-blur-2xl dark:bg-[#18191A]/80">
         <div className="mx-auto flex h-14 w-full max-w-[1440px] items-center justify-between px-3 sm:h-16 sm:px-6 md:px-8 lg:h-[72px] lg:px-8 xl:px-10">
           {pageMeta && PageIcon ? (
@@ -627,37 +728,15 @@ function DashboardTopbar({ lang, view }: Pick<DashboardPageProps, "lang"> & { vi
 
           <div className="ml-auto">
             <div className="flex items-center gap-2">
-            <TopbarButton label={chatLabel} onClick={() => setChatOpen(true)}>
-              <MessageCircle className="h-5 w-5" strokeWidth={2} />
-            </TopbarButton>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-[#F0F2F5] px-2.5 py-1 text-[11px] font-semibold text-emerald-600 dark:bg-[#3A3B3C] dark:text-emerald-300" title={lang === "vi" ? "Số người đang truy cập website" : "People currently visiting the website"}>
+                <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span>Live</span>
+                <span className="font-black tabular-nums text-slate-700 dark:text-slate-200">{onlineCount}</span>
+              </span>
             </div>
           </div>
         </div>
       </header>
-      <CommunityChatModal open={chatOpen} onClose={() => setChatOpen(false)} lang={lang} />
-    </>
-  )
-}
-
-function TopbarButton({
-  label,
-  onClick,
-  children,
-}: {
-  label: string
-  onClick: () => void
-  children: React.ReactNode
-}) {
-  return (
-    <button
-      type="button"
-      aria-label={label}
-      title={label}
-      onClick={onClick}
-      className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#F0F2F5] text-[#050505] transition-[transform,background-color] duration-150 hover:bg-[#E4E6EB] active:scale-95 dark:bg-[#3A3B3C] dark:text-[#E4E6EB] dark:hover:bg-[#4E4F50]"
-    >
-      {children}
-    </button>
   )
 }
 
@@ -780,13 +859,14 @@ function EmptyView({ lang, view }: { lang: Lang; view: "history" }) {
   const userId = user?.id
   const userCreatedAt = user?.created_at
   const [history, setHistory] = useState(() => userId ? readPracticeHistory(userId, userCreatedAt) : [])
-  const [expandedId, setExpandedId] = useState<string | null>(null)
+  const [detailItemId, setDetailItemId] = useState<string | null>(null)
   const [wrongListItemId, setWrongListItemId] = useState<string | null>(null)
+  const detailItem = history.find((item) => item.id === detailItemId)
   const wrongListItem = history.find((item) => item.id === wrongListItemId)
 
   useEffect(() => {
     setHistory(userId ? readPracticeHistory(userId, userCreatedAt) : [])
-    setExpandedId(null)
+    setDetailItemId(null)
     setWrongListItemId(null)
   }, [userCreatedAt, userId])
 
@@ -809,18 +889,30 @@ function EmptyView({ lang, view }: { lang: Lang; view: "history" }) {
     <section className="dashboard-reveal mx-auto max-w-4xl">
       <LearningStatsGrid lang={lang} className="mb-4 sm:hidden" />
       {history.length ? (
-        <div className="space-y-3">
-          {history.map((item) => (
-            <HistoryAttemptCard
-              key={item.id}
-              item={item}
-              lang={lang}
-              expanded={expandedId === item.id}
-              onToggle={() => setExpandedId(expandedId === item.id ? null : item.id)}
-              onShowWrong={() => setWrongListItemId(item.id)}
-              onRetry={() => retryWrong(item)}
-            />
-          ))}
+        <div className="overflow-hidden rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none sm:rounded-[20px]">
+          <div className="overflow-x-auto">
+            <table className="w-full table-fixed text-left text-sm">
+              <thead>
+                <tr className="border-b border-slate-200 bg-slate-50/90 text-[10px] font-black uppercase tracking-[0.08em] text-slate-400 dark:border-white/10 dark:bg-white/5 sm:text-[11px]">
+                  <th className="px-3 py-3 sm:px-4">{lang === "vi" ? "Bộ đề" : "Exam"}</th>
+                  <th className="hidden w-28 px-3 py-3 sm:table-cell">{lang === "vi" ? "Loại bài" : "Mode"}</th>
+                  <th className="hidden w-44 px-3 py-3 md:table-cell">{lang === "vi" ? "Hoàn thành" : "Completed"}</th>
+                  <th className="hidden w-28 px-3 py-3 lg:table-cell">{lang === "vi" ? "Lượt làm" : "Attempt"}</th>
+                  <th className="w-16 px-2 py-3 text-right sm:w-20 sm:px-3">{lang === "vi" ? "Điểm" : "Score"}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {history.map((item) => (
+                  <HistoryAttemptRow
+                    key={item.id}
+                    item={item}
+                    lang={lang}
+                    onOpen={() => setDetailItemId(item.id)}
+                  />
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       ) : <div className="flex min-h-[360px] flex-col items-center justify-center rounded-[20px] border-2 border-dashed border-slate-200 bg-white/70 p-8 text-center dark:border-white/10 dark:bg-slate-900/60">
         <div className="flex h-16 w-16 items-center justify-center rounded-[18px] bg-[#E8F7FE] text-[#1CB0F6] dark:bg-sky-500/10">
@@ -828,6 +920,17 @@ function EmptyView({ lang, view }: { lang: Lang; view: "history" }) {
         </div>
         <p className="mt-5 max-w-md text-sm font-bold leading-6 text-slate-500 dark:text-slate-400">{t.activityEmpty}</p>
       </div>}
+      <HistoryAttemptDialog
+        item={detailItem}
+        lang={lang}
+        onClose={() => setDetailItemId(null)}
+        onShowWrong={() => {
+          if (!detailItem) return
+          setWrongListItemId(detailItem.id)
+          setDetailItemId(null)
+        }}
+        onRetry={() => { if (detailItem) retryWrong(detailItem) }}
+      />
       <WrongAnswersDialog
         item={wrongListItem}
         lang={lang}
@@ -842,43 +945,96 @@ function EmptyView({ lang, view }: { lang: Lang; view: "history" }) {
 
 type HistoryItem = ReturnType<typeof readPracticeHistory>[number]
 
-function HistoryAttemptCard({ item, lang, expanded, onToggle, onShowWrong, onRetry }: {
+function HistoryAttemptRow({ item, lang, onOpen }: {
   item: HistoryItem
   lang: Lang
-  expanded: boolean
-  onToggle: () => void
+  onOpen: () => void
+}) {
+  const completedAt = new Date(item.completedAt).toLocaleString(lang === "vi" ? "vi-VN" : "en-US")
+  const mode = item.mode === "exam"
+    ? lang === "vi" ? "Thi thử" : "Exam"
+    : lang === "vi" ? "Luyện tập" : "Practice"
+  const retry = item.retryNumber
+    ? lang === "vi" ? `Làm lại lần ${item.retryNumber}` : `Retry ${item.retryNumber}`
+    : lang === "vi" ? "Lần đầu" : "First attempt"
+  return (
+      <tr
+        role="button"
+        tabIndex={0}
+        aria-label={lang === "vi" ? `Xem chi tiết ${item.title}` : `View details for ${item.title}`}
+        onClick={onOpen}
+        onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); onOpen() } }}
+        className="group cursor-pointer border-b border-slate-100 transition-colors last:border-b-0 hover:bg-sky-50/70 focus-visible:bg-sky-50/70 focus-visible:outline-none dark:border-white/5 dark:hover:bg-sky-500/10 dark:focus-visible:bg-sky-500/10"
+      >
+        <td className="px-3 py-3 sm:px-4 sm:py-4">
+          <div className="block w-full text-left">
+            <span className="line-clamp-2 font-extrabold leading-5 text-[#100F3E] dark:text-white sm:text-[15px]">{item.title}</span>
+            <span className="mt-1 block truncate text-[10px] font-bold text-slate-400 sm:text-xs md:hidden">
+              {completedAt}<span className="sm:hidden"> · {mode}</span>
+            </span>
+            <span className="mt-1 block truncate text-[10px] font-extrabold text-[#129BDC] dark:text-sky-300 sm:text-xs lg:hidden">{retry}</span>
+          </div>
+        </td>
+        <td className="hidden px-3 py-3 sm:table-cell">
+          <span className={cn("inline-flex rounded-full px-2.5 py-1 text-[11px] font-extrabold", item.mode === "exam" ? "bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-300" : "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300")}>{mode}</span>
+        </td>
+        <td className="hidden px-3 py-3 text-xs font-semibold text-slate-500 dark:text-slate-400 md:table-cell">{completedAt}</td>
+        <td className="hidden px-3 py-3 lg:table-cell"><span className="inline-flex rounded-full bg-[#E8F7FE] px-2.5 py-1 text-[11px] font-extrabold text-[#129BDC] dark:bg-sky-500/10 dark:text-sky-300">{retry}</span></td>
+        <td className="px-2 py-3 text-right sm:px-3"><span className="whitespace-nowrap text-sm font-black text-[#1CB0F6] sm:text-base">{item.score.toFixed(1)}<span className="text-[10px] text-slate-400 sm:text-xs">/10</span></span></td>
+      </tr>
+  )
+}
+
+function HistoryAttemptDialog({ item, lang, onClose, onShowWrong, onRetry }: {
+  item?: HistoryItem
+  lang: Lang
+  onClose: () => void
   onShowWrong: () => void
   onRetry: () => void
 }) {
-  const wrong = item.wrongQuestions ?? []
-  return (
-    <article className="overflow-hidden rounded-[15px] border-2 border-slate-200 bg-white shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none sm:rounded-[16px]">
-      <button type="button" className="flex w-full items-start justify-between gap-3 p-3.5 text-left sm:items-center sm:gap-4 sm:p-4" onClick={onToggle} aria-expanded={expanded}>
-        <div className="min-w-0">
-          <p className="line-clamp-2 text-sm font-extrabold leading-5 text-[#100F3E] dark:text-white sm:text-base">{item.title}</p>
-          <div className="mt-1 flex flex-wrap items-center gap-2 text-xs font-semibold text-slate-400">
-            <span>{new Date(item.completedAt).toLocaleString(lang === "vi" ? "vi-VN" : "en-US")} · {item.mode}</span>
-          </div>
+  const wrong = item?.wrongQuestions ?? []
+  const mode = item?.mode === "exam"
+    ? lang === "vi" ? "Thi thử" : "Exam"
+    : lang === "vi" ? "Luyện tập" : "Practice"
+  const retry = item?.retryNumber
+    ? lang === "vi" ? `Làm lại lần ${item.retryNumber}` : `Retry ${item.retryNumber}`
+    : lang === "vi" ? "Lần đầu" : "First attempt"
+  return <Dialog
+    open={Boolean(item)}
+    onClose={onClose}
+    title={lang === "vi" ? "Chi tiết lần làm bài" : "Attempt details"}
+    closeLabel={lang === "vi" ? "Đóng" : "Close"}
+    className="z-[90]"
+    panelClassName="w-full max-w-[640px] overflow-hidden rounded-[20px] border-2 border-[#E5E5E5] bg-white shadow-[0_6px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none"
+  >
+    <div className="flex min-h-[100px] items-start justify-between gap-4 border-b border-slate-100 px-4 py-4 sm:px-6 sm:py-5 dark:border-white/10">
+      <div className="min-w-0">
+        <p className="text-[10px] font-black uppercase tracking-[0.12em] text-[#129BDC]">{lang === "vi" ? "Chi tiết lần làm bài" : "Attempt details"}</p>
+        <h2 className="mt-1 line-clamp-2 text-lg font-black leading-6 text-[#100F3E] dark:text-white sm:text-xl">{item?.title}</h2>
+        <div className="mt-2 flex flex-wrap items-center gap-2 text-xs font-bold text-slate-400">
+          <span>{item ? new Date(item.completedAt).toLocaleString(lang === "vi" ? "vi-VN" : "en-US") : ""}</span>
+          <span aria-hidden="true">·</span><span>{mode}</span><span aria-hidden="true">·</span><span>{retry}</span>
         </div>
-        <div className="shrink-0 text-right">
-          <p className="text-sm font-black text-[#1CB0F6] sm:text-base">{item.score.toFixed(1)}/10</p>
-          {item.retryNumber ? <span className="mt-1 inline-block whitespace-nowrap rounded-full bg-[#E8F7FE] px-2 py-1 text-[10px] font-extrabold text-[#129BDC] dark:bg-sky-500/10 dark:text-sky-300 sm:text-xs">{lang === "vi" ? `Làm lại lần ${item.retryNumber}` : `Retry ${item.retryNumber}`}</span> : null}
-        </div>
-      </button>
-      {expanded ? <div className="border-t border-slate-100 p-3.5 dark:border-white/10 sm:p-4">
-        <div className="grid grid-cols-2 gap-2.5 text-center sm:grid-cols-4 sm:gap-3">
-          <HistoryMetric label={lang === "vi" ? "Đúng" : "Correct"} value={String(item.correct)} />
-          <HistoryMetric label={lang === "vi" ? "Sai / chưa làm" : "Wrong / skipped"} value={String(wrong.length)} />
-          <HistoryMetric label={lang === "vi" ? "Độ chính xác" : "Accuracy"} value={`${item.accuracy}%`} />
-          <HistoryMetric label={lang === "vi" ? "Thời gian" : "Duration"} value={formatTime(item.durationSeconds)} />
-        </div>
-        <div className="mt-4 flex flex-col gap-2 sm:flex-row">
-          <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={!wrong.length} onClick={onShowWrong}>{lang === "vi" ? "Xem danh sách câu sai" : "View wrong answers"}</button>
-          <button type="button" className="lp-btn lp-btn--primary lp-btn--sm" disabled={!wrong.length} onClick={onRetry}>{lang === "vi" ? "Làm lại câu sai" : "Retry wrong answers"}</button>
-        </div>
-      </div> : null}
-    </article>
-  )
+      </div>
+      <button type="button" className="lp-btn lp-btn--secondary lp-btn--icon shrink-0" onClick={onClose} aria-label={lang === "vi" ? "Đóng" : "Close"}><X className="h-4 w-4" /></button>
+    </div>
+    <div className="max-h-[min(65dvh,520px)] overflow-y-auto p-4 sm:p-6">
+      <div className="rounded-[16px] bg-gradient-to-br from-[#E8F7FE] to-white p-4 dark:from-sky-500/10 dark:to-slate-900">
+        <p className="text-xs font-black uppercase tracking-wide text-slate-400">{lang === "vi" ? "Điểm số" : "Score"}</p>
+        <p className="mt-1 text-4xl font-black text-[#1CB0F6]">{item?.score.toFixed(1)}<span className="text-lg text-slate-400">/10</span></p>
+      </div>
+      <div className="mt-4 grid grid-cols-2 gap-2.5 text-center sm:grid-cols-4 sm:gap-3">
+        <HistoryMetric label={lang === "vi" ? "Đúng" : "Correct"} value={String(item?.correct ?? 0)} />
+        <HistoryMetric label={lang === "vi" ? "Sai / chưa làm" : "Wrong / skipped"} value={String(wrong.length)} />
+        <HistoryMetric label={lang === "vi" ? "Độ chính xác" : "Accuracy"} value={`${item?.accuracy ?? 0}%`} />
+        <HistoryMetric label={lang === "vi" ? "Thời gian" : "Duration"} value={formatTime(item?.durationSeconds ?? 0)} />
+      </div>
+    </div>
+    <div className="grid grid-cols-2 gap-2 border-t border-slate-100 p-4 sm:flex sm:justify-end sm:px-6 dark:border-white/10">
+      <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm min-w-0 px-2 text-xs sm:px-[18px] sm:text-[13px]" disabled={!wrong.length} onClick={onShowWrong}>{lang === "vi" ? "Xem các câu sai" : "View wrong answers"}</button>
+      <button type="button" className="lp-btn lp-btn--primary lp-btn--sm min-w-0 px-2 text-xs sm:px-[18px] sm:text-[13px]" disabled={!wrong.length} onClick={onRetry}>{lang === "vi" ? "Làm lại câu sai" : "Retry wrong answers"}</button>
+    </div>
+  </Dialog>
 }
 
 function WrongAnswersDialog({ item, lang, onClose, onRetry }: {

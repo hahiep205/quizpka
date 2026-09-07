@@ -452,12 +452,19 @@ html.dark .lp-modal-title {
 }
 
 .lp-modal-desc-spaced {
+  display: none;
   margin: 12px 0 0;
   color: var(--gray-light);
   font-family: var(--font-ui);
   font-size: 14px;
   font-weight: 600;
   line-height: 1.6;
+}
+
+@media (min-width: 640px) {
+  .lp-modal-desc-spaced {
+    display: block;
+  }
 }
 
 html.dark .lp-modal-desc {
@@ -470,7 +477,7 @@ html.dark .lp-modal-desc {
   width: 100%;
   flex-direction: column;
   overflow: hidden;
-  height: min(593px, calc(100dvh - 2rem));
+  height: min(580px, calc(100dvh - 2rem));
   max-height: min(760px, 92dvh);
 }
 
@@ -482,7 +489,7 @@ html.dark .lp-modal-desc {
 
 .lp-modal-header {
   display: flex;
-  min-height: 128px;
+  min-height: 86px;
   flex-shrink: 0;
   align-items: flex-start;
   justify-content: space-between;
