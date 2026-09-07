@@ -6,338 +6,293 @@
     {
       "id": 1,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Lý thuyết marketing xuất hiện từ khi nào",
+      "question": "Lý thuyết marketing xuất hiện từ khi nào?",
       "options": {
-        "A": "Giữa thế kỷ XVI Lý thuyết marketing xuất",
-        "B": "Giữa thế kỷ XVIII hiện từ khi nào",
+        "A": "Giữa thế kỷ XVI",
+        "B": "Giữa thế kỷ XVIII",
         "C": "Giữa thế kỷ XX",
-        "D": "Cuối thế kỷ XX Bối cảnh nào dẫn đến sự"
+        "D": "Cuối thế kỷ XX"
       },
       "answer": "C",
-      "explainAnswer": "Lựa chọn C phù hợp. Lý thuyết marketing hình thành rõ nét vào giữa thế kỷ XX, khi sản xuất phát triển và doanh nghiệp phải quan tâm sâu hơn đến nhu cầu thị trường.",
-      "image": null
+      "explainAnswer": "Lý thuyết marketing hình thành rõ nét vào giữa thế kỷ XX, khi sản xuất phát triển mạnh và doanh nghiệp phải quan tâm sâu hơn đến nhu cầu thị trường."
     },
     {
       "id": 2,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Bối cảnh nào dẫn đến sự",
+      "question": "Bối cảnh nào dẫn đến sự xuất hiện của lý thuyết marketing?",
       "options": {
         "A": "Cung về hàng hóa phát triển mạnh mẽ",
-        "B": "Cầu về hàng hóa phát triển mạnh mẽ xuất hiện lý thuyết",
-        "C": "Khủng hoảng kinh tế marketing",
+        "B": "Cầu về hàng hóa phát triển mạnh mẽ",
+        "C": "Khủng hoảng kinh tế",
         "D": "Nhu cầu của con người thay đổi"
       },
       "answer": "A",
-      "explainAnswer": "Có thể giải thích ngắn gọn như sau: Khi cung hàng hóa tăng mạnh, cạnh tranh buộc doanh nghiệp phải tìm hiểu thị trường và người mua thay vì chỉ tập trung vào sản xuất. Vì vậy, phương án A là kết luận cần chọn.",
-      "image": null
+      "explainAnswer": "Khi cung hàng hóa tăng mạnh, cạnh tranh buộc doanh nghiệp phải tìm hiểu thị trường và người mua thay vì chỉ tập trung vào sản xuất."
     },
     {
       "id": 3,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Theo quan điểm của marketing thì nhà sản nhuận cao nhất xuất/kinh doanh sẽ",
+      "question": "Theo quan điểm của marketing thì nhà sản xuất/kinh doanh sẽ:",
       "options": {
-        "A": "Bán cái mà nhà sản xuất/kinh doanh có Theo quan điểm của",
+        "A": "Bán cái mà nhà sản xuất/kinh doanh có",
         "B": "Bán cái mà khách hàng cần",
-        "C": "Bán cái mà nhà sản xuất/kinh doanh thu được lợi 3 marketing thì nhà sản nhuận cao nhất B xuất/kinh doanh sẽ",
+        "C": "Bán cái mà nhà sản xuất/kinh doanh thu được lợi nhuận cao nhất",
         "D": "Bán cái mà nhà sản xuất/kinh doanh tốn ít chi phí nhất"
       },
       "answer": "B",
-      "explainAnswer": "Điểm cần nhớ ở đây là Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp. Điều đó dẫn tới đáp án B.",
-      "image": null
+      "explainAnswer": "Marketing hướng đến việc tạo giá trị và thỏa mãn nhu cầu khách hàng. Doanh nghiệp phải bán những gì khách hàng cần chứ không phải những gì mình có."
     },
     {
       "id": 4,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "nhận được Nhu cầu tự nhiên của con người là",
+      "question": "Nhu cầu tự nhiên của con người là:",
       "options": {
-        "A": "Cảm giác thiếu hụt một cái gì đó mà con người cảm nhận được Nhu cầu tự nhiên của con",
-        "B": "Là nhu cầu tự nhiên có dạng đặc thù 4 người là",
+        "A": "Cảm giác thiếu hụt một cái gì đó mà con người cảm nhận được",
+        "B": "Là nhu cầu tự nhiên có dạng đặc thù",
         "C": "Là nhu cầu tự nhiên phù hợp với khả năng thanh toán",
         "D": "Là nhu cầu tự nhiên và mong muốn phù hợp với khả năng thanh toán"
       },
       "answer": "A",
-      "explainAnswer": "Xét theo lý thuyết marketing, Nhu cầu tự nhiên là cảm giác thiếu hụt mà con người nhận biết, chẳng hạn như nhu cầu ăn, uống, nghỉ ngơi hoặc an toàn. Do đó lựa chọn A là chính xác.",
-      "image": null
+      "explainAnswer": "Nhu cầu tự nhiên (need) là cảm giác thiếu hụt cơ bản mà con người nhận biết, ví dụ: ăn, uống, nghỉ ngơi, an toàn..."
     },
     {
       "id": 5,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "nhận được Mong muốn của con người là năng thanh toán năng thanh toán",
+      "question": "Mong muốn của con người là:",
       "options": {
-        "A": "Cảm giác thiếu hụt một cái gì đó mà con người cảm nhận được Mong muốn của con",
+        "A": "Cảm giác thiếu hụt một cái gì đó mà con người cảm nhận được",
         "B": "Là nhu cầu tự nhiên có dạng đặc thù",
-        "C": "Là nhu cầu tự nhiên có dạng đặc thù phù hợp với khả B năng thanh toán",
+        "C": "Là nhu cầu tự nhiên có dạng đặc thù phù hợp với khả năng thanh toán",
         "D": "Là nhu cầu tự nhiên và mong muốn phù hợp với khả năng thanh toán"
       },
       "answer": "B",
-      "explainAnswer": "Trong tình huống này, Mong muốn là nhu cầu tự nhiên được biểu hiện dưới một hình thức cụ thể, chịu ảnh hưởng bởi văn hóa, hoàn cảnh và sở thích của mỗi người. Vì thế phương án B phù hợp nhất.",
-      "image": null
+      "explainAnswer": "Mong muốn (want) là nhu cầu tự nhiên được biểu hiện dưới hình thức cụ thể, chịu ảnh hưởng bởi văn hóa, hoàn cảnh và sở thích cá nhân."
     },
     {
       "id": 6,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Cầu trong Marketing là năng thanh toán năng thanh toán",
+      "question": "Cầu trong Marketing là:",
       "options": {
-        "A": "Cảm giác thiếu hụt một cái gì đó mà con người cảm nhận được Cầu",
-        "B": "Là nhu cầu tự nhiên có dạng đặc thù trong Marketing là",
-        "C": "Là nhu cầu tự nhiên và mong muốn phù hợp với khả C năng thanh toán",
-        "D": "Là nhu cầu tự nhiên có dạng đặc thù phù hợp với khả năng thanh toán Quan điểm quản trị tập"
+        "A": "Cảm giác thiếu hụt một cái gì đó mà con người cảm nhận được",
+        "B": "Là nhu cầu tự nhiên có dạng đặc thù",
+        "C": "Là nhu cầu tự nhiên và mong muốn phù hợp với khả năng thanh toán",
+        "D": "Là nhu cầu tự nhiên có dạng đặc thù phù hợp với khả năng thanh toán"
       },
       "answer": "C",
-      "explainAnswer": "Cơ sở của đáp án là Trong marketing, cầu là nhu cầu hoặc mong muốn đi kèm khả năng thanh toán và ý định mua thực tế. Kết quả đúng là C.",
-      "image": null
+      "explainAnswer": "Cầu (demand) là nhu cầu hoặc mong muốn đi kèm với khả năng thanh toán và ý định mua thực tế."
     },
     {
       "id": 7,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Quan điểm quản trị tập",
+      "question": "Quan điểm quản trị tập trung vào sản xuất cho rằng:",
       "options": {
-        "A": "Khách hàng sẽ ưa thích sản phẩm giá thấp và được",
-        "B": "Khách hàng sẽ ưa thích các sản phẩm có chất lượng rằng: tốt, hiệu suất cao và nhiều tính năng, đặc điểm vượt trội. Vì vậy, doanh nghiệp phải tập trung vào việc thường xuyên hoàn thiện sản phẩm",
-        "C": "Khách hàng sẽ chỉ mua sản phẩm nếu như doanh nghiệp quảng bá và xúc tiến bán sản phẩm, tập trung vào khâu bán hàng",
-        "D": "Mấu chốt thành công của doanh nghiệp là phải xác định đúng những nhu cầu và mong muốn của thị trường mục tiêu"
+        "A": "Khách hàng sẽ ưa thích sản phẩm giá thấp và được bán rộng rãi",
+        "B": "Khách hàng sẽ ưa thích các sản phẩm có chất lượng tốt, hiệu suất cao và nhiều tính năng vượt trội",
+        "C": "Khách hàng sẽ chỉ mua sản phẩm nếu doanh nghiệp quảng bá và xúc tiến bán mạnh",
+        "D": "Mấu chốt thành công là xác định đúng nhu cầu và mong muốn của thị trường mục tiêu"
       },
       "answer": "A",
-      "explainAnswer": "Không nên nhầm nội dung này với các khái niệm gần nghĩa: Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp. Bởi vậy chọn A.",
-      "image": null
+      "explainAnswer": "Quan điểm sản xuất cho rằng khách hàng ưu tiên sản phẩm giá rẻ và dễ mua. Doanh nghiệp tập trung tăng năng suất và hạ giá thành."
     },
     {
       "id": 8,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "rằng",
+      "question": "Quan điểm quản trị tập trung vào sản phẩm cho rằng:",
       "options": {
         "A": "Khách hàng sẽ ưa thích sản phẩm giá thấp và được bán rộng rãi",
-        "B": "Khách hàng sẽ ưa thích các sản phẩm có chất lượng tốt, hiệu suất cao và nhiều tính năng, đặc điểm vượt trội. Quan điểm quản trị tập Vì vậy, doanh nghiệp phải tập trung vào việc thường",
-        "C": "Khách hàng sẽ chỉ mua sản phẩm nếu như doanh nghiệp quảng bá và xúc tiến bán sản phẩm, tập trung vào khâu bán hàng",
-        "D": "Mấu chốt thành công của doanh nghiệp là phải xác định đúng những nhu cầu và mong muốn của thị trường mục tiêu"
+        "B": "Khách hàng sẽ ưa thích các sản phẩm có chất lượng tốt, hiệu suất cao và nhiều tính năng vượt trội. Vì vậy doanh nghiệp phải tập trung hoàn thiện sản phẩm",
+        "C": "Khách hàng sẽ chỉ mua sản phẩm nếu doanh nghiệp quảng bá và xúc tiến bán mạnh",
+        "D": "Mấu chốt thành công là xác định đúng nhu cầu và mong muốn của thị trường mục tiêu"
       },
       "answer": "B",
-      "explainAnswer": "Lựa chọn B phù hợp. Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp.",
-      "image": null
+      "explainAnswer": "Quan điểm sản phẩm cho rằng khách hàng thích sản phẩm chất lượng cao, nhiều tính năng. Doanh nghiệp tập trung cải tiến sản phẩm liên tục."
     },
     {
       "id": 9,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "tốt, hiệu suất cao và nhiều tính năng, đặc điểm vượt trội. Quan điểm quản trị tập Vì vậy, doanh nghiệp phải tập trung vào việc thường xuyên hoàn thiện sản phẩm. trung vào bán hàng cho rằng",
+      "question": "Quan điểm quản trị tập trung vào bán hàng cho rằng:",
       "options": {
         "A": "Khách hàng sẽ ưa thích sản phẩm giá thấp và được bán rộng rãi",
-        "B": "Khách hàng sẽ ưa thích các sản phẩm có chất lượng tốt, hiệu suất cao và nhiều tính năng, đặc điểm vượt trội. Quan điểm quản trị tập Vì vậy, doanh nghiệp phải tập trung vào việc thường",
-        "C": "Khách hàng sẽ chỉ mua sản phẩm nếu như doanh C nghiệp quảng bá và xúc tiến bán sản phẩm, tập trung vào khâu bán hàng.",
-        "D": "Mấu chốt thành công của doanh nghiệp là phải xác định đúng những nhu cầu và mong muốn của thị trường mục tiêu."
+        "B": "Khách hàng sẽ ưa thích các sản phẩm có chất lượng tốt, hiệu suất cao và nhiều tính năng vượt trội",
+        "C": "Khách hàng sẽ chỉ mua sản phẩm nếu doanh nghiệp quảng bá và xúc tiến bán sản phẩm, tập trung vào khâu bán hàng",
+        "D": "Mấu chốt thành công là xác định đúng nhu cầu và mong muốn của thị trường mục tiêu"
       },
       "answer": "C",
-      "explainAnswer": "Có thể giải thích ngắn gọn như sau: Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp. Vì vậy, phương án C là kết luận cần chọn.",
-      "image": null
+      "explainAnswer": "Quan điểm bán hàng nhấn mạnh việc thuyết phục và thúc đẩy bán hàng mạnh mẽ, đặc biệt với sản phẩm có nhu cầu thụ động."
     },
     {
       "id": 10,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "tốt, hiệu suất cao và nhiều tính năng, đặc điểm vượt trội. Vì vậy, doanh nghiệp phải tập trung vào việc thường Quan điểm marketing xuyên hoàn thiện sản phẩm. hiện đại cho rằng nghiệp quảng bá và xúc tiến bán sản phẩm, tập trung vào khâu bán hàng.",
+      "question": "Quan điểm marketing hiện đại cho rằng:",
       "options": {
-        "A": "Khách hàng sẽ ưa thích sản phẩm giá thấp và được bán rộng rãi.",
-        "B": "Khách hàng sẽ ưa thích các sản phẩm có chất lượng tốt, hiệu suất cao và nhiều tính năng, đặc điểm vượt trội. Vì vậy, doanh nghiệp phải tập trung vào việc thường Quan điểm marketing xuyên hoàn thiện sản phẩm.",
-        "C": "Khách hàng sẽ chỉ mua sản phẩm nếu như doanh D nghiệp quảng bá và xúc tiến bán sản phẩm, tập trung vào khâu bán hàng.",
-        "D": "Mấu chốt thành công của doanh nghiệp là phải xác định đúng những nhu cầu và mong muốn của thị trường mục tiêu."
+        "A": "Khách hàng sẽ ưa thích sản phẩm giá thấp và được bán rộng rãi",
+        "B": "Khách hàng sẽ ưa thích các sản phẩm có chất lượng tốt, hiệu suất cao và nhiều tính năng vượt trội",
+        "C": "Khách hàng sẽ chỉ mua sản phẩm nếu doanh nghiệp quảng bá và xúc tiến bán mạnh",
+        "D": "Mấu chốt thành công của doanh nghiệp là phải xác định đúng những nhu cầu và mong muốn của thị trường mục tiêu"
       },
       "answer": "D",
-      "explainAnswer": "Điểm cần nhớ ở đây là Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp. Điều đó dẫn tới đáp án D.",
-      "image": null
+      "explainAnswer": "Quan điểm marketing hiện đại lấy khách hàng làm trung tâm: xác định đúng nhu cầu thị trường mục tiêu và thỏa mãn nhu cầu đó hiệu quả hơn đối thủ."
     },
     {
       "id": 11,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "tốt, hiệu suất cao và nhiều tính năng, đặc điểm vượt trội. Vì vậy, doanh nghiệp phải tập trung vào việc thường Quan điểm marketing đạo xuyên hoàn thiện sản phẩm đức – xã hội cho rằng định đúng những nhu cầu và mong muốn của thị trường mục tiêu",
+      "question": "Quan điểm marketing đạo đức – xã hội cho rằng:",
       "options": {
         "A": "Khách hàng sẽ ưa thích sản phẩm giá thấp và được bán rộng rãi",
-        "B": "Khách hàng sẽ ưa thích các sản phẩm có chất lượng tốt, hiệu suất cao và nhiều tính năng, đặc điểm vượt trội. Vì vậy, doanh nghiệp phải tập trung vào việc thường Quan điểm marketing đạo xuyên hoàn thiện sản phẩm",
-        "C": "Mấu chốt thành công của doanh nghiệp là phải xác D định đúng những nhu cầu và mong muốn của thị trường mục tiêu",
-        "D": "Chìa khóa thành công của doanh nghiệp là phải cân bằng được việc tối đa hóa lợi nhuận của doanh nghiệp với việc đảm bảo sự thỏa mãn nhu cầu, mong muốn của khách hàng và lợi ích của xã hội Khái niệm cơ bản của"
+        "B": "Khách hàng sẽ ưa thích các sản phẩm có chất lượng tốt, hiệu suất cao và nhiều tính năng vượt trội",
+        "C": "Mấu chốt thành công là xác định đúng nhu cầu và mong muốn của thị trường mục tiêu",
+        "D": "Chìa khóa thành công là phải cân bằng việc tối đa hóa lợi nhuận của doanh nghiệp với việc đảm bảo sự thỏa mãn nhu cầu của khách hàng và lợi ích của xã hội"
       },
       "answer": "D",
-      "explainAnswer": "Xét theo lý thuyết marketing, Mong muốn là nhu cầu tự nhiên được biểu hiện dưới một hình thức cụ thể, chịu ảnh hưởng bởi văn hóa, hoàn cảnh và sở thích của mỗi người. Do đó lựa chọn D là chính xác.",
-      "image": null
+      "explainAnswer": "Quan điểm marketing xã hội yêu cầu doanh nghiệp cân bằng ba lợi ích: lợi nhuận doanh nghiệp – sự thỏa mãn khách hàng – phúc lợi xã hội dài hạn."
     },
     {
       "id": 12,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Khái niệm cơ bản của",
+      "question": "Khái niệm cơ bản của marketing là:",
       "options": {
         "A": "Sản phẩm",
         "B": "Sản xuất",
-        "C": "Thị trường quanh",
-        "D": "Sự thoả mãn Sáng nay, Mai định đi ăn"
+        "C": "Thị trường",
+        "D": "Sự thỏa mãn"
       },
       "answer": "D",
-      "explainAnswer": "Trong tình huống này, Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp. Vì thế phương án D phù hợp nhất.",
-      "image": null
+      "explainAnswer": "Mục tiêu cuối cùng của marketing là tạo ra sự thỏa mãn cho khách hàng thông qua việc cung cấp giá trị."
     },
     {
       "id": 13,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Sáng nay, Mai định đi ăn",
+      "question": "Sáng nay, Mai định đi ăn phở nhưng vì bạn ấy bận nên thôi không đi ăn nữa. Phở trong trường hợp này là:",
       "options": {
-        "A": "Nhu cầu phở nhưng vì bạn ấy",
+        "A": "Nhu cầu",
         "B": "Mong muốn",
-        "C": "Cầu (nhu cầu có khả năng thanh toán) B thôi không đi ăn nữa. Phở trong trường hợp này là",
+        "C": "Cầu (nhu cầu có khả năng thanh toán)",
         "D": "Đề nghị marketing"
       },
       "answer": "B",
-      "explainAnswer": "Cơ sở của đáp án là Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp. Kết quả đúng là B.",
-      "image": null
+      "explainAnswer": "Mai muốn ăn phở (một hình thức cụ thể của nhu cầu ăn uống) nhưng chưa thực hiện được → đây là mong muốn, chưa phải cầu."
     },
     {
       "id": 14,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Nhu cầu tự nhiên là",
+      "question": "Nhu cầu tự nhiên là:",
       "options": {
         "A": "Khả năng thanh toán cho mong muốn của bản thân",
-        "B": "Cảm giác thiếu hụt mà con người cảm nhận được 14 Nhu cầu tự nhiên là",
+        "B": "Cảm giác thiếu hụt mà con người cảm nhận được",
         "C": "Một sản phẩm cụ thể",
         "D": "Một thói quen mua sắm"
       },
-      "answer": "A",
-      "explainAnswer": "Không nên nhầm nội dung này với các khái niệm gần nghĩa: Nhu cầu tự nhiên là cảm giác thiếu hụt mà con người nhận biết, chẳng hạn như nhu cầu ăn, uống, nghỉ ngơi hoặc an toàn. Bởi vậy chọn A.",
-      "image": null
+      "answer": "B",
+      "explainAnswer": "Nhu cầu tự nhiên là cảm giác thiếu hụt cơ bản (đói, khát, mệt mỏi, an toàn...) mà con người nhận biết được."
     },
     {
       "id": 15,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Trong marketing, khách hàng là một sản phẩm",
+      "question": "Trong marketing, khách hàng là:",
       "options": {
-        "A": "Người mua hàng cá nhân Trong marketing, khách",
+        "A": "Người mua hàng cá nhân",
         "B": "Doanh nghiệp",
         "C": "Những người có nhu cầu",
         "D": "Những người mua hiện tại hoặc tiềm năng đối với một sản phẩm"
       },
       "answer": "D",
-      "explainAnswer": "Lựa chọn D phù hợp. Khách hàng bao gồm người mua hiện tại và những người có khả năng mua trong tương lai; doanh nghiệp cần phục vụ cả nhu cầu hiện tại lẫn tiềm ẩn.",
-      "image": null
+      "explainAnswer": "Khách hàng bao gồm cả người mua hiện tại và những người có khả năng mua trong tương lai (tiềm năng)."
     },
     {
       "id": 16,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Khi mua và sử dụng một sản phẩm, thông thường khách hàng sẽ đạt được sản phẩm có cùng chức năng trên thị trường sự thỏa mãn khi ngưỡng kỳ vọng",
+      "question": "Khi mua và sử dụng một sản phẩm, thông thường khách hàng sẽ đạt được sự thỏa mãn khi:",
       "options": {
-        "A": "Giá bán sản phẩm thấp Khi mua và sử dụng một",
-        "B": "Giá trị sản phẩm cao sản phẩm, thông thường",
-        "C": "Sản phẩm mang lại nhiều lợi ích hơn so với những D 16 khách hàng sẽ đạt được sản phẩm có cùng chức năng trên thị trường sự thỏa mãn khi",
-        "D": "Khách hàng nhận được nhiều giá trị từ sản phẩm hơn ngưỡng kỳ vọng Hôm nay, gia đình nhà"
+        "A": "Giá bán sản phẩm thấp",
+        "B": "Giá trị sản phẩm cao",
+        "C": "Sản phẩm mang lại nhiều lợi ích hơn so với những sản phẩm có cùng chức năng trên thị trường",
+        "D": "Khách hàng nhận được nhiều giá trị từ sản phẩm hơn ngưỡng kỳ vọng"
       },
       "answer": "D",
-      "explainAnswer": "Có thể giải thích ngắn gọn như sau: Sự thỏa mãn hình thành từ việc so sánh giá trị khách hàng cảm nhận sau khi mua với mức kỳ vọng trước đó. Cảm nhận càng vượt kỳ vọng, mức thỏa mãn càng cao. Vì vậy, phương án D là kết luận cần chọn.",
-      "image": null
+      "explainAnswer": "Sự thỏa mãn được hình thành từ việc so sánh giá trị cảm nhận sau khi sử dụng với kỳ vọng trước khi mua. Giá trị thực nhận càng vượt kỳ vọng thì mức thỏa mãn càng cao."
     },
     {
       "id": 17,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Hôm nay, gia đình nhà",
+      "question": "Hôm nay, gia đình nhà Tú đi xem phim chiếu rạp nhưng khi ra về ai cũng thất vọng. Giải thích hợp lý nhất cho sự thất vọng này là:",
       "options": {
-        "A": "Giá vé cao Tú đi xem phim chiếu rạp nhưng khi ra về, ai cũng",
+        "A": "Giá vé cao",
         "B": "Ghế không thoải mái",
-        "C": "Phim không hay D giải thích hợp lí nhất lí do của sự thất",
-        "D": "Sản phẩm không được như mọi người mong đợi vọng này là: Quan điể"
+        "C": "Phim không hay",
+        "D": "Sản phẩm không được như mọi người mong đợi"
       },
       "answer": "D",
-      "explainAnswer": "Điểm cần nhớ ở đây là Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp. Điều đó dẫn tới đáp án D.",
-      "image": null
+      "explainAnswer": "Sự thất vọng xảy ra khi giá trị thực nhận thấp hơn kỳ vọng ban đầu của khách hàng."
     },
     {
       "id": 18,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Quan điể",
+      "question": "Quan điểm marketing gồm những yếu tố nào?",
       "options": {
-        "A": "Sản phẩm và giá m marketing",
-        "B": "Giá và kênh phân phối u",
-        "C": "Sản phẩm và kênh truyền thông tố nào?",
+        "A": "Sản phẩm và giá",
+        "B": "Giá và kênh phân phối",
+        "C": "Sản phẩm và kênh truyền thông",
         "D": "Sản phẩm, giá, kênh phân phối và kênh truyền thông"
       },
       "answer": "D",
-      "explainAnswer": "Xét theo lý thuyết marketing, Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp. Do đó lựa chọn D là chính xác.",
-      "image": null
+      "explainAnswer": "Đây chính là marketing mix 4P: Product – Price – Place – Promotion."
     },
     {
       "id": 19,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Sự khác nhau giữa sản phẩm hữu hình (hàng hóa) cho người mua quyền sử dụng so với sản phẩm vô hình cho người mua quyền sử dụng và một phần (dịch vụ) là ở chỗ: quyền sở hữu",
+      "question": "Sự khác nhau giữa sản phẩm hữu hình (hàng hóa) so với sản phẩm vô hình (dịch vụ) là ở chỗ:",
       "options": {
-        "A": "Khi trao đổi thì người bán sẽ chuyển giao cho người mua cả quyền sử dụng và quyền sở hữu Sự khác nhau giữa sản",
-        "B": "Khi trao đổi thì người bán sẽ chỉ chuyển giao phẩm hữu hình (hàng hóa) cho người mua quyền sử dụng",
-        "C": "Khi trao đổi thì người bán sẽ chỉ chuyển giao A cho người mua quyền sử dụng và một phần (dịch vụ) là ở chỗ: quyền sở hữu",
+        "A": "Khi trao đổi thì người bán sẽ chuyển giao cho người mua cả quyền sử dụng và quyền sở hữu",
+        "B": "Khi trao đổi thì người bán sẽ chỉ chuyển giao cho người mua quyền sử dụng",
+        "C": "Khi trao đổi thì người bán sẽ chỉ chuyển giao cho người mua quyền sử dụng và một phần quyền sở hữu",
         "D": "Khi trao đổi thì người bán sẽ chỉ chuyển giao cho người mua quyền sở hữu"
       },
       "answer": "A",
-      "explainAnswer": "Trong tình huống này, Hàng hóa hữu hình thường đi kèm quyền sở hữu, còn dịch vụ chủ yếu cung cấp quyền sử dụng hoặc lợi ích trong một khoảng thời gian mà không chuyển giao quyền sở hữu. Vì thế phương án A phù hợp nhất.",
-      "image": null
+      "explainAnswer": "Hàng hóa hữu hình thường chuyển giao cả quyền sử dụng và quyền sở hữu. Dịch vụ chủ yếu chỉ chuyển giao quyền sử dụng trong một khoảng thời gian."
     },
     {
       "id": 20,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Sự khác nhau giữa sản phẩm vô hình (dịch vụ) so cho người mua quyền sử dụng với sản phẩm hữu hình cho người mua quyền sử dụng và một phần (hàng hóa) là ở chỗ: quyền sở hữu",
+      "question": "Sự khác nhau giữa sản phẩm vô hình (dịch vụ) so với sản phẩm hữu hình (hàng hóa) là ở chỗ:",
       "options": {
-        "A": "Khi trao đổi thì người bán sẽ chuyển giao cho người mua cả quyền sử dụng và quyền sở hữu Sự khác nhau giữa sản",
-        "B": "Khi trao đổi thì người bán sẽ chỉ chuyển giao phẩm vô hình (dịch vụ) so cho người mua quyền sử dụng",
-        "C": "Khi trao đổi thì người bán sẽ chỉ chuyển giao B cho người mua quyền sử dụng và một phần (hàng hóa) là ở chỗ: quyền sở hữu",
+        "A": "Khi trao đổi thì người bán sẽ chuyển giao cho người mua cả quyền sử dụng và quyền sở hữu",
+        "B": "Khi trao đổi thì người bán sẽ chỉ chuyển giao cho người mua quyền sử dụng",
+        "C": "Khi trao đổi thì người bán sẽ chỉ chuyển giao cho người mua quyền sử dụng và một phần quyền sở hữu",
         "D": "Khi trao đổi thì người bán sẽ chỉ chuyển giao cho người mua quyền sở hữu"
       },
       "answer": "B",
-      "explainAnswer": "Cơ sở của đáp án là Hàng hóa hữu hình thường đi kèm quyền sở hữu, còn dịch vụ chủ yếu cung cấp quyền sử dụng hoặc lợi ích trong một khoảng thời gian mà không chuyển giao quyền sở hữu. Kết quả đúng là B.",
-      "image": null
+      "explainAnswer": "Dịch vụ không chuyển giao quyền sở hữu, chỉ cung cấp quyền sử dụng hoặc lợi ích trong một khoảng thời gian nhất định."
     },
     {
       "id": 21,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "dùng bắt nguồn từ việc so sánh giữa giá và chất lượng sản phẩm họ đã mua Sự thỏa mãn của khách hàng là dùng bắt nguồn từ việc so sánh giá trị khách",
+      "question": "Sự thỏa mãn của khách hàng là:",
       "options": {
         "A": "Mức độ trạng thái cảm giác của người tiêu dùng bắt nguồn từ việc so sánh giá trị khách hàng thực nhận đối với những kỳ vọng của họ",
-        "B": "Mức độ trạng thái cảm giác của người tiêu dùng bắt nguồn từ việc so sánh giữa giá và chất lượng sản phẩm họ đã mua Sự thỏa mãn của khách",
-        "C": "Mức độ trạng thái cảm giác của người tiêu 21 hàng là: A dùng bắt nguồn từ việc so sánh giá trị khách hàng thực nhận đối với những chi phí mà họ phải bỏ ra",
+        "B": "Mức độ trạng thái cảm giác của người tiêu dùng bắt nguồn từ việc so sánh giữa giá và chất lượng sản phẩm họ đã mua",
+        "C": "Mức độ trạng thái cảm giác của người tiêu dùng bắt nguồn từ việc so sánh giá trị khách hàng thực nhận đối với những chi phí mà họ phải bỏ ra",
         "D": "Mức độ trạng thái cảm giác của người tiêu dùng bắt nguồn từ việc so sánh giá trị khách hàng thực nhận đối với những thông tin mà họ nhận được"
       },
       "answer": "A",
-      "explainAnswer": "Không nên nhầm nội dung này với các khái niệm gần nghĩa: Sự thỏa mãn hình thành từ việc so sánh giá trị khách hàng cảm nhận sau khi mua với mức kỳ vọng trước đó. Cảm nhận càng vượt kỳ vọng, mức thỏa mãn càng cao. Bởi vậy chọn A.",
-      "image": null
+      "explainAnswer": "Định nghĩa chuẩn của sự thỏa mãn: so sánh giữa giá trị cảm nhận sau khi sử dụng với kỳ vọng trước khi mua."
     },
     {
       "id": 22,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "nhận được Thị trường theo quan điểm của marketing là",
+      "question": "Thị trường theo quan điểm của marketing là:",
       "options": {
-        "A": "Nơi gặp gỡ giữa cung và cầu Thị trường theo quan điểm",
-        "B": "Khách hàng của doanh nghiệp 22 của marketing là",
+        "A": "Nơi gặp gỡ giữa cung và cầu",
+        "B": "Khách hàng của doanh nghiệp",
         "C": "Nhà trung gian của doanh nghiệp",
-        "D": "Người tiêu dùng sản phẩm của doanh nghiệp Vai trò của hoạt động"
+        "D": "Người tiêu dùng sản phẩm của doanh nghiệp"
       },
       "answer": "B",
-      "explainAnswer": "Lựa chọn B phù hợp. Theo marketing, thị trường là tập hợp khách hàng hiện tại và tiềm năng có nhu cầu, mong muốn và khả năng tham gia trao đổi.",
-      "image": null
+      "explainAnswer": "Theo marketing, thị trường là tập hợp tất cả khách hàng hiện tại và tiềm năng có nhu cầu, mong muốn và khả năng tham gia trao đổi."
     },
     {
       "id": 23,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Vai trò của hoạt động",
+      "question": "Vai trò của hoạt động marketing là:",
       "options": {
         "A": "Kết nối các hoạt động sản xuất kinh doanh",
         "B": "Đảm bảo hiệu quả của hoạt động sản xuất/kinh doanh",
@@ -345,329 +300,285 @@
         "D": "Kết nối các hoạt động sản xuất kinh doanh của doanh nghiệp với thị trường và đảm bảo cho doanh nghiệp phát triển bền vững"
       },
       "answer": "C",
-      "explainAnswer": "Có thể giải thích ngắn gọn như sau: Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp. Vì vậy, phương án C là kết luận cần chọn.",
-      "image": null
+      "explainAnswer": "Marketing đóng vai trò cầu nối giữa doanh nghiệp và thị trường, đồng thời giúp nâng cao hiệu quả hoạt động sản xuất kinh doanh."
     },
     {
       "id": 24,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "điểm",
+      "question": "Đặc điểm của quan điểm quản trị tập trung vào sản xuất là:",
       "options": {
         "A": "Tận dụng được tính kinh tế nhờ tăng quy mô nhưng chất lượng sản phẩm không được như khách hàng mong đợi",
-        "B": "Tập trung mọi nguồn lực vào việc tạo ra các Quan điểm quản trị tập sản phẩm hoàn hảo và thường xuyên cải tiến",
+        "B": "Tập trung mọi nguồn lực vào việc tạo ra các sản phẩm hoàn hảo và thường xuyên cải tiến",
         "C": "Tập trung vào hoạt động xúc tiến bán sản phẩm",
         "D": "Tìm mọi cách đảm bảo sự thỏa mãn nhu cầu và mong muốn của khách hàng bằng những phương thức ưu thế hơn so với đối thủ cạnh tranh"
       },
       "answer": "A",
-      "explainAnswer": "Điểm cần nhớ ở đây là Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp. Điều đó dẫn tới đáp án A.",
-      "image": null
+      "explainAnswer": "Quan điểm sản xuất chú trọng tăng quy mô, hạ giá thành, nhưng dễ bỏ qua chất lượng và nhu cầu thực sự của khách hàng."
     },
     {
       "id": 25,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "điểm",
+      "question": "Đặc điểm của quan điểm quản trị tập trung vào sản phẩm là:",
       "options": {
         "A": "Tận dụng được tính kinh tế nhờ tăng quy mô nhưng chất lượng sản phẩm không được như khách hàng mong đợi",
-        "B": "Tập trung mọi nguồn lực vào việc tạo ra các Quan điểm quản trị tập sản phẩm hoàn hảo và thường xuyên cải tiến",
+        "B": "Tập trung mọi nguồn lực vào việc tạo ra các sản phẩm hoàn hảo và thường xuyên cải tiến",
         "C": "Tập trung vào hoạt động xúc tiến bán sản phẩm",
         "D": "Tìm mọi cách đảm bảo sự thỏa mãn nhu cầu và mong muốn của khách hàng bằng những phương thức ưu thế hơn so với đối thủ cạnh tranh"
       },
       "answer": "B",
-      "explainAnswer": "Xét theo lý thuyết marketing, Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp. Do đó lựa chọn B là chính xác.",
-      "image": null
+      "explainAnswer": "Quan điểm sản phẩm tập trung toàn bộ nguồn lực vào việc làm ra sản phẩm hoàn hảo và liên tục cải tiến kỹ thuật."
     },
     {
       "id": 26,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "điểm",
+      "question": "Đặc điểm của quan điểm quản trị tập trung vào bán hàng là:",
       "options": {
         "A": "Tận dụng được tính kinh tế nhờ tăng quy mô nhưng chất lượng sản phẩm không được như khách hàng mong đợi",
-        "B": "Tập trung mọi nguồn lực vào việc tạo ra các Quan điểm quản trị tập sản phẩm hoàn hảo và thường xuyên cải tiến",
+        "B": "Tập trung mọi nguồn lực vào việc tạo ra các sản phẩm hoàn hảo và thường xuyên cải tiến",
         "C": "Tập trung vào hoạt động xúc tiến bán sản phẩm",
-        "D": "Tìm mọi cách đảm bảo sự thỏa mãn nhu cầu và mong muốn của khách hàng bằng những phương thức ưu thế hơn so với đối thủ cạnh tranh Quan điểm marketing hiện"
+        "D": "Tìm mọi cách đảm bảo sự thỏa mãn nhu cầu và mong muốn của khách hàng bằng những phương thức ưu thế hơn so với đối thủ cạnh tranh"
       },
       "answer": "C",
-      "explainAnswer": "Trong tình huống này, Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp. Vì thế phương án C phù hợp nhất.",
-      "image": null
+      "explainAnswer": "Quan điểm bán hàng đặt trọng tâm vào hoạt động xúc tiến và thúc đẩy bán hàng."
     },
     {
       "id": 27,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Quan điểm marketing hiện",
+      "question": "Đặc điểm của quan điểm marketing hiện đại là:",
       "options": {
         "A": "Tận dụng được tính kinh tế nhờ tăng quy mô",
         "B": "Tập trung mọi nguồn lực vào việc tạo ra các sản phẩm hoàn hảo và thường xuyên cải tiến chúng",
         "C": "Tập trung vào hoạt động xúc tiến bán sản phẩm",
-        "D": "Tìm mọi cách đảm bảo sự thỏa mãn nhu cầu và mong muốn của khách hàng bằng những phương thức ưu thế hơn so với đối thủ cạnh tranh Quan điểm tập trung vào"
+        "D": "Tìm mọi cách đảm bảo sự thỏa mãn nhu cầu và mong muốn của khách hàng bằng những phương thức ưu thế hơn so với đối thủ cạnh tranh"
       },
       "answer": "D",
-      "explainAnswer": "Cơ sở của đáp án là Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp. Kết quả đúng là D.",
-      "image": null
+      "explainAnswer": "Quan điểm marketing hiện đại lấy khách hàng làm trung tâm và cố gắng thỏa mãn nhu cầu khách hàng tốt hơn đối thủ."
     },
     {
       "id": 28,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Quan điểm tập trung vào",
+      "question": "Quan điểm tập trung vào bán hàng thích hợp nhất đối với sản phẩm nào dưới đây?",
       "options": {
-        "A": "Dầu gội đầu bán hàng thích hợp nhất",
+        "A": "Dầu gội đầu",
         "B": "Kem đánh răng",
-        "C": "Bánh trung thu D doanh sản phẩm nào dưới",
-        "D": "Bảo hiểm đây: Người tiêu dùng sẽ ưa thích các sả : Quan điểm tập trung vào sản xuất n phẩm có chấ A t lượng tốt, hiệu suất cao và ều tính năng, đặc điể B: Quan điểm tập trung vào sản phẩm nhi m"
+        "C": "Bánh trung thu",
+        "D": "Bảo hiểm"
       },
       "answer": "D",
-      "explainAnswer": "Không nên nhầm nội dung này với các khái niệm gần nghĩa: Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp. Bởi vậy chọn D.",
-      "image": null
+      "explainAnswer": "Bảo hiểm là sản phẩm có nhu cầu thụ động, khách hàng ít chủ động tìm mua nên cần quan điểm bán hàng mạnh để thuyết phục."
     },
     {
       "id": 29,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "trung toàn bộ ồ lực bán đượ",
+      "question": "Doanh nghiệp tập trung toàn bộ nguồn lực để tuyển dụng các nhân viên bán hàng giỏi và đưa ra các chính sách kích thích bán hàng nhiều hơn. Như vậy, doanh nghiệp đã định hướng kinh doanh theo quan điểm nào sau đây?",
       "options": {
-        "A": "Quan điểm tập trung vào bán hàng ngu n lực để tuyển dụng các nhân viên bán hàng giỏi và đưa ra",
-        "B": "Quan điểm tập trung vào sản xuất các chính sách kích thích",
-        "C": "Quan c nhiều hơn. Như vậy, doanh nghiệp đã định hướ",
-        "D": "Quan điểm Marketing hiện đại ng kinh doanh theo quan điểm nào sau đây: Theo quan điểm"
+        "A": "Quan điểm tập trung vào bán hàng",
+        "B": "Quan điểm tập trung vào sản xuất",
+        "C": "Quan điểm tập trung vào sản phẩm",
+        "D": "Quan điểm Marketing hiện đại"
       },
       "answer": "A",
-      "explainAnswer": "Lựa chọn A phù hợp. Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp.",
-      "image": null
+      "explainAnswer": "Việc tập trung nguồn lực vào đội ngũ bán hàng và chính sách kích thích bán là đặc trưng rõ rệt của quan điểm bán hàng."
     },
     {
       "id": 30,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Theo quan điểm",
+      "question": "Theo quan điểm Marketing đạo đức – xã hội, người làm Marketing cần cân đối những khía cạnh nào khi xây dựng chính sách Marketing?",
       "options": {
-        "A": "Lợi ích của doanh nghiệp và phúc lợi xã hội Marketing đạo đức xã hội,",
-        "B": "Phúc lợi xã hội và sự thỏa mãn của người tiêu người làm Marketing cầ dùng n",
-        "C": "Sự thỏa mãn của người tiêu dùng và lợi ích phải cân đố g khía D i nhữn của doanh nghiệp cạnh nào khi xây dựng",
-        "D": "Lợi ích của doanh nghiệp, sự thỏa mãn của chính sách Marketing? người tiêu dùng và phúc lợi xã hội hiên Một khách hàng vừ"
+        "A": "Lợi ích của doanh nghiệp và phúc lợi xã hội",
+        "B": "Phúc lợi xã hội và sự thỏa mãn của người tiêu dùng",
+        "C": "Sự thỏa mãn của người tiêu dùng và lợi ích của doanh nghiệp",
+        "D": "Lợi ích của doanh nghiệp, sự thỏa mãn của người tiêu dùng và phúc lợi xã hội"
       },
       "answer": "D",
-      "explainAnswer": "Có thể giải thích ngắn gọn như sau: Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp. Vì vậy, phương án D là kết luận cần chọn.",
-      "image": null
+      "explainAnswer": "Marketing xã hội yêu cầu cân bằng đồng thời ba yếu tố: lợi nhuận doanh nghiệp – sự thỏa mãn khách hàng – lợi ích xã hội."
     },
     {
       "id": 31,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Một khách hàng vừ",
+      "question": "Một khách hàng vừa mua một chiếc xe Mercedes từ cửa hàng để thỏa mãn nhu cầu được thể hiện bản thân. Vậy chiếc xe Mercedes là:",
       "options": {
-        "A": "Nhu cầu tự n a mua",
+        "A": "Nhu cầu tự nhiên",
         "B": "Mong muốn",
-        "C": "Cầu một cửa hàng để thỏa mãn",
-        "D": "Nhu cầu tự nhiên có khả năng thanh toán nhu cầu được thể hiện bản thân. Vậy chiếc xe Mercedes là: ...là hành động tiếp nhận"
+        "C": "Cầu",
+        "D": "Nhu cầu tự nhiên có khả năng thanh toán"
       },
       "answer": "B",
-      "explainAnswer": "Điểm cần nhớ ở đây là Khách hàng bao gồm người mua hiện tại và những người có khả năng mua trong tương lai; doanh nghiệp cần phục vụ cả nhu cầu hiện tại lẫn tiềm ẩn. Điều đó dẫn tới đáp án B.",
-      "image": null
+      "explainAnswer": "Chiếc xe Mercedes là hình thức cụ thể mà khách hàng lựa chọn để thỏa mãn nhu cầu thể hiện bản thân → đây là mong muốn."
     },
     {
       "id": 32,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "...là hành động tiếp nhận cách trao cho họ một thứ",
+      "question": "... là hành động tiếp nhận một sản phẩm mong muốn từ một người nào đó bằng cách trao cho họ một thứ khác.",
       "options": {
-        "A": "Sự thỏa mãn một sản phẩm mong muốn",
+        "A": "Sự thỏa mãn",
         "B": "Trao đổi",
-        "C": "Thị trường khác.",
-        "D": "Mua bán Trong marketing, nhu cầu"
+        "C": "Thị trường",
+        "D": "Mua bán"
       },
       "answer": "B",
-      "explainAnswer": "Xét theo lý thuyết marketing, Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp. Do đó lựa chọn B là chính xác.",
-      "image": null
+      "explainAnswer": "Trao đổi (exchange) là hành động nhận được sản phẩm mong muốn bằng cách đưa lại một giá trị khác cho bên kia."
     },
     {
       "id": 33,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Trong marketing, nhu cầu",
+      "question": "Trong marketing, nhu cầu và mong muốn của con người được thỏa mãn bằng cách nào?",
       "options": {
-        "A": "Mua bán và mong muốn của con",
+        "A": "Mua bán",
         "B": "Trao đổi",
-        "C": "Sản xuất B mãn bằng cách nào?",
-        "D": "Truyền thông Thông thường, khi làm"
+        "C": "Sản xuất",
+        "D": "Truyền thông"
       },
       "answer": "B",
-      "explainAnswer": "Trong tình huống này, Trong marketing, cầu là nhu cầu hoặc mong muốn đi kèm khả năng thanh toán và ý định mua thực tế. Vì thế phương án B phù hợp nhất.",
-      "image": null
+      "explainAnswer": "Marketing thỏa mãn nhu cầu và mong muốn của con người thông qua quá trình trao đổi."
     },
     {
       "id": 34,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Thông thường, khi làm",
+      "question": "Thông thường, khi làm marketing, nhà marketing quan tâm nhất đến:",
       "options": {
-        "A": "Nhu cầu marketing, nhà marketing",
+        "A": "Nhu cầu",
         "B": "Mong muốn",
-        "C": "Cầu (nhu cầu có khả năng thanh toán) C ….",
+        "C": "Cầu (nhu cầu có khả năng thanh toán)",
         "D": "Nhu cầu cụ thể"
       },
       "answer": "C",
-      "explainAnswer": "Cơ sở của đáp án là Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp. Kết quả đúng là C.",
-      "image": null
+      "explainAnswer": "Nhà marketing quan tâm nhất đến cầu – tức những nhu cầu/mong muốn có kèm khả năng và ý định thanh toán thực tế."
     },
     {
       "id": 35,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Ta phân biệ ật chất còn dịch vụ thì không t giữa hàng mặt v hóa và dị ụ ch v bằng cách: còn dịch vụ thì không hóa thì không",
+      "question": "Ta phân biệt giữa hàng hóa và dịch vụ bằng cách:",
       "options": {
         "A": "Hàng hóa sờ được còn dịch vụ thì không",
-        "B": "Khi mua hàng hóa ta có sự sở hữu thêm về Ta phân biệ ật chất còn dịch vụ thì không t giữa hàng mặt v",
-        "C": "Hàng hóa có thể đếm được về mặt số lượng B ch v bằng cách: còn dịch vụ thì không",
-        "D": "Dịch vụ sở hữu tính chất bất biến còn hàng hóa thì không Trong một tình huống"
+        "B": "Khi mua hàng hóa ta có sự sở hữu thêm về mặt vật chất còn dịch vụ thì không",
+        "C": "Hàng hóa có thể đếm được về mặt số lượng còn dịch vụ thì không",
+        "D": "Dịch vụ sở hữu tính chất bất biến còn hàng hóa thì không"
       },
       "answer": "B",
-      "explainAnswer": "Không nên nhầm nội dung này với các khái niệm gần nghĩa: Hàng hóa hữu hình thường đi kèm quyền sở hữu, còn dịch vụ chủ yếu cung cấp quyền sử dụng hoặc lợi ích trong một khoảng thời gian mà không chuyển giao quyền sở hữu. Bởi vậy chọn B.",
-      "image": null
+      "explainAnswer": "Đặc điểm quan trọng nhất để phân biệt: hàng hóa chuyển giao quyền sở hữu vật chất, còn dịch vụ thì không."
     },
     {
       "id": 36,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Trong một tình huống",
+      "question": "Trong một tình huống marketing, marketing là của:",
       "options": {
         "A": "Người đưa đề nghị marketing",
-        "B": "Doanh nghiệp marketing, marketing",
-        "C": "Người có nhu cầu D c",
-        "D": "Người tích cực hơn trong việc tạo nên trao của: đổi"
+        "B": "Doanh nghiệp",
+        "C": "Người có nhu cầu",
+        "D": "Người tích cực hơn trong việc tạo nên trao đổi"
       },
       "answer": "D",
-      "explainAnswer": "Lựa chọn D phù hợp. Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp.",
-      "image": null
+      "explainAnswer": "Marketing thuộc về bên nào chủ động và tích cực hơn trong việc tạo ra và thúc đẩy quá trình trao đổi."
     },
     {
       "id": 37,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "của: đổi Sự thỏa mãn là tiền đề của",
+      "question": "Sự thỏa mãn là tiền đề của:",
       "options": {
-        "A": "Sự thành công của chiến lược truyền thông Sự thỏa mãn là tiền đề",
-        "B": "Sự lan tỏa của chiến lược truyền thông 38 của",
+        "A": "Sự thành công của chiến lược truyền thông",
+        "B": "Sự lan tỏa của chiến lược truyền thông",
         "C": "Lòng trung thành của khách hàng",
         "D": "Sự hài lòng của khách hàng"
       },
       "answer": "C",
-      "explainAnswer": "Có thể giải thích ngắn gọn như sau: Sự thỏa mãn hình thành từ việc so sánh giá trị khách hàng cảm nhận sau khi mua với mức kỳ vọng trước đó. Cảm nhận càng vượt kỳ vọng, mức thỏa mãn càng cao. Vì vậy, phương án C là kết luận cần chọn.",
-      "image": null
+      "explainAnswer": "Khách hàng chỉ trung thành khi họ thực sự được thỏa mãn. Sự thỏa mãn là điều kiện cần để hình thành lòng trung thành."
     },
     {
       "id": 38,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Quan điểm nào là phù hợp nhất để bán sản phẩm bảo hiểm? đều không phù hợp",
+      "question": "Quan điểm nào là phù hợp nhất để bán sản phẩm bảo hiểm?",
       "options": {
-        "A": "Quan điểm sản xuất Quan điểm nào là phù hợp",
+        "A": "Quan điểm sản xuất",
         "B": "Quan điểm sản phẩm",
-        "C": "Quan điểm bán hàng C hiểm?",
-        "D": "Quan điểm sản xuất, sản phẩm hay bán hàng đều không phù hợp n xuất Tối ưu hóa giá thành sả"
+        "C": "Quan điểm bán hàng",
+        "D": "Quan điểm sản xuất, sản phẩm hay bán hàng đều không phù hợp"
       },
       "answer": "C",
-      "explainAnswer": "Điểm cần nhớ ở đây là Bảo hiểm thường đáp ứng một nhu cầu thụ động, nên doanh nghiệp phải chủ động giải thích lợi ích và thuyết phục khách hàng; đây là đặc trưng của quan điểm bán hàng. Điều đó dẫn tới đáp án C.",
-      "image": null
+      "explainAnswer": "Bảo hiểm là sản phẩm có nhu cầu thụ động, khách hàng ít chủ động tìm mua nên cần quan điểm bán hàng để thuyết phục mạnh mẽ."
     },
     {
       "id": 39,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Tối ưu hóa giá thành sả quan điểm marketing nào",
+      "question": "Tối ưu hóa giá thành sản phẩm là nội dung của quan điểm marketing nào?",
       "options": {
-        "A": "Quan điểm sả n",
-        "B": "Quan điểm sản phẩm i A quan điểm marketing nào",
-        "C": "Quan điểm bán hàng ?",
-        "D": "Quan điểm marketing xã hội : Quan điểm sản xuất Doanh nghiệp theo đuổ A i"
+        "A": "Quan điểm sản xuất",
+        "B": "Quan điểm sản phẩm",
+        "C": "Quan điểm bán hàng",
+        "D": "Quan điểm marketing xã hội"
       },
       "answer": "A",
-      "explainAnswer": "Xét theo lý thuyết marketing, Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp. Do đó lựa chọn A là chính xác.",
-      "image": null
+      "explainAnswer": "Quan điểm sản xuất tập trung vào việc tăng năng suất, giảm chi phí và tối ưu hóa giá thành."
     },
     {
       "id": 40,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Tạo ra sản phẩm khách",
+      "question": "Tạo ra sản phẩm khách hàng cần là nội dung của loại quan điểm nào?",
       "options": {
         "A": "Quan điểm sản xuất",
-        "B": "Quan điểm sản phẩm 42 hàng cần là nội dung của loại quan điểm nào?",
+        "B": "Quan điểm sản phẩm",
         "C": "Quan điểm bán hàng",
-        "D": "Quan điểm marketing Khách hàng sẽ đánh giá"
+        "D": "Quan điểm marketing"
       },
       "answer": "D",
-      "explainAnswer": "Trong tình huống này, Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp. Vì thế phương án D phù hợp nhất.",
-      "image": null
+      "explainAnswer": "Quan điểm marketing lấy khách hàng làm trung tâm: nghiên cứu và tạo ra đúng những gì khách hàng cần."
     },
     {
       "id": 41,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Khách hàng sẽ đánh giá",
+      "question": "Khách hàng sẽ đánh giá được … khi so sánh giá trị cảm nhận đối với sản phẩm với kỳ vọng trước khi mua.",
       "options": {
-        "A": "Giá trị cảm nhận đối với được …. sản phẩm khi so",
-        "B": "Lợi ích của",
-        "C": "Sự hài lòng đối với C mua với kỳ vọng trước khi",
-        "D": "Lòng trung thành đối với mua sản phẩm."
+        "A": "Giá trị cảm nhận đối với sản phẩm",
+        "B": "Lợi ích của sản phẩm",
+        "C": "Sự hài lòng đối với sản phẩm",
+        "D": "Lòng trung thành đối với sản phẩm"
       },
       "answer": "C",
-      "explainAnswer": "Cơ sở của đáp án là Khách hàng bao gồm người mua hiện tại và những người có khả năng mua trong tương lai; doanh nghiệp cần phục vụ cả nhu cầu hiện tại lẫn tiềm ẩn. Kết quả đúng là C.",
-      "image": null
+      "explainAnswer": "Việc so sánh giá trị cảm nhận với kỳ vọng chính là quá trình hình thành sự hài lòng/thỏa mãn của khách hàng."
     },
     {
       "id": 42,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "cơ sở thỏa mãn tối đa nhu cầu và mong muốn của khách hàng Quan điểm nào về Marketing là phù hợp nhất nghiệp/tổ chức thu được lợi nhuận cao nhất trên trong xu hướng hiện nay? cơ sở thỏa mãn tối đa nhu cầu và mong muốn của khách hàng và thực hiện tốt trách nhiệm xã hội",
+      "question": "Quan điểm nào về Marketing là phù hợp nhất trong xu hướng hiện nay?",
       "options": {
         "A": "Marketing là một triết lý quản trị giúp doanh nghiệp/tổ chức thu được lợi nhuận cao nhất",
-        "B": "Marketing là một triết lý quản trị giúp doanh nghiệp/tổ chức thu được lợi nhuận cao nhất trên cơ sở thỏa mãn tối đa nhu cầu và mong muốn của khách hàng Quan điểm nào về",
-        "C": "Marketing là một triết lý quản trị giúp doanh",
+        "B": "Marketing là một triết lý quản trị giúp doanh nghiệp/tổ chức thu được lợi nhuận cao nhất trên cơ sở thỏa mãn tối đa nhu cầu và mong muốn của khách hàng",
+        "C": "Marketing là một triết lý quản trị giúp doanh nghiệp/tổ chức thu được lợi nhuận cao nhất trên cơ sở thỏa mãn tối đa nhu cầu và mong muốn của khách hàng và thực hiện tốt trách nhiệm xã hội",
         "D": "Marketing là một triết lý quản trị giúp doanh nghiệp/tổ chức thu được lợi nhuận cao nhất trên cơ sở thỏa mãn tối đa nhu cầu và mong muốn của khách hàng"
       },
       "answer": "C",
-      "explainAnswer": "Không nên nhầm nội dung này với các khái niệm gần nghĩa: Mong muốn là nhu cầu tự nhiên được biểu hiện dưới một hình thức cụ thể, chịu ảnh hưởng bởi văn hóa, hoàn cảnh và sở thích của mỗi người. Bởi vậy chọn C.",
-      "image": null
+      "explainAnswer": "Xu hướng hiện nay là marketing xã hội: vừa thỏa mãn khách hàng, vừa có lợi nhuận, vừa thực hiện trách nhiệm với xã hội."
     },
     {
       "id": 43,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "cơ sở thỏa mãn tối đa nhu cầu và mong muốn của khách hàng Cho thuê điện thoại là",
+      "question": "Cho thuê điện thoại là:",
       "options": {
         "A": "Sản phẩm hữu hình",
-        "B": "Hàng hóa 45 Cho thuê điện thoại là",
+        "B": "Hàng hóa",
         "C": "Dịch vụ",
         "D": "Vừa là hàng hóa, vừa là dịch vụ"
       },
       "answer": "C",
-      "explainAnswer": "Lựa chọn C phù hợp. Mong muốn là nhu cầu tự nhiên được biểu hiện dưới một hình thức cụ thể, chịu ảnh hưởng bởi văn hóa, hoàn cảnh và sở thích của mỗi người.",
-      "image": null
+      "explainAnswer": "Cho thuê điện thoại là việc cung cấp quyền sử dụng trong một thời gian nhất định, không chuyển giao quyền sở hữu → thuộc dịch vụ."
     },
     {
       "id": 44,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "mãn nhu cầu, mong muốn của con người và có thể đem trao đổi được Sản phẩm theo quan điểm của marketing là mãn nhu cầu, mong muốn của con người, có thể đem trao đổi và thu được lợi nhuận",
+      "question": "Sản phẩm theo quan điểm của marketing là:",
       "options": {
         "A": "Kết quả của hoạt động có chủ đích nhằm thỏa mãn nhu cầu, mong muốn của con người",
         "B": "Kết quả của hoạt động có chủ đích nhằm thỏa mãn nhu cầu, mong muốn của con người và có thể đem trao đổi được",
-        "C": "Kết quả của hoạt động có chủ đích nhằm thỏa của marketing là: B mãn nhu cầu, mong muốn của con người, có thể đem trao đổi và thu được lợi nhuận",
+        "C": "Kết quả của hoạt động có chủ đích nhằm thỏa mãn nhu cầu, mong muốn của con người, có thể đem trao đổi và thu được lợi nhuận",
         "D": "Kết quả của hoạt động có chủ đích nhằm thỏa mãn nhu cầu, mong muốn của con người, có thể đem trao đổi và mang lại lợi ích cho xã hội"
       },
       "answer": "B",
-      "explainAnswer": "Có thể giải thích ngắn gọn như sau: Mong muốn là nhu cầu tự nhiên được biểu hiện dưới một hình thức cụ thể, chịu ảnh hưởng bởi văn hóa, hoàn cảnh và sở thích của mỗi người. Vì vậy, phương án B là kết luận cần chọn.",
-      "image": null
+      "explainAnswer": "Sản phẩm trong marketing là bất kỳ thứ gì có thể thỏa mãn nhu cầu/mong muốn và có thể đưa vào quá trình trao đổi."
     },
     {
       "id": 45,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "họ một thứ khác muốn từ một người nào đó bằng cách trả tiền cho họ Trao đổi là muốn từ một người nào đó bằng cách thanh toán",
+      "question": "Trao đổi là:",
       "options": {
         "A": "Hành động tiếp nhận một sản phẩm mong muốn từ một người nào đó bằng cách trao cho họ một thứ khác",
         "B": "Hành động tiếp nhận một sản phẩm mong muốn từ một người nào đó bằng cách trả tiền",
@@ -675,248 +586,215 @@
         "D": "Hành động tiếp nhận một sản phẩm mong muốn từ một người nào đó bằng cách trao cho họ một sản phẩm khác"
       },
       "answer": "A",
-      "explainAnswer": "Điểm cần nhớ ở đây là Trao đổi là hành động nhận sản phẩm mong muốn bằng cách đưa lại một giá trị khác, thường là tiền hoặc sản phẩm, cho bên cung cấp. Điều đó dẫn tới đáp án A.",
-      "image": null
+      "explainAnswer": "Trao đổi là hành động nhận sản phẩm mong muốn bằng cách đưa lại một giá trị khác (có thể là tiền, hàng hóa hoặc dịch vụ)."
     },
     {
       "id": 46,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "thấp Quan điểm quản trị tập trung vào sản xuất được áp dụng khi: lượng và đặc tính hoặc có “nhu cầu thụ động” như dịch vụ bảo hiểm,...",
+      "question": "Quan điểm quản trị tập trung vào sản xuất được áp dụng khi:",
       "options": {
-        "A": "Cầu lớn hơn cung và thị trường có thu nhập thấp Quan điểm quản trị tập",
+        "A": "Cầu lớn hơn cung và thị trường có thu nhập thấp",
         "B": "Chủ yếu đối với sản phẩm công nghệ",
-        "C": "Sản phẩm ít có khả năng biến đổi về chất A áp dụng khi: lượng và đặc tính hoặc có “nhu cầu thụ động” như dịch vụ bảo hiểm,...",
+        "C": "Sản phẩm ít có khả năng biến đổi về chất lượng và đặc tính hoặc có “nhu cầu thụ động” như dịch vụ bảo hiểm",
         "D": "Mức độ cạnh tranh trên thị trường cao"
       },
       "answer": "A",
-      "explainAnswer": "Xét theo lý thuyết marketing, Nhu cầu tự nhiên là cảm giác thiếu hụt mà con người nhận biết, chẳng hạn như nhu cầu ăn, uống, nghỉ ngơi hoặc an toàn. Do đó lựa chọn A là chính xác.",
-      "image": null
+      "explainAnswer": "Khi cầu vượt cung và thu nhập người dân còn thấp, quan điểm sản xuất (tập trung tăng sản lượng, hạ giá) là phù hợp."
     },
     {
       "id": 47,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "thấp Quan điểm quản trị tập trung vào sản phẩm được áp dụng khi: lượng và đặc tính hoặc có “nhu cầu thụ động” như dịch vụ bảo hiểm,...",
+      "question": "Quan điểm quản trị tập trung vào sản phẩm được áp dụng khi:",
       "options": {
-        "A": "Cầu lớn hơn cung và thị trường có thu nhập thấp Quan điểm quản trị tập",
+        "A": "Cầu lớn hơn cung và thị trường có thu nhập thấp",
         "B": "Chủ yếu đối với sản phẩm công nghệ",
-        "C": "Sản phẩm ít có khả năng biến đổi về chất B áp dụng khi: lượng và đặc tính hoặc có “nhu cầu thụ động” như dịch vụ bảo hiểm,...",
+        "C": "Sản phẩm ít có khả năng biến đổi về chất lượng và đặc tính hoặc có “nhu cầu thụ động” như dịch vụ bảo hiểm",
         "D": "Mức độ cạnh tranh trên thị trường cao"
       },
       "answer": "B",
-      "explainAnswer": "Trong tình huống này, Nhu cầu tự nhiên là cảm giác thiếu hụt mà con người nhận biết, chẳng hạn như nhu cầu ăn, uống, nghỉ ngơi hoặc an toàn. Vì thế phương án B phù hợp nhất.",
-      "image": null
+      "explainAnswer": "Quan điểm sản phẩm thường được áp dụng với các sản phẩm công nghệ cao, nơi chất lượng và tính năng kỹ thuật là yếu tố then chốt."
     },
     {
       "id": 48,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "thấp Quan điểm quản trị tập trung vào bán hàng được áp dụng khi: lượng và đặc tính hoặc có “nhu cầu thụ động” như dịch vụ bảo hiểm,...",
+      "question": "Quan điểm quản trị tập trung vào bán hàng được áp dụng khi:",
       "options": {
-        "A": "Cầu lớn hơn cung và thị trường có thu nhập thấp Quan điểm quản trị tập",
+        "A": "Cầu lớn hơn cung và thị trường có thu nhập thấp",
         "B": "Chủ yếu đối với sản phẩm công nghệ",
-        "C": "Sản phẩm ít có khả năng biến đổi về chất C áp dụng khi: lượng và đặc tính hoặc có “nhu cầu thụ động” như dịch vụ bảo hiểm,...",
+        "C": "Sản phẩm ít có khả năng biến đổi về chất lượng và đặc tính hoặc có “nhu cầu thụ động” như dịch vụ bảo hiểm",
         "D": "Mức độ cạnh tranh trên thị trường cao"
       },
       "answer": "C",
-      "explainAnswer": "Cơ sở của đáp án là Nhu cầu tự nhiên là cảm giác thiếu hụt mà con người nhận biết, chẳng hạn như nhu cầu ăn, uống, nghỉ ngơi hoặc an toàn. Kết quả đúng là C.",
-      "image": null
+      "explainAnswer": "Quan điểm bán hàng phù hợp với những sản phẩm khách hàng ít chủ động tìm mua (nhu cầu thụ động) hoặc sản phẩm ít khác biệt về chất lượng."
     },
     {
       "id": 49,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "thấp Quan điểm marketing hiện đại được áp dụng khi lượng và đặc tính hoặc có “nhu cầu thụ động” như dịch vụ bảo hiểm,...",
+      "question": "Quan điểm marketing hiện đại được áp dụng khi:",
       "options": {
-        "A": "Cầu lớn hơn cung và thị trường có thu nhập thấp Quan điểm marketing hiện",
+        "A": "Cầu lớn hơn cung và thị trường có thu nhập thấp",
         "B": "Chủ yếu đối với sản phẩm công nghệ",
-        "C": "Sản phẩm ít có khả năng biến đổi về chất D lượng và đặc tính hoặc có “nhu cầu thụ động” như dịch vụ bảo hiểm,...",
+        "C": "Sản phẩm ít có khả năng biến đổi về chất lượng và đặc tính hoặc có “nhu cầu thụ động” như dịch vụ bảo hiểm",
         "D": "Mức độ cạnh tranh trên thị trường cao"
       },
       "answer": "D",
-      "explainAnswer": "Không nên nhầm nội dung này với các khái niệm gần nghĩa: Trong marketing, cầu là nhu cầu hoặc mong muốn đi kèm khả năng thanh toán và ý định mua thực tế. Bởi vậy chọn D.",
-      "image": null
+      "explainAnswer": "Khi cạnh tranh gay gắt, doanh nghiệp buộc phải chuyển sang quan điểm marketing hiện đại – lấy khách hàng làm trung tâm."
     },
     {
       "id": 50,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Qui trình quản trị chọn thị trường mục tiêu, thực hiện các hoạt Marketing theo trình tự: động Marketing và xác lập chiến lược Marketing",
+      "question": "Qui trình quản trị Marketing theo trình tự:",
       "options": {
-        "A": "Phân tích cơ hội thị trường, xác định và lựa Qui trình quản trị",
+        "A": "Phân tích cơ hội thị trường, xác định và lựa chọn thị trường mục tiêu, thực hiện các hoạt động Marketing và xác lập chiến lược Marketing",
         "B": "Phân tích cơ hội thị trường, xác định và lựa chọn thị trường mục tiêu, xác lập chiến lược Marketing và thực hiện các hoạt động Marketing",
         "C": "Xác định và lựa chọn thị trường mục tiêu, phân tích cơ hội thị trường, thực hiện các hoạt động Marketing và xác lập chiến lược Marketing",
-        "D": "Xác định và lựa chọn thị trường mục tiêu, phân tích cơ hội thị trường, thực hiện các hoạt động Marketing Marketing là tất cả các"
+        "D": "Xác định và lựa chọn thị trường mục tiêu, phân tích cơ hội thị trường, thực hiện các hoạt động Marketing"
       },
       "answer": "B",
-      "explainAnswer": "Lựa chọn B phù hợp. Theo marketing, thị trường là tập hợp khách hàng hiện tại và tiềm năng có nhu cầu, mong muốn và khả năng tham gia trao đổi.",
-      "image": null
+      "explainAnswer": "Trình tự chuẩn của quản trị marketing: Phân tích cơ hội → Lựa chọn thị trường mục tiêu → Xây dựng chiến lược → Thực hiện và kiểm soát."
     },
     {
       "id": 51,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Marketing là tất cả các",
+      "question": "Marketing là tất cả các hoạt động có liên quan đến … nhằm thỏa mãn những nhu cầu của con người thông qua trao đổi.",
       "options": {
-        "A": "Doanh nghiệp hoạt động có liên quan đến",
-        "B": "Sản phẩm ... nhằm thỏa mãn những",
-        "C": "Thị trường C của con người thông qua",
-        "D": "Truyền thông trao đổi. Theo quan điểm về"
+        "A": "Doanh nghiệp",
+        "B": "Sản phẩm",
+        "C": "Thị trường",
+        "D": "Truyền thông"
       },
       "answer": "C",
-      "explainAnswer": "Có thể giải thích ngắn gọn như sau: Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp. Vì vậy, phương án C là kết luận cần chọn.",
-      "image": null
+      "explainAnswer": "Marketing là tập hợp các hoạt động hướng tới thị trường nhằm thỏa mãn nhu cầu con người thông qua trao đổi."
     },
     {
       "id": 52,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Theo quan điểm về",
+      "question": "Theo quan điểm về marketing của Kotler, sản phẩm cần có đặc tính gì?",
       "options": {
-        "A": "Giá bán thấp marketing của Kotler,",
+        "A": "Giá bán thấp",
         "B": "Có tính sáng tạo",
-        "C": "Mang lại giá trị C n p cần có đặc tính gì?",
-        "D": "Chất lượng tốt Có 4 giai đoạn chính của"
+        "C": "Mang lại giá trị",
+        "D": "Chất lượng tốt"
       },
       "answer": "C",
-      "explainAnswer": "Điểm cần nhớ ở đây là Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp. Điều đó dẫn tới đáp án C.",
-      "image": null
+      "explainAnswer": "Theo Kotler, sản phẩm phải mang lại giá trị cho khách hàng – đây là yếu tố then chốt."
     },
     {
       "id": 53,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Có 4 giai đoạn chính của",
+      "question": "Có 4 giai đoạn chính của quá trình sản xuất kinh doanh là chuẩn bị sản xuất, sản xuất, bán hàng và dịch vụ sau bán hàng. Trong marketing, giai đoạn quan trọng nhất là:",
       "options": {
-        "A": "Chuẩn bị sản xuất quá trình sản xuất kinh",
-        "B": "Sản xuất doanh là chuẩn bị sản",
+        "A": "Chuẩn bị sản xuất",
+        "B": "Sản xuất",
         "C": "Bán hàng",
-        "D": "Dịch vụ sau bán hàng Trong marketing, giai đoạn quan trọng nhất là: Giá thể bị thay đổi trị kỳ vọng của khách"
+        "D": "Dịch vụ sau bán hàng"
       },
       "answer": "A",
-      "explainAnswer": "Xét theo lý thuyết marketing, Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp. Do đó lựa chọn A là chính xác.",
-      "image": null
+      "explainAnswer": "Theo quan điểm marketing, giai đoạn chuẩn bị (nghiên cứu thị trường, thiết kế sản phẩm theo nhu cầu…) là quan trọng nhất."
     },
     {
       "id": 54,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "trị kỳ vọng của khách",
+      "question": "Giá trị kỳ vọng của khách hàng đối với một sản phẩm:",
       "options": {
-        "A": "Có",
-        "B": "Không thể bị thay đổi i với một sản ngoài",
-        "C": "Không bị tác động bởi các tác nhân bên phẩm",
+        "A": "Có thể bị thay đổi",
+        "B": "Không thể bị thay đổi",
+        "C": "Không bị tác động bởi các tác nhân bên ngoài",
         "D": "Không bị tác động bởi các tác nhân bên trong"
       },
       "answer": "A",
-      "explainAnswer": "Trong tình huống này, Kỳ vọng có thể chịu ảnh hưởng bởi quảng cáo, kinh nghiệm và truyền miệng; vì vậy doanh nghiệp không nên hứa vượt quá khả năng cung cấp. Vì thế phương án A phù hợp nhất.",
-      "image": null
+      "explainAnswer": "Kỳ vọng của khách hàng có thể bị ảnh hưởng bởi quảng cáo, truyền miệng, kinh nghiệm trước đó… Doanh nghiệp cần kiểm soát kỳ vọng ở mức hợp lý."
     },
     {
       "id": 55,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "dịch vụ",
+      "question": "Sản phẩm nào dưới đây là dịch vụ?",
       "options": {
-        "A": "Máy giặt Sản phẩm nào dưới đây là",
-        "B": "Đồ ăn nhanh 57 Cổ phiếu D dịch vụ",
-        "C": "Cung cấp quyền sở hữu vĩnh viễn cho khách hàng",
-        "D": "Cho thuê phòng khách sạn thực tế cao Sản phẩm của một thương"
+        "A": "Máy giặt",
+        "B": "Đồ ăn nhanh",
+        "C": "Cổ phiếu",
+        "D": "Cho thuê phòng khách sạn"
       },
       "answer": "D",
-      "explainAnswer": "Cơ sở của đáp án là Hàng hóa hữu hình thường đi kèm quyền sở hữu, còn dịch vụ chủ yếu cung cấp quyền sử dụng hoặc lợi ích trong một khoảng thời gian mà không chuyển giao quyền sở hữu. Kết quả đúng là D.",
-      "image": null
+      "explainAnswer": "Cho thuê phòng khách sạn là dịch vụ điển hình (không chuyển giao quyền sở hữu)."
     },
     {
       "id": 56,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Sản phẩm của một thương Rolex thườ",
+      "question": "Sản phẩm của một thương hiệu xa xỉ và nổi tiếng như Rolex thường sẽ có:",
       "options": {
-        "A": "Giá trị",
-        "B": "Giá trị thực tế thấp 58 hiệu xa xỉ và nổi tiếng như D Rolex thườ",
-        "C": "Chi phí tinh thần cao ng sẽ có",
-        "D": "Giá trị hình ảnh cao Khách hàng sẽ"
+        "A": "Giá trị thực tế thấp",
+        "B": "Giá trị thực tế cao",
+        "C": "Chi phí tinh thần cao",
+        "D": "Giá trị hình ảnh cao"
       },
       "answer": "D",
-      "explainAnswer": "Không nên nhầm nội dung này với các khái niệm gần nghĩa: Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp. Bởi vậy chọn D.",
-      "image": null
+      "explainAnswer": "Sản phẩm xa xỉ như Rolex mang lại giá trị hình ảnh (image value) rất cao cho người sử dụng."
     },
     {
       "id": 57,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Khách hàng sẽ đố",
+      "question": "Khách hàng sẽ mua sản phẩm khi họ có nhu cầu đối với sản phẩm và:",
       "options": {
-        "A": "Giá bán hợp lí mua sản",
-        "B": "Lợi ích lớn hơn chi phí bỏ ra 59 phẩm khi họ có nhu cầu B đố",
-        "C": "Chất lượng tốt i với sản phẩm và",
-        "D": "Được các khách hàng khác đánh giá tốt Sau khi tìm hiểu về đề"
+        "A": "Giá bán hợp lý",
+        "B": "Lợi ích lớn hơn chi phí bỏ ra",
+        "C": "Chất lượng tốt",
+        "D": "Được các khách hàng khác đánh giá tốt"
       },
       "answer": "B",
-      "explainAnswer": "Lựa chọn B phù hợp. Khách hàng bao gồm người mua hiện tại và những người có khả năng mua trong tương lai; doanh nghiệp cần phục vụ cả nhu cầu hiện tại lẫn tiềm ẩn.",
-      "image": null
+      "explainAnswer": "Khách hàng chỉ quyết định mua khi cảm nhận tổng lợi ích mang lại lớn hơn tổng chi phí phải bỏ ra (giá trị cảm nhận dương)."
     },
     {
       "id": 58,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Sau khi tìm hiểu về đề nghiệp, khách hàng sẽ có",
+      "question": "Sau khi tìm hiểu về đề nghị marketing của doanh nghiệp, khách hàng sẽ có … đối với sản phẩm.",
       "options": {
-        "A": "Sự tin tưởng nghị marketing của doanh",
+        "A": "Sự tin tưởng",
         "B": "Sự trung thành",
-        "C": "Sự kỳ vọng ... đối với sản phẩm.",
+        "C": "Sự kỳ vọng",
         "D": "Sự thỏa mãn"
       },
       "answer": "C",
-      "explainAnswer": "Có thể giải thích ngắn gọn như sau: Khách hàng bao gồm người mua hiện tại và những người có khả năng mua trong tương lai; doanh nghiệp cần phục vụ cả nhu cầu hiện tại lẫn tiềm ẩn. Vì vậy, phương án C là kết luận cần chọn.",
-      "image": null
+      "explainAnswer": "Sau khi tiếp nhận thông tin marketing, khách hàng hình thành kỳ vọng về sản phẩm trước khi quyết định mua."
     },
     {
       "id": 59,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "kiệm nước rửa cốc chén Quan điểm marketing xã Airblade trong thời gian nhất định hội được thể hiện trong trường hợp nào dưới đây? địa phương làm công nhân truyền thông để tuyên truyền lợi ích của việc",
+      "question": "Quan điểm marketing xã hội được thể hiện trong trường hợp nào dưới đây?",
       "options": {
         "A": "Highland Coffee sử dụng cốc nhựa để tiết kiệm nước rửa cốc chén",
-        "B": "Honda giảm giá cho khách hàng mua xe Quan điểm marketing xã Airblade trong thời gian nhất định",
-        "C": "Công ty Samsung tuyển dụng người dân C trường hợp nào dưới đây? địa phương làm công nhân",
-        "D": "Tập đoàn Meta thực hiện chiến lược truyền thông để tuyên truyền lợi ích của việc sử dụng quảng cáo trên Facebook ao Quan điểm bán hàng"
+        "B": "Honda giảm giá cho khách hàng mua xe Airblade trong thời gian nhất định",
+        "C": "Công ty Samsung tuyển dụng người dân địa phương làm công nhân",
+        "D": "Tập đoàn Meta thực hiện chiến lược truyền thông để tuyên truyền lợi ích của việc sử dụng quảng cáo trên Facebook"
       },
       "answer": "C",
-      "explainAnswer": "Điểm cần nhớ ở đây là Khách hàng có xu hướng lựa chọn khi tổng lợi ích cảm nhận lớn hơn chi phí phải bỏ ra; giá trị cảm nhận là cơ sở quan trọng của quyết định mua. Điều đó dẫn tới đáp án C.",
-      "image": null
+      "explainAnswer": "Tuyển dụng người dân địa phương thể hiện trách nhiệm xã hội của doanh nghiệp – đặc trưng của quan điểm marketing xã hội."
     },
     {
       "id": 60,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Quan điểm bán hàng",
+      "question": "Quan điểm bán hàng thường được áp dụng với sản phẩm:",
       "options": {
-        "A": "Giá c",
-        "B": "Thụ động 61 thường được áp dụng với Chất lượng tốt",
-        "C": "sản phẩm",
-        "D": "Đại trà Quan điểm marketing và"
+        "A": "Giá cao",
+        "B": "Thụ động",
+        "C": "Chất lượng tốt",
+        "D": "Đại trà"
       },
       "answer": "B",
-      "explainAnswer": "Xét theo lý thuyết marketing, Quan điểm bán hàng nhấn mạnh quảng bá và thuyết phục để thúc đẩy mua, nhất là với sản phẩm khách hàng chưa chủ động tìm kiếm. Do đó lựa chọn B là chính xác.",
-      "image": null
+      "explainAnswer": "Quan điểm bán hàng thường áp dụng cho các sản phẩm có nhu cầu thụ động (khách hàng ít chủ động tìm mua)."
     },
     {
       "id": 61,
       "chapter": "Chương I - Tổng quan Marketing",
-      "sourceChapter": "Chương I - Tổng quan Marketing",
-      "question": "Quan điểm marketing và",
+      "question": "Quan điểm marketing và quan điểm marketing xã hội khác nhau ở điểm nào?",
       "options": {
-        "A": "Xuất phát điểm quan điểm marketing xã",
+        "A": "Xuất phát điểm",
         "B": "Trọng tâm",
-        "C": "Biện pháp D nào?",
+        "C": "Biện pháp",
         "D": "Cách tạo lợi nhuận"
       },
       "answer": "D",
-      "explainAnswer": "Trong tình huống này, Nội dung được chọn phù hợp với định nghĩa và vai trò của marketing trong việc tạo giá trị, thỏa mãn nhu cầu khách hàng và đạt mục tiêu doanh nghiệp. Vì thế phương án D phù hợp nhất.",
-      "image": null
+      "explainAnswer": "Điểm khác biệt chính nằm ở cách thức tạo lợi nhuận: marketing thông thường tập trung vào khách hàng, còn marketing xã hội còn phải cân nhắc thêm lợi ích dài hạn của xã hội."
     }
   ]
 }

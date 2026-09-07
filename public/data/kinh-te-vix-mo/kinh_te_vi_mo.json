@@ -1,5 +1,5 @@
 {
-  "title": "Bộ câu hỏi trắc nghiệm Kinh tế vĩ mô",
+  "title": "Bộ câu hỏi trắc nghiệm Kinh tế vĩ mô (đã làm sạch đáp án)",
   "chapter": "Kinh tế vĩ mô",
   "totalQuestions": 183,
   "questions": [
@@ -15,7 +15,7 @@
         "D": "Thị trường riêng lẻ"
       },
       "answer": "C",
-      "explainAnswer": "Kinh tế vĩ mô nghiên cứu toàn bộ nền kinh tế như sản lượng quốc gia, lạm phát, thất nghiệp và tăng trưởng. Hành vi của từng doanh nghiệp hay thị trường riêng lẻ thuộc phạm vi kinh tế vi mô.",
+      "explainAnswer": "Kinh tế vĩ mô xem xét toàn bộ nền kinh tế, chẳng hạn sản lượng quốc gia, lạm phát, thất nghiệp và tăng trưởng. Hành vi của một doanh nghiệp hay một thị trường riêng lẻ thuộc phạm vi kinh tế vi mô.",
       "image": null
     },
     {
@@ -30,7 +30,7 @@
         "D": "Lợi nhuận doanh nghiệp tối đa"
       },
       "answer": "D",
-      "explainAnswer": "Các mục tiêu chính của kinh tế vĩ mô gồm tăng trưởng kinh tế, việc làm cao (thất nghiệp thấp) và ổn định giá cả. Tối đa hóa lợi nhuận là mục tiêu của doanh nghiệp riêng lẻ, không phải mục tiêu vĩ mô.",
+      "explainAnswer": "Các mục tiêu vĩ mô thường là tăng trưởng, việc làm cao và ổn định giá cả. Tối đa hóa lợi nhuận là mục tiêu của từng doanh nghiệp, không phải mục tiêu chung của nền kinh tế.",
       "image": null
     },
     {
@@ -45,7 +45,7 @@
         "D": "Tổng thu nhập của chính phủ"
       },
       "answer": "B",
-      "explainAnswer": "GDP (Tổng sản phẩm quốc nội) là tổng giá trị thị trường của tất cả hàng hóa và dịch vụ cuối cùng được sản xuất trong phạm vi lãnh thổ một quốc gia trong một khoảng thời gian nhất định.",
+      "explainAnswer": "GDP là tổng giá trị thị trường của hàng hóa và dịch vụ cuối cùng được sản xuất trong phạm vi lãnh thổ một quốc gia trong một khoảng thời gian nhất định.",
       "image": null
     },
     {
@@ -60,7 +60,7 @@
         "D": "Giá xuất khẩu"
       },
       "answer": "B",
-      "explainAnswer": "GDP danh nghĩa được tính theo giá hiện hành của năm đang xét. Vì vậy chỉ tiêu này có thể tăng do giá tăng dù sản lượng thực tế không đổi.",
+      "explainAnswer": "GDP danh nghĩa dùng giá hiện hành của năm đang xét. Vì vậy chỉ tiêu này có thể tăng do giá tăng, dù sản lượng thực tế không đổi.",
       "image": null
     },
     {
@@ -75,7 +75,7 @@
         "D": "Giá nhập khẩu"
       },
       "answer": "A",
-      "explainAnswer": "GDP thực tế định giá sản lượng bằng giá của năm gốc, nhờ đó loại bỏ ảnh hưởng của biến động giá và phản ánh rõ hơn sự thay đổi về sản lượng thực.",
+      "explainAnswer": "GDP thực tế định giá sản lượng bằng giá của năm gốc, nhờ đó loại bớt ảnh hưởng của biến động giá và phản ánh thay đổi về sản lượng rõ hơn.",
       "image": null
     },
     {
@@ -90,7 +90,7 @@
         "D": "Chi tiêu chính phủ"
       },
       "answer": "B",
-      "explainAnswer": "GNP = GDP + thu nhập yếu tố ròng từ nước ngoài. Sự khác biệt chính nằm ở thu nhập mà cư dân trong nước nhận từ nước ngoài và thu nhập người nước ngoài nhận trong nước.",
+      "explainAnswer": "GNP bằng GDP cộng thu nhập yếu tố ròng từ nước ngoài. Chênh lệch giữa hai chỉ tiêu nằm ở thu nhập cư dân nhận từ nước ngoài và thu nhập người nước ngoài nhận trong nước.",
       "image": null
     },
     {
@@ -100,12 +100,12 @@
       "question": "Hàng hóa cuối cùng là:",
       "options": {
         "A": "Hàng dùng cho sản xuất tiếp",
-        "B": "Hàng bán cho người tiêu dùng cuối cùng",
+        "B": "Hàng bán cho người tiêu dùng cuối",
         "C": "Hàng xuất khẩu",
         "D": "Hàng nhập khẩu"
       },
       "answer": "B",
-      "explainAnswer": "Hàng hóa cuối cùng là hàng hóa được bán cho người sử dụng cuối cùng và không còn được dùng làm đầu vào để sản xuất hàng hóa khác. Chỉ tính hàng cuối cùng giúp tránh cộng trùng giá trị trong GDP.",
+      "explainAnswer": "Hàng hóa cuối cùng được bán cho người sử dụng cuối cùng và không tiếp tục được dùng làm đầu vào cho sản phẩm khác. Quy tắc này giúp tránh cộng trùng giá trị.",
       "image": null
     },
     {
@@ -120,7 +120,7 @@
         "D": "Tăng nhập khẩu"
       },
       "answer": "B",
-      "explainAnswer": "Giá trị của hàng trung gian đã nằm trong giá bán của hàng cuối cùng. Nếu cộng thêm lần nữa sẽ làm GDP bị tính trùng và cao hơn giá trị sản xuất thực tế.",
+      "explainAnswer": "Giá trị của hàng trung gian đã nằm trong giá bán hàng cuối cùng. Cộng thêm lần nữa sẽ làm GDP bị tính trùng và cao hơn giá trị sản xuất thực.",
       "image": null
     },
     {
@@ -135,7 +135,7 @@
         "D": "Thuế"
       },
       "answer": "C",
-      "explainAnswer": "GDP thực tế bình quân đầu người vừa loại bỏ ảnh hưởng của biến động giá, vừa tính đến quy mô dân số. Đây là chỉ tiêu phản ánh mức sống trung bình tốt nhất trong các lựa chọn.",
+      "explainAnswer": "GDP thực tế bình quân đầu người vừa loại ảnh hưởng của giá cả, vừa tính đến quy mô dân số. Đây là thước đo gần hơn với sản lượng hoặc mức sống trung bình.",
       "image": null
     },
     {
@@ -150,7 +150,7 @@
         "D": "Xuất khẩu tăng"
       },
       "answer": "B",
-      "explainAnswer": "Nếu dân số tăng nhanh hơn GDP thì GDP thực tế bình quân đầu người giảm. Sản lượng tính trên mỗi người thấp hơn nên mức sống bình quân có xu hướng giảm.",
+      "explainAnswer": "Nếu dân số tăng nhanh hơn GDP, GDP thực tế bình quân đầu người giảm. Khi đó sản lượng tính trên mỗi người thấp hơn, nên mức sống bình quân có xu hướng giảm.",
       "image": null
     },
     {
@@ -165,7 +165,7 @@
         "D": "C + G"
       },
       "answer": "C",
-      "explainAnswer": "Trong nền kinh tế mở, tổng cầu gồm tiêu dùng (C), đầu tư (I), chi tiêu chính phủ (G) và xuất khẩu ròng (X – M). Công thức chuẩn: AD = C + I + G + (X – M).",
+      "explainAnswer": "Trong nền kinh tế mở, tổng cầu gồm tiêu dùng C, đầu tư I, chi tiêu chính phủ G và xuất khẩu ròng NX = X - M. Vì vậy AD = C + I + G + (X - M).",
       "image": null
     },
     {
@@ -180,7 +180,7 @@
         "D": "Lãi suất tăng"
       },
       "answer": "B",
-      "explainAnswer": "Chi tiêu chính phủ là thành phần trực tiếp của tổng cầu. Khi G tăng (các yếu tố khác không đổi), đường tổng cầu dịch sang phải.",
+      "explainAnswer": "Chi tiêu chính phủ là một thành phần trực tiếp của tổng cầu. Khi G tăng và các yếu tố khác không đổi, AD tăng theo.",
       "image": null
     },
     {
@@ -195,7 +195,7 @@
         "D": "Tất cả"
       },
       "answer": "D",
-      "explainAnswer": "Đường AD dốc xuống do ba hiệu ứng: hiệu ứng của cải (sức mua tăng), hiệu ứng lãi suất (lãi suất giảm kích thích đầu tư) và hiệu ứng tỷ giá (xuất khẩu ròng tăng).",
+      "explainAnswer": "Đường AD dốc xuống do hiệu ứng của cải, hiệu ứng lãi suất và hiệu ứng tỷ giá. Khi mức giá chung giảm, cả sức mua, đầu tư và xuất khẩu ròng có thể tăng.",
       "image": null
     },
     {
@@ -210,7 +210,7 @@
         "D": "Xuất khẩu giảm"
       },
       "answer": "A",
-      "explainAnswer": "Lãi suất thấp làm chi phí vay vốn giảm, doanh nghiệp có thêm động lực thực hiện dự án đầu tư. Vì vậy đầu tư tăng khi lãi suất giảm.",
+      "explainAnswer": "Lãi suất thấp làm chi phí vay vốn giảm, nên doanh nghiệp có thêm động lực thực hiện các dự án đầu tư. Vì vậy đầu tư tăng, trong điều kiện các yếu tố khác không đổi.",
       "image": null
     },
     {
@@ -225,7 +225,7 @@
         "D": "AS giảm"
       },
       "answer": "B",
-      "explainAnswer": "Giảm thuế làm thu nhập khả dụng của hộ gia đình tăng → tiêu dùng tăng → tổng cầu tăng. Đường AD dịch sang phải.",
+      "explainAnswer": "Giảm thuế làm thu nhập khả dụng của hộ gia đình tăng, từ đó tiêu dùng và tổng cầu tăng. Vì vậy AD dịch chuyển sang phải.",
       "image": null
     },
     {
@@ -240,7 +240,7 @@
         "D": "Thuế giảm"
       },
       "answer": "A",
-      "explainAnswer": "Khi thu nhập tăng, hộ gia đình thường tăng chi tiêu tiêu dùng. Tuy nhiên mức tăng tiêu dùng thường nhỏ hơn mức tăng thu nhập vì một phần được tiết kiệm.",
+      "explainAnswer": "Thu nhập cao hơn thường làm hộ gia đình tăng chi tiêu tiêu dùng, dù mức tăng tiêu dùng thường nhỏ hơn mức tăng thu nhập vì một phần được tiết kiệm.",
       "image": null
     },
     {
@@ -255,7 +255,7 @@
         "D": "AS giảm"
       },
       "answer": "A",
-      "explainAnswer": "Xuất khẩu là thành phần của xuất khẩu ròng. Xuất khẩu tăng (nhập khẩu không đổi) làm NX tăng → AD tăng.",
+      "explainAnswer": "Xuất khẩu là một phần của xuất khẩu ròng và tổng cầu. Xuất khẩu tăng vì thế làm AD tăng nếu nhập khẩu và các yếu tố khác không đổi.",
       "image": null
     },
     {
@@ -270,7 +270,7 @@
         "D": "Không đổi"
       },
       "answer": "B",
-      "explainAnswer": "Nhập khẩu được trừ trong NX = X – M. Nhập khẩu tăng làm xuất khẩu ròng và tổng cầu giảm.",
+      "explainAnswer": "Nhập khẩu được trừ trong NX = X - M. Nhập khẩu tăng làm xuất khẩu ròng và tổng cầu giảm, nếu các thành phần khác không đổi.",
       "image": null
     },
     {
@@ -285,7 +285,7 @@
         "D": "Chi phí sản xuất thay đổi"
       },
       "answer": "B",
-      "explainAnswer": "Các yếu tố ngoài mức giá chung (thuế, chi tiêu chính phủ, xuất khẩu…) làm đường AD dịch chuyển. Thay đổi mức giá chung chỉ gây di chuyển dọc theo đường AD.",
+      "explainAnswer": "Thuế là yếu tố ngoài mức giá chung có thể làm thay đổi chi tiêu và tổng cầu, nên làm AD dịch chuyển. Mức giá chung thay đổi chỉ gây di chuyển dọc theo đường AD.",
       "image": null
     },
     {
@@ -300,7 +300,7 @@
         "D": "Đường AD dịch trái"
       },
       "answer": "A",
-      "explainAnswer": "Khi mức giá chung giảm, sức mua tăng và lãi suất thường giảm → lượng tổng cầu tăng. Đây là di chuyển dọc theo đường AD.",
+      "explainAnswer": "Khi mức giá chung giảm, sức mua của tiền tăng và lãi suất thường giảm, từ đó lượng tổng cầu tăng. Đây là di chuyển dọc theo đường AD, không phải dịch chuyển cả đường.",
       "image": null
     },
     {
@@ -315,7 +315,7 @@
         "D": "Thuế"
       },
       "answer": "C",
-      "explainAnswer": "Trong dài hạn, sản lượng tiềm năng phụ thuộc vào nguồn lực (lao động, vốn, đất đai) và công nghệ. Mức giá không quyết định giới hạn sản xuất dài hạn.",
+      "explainAnswer": "Trong dài hạn, sản lượng phụ thuộc vào nguồn lực và công nghệ, từ đó xác định sản lượng tiềm năng. Mức giá hay lãi suất không quyết định trực tiếp giới hạn sản xuất dài hạn.",
       "image": null
     },
     {
@@ -330,7 +330,7 @@
         "D": "AD dịch phải"
       },
       "answer": "B",
-      "explainAnswer": "Công nghệ cải tiến làm năng suất tăng, chi phí trên mỗi đơn vị sản phẩm giảm. Doanh nghiệp cung ứng nhiều hơn tại mỗi mức giá → AS dịch sang phải.",
+      "explainAnswer": "Công nghệ tốt hơn làm năng suất tăng và giảm chi phí trên mỗi đơn vị sản phẩm. Doanh nghiệp có thể cung ứng nhiều hơn tại mỗi mức giá, nên AS dịch sang phải.",
       "image": null
     },
     {
@@ -345,7 +345,7 @@
         "D": "AD giảm"
       },
       "answer": "A",
-      "explainAnswer": "Chi phí sản xuất tăng làm lợi nhuận tại mỗi mức giá giảm. Doanh nghiệp thu hẹp sản lượng → đường tổng cung ngắn hạn dịch sang trái.",
+      "explainAnswer": "Chi phí sản xuất tăng làm lợi nhuận tại mỗi mức giá giảm. Doanh nghiệp thu hẹp sản lượng cung ứng, khiến AS dịch sang trái.",
       "image": null
     },
     {
@@ -360,7 +360,7 @@
         "D": "AD tăng"
       },
       "answer": "A",
-      "explainAnswer": "Lực lượng lao động tăng làm năng lực sản xuất của nền kinh tế lớn hơn → tổng cung tăng, AS dịch sang phải.",
+      "explainAnswer": "Lực lượng lao động tăng làm năng lực sản xuất của nền kinh tế lớn hơn. Vì vậy tổng cung tăng, thường thể hiện bằng dịch chuyển AS sang phải.",
       "image": null
     },
     {
@@ -375,7 +375,7 @@
         "D": "AD = I"
       },
       "answer": "A",
-      "explainAnswer": "Cân bằng vĩ mô ngắn hạn đạt được khi tổng lượng cầu bằng tổng lượng cung (AD = AS) tại cùng một mức giá chung.",
+      "explainAnswer": "Cân bằng vĩ mô ngắn hạn là điểm mà tổng lượng cầu bằng tổng lượng cung tại cùng một mức giá chung. Khi đó không còn áp lực dư cầu hoặc dư cung trên thị trường hàng hóa.",
       "image": null
     },
     {
@@ -390,7 +390,7 @@
         "D": "Y × C"
       },
       "answer": "A",
-      "explainAnswer": "Tiết kiệm là phần thu nhập chưa dùng cho tiêu dùng. Công thức: S = Y – C.",
+      "explainAnswer": "Tiết kiệm là phần thu nhập chưa dùng cho tiêu dùng. Với thu nhập Y và tiêu dùng C, công thức là S = Y - C.",
       "image": null
     },
     {
@@ -405,7 +405,7 @@
         "D": "Y / C"
       },
       "answer": "A",
-      "explainAnswer": "Xu hướng tiêu dùng cận biên (MPC) đo phần thu nhập khả dụng tăng thêm được dùng cho tiêu dùng: MPC = ΔC / ΔYd.",
+      "explainAnswer": "MPC đo phần thu nhập khả dụng tăng thêm được dùng cho tiêu dùng. Do đó MPC = ΔC/ΔYd.",
       "image": null
     },
     {
@@ -435,7 +435,7 @@
         "D": "5"
       },
       "answer": "C",
-      "explainAnswer": "Số nhân chi tiêu = 1/(1 – MPC). Với MPC = 0,75 thì 1/0,25 = 4.",
+      "explainAnswer": "Số nhân chi tiêu bằng 1/(1-MPC). Với MPC = 0,75, kết quả là 1/0,25 = 4.",
       "image": null
     },
     {
@@ -444,13 +444,13 @@
       "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
       "question": "số nhân chi tiêu được tính:",
       "options": {
-        "A": "1/MPC",
-        "B": "1/(1 – MPC)",
-        "C": "MPC/1",
+        "A": "1 / MPC",
+        "B": "1 / (1 – MPC)",
+        "C": "MPC / 1",
         "D": "MPC × MPS"
       },
       "answer": "B",
-      "explainAnswer": "Trong mô hình giản đơn không có thuế và nhập khẩu, số nhân chi tiêu = 1/(1 – MPC). Vì MPS = 1 – MPC nên cũng bằng 1/MPS.",
+      "explainAnswer": "Trong mô hình giản đơn không có thuế và nhập khẩu, số nhân chi tiêu là 1/(1-MPC). MPS = 1-MPC nên cũng có thể viết số nhân là 1/MPS.",
       "image": null
     },
     {
@@ -465,7 +465,7 @@
         "D": "Xuất khẩu"
       },
       "answer": "A",
-      "explainAnswer": "Chính sách tài khóa sử dụng hai công cụ chính là chi tiêu chính phủ và thuế. Lãi suất và cung tiền thuộc phạm vi chính sách tiền tệ.",
+      "explainAnswer": "Chính sách tài khóa sử dụng hai công cụ chính là chi tiêu chính phủ và thuế. Lãi suất, tỷ giá và cung tiền chủ yếu gắn với chính sách tiền tệ hoặc khu vực đối ngoại.",
       "image": null
     },
     {
@@ -480,7 +480,7 @@
         "D": "Giảm tiêu dùng"
       },
       "answer": "A",
-      "explainAnswer": "Chính sách tài khóa mở rộng (tăng G hoặc giảm thuế) nhằm kích thích tổng cầu, từ đó tăng sản lượng và việc làm trong ngắn hạn.",
+      "explainAnswer": "Tài khóa mở rộng tăng G hoặc giảm T để kích thích tổng cầu. Mục tiêu trực tiếp là nâng sản lượng và việc làm khi nền kinh tế suy yếu.",
       "image": null
     },
     {
@@ -494,7 +494,7 @@
         "C": "Giảm AS",
         "D": "Không đổi"
       },
-      "answer": "B",
+      "answer": "A",
       "explainAnswer": "Chi tiêu chính phủ là thành phần trực tiếp của AD. Khi G tăng, tổng cầu tăng theo số tiền ban đầu và còn tạo hiệu ứng lan tỏa qua số nhân.",
       "image": null
     },
@@ -524,7 +524,7 @@
         "C": "Thu = Chi",
         "D": "Thu > Xuất"
       },
-      "answer": "A",
+      "answer": "B",
       "explainAnswer": "Thâm hụt ngân sách xuất hiện khi chi tiêu chính phủ lớn hơn thu ngân sách. Nói cách khác, Chi > Thu.",
       "image": null
     },
@@ -539,7 +539,7 @@
         "C": "Xuất khẩu",
         "D": "Nhập khẩu"
       },
-      "answer": "D",
+      "answer": "B",
       "explainAnswer": "Ngân hàng trung ương điều tiết cung tiền, lãi suất và tín dụng. Thuế là công cụ của Chính phủ, còn xuất nhập khẩu thuộc khu vực đối ngoại.",
       "image": null
     },
@@ -554,7 +554,7 @@
         "C": "Kiểm soát lạm phát cao",
         "D": "Giảm đầu tư"
       },
-      "answer": "C",
+      "answer": "A",
       "explainAnswer": "Tiền tệ mở rộng làm cung tiền tăng và lãi suất giảm, qua đó hỗ trợ tín dụng, đầu tư và tiêu dùng. Đây là chính sách thường dùng để kích thích hoạt động kinh tế.",
       "image": null
     },
@@ -569,7 +569,7 @@
         "C": "Giảm đầu tư",
         "D": "Tăng thuế"
       },
-      "answer": "C",
+      "answer": "A",
       "explainAnswer": "NHTW mua trái phiếu bằng cách đưa tiền vào hệ thống ngân hàng. Dự trữ tăng tạo điều kiện cho ngân hàng mở rộng cho vay và làm cung tiền tăng.",
       "image": null
     },
@@ -584,7 +584,7 @@
         "C": "Tăng đầu tư",
         "D": "Tăng tiêu dùng"
       },
-      "answer": "A",
+      "answer": "B",
       "explainAnswer": "NHTW bán trái phiếu thu tiền về, làm dự trữ của ngân hàng thương mại giảm. Khả năng tạo tiền giảm nên cung tiền giảm.",
       "image": null
     },
@@ -599,7 +599,7 @@
         "C": "Giảm tiêu dùng",
         "D": "Giảm AD"
       },
-      "answer": "D",
+      "answer": "A",
       "explainAnswer": "Lãi suất giảm làm chi phí sử dụng vốn thấp hơn. Doanh nghiệp có xu hướng mở rộng các khoản đầu tư có lợi suất phù hợp.",
       "image": null
     },
@@ -611,7 +611,7 @@
       "options": {
         "A": "Thất nghiệp cơ cấu",
         "B": "Thất nghiệp tạm thời",
-        "C": "và B",
+        "C": "Thất nghiệp cơ cấu và thất nghiệp tạm thời",
         "D": "Thất nghiệp chu kỳ"
       },
       "answer": "C",
@@ -719,7 +719,7 @@
         "C": "Giá xuất khẩu",
         "D": "Giá nhập khẩu"
       },
-      "answer": "C",
+      "answer": "A",
       "explainAnswer": "CPI phản ánh mức thay đổi giá của hàng hóa và dịch vụ mà hộ gia đình tiêu dùng, không phải giá của toàn bộ sản phẩm sản xuất trong nền kinh tế.",
       "image": null
     },
@@ -757,12 +757,12 @@
       "id": 51,
       "chapter": "Kinh tế vĩ mô",
       "sourceChapter": "150 câu trắc nghiệm Kinh tế vĩ mô Phenikaa",
-      "question": "Tỉ giá là",
+      "question": "Tỷ giá hối đoái là:",
       "options": {
-        "A": "1/MPC",
-        "B": "1/(1-MPC)",
-        "C": "MPC",
-        "D": "MPC x MPS"
+        "A": "Giá của một đồng tiền được biểu thị bằng đồng tiền khác",
+        "B": "Tỷ lệ giữa xuất khẩu và nhập khẩu",
+        "C": "Lãi suất giữa hai quốc gia",
+        "D": "Tỷ lệ lạm phát giữa hai quốc gia"
       },
       "answer": "A",
       "explainAnswer": "Tỷ giá là giá của một đồng tiền được biểu thị bằng đồng tiền khác. Ví dụ, VND/USD cho biết cần bao nhiêu đồng Việt Nam để mua một USD.",
@@ -824,7 +824,7 @@
         "C": "Thuế",
         "D": "Tiêu dùng"
       },
-      "answer": "D",
+      "answer": "A",
       "explainAnswer": "Xuất khẩu tạo ra dòng thu ngoại tệ từ nước ngoài vào trong nước. Vì vậy xuất khẩu là nguồn cung ngoại tệ chủ yếu trong cách tiếp cận cơ bản.",
       "image": null
     },
@@ -839,7 +839,7 @@
         "C": "CPI",
         "D": "Thuế"
       },
-      "answer": "D",
+      "answer": "A",
       "explainAnswer": "Tăng trưởng kinh tế được đo bằng mức tăng của GDP thực, vì chỉ tiêu này loại ảnh hưởng của thay đổi giá và tập trung vào sản lượng.",
       "image": null
     },
@@ -854,7 +854,7 @@
         "C": "Thuế tăng",
         "D": "Xuất khẩu tăng"
       },
-      "answer": "B",
+      "answer": "A",
       "explainAnswer": "GDP thực tăng phản ánh sản lượng hàng hóa và dịch vụ tăng, không chỉ đơn thuần là giá cả tăng. Vì vậy kết luận phù hợp là sản lượng tăng.",
       "image": null
     },
@@ -869,7 +869,7 @@
         "C": "Sản lượng giảm",
         "D": "Thuế tăng"
       },
-      "answer": "C",
+      "answer": "A",
       "explainAnswer": "AD lớn hơn AS nghĩa là người mua muốn mua nhiều hơn lượng doanh nghiệp đang cung ứng. Áp lực dư cầu làm mức giá tăng và tạo lạm phát.",
       "image": null
     },
@@ -884,7 +884,7 @@
         "C": "Tăng trưởng",
         "D": "Xuất khẩu tăng"
       },
-      "answer": "C",
+      "answer": "A",
       "explainAnswer": "AS lớn hơn AD nghĩa là sản phẩm làm ra chưa bán hết. Doanh nghiệp giảm sản xuất, tạo áp lực suy giảm hoạt động kinh tế và suy thoái.",
       "image": null
     },
@@ -899,7 +899,7 @@
         "C": "Việc làm",
         "D": "Tất cả"
       },
-      "answer": "B",
+      "answer": "D",
       "explainAnswer": "Ba mục tiêu vĩ mô cơ bản là tăng trưởng kinh tế, ổn định giá cả và việc làm cao. Vì vậy phương án tổng hợp cả ba là đầy đủ nhất.",
       "image": null
     },

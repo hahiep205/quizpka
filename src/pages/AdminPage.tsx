@@ -5,6 +5,7 @@ import brandLogo from "@/assets/logo.png"
 import { useAuth } from "@/auth/AuthProvider"
 import { DashboardStatCard, dashboardStatGridClass } from "@/components/DashboardStatCard"
 import { Card } from "@/components/ui/card"
+import { Dialog } from "@/components/ui/dialog"
 import { fetchAllAdminUsers } from "@/features/admin/api/adminUsers"
 import { fetchAllActivityTimeline, fetchAllPracticeAttempts, fetchPracticeAttempts, fetchUserActivity } from "@/features/admin/api/adminActivity"
 import { ACTIVITY_LABELS, parseActivityRows, parseAttemptRows, type ActivityEvent, type ActivityEventType, type PracticeAttemptRow } from "@/features/activity/lib/activityLog"
@@ -169,6 +170,7 @@ export function AdminPage({ lang }: Props) {
   const [paymentsError, setPaymentsError] = useState<string | null>(null)
   const [paymentQuery, setPaymentQuery] = useState("")
   const [paymentStatus, setPaymentStatus] = useState<"latest" | "all" | PaymentStatus>("latest")
+  const [paymentProduct, setPaymentProduct] = useState("all")
   const [paymentPage, setPaymentPage] = useState(0)
   const [adminProducts, setAdminProducts] = useState<AdminProduct[]>([])
   const [grantUserId, setGrantUserId] = useState("")
@@ -182,6 +184,7 @@ export function AdminPage({ lang }: Props) {
   const [supportStatus, setSupportStatus] = useState<"all" | SupportStatus>("all")
   const [supportType, setSupportType] = useState<"all" | SupportType>("all")
   const [updatingSupportId, setUpdatingSupportId] = useState<string | null>(null)
+  const [selectedSupportId, setSelectedSupportId] = useState<string | null>(null)
 
   const [events, setEvents] = useState<ActivityEvent[]>([])
   const [eventsError, setEventsError] = useState<string | null>(null)
@@ -276,7 +279,7 @@ export function AdminPage({ lang }: Props) {
   useEffect(() => { setPage(0) }, [query, role, status, sortKey, sortDir])
   useEffect(() => { setTimelinePage(0) }, [eventFilter, timelineQuery, onlyAnomaly, rangeDays, section])
   useEffect(() => { setAttemptsPage(0) }, [onlyAnomaly, rangeDays, section])
-  useEffect(() => { setPaymentPage(0) }, [paymentQuery, paymentStatus])
+  useEffect(() => { setPaymentPage(0) }, [paymentQuery, paymentStatus, paymentProduct])
 
   const kpis = useMemo(() => ({ ...computeAdminKpis(users), totalLogined: userCounts.total, activeAccount: userCounts.active, blockedAccount: userCounts.blocked }), [userCounts, users])
   // Flags bất thường trên toàn bộ dữ liệu đã tải (A1/A2/A3/A6/A7).
@@ -333,16 +336,27 @@ export function AdminPage({ lang }: Props) {
   }, [users])
 
   const userById = useMemo(() => new Map(users.map((user) => [user.id, user])), [users])
+  const paymentProductOptions = useMemo(() => {
+    const byId = new Map<string, string>()
+    for (const product of adminProducts) byId.set(product.id, product.name)
+    for (const payment of payments) {
+      if (!byId.has(payment.productId)) byId.set(payment.productId, payment.productName)
+    }
+    return [...byId.entries()]
+      .map(([id, name]) => ({ id, name }))
+      .sort((a, b) => a.name.localeCompare(b.name, "vi"))
+  }, [adminProducts, payments])
   const filteredPayments = useMemo(() => {
     const q = paymentQuery.trim().toLowerCase()
     return payments.filter((payment) => {
       if (paymentStatus !== "latest" && paymentStatus !== "all" && payment.status !== paymentStatus) return false
+      if (paymentProduct !== "all" && payment.productId !== paymentProduct) return false
       if (!q) return true
       const user = userById.get(payment.userId)
       return [payment.orderId, payment.transactionId, payment.productName, payment.productId, payment.userId, user?.displayName, user?.email]
         .some((value) => value?.toLowerCase().includes(q))
     })
-  }, [paymentQuery, paymentStatus, payments, userById])
+  }, [paymentQuery, paymentStatus, paymentProduct, payments, userById])
   const paymentKpis = useMemo(() => ({
     revenue: payments.filter((payment) => payment.status === "paid").reduce((sum, payment) => sum + payment.amountVnd, 0),
     paid: payments.filter((payment) => payment.status === "paid").length,
@@ -484,6 +498,8 @@ export function AdminPage({ lang }: Props) {
     return [report.subject, report.description, report.displayName, report.email, report.userId].some((value) => value?.toLowerCase().includes(query))
   })
 
+  const selectedSupportReport = supportReports.find((report) => report.id === selectedSupportId) ?? null
+
   const handleSupportStatus = (reportId: string, status: SupportStatus) => {
     setUpdatingSupportId(reportId)
     void updateSupportStatus(reportId, status)
@@ -603,6 +619,7 @@ export function AdminPage({ lang }: Props) {
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <label className="relative block flex-1"><Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" /><input value={paymentQuery} onChange={(e) => setPaymentQuery(e.target.value)} placeholder="Tìm tên, email, mã đơn hoặc mã giao dịch..." className="h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white pl-10 pr-3 text-sm font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" /></label>
                    <select value={paymentStatus} onChange={(e) => setPaymentStatus(e.target.value as typeof paymentStatus)} className="h-11 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="latest">Mới nhất</option><option value="all">Tất cả trạng thái</option><option value="paid">Đã thanh toán</option><option value="pending">Đang chờ</option><option value="failed">Thất bại</option><option value="refunded">Đã hoàn tiền</option><option value="canceled">Đã hủy</option></select>
+                    <select aria-label="Lọc theo môn học" value={paymentProduct} onChange={(e) => setPaymentProduct(e.target.value)} className="h-11 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="all">Tất cả môn học</option>{paymentProductOptions.map((product) => <option key={product.id} value={product.id}>{product.name}</option>)}</select>
                 </div>
                 <p className="text-xs font-semibold text-slate-400">Hiển thị {filteredPayments.length}/{payments.length} giao dịch</p>
               </Card>
@@ -660,21 +677,79 @@ export function AdminPage({ lang }: Props) {
                     <table className="w-full min-w-[900px] text-left text-sm">
                       <thead><tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-wide text-slate-400 dark:bg-white/5"><th className="px-4 py-3">User</th><th className="px-4 py-3">Loại</th><th className="px-4 py-3">Nội dung</th><th className="px-4 py-3">Trạng thái</th><th className="px-4 py-3">Thời gian</th></tr></thead>
                       <tbody>{filteredSupportReports.map((report) => (
-                        <tr key={report.id} className="border-t border-slate-100 dark:border-white/5">
-                          <td className="px-4 py-3"><p className="font-extrabold text-[#100F3E] dark:text-white">{report.displayName ?? "(chưa đặt tên)"}</p><p className="text-xs font-semibold text-slate-400">{report.email ?? report.userId}</p></td>
-                          <td className="px-4 py-3"><span className={cn("whitespace-nowrap rounded-full px-2.5 py-1 text-[11px] font-black", report.type === "contribute" ? "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300" : report.type === "feedback" ? "bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-300" : "bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-300")}>{report.type === "contribute" ? "Đóng góp tài liệu" : report.type === "feedback" ? "Góp ý" : "Báo lỗi"}</span></td>
-                          <td className="max-w-[380px] px-4 py-3"><p className="font-extrabold text-[#100F3E] dark:text-white">{report.subject}</p><p className="mt-1 line-clamp-2 whitespace-pre-wrap text-xs font-semibold text-slate-500 dark:text-slate-400" title={report.description}>{report.description}</p></td>
-                          <td className="px-4 py-3"><select value={report.status} disabled={updatingSupportId === report.id} onChange={(event) => handleSupportStatus(report.id, event.target.value as SupportStatus)} className="h-10 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-xs font-black outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="pending">Đang chờ</option><option value="resolved">Đã xử lý</option><option value="unresolvable">Không xử lý được</option></select></td>
-                          <td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(report.createdAt, lang)}</td>
-                        </tr>
+                         <tr
+                           key={report.id}
+                           tabIndex={0}
+                           onClick={() => setSelectedSupportId(report.id)}
+                           onKeyDown={(event) => {
+                             if (event.key === "Enter" || event.key === " ") {
+                               event.preventDefault()
+                               setSelectedSupportId(report.id)
+                             }
+                           }}
+                           className="cursor-pointer border-t border-slate-100 transition-colors hover:bg-sky-50/60 focus:bg-sky-50/60 focus:outline-none dark:border-white/5 dark:hover:bg-white/[0.03] dark:focus:bg-white/[0.03]"
+                         >
+                           <td className="px-4 py-3"><p className="font-extrabold text-[#100F3E] dark:text-white">{report.displayName ?? "(chưa đặt tên)"}</p><p className="text-xs font-semibold text-slate-400">{report.email ?? report.userId}</p></td>
+                           <td className="px-4 py-3"><span className={cn("whitespace-nowrap rounded-full px-2.5 py-1 text-[11px] font-black", report.type === "contribute" ? "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300" : report.type === "feedback" ? "bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-300" : "bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-300")}>{report.type === "contribute" ? "Đóng góp tài liệu" : report.type === "feedback" ? "Góp ý" : "Báo lỗi"}</span></td>
+                           <td className="max-w-[380px] px-4 py-3"><p className="font-extrabold text-[#100F3E] dark:text-white">{report.subject}</p><p className="mt-1 line-clamp-2 whitespace-pre-wrap text-xs font-semibold text-slate-500 dark:text-slate-400" title={report.description}>{report.description}</p></td>
+                           <td className="px-4 py-3"><select value={report.status} disabled={updatingSupportId === report.id} onClick={(event) => event.stopPropagation()} onChange={(event) => { event.stopPropagation(); handleSupportStatus(report.id, event.target.value as SupportStatus) }} className="h-10 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-xs font-black outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="pending">Đang chờ</option><option value="resolved">Đã xử lý</option><option value="unresolvable">Không xử lý được</option></select></td>
+                           <td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(report.createdAt, lang)}</td>
+                         </tr>
                       ))}</tbody>
                     </table>
                   </div>
                 ) : <Card variant="dashed" className="py-14 text-center"><ShieldAlert className="mx-auto h-9 w-9 text-slate-300" /><p className="mt-3 text-sm font-bold text-slate-500">Chưa có báo lỗi phù hợp.</p></Card>}
              </section>
-             ) : null}
+              ) : null}
 
-             {section === "overview" ? (
+              {selectedSupportReport ? (
+                <Dialog
+                  open
+                  onClose={() => setSelectedSupportId(null)}
+                  title={selectedSupportReport.subject}
+                  closeLabel="Đóng chi tiết"
+                  className="z-[95]"
+                  panelClassName="max-h-[calc(100dvh_-_2rem)] w-full max-w-[680px] rounded-[20px] border-2 border-[#E5E5E5] bg-white shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none"
+                >
+                  <div className="flex items-start justify-between gap-4 border-b border-slate-100 px-5 py-4 sm:px-6 sm:py-5 dark:border-white/10">
+                    <div className="min-w-0">
+                      <p className="text-xs font-black uppercase tracking-wide text-[#129BDC]">Chi tiết báo lỗi</p>
+                      <h2 className="mt-1 text-xl font-black text-[#100F3E] dark:text-white">{selectedSupportReport.subject}</h2>
+                    </div>
+                    <button type="button" className="lp-btn lp-btn--secondary lp-btn--icon shrink-0" onClick={() => setSelectedSupportId(null)} aria-label="Đóng chi tiết"><X className="h-4 w-4" /></button>
+                  </div>
+                  <div className="space-y-5 overflow-y-auto px-5 py-5 sm:px-6">
+                    <div className="grid gap-4 sm:grid-cols-2">
+                      <div>
+                        <p className="text-[11px] font-black uppercase tracking-wide text-slate-400">Người gửi</p>
+                        <p className="mt-1 font-extrabold text-[#100F3E] dark:text-white">{selectedSupportReport.displayName ?? "(chưa đặt tên)"}</p>
+                        <p className="mt-0.5 break-all text-sm font-semibold text-slate-500 dark:text-slate-400">{selectedSupportReport.email ?? selectedSupportReport.userId}</p>
+                      </div>
+                      <div>
+                        <p className="text-[11px] font-black uppercase tracking-wide text-slate-400">Loại</p>
+                        <p className="mt-1 font-extrabold text-[#100F3E] dark:text-white">{selectedSupportReport.type === "contribute" ? "Đóng góp tài liệu" : selectedSupportReport.type === "feedback" ? "Góp ý" : "Báo lỗi"}</p>
+                        <p className="mt-0.5 text-sm font-semibold text-slate-500 dark:text-slate-400">{formatTime(selectedSupportReport.createdAt, lang)}</p>
+                      </div>
+                    </div>
+                    <div>
+                      <p className="text-[11px] font-black uppercase tracking-wide text-slate-400">Nội dung chi tiết</p>
+                      <p className="mt-2 whitespace-pre-wrap rounded-xl border-2 border-slate-100 bg-slate-50 px-4 py-3 text-sm font-semibold leading-6 text-slate-700 dark:border-white/10 dark:bg-white/5 dark:text-slate-200">{selectedSupportReport.description}</p>
+                    </div>
+                    {selectedSupportReport.pageUrl ? (
+                      <div>
+                        <p className="text-[11px] font-black uppercase tracking-wide text-slate-400">Trang gửi báo lỗi</p>
+                        <a href={selectedSupportReport.pageUrl} target="_blank" rel="noreferrer" className="mt-1 block break-all text-sm font-bold text-[#129BDC] underline underline-offset-2">{selectedSupportReport.pageUrl}</a>
+                      </div>
+                    ) : null}
+                    <div className="flex flex-col gap-2 border-t border-slate-100 pt-4 dark:border-white/10 sm:flex-row sm:items-center sm:justify-between">
+                      <p className="text-xs font-semibold text-slate-400">Cập nhật gần nhất: {formatTime(selectedSupportReport.updatedAt, lang)}</p>
+                      <select value={selectedSupportReport.status} disabled={updatingSupportId === selectedSupportReport.id} onChange={(event) => handleSupportStatus(selectedSupportReport.id, event.target.value as SupportStatus)} className="h-10 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-xs font-black outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="pending">Đang chờ</option><option value="resolved">Đã xử lý</option><option value="unresolvable">Không xử lý được</option></select>
+                    </div>
+                  </div>
+                </Dialog>
+              ) : null}
+
+              {section === "overview" ? (
             <>
             <section className={dashboardStatGridClass} aria-label="Statistics">
               <DashboardStatCard icon={Users} value={String(kpis.totalLogined)} label={lang === "vi" ? "Người dùng" : "Users"} tone="blue" />

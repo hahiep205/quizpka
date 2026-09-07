@@ -6,53 +6,46 @@
     {
       "id": 1,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "bộ phận marketing Thông tin marketing là: định marketing Các thông tin cần thiết cho việc xây dựng",
+      "question": "Thông tin marketing là:",
       "options": {
         "A": "Các thông tin cần thiết cho việc thành lập bộ phận marketing",
-        "B": "Các thông tin cần thiết cho việc ra quyết",
-        "C": "chiến lược marketing",
+        "B": "Các thông tin cần thiết cho việc ra quyết định marketing",
+        "C": "Các thông tin cần thiết cho việc xây dựng chiến lược marketing",
         "D": "Các thông tin cần thiết cho việc hình thành hệ thống thông tin marketing"
       },
       "answer": "B",
-      "explainAnswer": "Lựa chọn B phù hợp. Thông tin marketing có giá trị khi hỗ trợ nhà quản trị nhận diện vấn đề, lựa chọn phương án và ra quyết định marketing.",
-      "image": null
+      "explainAnswer": "Thông tin marketing có giá trị khi hỗ trợ nhà quản trị nhận diện vấn đề, lựa chọn phương án và ra quyết định marketing."
     },
     {
       "id": 2,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "marketing bao gồm: doanh nghiệp",
+      "question": "Hệ thống thông tin marketing bao gồm:",
       "options": {
-        "A": "Con người; thiết bị và quy trình thu thập, phân loại, phân tích, đánh giá và phân phối những thông tin cần thiết cho các nhà quản lý marketing. Hệ thống thông tin",
-        "B": "Quy trình xử lý thông tin marketing trong A marketing bao gồm: doanh nghiệp",
+        "A": "Con người; thiết bị và quy trình thu thập, phân loại, phân tích, đánh giá và phân phối những thông tin cần thiết cho các nhà quản lý marketing",
+        "B": "Quy trình xử lý thông tin marketing trong doanh nghiệp",
         "C": "Tập hợp các dữ liệu marketing được doanh nghiệp lưu trữ",
-        "D": "Hệ thống tổng hợp, dự đoán các thông tin về thị trường marketing"
+        "D": "Hệ thống tổng hợp, dự đoán các thông tin về thị trường"
       },
       "answer": "A",
-      "explainAnswer": "Có thể giải thích ngắn gọn như sau: Lựa chọn này phù hợp với quy trình nghiên cứu marketing: xác định nhu cầu thông tin, thu thập dữ liệu đáng tin cậy, phân tích rồi cung cấp kết quả cho người ra quyết định. Vì vậy, phương án A là kết luận cần chọn.",
-      "image": null
+      "explainAnswer": "Hệ thống thông tin marketing (MIS) bao gồm con người, thiết bị và các quy trình để thu thập, phân loại, phân tích, đánh giá và phân phối thông tin cần thiết cho nhà quản trị marketing."
     },
     {
       "id": 3,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "dung hỏ trả Đáp án Thông tin marketing cần",
+      "question": "Thông tin marketing cần phải đảm bảo tính:",
       "options": {
-        "A": "Đầy đủ A dung",
-        "B": "Đa dạng phải đảm bảo tính",
+        "A": "Đầy đủ",
+        "B": "Đa dạng",
         "C": "Chủ quan",
         "D": "Toàn diện"
       },
       "answer": "A",
-      "explainAnswer": "Điểm cần nhớ ở đây là Lựa chọn này phù hợp với quy trình nghiên cứu marketing: xác định nhu cầu thông tin, thu thập dữ liệu đáng tin cậy, phân tích rồi cung cấp kết quả cho người ra quyết định. Điều đó dẫn tới đáp án A.",
-      "image": null
+      "explainAnswer": "Thông tin marketing cần đầy đủ để hỗ trợ ra quyết định chính xác. Thông tin thiếu hụt sẽ dẫn đến quyết định sai lầm."
     },
     {
       "id": 4,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "phải đảm bảo tính hỏi mà các phương án trả lời chưa được đưa",
+      "question": "Thông tin marketing phải đảm bảo tính:",
       "options": {
         "A": "Đầy đủ",
         "B": "Khách quan",
@@ -60,488 +53,423 @@
         "D": "Chỉ cần nhiều về số lượng"
       },
       "answer": "B",
-      "explainAnswer": "Xét theo lý thuyết marketing, Lựa chọn này phù hợp với quy trình nghiên cứu marketing: xác định nhu cầu thông tin, thu thập dữ liệu đáng tin cậy, phân tích rồi cung cấp kết quả cho người ra quyết định. Do đó lựa chọn B là chính xác.",
-      "image": null
+      "explainAnswer": "Thông tin marketing phải khách quan, không bị bóp méo bởi ý kiến chủ quan của người thu thập hoặc cung cấp thông tin."
     },
     {
       "id": 5,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "Theo chương trình học,",
+      "question": "Theo chương trình học, đâu KHÔNG phải là một đặc điểm của thông tin tốt?",
       "options": {
-        "A": "Kịp thời đâu KHÔNG phải là một",
+        "A": "Kịp thời",
         "B": "Liên quan",
-        "C": "Chính xác thông tin tốt?",
+        "C": "Chính xác",
         "D": "Chủ quan"
       },
       "answer": "D",
-      "explainAnswer": "Trong tình huống này, Lựa chọn này phù hợp với quy trình nghiên cứu marketing: xác định nhu cầu thông tin, thu thập dữ liệu đáng tin cậy, phân tích rồi cung cấp kết quả cho người ra quyết định. Vì thế phương án D phù hợp nhất.",
-      "image": null
+      "explainAnswer": "Thông tin tốt cần kịp thời, liên quan và chính xác. Thông tin chủ quan làm giảm chất lượng quyết định."
     },
     {
       "id": 6,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "Điền vào chỗ trống: Hệ thu thập, xử lý và phân phối thống thông tin marketing … những loại, phân tích, đánh giá, và phân phối thông tin cần thiết, chính hiết bị và công cụ xác, kịp thời cho các nhà marketing có chức năng xử lý và truyền tải",
+      "question": "Điền vào chỗ trống: Hệ thống thông tin marketing … những thông tin cần thiết, chính xác, kịp thời cho các nhà quản lý marketing.",
       "options": {
-        "A": "Bao gồm con người; thiết bị; và qui trình Điền vào chỗ trống: Hệ thu thập, xử lý và phân phối thống thông tin",
-        "B": "Là tập hợp các qui trình thu thập, phân marketing … những",
-        "C": "Bao gồm các t xác, kịp thời cho các nhà marketing có chức năng xử lý và truyền tải quản lý marketing.",
-        "D": "Được vận hành bởi con người nhằm mục đích xác định và tìm kiếm Theo chương trình học,"
+        "A": "Bao gồm con người; thiết bị; và quy trình thu thập, xử lý và phân phối",
+        "B": "Là tập hợp các quy trình thu thập, phân loại, phân tích, đánh giá và phân phối",
+        "C": "Bao gồm các thiết bị và công cụ có chức năng xử lý và truyền tải",
+        "D": "Được vận hành bởi con người nhằm mục đích xác định và tìm kiếm"
       },
       "answer": "A",
-      "explainAnswer": "Cơ sở của đáp án là Thông tin phục vụ marketing cần liên quan, chính xác, đầy đủ và kịp thời. Thông tin chủ quan hoặc dư thừa có thể làm giảm chất lượng quyết định. Kết quả đúng là A.",
-      "image": null
+      "explainAnswer": "Hệ thống thông tin marketing bao gồm con người, thiết bị và quy trình để thu thập, xử lý và phân phối thông tin cần thiết, chính xác, kịp thời cho nhà quản trị."
     },
     {
       "id": 7,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "Theo chương trình học, đi thông tin marketing tốt?",
+      "question": "Theo chương trình học, đâu KHÔNG phải là đặc điểm của một hệ thống thông tin marketing tốt?",
       "options": {
         "A": "Thu thập quá nhiều thông tin",
-        "B": "Khả năng định hướng tương lai, liên quan, 7 ểm của một hệ thống và được tích hợp với máy tính A đi thông tin marketing tốt?",
+        "B": "Khả năng định hướng tương lai, liên quan và được tích hợp với máy tính",
         "C": "Liên tục",
-        "D": "Thu thập thông tin động Khi so sánh dữ liệu sơ"
+        "D": "Thu thập thông tin động"
       },
       "answer": "A",
-      "explainAnswer": "Không nên nhầm nội dung này với các khái niệm gần nghĩa: Thông tin phục vụ marketing cần liên quan, chính xác, đầy đủ và kịp thời. Thông tin chủ quan hoặc dư thừa có thể làm giảm chất lượng quyết định. Bởi vậy chọn A.",
-      "image": null
+      "explainAnswer": "Hệ thống thông tin tốt cần cung cấp thông tin liên quan, chính xác, kịp thời. Thu thập quá nhiều thông tin dư thừa sẽ gây lãng phí và giảm hiệu quả quyết định."
     },
     {
       "id": 8,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "Khi so sánh dữ liệu sơ",
+      "question": "Khi so sánh dữ liệu sơ cấp và dữ liệu thứ cấp, phát biểu nào sau đây KHÔNG chính xác?",
       "options": {
-        "A": "Dữ liệu sơ cấp có tính bảo mật thấp hơn cấp và dữ liệu thứ cấp,",
+        "A": "Dữ liệu sơ cấp có tính bảo mật thấp hơn",
         "B": "Dữ liệu sơ cấp đáng tin cậy hơn",
         "C": "Dữ liệu sơ cấp tốn thời gian thu thập hơn",
-        "D": "Dữ liệu sơ cấp tốn nhiều chi phí để thu KHÔNG chính xác? thập dữ liệu hơn Bước quan trọng nhất"
+        "D": "Dữ liệu sơ cấp tốn nhiều chi phí để thu thập hơn"
       },
       "answer": "A",
-      "explainAnswer": "Lựa chọn A phù hợp. Lựa chọn này phù hợp với quy trình nghiên cứu marketing: xác định nhu cầu thông tin, thu thập dữ liệu đáng tin cậy, phân tích rồi cung cấp kết quả cho người ra quyết định.",
-      "image": null
+      "explainAnswer": "Dữ liệu sơ cấp thường có tính bảo mật cao hơn vì được doanh nghiệp tự thu thập cho mục đích riêng. Các phát biểu còn lại đều đúng."
     },
     {
       "id": 9,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "Bước quan trọng nhất trong",
+      "question": "Bước quan trọng nhất trong quy trình nghiên cứu Marketing là?",
       "options": {
-        "A": "Lập kế hoạch nghiên cứu của quy trình nghiên cứu",
+        "A": "Lập kế hoạch nghiên cứu",
         "B": "Xác định vấn đề và mục tiêu nghiên cứu",
-        "C": "Thu thập dữ liệu và phân tích Marketing là?",
-        "D": "Viết báo cáo và thuyết trình kết quả NC Bước đầu tiên trong quy"
+        "C": "Thu thập dữ liệu và phân tích",
+        "D": "Viết báo cáo và thuyết trình kết quả nghiên cứu"
       },
       "answer": "B",
-      "explainAnswer": "Có thể giải thích ngắn gọn như sau: Một nghiên cứu tốt bắt đầu bằng việc xác định rõ vấn đề và mục tiêu. Nếu câu hỏi nghiên cứu chưa rõ, dữ liệu thu thập sau đó khó phục vụ đúng quyết định. Vì vậy, phương án B là kết luận cần chọn.",
-      "image": null
+      "explainAnswer": "Một nghiên cứu tốt bắt đầu bằng việc xác định rõ vấn đề và mục tiêu. Nếu câu hỏi nghiên cứu chưa rõ, dữ liệu thu thập sau đó khó phục vụ đúng quyết định."
     },
     {
       "id": 10,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "Bước đầu tiên trong quy",
+      "question": "Bước đầu tiên trong quy trình nghiên cứu Marketing là:",
       "options": {
         "A": "Lập kế hoạch nghiên cứu",
-        "B": "Xác định vấn trường là",
+        "B": "Xác định vấn đề và mục tiêu nghiên cứu",
         "C": "Thu thập dữ liệu và phân tích",
-        "D": "Viết báo cáo và thuyết trình kết quả NC"
+        "D": "Viết báo cáo và thuyết trình kết quả nghiên cứu"
       },
       "answer": "B",
-      "explainAnswer": "Điểm cần nhớ ở đây là Một nghiên cứu tốt bắt đầu bằng việc xác định rõ vấn đề và mục tiêu. Nếu câu hỏi nghiên cứu chưa rõ, dữ liệu thu thập sau đó khó phục vụ đúng quyết định. Điều đó dẫn tới đáp án B.",
-      "image": null
+      "explainAnswer": "Quy trình nghiên cứu marketing luôn bắt đầu bằng việc xác định rõ vấn đề và mục tiêu nghiên cứu."
     },
     {
       "id": 11,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "hỏi với các phương án trả lời được cho sẵn",
+      "question": "Câu hỏi với các phương án trả lời được cho sẵn được gọi là:",
       "options": {
         "A": "Câu hỏi mở",
         "B": "Câu hỏi đóng",
-        "C": "Có thể là",
+        "C": "Câu hỏi bán mở",
         "D": "Câu hỏi mô tả"
       },
-      "answer": "A",
-      "explainAnswer": "Xét theo lý thuyết marketing, Lựa chọn này phù hợp với quy trình nghiên cứu marketing: xác định nhu cầu thông tin, thu thập dữ liệu đáng tin cậy, phân tích rồi cung cấp kết quả cho người ra quyết định. Do đó lựa chọn A là chính xác.",
-      "image": null
+      "answer": "B",
+      "explainAnswer": "Câu hỏi đóng là câu hỏi có sẵn các phương án trả lời để người trả lời lựa chọn."
     },
     {
       "id": 12,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "Thông tin marketing bao vi mô gồm",
+      "question": "Thông tin marketing bao gồm:",
       "options": {
         "A": "Thông tin nội bộ và bên ngoài",
-        "B": "Thông tin bên trong và thông tin về môi trường Thông tin marketing bao",
+        "B": "Thông tin bên trong và thông tin về môi trường",
         "C": "Thông tin nội bộ và thông tin bên trong",
-        "D": "Thông tin về môi trường vi mô và môi trường vĩ mô Đâu KHÔNG phải là"
+        "D": "Thông tin về môi trường vi mô và môi trường vĩ mô"
       },
       "answer": "A",
-      "explainAnswer": "Trong tình huống này, Lựa chọn này phù hợp với quy trình nghiên cứu marketing: xác định nhu cầu thông tin, thu thập dữ liệu đáng tin cậy, phân tích rồi cung cấp kết quả cho người ra quyết định. Vì thế phương án A phù hợp nhất.",
-      "image": null
+      "explainAnswer": "Thông tin marketing bao gồm thông tin nội bộ (từ bên trong doanh nghiệp) và thông tin bên ngoài (từ thị trường, đối thủ, môi trường...)."
     },
     {
       "id": 13,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "Đâu KHÔNG phải là",
+      "question": "Đâu KHÔNG phải là phương pháp thu thập dữ liệu sơ cấp định tính?",
       "options": {
         "A": "Quan sát",
         "B": "Thực hiện điều tra định lượng",
-        "C": "Đ",
-        "D": "Phỏng vấn nhóm trọng tâm Đâu KHÔNG phải là"
+        "C": "Phỏng vấn sâu",
+        "D": "Phỏng vấn nhóm trọng tâm"
       },
       "answer": "B",
-      "explainAnswer": "Cơ sở của đáp án là Lựa chọn này phù hợp với quy trình nghiên cứu marketing: xác định nhu cầu thông tin, thu thập dữ liệu đáng tin cậy, phân tích rồi cung cấp kết quả cho người ra quyết định. Kết quả đúng là B.",
-      "image": null
+      "explainAnswer": "Điều tra định lượng thuộc phương pháp thu thập dữ liệu định lượng, không phải định tính."
     },
     {
       "id": 14,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "Đâu KHÔNG phải là định lượng?",
+      "question": "Đâu KHÔNG phải là phương pháp thu thập dữ liệu định lượng?",
       "options": {
         "A": "Gửi thư",
-        "B": "Phỏng vấn sâu B định lượng?",
+        "B": "Phỏng vấn sâu",
         "C": "Gửi email",
         "D": "Gọi điện thoại"
       },
       "answer": "B",
-      "explainAnswer": "Không nên nhầm nội dung này với các khái niệm gần nghĩa: Nghiên cứu định lượng thu thập câu trả lời có thể mã hóa và phân tích bằng số liệu; bảng hỏi, email hoặc điện thoại thường được dùng để khảo sát trên mẫu lớn. Bởi vậy chọn B.",
-      "image": null
+      "explainAnswer": "Phỏng vấn sâu thuộc phương pháp định tính. Các phương pháp còn lại (gửi thư, email, gọi điện) thường dùng để thu thập dữ liệu định lượng trên mẫu lớn."
     },
     {
       "id": 15,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "Danh sách khách hàng của một doanh nghiệp là: liệu sơ cấp (nguồn bên ngoài)",
+      "question": "Danh sách khách hàng của một doanh nghiệp là:",
       "options": {
-        "A": "Dữ liệu sơ cấp (nguồn nội bộ) Danh sách khách hàng",
-        "B": "Dữ liệu thứ cấp (nguồn nội bộ) 15 của một doanh nghiệp là: liệu sơ cấp (nguồn bên ngoài)",
-        "C": "Dữ",
+        "A": "Dữ liệu sơ cấp (nguồn nội bộ)",
+        "B": "Dữ liệu thứ cấp (nguồn nội bộ)",
+        "C": "Dữ liệu sơ cấp (nguồn bên ngoài)",
         "D": "Dữ liệu thứ cấp (nguồn bên ngoài)"
       },
       "answer": "B",
-      "explainAnswer": "Lựa chọn B phù hợp. Danh sách khách hàng do chính doanh nghiệp lưu giữ là dữ liệu thứ cấp từ nguồn nội bộ, vì dữ liệu đã có sẵn trước khi nghiên cứu mới được thực hiện.",
-      "image": null
+      "explainAnswer": "Danh sách khách hàng do chính doanh nghiệp lưu giữ là dữ liệu thứ cấp từ nguồn nội bộ, vì dữ liệu đã có sẵn trước khi nghiên cứu mới được thực hiện."
     },
     {
       "id": 16,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "Đặc tính nào KHỒNG thuộc về dữ liệu thứ cấp? ảo mật cao",
+      "question": "Đặc tính nào KHÔNG thuộc về dữ liệu thứ cấp?",
       "options": {
-        "A": "Dễ đánh giá tính chính xác Đặc tính nào KHỒNG",
-        "B": "Giá thấp 16 thuộc về dữ liệu thứ cấp? ảo mật cao",
+        "A": "Dễ đánh giá tính chính xác",
+        "B": "Giá thấp",
         "C": "Luôn có chi phí thu thập rất cao",
         "D": "Dễ so sánh"
       },
       "answer": "C",
-      "explainAnswer": "Có thể giải thích ngắn gọn như sau: Dữ liệu thứ cấp đã được thu thập từ trước bởi doanh nghiệp hoặc tổ chức khác. Ưu điểm là dễ tiếp cận và ít tốn kém, nhưng cần kiểm tra nguồn, thời điểm và độ phù hợp. Vì vậy, phương án C là kết luận cần chọn.",
-      "image": null
+      "explainAnswer": "Dữ liệu thứ cấp đã được thu thập từ trước nên ưu điểm là dễ tiếp cận và ít tốn kém. Chi phí thu thập rất cao là đặc điểm của dữ liệu sơ cấp."
     },
     {
       "id": 17,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
       "question": "Đặc tính nào KHÔNG thuộc về dữ liệu sơ cấp?",
       "options": {
-        "A": "Được tùy chỉnh theo nghiên cứu Đặc tính nào KHÔNG",
-        "B": "Nhanh chóng 17 thuộc về dữ liệu sơ cấp?",
+        "A": "Được tùy chỉnh theo nghiên cứu",
+        "B": "Nhanh chóng",
         "C": "Cập nhật",
         "D": "Dễ đánh giá mức độ thực hiện"
       },
       "answer": "B",
-      "explainAnswer": "Điểm cần nhớ ở đây là Dữ liệu sơ cấp được thu thập trực tiếp cho một mục tiêu nghiên cứu cụ thể nên thường phù hợp và cập nhật hơn, nhưng cần nhiều thời gian và chi phí. Điều đó dẫn tới đáp án B.",
-      "image": null
+      "explainAnswer": "Dữ liệu sơ cấp được thu thập trực tiếp cho mục tiêu nghiên cứu cụ thể nên phù hợp và cập nhật hơn, nhưng thường tốn nhiều thời gian và chi phí, không phải nhanh chóng."
     },
     {
       "id": 18,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "Dữ liệu thứ cấp KHÔNG được đánh giá thông qua: xử lý dữ liệu",
+      "question": "Dữ liệu thứ cấp KHÔNG được đánh giá thông qua:",
       "options": {
         "A": "Kinh nghiệm của tác giả",
-        "B": "Cách thức trình bày 18 được đánh giá thông qua: xử lý dữ liệu",
-        "C": "Phương pháp thu thập và",
+        "B": "Cách thức trình bày",
+        "C": "Phương pháp thu thập và xử lý dữ liệu",
         "D": "Nơi thu thập dữ liệu"
       },
       "answer": "D",
-      "explainAnswer": "Xét theo lý thuyết marketing, Dữ liệu thứ cấp đã được thu thập từ trước bởi doanh nghiệp hoặc tổ chức khác. Ưu điểm là dễ tiếp cận và ít tốn kém, nhưng cần kiểm tra nguồn, thời điểm và độ phù hợp. Do đó lựa chọn D là chính xác.",
-      "image": null
+      "explainAnswer": "Khi đánh giá dữ liệu thứ cấp, người ta xem xét kinh nghiệm tác giả, cách trình bày, phương pháp thu thập và xử lý. Nơi thu thập dữ liệu không phải tiêu chí đánh giá chính."
     },
     {
       "id": 19,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "liệu thứ cấp Dữ Được thu thập sau dữ liệu sơ cấp",
+      "question": "Dữ liệu thứ cấp:",
       "options": {
         "A": "Quan trọng hơn dữ liệu sơ cấp",
-        "B": "Đã có sẵn từ trước 19 Dữ Được thu thập sau dữ liệu sơ cấp",
+        "B": "Đã có sẵn từ trước",
         "C": "Doanh nghiệp chỉ được dùng dữ liệu sơ cấp",
         "D": "Chỉ được dùng khi có dữ liệu sơ cấp"
       },
       "answer": "B",
-      "explainAnswer": "Trong tình huống này, Dữ liệu sơ cấp được thu thập trực tiếp cho một mục tiêu nghiên cứu cụ thể nên thường phù hợp và cập nhật hơn, nhưng cần nhiều thời gian và chi phí. Vì thế phương án B phù hợp nhất.",
-      "image": null
+      "explainAnswer": "Dữ liệu thứ cấp là dữ liệu đã được thu thập sẵn từ trước bởi doanh nghiệp hoặc tổ chức khác."
     },
     {
       "id": 20,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "n Tạp chí là nguồ Dữ liệu tham khảo",
+      "question": "Tạp chí là nguồn:",
       "options": {
         "A": "Dữ liệu sơ cấp",
-        "B": "Dữ liệu thứ cấp 20 Tạp chí là nguồ Dữ liệu tham khảo",
+        "B": "Dữ liệu thứ cấp",
         "C": "Dữ liệu quan sát trực tiếp do doanh nghiệp tự thu thập",
-        "D": "Dữ liệu chuyên gia Bước đầu tiên của Thu thập thông tin quá"
+        "D": "Dữ liệu chuyên gia"
       },
       "answer": "B",
-      "explainAnswer": "Cơ sở của đáp án là Dữ liệu thứ cấp đã được thu thập từ trước bởi doanh nghiệp hoặc tổ chức khác. Ưu điểm là dễ tiếp cận và ít tốn kém, nhưng cần kiểm tra nguồn, thời điểm và độ phù hợp. Kết quả đúng là B.",
-      "image": null
+      "explainAnswer": "Tạp chí thuộc nguồn dữ liệu thứ cấp vì đã được xuất bản và có sẵn trước khi doanh nghiệp sử dụng."
     },
     {
       "id": 21,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "quá",
+      "question": "Bước đầu tiên của quá trình thu thập thông tin trong Marketing là:",
       "options": {
         "A": "Đánh giá nhu cầu thông tin",
-        "B": "Sàng lọc thông tin 21 trình",
-        "C": "Đánh giá nhu cầu thông tin C trong Marketing là",
+        "B": "Sàng lọc thông tin",
+        "C": "Thu thập thông tin",
         "D": "Phân tích thông tin"
       },
       "answer": "A",
-      "explainAnswer": "Không nên nhầm nội dung này với các khái niệm gần nghĩa: Lựa chọn này phù hợp với quy trình nghiên cứu marketing: xác định nhu cầu thông tin, thu thập dữ liệu đáng tin cậy, phân tích rồi cung cấp kết quả cho người ra quyết định. Bởi vậy chọn A.",
-      "image": null
+      "explainAnswer": "Quy trình bắt đầu bằng việc đánh giá nhu cầu thông tin: xác định doanh nghiệp cần những thông tin gì để ra quyết định."
     },
     {
       "id": 22,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "22 Dữ liệu thứ cấp",
+      "question": "Dữ liệu thứ cấp:",
       "options": {
-        "A": "Thu th",
-        "B": "Rẻ hơn dữ liệu sơ cấp",
+        "A": "Rẻ hơn dữ liệu sơ cấp",
+        "B": "Đắt hơn dữ liệu sơ cấp",
         "C": "Cập nhật hơn dữ liệu sơ cấp",
-        "D": "Có mức độ thực hiện cao hơn dữ liệu sơ cấp"
+        "D": "Có mức độ phù hợp cao hơn dữ liệu sơ cấp"
       },
       "answer": "A",
-      "explainAnswer": "Lựa chọn A phù hợp. Dữ liệu thứ cấp đã được thu thập từ trước bởi doanh nghiệp hoặc tổ chức khác. Ưu điểm là dễ tiếp cận và ít tốn kém, nhưng cần kiểm tra nguồn, thời điểm và độ phù hợp.",
-      "image": null
+      "explainAnswer": "Dữ liệu thứ cấp đã có sẵn nên chi phí thu thập thấp hơn nhiều so với dữ liệu sơ cấp."
     },
     {
       "id": 23,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
       "question": "Đâu KHÔNG phải là nguồn thông tin thứ cấp?",
       "options": {
-        "A": "Các ấn phẩm khoa học Đâu KHÔNG phải là",
-        "B": "Thực hiện điều tra 23 nguồn thông tin thứ cấp?",
-        "C": "Niên giám thông kê",
-        "D": "Báo cáo tài chính của đối thủ cạnh tranh Thông tin nào sau đây"
+        "A": "Các ấn phẩm khoa học",
+        "B": "Thực hiện điều tra",
+        "C": "Niên giám thống kê",
+        "D": "Báo cáo tài chính của đối thủ cạnh tranh"
       },
       "answer": "B",
-      "explainAnswer": "Có thể giải thích ngắn gọn như sau: Nguồn thứ cấp là tài liệu đã có sẵn như báo cáo, niên giám, ấn phẩm khoa học hoặc dữ liệu công bố. Một cuộc điều tra mới tạo ra dữ liệu sơ cấp, không phải dữ liệu thứ cấp. Vì vậy, phương án B là kết luận cần chọn.",
-      "image": null
+      "explainAnswer": "Thực hiện điều tra tạo ra dữ liệu sơ cấp. Các nguồn còn lại đều là dữ liệu thứ cấp đã có sẵn."
     },
     {
       "id": 24,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "Thông tin nào sau đây",
+      "question": "Thông tin nào sau đây là thông tin sơ cấp?",
       "options": {
         "A": "Thông tin thu được từ phỏng vấn sâu",
         "B": "Thông tin thu được từ điều tra bằng bảng hỏi",
-        "C": "Thông tin từ các giáo trình, đề tài nghiên cứu C sơ cấp?",
-        "D": "Thông tin thu được từ phương pháp chuyên gia So với các hình thức thu"
+        "C": "Thông tin từ các giáo trình, đề tài nghiên cứu",
+        "D": "Thông tin thu được từ phương pháp chuyên gia"
       },
       "answer": "A",
-      "explainAnswer": "Điểm cần nhớ ở đây là Lựa chọn này phù hợp với quy trình nghiên cứu marketing: xác định nhu cầu thông tin, thu thập dữ liệu đáng tin cậy, phân tích rồi cung cấp kết quả cho người ra quyết định. Điều đó dẫn tới đáp án A.",
-      "image": null
+      "explainAnswer": "Phỏng vấn sâu là phương pháp thu thập dữ liệu sơ cấp. Giáo trình, đề tài nghiên cứu thuộc dữ liệu thứ cấp."
     },
     {
       "id": 25,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "So với các hình thức thu thập dữ liệu có áp lực trả",
+      "question": "So với các hình thức thu thập dữ liệu có áp lực trả lời cao, hình thức thu thập dữ liệu có áp lực trả lời thấp thường có:",
       "options": {
-        "A": "Tỉ lệ trả lời thấp hơn thập dữ liệu có áp lực trả",
-        "B": "Chất lượng",
-        "C": "Khả năng kiểm soát người trả lời tốt hơn lời thấp thường có",
-        "D": "Thời gian thu thập dữ liệu ngắn hơn Kết quả một cuộc khảo"
+        "A": "Tỉ lệ trả lời thấp hơn",
+        "B": "Chất lượng câu trả lời cao hơn",
+        "C": "Khả năng kiểm soát người trả lời tốt hơn",
+        "D": "Thời gian thu thập dữ liệu ngắn hơn"
       },
       "answer": "A",
-      "explainAnswer": "Xét theo lý thuyết marketing, Lựa chọn này phù hợp với quy trình nghiên cứu marketing: xác định nhu cầu thông tin, thu thập dữ liệu đáng tin cậy, phân tích rồi cung cấp kết quả cho người ra quyết định. Do đó lựa chọn A là chính xác.",
-      "image": null
+      "explainAnswer": "Các hình thức có áp lực trả lời thấp (như gửi thư, email) thường có tỷ lệ phản hồi thấp hơn so với phỏng vấn trực tiếp hoặc gọi điện."
     },
     {
       "id": 26,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "Kết quả một cuộc khảo cao phổ biến từ 150-170",
+      "question": "Kết quả một cuộc khảo sát cho thấy sinh viên cao phổ biến từ 150-170 cm. Đây là dữ liệu loại:",
       "options": {
-        "A": "Định danh sát cho thấy sinh viên",
+        "A": "Định danh",
         "B": "Thứ bậc",
-        "C": "Khoảng cm. Đây là dữ liệu loại",
-        "D": "Tỉ lệ Đâu KHÔNG phải nguồn"
+        "C": "Khoảng",
+        "D": "Tỉ lệ"
       },
       "answer": "C",
-      "explainAnswer": "Trong tình huống này, Lựa chọn này phù hợp với quy trình nghiên cứu marketing: xác định nhu cầu thông tin, thu thập dữ liệu đáng tin cậy, phân tích rồi cung cấp kết quả cho người ra quyết định. Vì thế phương án C phù hợp nhất.",
-      "image": null
+      "explainAnswer": "Chiều cao là dữ liệu khoảng (interval) vì có thể đo khoảng cách giữa các giá trị nhưng không có điểm 0 tuyệt đối."
     },
     {
       "id": 27,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "Đâu KHÔNG phải nguồn doanh nghiệp?",
+      "question": "Đâu KHÔNG phải nguồn dữ liệu nội bộ trong doanh nghiệp?",
       "options": {
         "A": "Báo cáo từ đối thủ cạnh tranh",
-        "B": "Dữ liệu khách hàng 27 dữ liệu nội bộ trong A doanh nghiệp?",
+        "B": "Dữ liệu khách hàng",
         "C": "Báo cáo tài chính của doanh nghiệp",
-        "D": "Các thông báo doanh nghiệp từng ban hành Công ty Samsung đang"
+        "D": "Các thông báo doanh nghiệp từng ban hành"
       },
       "answer": "A",
-      "explainAnswer": "Cơ sở của đáp án là Nguồn thứ cấp là tài liệu đã có sẵn như báo cáo, niên giám, ấn phẩm khoa học hoặc dữ liệu công bố. Một cuộc điều tra mới tạo ra dữ liệu sơ cấp, không phải dữ liệu thứ cấp. Kết quả đúng là A.",
-      "image": null
+      "explainAnswer": "Báo cáo từ đối thủ cạnh tranh thuộc nguồn bên ngoài. Các nguồn còn lại đều là dữ liệu nội bộ của doanh nghiệp."
     },
     {
       "id": 28,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "Công ty Samsung đang",
+      "question": "Công ty Samsung đang nghiên cứu nhu cầu sử dụng điều hòa hai chiều ở Việt Nam. Dữ liệu này thuộc loại:",
       "options": {
-        "A": "Sơ cấp nghiên cứu nhu cầu sử",
-        "B": "Thứ cấp dụng điều hòa hai chiều ở",
-        "C": "Định tính A Samsung, dữ liệu này",
-        "D": "Định lượng thuộc loại: Phương pháp thu thập dữ"
+        "A": "Sơ cấp",
+        "B": "Thứ cấp",
+        "C": "Định tính",
+        "D": "Định lượng"
       },
       "answer": "A",
-      "explainAnswer": "Không nên nhầm nội dung này với các khái niệm gần nghĩa: Lựa chọn này phù hợp với quy trình nghiên cứu marketing: xác định nhu cầu thông tin, thu thập dữ liệu đáng tin cậy, phân tích rồi cung cấp kết quả cho người ra quyết định. Bởi vậy chọn A.",
-      "image": null
+      "explainAnswer": "Dữ liệu được thu thập trực tiếp cho mục tiêu nghiên cứu cụ thể của Samsung nên là dữ liệu sơ cấp."
     },
     {
       "id": 29,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "Phương pháp thu thập dữ",
+      "question": "Phương pháp thu thập dữ liệu định lượng nào sau đây có độ tin cậy của thông tin là cao nhất?",
       "options": {
-        "A": "Bưu điện liệu định lượng nào sau",
+        "A": "Bưu điện",
         "B": "Điện thoại",
-        "C": "Chặn phỏng vấn A cậy của thông tin là cao nhất?",
-        "D": "Phỏng vấn nhóm trọng tâm Hình thức thu thập dữ"
+        "C": "Chặn phỏng vấn",
+        "D": "Phỏng vấn nhóm trọng tâm"
       },
       "answer": "A",
-      "explainAnswer": "Lựa chọn A phù hợp. Lựa chọn này phù hợp với quy trình nghiên cứu marketing: xác định nhu cầu thông tin, thu thập dữ liệu đáng tin cậy, phân tích rồi cung cấp kết quả cho người ra quyết định.",
-      "image": null
+      "explainAnswer": "Thu thập qua bưu điện (gửi bảng hỏi) thường cho phép người trả lời suy nghĩ kỹ, giảm áp lực và có độ tin cậy cao hơn trong một số trường hợp."
     },
     {
       "id": 30,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "Hình thức thu thập dữ nhất là",
+      "question": "Hình thức thu thập dữ liệu có tỷ lệ phản hồi cao nhất là:",
       "options": {
         "A": "Bưu điện",
-        "B": "Điện thoại D nhất là",
+        "B": "Điện thoại",
         "C": "Email",
-        "D": "Chặn phỏng vấn trực tiếp Để tìm hiểu xu hướng sản"
+        "D": "Chặn phỏng vấn trực tiếp"
       },
       "answer": "D",
-      "explainAnswer": "Có thể giải thích ngắn gọn như sau: Lựa chọn này phù hợp với quy trình nghiên cứu marketing: xác định nhu cầu thông tin, thu thập dữ liệu đáng tin cậy, phân tích rồi cung cấp kết quả cho người ra quyết định. Vì vậy, phương án D là kết luận cần chọn.",
-      "image": null
+      "explainAnswer": "Chặn phỏng vấn trực tiếp có tỷ lệ phản hồi cao nhất vì người trả lời khó từ chối khi đang đứng trước mặt người phỏng vấn."
     },
     {
       "id": 31,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "Để tìm hiểu xu hướng sản",
+      "question": "Để tìm hiểu xu hướng sản xuất, doanh nghiệp E đã có một buổi trao đổi 45 phút với một chuyên gia trong lĩnh vực này. Đây là phương thức thu thập dữ liệu nào?",
       "options": {
         "A": "Phỏng vấn sâu",
-        "B": "Chặn phỏng vấn doanh nghiệp E đã có một buổi trao đổi 45 phút",
-        "C": "Đối thoại trực tiếp với một chuyên gia trong lĩnh vực này. Đây là phương thức thu thập dữ",
-        "D": "Phỏng vấn nhóm trọng tâm liệu nào? Phương pháp thu thập dữ"
+        "B": "Chặn phỏng vấn",
+        "C": "Đối thoại trực tiếp",
+        "D": "Phỏng vấn nhóm trọng tâm"
       },
       "answer": "A",
-      "explainAnswer": "Điểm cần nhớ ở đây là Lựa chọn này phù hợp với quy trình nghiên cứu marketing: xác định nhu cầu thông tin, thu thập dữ liệu đáng tin cậy, phân tích rồi cung cấp kết quả cho người ra quyết định. Điều đó dẫn tới đáp án A.",
-      "image": null
+      "explainAnswer": "Buổi trao đổi sâu với chuyên gia kéo dài 45 phút thuộc phương pháp phỏng vấn sâu (in-depth interview)."
     },
     {
       "id": 32,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "Phương pháp thu thập dữ phản hồi cao nhất?",
+      "question": "Phương pháp thu thập dữ liệu nào có tỷ lệ phản hồi cao nhất?",
       "options": {
         "A": "Bưu điện",
-        "B": "Điện thoại C phản hồi cao nhất?",
+        "B": "Điện thoại",
         "C": "Chặn phỏng vấn",
         "D": "Email"
       },
       "answer": "C",
-      "explainAnswer": "Xét theo lý thuyết marketing, Phương thức thu thập ảnh hưởng đến tỷ lệ phản hồi, chi phí và tốc độ nghiên cứu. Hình thức có tương tác trực tiếp thường giúp làm rõ câu trả lời nhưng tốn nguồn lực hơn. Do đó lựa chọn C là chính xác.",
-      "image": null
+      "explainAnswer": "Chặn phỏng vấn (intercept interview) có tỷ lệ phản hồi cao nhất nhờ tương tác trực tiếp."
     },
     {
       "id": 33,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "Nhà quản trị cấp cao có vai trò quan trọng nhất ở bước nào sau đây? cứu",
+      "question": "Nhà quản trị cấp cao có vai trò quan trọng nhất ở bước nào sau đây?",
       "options": {
-        "A": "Xác định vấn đề và mục tiêu nghiên cứu Nhà quản trị cấp cao có",
+        "A": "Xác định vấn đề và mục tiêu nghiên cứu",
         "B": "Lập kế hoạch nghiên cứu",
-        "C": "Thu thập và phân tích dữ liệu B bước nào sau đây?",
-        "D": "Viết báo cáo và thuyết trình kết quả nghiên cứu So với phỏng vấn qua"
+        "C": "Thu thập và phân tích dữ liệu",
+        "D": "Viết báo cáo và thuyết trình kết quả nghiên cứu"
       },
-      "answer": "B",
-      "explainAnswer": "Trong tình huống này, Lựa chọn này phù hợp với quy trình nghiên cứu marketing: xác định nhu cầu thông tin, thu thập dữ liệu đáng tin cậy, phân tích rồi cung cấp kết quả cho người ra quyết định. Vì thế phương án B phù hợp nhất.",
-      "image": null
+      "answer": "A",
+      "explainAnswer": "Nhà quản trị cấp cao đóng vai trò then chốt ở bước xác định vấn đề và mục tiêu nghiên cứu, vì họ hiểu rõ nhất nhu cầu thông tin phục vụ quyết định chiến lược."
     },
     {
       "id": 34,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "So với phỏng vấn qua",
+      "question": "So với phỏng vấn qua email, phỏng vấn qua điện thoại:",
       "options": {
         "A": "Có tỉ lệ phản hồi tốt hơn",
         "B": "Có thời gian phản hồi nhanh hơn",
-        "C": "Có chi phí cao hơn email ….",
-        "D": "Có"
+        "C": "Có chi phí cao hơn",
+        "D": "Có tất cả các đặc điểm trên"
       },
       "answer": "D",
-      "explainAnswer": "Cơ sở của đáp án là Lựa chọn này phù hợp với quy trình nghiên cứu marketing: xác định nhu cầu thông tin, thu thập dữ liệu đáng tin cậy, phân tích rồi cung cấp kết quả cho người ra quyết định. Kết quả đúng là D.",
-      "image": null
+      "explainAnswer": "Phỏng vấn điện thoại thường có tỷ lệ phản hồi cao hơn, tốc độ nhanh hơn nhưng chi phí cũng cao hơn so với email."
     },
     {
       "id": 35,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "Người làm marketing nên",
+      "question": "Người làm marketing nên ưu tiên phương thức thu thập dữ liệu nghiên cứu nào khi ngân sách hạn chế và mẫu nhỏ?",
       "options": {
-        "A": "Bưu điện ưu tiên phương thức thu",
-        "B": "Email thập dữ liệu nghiên cứu",
+        "A": "Bưu điện",
+        "B": "Email",
         "C": "Điện thoại",
-        "D": "Online mô nhỏ?"
+        "D": "Online"
       },
       "answer": "C",
-      "explainAnswer": "Không nên nhầm nội dung này với các khái niệm gần nghĩa: Lựa chọn này phù hợp với quy trình nghiên cứu marketing: xác định nhu cầu thông tin, thu thập dữ liệu đáng tin cậy, phân tích rồi cung cấp kết quả cho người ra quyết định. Bởi vậy chọn C.",
-      "image": null
+      "explainAnswer": "Với ngân sách hạn chế và mẫu nhỏ, phỏng vấn điện thoại là lựa chọn phù hợp về chi phí và khả năng kiểm soát chất lượng."
     },
     {
       "id": 36,
       "chapter": "Chương II - Hệ thống thông tin Marketing",
-      "sourceChapter": "Chương II - Hệ thống thông tin Marketing",
-      "question": "hỏi nghiên cứu",
+      "question": "Câu hỏi nghiên cứu “Nguyên nhân giảm sút doanh số là gì?” phù hợp với loại nghiên cứu nào?",
       "options": {
-        "A": "Nghiên cứu định tính “Nguyên nhân giảm sút",
+        "A": "Nghiên cứu định tính",
         "B": "Nghiên cứu định lượng",
-        "C": "Nghiên cứu nhân quả A gì?” phù hợp với loại",
-        "D": "Nghiên cứu quan sát nghiên cứu nào?"
+        "C": "Nghiên cứu nhân quả",
+        "D": "Nghiên cứu quan sát"
       },
       "answer": "A",
-      "explainAnswer": "Lựa chọn A phù hợp. Lựa chọn này phù hợp với quy trình nghiên cứu marketing: xác định nhu cầu thông tin, thu thập dữ liệu đáng tin cậy, phân tích rồi cung cấp kết quả cho người ra quyết định.",
-      "image": null
+      "explainAnswer": "Câu hỏi tìm hiểu nguyên nhân sâu xa, mang tính khám phá thường phù hợp với nghiên cứu định tính."
     }
   ]
 }
