@@ -18,6 +18,7 @@ export type SubjectId =
   | "marketing-can-ban"
   | "tin-hoc-van-phong"
   | "nguyen-ly-tai-chinh"
+  | "lich-su-van-minh-the-gioi"
   | "co-so-du-lieu"
   | "khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
   | "nhap-mon-khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
@@ -534,6 +535,23 @@ export const subjects: Subject[] = [
     chapters: [
       { id: "all", label: { en: "Principles of Finance - Final", vi: "Nguyên lý tài chính - Cuối kỳ" }, count: 171 },
       { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Nguyên lý Tài chính"], hidden: true, count: 171 },
+    ],
+  },
+  {
+    id: "lich-su-van-minh-the-gioi",
+    code: "CIV101",
+    name: { en: "World Civilization History", vi: "Quiz ôn tập Chương 1 và 2 - Lịch sử văn minh thế giới" },
+    category: { en: "General", vi: "Đại cương" },
+    exams: [
+      {
+        id: "world-civilization-chapters-1-2-bank-1", type: "final", year: 2026, questionCount: 185, durationMinutes: 60,
+        title: { en: "World Civilization History", vi: "Quiz ôn tập Chương 1 và 2 - Lịch sử văn minh thế giới" },
+        description: { en: "185 questions covering Chapters 1 and 2. Choose a chapter after clicking Try now.", vi: "185 câu hỏi Chương 1 và 2. Chọn chương sau khi ấn Thử ngay." },
+      },
+    ],
+    chapters: [
+      { id: "all", label: { en: "World Civilization History - Full Chapters 1 & 2", vi: "Lịch sử văn minh thế giới - Full chương 1 và 2" }, count: 185 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Lịch sử văn minh thế giới"], hidden: true, count: 185 },
     ],
   },
   {

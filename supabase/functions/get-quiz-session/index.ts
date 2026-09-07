@@ -15,6 +15,7 @@ const examFiles: Record<string, string> = {
   "kinh-te-vi-mo-macro-bank-1": "mac102/kinh_te_vi_mo.json",
   "office-it-final-bank-1": "oit101/tin_hoc_van_phong.json",
   "finance-final-bank-1": "fin101/nguyen_ly_tai_chinh.json",
+  "world-civilization-chapters-1-2-bank-1": "civ101/lich_su_van_minh_the_gioi.json",
 }
 const sqaFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json", "chuong_6.json"]
 const marFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json"]

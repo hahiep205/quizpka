@@ -13,7 +13,7 @@ vi.mock("@/lib/supabase", () => ({ supabase: { channel: api.channel, removeChann
 vi.mock("@/features/notifications/api/notifications", () => ({ fetchAdminNotificationHistory: api.history, fetchNotificationRecipients: api.recipients, fetchNotificationBatchRecipients: api.details, fetchNotificationBatchDetails: api.metadata, sendAdminNotifications: api.send, revokeAdminNotification: api.revoke }))
 vi.mock("@/features/admin/api/adminUsers", () => ({ fetchAllAdminUsers: api.users }))
 vi.mock("@/features/admin/api/adminActivity", () => ({ fetchAllActivityTimeline: api.events, fetchAllPracticeAttempts: api.attempts, fetchUserActivity: vi.fn(), fetchPracticeAttempts: vi.fn() }))
-vi.mock("@/features/admin/api/adminPayments", () => ({ fetchAllAdminPayments: api.payments }))
+vi.mock("@/features/admin/api/adminPayments", async (importOriginal) => ({ ...(await importOriginal<typeof import("@/features/admin/api/adminPayments")>()), fetchAllAdminPayments: api.payments }))
 vi.mock("@/features/admin/api/adminEntitlements", () => ({ fetchAdminProducts: api.products, grantAdminPurchase: vi.fn() }))
 vi.mock("@/features/support/api/supportReports", () => ({ fetchSupportReports: api.supports, updateSupportStatus: vi.fn() }))
 

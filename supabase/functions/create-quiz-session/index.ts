@@ -7,6 +7,7 @@ const examFiles: Record<string, string> = {
   "kinh-te-vi-mo-macro-bank-1": "mac102/kinh_te_vi_mo.json",
   "office-it-final-bank-1": "oit101/tin_hoc_van_phong.json",
   "finance-final-bank-1": "fin101/nguyen_ly_tai_chinh.json",
+  "world-civilization-chapters-1-2-bank-1": "civ101/lich_su_van_minh_the_gioi.json",
 }
 const examProducts: Record<string, string> = {
   "data-science-ai-midterm-1": "dsai101",
@@ -17,6 +18,7 @@ const examProducts: Record<string, string> = {
   "kinh-te-vi-mo-macro-bank-1": "mac102",
   "office-it-final-bank-1": "oit101",
   "finance-final-bank-1": "fin101",
+  "world-civilization-chapters-1-2-bank-1": "civ101",
 }
 const sqaExamId = "software-quality-assessment-final-bank-1"
 const marExamId = "marketing-final-bank-1"
@@ -109,7 +111,7 @@ Deno.serve(async (req) => {
     })
     const startedAt = new Date().toISOString()
     const expiresAt = new Date(Date.now() + durationMinutes * 60_000).toISOString()
-    const subjectId = productId === "sqa101" ? "danh-gia-va-kiem-dinh-chat-luong-phan-mem" : productId === "idsai101" ? "nhap-mon-khoa-hoc-du-lieu-va-tri-tue-nhan-tao" : productId === "mar101" ? "marketing-can-ban" : productId === "mac102" ? "kinh-te-vi-mo-macro" : productId === "oit101" ? "tin-hoc-van-phong" : productId === "fin101" ? "nguyen-ly-tai-chinh" : "khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
+    const subjectId = productId === "sqa101" ? "danh-gia-va-kiem-dinh-chat-luong-phan-mem" : productId === "idsai101" ? "nhap-mon-khoa-hoc-du-lieu-va-tri-tue-nhan-tao" : productId === "mar101" ? "marketing-can-ban" : productId === "mac102" ? "kinh-te-vi-mo-macro" : productId === "oit101" ? "tin-hoc-van-phong" : productId === "fin101" ? "nguyen-ly-tai-chinh" : productId === "civ101" ? "lich-su-van-minh-the-gioi" : "khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
     const { error: sessionError } = await admin.from("quiz_sessions").insert({ id: sessionId, user_id: user.id, exam_id: examId, subject_id: subjectId, duration_minutes: durationMinutes, idempotency_key: idempotencyKey, started_at: startedAt, expires_at: expiresAt })
     if (sessionError) throw sessionError
     const { error: questionsError } = await admin.from("quiz_session_questions").insert(sessionQuestions)
