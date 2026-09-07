@@ -19,6 +19,7 @@ export type SubjectId =
   | "tin-hoc-van-phong"
   | "nguyen-ly-tai-chinh"
   | "lich-su-van-minh-the-gioi"
+  | "kinh-te-hoc"
   | "co-so-du-lieu"
   | "khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
   | "nhap-mon-khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
@@ -551,6 +552,23 @@ export const subjects: Subject[] = [
     chapters: [
       { id: "all", label: { en: "World Civilization History - Midterm & Final", vi: "Lịch sử văn minh thế giới - Giữa và Cuối kỳ" }, count: 185 },
       { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Lịch sử văn minh thế giới"], hidden: true, count: 185 },
+    ],
+  },
+  {
+    id: "kinh-te-hoc",
+    code: "ECO101",
+    name: { en: "Economics", vi: "Quiz ôn tập Giữa và Cuối kỳ - Kinh tế học" },
+    category: { en: "General", vi: "Đại cương" },
+    exams: [
+      {
+        id: "economics-bank-1", type: "final", year: 2026, questionCount: 215, durationMinutes: 60,
+        title: { en: "Economics", vi: "Quiz ôn tập Giữa và Cuối kỳ - Kinh tế học" },
+        description: { en: "215 questions: Midterm (163) & Final (52). Choose a chapter after clicking Try now.", vi: "215 câu hỏi: Giữa kỳ (163 câu) & Cuối kỳ (52 câu). Chọn chương sau khi ấn Thử ngay." },
+      },
+    ],
+    chapters: [
+      { id: "c1234_mid", label: { en: "Economics - Midterm (Chapters 1, 2, 3, 4)", vi: "Kinh tế học - Giữa kỳ (Chương 1, 2, 3, 4)" }, matches: ["Chương 1.", "Chương 2.", "Chương 3.", "Chương 4."], count: 163 },
+      { id: "c567_final", label: { en: "Economics - Final (Chapters 5, 6, 7)", vi: "Kinh tế học - Cuối kỳ (Chương 5, 6, 7)" }, matches: ["Chương 5.", "Chương 6.", "Chương 7."], count: 52 },
     ],
   },
   {
