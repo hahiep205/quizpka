@@ -22,7 +22,6 @@ export type SubjectId =
   | "co-so-du-lieu"
   | "khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
   | "nhap-mon-khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
-  | "xay-dung-web"
   | "toeic"
 
 export type LocalizedText = {
@@ -540,17 +539,17 @@ export const subjects: Subject[] = [
   {
     id: "lich-su-van-minh-the-gioi",
     code: "CIV101",
-    name: { en: "World Civilization History", vi: "Quiz ôn tập Chương 1 và 2 - Lịch sử văn minh thế giới" },
+    name: { en: "World Civilization History", vi: "Quiz ôn tập Giữa và Cuối kỳ - Lịch sử văn minh thế giới" },
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
         id: "world-civilization-chapters-1-2-bank-1", type: "final", year: 2026, questionCount: 185, durationMinutes: 60,
-        title: { en: "World Civilization History", vi: "Quiz ôn tập Chương 1 và 2 - Lịch sử văn minh thế giới" },
+        title: { en: "World Civilization History", vi: "Quiz ôn tập Giữa và Cuối kỳ - Lịch sử văn minh thế giới" },
         description: { en: "185 questions covering Chapters 1 and 2. Choose a chapter after clicking Try now.", vi: "185 câu hỏi Chương 1 và 2. Chọn chương sau khi ấn Thử ngay." },
       },
     ],
     chapters: [
-      { id: "all", label: { en: "World Civilization History - Full Chapters 1 & 2", vi: "Lịch sử văn minh thế giới - Full chương 1 và 2" }, count: 185 },
+      { id: "all", label: { en: "World Civilization History - Midterm & Final", vi: "Lịch sử văn minh thế giới - Giữa và Cuối kỳ" }, count: 185 },
       { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Lịch sử văn minh thế giới"], hidden: true, count: 185 },
     ],
   },
@@ -603,22 +602,6 @@ export const subjects: Subject[] = [
         title: { en: "Intro Data Science & AI Practice Bank", vi: "Quiz ôn tập Cuối kỳ - Nhập môn Khoa học dữ liệu và Trí tuệ nhân tạo" },
         description: { en: "119 final review questions for Intro to Data Science and Artificial Intelligence.", vi: "119 câu hỏi ôn tập Cuối kỳ môn Nhập môn Khoa học dữ liệu và Trí tuệ nhân tạo." },
       },
-    ],
-  },
-  {
-    id: "xay-dung-web",
-    code: "WEB101",
-    name: { en: "Web Development", vi: "Xây dựng Web" },
-    category: { en: "Major", vi: "Chuyên ngành" },
-    exams: [
-      {
-        id: "web-midterm-2024", type: "midterm", year: 2024, questionCount: 0, durationMinutes: 0,
-        title: { en: "2024 Web Development Midterm Paper", vi: "Đề xây dựng web giữa kỳ 2024" },
-        description: { en: "2024 midterm set with notes and attachments. Choose the document after clicking Try now.", vi: "Bộ đề giữa kỳ 2024 kèm ghi chú và file đính kèm. Chọn tài liệu sau khi ấn Thử ngay." },
-      },
-    ],
-    chapters: [
-      { id: "tai-lieu-giua-ky-2024", label: { en: "2024 Midterm set (ZIP + notes)", vi: "Đề giữa kỳ 2024 (file ZIP + ghi chú)" }, pdfUrl: "/data/xay-dung-web/de-xay-dung-web-2024.zip", noteUrl: "/data/xay-dung-web/Luu-y.txt", count: 0 },
     ],
   },
   {
