@@ -144,12 +144,13 @@ export async function fetchNotificationBatchDetails(batchId: number): Promise<(A
 }
 
 export async function fetchNotificationBatchRecipients(
-  batchId: number, afterId?: string,
+  batchId: number, afterId?: string, readOnly = true,
 ): Promise<AdminNotificationHistory["recipients"]> {
   const { data, error } = await supabase.rpc("list_notification_batch_recipients", {
     p_batch_id: batchId,
     p_after_id: afterId ?? null,
     p_limit: 50,
+    p_read_only: readOnly,
   })
   if (error) throw notificationError(error)
   return ((data ?? []) as Array<RecipientRow & { read_at: string | null }>).map((row) => ({

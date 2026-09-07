@@ -1556,11 +1556,11 @@ function NotificationHistoryDetail({ notification: initialNotification, refresh,
           <DrawerMetric label="Chưa đọc" value={details ? String(details.unreadCount) : "..."} />
           <DrawerMetric label="Đã tải" value={String(recipients.length)} />
         </div>
-        <div><p className="text-xs font-black uppercase tracking-wide text-slate-400">Danh sách người nhận</p><div className="mt-2 space-y-1.5">{recipients.map((recipient) => <div key={recipient.id} className="flex items-center justify-between gap-3 rounded-xl bg-slate-50 px-3 py-2.5 dark:bg-white/5"><div className="min-w-0"><p className="truncate text-sm font-black text-[#100F3E] dark:text-white">{recipient.displayName ?? "(chưa đặt tên)"}</p><p className="truncate text-xs font-semibold text-slate-400">{recipient.email ?? recipient.id}</p></div><span className={cn("shrink-0 rounded-full px-2 py-1 text-[10px] font-black", recipient.readAt ? "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300" : "bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-300")}>{recipient.readAt ? "Đã đọc" : "Chưa đọc"}</span></div>)}</div></div>
-        {loading ? <p role="status" className="text-sm">Đang tải người nhận...</p> : null}
+        <div><p className="text-xs font-black uppercase tracking-wide text-slate-400">Danh sách đã đọc{details ? ` (${details.readCount})` : ""}</p><div className="mt-2 space-y-1.5">{recipients.map((recipient) => <div key={recipient.id} className="flex items-center justify-between gap-3 rounded-xl bg-slate-50 px-3 py-2.5 dark:bg-white/5"><div className="min-w-0"><p className="truncate text-sm font-black text-[#100F3E] dark:text-white">{recipient.displayName ?? "(chưa đặt tên)"}</p><p className="truncate text-xs font-semibold text-slate-400">{recipient.email ?? recipient.id}</p></div><span className="shrink-0 rounded-full bg-emerald-50 px-2 py-1 text-[10px] font-black text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300">Đã đọc</span></div>)}</div></div>
+        {loading ? <p role="status" className="text-sm">Đang tải người đọc...</p> : null}
         {error ? <p role="alert" className="text-sm text-red-600">{error} <button type="button" disabled={loading} className="underline" onClick={() => void loadPage(failedCursor.current)}>Thử lại</button></p> : null}
-        {!loading && !error && !recipients.length ? <p className="text-sm text-slate-500">Không có dữ liệu người nhận.</p> : null}
-        {hasMore && !error ? <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={loading} onClick={() => { const last = recipients[recipients.length - 1]; if (last) void loadPage(last.id) }}>Tải thêm người nhận</button> : null}
+        {!loading && !error && !recipients.length ? <p className="text-sm text-slate-500">Chưa có người đọc thông báo này.</p> : null}
+        {hasMore && !error ? <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={loading} onClick={() => { const last = recipients[recipients.length - 1]; if (last) void loadPage(last.id) }}>Tải thêm người đọc</button> : null}
       </div>
     </aside>
   </div>

@@ -1,0 +1,622 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kinh tế học - Chương 3: Lý thuyết Chi phí và Sản xuất",
+  "chapter": "Chương 3",
+  "totalQuestions": 41,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Trong các nhận định sau, nhận định nào là đúng về đường chi phí bình quân trong dài hạn?",
+      "options": {
+        "A": "Đường chi phí bình quân trong dài hạn có thể sẽ dốc lên vì chi phí quản lý tăng lên.",
+        "B": "Đường chi phí bình quân trong dài hạn có thể dốc xuống do hiệu suất tăng theo quy mô và có thể sẽ dốc lên vì chi phí quản lý tăng lên.",
+        "C": "Đường chi phí bình quân trong dài hạn luôn luôn biểu thị hiệu suất tăng của quy mô.",
+        "D": "Đường chi phí bình quân trong dài hạn có thể dốc xuống do hiệu suất tăng theo quy mô."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 2,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Nếu tại mức sản lượng sản xuất là 20 đơn vị, tổng chi phí là 2 triệu đồng và tổng chi phí cố định là 600 nghìn đồng, khi đó chi phí biến đổi bình quân bằng bao nhiêu?",
+      "options": {
+        "A": "70 nghìn đồng.",
+        "B": "400 nghìn đồng.",
+        "C": "30 nghìn đồng.",
+        "D": "50 nghìn đồng."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 3,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Biết tổng chi phí biến đổi thì có thể xác định chi phí nào trong các chi phí sau?",
+      "options": {
+        "A": "Tổng chi phí bình quân.",
+        "B": "Chi phí cố định bình quân.",
+        "C": "Tổng chi phí.",
+        "D": "Chi phí cận biên."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 4,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Mối quan hệgiữa sản phẩm cận biên của lao động và chi phí cận biên của sản phẩm là gì?",
+      "options": {
+        "A": "Chi phí cận biên là nghịch đảo của sản phẩm cận biên.",
+        "B": "Chi phí cận biên không đổi nhưng sản phẩm cận biên thì tuân theo hiệu suất giảm dần.",
+        "C": "Đường chi phí cận biên dốc xuống khi đường sản phẩm cận biên dốc xuống.",
+        "D": "Chi phí cận biên bằng mức tiền công chia cho sản phẩm cận biên."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 5,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Ở mức sản lượng mà chi phí trung bình đạt cực tiểu thì nhận định nào là đúng trong các nhận định sau?",
+      "options": {
+        "A": "Chi phí biến đổi bình quân sẽ bằng chi phí trung bình.",
+        "B": "Chi phí cận biên bằng chi phí trung bình.",
+        "C": "Lợi nhuận phải ở mức tối đa.",
+        "D": "Chi phí cận biên bằng chi phí biến đổi bình quân."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 6,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Đường tổng chi phí bình quân có dạng như thế nào?",
+      "options": {
+        "A": "Đường nằm ngang.",
+        "B": "Hình chữ U.",
+        "C": "Đường dốc lên.",
+        "D": "Đường dốc xuống."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 7,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Sản phẩm cận biên của một đầu vào được hiểu là",
+      "options": {
+        "A": "Sản phẩm bổ sung được tạo ra từ việc thuê thêm một đơn vị đầu vào.",
+        "B": "Sản lượng chia cho số đầu vào sử dụng trong quá trình sản xuất.",
+        "C": "Chi phí cần thiết để thuê thêm một đơn vị đầu vào.",
+        "D": "Chi phí của việc sản xuất thêm một đơn vị sản phẩm."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 8,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Đường chi phí bình quân dài hạn là đường như thế nào?",
+      "options": {
+        "A": "Bằng tổng của tất cả các đường chi phí bình quân ngắn hạn.",
+        "B": "Đường nằm ngang.",
+        "C": "Đường bao của tất cả các đường chi phí bình quân ngắn hạn.",
+        "D": "Đường biên phía trên của các đường chi phí bình quân ngắn hạn."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 9,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Sự khác biệt cơ bản cần quan tâm khi phân tích chi phí ngắn hạn và chi phí dài hạn là gì?",
+      "options": {
+        "A": "Xác định trong một thời điểm nhất định.",
+        "B": "Trong dài hạn tất cả các đầu vào đều có thể thay đổi được.",
+        "C": "Trong ngắn hạn có hiệu suất không đổi theo quy mô nhưng trong dài hạn không có.",
+        "D": "Trong ngắn hạn đường chi phí bình quân giảm dần, còn trong dài hạn thì nó tăng dần."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 10,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Trường hợp nào sau đây biểu thị hiệu suất giảm theo quy mô?",
+      "options": {
+        "A": "Khi tất cả các đầu vào tăng gấp 2, sản lượng tăng nhiều hơn 2 lần.",
+        "B": "Khi một đầu vào tăng gấp 2, sản lượng tăng nhiều hơn 2 lần.",
+        "C": "Khi đầu vào tăng thì sản phẩm tăng thêm trên đơn vị đầu vào bổ sung đó có xu hướng giảm xuống.",
+        "D": "Khi tất cả các đầu vào tăng gấp 2, sản lượng đầu ra tăng ít hơn 2 lần."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 11,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Tối đa hóa lợi nhuận và tối đa hóa doanh thu khác nhau ở điểm nào?",
+      "options": {
+        "A": "Sản lượng thấp hơn và giá thấp hơn.",
+        "B": "Sản lượng thấp hơn và giá cao hơn.",
+        "C": "Sản lượng cao hơn và giá cao hơn.",
+        "D": "Sản lượng cao hơn và giá thấp hơn."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 12,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Đường nào liên tục giảm (đi xuống) khi sản lượng tăng?",
+      "options": {
+        "A": "TFC.",
+        "B": "TVC.",
+        "C": "AVC.",
+        "D": "AFC."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 13,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Trong kinh tế vi mô, sản xuất trong ngắn hạn được định nghĩa như thế nào?",
+      "options": {
+        "A": "Khoảng thời gian sản xuất mà hãng thu thập số liệu về chi phí chứ không phải về sản xuất.",
+        "B": "Khoảng thời gian sản xuất mà hãng thay đổi sản lượng và công suất nhà máy.",
+        "C": "Khoảng thời gian sản xuất mà hãng chỉ có thể thay đổi được một số đầu vào, còn một hoặc một số đầu vào khác cố định.",
+        "D": "Khoảng thời gian sản xuất mà hãng thu thập số liệu về chi phí và về sản xuất."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 14,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Chi phí biến đổi bình quân (AVC) bằng",
+      "options": {
+        "A": "ATC + AFC.",
+        "B": "MC + AFC.",
+        "C": "TVC tính theo đơn vị lao động.",
+        "D": "MC ở điểm cực tiểu của AVC."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 15,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Nếu tại mức sản lượng sản xuất là 20 đơn vị, tổng chi phí là 2,4 triệu đồng và tổng chi phí cố định là 600 nghìn đồng, khi đó chi phí biến đổi bình quân bằng bao nhiêu?",
+      "options": {
+        "A": "500 nghìn đồng.",
+        "B": "400 nghìn đồng.",
+        "C": "80 nghìn đồng.",
+        "D": "90 nghìn đồng."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 16,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Khi đường chi phí cận biên nằm trên đường chi phí bình quân thì phát biểu nào là đúng?",
+      "options": {
+        "A": "Đường chi phí cận biên dốc xuống.",
+        "B": "Đường chi phí cận biên ở mức cực đại của nó.",
+        "C": "Đường chi phí bình quân ở mức tối thiểu của nó.",
+        "D": "Chi phí bình quân sẽ có xu hướng tăng lên khi tăng sản lượng sản xuất."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 17,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Tổng lợi nhuận đạt giá trị cực đại khi",
+      "options": {
+        "A": "doanh thu sản phẩm cận biên nhỏ hơn chi phí cận biên.",
+        "B": "doanh thu cận biên vượt quá chi phí cận biên.",
+        "C": "lợi nhuận cận biên bằng 0.",
+        "D": "lợi nhuận cận biên bằng với chi phí biên."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 18,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Trường hợp nào sau đây biểu thị hiệu suất tăng theo quy mô?",
+      "options": {
+        "A": "Tăng gấp 3 tất cả các đầu vào sẽ làm cho sản lượng tăng nhiều hơn 3 lần.",
+        "B": "Tăng gấp 3 tất cả các đầu vào trừ một đầu vào sẽ làm cho sản lượng tăng ít hơn 3 lần.",
+        "C": "Tăng gấp 3 tất cả các đầu vào sẽ làm cho sản lượng tăng 2 lần.",
+        "D": "Tăng gấp 3 tất cả các đầu vào sẽ làm cho sản lượng tăng ít hơn 3 lần."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 19,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Doanh thu cận biên được xác định bằng",
+      "options": {
+        "A": "sản lượng chia cho mức thay đổi trong tổng doanh thu.",
+        "B": "sản lượng chia cho tổng doanh thu.",
+        "C": "mức thay đổi trong sản lượng chia cho tổng doanh thu.",
+        "D": "mức thay đổi trong tổng doanh thu chia cho mức thay đổi của sản lượng."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 20,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Chi phí cận biên là",
+      "options": {
+        "A": "mức thay đổi trong chi phí biến đổi trung bình chia cho mức thay đổi trong lượng sản phẩm sản xuất.",
+        "B": "mức thay đổi trong tổng chi phí biến đổi chia cho mức thay đổi trong lượng sản phẩm sản xuất.",
+        "C": "giá trị tổng chi phí cho số sản lượng đã sản xuất.",
+        "D": "mức thay đổi trong tổng chi phí trung bình chia cho mức thay đổi trong lượng sản phẩm sản xuất."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 21,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Khi sản lượng tăng, tổng chi phí cố định sẽ",
+      "options": {
+        "A": "tăng.",
+        "B": "giảm.",
+        "C": "không đổi.",
+        "D": "giảm và sau đó tăng."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 22,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Chi phí cố định trong ngắn hạn là",
+      "options": {
+        "A": "những thanh toán trả cho một số yếu tố khả biến.",
+        "B": "các chi phí gắn với các đầu vào cố định.",
+        "C": "các chi phí gắn với các đầu vào cố định và không thay đổi theo mức sản lượng.",
+        "D": "các chi phí không thay đổi theo mức sản lượng."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 23,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Đường chi phí cố định bình quân là đường chi phí",
+      "options": {
+        "A": "luôn luôn dốc xuống về phía phải.",
+        "B": "tối thiểu ở điểm tối đa hoá lợi nhuận.",
+        "C": "tối thiểu ở điểm hoà vốn.",
+        "D": "cần thiết để xác định điểm đóng cửa."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 24,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Chi phí cố định bình quân (AFC) là giá trị nào?",
+      "options": {
+        "A": "TC - TVC.",
+        "B": "ATC - AVC.",
+        "C": "Điểm cực tiểu của ATC.",
+        "D": "AVC + MC."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 25,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Nếu Q = 1, 2, 3 đơn vị sản phẩm, chi phí tương ứng là 2 triệu đồng, 3 triệu đồng, 4 triệu đồng thì giá trị của MC lần lượt là bao nhiêu?",
+      "options": {
+        "A": "không đổi.",
+        "B": "giảm dần.",
+        "C": "tăng dần.",
+        "D": "2 triệu đồng, 1,5 đồng, 1,3 triệu đồng."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 26,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Khái niệm chi phí hiện khác với chi phí ẩn ở điểm nào?",
+      "options": {
+        "A": "Chi phí hiện là lãi suất và địa tô còn chi phí ẩn là chi phí cơ hội.",
+        "B": "Chi phí hiện là chi phí bỏ ra để trả cho các yếu tố sản xuất và chi phí ẩn là các ảnh hưởng hướng ngoại.",
+        "C": "Chi phí hiện là chi phí bỏ ra để trả cho các yếu tố sản xuất, được ghi rõ trong các chứng từ và chi phí ẩn hoàn toàn là chi phí cơ hội ẩn.",
+        "D": "Chi phí hiện là chi phí cơ hội và chi phí ẩn là lãi suất và địa tô."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 27,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Lựa chọn đầu vào của một hãng khi muốn thay đổi quy mô sản xuất trong ngắn hạn và trong dài hạn khác nhau ở đâu?",
+      "options": {
+        "A": "Trong ngắn hạn, hãng có cùng số lựa chọn đầu vào như trong dài hạn.",
+        "B": "Không có quan hệ giữa số lựa chọn đầu vào của hãng trong dài và ngắn hạn.",
+        "C": "Trong ngắn hạn, hãng có nhiều lựa chọn đầu vào hơn trong dài hạn.",
+        "D": "Trong ngắn hạn, hãng có ít lựa chọn đầu vào hơn trong dài hạn."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 28,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Tổng chi phí cố định của hãng là 100 nghìn USD, tổng chi phí biến đổi 200 nghìn USD và chi phí cố định bình quân là 20 nghìn USD. Vậy tổng chi phí của hãng là?",
+      "options": {
+        "A": "200 nghìn USD.",
+        "B": "320 nghìn USD.",
+        "C": "300 nghìn USD.",
+        "D": "100 nghìn USD."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 29,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Khi sản phẩm cận biên tăng, giá thuê đầu vào không đổi thì",
+      "options": {
+        "A": "Chi phí cận biên giảm xuống.",
+        "B": "Chi phí trung bình tăng lên.",
+        "C": "Chi phí trung bình giảm xuống.",
+        "D": "Chi phí cận biên tăng lên."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 30,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Khi chi phí trung bình lớn hơn chi phí cận biên thì nhận định nào là đúng?",
+      "options": {
+        "A": "Chi phí trung bình đang giảm xuống khi sản lượng tăng.",
+        "B": "Chi phí cận biên đang tăng lên khi sản lượng tăng.",
+        "C": "Chi phí trung bình đang tăng lên khi sản lượng tăng.",
+        "D": "Chi phí cận biên đang giảm xuống khi sản lượng tăng."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 31,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Khi tất cả các đầu vào thay đổi theo cùng tỷ lệ, hãng tăng thêm một lao động thì sản lượng sẽ tăng lên 4 đơn vị, chúng ta có thể kết luận rằng",
+      "options": {
+        "A": "sản phẩm cận biên của người công nhân gia tăng là 4 đơn vị.",
+        "B": "không xác định được sản phẩm cận biên.",
+        "C": "quy luật sản phẩm cận biên giảm dần đang phát huy tác dụng.",
+        "D": "sản phẩm trung bình của lao động là 4 đơn vị."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 32,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Một hãng sẽ không sản xuất ở mức sản lượng thỏa mãn MR = MC thì nhận định nào là nhận định đúng?",
+      "options": {
+        "A": "Hãng đang kiếm được lợi nhuận kế toán.",
+        "B": "Hãng đang kiếm được lợi nhuận kinh tế dương.",
+        "C": "Hãng đang kiếm được lợi nhuận kinh tế âm.",
+        "D": "Hãng chưa tối đa hóa được lợi nhuận."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 33,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Hãng chỉ tăng sản lượng để tăng lợi nhuận trong trường hợp?",
+      "options": {
+        "A": "MR > MC.",
+        "B": "MR > 0.",
+        "C": "MC = MR.",
+        "D": "MR < MC."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 34,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Điều kiện hãng lựa chọn đầu vào tối ưu để tối thiểu hóa chi phí là",
+      "options": {
+        "A": "sản phẩm cận biên của lao động bằng sản phẩm cận biên của vốn.",
+        "B": "chi phí cận biên bằng doanh thu cận biên.",
+        "C": "sản phẩm cận biên của vốn tính trên một đồng tiền thuê vốn bằng sản phẩm cận biên của lao động tính trên một đồng tiền thuê lao động khi sản xuất ra một mức sản lượng nhất định.",
+        "D": "chi phí sản xuất thấp nhất."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 35,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Một hãng đang ở mức sản lượng mà ở đó MC đi qua AVC, nhận định nào là đúng?",
+      "options": {
+        "A": "ATC đang tăng khi Q tăng.",
+        "B": "AVC đang tăng khi Q tăng.",
+        "C": "ATC đang giảm khi Q tăng.",
+        "D": "AVC đang giảm khi Q tăng."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 36,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Giả sử hãng đang tối đa hóa lợi nhuận, nếu chi phí cố định tăng lên, hãng đó muốn tiếp tục tối đa hoá lợi nhuận sẽ phải thực hiện chính sách gì?",
+      "options": {
+        "A": "Tăng sản lượng.",
+        "B": "Để cho giá và sản lượng không đổi.",
+        "C": "Giảm các chi phí biến đổi.",
+        "D": "Tăng giá sản phẩm bán ra."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 37,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Phương án nào trong các phương án sau đây là đúng?",
+      "options": {
+        "A": "ATC giảm hàm ý MC ở trên ATC khi tăng Q.",
+        "B": "MC nằm ở trên ATC hàm ý ATC đang tăng khi tăng Q.",
+        "C": "ATC nằm ở dưới MC hàm ý ATC đang giảm khi tăng Q.",
+        "D": "MC tăng hàm ý ATC tăng khi giảm Q."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 38,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Một hãng đang sản xuất ở mức sản lượng là 24 đơn vị và có tổng chi phí là 260 nghìn USD. Chi phí biên của hãng là:",
+      "options": {
+        "A": "Không thể xác định với thông tin trên.",
+        "B": "260 nghìn USD.",
+        "C": "10,83 nghìn USD.",
+        "D": "8,75 nghìn USD."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 39,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Nếu tổng chi phí của việc sản xuất 6 đơn vị là 48 triệu đồng và chi phí cận biên của đơn vị thứ 7 là 15 triệu đồng thì chi phí bình quân của 7 đơn vị là?",
+      "options": {
+        "A": "8 triệu đồng.",
+        "B": "42 triệu đồng.",
+        "C": "9 triệu đồng.",
+        "D": "33 triệu đồng."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 40,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Điều nào dưới đây KHÔNG ĐÚNG về sản phẩm bình quân của lao động APL (Xem hình)?",
+      "options": {
+        "A": "APL bằng độ dốc của đường nối từ gốc tọa độ đến một điểm trên đường tổng sản phẩm ứng với số lượng lao động tại điểm đó.",
+        "B": "APL bằng độ dốc của đường tổng sản phẩm.",
+        "C": "Giá trị APL đạt cực đại khi APL = MPL.",
+        "D": "APL được tính bằng tỉ số giữa tổng sản phẩm (hay còn gọi là tổng sản lượng) trên tổng đầu vào lao động L."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    },
+    {
+      "id": 41,
+      "chapter": "Chương 3",
+      "sourceChapter": "Chương 3",
+      "question": "Khi chi phí cận biên vượt quá doanh thu cận biên, một hãng muốn tối đa hoá lợi nhuận sẽ phải thực hiện chính sách nào?",
+      "options": {
+        "A": "Giảm sản lượng.",
+        "B": "Thuê thêm công nhân.",
+        "C": "Tăng sản lượng.",
+        "D": "Quyết định về sự an toàn thay cho tối đa hoá lợi nhuận."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết chi phí sản xuất chuẩn.",
+      "image": null
+    }
+  ]
+}

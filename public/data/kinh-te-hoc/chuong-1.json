@@ -1,0 +1,352 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kinh tế học - Chương 1: Giới thiệu về Kinh tế học",
+  "chapter": "Chương 1",
+  "totalQuestions": 23,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Kinh tế học có thể định nghĩa là",
+      "options": {
+        "A": "Cách kiếm tiền ở thị trường chứng khoán.",
+        "B": "Cách sử dụng các tài nguyên khan hiếm để sản xuất ra các hàng hoá dịch vụ và phân bổ các hàng hoá dịch vụ này cho các cá nhân trong xã hội một cách có hiệu quả.",
+        "C": "Cách làm tăng lượng tiền của gia đình.",
+        "D": "Giải thích các số liệu khan hiếm."
+      },
+      "answer": "B",
+      "explainAnswer": "Kinh tế học là khoa học nghiên cứu cách thức xã hội sử dụng các nguồn lực khan hiếm để sản xuất hàng hóa, dịch vụ và phân bổ chúng một cách hiệu quả cho các thành viên trong xã hội. Các phương án A, C liên quan đến tài chính cá nhân hoặc đầu tư, không phải định nghĩa của kinh tế học. D không chính xác.",
+      "image": null
+    },
+    {
+      "id": 2,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Vấn đề cơ bản của kinh tế học bao gồm",
+      "options": {
+        "A": "Sản xuất như thế nào? Sản xuất cho ai? Sản xuất cái gì?",
+        "B": "Sản xuất cái gì? Sản xuất như thế nào?",
+        "C": "Sản xuất như thế nào? Sản xuất cho ai?",
+        "D": "Sản xuất cho hiệu quả hơn."
+      },
+      "answer": "A",
+      "explainAnswer": "Ba vấn đề cơ bản của kinh tế học là: Sản xuất cái gì (what)? Sản xuất như thế nào (how)? và Sản xuất cho ai (for whom)? Đây là các câu hỏi trung tâm xuất phát từ sự khan hiếm nguồn lực.",
+      "image": null
+    },
+    {
+      "id": 3,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Kinh tế học là khoa học nghiên cứu điều gì?",
+      "options": {
+        "A": "Sử dụng các nguồn lực có hạn được nhằm thoả mãn những nhu cầu có hạn của con người.",
+        "B": "Một xã hội không phải lựa chọn cách sử dụng các nguồn lực.",
+        "C": "Cách thức xã hội sử dụng các nguồn lực khan hiếm có hiệu quả.",
+        "D": "Con người lựa chọn được việc sử dụng các nguồn lực vô hạn."
+      },
+      "answer": "C",
+      "explainAnswer": "Kinh tế học nghiên cứu cách thức xã hội sử dụng các nguồn lực khan hiếm một cách hiệu quả để thỏa mãn nhu cầu. Nguồn lực có hạn, nhu cầu vô hạn nên phải lựa chọn. A sai vì nhu cầu là vô hạn. B và D sai hoàn toàn.",
+      "image": null
+    },
+    {
+      "id": 4,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Nền kinh tế mà chính phủ đứng ra giải quyết các vấn đề kinh tế cơ bản là nền kinh tế:",
+      "options": {
+        "A": "chỉ huy.",
+        "B": "hỗn hợp.",
+        "C": "thị trường.",
+        "D": "truyền thống."
+      },
+      "answer": "A",
+      "explainAnswer": "Trong nền kinh tế chỉ huy (kế hoạch hóa tập trung), chính phủ quyết định các vấn đề cơ bản: sản xuất cái gì, như thế nào và cho ai. Nền kinh tế thị trường dựa vào cơ chế giá, hỗn hợp kết hợp cả hai, truyền thống dựa vào phong tục.",
+      "image": null
+    },
+    {
+      "id": 5,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Do các nguồn lực xung quanh chúng ta đều khan hiếm nên các nhà kinh tế học khuyên rằng:",
+      "options": {
+        "A": "phải thực hiện sự lựa chọn tối ưu.",
+        "B": "chính phủ phải phân bổ tài nguyên.",
+        "C": "phải tranh thủ khai thác và sử dụng.",
+        "D": "một số cá nhân phải mua ít đi."
+      },
+      "answer": "A",
+      "explainAnswer": "Vì nguồn lực khan hiếm, phải lựa chọn phương án sử dụng tối ưu (hiệu quả nhất). Không nhất thiết chính phủ phân bổ (B), cũng không khuyến khích khai thác bừa bãi (C).",
+      "image": null
+    },
+    {
+      "id": 6,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Các vấn đề cơ bản của kinh tế học bao gồm?",
+      "options": {
+        "A": "Sản xuất như thế nào? Sản xuất cho ai?",
+        "B": "Sản xuất cái gì và sản xuất cho hiệu quả hơn.",
+        "C": "Sản xuất như thế nào? Sản xuất cho ai? Sản xuất cái gì?",
+        "D": "Sản xuất cái gì và sản xuất cho ai?"
+      },
+      "answer": "C",
+      "explainAnswer": "Ba vấn đề kinh tế cơ bản là: What (sản xuất cái gì), How (như thế nào), For whom (cho ai).",
+      "image": null
+    },
+    {
+      "id": 7,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Khái niệm nào sau đây không thể lý giải bằng đường giới hạn khả năng sản xuất?",
+      "options": {
+        "A": "Chi phí cơ hội.",
+        "B": "Cung cầu.",
+        "C": "Sự khan hiếm.",
+        "D": "Quy luật chi phí cơ hội tăng dần."
+      },
+      "answer": "B",
+      "explainAnswer": "Đường PPF minh họa sự khan hiếm, chi phí cơ hội và quy luật chi phí cơ hội tăng dần (khi đường cong lồi). Cung cầu là khái niệm của thị trường, không được giải thích trực tiếp bởi PPF.",
+      "image": null
+    },
+    {
+      "id": 8,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Kinh tế học vi mô tập trung nghiên cứu kinh tế dưới góc độ nào?",
+      "options": {
+        "A": "Thị trường chứng khoán.",
+        "B": "Hành vi của người tiêu dùng và doanh nghiệp.",
+        "C": "Toàn bộ nền kinh tế.",
+        "D": "Chính phủ."
+      },
+      "answer": "B",
+      "explainAnswer": "Kinh tế học vi mô nghiên cứu hành vi của các tác nhân cá nhân: hộ gia đình, doanh nghiệp trên các thị trường riêng lẻ. Kinh tế vĩ mô nghiên cứu toàn bộ nền kinh tế (C).",
+      "image": null
+    },
+    {
+      "id": 9,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Cách tiếp cận một cách khoa học và khách quan để nghiên cứu các quan hệ kinh tế là?",
+      "options": {
+        "A": "Kinh tế học chuẩn tắc.",
+        "B": "Kinh tế chính trị.",
+        "C": "Kinh tế học vĩ mô.",
+        "D": "Kinh tế học thực chứng."
+      },
+      "answer": "D",
+      "explainAnswer": "Kinh tế học thực chứng (positive economics) nghiên cứu khách quan 'cái gì đang xảy ra' hoặc 'sẽ xảy ra nếu...', dựa trên dữ liệu và kiểm chứng. Kinh tế học chuẩn tắc (normative) liên quan đến giá trị, 'nên làm gì'.",
+      "image": null
+    },
+    {
+      "id": 10,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Môn khoa học nghiên cứu chi tiết hành vi ứng xử của các tác nhân trên các thị trường là môn nào?",
+      "options": {
+        "A": "Kinh tế học vĩ mô.",
+        "B": "Kinh tế học chuẩn tắc.",
+        "C": "Kinh tế học thực chứng.",
+        "D": "Kinh tế học vi mô."
+      },
+      "answer": "D",
+      "explainAnswer": "Kinh tế học vi mô nghiên cứu hành vi của các tác nhân (hộ gia đình, doanh nghiệp) trên các thị trường cụ thể.",
+      "image": null
+    },
+    {
+      "id": 11,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Trong nền kinh tế thị trường, động cơ làm việc nhiều hơn và sản xuất hiệu quả hơn được tạo ra bởi?",
+      "options": {
+        "A": "quyền sở hữu tư nhân.",
+        "B": "động cơ lợi nhuận.",
+        "C": "điều tiết của chính phủ.",
+        "D": "động cơ lợi nhuận và quyền sở hữu tư nhân."
+      },
+      "answer": "D",
+      "explainAnswer": "Trong kinh tế thị trường, quyền sở hữu tư nhân và động cơ lợi nhuận là hai yếu tố chính thúc đẩy cá nhân và doanh nghiệp làm việc, đầu tư và sản xuất hiệu quả.",
+      "image": null
+    },
+    {
+      "id": 12,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Một môn khoa học nghiên cứu hành vi ứng xử của các tác nhân (bao gồm các doanh nghiệp, hộ gia đình, các cá nhân) trên các thị trường là môn",
+      "options": {
+        "A": "Kinh tế học thực chứng.",
+        "B": "Kinh tế học vĩ mô.",
+        "C": "Kinh tế học chuẩn tắc.",
+        "D": "Kinh tế học vi mô."
+      },
+      "answer": "D",
+      "explainAnswer": "Đây chính là định nghĩa của kinh tế học vi mô.",
+      "image": null
+    },
+    {
+      "id": 13,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Yếu tố nào sau đây làm đường giới hạn khả năng sản xuất mở rộng?",
+      "options": {
+        "A": "Tiến bộ công nghệ.",
+        "B": "Số lượng người mua tăng.",
+        "C": "Người tiêu dùng tăng thu nhập.",
+        "D": "Giá của hàng hóa tăng."
+      },
+      "answer": "A",
+      "explainAnswer": "Đường PPF mở rộng (dịch chuyển ra ngoài) khi có tiến bộ công nghệ, tăng nguồn lực (lao động, vốn, tài nguyên). Các yếu tố cầu (B, C, D) không ảnh hưởng đến PPF.",
+      "image": null
+    },
+    {
+      "id": 14,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Một hàng hoá có giá thị trường bằng 0 được coi là vật phẩm:",
+      "options": {
+        "A": "khan hiếm.",
+        "B": "phi kinh tế.",
+        "C": "thứ cấp.",
+        "D": "không một ai có nhu cầu về nó."
+      },
+      "answer": "B",
+      "explainAnswer": "Hàng hóa phi kinh tế (free goods) có giá bằng 0 vì cung lớn hơn cầu ở mọi mức giá dương (ví dụ không khí sạch ở nhiều nơi). Hàng khan hiếm (economic goods) có giá dương.",
+      "image": null
+    },
+    {
+      "id": 15,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Đường giới hạn khả năng sản xuất cong lồi so với gốc tọa độ thể hiện",
+      "options": {
+        "A": "lợi ích kinh tế tăng dần.",
+        "B": "chi phí cơ hội tăng.",
+        "C": "nguồn lực khan hiếm.",
+        "D": "sản xuất chưa hiệu quả."
+      },
+      "answer": "B",
+      "explainAnswer": "Đường PPF cong lồi (bowed-out) phản ánh quy luật chi phí cơ hội tăng dần: khi chuyển thêm nguồn lực sang sản xuất một hàng hóa, chi phí cơ hội tăng vì nguồn lực không đồng nhất về năng suất.",
+      "image": null
+    },
+    {
+      "id": 16,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Khái niệm sự khan hiếm nguồn lực trong kinh tế học đề cập đến?",
+      "options": {
+        "A": "Chưa xác định được tài nguyên vô tận.",
+        "B": "Độc quyền hóa việc cung ứng hàng hóa.",
+        "C": "Các loại hàng hóa có thể không vô tận.",
+        "D": "Nguồn lực mà ngay tại giá bằng không thì lượng cầu vẫn lớn hơn lượng cung sẵn có."
+      },
+      "answer": "D",
+      "explainAnswer": "Sự khan hiếm nghĩa là tại mức giá bằng 0, lượng cầu vượt quá lượng cung sẵn có. Đây là định nghĩa chuẩn của scarcity trong kinh tế học.",
+      "image": null
+    },
+    {
+      "id": 17,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Trong nền kinh tế nào Chính phủ xác định cái gì được sản xuất ra, sản xuất như thế nào và sản xuất cho ai?",
+      "options": {
+        "A": "Nền kinh tế kế hoạch hóa tập trung (kinh tế chỉ huy)",
+        "B": "Nền kinh tế thị trường",
+        "C": "Nền kinh tế truyền thống",
+        "D": "Nền kinh tế hỗn hợp"
+      },
+      "answer": "A",
+      "explainAnswer": "Trong nền kinh tế chỉ huy/kế hoạch hóa tập trung, chính phủ quyết định toàn bộ ba vấn đề cơ bản.",
+      "image": null
+    },
+    {
+      "id": 18,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Trong kinh tế học, lợi ích cá nhân hợp lý có nghĩa là gì?",
+      "options": {
+        "A": "Chủ doanh nghiệp mong muốn tối đa hóa lợi nhuận.",
+        "B": "Cá nhân đó mong muốn với chi phí thấp nhất mà đạt được lợi ích cao nhất",
+        "C": "Mức lạm phát ảnh hưởng đến sự lựa chọn của từng cá nhân.",
+        "D": "Thu nhập được phân phối công bằng giữa các công dân."
+      },
+      "answer": "B",
+      "explainAnswer": "Lợi ích cá nhân hợp lý (rational self-interest) nghĩa là cá nhân cố gắng tối đa hóa lợi ích với chi phí thấp nhất có thể (hoặc đạt lợi ích cao nhất với chi phí cho trước).",
+      "image": null
+    },
+    {
+      "id": 19,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Các kết hợp hàng hóa nằm phía trong đường giới hạn khả năng sản xuất là",
+      "options": {
+        "A": "phương án sản xuất hiệu quả.",
+        "B": "các phương án sản xuất không hiệu quả.",
+        "C": "phân bổ nguồn lực hiệu quả.",
+        "D": "tiêu dùng không hiệu quả."
+      },
+      "answer": "B",
+      "explainAnswer": "Các điểm nằm bên trong PPF thể hiện sản xuất không hiệu quả (có thể tăng sản lượng một hàng hóa mà không giảm hàng hóa khác). Điểm trên PPF là hiệu quả.",
+      "image": null
+    },
+    {
+      "id": 20,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Tất cả những phương án sản xuất nằm miền bên ngoài của đường PPF",
+      "options": {
+        "A": "là những phương án không thể đạt tới với nguồn lực và kỹ thuật hiện có.",
+        "B": "thể hiện những điểm không hiệu quả của nền kinh tế.",
+        "C": "là những phương án có thể đạt tới với nguồn lực và kỹ thuật hiện có.",
+        "D": "thể hiện những điểm hiệu quả của nền kinh tế."
+      },
+      "answer": "A",
+      "explainAnswer": "Điểm nằm ngoài PPF là không thể đạt được với nguồn lực và công nghệ hiện tại.",
+      "image": null
+    },
+    {
+      "id": 21,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Chủ đề mang tính trọng tâm nhất mà kinh tế học nghiên cứu là gì?",
+      "options": {
+        "A": "Sự khan hiếm nguồn lực.",
+        "B": "Cơ chế giá cả.",
+        "C": "Tối đa hoá lợi nhuận.",
+        "D": "Tiền tệ."
+      },
+      "answer": "A",
+      "explainAnswer": "Sự khan hiếm là vấn đề gốc rễ, trung tâm nhất của kinh tế học. Mọi khái niệm khác đều xuất phát từ đó.",
+      "image": null
+    },
+    {
+      "id": 22,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Khan hiếm nguồn lực là do",
+      "options": {
+        "A": "tạo ra nguồn năng lượng mới không ít hơn so với sự giảm của tài nguyên thiên nhiên",
+        "B": "nguồn lực là có hạn trong khi nhu cầu về hàng hóa hay dịch vụ là vô hạn.",
+        "C": "nhu cầu của con người quá lớn.",
+        "D": "khai thác cạn kiệt tài nguyên thiên nhiên."
+      },
+      "answer": "B",
+      "explainAnswer": "Định nghĩa chuẩn: nguồn lực hữu hạn đối mặt với nhu cầu vô hạn dẫn đến khan hiếm.",
+      "image": null
+    },
+    {
+      "id": 23,
+      "chapter": "Chương 1",
+      "sourceChapter": "Chương 1",
+      "question": "Nền kinh tế được gọi là hiệu quả khi",
+      "options": {
+        "A": "các phương án sản xuất nằm ngoài đường giới hạn khả năng sản xuất.",
+        "B": "lực lượng lao động làm việc không hiệu quả.",
+        "C": "có thể sản xuất nhiều hơn một loại hàng hóa trong khi không phải giảm bớt sản xuất một loại hàng hóa khác.",
+        "D": "các phương án sản xuất nằm trên đường giới hạn khả năng sản xuất."
+      },
+      "answer": "D",
+      "explainAnswer": "Hiệu quả sản xuất đạt được khi nền kinh tế sản xuất trên đường PPF (không thể tăng sản lượng một hàng hóa mà không giảm hàng hóa khác).",
+      "image": null
+    }
+  ]
+}

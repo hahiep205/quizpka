@@ -1,0 +1,652 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kinh tế học - Chương 4: Cạnh tranh hoàn hảo và Độc quyền",
+  "chapter": "Chương 4",
+  "totalQuestions": 43,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Một hãng cạnh tranh hoàn hảo sản xuất trong ngắn hạn có hàm tổng chi phí TC = Q2 + Q + 9 (đơn vị tính là triệu USD). Sản lượng và mức giá hòa vốn của hãng tương ứng là bao nhiêu?",
+      "options": {
+        "A": "5 đơn vị sản phẩm và 11 triệu USD.",
+        "B": "10 đơn vị sản phẩm và 21 triệu USD",
+        "C": "3 đơn vị sản phẩm và 7 triệu USD.",
+        "D": "7 đơn vị sản phẩm và 15 triệu USD."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 2,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Nếu một hãng cạnh tranh hoàn hảo thuê thêm 1 đơn vị lao động và lao động này làm ra được 20 sản phẩm/ngày. Giá một đơn vị sản phẩm là 5 triệu USD. Sản phẩm doanh thu cận biên của đơn vị lao động này trong một ngày là?",
+      "options": {
+        "A": "100 triệu USD.",
+        "B": "4 triệu USD.",
+        "C": "20 triệu USD.",
+        "D": "25 triệu USD."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 3,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Nếu đường cầu (D) là đường thẳng dốc xuống thì đường MR có dạng như thế nào?",
+      "options": {
+        "A": "MR cao hơn P.",
+        "B": "MR dương.",
+        "C": "MR không đổi.",
+        "D": "MR sẽ dốc xuống nhưng với độ dốc lớn hơn đường cầu."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 4,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Trong một ngành có chi phí tăng, đường cung dài hạn của ngành là đường",
+      "options": {
+        "A": "nằm ngang.",
+        "B": "dốc lên.",
+        "C": "dịch chuyển.",
+        "D": "dốc xuống."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 5,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Nếu hãng tự do cạnh tranh phải bán sản phẩm của mình ở mức giá thị trường, bất kể giá thị trường đó là bao nhiêu, và muốn thu được lợi nhuận cực đại thì nó phải thực hiện chính sách nào?",
+      "options": {
+        "A": "Không bao giờ để cho chi phí cận biên bằng giá, vì đó là điểm làm cho lợi nhuận bằng không.",
+        "B": "Cố gắng sản xuất và bán mức sản lượng ở đó chi phí cận biên đạt mức tối thiểu.",
+        "C": "Cố gắng sản xuất và bán mức sản lượng ở đó chi phí cận biên và bằng giá thị trường.",
+        "D": "Cố gắng bán tất cả số lượng mà nó có thể sản xuất."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 6,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Một hãng cạnh tranh hoàn hảo sản xuất trong ngắn hạn có hàm tổng chi phí TC = Q2 + Q + 64. Sản lượng và mức giá hòa vốn của hãng tương ứng là bao nhiêu?",
+      "options": {
+        "A": "9 và 19.",
+        "B": "5 và 11.",
+        "C": "8 và 17.",
+        "D": "10 và 21."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 7,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Điểm đóng cửa sản xuất trong ngắn hạn là điểm mà ở đó?",
+      "options": {
+        "A": "Chi phí biến đổi trung bình nhỏ nhất và bằng giá thị trường.",
+        "B": "Chi phí cố định trung bình bằng chi phí cận biên.",
+        "C": "Tổng chi phí trung bình bằng chi phí cận biên.",
+        "D": "Giá bằng chi phí cận biên."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 8,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Đường cầu của một hãng cạnh tranh hoàn hảo có dạng là một đường",
+      "options": {
+        "A": "dốc xuống.",
+        "B": "nằm ngang.",
+        "C": "thẳng đứng.",
+        "D": "dốc lên."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 9,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Điểm đóng cửa sản xuất trong ngắn hạn là điểm mà ở đó:",
+      "options": {
+        "A": "chi phí cố định trung bình bằng chi phí cận biên.",
+        "B": "tổng chi phí trung bình bằng chi phí cận biên.",
+        "C": "chi phí biến đổi trung bình nhỏ nhất bằng giá thị trường.",
+        "D": "giá bằng chi phí cận biên."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 10,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Một hãng cạnh tranh hoàn hảo sản xuất trong ngắn hạn có hàm tổng chi phí: TC = 2Q2 + 4Q + 200 (triệu USD). Với mức giá thị trường P = 24 triệu USD thì lợi nhuận tối đa của hãng là bao nhiêu?",
+      "options": {
+        "A": "40 triệu USD.",
+        "B": "-100 triệu USD.",
+        "C": "-150 triệu USD.",
+        "D": "70 triệu USD."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 11,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Một hãng cạnh tranh hoàn hảo sản xuất trong ngắn hạn có hàm tổng chi phí TC = Q2 + Q + 49 (đơn vị tính là triệu USD). Sản lượng và mức giá hòa vốn của hãng tương ứng là bao nhiêu?",
+      "options": {
+        "A": "5 đơn vị sản phẩm và 11 triệu USD.",
+        "B": "10 đơn vị sản phẩm và 21 triệu USD.",
+        "C": "9 đơn vị sản phẩm và 19 triệu USD.",
+        "D": "7 đơn vị sản phẩm và 15 triệu USD."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 12,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Một hãng cạnh tranh hoàn hảo sản xuất trong ngắn hạn có hàm tổng chi phí TC = Q2 + Q + 81 triệu USD. Sản lượng và mức giá hòa vốn của hãng tương ứng là?",
+      "options": {
+        "A": "7 đơn vị sản phẩm và 15 triệu USD.",
+        "B": "10 đơn vị sản phẩm và 21 triệu USD.",
+        "C": "5 đơn vị sản phẩm và 11 triệu USD.",
+        "D": "9 đơn vị sản phẩm và 19 triệu USD."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 13,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Doanh thu cận biên",
+      "options": {
+        "A": "là lợi nhuận mà hãng nhận được từ bán thêm một đơn vị hàng hóa.",
+        "B": "bằng giá đối với hãng cạnh tranh hoàn hảo và là doanh thu mà hãng nhận được từ bán thêm một đơn vị hàng hóa.",
+        "C": "bằng giá đối với hãng cạnh tranh độc quyền.",
+        "D": "là lợi nhuận bổ sung mà hãng thu được khi bán thêm một đơn vị sản phẩm sau khi đã tính tất cả các chi phí cơ hội."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 14,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Hãng độc quyền là những hãng",
+      "options": {
+        "A": "đặt mức giá và sản lượng ở bất kỳ mức nào nó muốn.",
+        "B": "có doanh thu cận biên dưới mức giá.",
+        "C": "chấp nhận giá.",
+        "D": "phải tính đến chiến lược của những đối thủ cạnh tranh tiềm năng."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 15,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Nếu một hãng cạnh tranh hoàn hảo thuê thêm 1 đơn vị lao động và lao động này làm ra được 20 sản phẩm/ngày. Giá bán là 10 triệu đồng/sản phẩm. Sản phẩm doanh thu cận biên của đơn vị lao động này trong một ngày là bao nhiêu?",
+      "options": {
+        "A": "50 triệu đồng.",
+        "B": "40 triệu đồng.",
+        "C": "200 triệu đồng.",
+        "D": "100 triệu đồng."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 16,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Nếu một hãng cung ứng toàn bộ thị trường thì cấu trúc của thị trường thuộc dạng nào?",
+      "options": {
+        "A": "Cạnh tranh hoàn hảo.",
+        "B": "Độc quyền nhóm.",
+        "C": "Cạnh tranh độc quyền.",
+        "D": "Độc quyền thuần túy."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 17,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Nếu một hãng cạnh tranh hoàn hảo thuê thêm 1 đơn vị lao động và lao động này làm ra được 20 sản phẩm/ngày. Giá bán là 8 triệu đồng/sản phẩm. Sản phẩm doanh thu cận biên của đơn vị lao động này trong một ngày là bao nhiêu?",
+      "options": {
+        "A": "160 triệu đồng.",
+        "B": "50 triệu đồng.",
+        "C": "40 triệu đồng.",
+        "D": "200 triệu đồng."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 18,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Một hãng cạnh tranh hoàn hảo sản xuất trong ngắn hạn có hàm tổng chi phí: TC = 2Q2 + 4Q + 40. Với mức giá thị trường P = 24 triệu đồng thì lợi nhuận tối đa của hãng là bao nhiêu?",
+      "options": {
+        "A": "-150 triệu đồng.",
+        "B": "10 triệu đồng.",
+        "C": "70 triệu đồng.",
+        "D": "-100 triệu đồng."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 19,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Tính kinh tế của quy mô (còn gọi hiệu suất quy mô) đề cập đến vấn đề nào?",
+      "options": {
+        "A": "Đặt các giá khác nhau cho các khách hàng khác nhau.",
+        "B": "Khi sản xuất ra các sản phẩm khác nhau bằng cùng một nhà máy và máy móc thiết bị thì chi phí trung bình thấp hơn.",
+        "C": "Một yếu tố nào đó dựng lên các rào cản gia nhập đối với các đối thủ cạnh tranh mới.",
+        "D": "Khi sản lượng tăng chi phí trung bình trong dài hạn giảm."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 20,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Trong mô hình cạnh tranh hoàn hảo, một hãng đặt giá cao hơn mức giá thị trường thì hãng sẽ",
+      "options": {
+        "A": "không mất khách hàng nếu giá của nó bằng chi phí cận biên của nó.",
+        "B": "mất dần một ít khách hàng của mình.",
+        "C": "mất tất cả khách hàng của mình.",
+        "D": "có thể giữ được khách hàng của mình nếu chất lượng hàng hóa của mình cao hơn của những đối thủ cạnh tranh khác."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 21,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Hãng cạnh tranh hoàn hảo có tổng chi phí bình quân là ATC = 3Q, với mức giá thị trường là 24 triệu đồng, lợi nhuận tối đa của hãng là bao nhiêu?",
+      "options": {
+        "A": "48 triệu đồng.",
+        "B": "35 triệu đồng.",
+        "C": "24 triệu đồng.",
+        "D": "33 triệu đồng."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 22,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Nếu hãng độc quyền muốn tối đa hóa lợi nhuận thì hãng phải làm điều gì?",
+      "options": {
+        "A": "Tối đa hóa doanh thu.",
+        "B": "Chọn mức sản lượng nào có chi phí TB ở mức tối thiểu.",
+        "C": "Tối đa hóa lợi nhuận tính theo đơn vị sản phẩm.",
+        "D": "Lựa chọn sản lượng tối ưu thỏa mãn MR = MC."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 23,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Nếu đường cầu của hãng là đường nằm ngang thì doanh thu cận biên của hãng",
+      "options": {
+        "A": "bằng giá của sản phẩm.",
+        "B": "nhỏ hơn giá của sản phẩm.",
+        "C": "lớn hơn giá của sản phẩm.",
+        "D": "lớn hơn, bằng hoặc nhỏ hơn giá của sản phẩm phụ thuộc vào các hoàn cảnh cụ thể."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 24,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Khi giá lớn hơn mức chi phí biến đổi trung bình tối thiểu và nhỏ hơn chi phí bình quân tối thiểu, hãng cạnh tranh hoàn hảo sẽ",
+      "options": {
+        "A": "rời bỏ thị trường.",
+        "B": "gia nhập thị trường.",
+        "C": "tiếp tục sản xuất để tối thiểu hóa lỗ.",
+        "D": "đóng cửa sản xuất nhưng không rời bỏ."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 25,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Trong ngành cạnh tranh hoàn hảo, khi lợi nhuận dài hạn giảm xuống bằng 0, điều này hàm ý:",
+      "options": {
+        "A": "giá bằng mức tối thiểu của đường chi phí biến đổi trung bình.",
+        "B": "doanh thu vừa đủ để bù đắp tất cả chi phí, bao gồm cả chi phí cơ hội của tư bản tài chính đã đầu tư.",
+        "C": "doanh thu vừa đủ để bù đắp các chi phí biến đổi.",
+        "D": "lợi nhuận kế toán bằng không."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 26,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Hãng cạnh tranh hoàn hảo có tổng chi phí bình quân là ATC = 3Q (đơn vị tính là triệu USD). Với mức giá thị trường là 18 triệu USD, lợi nhuận tối đa của hãng là bao nhiêu?",
+      "options": {
+        "A": "24 triệu USD.",
+        "B": "35 triệu USD.",
+        "C": "27 triệu USD.",
+        "D": "33 triệu USD."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 27,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Hãng cạnh tranh hoàn hảo có tổng chi phí bình quân là ATC = 5Q, với mức giá thị trường là 60 triệu đồng, lợi nhuận tối đa của hãng là bao nhiêu?",
+      "options": {
+        "A": "180 triệu đồng.",
+        "B": "120 triệu đồng.",
+        "C": "450 triệu đồng.",
+        "D": "150 triệu đồng."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 28,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Một hãng độc quyền sản xuất ở mức doanh thu cận biên vượt quá chi phí cận biên, nhận định nào là đúng?",
+      "options": {
+        "A": "Hãng này đang tạo ra lợi nhuận kinh tế.",
+        "B": "Hãng này có thể tăng lợi nhuận bằng cách giảm sản lượng.",
+        "C": "Hãng này đang kiếm được lợi nhuận kinh tế âm (thua lỗ).",
+        "D": "Hãng này có thể tăng lợi nhuận bằng cách tăng sản lượng."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 29,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Khi các nhà kinh tế thúc giục chính phủ loại bỏ độc quyền bán, họ làm thế chủ yếu nhằm mục đích:",
+      "options": {
+        "A": "ngăn chặn không cho giảm số các hãng nhỏ.",
+        "B": "ngăn chặn sự tăng trưởng của doanh nghiệp lớn.",
+        "C": "bảo vệ cạnh tranh trong nền kinh tế.",
+        "D": "mở rộng những dịch vụ công cộng có tính kinh tế của quy mô."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 30,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "So sánh với thị trường cạnh tranh hoàn hảo, mức giá và sản lượng thị trường cạnh tranh không hoàn hảo sẽ như thế nào?",
+      "options": {
+        "A": "Giá cao hơn và sản lượng nhiều hơn.",
+        "B": "Giá thấp hơn và sản lượng cao hơn.",
+        "C": "Giá cao hơn và sản lượng thấp hơn.",
+        "D": "Giá thấp hơn và sản lượng thấp hơn."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 31,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Trong thị trường độc quyền, nhận định nào là đúng?",
+      "options": {
+        "A": "Không thể xác định được hình dạng đường cầu.",
+        "B": "Việc tăng giá không dẫn đến một sự suy giảm trong số lượng cầu.",
+        "C": "Đường doanh thu cận biên dốc xuống.",
+        "D": "Đường cầu của thị trường ở bên trên và song song với đường chi phí biên."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 32,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "So với hãng cạnh tranh hoàn hảo, nhận định nào là đúng về hãng độc quyền bán thuần túy?",
+      "options": {
+        "A": "Bán ít sản lượng hơn.",
+        "B": "Đặt giá cao hơn.",
+        "C": "Bán nhiều sản lượng hơn.",
+        "D": "Đặt giá cao hơn và bán ít sản lượng hơn."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 33,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Một hãng độc quyền thuần tuý sản xuất ra một sản phẩm không có sản phẩm thay thế gần và rào cản gia nhập ngành là:",
+      "options": {
+        "A": "đáng kể.",
+        "B": "không đáng kể.",
+        "C": "không có",
+        "D": "chưa chinh xác."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 34,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Một hãng cạnh tranh hoàn hảo sẽ không ở trong trạng thái cân bằng dài hạn khi?",
+      "options": {
+        "A": "Lợi nhuận kế toán bằng với chi phí cơ hội của vốn.",
+        "B": "Lợi nhuận kinh tế không bằng không (0).",
+        "C": "Giá không thấp hơn so với giá trước đây.",
+        "D": "Giá vượt quá chi phí biến đổi trung bình."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 35,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Một hãng sẽ gia nhập thị trường khi",
+      "options": {
+        "A": "giá thị trường lớn hơn chi phí trung bình tối thiểu của hãng.",
+        "B": "giá bằng chi phí cận biên.",
+        "C": "hãng có thể thu được doanh thu lớn hơn các chi phí biến đổi.",
+        "D": "giá lớn hơn mức tối thiểu của đường chi phí biến đổi trung bình."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 36,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Một hãng độc quyền đang sản xuất ở mức doanh thu cận biên bằng với chi phí biên và bằng tổng chi phí bình quân (ATC), lợi nhuận kinh tế của hãng này là:",
+      "options": {
+        "A": "dương.",
+        "B": "âm.",
+        "C": "không xác định.",
+        "D": "Zero."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 37,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Đường cung dài hạn của ngành có hiệu suất không đổi theo quy mô là một đường",
+      "options": {
+        "A": "không xác định được vị trí.",
+        "B": "nằm ngang.",
+        "C": "dốc lên.",
+        "D": "dốc xuống."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 38,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Hãng cạnh tranh hoàn hảo có tổng chi phí bình quân là ATC = 3Q (triệu USD/sản phẩm). Với mức giá thị trường là 36 triệu USD, lợi nhuận tối đa của hãng là bao nhiêu?",
+      "options": {
+        "A": "108 triệu USD.",
+        "B": "33 triệu USD.",
+        "C": "29 triệu USD.",
+        "D": "65 triệu USD."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 39,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Hãng cạnh tranh hoàn hảo có tổng chi phí bình quân là ATC = 5Q (triệu USD). Với mức giá thị trường là 30 triệu USD, lợi nhuận tối đa của hãng là bao nhiêu?",
+      "options": {
+        "A": "45 triệu USD.",
+        "B": "35 triệu USD.",
+        "C": "40 triệu USD.",
+        "D": "55 triệu USD."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 40,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Trong thị trường cạnh tranh hoàn hảo, hãng sẽ không nên đóng cửa sản xuất khi:",
+      "options": {
+        "A": "giá thấp hơn mức tối thiểu của đường chi phí trung bình.",
+        "B": "lợi nhuận kinh tế giảm xuống dưới không.",
+        "C": "giá cao hơn mức tối thiểu của đường chi phí biến đổi trung bình.",
+        "D": "giá thấp hơn mức tối thiểu của đường chi phí biến đổi trung bình."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 41,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Nhận định nào sau đây là đúng?",
+      "options": {
+        "A": "Đường cung độc quyền là phần của đường chi phí cận biên nằm trên mức chi phí biến đổi trung bình tối thiểu.",
+        "B": "Hãng độc quyền không có đường cung vì lượng cung ở một mức giá cụ thể phụ thuộc vào đường cầu về sản phẩm của hãng độc quyền đó.",
+        "C": "Đường cung độc quyền là kết quả của mối quan hệ một - một giữa giá và lượng.",
+        "D": "Nhà độc quyền không có đường cung vì đường chi phí cận biên (của nhà độc quyền) thay đổi đáng kể theo thời gian."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 42,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Để nhận lợi nhuận tối đa, hãng độc quyền không sản xuất tại mức sản lượng mà ở đó: P = MC vì:",
+      "options": {
+        "A": "đường cầu thị trường hoàn toàn co giãn (nằm ngang).",
+        "B": "nhà nước không cho phép.",
+        "C": "hãng không có sức mạnh thị trường.",
+        "D": "đường doanh thu cận biên nằm dưới đường cầu nên P > MR."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    },
+    {
+      "id": 43,
+      "chapter": "Chương 4",
+      "sourceChapter": "Chương 4",
+      "question": "Hãng Y là độc quyền, hãng này đang bán hàng ở mức giá 4 triệu USD. Chi phí cận biên là 3 triệu USD và độ co dãn theo giá của cầu là -0,6. Để tối đa hóa lợi nhuận, hãng nên",
+      "options": {
+        "A": "phải giảm giá.",
+        "B": "phải tăng sản lượng.",
+        "C": "tối đa hoá lợi nhuận.",
+        "D": "phải giảm sản lượng."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo lý thuyết cạnh tranh hoàn hảo và độc quyền chuẩn.",
+      "image": null
+    }
+  ]
+}

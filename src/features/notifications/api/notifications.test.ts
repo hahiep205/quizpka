@@ -124,9 +124,11 @@ describe("notification batches API", () => {
   it("pages batch recipients by UUID in pages of 50 and maps read timestamps", async () => {
     rpc.mockResolvedValue({ data: [{ id: "user-b", display_name: null, email: null, read_at: createdAt }], error: null })
     await expect(fetchNotificationBatchRecipients(7, "user-a")).resolves.toEqual([{ id: "user-b", displayName: null, email: null, readAt: createdAt }])
-    expect(rpc).toHaveBeenLastCalledWith("list_notification_batch_recipients", { p_batch_id: 7, p_after_id: "user-a", p_limit: 50 })
+    expect(rpc).toHaveBeenLastCalledWith("list_notification_batch_recipients", { p_batch_id: 7, p_after_id: "user-a", p_limit: 50, p_read_only: true })
     await fetchNotificationBatchRecipients(7)
-    expect(rpc).toHaveBeenLastCalledWith("list_notification_batch_recipients", { p_batch_id: 7, p_after_id: null, p_limit: 50 })
+    expect(rpc).toHaveBeenLastCalledWith("list_notification_batch_recipients", { p_batch_id: 7, p_after_id: null, p_limit: 50, p_read_only: true })
+    await fetchNotificationBatchRecipients(7, undefined, false)
+    expect(rpc).toHaveBeenLastCalledWith("list_notification_batch_recipients", { p_batch_id: 7, p_after_id: null, p_limit: 50, p_read_only: false })
   })
 
   it("maps recipient search pagination and keeps matched and active totals distinct", async () => {

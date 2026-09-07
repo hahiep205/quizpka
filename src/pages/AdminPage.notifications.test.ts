@@ -118,12 +118,12 @@ describe("admin batch notifications", () => {
     expect(api.history).toHaveBeenLastCalledWith({ createdAt: batch(30).createdAt, id: 30 })
     fireEvent.click(screen.getByRole("button", { name: "Batch 31" })); await tick()
     expect(api.details).toHaveBeenLastCalledWith(31, undefined)
-    fireEvent.click(screen.getByRole("button", { name: "Tải thêm người nhận" })); await tick()
+    fireEvent.click(screen.getByRole("button", { name: "Tải thêm người đọc" })); await tick()
     expect(api.details).toHaveBeenLastCalledWith(31, "user-49")
     expect(screen.getByText(/Details failed/)).toBeTruthy()
     fireEvent.click(screen.getByRole("button", { name: "Thử lại" })); await tick()
     expect(api.details).toHaveBeenLastCalledWith(31, "user-49")
-    expect(screen.queryByRole("button", { name: "Tải thêm người nhận" })).toBeNull()
+    expect(screen.queryByRole("button", { name: "Tải thêm người đọc" })).toBeNull()
   })
 
   it("debounces batch updates and focus without unrelated requests, and cleans up on exit", async () => {
@@ -168,7 +168,7 @@ describe("admin batch notifications", () => {
     await open()
     fireEvent.click(screen.getByRole("button", { name: "Tải thêm lịch sử" })); await tick()
     fireEvent.click(screen.getByRole("button", { name: "Batch 31" })); await tick()
-    fireEvent.click(screen.getByRole("button", { name: "Tải thêm người nhận" })); await tick()
+    fireEvent.click(screen.getByRole("button", { name: "Tải thêm người đọc" })); await tick()
     expect(api.metadata).toHaveBeenCalledTimes(1)
     expect(screen.getByText("Last page user")).toBeTruthy()
     fill(); await tick()

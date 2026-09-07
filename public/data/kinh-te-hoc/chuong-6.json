@@ -1,0 +1,307 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Kinh tế học - Chương 6: Mô hình Tổng chi tiêu (AE-Y) và Số nhân",
+  "chapter": "Chương 6",
+  "totalQuestions": 20,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Điều nào sau đây đúng khi nói về đường tổng chi tiêu (trong mô hình AE-Y)?",
+      "options": {
+        "A": "Là đường dốc lên và có độ dốc nhỏ hơn 1.",
+        "B": "Là đường dốc xuống và có độ dốc lớn hơn 1.",
+        "C": "Là đường dốc lên và có độ dốc lớn hơn 1.",
+        "D": "là đường dốc xuống và có độ dốc nhỏ hơn 1."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo mô hình AE-Y và số nhân chuẩn.",
+      "image": null
+    },
+    {
+      "id": 2,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Điểm khác nhau giữa số nhân của thuế và số nhân chi tiêu là:",
+      "options": {
+        "A": "Số nhân của thuế luôn luôn bằng số nhân chi tiêu",
+        "B": "Số nhân chi tiêu luôn lớn hơn 1, số nhân thuế nhỏ hơn 1.",
+        "C": "Số nhân của thuế thì âm, số nhân chi tiêu thì dương",
+        "D": "Số nhân của thuế luôn luôn lớn hơn số nhân chi tiêu"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo mô hình AE-Y và số nhân chuẩn.",
+      "image": null
+    },
+    {
+      "id": 3,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Chi tiêu của Chính phủ phụ thuộc vào:",
+      "options": {
+        "A": "Tất cả các câu đều đúng",
+        "B": "Số thu thuế của chính phủ",
+        "C": "Các cân nhắc về mặt kinh tế - xã hội của chính phủ",
+        "D": "Quy mô của chính phủ"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo mô hình AE-Y và số nhân chuẩn.",
+      "image": null
+    },
+    {
+      "id": 4,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Khi chính phủ tăng tỷ suất thuế sẽ làm cho giá trị của số nhân chi tiêu:",
+      "options": {
+        "A": "Giảm",
+        "B": "Tăng",
+        "C": "Tất cả các phương án đều có thể xảy ra",
+        "D": "Không đổi"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo mô hình AE-Y và số nhân chuẩn.",
+      "image": null
+    },
+    {
+      "id": 5,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Giả định rằng, trong một nền kinh tế giản đơn có chi tiêu cho tiêu dùng là 150, đầu tư theo kế hoạch là 50 và tổng giá trị sản lượng là 210, tiết kiệm sẽ bằng:",
+      "options": {
+        "A": "S = 10",
+        "B": "S = 50",
+        "C": "S = 60",
+        "D": "S = 110"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo mô hình AE-Y và số nhân chuẩn.",
+      "image": null
+    },
+    {
+      "id": 6,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Sử dụng C biểu thị cho tiêu dùng, I biểu thị cho đầu tư theo dự kiến, G biểu thị cho chi tiêu của chính phủ, T biểu thị cho thuế ròng, S biểu thị cho tiết kiệm, X biểu thị cho xuất khẩu, IM biểu thị cho nhập khẩu, tổng cầu danh nghĩa có thể được biểu thị bởi:",
+      "options": {
+        "A": "(C - S) + (G - T) + (X - IM)",
+        "B": "C + I + G + X - IM",
+        "C": "C + I + G + X + IM",
+        "D": "C + I + G + X - IM - T"
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo mô hình AE-Y và số nhân chuẩn.",
+      "image": null
+    },
+    {
+      "id": 7,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Điểm vừa đủ trên đường tiêu dùng là điểm mà tại đó:",
+      "options": {
+        "A": "C = Y và S > 0",
+        "B": "C < Y và S < 0",
+        "C": "C > Y và S > 0",
+        "D": "C = Y và S = 0"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo mô hình AE-Y và số nhân chuẩn.",
+      "image": null
+    },
+    {
+      "id": 8,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Khi thuế tăng, tiêu dùng của hộ gia đình",
+      "options": {
+        "A": "giảm",
+        "B": "không thay đổi.",
+        "C": "tăng.",
+        "D": "có thể tăng hoặc giảm."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo mô hình AE-Y và số nhân chuẩn.",
+      "image": null
+    },
+    {
+      "id": 9,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Khi tiêu dùng tự định tăng sẽ làm cho đồ thị đường tiêu dùng",
+      "options": {
+        "A": "thoải hơn.",
+        "B": "dịch chuyển song song lên trên.",
+        "C": "dịch chuyển song song xuống dưới.",
+        "D": "dốc hơn."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo mô hình AE-Y và số nhân chuẩn.",
+      "image": null
+    },
+    {
+      "id": 10,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Những khoản nào sau đây được tính vào đầu tư của nền kinh tế:",
+      "options": {
+        "A": "Đầu tư mua lại nhà xưởng cũ",
+        "B": "Đầu tư mua chứng khoán công ty",
+        "C": "Đầu tư mua trái phiếu chính phủ",
+        "D": "Đầu tư xây dựng văn phòng mới của công ty"
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo mô hình AE-Y và số nhân chuẩn.",
+      "image": null
+    },
+    {
+      "id": 11,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Giả sử trong nền kinh tế giản đơn có hàm tiêu dùng: C = 120 + 0,75Y. Nếu đầu tư tăng thêm 20 thì sản lượng cân bằng mới tăng thêm:",
+      "options": {
+        "A": "△Y = 80",
+        "B": "△Y = 100",
+        "C": "△Y = 120",
+        "D": "△Y = 140"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo mô hình AE-Y và số nhân chuẩn.",
+      "image": null
+    },
+    {
+      "id": 12,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Khi chính phủ tăng chi tiêu, điều nào dưới đây chắc chắn đúng:",
+      "options": {
+        "A": "Tổng cầu tăng",
+        "B": "Thất nghiệp tăng",
+        "C": "Khuyến khích đầu tư",
+        "D": "Cải thiện cán cân thương mại"
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo mô hình AE-Y và số nhân chuẩn.",
+      "image": null
+    },
+    {
+      "id": 13,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Việc thực hiện chính sách tài khoá mở rộng thường hướng đến mục tiêu",
+      "options": {
+        "A": "kích thích tăng trưởng kinh tế và giảm thất nghiệp.",
+        "B": "gia tăng đầu tư công.",
+        "C": "kiểm soát lạm phát",
+        "D": "kiềm chế tăng trưởng nóng."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo mô hình AE-Y và số nhân chuẩn.",
+      "image": null
+    },
+    {
+      "id": 14,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Số nhân chi tiêu của nền kinh tế đóng so với số nhân chi tiêu của nền kinh tế mở",
+      "options": {
+        "A": "nhỏ hơn.",
+        "B": "bằng nhau.",
+        "C": "lớn hơn.",
+        "D": "có thể lớn hơn hoặc nhỏ hơn."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo mô hình AE-Y và số nhân chuẩn.",
+      "image": null
+    },
+    {
+      "id": 15,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Khi xu hướng tiết kiệm cận biên tăng thì",
+      "options": {
+        "A": "xu hướng tiêu dùng cận biên giảm.",
+        "B": "xu hướng tiêu dùng cận biên tăng.",
+        "C": "xu hướng nhập khẩu cận biên tăng.",
+        "D": "xu hướng nhập khẩu cận biên giảm."
+      },
+      "answer": "A",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo mô hình AE-Y và số nhân chuẩn.",
+      "image": null
+    },
+    {
+      "id": 16,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Xét một nền kinh tế đóng có thuế độc lập với thu nhập. Nếu MPS = 0.25 thì giá trị của số nhân thuế là:",
+      "options": {
+        "A": "- 2",
+        "B": "- 4",
+        "C": "- 3",
+        "D": "- 0.75"
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo mô hình AE-Y và số nhân chuẩn.",
+      "image": null
+    },
+    {
+      "id": 17,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Nếu Chính phủ đồng thời tăng thuế và tăng chi tiêu thêm 500 tỷ đồng (giả sử lãi suất không đổi và thuế là khoản thu tự định) thì sản lượng cân bằng sẽ",
+      "options": {
+        "A": "giảm 500 tỷ đồng.",
+        "B": "không đổi.",
+        "C": "tăng 500 tỷ đồng.",
+        "D": "tăng 1.000 tỷ đồng."
+      },
+      "answer": "C",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo mô hình AE-Y và số nhân chuẩn.",
+      "image": null
+    },
+    {
+      "id": 18,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Khi tiêu dùng tự định tăng sẽ làm cho đường tổng chi tiêu trong mô hình AE-Y",
+      "options": {
+        "A": "dịch chuyển song song xuống dưới",
+        "B": "dịch chuyển song song lên trên.",
+        "C": "dốc hơn.",
+        "D": "thoải hơn."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo mô hình AE-Y và số nhân chuẩn.",
+      "image": null
+    },
+    {
+      "id": 19,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Giả sử có phương trình đường tổng chi tiêu trong nền kinh tế giản đơn: AE = 600 + 0,75Y. Nếu sản lượng thực tế là 2.000 thì hiện tượng ngoài dự kiến nào sẽ xảy ra điều gì?",
+      "options": {
+        "A": "Thiếu hụt ngoài dự kiến là 400.",
+        "B": "Thiếu hụt ngoài dự kiến là 100.",
+        "C": "Tồn kho ngoài dự kiến là 100.",
+        "D": "Tồn kho ngoài dự kiến là 400."
+      },
+      "answer": "B",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo mô hình AE-Y và số nhân chuẩn.",
+      "image": null
+    },
+    {
+      "id": 20,
+      "chapter": "Chương 6",
+      "sourceChapter": "Chương 6",
+      "question": "Thâm hụt ngân sách có xu hướng tăng trong thời kỳ suy thoái chủ yếu do",
+      "options": {
+        "A": "Chính phủ tăng thuế nhiều hơn tăng chi tiêu.",
+        "B": "cán cân thương mại thặng dư.",
+        "C": "nguồn thu từ thuế gián thu tăng vì giá cả và sản lượng tăng.",
+        "D": "thu ngân sách giảm trong khi nhu cầu chi ngân sách tăng."
+      },
+      "answer": "D",
+      "explainAnswer": "Đáp án theo đề gốc. Đã kiểm tra theo mô hình AE-Y và số nhân chuẩn.",
+      "image": null
+    }
+  ]
+}
