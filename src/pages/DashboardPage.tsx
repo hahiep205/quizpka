@@ -55,8 +55,8 @@ import { DirectNotificationPopup } from "@/components/DirectNotificationPopup"
 import { formatTime } from "@/features/quiz/lib/quizHelpers"
 import { createPaidCheckout, getPaidProductId, hasProductPurchase } from "@/lib/purchases"
 import type { ContactModalType } from "@/components/ContactModal"
-import { fetchNotifications, markAllNotificationsRead, markNotificationRead, type UserNotification } from "@/features/notifications/api/notifications"
-import { supabase } from "@/lib/supabase"
+import type { UserNotification } from "@/features/notifications/api/notifications"
+import { useNotifications } from "@/features/notifications/useNotifications"
 
 type Lang = Language
 type DashboardView = "home" | "leaderboard" | "history" | "purchased" | "notifications" | "settings"
@@ -138,7 +138,7 @@ export function DashboardPage({
 }: DashboardPageProps) {
   const [activeView, setActiveView] = useState<DashboardView>(() => getDashboardView(getCurrentPath()))
   const { user: dashboardUser, status: dashboardStatus } = useAuth()
-  const [unreadNotificationCount, setUnreadNotificationCount] = useState(0)
+  const { unreadCount: unreadNotificationCount } = useNotifications()
   const [payment, setPayment] = useState<{ payment: { qrUrl: string } } | null>(null)
   const [paymentProductId, setPaymentProductId] = useState("dsai101")
   const handlePaidTryNow = async (exam: ExamCatalogItem) => {
@@ -157,23 +157,6 @@ export function DashboardPage({
   useEffect(() => {
     logActivityEvent(dashboardUser?.id, "view_dashboard", {}, { oncePerSessionKey: `view_dashboard:${dashboardUser?.id ?? "anon"}` })
   }, [dashboardUser?.id, dashboardUser?.created_at])
-  useEffect(() => {
-    if (dashboardStatus !== "authenticated") {
-      setUnreadNotificationCount(0)
-      return
-    }
-    const reloadUnreadCount = () => {
-      void fetchNotifications().then((items) => setUnreadNotificationCount(items.filter((item) => !item.readAt).length)).catch(() => undefined)
-    }
-    reloadUnreadCount()
-    const channel = supabase
-      .channel("dashboard-mobile-notification-badge")
-      .on("postgres_changes", { event: "INSERT", schema: "public", table: "notifications" }, reloadUnreadCount)
-      .subscribe()
-    return () => {
-      void supabase.removeChannel(channel)
-    }
-  }, [dashboardStatus, dashboardUser?.id])
   const [query, setQuery] = useState("")
   const [filter, setFilter] = useState<"all" | "general" | "major" | "free" | "paid" | "toeic">("all")
   const [toeicPickerExam, setToeicPickerExam] = useState<ExamCatalogItem | null>(null)
@@ -311,7 +294,7 @@ export function DashboardPage({
           {activeView === "leaderboard" ? <LeaderboardView lang={lang} /> : null}
           {activeView === "history" ? <EmptyView lang={lang} view="history" /> : null}
           {activeView === "purchased" ? <PurchasedView lang={lang} onStartExam={(exam) => void handlePaidTryNow(exam)} /> : null}
-          {activeView === "notifications" ? <NotificationsView lang={lang} onUnreadChange={setUnreadNotificationCount} /> : null}
+          {activeView === "notifications" ? <NotificationsView lang={lang} /> : null}
           {activeView === "settings" ? (
             <SettingsView
               lang={lang}
@@ -464,54 +447,14 @@ function PurchasedView({ lang, onStartExam }: { lang: Lang; onStartExam: (exam: 
   )
 }
 
-function NotificationsView({ lang, onUnreadChange }: { lang: Lang; onUnreadChange: (count: number) => void }) {
+function NotificationsView({ lang }: { lang: Lang }) {
   const t = copy[lang]
-  const [items, setItems] = useState<UserNotification[]>([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(false)
   const [filter, setFilter] = useState<"all" | "unread">("all")
-  const unread = items.filter((item) => !item.readAt).length
-
-  useEffect(() => {
-    onUnreadChange(unread)
-  }, [onUnreadChange, unread])
-
-  const reload = () => {
-    setLoading(true)
-    setError(false)
-    void fetchNotifications()
-      .then(setItems)
-      .catch(() => {
-        setItems([])
-        setError(true)
-      })
-      .finally(() => setLoading(false))
-  }
-
-  useEffect(() => {
-    reload()
-    const channel = supabase
-      .channel("dashboard-notifications")
-      .on("postgres_changes", { event: "INSERT", schema: "public", table: "notifications" }, reload)
-      .subscribe()
-    return () => {
-      void supabase.removeChannel(channel)
-    }
-  }, [])
-
-  const markAll = () => {
-    void markAllNotificationsRead()
-      .then(() => setItems((current) => current.map((item) => ({ ...item, readAt: item.readAt ?? new Date().toISOString() }))))
-      .catch(() => undefined)
-  }
-
-  const markRead = (id: number) => {
-    void markNotificationRead(id)
-      .then(() => setItems((current) => current.map((item) => item.id === id ? { ...item, readAt: item.readAt ?? new Date().toISOString() } : item)))
-      .catch(() => undefined)
-  }
-
-  const visibleItems = filter === "unread" ? items.filter((item) => !item.readAt) : items
+  const { page, unreadCount: unread, error: syncError, mutationError, mutating, refresh, loadMore, markRead, markAllRead } = useNotifications(filter)
+  const { items: visibleItems, loading, error } = page
+  const markAll = () => { void markAllRead().catch(() => { /* Rendered through shared mutationError below. */ }) }
+  const read = (id: number) => { void markRead(id).catch(() => { /* Rendered through shared mutationError below. */ }) }
+  const reload = () => { void refresh() }
 
   return (
     <section className="dashboard-reveal mx-auto max-w-4xl">
@@ -520,13 +463,15 @@ function NotificationsView({ lang, onUnreadChange }: { lang: Lang; onUnreadChang
           <button type="button" className={cn("lp-chip min-w-0 shrink px-2 text-[11px] sm:px-3 sm:text-[13px]", filter === "all" && "is-active")} onClick={() => setFilter("all")}>{t.allNotifications}</button>
           <button type="button" className={cn("lp-chip min-w-0 shrink px-2 text-[11px] sm:px-3 sm:text-[13px]", filter === "unread" && "is-active")} onClick={() => setFilter("unread")}>{t.unreadNotifications}{unread ? ` (${unread})` : ""}</button>
         </div>
-        {unread > 0 ? <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm shrink-0 gap-1 px-2 text-[11px] sm:gap-2 sm:px-[18px] sm:text-[13px]" onClick={markAll}><CheckCircle2 className="h-4 w-4" /><span className="sm:hidden">{lang === "vi" ? "Đã đọc tất cả" : "Mark all read"}</span><span className="hidden sm:inline">{t.markAllRead}</span></button> : null}
+        {unread > 0 ? <button type="button" disabled={mutating} className="lp-btn lp-btn--secondary lp-btn--sm shrink-0 gap-1 px-2 text-[11px] sm:gap-2 sm:px-[18px] sm:text-[13px]" onClick={markAll}><CheckCircle2 className="h-4 w-4" /><span className="sm:hidden">{lang === "vi" ? "Đã đọc tất cả" : "Mark all read"}</span><span className="hidden sm:inline">{t.markAllRead}</span></button> : null}
       </div>
 
-      {loading ? <div className="space-y-3" aria-busy="true"><NotificationSkeleton /><NotificationSkeleton /><NotificationSkeleton /></div> : null}
+      {mutationError || syncError ? <p role="alert" className="mb-4 text-sm font-bold text-red-500">{mutationError ?? syncError}</p> : null}
+      {loading && !visibleItems.length ? <div className="space-y-3" aria-busy="true"><NotificationSkeleton /><NotificationSkeleton /><NotificationSkeleton /></div> : null}
       {!loading && error ? <Card variant="dashed" className="py-12 text-center"><Bell className="mx-auto h-9 w-9 text-slate-300" /><p className="mt-3 text-sm font-bold text-red-500">{t.notificationLoadError}</p><button type="button" className="lp-btn lp-btn--secondary lp-btn--sm mt-4" onClick={reload}>{lang === "vi" ? "Thử lại" : "Try again"}</button></Card> : null}
       {!loading && !error && !visibleItems.length ? <Card variant="dashed" className="py-14 text-center"><Bell className="mx-auto h-9 w-9 text-slate-300" /><p className="mt-3 text-sm font-bold text-slate-500">{filter === "unread" ? (lang === "vi" ? "Bạn đã đọc tất cả thông báo." : "You have read all notifications.") : t.noNotifications}</p></Card> : null}
-      {!loading && !error && visibleItems.length ? <div className="space-y-3">{visibleItems.map((item) => <NotificationCard key={item.id} item={item} lang={lang} onRead={() => markRead(item.id)} />)}</div> : null}
+      {visibleItems.length ? <div className="space-y-3" aria-busy={loading}>{visibleItems.map((item) => <NotificationCard key={item.id} item={item} lang={lang} disabled={mutating || Boolean(item.readAt)} onRead={() => read(item.id)} />)}</div> : null}
+      {page.hasMore ? <div className="mt-5 text-center"><button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={loading || mutating} onClick={() => void loadMore()}>{loading ? (lang === "vi" ? "Đang tải…" : "Loading…") : (lang === "vi" ? "Xem thêm" : "Load more")}</button></div> : null}
     </section>
   )
 }
@@ -535,12 +480,12 @@ function NotificationSkeleton() {
   return <div className="h-[116px] animate-pulse rounded-[16px] border-2 border-slate-100 bg-white p-5 dark:border-white/5 dark:bg-slate-900"><div className="h-4 w-2/5 rounded bg-slate-100 dark:bg-white/10" /><div className="mt-3 h-3 w-full rounded bg-slate-100 dark:bg-white/10" /><div className="mt-2 h-3 w-4/5 rounded bg-slate-100 dark:bg-white/10" /></div>
 }
 
-function NotificationCard({ item, lang, onRead }: { item: UserNotification; lang: Lang; onRead: () => void }) {
+function NotificationCard({ item, lang, onRead, disabled }: { item: UserNotification; lang: Lang; onRead: () => void; disabled: boolean }) {
   const date = new Date(item.createdAt)
   const formattedDate = Number.isNaN(date.getTime()) ? "" : date.toLocaleString(lang === "vi" ? "vi-VN" : "en-US", { dateStyle: "medium", timeStyle: "short" })
   return <article className={cn("relative overflow-hidden rounded-[16px] border-2 bg-white p-4 shadow-[0_3px_0_#DCDCDC] transition-shadow hover:shadow-[0_5px_0_#DCDCDC] dark:bg-slate-900 dark:shadow-none sm:p-5", item.readAt ? "border-slate-200 dark:border-white/10" : "border-sky-200 bg-sky-50/40 dark:border-sky-500/30 dark:bg-sky-500/5")}>
     {!item.readAt ? <span className="absolute inset-y-0 left-0 w-1 bg-[#1CB0F6]" /> : null}
-    <button type="button" className="block w-full text-left" onClick={onRead} aria-label={lang === "vi" ? `Đánh dấu đã đọc: ${item.title}` : `Mark as read: ${item.title}`}>
+    <button type="button" disabled={disabled} className="block w-full text-left" onClick={onRead} aria-label={lang === "vi" ? `Đánh dấu đã đọc: ${item.title}` : `Mark as read: ${item.title}`}>
       <div className="flex items-start gap-3">
         <span className={cn("mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl", item.isDirect ? "bg-violet-50 text-violet-500 dark:bg-violet-500/10 dark:text-violet-300" : "bg-sky-50 text-sky-500 dark:bg-sky-500/10 dark:text-sky-300")}><Bell className="h-4 w-4" /></span>
         <div className="min-w-0 flex-1"><div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4"><h2 className="text-sm font-black leading-5 text-[#100F3E] dark:text-white sm:text-base">{item.title}</h2>{!item.readAt ? <span className="w-fit shrink-0 rounded-full bg-sky-100 px-2 py-1 text-[10px] font-black uppercase tracking-wide text-sky-600 dark:bg-sky-500/10 dark:text-sky-300">{lang === "vi" ? "Mới" : "New"}</span> : null}</div><p className="mt-2 whitespace-pre-wrap text-sm font-semibold leading-6 text-slate-500 dark:text-slate-400">{item.message}</p><p className="mt-3 text-xs font-bold text-slate-400">{formattedDate}{item.isDirect ? ` · ${lang === "vi" ? "Thông báo riêng" : "Personal notification"}` : ""}</p></div>

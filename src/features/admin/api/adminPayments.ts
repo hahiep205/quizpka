@@ -32,6 +32,16 @@ type OrderRow = {
   products: { name: string } | Array<{ name: string }> | null
 }
 
+export function sortAdminPaymentsByCreatedAt(payments: AdminPayment[]): AdminPayment[] {
+  return [...payments].sort((a, b) => {
+    const aCreatedAt = Date.parse(a.createdAt)
+    const bCreatedAt = Date.parse(b.createdAt)
+    if (Number.isNaN(aCreatedAt)) return Number.isNaN(bCreatedAt) ? b.orderId.localeCompare(a.orderId) : 1
+    if (Number.isNaN(bCreatedAt)) return -1
+    return bCreatedAt - aCreatedAt || b.orderId.localeCompare(a.orderId)
+  })
+}
+
 function parseOrder(row: OrderRow): AdminPayment {
   const product = Array.isArray(row.products) ? row.products[0] : row.products
   return {
@@ -57,6 +67,7 @@ export async function fetchAllAdminPayments(): Promise<AdminPaymentsResult> {
         .from("orders")
         .select("order_id,user_id,product_id,amount_vnd,currency,status,provider_transaction_id,paid_at,created_at,products(name)")
         .order("created_at", { ascending: false })
+        .order("order_id", { ascending: false })
         .range(offset, offset + 999)
       if (error) return { ok: false, payments: [], error: `Không đọc được giao dịch: ${error.message}` }
       const rows = (data as unknown as OrderRow[]).map(parseOrder)

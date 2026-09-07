@@ -22,8 +22,8 @@ import {
 } from "@/features/admin/lib/adminStats"
 import { appRoutes, getCurrentPath, navigate, type AppPath } from "@/app/navigation"
 import { cn } from "@/lib/utils"
-import { fetchAdminNotificationHistory, fetchNotificationRecipients, revokeAdminNotification, sendAdminNotifications, type AdminNotificationHistory, type NotificationRecipient } from "@/features/notifications/api/notifications"
-import { fetchAllAdminPayments, type AdminPayment, type PaymentStatus } from "@/features/admin/api/adminPayments"
+import { fetchAdminNotificationHistory, fetchNotificationBatchDetails, fetchNotificationBatchRecipients, fetchNotificationRecipients, revokeAdminNotification, sendAdminNotifications, type AdminNotificationHistory, type NotificationRecipient } from "@/features/notifications/api/notifications"
+import { fetchAllAdminPayments, sortAdminPaymentsByCreatedAt, type AdminPayment, type PaymentStatus } from "@/features/admin/api/adminPayments"
 import { grantAdminPurchase, fetchAdminProducts, type AdminProduct } from "@/features/admin/api/adminEntitlements"
 import { fetchSupportReports, updateSupportStatus, type SupportReport, type SupportStatus, type SupportType } from "@/features/support/api/supportReports"
 
@@ -158,12 +158,25 @@ export function AdminPage({ lang }: Props) {
   const [selectedId, setSelectedId] = useState<string | null>(null)
   const [notificationRecipients, setNotificationRecipients] = useState<NotificationRecipient[]>([])
   const [notificationRecipientQuery, setNotificationRecipientQuery] = useState("")
+  const [notificationRecipientOffset, setNotificationRecipientOffset] = useState(0)
+  const [notificationRecipientTotals, setNotificationRecipientTotals] = useState<{ total: number; activeTotal: number } | null>(null)
+  const [notificationRecipientsLoading, setNotificationRecipientsLoading] = useState(true)
+  const [notificationRecipientsError, setNotificationRecipientsError] = useState<string | null>(null)
+  const [notificationRefresh, setNotificationRefresh] = useState(0)
+  const [notificationAudience, setNotificationAudience] = useState<"selected" | "all">("selected")
+  const notificationRequest = useRef<{ payload: string; key: string } | null>(null)
+  const notificationSendLock = useRef(false)
   const [notificationTitle, setNotificationTitle] = useState("")
   const [notificationMessage, setNotificationMessage] = useState("")
   const [notificationRecipientIds, setNotificationRecipientIds] = useState<string[]>([])
   const [notificationSending, setNotificationSending] = useState(false)
   const [notificationResult, setNotificationResult] = useState<string | null>(null)
   const [notificationHistory, setNotificationHistory] = useState<AdminNotificationHistory[]>([])
+  const [notificationHistoryLoading, setNotificationHistoryLoading] = useState(false)
+  const [notificationHistoryError, setNotificationHistoryError] = useState<string | null>(null)
+  const [notificationHistoryMore, setNotificationHistoryMore] = useState(false)
+  const notificationHistoryRequest = useRef(0)
+  const [notificationDetailRefresh, setNotificationDetailRefresh] = useState(0)
   const [selectedNotification, setSelectedNotification] = useState<AdminNotificationHistory | null>(null)
   const [revokingNotificationId, setRevokingNotificationId] = useState<number | null>(null)
   const [payments, setPayments] = useState<AdminPayment[]>([])
@@ -206,39 +219,113 @@ export function AdminPage({ lang }: Props) {
     return () => { mountedRef.current = false }
   }, [])
 
-  const reload = useCallback(() => {
-    setLoading(true)
-      void fetchAllAdminUsers().then((res) => {
-      if (!mountedRef.current) return
-       setUsers(res.users)
-       setUserCounts({ total: res.totalUsers, active: res.activeUsers, blocked: res.blockedUsers })
-      setError(res.ok ? null : res.error)
-      setLoading(false)
-    })
-     void fetchAllActivityTimeline().then((res) => {
-      if (!mountedRef.current) return
-      setEvents(res.events)
-      setEventsError(res.ok ? null : res.error)
-    })
-     void fetchAllPracticeAttempts().then((res) => {
-      if (!mountedRef.current) return
-      setAttempts(res.attempts)
-      setAttemptsError(res.ok ? null : res.error)
-     })
-     void fetchAdminNotificationHistory().then(setNotificationHistory).catch(() => setNotificationHistory([]))
-     void fetchAllAdminPayments().then((res) => {
-       if (!mountedRef.current) return
-       setPayments(res.payments)
-       setPaymentsError(res.ok ? null : res.error)
-     })
+  const loadNotificationHistory = useCallback(async (cursor?: { createdAt: string; id: number }) => {
+    if (!cursor) setNotificationDetailRefresh((value) => value + 1)
+    const request = ++notificationHistoryRequest.current
+    setNotificationHistoryLoading(true)
+    setNotificationHistoryError(null)
+    try {
+      const rows = await fetchAdminNotificationHistory(cursor)
+      if (!mountedRef.current || request !== notificationHistoryRequest.current) return
+      setNotificationHistory((current) => cursor ? [...current, ...rows.filter((row) => !current.some((item) => item.id === row.id))] : rows)
+      setSelectedNotification((current) => current ? rows.find((row) => row.id === current.id) ?? current : null)
+      setNotificationHistoryMore(rows.length === 30)
+    } catch (error: unknown) {
+      if (mountedRef.current && request === notificationHistoryRequest.current) setNotificationHistoryError(error instanceof Error ? error.message : "Không tải được lịch sử thông báo.")
+    } finally {
+      if (mountedRef.current && request === notificationHistoryRequest.current) setNotificationHistoryLoading(false)
+    }
   }, [])
+
+  useEffect(() => {
+    if (section !== "notifications") return
+    let timer: number | undefined
+    let active = true
+    const refreshHistory = () => {
+      if (!active) return
+      window.clearTimeout(timer)
+      timer = window.setTimeout(() => { void loadNotificationHistory() }, 300)
+    }
+    window.addEventListener("focus", refreshHistory)
+    let channel: ReturnType<typeof supabase.channel> | undefined
+    try {
+      channel = supabase.channel("admin-notification-batches")
+        .on("postgres_changes", { event: "UPDATE", schema: "public", table: "notification_batch_events" }, refreshHistory)
+        .on("postgres_changes", { event: "INSERT", schema: "public", table: "notification_batch_events" }, refreshHistory)
+        .subscribe((status) => { if (status === "SUBSCRIBED") refreshHistory() })
+    } catch {
+      // Focus and manual refresh remain available if realtime is unavailable.
+    }
+    return () => {
+      active = false
+      window.clearTimeout(timer)
+      window.removeEventListener("focus", refreshHistory)
+      if (channel) void supabase.removeChannel(channel)
+    }
+  }, [section, loadNotificationHistory])
+
+  const reload = useCallback(() => {
+    setError(null)
+    setLoading(false)
+    if (section === "notifications") {
+      void loadNotificationHistory()
+      setNotificationRecipientsLoading(true)
+      setNotificationRefresh((value) => value + 1)
+      return
+    }
+    if (section !== "supports") {
+      setLoading(true)
+      void fetchAllAdminUsers().then((res) => {
+        if (!mountedRef.current) return
+        setUsers(res.users)
+        setUserCounts({ total: res.totalUsers, active: res.activeUsers, blocked: res.blockedUsers })
+        setError(res.ok ? null : res.error)
+        setLoading(false)
+      })
+    }
+    if (["overview", "users", "timeline", "attempts"].includes(section)) {
+      void fetchAllActivityTimeline().then((res) => {
+        if (!mountedRef.current) return
+        setEvents(res.events)
+        setEventsError(res.ok ? null : res.error)
+      })
+      void fetchAllPracticeAttempts().then((res) => {
+        if (!mountedRef.current) return
+        setAttempts(res.attempts)
+        setAttemptsError(res.ok ? null : res.error)
+      })
+    }
+    if (["overview", "payment", "sendquiz"].includes(section)) {
+      void fetchAllAdminPayments().then((res) => {
+        if (!mountedRef.current) return
+        setPayments(res.payments)
+        setPaymentsError(res.ok ? null : res.error)
+      })
+    }
+    if (section === "payment" || section === "sendquiz") void fetchAdminProducts().then(setAdminProducts).catch(() => setAdminProducts([]))
+    if (section === "supports") void fetchSupportReports().then((reports) => { setSupportReports(reports); setSupportsError(null) }).catch((error: unknown) => setSupportsError(error instanceof Error ? error.message : "Không đọc được báo lỗi."))
+  }, [section, loadNotificationHistory])
 
   useEffect(() => { reload() }, [reload])
   useEffect(() => {
-    void fetchNotificationRecipients().then(setNotificationRecipients).catch(() => setNotificationRecipients([]))
-    void fetchAdminProducts().then(setAdminProducts).catch(() => setAdminProducts([]))
-    void fetchSupportReports().then((reports) => { setSupportReports(reports); setSupportsError(null) }).catch((error: unknown) => setSupportsError(error instanceof Error ? error.message : "Không đọc được báo lỗi."))
-  }, [])
+    if (section !== "notifications") return
+    let cancelled = false
+    setNotificationRecipientsLoading(true)
+    setNotificationRecipientsError(null)
+    const timer = window.setTimeout(() => {
+      void fetchNotificationRecipients(notificationRecipientQuery.trim(), notificationRecipientOffset).then((result) => {
+        if (cancelled) return
+        setNotificationRecipients(result.items)
+        setNotificationRecipientTotals({ total: result.total, activeTotal: result.activeTotal })
+      }).catch((error: unknown) => {
+        if (!cancelled) setNotificationRecipientsError(error instanceof Error ? error.message : "Không tải được người nhận.")
+      }).finally(() => { if (!cancelled) setNotificationRecipientsLoading(false) })
+    }, 300)
+    return () => { cancelled = true; window.clearTimeout(timer) }
+  }, [section, notificationRecipientQuery, notificationRecipientOffset, notificationRefresh])
+
+  const notificationPayload = JSON.stringify({ title: notificationTitle.trim(), message: notificationMessage.trim(), audienceMode: notificationAudience, recipientIds: notificationAudience === "selected" ? [...notificationRecipientIds].sort() : [] })
+  useEffect(() => { notificationRequest.current = null }, [notificationPayload])
 
   // Đồng bộ tab đang xem với URL (back/forward, link trực tiếp /admin/users...).
   useEffect(() => {
@@ -254,6 +341,7 @@ export function AdminPage({ lang }: Props) {
 
   // Realtime: prepend event/attempt mới khi đang mở /admin (optional, im lặng khi tắt).
   useEffect(() => {
+    if (!["overview", "users", "timeline", "attempts"].includes(section)) { setLive(false); return }
     let channel: ReturnType<typeof supabase.channel> | null = null
     try {
       channel = supabase
@@ -273,7 +361,7 @@ export function AdminPage({ lang }: Props) {
     return () => {
       if (channel) void supabase.removeChannel(channel)
     }
-  }, [])
+  }, [section])
 
   // Reset về trang 1 mỗi khi đổi filter/sort.
   useEffect(() => { setPage(0) }, [query, role, status, sortKey, sortDir])
@@ -348,7 +436,7 @@ export function AdminPage({ lang }: Props) {
   }, [adminProducts, payments])
   const filteredPayments = useMemo(() => {
     const q = paymentQuery.trim().toLowerCase()
-    return payments.filter((payment) => {
+    const filtered = payments.filter((payment) => {
       if (paymentStatus !== "latest" && paymentStatus !== "all" && payment.status !== paymentStatus) return false
       if (paymentProduct !== "all" && payment.productId !== paymentProduct) return false
       if (!q) return true
@@ -356,6 +444,8 @@ export function AdminPage({ lang }: Props) {
       return [payment.orderId, payment.transactionId, payment.productName, payment.productId, payment.userId, user?.displayName, user?.email]
         .some((value) => value?.toLowerCase().includes(q))
     })
+    if (paymentStatus !== "latest") return filtered
+    return sortAdminPaymentsByCreatedAt(filtered)
   }, [paymentQuery, paymentStatus, paymentProduct, payments, userById])
   const paymentKpis = useMemo(() => ({
     revenue: payments.filter((payment) => payment.status === "paid").reduce((sum, payment) => sum + payment.amountVnd, 0),
@@ -447,23 +537,44 @@ export function AdminPage({ lang }: Props) {
   const handleSignOut = () => { void signOut().then(() => navigate(appRoutes.home, { replace: true })) }
 
   const handleSendNotification = () => {
+    if (notificationSendLock.current) return
     setNotificationResult(null)
     if (!notificationTitle.trim() || !notificationMessage.trim()) {
       setNotificationResult("Vui lòng nhập đủ tiêu đề và nội dung.")
       return
     }
+    if (notificationRecipientsLoading || notificationRecipientsError || !notificationRecipientTotals) {
+      setNotificationResult("Chờ tải người nhận thành công trước khi gửi.")
+      return
+    }
+    if (notificationAudience === "selected" && !notificationRecipientIds.length) {
+      setNotificationResult("Vui lòng chọn ít nhất một người nhận.")
+      return
+    }
+    if (notificationAudience === "all" && (!notificationRecipientTotals.activeTotal || !window.confirm(`Gửi thông báo tới tất cả ${notificationRecipientTotals.activeTotal} user active?`))) return
+    if (notificationRequest.current?.payload !== notificationPayload) notificationRequest.current = { payload: notificationPayload, key: crypto.randomUUID() }
+    notificationSendLock.current = true
     setNotificationSending(true)
-    void sendAdminNotifications({ title: notificationTitle, message: notificationMessage, recipientIds: notificationRecipientIds })
-      .then((count) => { setNotificationResult(`Đã gửi thông báo tới ${count} user.`); setNotificationTitle(""); setNotificationMessage(""); setNotificationRecipientIds([]); return fetchAdminNotificationHistory() })
-      .then(setNotificationHistory)
+    void sendAdminNotifications({ title: notificationTitle.trim(), message: notificationMessage.trim(), audienceMode: notificationAudience, recipientIds: notificationAudience === "selected" ? [...notificationRecipientIds].sort() : [], idempotencyKey: notificationRequest.current.key })
+      .then((result) => {
+        setNotificationResult(`Đã gửi thông báo tới ${result.recipientCount} user.`)
+        notificationRequest.current = null
+        setNotificationTitle(""); setNotificationMessage(""); setNotificationRecipientIds([]); setNotificationAudience("selected")
+        void loadNotificationHistory()
+      })
       .catch((err: unknown) => setNotificationResult(err instanceof Error ? err.message : "Không thể gửi thông báo."))
-      .finally(() => setNotificationSending(false))
+      .finally(() => { notificationSendLock.current = false; setNotificationSending(false) })
   }
 
   const handleRevokeNotification = (notification: AdminNotificationHistory) => {
-    if (notification.revokedAt || !window.confirm(`Thu hồi thông báo này khỏi ${notification.recipientCount} user?`)) return
+    if (revokingNotificationId !== null || notification.revokedAt || !window.confirm(`Thu hồi thông báo này khỏi ${notification.recipientCount} user?`)) return
     setRevokingNotificationId(notification.id)
-    void revokeAdminNotification(notification.id).then(() => fetchAdminNotificationHistory()).then(setNotificationHistory).catch((err: unknown) => setNotificationResult(err instanceof Error ? err.message : "Không thể thu hồi thông báo.")).finally(() => setRevokingNotificationId(null))
+    void revokeAdminNotification(notification.id).then(() => {
+      const revokedAt = new Date().toISOString()
+      setNotificationHistory((rows) => rows.map((row) => row.id === notification.id ? { ...row, revokedAt } : row))
+      setSelectedNotification((current) => current?.id === notification.id ? { ...current, revokedAt } : current)
+      void loadNotificationHistory()
+    }).catch((err: unknown) => setNotificationResult(err instanceof Error ? err.message : "Không thể thu hồi thông báo.")).finally(() => setRevokingNotificationId(null))
   }
 
   const handleGrantPurchase = () => {
@@ -483,12 +594,6 @@ export function AdminPage({ lang }: Props) {
       .catch((err: unknown) => setGrantResult({ ok: false, message: err instanceof Error ? err.message : "Không thể cấp quyền môn học." }))
       .finally(() => setGrantSending(false))
   }
-
-  const filteredNotificationRecipients = notificationRecipients.filter((recipient) => {
-    const query = notificationRecipientQuery.trim().toLowerCase()
-    if (!query) return true
-    return [recipient.displayName, recipient.email, recipient.id].some((value) => value?.toLowerCase().includes(query))
-  })
 
   const filteredSupportReports = supportReports.filter((report) => {
     if (supportStatus !== "all" && report.status !== supportStatus) return false
@@ -537,11 +642,11 @@ export function AdminPage({ lang }: Props) {
       <AdminSidebar lang={lang} section={section} live={live} profileName={profile?.display_name ?? profile?.email ?? null} profileEmail={profile?.email ?? null} avatarUrl={profile?.avatar_url ?? null} onNavigate={goSection} onSignOut={handleSignOut} />
 
       <div className="lg:pl-[200px]">
-        <AdminTopbar lang={lang} section={section} title={adminTopbarTitle} live={live} onReload={reload} reloading={loading} onSignOut={handleSignOut} />
+        <AdminTopbar lang={lang} section={section} title={adminTopbarTitle} live={live} onReload={reload} reloading={section === "notifications" ? notificationHistoryLoading || notificationRecipientsLoading : loading} onSignOut={handleSignOut} />
 
         <main className="mx-auto w-full max-w-[1440px] space-y-6 px-3 pb-[calc(108px+env(safe-area-inset-bottom))] pt-4 min-[380px]:px-4 sm:space-y-8 sm:px-6 sm:pt-6 md:px-8 lg:px-8 lg:pb-12 lg:pt-8 xl:px-10">
            <div className="dashboard-reveal space-y-6 sm:space-y-8">
-            {error ? (
+            {error && section !== "notifications" && section !== "supports" ? (
               <div className="rounded-[16px] border-2 border-amber-200 bg-amber-50 p-4 text-sm font-semibold text-amber-800 shadow-[0_3px_0_#f5d78e] sm:rounded-[20px] sm:p-5 dark:border-amber-500/20 dark:bg-amber-500/10 dark:text-amber-200 dark:shadow-none">
                 <p className="font-black">Chưa đọc được full data: {error}</p>
                 <p className="mt-1">Hãy chạy file <code>supabase/migrations/*_admin_read.sql</code> trong Supabase SQL editor để mở policy cho role=admin.</p>
@@ -550,21 +655,26 @@ export function AdminPage({ lang }: Props) {
             {section === "notifications" ? (
             <section className="scroll-mt-24 space-y-4 sm:space-y-5">
               <Card className="space-y-5 p-4 sm:p-5">
-                <div className="grid gap-5 lg:grid-cols-2">
+                <fieldset disabled={notificationSending} className="grid min-w-0 gap-5 lg:grid-cols-2">
                   <div>
                     <label className="text-sm font-black">Đối tượng nhận</label>
+                    <div className="mt-2 space-y-2 text-sm font-bold">
+                      <label className="flex items-center gap-2"><input type="radio" name="notification-audience" checked={notificationAudience === "selected"} onChange={() => setNotificationAudience("selected")} />Chọn người nhận ({notificationRecipientIds.length})</label>
+                      <label className="flex items-center gap-2"><input type="radio" name="notification-audience" checked={notificationAudience === "all"} onChange={() => setNotificationAudience("all")} />Tất cả user active ({notificationRecipientsLoading || notificationRecipientsError ? "..." : notificationRecipientTotals?.activeTotal ?? "..."})</label>
+                    </div>
                     <label className="relative mt-2 block">
                       <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
-                      <input value={notificationRecipientQuery} onChange={(e) => setNotificationRecipientQuery(e.target.value)} placeholder="Tìm theo tên, email hoặc ID..." className="h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white pl-9 pr-3 text-sm font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" />
+                      <input aria-label="Tìm người nhận" value={notificationRecipientQuery} onChange={(e) => { setNotificationRecipientsLoading(true); setNotificationRecipientQuery(e.target.value); setNotificationRecipientOffset(0) }} placeholder="Tìm theo tên, email hoặc ID..." className="h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white pl-9 pr-3 text-sm font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" />
                     </label>
                     <div className="mt-2 max-h-64 overflow-y-auto rounded-xl border-2 border-[#E5E5E5] bg-white p-2 lg:max-h-72 dark:border-white/10 dark:bg-slate-800">
-                      <label className="flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-sm font-black hover:bg-sky-50 dark:hover:bg-white/5">
-                        <input type="checkbox" checked={notificationRecipientIds.length === 0} onChange={() => setNotificationRecipientIds([])} className="h-4 w-4 accent-[#1CB0F6]" />
-                        Tất cả user active ({notificationRecipients.length})
-                      </label>
-                      {filteredNotificationRecipients.map((u) => <label key={u.id} className="flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-sm font-semibold hover:bg-sky-50 dark:hover:bg-white/5"><input type="checkbox" checked={notificationRecipientIds.includes(u.id)} onChange={() => setNotificationRecipientIds((current) => current.includes(u.id) ? current.filter((id) => id !== u.id) : [...current, u.id])} className="h-4 w-4 accent-[#1CB0F6]" /><span className="min-w-0 truncate">{u.displayName ?? "(chưa đặt tên)"} <span className="text-xs text-slate-400">· {u.email ?? u.id.slice(0, 8)}</span></span></label>)}
+                      {notificationRecipientsLoading ? <p role="status" className="p-2 text-sm">Đang tải người nhận...</p> : notificationRecipientsError ? <p role="alert" className="p-2 text-sm text-red-600">{notificationRecipientsError} <button type="button" className="underline" onClick={() => { setNotificationRecipientsLoading(true); setNotificationRefresh((value) => value + 1) }}>Thử lại</button></p> : notificationRecipients.length ? notificationRecipients.map((u) => <label key={u.id} className="flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-sm font-semibold hover:bg-sky-50 dark:hover:bg-white/5"><input type="checkbox" disabled={notificationAudience !== "selected"} checked={notificationRecipientIds.includes(u.id)} onChange={() => setNotificationRecipientIds((current) => current.includes(u.id) ? current.filter((id) => id !== u.id) : [...current, u.id])} className="h-4 w-4 accent-[#1CB0F6]" /><span className="min-w-0 truncate">{u.displayName ?? "(chưa đặt tên)"} <span className="text-xs text-slate-400">· {u.email ?? u.id.slice(0, 8)}</span></span></label>) : <p className="p-2 text-sm">Không có người nhận phù hợp.</p>}
                     </div>
-                    <p className="mt-1 text-xs font-semibold text-slate-400">{notificationRecipientIds.length ? `Đã chọn ${notificationRecipientIds.length} user` : `Tất cả user active (${notificationRecipients.length})`} · Hiển thị {filteredNotificationRecipients.length}/{notificationRecipients.length}</p>
+                    <p className="mt-2 text-xs font-semibold text-slate-400">Đã chọn {notificationRecipientIds.length} user (giữ khi tìm kiếm / đổi trang). {!notificationRecipientsLoading && !notificationRecipientsError && notificationRecipientTotals ? `Hiển thị ${notificationRecipients.length ? notificationRecipientOffset + 1 : 0}-${notificationRecipientOffset + notificationRecipients.length} / ${notificationRecipientTotals.total} kết quả.` : ""}</p>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={notificationRecipientsLoading || notificationRecipientOffset === 0} onClick={() => { setNotificationRecipientsLoading(true); setNotificationRecipientOffset((value) => Math.max(0, value - 30)) }}>Trước</button>
+                      <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={notificationRecipientsLoading || !!notificationRecipientsError || !notificationRecipientTotals || notificationRecipientOffset + 30 >= notificationRecipientTotals.total} onClick={() => { setNotificationRecipientsLoading(true); setNotificationRecipientOffset((value) => value + 30) }}>Sau</button>
+                      <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={!notificationRecipientIds.length} onClick={() => setNotificationRecipientIds([])}>Bỏ chọn tất cả</button>
+                    </div>
                   </div>
                   <div className="space-y-5">
                     <div>
@@ -578,22 +688,24 @@ export function AdminPage({ lang }: Props) {
                       <p className="mt-1 text-right text-xs font-semibold text-slate-400">{notificationMessage.length}/2000</p>
                     </div>
                   </div>
-                </div>
-                {notificationResult ? <p className="rounded-xl bg-sky-50 px-3 py-2 text-sm font-bold text-sky-700 dark:bg-sky-500/10 dark:text-sky-300">{notificationResult}</p> : null}
+                </fieldset>
+                {notificationResult ? <p role="status" className="rounded-xl bg-sky-50 px-3 py-2 text-sm font-bold text-sky-700 dark:bg-sky-500/10 dark:text-sky-300">{notificationResult}</p> : null}
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                  <p className="text-xs font-semibold text-slate-400">{notificationRecipientIds.length ? `Sẽ gửi tới ${notificationRecipientIds.length} user đã chọn` : `Sẽ gửi tới tất cả ${notificationRecipients.length} user active`}</p>
-                  <button type="button" disabled={notificationSending} onClick={handleSendNotification} className="lp-btn lp-btn--primary w-full sm:w-auto"><Send className="h-4 w-4" />{notificationSending ? "Đang gửi..." : "Gửi thông báo"}</button>
+                  <p className="text-xs font-semibold text-slate-400">{notificationAudience === "selected" ? `Sẽ gửi tới ${notificationRecipientIds.length} user đã chọn` : "Gửi tới tất cả user active, cần xác nhận trước khi gửi."}</p>
+                  <button type="button" disabled={notificationSending || notificationRecipientsLoading || !!notificationRecipientsError || !notificationRecipientTotals || !notificationTitle.trim() || !notificationMessage.trim() || (notificationAudience === "selected" ? !notificationRecipientIds.length : !notificationRecipientTotals.activeTotal)} onClick={handleSendNotification} className="lp-btn lp-btn--primary w-full sm:w-auto"><Send className="h-4 w-4" />{notificationSending ? "Đang gửi..." : "Gửi thông báo"}</button>
                 </div>
               </Card>
               <div className="space-y-3">
-                <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Lịch sử đã gửi ({notificationHistory.length})</p>
+                <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Lịch sử đã gửi (đã tải {notificationHistory.length})</p>
+                {notificationHistoryLoading ? <p role="status" className="text-sm">Đang tải lịch sử...</p> : null}
+                {notificationHistoryError ? <p role="alert" className="text-sm text-red-600">Không tải được lịch sử: {notificationHistoryError} <button type="button" disabled={notificationHistoryLoading} className="underline" onClick={() => void loadNotificationHistory()}>Tải lại lịch sử</button></p> : null}
                 {notificationHistory.length ? (
                   <div className="overflow-x-auto rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none">
                     <table className="w-full min-w-[900px] text-left text-sm">
                       <thead><tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-wide text-slate-400 dark:bg-white/5"><th className="px-4 py-3">Tiêu đề</th><th className="px-4 py-3">Phạm vi</th><th className="px-4 py-3 text-right">Người nhận</th><th className="px-4 py-3">Thời gian</th><th className="px-4 py-3"><span className="sr-only">Thao tác</span></th></tr></thead>
                       <tbody>{notificationHistory.map((notification) => (
                         <tr key={notification.id} onClick={() => setSelectedNotification(notification)} className={cn("cursor-pointer border-t border-slate-100 transition-colors hover:bg-sky-50/60 dark:border-white/5 dark:hover:bg-white/5", notification.revokedAt && "opacity-60")}>
-                          <td className="max-w-[380px] px-4 py-3"><p className="truncate font-extrabold text-[#100F3E] dark:text-white" title={notification.title}>{notification.title}</p><p className="mt-1 line-clamp-1 truncate text-xs font-semibold text-slate-500 dark:text-slate-400" title={notification.message}>{notification.message}</p></td>
+                          <td className="max-w-[380px] px-4 py-3"><button type="button" className="block max-w-full truncate text-left font-extrabold text-[#100F3E] dark:text-white" title={notification.title} onClick={(event) => { event.stopPropagation(); setSelectedNotification(notification) }}>{notification.title}</button>{notification.legacy ? <span className="text-xs font-bold text-amber-600">Dữ liệu cũ (legacy)</span> : null}<p className="mt-1 line-clamp-1 truncate text-xs font-semibold text-slate-500 dark:text-slate-400" title={notification.message}>{notification.message}</p></td>
                           <td className="px-4 py-3"><span className={cn("whitespace-nowrap rounded-full px-2.5 py-1 text-[11px] font-black", notification.isDirect ? "bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-300" : "bg-sky-50 text-sky-600 dark:bg-sky-500/10 dark:text-sky-300")}>{notification.isDirect ? "Gửi riêng" : "Tất cả user"}</span>{notification.revokedAt ? <span className="ml-1.5 whitespace-nowrap rounded-full bg-red-50 px-2.5 py-1 text-[11px] font-black text-red-600 dark:bg-red-500/10 dark:text-red-300">Đã thu hồi</span> : null}</td>
                           <td className="px-4 py-3 text-right font-extrabold text-[#100F3E] dark:text-white">{notification.recipientCount}</td>
                           <td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(notification.createdAt, lang)}</td>
@@ -602,7 +714,8 @@ export function AdminPage({ lang }: Props) {
                       ))}</tbody>
                     </table>
                   </div>
-                ) : <Card variant="dashed" className="py-10 text-center"><p className="text-sm font-bold text-slate-500">Chưa có lịch sử thông báo.</p></Card>}
+                ) : !notificationHistoryLoading && !notificationHistoryError ? <Card variant="dashed" className="py-10 text-center"><p className="text-sm font-bold text-slate-500">Chưa có lịch sử thông báo.</p></Card> : null}
+                {notificationHistoryMore ? <button type="button" disabled={notificationHistoryLoading} className="lp-btn lp-btn--secondary" onClick={() => { const last = notificationHistory[notificationHistory.length - 1]; if (last) void loadNotificationHistory({ createdAt: last.createdAt, id: last.id }) }}>Tải thêm lịch sử</button> : null}
               </div>
             </section>
             ) : null}
@@ -625,7 +738,7 @@ export function AdminPage({ lang }: Props) {
               </Card>
               {paymentsError ? <Card variant="dashed" className="p-5 text-sm font-bold text-red-600">{paymentsError}</Card> : null}
               {!paymentsError && !filteredPayments.length ? <Card variant="dashed" className="py-14 text-center"><WalletCards className="mx-auto h-9 w-9 text-slate-300" /><p className="mt-3 text-sm font-bold text-slate-500">Chưa có giao dịch phù hợp.</p></Card> : null}
-              {pagedPayments.length ? <div className="overflow-x-auto rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none"><table className="w-full min-w-[900px] text-left text-sm"><thead><tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-wide text-slate-400 dark:bg-white/5"><th className="px-4 py-3">User</th><th className="px-4 py-3">Môn học</th><th className="px-4 py-3">Mã đơn</th><th className="px-4 py-3 text-right">Số tiền</th><th className="px-4 py-3">Trạng thái</th><th className="px-4 py-3">Thời gian</th></tr></thead><tbody>{pagedPayments.map((payment) => { const user = userById.get(payment.userId); return <tr key={payment.orderId} className="border-t border-slate-100 dark:border-white/5"><td className="px-4 py-3"><p className="font-extrabold text-[#100F3E] dark:text-white">{user?.displayName ?? "(chưa đặt tên)"}</p><p className="text-xs font-semibold text-slate-400">{user?.email ?? payment.userId}</p></td><td className="max-w-[240px] px-4 py-3 font-bold text-slate-600 dark:text-slate-300">{payment.productName}</td><td className="px-4 py-3 font-mono text-xs text-slate-500">{payment.orderId}<span className="block text-[10px] text-slate-400">{payment.transactionId ?? "Chưa có mã giao dịch"}</span></td><td className="px-4 py-3 text-right font-black text-[#129BDC]">{formatVnd(payment.amountVnd)}</td><td className="px-4 py-3"><PaymentStatusBadge status={payment.status} /></td><td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(payment.paidAt ?? payment.createdAt, lang)}</td></tr> })}</tbody></table></div> : null}
+              {pagedPayments.length ? <div className="overflow-x-auto rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none"><table className="w-full min-w-[900px] text-left text-sm"><thead><tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-wide text-slate-400 dark:bg-white/5"><th className="px-4 py-3">User</th><th className="px-4 py-3">Môn học</th><th className="px-4 py-3">Mã đơn</th><th className="px-4 py-3 text-right">Số tiền</th><th className="px-4 py-3">Trạng thái</th><th className="px-4 py-3">Thời gian tạo đơn</th></tr></thead><tbody>{pagedPayments.map((payment) => { const user = userById.get(payment.userId); return <tr key={payment.orderId} className="border-t border-slate-100 dark:border-white/5"><td className="px-4 py-3"><p className="font-extrabold text-[#100F3E] dark:text-white">{user?.displayName ?? "(chưa đặt tên)"}</p><p className="text-xs font-semibold text-slate-400">{user?.email ?? payment.userId}</p></td><td className="max-w-[240px] px-4 py-3 font-bold text-slate-600 dark:text-slate-300">{payment.productName}</td><td className="px-4 py-3 font-mono text-xs text-slate-500">{payment.orderId}<span className="block text-[10px] text-slate-400">{payment.transactionId ?? "Chưa có mã giao dịch"}</span></td><td className="px-4 py-3 text-right font-black text-[#129BDC]">{formatVnd(payment.amountVnd)}</td><td className="px-4 py-3"><PaymentStatusBadge status={payment.status} /></td><td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(payment.createdAt, lang)}</td></tr> })}</tbody></table></div> : null}
               {filteredPayments.length > PAYMENT_PAGE_SIZE ? <div className="flex items-center justify-between"><p className="text-sm font-bold text-slate-400">Hiển thị {safePaymentPage * PAYMENT_PAGE_SIZE + 1}–{Math.min(filteredPayments.length, safePaymentPage * PAYMENT_PAGE_SIZE + PAYMENT_PAGE_SIZE)} / {filteredPayments.length}</p><div className="flex gap-2"><button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safePaymentPage === 0} onClick={() => setPaymentPage(safePaymentPage - 1)}>← Trước</button><button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safePaymentPage >= paymentPageCount - 1} onClick={() => setPaymentPage(safePaymentPage + 1)}>Sau →</button></div></div> : null}
             </section>
              ) : null}
@@ -1136,7 +1249,7 @@ export function AdminPage({ lang }: Props) {
       <AdminMobileNav lang={lang} section={section} onNavigate={goSection} />
 
       {selected ? <UserDrawer user={selected} lang={lang} onClose={() => setSelectedId(null)} /> : null}
-      {selectedNotification ? <NotificationHistoryDetail notification={selectedNotification} lang={lang} onClose={() => setSelectedNotification(null)} /> : null}
+      {section === "notifications" && selectedNotification ? <NotificationHistoryDetail key={selectedNotification.id} notification={selectedNotification} refresh={notificationDetailRefresh} lang={lang} onClose={() => setSelectedNotification(null)} /> : null}
     </div>
   )
 }
@@ -1385,18 +1498,70 @@ function UserDrawer({ user, lang, onClose }: { user: AdminUser; lang: "vi" | "en
   )
 }
 
-function NotificationHistoryDetail({ notification, lang, onClose }: { notification: AdminNotificationHistory; lang: "vi" | "en"; onClose: () => void }) {
+function NotificationHistoryDetail({ notification: initialNotification, refresh, lang, onClose }: { notification: AdminNotificationHistory; refresh: number; lang: "vi" | "en"; onClose: () => void }) {
+  const [details, setDetails] = useState<Awaited<ReturnType<typeof fetchNotificationBatchDetails>>>(null)
+  const notification = details ?? initialNotification
+  const [recipients, setRecipients] = useState<Awaited<ReturnType<typeof fetchNotificationBatchRecipients>>>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  const [hasMore, setHasMore] = useState(false)
+  const requestRef = useRef(0)
+  const failedCursor = useRef<string | undefined>(undefined)
+  const batchId = initialNotification.id
+  const loadPage = useCallback(async (afterId?: string) => {
+    const request = ++requestRef.current
+    failedCursor.current = afterId
+    setLoading(true)
+    setError(null)
+    if (!afterId) { setDetails(null); setRecipients([]); setHasMore(false) }
+    try {
+      const [rows, metadata] = await Promise.all([
+        fetchNotificationBatchRecipients(batchId, afterId),
+        afterId ? Promise.resolve(undefined) : fetchNotificationBatchDetails(batchId),
+      ])
+      if (request !== requestRef.current) return
+      if (metadata === null) { setError("Thông báo không còn tồn tại hoặc không thể truy cập."); return }
+      if (metadata !== undefined) setDetails(metadata)
+      setRecipients((current) => afterId ? [...current, ...rows.filter((row) => !current.some((item) => item.id === row.id))] : rows)
+      setHasMore(rows.length === 50)
+    } catch (error: unknown) {
+      if (request === requestRef.current) setError(error instanceof Error ? error.message : "Không tải được chi tiết thông báo.")
+    } finally {
+      if (request === requestRef.current) setLoading(false)
+    }
+  }, [batchId])
+  useEffect(() => {
+    void loadPage()
+    return () => { requestRef.current += 1 }
+  }, [loadPage, refresh])
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => { if (event.key === "Escape") onClose() }
     window.addEventListener("keydown", onKey)
     return () => window.removeEventListener("keydown", onKey)
   }, [onClose])
-  const readCount = notification.recipients.filter((recipient) => recipient.readAt).length
   return <div className="fixed inset-0 z-[90] flex items-center justify-center p-3 sm:p-6">
     <button type="button" aria-label="Đóng" className="contact-modal-overlay absolute inset-0 bg-[rgba(16,15,62,0.45)] backdrop-blur-[2px]" onClick={onClose} />
     <aside role="dialog" aria-modal="true" className="contact-modal-panel relative z-10 flex max-h-[92dvh] w-full max-w-[620px] flex-col overflow-hidden rounded-[18px] border-2 border-[#E5E5E5] bg-white shadow-[0_6px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none">
       <div className="flex items-start justify-between gap-4 border-b border-slate-100 px-5 py-4 sm:px-6 sm:py-5 dark:border-white/10"><div className="min-w-0"><p className="text-xs font-black uppercase tracking-wide text-[#129BDC]">Chi tiết thông báo</p><h2 className="mt-1 truncate text-xl font-black text-[#100F3E] dark:text-white">{notification.title}</h2><p className="mt-1 text-xs font-semibold text-slate-400">{notification.isDirect ? "Gửi riêng" : "Tất cả user"} · {formatTime(notification.createdAt, lang)}</p></div><button type="button" className="lp-btn lp-btn--secondary lp-btn--icon shrink-0" onClick={onClose} aria-label="Đóng"><X className="h-4 w-4" /></button></div>
-      <div className="min-h-0 flex-1 space-y-4 overflow-y-auto px-5 py-4 sm:px-6"><div className="rounded-xl bg-slate-50 p-3.5 text-sm font-semibold leading-6 text-slate-600 dark:bg-white/5 dark:text-slate-300">{notification.message}</div><div className="grid grid-cols-2 gap-2 sm:grid-cols-3"><DrawerMetric label="Tổng người nhận" value={String(notification.recipientCount)} /><DrawerMetric label="Đã đọc" value={`${readCount}`} /><DrawerMetric label="Chưa đọc" value={`${notification.recipientCount - readCount}`} /></div><div><p className="text-xs font-black uppercase tracking-wide text-slate-400">Danh sách người nhận</p><div className="mt-2 space-y-1.5">{notification.recipients.map((recipient) => <div key={recipient.id} className="flex items-center justify-between gap-3 rounded-xl bg-slate-50 px-3 py-2.5 dark:bg-white/5"><div className="min-w-0"><p className="truncate text-sm font-black text-[#100F3E] dark:text-white">{recipient.displayName ?? "(chưa đặt tên)"}</p><p className="truncate text-xs font-semibold text-slate-400">{recipient.email ?? recipient.id}</p></div><span className={cn("shrink-0 rounded-full px-2 py-1 text-[10px] font-black", recipient.readAt ? "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300" : "bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-300")}>{recipient.readAt ? "Đã đọc" : "Chưa đọc"}</span></div>)}</div></div></div>
+      <div className="min-h-0 flex-1 space-y-4 overflow-y-auto px-5 py-4 sm:px-6">
+        {notification.legacy ? <p className="text-xs font-bold text-amber-600">Dữ liệu cũ (legacy)</p> : null}
+        {notification.revokedAt ? <p className="text-xs font-bold text-red-600">Đã thu hồi: {formatTime(notification.revokedAt, lang)}</p> : null}
+        <div className="whitespace-pre-wrap break-words rounded-xl bg-slate-50 p-3.5 text-sm font-semibold leading-6 text-slate-600 dark:bg-white/5 dark:text-slate-300">{notification.message}</div>
+        <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={loading} onClick={() => void loadPage()}>Làm mới chi tiết</button>
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+          <DrawerMetric label="Đã gửi ban đầu" value={String(notification.recipientCount)} />
+          <DrawerMetric label="Người nhận còn lại" value={details ? String(details.remainingCount) : "..."} />
+          <DrawerMetric label="Tài khoản đã xóa" value={details ? String(Math.max(0, details.recipientCount - details.remainingCount)) : "..."} />
+          <DrawerMetric label="Đã đọc" value={details ? String(details.readCount) : "..."} />
+          <DrawerMetric label="Chưa đọc" value={details ? String(details.unreadCount) : "..."} />
+          <DrawerMetric label="Đã tải" value={String(recipients.length)} />
+        </div>
+        <div><p className="text-xs font-black uppercase tracking-wide text-slate-400">Danh sách người nhận</p><div className="mt-2 space-y-1.5">{recipients.map((recipient) => <div key={recipient.id} className="flex items-center justify-between gap-3 rounded-xl bg-slate-50 px-3 py-2.5 dark:bg-white/5"><div className="min-w-0"><p className="truncate text-sm font-black text-[#100F3E] dark:text-white">{recipient.displayName ?? "(chưa đặt tên)"}</p><p className="truncate text-xs font-semibold text-slate-400">{recipient.email ?? recipient.id}</p></div><span className={cn("shrink-0 rounded-full px-2 py-1 text-[10px] font-black", recipient.readAt ? "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300" : "bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-300")}>{recipient.readAt ? "Đã đọc" : "Chưa đọc"}</span></div>)}</div></div>
+        {loading ? <p role="status" className="text-sm">Đang tải người nhận...</p> : null}
+        {error ? <p role="alert" className="text-sm text-red-600">{error} <button type="button" disabled={loading} className="underline" onClick={() => void loadPage(failedCursor.current)}>Thử lại</button></p> : null}
+        {!loading && !error && !recipients.length ? <p className="text-sm text-slate-500">Không có dữ liệu người nhận.</p> : null}
+        {hasMore && !error ? <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={loading} onClick={() => { const last = recipients[recipients.length - 1]; if (last) void loadPage(last.id) }}>Tải thêm người nhận</button> : null}
+      </div>
     </aside>
   </div>
 }
