@@ -10,7 +10,7 @@ export const appTranslations = {
     quizNow: "Take a quiz now",
     heroTitleLine1: "Speed up your practice",
     heroTitleLine2: "with",
-    brand: "QuizPKA",
+    brand: "Quizpka",
     heroDesc:
       "Designed to help PKA students prep fast for midterms and finals across all general and major courses.",
     explore: "Experience it now",
@@ -20,7 +20,9 @@ export const appTranslations = {
     eyebrowText: "Try free learning now!",
     contribute: "Contribute",
     support: "Support",
-    copyright: "© 2026 QuizPKA.",
+    policy: "Policy",
+    terms: "Terms & Policy",
+    copyright: "© 2026 Quizpka. All rights reserved.",
     switchToVi: "Switch to Vietnamese",
     switchToEn: "Switch to English",
     switchToDark: "Switch to dark mode",
@@ -38,7 +40,7 @@ export const appTranslations = {
     quizNow: "Làm quiz ngay",
     heroTitleLine1: "Luyện tập nhanh chóng",
     heroTitleLine2: "cùng",
-    brand: "QuizPKA",
+    brand: "Quizpka",
     heroDesc:
       "Trang giúp sinh viên PKA ôn thi cấp tốc với kho tài liệu ôn thi giữa và cuối kỳ phong phú, bao trọn cả các môn đại cương và chuyên ngành.",
     explore: "Trải nghiệm ngay",
@@ -48,7 +50,9 @@ export const appTranslations = {
     eyebrowText: "Học thử miễn phí ngay!",
     contribute: "Chia sẻ tài liệu",
     support: "Hỗ trợ và góp ý",
-    copyright: "© 2026 QuizPKA.",
+    policy: "Chính sách",
+    terms: "Điều khoản & Chính sách",
+    copyright: "© 2026 Quizpka. All rights reserved.",
     switchToVi: "Chuyển sang tiếng Việt",
     switchToEn: "Chuyển sang tiếng Anh",
     switchToDark: "Chuyển sang giao diện tối",
@@ -162,7 +166,7 @@ export const dashboardCopy = {
     historyDesc: "Các lượt làm bài gần đây của bạn sẽ xuất hiện tại đây.",
     purchasedTitle: "Quiz đã mua",
     notificationsTitle: "Thông báo",
-    notificationsDesc: "Cập nhật mới nhất từ QuizPKA dành cho bạn.",
+    notificationsDesc: "Cập nhật mới nhất từ Quizpka dành cho bạn.",
     markAllRead: "Đánh dấu tất cả đã đọc",
     allNotifications: "Tất cả",
     unreadNotifications: "Chưa đọc",
@@ -170,7 +174,7 @@ export const dashboardCopy = {
     notificationLoadError: "Không thể tải thông báo. Vui lòng thử lại.",
     unreadCount: "chưa đọc",
     settingsTitle: "Cài đặt",
-    settingsDesc: "Tùy chỉnh trải nghiệm QuizPKA theo cách bạn muốn.",
+    settingsDesc: "Tùy chỉnh trải nghiệm Quizpka theo cách bạn muốn.",
     language: "Ngôn ngữ",
     appearance: "Giao diện",
     vietnamese: "Tiếng Việt",
@@ -237,7 +241,7 @@ export const dashboardCopy = {
     historyDesc: "Your recent practice attempts will appear here.",
     purchasedTitle: "Purchased quizzes",
     notificationsTitle: "Notifications",
-    notificationsDesc: "The latest updates from QuizPKA for you.",
+    notificationsDesc: "The latest updates from Quizpka for you.",
     markAllRead: "Mark all as read",
     allNotifications: "All",
     unreadNotifications: "Unread",
@@ -245,7 +249,7 @@ export const dashboardCopy = {
     notificationLoadError: "Could not load notifications. Please try again.",
     unreadCount: "unread",
     settingsTitle: "Settings",
-    settingsDesc: "Personalise QuizPKA to fit your learning style.",
+    settingsDesc: "Personalise Quizpka to fit your learning style.",
     language: "Language",
     appearance: "Appearance",
     vietnamese: "Tiếng Việt",
@@ -701,7 +705,7 @@ export const dsaiPickerCopy = {
 export const toeicSectionCopy = {
   en: {
     title: "TOEIC Preparation with",
-    brand: "QuizPKA",
+    brand: "Quizpka",
     subtitle: "ETS 2026 standard format - 200 questions across Listening & Reading. Choose Full Test or practice by skill and by Part.",
     badge: "TOEIC",
     questions: "questions",
@@ -716,7 +720,7 @@ export const toeicSectionCopy = {
   },
   vi: {
     title: "Luyện thi TOEIC cùng",
-    brand: "QuizPKA",
+    brand: "Quizpka",
     subtitle: "Chuẩn ETS 2026 với 200 câu Listening & Reading. Chọn Full Test hoặc luyện theo kỹ năng và theo từng Part.",
     badge: "TOEIC",
     questions: "câu hỏi",
@@ -761,7 +765,7 @@ export const toeicPickerCopy = {
 export const toeicAnnouncementCopy = {
   en: {
     badge: "Under construction",
-    title: "QuizPKA is being built!",
+    title: "Quizpka is being built!",
     desc: "This website is a work in progress and gets better every day. Share your documents and exams to grow our shared question bank, or send feedback to help us improve.",
     benefits: [
       "New exams and documents added every day",
@@ -775,8 +779,8 @@ export const toeicAnnouncementCopy = {
   },
   vi: {
     badge: "Đang xây dựng",
-    title: "QuizPKA đang được hoàn thiện!",
-    desc: "QuizPKA đang trong quá trình xây dựng. Mọi chia sẻ và đóng góp của bạn sẽ giúp chúng mình nhanh chóng hoàn thiện kho tài liệu chung này!",
+    title: "Quizpka đang được hoàn thiện!",
+    desc: "Quizpka đang trong quá trình xây dựng. Mọi chia sẻ và đóng góp của bạn sẽ giúp chúng mình nhanh chóng hoàn thiện kho tài liệu chung này!",
     benefits: [
       "Kho đề và tài liệu được bổ sung mỗi ngày",
       "Mọi góp ý của bạn đều được lắng nghe",

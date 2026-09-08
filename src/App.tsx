@@ -20,6 +20,7 @@ const ToeicAnnouncementModal = lazy(() => import("@/components/ToeicAnnouncement
 const DashboardPage = lazy(() => import("@/pages/DashboardPage").then(({ DashboardPage: component }) => ({ default: component })))
 const AdminPage = lazy(() => import("@/pages/AdminPage").then(({ AdminPage: component }) => ({ default: component })))
 const PracticeGuestPage = lazy(() => import("@/pages/PracticeGuestPage").then(({ PracticeGuestPage: component }) => ({ default: component })))
+const PolicyPage = lazy(() => import("@/pages/PolicyPage").then(({ PolicyPage: component }) => ({ default: component })))
 const NotFoundPage = lazy(() => import("@/pages/NotFoundPage").then(({ NotFoundPage: component }) => ({ default: component })))
 
 function getTodayKey(): string {
@@ -155,6 +156,37 @@ export default function App() {
     )
   }
 
+  if (pathname === appRoutes.policy) {
+    return (
+      <div className={shellClassName}>
+        <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_#ffffff_0%,_rgba(248,250,252,0.55)_45%,_#f8fafc_100%)] dark:bg-[radial-gradient(ellipse_at_top,_rgba(30,58,138,0.25)_0%,_rgba(2,6,23,0.2)_45%,_#020617_100%)]" />
+        <div className="relative flex min-h-svh flex-col">
+          <SiteHeader
+            lang={lang}
+            theme={theme}
+            t={t}
+            onToggleLang={() => setLang((current) => (current === "en" ? "vi" : "en"))}
+            onToggleTheme={() =>
+              setTheme((current) => (current === "light" ? "dark" : "light"))
+            }
+            onOpenLogin={openLogin}
+          />
+          <Suspense fallback={<RouteLoading />}><PolicyPage lang={lang} /></Suspense>
+          <SiteFooter t={t} />
+        </div>
+
+        <Suspense fallback={null}><ContactModal
+          open={contactOpen}
+          type={contactType}
+          onClose={closeContact}
+          lang={lang}
+        /></Suspense>
+
+        <Suspense fallback={null}><LoginModal open={loginOpen} onClose={closeLogin} lang={lang} /></Suspense>
+      </div>
+    )
+  }
+
   if (pathname !== appRoutes.home) {
     return (
       <>
@@ -180,7 +212,7 @@ export default function App() {
         <HeroSection t={t} onOpenLogin={openLogin} onOpenDashboard={() => navigate(appRoutes.dashboard)} authenticated={status === "authenticated"} theme={theme} />
         <DocumentsPage lang={lang} />
         <ToeicSection lang={lang} />
-        <SiteFooter t={t} onOpenContact={openContact} />
+        <SiteFooter t={t} />
       </div>
 
       <Suspense fallback={null}><ContactModal

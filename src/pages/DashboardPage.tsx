@@ -74,13 +74,13 @@ const navItems: Array<{
   key: DashboardView
   icon: ComponentType<{ className?: string }>
 }> = [
-  { key: "home", icon: SidebarHomeIcon },
-  { key: "leaderboard", icon: SidebarRankingIcon },
-  { key: "history", icon: SidebarHistoryIcon },
-  { key: "purchased", icon: ShoppingBag },
-  { key: "notifications", icon: Bell },
-  { key: "settings", icon: SidebarSettingsIcon },
-]
+    { key: "home", icon: SidebarHomeIcon },
+    { key: "leaderboard", icon: SidebarRankingIcon },
+    { key: "history", icon: SidebarHistoryIcon },
+    { key: "purchased", icon: ShoppingBag },
+    { key: "notifications", icon: Bell },
+    { key: "settings", icon: SidebarSettingsIcon },
+  ]
 
 function SidebarSvg({ className, children }: { className?: string; children: React.ReactNode }) {
   return <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{children}</svg>
@@ -266,10 +266,10 @@ export function DashboardPage({
     const paths: Record<DashboardView, AppPath> = {
       home: appRoutes.dashboard,
       leaderboard: appRoutes.dashboardLeaderboard,
-        history: appRoutes.dashboardHistory,
-        purchased: appRoutes.dashboardPurchased,
-        notifications: appRoutes.dashboardNotifications,
-        settings: appRoutes.dashboardSettings,
+      history: appRoutes.dashboardHistory,
+      purchased: appRoutes.dashboardPurchased,
+      notifications: appRoutes.dashboardNotifications,
+      settings: appRoutes.dashboardSettings,
     }
     navigateApp(paths[view])
     window.scrollTo({ top: 0, behavior: "smooth" })
@@ -293,16 +293,16 @@ export function DashboardPage({
   const toeicScopeOption = toeicPickerExam ? getToeicScopeOption(toeicScope, toeicPickerExam.id) : null
   const toeicSetupExam: ExamCatalogItem | null = toeicPickerExam
     ? {
-        ...toeicPickerExam,
-        questionCount: toeicScopeOption?.count ?? toeicPickerExam.questionCount,
-        durationMinutes: toeicScopeOption?.durationMinutes ?? toeicPickerExam.durationMinutes,
-        title: toeicScopeOption
-          ? {
-              en: `${toeicPickerExam.title.en} - ${toeicScopeOption.label.en}`,
-              vi: `${toeicPickerExam.title.vi} - ${toeicScopeOption.label.vi}`,
-            }
-          : toeicPickerExam.title,
-      }
+      ...toeicPickerExam,
+      questionCount: toeicScopeOption?.count ?? toeicPickerExam.questionCount,
+      durationMinutes: toeicScopeOption?.durationMinutes ?? toeicPickerExam.durationMinutes,
+      title: toeicScopeOption
+        ? {
+          en: `${toeicPickerExam.title.en} - ${toeicScopeOption.label.en}`,
+          vi: `${toeicPickerExam.title.vi} - ${toeicScopeOption.label.vi}`,
+        }
+        : toeicPickerExam.title,
+    }
     : null
   const toeicSetupSubject = toeicPickerExam ? getSubjectById(toeicPickerExam.subjectId) : null
 
@@ -609,8 +609,8 @@ function DesktopSidebar({
   const handleSignOut = () => { void signOut().then(() => navigateApp(appRoutes.home, { replace: true })) }
   return (
     <aside className="fixed inset-y-0 left-0 z-40 hidden w-[200px] border-r border-slate-200 bg-white px-4 py-5 dark:border-white/10 dark:bg-slate-900 lg:flex lg:flex-col">
-      <a href="/" className="flex h-12 items-center px-3" aria-label="QuizPKA">
-        <img src={brandLogo} alt="QuizPKA" className="h-8 w-auto object-contain" />
+      <a href="/" className="flex h-12 items-center px-3" aria-label="Quizpka">
+        <img src={brandLogo} alt="Quizpka" className="h-8 w-auto object-contain" />
       </a>
 
       <nav className="mt-7 flex flex-1 flex-col gap-1.5" aria-label="Dashboard">
@@ -678,60 +678,60 @@ function DashboardTopbar({ lang, view, onlineCount = 0 }: Pick<DashboardPageProp
               : null
   const PageIcon = pageMeta?.icon
   return (
-      <header className="sticky top-0 z-30 bg-white/80 pt-[env(safe-area-inset-top)] backdrop-blur-2xl dark:bg-[#18191A]/80">
-        <div className="mx-auto flex h-14 w-full max-w-[1440px] items-center justify-between px-3 sm:h-16 sm:px-6 md:px-8 lg:h-[72px] lg:px-8 xl:px-10">
-          {pageMeta && PageIcon ? (
-            view === "leaderboard" ? (
-              <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={pageMeta.title}>
-                <span className="name-logo">{pageMeta.title}</span>
-              </a>
-            ) : view === "history" ? (
-              <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={lang === "vi" ? "Lịch sử làm quiz" : pageMeta.title}>
-                <span className="name-logo">{lang === "vi" ? "Lịch sử làm quiz" : pageMeta.title}</span>
-              </a>
-            ) : view === "purchased" ? (
-              <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={pageMeta.title}>
-                <span className="name-logo">{pageMeta.title}</span>
-              </a>
-            ) : view === "notifications" ? (
-              <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={pageMeta.title}>
-                <span className="name-logo">{pageMeta.title}</span>
-              </a>
-            ) : view === "settings" ? (
-              <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={pageMeta.title}>
-                <span className="name-logo">{pageMeta.title}</span>
-              </a>
-            ) : (
-              <div className="flex min-w-0 items-center gap-3 lg:hidden">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[13px] bg-[#E8F7FE] text-[#1CB0F6] sm:h-14 sm:w-14 sm:rounded-[16px] dark:bg-sky-500/10">
-                  <PageIcon className="h-5 w-5 sm:h-7 sm:w-7" />
-                </div>
-                <h2 className="truncate text-[22px] font-black leading-7 tracking-[-0.03em] text-[#100F3E] sm:text-[28px] dark:text-white">
-                  {pageMeta.title}
-                </h2>
-              </div>
-            )
-          ) : (
-            <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label="Quiz for PKAers">
-              <span className="name-logo">Quiz for PKAers</span>
+    <header className="sticky top-0 z-30 bg-white/80 pt-[env(safe-area-inset-top)] backdrop-blur-2xl dark:bg-[#18191A]/80">
+      <div className="mx-auto flex h-14 w-full max-w-[1440px] items-center justify-between px-3 sm:h-16 sm:px-6 md:px-8 lg:h-[72px] lg:px-8 xl:px-10">
+        {pageMeta && PageIcon ? (
+          view === "leaderboard" ? (
+            <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={pageMeta.title}>
+              <span className="name-logo">{pageMeta.title}</span>
             </a>
-          )}
-
-          <a href="/" className="hidden min-w-0 flex-1 sm:block" aria-label={topbarTitle}>
-            <h2 className="truncate bg-gradient-to-r from-[#7DD3FC] via-[#1CB0F6] to-[#0A4FD6] bg-clip-text text-2xl font-black tracking-[-0.025em] text-transparent sm:text-[32px] lg:text-[36px]">{topbarTitle}</h2>
-          </a>
-
-          <div className="ml-auto">
-            <div className="flex items-center gap-2">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-[#F0F2F5] px-2.5 py-1 text-[11px] font-semibold text-emerald-600 dark:bg-[#3A3B3C] dark:text-emerald-300" title={lang === "vi" ? "Số người đang truy cập website" : "People currently visiting the website"}>
-                <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span>Live</span>
-                <span className="font-black tabular-nums text-slate-700 dark:text-slate-200">{onlineCount}</span>
-              </span>
+          ) : view === "history" ? (
+            <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={lang === "vi" ? "Lịch sử làm quiz" : pageMeta.title}>
+              <span className="name-logo">{lang === "vi" ? "Lịch sử làm quiz" : pageMeta.title}</span>
+            </a>
+          ) : view === "purchased" ? (
+            <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={pageMeta.title}>
+              <span className="name-logo">{pageMeta.title}</span>
+            </a>
+          ) : view === "notifications" ? (
+            <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={pageMeta.title}>
+              <span className="name-logo">{pageMeta.title}</span>
+            </a>
+          ) : view === "settings" ? (
+            <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={pageMeta.title}>
+              <span className="name-logo">{pageMeta.title}</span>
+            </a>
+          ) : (
+            <div className="flex min-w-0 items-center gap-3 lg:hidden">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[13px] bg-[#E8F7FE] text-[#1CB0F6] sm:h-14 sm:w-14 sm:rounded-[16px] dark:bg-sky-500/10">
+                <PageIcon className="h-5 w-5 sm:h-7 sm:w-7" />
+              </div>
+              <h2 className="truncate text-[22px] font-black leading-7 tracking-[-0.03em] text-[#100F3E] sm:text-[28px] dark:text-white">
+                {pageMeta.title}
+              </h2>
             </div>
+          )
+        ) : (
+          <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label="Quiz for PKAers">
+            <span className="name-logo">Quiz for PKAers</span>
+          </a>
+        )}
+
+        <a href="/" className="hidden min-w-0 flex-1 sm:block" aria-label={topbarTitle}>
+          <h2 className="truncate bg-gradient-to-r from-[#7DD3FC] via-[#1CB0F6] to-[#0A4FD6] bg-clip-text text-2xl font-black tracking-[-0.025em] text-transparent sm:text-[32px] lg:text-[36px]">{topbarTitle}</h2>
+        </a>
+
+        <div className="ml-auto">
+          <div className="flex items-center gap-2">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-[#F0F2F5] px-2.5 py-1 text-[11px] font-semibold text-emerald-600 dark:bg-[#3A3B3C] dark:text-emerald-300" title={lang === "vi" ? "Số người đang truy cập website" : "People currently visiting the website"}>
+              <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span>Live</span>
+              <span className="font-black tabular-nums text-slate-700 dark:text-slate-200">{onlineCount}</span>
+            </span>
           </div>
         </div>
-      </header>
+      </div>
+    </header>
   )
 }
 
@@ -951,30 +951,30 @@ function HistoryAttemptRow({ item, lang, onOpen }: {
     ? lang === "vi" ? `Làm lại lần ${item.retryNumber}` : `Retry ${item.retryNumber}`
     : lang === "vi" ? "Lần đầu" : "First attempt"
   return (
-      <tr
-        role="button"
-        tabIndex={0}
-        aria-label={lang === "vi" ? `Xem chi tiết ${item.title}` : `View details for ${item.title}`}
-        onClick={onOpen}
-        onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); onOpen() } }}
-        className="group cursor-pointer border-b border-slate-100 transition-colors last:border-b-0 hover:bg-sky-50/70 focus-visible:bg-sky-50/70 focus-visible:outline-none dark:border-white/5 dark:hover:bg-sky-500/10 dark:focus-visible:bg-sky-500/10"
-      >
-        <td className="px-3 py-3 sm:px-4 sm:py-4">
-          <div className="block w-full text-left">
-            <span className="line-clamp-2 font-extrabold leading-5 text-[#100F3E] dark:text-white sm:text-[15px]">{item.title}</span>
-            <span className="mt-1 block truncate text-[10px] font-bold text-slate-400 sm:text-xs md:hidden">
-              {completedAt}<span className="sm:hidden"> · {mode}</span>
-            </span>
-            <span className="mt-1 block truncate text-[10px] font-extrabold text-[#129BDC] dark:text-sky-300 sm:text-xs lg:hidden">{retry}</span>
-          </div>
-        </td>
-        <td className="hidden px-3 py-3 sm:table-cell">
-          <span className={cn("inline-flex rounded-full px-2.5 py-1 text-[11px] font-extrabold", item.mode === "exam" ? "bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-300" : "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300")}>{mode}</span>
-        </td>
-        <td className="hidden px-3 py-3 text-xs font-semibold text-slate-500 dark:text-slate-400 md:table-cell">{completedAt}</td>
-        <td className="hidden px-3 py-3 lg:table-cell"><span className="inline-flex rounded-full bg-[#E8F7FE] px-2.5 py-1 text-[11px] font-extrabold text-[#129BDC] dark:bg-sky-500/10 dark:text-sky-300">{retry}</span></td>
-        <td className="px-2 py-3 text-right sm:px-3"><span className="whitespace-nowrap text-sm font-black text-[#1CB0F6] sm:text-base">{item.score.toFixed(1)}<span className="text-[10px] text-slate-400 sm:text-xs">/10</span></span></td>
-      </tr>
+    <tr
+      role="button"
+      tabIndex={0}
+      aria-label={lang === "vi" ? `Xem chi tiết ${item.title}` : `View details for ${item.title}`}
+      onClick={onOpen}
+      onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); onOpen() } }}
+      className="group cursor-pointer border-b border-slate-100 transition-colors last:border-b-0 hover:bg-sky-50/70 focus-visible:bg-sky-50/70 focus-visible:outline-none dark:border-white/5 dark:hover:bg-sky-500/10 dark:focus-visible:bg-sky-500/10"
+    >
+      <td className="px-3 py-3 sm:px-4 sm:py-4">
+        <div className="block w-full text-left">
+          <span className="line-clamp-2 font-extrabold leading-5 text-[#100F3E] dark:text-white sm:text-[15px]">{item.title}</span>
+          <span className="mt-1 block truncate text-[10px] font-bold text-slate-400 sm:text-xs md:hidden">
+            {completedAt}<span className="sm:hidden"> · {mode}</span>
+          </span>
+          <span className="mt-1 block truncate text-[10px] font-extrabold text-[#129BDC] dark:text-sky-300 sm:text-xs lg:hidden">{retry}</span>
+        </div>
+      </td>
+      <td className="hidden px-3 py-3 sm:table-cell">
+        <span className={cn("inline-flex rounded-full px-2.5 py-1 text-[11px] font-extrabold", item.mode === "exam" ? "bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-300" : "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300")}>{mode}</span>
+      </td>
+      <td className="hidden px-3 py-3 text-xs font-semibold text-slate-500 dark:text-slate-400 md:table-cell">{completedAt}</td>
+      <td className="hidden px-3 py-3 lg:table-cell"><span className="inline-flex rounded-full bg-[#E8F7FE] px-2.5 py-1 text-[11px] font-extrabold text-[#129BDC] dark:bg-sky-500/10 dark:text-sky-300">{retry}</span></td>
+      <td className="px-2 py-3 text-right sm:px-3"><span className="whitespace-nowrap text-sm font-black text-[#1CB0F6] sm:text-base">{item.score.toFixed(1)}<span className="text-[10px] text-slate-400 sm:text-xs">/10</span></span></td>
+    </tr>
   )
 }
 
@@ -1132,10 +1132,10 @@ function SettingsView({ lang, theme, onToggleLang, onToggleTheme, onOpenContact 
           <div className="min-w-0">
             <h3 className="text-lg font-black text-[#100F3E] dark:text-white">{t.supportTitle}</h3>
           </div>
-           <div className="grid w-full shrink-0 grid-cols-1 gap-2 sm:grid-cols-3 md:w-auto md:min-w-[540px]">
-             <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm w-full whitespace-normal text-center" onClick={() => onOpenContact("Contribute")}>{t.contribute}</button>
-             <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm w-full whitespace-normal text-center" onClick={() => onOpenContact("Support")}>{t.support}</button>
-             <button type="button" className="lp-btn lp-btn--primary lp-btn--sm w-full whitespace-normal text-center" onClick={() => onOpenContact("Report")}>Báo lỗi</button>
+          <div className="grid w-full shrink-0 grid-cols-1 gap-2 sm:grid-cols-3 md:w-auto md:min-w-[540px]">
+            <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm w-full whitespace-normal text-center" onClick={() => onOpenContact("Contribute")}>{t.contribute}</button>
+            <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm w-full whitespace-normal text-center" onClick={() => onOpenContact("Support")}>{t.support}</button>
+            <button type="button" className="lp-btn lp-btn--primary lp-btn--sm w-full whitespace-normal text-center" onClick={() => onOpenContact("Report")}>Báo lỗi</button>
           </div>
         </div>
         <div className="space-y-3 rounded-[20px] border-2 border-[#E5E5E5] bg-white p-5 shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)] md:col-span-2">

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useSyncExternalStore } from "react"
 import { supabase } from "@/lib/supabase"
 import { readStorage, writeStorage } from "@/lib/storage"
 
@@ -13,6 +13,48 @@ function getVisitorId(userId?: string): string {
   return `visitor:${created}`
 }
 
+// Shared store of online *user* ids, fed by the single "website-presence"
+// subscription below. Realtime-js reuses one channel instance per topic and
+// throws if `.on()` is called after `.subscribe()`, so there must be exactly
+// one subscriber: this hook (mounted once in App). Other components read via
+// useOnlineUserIds() and never touch the channel directly.
+let onlineUserIds: ReadonlySet<string> = new Set()
+const onlineListeners = new Set<() => void>()
+
+function emitOnlineIds() {
+  onlineListeners.forEach((listener) => listener())
+}
+
+function subscribeOnlineIds(listener: () => void): () => void {
+  onlineListeners.add(listener)
+  return () => {
+    onlineListeners.delete(listener)
+  }
+}
+
+function snapshotOnlineIds(): ReadonlySet<string> {
+  return onlineUserIds
+}
+
+function syncOnlineIds(state: Record<string, unknown>) {
+  const next = new Set<string>()
+  for (const key of Object.keys(state)) {
+    if (key.startsWith("user:")) next.add(key.slice("user:".length))
+  }
+  if (next.size === onlineUserIds.size) {
+    let same = true
+    for (const id of next) {
+      if (!onlineUserIds.has(id)) {
+        same = false
+        break
+      }
+    }
+    if (same) return
+  }
+  onlineUserIds = next
+  emitOnlineIds()
+}
+
 export function useOnlinePresence(userId?: string): number {
   const [onlineCount, setOnlineCount] = useState(0)
 
@@ -24,7 +66,9 @@ export function useOnlinePresence(userId?: string): number {
 
     channel
       .on("presence", { event: "sync" }, () => {
-        setOnlineCount(Object.keys(channel.presenceState()).length)
+        const state = channel.presenceState()
+        setOnlineCount(Object.keys(state).length)
+        syncOnlineIds(state)
       })
       .subscribe((status) => {
         if (status === "SUBSCRIBED") {
@@ -39,4 +83,8 @@ export function useOnlinePresence(userId?: string): number {
   }, [userId])
 
   return onlineCount
+}
+
+export function useOnlineUserIds(): ReadonlySet<string> {
+  return useSyncExternalStore(subscribeOnlineIds, snapshotOnlineIds, snapshotOnlineIds)
 }

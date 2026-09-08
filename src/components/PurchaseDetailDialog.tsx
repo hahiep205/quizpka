@@ -16,8 +16,8 @@ export function PurchaseDetailDialog({ exam, lang, loading, error, onClose, onCo
 }) {
   const isVietnamese = lang === "vi"
   const docSetCount = exam ? (getSubjectById(exam.subjectId)?.chapters ?? []).filter((chapter) => chapter.documentId).length : 0
-  const [ackDocs, setAckDocs] = useState(false)
-  useEffect(() => { setAckDocs(false) }, [exam?.id])
+  const [ackTerms, setAckTerms] = useState(false)
+  useEffect(() => { setAckTerms(false) }, [exam?.id])
   return <Dialog
     open={Boolean(exam)}
     onClose={onClose}
@@ -37,6 +37,7 @@ export function PurchaseDetailDialog({ exam, lang, loading, error, onClose, onCo
       <div className="rounded-[16px] border border-sky-100 bg-[#F4FBFF] p-4 dark:border-sky-500/15 dark:bg-sky-500/[0.06]">
         <p className="text-xs font-black uppercase tracking-[0.08em] text-slate-400">{isVietnamese ? "Ghi chú" : "Note"}</p>
         <p className="mt-2 text-sm font-semibold leading-6 text-slate-600 dark:text-slate-300">{exam?.description[lang]}</p>
+        <p className="mt-2 text-sm font-bold leading-6 text-[#129BDC] dark:text-sky-300">{isVietnamese ? "Không giới hạn số lần làm, hạn dùng vĩnh viễn." : "Unlimited attempts, lifetime access."}</p>
       </div>
       <div className="mt-4 grid grid-cols-2 gap-3">
         <div className="rounded-[14px] bg-slate-50 p-4 dark:bg-white/5">
@@ -48,27 +49,36 @@ export function PurchaseDetailDialog({ exam, lang, loading, error, onClose, onCo
           <p className="mt-1 text-xl font-black text-[#100F3E] dark:text-white">{docSetCount > 0 ? (exam?.year ?? "—") : `${exam?.durationMinutes ?? 0} ${isVietnamese ? "phút" : "min"}`}</p>
         </div>
       </div>
+      <label className="mt-4 flex cursor-pointer items-start justify-between gap-3 rounded-[14px] border-2 border-sky-200 bg-sky-50 p-4 dark:border-sky-500/20 dark:bg-sky-500/10">
+        <span className="min-w-0 text-xs font-bold leading-5 text-sky-900 dark:text-sky-200">
+          {isVietnamese ? (
+            <>Tôi đã đọc và đồng ý với <a href="/policy" target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()} className="underline">điều khoản sử dụng và chính sách thanh toán</a> của QuizPKA.</>
+          ) : (
+            <>I have read and agree to the <a href="/policy" target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()} className="underline">QuizPKA terms of use and payment policy</a>.</>
+          )}
+        </span>
+        <input
+          type="checkbox"
+          checked={ackTerms}
+          onChange={(event) => setAckTerms(event.target.checked)}
+          className="mt-0.5 h-5 w-5 shrink-0 accent-[#1CB0F6]"
+          aria-label={isVietnamese ? "Tôi đã đọc và đồng ý với điều khoản" : "I agree to the terms"}
+        />
+      </label>
       {docSetCount > 0 ? (
-        <label className="mt-4 flex cursor-pointer items-start justify-between gap-3 rounded-[14px] border-2 border-amber-200 bg-amber-50 p-4 dark:border-amber-500/20 dark:bg-amber-500/10">
-          <span className="min-w-0 text-xs font-bold leading-5 text-amber-800 dark:text-amber-200">
+        <div className="mt-4 rounded-[14px] border-2 border-amber-200 bg-amber-50 p-4 dark:border-amber-500/20 dark:bg-amber-500/10">
+          <p className="text-xs font-bold leading-5 text-amber-800 dark:text-amber-200">
             {isVietnamese
               ? "Tất cả đề thi đều là ảnh được sưu tầm, gom nhặt qua các năm trước. Lưu ý: Các dạng bài, cấu trúc đề thi có thể được thay đổi theo từng năm. Chỉ nên dùng để tham khảo, KHÔNG NÊN ÔM TỦ!"
               : "All exams are scanned images collected from previous years. Note: question types and exam structure may change from year to year. Use for reference only!"}
-          </span>
-          <input
-            type="checkbox"
-            checked={ackDocs}
-            onChange={(event) => setAckDocs(event.target.checked)}
-            className="mt-0.5 h-5 w-5 shrink-0 accent-[#1CB0F6]"
-            aria-label={isVietnamese ? "Tôi đã hiểu lưu ý trên" : "I understand the note above"}
-          />
-        </label>
+          </p>
+        </div>
       ) : null}
       {error ? <p role="alert" className="mt-4 rounded-xl bg-red-50 px-3 py-2 text-sm font-bold text-red-600 dark:bg-red-500/10 dark:text-red-300">{error}</p> : null}
     </div>
     <footer className="grid grid-cols-2 gap-2 border-t border-slate-100 p-4 sm:px-6 dark:border-white/10">
       <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={onClose} disabled={loading}>{isVietnamese ? "Hủy" : "Cancel"}</button>
-      <button type="button" className="lp-btn lp-btn--primary lp-btn--sm" onClick={onConfirm} disabled={loading || (docSetCount > 0 && !ackDocs)}>{loading ? (isVietnamese ? "Đang tạo đơn..." : "Creating...") : "10.000 VND"}</button>
+      <button type="button" className="lp-btn lp-btn--primary lp-btn--sm" onClick={onConfirm} disabled={loading || !ackTerms}>{loading ? (isVietnamese ? "Đang tạo đơn..." : "Creating...") : "10.000 VND"}</button>
     </footer>
   </Dialog>
 }

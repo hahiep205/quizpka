@@ -13,6 +13,7 @@ export const appRoutes = {
   result: "/result",
   resultGuest: "/result4guest",
   authCallback: "/auth/callback",
+  policy: "/policy",
   admin: "/admin",
   adminOverview: "/admin/overview",
   adminUsers: "/admin/users",

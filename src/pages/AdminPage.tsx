@@ -12,6 +12,7 @@ import { ACTIVITY_LABELS, parseActivityRows, parseAttemptRows, type ActivityEven
 import { bucketHoursToday, eventsByType, filterByDays, topSubjects } from "@/features/admin/lib/adminOverview"
 import { ANOMALY_META, detectAllAnomalies, detectUserAnomalies, riskScore, type AnomalyFlag, type AnomalySeverity } from "@/features/admin/lib/anomalyDetectors"
 import { supabase } from "@/lib/supabase"
+import { useOnlineUserIds } from "@/hooks/useOnlinePresence"
 import {
   computeAdminKpis,
   filterAdminUsers,
@@ -135,6 +136,11 @@ export function AdminPage({ lang }: Props) {
   const [query, setQuery] = useState("")
   const [role, setRole] = useState<"all" | "user" | "admin">("all")
   const [status, setStatus] = useState<"all" | "active" | "blocked">("all")
+  const [onlineOnly, setOnlineOnly] = useState(false)
+  // Store chung từ subscription presence duy nhất ở App (useOnlinePresence).
+  // Không tự subscribe ở đây: realtime-js dùng chung channel theo topic và
+  // throw khi gọi .on() sau .subscribe().
+  const onlineIds = useOnlineUserIds()
   const [sortKey, setSortKey] = useState<AdminSortKey | "risk">("lastActive")
   const [sortDir, setSortDir] = useState<"asc" | "desc">("desc")
   const [selectedId, setSelectedId] = useState<string | null>(null)
@@ -145,7 +151,7 @@ export function AdminPage({ lang }: Props) {
   const [notificationRecipientsLoading, setNotificationRecipientsLoading] = useState(true)
   const [notificationRecipientsError, setNotificationRecipientsError] = useState<string | null>(null)
   const [notificationRefresh, setNotificationRefresh] = useState(0)
-  const [notificationAudience, setNotificationAudience] = useState<"selected" | "all">("selected")
+  const [notificationAudience, setNotificationAudience] = useState<"selected" | "all" | "online">("selected")
   const notificationRequest = useRef<{ payload: string; key: string } | null>(null)
   const notificationSendLock = useRef(false)
   const [notificationTitle, setNotificationTitle] = useState("")
@@ -308,7 +314,8 @@ export function AdminPage({ lang }: Props) {
     return () => { cancelled = true; window.clearTimeout(timer) }
   }, [section, notificationRecipientQuery, notificationRecipientOffset, notificationRefresh])
 
-  const notificationPayload = JSON.stringify({ title: notificationTitle.trim(), message: notificationMessage.trim(), audienceMode: notificationAudience, recipientIds: notificationAudience === "selected" ? [...notificationRecipientIds].sort() : [] })
+  const onlineRecipientIds = useMemo(() => [...onlineIds].sort(), [onlineIds])
+  const notificationPayload = JSON.stringify({ title: notificationTitle.trim(), message: notificationMessage.trim(), audienceMode: notificationAudience, recipientIds: notificationAudience === "selected" ? [...notificationRecipientIds].sort() : notificationAudience === "online" ? onlineRecipientIds : [] })
   useEffect(() => { notificationRequest.current = null }, [notificationPayload])
 
   // Đồng bộ tab đang xem với URL (back/forward, link trực tiếp /admin/users...).
@@ -348,7 +355,8 @@ export function AdminPage({ lang }: Props) {
   }, [section])
 
   // Reset về trang 1 mỗi khi đổi filter/sort.
-  useEffect(() => { setPage(0) }, [query, role, status, sortKey, sortDir])
+  useEffect(() => { setPage(0) }, [query, role, status, onlineOnly, sortKey, sortDir])
+
   useEffect(() => { setTimelinePage(0) }, [eventFilter, timelineQuery, onlyAnomaly, rangeDays, section])
   useEffect(() => { setAttemptsPage(0) }, [onlyAnomaly, rangeDays, section])
   useEffect(() => { setPaymentPage(0) }, [paymentQuery, paymentStatus, paymentProduct])
@@ -385,14 +393,15 @@ export function AdminPage({ lang }: Props) {
   const visible = useMemo(() => {
     const byTab = filterByTab(users, "logined")
     const byFilter = filterAdminUsers(byTab, { query, role, status })
+    const byOnline = onlineOnly ? byFilter.filter((u) => onlineIds.has(u.id)) : byFilter
     if (sortKey === "risk") {
-      return [...byFilter].sort((a, b) =>
+      return [...byOnline].sort((a, b) =>
         (flagCountByUser.get(b.id) ?? 0) - (flagCountByUser.get(a.id) ?? 0)
         || Date.parse(b.lastActiveAt ?? "") - Date.parse(a.lastActiveAt ?? ""),
       )
     }
-    return sortAdminUsers(byFilter, sortKey, sortDir)
-  }, [flagCountByUser, query, role, sortDir, sortKey, status, users])
+    return sortAdminUsers(byOnline, sortKey, sortDir)
+  }, [flagCountByUser, onlineIds, onlineOnly, query, role, sortDir, sortKey, status, users])
 
   const pageCount = Math.max(1, Math.ceil(visible.length / USER_PAGE_SIZE))
   const safePage = Math.min(page, pageCount - 1)
@@ -421,6 +430,9 @@ export function AdminPage({ lang }: Props) {
   const filteredPayments = useMemo(() => {
     const q = paymentQuery.trim().toLowerCase()
     const filtered = payments.filter((payment) => {
+      // Bảng chỉ hiện đơn trong ngày hôm nay (0h–23h59 giờ địa phương),
+      // cùng mốc với cột "Thời gian tạo đơn". Đơn ngày cũ ẩn hẳn.
+      if (!isToday(payment.createdAt)) return false
       if (paymentStatus !== "latest" && paymentStatus !== "all" && payment.status !== paymentStatus) return false
       if (paymentProduct !== "all" && payment.productId !== paymentProduct) return false
       if (!q) return true
@@ -541,11 +553,16 @@ export function AdminPage({ lang }: Props) {
       setNotificationResult("Vui lòng chọn ít nhất một người nhận.")
       return
     }
+    if (notificationAudience === "online" && !onlineRecipientIds.length) {
+      setNotificationResult("Hiện không có user nào đang online.")
+      return
+    }
     if (notificationAudience === "all" && (!notificationRecipientTotals.activeTotal || !window.confirm(`Gửi thông báo tới tất cả ${notificationRecipientTotals.activeTotal} user active?`))) return
+    if (notificationAudience === "online" && !window.confirm(`Gửi thông báo tới ${onlineRecipientIds.length} user đang online? Danh sách chốt tại lúc bấm gửi.`)) return
     if (notificationRequest.current?.payload !== notificationPayload) notificationRequest.current = { payload: notificationPayload, key: crypto.randomUUID() }
     notificationSendLock.current = true
     setNotificationSending(true)
-    void sendAdminNotifications({ title: notificationTitle.trim(), message: notificationMessage.trim(), audienceMode: notificationAudience, recipientIds: notificationAudience === "selected" ? [...notificationRecipientIds].sort() : [], idempotencyKey: notificationRequest.current.key })
+    void sendAdminNotifications({ title: notificationTitle.trim(), message: notificationMessage.trim(), audienceMode: notificationAudience === "online" ? "selected" : notificationAudience, recipientIds: notificationAudience === "selected" ? [...notificationRecipientIds].sort() : notificationAudience === "online" ? onlineRecipientIds : [], idempotencyKey: notificationRequest.current.key })
       .then((result) => {
         setNotificationResult(`Đã gửi thông báo tới ${result.recipientCount} user.`)
         notificationRequest.current = null
@@ -647,7 +664,7 @@ export function AdminPage({ lang }: Props) {
         <AdminTopbar lang={lang} section={section} title={adminTopbarTitle} live={live} onReload={reload} reloading={section === "notifications" ? notificationHistoryLoading || notificationRecipientsLoading : loading} onSignOut={handleSignOut} />
 
         <main className="mx-auto w-full max-w-[1440px] space-y-6 px-3 pb-[calc(108px+env(safe-area-inset-bottom))] pt-4 min-[380px]:px-4 sm:space-y-8 sm:px-6 sm:pt-6 md:px-8 lg:px-8 lg:pb-12 lg:pt-8 xl:px-10">
-           <div className="dashboard-reveal space-y-6 sm:space-y-8">
+          <div className="dashboard-reveal space-y-6 sm:space-y-8">
             {error && section !== "notifications" && section !== "supports" ? (
               <div className="rounded-[16px] border-2 border-amber-200 bg-amber-50 p-4 text-sm font-semibold text-amber-800 shadow-[0_3px_0_#f5d78e] sm:rounded-[20px] sm:p-5 dark:border-amber-500/20 dark:bg-amber-500/10 dark:text-amber-200 dark:shadow-none">
                 <p className="font-black">Chưa đọc được full data: {error}</p>
@@ -655,609 +672,626 @@ export function AdminPage({ lang }: Props) {
               </div>
             ) : null}
             {section === "notifications" ? (
-            <section className="scroll-mt-24 space-y-4 sm:space-y-5">
-              <Card className="space-y-5 p-4 sm:p-5">
-                <fieldset disabled={notificationSending} className="grid min-w-0 gap-5 lg:grid-cols-2">
-                  <div>
-                    <label className="text-sm font-black">Đối tượng nhận</label>
-                    <div className="mt-2 space-y-2 text-sm font-bold">
-                      <label className="flex items-center gap-2"><input type="radio" name="notification-audience" checked={notificationAudience === "selected"} onChange={() => setNotificationAudience("selected")} />Chọn người nhận ({notificationRecipientIds.length})</label>
-                      <label className="flex items-center gap-2"><input type="radio" name="notification-audience" checked={notificationAudience === "all"} onChange={() => setNotificationAudience("all")} />Tất cả user active ({notificationRecipientsLoading || notificationRecipientsError ? "..." : notificationRecipientTotals?.activeTotal ?? "..."})</label>
-                    </div>
-                    <label className="relative mt-2 block">
-                      <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
-                      <input aria-label="Tìm người nhận" value={notificationRecipientQuery} onChange={(e) => { setNotificationRecipientsLoading(true); setNotificationRecipientQuery(e.target.value); setNotificationRecipientOffset(0) }} placeholder="Tìm theo tên, email hoặc ID..." className="h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white pl-9 pr-3 text-sm font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" />
-                    </label>
-                    <div className="mt-2 max-h-64 overflow-y-auto rounded-xl border-2 border-[#E5E5E5] bg-white p-2 lg:max-h-72 dark:border-white/10 dark:bg-slate-800">
-                      {notificationRecipientsLoading ? <p role="status" className="p-2 text-sm">Đang tải người nhận...</p> : notificationRecipientsError ? <p role="alert" className="p-2 text-sm text-red-600">{notificationRecipientsError} <button type="button" className="underline" onClick={() => { setNotificationRecipientsLoading(true); setNotificationRefresh((value) => value + 1) }}>Thử lại</button></p> : notificationRecipients.length ? notificationRecipients.map((u) => <label key={u.id} className="flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-sm font-semibold hover:bg-sky-50 dark:hover:bg-white/5"><input type="checkbox" disabled={notificationAudience !== "selected"} checked={notificationRecipientIds.includes(u.id)} onChange={() => setNotificationRecipientIds((current) => current.includes(u.id) ? current.filter((id) => id !== u.id) : [...current, u.id])} className="h-4 w-4 accent-[#1CB0F6]" /><span className="min-w-0 truncate">{u.displayName ?? "(chưa đặt tên)"} <span className="text-xs text-slate-400">· {u.email ?? u.id.slice(0, 8)}</span></span></label>) : <p className="p-2 text-sm">Không có người nhận phù hợp.</p>}
-                    </div>
-                    <p className="mt-2 text-xs font-semibold text-slate-400">Đã chọn {notificationRecipientIds.length} user (giữ khi tìm kiếm / đổi trang). {!notificationRecipientsLoading && !notificationRecipientsError && notificationRecipientTotals ? `Hiển thị ${notificationRecipients.length ? notificationRecipientOffset + 1 : 0}-${notificationRecipientOffset + notificationRecipients.length} / ${notificationRecipientTotals.total} kết quả.` : ""}</p>
-                    <div className="mt-2 flex flex-wrap gap-2">
-                      <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={notificationRecipientsLoading || notificationRecipientOffset === 0} onClick={() => { setNotificationRecipientsLoading(true); setNotificationRecipientOffset((value) => Math.max(0, value - 30)) }}>Trước</button>
-                      <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={notificationRecipientsLoading || !!notificationRecipientsError || !notificationRecipientTotals || notificationRecipientOffset + 30 >= notificationRecipientTotals.total} onClick={() => { setNotificationRecipientsLoading(true); setNotificationRecipientOffset((value) => value + 30) }}>Sau</button>
-                      <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={!notificationRecipientIds.length} onClick={() => setNotificationRecipientIds([])}>Bỏ chọn tất cả</button>
-                    </div>
-                  </div>
-                  <div className="space-y-5">
+              <section className="scroll-mt-24 space-y-4 sm:space-y-5">
+                <Card className="space-y-5 p-4 sm:p-5">
+                  <fieldset disabled={notificationSending} className="grid min-w-0 gap-5 lg:grid-cols-2">
                     <div>
-                      <label htmlFor="notification-title" className="text-sm font-black">Tiêu đề</label>
-                      <input id="notification-title" maxLength={120} value={notificationTitle} onChange={(e) => setNotificationTitle(e.target.value)} placeholder="Ví dụ: Lịch thi sắp tới" className="mt-2 h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" />
-                      <p className="mt-1 text-right text-xs font-semibold text-slate-400">{notificationTitle.length}/120</p>
+                      <label className="text-sm font-black">Đối tượng nhận</label>
+                      <div className="mt-2 space-y-2 text-sm font-bold">
+                        <label className="flex items-center gap-2"><input type="radio" name="notification-audience" checked={notificationAudience === "selected"} onChange={() => setNotificationAudience("selected")} />Chọn người nhận ({notificationRecipientIds.length})</label>
+                        <label className="flex items-center gap-2"><input type="radio" name="notification-audience" checked={notificationAudience === "all"} onChange={() => setNotificationAudience("all")} />Tất cả user active ({notificationRecipientsLoading || notificationRecipientsError ? "..." : notificationRecipientTotals?.activeTotal ?? "..."})</label>
+                        <label className="flex items-center gap-2"><input type="radio" name="notification-audience" checked={notificationAudience === "online"} onChange={() => setNotificationAudience("online")} /><span className="inline-flex items-center gap-1.5">User đang online ({onlineRecipientIds.length})<span className={onlineRecipientIds.length > 0 ? "h-2 w-2 rounded-full bg-emerald-500" : "h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-600"} /></span></label>
+                      </div>
+                      <label className="relative mt-2 block">
+                        <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+                        <input aria-label="Tìm người nhận" value={notificationRecipientQuery} onChange={(e) => { setNotificationRecipientsLoading(true); setNotificationRecipientQuery(e.target.value); setNotificationRecipientOffset(0) }} placeholder="Tìm theo tên, email hoặc ID..." className="h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white pl-9 pr-3 text-sm font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" />
+                      </label>
+                      <div className="mt-2 max-h-64 overflow-y-auto rounded-xl border-2 border-[#E5E5E5] bg-white p-2 lg:max-h-72 dark:border-white/10 dark:bg-slate-800">
+                        {notificationRecipientsLoading ? <p role="status" className="p-2 text-sm">Đang tải người nhận...</p> : notificationRecipientsError ? <p role="alert" className="p-2 text-sm text-red-600">{notificationRecipientsError} <button type="button" className="underline" onClick={() => { setNotificationRecipientsLoading(true); setNotificationRefresh((value) => value + 1) }}>Thử lại</button></p> : notificationRecipients.length ? notificationRecipients.map((u) => <label key={u.id} className="flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-sm font-semibold hover:bg-sky-50 dark:hover:bg-white/5"><input type="checkbox" disabled={notificationAudience !== "selected"} checked={notificationRecipientIds.includes(u.id)} onChange={() => setNotificationRecipientIds((current) => current.includes(u.id) ? current.filter((id) => id !== u.id) : [...current, u.id])} className="h-4 w-4 accent-[#1CB0F6]" /><span className="min-w-0 truncate">{u.displayName ?? "(chưa đặt tên)"} <span className="text-xs text-slate-400">· {u.email ?? u.id.slice(0, 8)}</span></span></label>) : <p className="p-2 text-sm">Không có người nhận phù hợp.</p>}
+                      </div>
+                      <p className="mt-2 text-xs font-semibold text-slate-400">Đã chọn {notificationRecipientIds.length} user (giữ khi tìm kiếm / đổi trang). {!notificationRecipientsLoading && !notificationRecipientsError && notificationRecipientTotals ? `Hiển thị ${notificationRecipients.length ? notificationRecipientOffset + 1 : 0}-${notificationRecipientOffset + notificationRecipients.length} / ${notificationRecipientTotals.total} kết quả.` : ""}</p>
+                      <div className="mt-2 flex flex-wrap gap-2">
+                        <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={notificationRecipientsLoading || notificationRecipientOffset === 0} onClick={() => { setNotificationRecipientsLoading(true); setNotificationRecipientOffset((value) => Math.max(0, value - 30)) }}>Trước</button>
+                        <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={notificationRecipientsLoading || !!notificationRecipientsError || !notificationRecipientTotals || notificationRecipientOffset + 30 >= notificationRecipientTotals.total} onClick={() => { setNotificationRecipientsLoading(true); setNotificationRecipientOffset((value) => value + 30) }}>Sau</button>
+                        <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={!notificationRecipientIds.length} onClick={() => setNotificationRecipientIds([])}>Bỏ chọn tất cả</button>
+                      </div>
                     </div>
-                    <div>
-                      <label htmlFor="notification-message" className="text-sm font-black">Nội dung</label>
-                      <textarea id="notification-message" maxLength={2000} rows={8} value={notificationMessage} onChange={(e) => setNotificationMessage(e.target.value)} placeholder="Nhập nội dung thông báo..." className="mt-2 w-full resize-y rounded-xl border-2 border-[#E5E5E5] bg-white px-3 py-3 text-sm font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" />
-                      <p className="mt-1 text-right text-xs font-semibold text-slate-400">{notificationMessage.length}/2000</p>
+                    <div className="space-y-5">
+                      <div>
+                        <label htmlFor="notification-title" className="text-sm font-black">Tiêu đề</label>
+                        <input id="notification-title" maxLength={120} value={notificationTitle} onChange={(e) => setNotificationTitle(e.target.value)} placeholder="Ví dụ: Lịch thi sắp tới" className="mt-2 h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" />
+                        <p className="mt-1 text-right text-xs font-semibold text-slate-400">{notificationTitle.length}/120</p>
+                      </div>
+                      <div>
+                        <label htmlFor="notification-message" className="text-sm font-black">Nội dung</label>
+                        <textarea id="notification-message" maxLength={2000} rows={8} value={notificationMessage} onChange={(e) => setNotificationMessage(e.target.value)} placeholder="Nhập nội dung thông báo..." className="mt-2 w-full resize-y rounded-xl border-2 border-[#E5E5E5] bg-white px-3 py-3 text-sm font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" />
+                        <p className="mt-1 text-right text-xs font-semibold text-slate-400">{notificationMessage.length}/2000</p>
+                      </div>
                     </div>
+                  </fieldset>
+                  {notificationResult ? <p role="status" className="rounded-xl bg-sky-50 px-3 py-2 text-sm font-bold text-sky-700 dark:bg-sky-500/10 dark:text-sky-300">{notificationResult}</p> : null}
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                    <p className="text-xs font-semibold text-slate-400">{notificationAudience === "selected" ? `Sẽ gửi tới ${notificationRecipientIds.length} user đã chọn` : notificationAudience === "online" ? `Sẽ gửi tới ${onlineRecipientIds.length} user đang online (chốt danh sách lúc bấm gửi), cần xác nhận trước khi gửi.` : "Gửi tới tất cả user active, cần xác nhận trước khi gửi."}</p>
+                    <button type="button" disabled={notificationSending || notificationRecipientsLoading || !!notificationRecipientsError || !notificationRecipientTotals || !notificationTitle.trim() || !notificationMessage.trim() || (notificationAudience === "selected" ? !notificationRecipientIds.length : notificationAudience === "online" ? !onlineRecipientIds.length : !notificationRecipientTotals.activeTotal)} onClick={handleSendNotification} className="lp-btn lp-btn--primary w-full sm:w-auto"><Send className="h-4 w-4" />{notificationSending ? "Đang gửi..." : "Gửi thông báo"}</button>
                   </div>
-                </fieldset>
-                {notificationResult ? <p role="status" className="rounded-xl bg-sky-50 px-3 py-2 text-sm font-bold text-sky-700 dark:bg-sky-500/10 dark:text-sky-300">{notificationResult}</p> : null}
-                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                  <p className="text-xs font-semibold text-slate-400">{notificationAudience === "selected" ? `Sẽ gửi tới ${notificationRecipientIds.length} user đã chọn` : "Gửi tới tất cả user active, cần xác nhận trước khi gửi."}</p>
-                  <button type="button" disabled={notificationSending || notificationRecipientsLoading || !!notificationRecipientsError || !notificationRecipientTotals || !notificationTitle.trim() || !notificationMessage.trim() || (notificationAudience === "selected" ? !notificationRecipientIds.length : !notificationRecipientTotals.activeTotal)} onClick={handleSendNotification} className="lp-btn lp-btn--primary w-full sm:w-auto"><Send className="h-4 w-4" />{notificationSending ? "Đang gửi..." : "Gửi thông báo"}</button>
+                </Card>
+                <div className="space-y-3">
+                  <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Lịch sử đã gửi (đã tải {notificationHistory.length})</p>
+                  {notificationHistoryLoading ? <p role="status" className="text-sm">Đang tải lịch sử...</p> : null}
+                  {notificationHistoryError ? <p role="alert" className="text-sm text-red-600">Không tải được lịch sử: {notificationHistoryError} <button type="button" disabled={notificationHistoryLoading} className="underline" onClick={() => void loadNotificationHistory()}>Tải lại lịch sử</button></p> : null}
+                  {notificationHistory.length ? (
+                    <div className="overflow-x-auto rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none">
+                      <table className="w-full min-w-[900px] text-left text-sm">
+                        <thead><tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-wide text-slate-400 dark:bg-white/5"><th className="px-4 py-3">Tiêu đề</th><th className="px-4 py-3">Phạm vi</th><th className="px-4 py-3 text-right">Người nhận</th><th className="px-4 py-3">Thời gian</th><th className="px-4 py-3"><span className="sr-only">Thao tác</span></th></tr></thead>
+                        <tbody>{notificationHistory.map((notification) => (
+                          <tr key={notification.id} onClick={() => setSelectedNotification(notification)} className={cn("cursor-pointer border-t border-slate-100 transition-colors hover:bg-sky-50/60 dark:border-white/5 dark:hover:bg-white/5", notification.revokedAt && "opacity-60")}>
+                            <td className="max-w-[380px] px-4 py-3"><button type="button" className="block max-w-full truncate text-left font-extrabold text-[#100F3E] dark:text-white" title={notification.title} onClick={(event) => { event.stopPropagation(); setSelectedNotification(notification) }}>{notification.title}</button>{notification.legacy ? <span className="text-xs font-bold text-amber-600">Dữ liệu cũ (legacy)</span> : null}<p className="mt-1 line-clamp-1 truncate text-xs font-semibold text-slate-500 dark:text-slate-400" title={notification.message}>{notification.message}</p></td>
+                            <td className="px-4 py-3"><span className={cn("whitespace-nowrap rounded-full px-2.5 py-1 text-[11px] font-black", notification.isDirect ? "bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-300" : "bg-sky-50 text-sky-600 dark:bg-sky-500/10 dark:text-sky-300")}>{notification.isDirect ? "Gửi riêng" : "Tất cả user"}</span>{notification.revokedAt ? <span className="ml-1.5 whitespace-nowrap rounded-full bg-red-50 px-2.5 py-1 text-[11px] font-black text-red-600 dark:bg-red-500/10 dark:text-red-300">Đã thu hồi</span> : null}</td>
+                            <td className="px-4 py-3 text-right font-extrabold text-[#100F3E] dark:text-white">{notification.recipientCount}</td>
+                            <td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(notification.createdAt, lang)}</td>
+                            <td className="px-4 py-3 text-right">{!notification.revokedAt ? <button type="button" disabled={revokingNotificationId === notification.id} onClick={(event) => { event.stopPropagation(); handleRevokeNotification(notification) }} className="lp-btn lp-btn--secondary lp-btn--sm shrink-0 text-red-600">{revokingNotificationId === notification.id ? "Đang thu hồi..." : "Thu hồi"}</button> : null}</td>
+                          </tr>
+                        ))}</tbody>
+                      </table>
+                    </div>
+                  ) : !notificationHistoryLoading && !notificationHistoryError ? <Card variant="dashed" className="py-10 text-center"><p className="text-sm font-bold text-slate-500">Chưa có lịch sử thông báo.</p></Card> : null}
+                  {notificationHistoryMore ? <button type="button" disabled={notificationHistoryLoading} className="lp-btn lp-btn--secondary" onClick={() => { const last = notificationHistory[notificationHistory.length - 1]; if (last) void loadNotificationHistory({ createdAt: last.createdAt, id: last.id }) }}>Tải thêm lịch sử</button> : null}
                 </div>
-              </Card>
-              <div className="space-y-3">
-                <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Lịch sử đã gửi (đã tải {notificationHistory.length})</p>
-                {notificationHistoryLoading ? <p role="status" className="text-sm">Đang tải lịch sử...</p> : null}
-                {notificationHistoryError ? <p role="alert" className="text-sm text-red-600">Không tải được lịch sử: {notificationHistoryError} <button type="button" disabled={notificationHistoryLoading} className="underline" onClick={() => void loadNotificationHistory()}>Tải lại lịch sử</button></p> : null}
-                {notificationHistory.length ? (
-                  <div className="overflow-x-auto rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none">
-                    <table className="w-full min-w-[900px] text-left text-sm">
-                      <thead><tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-wide text-slate-400 dark:bg-white/5"><th className="px-4 py-3">Tiêu đề</th><th className="px-4 py-3">Phạm vi</th><th className="px-4 py-3 text-right">Người nhận</th><th className="px-4 py-3">Thời gian</th><th className="px-4 py-3"><span className="sr-only">Thao tác</span></th></tr></thead>
-                      <tbody>{notificationHistory.map((notification) => (
-                        <tr key={notification.id} onClick={() => setSelectedNotification(notification)} className={cn("cursor-pointer border-t border-slate-100 transition-colors hover:bg-sky-50/60 dark:border-white/5 dark:hover:bg-white/5", notification.revokedAt && "opacity-60")}>
-                          <td className="max-w-[380px] px-4 py-3"><button type="button" className="block max-w-full truncate text-left font-extrabold text-[#100F3E] dark:text-white" title={notification.title} onClick={(event) => { event.stopPropagation(); setSelectedNotification(notification) }}>{notification.title}</button>{notification.legacy ? <span className="text-xs font-bold text-amber-600">Dữ liệu cũ (legacy)</span> : null}<p className="mt-1 line-clamp-1 truncate text-xs font-semibold text-slate-500 dark:text-slate-400" title={notification.message}>{notification.message}</p></td>
-                          <td className="px-4 py-3"><span className={cn("whitespace-nowrap rounded-full px-2.5 py-1 text-[11px] font-black", notification.isDirect ? "bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-300" : "bg-sky-50 text-sky-600 dark:bg-sky-500/10 dark:text-sky-300")}>{notification.isDirect ? "Gửi riêng" : "Tất cả user"}</span>{notification.revokedAt ? <span className="ml-1.5 whitespace-nowrap rounded-full bg-red-50 px-2.5 py-1 text-[11px] font-black text-red-600 dark:bg-red-500/10 dark:text-red-300">Đã thu hồi</span> : null}</td>
-                          <td className="px-4 py-3 text-right font-extrabold text-[#100F3E] dark:text-white">{notification.recipientCount}</td>
-                          <td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(notification.createdAt, lang)}</td>
-                          <td className="px-4 py-3 text-right">{!notification.revokedAt ? <button type="button" disabled={revokingNotificationId === notification.id} onClick={(event) => { event.stopPropagation(); handleRevokeNotification(notification) }} className="lp-btn lp-btn--secondary lp-btn--sm shrink-0 text-red-600">{revokingNotificationId === notification.id ? "Đang thu hồi..." : "Thu hồi"}</button> : null}</td>
-                        </tr>
-                      ))}</tbody>
-                    </table>
-                  </div>
-                ) : !notificationHistoryLoading && !notificationHistoryError ? <Card variant="dashed" className="py-10 text-center"><p className="text-sm font-bold text-slate-500">Chưa có lịch sử thông báo.</p></Card> : null}
-                {notificationHistoryMore ? <button type="button" disabled={notificationHistoryLoading} className="lp-btn lp-btn--secondary" onClick={() => { const last = notificationHistory[notificationHistory.length - 1]; if (last) void loadNotificationHistory({ createdAt: last.createdAt, id: last.id }) }}>Tải thêm lịch sử</button> : null}
-              </div>
-            </section>
+              </section>
             ) : null}
 
-             {section === "payment" ? (
-            <section className="scroll-mt-24 space-y-4 sm:space-y-5">
-              <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
-                <DashboardStatCard icon={Banknote} value={formatVnd(paymentKpis.revenue)} label="Doanh thu hôm nay" tone="green" />
-                <DashboardStatCard icon={CheckCircle2} value={String(paymentKpis.paid)} label="Giao dịch thành công" tone="blue" />
-                <DashboardStatCard icon={Clock3} value={String(paymentKpis.pending)} label="Đang chờ thanh toán" tone="orange" />
-                <DashboardStatCard icon={ShieldAlert} value={String(paymentKpis.unsuccessful)} label="Thất bại / hoàn tiền" tone="violet" />
-              </div>
-              <Card className="space-y-3 p-4 sm:p-5">
-                <div className="flex flex-col gap-3 sm:flex-row">
-                  <label className="relative block flex-1"><Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" /><input value={paymentQuery} onChange={(e) => setPaymentQuery(e.target.value)} placeholder="Tìm tên, email, mã đơn hoặc mã giao dịch..." className="h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white pl-10 pr-3 text-sm font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" /></label>
-                   <select value={paymentStatus} onChange={(e) => setPaymentStatus(e.target.value as typeof paymentStatus)} className="h-11 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="latest">Mới nhất</option><option value="all">Tất cả trạng thái</option><option value="paid">Đã thanh toán</option><option value="pending">Đang chờ</option><option value="failed">Thất bại</option><option value="refunded">Đã hoàn tiền</option><option value="canceled">Đã hủy</option></select>
-                    <select aria-label="Lọc theo môn học" value={paymentProduct} onChange={(e) => setPaymentProduct(e.target.value)} className="h-11 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="all">Tất cả môn học</option>{paymentProductOptions.map((product) => <option key={product.id} value={product.id}>{product.name}</option>)}</select>
+            {section === "payment" ? (
+              <section className="scroll-mt-24 space-y-4 sm:space-y-5">
+                <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+                  <DashboardStatCard icon={Banknote} value={formatVnd(paymentKpis.revenue)} label="Doanh thu hôm nay" tone="green" />
+                  <DashboardStatCard icon={CheckCircle2} value={String(paymentKpis.paid)} label="Giao dịch thành công" tone="blue" />
+                  <DashboardStatCard icon={Clock3} value={String(paymentKpis.pending)} label="Đang chờ thanh toán" tone="orange" />
+                  <DashboardStatCard icon={ShieldAlert} value={String(paymentKpis.unsuccessful)} label="Thất bại / hoàn tiền" tone="violet" />
                 </div>
-                <p className="text-xs font-semibold text-slate-400">Hiển thị {filteredPayments.length}/{payments.length} giao dịch</p>
-              </Card>
-              {paymentsError ? <Card variant="dashed" className="p-5 text-sm font-bold text-red-600">{paymentsError}</Card> : null}
-              {!paymentsError && !filteredPayments.length ? <Card variant="dashed" className="py-14 text-center"><WalletCards className="mx-auto h-9 w-9 text-slate-300" /><p className="mt-3 text-sm font-bold text-slate-500">Chưa có giao dịch phù hợp.</p></Card> : null}
-              {pagedPayments.length ? <div className="overflow-x-auto rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none"><table className="w-full min-w-[900px] text-left text-sm"><thead><tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-wide text-slate-400 dark:bg-white/5"><th className="px-4 py-3">User</th><th className="px-4 py-3">Môn học</th><th className="px-4 py-3">Mã đơn</th><th className="px-4 py-3 text-right">Số tiền</th><th className="px-4 py-3">Trạng thái</th><th className="px-4 py-3">Thời gian tạo đơn</th></tr></thead><tbody>{pagedPayments.map((payment) => { const user = userById.get(payment.userId); return <tr key={payment.orderId} className="border-t border-slate-100 dark:border-white/5"><td className="px-4 py-3"><p className="font-extrabold text-[#100F3E] dark:text-white">{user?.displayName ?? "(chưa đặt tên)"}</p><p className="text-xs font-semibold text-slate-400">{user?.email ?? payment.userId}</p></td><td className="max-w-[240px] px-4 py-3 font-bold text-slate-600 dark:text-slate-300">{payment.productName}</td><td className="px-4 py-3 font-mono text-xs text-slate-500">{payment.orderId}<span className="block text-[10px] text-slate-400">{payment.transactionId ?? "Chưa có mã giao dịch"}</span></td><td className="px-4 py-3 text-right font-black text-[#129BDC]">{formatVnd(payment.amountVnd)}</td><td className="px-4 py-3"><PaymentStatusBadge status={payment.status} /></td><td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(payment.createdAt, lang)}</td></tr> })}</tbody></table></div> : null}
-              {filteredPayments.length > PAYMENT_PAGE_SIZE ? <div className="flex items-center justify-between"><p className="text-sm font-bold text-slate-400">Hiển thị {safePaymentPage * PAYMENT_PAGE_SIZE + 1}–{Math.min(filteredPayments.length, safePaymentPage * PAYMENT_PAGE_SIZE + PAYMENT_PAGE_SIZE)} / {filteredPayments.length}</p><div className="flex gap-2"><button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safePaymentPage === 0} onClick={() => setPaymentPage(safePaymentPage - 1)}>← Trước</button><button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safePaymentPage >= paymentPageCount - 1} onClick={() => setPaymentPage(safePaymentPage + 1)}>Sau →</button></div></div> : null}
-            </section>
-             ) : null}
-
-             {section === "sendquiz" ? (
-             <section className="scroll-mt-24 space-y-4 sm:space-y-5">
-                <Card className="max-w-3xl space-y-5 p-5 sm:p-6">
-                 <div className="rounded-xl bg-amber-50 p-4 text-sm font-semibold leading-6 text-amber-800 dark:bg-amber-500/10 dark:text-amber-200">
-                   Chỉ sử dụng sau khi đã đối soát thanh toán. Thao tác này ghi nhận quyền mua trực tiếp, không tạo doanh thu hoặc giao dịch thanh toán mới.
-                 </div>
-                 <div>
-                   <label htmlFor="grant-user" className="text-sm font-black">User nhận quyền</label>
-                   <label className="relative mt-2 block">
-                     <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
-                     <input value={grantUserQuery} onChange={(e) => setGrantUserQuery(e.target.value)} placeholder="Tìm theo tên, email hoặc ID..." className="h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white pl-9 pr-3 text-sm font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" />
-                   </label>
-                   <select id="grant-user" value={grantUserId} onChange={(e) => setGrantUserId(e.target.value)} className="mt-2 h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white">
-                     <option value="">Chọn user...</option>
-                     {grantUsers.map((user) => <option key={user.id} value={user.id}>{user.displayName ?? "(chưa đặt tên)"} · {user.email ?? user.id}</option>)}
-                   </select>
-                   <p className="mt-1 text-xs font-semibold text-slate-400">Hiển thị {grantUsers.length}/{users.filter((user) => user.role !== "admin").length} user.</p>
-                 </div>
-                 <div>
-                   <label htmlFor="grant-product" className="text-sm font-black">Môn học trả phí</label>
-                   <select id="grant-product" value={grantProductId} onChange={(e) => setGrantProductId(e.target.value)} className="mt-2 h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white">
-                     <option value="">Chọn môn học...</option>
-                     {adminProducts.map((product) => <option key={product.id} value={product.id}>{product.name} · {formatVnd(product.priceVnd)}</option>)}
-                   </select>
-                 </div>
-                 {grantResult ? <p className={cn("rounded-xl px-3 py-2 text-sm font-bold", grantResult.ok ? "bg-emerald-50 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300" : "bg-red-50 text-red-700 dark:bg-red-500/10 dark:text-red-300")}>{grantResult.message}</p> : null}
-                 <button type="button" disabled={grantSending || !grantUserId || !grantProductId} onClick={handleGrantPurchase} className="lp-btn lp-btn--primary"><Send className="h-4 w-4" />{grantSending ? "Đang cấp quyền..." : "Đánh dấu đã mua và cấp quyền"}</button>
-               </Card>
-             </section>
-             ) : null}
-
-             {section === "supports" ? (
-             <section className="scroll-mt-24 space-y-4 sm:space-y-5">
                 <Card className="space-y-3 p-4 sm:p-5">
-                 <div className="flex flex-col gap-3 sm:flex-row">
-                   <label className="relative block flex-1"><Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" /><input value={supportQuery} onChange={(event) => setSupportQuery(event.target.value)} placeholder="Tìm tiêu đề, nội dung, tên, email hoặc ID..." className="h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white pl-10 pr-3 text-sm font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" /></label>
-                   <select value={supportType} onChange={(event) => setSupportType(event.target.value as typeof supportType)} className="h-11 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="all">Tất cả loại</option><option value="contribute">Đóng góp tài liệu</option><option value="feedback">Góp ý</option><option value="report">Báo lỗi</option></select>
-                   <select value={supportStatus} onChange={(event) => setSupportStatus(event.target.value as typeof supportStatus)} className="h-11 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="all">Tất cả trạng thái</option><option value="pending">Đang chờ</option><option value="resolved">Đã xử lý</option><option value="unresolvable">Không xử lý được</option></select>
-                 </div>
-                 <p className="text-xs font-semibold text-slate-400">Hiển thị {filteredSupportReports.length}/{supportReports.length} báo lỗi</p>
-               </Card>
-               {supportsError ? <Card variant="dashed" className="p-5 text-sm font-bold text-red-600">{supportsError}</Card> : null}
+                  <div className="flex flex-col gap-3 sm:flex-row">
+                    <label className="relative block flex-1"><Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" /><input value={paymentQuery} onChange={(e) => setPaymentQuery(e.target.value)} placeholder="Tìm tên, email, mã đơn hoặc mã giao dịch..." className="h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white pl-10 pr-3 text-sm font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" /></label>
+                    <select value={paymentStatus} onChange={(e) => setPaymentStatus(e.target.value as typeof paymentStatus)} className="h-11 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="latest">Mới nhất</option><option value="all">Tất cả trạng thái</option><option value="paid">Đã thanh toán</option><option value="pending">Đang chờ</option><option value="failed">Thất bại</option><option value="refunded">Đã hoàn tiền</option><option value="canceled">Đã hủy</option></select>
+                    <select aria-label="Lọc theo môn học" value={paymentProduct} onChange={(e) => setPaymentProduct(e.target.value)} className="h-11 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="all">Tất cả môn học</option>{paymentProductOptions.map((product) => <option key={product.id} value={product.id}>{product.name}</option>)}</select>
+                  </div>
+
+                </Card>
+                {paymentsError ? <Card variant="dashed" className="p-5 text-sm font-bold text-red-600">{paymentsError}</Card> : null}
+                {!paymentsError && !filteredPayments.length ? <Card variant="dashed" className="py-14 text-center"><WalletCards className="mx-auto h-9 w-9 text-slate-300" /><p className="mt-3 text-sm font-bold text-slate-500">Chưa có giao dịch phù hợp.</p></Card> : null}
+                {pagedPayments.length ? <div className="overflow-x-auto rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none"><table className="w-full min-w-[900px] text-left text-sm"><thead><tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-wide text-slate-400 dark:bg-white/5"><th className="px-4 py-3">User</th><th className="px-4 py-3">Môn học</th><th className="px-4 py-3">Mã đơn</th><th className="px-4 py-3 text-right">Số tiền</th><th className="px-4 py-3">Trạng thái</th><th className="px-4 py-3">Thời gian tạo đơn</th></tr></thead><tbody>{pagedPayments.map((payment) => { const user = userById.get(payment.userId); return <tr key={payment.orderId} className="border-t border-slate-100 dark:border-white/5"><td className="px-4 py-3"><p className="font-extrabold text-[#100F3E] dark:text-white">{user?.displayName ?? "(chưa đặt tên)"}</p><p className="text-xs font-semibold text-slate-400">{user?.email ?? payment.userId}</p></td><td className="max-w-[240px] px-4 py-3 font-bold text-slate-600 dark:text-slate-300">{payment.productName}</td><td className="px-4 py-3 font-mono text-xs text-slate-500">{payment.orderId}<span className="block text-[10px] text-slate-400">{payment.transactionId ?? "Chưa có mã giao dịch"}</span></td><td className="px-4 py-3 text-right font-black text-[#129BDC]">{formatVnd(payment.amountVnd)}</td><td className="px-4 py-3"><PaymentStatusBadge status={payment.status} /></td><td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(payment.createdAt, lang)}</td></tr> })}</tbody></table></div> : null}
+                {filteredPayments.length > PAYMENT_PAGE_SIZE ? <div className="flex items-center justify-between"><p className="text-sm font-bold text-slate-400">Hiển thị {safePaymentPage * PAYMENT_PAGE_SIZE + 1}–{Math.min(filteredPayments.length, safePaymentPage * PAYMENT_PAGE_SIZE + PAYMENT_PAGE_SIZE)} / {filteredPayments.length}</p><div className="flex gap-2"><button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safePaymentPage === 0} onClick={() => setPaymentPage(safePaymentPage - 1)}>← Trước</button><button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safePaymentPage >= paymentPageCount - 1} onClick={() => setPaymentPage(safePaymentPage + 1)}>Sau →</button></div></div> : null}
+              </section>
+            ) : null}
+
+            {section === "sendquiz" ? (
+              <section className="scroll-mt-24 space-y-4 sm:space-y-5">
+                <Card className="max-w-3xl space-y-5 p-5 sm:p-6">
+                  <div className="rounded-xl bg-amber-50 p-4 text-sm font-semibold leading-6 text-amber-800 dark:bg-amber-500/10 dark:text-amber-200">
+                    Chỉ sử dụng sau khi đã đối soát thanh toán. Thao tác này ghi nhận quyền mua trực tiếp, không tạo doanh thu hoặc giao dịch thanh toán mới.
+                  </div>
+                  <div>
+                    <label htmlFor="grant-user" className="text-sm font-black">User nhận quyền</label>
+                    <label className="relative mt-2 block">
+                      <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+                      <input value={grantUserQuery} onChange={(e) => setGrantUserQuery(e.target.value)} placeholder="Tìm theo tên, email hoặc ID..." className="h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white pl-9 pr-3 text-sm font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" />
+                    </label>
+                    <select id="grant-user" value={grantUserId} onChange={(e) => setGrantUserId(e.target.value)} className="mt-2 h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white">
+                      <option value="">Chọn user...</option>
+                      {grantUsers.map((user) => <option key={user.id} value={user.id}>{user.displayName ?? "(chưa đặt tên)"} · {user.email ?? user.id}</option>)}
+                    </select>
+                    <p className="mt-1 text-xs font-semibold text-slate-400">Hiển thị {grantUsers.length}/{users.filter((user) => user.role !== "admin").length} user.</p>
+                  </div>
+                  <div>
+                    <label htmlFor="grant-product" className="text-sm font-black">Môn học trả phí</label>
+                    <select id="grant-product" value={grantProductId} onChange={(e) => setGrantProductId(e.target.value)} className="mt-2 h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white">
+                      <option value="">Chọn môn học...</option>
+                      {adminProducts.map((product) => <option key={product.id} value={product.id}>{product.name} · {formatVnd(product.priceVnd)}</option>)}
+                    </select>
+                  </div>
+                  {grantResult ? <p className={cn("rounded-xl px-3 py-2 text-sm font-bold", grantResult.ok ? "bg-emerald-50 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300" : "bg-red-50 text-red-700 dark:bg-red-500/10 dark:text-red-300")}>{grantResult.message}</p> : null}
+                  <button type="button" disabled={grantSending || !grantUserId || !grantProductId} onClick={handleGrantPurchase} className="lp-btn lp-btn--primary"><Send className="h-4 w-4" />{grantSending ? "Đang cấp quyền..." : "Đánh dấu đã mua và cấp quyền"}</button>
+                </Card>
+              </section>
+            ) : null}
+
+            {section === "supports" ? (
+              <section className="scroll-mt-24 space-y-4 sm:space-y-5">
+                <Card className="space-y-3 p-4 sm:p-5">
+                  <div className="flex flex-col gap-3 sm:flex-row">
+                    <label className="relative block flex-1"><Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" /><input value={supportQuery} onChange={(event) => setSupportQuery(event.target.value)} placeholder="Tìm tiêu đề, nội dung, tên, email hoặc ID..." className="h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white pl-10 pr-3 text-sm font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" /></label>
+                    <select value={supportType} onChange={(event) => setSupportType(event.target.value as typeof supportType)} className="h-11 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="all">Tất cả loại</option><option value="contribute">Đóng góp tài liệu</option><option value="feedback">Góp ý</option><option value="report">Báo lỗi</option></select>
+                    <select value={supportStatus} onChange={(event) => setSupportStatus(event.target.value as typeof supportStatus)} className="h-11 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="all">Tất cả trạng thái</option><option value="pending">Đang chờ</option><option value="resolved">Đã xử lý</option><option value="unresolvable">Không xử lý được</option></select>
+                  </div>
+                  <p className="text-xs font-semibold text-slate-400">Hiển thị {filteredSupportReports.length}/{supportReports.length} báo lỗi</p>
+                </Card>
+                {supportsError ? <Card variant="dashed" className="p-5 text-sm font-bold text-red-600">{supportsError}</Card> : null}
                 {filteredSupportReports.length ? (
                   <div className="overflow-x-auto rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none">
                     <table className="w-full min-w-[900px] text-left text-sm">
                       <thead><tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-wide text-slate-400 dark:bg-white/5"><th className="px-4 py-3">User</th><th className="px-4 py-3">Loại</th><th className="px-4 py-3">Nội dung</th><th className="px-4 py-3">Trạng thái</th><th className="px-4 py-3">Thời gian</th></tr></thead>
                       <tbody>{filteredSupportReports.map((report) => (
-                         <tr
-                           key={report.id}
-                           tabIndex={0}
-                           onClick={() => setSelectedSupportId(report.id)}
-                           onKeyDown={(event) => {
-                             if (event.key === "Enter" || event.key === " ") {
-                               event.preventDefault()
-                               setSelectedSupportId(report.id)
-                             }
-                           }}
-                           className="cursor-pointer border-t border-slate-100 transition-colors hover:bg-sky-50/60 focus:bg-sky-50/60 focus:outline-none dark:border-white/5 dark:hover:bg-white/[0.03] dark:focus:bg-white/[0.03]"
-                         >
-                           <td className="px-4 py-3"><p className="font-extrabold text-[#100F3E] dark:text-white">{report.displayName ?? "(chưa đặt tên)"}</p><p className="text-xs font-semibold text-slate-400">{report.email ?? report.userId}</p></td>
-                           <td className="px-4 py-3"><span className={cn("whitespace-nowrap rounded-full px-2.5 py-1 text-[11px] font-black", report.type === "contribute" ? "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300" : report.type === "feedback" ? "bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-300" : "bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-300")}>{report.type === "contribute" ? "Đóng góp tài liệu" : report.type === "feedback" ? "Góp ý" : "Báo lỗi"}</span></td>
-                           <td className="max-w-[380px] px-4 py-3"><p className="font-extrabold text-[#100F3E] dark:text-white">{report.subject}</p><p className="mt-1 line-clamp-2 whitespace-pre-wrap text-xs font-semibold text-slate-500 dark:text-slate-400" title={report.description}>{report.description}</p></td>
-                           <td className="px-4 py-3"><select value={report.status} disabled={updatingSupportId === report.id} onClick={(event) => event.stopPropagation()} onChange={(event) => { event.stopPropagation(); handleSupportStatus(report.id, event.target.value as SupportStatus) }} className="h-10 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-xs font-black outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="pending">Đang chờ</option><option value="resolved">Đã xử lý</option><option value="unresolvable">Không xử lý được</option></select></td>
-                           <td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(report.createdAt, lang)}</td>
-                         </tr>
+                        <tr
+                          key={report.id}
+                          tabIndex={0}
+                          onClick={() => setSelectedSupportId(report.id)}
+                          onKeyDown={(event) => {
+                            if (event.key === "Enter" || event.key === " ") {
+                              event.preventDefault()
+                              setSelectedSupportId(report.id)
+                            }
+                          }}
+                          className="cursor-pointer border-t border-slate-100 transition-colors hover:bg-sky-50/60 focus:bg-sky-50/60 focus:outline-none dark:border-white/5 dark:hover:bg-white/[0.03] dark:focus:bg-white/[0.03]"
+                        >
+                          <td className="px-4 py-3"><p className="font-extrabold text-[#100F3E] dark:text-white">{report.displayName ?? "(chưa đặt tên)"}</p><p className="text-xs font-semibold text-slate-400">{report.email ?? report.userId}</p></td>
+                          <td className="px-4 py-3"><span className={cn("whitespace-nowrap rounded-full px-2.5 py-1 text-[11px] font-black", report.type === "contribute" ? "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300" : report.type === "feedback" ? "bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-300" : "bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-300")}>{report.type === "contribute" ? "Đóng góp tài liệu" : report.type === "feedback" ? "Góp ý" : "Báo lỗi"}</span></td>
+                          <td className="max-w-[380px] px-4 py-3"><p className="font-extrabold text-[#100F3E] dark:text-white">{report.subject}</p><p className="mt-1 line-clamp-2 whitespace-pre-wrap text-xs font-semibold text-slate-500 dark:text-slate-400" title={report.description}>{report.description}</p></td>
+                          <td className="px-4 py-3"><select value={report.status} disabled={updatingSupportId === report.id} onClick={(event) => event.stopPropagation()} onChange={(event) => { event.stopPropagation(); handleSupportStatus(report.id, event.target.value as SupportStatus) }} className="h-10 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-xs font-black outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="pending">Đang chờ</option><option value="resolved">Đã xử lý</option><option value="unresolvable">Không xử lý được</option></select></td>
+                          <td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(report.createdAt, lang)}</td>
+                        </tr>
                       ))}</tbody>
                     </table>
                   </div>
                 ) : <Card variant="dashed" className="py-14 text-center"><ShieldAlert className="mx-auto h-9 w-9 text-slate-300" /><p className="mt-3 text-sm font-bold text-slate-500">Chưa có báo lỗi phù hợp.</p></Card>}
-             </section>
-              ) : null}
-
-              {selectedSupportReport ? (
-                <Dialog
-                  open
-                  onClose={() => setSelectedSupportId(null)}
-                  title={selectedSupportReport.subject}
-                  closeLabel="Đóng chi tiết"
-                  className="z-[95]"
-                  panelClassName="max-h-[calc(100dvh_-_2rem)] w-full max-w-[680px] rounded-[20px] border-2 border-[#E5E5E5] bg-white shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none"
-                >
-                  <div className="flex items-start justify-between gap-4 border-b border-slate-100 px-5 py-4 sm:px-6 sm:py-5 dark:border-white/10">
-                    <div className="min-w-0">
-                      <p className="text-xs font-black uppercase tracking-wide text-[#129BDC]">Chi tiết báo lỗi</p>
-                      <h2 className="mt-1 text-xl font-black text-[#100F3E] dark:text-white">{selectedSupportReport.subject}</h2>
-                    </div>
-                    <button type="button" className="lp-btn lp-btn--secondary lp-btn--icon shrink-0" onClick={() => setSelectedSupportId(null)} aria-label="Đóng chi tiết"><X className="h-4 w-4" /></button>
-                  </div>
-                  <div className="space-y-5 overflow-y-auto px-5 py-5 sm:px-6">
-                    <div className="grid gap-4 sm:grid-cols-2">
-                      <div>
-                        <p className="text-[11px] font-black uppercase tracking-wide text-slate-400">Người gửi</p>
-                        <p className="mt-1 font-extrabold text-[#100F3E] dark:text-white">{selectedSupportReport.displayName ?? "(chưa đặt tên)"}</p>
-                        <p className="mt-0.5 break-all text-sm font-semibold text-slate-500 dark:text-slate-400">{selectedSupportReport.email ?? selectedSupportReport.userId}</p>
-                      </div>
-                      <div>
-                        <p className="text-[11px] font-black uppercase tracking-wide text-slate-400">Loại</p>
-                        <p className="mt-1 font-extrabold text-[#100F3E] dark:text-white">{selectedSupportReport.type === "contribute" ? "Đóng góp tài liệu" : selectedSupportReport.type === "feedback" ? "Góp ý" : "Báo lỗi"}</p>
-                        <p className="mt-0.5 text-sm font-semibold text-slate-500 dark:text-slate-400">{formatTime(selectedSupportReport.createdAt, lang)}</p>
-                      </div>
-                    </div>
-                    <div>
-                      <p className="text-[11px] font-black uppercase tracking-wide text-slate-400">Nội dung chi tiết</p>
-                      <p className="mt-2 whitespace-pre-wrap rounded-xl border-2 border-slate-100 bg-slate-50 px-4 py-3 text-sm font-semibold leading-6 text-slate-700 dark:border-white/10 dark:bg-white/5 dark:text-slate-200">{selectedSupportReport.description}</p>
-                    </div>
-                    {selectedSupportReport.pageUrl ? (
-                      <div>
-                        <p className="text-[11px] font-black uppercase tracking-wide text-slate-400">Trang gửi báo lỗi</p>
-                        <a href={selectedSupportReport.pageUrl} target="_blank" rel="noreferrer" className="mt-1 block break-all text-sm font-bold text-[#129BDC] underline underline-offset-2">{selectedSupportReport.pageUrl}</a>
-                      </div>
-                    ) : null}
-                    <div className="flex flex-col gap-2 border-t border-slate-100 pt-4 dark:border-white/10 sm:flex-row sm:items-center sm:justify-between">
-                      <p className="text-xs font-semibold text-slate-400">Cập nhật gần nhất: {formatTime(selectedSupportReport.updatedAt, lang)}</p>
-                      <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
-                        <select value={selectedSupportReport.status} disabled={updatingSupportId === selectedSupportReport.id} onChange={(event) => handleSupportStatus(selectedSupportReport.id, event.target.value as SupportStatus)} className="h-10 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-xs font-black outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="pending">Đang chờ</option><option value="resolved">Đã xử lý</option><option value="unresolvable">Không xử lý được</option></select>
-                        <button type="button" disabled={updatingSupportId === selectedSupportReport.id} onClick={() => handleDeleteSupport(selectedSupportReport.id)} className="lp-btn lp-btn--secondary lp-btn--sm shrink-0 text-red-600">{updatingSupportId === selectedSupportReport.id ? "Đang xóa..." : "Xóa"}</button>
-                      </div>
-                    </div>
-                  </div>
-                </Dialog>
-              ) : null}
-
-              {section === "overview" ? (
-            <>
-            <section className={dashboardStatGridClass} aria-label="Statistics">
-              <DashboardStatCard icon={Users} value={String(kpis.totalLogined)} label={lang === "vi" ? "Người dùng" : "Users"} tone="blue" />
-              <DashboardStatCard icon={UserRound} value={String(kpis.newToday)} label={lang === "vi" ? "User mới hôm nay" : "New users today"} tone="orange" />
-              <DashboardStatCard icon={CheckCircle2} value={String(todayKpis.purchases)} label={lang === "vi" ? "Lượt mua hôm nay" : "Purchases today"} tone="green" />
-              <DashboardStatCard icon={Clock3} value={String(todayKpis.completedQuizzes)} label={lang === "vi" ? "Lượt hoàn thành quiz hôm nay" : "Completed quizzes today"} tone="violet" />
-            </section>
-
-            {kpis.blockedAccount > 0 ? (
-              <p className="flex items-center gap-2 text-sm font-bold text-slate-500 dark:text-slate-400"><ShieldAlert className="h-4 w-4" />Blocked: {kpis.blockedAccount} — vẫn hiện ở tab Logined, ẩn ở các tab Active.</p>
+              </section>
             ) : null}
 
-            {/* Tổng quan */}
-            <section id="admin-overview" className="scroll-mt-24 space-y-4 sm:space-y-5">
-              <div className="grid gap-3 sm:gap-4 lg:grid-cols-5">
-                <div className="rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] lg:col-span-3 dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <div className="min-w-0">
-                      <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Nhịp hoạt động · hôm nay theo giờ</p>
-                      <p className="mt-1 text-sm font-black text-[#100F3E] dark:text-white">
-                        {contributionTotals.attempts} nộp · {contributionTotals.events} events
+            {selectedSupportReport ? (
+              <Dialog
+                open
+                onClose={() => setSelectedSupportId(null)}
+                title={selectedSupportReport.subject}
+                closeLabel="Đóng chi tiết"
+                className="z-[95]"
+                panelClassName="max-h-[calc(100dvh_-_2rem)] w-full max-w-[680px] rounded-[20px] border-2 border-[#E5E5E5] bg-white shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none"
+              >
+                <div className="flex items-start justify-between gap-4 border-b border-slate-100 px-5 py-4 sm:px-6 sm:py-5 dark:border-white/10">
+                  <div className="min-w-0">
+                    <p className="text-xs font-black uppercase tracking-wide text-[#129BDC]">Chi tiết báo lỗi</p>
+                    <h2 className="mt-1 text-xl font-black text-[#100F3E] dark:text-white">{selectedSupportReport.subject}</h2>
+                  </div>
+                  <button type="button" className="lp-btn lp-btn--secondary lp-btn--icon shrink-0" onClick={() => setSelectedSupportId(null)} aria-label="Đóng chi tiết"><X className="h-4 w-4" /></button>
+                </div>
+                <div className="space-y-5 overflow-y-auto px-5 py-5 sm:px-6">
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div>
+                      <p className="text-[11px] font-black uppercase tracking-wide text-slate-400">Người gửi</p>
+                      <p className="mt-1 font-extrabold text-[#100F3E] dark:text-white">{selectedSupportReport.displayName ?? "(chưa đặt tên)"}</p>
+                      <p className="mt-0.5 break-all text-sm font-semibold text-slate-500 dark:text-slate-400">{selectedSupportReport.email ?? selectedSupportReport.userId}</p>
+                    </div>
+                    <div>
+                      <p className="text-[11px] font-black uppercase tracking-wide text-slate-400">Loại</p>
+                      <p className="mt-1 font-extrabold text-[#100F3E] dark:text-white">{selectedSupportReport.type === "contribute" ? "Đóng góp tài liệu" : selectedSupportReport.type === "feedback" ? "Góp ý" : "Báo lỗi"}</p>
+                      <p className="mt-0.5 text-sm font-semibold text-slate-500 dark:text-slate-400">{formatTime(selectedSupportReport.createdAt, lang)}</p>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="text-[11px] font-black uppercase tracking-wide text-slate-400">Nội dung chi tiết</p>
+                    <p className="mt-2 whitespace-pre-wrap rounded-xl border-2 border-slate-100 bg-slate-50 px-4 py-3 text-sm font-semibold leading-6 text-slate-700 dark:border-white/10 dark:bg-white/5 dark:text-slate-200">{selectedSupportReport.description}</p>
+                  </div>
+                  {selectedSupportReport.pageUrl ? (
+                    <div>
+                      <p className="text-[11px] font-black uppercase tracking-wide text-slate-400">Trang gửi báo lỗi</p>
+                      <a href={selectedSupportReport.pageUrl} target="_blank" rel="noreferrer" className="mt-1 block break-all text-sm font-bold text-[#129BDC] underline underline-offset-2">{selectedSupportReport.pageUrl}</a>
+                    </div>
+                  ) : null}
+                  <div className="flex flex-col gap-2 border-t border-slate-100 pt-4 dark:border-white/10 sm:flex-row sm:items-center sm:justify-between">
+                    <p className="text-xs font-semibold text-slate-400">Cập nhật gần nhất: {formatTime(selectedSupportReport.updatedAt, lang)}</p>
+                    <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+                      <select value={selectedSupportReport.status} disabled={updatingSupportId === selectedSupportReport.id} onChange={(event) => handleSupportStatus(selectedSupportReport.id, event.target.value as SupportStatus)} className="h-10 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-xs font-black outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="pending">Đang chờ</option><option value="resolved">Đã xử lý</option><option value="unresolvable">Không xử lý được</option></select>
+                      <button type="button" disabled={updatingSupportId === selectedSupportReport.id} onClick={() => handleDeleteSupport(selectedSupportReport.id)} className="lp-btn lp-btn--secondary lp-btn--sm shrink-0 text-red-600">{updatingSupportId === selectedSupportReport.id ? "Đang xóa..." : "Xóa"}</button>
+                    </div>
+                  </div>
+                </div>
+              </Dialog>
+            ) : null}
+
+            {section === "overview" ? (
+              <>
+                <section className={dashboardStatGridClass} aria-label="Statistics">
+                  <DashboardStatCard icon={Users} value={String(kpis.totalLogined)} label={lang === "vi" ? "Người dùng" : "Users"} tone="blue" />
+                  <DashboardStatCard icon={UserRound} value={String(kpis.newToday)} label={lang === "vi" ? "User mới hôm nay" : "New users today"} tone="orange" />
+                  <DashboardStatCard icon={CheckCircle2} value={String(todayKpis.purchases)} label={lang === "vi" ? "Lượt mua hôm nay" : "Purchases today"} tone="green" />
+                  <DashboardStatCard icon={Clock3} value={String(todayKpis.completedQuizzes)} label={lang === "vi" ? "Lượt hoàn thành quiz hôm nay" : "Completed quizzes today"} tone="violet" />
+                </section>
+
+                {kpis.blockedAccount > 0 ? (
+                  <p className="flex items-center gap-2 text-sm font-bold text-slate-500 dark:text-slate-400"><ShieldAlert className="h-4 w-4" />Blocked: {kpis.blockedAccount} — vẫn hiện ở tab Logined, ẩn ở các tab Active.</p>
+                ) : null}
+
+                {/* Tổng quan */}
+                <section id="admin-overview" className="scroll-mt-24 space-y-4 sm:space-y-5">
+                  <div className="grid gap-3 sm:gap-4 lg:grid-cols-5">
+                    <div className="rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] lg:col-span-3 dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <div className="min-w-0">
+                          <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Nhịp hoạt động · hôm nay theo giờ</p>
+                          <p className="mt-1 text-sm font-black text-[#100F3E] dark:text-white">
+                            {contributionTotals.attempts} nộp · {contributionTotals.events} events
+                          </p>
+                        </div>
+                        <div className="ml-auto flex items-center gap-3 text-[11px] font-bold text-slate-400">
+                          <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-[4px] bg-[#1CB0F6] ring-1 ring-black/5 dark:ring-white/10" />Nộp bài</span>
+                          <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-[4px] bg-[#8B5CF6] ring-1 ring-black/5 dark:ring-white/10" />Events</span>
+                        </div>
+                      </div>
+                      <div className="mt-4 grid grid-cols-6 gap-1.5 sm:grid-cols-12 sm:gap-2 xl:grid-cols-[repeat(24,minmax(0,1fr))]">
+                        {hourBuckets.map((b) => {
+                          const isCurrentHour = b.hour === currentHour
+                          return (
+                            <div key={b.hour} className="min-w-0" title={`${b.label}: ${b.attempts} lượt nộp, ${b.events} events`}>
+                              <div className={`flex h-[104px] flex-col rounded-[12px] border border-black/5 bg-white px-1 pb-1.5 pt-2 transition-transform duration-150 hover:scale-[1.04] sm:h-[128px] dark:border-white/10 dark:bg-slate-900 ${isCurrentHour ? "outline outline-2 outline-offset-1 outline-[#1CB0F6]" : ""}`}>
+                                <div className="flex min-h-0 flex-1 items-end justify-center gap-1 sm:gap-1.5">
+                                  <div className="flex h-full w-2.5 flex-col justify-end overflow-hidden rounded-full bg-sky-100 sm:w-3 dark:bg-sky-500/15">
+                                    <div className="w-full rounded-full bg-[#1CB0F6]" style={{ height: `${b.attempts > 0 ? Math.max(6, Math.round((b.attempts / attemptsMax) * 100)) : 0}%` }} />
+                                  </div>
+                                  <div className="flex h-full w-2.5 flex-col justify-end overflow-hidden rounded-full bg-violet-100 sm:w-3 dark:bg-violet-500/15">
+                                    <div className="w-full rounded-full bg-[#8B5CF6]" style={{ height: `${b.events > 0 ? Math.max(6, Math.round((b.events / eventsMax) * 100)) : 0}%` }} />
+                                  </div>
+                                </div>
+                                <div className="mt-1 min-w-0 text-center text-[8px] font-black leading-tight tabular-nums sm:text-[9px]">
+                                  {b.attempts > 0 || b.events > 0 ? (
+                                    <>
+                                      <p className="truncate text-[#1CB0F6]">{b.attempts}</p>
+                                      <p className="truncate text-[#8B5CF6]">{b.events >= 1000 ? `${(b.events / 1000).toFixed(1).replace(".", ",")}k` : b.events}</p>
+                                    </>
+                                  ) : (
+                                    <p className="truncate text-slate-300 dark:text-slate-600">—</p>
+                                  )}
+                                </div>
+                                <p className="truncate text-center text-[8px] font-bold text-slate-400 sm:text-[9px]">{b.label}</p>
+                              </div>
+                            </div>
+                          )
+                        })}
+                      </div>
+                      <p className="mt-3 border-t border-slate-100 pt-3 text-[11px] font-bold text-slate-400 dark:border-white/10">
+                        {contributionPeak && (contributionPeak.attempts > 0 || contributionPeak.events > 0)
+                          ? `Cao điểm ${contributionPeak.label} hôm nay: ${contributionPeak.attempts} lượt nộp · ${contributionPeak.events} events`
+                          : "Chưa có dữ liệu trong ngày hôm nay."}
                       </p>
                     </div>
-                    <div className="ml-auto flex items-center gap-3 text-[11px] font-bold text-slate-400">
-                      <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-[4px] bg-[#1CB0F6] ring-1 ring-black/5 dark:ring-white/10" />Nộp bài</span>
-                      <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-[4px] bg-[#8B5CF6] ring-1 ring-black/5 dark:ring-white/10" />Events</span>
-                    </div>
-                  </div>
-                  <div className="mt-4 grid grid-cols-6 gap-1.5 sm:grid-cols-12 sm:gap-2 xl:grid-cols-[repeat(24,minmax(0,1fr))]">
-                    {hourBuckets.map((b) => {
-                      const isCurrentHour = b.hour === currentHour
-                      return (
-                        <div key={b.hour} className="min-w-0" title={`${b.label}: ${b.attempts} lượt nộp, ${b.events} events`}>
-                          <div className={`flex h-[104px] flex-col rounded-[12px] border border-black/5 bg-white px-1 pb-1.5 pt-2 transition-transform duration-150 hover:scale-[1.04] sm:h-[128px] dark:border-white/10 dark:bg-slate-900 ${isCurrentHour ? "outline outline-2 outline-offset-1 outline-[#1CB0F6]" : ""}`}>
-                            <div className="flex min-h-0 flex-1 items-end justify-center gap-1 sm:gap-1.5">
-                              <div className="flex h-full w-2.5 flex-col justify-end overflow-hidden rounded-full bg-sky-100 sm:w-3 dark:bg-sky-500/15">
-                                <div className="w-full rounded-full bg-[#1CB0F6]" style={{ height: `${b.attempts > 0 ? Math.max(6, Math.round((b.attempts / attemptsMax) * 100)) : 0}%` }} />
-                              </div>
-                              <div className="flex h-full w-2.5 flex-col justify-end overflow-hidden rounded-full bg-violet-100 sm:w-3 dark:bg-violet-500/15">
-                                <div className="w-full rounded-full bg-[#8B5CF6]" style={{ height: `${b.events > 0 ? Math.max(6, Math.round((b.events / eventsMax) * 100)) : 0}%` }} />
-                              </div>
-                            </div>
-                            <div className="mt-1 min-w-0 text-center text-[8px] font-black leading-tight tabular-nums sm:text-[9px]">
-                              {b.attempts > 0 || b.events > 0 ? (
-                                <>
-                                  <p className="truncate text-[#1CB0F6]">{b.attempts}</p>
-                                  <p className="truncate text-[#8B5CF6]">{b.events >= 1000 ? `${(b.events / 1000).toFixed(1).replace(".", ",")}k` : b.events}</p>
-                                </>
-                              ) : (
-                                <p className="truncate text-slate-300 dark:text-slate-600">—</p>
-                              )}
-                            </div>
-                            <p className="truncate text-center text-[8px] font-bold text-slate-400 sm:text-[9px]">{b.label}</p>
+                    <div className="space-y-2.5 rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] lg:col-span-2 dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
+                      <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Events theo loại</p>
+                      {evTypeCounts.length ? evTypeCounts.map((c) => (
+                        <div key={c.key} className="flex items-center gap-2.5 text-xs font-bold">
+                          <span className="w-28 shrink-0 truncate text-slate-600 sm:w-32 dark:text-slate-300">{ACTIVITY_LABELS[c.key as ActivityEventType] ?? c.key}</span>
+                          <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-slate-100 dark:bg-white/10">
+                            <div className="h-full rounded-full bg-[#1CB0F6]" style={{ width: `${Math.round((c.count / evTypeMax) * 100)}%` }} />
                           </div>
+                          <span className="w-8 shrink-0 text-right font-black text-[#100F3E] dark:text-white">{c.count}</span>
                         </div>
-                      )
-                    })}
+                      )) : <p className="text-xs font-semibold text-slate-400">Chưa có event nào.</p>}
+                    </div>
                   </div>
-                  <p className="mt-3 border-t border-slate-100 pt-3 text-[11px] font-bold text-slate-400 dark:border-white/10">
-                    {contributionPeak && (contributionPeak.attempts > 0 || contributionPeak.events > 0)
-                      ? `Cao điểm ${contributionPeak.label} hôm nay: ${contributionPeak.attempts} lượt nộp · ${contributionPeak.events} events`
-                      : "Chưa có dữ liệu trong ngày hôm nay."}
-                  </p>
-                </div>
-                <div className="space-y-2.5 rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] lg:col-span-2 dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
-                  <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Events theo loại</p>
-                  {evTypeCounts.length ? evTypeCounts.map((c) => (
-                    <div key={c.key} className="flex items-center gap-2.5 text-xs font-bold">
-                      <span className="w-28 shrink-0 truncate text-slate-600 sm:w-32 dark:text-slate-300">{ACTIVITY_LABELS[c.key as ActivityEventType] ?? c.key}</span>
-                      <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-slate-100 dark:bg-white/10">
-                        <div className="h-full rounded-full bg-[#1CB0F6]" style={{ width: `${Math.round((c.count / evTypeMax) * 100)}%` }} />
-                      </div>
-                      <span className="w-8 shrink-0 text-right font-black text-[#100F3E] dark:text-white">{c.count}</span>
+                  <div className="rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
+                    <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Top môn (lượt nộp server)</p>
+                    <div className="mt-3 space-y-2">
+                      {subjectTops.length ? subjectTops.map((s) => (
+                        <div key={s.key} className="flex items-center gap-2.5 text-xs font-bold">
+                          <span className="w-36 shrink-0 truncate text-slate-600 sm:w-40 dark:text-slate-300">{s.key}</span>
+                          <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-slate-100 dark:bg-white/10">
+                            <div className="h-full rounded-full bg-emerald-400" style={{ width: `${Math.round((s.count / Math.max(1, subjectTops[0]?.count ?? 1)) * 100)}%` }} />
+                          </div>
+                          <span className="w-8 shrink-0 text-right font-black text-[#100F3E] dark:text-white">{s.count}</span>
+                        </div>
+                      )) : <p className="text-xs font-semibold text-slate-400">Chưa có.</p>}
                     </div>
-                  )) : <p className="text-xs font-semibold text-slate-400">Chưa có event nào.</p>}
-                </div>
-              </div>
-              <div className="rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
-                <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Top môn (lượt nộp server)</p>
-                <div className="mt-3 space-y-2">
-                  {subjectTops.length ? subjectTops.map((s) => (
-                    <div key={s.key} className="flex items-center gap-2.5 text-xs font-bold">
-                      <span className="w-36 shrink-0 truncate text-slate-600 sm:w-40 dark:text-slate-300">{s.key}</span>
-                      <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-slate-100 dark:bg-white/10">
-                        <div className="h-full rounded-full bg-emerald-400" style={{ width: `${Math.round((s.count / Math.max(1, subjectTops[0]?.count ?? 1)) * 100)}%` }} />
-                      </div>
-                      <span className="w-8 shrink-0 text-right font-black text-[#100F3E] dark:text-white">{s.count}</span>
-                    </div>
-                  )) : <p className="text-xs font-semibold text-slate-400">Chưa có.</p>}
-                </div>
-              </div>
-            </section>
-            </>
+                  </div>
+                </section>
+              </>
             ) : null}
 
             {section === "users" ? (
-            <>
-            {/* Người dùng */}
-            <section id="admin-users" className="scroll-mt-24 space-y-4 sm:space-y-5">
-              <div className="rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
-                <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
-                  <label className="relative block flex-1">
-                    <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
-                    <input
-                      value={query}
-                      onChange={(e) => setQuery(e.target.value)}
-                      placeholder={lang === "vi" ? "Tìm email / tên / id…" : "Search email / name / id…"}
-                      className="h-11 w-full rounded-[12px] border-2 border-[#E5E5E5] bg-white pl-10 pr-3 text-sm font-bold text-[#100F3E] shadow-[0_3px_0_#DCDCDC] outline-none transition focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white dark:shadow-[0_3px_0_rgba(0,0,0,0.35)]"
-                    />
-                  </label>
-                  <div className="grid grid-cols-1 gap-2 min-[480px]:grid-cols-3 lg:flex">
-                    <select value={role} onChange={(e) => setRole(e.target.value as typeof role)} className="h-11 min-w-0 rounded-[12px] border-2 border-[#E5E5E5] bg-white px-2 text-sm font-bold text-[#100F3E] shadow-[0_3px_0_#DCDCDC] outline-none focus:border-[#7DD3FC] sm:px-3 dark:border-white/10 dark:bg-slate-800 dark:text-white dark:shadow-[0_3px_0_rgba(0,0,0,0.35)]" aria-label="Role">
-                      <option value="all">All roles</option>
-                      <option value="user">user</option>
-                      <option value="admin">admin</option>
-                    </select>
-                    <select value={status} onChange={(e) => setStatus(e.target.value as typeof status)} className="h-11 min-w-0 rounded-[12px] border-2 border-[#E5E5E5] bg-white px-2 text-sm font-bold text-[#100F3E] shadow-[0_3px_0_#DCDCDC] outline-none focus:border-[#7DD3FC] sm:px-3 dark:border-white/10 dark:bg-slate-800 dark:text-white dark:shadow-[0_3px_0_rgba(0,0,0,0.35)]" aria-label="Status">
-                      <option value="all">All status</option>
-                      <option value="active">active</option>
-                      <option value="blocked">blocked</option>
-                    </select>
-            <select value={sortKey === "risk" ? "risk:desc" : `${sortKey}:${sortDir}`} onChange={(e) => { const [k, d] = e.target.value.split(":"); if (k === "risk") { setSortKey("risk"); return } setSortKey(k as AdminSortKey); setSortDir(d as "asc" | "desc") }} className="h-11 min-w-0 rounded-[12px] border-2 border-[#E5E5E5] bg-white px-2 text-sm font-bold text-[#100F3E] shadow-[0_3px_0_#DCDCDC] outline-none focus:border-[#7DD3FC] sm:px-3 dark:border-white/10 dark:bg-slate-800 dark:text-white dark:shadow-[0_3px_0_rgba(0,0,0,0.35)]" aria-label="Sort">
-              <option value="risk:desc">🚩 Rủi ro ↓</option>
-              <option value="lastActive:desc">Mới hoạt động nhất</option>
-                      <option value="attempts:desc">Lượt làm ↓</option>
-                      <option value="points:desc">Points ↓</option>
-                      <option value="accuracy:desc">Accuracy ↓</option>
-                      <option value="displayName:asc">Tên A→Z</option>
-                      <option value="createdAt:desc">Mới login nhất</option>
-                    </select>
+              <>
+                {/* Người dùng */}
+                <section id="admin-users" className="scroll-mt-24 space-y-4 sm:space-y-5">
+                  <div className="rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
+                    <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
+                      <label className="relative block flex-1">
+                        <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+                        <input
+                          value={query}
+                          onChange={(e) => setQuery(e.target.value)}
+                          placeholder={lang === "vi" ? "Tìm email / tên / id…" : "Search email / name / id…"}
+                          className="h-11 w-full rounded-[12px] border-2 border-[#E5E5E5] bg-white pl-10 pr-3 text-sm font-bold text-[#100F3E] shadow-[0_3px_0_#DCDCDC] outline-none transition focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white dark:shadow-[0_3px_0_rgba(0,0,0,0.35)]"
+                        />
+                      </label>
+                      <div className="grid grid-cols-1 gap-2 min-[480px]:grid-cols-2 lg:flex">
+                        <select value={role} onChange={(e) => setRole(e.target.value as typeof role)} className="h-11 min-w-0 rounded-[12px] border-2 border-[#E5E5E5] bg-white px-2 text-sm font-bold text-[#100F3E] shadow-[0_3px_0_#DCDCDC] outline-none focus:border-[#7DD3FC] sm:px-3 dark:border-white/10 dark:bg-slate-800 dark:text-white dark:shadow-[0_3px_0_rgba(0,0,0,0.35)]" aria-label="Role">
+                          <option value="all">All roles</option>
+                          <option value="user">user</option>
+                          <option value="admin">admin</option>
+                        </select>
+                        <select value={status} onChange={(e) => setStatus(e.target.value as typeof status)} className="h-11 min-w-0 rounded-[12px] border-2 border-[#E5E5E5] bg-white px-2 text-sm font-bold text-[#100F3E] shadow-[0_3px_0_#DCDCDC] outline-none focus:border-[#7DD3FC] sm:px-3 dark:border-white/10 dark:bg-slate-800 dark:text-white dark:shadow-[0_3px_0_rgba(0,0,0,0.35)]" aria-label="Status">
+                          <option value="all">All status</option>
+                          <option value="active">active</option>
+                          <option value="blocked">blocked</option>
+                        </select>
+                        <button
+                          type="button"
+                          onClick={() => setOnlineOnly((v) => !v)}
+                          className={cn("flex h-11 min-w-0 items-center justify-center gap-1.5 rounded-[12px] border-2 border-[#E5E5E5] bg-white px-2 text-sm font-bold text-[#100F3E] shadow-[0_3px_0_#DCDCDC] outline-none transition focus:border-[#7DD3FC] sm:px-3 dark:border-white/10 dark:bg-slate-800 dark:text-white dark:shadow-[0_3px_0_rgba(0,0,0,0.35)]", onlineOnly && "border-emerald-400 bg-emerald-50 text-emerald-700 dark:border-emerald-500/40 dark:bg-emerald-500/10 dark:text-emerald-300")}
+                          aria-pressed={onlineOnly}
+                          title={lang === "vi" ? "Chỉ hiện user đang online" : "Show online users only"}
+                        >
+                          <span className={cn("h-2.5 w-2.5 shrink-0 rounded-full", onlineIds.size > 0 ? "bg-emerald-500" : "bg-slate-300 dark:bg-slate-600", onlineOnly && "animate-pulse")} />
+                          {lang === "vi" ? "Đang online" : "Online"}{onlineIds.size > 0 ? ` (${onlineIds.size})` : null}
+                        </button>
+                        <select value={sortKey === "risk" ? "risk:desc" : `${sortKey}:${sortDir}`} onChange={(e) => { const [k, d] = e.target.value.split(":"); if (k === "risk") { setSortKey("risk"); return } setSortKey(k as AdminSortKey); setSortDir(d as "asc" | "desc") }} className="h-11 min-w-0 rounded-[12px] border-2 border-[#E5E5E5] bg-white px-2 text-sm font-bold text-[#100F3E] shadow-[0_3px_0_#DCDCDC] outline-none focus:border-[#7DD3FC] sm:px-3 dark:border-white/10 dark:bg-slate-800 dark:text-white dark:shadow-[0_3px_0_rgba(0,0,0,0.35)]" aria-label="Sort">
+                          <option value="risk:desc">🚩 Rủi ro ↓</option>
+                          <option value="lastActive:desc">Mới hoạt động nhất</option>
+                          <option value="attempts:desc">Lượt làm ↓</option>
+                          <option value="points:desc">Points ↓</option>
+                          <option value="accuracy:desc">Accuracy ↓</option>
+                          <option value="displayName:asc">Tên A→Z</option>
+                          <option value="createdAt:desc">Mới login nhất</option>
+                        </select>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
 
-              {loading ? (
-                <Card variant="dashed" className="py-14 text-center"><p className="text-sm font-bold text-slate-500">Đang tải dữ liệu…</p></Card>
-              ) : null}
-              {!loading && !visible.length ? (
-                <Card variant="dashed" className="py-14 text-center">
-                  <BarChart3 className="mx-auto h-9 w-9 text-slate-300" />
-                  <p className="mt-3 text-sm font-bold text-slate-500">Không có user nào khớp filter.</p>
-                </Card>
-              ) : null}
+                  {loading ? (
+                    <Card variant="dashed" className="py-14 text-center"><p className="text-sm font-bold text-slate-500">Đang tải dữ liệu…</p></Card>
+                  ) : null}
+                  {!loading && !visible.length ? (
+                    <Card variant="dashed" className="py-14 text-center">
+                      <BarChart3 className="mx-auto h-9 w-9 text-slate-300" />
+                      <p className="mt-3 text-sm font-bold text-slate-500">Không có user nào khớp filter.</p>
+                    </Card>
+                  ) : null}
 
-              {visible.length ? (
-                <div className="hidden overflow-hidden rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:shadow-[0_4px_0_#DCDCDC] md:block dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
-                  <div className="overflow-x-auto">
-                    <table className="w-full min-w-[880px] text-left text-sm">
-                      <thead>
-                        <tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-[0.06em] text-slate-400 dark:bg-white/5">
-                          <th className="px-4 py-3">User</th>
-                          <th className="px-4 py-3">Role / Status</th>
-                          <th className="px-4 py-3 text-center" title="Số dấu hiệu bất thường">🚩</th>
-                          <th className="px-4 py-3 text-right">Attempts</th>
-                          <th className="px-4 py-3 text-right">Acc</th>
-                          <th className="px-4 py-3 text-right">Points</th>
-                          <th className="px-4 py-3 text-right">Giờ học</th>
-                          <th className="px-4 py-3">Last active</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {pagedUsers.map((u) => (
-                          <tr key={u.id} className="cursor-pointer border-t border-slate-100 transition-colors hover:bg-sky-50/60 dark:border-white/5 dark:hover:bg-white/5" onClick={() => setSelectedId(u.id)}>
-                            <td className="px-4 py-3">
-                              <div className="flex items-center gap-3">
-                                <div className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-[11px] bg-[#E8F7FE] text-[#1CB0F6]">
-                                  {u.avatarUrl ? <img src={u.avatarUrl} alt="" className="h-9 w-9 object-cover" /> : <span className="text-sm font-black">{(u.displayName ?? u.email ?? "?").slice(0, 1).toUpperCase()}</span>}
-                                </div>
-                                <div className="min-w-0">
-                                  <p className="truncate text-sm font-extrabold text-[#100F3E] dark:text-white">{u.displayName ?? "(chưa đặt tên)"}</p>
-                                  <p className="truncate text-xs font-semibold text-slate-400">{u.email ?? u.id}</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td className="px-4 py-3">
-                              <span className="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-black text-slate-500 dark:bg-white/10 dark:text-slate-300">{u.role}</span>{" "}
-                              <span className={cn("rounded-full px-2.5 py-1 text-[11px] font-black", u.status === "active" ? "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300" : "bg-red-50 text-red-600 dark:bg-red-500/10 dark:text-red-300")}>{u.status}</span>
-                            </td>
-                            <td className="px-4 py-3 text-center">
-                              {(flagCountByUser.get(u.id) ?? 0) > 0 ? (
-                                <span className="inline-block rounded-full bg-red-50 px-2.5 py-1 text-[11px] font-black text-red-600 dark:bg-red-500/10 dark:text-red-300" title="Có dấu hiệu bất thường, bấm để xem">
-                                  🚩{flagCountByUser.get(u.id)}
-                                </span>
-                              ) : <span className="text-xs font-bold text-slate-300 dark:text-slate-600">—</span>}
-                            </td>
-                            <td className="px-4 py-3 text-right text-sm font-black text-[#100F3E] dark:text-white">{u.attempts}{u.weekAttempts ? <span className="text-xs font-bold text-slate-400"> (+{u.weekAttempts}/7d)</span> : null}</td>
-                            <td className="px-4 py-3 text-right text-sm font-extrabold text-[#100F3E] dark:text-white">{u.averageAccuracy}%</td>
-                            <td className="px-4 py-3 text-right text-sm font-black text-[#1CB0F6]">{u.points}</td>
-                            <td className="px-4 py-3 text-right text-sm font-extrabold text-[#100F3E] dark:text-white">{formatAdminDuration(u.totalDurationSeconds)}</td>
-                            <td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(u.lastActiveAt, lang)}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              ) : null}
-              {visible.length ? (
-                <div className="space-y-2.5 md:hidden">
-                  {pagedUsers.map((u) => (
-                    <button
-                      key={u.id}
-                      type="button"
-                      onClick={() => setSelectedId(u.id)}
-                      className="w-full rounded-[15px] border-2 border-[#E5E5E5] bg-white p-3.5 text-left shadow-[0_3px_0_#DCDCDC] transition-all active:scale-[0.99] dark:border-white/10 dark:bg-slate-900 dark:shadow-none"
-                    >
-                      <div className="flex items-center gap-3">
-                        <div className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-[12px] bg-[#E8F7FE] text-[#1CB0F6]">
-                          {u.avatarUrl ? <img src={u.avatarUrl} alt="" className="h-10 w-10 object-cover" /> : <span className="text-base font-black">{(u.displayName ?? u.email ?? "?").slice(0, 1).toUpperCase()}</span>}
-                        </div>
-                        <div className="min-w-0 flex-1">
-                          <p className="truncate text-sm font-extrabold text-[#100F3E] dark:text-white">{u.displayName ?? "(chưa đặt tên)"}</p>
-                          <p className="truncate text-xs font-semibold text-slate-400">{u.email ?? u.id}</p>
-                        </div>
-                        {(flagCountByUser.get(u.id) ?? 0) > 0 ? (
-                          <span className="shrink-0 rounded-full bg-red-50 px-2 py-1 text-[11px] font-black text-red-600 dark:bg-red-500/10 dark:text-red-300">
-                            🚩{flagCountByUser.get(u.id)}
-                          </span>
-                        ) : null}
+                  {visible.length ? (
+                    <div className="hidden overflow-hidden rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:shadow-[0_4px_0_#DCDCDC] md:block dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
+                      <div className="overflow-x-auto">
+                        <table className="w-full min-w-[880px] text-left text-sm">
+                          <thead>
+                            <tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-[0.06em] text-slate-400 dark:bg-white/5">
+                              <th className="px-4 py-3">User</th>
+                              <th className="px-4 py-3">Role / Status</th>
+                              <th className="px-4 py-3 text-center" title="Số dấu hiệu bất thường">🚩</th>
+                              <th className="px-4 py-3 text-right">Attempts</th>
+                              <th className="px-4 py-3 text-right">Acc</th>
+                              <th className="px-4 py-3 text-right">Points</th>
+                              <th className="px-4 py-3 text-right">Giờ học</th>
+                              <th className="px-4 py-3">Last active</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {pagedUsers.map((u) => (
+                              <tr key={u.id} className="cursor-pointer border-t border-slate-100 transition-colors hover:bg-sky-50/60 dark:border-white/5 dark:hover:bg-white/5" onClick={() => setSelectedId(u.id)}>
+                                <td className="px-4 py-3">
+                                  <div className="flex items-center gap-3">
+                                    <div className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-[11px] bg-[#E8F7FE] text-[#1CB0F6]">
+                                      {u.avatarUrl ? <img src={u.avatarUrl} alt="" className="h-9 w-9 object-cover" /> : <span className="text-sm font-black">{(u.displayName ?? u.email ?? "?").slice(0, 1).toUpperCase()}</span>}
+                                    </div>
+                                    <div className="min-w-0">
+                                      <p className="flex items-center gap-1.5 truncate text-sm font-extrabold text-[#100F3E] dark:text-white">
+                                        {onlineIds.has(u.id) ? <span className="h-2 w-2 shrink-0 rounded-full bg-emerald-500" title={lang === "vi" ? "Đang online" : "Online"} /> : null}
+                                        <span className="truncate">{u.displayName ?? "(chưa đặt tên)"}</span>
+                                      </p>
+                                      <p className="truncate text-xs font-semibold text-slate-400">{u.email ?? u.id}</p>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td className="px-4 py-3">
+                                  <span className="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-black text-slate-500 dark:bg-white/10 dark:text-slate-300">{u.role}</span>{" "}
+                                  <span className={cn("rounded-full px-2.5 py-1 text-[11px] font-black", u.status === "active" ? "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300" : "bg-red-50 text-red-600 dark:bg-red-500/10 dark:text-red-300")}>{u.status}</span>
+                                </td>
+                                <td className="px-4 py-3 text-center">
+                                  {(flagCountByUser.get(u.id) ?? 0) > 0 ? (
+                                    <span className="inline-block rounded-full bg-red-50 px-2.5 py-1 text-[11px] font-black text-red-600 dark:bg-red-500/10 dark:text-red-300" title="Có dấu hiệu bất thường, bấm để xem">
+                                      🚩{flagCountByUser.get(u.id)}
+                                    </span>
+                                  ) : <span className="text-xs font-bold text-slate-300 dark:text-slate-600">—</span>}
+                                </td>
+                                <td className="px-4 py-3 text-right text-sm font-black text-[#100F3E] dark:text-white">{u.attempts}{u.weekAttempts ? <span className="text-xs font-bold text-slate-400"> (+{u.weekAttempts}/7d)</span> : null}</td>
+                                <td className="px-4 py-3 text-right text-sm font-extrabold text-[#100F3E] dark:text-white">{u.averageAccuracy}%</td>
+                                <td className="px-4 py-3 text-right text-sm font-black text-[#1CB0F6]">{u.points}</td>
+                                <td className="px-4 py-3 text-right text-sm font-extrabold text-[#100F3E] dark:text-white">{formatAdminDuration(u.totalDurationSeconds)}</td>
+                                <td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(u.lastActiveAt, lang)}</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
                       </div>
-                      <div className="mt-2.5 flex flex-wrap items-center gap-1.5">
-                        <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-black text-slate-500 dark:bg-white/10 dark:text-slate-300">{u.role}</span>
-                        <span className={cn("rounded-full px-2 py-0.5 text-[11px] font-black", u.status === "active" ? "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300" : "bg-red-50 text-red-600 dark:bg-red-500/10 dark:text-red-300")}>{u.status}</span>
-                        <span className="ml-auto text-[11px] font-bold text-slate-400">{formatTime(u.lastActiveAt, lang)}</span>
+                    </div>
+                  ) : null}
+                  {visible.length ? (
+                    <div className="space-y-2.5 md:hidden">
+                      {pagedUsers.map((u) => (
+                        <button
+                          key={u.id}
+                          type="button"
+                          onClick={() => setSelectedId(u.id)}
+                          className="w-full rounded-[15px] border-2 border-[#E5E5E5] bg-white p-3.5 text-left shadow-[0_3px_0_#DCDCDC] transition-all active:scale-[0.99] dark:border-white/10 dark:bg-slate-900 dark:shadow-none"
+                        >
+                          <div className="flex items-center gap-3">
+                            <div className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-[12px] bg-[#E8F7FE] text-[#1CB0F6]">
+                              {u.avatarUrl ? <img src={u.avatarUrl} alt="" className="h-10 w-10 object-cover" /> : <span className="text-base font-black">{(u.displayName ?? u.email ?? "?").slice(0, 1).toUpperCase()}</span>}
+                            </div>
+                            <div className="min-w-0 flex-1">
+                              <p className="flex items-center gap-1.5 truncate text-sm font-extrabold text-[#100F3E] dark:text-white">
+                                {onlineIds.has(u.id) ? <span className="h-2 w-2 shrink-0 rounded-full bg-emerald-500" title={lang === "vi" ? "Đang online" : "Online"} /> : null}
+                                <span className="truncate">{u.displayName ?? "(chưa đặt tên)"}</span>
+                              </p>
+                              <p className="truncate text-xs font-semibold text-slate-400">{u.email ?? u.id}</p>
+                            </div>
+                            {(flagCountByUser.get(u.id) ?? 0) > 0 ? (
+                              <span className="shrink-0 rounded-full bg-red-50 px-2 py-1 text-[11px] font-black text-red-600 dark:bg-red-500/10 dark:text-red-300">
+                                🚩{flagCountByUser.get(u.id)}
+                              </span>
+                            ) : null}
+                          </div>
+                          <div className="mt-2.5 flex flex-wrap items-center gap-1.5">
+                            <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-black text-slate-500 dark:bg-white/10 dark:text-slate-300">{u.role}</span>
+                            <span className={cn("rounded-full px-2 py-0.5 text-[11px] font-black", u.status === "active" ? "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300" : "bg-red-50 text-red-600 dark:bg-red-500/10 dark:text-red-300")}>{u.status}</span>
+                            <span className="ml-auto text-[11px] font-bold text-slate-400">{formatTime(u.lastActiveAt, lang)}</span>
+                          </div>
+                          <div className="mt-2.5 grid grid-cols-4 gap-1.5">
+                            <MobileUserStat value={String(u.attempts)} label={lang === "vi" ? "Lượt" : "Tries"} />
+                            <MobileUserStat value={`${u.averageAccuracy}%`} label="Acc" />
+                            <MobileUserStat value={String(u.points)} label="Points" accent />
+                            <MobileUserStat value={formatAdminDuration(u.totalDurationSeconds)} label={lang === "vi" ? "Giờ học" : "Time"} />
+                          </div>
+                        </button>
+                      ))}
+                    </div>
+                  ) : null}
+                  {visible.length > USER_PAGE_SIZE ? (
+                    <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                      <p className="text-sm font-bold text-slate-400">Hiển thị {safePage * USER_PAGE_SIZE + 1}–{Math.min(visible.length, safePage * USER_PAGE_SIZE + USER_PAGE_SIZE)} / {visible.length}</p>
+                      <div className="flex gap-2">
+                        <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safePage === 0} onClick={() => setPage(safePage - 1)}>← Trước</button>
+                        <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safePage >= pageCount - 1} onClick={() => setPage(safePage + 1)}>Sau →</button>
                       </div>
-                      <div className="mt-2.5 grid grid-cols-4 gap-1.5">
-                        <MobileUserStat value={String(u.attempts)} label={lang === "vi" ? "Lượt" : "Tries"} />
-                        <MobileUserStat value={`${u.averageAccuracy}%`} label="Acc" />
-                        <MobileUserStat value={String(u.points)} label="Points" accent />
-                        <MobileUserStat value={formatAdminDuration(u.totalDurationSeconds)} label={lang === "vi" ? "Giờ học" : "Time"} />
-                      </div>
-                    </button>
-                  ))}
-                </div>
-              ) : null}
-              {visible.length > USER_PAGE_SIZE ? (
-                <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                  <p className="text-sm font-bold text-slate-400">Hiển thị {safePage * USER_PAGE_SIZE + 1}–{Math.min(visible.length, safePage * USER_PAGE_SIZE + USER_PAGE_SIZE)} / {visible.length}</p>
-                  <div className="flex gap-2">
-                    <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safePage === 0} onClick={() => setPage(safePage - 1)}>← Trước</button>
-                    <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safePage >= pageCount - 1} onClick={() => setPage(safePage + 1)}>Sau →</button>
-                  </div>
-                </div>
-              ) : null}
-            </section>
-            </>
+                    </div>
+                  ) : null}
+                </section>
+              </>
             ) : null}
 
             {section === "timeline" ? (
-            <>
-            {/* Timeline luồng hoạt động sau active */}
-            <section id="admin-timeline" className="scroll-mt-24 space-y-4 sm:space-y-5">
-              <div className="rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
-                <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-                  <div className="flex flex-wrap items-center gap-2">
+              <>
+                {/* Timeline luồng hoạt động sau active */}
+                <section id="admin-timeline" className="scroll-mt-24 space-y-4 sm:space-y-5">
+                  <div className="rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
+                    <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <button
+                          type="button"
+                          onClick={() => setOnlyAnomaly((v) => !v)}
+                          className={cn("lp-chip min-h-9 justify-center px-3 text-xs", onlyAnomaly && "is-active")}
+                          title="Chỉ hiện dòng có dấu hiệu bất thường"
+                        >
+                          🚩 Bất thường{allFlags.length ? ` (${allFlags.length})` : ""}
+                        </button>
+                        <select value={eventFilter} onChange={(e) => setEventFilter(e.target.value as typeof eventFilter)} className="h-11 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none dark:border-white/10 dark:bg-slate-800 dark:text-white" aria-label="Loại event">
+                          {EVENT_FILTERS.map((f) => (
+                            <option key={f} value={f}>{f === "all" ? "Tất cả event" : ACTIVITY_LABELS[f]}</option>
+                          ))}
+                        </select>
+                      </div>
+                      <label className="relative block sm:ml-auto sm:w-[220px]">
+                        <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+                        <input
+                          value={timelineQuery}
+                          onChange={(e) => setTimelineQuery(e.target.value)}
+                          placeholder="Lọc theo user…"
+                          className="h-11 w-full rounded-[12px] border-2 border-[#E5E5E5] bg-white pl-10 pr-3 text-sm font-bold text-[#100F3E] shadow-[0_3px_0_#DCDCDC] outline-none transition focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white dark:shadow-[0_3px_0_rgba(0,0,0,0.35)]"
+                        />
+                      </label>
+                    </div>
+                  </div>
+                  {allFlags.length ? (
                     <button
                       type="button"
-                      onClick={() => setOnlyAnomaly((v) => !v)}
-                      className={cn("lp-chip min-h-9 justify-center px-3 text-xs", onlyAnomaly && "is-active")}
-                      title="Chỉ hiện dòng có dấu hiệu bất thường"
+                      onClick={() => { setOnlyAnomaly(true); }}
+                      className="flex w-full items-center gap-3 rounded-[16px] border-2 border-red-200 bg-red-50 p-4 text-left shadow-[0_3px_0_#f3b8b8] sm:rounded-[20px] sm:p-5 dark:border-red-500/25 dark:bg-red-500/10 dark:shadow-none"
                     >
-                      🚩 Bất thường{allFlags.length ? ` (${allFlags.length})` : ""}
+                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[12px] bg-red-500 text-lg text-white">🚩</span>
+                      <span className="min-w-0 flex-1">
+                        <span className="block text-sm font-black text-red-700 dark:text-red-300">{allFlags.length} dấu hiệu bất thường ở {anomalyUserCount} user (trong dữ liệu đã tải)</span>
+                        <span className="mt-0.5 block text-xs font-semibold text-red-500 dark:text-red-400">Bấm để lọc chỉ hiện dòng bất thường · Chỉ review, không tự block</span>
+                      </span>
                     </button>
-                    <select value={eventFilter} onChange={(e) => setEventFilter(e.target.value as typeof eventFilter)} className="h-11 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none dark:border-white/10 dark:bg-slate-800 dark:text-white" aria-label="Loại event">
-                      {EVENT_FILTERS.map((f) => (
-                        <option key={f} value={f}>{f === "all" ? "Tất cả event" : ACTIVITY_LABELS[f]}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <label className="relative block sm:ml-auto sm:w-[220px]">
-                    <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
-                    <input
-                      value={timelineQuery}
-                      onChange={(e) => setTimelineQuery(e.target.value)}
-                      placeholder="Lọc theo user…"
-                      className="h-11 w-full rounded-[12px] border-2 border-[#E5E5E5] bg-white pl-10 pr-3 text-sm font-bold text-[#100F3E] shadow-[0_3px_0_#DCDCDC] outline-none transition focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white dark:shadow-[0_3px_0_rgba(0,0,0,0.35)]"
-                    />
-                  </label>
-                </div>
-              </div>
-              {allFlags.length ? (
-                <button
-                  type="button"
-                  onClick={() => { setOnlyAnomaly(true); }}
-                  className="flex w-full items-center gap-3 rounded-[16px] border-2 border-red-200 bg-red-50 p-4 text-left shadow-[0_3px_0_#f3b8b8] sm:rounded-[20px] sm:p-5 dark:border-red-500/25 dark:bg-red-500/10 dark:shadow-none"
-                >
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[12px] bg-red-500 text-lg text-white">🚩</span>
-                  <span className="min-w-0 flex-1">
-                    <span className="block text-sm font-black text-red-700 dark:text-red-300">{allFlags.length} dấu hiệu bất thường ở {anomalyUserCount} user (trong dữ liệu đã tải)</span>
-                    <span className="mt-0.5 block text-xs font-semibold text-red-500 dark:text-red-400">Bấm để lọc chỉ hiện dòng bất thường · Chỉ review, không tự block</span>
-                  </span>
-                </button>
-              ) : null}
-              {eventsError ? (
-                <div className="rounded-[16px] border-2 border-amber-200 bg-amber-50 p-4 text-sm font-semibold text-amber-800 shadow-[0_3px_0_#f5d78e] sm:p-5 dark:border-amber-500/20 dark:bg-amber-500/10 dark:text-amber-200 dark:shadow-none">
-                  <p className="font-black">{eventsError}</p>
-                </div>
-              ) : null}
-              {onlyAnomaly && visibleFlags.length ? (
-                <div className="overflow-x-auto rounded-[16px] border-2 border-red-200 bg-white shadow-[0_3px_0_#f3b8b8] dark:border-red-500/25 dark:bg-slate-900 dark:shadow-none">
-                  <table className="w-full min-w-[900px] text-left text-sm">
-                    <thead><tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-wide text-slate-400 dark:bg-white/5"><th className="px-4 py-3">User</th><th className="px-4 py-3">Cờ</th><th className="px-4 py-3">Lý do</th><th className="px-4 py-3">Thời gian</th></tr></thead>
-                    <tbody>{visibleFlags.slice(0, 100).map((f, index) => (
-                      <tr key={`${f.code}-${f.userId}-${f.createdAt}-${index}`} className="border-t border-slate-100 dark:border-white/5">
-                        <td className="px-4 py-3"><button type="button" onClick={() => setSelectedId(f.userId)} title={lang === "vi" ? "Bấm để xem user" : "Click to view user"} className="text-left font-extrabold text-[#100F3E] transition-colors hover:text-[#129BDC] dark:text-white"><p>{nameById.get(f.userId) ?? f.userId.slice(0, 8)}</p><p className="text-xs font-semibold text-slate-400">{f.userId.slice(0, 8)}</p></button></td>
-                        <td className="px-4 py-3"><FlagBadge flag={f} /><p className="mt-1 text-xs font-bold text-slate-500 dark:text-slate-400">{ANOMALY_META[f.code].labelVi}</p></td>
-                        <td className="max-w-[420px] px-4 py-3 text-xs font-semibold text-slate-500 dark:text-slate-400" title={f.reasonVi}>{f.reasonVi}</td>
-                        <td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(f.createdAt, lang)}</td>
-                      </tr>
-                    ))}</tbody>
-                  </table>
-                </div>
-              ) : null}
-              {!eventsError && !filteredEvents.length && (!onlyAnomaly || !visibleFlags.length) ? (
-                <Card variant="dashed" className="py-14 text-center">
-                  <Activity className="mx-auto h-9 w-9 text-slate-300" />
-                  <p className="mx-auto mt-3 max-w-md text-sm font-bold leading-6 text-slate-500 dark:text-slate-400">{onlyAnomaly ? "Không có dòng nào dính cờ trong filter hiện tại." : "Chưa có event nào. Hãy làm 1 bài quiz rồi reload — event submit_attempt sẽ hiện ở đây."}</p>
-                </Card>
-              ) : null}
-              {filteredEvents.length ? (
-                <div className="overflow-x-auto rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none">
-                  <table className="w-full min-w-[900px] text-left text-sm">
-                    <thead><tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-wide text-slate-400 dark:bg-white/5"><th className="px-4 py-3">User</th><th className="px-4 py-3">Sự kiện</th><th className="px-4 py-3">Chi tiết</th><th className="px-4 py-3">Thời gian</th></tr></thead>
-                    <tbody>{pagedEvents.map((e) => (
-                      <tr key={e.id} className="border-t border-slate-100 dark:border-white/5">
-                        <td className="px-4 py-3"><button type="button" onClick={() => setSelectedId(e.userId)} className="text-left font-extrabold text-[#100F3E] transition-colors hover:text-[#129BDC] dark:text-white"><p>{nameById.get(e.userId) ?? e.userId.slice(0, 8)}</p><p className="text-xs font-semibold text-slate-400">{e.userId.slice(0, 8)}</p></button></td>
-                        <td className="px-4 py-3"><span className="flex items-center gap-2.5"><span className={cn("flex h-9 w-9 shrink-0 items-center justify-center rounded-[11px]", EVENT_TONES[e.eventType])}><Activity className="h-4 w-4" strokeWidth={2.2} /></span><span className="font-bold text-slate-600 dark:text-slate-300">{ACTIVITY_LABELS[e.eventType]}</span></span>{(flagsByEventId.get(e.id) ?? []).length ? (<span className="mt-1.5 flex flex-wrap gap-1">{(flagsByEventId.get(e.id) ?? []).map((f) => (<FlagBadge key={`${f.code}-${e.id}`} flag={f} />))}</span>) : null}</td>
-                        <td className="max-w-[380px] px-4 py-3 text-xs font-semibold text-slate-500 dark:text-slate-400" title={summarizeMetadata(e)}>{summarizeMetadata(e)}</td>
-                        <td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(e.createdAt, lang)}</td>
-                      </tr>
-                    ))}</tbody>
-                  </table>
-                </div>
-              ) : null}
-              {filteredEvents.length > TIMELINE_PAGE_SIZE ? (
-                <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                  <p className="text-sm font-bold text-slate-400">Hiển thị {safeTimelinePage * TIMELINE_PAGE_SIZE + 1}–{Math.min(filteredEvents.length, safeTimelinePage * TIMELINE_PAGE_SIZE + TIMELINE_PAGE_SIZE)} / {filteredEvents.length}</p>
-                  <div className="flex gap-2">
-                    <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safeTimelinePage === 0} onClick={() => setTimelinePage(safeTimelinePage - 1)}>← Trước</button>
-                    <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safeTimelinePage >= timelinePageCount - 1} onClick={() => setTimelinePage(safeTimelinePage + 1)}>Sau →</button>
-                  </div>
-                </div>
-              ) : null}
-            </section>
-            </>
+                  ) : null}
+                  {eventsError ? (
+                    <div className="rounded-[16px] border-2 border-amber-200 bg-amber-50 p-4 text-sm font-semibold text-amber-800 shadow-[0_3px_0_#f5d78e] sm:p-5 dark:border-amber-500/20 dark:bg-amber-500/10 dark:text-amber-200 dark:shadow-none">
+                      <p className="font-black">{eventsError}</p>
+                    </div>
+                  ) : null}
+                  {onlyAnomaly && visibleFlags.length ? (
+                    <div className="overflow-x-auto rounded-[16px] border-2 border-red-200 bg-white shadow-[0_3px_0_#f3b8b8] dark:border-red-500/25 dark:bg-slate-900 dark:shadow-none">
+                      <table className="w-full min-w-[900px] text-left text-sm">
+                        <thead><tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-wide text-slate-400 dark:bg-white/5"><th className="px-4 py-3">User</th><th className="px-4 py-3">Cờ</th><th className="px-4 py-3">Lý do</th><th className="px-4 py-3">Thời gian</th></tr></thead>
+                        <tbody>{visibleFlags.slice(0, 100).map((f, index) => (
+                          <tr key={`${f.code}-${f.userId}-${f.createdAt}-${index}`} className="border-t border-slate-100 dark:border-white/5">
+                            <td className="px-4 py-3"><button type="button" onClick={() => setSelectedId(f.userId)} title={lang === "vi" ? "Bấm để xem user" : "Click to view user"} className="text-left font-extrabold text-[#100F3E] transition-colors hover:text-[#129BDC] dark:text-white"><p>{nameById.get(f.userId) ?? f.userId.slice(0, 8)}</p><p className="text-xs font-semibold text-slate-400">{f.userId.slice(0, 8)}</p></button></td>
+                            <td className="px-4 py-3"><FlagBadge flag={f} /><p className="mt-1 text-xs font-bold text-slate-500 dark:text-slate-400">{ANOMALY_META[f.code].labelVi}</p></td>
+                            <td className="max-w-[420px] px-4 py-3 text-xs font-semibold text-slate-500 dark:text-slate-400" title={f.reasonVi}>{f.reasonVi}</td>
+                            <td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(f.createdAt, lang)}</td>
+                          </tr>
+                        ))}</tbody>
+                      </table>
+                    </div>
+                  ) : null}
+                  {!eventsError && !filteredEvents.length && (!onlyAnomaly || !visibleFlags.length) ? (
+                    <Card variant="dashed" className="py-14 text-center">
+                      <Activity className="mx-auto h-9 w-9 text-slate-300" />
+                      <p className="mx-auto mt-3 max-w-md text-sm font-bold leading-6 text-slate-500 dark:text-slate-400">{onlyAnomaly ? "Không có dòng nào dính cờ trong filter hiện tại." : "Chưa có event nào. Hãy làm 1 bài quiz rồi reload — event submit_attempt sẽ hiện ở đây."}</p>
+                    </Card>
+                  ) : null}
+                  {filteredEvents.length ? (
+                    <div className="overflow-x-auto rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none">
+                      <table className="w-full min-w-[900px] text-left text-sm">
+                        <thead><tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-wide text-slate-400 dark:bg-white/5"><th className="px-4 py-3">User</th><th className="px-4 py-3">Sự kiện</th><th className="px-4 py-3">Chi tiết</th><th className="px-4 py-3">Thời gian</th></tr></thead>
+                        <tbody>{pagedEvents.map((e) => (
+                          <tr key={e.id} className="border-t border-slate-100 dark:border-white/5">
+                            <td className="px-4 py-3"><button type="button" onClick={() => setSelectedId(e.userId)} className="text-left font-extrabold text-[#100F3E] transition-colors hover:text-[#129BDC] dark:text-white"><p>{nameById.get(e.userId) ?? e.userId.slice(0, 8)}</p><p className="text-xs font-semibold text-slate-400">{e.userId.slice(0, 8)}</p></button></td>
+                            <td className="px-4 py-3"><span className="flex items-center gap-2.5"><span className={cn("flex h-9 w-9 shrink-0 items-center justify-center rounded-[11px]", EVENT_TONES[e.eventType])}><Activity className="h-4 w-4" strokeWidth={2.2} /></span><span className="font-bold text-slate-600 dark:text-slate-300">{ACTIVITY_LABELS[e.eventType]}</span></span>{(flagsByEventId.get(e.id) ?? []).length ? (<span className="mt-1.5 flex flex-wrap gap-1">{(flagsByEventId.get(e.id) ?? []).map((f) => (<FlagBadge key={`${f.code}-${e.id}`} flag={f} />))}</span>) : null}</td>
+                            <td className="max-w-[380px] px-4 py-3 text-xs font-semibold text-slate-500 dark:text-slate-400" title={summarizeMetadata(e)}>{summarizeMetadata(e)}</td>
+                            <td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(e.createdAt, lang)}</td>
+                          </tr>
+                        ))}</tbody>
+                      </table>
+                    </div>
+                  ) : null}
+                  {filteredEvents.length > TIMELINE_PAGE_SIZE ? (
+                    <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                      <p className="text-sm font-bold text-slate-400">Hiển thị {safeTimelinePage * TIMELINE_PAGE_SIZE + 1}–{Math.min(filteredEvents.length, safeTimelinePage * TIMELINE_PAGE_SIZE + TIMELINE_PAGE_SIZE)} / {filteredEvents.length}</p>
+                      <div className="flex gap-2">
+                        <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safeTimelinePage === 0} onClick={() => setTimelinePage(safeTimelinePage - 1)}>← Trước</button>
+                        <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safeTimelinePage >= timelinePageCount - 1} onClick={() => setTimelinePage(safeTimelinePage + 1)}>Sau →</button>
+                      </div>
+                    </div>
+                  ) : null}
+                </section>
+              </>
             ) : null}
 
             {section === "attempts" ? (
-            <>
-            {/* Lịch sử làm bài trên server */}
-            <section id="admin-attempts" className="scroll-mt-24 space-y-4 sm:space-y-5">
-              {attemptsError ? (
-                <div className="rounded-[16px] border-2 border-amber-200 bg-amber-50 p-4 text-sm font-semibold text-amber-800 shadow-[0_3px_0_#f5d78e] sm:p-5 dark:border-amber-500/20 dark:bg-amber-500/10 dark:text-amber-200 dark:shadow-none">
-                  <p className="font-black">{attemptsError}</p>
-                </div>
-              ) : null}
-              {!attemptsError && !visibleAttempts.length ? (
-                <Card variant="dashed" className="py-14 text-center">
-                  <History className="mx-auto h-9 w-9 text-slate-300" />
-                  <p className="mx-auto mt-3 max-w-md text-sm font-bold leading-6 text-slate-500 dark:text-slate-400">{onlyAnomaly ? "Không có lượt nào dính cờ trong khoảng này." : "Chưa có lượt làm nào trong khoảng này. Dữ liệu cũ vẫn nằm ở localStorage từng máy."}</p>
-                </Card>
-              ) : null}
-              {visibleAttempts.length ? (
-                <div className="overflow-x-auto rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none">
-                  <table className="w-full min-w-[900px] text-left text-sm">
-                    <thead><tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-wide text-slate-400 dark:bg-white/5"><th className="px-4 py-3 text-right">Điểm</th><th className="px-4 py-3">Bài làm</th><th className="px-4 py-3">User</th><th className="px-4 py-3 text-right">Đúng</th><th className="px-4 py-3 text-right">Chính xác</th><th className="px-4 py-3">Thời gian</th></tr></thead>
-                    <tbody>{pagedAttempts.map((a) => (
-                      <tr key={`${a.userId}:${a.historyId}`} onClick={() => setSelectedId(a.userId)} className="cursor-pointer border-t border-slate-100 transition-colors hover:bg-sky-50/60 dark:border-white/5 dark:hover:bg-white/5">
-                        <td className="px-4 py-3 text-right font-black text-[#1CB0F6]">{a.score.toFixed(1)}</td>
-                        <td className="max-w-[320px] px-4 py-3"><p className="truncate font-extrabold text-[#100F3E] dark:text-white" title={a.title || a.examId}>{a.title || a.examId}</p><p className="mt-0.5 truncate text-xs font-semibold text-slate-400">{a.mode}{a.retryNumber ? ` · retry ${a.retryNumber}` : ""}</p>{(flagsByAttemptKey.get(`${a.userId}:${a.historyId}`) ?? []).length ? (<span className="mt-1.5 flex flex-wrap gap-1">{(flagsByAttemptKey.get(`${a.userId}:${a.historyId}`) ?? []).map((f) => (<FlagBadge key={`${f.code}-${a.historyId}`} flag={f} />))}</span>) : null}</td>
-                        <td className="px-4 py-3"><p className="font-extrabold text-[#100F3E] dark:text-white">{nameById.get(a.userId) ?? a.userId.slice(0, 8)}</p><p className="text-xs font-semibold text-slate-400">{a.userId.slice(0, 8)}</p></td>
-                        <td className="px-4 py-3 text-right font-extrabold text-[#100F3E] dark:text-white">{a.correct}/{a.total}</td>
-                        <td className="px-4 py-3 text-right"><span className={cn("whitespace-nowrap rounded-full px-2.5 py-1 text-[11px] font-black", a.accuracy >= 80 ? "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300" : a.accuracy >= 50 ? "bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-300" : "bg-red-50 text-red-600 dark:bg-red-500/10 dark:text-red-300")}>{a.accuracy}%</span></td>
-                        <td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(a.completedAt, lang)}</td>
-                      </tr>
-                    ))}</tbody>
-                  </table>
-                </div>
-              ) : null}
-              {visibleAttempts.length > ATTEMPTS_PAGE_SIZE ? (
-                <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                  <p className="text-sm font-bold text-slate-400">Hiển thị {safeAttemptsPage * ATTEMPTS_PAGE_SIZE + 1}–{Math.min(visibleAttempts.length, safeAttemptsPage * ATTEMPTS_PAGE_SIZE + ATTEMPTS_PAGE_SIZE)} / {visibleAttempts.length}</p>
-                  <div className="flex gap-2">
-                    <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safeAttemptsPage === 0} onClick={() => setAttemptsPage(safeAttemptsPage - 1)}>← Trước</button>
-                    <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safeAttemptsPage >= attemptsPageCount - 1} onClick={() => setAttemptsPage(safeAttemptsPage + 1)}>Sau →</button>
-                  </div>
-                </div>
-              ) : null}
-            </section>
-            </>
+              <>
+                {/* Lịch sử làm bài trên server */}
+                <section id="admin-attempts" className="scroll-mt-24 space-y-4 sm:space-y-5">
+                  {attemptsError ? (
+                    <div className="rounded-[16px] border-2 border-amber-200 bg-amber-50 p-4 text-sm font-semibold text-amber-800 shadow-[0_3px_0_#f5d78e] sm:p-5 dark:border-amber-500/20 dark:bg-amber-500/10 dark:text-amber-200 dark:shadow-none">
+                      <p className="font-black">{attemptsError}</p>
+                    </div>
+                  ) : null}
+                  {!attemptsError && !visibleAttempts.length ? (
+                    <Card variant="dashed" className="py-14 text-center">
+                      <History className="mx-auto h-9 w-9 text-slate-300" />
+                      <p className="mx-auto mt-3 max-w-md text-sm font-bold leading-6 text-slate-500 dark:text-slate-400">{onlyAnomaly ? "Không có lượt nào dính cờ trong khoảng này." : "Chưa có lượt làm nào trong khoảng này. Dữ liệu cũ vẫn nằm ở localStorage từng máy."}</p>
+                    </Card>
+                  ) : null}
+                  {visibleAttempts.length ? (
+                    <div className="overflow-x-auto rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none">
+                      <table className="w-full min-w-[900px] text-left text-sm">
+                        <thead><tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-wide text-slate-400 dark:bg-white/5"><th className="px-4 py-3 text-right">Điểm</th><th className="px-4 py-3">Bài làm</th><th className="px-4 py-3">User</th><th className="px-4 py-3 text-right">Đúng</th><th className="px-4 py-3 text-right">Chính xác</th><th className="px-4 py-3">Thời gian</th></tr></thead>
+                        <tbody>{pagedAttempts.map((a) => (
+                          <tr key={`${a.userId}:${a.historyId}`} onClick={() => setSelectedId(a.userId)} className="cursor-pointer border-t border-slate-100 transition-colors hover:bg-sky-50/60 dark:border-white/5 dark:hover:bg-white/5">
+                            <td className="px-4 py-3 text-right font-black text-[#1CB0F6]">{a.score.toFixed(1)}</td>
+                            <td className="max-w-[320px] px-4 py-3"><p className="truncate font-extrabold text-[#100F3E] dark:text-white" title={a.title || a.examId}>{a.title || a.examId}</p><p className="mt-0.5 truncate text-xs font-semibold text-slate-400">{a.mode}{a.retryNumber ? ` · retry ${a.retryNumber}` : ""}</p>{(flagsByAttemptKey.get(`${a.userId}:${a.historyId}`) ?? []).length ? (<span className="mt-1.5 flex flex-wrap gap-1">{(flagsByAttemptKey.get(`${a.userId}:${a.historyId}`) ?? []).map((f) => (<FlagBadge key={`${f.code}-${a.historyId}`} flag={f} />))}</span>) : null}</td>
+                            <td className="px-4 py-3"><p className="font-extrabold text-[#100F3E] dark:text-white">{nameById.get(a.userId) ?? a.userId.slice(0, 8)}</p><p className="text-xs font-semibold text-slate-400">{a.userId.slice(0, 8)}</p></td>
+                            <td className="px-4 py-3 text-right font-extrabold text-[#100F3E] dark:text-white">{a.correct}/{a.total}</td>
+                            <td className="px-4 py-3 text-right"><span className={cn("whitespace-nowrap rounded-full px-2.5 py-1 text-[11px] font-black", a.accuracy >= 80 ? "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300" : a.accuracy >= 50 ? "bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-300" : "bg-red-50 text-red-600 dark:bg-red-500/10 dark:text-red-300")}>{a.accuracy}%</span></td>
+                            <td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(a.completedAt, lang)}</td>
+                          </tr>
+                        ))}</tbody>
+                      </table>
+                    </div>
+                  ) : null}
+                  {visibleAttempts.length > ATTEMPTS_PAGE_SIZE ? (
+                    <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                      <p className="text-sm font-bold text-slate-400">Hiển thị {safeAttemptsPage * ATTEMPTS_PAGE_SIZE + 1}–{Math.min(visibleAttempts.length, safeAttemptsPage * ATTEMPTS_PAGE_SIZE + ATTEMPTS_PAGE_SIZE)} / {visibleAttempts.length}</p>
+                      <div className="flex gap-2">
+                        <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safeAttemptsPage === 0} onClick={() => setAttemptsPage(safeAttemptsPage - 1)}>← Trước</button>
+                        <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safeAttemptsPage >= attemptsPageCount - 1} onClick={() => setAttemptsPage(safeAttemptsPage + 1)}>Sau →</button>
+                      </div>
+                    </div>
+                  ) : null}
+                </section>
+              </>
             ) : null}
           </div>
         </main>
@@ -1292,8 +1326,8 @@ function AdminSidebar({
 }) {
   return (
     <aside className="fixed inset-y-0 left-0 z-40 hidden w-[200px] flex-col border-r border-slate-200 bg-white px-4 py-5 lg:flex dark:border-white/10 dark:bg-slate-900">
-      <a href="/" className="flex h-12 items-center gap-2 px-3" aria-label="QuizPKA Admin">
-        <img src={brandLogo} alt="QuizPKA" className="h-8 w-auto object-contain" />
+      <a href="/" className="flex h-12 items-center gap-2 px-3" aria-label="Quizpka Admin">
+        <img src={brandLogo} alt="Quizpka" className="h-8 w-auto object-contain" />
         <span className="rounded-full bg-[#E8F7FE] px-2 py-0.5 text-[10px] font-black uppercase tracking-wide text-[#129BDC] dark:bg-sky-500/10">Admin</span>
       </a>
 
