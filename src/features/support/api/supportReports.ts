@@ -23,3 +23,9 @@ export async function updateSupportStatus(id: string, status: SupportStatus): Pr
   const { error } = await supabase.rpc("admin_update_support_status", { p_report_id: id, p_status: status })
   if (error) throw new Error(`Không thể cập nhật trạng thái: ${error.message}`)
 }
+
+export async function deleteSupportReport(id: string): Promise<void> {
+  const { data, error } = await supabase.rpc("admin_delete_support_report", { p_report_id: id })
+  if (error) throw new Error(`Không thể xóa báo lỗi: ${error.message}`)
+  if (data === false) throw new Error("Báo lỗi không còn tồn tại.")
+}

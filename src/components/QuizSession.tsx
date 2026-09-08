@@ -337,12 +337,28 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
     resetTimer()
   }, [resetTimer])
 
+  // Leaving before submitting counts as abandoning the attempt. Finished
+  // screens reuse the same buttons, but finished=true skips the log row.
+  const handleExit = useCallback(() => {
+    if (!finished) {
+      logActivityEvent(user?.id, "abandon_attempt", {
+        examId: exam.id,
+        subjectId: subject.id,
+        mode: setup.mode,
+        answered: answeredCount,
+        total: questions.length,
+        progress,
+      })
+    }
+    onExit()
+  }, [answeredCount, exam.id, finished, onExit, progress, questions.length, setup.mode, subject.id, user?.id])
+
   if (loading) return (<CenterCard><p className="lp-modal-desc text-[15px]">{t.loading}</p></CenterCard>)
   if (error || questions.length === 0) return (
     <CenterCard>
       <p className="lp-modal-desc text-[15px]">{t.loadError}</p>
       <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:justify-center">
-        <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={onExit}>{t.backDocs}</button>
+        <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={handleExit}>{t.backDocs}</button>
         <button type="button" className="lp-btn lp-btn--primary lp-btn--sm" onClick={reload}>{t.retry}</button>
       </div>
     </CenterCard>
@@ -393,7 +409,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
               </div>
             ) : null}
             <div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
-              <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={onExit}>{t.backDocs}</button>
+              <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={handleExit}>{t.backDocs}</button>
               {hardCompletedAll ? (
                 <>
                   <button type="button" className="lp-btn lp-btn--primary lp-btn--sm" onClick={() => setReviewOpen(true)}>{t.review}</button>
@@ -438,7 +454,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
             reviewLabel={t.review}
             retryWrongLabel={wrongCount > 0 ? `${t.retryWrong} (${wrongCount})` : t.retryWrong}
             retryWrongDisabled={wrongCount === 0}
-            onExit={onExit}
+            onExit={handleExit}
             onRetryWrong={handleRetryWrong}
             onReview={handleOpenReview}
             onOpenQuestionList={handleOpenQuestionList}
@@ -504,7 +520,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
             </div>
           ) : null}
           <div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
-            <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={onExit}>{t.backDocs}</button>
+            <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={handleExit}>{t.backDocs}</button>
             {subject.code !== "TADV01" ? (
               wrongQuestions.length > 0 ? (
                 <button type="button" className="lp-btn lp-btn--primary lp-btn--sm" onClick={handleRetryWrong}>
@@ -528,7 +544,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
     return (
       <div className="mx-auto flex w-full max-w-[860px] flex-1 flex-col px-4 pb-10 pt-4 sm:px-6 lg:px-8">
         <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-          <button type="button" onClick={onExit} className="lp-btn lp-btn--secondary lp-btn--sm"><ArrowLeft className="h-4 w-4" strokeWidth={2} />{t.exit}</button>
+          <button type="button" onClick={handleExit} className="lp-btn lp-btn--secondary lp-btn--sm"><ArrowLeft className="h-4 w-4" strokeWidth={2} />{t.exit}</button>
           <div className="inline-flex items-center gap-2 rounded-full border-2 border-[#E5E5E5] bg-white px-3 py-2 text-[13px] font-extrabold text-[#100F3E] shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:text-white">
             <Clock3 className="h-4 w-4 text-[#1CB0F6]" strokeWidth={2} />
             {setup.timed ? `${t.timeLeft}: ${formatTime(secondsLeft)}` : t.unlimited}
@@ -585,7 +601,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
   return (
     <div className="mx-auto flex w-full max-w-[980px] flex-1 flex-col px-4 pb-10 pt-4 sm:px-6 lg:px-8">
       <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-        <button type="button" onClick={onExit} className="lp-btn lp-btn--secondary lp-btn--sm"><ArrowLeft className="h-4 w-4" strokeWidth={2} />{t.exit}</button>
+        <button type="button" onClick={handleExit} className="lp-btn lp-btn--secondary lp-btn--sm"><ArrowLeft className="h-4 w-4" strokeWidth={2} />{t.exit}</button>
         <div className="inline-flex items-center gap-2 rounded-full border-2 border-[#E5E5E5] bg-white px-3 py-2 text-[13px] font-extrabold text-[#100F3E] shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:text-white">
           <Clock3 className="h-4 w-4 text-[#1CB0F6]" strokeWidth={2} />
           {setup.timed ? `${t.timeLeft}: ${formatTime(secondsLeft)}` : t.unlimited}

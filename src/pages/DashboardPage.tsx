@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, type ComponentType } from "react"
+import { useCallback, useEffect, useMemo, useRef, useState, type ComponentType } from "react"
 import {
   ArrowRight,
   BarChart3,
@@ -172,6 +172,7 @@ export function DashboardPage({
       setPaymentProductId(productId)
       setPurchaseExam(null)
       setPayment({ payment: result.payment })
+      logActivityEvent(dashboardUser?.id, "purchase_start", { productId, orderId: result.orderId ?? null })
     } catch (error) {
       setPurchaseError(error instanceof Error ? error.message : "Không thể tạo thanh toán. Vui lòng thử lại.")
     } finally {
@@ -183,6 +184,25 @@ export function DashboardPage({
     logActivityEvent(dashboardUser?.id, "view_dashboard", {}, { oncePerSessionKey: `view_dashboard:${dashboardUser?.id ?? "anon"}` })
   }, [dashboardUser?.id, dashboardUser?.created_at])
   const [query, setQuery] = useState("")
+  const searchTimer = useRef<number | undefined>(undefined)
+  // Log distinct search terms (debounced, once per term per session) instead of
+  // every keystroke, so search activity stays visible without flooding the log.
+  const handleQueryChange = useCallback((value: string) => {
+    setQuery(value)
+    window.clearTimeout(searchTimer.current)
+    const term = value.trim().toLowerCase()
+    if (term.length < 2) return
+    searchTimer.current = window.setTimeout(() => {
+      try {
+        const logged: string[] = JSON.parse(sessionStorage.getItem("quizpka-search-logged") ?? "[]")
+        if (logged.includes(term)) return
+        sessionStorage.setItem("quizpka-search-logged", JSON.stringify([...logged.slice(-49), term]))
+      } catch {
+        return
+      }
+      logActivityEvent(dashboardUser?.id, "search_exam", { query: value.trim().slice(0, 60) })
+    }, 1500)
+  }, [dashboardUser?.id])
   const [filter, setFilter] = useState<"all" | "free" | "paid" | "midterm" | "final" | "toeic">("all")
   const [toeicPickerExam, setToeicPickerExam] = useState<ExamCatalogItem | null>(null)
   const [toeicScope, setToeicScope] = useState<ToeicScope>("full")
@@ -314,7 +334,7 @@ export function DashboardPage({
               query={query}
               filter={filter}
               filteredExams={filteredExams}
-              onQueryChange={setQuery}
+              onQueryChange={handleQueryChange}
               onFilterChange={setFilter}
               onStartExam={handleDashboardStart}
             />
@@ -584,11 +604,21 @@ function PurchasedView({ lang, onStartExam }: { lang: Lang; onStartExam: (exam: 
 
 function NotificationsView({ lang }: { lang: Lang }) {
   const t = copy[lang]
+  const { user } = useAuth()
   const [filter, setFilter] = useState<"all" | "unread">("all")
   const { page, unreadCount: unread, error: syncError, mutationError, mutating, refresh, loadMore, markRead, markAllRead } = useNotifications(filter)
   const { items: visibleItems, loading, error } = page
-  const markAll = () => { void markAllRead().catch(() => { /* Rendered through shared mutationError below. */ }) }
-  const read = (id: number) => { void markRead(id).catch(() => { /* Rendered through shared mutationError below. */ }) }
+  useEffect(() => {
+    logActivityEvent(user?.id, "view_notifications", {})
+  }, [user?.id])
+  const markAll = () => {
+    logActivityEvent(user?.id, "read_notification", { mode: "all", count: unread })
+    void markAllRead().catch(() => { /* Rendered through shared mutationError below. */ })
+  }
+  const read = (id: number) => {
+    logActivityEvent(user?.id, "read_notification", { notificationId: id })
+    void markRead(id).catch(() => { /* Rendered through shared mutationError below. */ })
+  }
   const reload = () => { void refresh() }
 
   return (

@@ -46,6 +46,50 @@ export function bucketLast14Days(
   return [...buckets.values()]
 }
 
+export type HourBucket = {
+  hour: number // 0-23, local time
+  label: string // "00h".."23h"
+  attempts: number
+  events: number
+}
+
+function hourKeyOf(iso: string): number | null {
+  const t = Date.parse(iso)
+  if (!Number.isFinite(t)) return null
+  return new Date(t).getHours()
+}
+
+function isTodayLocal(iso: string, now: number): boolean {
+  const t = Date.parse(iso)
+  if (!Number.isFinite(t)) return false
+  const d = new Date(t)
+  const n = new Date(now)
+  return d.getFullYear() === n.getFullYear() && d.getMonth() === n.getMonth() && d.getDate() === n.getDate()
+}
+
+/** 24 khung giờ hôm nay (giờ địa phương), đếm attempts + events mỗi giờ. */
+export function bucketHoursToday(
+  attempts: PracticeAttemptRow[],
+  events: ActivityEvent[],
+  now = Date.now(),
+): HourBucket[] {
+  const buckets: HourBucket[] = Array.from({ length: 24 }, (_, hour) => ({
+    hour,
+    label: `${String(hour).padStart(2, "0")}h`,
+    attempts: 0,
+    events: 0,
+  }))
+  for (const a of attempts) {
+    const h = hourKeyOf(a.completedAt)
+    if (h !== null && isTodayLocal(a.completedAt, now)) buckets[h].attempts += 1
+  }
+  for (const e of events) {
+    const h = hourKeyOf(e.createdAt)
+    if (h !== null && isTodayLocal(e.createdAt, now)) buckets[h].events += 1
+  }
+  return buckets
+}
+
 export function countByKey(items: string[], limit = 8): Array<{ key: string; count: number }> {
   const m = new Map<string, number>()
   for (const k of items) {

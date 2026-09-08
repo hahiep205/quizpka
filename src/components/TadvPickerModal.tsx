@@ -1,5 +1,7 @@
-import { useEffect, useId, useState } from "react"
+import { useEffect, useId, useRef, useState } from "react"
 import { BookOpen } from "lucide-react"
+import { useAuth } from "@/auth/AuthProvider"
+import { logActivityEvent } from "@/features/activity/lib/activityLog"
 import { tadvExamOptions } from "@/data/tadvExams"
 import type { ExamCatalogItem, Subject } from "@/data/subjects"
 import { getExamTitle } from "@/data/subjects"
@@ -19,9 +21,11 @@ type Props = {
 
 export function TadvPickerModal({ open, lang, exam, subject, onClose, onSelect }: Props) {
   const titleId = useId()
+  const { user } = useAuth()
   const [visible, setVisible] = useState(false)
   const [state, setState] = useState<"open" | "closed">("closed")
   const [selected, setSelected] = useState<string>(tadvExamOptions[0].id)
+  const loggedExamRef = useRef<string | null>(null)
   const t = copy[lang]
 
   useEffect(() => {
@@ -29,13 +33,18 @@ export function TadvPickerModal({ open, lang, exam, subject, onClose, onSelect }
       setSelected(tadvExamOptions[0].id)
       setVisible(true)
       setState("open")
+      if (user?.id && loggedExamRef.current !== exam.id) {
+        loggedExamRef.current = exam.id
+        logActivityEvent(user.id, "view_exam_detail", { examId: exam.id, subjectId: exam.subjectId })
+      }
       return
     }
+    loggedExamRef.current = null
     if (!visible) return
     setState("closed")
     const timer = window.setTimeout(() => setVisible(false), 180)
     return () => window.clearTimeout(timer)
-  }, [open, exam, visible])
+  }, [exam, open, user?.id, visible])
 
   useEffect(() => {
     if (!open) return

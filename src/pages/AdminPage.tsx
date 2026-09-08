@@ -9,7 +9,7 @@ import { Dialog } from "@/components/ui/dialog"
 import { fetchAllAdminUsers } from "@/features/admin/api/adminUsers"
 import { fetchAllActivityTimeline, fetchAllPracticeAttempts, fetchPracticeAttempts, fetchUserActivity } from "@/features/admin/api/adminActivity"
 import { ACTIVITY_LABELS, parseActivityRows, parseAttemptRows, type ActivityEvent, type ActivityEventType, type PracticeAttemptRow } from "@/features/activity/lib/activityLog"
-import { bucketLast14Days, eventsByType, filterByDays, topSubjects } from "@/features/admin/lib/adminOverview"
+import { bucketHoursToday, eventsByType, filterByDays, topSubjects } from "@/features/admin/lib/adminOverview"
 import { ANOMALY_META, detectAllAnomalies, detectUserAnomalies, riskScore, type AnomalyFlag, type AnomalySeverity } from "@/features/admin/lib/anomalyDetectors"
 import { supabase } from "@/lib/supabase"
 import {
@@ -25,7 +25,7 @@ import { cn } from "@/lib/utils"
 import { fetchAdminNotificationHistory, fetchNotificationBatchDetails, fetchNotificationBatchRecipients, fetchNotificationRecipients, revokeAdminNotification, sendAdminNotifications, type AdminNotificationHistory, type NotificationRecipient } from "@/features/notifications/api/notifications"
 import { fetchAllAdminPayments, sortAdminPaymentsByCreatedAt, type AdminPayment, type PaymentStatus } from "@/features/admin/api/adminPayments"
 import { grantAdminPurchase, fetchAdminProducts, type AdminProduct } from "@/features/admin/api/adminEntitlements"
-import { fetchSupportReports, updateSupportStatus, type SupportReport, type SupportStatus, type SupportType } from "@/features/support/api/supportReports"
+import { deleteSupportReport, fetchSupportReports, updateSupportStatus, type SupportReport, type SupportStatus, type SupportType } from "@/features/support/api/supportReports"
 
 function formatAdminDuration(totalSeconds: number): string {
   const s = Math.max(0, Math.round(totalSeconds))
@@ -46,32 +46,6 @@ function formatVnd(value: number): string {
   return new Intl.NumberFormat("vi-VN", { style: "currency", currency: "VND" }).format(value)
 }
 
-// Mỗi ô ngày chia 2 nửa: trên = Nộp bài (xanh thương hiệu), dưới = Events (tím).
-// Thang màu riêng cho từng chỉ số vì events thường lớn hơn lượt nộp hàng chục lần.
-const ATTEMPT_TONES = [
-  "bg-slate-100 dark:bg-white/10",
-  "bg-[#D6EFFF] dark:bg-[#143a52]",
-  "bg-[#8ED4FB] dark:bg-[#155e85]",
-  "bg-[#1CB0F6] dark:bg-[#1d9bd7]",
-  "bg-[#0A4FD6] dark:bg-[#4C9AFF]",
-]
-
-const HEAT_EVENT_TONES = [
-  "bg-slate-100 dark:bg-white/10",
-  "bg-[#EDE9FE] dark:bg-[#2a2350]",
-  "bg-[#C4B5FD] dark:bg-[#4c3a9e]",
-  "bg-[#8B5CF6] dark:bg-[#7c5cf0]",
-  "bg-[#5B21B6] dark:bg-[#a78bfa]",
-]
-
-function contributionLevel(total: number, max: number): number {
-  if (total <= 0 || max <= 0) return 0
-  const ratio = total / max
-  if (ratio <= 0.25) return 1
-  if (ratio <= 0.5) return 2
-  if (ratio <= 0.75) return 3
-  return 4
-}
 
 function isToday(value: string | null): boolean {
   if (!value) return false
@@ -93,7 +67,7 @@ function PaymentStatusBadge({ status }: { status: PaymentStatus }) {
 type Props = { lang: "vi" | "en" }
 type AdminSection = "overview" | "users" | "notifications" | "payment" | "sendquiz" | "supports" | "timeline" | "attempts"
 
-const EVENT_FILTERS: Array<"all" | ActivityEventType> = ["all", "login", "open_exam", "start_attempt", "submit_attempt", "retry_wrong", "view_dashboard", "view_leaderboard", "update_profile"]
+const EVENT_FILTERS: Array<"all" | ActivityEventType> = ["all", "login", "open_exam", "view_exam_detail", "start_attempt", "submit_attempt", "abandon_attempt", "retry_wrong", "purchase_start", "purchase_success", "search_exam", "view_notifications", "read_notification", "devtools_attempt", "view_dashboard", "view_leaderboard", "update_profile"]
 
 const EVENT_TONES: Record<ActivityEventType, string> = {
   login: "bg-emerald-50 text-emerald-500 dark:bg-emerald-500/10",
@@ -104,6 +78,14 @@ const EVENT_TONES: Record<ActivityEventType, string> = {
   retry_wrong: "bg-violet-50 text-violet-500 dark:bg-violet-500/10",
   view_leaderboard: "bg-yellow-50 text-yellow-600 dark:bg-yellow-500/10",
   update_profile: "bg-slate-100 text-slate-500 dark:bg-white/10",
+  devtools_attempt: "bg-red-50 text-red-600 dark:bg-red-500/10",
+  abandon_attempt: "bg-orange-50 text-orange-700 dark:bg-orange-500/10",
+  purchase_start: "bg-teal-50 text-teal-600 dark:bg-teal-500/10",
+  purchase_success: "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10",
+  search_exam: "bg-cyan-50 text-cyan-600 dark:bg-cyan-500/10",
+  view_notifications: "bg-sky-50 text-sky-600 dark:bg-sky-500/10",
+  read_notification: "bg-blue-50 text-blue-600 dark:bg-blue-500/10",
+  view_exam_detail: "bg-lime-50 text-lime-700 dark:bg-lime-500/10",
 }
 
 const SECTION_NAV: Array<{ key: AdminSection; icon: LucideIcon; vi: string; en: string }> = [
@@ -205,7 +187,9 @@ export function AdminPage({ lang }: Props) {
   const [attemptsError, setAttemptsError] = useState<string | null>(null)
   const [eventFilter, setEventFilter] = useState<"all" | ActivityEventType>("all")
   const [timelineQuery, setTimelineQuery] = useState("")
-  const [rangeDays] = useState(7)
+  // Activity log is capped at the newest 3000 events (~1 day), so the
+  // default window matches the retained data instead of an empty 7-day range.
+  const [rangeDays] = useState(1)
   const [page, setPage] = useState(0)
   const [timelinePage, setTimelinePage] = useState(0)
   const [attemptsPage, setAttemptsPage] = useState(0)
@@ -447,12 +431,17 @@ export function AdminPage({ lang }: Props) {
     if (paymentStatus !== "latest") return filtered
     return sortAdminPaymentsByCreatedAt(filtered)
   }, [paymentQuery, paymentStatus, paymentProduct, payments, userById])
-  const paymentKpis = useMemo(() => ({
-    revenue: payments.filter((payment) => payment.status === "paid").reduce((sum, payment) => sum + payment.amountVnd, 0),
-    paid: payments.filter((payment) => payment.status === "paid").length,
-    pending: payments.filter((payment) => payment.status === "pending").length,
-    unsuccessful: payments.filter((payment) => ["failed", "refunded", "canceled"].includes(payment.status)).length,
-  }), [payments])
+  // KPI giao dịch chỉ tính trong ngày hôm nay (0h–23h59 giờ địa phương),
+  // dùng cùng mốc thời gian hiển thị ở cột "Thời gian tạo đơn".
+  const paymentKpis = useMemo(() => {
+    const today = payments.filter((payment) => isToday(payment.paidAt ?? payment.createdAt))
+    return {
+      revenue: today.filter((payment) => payment.status === "paid").reduce((sum, payment) => sum + payment.amountVnd, 0),
+      paid: today.filter((payment) => payment.status === "paid").length,
+      pending: today.filter((payment) => payment.status === "pending").length,
+      unsuccessful: today.filter((payment) => ["failed", "refunded", "canceled"].includes(payment.status)).length,
+    }
+  }, [payments])
   const todayKpis = useMemo(() => ({
     purchases: payments.filter((payment) => payment.status === "paid" && isToday(payment.paidAt)).length,
     completedQuizzes: attempts.filter((attempt) => isToday(attempt.completedAt)).length,
@@ -506,22 +495,23 @@ export function AdminPage({ lang }: Props) {
     [safeAttemptsPage, visibleAttempts],
   )
 
-  const chartDays = rangeDays === 0 ? 30 : Math.min(rangeDays, 30)
-  const dayBuckets = useMemo(() => bucketLast14Days(rangedAttempts, rangedEvents, undefined, chartDays), [rangedAttempts, rangedEvents, chartDays])
-  const attemptsMax = useMemo(() => Math.max(1, ...dayBuckets.map((b) => b.attempts)), [dayBuckets])
-  const eventsMax = useMemo(() => Math.max(1, ...dayBuckets.map((b) => b.events)), [dayBuckets])
+  // Heatmap theo giờ hôm nay (giờ địa phương): dữ liệu log chỉ giữ ~1 ngày
+  // nên gom theo ngày sẽ dồn hết vào 1 ô, xem theo giờ mới thấy nhịp dùng.
+  const hourBuckets = useMemo(() => bucketHoursToday(rangedAttempts, rangedEvents), [rangedAttempts, rangedEvents])
+  const attemptsMax = useMemo(() => Math.max(1, ...hourBuckets.map((b) => b.attempts)), [hourBuckets])
+  const eventsMax = useMemo(() => Math.max(1, ...hourBuckets.map((b) => b.events)), [hourBuckets])
   const contributionTotals = useMemo(() => ({
-    attempts: dayBuckets.reduce((sum, b) => sum + b.attempts, 0),
-    events: dayBuckets.reduce((sum, b) => sum + b.events, 0),
-  }), [dayBuckets])
+    attempts: hourBuckets.reduce((sum, b) => sum + b.attempts, 0),
+    events: hourBuckets.reduce((sum, b) => sum + b.events, 0),
+  }), [hourBuckets])
   const contributionPeak = useMemo(() => {
-    let peak = dayBuckets[0] ?? null
-    for (const b of dayBuckets) {
+    let peak = hourBuckets[0] ?? null
+    for (const b of hourBuckets) {
       if (b.attempts + b.events > (peak ? peak.attempts + peak.events : -1)) peak = b
     }
     return peak
-  }, [dayBuckets])
-  const todayKey = new Date().toISOString().slice(0, 10)
+  }, [hourBuckets])
+  const currentHour = new Date().getHours()
   const evTypeCounts = useMemo(() => eventsByType(rangedEvents), [rangedEvents])
   const evTypeMax = useMemo(() => Math.max(1, ...evTypeCounts.map((c) => c.count)), [evTypeCounts])
   const subjectTops = useMemo(() => topSubjects(rangedAttempts), [rangedAttempts])
@@ -610,6 +600,18 @@ export function AdminPage({ lang }: Props) {
     void updateSupportStatus(reportId, status)
       .then(() => setSupportReports((reports) => reports.map((report) => report.id === reportId ? { ...report, status, updatedAt: new Date().toISOString() } : report)))
       .catch((error: unknown) => setSupportsError(error instanceof Error ? error.message : "Không thể cập nhật báo lỗi."))
+      .finally(() => setUpdatingSupportId(null))
+  }
+
+  const handleDeleteSupport = (reportId: string) => {
+    if (!window.confirm("Xóa vĩnh viễn báo lỗi này? Thao tác không thể hoàn tác.")) return
+    setUpdatingSupportId(reportId)
+    void deleteSupportReport(reportId)
+      .then(() => {
+        setSupportReports((reports) => reports.filter((report) => report.id !== reportId))
+        setSelectedSupportId(null)
+      })
+      .catch((error: unknown) => setSupportsError(error instanceof Error ? error.message : "Không thể xóa báo lỗi."))
       .finally(() => setUpdatingSupportId(null))
   }
 
@@ -723,7 +725,7 @@ export function AdminPage({ lang }: Props) {
              {section === "payment" ? (
             <section className="scroll-mt-24 space-y-4 sm:space-y-5">
               <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
-                <DashboardStatCard icon={Banknote} value={formatVnd(paymentKpis.revenue)} label="Doanh thu đã thu" tone="green" />
+                <DashboardStatCard icon={Banknote} value={formatVnd(paymentKpis.revenue)} label="Doanh thu hôm nay" tone="green" />
                 <DashboardStatCard icon={CheckCircle2} value={String(paymentKpis.paid)} label="Giao dịch thành công" tone="blue" />
                 <DashboardStatCard icon={Clock3} value={String(paymentKpis.pending)} label="Đang chờ thanh toán" tone="orange" />
                 <DashboardStatCard icon={ShieldAlert} value={String(paymentKpis.unsuccessful)} label="Thất bại / hoàn tiền" tone="violet" />
@@ -856,7 +858,10 @@ export function AdminPage({ lang }: Props) {
                     ) : null}
                     <div className="flex flex-col gap-2 border-t border-slate-100 pt-4 dark:border-white/10 sm:flex-row sm:items-center sm:justify-between">
                       <p className="text-xs font-semibold text-slate-400">Cập nhật gần nhất: {formatTime(selectedSupportReport.updatedAt, lang)}</p>
-                      <select value={selectedSupportReport.status} disabled={updatingSupportId === selectedSupportReport.id} onChange={(event) => handleSupportStatus(selectedSupportReport.id, event.target.value as SupportStatus)} className="h-10 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-xs font-black outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="pending">Đang chờ</option><option value="resolved">Đã xử lý</option><option value="unresolvable">Không xử lý được</option></select>
+                      <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+                        <select value={selectedSupportReport.status} disabled={updatingSupportId === selectedSupportReport.id} onChange={(event) => handleSupportStatus(selectedSupportReport.id, event.target.value as SupportStatus)} className="h-10 rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-xs font-black outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white"><option value="pending">Đang chờ</option><option value="resolved">Đã xử lý</option><option value="unresolvable">Không xử lý được</option></select>
+                        <button type="button" disabled={updatingSupportId === selectedSupportReport.id} onClick={() => handleDeleteSupport(selectedSupportReport.id)} className="lp-btn lp-btn--secondary lp-btn--sm shrink-0 text-red-600">{updatingSupportId === selectedSupportReport.id ? "Đang xóa..." : "Xóa"}</button>
+                      </div>
                     </div>
                   </div>
                 </Dialog>
@@ -881,7 +886,7 @@ export function AdminPage({ lang }: Props) {
                 <div className="rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] lg:col-span-3 dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
                   <div className="flex flex-wrap items-center gap-2">
                     <div className="min-w-0">
-                      <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Nhịp hoạt động · {chartDays} ngày</p>
+                      <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Nhịp hoạt động · hôm nay theo giờ</p>
                       <p className="mt-1 text-sm font-black text-[#100F3E] dark:text-white">
                         {contributionTotals.attempts} nộp · {contributionTotals.events} events
                       </p>
@@ -891,28 +896,40 @@ export function AdminPage({ lang }: Props) {
                       <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-[4px] bg-[#8B5CF6] ring-1 ring-black/5 dark:ring-white/10" />Events</span>
                     </div>
                   </div>
-                  <div className="mt-4 grid grid-cols-7 gap-1.5 sm:gap-2">
-                    {dayBuckets.map((b) => {
-                      const isTodayCell = b.date === todayKey
+                  <div className="mt-4 grid grid-cols-6 gap-1.5 sm:grid-cols-12 sm:gap-2 xl:grid-cols-[repeat(24,minmax(0,1fr))]">
+                    {hourBuckets.map((b) => {
+                      const isCurrentHour = b.hour === currentHour
                       return (
-                        <div key={b.date} className="min-w-0" title={`${b.label}: ${b.attempts} lượt nộp, ${b.events} events`}>
-                          <div className={`grid aspect-square grid-rows-2 overflow-hidden rounded-[10px] ring-1 ring-black/5 dark:ring-white/10 ${isTodayCell ? "outline outline-2 outline-offset-1 outline-[#1CB0F6]" : ""}`}>
-                            <div className={`flex items-center justify-center text-[10px] font-black sm:text-xs ${ATTEMPT_TONES[contributionLevel(b.attempts, attemptsMax)]} ${contributionLevel(b.attempts, attemptsMax) >= 3 ? "text-white" : "text-[#100F3E] dark:text-white"}`}>
-                              {b.attempts > 0 ? b.attempts : ""}
+                        <div key={b.hour} className="min-w-0" title={`${b.label}: ${b.attempts} lượt nộp, ${b.events} events`}>
+                          <div className={`flex h-[104px] flex-col rounded-[12px] border border-black/5 bg-white px-1 pb-1.5 pt-2 transition-transform duration-150 hover:scale-[1.04] sm:h-[128px] dark:border-white/10 dark:bg-slate-900 ${isCurrentHour ? "outline outline-2 outline-offset-1 outline-[#1CB0F6]" : ""}`}>
+                            <div className="flex min-h-0 flex-1 items-end justify-center gap-1 sm:gap-1.5">
+                              <div className="flex h-full w-2.5 flex-col justify-end overflow-hidden rounded-full bg-sky-100 sm:w-3 dark:bg-sky-500/15">
+                                <div className="w-full rounded-full bg-[#1CB0F6]" style={{ height: `${b.attempts > 0 ? Math.max(6, Math.round((b.attempts / attemptsMax) * 100)) : 0}%` }} />
+                              </div>
+                              <div className="flex h-full w-2.5 flex-col justify-end overflow-hidden rounded-full bg-violet-100 sm:w-3 dark:bg-violet-500/15">
+                                <div className="w-full rounded-full bg-[#8B5CF6]" style={{ height: `${b.events > 0 ? Math.max(6, Math.round((b.events / eventsMax) * 100)) : 0}%` }} />
+                              </div>
                             </div>
-                            <div className={`flex items-center justify-center text-[10px] font-black sm:text-xs ${HEAT_EVENT_TONES[contributionLevel(b.events, eventsMax)]} ${contributionLevel(b.events, eventsMax) >= 3 ? "text-white" : "text-[#100F3E] dark:text-white"}`}>
-                              {b.events > 0 ? (b.events >= 1000 ? `${(b.events / 1000).toFixed(1).replace(".", ",")}k` : b.events) : ""}
+                            <div className="mt-1 min-w-0 text-center text-[8px] font-black leading-tight tabular-nums sm:text-[9px]">
+                              {b.attempts > 0 || b.events > 0 ? (
+                                <>
+                                  <p className="truncate text-[#1CB0F6]">{b.attempts}</p>
+                                  <p className="truncate text-[#8B5CF6]">{b.events >= 1000 ? `${(b.events / 1000).toFixed(1).replace(".", ",")}k` : b.events}</p>
+                                </>
+                              ) : (
+                                <p className="truncate text-slate-300 dark:text-slate-600">—</p>
+                              )}
                             </div>
+                            <p className="truncate text-center text-[8px] font-bold text-slate-400 sm:text-[9px]">{b.label}</p>
                           </div>
-                          <p className="mt-1 truncate text-center text-[9px] font-bold text-slate-400 sm:text-[10px]">{b.label}</p>
                         </div>
                       )
                     })}
                   </div>
                   <p className="mt-3 border-t border-slate-100 pt-3 text-[11px] font-bold text-slate-400 dark:border-white/10">
-                    {contributionPeak
-                      ? `Cao điểm ${contributionPeak.label}: ${contributionPeak.attempts} lượt nộp · ${contributionPeak.events} events`
-                      : "Chưa có dữ liệu trong khoảng này."}
+                    {contributionPeak && (contributionPeak.attempts > 0 || contributionPeak.events > 0)
+                      ? `Cao điểm ${contributionPeak.label} hôm nay: ${contributionPeak.attempts} lượt nộp · ${contributionPeak.events} events`
+                      : "Chưa có dữ liệu trong ngày hôm nay."}
                   </p>
                 </div>
                 <div className="space-y-2.5 rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] lg:col-span-2 dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">

@@ -16,6 +16,7 @@ import { useExamLaunch } from "@/lib/useExamLaunch"
 import { CatalogExamCard } from "@/components/CatalogExamCard"
 import { PaymentModal } from "@/components/PaymentModal"
 import { createPaidCheckout, getPaidProductId, hasProductPurchase } from "@/lib/purchases"
+import { logActivityEvent } from "@/features/activity/lib/activityLog"
 import { useAuth } from "@/auth/AuthProvider"
 
 type Lang = "en" | "vi"
@@ -63,6 +64,7 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
     if (!result.payment) return
     setPaymentProductId(productId)
     setPayment({ payment: result.payment })
+    logActivityEvent(user?.id, "purchase_start", { productId, orderId: result.orderId ?? null })
     } catch (error) { window.alert(error instanceof Error ? error.message : "Không thể tạo thanh toán. Vui lòng thử lại.") }
   })
 

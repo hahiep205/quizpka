@@ -9,6 +9,14 @@ export type ActivityEventType =
   | "retry_wrong"
   | "view_leaderboard"
   | "update_profile"
+  | "devtools_attempt"
+  | "abandon_attempt"
+  | "purchase_start"
+  | "purchase_success"
+  | "search_exam"
+  | "view_notifications"
+  | "read_notification"
+  | "view_exam_detail"
 
 export type ActivityEvent = {
   id: number
@@ -219,6 +227,14 @@ export const ACTIVITY_LABELS: Record<ActivityEventType, string> = {
   retry_wrong: "Làm lại câu sai",
   view_leaderboard: "Xem xếp hạng",
   update_profile: "Sửa profile",
+  devtools_attempt: "Mở devtools",
+  abandon_attempt: "Thoát giữa chừng",
+  purchase_start: "Mở thanh toán",
+  purchase_success: "Thanh toán xong",
+  search_exam: "Tìm bộ đề",
+  view_notifications: "Xem thông báo",
+  read_notification: "Đọc thông báo",
+  view_exam_detail: "Xem chi tiết đề",
 }
 
 function csvCell(value: string | number | null | undefined): string {

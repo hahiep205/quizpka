@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { bucketLast14Days, eventsByType, filterByDays, topLearners, topSubjects } from "@/features/admin/lib/adminOverview"
+import { bucketHoursToday, bucketLast14Days, eventsByType, filterByDays, topLearners, topSubjects } from "@/features/admin/lib/adminOverview"
 
 const NOW = Date.parse("2026-09-04T12:00:00.000Z")
 
@@ -15,6 +15,22 @@ describe("adminOverview", () => {
     expect(buckets[13]?.attempts).toBe(1)
     expect(buckets[12]?.events).toBe(1)
     expect(buckets.reduce((s, b) => s + b.attempts, 0)).toBe(1)
+  })
+
+  it("buckets attempts and events into 24 local hours of today", () => {
+    // 2026-09-04T12:00Z; local-hour assertions use the runner's timezone,
+    // so derive expectations from the same Date conversion the code uses.
+    const at = (iso: string) => new Date(iso).getHours()
+    const buckets = bucketHoursToday(
+      [{ completedAt: "2026-09-04T01:30:00.000Z" } as never, { completedAt: "2026-09-03T01:30:00.000Z" } as never],
+      [{ createdAt: "2026-09-04T02:15:00.000Z" } as never],
+      NOW,
+    )
+    expect(buckets).toHaveLength(24)
+    expect(buckets.map((b) => b.label)).toEqual(Array.from({ length: 24 }, (_, h) => `${String(h).padStart(2, "0")}h`))
+    expect(buckets[at("2026-09-04T01:30:00.000Z")]?.attempts).toBe(1)
+    expect(buckets[at("2026-09-04T02:15:00.000Z")]?.events).toBe(1)
+    expect(buckets.reduce((s, b) => s + b.attempts + b.events, 0)).toBe(2)
   })
 
   it("ranks top subjects and learners", () => {

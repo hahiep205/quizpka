@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 import { Check, LoaderCircle, RefreshCw, X } from "lucide-react"
 import { hasProductPurchase } from "@/lib/purchases"
+import { logActivityEvent } from "@/features/activity/lib/activityLog"
 import { cn } from "@/lib/utils"
 
 type Lang = "en" | "vi"
@@ -19,15 +20,29 @@ export function PaymentModal({ open, lang, payment, productId = "dsai101", userI
   const [paid, setPaid] = useState(false)
   const [checking, setChecking] = useState(false)
   const [error, setError] = useState(false)
+  const successLoggedRef = useRef(false)
+
+  const markPaid = useCallback(() => {
+    setPaid(true)
+    if (!successLoggedRef.current) {
+      successLoggedRef.current = true
+      logActivityEvent(userId, "purchase_success", { productId })
+    }
+  }, [productId, userId])
 
   useEffect(() => {
-    if (!open || !userId) return
+    if (!open) {
+      setPaid(false)
+      successLoggedRef.current = false
+      return
+    }
+    if (!userId) return
     let active = true
     const check = async () => {
       setChecking(true)
       try {
         if (active && await hasProductPurchase(userId, productId)) {
-          setPaid(true)
+          markPaid()
           onPaid()
         }
       } catch {
@@ -42,7 +57,7 @@ export function PaymentModal({ open, lang, payment, productId = "dsai101", userI
       active = false
       window.clearInterval(timer)
     }
-  }, [onPaid, open, productId, userId])
+  }, [markPaid, onPaid, open, productId, userId])
 
   if (!open || !payment) return null
 
@@ -73,7 +88,7 @@ export function PaymentModal({ open, lang, payment, productId = "dsai101", userI
     setError(false)
     try {
       if (await hasProductPurchase(userId, productId)) {
-        setPaid(true)
+        markPaid()
         onPaid()
       }
     } catch {
