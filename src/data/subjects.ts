@@ -340,12 +340,12 @@ export const subjects: Subject[] = [
   {
     id: "ky-nang-quan-ly-du-an",
     code: "PM101",
-    name: { en: "Project Management Skills", vi: "Kỹ năng Quản lý Dự án" },
+    name: { en: "Project Management Skills", vi: "Quiz ôn tập - Kỹ năng Quản lý Dự án" },
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
         id: "project-management-final-bank-1", type: "final", year: 2026, questionCount: 219, durationMinutes: 60,
-        title: { en: "Project Management Skills", vi: "Kỹ năng Quản lý Dự án" },
+        title: { en: "Project Management Skills", vi: "Quiz ôn tập - Kỹ năng Quản lý Dự án" },
         description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
         questionBanks: [
           "/data/ky-nang-quan-ly-du-an/chuong_1.json",
@@ -424,12 +424,12 @@ export const subjects: Subject[] = [
   {
     id: "ky-nang-khoi-nghiep-va-lanh-dao",
     code: "ENT101",
-    name: { en: "Entrepreneurship and Leadership Skills", vi: "Kỹ năng Khởi nghiệp và Lãnh đạo" },
+    name: { en: "Entrepreneurship and Leadership Skills", vi: "Quiz ôn tập - Kỹ năng Khởi nghiệp và Lãnh đạo" },
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
         id: "entrepreneurship-leadership-final-bank-1", type: "final", year: 2026, questionCount: 112, durationMinutes: 60,
-        title: { en: "Entrepreneurship and Leadership Skills", vi: "Kỹ năng Khởi nghiệp và Lãnh đạo" },
+        title: { en: "Entrepreneurship and Leadership Skills", vi: "Quiz ôn tập - Kỹ năng Khởi nghiệp và Lãnh đạo" },
         description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
         questionBanks: [
           "/data/ky-nang-khoi-nghiep-va-lanh-dao/chuong_1.json",
@@ -476,12 +476,12 @@ export const subjects: Subject[] = [
   {
     id: "kinh-te-vi-mo",
     code: "MAC101",
-    name: { en: "Microeconomics", vi: "Kinh tế vi mô" },
+    name: { en: "Microeconomics", vi: "Quiz ôn tập - Kinh tế vi mô" },
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
         id: "macroeconomics-final-bank-1", type: "final", year: 2026, questionCount: 181, durationMinutes: 60,
-        title: { en: "Microeconomics", vi: "Kinh tế vi mô" },
+        title: { en: "Microeconomics", vi: "Quiz ôn tập - Kinh tế vi mô" },
         description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
         questionBanks: [
           "/data/kinh_te_vi_mo/chuong_1.json",
@@ -713,12 +713,12 @@ export const subjects: Subject[] = [
   {
     id: "co-so-du-lieu",
     code: "DB101",
-    name: { en: "Database", vi: "Cơ sở dữ liệu" },
+    name: { en: "Database", vi: "Quiz và Đề ôn tập Cuối kỳ - Cơ sở dữ liệu" },
     category: { en: "Major", vi: "Chuyên ngành" },
     exams: [
       {
         id: "database-final-bank-1", type: "final", year: 2026, questionCount: 150, durationMinutes: 60,
-        title: { en: "Database", vi: "Cơ sở dữ liệu" },
+        title: { en: "Database", vi: "Quiz và Đề ôn tập Cuối kỳ - Cơ sở dữ liệu" },
         description: { en: "Practice by part: theory, SQL and applications.", vi: "Ôn theo từng phần: lý thuyết, SQL và ứng dụng." },
         questionBanks: [
           "/data/co-so-du-lieu/phan_1.json",

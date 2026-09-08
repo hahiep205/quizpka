@@ -15,6 +15,7 @@ import { documentsCopy as copy } from "@/shared/i18n"
 import { useExamLaunch } from "@/lib/useExamLaunch"
 import { CatalogExamCard } from "@/components/CatalogExamCard"
 import { PaymentModal } from "@/components/PaymentModal"
+import { PurchaseDetailDialog } from "@/components/PurchaseDetailDialog"
 import { createPaidCheckout, getPaidProductId, hasProductPurchase } from "@/lib/purchases"
 import { logActivityEvent } from "@/features/activity/lib/activityLog"
 import { useAuth } from "@/auth/AuthProvider"
@@ -34,6 +35,9 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
   const [typeFilter, setTypeFilter] = useState<CategoryFilter>("all")
   const [payment, setPayment] = useState<{ payment: { qrUrl: string } } | null>(null)
   const [paymentProductId, setPaymentProductId] = useState("dsai101")
+  const [purchaseExam, setPurchaseExam] = useState<ExamCatalogItem | null>(null)
+  const [purchaseLoading, setPurchaseLoading] = useState(false)
+  const [purchaseError, setPurchaseError] = useState<string | null>(null)
   const {
     pickerExam: hcmPickerExam,
     setupExam,
@@ -60,13 +64,35 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
   const tryExam = (exam: ExamCatalogItem) => nudge.requestNudge(async () => { try {
     const productId = getPaidProductId(exam.subjectCode)
     if (!productId || (user?.id && await hasProductPurchase(user.id, productId))) return handleTryNow(exam)
-    const result = await createPaidCheckout(productId); if (result.owned) return handleTryNow(exam)
-    if (!result.payment) return
-    setPaymentProductId(productId)
-    setPayment({ payment: result.payment })
-    logActivityEvent(user?.id, "purchase_start", { productId, orderId: result.orderId ?? null })
+    setPurchaseError(null)
+    setPurchaseExam(exam)
     } catch (error) { window.alert(error instanceof Error ? error.message : "Không thể tạo thanh toán. Vui lòng thử lại.") }
   })
+
+  const confirmPurchase = async () => {
+    if (!purchaseExam || purchaseLoading) return
+    const productId = getPaidProductId(purchaseExam.subjectCode)
+    if (!productId) return
+    setPurchaseLoading(true)
+    setPurchaseError(null)
+    try {
+      const result = await createPaidCheckout(productId)
+      if (result.owned) {
+        setPurchaseExam(null)
+        handleTryNow(purchaseExam)
+        return
+      }
+      if (!result.payment) throw new Error("Chưa cấu hình thông tin tài khoản thanh toán")
+      setPaymentProductId(productId)
+      setPurchaseExam(null)
+      setPayment({ payment: result.payment })
+      logActivityEvent(user?.id, "purchase_start", { productId, orderId: result.orderId ?? null })
+    } catch (error) {
+      setPurchaseError(error instanceof Error ? error.message : "Không thể tạo thanh toán. Vui lòng thử lại.")
+    } finally {
+      setPurchaseLoading(false)
+    }
+  }
 
   const filteredExams = useMemo(() => {
     const normalized = query.trim().toLowerCase()
@@ -252,6 +278,15 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
         subject={setupSubject}
         onClose={handleSetupClose}
         onStart={handleSetupStart}
+      />
+
+      <PurchaseDetailDialog
+        exam={purchaseExam}
+        lang={lang}
+        loading={purchaseLoading}
+        error={purchaseError}
+        onClose={() => { if (!purchaseLoading) { setPurchaseExam(null); setPurchaseError(null) } }}
+        onConfirm={() => void confirmPurchase()}
       />
 
       <PaymentModal

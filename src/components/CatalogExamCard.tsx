@@ -2,6 +2,7 @@ import { BookOpen } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { ExamMetaRow } from "@/components/ExamMetaRow"
 import { getSubjectById, type ExamCatalogItem } from "@/data/subjects"
+import { tadvExamOptions } from "@/data/tadvExams"
 import { getPaidProductId } from "@/lib/purchases"
 import type { ReactNode } from "react"
 
@@ -23,6 +24,7 @@ export function CatalogExamCard({
   // Only individual chapters (c1..cN): group aggregates like mid/final/suutam are not chapters.
   const chapterCount = (getSubjectById(exam.subjectId)?.chapters ?? [])
     .filter((chapter) => /^c\d+$/.test(chapter.id)).length
+  const examSetCount = exam.subjectId === "tieng-anh-dau-vao" ? tadvExamOptions.length : 0
   const isPaid = getPaidProductId(exam.subjectCode) !== null
   const badgeLabel = isPaid ? categoryLabel : lang === "vi" ? "Miễn phí" : "Free"
   return (
@@ -51,6 +53,7 @@ export function CatalogExamCard({
         chapterCount={chapterCount}
         durationMinutes={exam.durationMinutes}
         questionsLabel={questionsLabel}
+        examSetCount={examSetCount}
         lang={lang}
         className="mt-3 gap-x-2.5 border-t border-slate-100 pt-3 text-[10px] font-bold text-[#129BDC] dark:border-white/10 dark:text-sky-300 sm:mt-5 sm:gap-x-4 sm:pt-4 sm:text-xs"
       />
