@@ -491,8 +491,8 @@ function PurchaseDetailDialog({ exam, lang, loading, error, onClose, onConfirm }
         <label className="mt-4 flex cursor-pointer items-start justify-between gap-3 rounded-[14px] border-2 border-amber-200 bg-amber-50 p-4 dark:border-amber-500/20 dark:bg-amber-500/10">
           <span className="min-w-0 text-xs font-bold leading-5 text-amber-800 dark:text-amber-200">
             {isVietnamese
-              ? "Tất cả đề thi đều là ảnh được sưu tầm, gom nhặt qua các năm trước. Lưu ý: Các dạng bài, cấu trúc đề thi có thể được thay đổi theo từng năm!"
-              : "All exams are scanned images collected from previous years. Note: question types and exam structure may change from year to year!"}
+              ? "Tất cả đề thi đều là ảnh được sưu tầm, gom nhặt qua các năm trước. Lưu ý: Các dạng bài, cấu trúc đề thi có thể được thay đổi theo từng năm. Chỉ nên dùng để tham khảo, KHÔNG NÊN ÔM TỦ!"
+              : "All exams are scanned images collected from previous years. Note: question types and exam structure may change from year to year. Use for reference only!"}
           </span>
           <input
             type="checkbox"

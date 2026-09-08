@@ -715,7 +715,7 @@ export const subjects: Subject[] = [
     category: { en: "Major", vi: "Chuyên ngành" },
     exams: [
       {
-        id: "dstt-final-docs-1", type: "final", year: 2025, questionCount: 0, durationMinutes: 0,
+        id: "dstt-final-docs-1", type: "final", year: 2023, questionCount: 0, durationMinutes: 0,
         title: { en: "Linear Algebra - Final", vi: "Đề Đại số tuyến tính - Cuối kỳ" },
         description: { en: "View scanned exam papers and download each set.", vi: "Xem ảnh đề thi trực tiếp và tải từng bộ đề." },
       },
