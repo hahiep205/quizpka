@@ -7,6 +7,7 @@ import { QuizSetupModal } from "@/components/QuizSetupModal"
 import { HcmChapterPickerModal } from "@/components/HcmChapterPickerModal"
 import { LoginNudgeModal, useLoginNudge } from "@/components/LoginNudgeModal"
 import { PdfViewerModal } from "@/components/PdfViewerModal"
+import { ImageDocViewerModal } from "@/components/ImageDocViewerModal"
 import { TadvPickerModal } from "@/components/TadvPickerModal"
 import { DsaiPickerModal } from "@/components/DsaiPickerModal"
 import { cn } from "@/lib/utils"
@@ -41,6 +42,8 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
     handlePickerClose,
     handlePdfClose,
     pdfChapter,
+    imageDoc,
+    handleImageDocClose,
     handleSetupClose,
     handleSetupStart,
     tadvPickerExam,
@@ -211,6 +214,15 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
         pdfUrl={pdfChapter?.url ?? null}
         noteUrl={pdfChapter?.noteUrl ?? null}
         onClose={handlePdfClose}
+      />
+
+      <ImageDocViewerModal
+        open={Boolean(imageDoc)}
+        lang={lang}
+        title={imageDoc?.title ?? null}
+        subjectId={imageDoc?.subjectId ?? null}
+        documentId={imageDoc?.documentId ?? null}
+        onClose={handleImageDocClose}
       />
 
       <TadvPickerModal

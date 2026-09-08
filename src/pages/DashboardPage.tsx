@@ -26,6 +26,7 @@ import brandLogo from "@/assets/logo.png"
 import { QuizSetupModal, type QuizSetupValues } from "@/components/QuizSetupModal"
 import { HcmChapterPickerModal } from "@/components/HcmChapterPickerModal"
 import { PdfViewerModal } from "@/components/PdfViewerModal"
+import { ImageDocViewerModal } from "@/components/ImageDocViewerModal"
 import { TadvPickerModal } from "@/components/TadvPickerModal"
 import { DsaiPickerModal } from "@/components/DsaiPickerModal"
 import { ToeicScopePickerModal } from "@/components/ToeicScopePickerModal"
@@ -195,6 +196,8 @@ export function DashboardPage({
     handlePickerClose,
     handlePdfClose,
     pdfChapter,
+    imageDoc,
+    handleImageDocClose,
     handleSetupClose,
     handleSetupStart,
     tadvPickerExam,
@@ -352,6 +355,15 @@ export function DashboardPage({
         onClose={handlePdfClose}
       />
 
+      <ImageDocViewerModal
+        open={Boolean(imageDoc)}
+        lang={lang}
+        title={imageDoc?.title ?? null}
+        subjectId={imageDoc?.subjectId ?? null}
+        documentId={imageDoc?.documentId ?? null}
+        onClose={handleImageDocClose}
+      />
+
       <TadvPickerModal
         open={Boolean(tadvPickerExam)}
         lang={lang}
@@ -442,6 +454,9 @@ function PurchaseDetailDialog({ exam, lang, loading, error, onClose, onConfirm }
   onConfirm: () => void
 }) {
   const isVietnamese = lang === "vi"
+  const docSetCount = exam ? (getSubjectById(exam.subjectId)?.chapters ?? []).filter((chapter) => chapter.documentId).length : 0
+  const [ackDocs, setAckDocs] = useState(false)
+  useEffect(() => { setAckDocs(false) }, [exam?.id])
   return <Dialog
     open={Boolean(exam)}
     onClose={onClose}
@@ -464,19 +479,35 @@ function PurchaseDetailDialog({ exam, lang, loading, error, onClose, onConfirm }
       </div>
       <div className="mt-4 grid grid-cols-2 gap-3">
         <div className="rounded-[14px] bg-slate-50 p-4 dark:bg-white/5">
-          <p className="text-xs font-bold text-slate-400">{isVietnamese ? "Số câu hỏi" : "Questions"}</p>
-          <p className="mt-1 text-xl font-black text-[#100F3E] dark:text-white">{exam?.questionCount ?? 0}</p>
+          <p className="text-xs font-bold text-slate-400">{docSetCount > 0 ? (isVietnamese ? "Số bộ đề" : "Exam sets") : (isVietnamese ? "Số câu hỏi" : "Questions")}</p>
+          <p className="mt-1 text-xl font-black text-[#100F3E] dark:text-white">{docSetCount > 0 ? docSetCount : (exam?.questionCount ?? 0)}</p>
         </div>
         <div className="rounded-[14px] bg-slate-50 p-4 dark:bg-white/5">
-          <p className="text-xs font-bold text-slate-400">{isVietnamese ? "Thời lượng" : "Duration"}</p>
-          <p className="mt-1 text-xl font-black text-[#100F3E] dark:text-white">{exam?.durationMinutes ?? 0} {isVietnamese ? "phút" : "min"}</p>
+          <p className="text-xs font-bold text-slate-400">{docSetCount > 0 ? (isVietnamese ? "Năm thi" : "Exam year") : (isVietnamese ? "Thời lượng" : "Duration")}</p>
+          <p className="mt-1 text-xl font-black text-[#100F3E] dark:text-white">{docSetCount > 0 ? (exam?.year ?? "—") : `${exam?.durationMinutes ?? 0} ${isVietnamese ? "phút" : "min"}`}</p>
         </div>
       </div>
+      {docSetCount > 0 ? (
+        <label className="mt-4 flex cursor-pointer items-start justify-between gap-3 rounded-[14px] border-2 border-amber-200 bg-amber-50 p-4 dark:border-amber-500/20 dark:bg-amber-500/10">
+          <span className="min-w-0 text-xs font-bold leading-5 text-amber-800 dark:text-amber-200">
+            {isVietnamese
+              ? "Tất cả đề thi đều là ảnh được sưu tầm, gom nhặt qua các năm trước. Lưu ý: Các dạng bài, cấu trúc đề thi có thể được thay đổi theo từng năm!"
+              : "All exams are scanned images collected from previous years. Note: question types and exam structure may change from year to year!"}
+          </span>
+          <input
+            type="checkbox"
+            checked={ackDocs}
+            onChange={(event) => setAckDocs(event.target.checked)}
+            className="mt-0.5 h-5 w-5 shrink-0 accent-[#1CB0F6]"
+            aria-label={isVietnamese ? "Tôi đã hiểu lưu ý trên" : "I understand the note above"}
+          />
+        </label>
+      ) : null}
       {error ? <p role="alert" className="mt-4 rounded-xl bg-red-50 px-3 py-2 text-sm font-bold text-red-600 dark:bg-red-500/10 dark:text-red-300">{error}</p> : null}
     </div>
     <footer className="grid grid-cols-2 gap-2 border-t border-slate-100 p-4 sm:px-6 dark:border-white/10">
       <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={onClose} disabled={loading}>{isVietnamese ? "Hủy" : "Cancel"}</button>
-      <button type="button" className="lp-btn lp-btn--primary lp-btn--sm" onClick={onConfirm} disabled={loading}>{loading ? (isVietnamese ? "Đang tạo đơn..." : "Creating...") : "10.000 VND"}</button>
+      <button type="button" className="lp-btn lp-btn--primary lp-btn--sm" onClick={onConfirm} disabled={loading || (docSetCount > 0 && !ackDocs)}>{loading ? (isVietnamese ? "Đang tạo đơn..." : "Creating...") : "10.000 VND"}</button>
     </footer>
   </Dialog>
 }

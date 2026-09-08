@@ -14,6 +14,7 @@ export function useChapterPractice(lang: Lang) {
   const [setupExam, setSetupExam] = useState<ExamCatalogItem | null>(null)
   const [pendingChapter, setPendingChapter] = useState<string>("all")
   const [pdfChapter, setPdfChapter] = useState<{ title: ChapterOption["label"]; url: string; noteUrl: string | null } | null>(null)
+  const [imageDoc, setImageDoc] = useState<{ title: ChapterOption["label"]; subjectId: string; documentId: string } | null>(null)
 
   const handleTryNow = (exam: ExamCatalogItem) => {
     const sessionId = beginAttemptSession(exam.id)
@@ -35,12 +36,18 @@ export function useChapterPractice(lang: Lang) {
       setPickerExam(null)
       return
     }
+    if (option?.documentId && pickerExam) {
+      setImageDoc({ title: option.label, subjectId: pickerExam.subjectId, documentId: option.documentId })
+      setPickerExam(null)
+      return
+    }
     setPendingChapter(chapterId)
     setSetupExam(pickerExam)
     setPickerExam(null)
   }
 
   const handlePdfClose = () => setPdfChapter(null)
+  const handleImageDocClose = () => setImageDoc(null)
 
   const handleSetupClose = () => {
     setSetupExam(null)
@@ -83,6 +90,8 @@ export function useChapterPractice(lang: Lang) {
     handlePickerClose,
     handlePdfClose,
     pdfChapter,
+    imageDoc,
+    handleImageDocClose,
     handleSetupClose,
     handleSetupStart,
     setPickerExam,

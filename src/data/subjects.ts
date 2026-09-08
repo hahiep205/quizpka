@@ -26,6 +26,12 @@ export type SubjectId =
   | "co-so-du-lieu"
   | "khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
   | "nhap-mon-khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
+  | "vat-ly-1"
+  | "phuong-phap-tinh-giua-ky"
+  | "phuong-phap-tinh-cuoi-ky"
+  | "giai-tich"
+  | "dai-so-tuyen-tinh"
+  | "xac-suat-thong-ke"
   | "toeic"
 
 export type LocalizedText = {
@@ -56,6 +62,8 @@ export type ChapterOption = {
   pdfUrl?: string
   /** Optional plain-text note (e.g. Luu-y.txt) shown above the document with its download. */
   noteUrl?: string
+  /** When set, selecting this option opens the gated image viewer for a paid document set. */
+  documentId?: string
   /** When true, the option stays available for filtering/counts but is hidden from the chapter picker. */
   hidden?: boolean
   count: number
@@ -681,6 +689,106 @@ export const subjects: Subject[] = [
         title: { en: "Intro Data Science & AI Practice Bank", vi: "Quiz ôn tập Cuối kỳ - Nhập môn Khoa học dữ liệu và Trí tuệ nhân tạo" },
         description: { en: "Comprehensive final review set.", vi: "Bộ đề tổng hợp ôn tập Cuối kỳ." },
       },
+    ],
+  },
+  {
+    id: "giai-tich",
+    code: "GT101",
+    name: { en: "Calculus - Final", vi: "Đề Giải tích - Cuối kỳ" },
+    category: { en: "Major", vi: "Chuyên ngành" },
+    exams: [
+      {
+        id: "calculus-final-docs-1", type: "final", year: 2025, questionCount: 0, durationMinutes: 0,
+        title: { en: "Calculus - Final", vi: "Đề Giải tích - Cuối kỳ" },
+        description: { en: "View scanned exam papers and download each set.", vi: "Xem ảnh đề thi trực tiếp và tải từng bộ đề." },
+      },
+    ],
+    chapters: [
+      { id: "de1", label: { en: "Calculus - Set 1", vi: "Giải tích - Đề 1" }, documentId: "cal-de-1", count: 1 },
+      { id: "de2", label: { en: "Calculus - Set 2", vi: "Giải tích - Đề 2" }, documentId: "cal-de-2", count: 1 },
+    ],
+  },
+  {
+    id: "dai-so-tuyen-tinh",
+    code: "DST101",
+    name: { en: "Linear Algebra - Final", vi: "Đề Đại số tuyến tính - Cuối kỳ" },
+    category: { en: "Major", vi: "Chuyên ngành" },
+    exams: [
+      {
+        id: "dstt-final-docs-1", type: "final", year: 2025, questionCount: 0, durationMinutes: 0,
+        title: { en: "Linear Algebra - Final", vi: "Đề Đại số tuyến tính - Cuối kỳ" },
+        description: { en: "View scanned exam papers and download each set.", vi: "Xem ảnh đề thi trực tiếp và tải từng bộ đề." },
+      },
+    ],
+    chapters: [
+      { id: "de1", label: { en: "Linear Algebra - Set 1", vi: "Đại số tuyến tính - Đề 1" }, documentId: "dst-de-1", count: 1 },
+    ],
+  },
+  {
+    id: "xac-suat-thong-ke",
+    code: "XST101",
+    name: { en: "Probability & Statistics - Midterm", vi: "Đề Xác suất thống kê - Giữa kỳ" },
+    category: { en: "Major", vi: "Chuyên ngành" },
+    exams: [
+      {
+        id: "xstk-midterm-docs-1", type: "midterm", year: 2025, questionCount: 0, durationMinutes: 0,
+        title: { en: "Probability & Statistics - Midterm", vi: "Đề Xác suất thống kê - Giữa kỳ" },
+        description: { en: "View scanned exam papers and download each set.", vi: "Xem ảnh đề thi trực tiếp và tải từng bộ đề." },
+      },
+    ],
+    chapters: [
+      { id: "de1", label: { en: "Probability & Statistics - Midterm Set 1", vi: "Xác suất thống kê - Đề Giữa kỳ" }, documentId: "xstk-de-1", count: 1 },
+    ],
+  },
+  {
+    id: "phuong-phap-tinh-giua-ky",
+    code: "PPT101",
+    name: { en: "Numerical Methods - Midterm", vi: "Đề Phương pháp tính - Giữa kỳ" },
+    category: { en: "Major", vi: "Chuyên ngành" },
+    exams: [
+      {
+        id: "ppt-midterm-docs-1", type: "midterm", year: 2025, questionCount: 0, durationMinutes: 0,
+        title: { en: "Numerical Methods - Midterm", vi: "Đề Phương pháp tính - Giữa kỳ" },
+        description: { en: "View scanned exam papers and download each set.", vi: "Xem ảnh đề thi trực tiếp và tải từng bộ đề." },
+      },
+    ],
+    chapters: [
+      { id: "de1", label: { en: "Numerical Methods - Midterm Set 1", vi: "Phương pháp tính - Đề Giữa kỳ" }, documentId: "ppt-mid-de-1", count: 1 },
+    ],
+  },
+  {
+    id: "phuong-phap-tinh-cuoi-ky",
+    code: "PPT102",
+    name: { en: "Numerical Methods - Final", vi: "Đề Phương pháp tính - Cuối kỳ" },
+    category: { en: "Major", vi: "Chuyên ngành" },
+    exams: [
+      {
+        id: "ppt-final-docs-1", type: "final", year: 2025, questionCount: 0, durationMinutes: 0,
+        title: { en: "Numerical Methods - Final", vi: "Đề Phương pháp tính - Cuối kỳ" },
+        description: { en: "View scanned exam papers and download each set.", vi: "Xem ảnh đề thi trực tiếp và tải từng bộ đề." },
+      },
+    ],
+    chapters: [
+      { id: "de1", label: { en: "Numerical Methods - Final Set 1", vi: "Phương pháp tính - Đề Cuối kỳ 1" }, documentId: "ppt-final-de-1", count: 1 },
+      { id: "de2", label: { en: "Numerical Methods - Final Set 2", vi: "Phương pháp tính - Đề Cuối kỳ 2" }, documentId: "ppt-final-de-2", count: 1 },
+    ],
+  },
+  {
+    id: "vat-ly-1",
+    code: "PHY101",
+    name: { en: "Physics 1 - Final", vi: "Đề Vật Lý 1 - Cuối kỳ" },
+    category: { en: "Major", vi: "Chuyên ngành" },
+    exams: [
+      {
+        id: "physics-1-final-docs-1", type: "final", year: 2025, questionCount: 0, durationMinutes: 0,
+        title: { en: "Physics 1 - Final", vi: "Đề Vật Lý 1 - Cuối kỳ" },
+        description: { en: "View scanned exam papers and download each set.", vi: "Xem ảnh đề thi trực tiếp và tải từng bộ đề." },
+      },
+    ],
+    chapters: [
+      { id: "de1", label: { en: "Physics 1 - Set 1", vi: "Vật lý 1 - Đề 1" }, documentId: "phy-de-1", count: 2 },
+      { id: "de2", label: { en: "Physics 1 - Set 2", vi: "Vật lý 1 - Đề 2" }, documentId: "phy-de-2", count: 2 },
+      { id: "de3", label: { en: "Physics 1 - Set 3", vi: "Vật lý 1 - Đề 3" }, documentId: "phy-de-3", count: 2 },
     ],
   },
   {

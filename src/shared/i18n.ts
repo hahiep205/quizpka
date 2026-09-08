@@ -601,6 +601,7 @@ export const chapterPickerCopy = {
     questions: "questions",
     pdf: "PDF document",
     file: "Attached file",
+    images: "images",
   },
   vi: {
     title: "Chọn chương",
@@ -611,6 +612,7 @@ export const chapterPickerCopy = {
     questions: "câu hỏi",
     pdf: "Tài liệu PDF",
     file: "File đính kèm",
+    images: "ảnh",
   },
 } as const
 
@@ -635,6 +637,25 @@ export const pdfViewerCopy = {
     loading: "Đang tải tài liệu…",
     previewUnavailable: "Trình duyệt của bạn không xem trước được PDF này. Hãy mở tab mới hoặc tải về.",
     notes: "Ghi chú",
+    close: "Đóng",
+  },
+} as const
+
+export const imageDocViewerCopy = {
+  en: {
+    loading: "Loading images…",
+    loadError: "Could not load images. Please try again.",
+    retry: "Try again",
+    download: "Download",
+    downloadAll: "Download all",
+    close: "Close",
+  },
+  vi: {
+    loading: "Đang tải ảnh…",
+    loadError: "Không tải được ảnh. Vui lòng thử lại.",
+    retry: "Thử lại",
+    download: "Tải ảnh",
+    downloadAll: "Tải tất cả",
     close: "Đóng",
   },
 } as const
