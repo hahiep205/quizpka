@@ -29,7 +29,7 @@ export function ExamMetaRow({
       {chapterCount > 0 ? (
         <span className="inline-flex min-w-0 items-center gap-1 sm:gap-1.5">
           <Layers className="h-3 w-3 shrink-0 sm:h-3.5 sm:w-3.5" strokeWidth={1.75} />
-          <span className="truncate whitespace-nowrap">{chapterCount} {lang === "vi" ? "chương" : chapterCount === 1 ? "chapter" : "chapters"}</span>
+          <span className="truncate whitespace-nowrap">{chapterCount === 1 ? (lang === "vi" ? "1 bộ đề" : "1 set") : `${chapterCount} ${lang === "vi" ? "chương" : "chapters"}`}</span>
         </span>
       ) : null}
       {durationMinutes > 0 ? (
