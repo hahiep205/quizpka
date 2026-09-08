@@ -3,17 +3,22 @@ type ExamType = "midterm" | "final"
 export type SubjectId =
   | "tieng-anh-dau-vao"
   | "tu-tuong-ho-chi-minh"
+  | "lich-su-dang-cong-san-viet-nam-giua-ky"
   | "lich-su-dang-cong-san-viet-nam"
   | "quan-tri-hoc"
   | "quan-tri-hoc-giua-ky"
+  | "triet-hoc-mac-lenin-2tc-giua-ky"
+  | "triet-hoc-mac-lenin-3tc-giua-ky"
   | "triet-hoc-mac-lenin-2tc"
   | "triet-hoc-mac-lenin-3tc"
   | "tu-tuong-ho-chi-minh-giua-ky"
   | "ky-nang-quan-ly-du-an"
   | "chu-nghia-xa-hoi-khoa-hoc"
+  | "chu-nghia-xa-hoi-khoa-hoc-giua-ky"
   | "danh-gia-va-kiem-dinh-chat-luong-phan-mem"
   | "kinh-te-vi-mo"
   | "kinh-te-vi-mo-macro"
+  | "kinh-te-chinh-tri-mac-lenin-giua-ky"
   | "kinh-te-chinh-tri-mac-lenin"
   | "ky-nang-khoi-nghiep-va-lanh-dao"
   | "bao-mat-ung-dung-he-thong"
@@ -99,7 +104,7 @@ export const subjects: Subject[] = [
   {
     id: "tieng-anh-dau-vao",
     code: "TADV01",
-    name: { en: "English Placement Test", vi: "Tiếng Anh Đầu Vào" },
+    name: { en: "English Placement Mock Test", vi: "Thi thử Tiếng Anh Đầu Vào" },
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
@@ -108,7 +113,7 @@ export const subjects: Subject[] = [
         year: 2026,
         questionCount: 55,
         durationMinutes: 60,
-        title: { en: "English Placement Sample Test", vi: "Đề mẫu Tiếng Anh Đầu Vào" },
+        title: { en: "English Placement Mock Test", vi: "Thi thử Tiếng Anh Đầu Vào" },
         description: { en: "Includes 3 reference tests; pick one to start.", vi: "Gồm 3 đề tham khảo, chọn 1 đề để làm bài." },
         questionBanks: ["/data/tadv/tadv-reading.json", "/data/tadv/tadv-listening.json"],
       },
@@ -163,21 +168,34 @@ export const subjects: Subject[] = [
     ],
   },
   {
+    id: "lich-su-dang-cong-san-viet-nam-giua-ky",
+    code: "HIS100",
+    name: { en: "History of the Communist Party of Vietnam Midterm", vi: "Quiz ôn tập Giữa kỳ - Lịch sử Đảng Cộng sản Việt Nam" },
+    category: { en: "General", vi: "Đại cương" },
+    exams: [
+      {
+        id: "history-party-midterm-bank-1", type: "midterm", year: 2026, questionCount: 165, durationMinutes: 60,
+        title: { en: "History of the Communist Party of Vietnam Midterm", vi: "Quiz ôn tập Giữa kỳ - Lịch sử Đảng Cộng sản Việt Nam" },
+        description: { en: "Midterm set with chapter-by-chapter practice.", vi: "Bộ đề Giữa kỳ, ôn luyện theo từng chương." },
+        questionBanks: ["/data/lich-su-dang-giua-ky/his_giua_ky.json"],
+      },
+    ],
+    chapters: [
+      { id: "c12_mid", label: { en: "Chapters 1,2 - Midterm", vi: "Chương 1,2 - Giữa kỳ" }, matches: ["Chương 1", "Chương 2"], count: 165 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, count: 79 },
+      { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, count: 86 },
+    ],
+  },
+  {
     id: "lich-su-dang-cong-san-viet-nam",
     code: "HIS101",
-    name: { en: "History of the Communist Party of Vietnam", vi: "Lịch sử Đảng Cộng sản Việt Nam" },
+    name: { en: "History of the Communist Party of Vietnam", vi: "Quiz ôn tập Cuối kỳ - Lịch sử Đảng Cộng sản Việt Nam" },
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
         id: "history-party-final-bank-1", type: "final", year: 2026, questionCount: 288, durationMinutes: 60,
-        title: { en: "History of the Communist Party of Vietnam", vi: "Lịch sử Đảng Cộng sản Việt Nam" },
+        title: { en: "History of the Communist Party of Vietnam", vi: "Quiz ôn tập Cuối kỳ - Lịch sử Đảng Cộng sản Việt Nam" },
         description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
-        questionBanks: [
-          "/data/lich-su-dang/cau_hoi_suu_tam.json",
-          "/data/lich-su-dang/chuong_1.json",
-          "/data/lich-su-dang/chuong_2.json",
-          "/data/lich-su-dang/chuong_3.json",
-        ],
       },
     ],
     chapters: [
@@ -197,7 +215,7 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "mgt-midterm-bank-1", type: "midterm", year: 2026, questionCount: 202, durationMinutes: 60,
+        id: "mgt-midterm-bank-1", type: "midterm", year: 2026, questionCount: 162, durationMinutes: 60,
         title: { en: "Management Midterm", vi: "Quiz ôn tập Giữa kỳ - Quản trị học" },
         description: { en: "Midterm set with chapter-by-chapter practice.", vi: "Bộ đề Giữa kỳ, ôn luyện theo từng chương." },
         questionBanks: [
@@ -206,12 +224,11 @@ export const subjects: Subject[] = [
       },
     ],
     chapters: [
-      { id: "c12345_mid", label: { en: "Management - Midterm (Chapters 1, 2, 3, 4, 5)", vi: "Quản trị học - Giữa kỳ" }, matches: ["Chương 1", "Chương 2", "Chương 3", "Chương 4", "Chương 5"], count: 202 },
+      { id: "c1234_mid", label: { en: "Management - Midterm (Chapters 1, 2, 3, 4)", vi: "Quản trị học - Giữa kỳ" }, matches: ["Chương 1", "Chương 2", "Chương 3", "Chương 4"], count: 162 },
       { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Chương 1"], count: 42 },
       { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, matches: ["Chương 2"], count: 41 },
       { id: "c3", label: { en: "Chapter 3", vi: "Chương 3" }, matches: ["Chương 3"], count: 39 },
       { id: "c4", label: { en: "Chapter 4", vi: "Chương 4" }, matches: ["Chương 4"], count: 40 },
-      { id: "c5", label: { en: "Chapter 5", vi: "Chương 5" }, matches: ["Chương 5"], count: 40 },
     ],
   },
   {
@@ -241,21 +258,53 @@ export const subjects: Subject[] = [
     ],
   },
   {
+    id: "triet-hoc-mac-lenin-2tc-giua-ky",
+    code: "MLN100",
+    name: { en: "Marxist-Leninist Philosophy (2 credits) Midterm", vi: "Quiz ôn tập Giữa kỳ - Triết học Mác - Lênin (2 tín chỉ)" },
+    category: { en: "General", vi: "Đại cương" },
+    exams: [
+      {
+        id: "philosophy-2-credit-midterm-bank-1", type: "midterm", year: 2026, questionCount: 116, durationMinutes: 60,
+        title: { en: "Marxist-Leninist Philosophy (2 credits) Midterm", vi: "Quiz ôn tập Giữa kỳ - Triết học Mác - Lênin (2 tín chỉ)" },
+        description: { en: "Midterm set with chapter-by-chapter practice.", vi: "Bộ đề Giữa kỳ, ôn luyện theo từng chương." },
+        questionBanks: ["/data/triet-hoc-mac-lenin-2tc-giua-ky/mln_2tc_giua_ky.json"],
+      },
+    ],
+    chapters: [
+      { id: "c12_mid", label: { en: "Chapters 1,2 - Midterm", vi: "Chương 1,2 - Giữa kỳ" }, matches: ["Chương 1", "Chương 2"], count: 116 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Chương 1"], count: 42 },
+      { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, matches: ["Chương 2"], count: 74 },
+    ],
+  },
+  {
+    id: "triet-hoc-mac-lenin-3tc-giua-ky",
+    code: "MLN103",
+    name: { en: "Marxist-Leninist Philosophy (3 credits) Midterm", vi: "Quiz ôn tập Giữa kỳ - Triết học Mác - Lênin (3 tín chỉ)" },
+    category: { en: "General", vi: "Đại cương" },
+    exams: [
+      {
+        id: "philosophy-3-credit-midterm-bank-1", type: "midterm", year: 2026, questionCount: 124, durationMinutes: 60,
+        title: { en: "Marxist-Leninist Philosophy (3 credits) Midterm", vi: "Quiz ôn tập Giữa kỳ - Triết học Mác - Lênin (3 tín chỉ)" },
+        description: { en: "Midterm set with chapter-by-chapter practice.", vi: "Bộ đề Giữa kỳ, ôn luyện theo từng chương." },
+        questionBanks: ["/data/triet-hoc-mac-lenin-3tc-giua-ky/mln_3tc_giua_ky.json"],
+      },
+    ],
+    chapters: [
+      { id: "c12_mid", label: { en: "Chapters 1,2 - Midterm", vi: "Chương 1,2 - Giữa kỳ" }, matches: ["Chương 1", "Chương 2"], count: 124 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Chương 1"], count: 50 },
+      { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, matches: ["Chương 2"], count: 74 },
+    ],
+  },
+  {
     id: "triet-hoc-mac-lenin-2tc",
     code: "MLN101",
-    name: { en: "Marxist-Leninist Philosophy (2 credits)", vi: "Triết học Mác - Lênin (2 tín chỉ)" },
+    name: { en: "Marxist-Leninist Philosophy (2 credits)", vi: "Quiz ôn tập Cuối kỳ - Triết học Mác - Lênin (2 tín chỉ)" },
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
         id: "philosophy-2-credit-final-bank-1", type: "final", year: 2026, questionCount: 361, durationMinutes: 60,
-        title: { en: "Marxist-Leninist Philosophy (2 credits)", vi: "Triết học Mác - Lênin (2 tín chỉ)" },
+        title: { en: "Marxist-Leninist Philosophy (2 credits)", vi: "Quiz ôn tập Cuối kỳ - Triết học Mác - Lênin (2 tín chỉ)" },
         description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
-        questionBanks: [
-          "/data/triet-hoc-mac-lenin/2tc/cau_hoi_suu_tam.json",
-          "/data/triet-hoc-mac-lenin/2tc/chuong_1.json",
-          "/data/triet-hoc-mac-lenin/2tc/chuong_2.json",
-          "/data/triet-hoc-mac-lenin/2tc/chuong_3.json",
-        ],
       },
     ],
     chapters: [
@@ -271,19 +320,13 @@ export const subjects: Subject[] = [
   {
     id: "triet-hoc-mac-lenin-3tc",
     code: "MLN102",
-    name: { en: "Marxist-Leninist Philosophy (3 credits)", vi: "Triết học Mác - Lênin (3 tín chỉ)" },
+    name: { en: "Marxist-Leninist Philosophy (3 credits)", vi: "Quiz ôn tập Cuối kỳ - Triết học Mác - Lênin (3 tín chỉ)" },
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
         id: "philosophy-3-credit-final-bank-1", type: "final", year: 2026, questionCount: 210, durationMinutes: 60,
-        title: { en: "Marxist-Leninist Philosophy (3 credits)", vi: "Triết học Mác - Lênin (3 tín chỉ)" },
+        title: { en: "Marxist-Leninist Philosophy (3 credits)", vi: "Quiz ôn tập Cuối kỳ - Triết học Mác - Lênin (3 tín chỉ)" },
         description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
-        questionBanks: [
-          "/data/triet-hoc-mac-lenin/3tc/cau_hoi_suu_tam.json",
-          "/data/triet-hoc-mac-lenin/3tc/chuong_1.json",
-          "/data/triet-hoc-mac-lenin/3tc/chuong_2.json",
-          "/data/triet-hoc-mac-lenin/3tc/chuong_3.json",
-        ],
       },
     ],
     chapters: [
@@ -331,24 +374,38 @@ export const subjects: Subject[] = [
     ],
   },
   {
+    id: "chu-nghia-xa-hoi-khoa-hoc-giua-ky",
+    code: "SOC100",
+    name: { en: "Scientific Socialism Midterm", vi: "Quiz ôn tập Giữa kỳ - Chủ nghĩa xã hội khoa học" },
+    category: { en: "General", vi: "Đại cương" },
+    exams: [
+      {
+        id: "scientific-socialism-midterm-bank-1", type: "midterm", year: 2026, questionCount: 103, durationMinutes: 60,
+        title: { en: "Scientific Socialism Midterm", vi: "Quiz ôn tập Giữa kỳ - Chủ nghĩa xã hội khoa học" },
+        description: { en: "Midterm set with chapter-by-chapter practice.", vi: "Bộ đề Giữa kỳ, ôn luyện theo từng chương." },
+        questionBanks: [
+          "/data/chu-nghia-khoa-hoc-xa-hoi-giua-ky/soc_giua_ky.json",
+        ],
+      },
+    ],
+    chapters: [
+      { id: "c1234_mid", label: { en: "Scientific Socialism - Midterm", vi: "Chủ nghĩa xã hội khoa học - Giữa kỳ" }, matches: ["Chương 1", "Chương 2", "Chương 3", "Chương 4"], count: 103 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Chương 1"], count: 24 },
+      { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, matches: ["Chương 2"], count: 30 },
+      { id: "c3", label: { en: "Chapter 3", vi: "Chương 3" }, matches: ["Chương 3"], count: 27 },
+      { id: "c4", label: { en: "Chapter 4", vi: "Chương 4" }, matches: ["Chương 4"], count: 22 },
+    ],
+  },
+  {
     id: "chu-nghia-xa-hoi-khoa-hoc",
     code: "SOC101",
-    name: { en: "Scientific Socialism", vi: "Chủ nghĩa xã hội khoa học" },
+    name: { en: "Scientific Socialism", vi: "Quiz ôn tập Cuối kỳ - Chủ nghĩa xã hội khoa học" },
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
         id: "scientific-socialism-final-bank-1", type: "final", year: 2026, questionCount: 195, durationMinutes: 60,
-        title: { en: "Scientific Socialism", vi: "Chủ nghĩa xã hội khoa học" },
+        title: { en: "Scientific Socialism", vi: "Quiz ôn tập Cuối kỳ - Chủ nghĩa xã hội khoa học" },
         description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
-        questionBanks: [
-          "/data/chu-nghia-khoa-hoc-xa-hoi/chuong_1.json",
-          "/data/chu-nghia-khoa-hoc-xa-hoi/chuong_2.json",
-          "/data/chu-nghia-khoa-hoc-xa-hoi/chuong_3.json",
-          "/data/chu-nghia-khoa-hoc-xa-hoi/chuong_4.json",
-          "/data/chu-nghia-khoa-hoc-xa-hoi/chuong_5.json",
-          "/data/chu-nghia-khoa-hoc-xa-hoi/chuong_6.json",
-          "/data/chu-nghia-khoa-hoc-xa-hoi/chuong_7.json",
-        ],
       },
     ],
     chapters: [
@@ -464,29 +521,42 @@ export const subjects: Subject[] = [
     ],
   },
   {
+    id: "kinh-te-chinh-tri-mac-lenin-giua-ky",
+    code: "PEC100",
+    name: { en: "Marxist-Leninist Political Economy Midterm", vi: "Quiz ôn tập Giữa kỳ - Kinh tế chính trị Mác - Lênin" },
+    category: { en: "General", vi: "Đại cương" },
+    exams: [
+      {
+        id: "political-economy-midterm-bank-1", type: "midterm", year: 2026, questionCount: 155, durationMinutes: 60,
+        title: { en: "Marxist-Leninist Political Economy Midterm", vi: "Quiz ôn tập Giữa kỳ - Kinh tế chính trị Mác - Lênin" },
+        description: { en: "Midterm set with chapter-by-chapter practice.", vi: "Bộ đề Giữa kỳ, ôn luyện theo từng chương." },
+        questionBanks: ["/data/kinh-te-chinh-tri-mac-lenin-giua-ky/pec_giua_ky.json"],
+      },
+    ],
+    chapters: [
+      { id: "c1234_mid", label: { en: "Chapters 1,2,3,4 - Midterm", vi: "Chương 1,2,3,4 - Giữa kỳ" }, matches: ["Chương 1", "Chương 2", "Chương 3", "Chương 4"], count: 155 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Chương 1"], count: 29 },
+      { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, matches: ["Chương 2"], count: 50 },
+      { id: "c3", label: { en: "Chapter 3", vi: "Chương 3" }, matches: ["Chương 3"], count: 31 },
+      { id: "c4", label: { en: "Chapter 4", vi: "Chương 4" }, matches: ["Chương 4"], count: 45 },
+    ],
+  },
+  {
     id: "kinh-te-chinh-tri-mac-lenin",
     code: "PEC101",
-    name: { en: "Marxist-Leninist Political Economy", vi: "Kinh tế chính trị Mác - Lênin" },
+    name: { en: "Marxist-Leninist Political Economy", vi: "Quiz ôn tập Cuối kỳ - Kinh tế chính trị Mác - Lênin" },
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
         id: "political-economy-final-bank-1", type: "final", year: 2026, questionCount: 240, durationMinutes: 60,
-        title: { en: "Marxist-Leninist Political Economy", vi: "Kinh tế chính trị Mác - Lênin" },
+        title: { en: "Marxist-Leninist Political Economy", vi: "Quiz ôn tập Cuối kỳ - Kinh tế chính trị Mác - Lênin" },
         description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
-        questionBanks: [
-          "/data/kinh_te_chinh_tri_mac_lenin/chuong_1.json",
-          "/data/kinh_te_chinh_tri_mac_lenin/chuong_2.json",
-          "/data/kinh_te_chinh_tri_mac_lenin/chuong_3.json",
-          "/data/kinh_te_chinh_tri_mac_lenin/chuong_4.json",
-          "/data/kinh_te_chinh_tri_mac_lenin/chuong_5.json",
-          "/data/kinh_te_chinh_tri_mac_lenin/chuong_6.json",
-        ],
       },
     ],
     chapters: [
       { id: "all", label: { en: "All chapters", vi: "Toàn bộ (240 câu)" }, count: 240 },
-      { id: "c123_mid", label: { en: "Chapters 1,2,3 - Midterm", vi: "Chương 1,2,3 - Giữa kỳ" }, matches: ["Chương 1","Chương 2","Chương 3"], count: 110 },
-      { id: "c456_final", label: { en: "Chapters 4,5,6 - Final", vi: "Chương 4,5,6 - Cuối kỳ" }, matches: ["Chương 4","Chương 5","Chương 6"], count: 130 },
+      { id: "c1234_mid", label: { en: "Chapters 1,2,3,4 - Midterm", vi: "Chương 1,2,3,4 - Giữa kỳ" }, matches: ["Chương 1","Chương 2","Chương 3","Chương 4"], count: 155 },
+      { id: "c56_final", label: { en: "Chapters 5,6 - Final", vi: "Chương 5,6 - Cuối kỳ" }, matches: ["Chương 5","Chương 6"], count: 85 },
       { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, count: 29 },
       { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, count: 50 },
       { id: "c3", label: { en: "Chapter 3", vi: "Chương 3" }, count: 31 },

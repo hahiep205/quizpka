@@ -7,7 +7,7 @@ const invokeMock = vi.hoisted(() => vi.fn())
 vi.mock("@/lib/supabase", () => ({ supabase: { functions: { invoke: invokeMock } } }))
 
 const setup = { mode: "practice", questionOrder: "original", answerOrder: "original", timed: false, durationMinutes: 0 } as const
-const subject = getSubjectById("chu-nghia-xa-hoi-khoa-hoc")!
+const subject = getSubjectById("chu-nghia-xa-hoi-khoa-hoc-giua-ky")!
 const exam: ExamPaper = {
   id: "test-exam",
   type: "final",
@@ -42,7 +42,7 @@ describe("quiz question loader", () => {
   })
 
   it("merges multiple general banks, filters by chapter, and keeps mapped ids unique", async () => {
-    const lsdSubject = getSubjectById("lich-su-dang-cong-san-viet-nam")!
+    const lsdSubject = getSubjectById("lich-su-dang-cong-san-viet-nam-giua-ky")!
     const multiExam: ExamPaper = {
       id: "multi-bank-exam",
       type: "final",
@@ -91,6 +91,22 @@ describe("quiz question loader", () => {
 
     expect(invokeMock).toHaveBeenCalledWith("get-paid-question-bank", {
       body: { examId: "hcm-final-bank-1", subjectId: "tu-tuong-ho-chi-minh" },
+    })
+  })
+
+  it("loads the paid SOC101 final bank through the gated function (not fallback)", async () => {
+    const socSubject = getSubjectById("chu-nghia-xa-hoi-khoa-hoc")!
+    const socExam = socSubject.exams[0]
+    invokeMock.mockResolvedValue({ data: { questions: [
+      { id: 1, chapter: "Chương 5: Cơ cấu xã hội", question: "Q5", answer: "A", options: { A: "Correct" } },
+      { id: 2, chapter: "Chương 1: Nhập môn", question: "Q1", answer: "A", options: { A: "Correct" } },
+    ] }, error: null })
+
+    const questions = await loadQuizQuestions({ subject: socSubject, exam: socExam, setup, chapterId: "c5", signal: new AbortController().signal })
+
+    expect(questions.map((question) => question.prompt)).toEqual(["Q5"])
+    expect(invokeMock).toHaveBeenCalledWith("get-paid-question-bank", {
+      body: { examId: "scientific-socialism-final-bank-1", subjectId: "chu-nghia-xa-hoi-khoa-hoc" },
     })
   })
 })

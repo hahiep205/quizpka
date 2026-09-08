@@ -12,6 +12,11 @@ const examFiles: Record<string, string> = {
   "phap-luat-dai-cuong-bank-1": "law101/phap_luat_dai_cuong.json",
   "hcm-final-bank-1": "hcm101/tu_tuong_hcm.json",
   "management-final-bank-1": "mgt101/quan_tri_hoc.json",
+  "philosophy-3-credit-final-bank-1": "mln102/triet_hoc_mln_3tc.json",
+  "political-economy-final-bank-1": "pec101/kinh_te_chinh_tri.json",
+  "philosophy-2-credit-final-bank-1": "mln101/triet_hoc_mln_2tc.json",
+  "history-party-final-bank-1": "his101/lich_su_dang.json",
+  "scientific-socialism-final-bank-1": "soc101/chu_nghia_xa_hoi.json",
 }
 const examProducts: Record<string, string> = {
   "data-science-ai-midterm-1": "dsai101",
@@ -27,6 +32,11 @@ const examProducts: Record<string, string> = {
   "phap-luat-dai-cuong-bank-1": "law101",
   "hcm-final-bank-1": "hcm101",
   "management-final-bank-1": "mgt101",
+  "philosophy-3-credit-final-bank-1": "mln102",
+  "political-economy-final-bank-1": "pec101",
+  "philosophy-2-credit-final-bank-1": "mln101",
+  "history-party-final-bank-1": "his101",
+  "scientific-socialism-final-bank-1": "soc101",
 }
 const sqaExamId = "software-quality-assessment-final-bank-1"
 const marExamId = "marketing-final-bank-1"
@@ -119,7 +129,7 @@ Deno.serve(async (req) => {
     })
     const startedAt = new Date().toISOString()
     const expiresAt = new Date(Date.now() + durationMinutes * 60_000).toISOString()
-    const subjectId = productId === "sqa101" ? "danh-gia-va-kiem-dinh-chat-luong-phan-mem" : productId === "idsai101" ? "nhap-mon-khoa-hoc-du-lieu-va-tri-tue-nhan-tao" : productId === "mar101" ? "marketing-can-ban" : productId === "mac102" ? "kinh-te-vi-mo-macro" : productId === "oit101" ? "tin-hoc-van-phong" : productId === "fin101" ? "nguyen-ly-tai-chinh" : productId === "civ101" ? "lich-su-van-minh-the-gioi" : productId === "eco101" ? "kinh-te-hoc" : productId === "law101" ? "phap-luat-dai-cuong" : productId === "hcm101" ? "tu-tuong-ho-chi-minh" : productId === "mgt101" ? "quan-tri-hoc" : "khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
+    const subjectId = productId === "sqa101" ? "danh-gia-va-kiem-dinh-chat-luong-phan-mem" : productId === "idsai101" ? "nhap-mon-khoa-hoc-du-lieu-va-tri-tue-nhan-tao" : productId === "mar101" ? "marketing-can-ban" : productId === "mac102" ? "kinh-te-vi-mo-macro" : productId === "oit101" ? "tin-hoc-van-phong" : productId === "fin101" ? "nguyen-ly-tai-chinh" : productId === "civ101" ? "lich-su-van-minh-the-gioi" : productId === "eco101" ? "kinh-te-hoc" : productId === "law101" ? "phap-luat-dai-cuong" : productId === "hcm101" ? "tu-tuong-ho-chi-minh" : productId === "mgt101" ? "quan-tri-hoc" : productId === "mln102" ? "triet-hoc-mac-lenin-3tc" : productId === "pec101" ? "kinh-te-chinh-tri-mac-lenin" : productId === "mln101" ? "triet-hoc-mac-lenin-2tc" : productId === "his101" ? "lich-su-dang-cong-san-viet-nam" : productId === "soc101" ? "chu-nghia-xa-hoi-khoa-hoc" : "khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
     const { error: sessionError } = await admin.from("quiz_sessions").insert({ id: sessionId, user_id: user.id, exam_id: examId, subject_id: subjectId, duration_minutes: durationMinutes, idempotency_key: idempotencyKey, started_at: startedAt, expires_at: expiresAt })
     if (sessionError) throw sessionError
     const { error: questionsError } = await admin.from("quiz_session_questions").insert(sessionQuestions)

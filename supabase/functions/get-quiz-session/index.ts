@@ -20,6 +20,11 @@ const examFiles: Record<string, string> = {
   "phap-luat-dai-cuong-bank-1": "law101/phap_luat_dai_cuong.json",
   "hcm-final-bank-1": "hcm101/tu_tuong_hcm.json",
   "management-final-bank-1": "mgt101/quan_tri_hoc.json",
+  "philosophy-3-credit-final-bank-1": "mln102/triet_hoc_mln_3tc.json",
+  "political-economy-final-bank-1": "pec101/kinh_te_chinh_tri.json",
+  "philosophy-2-credit-final-bank-1": "mln101/triet_hoc_mln_2tc.json",
+  "history-party-final-bank-1": "his101/lich_su_dang.json",
+  "scientific-socialism-final-bank-1": "soc101/chu_nghia_xa_hoi.json",
 }
 const sqaFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json", "chuong_6.json"]
 const marFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json"]

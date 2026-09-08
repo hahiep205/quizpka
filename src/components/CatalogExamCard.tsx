@@ -2,6 +2,7 @@ import { BookOpen } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { ExamMetaRow } from "@/components/ExamMetaRow"
 import { getSubjectById, type ExamCatalogItem } from "@/data/subjects"
+import { getPaidProductId } from "@/lib/purchases"
 import type { ReactNode } from "react"
 
 type Lang = "en" | "vi"
@@ -22,6 +23,8 @@ export function CatalogExamCard({
   // Only individual chapters (c1..cN): group aggregates like mid/final/suutam are not chapters.
   const chapterCount = (getSubjectById(exam.subjectId)?.chapters ?? [])
     .filter((chapter) => /^c\d+$/.test(chapter.id)).length
+  const isPaid = getPaidProductId(exam.subjectCode) !== null
+  const badgeLabel = isPaid ? categoryLabel : lang === "vi" ? "Miễn phí" : "Free"
   return (
     <article className="group flex h-full flex-col rounded-[15px] border-2 border-[#E5E5E5] bg-white p-3 shadow-[0_3px_0_#DCDCDC] transition-transform hover:-translate-y-1 dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_3px_0_rgba(0,0,0,0.35)] sm:rounded-[16px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:sm:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
       <div className="flex items-center justify-between gap-2 sm:items-start sm:gap-3">
@@ -30,7 +33,7 @@ export function CatalogExamCard({
         </div>
         <div className="flex min-w-0 flex-1 items-center justify-end gap-1.5 overflow-hidden sm:flex-none sm:contents">
           <Badge className="h-6 max-w-[70%] shrink-0 truncate border-0 bg-[#E8F7FE] px-2 text-[10px] font-extrabold text-[#129BDC] dark:bg-sky-500/10 dark:text-sky-300 sm:h-7 sm:max-w-none sm:px-3 sm:text-[12px]">
-            {categoryLabel}
+            {badgeLabel}
           </Badge>
         </div>
       </div>
