@@ -149,4 +149,26 @@ describe("subject chapter filtering", () => {
       { id: 4, chapter: "Chương 5" },
     ])
   })
+
+  it("filters Introduction to Law midterm, final, and individual chapters by dotted labels", () => {
+    const questions = [
+      { id: 1, chapter: "Chương 1. Những vấn đề lý luận cơ bản về nhà nước" },
+      { id: 2, chapter: "Chương 2. Những vấn đề lý luận cơ bản về pháp luật" },
+      { id: 3, chapter: "Chương 4. Quan hệ pháp luật" },
+      { id: 4, chapter: "Chương 5. Thực hiện pháp luật, vi phạm pháp luật và trách nhiệm pháp lý" },
+      { id: 5, chapter: "Chương 6. Nhà nước và pháp luật Cộng hòa xã hội chủ nghĩa Việt Nam" },
+    ]
+    expect(filterQuestionsBySubjectChapter("phap-luat-dai-cuong", questions, "c1")).toEqual([
+      { id: 1, chapter: "Chương 1. Những vấn đề lý luận cơ bản về nhà nước" },
+    ])
+    expect(filterQuestionsBySubjectChapter("phap-luat-dai-cuong", questions, "c1234_mid")).toEqual([
+      { id: 1, chapter: "Chương 1. Những vấn đề lý luận cơ bản về nhà nước" },
+      { id: 2, chapter: "Chương 2. Những vấn đề lý luận cơ bản về pháp luật" },
+      { id: 3, chapter: "Chương 4. Quan hệ pháp luật" },
+    ])
+    expect(filterQuestionsBySubjectChapter("phap-luat-dai-cuong", questions, "c56_final")).toEqual([
+      { id: 4, chapter: "Chương 5. Thực hiện pháp luật, vi phạm pháp luật và trách nhiệm pháp lý" },
+      { id: 5, chapter: "Chương 6. Nhà nước và pháp luật Cộng hòa xã hội chủ nghĩa Việt Nam" },
+    ])
+  })
 })

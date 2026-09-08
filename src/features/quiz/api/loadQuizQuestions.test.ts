@@ -3,6 +3,9 @@ import { loadQuizQuestions } from "@/features/quiz/api/loadQuizQuestions"
 import { getSubjectById, type ExamPaper } from "@/data/subjects"
 import { QuestionBankDataError } from "@/features/quiz/lib/questionBankSchema"
 
+const invokeMock = vi.hoisted(() => vi.fn())
+vi.mock("@/lib/supabase", () => ({ supabase: { functions: { invoke: invokeMock } } }))
+
 const setup = { mode: "practice", questionOrder: "original", answerOrder: "original", timed: false, durationMinutes: 0 } as const
 const subject = getSubjectById("chu-nghia-xa-hoi-khoa-hoc")!
 const exam: ExamPaper = {
@@ -68,30 +71,15 @@ describe("quiz question loader", () => {
     expect(new Set(questions.map((question) => question.id)).size).toBe(2)
   })
 
-  it("merges split HCM banks and filters chapters by label", async () => {
+  it("loads the paid HCM bank through the gated function and filters chapters by label", async () => {
     const hcmSubject = getSubjectById("tu-tuong-ho-chi-minh")!
-    const hcmExam: ExamPaper = {
-      id: "hcm-multi-bank-exam",
-      type: "final",
-      year: 2026,
-      questionCount: 4,
-      durationMinutes: 10,
-      title: { en: "HCM", vi: "HCM" },
-      description: { en: "HCM", vi: "HCM" },
-      questionBanks: ["/data/hcm-bank-a.json", "/data/hcm-bank-b.json"],
-    }
-    const bankA = { questions: [
+    const hcmExam = hcmSubject.exams[0]
+    invokeMock.mockResolvedValue({ data: { questions: [
       { id: 1, chapter: "Chương 1", question: "Q1A", answer: "A", options: { A: "Correct" } },
       { id: 2, chapter: "Chương 2", question: "Q2A", answer: "A", options: { A: "Correct" } },
-    ] }
-    const bankB = { questions: [
       { id: 3, chapter: "Chương 3", question: "Q3B", answer: "A", options: { A: "Correct" } },
       { id: 4, chapter: "Chương 4", question: "Q4B", answer: "A", options: { A: "Correct" } },
-    ] }
-    vi.stubGlobal("fetch", vi.fn((url: string) => {
-      const payload = url.includes("bank-a") ? bankA : bankB
-      return Promise.resolve(new Response(JSON.stringify(payload), { status: 200 }))
-    }))
+    ] }, error: null })
 
     const c1Questions = await loadQuizQuestions({ subject: hcmSubject, exam: hcmExam, setup, chapterId: "c1", signal: new AbortController().signal })
     expect(c1Questions.map((question) => question.prompt)).toEqual(["Q1A"])
@@ -100,5 +88,9 @@ describe("quiz question loader", () => {
     const midQuestions = await loadQuizQuestions({ subject: hcmSubject, exam: hcmExam, setup, chapterId: "c123_mid", signal: new AbortController().signal })
     expect(midQuestions.map((question) => question.prompt).sort()).toEqual(["Q1A", "Q2A", "Q3B"])
     expect(new Set(midQuestions.map((question) => question.id)).size).toBe(3)
+
+    expect(invokeMock).toHaveBeenCalledWith("get-paid-question-bank", {
+      body: { examId: "hcm-final-bank-1", subjectId: "tu-tuong-ho-chi-minh" },
+    })
   })
 })

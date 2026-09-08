@@ -1,7 +1,7 @@
 import { BookOpen } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { ExamMetaRow } from "@/components/ExamMetaRow"
-import type { ExamCatalogItem } from "@/data/subjects"
+import { getSubjectById, type ExamCatalogItem } from "@/data/subjects"
 import type { ReactNode } from "react"
 
 type Lang = "en" | "vi"
@@ -9,18 +9,19 @@ type Lang = "en" | "vi"
 export function CatalogExamCard({
   exam,
   lang,
-  attemptCount,
   categoryLabel,
   questionsLabel,
   footer,
 }: {
   exam: ExamCatalogItem
   lang: Lang
-  attemptCount: number
   categoryLabel: string
   questionsLabel: string
   footer: ReactNode
 }) {
+  // Only individual chapters (c1..cN): group aggregates like mid/final/suutam are not chapters.
+  const chapterCount = (getSubjectById(exam.subjectId)?.chapters ?? [])
+    .filter((chapter) => /^c\d+$/.test(chapter.id)).length
   return (
     <article className="group flex h-full flex-col rounded-[15px] border-2 border-[#E5E5E5] bg-white p-3 shadow-[0_3px_0_#DCDCDC] transition-transform hover:-translate-y-1 dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_3px_0_rgba(0,0,0,0.35)] sm:rounded-[16px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:sm:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
       <div className="flex items-center justify-between gap-2 sm:items-start sm:gap-3">
@@ -44,7 +45,8 @@ export function CatalogExamCard({
       </div>
       <ExamMetaRow
         questionCount={exam.questionCount}
-        attemptCount={attemptCount}
+        chapterCount={chapterCount}
+        durationMinutes={exam.durationMinutes}
         questionsLabel={questionsLabel}
         lang={lang}
         className="mt-3 gap-x-2.5 border-t border-slate-100 pt-3 text-[10px] font-bold text-[#129BDC] dark:border-white/10 dark:text-sky-300 sm:mt-5 sm:gap-x-4 sm:pt-4 sm:text-xs"

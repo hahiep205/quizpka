@@ -8,7 +8,6 @@ import { goToPractice } from "@/lib/practiceSession"
 import { toeicSectionCopy as copy } from "@/shared/i18n"
 import { getToeicScopeOption } from "@/data/toeic"
 import { useAuth } from "@/auth/AuthProvider"
-import { useSubjectAttemptCounts } from "@/hooks/useSubjectAttemptCounts"
 import { CatalogExamCard } from "@/components/CatalogExamCard"
 
 type Lang = "en" | "vi"
@@ -16,7 +15,6 @@ type Lang = "en" | "vi"
 export function ToeicSection({ lang }: { lang: Lang }) {
   const { status } = useAuth()
   const t = copy[lang]
-  const attemptCountsBySubject = useSubjectAttemptCounts()
   const [pickerOpen, setPickerOpen] = useState(false)
   const [setupOpen, setSetupOpen] = useState(false)
   const [selectedScope, setSelectedScope] = useState<ToeicScope>("full")
@@ -102,7 +100,6 @@ export function ToeicSection({ lang }: { lang: Lang }) {
             key={exam.id}
             exam={exam}
             lang={lang}
-            attemptCount={attemptCountsBySubject[exam.subjectId] ?? 0}
             categoryLabel={t.badge}
             questionsLabel={t.questions}
             footer={

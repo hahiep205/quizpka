@@ -12,7 +12,6 @@ import { DsaiPickerModal } from "@/components/DsaiPickerModal"
 import { cn } from "@/lib/utils"
 import { documentsCopy as copy } from "@/shared/i18n"
 import { useExamLaunch } from "@/lib/useExamLaunch"
-import { useSubjectAttemptCounts } from "@/hooks/useSubjectAttemptCounts"
 import { CatalogExamCard } from "@/components/CatalogExamCard"
 import { PaymentModal } from "@/components/PaymentModal"
 import { createPaidCheckout, getPaidProductId, hasProductPurchase } from "@/lib/purchases"
@@ -52,7 +51,6 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
     handleDsaiSelect,
     setDsaiPickerExam,
   } = useExamLaunch(lang)
-  const attemptCountsBySubject = useSubjectAttemptCounts()
   const nudge = useLoginNudge()
   const { user } = useAuth()
   const tryExam = (exam: ExamCatalogItem) => nudge.requestNudge(async () => { try {
@@ -174,7 +172,6 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
               key={exam.id}
               exam={exam}
               lang={lang}
-              attemptCount={attemptCountsBySubject[exam.subjectId] ?? 0}
               categoryLabel={exam.category.en === "General" ? t.general : t.major}
               questionsLabel={t.questions}
               footer={

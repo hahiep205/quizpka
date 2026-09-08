@@ -43,7 +43,6 @@ import { readStorage, writeStorage } from "@/lib/storage"
 import { logActivityEvent } from "@/features/activity/lib/activityLog"
 import { computeLearningStats, formatLearningDuration } from "@/lib/learningStats"
 import { goToPractice, readPracticeHistory } from "@/lib/practiceSession"
-import { useSubjectAttemptCounts } from "@/hooks/useSubjectAttemptCounts"
 import { MobileTabBar } from "@/components/MobileTabBar"
 import { CatalogExamCard } from "@/components/CatalogExamCard"
 import { PaymentModal } from "@/components/PaymentModal"
@@ -183,7 +182,7 @@ export function DashboardPage({
     logActivityEvent(dashboardUser?.id, "view_dashboard", {}, { oncePerSessionKey: `view_dashboard:${dashboardUser?.id ?? "anon"}` })
   }, [dashboardUser?.id, dashboardUser?.created_at])
   const [query, setQuery] = useState("")
-  const [filter, setFilter] = useState<"all" | "general" | "major" | "free" | "paid" | "toeic">("all")
+  const [filter, setFilter] = useState<"all" | "free" | "paid" | "midterm" | "final" | "toeic">("all")
   const [toeicPickerExam, setToeicPickerExam] = useState<ExamCatalogItem | null>(null)
   const [toeicScope, setToeicScope] = useState<ToeicScope>("full")
   const [toeicSetupOpen, setToeicSetupOpen] = useState(false)
@@ -222,8 +221,7 @@ export function DashboardPage({
       } else if (isToeic) {
         return false
       }
-      const categoryKey = exam.category.en === "General" ? "general" : "major"
-        const isPaid = getPaidProductId(exam.subjectCode) !== null
+      const isPaid = getPaidProductId(exam.subjectCode) !== null
       const matchesFilter =
         filter === "all" || filter === "toeic"
           ? true
@@ -231,7 +229,9 @@ export function DashboardPage({
             ? !isPaid
             : filter === "paid"
               ? isPaid
-              : categoryKey === filter
+              : filter === "midterm"
+                ? exam.type === "midterm"
+                : exam.type === "final"
       const haystack = `${exam.title[lang]} ${exam.subjectName[lang]} ${exam.subjectCode}`.toLocaleLowerCase(lang)
       return matchesFilter && (!normalized || haystack.includes(normalized))
     })
@@ -769,14 +769,13 @@ function HomeDashboard({
 }: {
   lang: Lang
   query: string
-  filter: "all" | "general" | "major" | "free" | "paid" | "toeic"
+  filter: "all" | "free" | "paid" | "midterm" | "final" | "toeic"
   filteredExams: ExamCatalogItem[]
   onQueryChange: (value: string) => void
-  onFilterChange: (value: "all" | "general" | "major" | "free" | "paid" | "toeic") => void
+  onFilterChange: (value: "all" | "free" | "paid" | "midterm" | "final" | "toeic") => void
   onStartExam: (exam: ExamCatalogItem) => void
 }) {
   const t = copy[lang]
-  const attemptCountsBySubject = useSubjectAttemptCounts()
 
   return (
     <div className="space-y-6 dashboard-reveal sm:space-y-8">
@@ -798,17 +797,17 @@ function HomeDashboard({
               <span className="sr-only">{lang === "vi" ? "Lọc bộ đề" : "Filter exam sets"}</span>
               <select
                 value={filter}
-                onChange={(event) => onFilterChange(event.target.value as "all" | "general" | "major" | "free" | "paid" | "toeic")}
+                onChange={(event) => onFilterChange(event.target.value as "all" | "free" | "paid" | "midterm" | "final" | "toeic")}
                 className="h-11 w-full appearance-none rounded-[12px] border-2 border-[#E5E5E5] bg-white pl-3 pr-10 text-sm font-bold text-[#100F3E] shadow-[0_3px_0_#DCDCDC] outline-none transition focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-900 dark:text-white dark:shadow-[0_3px_0_rgba(0,0,0,0.35)]"
               >
-                {(["all", "general", "major", "free", "paid", "toeic"] as const).map((item) => (
+                {(["all", "free", "paid", "midterm", "final", "toeic"] as const).map((item) => (
                   <option key={item} value={item}>{t[item]}</option>
                 ))}
               </select>
               <ChevronDown className="pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
             </label>
             <div className="hidden w-full grid-cols-3 gap-2 sm:grid sm:w-auto sm:grid-cols-none sm:grid-flow-col">
-              {(["all", "general", "major", "free", "paid", "toeic"] as const).map((item) => (
+              {(["all", "free", "paid", "midterm", "final", "toeic"] as const).map((item) => (
                 <button
                   key={item}
                   type="button"
@@ -829,7 +828,6 @@ function HomeDashboard({
                 key={exam.id}
                 exam={exam}
                 lang={lang}
-                attemptCount={attemptCountsBySubject[exam.subjectId] ?? 0}
                 categoryLabel={exam.subjectId === "toeic" ? "TOEIC" : exam.category.en === "General" ? t.general : t.major}
                 questionsLabel={t.questions}
                 footer={

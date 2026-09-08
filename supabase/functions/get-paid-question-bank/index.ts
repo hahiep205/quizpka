@@ -17,6 +17,9 @@ const examFiles: Record<string, string> = {
   "finance-final-bank-1": "fin101/nguyen_ly_tai_chinh.json",
   "world-civilization-chapters-1-2-bank-1": "civ101/lich_su_van_minh_the_gioi.json",
   "economics-bank-1": "eco101/kinh_te_hoc.json",
+  "phap-luat-dai-cuong-bank-1": "law101/phap_luat_dai_cuong.json",
+  "hcm-final-bank-1": "hcm101/tu_tuong_hcm.json",
+  "management-final-bank-1": "mgt101/quan_tri_hoc.json",
 }
 const subjectProducts: Record<string, string> = {
   "khoa-hoc-du-lieu-va-tri-tue-nhan-tao": "dsai101",
@@ -29,6 +32,9 @@ const subjectProducts: Record<string, string> = {
   "nguyen-ly-tai-chinh": "fin101",
   "lich-su-van-minh-the-gioi": "civ101",
   "kinh-te-hoc": "eco101",
+  "phap-luat-dai-cuong": "law101",
+  "tu-tuong-ho-chi-minh": "hcm101",
+  "quan-tri-hoc": "mgt101",
 }
 const sqaFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json", "chuong_6.json"]
 const secFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json", "chuong_6.json.gz", "chuong_7.json", "chuong_8.json"]

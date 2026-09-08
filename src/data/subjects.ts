@@ -5,8 +5,10 @@ export type SubjectId =
   | "tu-tuong-ho-chi-minh"
   | "lich-su-dang-cong-san-viet-nam"
   | "quan-tri-hoc"
+  | "quan-tri-hoc-giua-ky"
   | "triet-hoc-mac-lenin-2tc"
   | "triet-hoc-mac-lenin-3tc"
+  | "tu-tuong-ho-chi-minh-giua-ky"
   | "ky-nang-quan-ly-du-an"
   | "chu-nghia-xa-hoi-khoa-hoc"
   | "danh-gia-va-kiem-dinh-chat-luong-phan-mem"
@@ -20,6 +22,7 @@ export type SubjectId =
   | "nguyen-ly-tai-chinh"
   | "lich-su-van-minh-the-gioi"
   | "kinh-te-hoc"
+  | "phap-luat-dai-cuong"
   | "co-so-du-lieu"
   | "khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
   | "nhap-mon-khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
@@ -98,30 +101,44 @@ export const subjects: Subject[] = [
         questionCount: 55,
         durationMinutes: 60,
         title: { en: "English Placement Sample Test", vi: "Đề mẫu Tiếng Anh Đầu Vào" },
-        description: { en: "Sample test with 3 reference exams. Choose one after clicking Try now.", vi: "Đề mẫu gồm 3 đề tham khảo. Chọn 1 đề sau khi ấn Thử ngay." },
+        description: { en: "Includes 3 reference tests; pick one to start.", vi: "Gồm 3 đề tham khảo, chọn 1 đề để làm bài." },
         questionBanks: ["/data/tadv/tadv-reading.json", "/data/tadv/tadv-listening.json"],
       },
     ],
   },
   {
+    id: "tu-tuong-ho-chi-minh-giua-ky",
+    code: "HCM100",
+    name: { en: "Ho Chi Minh Ideology Midterm", vi: "Quiz ôn tập Giữa kỳ - Tư tưởng Hồ Chí Minh" },
+    category: { en: "General", vi: "Đại cương" },
+    exams: [
+      {
+        id: "hcm-midterm-bank-1", type: "midterm", year: 2026, questionCount: 276, durationMinutes: 60,
+        title: { en: "Ho Chi Minh Ideology Midterm", vi: "Quiz ôn tập Giữa kỳ - Tư tưởng Hồ Chí Minh" },
+        description: { en: "Midterm set with chapter-by-chapter practice.", vi: "Bộ đề Giữa kỳ, ôn luyện theo từng chương." },
+        questionBanks: [
+          "/data/tu-tuong-hcm-giua-ky/tu_tuong_hcm_giua_ky.json",
+        ],
+      },
+    ],
+    chapters: [
+      { id: "c1234_mid", label: { en: "Ho Chi Minh Ideology - Midterm (Chapters 1, 2, 3, 4)", vi: "Tư tưởng Hồ Chí Minh - Giữa kỳ (gộp chương 1234)" }, matches: ["Chương 1", "Chương 2", "Chương 3", "Chương 4"], count: 276 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Chương 1"], count: 68 },
+      { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, matches: ["Chương 2"], count: 65 },
+      { id: "c3", label: { en: "Chapter 3", vi: "Chương 3" }, matches: ["Chương 3"], count: 71 },
+      { id: "c4", label: { en: "Chapter 4", vi: "Chương 4" }, matches: ["Chương 4"], count: 72 },
+    ],
+  },
+  {
     id: "tu-tuong-ho-chi-minh",
     code: "HCM101",
-    name: { en: "Ho Chi Minh Ideology", vi: "Tư tưởng Hồ Chí Minh" },
+    name: { en: "Ho Chi Minh Ideology", vi: "Quiz ôn tập Cuối kỳ - Tư tưởng Hồ Chí Minh" },
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
         id: "hcm-final-bank-1", type: "final", year: 2026, questionCount: 456, durationMinutes: 60,
-        title: { en: "Ho Chi Minh Ideology", vi: "Tư tưởng Hồ Chí Minh" },
-        description: { en: "456 questions grouped by chapters. Choose a chapter after clicking Try now.", vi: "456 câu hỏi được chia theo chương. Chọn chương sau khi ấn Thử ngay." },
-        questionBanks: [
-          "/data/tu-tuong-hcm/cau_hoi_suu_tam.json",
-          "/data/tu-tuong-hcm/chuong_1.json",
-          "/data/tu-tuong-hcm/chuong_2.json",
-          "/data/tu-tuong-hcm/chuong_3.json",
-          "/data/tu-tuong-hcm/chuong_4.json",
-          "/data/tu-tuong-hcm/chuong_5.json",
-          "/data/tu-tuong-hcm/chuong_6.json",
-        ],
+        title: { en: "Ho Chi Minh Ideology", vi: "Quiz ôn tập Cuối kỳ - Tư tưởng Hồ Chí Minh" },
+        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
       },
     ],
     chapters: [
@@ -146,7 +163,7 @@ export const subjects: Subject[] = [
       {
         id: "history-party-final-bank-1", type: "final", year: 2026, questionCount: 288, durationMinutes: 60,
         title: { en: "History of the Communist Party of Vietnam", vi: "Lịch sử Đảng Cộng sản Việt Nam" },
-        description: { en: "288 questions grouped by chapters. Choose a chapter after clicking Try now.", vi: "288 câu hỏi được chia theo chương. Chọn chương sau khi ấn Thử ngay." },
+        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
         questionBanks: [
           "/data/lich-su-dang/cau_hoi_suu_tam.json",
           "/data/lich-su-dang/chuong_1.json",
@@ -166,25 +183,39 @@ export const subjects: Subject[] = [
     ],
   },
   {
+    id: "quan-tri-hoc-giua-ky",
+    code: "MGT100",
+    name: { en: "Management Midterm", vi: "Quiz ôn tập Giữa kỳ - Quản trị học" },
+    category: { en: "General", vi: "Đại cương" },
+    exams: [
+      {
+        id: "mgt-midterm-bank-1", type: "midterm", year: 2026, questionCount: 202, durationMinutes: 60,
+        title: { en: "Management Midterm", vi: "Quiz ôn tập Giữa kỳ - Quản trị học" },
+        description: { en: "Midterm set with chapter-by-chapter practice.", vi: "Bộ đề Giữa kỳ, ôn luyện theo từng chương." },
+        questionBanks: [
+          "/data/quan-tri-hoc-giua-ky/mgt_giua_ky.json",
+        ],
+      },
+    ],
+    chapters: [
+      { id: "c12345_mid", label: { en: "Management - Midterm (Chapters 1, 2, 3, 4, 5)", vi: "Quản trị học - Giữa kỳ" }, matches: ["Chương 1", "Chương 2", "Chương 3", "Chương 4", "Chương 5"], count: 202 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Chương 1"], count: 42 },
+      { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, matches: ["Chương 2"], count: 41 },
+      { id: "c3", label: { en: "Chapter 3", vi: "Chương 3" }, matches: ["Chương 3"], count: 39 },
+      { id: "c4", label: { en: "Chapter 4", vi: "Chương 4" }, matches: ["Chương 4"], count: 40 },
+      { id: "c5", label: { en: "Chapter 5", vi: "Chương 5" }, matches: ["Chương 5"], count: 40 },
+    ],
+  },
+  {
     id: "quan-tri-hoc",
     code: "MGT101",
-    name: { en: "Management", vi: "Quản trị học" },
+    name: { en: "Management", vi: "Quiz ôn tập Cuối kỳ - Quản trị học" },
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
         id: "management-final-bank-1", type: "final", year: 2026, questionCount: 450, durationMinutes: 60,
-        title: { en: "Management", vi: "Quản trị học" },
-        description: { en: "450 questions grouped by chapters. Choose a chapter after clicking Try now.", vi: "450 câu hỏi được chia theo chương. Chọn chương sau khi ấn Thử ngay." },
-        questionBanks: [
-          "/data/quan-tri-hoc/cau_hoi_suu_tam.json",
-          "/data/quan-tri-hoc/chuong_1.json",
-          "/data/quan-tri-hoc/chuong_2.json",
-          "/data/quan-tri-hoc/chuong_3.json",
-          "/data/quan-tri-hoc/chuong_4.json",
-          "/data/quan-tri-hoc/chuong_5.json",
-          "/data/quan-tri-hoc/chuong_6.json",
-          "/data/quan-tri-hoc/chuong_7.json",
-        ],
+        title: { en: "Management", vi: "Quiz ôn tập Cuối kỳ - Quản trị học" },
+        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
       },
     ],
     chapters: [
@@ -210,7 +241,7 @@ export const subjects: Subject[] = [
       {
         id: "philosophy-2-credit-final-bank-1", type: "final", year: 2026, questionCount: 361, durationMinutes: 60,
         title: { en: "Marxist-Leninist Philosophy (2 credits)", vi: "Triết học Mác - Lênin (2 tín chỉ)" },
-        description: { en: "361 questions grouped by chapters. Choose a chapter after clicking Try now.", vi: "361 câu hỏi được chia theo chương. Chọn chương sau khi ấn Thử ngay." },
+        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
         questionBanks: [
           "/data/triet-hoc-mac-lenin/2tc/cau_hoi_suu_tam.json",
           "/data/triet-hoc-mac-lenin/2tc/chuong_1.json",
@@ -238,7 +269,7 @@ export const subjects: Subject[] = [
       {
         id: "philosophy-3-credit-final-bank-1", type: "final", year: 2026, questionCount: 210, durationMinutes: 60,
         title: { en: "Marxist-Leninist Philosophy (3 credits)", vi: "Triết học Mác - Lênin (3 tín chỉ)" },
-        description: { en: "210 questions grouped by chapters. Choose a chapter after clicking Try now.", vi: "210 câu hỏi được chia theo chương. Chọn chương sau khi ấn Thử ngay." },
+        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
         questionBanks: [
           "/data/triet-hoc-mac-lenin/3tc/cau_hoi_suu_tam.json",
           "/data/triet-hoc-mac-lenin/3tc/chuong_1.json",
@@ -264,7 +295,7 @@ export const subjects: Subject[] = [
       {
         id: "project-management-final-bank-1", type: "final", year: 2026, questionCount: 219, durationMinutes: 60,
         title: { en: "Project Management Skills", vi: "Kỹ năng Quản lý Dự án" },
-        description: { en: "219 questions grouped by chapters. Choose a chapter after clicking Try now.", vi: "219 câu hỏi được chia theo chương. Chọn chương sau khi ấn Thử ngay." },
+        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
         questionBanks: [
           "/data/ky-nang-quan-ly-du-an/chuong_1.json",
           "/data/ky-nang-quan-ly-du-an/chuong_2.json",
@@ -300,7 +331,7 @@ export const subjects: Subject[] = [
       {
         id: "scientific-socialism-final-bank-1", type: "final", year: 2026, questionCount: 195, durationMinutes: 60,
         title: { en: "Scientific Socialism", vi: "Chủ nghĩa xã hội khoa học" },
-        description: { en: "195 questions grouped by chapters. Choose a chapter after clicking Try now.", vi: "195 câu hỏi được chia theo chương. Chọn chương sau khi ấn Thử ngay." },
+        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
         questionBanks: [
           "/data/chu-nghia-khoa-hoc-xa-hoi/chuong_1.json",
           "/data/chu-nghia-khoa-hoc-xa-hoi/chuong_2.json",
@@ -334,7 +365,7 @@ export const subjects: Subject[] = [
       {
         id: "entrepreneurship-leadership-final-bank-1", type: "final", year: 2026, questionCount: 112, durationMinutes: 60,
         title: { en: "Entrepreneurship and Leadership Skills", vi: "Kỹ năng Khởi nghiệp và Lãnh đạo" },
-        description: { en: "112 questions grouped by chapters. Choose a chapter after clicking Try now.", vi: "112 câu hỏi được chia theo chương. Chọn chương sau khi ấn Thử ngay." },
+        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
         questionBanks: [
           "/data/ky-nang-khoi-nghiep-va-lanh-dao/chuong_1.json",
           "/data/ky-nang-khoi-nghiep-va-lanh-dao/chuong_2.json",
@@ -364,7 +395,7 @@ export const subjects: Subject[] = [
       {
         id: "software-quality-assessment-final-bank-1", type: "final", year: 2026, questionCount: 299, durationMinutes: 60,
         title: { en: "Software Quality Assessment and Testing", vi: "Quiz ôn tập Cuối kỳ - Đánh giá và kiểm định chất lượng phần mềm" },
-        description: { en: "299 questions for the final exam. Start after clicking Try now.", vi: "299 câu hỏi cho bài thi cuối kỳ. Ấn Thử ngay để bắt đầu." },
+        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
       },
     ],
     chapters: [
@@ -386,7 +417,7 @@ export const subjects: Subject[] = [
       {
         id: "macroeconomics-final-bank-1", type: "final", year: 2026, questionCount: 181, durationMinutes: 60,
         title: { en: "Microeconomics", vi: "Kinh tế vi mô" },
-        description: { en: "181 questions grouped by chapters. Choose a chapter after clicking Try now.", vi: "181 câu hỏi được chia theo chương. Chọn chương sau khi ấn Thử ngay." },
+        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
         questionBanks: [
           "/data/kinh_te_vi_mo/chuong_1.json",
           "/data/kinh_te_vi_mo/chuong_2.json",
@@ -416,7 +447,7 @@ export const subjects: Subject[] = [
       {
         id: "kinh-te-vi-mo-macro-bank-1", type: "final", year: 2026, questionCount: 183, durationMinutes: 60,
         title: { en: "Macroeconomics", vi: "Quiz ôn tập Cuối kỳ - Kinh tế vĩ mô" },
-        description: { en: "183 questions. Choose a chapter after clicking Try now.", vi: "183 câu hỏi. Chọn chương sau khi ấn Thử ngay." },
+        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
       },
     ],
     chapters: [
@@ -433,7 +464,7 @@ export const subjects: Subject[] = [
       {
         id: "political-economy-final-bank-1", type: "final", year: 2026, questionCount: 240, durationMinutes: 60,
         title: { en: "Marxist-Leninist Political Economy", vi: "Kinh tế chính trị Mác - Lênin" },
-        description: { en: "240 questions grouped by chapters. Choose a chapter after clicking Try now.", vi: "240 câu hỏi được chia theo chương. Chọn chương sau khi ấn Thử ngay." },
+        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
         questionBanks: [
           "/data/kinh_te_chinh_tri_mac_lenin/chuong_1.json",
           "/data/kinh_te_chinh_tri_mac_lenin/chuong_2.json",
@@ -465,7 +496,7 @@ export const subjects: Subject[] = [
       {
         id: "sec-final-bank-2", type: "final", year: 2026, questionCount: 150, durationMinutes: 90,
         title: { en: "Application & System Security", vi: "Quiz ôn tập Giữa và Cuối kỳ - Bảo mật ứng dụng và hệ thống" },
-        description: { en: "150 questions grouped by chapters. Choose a chapter after clicking Try now.", vi: "150 câu hỏi được chia theo chương. Chọn chương sau khi ấn Thử ngay." },
+        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
       },
     ],
     chapters: [
@@ -491,7 +522,7 @@ export const subjects: Subject[] = [
       {
         id: "marketing-final-bank-1", type: "final", year: 2026, questionCount: 257, durationMinutes: 60,
         title: { en: "Principles of Marketing", vi: "Quiz ôn tập Cuối kỳ - Marketing căn bản" },
-        description: { en: "257 questions grouped by chapters. Choose a chapter after clicking Try now.", vi: "257 câu hỏi chia theo 5 chương. Chọn chương sau khi ấn Thử ngay." },
+        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
       },
     ],
     chapters: [
@@ -512,7 +543,7 @@ export const subjects: Subject[] = [
       {
         id: "office-it-final-bank-1", type: "final", year: 2026, questionCount: 120, durationMinutes: 60,
         title: { en: "Office Information Technology", vi: "Quiz ôn tập Cuối kỳ - Tin học văn phòng" },
-        description: { en: "120 questions. Choose a chapter after clicking Try now.", vi: "120 câu hỏi. Chọn chương sau khi ấn Thử ngay." },
+        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
       },
     ],
     chapters: [
@@ -529,7 +560,7 @@ export const subjects: Subject[] = [
       {
         id: "finance-final-bank-1", type: "final", year: 2026, questionCount: 171, durationMinutes: 60,
         title: { en: "Principles of Finance", vi: "Quiz ôn tập Cuối kỳ - Nguyên lý tài chính" },
-        description: { en: "171 questions. Choose a chapter after clicking Try now.", vi: "171 câu hỏi. Chọn chương sau khi ấn Thử ngay." },
+        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
       },
     ],
     chapters: [
@@ -546,7 +577,7 @@ export const subjects: Subject[] = [
       {
         id: "world-civilization-chapters-1-2-bank-1", type: "final", year: 2026, questionCount: 185, durationMinutes: 60,
         title: { en: "World Civilization History", vi: "Quiz ôn tập Giữa và Cuối kỳ - Lịch sử văn minh thế giới" },
-        description: { en: "185 questions covering Chapters 1 and 2. Choose a chapter after clicking Try now.", vi: "185 câu hỏi Chương 1 và 2. Chọn chương sau khi ấn Thử ngay." },
+        description: { en: "Includes Midterm and Final sets.", vi: "Gồm 2 bộ đề Giữa kỳ và Cuối kỳ." },
       },
     ],
     chapters: [
@@ -563,12 +594,42 @@ export const subjects: Subject[] = [
       {
         id: "economics-bank-1", type: "final", year: 2026, questionCount: 215, durationMinutes: 60,
         title: { en: "Economics", vi: "Quiz ôn tập Giữa và Cuối kỳ - Kinh tế học" },
-        description: { en: "215 questions: Midterm (163) & Final (52). Choose a chapter after clicking Try now.", vi: "215 câu hỏi: Giữa kỳ (163 câu) & Cuối kỳ (52 câu). Chọn chương sau khi ấn Thử ngay." },
+        description: { en: "Includes Midterm and Final sets.", vi: "Gồm 2 bộ đề Giữa kỳ và Cuối kỳ." },
       },
     ],
     chapters: [
       { id: "c1234_mid", label: { en: "Economics - Midterm (Chapters 1, 2, 3, 4)", vi: "Kinh tế học - Giữa kỳ (Chương 1, 2, 3, 4)" }, matches: ["Chương 1.", "Chương 2.", "Chương 3.", "Chương 4."], count: 163 },
       { id: "c567_final", label: { en: "Economics - Final (Chapters 5, 6, 7)", vi: "Kinh tế học - Cuối kỳ (Chương 5, 6, 7)" }, matches: ["Chương 5.", "Chương 6.", "Chương 7."], count: 52 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Chương 1."], hidden: true, count: 21 },
+      { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, matches: ["Chương 2."], hidden: true, count: 66 },
+      { id: "c3", label: { en: "Chapter 3", vi: "Chương 3" }, matches: ["Chương 3."], hidden: true, count: 40 },
+      { id: "c4", label: { en: "Chapter 4", vi: "Chương 4" }, matches: ["Chương 4."], hidden: true, count: 36 },
+      { id: "c5", label: { en: "Chapter 5", vi: "Chương 5" }, matches: ["Chương 5."], hidden: true, count: 17 },
+      { id: "c6", label: { en: "Chapter 6", vi: "Chương 6" }, matches: ["Chương 6."], hidden: true, count: 20 },
+      { id: "c7", label: { en: "Chapter 7", vi: "Chương 7" }, matches: ["Chương 7."], hidden: true, count: 15 },
+    ],
+  },
+  {
+    id: "phap-luat-dai-cuong",
+    code: "LAW101",
+    name: { en: "Introduction to Law", vi: "Quiz ôn tập Giữa và Cuối kỳ - Pháp luật đại cương" },
+    category: { en: "General", vi: "Đại cương" },
+    exams: [
+      {
+        id: "phap-luat-dai-cuong-bank-1", type: "final", year: 2026, questionCount: 716, durationMinutes: 60,
+        title: { en: "Introduction to Law", vi: "Quiz ôn tập Giữa và Cuối kỳ - Pháp luật đại cương" },
+        description: { en: "Includes Midterm and Final sets.", vi: "Gồm 2 bộ đề Giữa kỳ và Cuối kỳ." },
+      },
+    ],
+    chapters: [
+      { id: "c1234_mid", label: { en: "Introduction to Law - Midterm (Chapters 1, 2, 3, 4)", vi: "Pháp luật đại cương - Giữa kỳ (Chương 1, 2, 3, 4)" }, matches: ["Chương 1.", "Chương 2.", "Chương 3.", "Chương 4."], count: 431 },
+      { id: "c56_final", label: { en: "Introduction to Law - Final (Chapters 5, 6)", vi: "Pháp luật đại cương - Cuối kỳ (Chương 5, 6)" }, matches: ["Chương 5.", "Chương 6."], count: 285 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Chương 1."], count: 73 },
+      { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, matches: ["Chương 2."], count: 96 },
+      { id: "c3", label: { en: "Chapter 3", vi: "Chương 3" }, matches: ["Chương 3."], count: 175 },
+      { id: "c4", label: { en: "Chapter 4", vi: "Chương 4" }, matches: ["Chương 4."], count: 87 },
+      { id: "c5", label: { en: "Chapter 5", vi: "Chương 5" }, matches: ["Chương 5."], count: 159 },
+      { id: "c6", label: { en: "Chapter 6", vi: "Chương 6" }, matches: ["Chương 6."], count: 126 },
     ],
   },
   {
@@ -580,7 +641,7 @@ export const subjects: Subject[] = [
       {
         id: "database-final-bank-1", type: "final", year: 2026, questionCount: 150, durationMinutes: 60,
         title: { en: "Database", vi: "Cơ sở dữ liệu" },
-        description: { en: "150 questions grouped by parts. Choose a part after clicking Try now.", vi: "150 câu hỏi được chia theo phần. Chọn phần sau khi ấn Thử ngay." },
+        description: { en: "Practice by part: theory, SQL and applications.", vi: "Ôn theo từng phần: lý thuyết, SQL và ứng dụng." },
         questionBanks: [
           "/data/co-so-du-lieu/phan_1.json",
           "/data/co-so-du-lieu/phan_2.json",
@@ -605,7 +666,7 @@ export const subjects: Subject[] = [
       {
         id: "data-science-ai-bank-1", type: "final", year: 2026, questionCount: 298, durationMinutes: 60,
         title: { en: "Data Science and Artificial Intelligence", vi: "Quiz ôn tập Giữa và Cuối kỳ - Khoa học dữ liệu và Trí tuệ nhân tạo" },
-        description: { en: "2 sets: Midterm (95) & Final (203). Choose one after clicking Try now.", vi: "2 bộ đề: Giữa kỳ (95 câu) & Cuối kỳ (203 câu). Chọn 1 đề sau khi ấn Thử ngay." },
+        description: { en: "Includes Midterm and Final sets.", vi: "Gồm 2 bộ đề Giữa kỳ và Cuối kỳ." },
       },
     ],
   },
@@ -618,7 +679,7 @@ export const subjects: Subject[] = [
       {
         id: "intro-data-science-ai-bank-1", type: "final", year: 2026, questionCount: 119, durationMinutes: 60,
         title: { en: "Intro Data Science & AI Practice Bank", vi: "Quiz ôn tập Cuối kỳ - Nhập môn Khoa học dữ liệu và Trí tuệ nhân tạo" },
-        description: { en: "119 final review questions for Intro to Data Science and Artificial Intelligence.", vi: "119 câu hỏi ôn tập Cuối kỳ môn Nhập môn Khoa học dữ liệu và Trí tuệ nhân tạo." },
+        description: { en: "Comprehensive final review set.", vi: "Bộ đề tổng hợp ôn tập Cuối kỳ." },
       },
     ],
   },
@@ -639,8 +700,8 @@ export const subjects: Subject[] = [
           vi: "Bộ tài liệu ôn luyện TOEIC 01",
         },
         description: {
-          en: "Full ETS 2026 format with 200 questions across Listening and Reading. Choose Full Test, skill-based or per-Part practice.",
-          vi: "Chuẩn ETS 2026 với 200 câu Listening & Reading. Chọn Full Test, luyện theo kỹ năng hoặc theo từng Part.",
+          en: "ETS 2026 format: Full Test, skills or per-Part practice.",
+          vi: "Chuẩn ETS 2026: Full Test, luyện kỹ năng hoặc theo Part.",
         },
       },
       {
@@ -654,8 +715,8 @@ export const subjects: Subject[] = [
           vi: "Bộ tài liệu ôn luyện TOEIC 02",
         },
         description: {
-          en: "Full ETS 2026 format with 200 questions across Listening and Reading. Choose Full Test, skill-based or per-Part practice.",
-          vi: "Chuẩn ETS 2026 với 200 câu Listening & Reading. Chọn Full Test, luyện theo kỹ năng hoặc theo từng Part.",
+          en: "ETS 2026 format: Full Test, skills or per-Part practice.",
+          vi: "Chuẩn ETS 2026: Full Test, luyện kỹ năng hoặc theo Part.",
         },
       },
       {
@@ -669,8 +730,8 @@ export const subjects: Subject[] = [
           vi: "Bộ tài liệu ôn luyện TOEIC 03",
         },
         description: {
-          en: "Full ETS 2026 format with 200 questions across Listening and Reading. Choose Full Test, skill-based or per-Part practice.",
-          vi: "Chuẩn ETS 2026 với 200 câu Listening & Reading. Chọn Full Test, luyện theo kỹ năng hoặc theo từng Part.",
+          en: "ETS 2026 format: Full Test, skills or per-Part practice.",
+          vi: "Chuẩn ETS 2026: Full Test, luyện kỹ năng hoặc theo Part.",
         },
       },
     ],
