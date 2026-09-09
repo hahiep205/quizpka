@@ -1,0 +1,413 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Marketing căn bản - Chương 9. Chính sách xúc tiến",
+  "chapter": "Chương 9. Chính sách xúc tiến",
+  "totalQuestions": 29,
+  "questions": [
+    {
+      "id": 181,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "CHƯƠNG 9 – CHÍNH SÁCH XÚC TIẾN",
+      "question": "Một doanh nghiệp sử dụng quảng cáo, khuyến mại, bán hàng cá nhân, quan hệ công chúng và marketing trực tiếp để tiếp cận khách hàng. Tập hợp này được gọi là:",
+      "options": {
+        "A": "Phối thức sản phẩm",
+        "B": "Phối thức truyền thông Marketing",
+        "C": "Phối thức phân phối",
+        "D": "Phối thức định giá"
+      },
+      "answer": "B",
+      "explainAnswer": "Quảng cáo, khuyến mại, bán hàng cá nhân, PR và marketing trực tiếp tạo thành phối thức truyền thông marketing. Không phải phối thức sản phẩm, phân phối hay định giá."
+    },
+    {
+      "id": 182,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "CHƯƠNG 9 – CHÍNH SÁCH XÚC TIẾN",
+      "question": "Một công ty gửi email riêng cho khách hàng để giới thiệu sản phẩm mới và hướng khách hàng thực hiện mua hàng. Công cụ này phù hợp nhất với:",
+      "options": {
+        "A": "Quan hệ công chúng",
+        "B": "Quảng cáo ngoài trời",
+        "C": "Marketing trực tiếp",
+        "D": "Bán hàng cá nhân"
+      },
+      "answer": "C",
+      "explainAnswer": "Email riêng giới thiệu sản phẩm và kêu gọi mua: marketing trực tiếp. PR hướng công chúng; quảng cáo ngoài trời không cá nhân hóa; bán hàng cá nhân là đối thoại miệng trực tiếp."
+    },
+    {
+      "id": 183,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "CHƯƠNG 9 – CHÍNH SÁCH XÚC TIẾN",
+      "question": "Một thương hiệu tổ chức sự kiện cộng đồng và đóng góp từ thiện nhằm tạo thiện cảm với công chúng và nâng cao uy tín doanh nghiệp. Công cụ phù hợp nhất là:",
+      "options": {
+        "A": "Quan hệ công chúng",
+        "B": "Khuyến mại",
+        "C": "Bán hàng cá nhân",
+        "D": "Định giá khuyến mại"
+      },
+      "answer": "A",
+      "explainAnswer": "Sự kiện cộng đồng và từ thiện nhằm thiện cảm, uy tín: quan hệ công chúng. Khuyến mại kích thích mua ngắn hạn; bán hàng cá nhân thuyết phục từng khách; định giá khuyến mại thuộc chính sách giá."
+    },
+    {
+      "id": 184,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "CHƯƠNG 9 – CHÍNH SÁCH XÚC TIẾN",
+      "question": "Một siêu thị phát phiếu giảm giá có thời hạn 7 ngày nhằm thúc đẩy khách hàng mua sản phẩm ngay trong thời gian ngắn. Công cụ này phản ánh:",
+      "options": {
+        "A": "Quảng cáo",
+        "B": "Khuyến mại",
+        "C": "Quan hệ công chúng",
+        "D": "Marketing trực tiếp"
+      },
+      "answer": "B",
+      "explainAnswer": "Phiếu giảm giá 7 ngày thúc mua ngay: khuyến mại, công cụ ngắn hạn. Quảng cáo xây nhận biết; PR xây quan hệ; marketing trực tiếp giao tiếp một-một dài hơi hơn phiếu có hạn."
+    },
+    {
+      "id": 185,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "CHƯƠNG 9 – CHÍNH SÁCH XÚC TIẾN",
+      "question": "Một nhân viên kinh doanh trực tiếp giới thiệu sản phẩm, tư vấn và giải đáp thắc mắc cho khách hàng tiềm năng nhằm thuyết phục họ mua. Đây là:",
+      "options": {
+        "A": "Quảng cáo",
+        "B": "Quan hệ công chúng",
+        "C": "Bán hàng cá nhân",
+        "D": "Marketing trực tuyến"
+      },
+      "answer": "C",
+      "explainAnswer": "Nhân viên giới thiệu, tư vấn, đối thoại để bán: bán hàng cá nhân. Quảng cáo không đối thoại trực tiếp; PR không nhằm chốt đơn từng khách; marketing trực tuyến là kênh số, không phải bản chất đối thoại miệng."
+    },
+    {
+      "id": 186,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "CHƯƠNG 9 – CHÍNH SÁCH XÚC TIẾN",
+      "question": "Một doanh nghiệp muốn xây dựng chương trình truyền thông nhưng trước tiên phải xác định nhóm khách hàng mà thông điệp hướng tới. Bước này là:",
+      "options": {
+        "A": "Thiết kế thông điệp",
+        "B": "Xác định công chúng nhận tin mục tiêu",
+        "C": "Lựa chọn phương tiện truyền thông",
+        "D": "Thu nhận thông tin phản hồi"
+      },
+      "answer": "B",
+      "explainAnswer": "Xác định nhóm khách mà thông điệp hướng tới là bước xác định công chúng nhận tin mục tiêu, đứng trước thiết kế thông điệp, chọn phương tiện và thu phản hồi."
+    },
+    {
+      "id": 187,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "CHƯƠNG 9 – CHÍNH SÁCH XÚC TIẾN",
+      "question": "Một công ty vừa ra mắt sản phẩm công nghệ mới nhưng khách hàng chưa biết sản phẩm có những tính năng gì và sử dụng như thế nào. Công ty muốn cung cấp thông tin rộng rãi trước khi thuyết phục khách hàng chuyển sang thương hiệu. Mục tiêu quảng cáo phù hợp nhất là:",
+      "options": {
+        "A": "Quảng cáo nhắc nhở",
+        "B": "Quảng cáo thông tin",
+        "C": "Quảng cáo thuyết phục",
+        "D": "Quảng cáo cạnh tranh"
+      },
+      "answer": "B",
+      "explainAnswer": "Sản phẩm mới, khách chưa biết tính năng và cách dùng: quảng cáo thông tin. Nhắc nhở dành cho thương hiệu đã biết; thuyết phục/cạnh tranh nhằm chuyển thái độ khi đã có nhận biết."
+    },
+    {
+      "id": 188,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "CHƯƠNG 9 – CHÍNH SÁCH XÚC TIẾN",
+      "question": "Một thương hiệu nước giải khát đã có nhận biết cao trên thị trường nhưng doanh số có dấu hiệu giảm do khách hàng chuyển sang thương hiệu khác. Doanh nghiệp muốn quảng cáo nhằm xây dựng sự ưu thích và khuyến khích khách hàng chuyển sang thương hiệu của mình. Mục tiêu phù hợp nhất là:",
+      "options": {
+        "A": "Quảng cáo thông tin",
+        "B": "Quảng cáo thuyết phục",
+        "C": "Quảng cáo nhắc nhở",
+        "D": "Quảng cáo tuyển dụng"
+      },
+      "answer": "B",
+      "explainAnswer": "Nhận biết đã cao nhưng khách chuyển sang đối thủ: quảng cáo thuyết phục để tạo ưu thích và chuyển đổi. Thông tin cho giai đoạn chưa biết; nhắc nhở giữ hiện diện; tuyển dụng không phải mục tiêu thương hiệu."
+    },
+    {
+      "id": 189,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "CHƯƠNG 9 – CHÍNH SÁCH XÚC TIẾN",
+      "question": "Một nhãn hàng kem muốn duy trì ấn tượng thương hiệu trong tâm trí khách hàng vào mùa đông, khi nhu cầu tiêu dùng thấp. Doanh nghiệp nên ưu tiên:",
+      "options": {
+        "A": "Quảng cáo thông tin",
+        "B": "Quảng cáo thuyết phục",
+        "C": "Quảng cáo nhắc nhở",
+        "D": "Bán hàng cá nhân"
+      },
+      "answer": "C",
+      "explainAnswer": "Kem vào mùa đông, nhu cầu thấp, cần giữ thương hiệu trong tâm trí: quảng cáo nhắc nhở. Thông tin và thuyết phục không phải mục tiêu trái vụ; bán hàng cá nhân không phải công cụ duy trì hình ảnh đại chúng."
+    },
+    {
+      "id": 190,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "CHƯƠNG 9 – CHÍNH SÁCH XÚC TIẾN",
+      "question": "Một doanh nghiệp muốn quảng cáo tới 80% khách hàng mục tiêu trong vòng 3 tháng. Sau khi lựa chọn phương tiện, bộ phận marketing cần theo dõi số lần trung bình một người tiếp xúc với thông điệp mỗi tuần. Chỉ tiêu đang được đo là:",
+      "options": {
+        "A": "Phạm vi",
+        "B": "Tần suất",
+        "C": "Cường độ",
+        "D": "Chi phí truyền thông"
+      },
+      "answer": "B",
+      "explainAnswer": "80% khách mục tiêu trong 3 tháng là phạm vi; số lần trung bình một người tiếp xúc thông điệp mỗi tuần là tần suất. Cường độ/chi phí không đo số lần tiếp xúc trung bình."
+    },
+    {
+      "id": 191,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "CHƯƠNG 9 – CHÍNH SÁCH XÚC TIẾN",
+      "question": "Một doanh nghiệp muốn quảng cáo đến một lượng lớn khách hàng mục tiêu trong thời gian ngắn. Công ty cân nhắc truyền hình vì phương tiện này kết hợp được hình, tiếng và khả năng thu hút nhiều giác quan. Lựa chọn này dựa trên ưu điểm nào của truyền hình?",
+      "options": {
+        "A": "Khả năng chọn lọc người nhận tin rất cao",
+        "B": "Tầm bao phủ rộng và sức mạnh kết hợp nhiều giác quan",
+        "C": "Chi phí tổng thể luôn thấp nhất",
+        "D": "Không có hiện tượng nhiễu thông tin"
+      },
+      "answer": "B",
+      "explainAnswer": "Truyền hình có tầm bao phủ rộng và kết hợp hình ảnh, âm thanh, nhiều giác quan. Nhược điểm là khó chọn lọc người nhận, chi phí tổng thể cao và vẫn có nhiễu, nên không chọn A, C, D."
+    },
+    {
+      "id": 192,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "CHƯƠNG 9 – CHÍNH SÁCH XÚC TIẾN",
+      "question": "Một doanh nghiệp có ngân sách truyền thông hạn chế nhưng muốn tiếp cận chính xác một nhóm khách hàng cụ thể và tạo khả năng tương tác ngay. Doanh nghiệp đang cân nhắc Internet. Đặc điểm nào ủng hộ lựa chọn này?",
+      "options": {
+        "A": "Tính lựa chọn cao, giá thấp, tức thời và có khả năng tương tác",
+        "B": "Tầm bao phủ rộng nhưng không có khả năng tương tác",
+        "C": "Chi phí tổng thể cao nhưng uy tín tuyệt đối",
+        "D": "Khả năng tiếp cận thấp và không thể lựa chọn khách hàng"
+      },
+      "answer": "A",
+      "explainAnswer": "Internet có tính lựa chọn cao, giá thấp, tức thời, tương tác, phù hợp ngân sách hạn chế cần đúng nhóm. Không phải bao phủ rộng mà không tương tác, không phải chi phí cao/uy tín tuyệt đối, cũng không phải tiếp cận thấp."
+    },
+    {
+      "id": 193,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "CHƯƠNG 9 – CHÍNH SÁCH XÚC TIẾN",
+      "question": "Một thương hiệu mỹ phẩm xây dựng quảng cáo nhấn mạnh “sản phẩm phù hợp với phong cách sống hiện đại của phụ nữ trẻ”. Doanh nghiệp đang sử dụng cách thức thể hiện thông điệp nào?",
+      "options": {
+        "A": "Bằng chứng khoa học",
+        "B": "Phong cách sống",
+        "C": "Xác nhận kỹ thuật",
+        "D": "Chứng thực của chuyên gia"
+      },
+      "answer": "B",
+      "explainAnswer": "Thông điệp sản phẩm phù hợp phong cách sống hiện đại của phụ nữ trẻ dùng cách thể hiện phong cách sống. Không phải bằng chứng khoa học, xác nhận kỹ thuật hay chứng thực chuyên gia."
+    },
+    {
+      "id": 194,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "CHƯƠNG 9 – CHÍNH SÁCH XÚC TIẾN",
+      "question": "Một thương hiệu thời trang định vị là \"thời trang tối giản, cao cấp cho người trẻ thành đạt\", nhưng quảng cáo mới lại tập trung vào thông điệp giá rẻ và mua càng nhiều càng tốt. Vấn đề quan trọng nhất của quảng cáo là:",
+      "options": {
+        "A": "Tần suất quảng cáo quá thấp",
+        "B": "Thông điệp không phù hợp với chiến lược định vị",
+        "C": "Phương tiện truyền thông không có âm thanh",
+        "D": "Phạm vi quảng cáo quá rộng"
+      },
+      "answer": "B",
+      "explainAnswer": "Định vị tối giản cao cấp mà quảng cáo kêu gọi giá rẻ, mua nhiều: thông điệp lệch chiến lược định vị. Không phải vì tần suất thấp, thiếu âm thanh hay phạm vi rộng."
+    },
+    {
+      "id": 195,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "CHƯƠNG 9 – CHÍNH SÁCH XÚC TIẾN",
+      "question": "Một hãng điện thoại mới muốn kích thích khách hàng dùng thử sản phẩm bằng cách phát hàng mẫu tại các trung tâm thương mại trong tuần đầu ra mắt. Công cụ phù hợp nhất là:",
+      "options": {
+        "A": "Quan hệ công chúng",
+        "B": "Khuyến mại",
+        "C": "Quảng cáo",
+        "D": "Marketing trực tiếp"
+      },
+      "answer": "B",
+      "explainAnswer": "Hàng mẫu tại trung tâm thương mại để dùng thử: khuyến mại. PR xây quan hệ; quảng cáo truyền thông điệp; marketing trực tiếp giao tiếp trực tiếp dài hạn hơn hàng mẫu sự kiện."
+    },
+    {
+      "id": 196,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "CHƯƠNG 9 – CHÍNH SÁCH XÚC TIẾN",
+      "question": "Một nhà sản xuất muốn các đại lý ưu tiên bán sản phẩm mới, dự trữ nhiều hơn và dành nhiều vị trí trưng bày hơn cho sản phẩm. Công cụ phù hợp nhất là:",
+      "options": {
+        "A": "Khuyến mại hướng tới thành viên trung gian",
+        "B": "Quảng cáo nhắc nhở người tiêu dùng",
+        "C": "Quan hệ công chúng hướng tới báo chí",
+        "D": "Marketing trực tiếp tới khách hàng cuối cùng"
+      },
+      "answer": "A",
+      "explainAnswer": "Muốn đại lý nhập nhiều, trưng bày nhiều, ưu tiên bán hàng mới: khuyến mại hướng trung gian (chiến lược đẩy). Quảng cáo nhắc người dùng, PR báo chí hay marketing trực tiếp khách cuối là kéo, không tác động trực tiếp đại lý."
+    },
+    {
+      "id": 197,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "CHƯƠNG 9 – CHÍNH SÁCH XÚC TIẾN",
+      "question": "Một công ty B2B bán thiết bị sản xuất có giá trị lớn. Khách hàng cần được giải thích kỹ về thông số kỹ thuật, cách vận hành và hiệu quả đầu tư trước khi quyết định mua. Công cụ truyền thông nào phù hợp nhất?",
+      "options": {
+        "A": "Quảng cáo ngoài trời",
+        "B": "Bán hàng cá nhân",
+        "C": "Khuyến mại bằng phiếu thưởng",
+        "D": "Quảng cáo truyền thanh"
+      },
+      "answer": "B",
+      "explainAnswer": "Thiết bị B2B giá trị lớn, cần giải thích thông số và hiệu quả đầu tư: bán hàng cá nhân. Ngoài trời, phiếu thưởng hay truyền thanh không đủ tư vấn kỹ thuật."
+    },
+    {
+      "id": 198,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "CHƯƠNG 9 – CHÍNH SÁCH XÚC TIẾN",
+      "question": "Một doanh nghiệp muốn cải thiện uy tín sau một sự cố môi trường. Công ty tổ chức hoạt động cộng đồng, tài trợ một chương trình xã hội và phối hợp với báo chí để truyền tải các hoạt động này. Công cụ nên giữ vai trò trung tâm là:",
+      "options": {
+        "A": "Quan hệ công chúng",
+        "B": "Khuyến mại",
+        "C": "Bán hàng cá nhân",
+        "D": "Định giá"
+      },
+      "answer": "A",
+      "explainAnswer": "Sau sự cố môi trường: hoạt động cộng đồng, tài trợ, phối hợp báo chí lấy PR làm trung tâm. Khuyến mại, bán hàng cá nhân hay định giá không khôi phục uy tín công chúng."
+    },
+    {
+      "id": 199,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "CHƯƠNG 9 – CHÍNH SÁCH XÚC TIẾN",
+      "question": "Một doanh nghiệp muốn đẩy mạnh sản phẩm mới bằng cách tác động trực tiếp đến nhà bán buôn và nhà bán lẻ để họ nhập hàng, trưng bày và thúc đẩy bán sản phẩm. Đây là biểu hiện của:",
+      "options": {
+        "A": "Chiến lược kéo",
+        "B": "Chiến lược đẩy",
+        "C": "Chiến lược định vị",
+        "D": "Chiến lược phân phối độc quyền"
+      },
+      "answer": "B",
+      "explainAnswer": "Tác động nhà bán buôn/bán lẻ để họ nhập, trưng bày và thúc bán: chiến lược đẩy. Kéo tác động khách cuối để họ đòi hàng; định vị và phân phối độc quyền không mô tả hướng tác động kênh."
+    },
+    {
+      "id": 200,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "CHƯƠNG 9 – CHÍNH SÁCH XÚC TIẾN",
+      "question": "Một doanh nghiệp có ngân sách truyền thông hạn chế. Ban giám đốc xác định rõ mục tiêu là đạt 10.000 lượt dùng thử và sau đó tính toán chi phí cần thiết cho quảng cáo, hàng mẫu và các hoạt động hỗ trợ để đạt mục tiêu. Doanh nghiệp đang sử dụng phương pháp xác định ngân sách nào?",
+      "options": {
+        "A": "Theo tỷ lệ phần trăm doanh thu",
+        "B": "Cân bằng cạnh tranh",
+        "C": "Căn cứ vào mục tiêu và nhiệm vụ cần hoàn thành",
+        "D": "Tùy khả năng tài chính hiện tại"
+      },
+      "answer": "C",
+      "explainAnswer": "Đặt mục tiêu 10.000 lượt dùng thử rồi tính chi phí quảng cáo, hàng mẫu, hỗ trợ: phương pháp mục tiêu và nhiệm vụ. Không phải % doanh thu, cân bằng cạnh tranh hay tùy tiền đang có."
+    },
+    {
+      "id": 242,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "",
+      "question": "Truyền thông Marketing về bản chất là hoạt động:",
+      "options": {
+        "A": "Truyền đi thông tin về tổ chức và sản phẩm tới khách hàng mục tiêu",
+        "B": "Chỉ nhằm giảm giá sản phẩm",
+        "C": "Chỉ nhằm xây dựng hệ thống phân phối",
+        "D": "Chỉ nhằm nghiên cứu đối thủ cạnh tranh"
+      },
+      "answer": "A",
+      "explainAnswer": "Truyền thông marketing là hoạt động truyền thông tin về tổ chức và sản phẩm tới khách hàng mục tiêu. Nó không chỉ nhằm giảm giá, không chỉ nhằm xây kênh phân phối và không chỉ nhằm nghiên cứu đối thủ."
+    },
+    {
+      "id": 243,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "",
+      "question": "Năm công cụ chủ yếu của phối thức truyền thông Marketing gồm:",
+      "options": {
+        "A": "Quảng cáo, giá, sản phẩm, phân phối, bán hàng",
+        "B": "Quảng cáo, khuyến mại, bán hàng cá nhân, PR, Marketing trực tiếp",
+        "C": "PR, sản xuất, logistics, bán hàng, giá",
+        "D": "Nghiên cứu, sản phẩm, giá, phân phối, PR"
+      },
+      "answer": "B",
+      "explainAnswer": "Năm công cụ của phối thức truyền thông marketing là quảng cáo, khuyến mại, bán hàng cá nhân, quan hệ công chúng và marketing trực tiếp. Giá, sản phẩm, phân phối thuộc 4P; sản xuất và logistics không nằm trong promotion mix."
+    },
+    {
+      "id": 244,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "",
+      "question": "Công cụ nào sau đây thuộc quan hệ công chúng (PR)?",
+      "options": {
+        "A": "Phiếu thưởng",
+        "B": "Hàng mẫu",
+        "C": "Quan hệ báo giới",
+        "D": "Chiết khấu số lượng"
+      },
+      "answer": "C",
+      "explainAnswer": "Quan hệ báo giới là công cụ quan hệ công chúng, nhằm xây dựng uy tín qua phương tiện truyền thông. Phiếu thưởng, hàng mẫu và chiết khấu số lượng là các hình thức khuyến mại, kích thích mua trong ngắn hạn."
+    },
+    {
+      "id": 245,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "",
+      "question": "Công cụ nào sau đây là một hình thức của khuyến mại?",
+      "options": {
+        "A": "Hàng mẫu",
+        "B": "Quan hệ báo giới",
+        "C": "Tư vấn sản phẩm",
+        "D": "Thư gửi qua bưu điện"
+      },
+      "answer": "A",
+      "explainAnswer": "Hàng mẫu là hình thức khuyến mại điển hình, nhằm kích thích dùng thử. Quan hệ báo giới thuộc PR; tư vấn sản phẩm gắn với bán hàng cá nhân; thư gửi qua bưu điện là marketing trực tiếp."
+    },
+    {
+      "id": 246,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "",
+      "question": "Đặc trưng cơ bản của bán hàng cá nhân là:",
+      "options": {
+        "A": "Truyền thông đại chúng một chiều",
+        "B": "Trình bày, tư vấn và trao đổi trực tiếp với khách hàng",
+        "C": "Truyền thông hoàn toàn tự động",
+        "D": "Chỉ sử dụng phương tiện truyền hình"
+      },
+      "answer": "B",
+      "explainAnswer": "Bán hàng cá nhân là trình bày, tư vấn và trao đổi trực tiếp với một hoặc vài khách hàng tiềm năng để thuyết phục mua. Không phải truyền thông đại chúng một chiều, không phải quy trình hoàn toàn tự động và không bị giới hạn chỉ ở truyền hình."
+    },
+    {
+      "id": 247,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "",
+      "question": "Marketing trực tiếp có đặc điểm nổi bật là:",
+      "options": {
+        "A": "Chỉ thực hiện thông qua các đại lý",
+        "B": "Sử dụng các phương tiện để giao tiếp trực tiếp với khách hàng",
+        "C": "Chỉ sử dụng truyền hình",
+        "D": "Không có sự tương tác với khách hàng"
+      },
+      "answer": "B",
+      "explainAnswer": "Marketing trực tiếp dùng các phương tiện để giao tiếp thẳng với khách hàng xác định, thường có tương tác và phản hồi. Không phải chỉ thực hiện qua đại lý, không phải chỉ dùng truyền hình và không phải thiếu tương tác."
+    },
+    {
+      "id": 248,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "",
+      "question": "Trong quá trình truyền thông Marketing, bước nào liên quan đến việc xác định người mà doanh nghiệp muốn truyền thông tới?",
+      "options": {
+        "A": "Xác định đối tượng mục tiêu",
+        "B": "Thu thập phản hồi",
+        "C": "Lựa chọn nguồn phát",
+        "D": "Xác định ngân sách"
+      },
+      "answer": "A",
+      "explainAnswer": "Bước xác định đối tượng mục tiêu trả lời câu hỏi doanh nghiệp muốn truyền thông tới ai, tức công chúng nhận tin. Thu thập phản hồi, lựa chọn nguồn phát và xác định ngân sách là các bước khác trong quy trình xây dựng chương trình truyền thông."
+    },
+    {
+      "id": 249,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "",
+      "question": "Trong quảng cáo, độ bao phủ (reach) được hiểu là:",
+      "options": {
+        "A": "Số lần trung bình một người tiếp xúc với quảng cáo",
+        "B": "Tỷ lệ thị trường mục tiêu được tiếp xúc với quảng cáo trong một khoảng thời gian",
+        "C": "Mức độ tin cậy của phương tiện truyền thông",
+        "D": "Chi phí để tạo ra một quảng cáo"
+      },
+      "answer": "B",
+      "explainAnswer": "Độ bao phủ (reach) là tỷ lệ thị trường mục tiêu được tiếp xúc với quảng cáo trong một khoảng thời gian. Số lần trung bình một người tiếp xúc là tần suất (frequency); mức độ tin cậy của phương tiện và chi phí làm quảng cáo không phải reach."
+    },
+    {
+      "id": 250,
+      "chapter": "Chương 9. Chính sách xúc tiến",
+      "sourceChapter": "",
+      "question": "Mục tiêu quảng cáo nhắc nhở chủ yếu nhằm:",
+      "options": {
+        "A": "Giới thiệu một sản phẩm hoàn toàn mới cho khách hàng chưa biết",
+        "B": "Thuyết phục khách hàng chuyển từ thương hiệu khác",
+        "C": "Duy trì sự hiện diện và nhắc khách hàng nhớ đến sản phẩm/thương hiệu",
+        "D": "Giải thích chi tiết toàn bộ quy trình sản xuất"
+      },
+      "answer": "C",
+      "explainAnswer": "Quảng cáo nhắc nhở nhằm duy trì sự hiện diện và gợi nhớ sản phẩm, thương hiệu, kể cả khi nhu cầu trái vụ. Giới thiệu sản phẩm hoàn toàn mới cho khách chưa biết là quảng cáo thông tin; thuyết phục chuyển thương hiệu là quảng cáo thuyết phục; giải thích quy trình sản xuất không phải mục tiêu nhắc nhở."
+    }
+  ]
+}

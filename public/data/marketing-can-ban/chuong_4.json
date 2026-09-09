@@ -1,11 +1,418 @@
 {
-  "title": "Bộ câu hỏi Marketing căn bản - Chương IV - Hành vi khách hàng",
-  "chapter": "Chương IV - Hành vi khách hàng",
-  "totalQuestions": 55,
+  "title": "Bộ câu hỏi trắc nghiệm Marketing căn bản - Chương 4. Hành vi khách hàng",
+  "chapter": "Chương 4. Hành vi khách hàng",
+  "totalQuestions": 74,
   "questions": [
     {
-      "id": 1,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 65,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "CHƯƠNG 4 – HÀNH VI KHÁCH HÀNG",
+      "question": "Một doanh nghiệp muốn nghiên cứu hành vi của những cá nhân và hộ gia đình mua sản phẩm để phục vụ nhu cầu sinh hoạt của chính họ. Đối tượng nghiên cứu này thuộc thị trường nào?",
+      "options": {
+        "A": "Thị trường các nhà sản xuất.",
+        "B": "Thị trường người tiêu dùng.",
+        "C": "Thị trường bán buôn trung gian.",
+        "D": "Thị trường các tổ chức Nhà nước."
+      },
+      "answer": "B",
+      "explainAnswer": "Cá nhân và hộ mua cho sinh hoạt thuộc thị trường người tiêu dùng. Nhà sản xuất, trung gian bán buôn và tổ chức nhà nước mua cho sản xuất, kinh doanh hoặc công vụ."
+    },
+    {
+      "id": 66,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "CHƯƠNG 4 – HÀNH VI KHÁCH HÀNG",
+      "question": "Một khách hàng nhìn thấy quảng cáo điện thoại, tiếp nhận thông tin nhưng quyết định mua hay không còn phụ thuộc vào đặc điểm cá nhân và quá trình suy nghĩ của họ. Trong mô hình hành vi người tiêu dùng, quá trình này phù hợp nhất với khái niệm nào?",
+      "options": {
+        "A": "Hệ thống Marketing của doanh nghiệp.",
+        "B": "Hộp đen ý thức của người tiêu dùng.",
+        "C": "Môi trường Marketing của doanh nghiệp.",
+        "D": "Hệ thống phân phối của doanh nghiệp."
+      },
+      "answer": "B",
+      "explainAnswer": "Kích thích bên ngoài đi vào quá trình tâm lý bên trong rồi cho phản ứng mua: hộp đen ý thức. Hệ thống marketing, môi trường hay phân phối là đầu vào/đầu ra, không phải cơ chế xử lý bên trong."
+    },
+    {
+      "id": 67,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "CHƯƠNG 4 – HÀNH VI KHÁCH HÀNG",
+      "question": "Hai người cùng nhìn thấy một quảng cáo nhưng có thể đưa ra phản ứng khác nhau vì tuổi tác, thu nhập, nghề nghiệp, lối sống và nhân cách khác nhau. Điều này cho thấy:",
+      "options": {
+        "A": "Người tiêu dùng luôn phản ứng giống nhau trước cùng một kích thích Marketing.",
+        "B": "Đặc tính người tiêu dùng ảnh hưởng cách họ tiếp nhận và phản ứng với kích thích.",
+        "C": "Chỉ giá cả mới quyết định phản ứng của người tiêu dùng.",
+        "D": "Hành vi mua hoàn toàn do doanh nghiệp kiểm soát thông qua xúc tiến."
+      },
+      "answer": "B",
+      "explainAnswer": "Cùng một quảng cáo nhưng tuổi, thu nhập, nghề, lối sống khác nhau làm phản ứng khác nhau vì đặc tính người tiêu dùng. Không phải mọi người phản ứng giống nhau, không chỉ giá quyết định, doanh nghiệp cũng không kiểm soát hết hành vi."
+    },
+    {
+      "id": 68,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "CHƯƠNG 4 – HÀNH VI KHÁCH HÀNG",
+      "question": "Một người thường tham khảo ý kiến gia đình, bạn thân và đồng nghiệp trước khi lựa chọn một thương hiệu. Những nhóm này được gọi là:",
+      "options": {
+        "A": "Giai tầng xã hội.",
+        "B": "Nhóm tham khảo.",
+        "C": "Công chúng truyền thông.",
+        "D": "Trung gian Marketing."
+      },
+      "answer": "B",
+      "explainAnswer": "Gia đình, bạn thân, đồng nghiệp là nhóm tham khảo khi hình thành thái độ và lựa chọn nhãn hiệu. Giai tầng là vị thế xã hội rộng hơn; công chúng truyền thông và trung gian marketing không phải nhóm người tiêu dùng tham khảo."
+    },
+    {
+      "id": 69,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "CHƯƠNG 4 – HÀNH VI KHÁCH HÀNG",
+      "question": "Một người tiêu dùng nhận thấy chiếc điện thoại hiện tại không đáp ứng nhu cầu sử dụng và bắt đầu muốn có một chiếc điện thoại mới. Đây là giai đoạn nào trong quá trình quyết định mua?",
+      "options": {
+        "A": "Nhận biết nhu cầu.",
+        "B": "Tìm kiếm thông tin.",
+        "C": "Đánh giá phương án.",
+        "D": "Đánh giá sau khi mua."
+      },
+      "answer": "A",
+      "explainAnswer": "Điện thoại cũ không đáp ứng nhu cầu là nhận biết nhu cầu, bước đầu quy trình mua. Tìm kiếm, đánh giá phương án và đánh giá sau mua diễn ra sau bước này."
+    },
+    {
+      "id": 70,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "CHƯƠNG 4 – HÀNH VI KHÁCH HÀNG",
+      "question": "Một người đang cân nhắc mua laptop và đánh giá RAM, thiết kế, thương hiệu, giá cả và dịch vụ bảo hành. Cách đánh giá này phản ánh quan điểm nào về sản phẩm?",
+      "options": {
+        "A": "Sản phẩm chỉ được đánh giá dựa trên giá bán.",
+        "B": "Người tiêu dùng xem sản phẩm là một tập hợp các thuộc tính phản ánh lợi ích mong đợi.",
+        "C": "Người tiêu dùng chỉ quan tâm đến đặc tính kỹ thuật của sản phẩm.",
+        "D": "Người tiêu dùng luôn lựa chọn sản phẩm có nhiều thuộc tính nhất."
+      },
+      "answer": "B",
+      "explainAnswer": "RAM, thiết kế, thương hiệu, giá, bảo hành cho thấy người mua xem sản phẩm là tập hợp thuộc tính phản ánh lợi ích mong đợi. Không chỉ giá, không chỉ kỹ thuật, cũng không phải cứ nhiều thuộc tính thì được chọn."
+    },
+    {
+      "id": 71,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "CHƯƠNG 4 – HÀNH VI KHÁCH HÀNG",
+      "question": "Một thương hiệu nước giải khát phát hiện người tiêu dùng trẻ ngày càng quan tâm đến trải nghiệm mới và các sản phẩm phù hợp với phong cách sống cá nhân. Thương hiệu muốn điều chỉnh hoạt động Marketing dựa trên sự thay đổi của thị trường. Yếu tố nào cần được doanh nghiệp đặc biệt chú ý?",
+      "options": {
+        "A": "Chỉ quy mô dân số của thị trường.",
+        "B": "Đặc điểm và sự khác biệt của người tiêu dùng.",
+        "C": "Chỉ số lượng trung gian phân phối.",
+        "D": "Chỉ số lượng đối thủ cạnh tranh."
+      },
+      "answer": "B",
+      "explainAnswer": "Phong cách sống và trải nghiệm của người trẻ là đặc điểm/khác biệt người tiêu dùng cần theo dõi. Chỉ quy mô dân số, số trung gian hay số đối thủ không giải thích thay đổi thị hiếu này."
+    },
+    {
+      "id": 72,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "CHƯƠNG 4 – HÀNH VI KHÁCH HÀNG",
+      "question": "Một hãng điện thoại tung quảng cáo nhấn mạnh camera, nhưng một nhóm khách hàng lại quan tâm chủ yếu đến độ bền và thời lượng pin. Hai nhóm tiếp nhận cùng một quảng cáo nhưng phản ứng khác nhau. Nguyên nhân phù hợp nhất là:",
+      "options": {
+        "A": "Khác biệt trong đặc tính và nhu cầu của người tiêu dùng.",
+        "B": "Doanh nghiệp sử dụng sai hệ thống phân phối.",
+        "C": "Giá sản phẩm chưa được niêm yết chính xác.",
+        "D": "Thị trường người tiêu dùng không có sự khác biệt."
+      },
+      "answer": "A",
+      "explainAnswer": "Một nhóm thích camera, nhóm khác thích pin vì khác biệt đặc tính và nhu cầu nên hiểu cùng quảng cáo khác nhau. Không phải vì kênh phân phối, niêm yết giá hay vì thị trường đồng nhất."
+    },
+    {
+      "id": 73,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "CHƯƠNG 4 – HÀNH VI KHÁCH HÀNG",
+      "question": "Một thương hiệu giày thể thao muốn thâm nhập nhóm khách hàng trẻ thường xuyên tham gia các câu lạc bộ thể thao. Doanh nghiệp muốn xác định những người có khả năng tác động mạnh đến lựa chọn thương hiệu của nhóm này. Doanh nghiệp nên ưu tiên:",
+      "options": {
+        "A": "Xác định các nhóm tham khảo và tìm kiếm người định hướng dư luận.",
+        "B": "Chỉ khảo sát mức thu nhập trung bình của thị trường.",
+        "C": "Chỉ thay đổi bao bì sản phẩm.",
+        "D": "Chỉ mở rộng số lượng điểm bán."
+      },
+      "answer": "A",
+      "explainAnswer": "Câu lạc bộ thể thao là nhóm tham khảo; cần tìm người định hướng dư luận trong nhóm. Chỉ khảo sát thu nhập, đổi bao bì hay thêm điểm bán không khai thác ảnh hưởng xã hội then chốt."
+    },
+    {
+      "id": 74,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "CHƯƠNG 4 – HÀNH VI KHÁCH HÀNG",
+      "question": "Một hãng bán đồng hồ nhận thấy khách hàng mua đồng hồ cao cấp thường quan tâm đến việc bạn bè, đồng nghiệp và cộng đồng đánh giá như thế nào về thương hiệu. Trong trường hợp này, doanh nghiệp nên tập trung khai thác:",
+      "options": {
+        "A": "Ảnh hưởng của nhóm tham khảo.",
+        "B": "Ảnh hưởng của nhà cung ứng.",
+        "C": "Ảnh hưởng của trung gian tài chính.",
+        "D": "Ảnh hưởng của quy mô hộ gia đình."
+      },
+      "answer": "A",
+      "explainAnswer": "Mua đồng hồ cao cấp vì bạn bè, đồng nghiệp đánh giá thương hiệu là ảnh hưởng nhóm tham khảo. Nhà cung ứng, trung gian tài chính hay quy mô hộ không giải thích động cơ thể hiện địa vị."
+    },
+    {
+      "id": 75,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "CHƯƠNG 4 – HÀNH VI KHÁCH HÀNG",
+      "question": "Một công ty bán mì ăn liền nhận thấy quy mô hộ gia đình tại thị trường mục tiêu đang giảm, nhiều hộ chỉ có một hoặc hai người. Doanh nghiệp muốn điều chỉnh quy cách đóng gói. Quyết định nào phù hợp nhất?",
+      "options": {
+        "A": "Tăng kích cỡ mọi gói sản phẩm để tối đa hóa sản lượng.",
+        "B": "Nghiên cứu quy mô hộ để điều chỉnh kích cỡ đóng gói và tần suất mua.",
+        "C": "Chỉ tăng ngân sách quảng cáo để duy trì sản lượng.",
+        "D": "Giữ nguyên bao bì vì quy mô hộ không ảnh hưởng đến hành vi mua."
+      },
+      "answer": "B",
+      "explainAnswer": "Hộ nhỏ hơn làm giảm kích cỡ gói và đổi tần suất mua. Tăng mọi gói, chỉ tăng quảng cáo hay giữ nguyên bao bì bỏ qua biến nhân khẩu này."
+    },
+    {
+      "id": 76,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "CHƯƠNG 4 – HÀNH VI KHÁCH HÀNG",
+      "question": "Một gia đình trẻ có thu nhập tăng đáng kể và bắt đầu chuyển từ các sản phẩm phổ thông sang sản phẩm có chất lượng và giá trị cao hơn. Doanh nghiệp muốn dự báo sự thay đổi trong cơ cấu mua sắm của nhóm này. Yếu tố cần xem xét trực tiếp nhất là:",
+      "options": {
+        "A": "Thu nhập gia đình.",
+        "B": "Nhóm tham khảo bên ngoài.",
+        "C": "Nhận thức thương hiệu.",
+        "D": "Đặc điểm của nhà bán lẻ."
+      },
+      "answer": "A",
+      "explainAnswer": "Chuyển từ hàng phổ thông sang hàng giá trị cao khi thu nhập tăng: yếu tố trực tiếp là thu nhập gia đình. Nhóm tham khảo, nhận thức thương hiệu hay nhà bán lẻ là yếu tố gián tiếp hơn."
+    },
+    {
+      "id": 77,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "CHƯƠNG 4 – HÀNH VI KHÁCH HÀNG",
+      "question": "Một thương hiệu nội thất muốn bán sản phẩm cho các gia đình có phong cách sống tối giản. Thay vì chỉ phân đoạn theo thu nhập, doanh nghiệp muốn hiểu sâu hơn về cách khách hàng sống, sở thích và mối quan tâm của họ. Biến số nào phù hợp nhất?",
+      "options": {
+        "A": "Lối sống.",
+        "B": "Tuổi sinh học.",
+        "C": "Quy mô gia đình.",
+        "D": "Nghề nghiệp của người bán hàng."
+      },
+      "answer": "A",
+      "explainAnswer": "Cách sống, sở thích, mối quan tâm là lối sống, biến cá nhân sâu hơn thu nhập. Tuổi sinh học và quy mô gia đình là nhân khẩu; nghề người bán không phải đặc tính khách hàng."
+    },
+    {
+      "id": 78,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "CHƯƠNG 4 – HÀNH VI KHÁCH HÀNG",
+      "question": "Một doanh nghiệp bán quần áo công sở nhận thấy khách hàng làm việc trong các ngành nghề khác nhau có nhu cầu trang phục khác nhau. Doanh nghiệp muốn thiết kế danh mục sản phẩm phù hợp. Yếu tố cá nhân nào giải thích rõ nhất sự khác biệt này?",
+      "options": {
+        "A": "Nghề nghiệp.",
+        "B": "Nhóm tham khảo.",
+        "C": "Nhận thức.",
+        "D": "Giai tầng xã hội."
+      },
+      "answer": "A",
+      "explainAnswer": "Nhu cầu trang phục công sở khác nhau theo ngành nghề nên biến then chốt là nghề nghiệp. Nhóm tham khảo và nhận thức là xã hội/tâm lý; giai tầng rộng hơn nghề."
+    },
+    {
+      "id": 79,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "CHƯƠNG 4 – HÀNH VI KHÁCH HÀNG",
+      "question": "Một hãng ô tô nhận thấy nhóm khách hàng trẻ độc thân có nhu cầu sản phẩm khác với nhóm khách hàng đã kết hôn và có con. Hãng muốn xây dựng các chương trình Marketing khác nhau cho từng nhóm. Yếu tố nào nên được ưu tiên phân tích?",
+      "options": {
+        "A": "Giai đoạn đường đời của người tiêu dùng.",
+        "B": "Chỉ trình độ học vấn.",
+        "C": "Chỉ nhóm tham khảo.",
+        "D": "Chỉ nhận thức về thương hiệu."
+      },
+      "answer": "A",
+      "explainAnswer": "Độc thân khác nhu cầu với đã kết hôn có con: giai đoạn đường đời. Không chỉ học vấn, nhóm tham khảo hay nhận thức thương hiệu."
+    },
+    {
+      "id": 80,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "CHƯƠNG 4 – HÀNH VI KHÁCH HÀNG",
+      "question": "Một thương hiệu thời trang cao cấp muốn xây dựng ấn tượng phù hợp với khách hàng có địa vị xã hội cao. Doanh nghiệp nghiên cứu của cải, nghề nghiệp, trình độ và định hướng giá trị của khách hàng. Doanh nghiệp đang khai thác:",
+      "options": {
+        "A": "Giai tầng xã hội.",
+        "B": "Nhận thức có chọn lọc.",
+        "C": "Động cơ sinh lý.",
+        "D": "Kinh nghiệm tiêu dùng."
+      },
+      "answer": "A",
+      "explainAnswer": "Của cải, nghề, học vấn, định hướng giá trị tạo giai tầng xã hội, dùng để phân đoạn và định vị cao cấp. Không phải nhận thức chọn lọc, động cơ sinh lý hay chỉ kinh nghiệm tiêu dùng."
+    },
+    {
+      "id": 81,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "CHƯƠNG 4 – HÀNH VI KHÁCH HÀNG",
+      "question": "Một khách hàng mua bảo hiểm vì lo ngại những rủi ro tài chính có thể xảy ra với gia đình. Doanh nghiệp muốn xây dựng thông điệp dựa trên lý do thực sự thúc đẩy hành vi mua. Theo lý thuyết động cơ, doanh nghiệp nên nhấn mạnh:",
+      "options": {
+        "A": "Nhu cầu an toàn.",
+        "B": "Nhu cầu sinh lý.",
+        "C": "Nhu cầu tự hoàn thiện.",
+        "D": "Nhu cầu được giao lưu."
+      },
+      "answer": "A",
+      "explainAnswer": "Mua bảo hiểm vì lo rủi ro tài chính gắn nhu cầu an toàn trong hệ thống Maslow. Sinh lý là đói khát; tự hoàn thiện là phát huy tiềm năng; giao lưu là nhu cầu xã hội/thuộc về."
+    },
+    {
+      "id": 82,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "CHƯƠNG 4 – HÀNH VI KHÁCH HÀNG",
+      "question": "Một người đang xem quảng cáo trên mạng nhưng chỉ chú ý đến những quảng cáo liên quan trực tiếp đến sở thích của mình và bỏ qua phần lớn quảng cáo khác. Hiện tượng này phản ánh:",
+      "options": {
+        "A": "Sự chú ý có chọn lọc.",
+        "B": "Sự lưu giữ có chọn lọc.",
+        "C": "Sự bóp méo thông tin.",
+        "D": "Sự thay đổi đường đời."
+      },
+      "answer": "A",
+      "explainAnswer": "Chỉ để ý quảng cáo đúng sở thích là chú ý có chọn lọc. Bóp méo là giải thích lệch theo niềm tin; lưu giữ là nhớ có chọn lọc sau đó; đường đời không phải cơ chế nhận thức."
+    },
+    {
+      "id": 83,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "CHƯƠNG 4 – HÀNH VI KHÁCH HÀNG",
+      "question": "Một khách hàng vốn tin rằng thương hiệu A có chất lượng cao. Khi đọc một quảng cáo của đối thủ cho rằng sản phẩm A có hiệu năng thấp, khách hàng diễn giải thông tin theo hướng phù hợp với niềm tin có sẵn của mình. Đây là biểu hiện của:",
+      "options": {
+        "A": "Sự chú ý có chọn lọc.",
+        "B": "Sự bóp méo thông tin hay nhận thức thiên vị.",
+        "C": "Sự lưu giữ thông tin có chọn lọc.",
+        "D": "Sự thay đổi nhu cầu."
+      },
+      "answer": "B",
+      "explainAnswer": "Diễn giải quảng cáo đối thủ theo hướng bảo vệ niềm tin sẵn có là bóp méo thông tin/nhận thức thiên vị. Chú ý là khâu chọn cái nhìn thấy; lưu giữ là khâu nhớ; không phải thay đổi nhu cầu."
+    },
+    {
+      "id": 84,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "CHƯƠNG 4 – HÀNH VI KHÁCH HÀNG",
+      "question": "Một người tiêu dùng sau khi mua điện thoại thường chỉ nhớ những thông tin tích cực củng cố lựa chọn của mình và ít nhớ những thông tin bất lợi mà họ từng đọc trước khi mua. Hiện tượng này phù hợp nhất với:",
+      "options": {
+        "A": "Sự chú ý có chọn lọc.",
+        "B": "Sự bóp méo thông tin.",
+        "C": "Sự lưu giữ có chọn lọc.",
+        "D": "Sự nhận biết nhu cầu."
+      },
+      "answer": "C",
+      "explainAnswer": "Sau khi mua, nhớ thông tin ủng hộ và quên thông tin bất lợi là lưu giữ có chọn lọc. Chú ý và bóp méo xảy ra lúc tiếp nhận/mã hóa; nhận biết nhu cầu là bước quy trình mua."
+    },
+    {
+      "id": 85,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "CHƯƠNG 4 – HÀNH VI KHÁCH HÀNG",
+      "question": "Một khách hàng có nhu cầu mua laptop. Ban đầu người này chỉ nhận ra máy hiện tại đã chậm và không đáp ứng công việc. Sau đó họ bắt đầu tìm kiếm thông tin về các mẫu laptop trên Internet. Hành vi tìm kiếm thông tin xuất hiện sau giai đoạn nào?",
+      "options": {
+        "A": "Đánh giá sau khi mua.",
+        "B": "Nhận biết nhu cầu.",
+        "C": "Quyết định mua.",
+        "D": "Đánh giá các phương án thay thế."
+      },
+      "answer": "B",
+      "explainAnswer": "Máy chậm không đáp ứng việc rồi mới tìm laptop: tìm kiếm thông tin đi sau nhận biết nhu cầu, trước đánh giá phương án và quyết định mua. Đánh giá sau mua là bước cuối."
+    },
+    {
+      "id": 86,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "CHƯƠNG 4 – HÀNH VI KHÁCH HÀNG",
+      "question": "Một khách hàng muốn mua ô tô và tham khảo ý kiến cha mẹ, bạn bè, xem quảng cáo của hãng, đọc đánh giá trên báo chí rồi trực tiếp lái thử xe. Doanh nghiệp muốn xác định các nguồn thông tin khách hàng đang sử dụng. Nguồn nào sau đây không thuộc các nhóm nguồn thông tin người tiêu dùng thường dùng khi tìm kiếm?",
+      "options": {
+        "A": "Nguồn thông tin cá nhân.",
+        "B": "Nguồn thông tin thương mại.",
+        "C": "Nguồn thông tin đại chúng.",
+        "D": "Nguồn thông tin nội bộ doanh nghiệp."
+      },
+      "answer": "D",
+      "explainAnswer": "Nguồn tìm kiếm của người tiêu dùng gồm cá nhân (gia đình, bạn), thương mại (quảng cáo hãng), đại chúng (báo chí) và kinh nghiệm (lái thử). Nguồn thông tin nội bộ doanh nghiệp không thuộc các nhóm nguồn người mua sử dụng."
+    },
+    {
+      "id": 87,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "CHƯƠNG 4 – HÀNH VI KHÁCH HÀNG",
+      "question": "Một khách hàng đang so sánh ba mẫu điện thoại. Người này cho rằng thời lượng pin là thuộc tính quan trọng nhất vì phù hợp với nhu cầu sử dụng, trong khi màu sắc chỉ có vai trò thứ yếu. Cách đánh giá này phù hợp nhất với nhận định nào?",
+      "options": {
+        "A": "Mọi thuộc tính sản phẩm đều có mức độ quan trọng như nhau.",
+        "B": "Người tiêu dùng có xu hướng phân loại mức độ quan trọng của các thuộc tính.",
+        "C": "Người tiêu dùng chỉ đánh giá sản phẩm dựa trên thương hiệu.",
+        "D": "Người tiêu dùng luôn lựa chọn sản phẩm có nhiều thuộc tính nhất."
+      },
+      "answer": "B",
+      "explainAnswer": "Pin quan trọng hơn màu sắc cho thấy người mua phân loại trọng số thuộc tính theo lợi ích mong đợi. Không phải mọi thuộc tính ngang nhau, không chỉ nhìn thương hiệu, cũng không chọn sản phẩm nhiều thuộc tính nhất."
+    },
+    {
+      "id": 88,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "CHƯƠNG 4 – HÀNH VI KHÁCH HÀNG",
+      "question": "Một thương hiệu điện thoại mới gia nhập thị trường nhưng khách hàng chưa có nhiều hiểu biết về sản phẩm. Doanh nghiệp muốn giúp khách hàng hình thành hiểu biết tích cực về thương hiệu. Giải pháp phù hợp nhất là:",
+      "options": {
+        "A": "Tổ chức các hoạt động Marketing hỗ trợ và phát triển hiểu biết của người tiêu dùng theo hướng tích cực.",
+        "B": "Không cung cấp thêm thông tin để khách hàng tự hình thành nhận thức.",
+        "C": "Chỉ giảm giá sản phẩm mà không cần truyền thông.",
+        "D": "Chỉ tập trung vào khách hàng đã từng mua sản phẩm."
+      },
+      "answer": "A",
+      "explainAnswer": "Sản phẩm mới ít hiểu biết thì phải truyền thông để hình thành nhận thức tích cực. Im lặng, chỉ giảm giá hay chỉ chăm khách cũ không tạo hiểu biết ban đầu trên thị trường."
+    },
+    {
+      "id": 217,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "",
+      "question": "Thị trường người tiêu dùng bao gồm:",
+      "options": {
+        "A": "Chỉ các doanh nghiệp mua hàng để sản xuất",
+        "B": "Cá nhân, hộ gia đình và nhóm mua sản phẩm cho nhu cầu cá nhân",
+        "C": "Chỉ các tổ chức nhà nước",
+        "D": "Chỉ những khách hàng đã từng mua sản phẩm"
+      },
+      "answer": "B",
+      "explainAnswer": "Thị trường người tiêu dùng gồm cá nhân, hộ gia đình và nhóm mua hàng hóa, dịch vụ để thỏa mãn nhu cầu cá nhân. Doanh nghiệp mua để sản xuất thuộc thị trường tư liệu sản xuất; tổ chức nhà nước thuộc thị trường chính phủ; thị trường tiêu dùng không chỉ gồm khách đã từng mua."
+    },
+    {
+      "id": 218,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "",
+      "question": "Trong mô hình hành vi người tiêu dùng, “hộp đen ý thức” bao gồm:",
+      "options": {
+        "A": "Các yếu tố Marketing và môi trường",
+        "B": "Đặc tính người tiêu dùng và quá trình ra quyết định mua",
+        "C": "Sản phẩm và giá bán",
+        "D": "Phân phối và xúc tiến"
+      },
+      "answer": "B",
+      "explainAnswer": "Hộp đen ý thức là cơ chế bên trong gồm đặc tính người tiêu dùng và quá trình ra quyết định mua, nơi các kích thích được xử lý thành phản ứng. Yếu tố marketing và môi trường là đầu vào; sản phẩm–giá hay phân phối–xúc tiến là kích thích 4P, không phải nội dung hộp đen."
+    },
+    {
+      "id": 219,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "",
+      "question": "Nhóm yếu tố nào sau đây thuộc các yếu tố tâm lý ảnh hưởng đến hành vi người tiêu dùng?",
+      "options": {
+        "A": "Văn hóa, tiểu văn hóa và tầng lớp xã hội",
+        "B": "Tuổi, nghề nghiệp và hoàn cảnh kinh tế",
+        "C": "Động cơ, nhận thức, học hỏi, niềm tin và thái độ",
+        "D": "Gia đình, nhóm tham khảo và vai trò xã hội"
+      },
+      "answer": "C",
+      "explainAnswer": "Nhóm tâm lý gồm động cơ, nhận thức, học hỏi, niềm tin và thái độ. Văn hóa, tiểu văn hóa, tầng lớp xã hội thuộc yếu tố xã hội; tuổi, nghề nghiệp, hoàn cảnh kinh tế thuộc yếu tố cá nhân; gia đình, nhóm tham khảo, vai trò xã hội cũng thuộc yếu tố xã hội."
+    },
+    {
+      "id": 220,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "",
+      "question": "Nhóm tham khảo là những nhóm:",
+      "options": {
+        "A": "Chỉ có quan hệ trực tiếp với doanh nghiệp",
+        "B": "Cá nhân xem xét như một sự tham khảo khi hình thành thái độ và quan điểm",
+        "C": "Chỉ bao gồm các thành viên trong gia đình",
+        "D": "Chỉ có ảnh hưởng đến quyết định về giá"
+      },
+      "answer": "B",
+      "explainAnswer": "Nhóm tham khảo là những nhóm cá nhân lấy làm chuẩn khi hình thành thái độ, quan điểm và hành vi mua, có thể ảnh hưởng trực tiếp hoặc gián tiếp. Không phải quan hệ với doanh nghiệp, không chỉ gồm gia đình và không chỉ tác động đến quyết định giá."
+    },
+    {
+      "id": 221,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "",
+      "question": "Theo mô hình quá trình ra quyết định mua của người tiêu dùng, bước đầu tiên là:",
+      "options": {
+        "A": "Tìm kiếm thông tin",
+        "B": "Đánh giá các phương án",
+        "C": "Nhận biết nhu cầu",
+        "D": "Đánh giá sau mua"
+      },
+      "answer": "C",
+      "explainAnswer": "Quy trình quyết định mua bắt đầu bằng nhận biết nhu cầu, khi xuất hiện khoảng cách giữa trạng thái hiện tại và trạng thái mong muốn. Tìm kiếm thông tin, đánh giá phương án diễn ra sau đó; đánh giá sau mua là bước cuối."
+    },
+    {
+      "id": 382,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Thị trường người tiêu dùng bao gồm:",
       "options": {
         "A": "Tất cả các cá nhân mua sắm hàng hóa/dịch vụ nhằm mục đích thỏa mãn nhu cầu cá nhân",
@@ -17,8 +424,9 @@
       "explainAnswer": "Thị trường người tiêu dùng gồm cá nhân và hộ gia đình mua hoặc sử dụng hàng hóa, dịch vụ để thỏa mãn nhu cầu cá nhân, bao gồm cả nhóm hiện tại và tiềm năng."
     },
     {
-      "id": 2,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 383,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Hành vi của người tiêu dùng là:",
       "options": {
         "A": "Toàn bộ hành động mà người tiêu dùng bộc lộ ra trong quá trình điều tra, mua sắm hàng hóa và dịch vụ nhằm thỏa mãn nhu cầu của họ",
@@ -27,11 +435,12 @@
         "D": "Toàn bộ hành động mà tổ chức bộc lộ ra trong quá trình điều tra, mua sắm, sử dụng, đánh giá hàng hóa và dịch vụ nhằm thỏa mãn nhu cầu của họ"
       },
       "answer": "C",
-      "explainAnswer": "Hành vi người tiêu dùng bao quát toàn bộ quá trình tìm hiểu, mua, sử dụng và đánh giá sản phẩm nhằm thỏa mãn nhu cầu."
+      "explainAnswer": "Hành vi người tiêu dùng trải suốt tìm hiểu, mua, dùng và đánh giá sản phẩm. Thiếu khâu sử dụng hoặc đánh giá là cắt quy trình; hành vi tổ chức thuộc thị trường B2B, không phải người tiêu dùng."
     },
     {
-      "id": 3,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 384,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Quá trình thông qua quyết định mua của người tiêu dùng bao gồm các bước sau:",
       "options": {
         "A": "Nhận biết nhu cầu, tìm kiếm thông tin, đánh giá các phương án, quyết định mua, đánh giá sau khi mua",
@@ -40,11 +449,12 @@
         "D": "Nhận biết nhu cầu, tìm kiếm thông tin, đánh giá các phương án, quyết định mua"
       },
       "answer": "A",
-      "explainAnswer": "Quy trình quyết định mua chuẩn gồm 5 bước: nhận biết nhu cầu → tìm kiếm thông tin → đánh giá phương án → quyết định mua → đánh giá sau mua."
+      "explainAnswer": "Năm bước chuẩn: nhận nhu cầu → tìm thông tin → đánh giá phương án → quyết định mua → đánh giá sau mua. Bỏ đánh giá phương án hoặc bỏ đánh giá sau mua làm đứt mạch ra quyết định."
     },
     {
-      "id": 4,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 385,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Những yếu tố cơ bản ảnh hưởng đến hành vi người tiêu dùng gồm:",
       "options": {
         "A": "Nhận thức",
@@ -53,37 +463,40 @@
         "D": "Nhận thức, sự hiểu biết và nghề nghiệp"
       },
       "answer": "D",
-      "explainAnswer": "Các yếu tố cá nhân và tâm lý như nhận thức, sự hiểu biết và nghề nghiệp đều ảnh hưởng đến hành vi mua của người tiêu dùng."
+      "explainAnswer": "Nhận thức và sự hiểu biết thuộc tâm lý; nghề nghiệp thuộc cá nhân — cả ba đều đẩy hành vi mua. Lấy một yếu tố đơn lẻ là thiếu nhóm ảnh hưởng."
     },
     {
-      "id": 5,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 386,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Các yếu tố văn hóa bao gồm:",
       "options": {
         "A": "Nền văn hóa, nhánh văn hóa, sự giao lưu và biến đổi văn hóa, nhân cách, lối sống",
         "B": "Nền văn hóa, nhánh văn hóa, sự giao lưu và biến đổi văn hóa, lối sống",
-        "C": "Nền văn hóa, nhánh văn hóa, sự giao lưu và biến đổi văn hóa",
+        "C": "Nền văn hóa, nhánh văn hóa",
         "D": "Nền văn hóa, nhánh văn hóa, sự giao lưu và biến đổi văn hóa"
       },
       "answer": "D",
-      "explainAnswer": "Yếu tố văn hóa gồm nền văn hóa, nhánh văn hóa và sự giao lưu, biến đổi văn hóa. Nhân cách và lối sống thuộc yếu tố cá nhân/tâm lý."
+      "explainAnswer": "Văn hóa gồm nền văn hóa, nhánh văn hóa và sự giao lưu, biến đổi. Nhân cách, lối sống thuộc cá nhân; phương án thiếu giao lưu văn hóa thì chưa đủ bộ."
     },
     {
-      "id": 6,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 387,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Các yếu tố tâm lý bao gồm:",
       "options": {
         "A": "Động cơ, nhận thức, sự hiểu biết, niềm tin và thái độ, nhân cách, lối sống",
         "B": "Động cơ, nhận thức, sự hiểu biết, niềm tin và thái độ, lối sống",
-        "C": "Động cơ, nhận thức, sự hiểu biết, niềm tin và thái độ",
+        "C": "Động cơ, nhận thức",
         "D": "Động cơ, nhận thức, sự hiểu biết, niềm tin và thái độ"
       },
       "answer": "D",
-      "explainAnswer": "Các yếu tố tâm lý chính gồm động cơ, nhận thức, sự hiểu biết, niềm tin và thái độ."
+      "explainAnswer": "Tâm lý cốt lõi: động cơ, nhận thức, hiểu biết, niềm tin và thái độ. Nhân cách cùng lối sống xếp sang yếu tố cá nhân; cắt bớt động cơ hay nhận thức là thiếu."
     },
     {
-      "id": 7,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 388,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Nhận biết nhu cầu là:",
       "options": {
         "A": "Cảm giác của người mua về một sự khác biệt giữa trạng thái hiện có và trạng thái họ mong muốn",
@@ -92,11 +505,12 @@
         "D": "Nhận biết của người mua về khả năng của người mua đối với một hàng hóa/dịch vụ nào đó"
       },
       "answer": "A",
-      "explainAnswer": "Nhận biết nhu cầu xuất hiện khi người mua cảm thấy khoảng cách giữa trạng thái hiện tại và trạng thái mong muốn."
+      "explainAnswer": "Nhu cầu được nhận ra khi người mua thấy khoảng cách giữa hiện trạng và trạng thái mong muốn. Người bán nhận biết hay khả năng thanh toán không thay cho cảm giác thiếu hụt của chính người mua."
     },
     {
-      "id": 8,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 389,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Những yếu tố ảnh hưởng cơ bản đến hành vi mua hàng bao gồm:",
       "options": {
         "A": "Các yếu tố cá nhân, các yếu tố tâm lý",
@@ -105,11 +519,12 @@
         "D": "Các yếu tố tâm lý, các yếu tố văn hóa"
       },
       "answer": "C",
-      "explainAnswer": "Hành vi mua chịu ảnh hưởng của 4 nhóm yếu tố chính: văn hóa, xã hội, cá nhân và tâm lý."
+      "explainAnswer": "Bốn nhóm ảnh hưởng cổ điển: văn hóa, xã hội, cá nhân, tâm lý. Thiếu xã hội hoặc văn hóa là thiếu một tầng định hình sở thích và chuẩn mực."
     },
     {
-      "id": 9,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 390,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Gia đình, bạn bè, hàng xóm thuộc nhóm:",
       "options": {
         "A": "Thứ cấp",
@@ -118,11 +533,12 @@
         "D": "Tẩy chay"
       },
       "answer": "B",
-      "explainAnswer": "Gia đình, bạn bè, hàng xóm là nhóm tham khảo sơ cấp (primary group) – nhóm có tương tác trực tiếp, thường xuyên."
+      "explainAnswer": "Gia đình, bạn bè, hàng xóm tiếp xúc thường xuyên, mặt đối mặt — nhóm tham khảo sơ cấp. Nhóm thứ cấp họp ít hơn; ngưỡng mộ và tẩy chay là nhóm ước muốn hoặc tránh xa, không phải quan hệ hằng ngày."
     },
     {
-      "id": 10,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 391,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Hộp đen của khách hàng gồm:",
       "options": {
         "A": "Các đặc điểm của khách hàng và quy trình mua hàng",
@@ -131,11 +547,12 @@
         "D": "Quy trình mua hàng, các kích thích marketing và các yếu tố thuộc môi trường vĩ mô"
       },
       "answer": "A",
-      "explainAnswer": "Trong mô hình hành vi mua, “hộp đen” là đặc điểm và quá trình xử lý bên trong của người mua."
+      "explainAnswer": "Hộp đen là cái bên trong người mua: đặc điểm cá nhân và quá trình xử lý quyết định. Kích thích marketing và môi trường vĩ mô là đầu vào bên ngoài, chưa phải hộp đen."
     },
     {
-      "id": 11,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 392,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Trong mô hình hành vi mua, bạn bè, gia đình của người tiêu dùng được coi là:",
       "options": {
         "A": "Nhóm tham khảo trực tiếp",
@@ -144,11 +561,12 @@
         "D": "Nhóm ngưỡng mộ"
       },
       "answer": "A",
-      "explainAnswer": "Gia đình và bạn bè là nhóm tham khảo trực tiếp (primary reference group)."
+      "explainAnswer": "Bạn bè và gia đình tác động trực tiếp nên là nhóm tham khảo trực tiếp/sơ cấp. Nhóm gián tiếp, ngưỡng mộ, tẩy chay không mô tả quan hệ thân cận này."
     },
     {
-      "id": 12,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 393,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Tham khảo đánh giá của những người đã từng dùng sản phẩm thuộc bước thứ mấy trong quá trình thông qua quyết định mua hàng?",
       "options": {
         "A": "Nhận biết nhu cầu",
@@ -157,11 +575,12 @@
         "D": "Quyết định mua"
       },
       "answer": "B",
-      "explainAnswer": "Việc tham khảo ý kiến người đã sử dụng sản phẩm thuộc bước tìm kiếm thông tin."
+      "explainAnswer": "Hỏi người đã dùng sản phẩm là đi tìm thông tin, chưa phải lúc chấm điểm các phương án. Nhận nhu cầu đứng trước; quyết định mua đứng sau khi đã đánh giá."
     },
     {
-      "id": 13,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 394,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Cách xử sự của một người được thể hiện qua hành động, quan điểm của người đó về môi trường xung quanh là:",
       "options": {
         "A": "Tính cách",
@@ -170,37 +589,40 @@
         "D": "Tâm lý"
       },
       "answer": "B",
-      "explainAnswer": "Lối sống phản ánh cách một người sinh hoạt, quan tâm và thể hiện qua hành động, quan điểm về môi trường xung quanh."
+      "explainAnswer": "Lối sống là cách con người sống, quan tâm và thể hiện qua hành động, quan điểm về môi trường. Tính cách là đặc điểm tâm lý ổn định; quan niệm bản thân là hình ảnh về 'cái tôi', hẹp hơn lối sống."
     },
     {
-      "id": 14,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 395,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Các yếu tố xã hội bao gồm:",
       "options": {
         "A": "Giai tầng xã hội, nhóm, gia đình, vai trò và địa vị xã hội, nhánh văn hóa, sự giao lưu và biến đổi văn hóa",
-        "B": "Giai tầng xã hội, nhóm, gia đình, vai trò và địa vị xã hội",
+        "B": "Giai tầng xã hội, nhóm, gia đình",
         "C": "Giai tầng xã hội, nhóm, gia đình, vai trò và địa vị xã hội, sự giao lưu và biến đổi văn hóa",
         "D": "Giai tầng xã hội, nhóm, gia đình, vai trò và địa vị xã hội"
       },
       "answer": "D",
-      "explainAnswer": "Yếu tố xã hội gồm giai tầng xã hội, nhóm tham khảo, gia đình, vai trò và địa vị xã hội."
+      "explainAnswer": "Xã hội gồm giai tầng, nhóm tham khảo, gia đình, vai trò và địa vị. Nhánh văn hóa cùng giao lưu văn hóa thuộc tầng văn hóa, không nhét vào xã hội."
     },
     {
-      "id": 15,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 396,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Các yếu tố cá nhân bao gồm:",
       "options": {
         "A": "Tuổi đời, nghề nghiệp, hoàn cảnh kinh tế, nhân cách, lối sống, động cơ, nhận thức",
-        "B": "Tuổi đời, nghề nghiệp, hoàn cảnh kinh tế, nhân cách, lối sống",
+        "B": "Tuổi đời, nghề nghiệp, hoàn cảnh kinh tế",
         "C": "Tuổi đời, nghề nghiệp, hoàn cảnh kinh tế, nhân cách, lối sống, nhận thức",
         "D": "Tuổi đời, nghề nghiệp, hoàn cảnh kinh tế, nhân cách, lối sống"
       },
       "answer": "D",
-      "explainAnswer": "Yếu tố cá nhân gồm tuổi, nghề nghiệp, hoàn cảnh kinh tế, nhân cách và lối sống. Động cơ và nhận thức thuộc yếu tố tâm lý."
+      "explainAnswer": "Cá nhân gồm tuổi, nghề, hoàn cảnh kinh tế, nhân cách, lối sống. Động cơ và nhận thức thuộc tâm lý; thiếu tuổi hay nghề là cắt bộ cá nhân."
     },
     {
-      "id": 16,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 397,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Khách hàng bao gồm:",
       "options": {
         "A": "Người tiêu dùng cá nhân",
@@ -209,11 +631,12 @@
         "D": "Người tiêu dùng và khách hàng là tổ chức"
       },
       "answer": "D",
-      "explainAnswer": "Trong marketing, khách hàng bao gồm cả người tiêu dùng cuối cùng và khách hàng tổ chức (doanh nghiệp, tổ chức)."
+      "explainAnswer": "Khách hàng trong marketing gồm người tiêu dùng cuối và khách hàng tổ chức. Chỉ cá nhân, chỉ trung gian hoặc chỉ phi lợi nhuận đều hẹp hơn tập khách hàng."
     },
     {
-      "id": 17,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 398,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "… là những đánh giá, cảm xúc và những khuynh hướng nhất quán về một sự vật, hiện tượng hay một ý tưởng nào đó.",
       "options": {
         "A": "Thái độ",
@@ -222,11 +645,12 @@
         "D": "Lối sống"
       },
       "answer": "A",
-      "explainAnswer": "Thái độ là những đánh giá, cảm xúc và xu hướng hành vi nhất quán đối với một đối tượng."
+      "explainAnswer": "Thái độ là đánh giá, cảm xúc và khuynh hướng hành vi tương đối bền với một đối tượng. Niềm tin là ý kiến cho là đúng; lối sống mô tả cách sống; 'tâm lý' quá chung."
     },
     {
-      "id": 18,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 399,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Biết được phương thức tìm kiếm thông tin của khách hàng giúp doanh nghiệp:",
       "options": {
         "A": "Lựa chọn các phương thức quảng cáo hữu hiệu nhắm đến thị trường mục tiêu",
@@ -235,11 +659,12 @@
         "D": "Lựa chọn các chiến lược marketing hữu hiệu nhắm đến thị trường mục tiêu"
       },
       "answer": "B",
-      "explainAnswer": "Hiểu cách khách hàng tìm kiếm thông tin giúp doanh nghiệp lựa chọn phương thức truyền thông phù hợp và hiệu quả."
+      "explainAnswer": "Biết khách tìm tin ở đâu giúp chọn phương thức truyền thông khớp kênh họ đang dùng. Quảng cáo chỉ là một công cụ; 'chiến lược marketing' rộng hơn câu hỏi; kênh truyền thông là phương tiện chứ chưa phải cách thức."
     },
     {
-      "id": 19,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 400,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "… của một con người được thể hiện qua hành động, quan điểm về các nhân tố xung quanh.",
       "options": {
         "A": "Nhân cách",
@@ -248,50 +673,12 @@
         "D": "Lối sống"
       },
       "answer": "D",
-      "explainAnswer": "Lối sống được thể hiện qua hành động, sở thích và quan điểm của cá nhân về môi trường xung quanh."
+      "explainAnswer": "Hành động, sở thích và quan điểm về thế giới xung quanh vẽ nên lối sống. Nhân cách là nét tính; niềm tin là nhận định; tâm lý là phạm trù mẹ, không phải khái niệm điền vào chỗ trống này."
     },
     {
-      "id": 20,
-      "chapter": "Chương IV - Hành vi khách hàng",
-      "question": "Tùy vào hoàn cảnh, cơ hội của doanh nghiệp có thể trở thành … và ngược lại.",
-      "options": {
-        "A": "Cơ hội",
-        "B": "Thách thức",
-        "C": "Điểm yếu",
-        "D": "Cơ hội, thách thức và điểm yếu"
-      },
-      "answer": "B",
-      "explainAnswer": "Tùy hoàn cảnh, cơ hội có thể chuyển thành thách thức và ngược lại."
-    },
-    {
-      "id": 21,
-      "chapter": "Chương IV - Hành vi khách hàng",
-      "question": "Hoạt động nào sau đây KHÔNG phải hoạt động chủ yếu trong chuỗi giá trị của công ty?",
-      "options": {
-        "A": "Sản xuất",
-        "B": "Nghiên cứu công nghệ",
-        "C": "Marketing và bán hàng",
-        "D": "Dịch vụ khách hàng"
-      },
-      "answer": "B",
-      "explainAnswer": "Nghiên cứu công nghệ thuộc hoạt động hỗ trợ. Các hoạt động chủ yếu gồm sản xuất, marketing & bán hàng và dịch vụ khách hàng."
-    },
-    {
-      "id": 22,
-      "chapter": "Chương IV - Hành vi khách hàng",
-      "question": "Hoạt động nào sau đây là hoạt động chủ yếu trong chuỗi giá trị của công ty?",
-      "options": {
-        "A": "Sản xuất",
-        "B": "Dịch vụ khách hàng",
-        "C": "Marketing và bán hàng",
-        "D": "Sản xuất, dịch vụ khách hàng và marketing & bán hàng"
-      },
-      "answer": "D",
-      "explainAnswer": "Sản xuất, dịch vụ khách hàng và marketing & bán hàng đều là hoạt động chủ yếu trong chuỗi giá trị."
-    },
-    {
-      "id": 23,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 403,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Các yếu tố ảnh hưởng đến quyết định mua của doanh nghiệp sản xuất bao gồm:",
       "options": {
         "A": "Yếu tố cá nhân của người mua, quan hệ cá nhân, yếu tố tổ chức, yếu tố môi trường, yếu tố văn hóa, yếu tố xã hội",
@@ -300,11 +687,12 @@
         "D": "Yếu tố cá nhân của người mua, quan hệ cá nhân, yếu tố tổ chức, yếu tố môi trường"
       },
       "answer": "D",
-      "explainAnswer": "Quyết định mua của tổ chức chịu ảnh hưởng của yếu tố cá nhân người mua, quan hệ cá nhân, yếu tố tổ chức và yếu tố môi trường."
+      "explainAnswer": "Mua tổ chức chịu bốn nhóm: môi trường, tổ chức, quan hệ cá nhân và cá nhân người mua. Văn hóa, xã hội là khung hành vi người tiêu dùng, không phải mô hình Webster–Wind."
     },
     {
-      "id": 24,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 404,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Yếu tố nào sau đây KHÔNG ảnh hưởng đến quyết định mua của doanh nghiệp sản xuất?",
       "options": {
         "A": "Tuổi, thu nhập, học vấn",
@@ -313,11 +701,12 @@
         "D": "Quyền thế, địa vị"
       },
       "answer": "A",
-      "explainAnswer": "Tuổi, thu nhập, học vấn là yếu tố cá nhân của người tiêu dùng cuối cùng hơn là yếu tố quyết định mua của tổ chức."
+      "explainAnswer": "Học phần tách tuổi–thu nhập–học vấn sang hành vi người tiêu dùng cuối. Quyết định mua công nghiệp nhấn vị trí công tác, quyền thế, nhân cách và văn hóa tổ chức hơn là nhân khẩu người tiêu dùng."
     },
     {
-      "id": 25,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 405,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Yếu tố nào sau đây KHÔNG thuộc yếu tố quan hệ cá nhân ảnh hưởng đến quyết định mua của doanh nghiệp sản xuất?",
       "options": {
         "A": "Vị trí công tác",
@@ -326,11 +715,12 @@
         "D": "Quyền thế, địa vị"
       },
       "answer": "A",
-      "explainAnswer": "Vị trí công tác thuộc yếu tố tổ chức. Sự đồng cảm, sức thuyết phục, quyền thế thuộc yếu tố quan hệ cá nhân."
+      "explainAnswer": "Vị trí công tác gắn cơ cấu tổ chức. Sự đồng cảm, sức thuyết phục, quyền thế mới là quan hệ giữa các cá nhân trong trung tâm mua."
     },
     {
-      "id": 26,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 406,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Yếu tố nào sau đây KHÔNG thuộc yếu tố tổ chức ảnh hưởng đến quyết định mua của doanh nghiệp sản xuất?",
       "options": {
         "A": "Cơ cấu và hệ thống tổ chức",
@@ -339,11 +729,12 @@
         "D": "Đặc thù, thủ tục mua hàng (ai quyết định mua, tiêu chí đánh giá là gì,...)"
       },
       "answer": "B",
-      "explainAnswer": "Vị trí công tác thuộc yếu tố cá nhân/quan hệ cá nhân hơn là yếu tố tổ chức thuần túy."
+      "explainAnswer": "Vị trí công tác mô tả cá nhân người mua, không phải mục tiêu, thủ tục hay sơ đồ tổ chức. Cơ cấu, mục tiêu mua và quy trình mới là yếu tố tổ chức."
     },
     {
-      "id": 27,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 407,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Trong quá trình thông qua quyết định mua hàng gồm 5 bước, ở bước đầu tiên nhận biết nhu cầu thì nhu cầu của khách hàng có thể bị tác động bởi:",
       "options": {
         "A": "Bản thân khách hàng",
@@ -352,11 +743,12 @@
         "D": "Bản thân khách hàng, các công cụ marketing và ảnh hưởng từ môi trường văn hóa xã hội"
       },
       "answer": "D",
-      "explainAnswer": "Nhu cầu có thể bị kích thích từ bản thân khách hàng, từ các công cụ marketing hoặc từ môi trường văn hóa – xã hội."
+      "explainAnswer": "Nhu cầu có thể bị đánh thức từ bên trong (sinh lý, kinh nghiệm), từ marketing-mix hoặc từ chuẩn mực văn hóa–xã hội. Chọn một nguồn là bỏ hai nguồn kích thích còn lại."
     },
     {
-      "id": 28,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 408,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Người tiêu dùng sẽ có mức độ quan tâm thấp với những sản phẩm nào?",
       "options": {
         "A": "Máy tính",
@@ -365,11 +757,12 @@
         "D": "Máy tính và chương trình học cử nhân"
       },
       "answer": "C",
-      "explainAnswer": "Quần áo mặc hàng ngày thuộc sản phẩm mua thường xuyên, mức độ quan tâm (involvement) thấp."
+      "explainAnswer": "Quần áo mặc hằng ngày rủi ro thấp, mua lặp, involvement thấp. Máy tính và chương trình cử nhân giá trị lớn, hệ quả lâu nên quan tâm cao."
     },
     {
-      "id": 29,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 409,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Khi mức độ quan tâm của người tiêu dùng đối với sản phẩm cao, họ sẽ … tìm kiếm thông tin sản phẩm và dành … thời gian.",
       "options": {
         "A": "Không chủ động – nhiều",
@@ -378,11 +771,12 @@
         "D": "Chủ động – ít"
       },
       "answer": "B",
-      "explainAnswer": "Khi mức độ quan tâm cao, người tiêu dùng sẽ chủ động tìm kiếm nhiều thông tin và dành nhiều thời gian hơn."
+      "explainAnswer": "Involvement cao thì khách chủ động tìm nhiều thông tin và chấp nhận bỏ thời gian. 'Không chủ động' hoặc 'ít thời gian' mô tả hàng quan tâm thấp."
     },
     {
-      "id": 30,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 410,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Lòng trung thành của khách hàng thường sẽ … khi tìm kiếm và mua sản phẩm có mức độ quan tâm thấp.",
       "options": {
         "A": "Không đổi",
@@ -391,11 +785,12 @@
         "D": "Không đánh giá được"
       },
       "answer": "B",
-      "explainAnswer": "Với sản phẩm mức độ quan tâm thấp, khách hàng thường trung thành cao hơn vì không muốn mất công tìm kiếm và so sánh."
+      "explainAnswer": "Hàng quan tâm thấp dễ mua theo quán tính: đổi nhãn tốn công so với lợi ích mang lại, nên lòng trung thành hình thức thường cao hơn. Không phải 'không đổi' theo nghĩa lý thuyết, cũng không thấp hơn."
     },
     {
-      "id": 31,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 411,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Cơ hội cho nhà cung cấp mới thường đến trong trường hợp nào?",
       "options": {
         "A": "Doanh nghiệp mua lặp lại không thay đổi về yêu cầu",
@@ -404,11 +799,12 @@
         "D": "Doanh nghiệp mua lặp lại thay đổi về yêu cầu và Doanh nghiệp mua lần đầu"
       },
       "answer": "D",
-      "explainAnswer": "Cơ hội cho nhà cung cấp mới xuất hiện khi doanh nghiệp mua lần đầu hoặc mua lặp lại nhưng có thay đổi yêu cầu."
+      "explainAnswer": "Nhà cung cấp mới có cửa khi doanh nghiệp mua lần đầu hoặc mua lại nhưng đổi spec. Mua lặp không đổi yêu cầu gắn với nhà cung cấp hiện hữu, cửa rất hẹp."
     },
     {
-      "id": 32,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 412,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Ảnh hưởng của người khác tới việc lựa chọn sản phẩm sẽ … đối với …",
       "options": {
         "A": "Yếu – Hàng xa xỉ ở nơi công cộng",
@@ -417,11 +813,12 @@
         "D": "Mạnh – Hàng thiết yếu ở nơi công cộng"
       },
       "answer": "C",
-      "explainAnswer": "Ảnh hưởng của người khác thường yếu với hàng thiết yếu sử dụng nơi công cộng (vì ít thể hiện địa vị)."
+      "explainAnswer": "Hàng thiết yếu dùng nơi công cộng ít dùng để khoe địa vị nên ảnh hưởng người khác lên lựa chọn sản phẩm yếu. Hàng xa xỉ, nhất là nơi công cộng, chịu sức ép xã hội mạnh hơn."
     },
     {
-      "id": 33,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 413,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Một người tiêu dùng có thể thấy chiếc xe Cadillac như là biểu tượng thành công, trong khi người khác lại cho nó như là một sản phẩm xa xỉ. Đây là kết quả từ:",
       "options": {
         "A": "Hiểu biết của người tiêu dùng",
@@ -430,11 +827,12 @@
         "D": "Niềm tin của người tiêu dùng"
       },
       "answer": "C",
-      "explainAnswer": "Sự khác biệt trong cách nhìn nhận cùng một sản phẩm là kết quả của nhận thức khác nhau."
+      "explainAnswer": "Cùng một Cadillac, người thấy biểu tượng thành công, người thấy đồ xa xỉ — đó là nhận thức khác nhau. Thái độ đã là đánh giá thích/ghét; niềm tin là mệnh đề cho là đúng; hiểu biết là vốn kiến thức."
     },
     {
-      "id": 34,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 414,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Một khách hàng đã có ý định mua chiếc xe máy Honda nhưng lại nhận được thông tin dịch vụ bảo dưỡng của hãng này không được tốt lắm. Thông tin trên là:",
       "options": {
         "A": "Một loại nhiễu trong thông điệp",
@@ -443,11 +841,12 @@
         "D": "Thông tin thứ cấp"
       },
       "answer": "B",
-      "explainAnswer": "Thông tin tiêu cực về dịch vụ bảo dưỡng là yếu tố cản trở (risk) làm giảm khả năng quyết định mua."
+      "explainAnswer": "Tin xấu về bảo dưỡng xuất hiện đúng lúc định chốt đơn, thành rào cản chuyển ý định thành hành vi mua. Không phải nhiễu kỹ thuật của thông điệp, cũng chưa phải đánh giá sau sử dụng hay dữ liệu thứ cấp."
     },
     {
-      "id": 35,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 415,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Một khách hàng có thể không hài lòng với sản phẩm mà họ mua. Mức độ cao nhất của sự không hài lòng được biểu hiện bằng thái độ nào sau đây?",
       "options": {
         "A": "Không mua lại tất cả các sản phẩm của doanh nghiệp đó và tìm kiếm sản phẩm thay thế khác",
@@ -456,11 +855,12 @@
         "D": "Viết thư và gọi điện theo đường dây nóng cho doanh nghiệp"
       },
       "answer": "B",
-      "explainAnswer": "Tẩy chay và truyền miệng tiêu cực là mức độ không hài lòng cao nhất, gây hại lớn cho doanh nghiệp."
+      "explainAnswer": "Tẩy chay kèm truyền miệng xấu lan ra ngoài, tổn thương thương hiệu nặng nhất. Không mua lại hay phàn nàn nội bộ vẫn kiểm soát được hơn là công kích công khai."
     },
     {
-      "id": 36,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 416,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Unilever xác định lý do duy nhất khiến nam giới mua khử mùi là do họ nghĩ nó sẽ khiến họ hấp dẫn hơn. Khi đó Unilever đang nghiên cứu yếu tố gì ảnh hưởng đến quyết định mua hàng của người tiêu dùng?",
       "options": {
         "A": "Nhận thức",
@@ -469,24 +869,26 @@
         "D": "Nhân cách"
       },
       "answer": "C",
-      "explainAnswer": "Lý do mua hàng (muốn hấp dẫn hơn) thuộc yếu tố động cơ."
+      "explainAnswer": "Nam giới mua khử mùi vì muốn hấp dẫn hơn — đó là động cơ (nhu cầu được cụ thể hóa thành lý do hành động). Nhận thức là cách giải thích kích thích; hiểu biết là vốn kiến thức; nhân cách là nét tính."
     },
     {
-      "id": 37,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 417,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Ý nào sau đây là ĐÚNG:",
       "options": {
         "A": "Người tiêu dùng không nhất thiết phải trải qua đầy đủ tất cả các bước trong quá trình mua hàng",
-        "B": "Nếu người bán phóng đại các tính năng của sản phẩm thì người tiêu dùng sẽ kỳ vọng cao hơn",
+        "B": "Người tiêu dùng luôn phải trải qua đủ năm bước dù mua hàng giá trị thấp theo thói quen",
         "C": "Nghề nghiệp của một người không ảnh hưởng đến tính chất sản phẩm mà người đó lựa chọn",
         "D": "Tuổi tác của một người không ảnh hưởng đến tính chất sản phẩm mà người đó lựa chọn"
       },
       "answer": "A",
-      "explainAnswer": "Tùy mức độ quan tâm, người tiêu dùng có thể rút ngắn hoặc bỏ qua một số bước trong quy trình mua."
+      "explainAnswer": "Tùy mức độ quan tâm, khách có thể nhảy cóc hoặc rút ngắn bước trong quy trình mua, kể cả với hàng giá trị thấp mua theo thói quen. Nghề nghiệp và tuổi vẫn định hình lựa chọn sản phẩm, nên hai phủ định đó sai."
     },
     {
-      "id": 38,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 418,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Thông tin thu thập theo cách nào sau đây thuộc nguồn thông tin thương mại?",
       "options": {
         "A": "Dùng thử",
@@ -495,11 +897,12 @@
         "D": "Dùng thử, thuê KOL trải nghiệm và viết đánh giá về sản phẩm và khảo sát"
       },
       "answer": "D",
-      "explainAnswer": "Tất cả các hình thức trên đều thuộc nguồn thông tin thương mại (do doanh nghiệp hoặc bên thứ ba thực hiện vì mục đích thương mại)."
+      "explainAnswer": "Dùng thử do hãng tổ chức, KOL được thuê và khảo sát do doanh nghiệp đặt hàng đều là nguồn tin mang mục đích thương mại. Chúng không phải nguồn tin cá nhân (bạn bè) hay nguồn công cộng độc lập."
     },
     {
-      "id": 39,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 419,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Mục đích chính của khách hàng khi mua điện thoại Vertu là để thể hiện đẳng cấp. Điều này thể hiện … của khách hàng.",
       "options": {
         "A": "Nhận thức",
@@ -508,11 +911,12 @@
         "D": "Sự hiểu biết"
       },
       "answer": "C",
-      "explainAnswer": "Mục đích thể hiện đẳng cấp là động cơ mua hàng."
+      "explainAnswer": "Mua Vertu để khoe đẳng cấp là động cơ mang tính biểu trưng. Nhận thức, quan niệm hay hiểu biết không giải thích 'vì sao mua' mạnh như động cơ."
     },
     {
-      "id": 40,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 420,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Phương án tối ưu ở bước đánh giá các phương án …",
       "options": {
         "A": "Luôn là phương án được lựa chọn để mua",
@@ -521,11 +925,12 @@
         "D": "Có thể không phải là phương án được lựa chọn để mua"
       },
       "answer": "D",
-      "explainAnswer": "Phương án tối ưu ở bước đánh giá vẫn có thể không được chọn do các yếu tố cản trở phát sinh ở bước quyết định mua."
+      "explainAnswer": "Sau khi xếp hạng phương án, ý định mua vẫn có thể gãy vì hết hàng, người thân can, hay rủi ro cảm nhận. Vì thế phương án tối ưu lúc đánh giá không tự khắc thành món được mua."
     },
     {
-      "id": 41,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 421,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Khách hàng sẽ thỏa mãn đối với sản phẩm mình mua khi:",
       "options": {
         "A": "Sản phẩm đúng như khách hàng kỳ vọng",
@@ -534,11 +939,12 @@
         "D": "Sản phẩm dưới mức khách hàng kỳ vọng"
       },
       "answer": "C",
-      "explainAnswer": "Khách hàng thỏa mãn khi sản phẩm đạt hoặc vượt kỳ vọng."
+      "explainAnswer": "Hài lòng khi giá trị nhận được đạt hoặc vượt kỳ vọng. Đúng kỳ vọng đã là thỏa mãn; vượt kỳ vọng là hài lòng cao. Dưới kỳ vọng sinh thất vọng."
     },
     {
-      "id": 42,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 422,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Hành vi mua của tổ chức khác với hành vi mua của người tiêu dùng ở điểm:",
       "options": {
         "A": "Khối lượng mua thường nhiều hơn",
@@ -547,24 +953,26 @@
         "D": "Khối lượng mua thường nhiều hơn và thanh toán diễn ra ngay lập tức"
       },
       "answer": "A",
-      "explainAnswer": "Đặc điểm nổi bật của mua sắm tổ chức là khối lượng mua lớn hơn nhiều so với người tiêu dùng cá nhân."
+      "explainAnswer": "Mua tổ chức nổi bật ở khối lượng lớn, nhiều người tham gia, quy trình dài. Thanh toán ngay và quy trình đơn giản mới là nét mua lẻ, không phải B2B."
     },
     {
-      "id": 43,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 423,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Đâu KHÔNG phải là đặc điểm mua sắm của khách hàng tổ chức?",
       "options": {
         "A": "Hướng tới mối quan hệ lâu dài với nhà cung ứng",
         "B": "Số lượng khách hàng ít",
-        "C": "Nhu cầu phái sinh",
+        "C": "Quyết định mua chủ yếu mang tính cảm tính, bốc đồng",
         "D": "Số lượng khách hàng ít và hướng tới mối quan hệ lâu dài với nhà cung ứng"
       },
       "answer": "C",
-      "explainAnswer": "Nhu cầu phái sinh là đặc điểm đúng của thị trường tổ chức. Câu hỏi hỏi “KHÔNG phải” nên cần chọn đáp án sai, nhưng theo logic gốc đáp án là C (có thể do lỗi đề gốc)."
+      "explainAnswer": "Mua tổ chức mang tính lý tính, nhiều người tham gia, nhu cầu phái sinh và quan hệ dài với nhà cung ứng. Quyết định cảm tính, bốc đồng mới là nét mua lẻ, không phải đặc điểm B2B."
     },
     {
-      "id": 44,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 424,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Tuấn muốn mua một chiếc laptop phục vụ cho việc học. Sau khi tìm kiếm được thông tin về những sản phẩm máy tính hiện đang có trên thị trường, Tuấn sẽ làm gì tiếp theo?",
       "options": {
         "A": "Đánh giá giá cả của các phương án",
@@ -573,50 +981,26 @@
         "D": "Đánh giá mức độ quan trọng đối với mỗi thuộc tính của các phương án"
       },
       "answer": "C",
-      "explainAnswer": "Sau bước tìm kiếm thông tin, người tiêu dùng thường loại bỏ sơ những phương án không phù hợp trước khi đánh giá chi tiết."
+      "explainAnswer": "Sau khi có danh sách laptop trên thị trường, bước kế là sàng lọc những máy hoàn toàn không khớp nhu cầu học. So giá hay so nhãn hiệu chi tiết thuộc bước đánh giá sâu hơn, sau khi đã loại thô."
     },
     {
-      "id": 45,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 425,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Các yếu tố ảnh hưởng đến quyết định mua của doanh nghiệp sản xuất bao gồm:",
       "options": {
-        "A": "Yếu tố cá nhân của người mua, quan hệ cá nhân, yếu tố tổ chức, yếu tố môi trường",
+        "A": "Yếu tố cá nhân của người mua, quan hệ cá nhân, yếu tố tổ chức",
         "B": "Yếu tố cá nhân của người mua, quan hệ cá nhân, yếu tố tổ chức, yếu tố môi trường, yếu tố văn hóa",
         "C": "Yếu tố cá nhân của người mua, quan hệ cá nhân, yếu tố tổ chức, yếu tố môi trường, yếu tố xã hội",
         "D": "Yếu tố cá nhân của người mua, quan hệ cá nhân, yếu tố tổ chức, yếu tố môi trường"
       },
       "answer": "D",
-      "explainAnswer": "Bốn nhóm yếu tố chính ảnh hưởng đến quyết định mua của tổ chức là: yếu tố môi trường, tổ chức, quan hệ cá nhân và cá nhân người mua."
+      "explainAnswer": "Bốn nhóm Webster–Wind: môi trường, tổ chức, quan hệ cá nhân, cá nhân người mua. Cộng thêm văn hóa hay xã hội là lấy nhầm khung hành vi người tiêu dùng."
     },
     {
-      "id": 46,
-      "chapter": "Chương IV - Hành vi khách hàng",
-      "question": "Yếu tố nào sau đây KHÔNG ảnh hưởng đến quyết định mua của doanh nghiệp sản xuất?",
-      "options": {
-        "A": "Tuổi, thu nhập, học vấn",
-        "B": "Vị trí công tác",
-        "C": "Nhân cách, văn hóa",
-        "D": "Quyền thế, địa vị"
-      },
-      "answer": "A",
-      "explainAnswer": "Tuổi, thu nhập, học vấn ít ảnh hưởng trực tiếp đến quyết định mua của tổ chức hơn các yếu tố khác."
-    },
-    {
-      "id": 47,
-      "chapter": "Chương IV - Hành vi khách hàng",
-      "question": "Yếu tố nào sau đây KHÔNG thuộc yếu tố quan hệ cá nhân ảnh hưởng đến quyết định mua của doanh nghiệp sản xuất?",
-      "options": {
-        "A": "Vị trí công tác",
-        "B": "Sự đồng cảm",
-        "C": "Sức thuyết phục",
-        "D": "Quyền thế, địa vị"
-      },
-      "answer": "A",
-      "explainAnswer": "Vị trí công tác thuộc yếu tố tổ chức/cá nhân hơn là quan hệ cá nhân thuần túy."
-    },
-    {
-      "id": 48,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 426,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Yếu tố nào sau đây KHÔNG thuộc yếu tố tổ chức ảnh hưởng đến quyết định mua của doanh nghiệp sản xuất?",
       "options": {
         "A": "Cơ cấu và hệ thống tổ chức",
@@ -625,37 +1009,12 @@
         "D": "Đặc thù, thủ tục mua hàng"
       },
       "answer": "B",
-      "explainAnswer": "Vị trí công tác không phải yếu tố tổ chức thuần túy."
+      "explainAnswer": "Vị trí công tác mô tả cá nhân trong trung tâm mua, không phải mục tiêu–thủ tục–sơ đồ của tổ chức. Cơ cấu, mục tiêu mua sắm và quy trình mới là yếu tố tổ chức."
     },
     {
-      "id": 49,
-      "chapter": "Chương IV - Hành vi khách hàng",
-      "question": "Trong quá trình thông qua quyết định mua hàng gồm 5 bước, ở bước đầu tiên nhận biết nhu cầu thì nhu cầu của khách hàng có thể bị tác động bởi:",
-      "options": {
-        "A": "Bản thân khách hàng",
-        "B": "Các công cụ marketing",
-        "C": "Ảnh hưởng từ môi trường văn hóa xã hội",
-        "D": "Bản thân khách hàng, các công cụ marketing và ảnh hưởng từ môi trường văn hóa xã hội"
-      },
-      "answer": "D",
-      "explainAnswer": "Nhu cầu có thể bị kích thích từ nhiều nguồn: bản thân, marketing và môi trường."
-    },
-    {
-      "id": 50,
-      "chapter": "Chương IV - Hành vi khách hàng",
-      "question": "Người tiêu dùng sẽ có mức độ quan tâm thấp với những sản phẩm nào?",
-      "options": {
-        "A": "Máy tính",
-        "B": "Chương trình học cử nhân",
-        "C": "Quần áo mặc hàng ngày",
-        "D": "Máy tính và chương trình học cử nhân"
-      },
-      "answer": "C",
-      "explainAnswer": "Sản phẩm mua thường xuyên như quần áo hàng ngày có mức độ quan tâm thấp."
-    },
-    {
-      "id": 51,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 427,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Khi mức độ quan tâm của người tiêu dùng đối với sản phẩm cao, họ sẽ … tìm kiếm thông tin và dành … thời gian.",
       "options": {
         "A": "Không chủ động – nhiều",
@@ -664,59 +1023,21 @@
         "D": "Chủ động – ít"
       },
       "answer": "B",
-      "explainAnswer": "Mức độ quan tâm cao → chủ động tìm kiếm nhiều thông tin và dành nhiều thời gian."
+      "explainAnswer": "Quan tâm cao đi với tìm tin chủ động và chấp nhận tốn thời gian. Cặp 'không chủ động–ít thời gian' dành cho hàng involvement thấp."
     },
     {
-      "id": 52,
-      "chapter": "Chương IV - Hành vi khách hàng",
-      "question": "Lòng trung thành của khách hàng thường sẽ … khi tìm kiếm và mua sản phẩm có mức độ quan tâm thấp.",
-      "options": {
-        "A": "Không đổi",
-        "B": "Cao hơn",
-        "C": "Thấp hơn",
-        "D": "Không đánh giá được"
-      },
-      "answer": "B",
-      "explainAnswer": "Với sản phẩm quan tâm thấp, lòng trung thành thường cao hơn vì khách hàng không muốn mất công so sánh."
-    },
-    {
-      "id": 53,
-      "chapter": "Chương IV - Hành vi khách hàng",
-      "question": "Cơ hội cho nhà cung cấp mới thường đến trong trường hợp nào?",
-      "options": {
-        "A": "Doanh nghiệp mua lặp lại không thay đổi về yêu cầu",
-        "B": "Doanh nghiệp mua lặp lại thay đổi về yêu cầu",
-        "C": "Doanh nghiệp mua lần đầu",
-        "D": "Doanh nghiệp mua lặp lại thay đổi về yêu cầu và Doanh nghiệp mua lần đầu"
-      },
-      "answer": "D",
-      "explainAnswer": "Cơ hội xuất hiện khi mua mới hoặc mua lại có thay đổi yêu cầu."
-    },
-    {
-      "id": 54,
-      "chapter": "Chương IV - Hành vi khách hàng",
+      "id": 428,
+      "chapter": "Chương 4. Hành vi khách hàng",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
       "question": "Ảnh hưởng của người khác tới việc lựa chọn sản phẩm sẽ yếu đối với:",
       "options": {
         "A": "Hàng xa xỉ ở nơi công cộng",
         "B": "Hàng xa xỉ ở nơi riêng tư",
         "C": "Hàng thiết yếu ở nơi công cộng",
-        "D": "Hàng thiết yếu ở nơi riêng tư"
+        "D": "Sản phẩm xa xỉ mới mua để thể hiện đẳng cấp"
       },
       "answer": "C",
-      "explainAnswer": "Ảnh hưởng xã hội yếu với hàng thiết yếu sử dụng nơi công cộng."
-    },
-    {
-      "id": 55,
-      "chapter": "Chương IV - Hành vi khách hàng",
-      "question": "Tuấn muốn mua một chiếc laptop phục vụ cho việc học. Sau khi tìm kiếm được thông tin về những sản phẩm máy tính hiện đang có trên thị trường, Tuấn sẽ làm gì tiếp theo?",
-      "options": {
-        "A": "Đánh giá giá cả của các phương án",
-        "B": "Đánh giá nhãn hiệu của các phương án",
-        "C": "Đánh giá để loại bỏ sơ những phương án hoàn toàn không phù hợp",
-        "D": "Đánh giá mức độ quan trọng đối với mỗi thuộc tính của các phương án"
-      },
-      "answer": "C",
-      "explainAnswer": "Sau tìm kiếm thông tin, bước tiếp theo thường là loại bỏ sơ những phương án không phù hợp."
+      "explainAnswer": "Hàng thiết yếu nơi công cộng ít dùng làm tín hiệu địa vị nên ảnh hưởng người khác lên lựa chọn sản phẩm yếu. Hàng xa xỉ, đặc biệt khi dùng nơi công cộng, chịu ánh nhìn xã hội mạnh hơn."
     }
   ]
 }

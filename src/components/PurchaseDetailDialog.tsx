@@ -52,9 +52,9 @@ export function PurchaseDetailDialog({ exam, lang, loading, error, onClose, onCo
       <label className="mt-4 flex cursor-pointer items-start justify-between gap-3 rounded-[14px] border-2 border-sky-200 bg-sky-50 p-4 dark:border-sky-500/20 dark:bg-sky-500/10">
         <span className="min-w-0 text-xs font-bold leading-5 text-sky-900 dark:text-sky-200">
           {isVietnamese ? (
-            <>Tôi đã đọc và đồng ý với <a href="/policy" target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()} className="underline">điều khoản sử dụng và chính sách thanh toán</a> của QuizPKA.</>
+            <>Tôi đã đọc và đồng ý với <a href="/policy" target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()} className="underline">điều khoản sử dụng và chính sách thanh toán</a> của Quizpka.</>
           ) : (
-            <>I have read and agree to the <a href="/policy" target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()} className="underline">QuizPKA terms of use and payment policy</a>.</>
+            <>I have read and agree to the <a href="/policy" target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()} className="underline">Quizpka terms of use and payment policy</a>.</>
           )}
         </span>
         <input

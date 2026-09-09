@@ -1,11 +1,390 @@
 {
-  "title": "Bộ câu hỏi Marketing căn bản - Chương III - Môi trường Marketing",
-  "chapter": "Chương III - Môi trường Marketing",
-  "totalQuestions": 35,
+  "title": "Bộ câu hỏi trắc nghiệm Marketing căn bản - Chương 3. Môi trường Marketing",
+  "chapter": "Chương 3. Môi trường Marketing",
+  "totalQuestions": 63,
   "questions": [
     {
-      "id": 1,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 43,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "CHƯƠNG 3 – MÔI TRƯỜNG MARKETING",
+      "question": "Một doanh nghiệp nhận thấy sự thay đổi của môi trường có thể tạo ra cả thuận lợi và bất lợi đối với hoạt động Marketing. Cách hiểu nào sau đây phù hợp nhất với bản chất của môi trường Marketing?",
+      "options": {
+        "A": "Là những yếu tố doanh nghiệp có thể kiểm soát hoàn toàn thông qua kế hoạch Marketing.",
+        "B": "Là các chủ thể và lực lượng thường xuyên tác động tốt hoặc xấu đến các quyết định Marketing.",
+        "C": "Là toàn bộ yếu tố nội bộ doanh nghiệp quyết định trực tiếp khả năng bán sản phẩm.",
+        "D": "Là những yếu tố bên ngoài chỉ tác động đến hoạt động quảng cáo của doanh nghiệp."
+      },
+      "answer": "B",
+      "explainAnswer": "Môi trường marketing là các chủ thể và lực lượng thường xuyên tác động tốt hoặc xấu đến quyết định marketing, doanh nghiệp không kiểm soát hoàn toàn. Không phải toàn bộ yếu tố nội bộ, không chỉ tác động quảng cáo, cũng không phải thứ có thể kiểm soát hết bằng kế hoạch."
+    },
+    {
+      "id": 44,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "CHƯƠNG 3 – MÔI TRƯỜNG MARKETING",
+      "question": "Một nhà quản trị phân biệt môi trường vi mô và môi trường vĩ mô để xác định cách thức phản ứng của doanh nghiệp. Nhận định nào phù hợp nhất?",
+      "options": {
+        "A": "Môi trường vi mô tác động trực tiếp đến khả năng phục vụ khách hàng, còn môi trường vĩ mô có phạm vi ảnh hưởng rộng hơn.",
+        "B": "Môi trường vi mô chỉ bao gồm khách hàng, còn môi trường vĩ mô chỉ bao gồm đối thủ cạnh tranh.",
+        "C": "Môi trường vi mô luôn có thể kiểm soát, còn môi trường vĩ mô luôn không tạo ra cơ hội kinh doanh.",
+        "D": "Môi trường vi mô tác động đến toàn bộ nền kinh tế, còn môi trường vĩ mô chỉ tác động một doanh nghiệp."
+      },
+      "answer": "A",
+      "explainAnswer": "Vi mô tác động trực tiếp đến năng lực thỏa mãn khách hàng; vĩ mô có phạm vi rộng hơn và ảnh hưởng cả môi trường vi mô. Vi mô không chỉ gồm khách hàng; không luôn kiểm soát được; cũng không đảo ngược phạm vi ảnh hưởng với vĩ mô."
+    },
+    {
+      "id": 45,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "CHƯƠNG 3 – MÔI TRƯỜNG MARKETING",
+      "question": "Một công ty bán hàng thông qua nhà bán buôn, đồng thời thuê công ty nghiên cứu thị trường và sử dụng ngân hàng để hỗ trợ hoạt động kinh doanh. Các tổ chức này có điểm chung nào?",
+      "options": {
+        "A": "Đều là khách hàng cuối cùng của doanh nghiệp.",
+        "B": "Đều thuộc nhóm đối thủ cạnh tranh trực tiếp của doanh nghiệp.",
+        "C": "Đều có thể đóng vai trò trung gian Marketing hỗ trợ doanh nghiệp đưa hàng hóa đến người mua.",
+        "D": "Đều thuộc môi trường vĩ mô vì doanh nghiệp không thể kiểm soát hoàn toàn hoạt động của họ."
+      },
+      "answer": "C",
+      "explainAnswer": "Nhà bán buôn, công ty nghiên cứu và ngân hàng đều có thể là trung gian marketing (thương mại, dịch vụ marketing, tài chính). Họ không phải khách cuối, không phải đối thủ trực tiếp, cũng không vì khó kiểm soát mà thành môi trường vĩ mô."
+    },
+    {
+      "id": 46,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "CHƯƠNG 3 – MÔI TRƯỜNG MARKETING",
+      "question": "Một doanh nghiệp kinh doanh thực phẩm nhận thấy sự gia tăng của các tổ chức bảo vệ người tiêu dùng khiến doanh nghiệp phải chú trọng hơn đến chất lượng sản phẩm. Hiện tượng này phản ánh vai trò của yếu tố nào?",
+      "options": {
+        "A": "Công chúng trong môi trường vi mô và nhóm áp lực xã hội trong môi trường chính trị.",
+        "B": "Nhà cung ứng trong môi trường vi mô và yếu tố công nghệ trong môi trường vĩ mô.",
+        "C": "Khách hàng trong môi trường vi mô và yếu tố tự nhiên trong môi trường vĩ mô.",
+        "D": "Trung gian Marketing trong môi trường vi mô và yếu tố nhân khẩu học trong môi trường vĩ mô."
+      },
+      "answer": "A",
+      "explainAnswer": "Tổ chức bảo vệ người tiêu dùng là công chúng (vi mô) đồng thời là nhóm áp lực xã hội trong môi trường chính trị. Không phải nhà cung ứng/công nghệ, khách hàng/tự nhiên hay trung gian/nhân khẩu."
+    },
+    {
+      "id": 47,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "CHƯƠNG 3 – MÔI TRƯỜNG MARKETING",
+      "question": "Hai doanh nghiệp cùng kinh doanh xe đạp. Doanh nghiệp A bán xe đạp 3 tốc độ, doanh nghiệp B bán xe đạp 10 tốc độ; cả hai thuộc cùng ngành nhưng khác đặc điểm sản phẩm và phân khúc giá. Đây phù hợp nhất với dạng cạnh tranh nào?",
+      "options": {
+        "A": "Cạnh tranh mong muốn.",
+        "B": "Cạnh tranh giữa các sản phẩm thay thế.",
+        "C": "Cạnh tranh trong cùng ngành.",
+        "D": "Cạnh tranh trực tiếp."
+      },
+      "answer": "C",
+      "explainAnswer": "Hai loại xe đạp khác tốc độ vẫn cùng ngành hàng: cạnh tranh trong cùng ngành. Cạnh tranh mong muốn là nhu cầu khác tranh cùng ngân sách; sản phẩm thay thế là ngành khác cùng chức năng; cạnh tranh trực tiếp là sản phẩm rất giống nhau, cùng phân khúc."
+    },
+    {
+      "id": 48,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "CHƯƠNG 3 – MÔI TRƯỜNG MARKETING",
+      "question": "Một hãng sữa muốn tung sản phẩm mới cho trẻ em. Bộ phận Marketing đề xuất chiến dịch quảng bá rất lớn nhưng bộ phận sản xuất cho biết chưa thể đáp ứng sản lượng dự kiến. Hãng nên xử lý vấn đề này như thế nào?",
+      "options": {
+        "A": "Vẫn triển khai quảng cáo vì Marketing là bộ phận quyết định toàn bộ hoạt động kinh doanh.",
+        "B": "Tạm dừng phối hợp với sản xuất vì sản lượng chỉ liên quan đến hoạt động vận hành.",
+        "C": "Phối hợp Marketing với sản xuất để bảo đảm khả năng cung ứng phù hợp với thị trường mục tiêu.",
+        "D": "Chuyển toàn bộ trách nhiệm cung ứng cho trung gian Marketing để giảm áp lực nội bộ."
+      },
+      "answer": "C",
+      "explainAnswer": "Marketing phải phối hợp với sản xuất để bảo đảm khả năng cung ứng khớp thị trường mục tiêu. Không thể quảng cáo vượt năng lực, không đẩy hết trách nhiệm cho sản xuất hay trung gian."
+    },
+    {
+      "id": 49,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "CHƯƠNG 3 – MÔI TRƯỜNG MARKETING",
+      "question": "Một công ty thời trang chuẩn bị ra mắt bộ sưu tập mới. Phòng Marketing muốn định vị sản phẩm theo xu hướng thời trang trẻ, nhưng R&D cho rằng thiết kế hiện tại chưa đáp ứng được yêu cầu đó. Bộ phận nào cần được phối hợp trực tiếp để giải quyết vấn đề?",
+      "options": {
+        "A": "R&D và Marketing.",
+        "B": "Tài chính và kế toán.",
+        "C": "Nhân sự và bán hàng.",
+        "D": "Kho vận và ngân hàng."
+      },
+      "answer": "A",
+      "explainAnswer": "Định vị theo xu hướng thiết kế mới cần phối hợp R&D và marketing. Tài chính, nhân sự hay kho vận không phải cặp chức năng then chốt cho định vị sản phẩm mới."
+    },
+    {
+      "id": 50,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "CHƯƠNG 3 – MÔI TRƯỜNG MARKETING",
+      "question": "Một doanh nghiệp sản xuất đồ uống phụ thuộc vào một nhà cung ứng đường duy nhất. Nhà cung ứng thông báo giá nguyên liệu tăng mạnh và nguồn cung có nguy cơ thiếu hụt. Phản ứng Marketing phù hợp nhất là gì?",
+      "options": {
+        "A": "Giữ nguyên mọi quyết định Marketing vì nhà cung ứng không thuộc bộ phận Marketing.",
+        "B": "Đánh giá lại các quyết định Marketing do thay đổi đầu vào có thể ảnh hưởng đến hoạt động kinh doanh.",
+        "C": "Tăng quảng cáo ngay để bù đắp phần chi phí nguyên liệu tăng.",
+        "D": "Ngừng toàn bộ hoạt động Marketing cho đến khi nhà cung ứng ổn định."
+      },
+      "answer": "B",
+      "explainAnswer": "Phụ thuộc một nhà cung ứng đường: khi giá/nguồn thay đổi phải đánh giá lại quyết định marketing (giá, sản phẩm, mix). Không giữ nguyên, không chỉ tăng quảng cáo, cũng không ngừng marketing."
+    },
+    {
+      "id": 51,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "CHƯƠNG 3 – MÔI TRƯỜNG MARKETING",
+      "question": "Một thương hiệu mỹ phẩm bán hàng qua Shopee và TikTok Shop, đồng thời thuê một công ty quảng cáo thực hiện chiến dịch truyền thông. Trong trường hợp này, công ty quảng cáo đóng vai trò chủ yếu nào?",
+      "options": {
+        "A": "Trung gian thương mại.",
+        "B": "Trung gian tài chính.",
+        "C": "Trung gian dịch vụ Marketing.",
+        "D": "Trung gian lưu thông hàng hóa."
+      },
+      "answer": "C",
+      "explainAnswer": "Công ty quảng cáo là trung gian dịch vụ marketing. Shopee/TikTok Shop là trung gian thương mại; ngân hàng là trung gian tài chính; kho vận là lưu thông hàng hóa."
+    },
+    {
+      "id": 52,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "CHƯƠNG 3 – MÔI TRƯỜNG MARKETING",
+      "question": "Một nhà sản xuất đồ gia dụng muốn mở rộng thị trường nhưng không đủ năng lực tự vận chuyển và lưu kho trên toàn quốc. Doanh nghiệp ký hợp đồng với một công ty logistics. Vai trò của công ty logistics phù hợp nhất là:",
+      "options": {
+        "A": "Hỗ trợ lưu kho, dự trữ và vận chuyển hàng hóa.",
+        "B": "Hỗ trợ nghiên cứu thị trường và định vị sản phẩm.",
+        "C": "Hỗ trợ huy động vốn và bảo hiểm hoạt động kinh doanh.",
+        "D": "Hỗ trợ doanh nghiệp xác định nhóm khách hàng mục tiêu."
+      },
+      "answer": "A",
+      "explainAnswer": "Thiếu năng lực tự vận chuyển, lưu kho thì cần trung gian hỗ trợ lưu kho, dự trữ, vận chuyển. Nghiên cứu/định vị, vốn/bảo hiểm hay chọn phân khúc là vai trò khác."
+    },
+    {
+      "id": 53,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "CHƯƠNG 3 – MÔI TRƯỜNG MARKETING",
+      "question": "Một sinh viên có 80 triệu đồng và đang cân nhắc mua xe máy, đi du lịch nước ngoài hoặc sử dụng tiền cho mục đích khác. Một hãng xe máy muốn đánh giá nguy cơ mất khách trước các lựa chọn này. Hãng đang xem xét loại cạnh tranh nào?",
+      "options": {
+        "A": "Cạnh tranh trực tiếp.",
+        "B": "Cạnh tranh trong cùng ngành.",
+        "C": "Cạnh tranh giữa các sản phẩm thay thế.",
+        "D": "Cạnh tranh mong muốn."
+      },
+      "answer": "D",
+      "explainAnswer": "Xe máy, du lịch hay mục đích khác tranh cùng một khoản thu nhập: cạnh tranh mong muốn. Cùng ngành hay thay thế là các cấp hẹp hơn; trực tiếp là sản phẩm rất giống."
+    },
+    {
+      "id": 54,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "CHƯƠNG 3 – MÔI TRƯỜNG MARKETING",
+      "question": "Một người tiêu dùng muốn cải thiện khả năng đi lại và đang cân nhắc xe hơi, xe máy hoặc xe đạp. Nếu một hãng xe đạp muốn xác định các đối thủ rộng nhất của mình, nhóm nào nên được xem xét?",
+      "options": {
+        "A": "Các thương hiệu xe đạp khác.",
+        "B": "Các loại xe đạp khác.",
+        "C": "Xe hơi và xe máy.",
+        "D": "Các doanh nghiệp sản xuất phụ tùng xe đạp."
+      },
+      "answer": "C",
+      "explainAnswer": "Xe hơi, xe máy, xe đạp đáp ứng nhu cầu đi lại: sản phẩm thay thế. Thương hiệu xe đạp khác là cạnh tranh trực tiếp/cùng ngành; phụ tùng không phải đối thủ cùng chức năng đi lại."
+    },
+    {
+      "id": 55,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "CHƯƠNG 3 – MÔI TRƯỜNG MARKETING",
+      "question": "Một hãng xe đạp nhận thấy khách hàng mục tiêu, phân khúc giá và nhu cầu của mình gần như giống hệt một thương hiệu xe đạp khác; hai sản phẩm chỉ khác nhãn hiệu. Hãng kia thuộc loại đối thủ nào?",
+      "options": {
+        "A": "Đối thủ cạnh tranh mong muốn.",
+        "B": "Đối thủ cạnh tranh giữa sản phẩm thay thế.",
+        "C": "Đối thủ cạnh tranh trong cùng ngành.",
+        "D": "Đối thủ cạnh tranh trực tiếp."
+      },
+      "answer": "D",
+      "explainAnswer": "Cùng phân khúc, giá và nhu cầu gần như giống hệt, chỉ khác nhãn hiệu là cạnh tranh trực tiếp. Cùng ngành rộng hơn; thay thế và mong muốn là cấp xa hơn."
+    },
+    {
+      "id": 56,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "CHƯƠNG 3 – MÔI TRƯỜNG MARKETING",
+      "question": "Một chuỗi nhà hàng xây dựng cơ sở mới tại một khu dân cư. Một tổ chức cộng đồng địa phương lo ngại hoạt động của nhà hàng gây ảnh hưởng đến khu vực và lên tiếng phản đối. Chuỗi nhà hàng đang chịu tác động chủ yếu từ:",
+      "options": {
+        "A": "Công chúng địa phương.",
+        "B": "Công chúng tài chính.",
+        "C": "Công chúng truyền thông.",
+        "D": "Công chúng nội bộ."
+      },
+      "answer": "A",
+      "explainAnswer": "Tổ chức cộng đồng khu dân cư lo ngại nhà hàng mới là công chúng địa phương, không phải tài chính, truyền thông hay nội bộ."
+    },
+    {
+      "id": 57,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "CHƯƠNG 3 – MÔI TRƯỜNG MARKETING",
+      "question": "Một công ty chuẩn bị đầu tư nhà máy mới nhưng cần nguồn vốn lớn. Công ty đang làm việc với ngân hàng, công ty tài chính và quỹ đầu tư để bảo đảm nguồn vốn. Nhóm này thuộc:",
+      "options": {
+        "A": "Công chúng Chính phủ.",
+        "B": "Công chúng tài chính.",
+        "C": "Công chúng địa phương.",
+        "D": "Công chúng hành động vì công dân."
+      },
+      "answer": "B",
+      "explainAnswer": "Ngân hàng, quỹ đầu tư khi cần vốn là công chúng tài chính. Chính phủ, địa phương hay nhóm công dân là các nhóm công chúng khác."
+    },
+    {
+      "id": 58,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "CHƯƠNG 3 – MÔI TRƯỜNG MARKETING",
+      "question": "Một thương hiệu thực phẩm bị một chương trình truyền hình đưa tin bất lợi về chất lượng sản phẩm. Ban Marketing nhận thấy thông tin này có thể làm giảm niềm tin của khách hàng. Doanh nghiệp đang chịu ảnh hưởng chủ yếu từ:",
+      "options": {
+        "A": "Công chúng truyền thông.",
+        "B": "Công chúng tài chính.",
+        "C": "Công chúng nội bộ.",
+        "D": "Công chúng địa phương."
+      },
+      "answer": "A",
+      "explainAnswer": "Chương trình truyền hình đưa tin bất lợi là công chúng truyền thông. Không nhầm sang tài chính, nội bộ hay địa phương."
+    },
+    {
+      "id": 59,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "CHƯƠNG 3 – MÔI TRƯỜNG MARKETING",
+      "question": "Một công ty thực phẩm nhận thấy dân số trẻ trong khu vực mục tiêu tăng nhanh, đồng thời số lượng hộ gia đình nhỏ tăng. Nếu công ty bán sản phẩm đóng gói theo hộ gia đình, yếu tố cần được ưu tiên phân tích là:",
+      "options": {
+        "A": "Nhân khẩu học.",
+        "B": "Chính trị.",
+        "C": "Công nghệ.",
+        "D": "Tự nhiên."
+      },
+      "answer": "A",
+      "explainAnswer": "Dân số trẻ tăng và hộ gia đình nhỏ là môi trường nhân khẩu học, ảnh hưởng quy cách đóng gói theo hộ. Chính trị, công nghệ hay tự nhiên không giải thích thay đổi cấu trúc dân số."
+    },
+    {
+      "id": 60,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "CHƯƠNG 3 – MÔI TRƯỜNG MARKETING",
+      "question": "Một doanh nghiệp nhận thấy thu nhập bình quân của nhóm khách hàng mục tiêu tăng nhưng chênh lệch thu nhập giữa các nhóm dân cư cũng lớn hơn. Doanh nghiệp muốn điều chỉnh danh mục sản phẩm theo khả năng chi trả. Yếu tố môi trường nào cần được chú trọng nhất?",
+      "options": {
+        "A": "Môi trường văn hóa.",
+        "B": "Môi trường kinh tế.",
+        "C": "Môi trường chính trị.",
+        "D": "Môi trường tự nhiên."
+      },
+      "answer": "B",
+      "explainAnswer": "Thu nhập bình quân tăng và phân hóa thu nhập thuộc môi trường kinh tế, quyết định sức mua và danh mục theo khả năng chi trả. Văn hóa, chính trị hay tự nhiên không phải biến sức mua."
+    },
+    {
+      "id": 61,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "CHƯƠNG 3 – MÔI TRƯỜNG MARKETING",
+      "question": "Một doanh nghiệp sản xuất bao bì nhận thấy nguyên liệu truyền thống ngày càng khan hiếm và giá năng lượng tăng. Đồng thời, người tiêu dùng và Chính phủ quan tâm hơn đến sản phẩm thân thiện môi trường. Hướng điều chỉnh nào phù hợp nhất?",
+      "options": {
+        "A": "Tăng sử dụng nguyên liệu truyền thống để duy trì sản phẩm hiện tại.",
+        "B": "Nghiên cứu vật liệu tái chế và giải pháp tiết kiệm năng lượng.",
+        "C": "Giảm chất lượng bao bì để bù đắp chi phí nguyên liệu.",
+        "D": "Chuyển toàn bộ hoạt động Marketing sang quảng cáo trực tuyến."
+      },
+      "answer": "B",
+      "explainAnswer": "Khan hiếm nguyên liệu, giá năng lượng và sức ép sản phẩm thân thiện môi trường thuộc môi trường tự nhiên; hướng phù hợp là vật liệu tái chế và tiết kiệm năng lượng. Tăng nguyên liệu truyền thống hay giảm chất lượng làm nặng thêm rủi ro; chỉ chuyển quảng cáo online không giải quyết đầu vào."
+    },
+    {
+      "id": 62,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "CHƯƠNG 3 – MÔI TRƯỜNG MARKETING",
+      "question": "Một hãng điện thoại nhận thấy công nghệ mới xuất hiện với tốc độ rất nhanh, khiến các mẫu điện thoại hiện tại nhanh chóng bị xem là lỗi thời. Hãng cần phản ứng chủ yếu bằng cách nào?",
+      "options": {
+        "A": "Duy trì sản phẩm hiện tại càng lâu càng tốt để giảm chi phí.",
+        "B": "Cập nhật công nghệ phù hợp với xu hướng và thị hiếu thị trường.",
+        "C": "Chỉ tập trung giảm giá vì công nghệ không liên quan đến Marketing.",
+        "D": "Ngừng phát triển sản phẩm để tránh rủi ro đầu tư công nghệ."
+      },
+      "answer": "B",
+      "explainAnswer": "Công nghệ đổi nhanh rút ngắn vòng đời sản phẩm nên phải cập nhật theo xu hướng. Giữ nguyên mẫu, chỉ giảm giá hay ngừng phát triển làm tăng rủi ro lỗi thời."
+    },
+    {
+      "id": 63,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "CHƯƠNG 3 – MÔI TRƯỜNG MARKETING",
+      "question": "Một doanh nghiệp kinh doanh thực phẩm phải điều chỉnh hoạt động sau khi hệ thống văn bản pháp luật liên quan đến chất lượng và quản lý sản phẩm thay đổi. Doanh nghiệp cần xem xét yếu tố nào trước tiên?",
+      "options": {
+        "A": "Môi trường chính trị.",
+        "B": "Môi trường nhân khẩu học.",
+        "C": "Môi trường văn hóa.",
+        "D": "Môi trường công nghệ."
+      },
+      "answer": "A",
+      "explainAnswer": "Thay đổi văn bản pháp luật về chất lượng và quản lý sản phẩm thuộc môi trường chính trị – pháp luật. Nhân khẩu, văn hóa hay công nghệ không phải nguồn ràng buộc pháp lý này."
+    },
+    {
+      "id": 64,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "CHƯƠNG 3 – MÔI TRƯỜNG MARKETING",
+      "question": "Một thương hiệu thời trang quốc tế chuẩn bị thâm nhập một thị trường mới. Nghiên cứu cho thấy nhóm khách hàng địa phương có những chuẩn mực và giá trị văn hóa khác biệt đáng kể so với thị trường hiện tại, đặc biệt về cách ăn mặc trong các dịp lễ. Quyết định Marketing nào hợp lý nhất?",
+      "options": {
+        "A": "Giữ nguyên sản phẩm vì văn hóa không ảnh hưởng đến Marketing.",
+        "B": "Điều chỉnh sản phẩm và truyền thông phù hợp với chuẩn mực, giá trị văn hóa địa phương.",
+        "C": "Chỉ giảm giá để bù đắp sự khác biệt về văn hóa.",
+        "D": "Chỉ thay đổi kênh phân phối vì văn hóa chỉ ảnh hưởng đến hành vi mua."
+      },
+      "answer": "B",
+      "explainAnswer": "Chuẩn mực và giá trị văn hóa địa phương buộc điều chỉnh sản phẩm và truyền thông. Không bỏ qua văn hóa, không chỉ giảm giá hay chỉ đổi kênh vì văn hóa chi phối cả cách mặc và ý nghĩa sản phẩm."
+    },
+    {
+      "id": 212,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "",
+      "question": "Môi trường Marketing được hiểu là:",
+      "options": {
+        "A": "Chỉ bao gồm các yếu tố nằm bên ngoài doanh nghiệp",
+        "B": "Chỉ bao gồm các yếu tố mà doanh nghiệp có thể kiểm soát",
+        "C": "Tập hợp các lực lượng và chủ thể ảnh hưởng đến quyết định Marketing",
+        "D": "Chỉ bao gồm khách hàng và đối thủ cạnh tranh"
+      },
+      "answer": "C",
+      "explainAnswer": "Môi trường marketing là tập hợp các lực lượng và chủ thể tác động đến quyết định marketing. Nó không chỉ gồm yếu tố bên ngoài, không chỉ những gì doanh nghiệp kiểm soát được, cũng không thu hẹp chỉ còn khách hàng và đối thủ."
+    },
+    {
+      "id": 213,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "",
+      "question": "Yếu tố nào sau đây thuộc môi trường Marketing vi mô?",
+      "options": {
+        "A": "Công nghệ",
+        "B": "Văn hóa",
+        "C": "Nhà cung cấp",
+        "D": "Nhân khẩu học"
+      },
+      "answer": "C",
+      "explainAnswer": "Nhà cung cấp thuộc môi trường vi mô vì ảnh hưởng trực tiếp đến khả năng tạo và cung ứng giá trị cho khách hàng. Công nghệ, văn hóa và nhân khẩu học là các lực lượng vĩ mô, phạm vi rộng hơn một doanh nghiệp."
+    },
+    {
+      "id": 214,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "",
+      "question": "Yếu tố nào sau đây thuộc môi trường Marketing vĩ mô?",
+      "options": {
+        "A": "Trung gian Marketing",
+        "B": "Đối thủ cạnh tranh",
+        "C": "Nhà cung cấp",
+        "D": "Môi trường công nghệ"
+      },
+      "answer": "D",
+      "explainAnswer": "Môi trường công nghệ là lực lượng vĩ mô, tác động rộng đến cả ngành và môi trường vi mô. Trung gian marketing, đối thủ cạnh tranh và nhà cung cấp đều thuộc môi trường vi mô."
+    },
+    {
+      "id": 215,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "",
+      "question": "Yếu tố nhân khẩu học của môi trường Marketing bao gồm:",
+      "options": {
+        "A": "Quy mô, mật độ, tuổi và giới tính dân số",
+        "B": "Lãi suất, thu nhập và sức mua",
+        "C": "Luật pháp, chính sách và nhóm gây sức ép",
+        "D": "Tài nguyên thiên nhiên và năng lượng"
+      },
+      "answer": "A",
+      "explainAnswer": "Nhân khẩu học nghiên cứu đặc điểm dân số: quy mô, mật độ, tuổi, giới tính. Lãi suất, thu nhập, sức mua thuộc môi trường kinh tế; luật pháp, chính sách, nhóm gây sức ép thuộc chính trị; tài nguyên và năng lượng thuộc môi trường tự nhiên."
+    },
+    {
+      "id": 216,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "",
+      "question": "Đặc điểm nào phản ánh đúng nhất tác động của môi trường công nghệ đối với Marketing?",
+      "options": {
+        "A": "Công nghệ chỉ tạo ra nguy cơ cho doanh nghiệp",
+        "B": "Công nghệ có thể tạo cơ hội sản phẩm mới nhưng cũng làm sản phẩm nhanh lỗi thời",
+        "C": "Công nghệ không ảnh hưởng đến chu kỳ sống sản phẩm",
+        "D": "Công nghệ chỉ ảnh hưởng đến hoạt động sản xuất"
+      },
+      "answer": "B",
+      "explainAnswer": "Công nghệ vừa tạo cơ hội sản phẩm mới, vừa rút ngắn vòng đời nên hàng hóa dễ lỗi thời. Không phải chỉ sinh nguy cơ, không phải không ảnh hưởng đến chu kỳ sống sản phẩm, cũng không giới hạn tác động ở khâu sản xuất."
+    },
+    {
+      "id": 348,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Yếu tố nào sau đây KHÔNG thuộc môi trường nhân khẩu học?",
       "options": {
         "A": "Cơ cấu dân số",
@@ -14,11 +393,12 @@
         "D": "Quy mô và cơ cấu hộ gia đình"
       },
       "answer": "C",
-      "explainAnswer": "Môi trường nhân khẩu học liên quan đến dân số, tuổi, cơ cấu hộ gia đình, quy mô và tốc độ tăng dân số. Tỷ lệ thất nghiệp thuộc môi trường kinh tế."
+      "explainAnswer": "Tỷ lệ thất nghiệp phản ánh thị trường lao động, thuộc môi trường kinh tế. Nhân khẩu học chỉ gồm dân số, cơ cấu tuổi và quy mô hộ, không gồm việc làm."
     },
     {
-      "id": 2,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 349,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Phân tích môi trường bên ngoài cho ta thấy:",
       "options": {
         "A": "Điểm mạnh, điểm yếu",
@@ -27,11 +407,12 @@
         "D": "Điểm mạnh, cơ hội"
       },
       "answer": "B",
-      "explainAnswer": "Môi trường bên ngoài tạo ra cơ hội và thách thức, còn phân tích nội bộ giúp nhận diện điểm mạnh và điểm yếu. Đây là nền tảng của ma trận SWOT."
+      "explainAnswer": "Môi trường ngoài cho cơ hội và thách thức; nội bộ cho điểm mạnh và điểm yếu. Ghép mạnh với cơ hội hay yếu với thách thức là trộn hai nửa SWOT."
     },
     {
-      "id": 3,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 350,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Loại môi trường nào thuộc môi trường Marketing?",
       "options": {
         "A": "Môi trường vĩ mô",
@@ -40,11 +421,12 @@
         "D": "Môi trường vĩ mô, môi trường vi mô và môi trường nội bộ"
       },
       "answer": "D",
-      "explainAnswer": "Môi trường Marketing bao gồm cả môi trường vĩ mô, môi trường vi mô (ngành) và môi trường nội bộ của doanh nghiệp."
+      "explainAnswer": "Bức tranh môi trường marketing theo học phần gồm vĩ mô, vi mô/ngành và nội bộ. Cắt còn một lớp sẽ bỏ lực lượng đang tác động lên quyết định."
     },
     {
-      "id": 4,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 351,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Yếu tố nào sau đây KHÔNG thuộc môi trường kinh tế?",
       "options": {
         "A": "GDP",
@@ -53,11 +435,12 @@
         "D": "Lạm phát"
       },
       "answer": "B",
-      "explainAnswer": "Các yếu tố kinh tế gồm GDP, thu nhập, lãi suất, lạm phát và sức mua. Nghề nghiệp thuộc yếu tố nhân khẩu học hoặc cá nhân."
+      "explainAnswer": "Nghề nghiệp là biến nhân khẩu/cá nhân, không phải chỉ số kinh tế. GDP, lãi suất và lạm phát mới đo sức mua và vòng quay nền kinh tế."
     },
     {
-      "id": 5,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 352,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Yếu tố nào sau đây KHÔNG thuộc môi trường văn hóa – xã hội?",
       "options": {
         "A": "Các giá trị văn hóa truyền thống",
@@ -66,11 +449,12 @@
         "D": "Nhánh văn hóa"
       },
       "answer": "C",
-      "explainAnswer": "Quy mô và cơ cấu hộ gia đình thuộc môi trường nhân khẩu học. Môi trường văn hóa – xã hội bao gồm giá trị, niềm tin, nhánh văn hóa và lối sống."
+      "explainAnswer": "Quy mô và cơ cấu hộ là nhân khẩu học. Giá trị truyền thống, giá trị thứ phát và nhánh văn hóa thuộc văn hóa–xã hội."
     },
     {
-      "id": 6,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 353,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Yếu tố nào sau đây KHÔNG thuộc môi trường khoa học – công nghệ?",
       "options": {
         "A": "Tốc độ phát triển và đổi mới kỹ thuật, công nghệ",
@@ -79,11 +463,12 @@
         "D": "Quy định về thay đổi công nghệ"
       },
       "answer": "B",
-      "explainAnswer": "Tốc độ tăng trưởng GDP thuộc môi trường kinh tế. Môi trường công nghệ phản ánh tốc độ đổi mới, ngân sách R&D và các quy định liên quan."
+      "explainAnswer": "Tốc độ tăng GDP đo sức khỏe kinh tế, không phải tiến bộ kỹ thuật. Môi trường khoa học–công nghệ gồm tốc độ đổi mới, ngân sách R&D và các quy định làm thay đổi công nghệ."
     },
     {
-      "id": 7,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 354,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Yếu tố nào sau đây KHÔNG thuộc môi trường tự nhiên?",
       "options": {
         "A": "Sự thiếu hụt nguyên liệu",
@@ -92,11 +477,12 @@
         "D": "Mức độ ô nhiễm tăng"
       },
       "answer": "C",
-      "explainAnswer": "Tốc độ tăng dân số thuộc môi trường nhân khẩu học. Môi trường tự nhiên bao gồm nguyên liệu, năng lượng, ô nhiễm và điều kiện sinh thái."
+      "explainAnswer": "Tốc độ tăng dân số là biến nhân khẩu học. Môi trường tự nhiên gồm khan hiếm nguyên liệu, chi phí năng lượng và mức độ ô nhiễm — những ràng buộc sinh thái lên sản xuất."
     },
     {
-      "id": 8,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 355,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Yếu tố nào sau đây KHÔNG phải là ảnh hưởng của xã hội?",
       "options": {
         "A": "Văn hóa",
@@ -105,11 +491,12 @@
         "D": "Cá tính"
       },
       "answer": "D",
-      "explainAnswer": "Cá tính thuộc yếu tố tâm lý cá nhân. Văn hóa, gia đình và giai tầng xã hội thuộc ảnh hưởng xã hội."
+      "explainAnswer": "Cá tính là đặc điểm tâm lý của từng người. Ảnh hưởng xã hội đến từ văn hóa, gia đình và giai tầng — các lực lượng bên ngoài cá nhân, định hình chuẩn mực mua sắm."
     },
     {
-      "id": 9,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 356,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Môi trường vi mô của doanh nghiệp KHÔNG bao gồm:",
       "options": {
         "A": "Khách hàng",
@@ -118,11 +505,12 @@
         "D": "Ban Lãnh đạo doanh nghiệp"
       },
       "answer": "D",
-      "explainAnswer": "Môi trường vi mô gồm khách hàng, đối thủ, nhà cung ứng và trung gian marketing. Ban lãnh đạo thuộc môi trường nội bộ."
+      "explainAnswer": "Ban lãnh đạo thuộc môi trường nội bộ, doanh nghiệp tự điều khiển được. Vi mô là các lực lượng sát thị trường: khách hàng, đối thủ và nhà cung ứng."
     },
     {
-      "id": 10,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 357,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Yếu tố nào sau đây KHÔNG thuộc môi trường marketing nội bộ?",
       "options": {
         "A": "Loại hình và lĩnh vực kinh doanh của doanh nghiệp",
@@ -131,11 +519,12 @@
         "D": "Văn hóa doanh nghiệp"
       },
       "answer": "B",
-      "explainAnswer": "Nhà cung ứng thuộc môi trường vi mô (bên ngoài). Môi trường nội bộ gồm loại hình kinh doanh, nguồn lực và văn hóa doanh nghiệp."
+      "explainAnswer": "Nhà cung ứng đứng ngoài cổng, thuộc vi mô. Loại hình kinh doanh, nguồn lực và văn hóa doanh nghiệp mới là nội bộ."
     },
     {
-      "id": 11,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 358,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Trong các yếu tố sau đây, yếu tố nào KHÔNG thuộc về môi trường vi mô của doanh nghiệp?",
       "options": {
         "A": "Khách hàng",
@@ -144,11 +533,12 @@
         "D": "Các trung gian marketing"
       },
       "answer": "B",
-      "explainAnswer": "Lãnh đạo doanh nghiệp thuộc môi trường nội bộ. Khách hàng, đối thủ và trung gian marketing thuộc môi trường vi mô."
+      "explainAnswer": "Lãnh đạo doanh nghiệp nằm trong nội bộ. Khách hàng, đối thủ và trung gian marketing mới là các tác nhân vi mô mà DN phải ứng phó trên thị trường."
     },
     {
-      "id": 12,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 359,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Việc phân tích môi trường nội bộ giúp doanh nghiệp nhận diện:",
       "options": {
         "A": "Cơ hội",
@@ -157,24 +547,26 @@
         "D": "Cơ hội và thách thức"
       },
       "answer": "C",
-      "explainAnswer": "Phân tích môi trường nội bộ giúp nhận diện điểm mạnh và điểm yếu của doanh nghiệp."
+      "explainAnswer": "Phân tích nội bộ cho điểm mạnh (và điểm yếu). Cơ hội cùng thách thức đến từ bên ngoài, không phải từ bên trong."
     },
     {
-      "id": 13,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 360,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Môi trường marketing … có ảnh hưởng tích cực hoặc tiêu cực đến hoạt động marketing của doanh nghiệp.",
       "options": {
         "A": "Bao gồm tất cả các yếu tố và lực lượng thuộc về doanh nghiệp",
         "B": "Bao gồm tất cả các yếu tố và lực lượng thuộc về môi trường vi mô và vĩ mô",
         "C": "Bao gồm tất cả các yếu tố và lực lượng thuộc về môi trường nội bộ",
-        "D": "Bao gồm tất cả các yếu tố và lực lượng thuộc về môi trường bên ngoài doanh nghiệp"
+        "D": "Bao gồm tất cả các yếu tố và lực lượng thuộc về môi trường vĩ mô"
       },
       "answer": "B",
-      "explainAnswer": "Môi trường marketing bao gồm các yếu tố thuộc môi trường vi mô và vĩ mô có ảnh hưởng đến hoạt động marketing của doanh nghiệp."
+      "explainAnswer": "Theo câu này, môi trường marketing là tập vi mô và vĩ mô có thể nâng hoặc cản hoạt động. Chỉ nội bộ quá hẹp; chỉ vĩ mô bỏ khách–đối thủ–cung ứng."
     },
     {
-      "id": 14,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 361,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Những yếu tố nào thuộc về môi trường nội bộ của doanh nghiệp?",
       "options": {
         "A": "Khả năng tài chính",
@@ -183,11 +575,12 @@
         "D": "Khả năng tài chính và uy tín"
       },
       "answer": "D",
-      "explainAnswer": "Khả năng tài chính và uy tín là những yếu tố thuộc môi trường nội bộ của doanh nghiệp."
+      "explainAnswer": "Khả năng tài chính và uy tín là nguồn lực, tài sản vô hình nằm trong tay doanh nghiệp. Tình hình thị trường biến động bên ngoài, không thuộc nội bộ."
     },
     {
-      "id": 15,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 362,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Những yếu tố nào thuộc về môi trường bên trong của doanh nghiệp?",
       "options": {
         "A": "Khách hàng của doanh nghiệp",
@@ -196,11 +589,12 @@
         "D": "Khách hàng của doanh nghiệp và các công ty đối tác với doanh nghiệp"
       },
       "answer": "C",
-      "explainAnswer": "Quy mô sản xuất thuộc môi trường nội bộ. Khách hàng và đối tác thuộc môi trường bên ngoài."
+      "explainAnswer": "Quy mô sản xuất là năng lực bên trong. Khách hàng và công ty đối tác đứng ngoài cổng, thuộc môi trường vi mô chứ không phải môi trường nội bộ."
     },
     {
-      "id": 16,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 363,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Hoạt động nào sau đây KHÔNG phải hoạt động chủ yếu trong chuỗi giá trị của công ty?",
       "options": {
         "A": "Sản xuất",
@@ -209,11 +603,12 @@
         "D": "Dịch vụ khách hàng"
       },
       "answer": "B",
-      "explainAnswer": "Kế toán là hoạt động hỗ trợ. Các hoạt động chủ yếu trong chuỗi giá trị gồm sản xuất, marketing & bán hàng và dịch vụ khách hàng."
+      "explainAnswer": "Trong chuỗi giá trị, kế toán là hoạt động hỗ trợ. Sản xuất, marketing–bán hàng và dịch vụ khách mới tạo giá trị trực tiếp."
     },
     {
-      "id": 17,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 364,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Hoạt động nào sau đây là hoạt động chủ yếu trong chuỗi giá trị của công ty?",
       "options": {
         "A": "Sản xuất",
@@ -222,11 +617,12 @@
         "D": "Sản xuất, dịch vụ khách hàng và marketing & bán hàng"
       },
       "answer": "D",
-      "explainAnswer": "Trong chuỗi giá trị, sản xuất, dịch vụ khách hàng, marketing và bán hàng đều là các hoạt động chủ yếu tạo giá trị."
+      "explainAnswer": "Chuỗi giá trị xếp sản xuất, marketing–bán hàng và dịch vụ khách vào hoạt động chủ yếu. Chọn một nhánh là thiếu hai khâu còn lại cùng tạo giá trị cho khách."
     },
     {
-      "id": 18,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 365,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Yếu tố nào sau đây thuộc môi trường nội bộ?",
       "options": {
         "A": "Loại hình và lĩnh vực kinh doanh của doanh nghiệp",
@@ -235,11 +631,12 @@
         "D": "Loại hình và lĩnh vực kinh doanh của doanh nghiệp và nguồn lực của doanh nghiệp"
       },
       "answer": "D",
-      "explainAnswer": "Loại hình kinh doanh và nguồn lực đều thuộc môi trường nội bộ. Nhà cung ứng thuộc môi trường vi mô."
+      "explainAnswer": "Loại hình kinh doanh và nguồn lực cùng là nội bộ. Nhà cung ứng thuộc vi mô nên không ghép vào; lấy riêng A hoặc C đều bỏ một nửa nội lực."
     },
     {
-      "id": 19,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 366,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Các trung gian marketing KHÔNG bao gồm:",
       "options": {
         "A": "Các hãng phân phối chuyên nghiệp",
@@ -248,11 +645,12 @@
         "D": "Các tổ chức tài chính – tín dụng"
       },
       "answer": "B",
-      "explainAnswer": "Nhà cung ứng không thuộc trung gian marketing. Trung gian marketing gồm nhà phân phối, đại lý, hãng dịch vụ marketing và tổ chức tài chính hỗ trợ."
+      "explainAnswer": "Trung gian marketing gồm nhà phân phối, hãng dịch vụ marketing và tổ chức tài chính hỗ trợ. Nhà cung ứng đứng ở đầu vào, không phải trung gian."
     },
     {
-      "id": 20,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 367,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Yếu tố nào sau đây KHÔNG thuộc môi trường bên ngoài?",
       "options": {
         "A": "Kinh tế",
@@ -261,11 +659,12 @@
         "D": "Chính trị - pháp luật"
       },
       "answer": "C",
-      "explainAnswer": "Quản lý thuộc môi trường nội bộ. Kinh tế, văn hóa – xã hội và chính trị – pháp luật thuộc môi trường bên ngoài."
+      "explainAnswer": "Quản lý là hàm điều hành bên trong. Kinh tế, văn hóa–xã hội và chính trị–pháp luật là các lực lượng vĩ mô doanh nghiệp không kiểm soát trực tiếp."
     },
     {
-      "id": 21,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 368,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Môi trường vĩ mô được thể hiện trừ yếu tố nào?",
       "options": {
         "A": "Dân số",
@@ -274,11 +673,12 @@
         "D": "Khách hàng"
       },
       "answer": "D",
-      "explainAnswer": "Khách hàng thuộc môi trường vi mô. Dân số, thu nhập và tốc độ tăng trưởng kinh tế thuộc môi trường vĩ mô."
+      "explainAnswer": "Khách hàng là lực lượng vi mô sát doanh nghiệp. Dân số, thu nhập dân cư và tăng trưởng kinh tế thuộc lớp vĩ mô, tác động gián tiếp lên sức mua."
     },
     {
-      "id": 22,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 369,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Phân tích điểm mạnh (S) và điểm yếu (W) của doanh nghiệp là hoạt động có được từ:",
       "options": {
         "A": "Phân tích môi trường vi mô",
@@ -287,24 +687,12 @@
         "D": "Phân tích môi trường vĩ mô"
       },
       "answer": "C",
-      "explainAnswer": "Điểm mạnh và điểm yếu được xác định từ việc phân tích môi trường nội bộ của doanh nghiệp."
+      "explainAnswer": "Điểm mạnh và điểm yếu chỉ đọc được khi soi nguồn lực, văn hóa, năng lực bên trong. Vi mô lẫn vĩ mô cho cơ hội và thách thức, không cho S/W."
     },
     {
-      "id": 23,
-      "chapter": "Chương III - Môi trường Marketing",
-      "question": "Phân tích môi trường bên ngoài cho ta thấy:",
-      "options": {
-        "A": "Điểm mạnh, điểm yếu",
-        "B": "Cơ hội, thách thức",
-        "C": "Điểm yếu, thách thức",
-        "D": "Điểm mạnh, cơ hội"
-      },
-      "answer": "B",
-      "explainAnswer": "Phân tích môi trường bên ngoài giúp nhận diện cơ hội và thách thức."
-    },
-    {
-      "id": 24,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 370,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Phân tích môi trường bên trong cho ta thấy:",
       "options": {
         "A": "Điểm mạnh, điểm yếu",
@@ -313,11 +701,12 @@
         "D": "Điểm mạnh, cơ hội"
       },
       "answer": "A",
-      "explainAnswer": "Phân tích môi trường bên trong giúp nhận diện điểm mạnh và điểm yếu của doanh nghiệp."
+      "explainAnswer": "Phân tích bên trong cho điểm mạnh và điểm yếu; phân tích bên ngoài cho cơ hội và thách thức. Đổi cặp này là đảo ma trận SWOT."
     },
     {
-      "id": 25,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 371,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Nhà cung ứng là yếu tố của môi trường nào sau đây?",
       "options": {
         "A": "Môi trường vĩ mô",
@@ -326,11 +715,12 @@
         "D": "Môi trường kinh tế"
       },
       "answer": "C",
-      "explainAnswer": "Nhà cung ứng thuộc môi trường vi mô của doanh nghiệp."
+      "explainAnswer": "Nhà cung ứng nằm trong năm lực lượng vi mô sát ngành. Không phải biến vĩ mô, không phải nguồn lực nội bộ, cũng không gom vào riêng mục kinh tế."
     },
     {
-      "id": 26,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 372,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Một doanh nghiệp đã trúng thầu khai thác một mỏ muối có chất lượng cao tại Tây Ninh. Đây được coi là?",
       "options": {
         "A": "Điểm mạnh",
@@ -339,11 +729,12 @@
         "D": "Thách thức"
       },
       "answer": "A",
-      "explainAnswer": "Việc sở hữu quyền khai thác mỏ muối chất lượng cao là một điểm mạnh (nội lực) của doanh nghiệp."
+      "explainAnswer": "Quyền khai thác mỏ muối đã thuộc về doanh nghiệp — đó là năng lực nội bộ, tức điểm mạnh. Cơ hội phải là yếu tố bên ngoài chưa nắm trong tay."
     },
     {
-      "id": 27,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 373,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Tùy vào hoàn cảnh, điểm mạnh của doanh nghiệp có thể trở thành:",
       "options": {
         "A": "Là điểm yếu của doanh nghiệp",
@@ -351,12 +742,13 @@
         "C": "Là thách thức đối với doanh nghiệp",
         "D": "Có thể là cơ hội hoặc thách thức đối với doanh nghiệp"
       },
-      "answer": "D",
-      "explainAnswer": "Tùy vào hoàn cảnh thị trường, một yếu tố có thể chuyển hóa giữa điểm mạnh/điểm yếu hoặc cơ hội/thách thức."
+      "answer": "A",
+      "explainAnswer": "Khi hoàn cảnh đổi, một năng lực hôm nay có thể trở thành gánh nặng ngày mai, tức điểm yếu. Cơ hội và thách thức thuộc môi trường ngoài, không phải sự chuyển hóa của điểm mạnh."
     },
     {
-      "id": 28,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 374,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Dịch bệnh COVID-19 làm đứt gãy các chuỗi cung ứng trên thế giới, ảnh hưởng đến nguồn nguyên vật liệu phục vụ sản xuất của doanh nghiệp là một ví dụ về ảnh hưởng của môi trường nào?",
       "options": {
         "A": "Môi trường vi mô",
@@ -365,11 +757,12 @@
         "D": "Môi trường chính trị"
       },
       "answer": "B",
-      "explainAnswer": "Dịch bệnh COVID-19 thuộc yếu tố môi trường vĩ mô (yếu tố tự nhiên/xã hội toàn cầu) ảnh hưởng đến doanh nghiệp."
+      "explainAnswer": "COVID đứt gãy chuỗi cung ứng là cú sốc vĩ mô (dịch bệnh toàn cầu), dù hệ quả đụng nhà cung ứng. Không quy về nội bộ hay chỉ 'chính trị'."
     },
     {
-      "id": 29,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 375,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Đối thủ cạnh tranh của dầu gội X là tất cả các sản phẩm dầu gội đầu. Đối thủ cạnh tranh như trên đây thuộc cấp độ:",
       "options": {
         "A": "Cạnh tranh chung",
@@ -378,11 +771,12 @@
         "D": "Cạnh tranh giữa các nhãn hiệu"
       },
       "answer": "C",
-      "explainAnswer": "Tất cả các sản phẩm dầu gội đầu thuộc cùng một ngành → cạnh tranh ngành."
+      "explainAnswer": "Mọi dầu gội cùng ngành hàng nên là cạnh tranh ngành. Cạnh tranh nhãn hiệu hẹp hơn (từng brand); cạnh tranh nhu cầu và cạnh tranh chung rộng hơn, gồm cả cách thỏa mãn khác."
     },
     {
-      "id": 30,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 376,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Sức mạnh khách hàng sẽ nhỏ trong trường hợp nào?",
       "options": {
         "A": "Các khách hàng sống cùng khu vực và biết nhau",
@@ -390,12 +784,13 @@
         "C": "Số lượng cửa hàng ít",
         "D": "Các khách hàng sống cùng khu vực và biết nhau và Số lượng cửa hàng ít"
       },
-      "answer": "A",
-      "explainAnswer": "Khi khách hàng sống cùng khu vực và biết nhau, họ dễ trao đổi thông tin và tăng sức mạnh thương lượng. Câu hỏi hỏi trường hợp sức mạnh nhỏ nên đáp án đúng là khi khách hàng phân tán, không liên kết."
+      "answer": "C",
+      "explainAnswer": "Ít cửa hàng nghĩa là ít lựa chọn thay thế, sức mạnh thương lượng của khách yếu đi. Khách sống gần và biết nhau dễ chia sẻ thông tin nên sức mạnh tăng; ít khách hàng thì từng người càng có trọng lượng."
     },
     {
-      "id": 31,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 377,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Tùy vào hoàn cảnh, điểm mạnh của doanh nghiệp có thể trở thành … và ngược lại.",
       "options": {
         "A": "Cơ hội",
@@ -404,11 +799,12 @@
         "D": "Cơ hội, thách thức và điểm yếu"
       },
       "answer": "C",
-      "explainAnswer": "Tùy hoàn cảnh, điểm mạnh có thể trở thành điểm yếu và ngược lại."
+      "explainAnswer": "Cặp nội bộ của SWOT đi thành cặp: điểm mạnh có thể đảo thành điểm yếu và ngược lại. Cơ hội/thách thức là cặp bên ngoài, không đối xứng trực tiếp với điểm mạnh."
     },
     {
-      "id": 32,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 378,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Sữa và nước khoáng là:",
       "options": {
         "A": "Sản phẩm cạnh tranh trực tiếp",
@@ -417,11 +813,12 @@
         "D": "2 sản phẩm không liên quan đến nhau"
       },
       "answer": "B",
-      "explainAnswer": "Sữa và nước khoáng có thể thay thế nhau trong một số nhu cầu giải khát → sản phẩm thay thế."
+      "explainAnswer": "Sữa và nước khoáng có thể thay nhau khi giải quyết cơn khát. Chúng không phải hai nhãn cùng ngành hàng trực tiếp, cũng không bổ trợ như máy và linh kiện."
     },
     {
-      "id": 33,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 379,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Số lượng đối thủ cạnh tranh tiềm ẩn sẽ nhiều khi:",
       "options": {
         "A": "Giá bán sản phẩm lớn hơn nhiều so với chi phí bỏ ra",
@@ -430,11 +827,12 @@
         "D": "Giá bán sản phẩm lớn hơn nhiều so với chi phí bỏ ra, Số lượng khách hàng của ngành có xu hướng giảm và Số lượng doanh nghiệp đang hoạt động trong ngành nhiều"
       },
       "answer": "A",
-      "explainAnswer": "Khi biên lợi nhuận cao (giá bán >> chi phí), sẽ thu hút nhiều đối thủ tiềm ẩn gia nhập ngành."
+      "explainAnswer": "Biên lãi dày (giá bán vượt xa chi phí) hút người mới gia nhập. Nhu cầu giảm hay ngành đã đông lại làm giảm, chứ không tăng, sức hút của đối thủ tiềm ẩn."
     },
     {
-      "id": 34,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 380,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Hiện tại EVN là đơn vị duy nhất tại thị trường bán lẻ điện tại Việt Nam. Yếu tố nào gây nên tình trạng này?",
       "options": {
         "A": "Vốn đầu tư",
@@ -443,11 +841,12 @@
         "D": "Danh tiếng"
       },
       "answer": "B",
-      "explainAnswer": "Tình trạng độc quyền của EVN chủ yếu do rào cản giấy phép (độc quyền nhà nước) trong lĩnh vực điện lực."
+      "explainAnswer": "Độc quyền bán lẻ điện của EVN gắn rào cản giấy phép/nhà nước. Vốn, công nghệ hay danh tiếng có thể là rào cản khác nhưng không giải thích tình trạng độc quyền này."
     },
     {
-      "id": 35,
-      "chapter": "Chương III - Môi trường Marketing",
+      "id": 381,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương III - Môi trường Marketing",
       "question": "Tại một số khu vực thuộc vùng núi, đa phần các gia đình vẫn có tư tưởng trọng nam khinh nữ. Đây là yếu tố thuộc môi trường nào?",
       "options": {
         "A": "Môi trường chính trị - luật pháp",
@@ -456,7 +855,35 @@
         "D": "Môi trường nhân khẩu học"
       },
       "answer": "C",
-      "explainAnswer": "Tư tưởng trọng nam khinh nữ là yếu tố thuộc môi trường văn hóa – xã hội."
+      "explainAnswer": "Tư tưởng trọng nam khinh nữ là chuẩn mực, giá trị văn hóa ăn sâu trong cộng đồng. Không phải quy tắc pháp lý, điều kiện tự nhiên hay biến số nhân khẩu như tuổi, giới, quy mô hộ."
+    },
+    {
+      "id": 401,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
+      "question": "Tùy vào hoàn cảnh, cơ hội của doanh nghiệp có thể trở thành … và ngược lại.",
+      "options": {
+        "A": "Cơ hội",
+        "B": "Thách thức",
+        "C": "Điểm yếu",
+        "D": "Cơ hội, thách thức và điểm yếu"
+      },
+      "answer": "B",
+      "explainAnswer": "Cặp bên ngoài của SWOT đối xứng: cơ hội hôm nay có thể hóa thách thức khi luật, công nghệ hay đối thủ đổi chiều. Điểm yếu thuộc nội bộ, không phải đối cực của cơ hội."
+    },
+    {
+      "id": 402,
+      "chapter": "Chương 3. Môi trường Marketing",
+      "sourceChapter": "Chương IV - Hành vi khách hàng",
+      "question": "Hoạt động nào sau đây KHÔNG phải hoạt động chủ yếu trong chuỗi giá trị của công ty?",
+      "options": {
+        "A": "Sản xuất",
+        "B": "Nghiên cứu công nghệ",
+        "C": "Marketing và bán hàng",
+        "D": "Dịch vụ khách hàng"
+      },
+      "answer": "B",
+      "explainAnswer": "Nghiên cứu công nghệ là hoạt động hỗ trợ trong chuỗi giá trị. Sản xuất, marketing–bán hàng và dịch vụ khách mới nằm ở dòng hoạt động chủ yếu."
     }
   ]
 }

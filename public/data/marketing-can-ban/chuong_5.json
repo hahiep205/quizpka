@@ -1,11 +1,418 @@
 {
-  "title": "Bộ câu hỏi Marketing căn bản - Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
-  "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
-  "totalQuestions": 70,
+  "title": "Bộ câu hỏi trắc nghiệm Marketing căn bản - Chương 5. Quy trình STP",
+  "chapter": "Chương 5. Quy trình STP",
+  "totalQuestions": 79,
   "questions": [
     {
-      "id": 1,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 89,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "CHƯƠNG 5 – QUY TRÌNH STP",
+      "question": "Một doanh nghiệp chia thị trường điện thoại thành các nhóm dựa trên tuổi, thu nhập, nghề nghiệp và quy mô gia đình. Doanh nghiệp đang sử dụng cơ sở phân đoạn nào?",
+      "options": {
+        "A": "Địa lý",
+        "B": "Nhân khẩu học",
+        "C": "Tâm lý học",
+        "D": "Hành vi"
+      },
+      "answer": "B",
+      "explainAnswer": "Tuổi, thu nhập, nghề nghiệp, quy mô gia đình là biến nhân khẩu học. Địa lý là vùng miền; tâm lý là lối sống/nhân cách; hành vi là lợi ích, mức dùng, trung thành."
+    },
+    {
+      "id": 90,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "CHƯƠNG 5 – QUY TRÌNH STP",
+      "question": "Một đoạn thị trường được xem là có hiệu quả khi đáp ứng tốt nhất yêu cầu nào sau đây?",
+      "options": {
+        "A": "Có quy mô lớn nhất và tốc độ tăng trưởng cao nhất",
+        "B": "Có nhiều khách hàng và ít đối thủ cạnh tranh",
+        "C": "Doanh nghiệp có khả năng đáp ứng nhu cầu và tạo dòng tiền thu lớn hơn dòng tiền chi",
+        "D": "Có mức giá bán cao và khách hàng ít nhạy cảm về giá"
+      },
+      "answer": "C",
+      "explainAnswer": "Đoạn hiệu quả phải tiếp cận được, doanh nghiệp đáp ứng được và dòng tiền thu lớn hơn chi, chứ không chỉ lớn nhất, ít đối thủ nhất hay giá cao nhất. Quy mô lớn mà không sinh lời hoặc ngoài năng lực vẫn không hiệu quả."
+    },
+    {
+      "id": 91,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "CHƯƠNG 5 – QUY TRÌNH STP",
+      "question": "Điểm khác biệt cơ bản giữa phân đoạn thị trường và lựa chọn thị trường mục tiêu là gì?",
+      "options": {
+        "A": "Phân đoạn nhằm lựa chọn sản phẩm, còn mục tiêu nhằm lựa chọn giá",
+        "B": "Phân đoạn chia thị trường thành các nhóm, còn lựa chọn mục tiêu quyết định nhóm doanh nghiệp tập trung phục vụ",
+        "C": "Phân đoạn xác định vị thế, còn mục tiêu xây dựng hình ảnh thương hiệu",
+        "D": "Phân đoạn chỉ dành cho doanh nghiệp lớn, còn mục tiêu dành cho doanh nghiệp nhỏ"
+      },
+      "answer": "B",
+      "explainAnswer": "Phân đoạn chia thị trường thành nhóm tương đồng; targeting quyết định nhóm sẽ phục vụ. Không phải chọn sản phẩm/giá, không phải định vị/hình ảnh, cũng không phải chỉ dành cho doanh nghiệp lớn hay nhỏ."
+    },
+    {
+      "id": 92,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "CHƯƠNG 5 – QUY TRÌNH STP",
+      "question": "Một doanh nghiệp xác định trong tâm trí khách hàng mục tiêu rằng sản phẩm của mình nổi bật về chất lượng cao và độ tin cậy, đồng thời xây dựng các hoạt động marketing phù hợp. Đây là hoạt động chủ yếu của:",
+      "options": {
+        "A": "Phân đoạn thị trường",
+        "B": "Lựa chọn thị trường mục tiêu",
+        "C": "Định vị thị trường",
+        "D": "Đa dạng hóa sản phẩm"
+      },
+      "answer": "C",
+      "explainAnswer": "Tạo vị trí chất lượng cao, đáng tin trong tâm trí khách mục tiêu là định vị. Phân đoạn và chọn mục tiêu đứng trước; đa dạng hóa sản phẩm không đồng nghĩa với định vị."
+    },
+    {
+      "id": 93,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "CHƯƠNG 5 – QUY TRÌNH STP",
+      "question": "Một doanh nghiệp đánh giá một đoạn thị trường dựa trên quy mô và tốc độ tăng trưởng, mức độ hấp dẫn về cơ cấu, mục tiêu và khả năng của doanh nghiệp. Doanh nghiệp đang thực hiện bước nào?",
+      "options": {
+        "A": "Xác định cơ sở phân đoạn",
+        "B": "Đánh giá các đoạn thị trường",
+        "C": "Xây dựng bản đồ định vị",
+        "D": "Thiết kế marketing mix"
+      },
+      "answer": "B",
+      "explainAnswer": "Quy mô/tăng trưởng, hấp dẫn cơ cấu, mục tiêu và khả năng doanh nghiệp là ba tiêu chuẩn đánh giá đoạn thị trường. Chưa phải chọn cơ sở phân đoạn, vẽ bản đồ định vị hay thiết kế mix."
+    },
+    {
+      "id": 94,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "CHƯƠNG 5 – QUY TRÌNH STP",
+      "question": "Một doanh nghiệp chọn một nhóm khách hàng riêng biệt và tập trung đáp ứng nhiều nhu cầu khác nhau của chính nhóm khách hàng đó. Phương án này được gọi là:",
+      "options": {
+        "A": "Tập trung vào một đoạn thị trường",
+        "B": "Chuyên môn hóa tuyển chọn",
+        "C": "Chuyên môn hóa theo đặc tính thị trường",
+        "D": "Chuyên môn hóa theo đặc tính sản phẩm"
+      },
+      "answer": "C",
+      "explainAnswer": "Một nhóm khách riêng biệt, đáp ứng nhiều nhu cầu khác nhau của chính nhóm đó là chuyên môn hóa theo đặc tính thị trường. Tập trung một đoạn hẹp hơn; tuyển chọn là vài đoạn không liên hệ; theo sản phẩm là một sản phẩm bán cho nhiều nhóm."
+    },
+    {
+      "id": 95,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "CHƯƠNG 5 – QUY TRÌNH STP",
+      "question": "Một hãng thời trang nhận thấy khách hàng tại miền Bắc có xu hướng ưu tiên trang phục giữ ấm, trong khi khách hàng miền Nam quan tâm nhiều hơn đến sản phẩm mỏng, thóang. Hãng quyết định xây dựng chương trình marketing riêng cho từng khu vực. Cơ sở phân đoạn chủ yếu mà doanh nghiệp đang sử dụng là:",
+      "options": {
+        "A": "Nhân khẩu học",
+        "B": "Địa lý",
+        "C": "Tâm lý học",
+        "D": "Hành vi"
+      },
+      "answer": "B",
+      "explainAnswer": "Miền Bắc/miền Nam khác khí hậu và trang phục: phân đoạn địa lý. Nhân khẩu là tuổi/thu nhập; tâm lý là lối sống; hành vi là lợi ích/mức dùng."
+    },
+    {
+      "id": 96,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "CHƯƠNG 5 – QUY TRÌNH STP",
+      "question": "Một hãng ô tô phân chia khách hàng thành nhóm có thu nhập dưới 300 triệu đồng/năm, từ 300–700 triệu đồng/năm và trên 700 triệu đồng/năm để xây dựng danh mục xe phù hợp. Cơ sở phân đoạn nào phù hợp nhất?",
+      "options": {
+        "A": "Địa lý",
+        "B": "Tâm lý học",
+        "C": "Nhân khẩu học",
+        "D": "Hành vi"
+      },
+      "answer": "C",
+      "explainAnswer": "Thu nhập là biến nhân khẩu học. Không phải vùng miền, lối sống hay tình trạng sử dụng."
+    },
+    {
+      "id": 97,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "CHƯƠNG 5 – QUY TRÌNH STP",
+      "question": "Một thương hiệu mỹ phẩm chia khách hàng thành nhóm ưa chuộng lối sống truyền thống, nhóm theo đuổi lối sống hiện đại và nhóm đề cao cá tính riêng. Thương hiệu sau đó thiết kế thông điệp khác nhau cho từng nhóm. Cơ sở phân đoạn nào được sử dụng?",
+      "options": {
+        "A": "Hành vi",
+        "B": "Nhân khẩu học",
+        "C": "Địa lý",
+        "D": "Tâm lý học"
+      },
+      "answer": "D",
+      "explainAnswer": "Lối sống truyền thống/hiện đại/cá tính thuộc phân đoạn tâm lý học. Hành vi là lợi ích và mức dùng; nhân khẩu là tuổi/thu nhập; địa lý là vùng."
+    },
+    {
+      "id": 98,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "CHƯƠNG 5 – QUY TRÌNH STP",
+      "question": "Một hãng kem đánh răng phát hiện ba nhóm khách hàng: nhóm tìm kiếm giá thấp, nhóm quan tâm phòng sâu răng và nhóm ưu tiên tính thẩm mỹ của hàm răng. Hãng phát triển sản phẩm tương ứng cho từng nhóm. Tiêu thức phân đoạn quan trọng nhất trong trường hợp này là:",
+      "options": {
+        "A": "Lợi ích tìm kiếm",
+        "B": "Quy mô gia đình",
+        "C": "Khí hậu",
+        "D": "Nghề nghiệp"
+      },
+      "answer": "A",
+      "explainAnswer": "Giá thấp, phòng sâu răng, thẩm mỹ là lợi ích tìm kiếm, biến hành vi điển hình của kem đánh răng. Quy mô gia đình và nghề là nhân khẩu; khí hậu là địa lý."
+    },
+    {
+      "id": 99,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "CHƯƠNG 5 – QUY TRÌNH STP",
+      "question": "Một chuỗi cà phê chia khách hàng thành người chưa từng sử dụng, người sử dụng ít, người sử dụng thường xuyên và khách hàng trung thành để xây dựng chương trình chăm sóc khác nhau. Doanh nghiệp đang sử dụng tiêu thức nào?",
+      "options": {
+        "A": "Địa lý",
+        "B": "Nhân khẩu học",
+        "C": "Hành vi",
+        "D": "Tâm lý học"
+      },
+      "answer": "C",
+      "explainAnswer": "Chưa dùng, dùng ít, dùng thường xuyên, trung thành là biến hành vi. Không phải địa lý, nhân khẩu hay tâm lý."
+    },
+    {
+      "id": 100,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "CHƯƠNG 5 – QUY TRÌNH STP",
+      "question": "Một công ty bán phần mềm quản trị doanh nghiệp trước tiên chia thị trường theo ngành và quy mô doanh nghiệp, sau đó trong từng nhóm lại chia theo công nghệ đang sử dụng, tình trạng sử dụng và năng lực khách hàng. Quy trình này phù hợp nhất với:",
+      "options": {
+        "A": "Phân đoạn hành vi người tiêu dùng",
+        "B": "Phân đoạn vĩ mô và vi mô trên thị trường tư liệu sản xuất",
+        "C": "Marketing không phân biệt",
+        "D": "Chuyên môn hóa theo đặc tính sản phẩm"
+      },
+      "answer": "B",
+      "explainAnswer": "Chia trước theo ngành, quy mô rồi trong từng nhóm chia theo công nghệ, tình trạng dùng, năng lực là phân đoạn vĩ mô rồi vi mô trên thị trường tư liệu sản xuất. Không phải hành vi người tiêu dùng, marketing không phân biệt hay chuyên môn hóa sản phẩm."
+    },
+    {
+      "id": 101,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "CHƯƠNG 5 – QUY TRÌNH STP",
+      "question": "Một doanh nghiệp xác định một đoạn khách hàng có quy mô rất lớn và tăng trưởng 20%/năm. Tuy nhiên, đoạn này có nhiều đối thủ mạnh, sản phẩm đồng nhất và chi phí cố định cao. Nếu chỉ dựa vào quy mô và tốc độ tăng trưởng, doanh nghiệp có thể mắc sai lầm nào?",
+      "options": {
+        "A": "Đánh giá đoạn thị trường quá hấp dẫn mà bỏ qua cơ cấu cạnh tranh",
+        "B": "Đánh giá thấp khả năng sinh lời do thị trường tăng trưởng cao",
+        "C": "Chỉ quan tâm đến nhu cầu mà bỏ qua quy mô thị trường",
+        "D": "Chọn thị trường dựa hoàn toàn vào đặc điểm tâm lý"
+      },
+      "answer": "A",
+      "explainAnswer": "Đoạn lớn, tăng 20% nhưng nhiều đối thủ, sản phẩm đồng nhất, chi phí cố định cao có thể kém hấp dẫn về cơ cấu. Sai lầm là chỉ nhìn quy mô/tăng trưởng. Không phải đánh giá thấp khả năng sinh lời vì tăng trưởng cao, cũng không phải bỏ qua quy mô hay chỉ nhìn tâm lý."
+    },
+    {
+      "id": 102,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "CHƯƠNG 5 – QUY TRÌNH STP",
+      "question": "Một công ty sữa đang cân nhắc một phân đoạn có tốc độ tăng trưởng cao. Tuy nhiên, khách hàng trong phân đoạn có khả năng dễ dàng chuyển sang sữa thực vật và nước trái cây. Yếu tố nào làm giảm mức độ hấp dẫn của phân đoạn này?",
+      "options": {
+        "A": "Quyền thương lượng của khách hàng",
+        "B": "Mối đe dọa từ sản phẩm thay thế",
+        "C": "Quyền thương lượng của nhà cung cấp",
+        "D": "Mối đe dọa từ đối thủ tiềm ẩn"
+      },
+      "answer": "B",
+      "explainAnswer": "Sữa thực vật và nước trái cây là sản phẩm thay thế, làm giảm giá và lợi nhuận tiềm năng. Không phải quyền khách hàng, nhà cung cấp hay đối thủ tiềm ẩn trong tình huống này."
+    },
+    {
+      "id": 103,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "CHƯƠNG 5 – QUY TRÌNH STP",
+      "question": "Một doanh nghiệp B2B bán nguyên liệu cho các nhà máy. Trong một phân đoạn, chỉ có ba khách hàng lớn nhưng mỗi khách hàng chiếm tỷ trọng rất cao trong doanh số của doanh nghiệp và có thể dễ dàng chuyển sang nhà cung cấp khác. Áp lực nào cần được đặc biệt xem xét?",
+      "options": {
+        "A": "Quyền thương lượng của khách hàng",
+        "B": "Quyền thương lượng của nhà cung cấp",
+        "C": "Đe dọa từ sản phẩm thay thế",
+        "D": "Đe dọa từ đối thủ tiềm ẩn"
+      },
+      "answer": "A",
+      "explainAnswer": "Ít khách nhưng mỗi khách chiếm tỷ trọng lớn và dễ chuyển nhà cung cấp: quyền thương lượng của khách hàng cao. Không phải quyền nhà cung cấp, thay thế hay đối thủ tiềm ẩn."
+    },
+    {
+      "id": 104,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "CHƯƠNG 5 – QUY TRÌNH STP",
+      "question": "Một doanh nghiệp sản xuất thực phẩm phụ thuộc vào một số ít nhà cung cấp nguyên liệu quan trọng. Các nguyên liệu này khó thay thế và việc chuyển sang nhà cung cấp khác rất tốn kém. Đoạn thị trường này kém hấp dẫn chủ yếu do:",
+      "options": {
+        "A": "Quyền thương lượng của khách hàng cao",
+        "B": "Cạnh tranh nội bộ ngành cao",
+        "C": "Quyền thương lượng của nhà cung cấp cao",
+        "D": "Mối đe dọa từ sản phẩm thay thế cao"
+      },
+      "answer": "C",
+      "explainAnswer": "Ít nhà cung cấp, đầu vào khó thay, chi phí chuyển đổi cao: quyền thương lượng nhà cung cấp. Không phải quyền khách, cạnh tranh nội bộ hay sản phẩm thay thế."
+    },
+    {
+      "id": 105,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "CHƯƠNG 5 – QUY TRÌNH STP",
+      "question": "Một startup có vốn hạn chế phát hiện một nhóm khách hàng rất nhỏ nhưng có nhu cầu đặc thù mà các doanh nghiệp lớn chưa phục vụ tốt. Startup quyết định tập trung gần như toàn bộ nguồn lực vào nhóm này. Lựa chọn phù hợp nhất là:",
+      "options": {
+        "A": "Marketing không phân biệt",
+        "B": "Marketing phân biệt",
+        "C": "Marketing tập trung",
+        "D": "Bao phủ toàn bộ thị trường"
+      },
+      "answer": "C",
+      "explainAnswer": "Nguồn lực hạn chế, nhóm nhỏ nhu cầu đặc thù mà hãng lớn bỏ quên: marketing tập trung. Không phân biệt và phân biệt cần nguồn lực lớn hơn; bao phủ toàn thị trường trái với tập trung."
+    },
+    {
+      "id": 106,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "CHƯƠNG 5 – QUY TRÌNH STP",
+      "question": "Một hãng thời trang chọn ba phân đoạn: sinh viên, nhân viên văn phòng và khách hàng thu nhập cao. Hãng phát triển dòng sản phẩm, mức giá và chương trình marketing riêng cho từng phân đoạn. Đây là chiến lược:",
+      "options": {
+        "A": "Marketing không phân biệt",
+        "B": "Marketing phân biệt",
+        "C": "Marketing tập trung",
+        "D": "Marketing đại trà"
+      },
+      "answer": "B",
+      "explainAnswer": "Ba phân đoạn, mỗi phân đoạn một mix riêng: marketing phân biệt. Không phân biệt dùng một mix cho cả thị trường; tập trung chỉ một/vài đoạn nhỏ; đại trà đồng nghĩa không phân biệt."
+    },
+    {
+      "id": 107,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "CHƯƠNG 5 – QUY TRÌNH STP",
+      "question": "Một doanh nghiệp nước đóng chai quyết định không phân đoạn thị trường mà sử dụng một sản phẩm tiêu chuẩn, một chương trình marketing và hệ thống phân phối đại trà để phục vụ toàn bộ thị trường. Đây là:",
+      "options": {
+        "A": "Marketing phân biệt",
+        "B": "Marketing tập trung",
+        "C": "Marketing không phân biệt",
+        "D": "Chuyên môn hóa tuyển chọn"
+      },
+      "answer": "C",
+      "explainAnswer": "Một sản phẩm, một chương trình, phân phối đại trà cho cả thị trường: marketing không phân biệt. Phân biệt và tập trung đều chia đoạn; chuyên môn hóa tuyển chọn là chọn vài đoạn rời."
+    },
+    {
+      "id": 108,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "CHƯƠNG 5 – QUY TRÌNH STP",
+      "question": "Một doanh nghiệp chỉ sản xuất một loại giày chuyên dụng, nhưng bán sản phẩm đó cho trẻ em, thanh niên và người lớn. Doanh nghiệp không phát triển các sản phẩm khác nhau cho từng nhóm. Phương án lựa chọn thị trường mục tiêu phù hợp nhất là:",
+      "options": {
+        "A": "Chuyên môn hóa theo đặc tính sản phẩm",
+        "B": "Chuyên môn hóa theo đặc tính thị trường",
+        "C": "Chuyên môn hóa tuyển chọn",
+        "D": "Tập trung vào một đoạn thị trường"
+      },
+      "answer": "A",
+      "explainAnswer": "Một loại giày bán cho trẻ em, thanh niên, người lớn mà không đổi sản phẩm theo nhóm: chuyên môn hóa theo đặc tính sản phẩm. Theo thị trường là nhiều sản phẩm cho một nhóm; tuyển chọn là vài đoạn không liên hệ."
+    },
+    {
+      "id": 109,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "CHƯƠNG 5 – QUY TRÌNH STP",
+      "question": "Một doanh nghiệp chuyên cung cấp sản phẩm chăm sóc sức khỏe cho người cao tuổi. Khi đã tạo được danh tiếng trong nhóm khách hàng này, doanh nghiệp tiếp tục phát triển nhiều sản phẩm khác nhau dành cho họ. Doanh nghiệp đang áp dụng:",
+      "options": {
+        "A": "Chuyên môn hóa theo đặc tính thị trường",
+        "B": "Chuyên môn hóa theo đặc tính sản phẩm",
+        "C": "Marketing không phân biệt",
+        "D": "Tập trung vào một sản phẩm duy nhất"
+      },
+      "answer": "A",
+      "explainAnswer": "Nhiều sản phẩm chăm sóc sức khỏe cho cùng người cao tuổi: chuyên môn hóa theo đặc tính thị trường. Theo sản phẩm là một sản phẩm cho nhiều nhóm; không phân biệt không tập trung một nhóm; một sản phẩm duy nhất trái với phát triển nhiều dòng."
+    },
+    {
+      "id": 110,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "CHƯƠNG 5 – QUY TRÌNH STP",
+      "question": "Một thương hiệu mới gia nhập thị trường xe điện muốn khách hàng mục tiêu ghi nhớ mình là thương hiệu \"xe điện đô thị nhỏ gọn, dễ sử dụng cho người trẻ\". Doanh nghiệp đồng thời điều chỉnh sản phẩm, giá, phân phối và truyền thông theo định vị này. Hoạt động trên thể hiện rõ nhất mối quan hệ nào?",
+      "options": {
+        "A": "Phân đoạn → sản phẩm",
+        "B": "Định vị → marketing mix",
+        "C": "Targeting → phân phối",
+        "D": "Marketing mix → phân đoạn"
+      },
+      "answer": "B",
+      "explainAnswer": "Hình ảnh xe điện đô thị nhỏ gọn được triển khai bằng sản phẩm, giá, kênh, truyền thông: định vị dẫn dắt marketing-mix. Không phải phân đoạn dẫn sản phẩm, targeting dẫn phân phối, hay mix đứng trước phân đoạn."
+    },
+    {
+      "id": 111,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "CHƯƠNG 5 – QUY TRÌNH STP",
+      "question": "Một thương hiệu cà phê có sản phẩm chất lượng tương đương đối thủ nhưng khách hàng không nhận thấy điểm khác biệt. Doanh nghiệp quyết định cải thiện thiết kế bao bì, thái độ nhân viên, dịch vụ giao hàng và ấn tượng thương hiệu để tạo điểm khác biệt có ý nghĩa. Hoạt động này phù hợp nhất với nội dung nào của định vị?",
+      "options": {
+        "A": "Tạo hình ảnh và tạo sự khác biệt",
+        "B": "Đánh giá quy mô thị trường",
+        "C": "Phân đoạn theo nhân khẩu học",
+        "D": "Đánh giá quyền thương lượng của nhà cung cấp"
+      },
+      "answer": "A",
+      "explainAnswer": "Cải thiện bao bì, nhân viên, giao hàng, hình ảnh để khách thấy khác biệt: tạo hình ảnh và tạo sự khác biệt trong định vị. Không phải đánh giá quy mô, phân đoạn nhân khẩu hay quyền nhà cung cấp."
+    },
+    {
+      "id": 112,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "CHƯƠNG 5 – QUY TRÌNH STP",
+      "question": "Một công ty nhận thấy khách hàng mục tiêu có rất nhiều thông tin quảng cáo phải tiếp nhận mỗi ngày. Công ty muốn thông điệp định vị được ghi nhớ tốt hơn nên tập trung vào một lợi ích nổi bật, dễ hiểu và có giá trị đối với khách hàng. Quyết định này phù hợp nhất với nguyên tắc nào?",
+      "options": {
+        "A": "Mọi điểm khác biệt đều cần được truyền thông",
+        "B": "Điểm khác biệt phải gắn với lợi ích khách hàng mong đợi",
+        "C": "Chỉ cần tăng số lượng thông điệp truyền thông",
+        "D": "Định vị phải dựa chủ yếu vào mức giá thấp"
+      },
+      "answer": "B",
+      "explainAnswer": "Một lợi ích nổi bật, dễ hiểu, có giá trị với khách: điểm khác biệt phải gắn lợi ích khách mong đợi. Không phải truyền mọi khác biệt, không phải tăng số lượng thông điệp, cũng không bắt buộc giá thấp."
+    },
+    {
+      "id": 113,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "CHƯƠNG 5 – QUY TRÌNH STP",
+      "question": "Một hãng ô tô xác định nhóm khách hàng mục tiêu là người trẻ có thu nhập trung bình. Sau khi nghiên cứu đối thủ, hãng muốn định vị sản phẩm theo hướng “công nghệ hiện đại trong mức giá dễ tiếp cận” và xây dựng sản phẩm, giá, kênh phân phối và xúc tiến phù hợp. Trình tự nào dưới đây phản ánh đúng quy trình STP và triển khai marketing?",
+      "options": {
+        "A": "Targeting → Segmentation → Positioning → Marketing Mix",
+        "B": "Segmentation → Targeting → Positioning → Marketing Mix",
+        "C": "Positioning → Segmentation → Targeting → Marketing Mix",
+        "D": "Marketing Mix → Targeting → Segmentation → Positioning"
+      },
+      "answer": "B",
+      "explainAnswer": "Thứ tự chuẩn là Segmentation → Targeting → Positioning → Marketing Mix. Đảo STP hay để mix đứng trước đều sai trình tự chiến lược."
+    },
+    {
+      "id": 222,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "",
+      "question": "Trong marketing mục tiêu, STP bao gồm ba bước theo thứ tự:",
+      "options": {
+        "A": "Strategy – Target – Product",
+        "B": "Segmentation – Targeting – Positioning",
+        "C": "Segmentation – Trading – Promotion",
+        "D": "Strategy – Targeting – Promotion"
+      },
+      "answer": "B",
+      "explainAnswer": "STP là Segmentation – Targeting – Positioning theo đúng thứ tự phân đoạn, chọn mục tiêu rồi định vị. Strategy–Target–Product, Trading hay Promotion không phải ba bước của marketing mục tiêu."
+    },
+    {
+      "id": 223,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "",
+      "question": "Phân đoạn thị trường là hoạt động:",
+      "options": {
+        "A": "Chia thị trường thành các nhóm khách hàng có đặc điểm nhất định",
+        "B": "Chọn một thương hiệu để cạnh tranh trên thị trường",
+        "C": "Xây dựng hệ thống phân phối cho toàn thị trường",
+        "D": "Xác định mức giá cho từng sản phẩm"
+      },
+      "answer": "A",
+      "explainAnswer": "Phân đoạn thị trường chia tổng thị trường thành các nhóm khách hàng có đặc điểm và phản ứng tương đồng. Chọn thương hiệu để cạnh tranh, thiết kế kênh phân phối hay định giá sản phẩm là các quyết định khác, không phải bản chất của segmentation."
+    },
+    {
+      "id": 224,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "",
+      "question": "Trong quy trình STP, hoạt động Targeting chủ yếu là:",
+      "options": {
+        "A": "Xây dựng hình ảnh sản phẩm trong tâm trí khách hàng",
+        "B": "Xác định các cơ sở phân đoạn thị trường",
+        "C": "Đánh giá mức độ hấp dẫn và lựa chọn thị trường mục tiêu",
+        "D": "Thiết kế bao bì sản phẩm"
+      },
+      "answer": "C",
+      "explainAnswer": "Targeting là đánh giá mức độ hấp dẫn của từng đoạn rồi lựa chọn thị trường mục tiêu sẽ phục vụ. Xây vị thế trong tâm trí khách hàng là định vị; xác định cơ sở chia đoạn thuộc phân đoạn; thiết kế bao bì thuộc chính sách sản phẩm."
+    },
+    {
+      "id": 225,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "",
+      "question": "Định vị Marketing chủ yếu nhằm:",
+      "options": {
+        "A": "Xác định số lượng khách hàng trong thị trường",
+        "B": "Xây dựng vị thế mong muốn của sản phẩm trên thị trường mục tiêu",
+        "C": "Xác định số lượng trung gian phân phối",
+        "D": "Tính toán chi phí sản xuất sản phẩm"
+      },
+      "answer": "B",
+      "explainAnswer": "Định vị nhằm xây dựng vị thế mong muốn của sản phẩm trong tâm trí khách hàng mục tiêu. Việc đếm số khách, đếm trung gian hay tính chi phí sản xuất không phải nội dung của positioning."
+    },
+    {
+      "id": 429,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Một thị trường bao gồm:",
       "options": {
         "A": "Một nhóm khách hàng tiềm ẩn với nhu cầu giống nhau",
@@ -14,24 +421,12 @@
         "D": "Các loại sản phẩm khác nhau với các đặc điểm giống nhau"
       },
       "answer": "B",
-      "explainAnswer": "Thị trường là tập hợp các khách hàng hiện tại và tiềm năng có mong muốn và khả năng mua sản phẩm."
+      "explainAnswer": "Thị trường là tập khách hiện tại và tiềm năng có nhu cầu kèm sức mua. 'Nhu cầu giống nhau' chưa đủ; doanh nghiệp trong ngành là phía cung; sản phẩm giống nhau không tạo nên thị trường."
     },
     {
-      "id": 2,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
-      "question": "Đoạn thị trường là một nhóm khách hàng trong thị trường tổng thể:",
-      "options": {
-        "A": "Có sự đa dạng về nhu cầu, ước muốn hay hành vi",
-        "B": "Có phản ứng tương đồng đối với cùng một tập hợp những kích thích của marketing",
-        "C": "Giống nhau về tuổi tác và giới tính",
-        "D": "Có những nhu cầu cơ bản"
-      },
-      "answer": "B",
-      "explainAnswer": "Đoạn thị trường là nhóm khách hàng có phản ứng tương đồng với các kích thích marketing."
-    },
-    {
-      "id": 3,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 430,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Yêu cầu của phân đoạn thị trường KHÔNG bao gồm:",
       "options": {
         "A": "Có thể phân biệt được các đoạn thị trường",
@@ -43,8 +438,9 @@
       "explainAnswer": "Các yêu cầu cơ bản của phân đoạn là: có thể đo lường, đủ lớn, có thể tiếp cận và có thể phân biệt. Tiềm năng tăng trưởng là tiêu chí đánh giá mức hấp dẫn chứ không phải yêu cầu bắt buộc của phân đoạn."
     },
     {
-      "id": 4,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 431,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Chiến lược marketing không phân biệt có đặc trưng sau:",
       "options": {
         "A": "Doanh nghiệp áp dụng một chiến lược marketing chung cho tất cả các đoạn thị trường",
@@ -53,11 +449,12 @@
         "D": "Doanh nghiệp tập trung nỗ lực marketing vào một số đoạn thị trường quan trọng"
       },
       "answer": "A",
-      "explainAnswer": "Marketing không phân biệt (undifferentiated) dùng một chương trình marketing chung cho toàn thị trường."
+      "explainAnswer": "Không phân biệt = một marketing-mix cho cả thị trường tổng thể. Mix riêng từng đoạn là phân biệt; dồn vào một đoạn là tập trung."
     },
     {
-      "id": 5,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 432,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Chiến lược marketing phân biệt có đặc trưng sau:",
       "options": {
         "A": "Doanh nghiệp áp dụng một chiến lược marketing chung cho tất cả các đoạn thị trường",
@@ -66,11 +463,12 @@
         "D": "Doanh nghiệp tập trung nỗ lực marketing vào một số đoạn thị trường quan trọng"
       },
       "answer": "B",
-      "explainAnswer": "Marketing phân biệt (differentiated) thiết kế chương trình marketing riêng cho từng đoạn thị trường."
+      "explainAnswer": "Phân biệt nghĩa là thiết kế chương trình riêng cho từng đoạn đã chọn. Một chương trình chung là không phân biệt; dồn nguồn lực vào một đoạn là tập trung."
     },
     {
-      "id": 6,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 433,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Chiến lược marketing tập trung có đặc trưng sau:",
       "options": {
         "A": "Doanh nghiệp áp dụng một chiến lược marketing chung cho tất cả các đoạn thị trường",
@@ -79,11 +477,12 @@
         "D": "Doanh nghiệp tập trung nỗ lực marketing vào một số đoạn thị trường quan trọng"
       },
       "answer": "C",
-      "explainAnswer": "Marketing tập trung (concentrated/niche) tập trung toàn bộ nguồn lực vào một hoặc vài đoạn thị trường quan trọng nhất."
+      "explainAnswer": "Tập trung dồn nỗ lực vào đoạn quan trọng nhất (hoặc vài đoạn hẹp). Trải đều mọi đoạn bằng một mix là không phân biệt; mix riêng nhiều đoạn là phân biệt."
     },
     {
-      "id": 7,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 434,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Các yếu tố để phân chia thị trường theo địa lý là:",
       "options": {
         "A": "Châu lục, khu vực, vùng, khí hậu",
@@ -92,11 +491,12 @@
         "D": "Vị trí địa lý, văn hóa xã hội, chính trị luật pháp"
       },
       "answer": "A",
-      "explainAnswer": "Phân đoạn theo địa lý dựa trên châu lục, quốc gia, vùng miền, khí hậu..."
+      "explainAnswer": "Phân đoạn địa lý dựa trên đơn vị không gian: châu lục, vùng, khu vực và khí hậu. Văn hóa–xã hội hay chính trị là tiêu thức khác, không phải biến địa lý."
     },
     {
-      "id": 8,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 435,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Yếu tố nào KHÔNG dùng để phân chia thị trường theo tiêu thức nhân khẩu học?",
       "options": {
         "A": "Tuổi tác",
@@ -105,11 +505,12 @@
         "D": "Chu kỳ sống của gia đình"
       },
       "answer": "C",
-      "explainAnswer": "Nơi sống thuộc tiêu thức địa lý. Tuổi, tôn giáo, chu kỳ sống gia đình thuộc nhân khẩu học."
+      "explainAnswer": "Nơi sống (thành thị, nông thôn, vùng) là tiêu thức địa lý. Tuổi, tôn giáo và chu kỳ sống gia đình mới nằm trong nhân khẩu học."
     },
     {
-      "id": 9,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 436,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Yếu tố nào KHÔNG dùng để phân chia thị trường theo tiêu thức hành vi của khách hàng?",
       "options": {
         "A": "Lợi ích tìm kiếm",
@@ -118,11 +519,12 @@
         "D": "Loại mặt hàng"
       },
       "answer": "D",
-      "explainAnswer": "Loại mặt hàng không phải tiêu thức hành vi. Lợi ích tìm kiếm, lý do mua, cường độ sử dụng thuộc hành vi."
+      "explainAnswer": "Loại mặt hàng mô tả sản phẩm, không phải hành vi khách. Lợi ích tìm kiếm, lý do mua và cường độ sử dụng mới là tiêu thức hành vi."
     },
     {
-      "id": 10,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 437,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Yếu tố nào KHÔNG dùng để phân chia thị trường theo tiêu thức tâm lý của khách hàng?",
       "options": {
         "A": "Tầng lớp xã hội",
@@ -131,12 +533,13 @@
         "D": "Nhân cách"
       },
       "answer": "C",
-      "explainAnswer": "Chế độ ăn uống không phải tiêu thức tâm lý chuẩn. Tầng lớp xã hội, phong cách sống, nhân cách thuộc tâm lý."
+      "explainAnswer": "Chế độ ăn uống là thói quen tiêu dùng cụ thể, không nằm trong bộ tâm lý chuẩn. Tầng lớp, phong cách sống và nhân cách mới là biến tâm lý."
     },
     {
-      "id": 11,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
-      "question": "Hình ảnh về sản phẩm được hình thành dựa trên:",
+      "id": 438,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "question": "Ấn tượng về sản phẩm được hình thành dựa trên:",
       "options": {
         "A": "Dây chuyền sản xuất",
         "B": "Cảm nhận khách hàng sau khi tiêu dùng sản phẩm",
@@ -144,11 +547,12 @@
         "D": "Lý do mua hàng của người tiêu dùng"
       },
       "answer": "B",
-      "explainAnswer": "Hình ảnh sản phẩm được hình thành chủ yếu từ cảm nhận thực tế của khách hàng sau khi sử dụng."
+      "explainAnswer": "Ấn tượng sản phẩm đọng lại chủ yếu từ cảm nhận sau khi dùng. Dây chuyền sản xuất hay giá là tín hiệu đầu vào, chưa phải hình ảnh đã được khách nội tâm hóa."
     },
     {
-      "id": 12,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 439,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Phân khúc thị trường là:",
       "options": {
         "A": "Việc phân chia thị trường thành những nhóm khách hàng nhỏ hơn có chung đặc điểm",
@@ -157,11 +561,12 @@
         "D": "Là việc gộp các thị trường nhỏ thành nhóm khách hàng lớn hơn có cùng tư tưởng sống"
       },
       "answer": "A",
-      "explainAnswer": "Phân khúc (phân đoạn) thị trường là chia thị trường tổng thể thành các nhóm khách hàng có đặc điểm hoặc nhu cầu tương đồng."
+      "explainAnswer": "Phân khúc là tách thị trường tổng thể thành nhóm nhỏ hơn có đặc điểm/nhu cầu tương đồng. Gộp thị trường nhỏ thành nhóm lớn là đi ngược; 'cùng tư tưởng sống' chỉ là một tiêu thức tâm lý, không phải định nghĩa."
     },
     {
-      "id": 13,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 440,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "4 tiêu thức dùng để phân khúc thị trường bao gồm:",
       "options": {
         "A": "Địa hình, khí hậu, dân số, và vùng miền",
@@ -170,11 +575,12 @@
         "D": "Khí hậu, dân số, độ tuổi, giới tính, và thu nhập"
       },
       "answer": "C",
-      "explainAnswer": "Bốn tiêu thức phân đoạn phổ biến nhất là: địa lý, nhân khẩu học, tâm lý và hành vi."
+      "explainAnswer": "Bốn tiêu thức cổ điển: địa lý, nhân khẩu, tâm lý, hành vi. Địa hình–khí hậu chỉ là biến địa lý; tuổi–giới–thu nhập chỉ là nhân khẩu."
     },
     {
-      "id": 14,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 441,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Một phân khúc thị trường được đánh giá dựa trên:",
       "options": {
         "A": "Số lượng khách hàng",
@@ -183,11 +589,12 @@
         "D": "Số lượng khách hàng, khả năng tăng trưởng về số lượng khách hàng và tiềm năng lợi nhuận"
       },
       "answer": "D",
-      "explainAnswer": "Khi đánh giá đoạn thị trường cần xem xét quy mô, tốc độ tăng trưởng và tiềm năng lợi nhuận."
+      "explainAnswer": "Đánh giá đoạn cần nhìn quy mô hiện tại, khả năng tăng trưởng và tiềm năng lợi nhuận. Lấy một chỉ số đơn lẻ dễ chọn đoạn đông nhưng nghèo hoặc nhỏ nhưng bão hòa."
     },
     {
-      "id": 15,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 442,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "So với marketing không phân biệt, marketing phân biệt:",
       "options": {
         "A": "Có chi phí cao hơn",
@@ -196,11 +603,12 @@
         "D": "Có chi phí cao hơn và hướng tới số lượng khách hàng cao cấp"
       },
       "answer": "A",
-      "explainAnswer": "Marketing phân biệt tốn chi phí cao hơn vì phải thiết kế nhiều chương trình marketing khác nhau cho từng đoạn."
+      "explainAnswer": "Marketing phân biệt phải nuôi nhiều marketing-mix nên chi phí cao hơn không phân biệt. Không đồng nghĩa phục vụ nhiều khách hơn; khách cao cấp là chuyện định vị, không phải hệ quả tất yếu."
     },
     {
-      "id": 16,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 443,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Chiến lược marketing tập trung là chiến lược lựa chọn ……… khúc thị trường.",
       "options": {
         "A": "Một hoặc một số ít",
@@ -209,11 +617,12 @@
         "D": "Nhiều"
       },
       "answer": "A",
-      "explainAnswer": "Marketing tập trung chọn một hoặc một số ít đoạn thị trường để phục vụ chuyên sâu."
+      "explainAnswer": "Tập trung = chọn một hoặc một số ít đoạn để phục vụ sâu. 'Tất cả' hay 'đa số' là không phân biệt hoặc phân biệt trải rộng."
     },
     {
-      "id": 17,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 444,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Bản đồ định vị (positioning map) thể hiện thông tin gì?",
       "options": {
         "A": "Vị trí của các nhãn hiệu sản phẩm hiện có của doanh nghiệp",
@@ -222,11 +631,12 @@
         "D": "Vị trí và đường đi đến các điểm bán sản phẩm của doanh nghiệp"
       },
       "answer": "C",
-      "explainAnswer": "Bản đồ định vị thể hiện vị trí tương đối của các nhãn hiệu của doanh nghiệp và đối thủ trên các thuộc tính quan trọng."
+      "explainAnswer": "Bản đồ định vị đặt nhãn của ta và của đối thủ trên cùng thuộc tính khách coi trọng. Chỉ vẽ nhãn mình, chỉ vẽ nhãn tương lai, hay nhầm thành bản đồ điểm bán đều sai công dụng."
     },
     {
-      "id": 18,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 445,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Điều kiện nào sau đây là tiêu chuẩn xác đáng để đánh giá mức độ hấp dẫn của một đoạn thị trường?",
       "options": {
         "A": "Mức tăng trưởng",
@@ -235,11 +645,12 @@
         "D": "Mức tăng trưởng phù hợp, quy mô lớn và phù hợp với nguồn lực của doanh nghiệp"
       },
       "answer": "D",
-      "explainAnswer": "Đoạn thị trường hấp dẫn khi có quy mô đủ lớn, tăng trưởng tốt và phù hợp với nguồn lực, mục tiêu của doanh nghiệp."
+      "explainAnswer": "Đoạn hấp dẫn khi đủ lớn, tăng trưởng phù hợp và khớp nguồn lực doanh nghiệp. Thiếu một trong ba — quá nhỏ, đã già, hoặc ngoài năng lực — thì chưa đáng chọn."
     },
     {
-      "id": 19,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 446,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Tất cả những tiêu thức sau đây thuộc nhóm tiêu thức nhân khẩu học ngoại trừ:",
       "options": {
         "A": "Tuổi tác",
@@ -248,11 +659,12 @@
         "D": "Lối sống"
       },
       "answer": "D",
-      "explainAnswer": "Lối sống thuộc tiêu thức tâm lý. Tuổi, thu nhập, giới tính thuộc nhân khẩu học."
+      "explainAnswer": "Lối sống mô tả cách con người sống và quan tâm, thuộc tâm lý. Tuổi, thu nhập, giới tính là các biến nhân khẩu học dễ đo."
     },
     {
-      "id": 20,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 447,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Đâu là ưu điểm của chiến lược Marketing không phân biệt?",
       "options": {
         "A": "Giúp tiết kiệm chi phí",
@@ -261,11 +673,12 @@
         "D": "Giúp tiết kiệm chi phí và gặp phải cạnh tranh khốc liệt"
       },
       "answer": "A",
-      "explainAnswer": "Ưu điểm lớn nhất của marketing không phân biệt là tiết kiệm chi phí nhờ quy mô lớn và chương trình thống nhất."
+      "explainAnswer": "Một chương trình cho cả thị trường tận dụng quy mô, tiết kiệm chi phí. Cạnh tranh khốc liệt là nhược; nguồn lực hạn chế hợp chiến lược tập trung, không phải ưu điểm của không phân biệt."
     },
     {
-      "id": 21,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 448,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Quá trình trong đó người bán phân biệt các đoạn thị trường, chọn một hay một vài đoạn thị trường làm thị trường mục tiêu và thiết kế marketing mix cho thị trường mục tiêu được gọi là:",
       "options": {
         "A": "Marketing đại trà",
@@ -274,11 +687,12 @@
         "D": "Marketing phân biệt theo người tiêu dùng"
       },
       "answer": "B",
-      "explainAnswer": "Đây chính là định nghĩa của marketing mục tiêu (target marketing)."
+      "explainAnswer": "Tách đoạn, chọn mục tiêu rồi thiết kế mix cho đoạn đã chọn chính là marketing mục tiêu. Đại trà bỏ qua tách đoạn; đa dạng hóa sản phẩm và 'phân biệt theo người tiêu dùng' không mô tả tiến trình STP."
     },
     {
-      "id": 22,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 449,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Marketing mục tiêu phải đảm bảo:",
       "options": {
         "A": "Đoạn/các đoạn thị trường đó phải đủ lớn",
@@ -287,11 +701,12 @@
         "D": "Đoạn/các đoạn thị trường đó phải phát triển bền vững và đủ lớn"
       },
       "answer": "B",
-      "explainAnswer": "Các đoạn được chọn làm thị trường mục tiêu phải thỏa mãn các điều kiện: đo lường được, đủ lớn, tiếp cận được và có phản ứng khác biệt."
+      "explainAnswer": "Đoạn chọn làm mục tiêu phải đo được, đủ lớn, tiếp cận được và phản ứng khác biệt với mix. Chỉ 'đủ lớn' hoặc chỉ 'bền vững' chưa đủ điều kiện Kotler."
     },
     {
-      "id": 23,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 450,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Đâu KHÔNG phải là phương án lựa chọn thị trường mục tiêu?",
       "options": {
         "A": "Tập trung vào một đoạn thị trường",
@@ -303,8 +718,9 @@
       "explainAnswer": "Các phương án phổ biến gồm: tập trung một đoạn, chuyên môn hóa theo sản phẩm/thị trường, tuyển chọn và bao quát toàn bộ. “Chuyên môn hóa theo bán hàng” không phải phương án chuẩn."
     },
     {
-      "id": 24,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 451,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Lý do doanh nghiệp phải phân đoạn thị trường KHÔNG bao gồm:",
       "options": {
         "A": "Quá trình nhận thức của khách hàng phức tạp",
@@ -313,11 +729,12 @@
         "D": "Số lượng lớn các thông điệp quảng cáo"
       },
       "answer": "C",
-      "explainAnswer": "Phân đoạn không phải lúc nào cũng nhằm gia tăng lợi nhuận ngay lập tức; mục tiêu chính là phục vụ khách hàng tốt hơn và cạnh tranh hiệu quả hơn."
+      "explainAnswer": "Phân đoạn trước hết vì nhu cầu dị biệt, thông điệp quá tải và sức ép cạnh tranh. Lợi nhuận là hệ quả có thể có, không phải lý do trực tiếp bắt buộc phải tách đoạn."
     },
     {
-      "id": 25,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 452,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Các mục tiêu mà doanh nghiệp theo đuổi khi định vị trên thị trường KHÔNG bao gồm:",
       "options": {
         "A": "Chiếm vị trí mới trên thị trường",
@@ -326,12 +743,13 @@
         "D": "Hoàn thiện hệ thống chủng loại sản phẩm"
       },
       "answer": "B",
-      "explainAnswer": "Định vị nhằm chiếm vị trí trong tâm trí khách hàng mục tiêu hiện tại, không phải thay đổi khách hàng mục tiêu."
+      "explainAnswer": "Định vị chiếm chỗ trong tâm trí khách mục tiêu hiện tại: vị trí mới, đối đầu, hoặc hoàn thiện chủng loại. Đổi khách hàng mục tiêu là việc của bước targeting, không phải mục tiêu định vị."
     },
     {
-      "id": 26,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
-      "question": "Hình ảnh trong tâm trí khách hàng là:",
+      "id": 453,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "question": "Ấn tượng trong tâm trí khách hàng là:",
       "options": {
         "A": "Sự kết hợp giữa nhận thức và đánh giá của khách hàng về doanh nghiệp và các sản phẩm mà doanh nghiệp cung ứng",
         "B": "Sự kết hợp giữa nhận thức và đánh giá của khách hàng về doanh nghiệp",
@@ -339,11 +757,12 @@
         "D": "Sự kết hợp giữa nhận thức và đánh giá của khách hàng về các sản phẩm mà doanh nghiệp cung ứng và chiến lược thị trường của doanh nghiệp"
       },
       "answer": "A",
-      "explainAnswer": "Hình ảnh thương hiệu là tổng hợp nhận thức và đánh giá của khách hàng về doanh nghiệp cùng sản phẩm/dịch vụ của họ."
+      "explainAnswer": "Ấn tượng trong tâm trí là tổng nhận thức và đánh giá về cả doanh nghiệp lẫn sản phẩm họ bán. Chỉ doanh nghiệp hoặc chỉ sản phẩm đều cắt một nửa; chiến lược thị trường là việc của DN, không phải nội dung ấn tượng."
     },
     {
-      "id": 27,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 454,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Tiêu thức có thể được sử dụng để phân khúc thị trường cho nhiều mặt hàng và ngành hàng nhất là:",
       "options": {
         "A": "Thu nhập",
@@ -352,11 +771,12 @@
         "D": "Lòng trung thành"
       },
       "answer": "A",
-      "explainAnswer": "Thu nhập là tiêu thức nhân khẩu học được sử dụng rộng rãi nhất cho nhiều ngành hàng khác nhau."
+      "explainAnswer": "Thu nhập cắt được hầu hết ngành hàng vì sức mua chi phối khả năng chọn. Giới, tuổi hay lòng trung thành hữu ích nhưng không phổ quát bằng thu nhập."
     },
     {
-      "id": 28,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 455,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Tạo sự khác biệt cho sản phẩm, nhãn hiệu dưới góc độ sản phẩm KHÔNG bao gồm yếu tố nào?",
       "options": {
         "A": "Logo",
@@ -365,11 +785,12 @@
         "D": "Kiểu dáng"
       },
       "answer": "A",
-      "explainAnswer": "Logo thuộc yếu tố hình ảnh/thương hiệu. Tính năng, công dụng, kiểu dáng thuộc sự khác biệt về sản phẩm."
+      "explainAnswer": "Logo gắn nhận diện thương hiệu, không phải thuộc tính vật lý của hàng hóa. Tính năng, công dụng và kiểu dáng mới tạo khác biệt trên sản phẩm."
     },
     {
-      "id": 29,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 456,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Tạo sự khác biệt cho sản phẩm dưới góc độ dịch vụ KHÔNG bao gồm yếu tố nào?",
       "options": {
         "A": "Tên gọi",
@@ -378,12 +799,13 @@
         "D": "Thời gian giao hàng"
       },
       "answer": "A",
-      "explainAnswer": "Tên gọi thuộc yếu tố hình ảnh. Lắp đặt, tư vấn, thời gian giao hàng thuộc sự khác biệt về dịch vụ."
+      "explainAnswer": "Tên gọi thuộc lớp ấn tượng thương hiệu. Lắp đặt, tư vấn và thời gian giao hàng mới là khác biệt khai thác từ dịch vụ đi kèm."
     },
     {
-      "id": 30,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
-      "question": "Tạo sự khác biệt cho sản phẩm dưới góc độ hình ảnh KHÔNG bao gồm yếu tố nào?",
+      "id": 457,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "question": "Tạo sự khác biệt cho sản phẩm dưới góc độ ấn tượng thương hiệu KHÔNG bao gồm yếu tố nào?",
       "options": {
         "A": "Thái độ",
         "B": "Logo",
@@ -391,11 +813,12 @@
         "D": "Màu sắc"
       },
       "answer": "A",
-      "explainAnswer": "Thái độ thuộc yếu tố nhân sự. Logo, tên gọi, màu sắc thuộc sự khác biệt về hình ảnh."
+      "explainAnswer": "Thái độ nhân viên thuộc khác biệt con người. Logo, tên gọi và màu sắc mới xây ấn tượng thương hiệu trong tâm trí khách."
     },
     {
-      "id": 31,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 458,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Tạo sự khác biệt cho sản phẩm dưới góc độ nhân sự KHÔNG bao gồm yếu tố nào?",
       "options": {
         "A": "Tư vấn",
@@ -404,11 +827,12 @@
         "D": "Năng lực"
       },
       "answer": "A",
-      "explainAnswer": "Tư vấn thuộc yếu tố dịch vụ. Thái độ, tính chuyên nghiệp, năng lực thuộc sự khác biệt về nhân sự."
+      "explainAnswer": "Tư vấn là dịch vụ đi kèm sản phẩm. Khác biệt nhân sự đo ở thái độ, tính chuyên nghiệp và năng lực của người tiếp xúc khách hàng."
     },
     {
-      "id": 32,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 459,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Công ty Hòa Phát vừa mở rộng sản xuất sản phẩm bàn ghế. Phân khúc nào phù hợp cho Công ty đối với sản phẩm này có thể là:",
       "options": {
         "A": "Độ tuổi",
@@ -417,11 +841,12 @@
         "D": "Giới tính"
       },
       "answer": "C",
-      "explainAnswer": "Với sản phẩm bàn ghế (nội thất), mật độ dân cư (thành thị/nông thôn) là tiêu thức địa lý phù hợp để phân khúc."
+      "explainAnswer": "Bàn ghế nội thất phụ thuộc mật độ và kiểu cư trú (chung cư/nhà phố), tức tiêu thức địa lý. Tuổi, thu nhập, giới vẫn dùng được nhưng với mặt hàng này mật độ dân cư tách đoạn rõ hơn."
     },
     {
-      "id": 33,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 460,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Tiêu chí phân khúc thị trường phổ biến nhất là:",
       "options": {
         "A": "Khối lượng sử dụng và mức độ trung thành",
@@ -430,11 +855,12 @@
         "D": "Giới tính và độ tuổi"
       },
       "answer": "D",
-      "explainAnswer": "Giới tính và độ tuổi là hai tiêu thức nhân khẩu học được sử dụng phổ biến nhất."
+      "explainAnswer": "Giới tính và độ tuổi là cặp nhân khẩu dễ đo, dễ tiếp cận truyền thông, nên dùng phổ biến nhất. Khối lượng dùng, thu nhập hay cá tính đều hợp lệ nhưng không 'phổ biến nhất' trong học phần."
     },
     {
-      "id": 34,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 461,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "“Với loại dầu ăn này, chúng ta sẽ có một phân đoạn khách hàng là phụ nữ quan tâm sức khỏe, yêu thương gia đình, thích chăm sóc con cái”. Doanh nghiệp này đang phân đoạn dựa vào các cơ sở nào?",
       "options": {
         "A": "Nhân khẩu học và tâm lý",
@@ -443,11 +869,12 @@
         "D": "Nhân khẩu học và hành vi"
       },
       "answer": "A",
-      "explainAnswer": "“Phụ nữ” thuộc nhân khẩu học; “quan tâm sức khỏe, yêu thương gia đình...” thuộc tâm lý."
+      "explainAnswer": "'Phụ nữ' là nhân khẩu; quan tâm sức khỏe, yêu thương gia đình là tâm lý. Không có biến địa lý hay hành vi (cường độ dùng, lợi ích tìm kiếm) trong mô tả này."
     },
     {
-      "id": 35,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 462,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Doanh nghiệp MIC bán mọi sản phẩm học đường cho một nhóm khách hàng nhất định. Đây là ví dụ của phương án lựa chọn mục tiêu nào?",
       "options": {
         "A": "Chuyên môn hóa tuyển chọn theo đặc tính thị trường",
@@ -456,11 +883,12 @@
         "D": "Tập trung vào một số đoạn thị trường"
       },
       "answer": "A",
-      "explainAnswer": "Bán nhiều sản phẩm cho một nhóm khách hàng nhất định là chuyên môn hóa theo thị trường (market specialization)."
+      "explainAnswer": "Bán nhiều sản phẩm học đường cho một nhóm khách cố định là chuyên môn hóa theo thị trường. Chuyên môn hóa sản phẩm làm một loại hàng cho nhiều đoạn; tập trung một đoạn thì cả sản phẩm lẫn khách đều hẹp."
     },
     {
-      "id": 36,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 463,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Biti’s sản xuất giày dép cho người ở mọi lứa tuổi là ví dụ của phương án lựa chọn thị trường mục tiêu nào?",
       "options": {
         "A": "Chuyên môn hóa tuyển chọn",
@@ -469,11 +897,12 @@
         "D": "Tập trung vào một đoạn thị trường"
       },
       "answer": "C",
-      "explainAnswer": "Tập trung vào một loại sản phẩm (giày dép) phục vụ nhiều đoạn khách hàng là chuyên môn hóa theo sản phẩm (product specialization)."
+      "explainAnswer": "Biti's làm giày dép cho mọi lứa tuổi: một ngành hàng, nhiều đoạn khách — chuyên môn hóa theo sản phẩm. Không phải dồn một đoạn, cũng không phải bán nhiều ngành cho một nhóm khách."
     },
     {
-      "id": 37,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 464,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Hãng xe máy Harley-Davidson xâm nhập thị trường xe máy Việt Nam bằng loại xe dành cho người thích đi du lịch đường trường bằng xe máy là ví dụ của chiến lược marketing đáp ứng thị trường mục tiêu nào?",
       "options": {
         "A": "Chiến lược Marketing phân biệt",
@@ -482,11 +911,12 @@
         "D": "Thị trường ngách"
       },
       "answer": "C",
-      "explainAnswer": "Tập trung vào một nhóm khách hàng cụ thể (người thích du lịch đường trường) là chiến lược marketing tập trung (hoặc thị trường ngách)."
+      "explainAnswer": "Harley chỉ nhắm người thích touring khi vào Việt Nam — marketing tập trung. Phân biệt cần nhiều đoạn với mix khác nhau; không phân biệt trải đại trà; 'thị trường ngách' là loại đoạn, không phải tên chiến lược đáp ứng trong bộ ba."
     },
     {
-      "id": 38,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 465,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Doanh nghiệp mới thành lập, quy mô nhỏ nên chọn phương án lựa chọn thị trường mục tiêu nào?",
       "options": {
         "A": "Tập trung vào 1 đoạn thị trường",
@@ -495,11 +925,12 @@
         "D": "Chuyên môn hóa theo đặc tính sản phẩm"
       },
       "answer": "A",
-      "explainAnswer": "Doanh nghiệp nhỏ, nguồn lực hạn chế nên tập trung vào một đoạn thị trường để sử dụng nguồn lực hiệu quả nhất."
+      "explainAnswer": "Doanh nghiệp mới, nhỏ thiếu nguồn lực trải nhiều đoạn nên chọn một đoạn để dồn lực. Chuyên môn hóa tuyển chọn hay theo thị trường/sản phẩm đòi hỏi danh mục rộng hơn."
     },
     {
-      "id": 39,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 466,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Các hoạt động trọng tâm của định vị KHÔNG bao gồm:",
       "options": {
         "A": "Tạo một hình ảnh cụ thể cho sản phẩm, nhãn hiệu trong tâm trí khách hàng ở thị trường mục tiêu",
@@ -508,11 +939,12 @@
         "D": "Lựa chọn và khuyếch trương các điểm khác biệt có ý nghĩa"
       },
       "answer": "C",
-      "explainAnswer": "Đăng ký nhãn hiệu thuộc hoạt động pháp lý, không phải hoạt động trọng tâm của định vị."
+      "explainAnswer": "Đăng ký nhãn hiệu là thủ tục pháp lý bảo hộ, không tạo vị trí trong tâm trí. Định vị gồm chọn vị thế, tạo ấn tượng và khuếch trương điểm khác biệt có ý nghĩa."
     },
     {
-      "id": 40,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 467,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Một doanh nghiệp nhỏ, kinh doanh một sản phẩm mới, đồng nhất nên chọn:",
       "options": {
         "A": "Chiến lược marketing tập trung",
@@ -521,11 +953,12 @@
         "D": "Chiến lược phát triển sản phẩm"
       },
       "answer": "A",
-      "explainAnswer": "Doanh nghiệp nhỏ với sản phẩm mới nên tập trung nguồn lực vào một đoạn thị trường phù hợp."
+      "explainAnswer": "Sản phẩm mới, đồng nhất, DN nhỏ: tập trung một đoạn để học thị trường và giữ chi phí. Phân biệt quá tốn; không phân biệt dễ bị đối thủ khoét từng đoạn."
     },
     {
-      "id": 41,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 468,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Những hạn chế của chiến lược marketing không phân biệt là:",
       "options": {
         "A": "Không dễ tạo ra nhãn hiệu có khả năng thỏa mãn mọi khách hàng",
@@ -534,11 +967,12 @@
         "D": "Không dễ tạo ra nhãn hiệu có khả năng thỏa mãn mọi khách hàng, dễ gặp rủi ro trong kinh doanh và gây nên cạnh tranh gay gắt"
       },
       "answer": "D",
-      "explainAnswer": "Marketing không phân biệt khó thỏa mãn mọi khách hàng, dễ bị đối thủ tấn công vào từng đoạn và rủi ro cao khi thị trường thay đổi."
+      "explainAnswer": "Một nhãn cho mọi người khó vừa tất cả, dễ bị tấn công từng đoạn và rủi ro khi thị trường đảo. Cả ba nhược điểm cùng hiện; chọn một cái là thiếu."
     },
     {
-      "id": 42,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 469,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Các nhãn hiệu xa xỉ như Gucci thường dùng tiêu thức nào để phân đoạn thị trường?",
       "options": {
         "A": "Giới tính",
@@ -547,11 +981,12 @@
         "D": "Gia đình"
       },
       "answer": "B",
-      "explainAnswer": "Nhãn hiệu xa xỉ chủ yếu phân đoạn theo thu nhập (khách hàng có thu nhập cao)."
+      "explainAnswer": "Gucci sống nhờ khách có sức mua cao nên thu nhập là tiêu thức chủ đạo. Giới tính hay gia đình chỉ là lớp phụ, không thay được ngưỡng thu nhập."
     },
     {
-      "id": 43,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 470,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Ý nào dưới đây là ưu điểm của chiến lược marketing tập trung?",
       "options": {
         "A": "Doanh nghiệp tiết kiệm chi phí, tăng khả năng cạnh tranh về giá",
@@ -560,11 +995,12 @@
         "D": "Doanh nghiệp tạo sự khác biệt cho sản phẩm, nhãn hiệu"
       },
       "answer": "C",
-      "explainAnswer": "Ưu điểm lớn của marketing tập trung là giúp doanh nghiệp giành vị trí vững chắc, trở thành chuyên gia trên đoạn thị trường đã chọn."
+      "explainAnswer": "Tập trung giúp DN trở thành 'người của đoạn đó', vị trí vững. Tiết kiệm chi phí kiểu quy mô là ưu của không phân biệt; đáp ứng từng đoạn bằng nhiều mix là ưu của phân biệt."
     },
     {
-      "id": 44,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 471,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Đoạn thị trường là một nhóm khách hàng trong thị trường tổng thể:",
       "options": {
         "A": "Có sự đa dạng về nhu cầu, ước muốn hay hành vi",
@@ -573,24 +1009,12 @@
         "D": "Có những nhu cầu cơ bản"
       },
       "answer": "B",
-      "explainAnswer": "Đặc điểm cốt lõi của đoạn thị trường là phản ứng tương đồng với các kích thích marketing."
+      "explainAnswer": "Đoạn thị trường là nhóm phản ứng tương đồng với cùng một chùm kích thích marketing. Đa dạng nhu cầu mô tả thị trường tổng thể; cùng tuổi–giới chưa bảo đảm cùng phản ứng; nhu cầu cơ bản thì ai cũng có."
     },
     {
-      "id": 45,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
-      "question": "Yêu cầu của phân đoạn thị trường KHÔNG bao gồm:",
-      "options": {
-        "A": "Có thể phân biệt được các đoạn thị trường",
-        "B": "Quy mô đủ lớn",
-        "C": "Tiềm năng tăng trưởng",
-        "D": "Khả năng tiếp cận"
-      },
-      "answer": "C",
-      "explainAnswer": "Tiềm năng tăng trưởng là tiêu chí đánh giá mức hấp dẫn, không phải yêu cầu bắt buộc để một nhóm được coi là đoạn thị trường."
-    },
-    {
-      "id": 46,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 472,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Chiến lược marketing không phân biệt có đặc trưng:",
       "options": {
         "A": "Doanh nghiệp áp dụng một chiến lược marketing chung cho tất cả các đoạn thị trường",
@@ -599,11 +1023,12 @@
         "D": "Doanh nghiệp tập trung nỗ lực marketing vào một số đoạn thị trường quan trọng"
       },
       "answer": "A",
-      "explainAnswer": "Đặc trưng của marketing không phân biệt là một chương trình chung cho toàn thị trường."
+      "explainAnswer": "Không phân biệt = một chiến lược chung cho mọi đoạn. Mix riêng từng đoạn là phân biệt; dồn vào đoạn then chốt là tập trung."
     },
     {
-      "id": 47,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 473,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Chiến lược marketing phân biệt có đặc trưng:",
       "options": {
         "A": "Doanh nghiệp áp dụng một chiến lược marketing chung cho tất cả các đoạn thị trường",
@@ -612,11 +1037,12 @@
         "D": "Doanh nghiệp tập trung nỗ lực marketing vào một số đoạn thị trường quan trọng"
       },
       "answer": "B",
-      "explainAnswer": "Marketing phân biệt thiết kế marketing mix riêng cho từng đoạn."
+      "explainAnswer": "Marketing phân biệt gán mỗi đoạn một mix riêng. Một mix chung cho cả thị trường là không phân biệt; dồn hết nguồn lực vào một đoạn là tập trung."
     },
     {
-      "id": 48,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 474,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Chiến lược marketing tập trung có đặc trưng:",
       "options": {
         "A": "Doanh nghiệp áp dụng một chiến lược marketing chung cho tất cả các đoạn thị trường",
@@ -625,37 +1051,12 @@
         "D": "Doanh nghiệp tập trung nỗ lực marketing vào một số đoạn thị trường quan trọng"
       },
       "answer": "C",
-      "explainAnswer": "Marketing tập trung dồn nguồn lực vào một hoặc vài đoạn quan trọng nhất."
+      "explainAnswer": "Tập trung = dồn nỗ lực vào đoạn quan trọng nhất. Trải đều bằng một mix hoặc bằng nhiều mix lần lượt là không phân biệt và phân biệt."
     },
     {
-      "id": 49,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
-      "question": "Các yếu tố để phân chia thị trường theo địa lý là:",
-      "options": {
-        "A": "Châu lục, khu vực, vùng, khí hậu",
-        "B": "Châu lục, khu vực, vùng, văn hóa xã hội",
-        "C": "Vị trí địa lý",
-        "D": "Vị trí địa lý, văn hóa xã hội, chính trị luật pháp"
-      },
-      "answer": "A",
-      "explainAnswer": "Phân đoạn địa lý dựa trên vị trí địa lý, khí hậu, vùng miền..."
-    },
-    {
-      "id": 50,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
-      "question": "Yếu tố nào KHÔNG dùng để phân chia thị trường theo tiêu thức nhân khẩu học?",
-      "options": {
-        "A": "Tuổi tác",
-        "B": "Tôn giáo",
-        "C": "Nơi sống",
-        "D": "Chu kỳ sống của gia đình"
-      },
-      "answer": "C",
-      "explainAnswer": "Nơi sống thuộc địa lý."
-    },
-    {
-      "id": 51,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 475,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Yếu tố nào KHÔNG dùng để phân chia thị trường theo tiêu thức hành vi?",
       "options": {
         "A": "Lợi ích tìm kiếm",
@@ -664,11 +1065,12 @@
         "D": "Loại mặt hàng"
       },
       "answer": "D",
-      "explainAnswer": "Loại mặt hàng không phải tiêu thức hành vi."
+      "explainAnswer": "Loại mặt hàng mô tả sản phẩm, không phải hành vi mua. Lợi ích tìm kiếm, lý do mua và cường độ sử dụng mới là tiêu thức hành vi."
     },
     {
-      "id": 52,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 476,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Yếu tố nào KHÔNG dùng để phân chia thị trường theo tiêu thức tâm lý?",
       "options": {
         "A": "Tầng lớp xã hội",
@@ -677,89 +1079,12 @@
         "D": "Nhân cách"
       },
       "answer": "C",
-      "explainAnswer": "Chế độ ăn uống không phải tiêu thức tâm lý chuẩn."
+      "explainAnswer": "Chế độ ăn uống là thói quen tiêu dùng cụ thể, không phải biến tâm lý chuẩn. Tầng lớp, phong cách sống và nhân cách mới dùng để cắt đoạn tâm lý."
     },
     {
-      "id": 53,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
-      "question": "Hình ảnh về sản phẩm được hình thành dựa trên:",
-      "options": {
-        "A": "Dây chuyền sản xuất",
-        "B": "Cảm nhận khách hàng sau khi tiêu dùng sản phẩm",
-        "C": "Giá sản phẩm",
-        "D": "Lý do mua hàng của người tiêu dùng"
-      },
-      "answer": "B",
-      "explainAnswer": "Hình ảnh sản phẩm chủ yếu đến từ cảm nhận của khách hàng."
-    },
-    {
-      "id": 54,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
-      "question": "Phân khúc thị trường là:",
-      "options": {
-        "A": "Việc phân chia thị trường thành những nhóm khách hàng nhỏ hơn có chung đặc điểm",
-        "B": "Việc phân chia thị trường thành những nhóm khách hàng nhỏ hơn có cùng tư tưởng sống",
-        "C": "Việc gộp các thị trường nhỏ thành nhóm khách hàng lớn hơn",
-        "D": "Là việc gộp các thị trường nhỏ thành nhóm khách hàng lớn hơn có cùng tư tưởng sống"
-      },
-      "answer": "A",
-      "explainAnswer": "Phân khúc là chia nhỏ thị trường thành các nhóm có đặc điểm chung."
-    },
-    {
-      "id": 55,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
-      "question": "4 tiêu thức dùng để phân khúc thị trường bao gồm:",
-      "options": {
-        "A": "Địa hình, khí hậu, dân số, và vùng miền",
-        "B": "Độ tuổi, giới tính, thu nhập, và học vấn",
-        "C": "Địa lý, nhân khẩu, hành vi mua, và tâm lý",
-        "D": "Khí hậu, dân số, độ tuổi, giới tính, và thu nhập"
-      },
-      "answer": "C",
-      "explainAnswer": "Bốn tiêu thức chính: địa lý, nhân khẩu học, tâm lý, hành vi."
-    },
-    {
-      "id": 56,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
-      "question": "Một phân khúc thị trường được đánh giá dựa trên:",
-      "options": {
-        "A": "Số lượng khách hàng",
-        "B": "Khả năng tăng trưởng về số lượng khách hàng",
-        "C": "Tiềm năng lợi nhuận",
-        "D": "Số lượng khách hàng, khả năng tăng trưởng về số lượng khách hàng và tiềm năng lợi nhuận"
-      },
-      "answer": "D",
-      "explainAnswer": "Cần đánh giá cả quy mô, tăng trưởng và tiềm năng lợi nhuận."
-    },
-    {
-      "id": 57,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
-      "question": "So với marketing không phân biệt, marketing phân biệt:",
-      "options": {
-        "A": "Có chi phí cao hơn",
-        "B": "Hướng tới số lượng khách hàng nhiều hơn",
-        "C": "Có chi phí cao hơn và hướng tới số lượng khách hàng nhiều hơn",
-        "D": "Có chi phí cao hơn và hướng tới số lượng khách hàng cao cấp"
-      },
-      "answer": "A",
-      "explainAnswer": "Marketing phân biệt tốn kém hơn."
-    },
-    {
-      "id": 58,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
-      "question": "Chiến lược marketing tập trung là chiến lược lựa chọn ……… khúc thị trường.",
-      "options": {
-        "A": "Một hoặc một số ít",
-        "B": "Tất cả",
-        "C": "Đa số các",
-        "D": "Nhiều"
-      },
-      "answer": "A",
-      "explainAnswer": "Tập trung vào một hoặc vài đoạn."
-    },
-    {
-      "id": 59,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 477,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Bản đồ định vị thể hiện thông tin gì?",
       "options": {
         "A": "Vị trí của các nhãn hiệu sản phẩm hiện có của doanh nghiệp",
@@ -768,50 +1093,12 @@
         "D": "Vị trí và đường đi đến các điểm bán sản phẩm của doanh nghiệp"
       },
       "answer": "C",
-      "explainAnswer": "Bản đồ định vị thể hiện vị trí của thương hiệu doanh nghiệp và đối thủ."
+      "explainAnswer": "Bản đồ định vị so vị trí nhãn của DN với nhãn đối thủ trên thuộc tính khách coi trọng. Chỉ vẽ nhãn mình, chỉ vẽ tương lai, hay nhầm thành bản đồ điểm bán đều sai."
     },
     {
-      "id": 60,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
-      "question": "Điều kiện nào sau đây là tiêu chuẩn xác đáng để đánh giá mức độ hấp dẫn của một đoạn thị trường?",
-      "options": {
-        "A": "Mức tăng trưởng",
-        "B": "Quy mô",
-        "C": "Phù hợp với nguồn lực của doanh nghiệp",
-        "D": "Mức tăng trưởng phù hợp, quy mô lớn và phù hợp với nguồn lực của doanh nghiệp"
-      },
-      "answer": "D",
-      "explainAnswer": "Cần đồng thời xem xét quy mô, tăng trưởng và sự phù hợp với doanh nghiệp."
-    },
-    {
-      "id": 61,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
-      "question": "Tất cả những tiêu thức sau đây thuộc nhóm tiêu thức nhân khẩu học ngoại trừ:",
-      "options": {
-        "A": "Tuổi tác",
-        "B": "Thu nhập",
-        "C": "Giới tính",
-        "D": "Lối sống"
-      },
-      "answer": "D",
-      "explainAnswer": "Lối sống thuộc tâm lý."
-    },
-    {
-      "id": 62,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
-      "question": "Đâu là ưu điểm của chiến lược Marketing không phân biệt?",
-      "options": {
-        "A": "Giúp tiết kiệm chi phí",
-        "B": "Gặp phải cạnh tranh khốc liệt",
-        "C": "Đặc biệt phù hợp với những doanh nghiệp bị hạn chế về nguồn lực",
-        "D": "Giúp tiết kiệm chi phí và gặp phải cạnh tranh khốc liệt"
-      },
-      "answer": "A",
-      "explainAnswer": "Ưu điểm chính là tiết kiệm chi phí."
-    },
-    {
-      "id": 63,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
+      "id": 478,
+      "chapter": "Chương 5. Quy trình STP",
+      "sourceChapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
       "question": "Quá trình trong đó người bán phân biệt các đoạn thị trường, chọn một hay một vài đoạn làm thị trường mục tiêu và thiết kế marketing mix được gọi là:",
       "options": {
         "A": "Marketing đại trà",
@@ -820,98 +1107,7 @@
         "D": "Marketing phân biệt theo người tiêu dùng"
       },
       "answer": "B",
-      "explainAnswer": "Đây là marketing mục tiêu."
-    },
-    {
-      "id": 64,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
-      "question": "Marketing mục tiêu phải đảm bảo:",
-      "options": {
-        "A": "Đoạn/các đoạn thị trường đó phải đủ lớn",
-        "B": "Đoạn/các đoạn thị trường đó phải có thể đo lường được, đủ lớn, có thể tiếp cận và có phản ứng khác biệt",
-        "C": "Đoạn/các đoạn thị trường đó phải phát triển bền vững",
-        "D": "Đoạn/các đoạn thị trường đó phải phát triển bền vững và đủ lớn"
-      },
-      "answer": "B",
-      "explainAnswer": "Phải thỏa mãn các điều kiện đo lường, quy mô, tiếp cận và phản ứng khác biệt."
-    },
-    {
-      "id": 65,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
-      "question": "Đâu KHÔNG phải là phương án lựa chọn thị trường mục tiêu?",
-      "options": {
-        "A": "Tập trung vào một đoạn thị trường",
-        "B": "Chuyên môn hóa theo thị trường",
-        "C": "Bao quát toàn bộ thị trường",
-        "D": "Chuyên môn hóa theo bán hàng"
-      },
-      "answer": "D",
-      "explainAnswer": "“Chuyên môn hóa theo bán hàng” không phải phương án chuẩn."
-    },
-    {
-      "id": 66,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
-      "question": "Lý do doanh nghiệp phải phân đoạn thị trường KHÔNG bao gồm:",
-      "options": {
-        "A": "Quá trình nhận thức của khách hàng phức tạp",
-        "B": "Yêu cầu tất yếu để cạnh tranh",
-        "C": "Nhằm gia tăng lợi nhuận cho doanh nghiệp",
-        "D": "Số lượng lớn các thông điệp quảng cáo"
-      },
-      "answer": "C",
-      "explainAnswer": "Mục tiêu chính không phải lúc nào cũng là gia tăng lợi nhuận ngay."
-    },
-    {
-      "id": 67,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
-      "question": "Các mục tiêu mà doanh nghiệp theo đuổi khi định vị trên thị trường KHÔNG bao gồm:",
-      "options": {
-        "A": "Chiếm vị trí mới trên thị trường",
-        "B": "Thay đổi khách hàng mục tiêu của doanh nghiệp",
-        "C": "Cạnh tranh đối đầu trực tiếp",
-        "D": "Hoàn thiện hệ thống chủng loại sản phẩm"
-      },
-      "answer": "B",
-      "explainAnswer": "Định vị không nhằm thay đổi khách hàng mục tiêu."
-    },
-    {
-      "id": 68,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
-      "question": "Hình ảnh trong tâm trí khách hàng là:",
-      "options": {
-        "A": "Sự kết hợp giữa nhận thức và đánh giá của khách hàng về doanh nghiệp và các sản phẩm mà doanh nghiệp cung ứng",
-        "B": "Sự kết hợp giữa nhận thức và đánh giá của khách hàng về doanh nghiệp",
-        "C": "Sự kết hợp giữa nhận thức và đánh giá của khách hàng về các sản phẩm mà doanh nghiệp cung ứng",
-        "D": "Sự kết hợp giữa nhận thức và đánh giá của khách hàng về các sản phẩm mà doanh nghiệp cung ứng và chiến lược thị trường của doanh nghiệp"
-      },
-      "answer": "A",
-      "explainAnswer": "Hình ảnh bao gồm cả doanh nghiệp và sản phẩm."
-    },
-    {
-      "id": 69,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
-      "question": "Tiêu thức có thể được sử dụng để phân khúc thị trường cho nhiều mặt hàng và ngành hàng nhất là:",
-      "options": {
-        "A": "Thu nhập",
-        "B": "Giới tính",
-        "C": "Độ tuổi",
-        "D": "Lòng trung thành"
-      },
-      "answer": "A",
-      "explainAnswer": "Thu nhập là tiêu thức phổ biến nhất cho nhiều ngành."
-    },
-    {
-      "id": 70,
-      "chapter": "Chương V - Phân đoạn TT, TT Mục tiêu, Định vị SP",
-      "question": "Ý nào dưới đây là ưu điểm của chiến lược marketing tập trung?",
-      "options": {
-        "A": "Doanh nghiệp tiết kiệm chi phí, tăng khả năng cạnh tranh về giá",
-        "B": "Doanh nghiệp đáp ứng tốt hơn nhu cầu của từng đoạn thị trường",
-        "C": "Doanh nghiệp giành vị trí vững chắc trên đoạn thị trường đã chọn",
-        "D": "Doanh nghiệp tạo sự khác biệt cho sản phẩm, nhãn hiệu"
-      },
-      "answer": "C",
-      "explainAnswer": "Ưu điểm nổi bật là giành vị trí vững chắc trên đoạn đã chọn."
+      "explainAnswer": "Tách đoạn – chọn mục tiêu – thiết kế mix chính là marketing mục tiêu. Đại trà bỏ qua STP; đa dạng hóa sản phẩm và phân biệt theo từng người không phải tên tiến trình này."
     }
   ]
 }

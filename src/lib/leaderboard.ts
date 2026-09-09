@@ -119,7 +119,7 @@ export function toLeaderboardEntry(row: LearningStatsRow, period: LearningPeriod
   const { stats, points } = statsForPeriod(row, period)
   return {
     userId: row.user_id,
-    name: row.display_name?.trim() || "QuizPKA",
+    name: row.display_name?.trim() || "Quizpka",
     avatarUrl: row.avatar_url,
     visible: row.visible,
     isYou: Boolean(currentUserId && row.user_id === currentUserId),

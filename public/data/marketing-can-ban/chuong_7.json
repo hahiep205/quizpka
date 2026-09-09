@@ -1,0 +1,399 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Marketing căn bản - Chương 7. Chính sách giá",
+  "chapter": "Chương 7. Chính sách giá",
+  "totalQuestions": 28,
+  "questions": [
+    {
+      "id": 139,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "CHƯƠNG 7 – CHÍNH SÁCH GIÁ",
+      "question": "Một doanh nghiệp xác định giá bán dựa trên tổng chi phí sản xuất một đơn vị sản phẩm cộng với phần lợi nhuận mong muốn. Mối quan hệ phù hợp là:",
+      "options": {
+        "A": "Giá bán = Giá thành − Lợi nhuận",
+        "B": "Giá bán = Giá thành + Lợi nhuận",
+        "C": "Giá thành = Giá bán + Lợi nhuận",
+        "D": "Lợi nhuận = Giá thành + Giá bán"
+      },
+      "answer": "B",
+      "explainAnswer": "Giá bán được xác định từ giá thành cộng lợi nhuận mong muốn, nên Giá bán = Giá thành + Lợi nhuận. Trừ lợi nhuận, cộng ngược hay cộng giá thành với giá bán đều sai quan hệ kế toán chi phí."
+    },
+    {
+      "id": 140,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "CHƯƠNG 7 – CHÍNH SÁCH GIÁ",
+      "question": "Một doanh nghiệp lựa chọn mức giá thấp nhằm đạt quy mô thị trường lớn nhất mà doanh nghiệp mong muốn. Mục tiêu marketing phù hợp nhất là:",
+      "options": {
+        "A": "Dẫn đầu về chất lượng",
+        "B": "Dẫn đầu thị phần",
+        "C": "Tối đa hóa lợi nhuận hiện hành",
+        "D": "Đảm bảo sống sót"
+      },
+      "answer": "B",
+      "explainAnswer": "Giá thấp để đạt quy mô thị trường lớn nhất là mục tiêu dẫn đầu thị phần. Dẫn đầu chất lượng thường giá cao; tối đa hóa lợi nhuận hiện hành lấy lãi ngắn hạn; sống sót là giá để trang trải khi khó khăn."
+    },
+    {
+      "id": 141,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "CHƯƠNG 7 – CHÍNH SÁCH GIÁ",
+      "question": "Một doanh nghiệp đưa sản phẩm mới ra thị trường với mức giá cao, sau đó giảm dần giá để thu hút thêm những khách hàng nhạy cảm về giá. Đây là:",
+      "options": {
+        "A": "Chiến lược giá thâm nhập",
+        "B": "Chiến lược giá hớt váng",
+        "C": "Định giá trọn gói",
+        "D": "Định giá hai phần"
+      },
+      "answer": "B",
+      "explainAnswer": "Giá cao lúc ra mắt rồi giảm dần để thu khách nhạy cảm giá: giá hớt váng. Thâm nhập bắt đầu giá thấp; trọn gói và hai phần là kỹ thuật định giá hỗn hợp, không phải lộ trình giảm giá theo thời gian."
+    },
+    {
+      "id": 142,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "CHƯƠNG 7 – CHÍNH SÁCH GIÁ",
+      "question": "Một doanh nghiệp bán một nhóm sản phẩm và áp dụng các mức giá khác nhau cho từng phiên bản dựa trên đặc điểm và giá trị của từng phiên bản. Doanh nghiệp đang thực hiện:",
+      "options": {
+        "A": "Định giá cho chủng loại sản phẩm",
+        "B": "Định giá sản phẩm phụ",
+        "C": "Định giá hai phần",
+        "D": "Định giá theo địa lý"
+      },
+      "answer": "A",
+      "explainAnswer": "Các phiên bản cùng nhóm, giá khác nhau theo đặc điểm/giá trị: định giá cho chủng loại sản phẩm. Không phải sản phẩm phụ, hai phần hay theo địa lý."
+    },
+    {
+      "id": 143,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "CHƯƠNG 7 – CHÍNH SÁCH GIÁ",
+      "question": "Một doanh nghiệp bán một gói gồm nhiều hàng hóa và dịch vụ với mức giá thấp hơn tổng giá nếu khách hàng mua riêng từng sản phẩm. Đây là:",
+      "options": {
+        "A": "Định giá hai phần",
+        "B": "Định giá trọn gói",
+        "C": "Định giá phân biệt",
+        "D": "Định giá theo thời điểm"
+      },
+      "answer": "B",
+      "explainAnswer": "Gói nhiều hàng hóa/dịch vụ với giá thấp hơn tổng mua lẻ: định giá trọn gói. Hai phần có phí cố định cộng phí sử dụng; phân biệt và theo thời điểm không tạo gói."
+    },
+    {
+      "id": 144,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "CHƯƠNG 7 – CHÍNH SÁCH GIÁ",
+      "question": "Một startup phát triển thiết bị đeo thông minh cao cấp. Khách hàng mục tiêu sẵn sàng trả giá cao, cầu ban đầu lớn, chi phí đơn vị thấp và doanh nghiệp cho rằng mức giá cao giúp tạo ấn tượng chất lượng cao. Chiến lược phù hợp nhất là:",
+      "options": {
+        "A": "Giá thâm nhập",
+        "B": "Giá hớt váng",
+        "C": "Giá trọn gói",
+        "D": "Giá hai phần"
+      },
+      "answer": "B",
+      "explainAnswer": "Khách sẵn sàng trả cao, cầu ban đầu lớn, chi phí đơn vị thấp, giá cao tạo hình ảnh chất lượng: đủ điều kiện giá hớt váng. Thâm nhập trái với giá cao; trọn gói và hai phần không khớp tình huống thiết bị cao cấp."
+    },
+    {
+      "id": 145,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "CHƯƠNG 7 – CHÍNH SÁCH GIÁ",
+      "question": "Một công ty ra mắt nước uống mới trong thị trường có rất nhiều sản phẩm tương tự. Khách hàng rất nhạy cảm về giá, doanh nghiệp có khả năng tăng sản lượng nhanh và chi phí đơn vị giảm khi sản lượng tăng. Chiến lược nào phù hợp nhất?",
+      "options": {
+        "A": "Giá hớt váng",
+        "B": "Giá thâm nhập",
+        "C": "Giá theo hình ảnh",
+        "D": "Giá phân biệt theo khách hàng"
+      },
+      "answer": "B",
+      "explainAnswer": "Nhiều sản phẩm tương tự, khách nhạy giá, tăng sản lượng nhanh làm giảm chi phí đơn vị: giá thâm nhập. Hớt váng cần cầu kém nhạy và hình ảnh giá cao; giá theo hình ảnh/phân biệt khách không phải logic thâm nhập thị trường đông đúc."
+    },
+    {
+      "id": 146,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "CHƯƠNG 7 – CHÍNH SÁCH GIÁ",
+      "question": "Một doanh nghiệp có giá thành sản phẩm là 200.000 đồng/đơn vị và muốn cộng thêm 25% giá thành làm lợi nhuận. Giá bán theo phương pháp cộng lãi vào giá thành là:",
+      "options": {
+        "A": "225.000 đồng",
+        "B": "240.000 đồng",
+        "C": "250.000 đồng",
+        "D": "275.000 đồng"
+      },
+      "answer": "C",
+      "explainAnswer": "Lợi nhuận = 200.000 × 25% = 50.000; giá bán = 200.000 + 50.000 = 250.000 đồng. 225.000 là cộng 12,5%; 240.000 cộng 20%; 275.000 cộng 37,5%, đều không khớp 25% giá thành."
+    },
+    {
+      "id": 147,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "CHƯƠNG 7 – CHÍNH SÁCH GIÁ",
+      "question": "Một nhà máy có tổng chi phí sản xuất 900 triệu đồng và sản xuất 10.000 sản phẩm. Giá thành đơn vị sản phẩm là:",
+      "options": {
+        "A": "9.000 đồng",
+        "B": "90.000 đồng",
+        "C": "900.000 đồng",
+        "D": "9 triệu đồng"
+      },
+      "answer": "B",
+      "explainAnswer": "Giá thành đơn vị = 900.000.000 / 10.000 = 90.000 đồng. 9.000 thiếu một số 0; 900.000 chia nhầm 1.000; 9 triệu đảo ngược phép tính."
+    },
+    {
+      "id": 148,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "CHƯƠNG 7 – CHÍNH SÁCH GIÁ",
+      "question": "Một doanh nghiệp có tổng chi phí cố định 300 triệu đồng và tổng chi phí biến đổi 500 triệu đồng khi sản xuất một mức sản lượng nhất định. Tổng chi phí của doanh nghiệp là:",
+      "options": {
+        "A": "200 triệu đồng",
+        "B": "500 triệu đồng",
+        "C": "800 triệu đồng",
+        "D": "1,5 tỷ đồng"
+      },
+      "answer": "C",
+      "explainAnswer": "Tổng chi phí = chi phí cố định + chi phí biến đổi = 300 + 500 = 800 triệu đồng. 200 là hiệu số; 500 bỏ cố định; 1,5 tỷ cộng sai."
+    },
+    {
+      "id": 149,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "CHƯƠNG 7 – CHÍNH SÁCH GIÁ",
+      "question": "Một công ty định giá sản phẩm dựa trên mức giá mà các đối thủ đang áp dụng. Công ty cân nhắc ba khả năng: thấp hơn, ngang bằng hoặc cao hơn giá thị trường. Đây là phương pháp:",
+      "options": {
+        "A": "Định giá dựa vào chi phí",
+        "B": "Định giá theo giá trị cảm nhận",
+        "C": "Định giá theo mức giá hiện hành",
+        "D": "Định giá đấu thầu"
+      },
+      "answer": "C",
+      "explainAnswer": "Chọn giá thấp hơn, ngang hoặc cao hơn đối thủ là định giá theo mức giá hiện hành/cạnh tranh. Không phải cộng chi phí, giá trị cảm nhận hay đấu thầu."
+    },
+    {
+      "id": 150,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "CHƯƠNG 7 – CHÍNH SÁCH GIÁ",
+      "question": "Một khách sạn tổ chức đấu thầu cung cấp suất ăn cho một hội nghị. Doanh nghiệp phải xem xét giá thầu của các đối thủ trước khi đưa ra mức giá của mình. Phương pháp định giá phù hợp là:",
+      "options": {
+        "A": "Định giá dựa vào chi phí",
+        "B": "Định giá theo mức giá hiện hành",
+        "C": "Định giá theo giá trị cảm nhận",
+        "D": "Định giá đấu thầu"
+      },
+      "answer": "D",
+      "explainAnswer": "Xem giá thầu đối thủ trước khi đề xuất giá suất ăn hội nghị: định giá đấu thầu. Chi phí, giá hiện hành niêm yết hay giá trị cảm nhận không phải cơ chế bỏ thầu."
+    },
+    {
+      "id": 151,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "CHƯƠNG 7 – CHÍNH SÁCH GIÁ",
+      "question": "Một hãng laptop định vị sản phẩm cao cấp, sử dụng linh kiện chất lượng cao và dịch vụ hậu mãi tốt. Nếu doanh nghiệp đặt mức giá quá thấp so với định vị cao cấp, vấn đề nào có thể xảy ra?",
+      "options": {
+        "A": "Giá không còn phù hợp với chiến lược định vị",
+        "B": "Chi phí sản xuất chắc chắn tăng",
+        "C": "Cầu thị trường chắc chắn giảm về 0",
+        "D": "Doanh nghiệp chuyển sang độc quyền"
+      },
+      "answer": "A",
+      "explainAnswer": "Laptop cao cấp mà giá quá thấp làm lệch hình ảnh: giá không còn phù hợp chiến lược định vị. Không chắc chi phí tăng, cầu về 0 hay chuyển độc quyền."
+    },
+    {
+      "id": 152,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "CHƯƠNG 7 – CHÍNH SÁCH GIÁ",
+      "question": "Một sản phẩm có nhiều sản phẩm thay thế và khách hàng có thể dễ dàng chuyển sang thương hiệu khác nếu giá tăng. Doanh nghiệp cần đặc biệt lưu ý:",
+      "options": {
+        "A": "Cầu ít co giãn",
+        "B": "Cầu co giãn theo giá",
+        "C": "Độc quyền thuần túy",
+        "D": "Chi phí cố định"
+      },
+      "answer": "B",
+      "explainAnswer": "Nhiều sản phẩm thay thế, dễ chuyển thương hiệu khi giá tăng: cầu co giãn theo giá. Cầu ít co giãn trái tình huống; độc quyền thuần túy và chi phí cố định không mô tả độ nhạy cầu."
+    },
+    {
+      "id": 153,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "CHƯƠNG 7 – CHÍNH SÁCH GIÁ",
+      "question": "Giá một sản phẩm tăng 10% làm lượng cầu giảm 30%. Độ co giãn của cầu theo giá có giá trị tuyệt đối là:",
+      "options": {
+        "A": "0,3",
+        "B": "3",
+        "C": "10/30",
+        "D": "40"
+      },
+      "answer": "B",
+      "explainAnswer": "Độ co giãn theo giá lấy giá trị tuyệt đối |Ed| = 30% / 10% = 3. 0,3 đảo ngược tỷ số; 10/30 chưa rút gọn đúng cách hiểu; 40 cộng hai tỷ lệ chứ không chia."
+    },
+    {
+      "id": 154,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "CHƯƠNG 7 – CHÍNH SÁCH GIÁ",
+      "question": "Một rạp chiếu phim thu 100.000 đồng phí thành viên mỗi tháng, sau đó khách hàng trả thêm tiền cho mỗi lượt xem vượt quá số lượt tối thiểu. Đây là:",
+      "options": {
+        "A": "Định giá trọn gói",
+        "B": "Định giá hai phần",
+        "C": "Định giá phân biệt",
+        "D": "Định giá khuyến mại"
+      },
+      "answer": "B",
+      "explainAnswer": "Phí thành viên cố định rồi trả thêm mỗi lượt xem vượt mức: định giá hai phần. Trọn gói bán combo; phân biệt và khuyến mại không tách phí quyền dùng và phí tiêu dùng thêm."
+    },
+    {
+      "id": 155,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "CHƯƠNG 7 – CHÍNH SÁCH GIÁ",
+      "question": "Một nhà hàng bán riêng một suất ăn gồm món chính, đồ uống và tráng miệng với tổng giá 180.000 đồng. Nếu khách mua theo combo, nhà hàng thu 150.000 đồng. Đây là:",
+      "options": {
+        "A": "Định giá hai phần",
+        "B": "Định giá trọn gói",
+        "C": "Định giá theo địa điểm",
+        "D": "Định giá phân biệt"
+      },
+      "answer": "B",
+      "explainAnswer": "Combo 150.000 thấp hơn tổng 180.000 khi mua lẻ: định giá trọn gói. Hai phần, theo địa điểm hay phân biệt không lấy nguyên tắc giá gói thấp hơn tổng lẻ."
+    },
+    {
+      "id": 156,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "CHƯƠNG 7 – CHÍNH SÁCH GIÁ",
+      "question": "Một công ty bán cùng một sản phẩm với giá khác nhau cho khách hàng ở Hà Nội, Đà Nẵng và TP.HCM do chi phí vận chuyển đến từng khu vực khác nhau. Đây là:",
+      "options": {
+        "A": "Định giá theo nguyên tắc địa lý",
+        "B": "Định giá theo khách hàng",
+        "C": "Định giá theo hình ảnh",
+        "D": "Định giá theo thời điểm"
+      },
+      "answer": "A",
+      "explainAnswer": "Cùng sản phẩm, giá khác nhau vì cước vận chuyển Hà Nội, Đà Nẵng, TP.HCM: định giá theo nguyên tắc địa lý. Không phải theo khách hàng, hình ảnh hay thời điểm."
+    },
+    {
+      "id": 157,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "CHƯƠNG 7 – CHÍNH SÁCH GIÁ",
+      "question": "Một siêu thị giảm giá 10% cho khách hàng mua từ 20 sản phẩm trở lên, trong khi khách mua dưới 20 sản phẩm phải trả giá niêm yết. Đây là:",
+      "options": {
+        "A": "Chiết giá theo số lượng mua lớn",
+        "B": "Chiết khấu thời vụ",
+        "C": "Chiết giá chức năng",
+        "D": "Bớt giá"
+      },
+      "answer": "A",
+      "explainAnswer": "Giảm 10% khi mua từ 20 sản phẩm trở lên: chiết giá theo số lượng. Không phải chiết khấu thời vụ, chiết giá chức năng cho trung gian hay bớt giá ngoài số lượng."
+    },
+    {
+      "id": 158,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "CHƯƠNG 7 – CHÍNH SÁCH GIÁ",
+      "question": "Một khách sạn tăng giá phòng vào cuối tuần và mùa du lịch cao điểm nhưng giảm giá vào các ngày thấp điểm. Đây là hình thức:",
+      "options": {
+        "A": "Định giá theo khách hàng",
+        "B": "Định giá theo địa điểm",
+        "C": "Định giá theo thời điểm",
+        "D": "Định giá theo hình ảnh"
+      },
+      "answer": "C",
+      "explainAnswer": "Tăng giá cuối tuần/mùa cao điểm, giảm ngày thấp điểm: định giá theo thời điểm. Không phải theo khách hàng, địa điểm hay hình ảnh."
+    },
+    {
+      "id": 159,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "CHƯƠNG 7 – CHÍNH SÁCH GIÁ",
+      "question": "Một hãng điện thoại giảm giá tạm thời một mẫu máy trong tuần lễ ra mắt nhằm hỗ trợ chương trình xúc tiến bán và kích thích khách hàng mua ngay. Đây là:",
+      "options": {
+        "A": "Định giá khuyến mại",
+        "B": "Định giá hớt váng",
+        "C": "Định giá theo chủng loại",
+        "D": "Định giá đấu thầu"
+      },
+      "answer": "A",
+      "explainAnswer": "Giảm giá tạm thời tuần ra mắt để kích thích mua ngay: định giá khuyến mại. Không phải hớt váng, theo chủng loại hay đấu thầu."
+    },
+    {
+      "id": 160,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "CHƯƠNG 7 – CHÍNH SÁCH GIÁ",
+      "question": "Một doanh nghiệp đang xem xét tăng giá. Chi phí đầu vào tăng mạnh, trong khi cầu đối với sản phẩm cũng tăng vượt quá khả năng cung ứng hiện tại. Yếu tố nào có thể là cơ sở để doanh nghiệp chủ động tăng giá?",
+      "options": {
+        "A": "Dư thừa năng lực sản xuất",
+        "B": "Tỷ phần thị trường giảm sút",
+        "C": "Lạm phát chi phí và cầu tăng quá mức so với cung",
+        "D": "Sản lượng giảm do thị hiếu thay đổi"
+      },
+      "answer": "C",
+      "explainAnswer": "Chi phí đầu vào tăng (lạm phát chi phí) và cầu vượt khả năng cung là hai căn cứ điển hình để chủ động tăng giá. Dư thừa năng lực hay thị phần giảm thường tạo áp lực giảm giá; sản lượng giảm vì thị hiếu đổi không phải lý do tăng giá."
+    },
+    {
+      "id": 231,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "",
+      "question": "Mục tiêu chủ yếu của chiến lược giá hớt váng là:",
+      "options": {
+        "A": "Đưa giá ban đầu thấp để nhanh chóng chiếm thị phần",
+        "B": "Đặt giá ban đầu cao để khai thác những khách hàng sẵn sàng trả giá cao",
+        "C": "Duy trì giá thấp hơn mọi đối thủ",
+        "D": "Bán sản phẩm với giá bằng chi phí sản xuất"
+      },
+      "answer": "B",
+      "explainAnswer": "Chiến lược giá hớt váng đặt giá ban đầu cao để khai thác nhóm khách sẵn sàng trả cao, sau đó có thể giảm giá để mở rộng thị trường. Giá ban đầu thấp để chiếm thị phần là thâm nhập; luôn rẻ hơn đối thủ hay bán bằng chi phí không phải hớt váng."
+    },
+    {
+      "id": 232,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "",
+      "question": "Chiến lược giá thâm nhập được đặc trưng bởi:",
+      "options": {
+        "A": "Giá ban đầu cao nhằm tối đa hóa lợi nhuận trên mỗi đơn vị",
+        "B": "Giá ban đầu thấp nhằm giành thị phần lớn",
+        "C": "Giá luôn cao hơn đối thủ cạnh tranh",
+        "D": "Giá thay đổi hoàn toàn theo chi phí vận chuyển"
+      },
+      "answer": "B",
+      "explainAnswer": "Giá thâm nhập lấy mức giá ban đầu thấp nhằm giành thị phần lớn khi khách nhạy cảm về giá. Giá ban đầu cao để tối đa hóa lãi trên từng đơn vị là hớt váng; luôn cao hơn đối thủ hay neo giá theo cước vận chuyển không phải đặc trưng thâm nhập."
+    },
+    {
+      "id": 233,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "",
+      "question": "Điều kiện nào phù hợp với chiến lược giá thâm nhập?",
+      "options": {
+        "A": "Thị trường rất nhạy cảm về giá",
+        "B": "Cầu về sản phẩm hoàn toàn không co giãn",
+        "C": "Doanh nghiệp muốn duy trì thị phần rất nhỏ",
+        "D": "Sản phẩm chỉ dành cho nhóm khách hàng cao cấp"
+      },
+      "answer": "A",
+      "explainAnswer": "Giá thâm nhập phù hợp khi thị trường rất nhạy cảm về giá, tăng sản lượng giúp giảm chi phí đơn vị. Cầu không co giãn, muốn giữ thị phần rất nhỏ hoặc chỉ phục vụ khách cao cấp nghiêng về giá hớt váng hoặc định vị giá cao."
+    },
+    {
+      "id": 234,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "",
+      "question": "Định giá trọn gói là phương thức:",
+      "options": {
+        "A": "Bán từng sản phẩm với giá riêng biệt cao hơn",
+        "B": "Tập hợp một số hàng hóa, dịch vụ thành một “bộ” hoặc “gói” để bán",
+        "C": "Định giá dựa hoàn toàn vào giá của đối thủ",
+        "D": "Định giá theo từng khu vực địa lý"
+      },
+      "answer": "B",
+      "explainAnswer": "Định giá trọn gói tập hợp một số hàng hóa hoặc dịch vụ thành một bộ để bán, thường với giá thấp hơn tổng nếu mua lẻ. Bán từng món với giá riêng cao hơn, bám giá đối thủ hay định giá theo vùng địa lý là các kỹ thuật khác."
+    },
+    {
+      "id": 235,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "",
+      "question": "Chiết giá trong chính sách giá có mục đích chủ yếu là:",
+      "options": {
+        "A": "Khuyến khích khách hàng mua và thanh toán",
+        "B": "Làm tăng chi phí phân phối",
+        "C": "Loại bỏ hoàn toàn đối thủ cạnh tranh",
+        "D": "Giảm chất lượng sản phẩm"
+      },
+      "answer": "A",
+      "explainAnswer": "Chiết giá nhằm khuyến khích khách hàng mua nhiều hơn, mua ngay hoặc thanh toán nhanh, đúng hạn. Mục tiêu không phải tăng chi phí phân phối, không phải loại bỏ hết đối thủ và không phải giảm chất lượng sản phẩm."
+    },
+    {
+      "id": 236,
+      "chapter": "Chương 7. Chính sách giá",
+      "sourceChapter": "",
+      "question": "Theo phương pháp định giá theo mức giá hiện hành, doanh nghiệp có thể lựa chọn mức giá:",
+      "options": {
+        "A": "Chỉ thấp hơn thị trường",
+        "B": "Chỉ cao hơn thị trường",
+        "C": "Ngang bằng, cao hơn hoặc thấp hơn thị trường",
+        "D": "Luôn bằng chi phí sản xuất"
+      },
+      "answer": "C",
+      "explainAnswer": "Định giá theo mức giá hiện hành cho phép doanh nghiệp chọn mức ngang bằng, cao hơn hoặc thấp hơn giá thị trường/đối thủ. Phương pháp này không bị khóa chỉ thấp hơn, chỉ cao hơn, cũng không buộc giá luôn bằng chi phí sản xuất."
+    }
+  ]
+}
