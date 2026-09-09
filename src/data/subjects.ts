@@ -135,7 +135,7 @@ export const subjects: Subject[] = [
       },
     ],
     chapters: [
-      { id: "c1234_mid", label: { en: "Ho Chi Minh Ideology - Midterm (Chapters 1, 2, 3, 4)", vi: "Tư tưởng Hồ Chí Minh - Giữa kỳ (gộp chương 1234)" }, matches: ["Chương 1", "Chương 2", "Chương 3", "Chương 4"], count: 276 },
+      { id: "c1234_mid", label: { en: "Ho Chi Minh Ideology - Midterm (Chapters 1, 2, 3, 4)", vi: "Tư tưởng Hồ Chí Minh - Giữa kỳ" }, matches: ["Chương 1", "Chương 2", "Chương 3", "Chương 4"], count: 276 },
       { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Chương 1"], count: 68 },
       { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, matches: ["Chương 2"], count: 65 },
       { id: "c3", label: { en: "Chapter 3", vi: "Chương 3" }, matches: ["Chương 3"], count: 71 },
@@ -774,7 +774,7 @@ export const subjects: Subject[] = [
       {
         id: "calculus-final-docs-1", type: "final", year: 2025, questionCount: 0, durationMinutes: 0,
         title: { en: "Calculus - Final", vi: "Đề Giải tích - Cuối kỳ" },
-        description: { en: "View scanned exam papers and download each set.", vi: "Xem ảnh đề thi trực tiếp và tải từng bộ đề." },
+        description: { en: "View scanned exam papers and download each image.", vi: "Xem ảnh đề thi trực tiếp và tải từng hình ảnh." },
       },
     ],
     chapters: [
@@ -791,7 +791,7 @@ export const subjects: Subject[] = [
       {
         id: "dstt-final-docs-1", type: "final", year: 2023, questionCount: 0, durationMinutes: 0,
         title: { en: "Linear Algebra - Final", vi: "Đề Đại số tuyến tính - Cuối kỳ" },
-        description: { en: "View scanned exam papers and download each set.", vi: "Xem ảnh đề thi trực tiếp và tải từng bộ đề." },
+        description: { en: "View scanned exam papers and download each image.", vi: "Xem ảnh đề thi trực tiếp và tải từng hình ảnh." },
       },
     ],
     chapters: [
@@ -807,7 +807,7 @@ export const subjects: Subject[] = [
       {
         id: "xstk-midterm-docs-1", type: "midterm", year: 2025, questionCount: 0, durationMinutes: 0,
         title: { en: "Probability & Statistics - Midterm", vi: "Đề Xác suất thống kê - Giữa kỳ" },
-        description: { en: "View scanned exam papers and download each set.", vi: "Xem ảnh đề thi trực tiếp và tải từng bộ đề." },
+        description: { en: "View scanned exam papers and download each image.", vi: "Xem ảnh đề thi trực tiếp và tải từng hình ảnh." },
       },
     ],
     chapters: [
@@ -823,7 +823,7 @@ export const subjects: Subject[] = [
       {
         id: "ppt-midterm-docs-1", type: "midterm", year: 2025, questionCount: 0, durationMinutes: 0,
         title: { en: "Numerical Methods - Midterm", vi: "Đề Phương pháp tính - Giữa kỳ" },
-        description: { en: "View scanned exam papers and download each set.", vi: "Xem ảnh đề thi trực tiếp và tải từng bộ đề." },
+        description: { en: "View scanned exam papers and download each image.", vi: "Xem ảnh đề thi trực tiếp và tải từng hình ảnh." },
       },
     ],
     chapters: [
@@ -839,7 +839,7 @@ export const subjects: Subject[] = [
       {
         id: "ppt-final-docs-1", type: "final", year: 2025, questionCount: 0, durationMinutes: 0,
         title: { en: "Numerical Methods - Final", vi: "Đề Phương pháp tính - Cuối kỳ" },
-        description: { en: "View scanned exam papers and download each set.", vi: "Xem ảnh đề thi trực tiếp và tải từng bộ đề." },
+        description: { en: "View scanned exam papers and download each image.", vi: "Xem ảnh đề thi trực tiếp và tải từng hình ảnh." },
       },
     ],
     chapters: [
@@ -856,7 +856,7 @@ export const subjects: Subject[] = [
       {
         id: "physics-1-final-docs-1", type: "final", year: 2025, questionCount: 0, durationMinutes: 0,
         title: { en: "Physics 1 - Final", vi: "Đề Vật Lý 1 - Cuối kỳ" },
-        description: { en: "View scanned exam papers and download each set.", vi: "Xem ảnh đề thi trực tiếp và tải từng bộ đề." },
+        description: { en: "View scanned exam papers and download each image.", vi: "Xem ảnh đề thi trực tiếp và tải từng hình ảnh." },
       },
     ],
     chapters: [

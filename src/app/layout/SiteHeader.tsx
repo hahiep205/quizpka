@@ -1,9 +1,8 @@
 import { useEffect, useState, type ReactNode } from "react"
-import { Languages, LogOut, Menu, MessageCircle, Moon, Sun, X } from "lucide-react"
+import { Languages, LogOut, Menu, Moon, Sun, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import brandLogo from "@/assets/logo.png"
 import { GoogleIcon } from "@/shared/icons/GoogleIcon"
-import { CommunityChatModal } from "@/components/CommunityChatModal"
 import { useAuth } from "@/auth/AuthProvider"
 import { appRoutes, navigate } from "@/app/navigation"
 
@@ -63,7 +62,6 @@ export function SiteHeader({
   const [menuVisible, setMenuVisible] = useState(false)
   const [menuState, setMenuState] = useState<"open" | "closed">("closed")
   const [activeNav, setActiveNav] = useState<NavKey>("home")
-  const [chatOpen, setChatOpen] = useState(false)
   const { status, signOut } = useAuth()
   const authenticated = status === "authenticated"
 
@@ -255,12 +253,7 @@ export function SiteHeader({
             </HeaderIconButton>
           </div>
 
-          <HeaderIconButton
-            label={t.communityChat ?? (lang === "vi" ? "Chat cộng đồng" : "Community Chat")}
-            onClick={() => setChatOpen(true)}
-          >
-            <MessageCircle className="h-[18px] w-[18px]" strokeWidth={2} />
-          </HeaderIconButton>
+
         </div>
       </div>
 
@@ -392,7 +385,6 @@ export function SiteHeader({
         </>
       ) : null}
       </header>
-      <CommunityChatModal open={chatOpen} onClose={() => setChatOpen(false)} lang={lang} />
     </>
   )
 }
