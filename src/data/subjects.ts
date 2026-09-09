@@ -623,14 +623,17 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "office-it-final-bank-1", type: "final", year: 2026, questionCount: 120, durationMinutes: 60,
+        id: "office-it-final-bank-1", type: "final", year: 2026, questionCount: 309, durationMinutes: 60,
         title: { en: "Office Information Technology", vi: "Quiz ôn tập Cuối kỳ - Tin học văn phòng" },
         description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
       },
     ],
     chapters: [
-      { id: "all", label: { en: "Office Computing - Final", vi: "Tin học văn phòng - Cuối kỳ" }, count: 120 },
-      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Tin học văn phòng"], hidden: true, count: 120 },
+      { id: "all", label: { en: "Office Computing - Final", vi: "Tin học văn phòng - Cuối kỳ" }, count: 309 },
+      { id: "c1", label: { en: "Part 1", vi: "Phần 1" }, matches: ["Phần 1"], count: 77 },
+      { id: "c2", label: { en: "Part 2", vi: "Phần 2" }, matches: ["Phần 2"], count: 77 },
+      { id: "c3", label: { en: "Part 3", vi: "Phần 3" }, matches: ["Phần 3"], count: 78 },
+      { id: "c4", label: { en: "Part 4", vi: "Phần 4" }, matches: ["Phần 4"], count: 77 },
     ],
   },
   {

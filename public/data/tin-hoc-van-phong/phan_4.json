@@ -1,0 +1,1085 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Tin học văn phòng - Phần 4",
+  "chapter": "Phần 4",
+  "totalQuestions": 77,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phím tắt để cắt một đối tượng vào clipboard là gì?",
+      "options": {
+        "A": "Ctrl + C",
+        "B": "Ctrl + X",
+        "C": "Ctrl + V",
+        "D": "Ctrl + Z"
+      },
+      "answer": "B",
+      "explainAnswer": "Ctrl + X thực hiện lệnh Cut – cắt đối tượng đang chọn và đưa vào bộ nhớ tạm (clipboard). Sau đó có thể dán (Ctrl + V) sang vị trí khác."
+    },
+    {
+      "id": 2,
+      "chapter": "Phần 4",
+      "sourceChapter": "c4.txt",
+      "question": "Chèn hiệu ứng cho đối tượng trên Slide, muốn hiệu ứng xuất hiện đồng thời khi trình diễn, tại mục Start ta chọn",
+      "options": {
+        "A": "After previous",
+        "B": "With previous",
+        "C": "click After",
+        "D": "On click"
+      },
+      "answer": "B",
+      "explainAnswer": "Start = With Previous cho hiệu ứng chạy đồng thời với hiệu ứng trước. After Previous tuần tự; On Click chờ bấm."
+    },
+    {
+      "id": 3,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Mạng WAN là viết tắt của?",
+      "options": {
+        "A": "Wide Area Network",
+        "B": "Wireless Area Network",
+        "C": "World Area Network",
+        "D": "Web Area Network"
+      },
+      "answer": "A",
+      "explainAnswer": "WAN là Wide Area Network – mạng diện rộng, kết nối các mạng máy tính trên phạm vi lớn (thành phố, quốc gia, toàn cầu). Internet là ví dụ điển hình của WAN."
+    },
+    {
+      "id": 4,
+      "chapter": "Phần 4",
+      "sourceChapter": "c1.txt",
+      "question": "Hành động nào sau đây KHÔNG phải là biện pháp được khuyến khích áp dụng để máy tính của bạn tránh bị lây nhiễm virus?",
+      "options": {
+        "A": "Kích hoạt các tệp tin tải về có đuôi .exe",
+        "B": "Lưu tất cả các tệp tin mà bạn tải về từ Internet vào một thư mục khác với thư mục dữ liệu của bạn, quét tất cả các tệp tin này trước khi mở.",
+        "C": "Luôn quét tất cả các tệp tin đính kèm email trước khi mở chúng, ngay cả khi chúng đến từ một người bạn quen biết",
+        "D": "Quét bất kỳ phương tiện di động nào (CD, USB) trước khi sao chép hoặc mở tệp tin chứa trên chúng"
+      },
+      "answer": "A",
+      "explainAnswer": "Mở ngay file .exe tải về là hành vi nguy hiểm, không phải biện pháp phòng virus. Quét file tải, email và USB mới là khuyến nghị."
+    },
+    {
+      "id": 5,
+      "chapter": "Phần 4",
+      "sourceChapter": "c1.txt",
+      "question": "Các thiết bị nào thông dụng nhất hiện nay dùng để cung cấp dữ liệu cho máy xử lý?",
+      "options": {
+        "A": "Máy quét ảnh (Scaner)",
+        "B": "Bàn phím (Keyboard), Chuột (Mouse), Máy in (Printer)",
+        "C": "Máy quét ảnh (Scaner), Chuột (Mouse)",
+        "D": "Bàn phím (Keyboard), Chuột (Mouse) và Máy quét ảnh (Scaner)."
+      },
+      "answer": "D",
+      "explainAnswer": "Thiết bị nhập thông dụng: bàn phím, chuột, máy quét. Máy in là thiết bị xuất nên không xếp vào nhóm cung cấp dữ liệu cho máy xử lý."
+    },
+    {
+      "id": 6,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Trong trình duyệt Internet Explorer, để lưu lại một bức ảnh về máy tính, ta thực hiện thao tác?",
+      "options": {
+        "A": "Nhấn chuột phải vào ảnh, chọn Save picture as",
+        "B": "Nhấn Ctrl + S",
+        "C": "Kéo thả ảnh ra Desktop",
+        "D": "Cả A và C đều đúng"
+      },
+      "answer": "A",
+      "explainAnswer": "Cách chuẩn và an toàn nhất là chuột phải vào ảnh → Save picture as… để chọn vị trí và tên file lưu trên máy."
+    },
+    {
+      "id": 7,
+      "chapter": "Phần 4",
+      "sourceChapter": "c3.txt",
+      "question": "Thao tác để di chuyển đến một sheet khác trong cùng một tập tin?",
+      "options": {
+        "A": "Nhấn phím F2 và số thứ tự của các sheet",
+        "B": "Nhấn chuột lên tên sheet cần di chuyển đến hoặc nhấn tổ hợp phím Ctrl + PgUp hoặc Ctrl + PgUp",
+        "C": "Nhấn phím F5 và số thứ tự của các sheet",
+        "D": "Nhấn phím F3 và số thứ tự của các sheet"
+      },
+      "answer": "B",
+      "explainAnswer": "Chuyển sheet bằng cách bấm tên sheet hoặc Ctrl+PageUp/PageDown. F2 sửa ô; F5 Go To; F3 Paste Name."
+    },
+    {
+      "id": 8,
+      "chapter": "Phần 4",
+      "sourceChapter": "c1.txt",
+      "question": "Việc làm nào sau đây không phải là nguyên nhân có thể làm cho máy tính của bạn bị nhiễm virus và phần mềm độc hại qua Internet?",
+      "options": {
+        "A": "Truy cập vào các website có cài đặt sẵn virus",
+        "B": "Tải các tệp tin tài liệu hoặc phần mềm từ Internet",
+        "C": "Lây nhiễm thông qua việc mở các thư điện tử hoặc tin nhắn chứa liên kết dẫn đến các website lạ",
+        "D": "Bình luận trên trang cá nhân của một người bạn trên mạng xã hội Facebook mà máy tính cá nhân của họ bị nhiễm virus"
+      },
+      "answer": "D",
+      "explainAnswer": "Bình luận trên Facebook của người khác không phải vector lây nhiễm điển hình. Website độc hại, tải file và email/link mới là nguyên nhân thường gặp."
+    },
+    {
+      "id": 9,
+      "chapter": "Phần 4",
+      "sourceChapter": "c2.txt",
+      "question": "Để chèn được dấu ≥ vào văn bản, ta thực hiện?",
+      "options": {
+        "A": "Vào thanh Quick Access Toolbar/ Spelling and Grammar",
+        "B": "Dấu ≥ được tích hợp sẵn trên bàn phím, chỉ cần gõ",
+        "C": "Chọn Insert/ Symbol",
+        "D": "Không có đáp án đúng"
+      },
+      "answer": "C",
+      "explainAnswer": "Ký hiệu ≥ không có sẵn trên bàn phím chuẩn tiếng Việt; chèn bằng Insert → Symbol. Spelling and Grammar chỉ kiểm tra chính tả."
+    },
+    {
+      "id": 10,
+      "chapter": "Phần 4",
+      "sourceChapter": "c4.txt",
+      "question": "Để tùy chỉnh kích cỡ biểu tượng trên màn hình nền Desktop, bạn nháy chuột phải vào vùng trống trên màn hình nền Desktop để mở trình đơn chuột phải và sử dụng tùy chọn nào sau đây?",
+      "options": {
+        "A": "View",
+        "B": "Sort by",
+        "C": "Refresh",
+        "D": "Personalize"
+      },
+      "answer": "A",
+      "explainAnswer": "Cỡ icon Desktop: chuột phải nền → View (Large/Medium/Small). Personalize đổi nền/chủ đề; Sort by sắp xếp icon."
+    },
+    {
+      "id": 11,
+      "chapter": "Phần 4",
+      "sourceChapter": "c1.txt",
+      "question": "Phần mềm nào sau đây không phải là tên của một loại phần mềm độc hại?",
+      "options": {
+        "A": "Phần mềm quảng cáo (adware)",
+        "B": "Phần mềm gián điệp (spyware)",
+        "C": "Sâu máy tính (worm)",
+        "D": "Phần mềm đóng băng ổ đĩa"
+      },
+      "answer": "D",
+      "explainAnswer": "Adware, spyware, worm là malware. 'Phần mềm đóng băng ổ đĩa' không phải tên loại mã độc chuẩn."
+    },
+    {
+      "id": 12,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Lựa chọn nào chỉ ra tiện ích của tệp tin nén?",
+      "options": {
+        "A": "Tệp tin nén có kích thước nhỏ hơn kích thước của tệp tin ban đầu và thông tin ban đầu không bị mất",
+        "B": "Tệp tin nén luôn lớn hơn tệp gốc",
+        "C": "Nén làm mất dữ liệu vĩnh viễn",
+        "D": "Tệp nén không thể giải nén"
+      },
+      "answer": "A",
+      "explainAnswer": "Nén dữ liệu giúp giảm dung lượng lưu trữ và truyền tải mà vẫn giữ nguyên thông tin gốc (nén không mất dữ liệu – lossless). Khi giải nén sẽ khôi phục đầy đủ."
+    },
+    {
+      "id": 13,
+      "chapter": "Phần 4",
+      "sourceChapter": "c5.txt",
+      "question": "Địa chỉ IP nào sau đây không hợp lệ",
+      "options": {
+        "A": "192.168.1.1",
+        "B": "192.168.10.123",
+        "C": "192.168.100.1",
+        "D": "192.168.10.360"
+      },
+      "answer": "D",
+      "explainAnswer": "Mỗi octet IPv4 chỉ 0–255; 360 vượt phạm vi nên 192.168.10.360 không hợp lệ. Ba địa chỉ kia đều trong 0–255."
+    },
+    {
+      "id": 14,
+      "chapter": "Phần 4",
+      "sourceChapter": "c3.txt",
+      "question": "Hàm Day có nghĩa là?",
+      "options": {
+        "A": "Lấy ra Ngày từ chuỗi ngày tháng",
+        "B": "Lấy ra Năm từ chuỗi ngày tháng",
+        "C": "Lấy ra Thứ (Từ thứ 2 đến chủ Nhật) từ chuỗi ngày tháng",
+        "D": "Lấy ra Tháng từ chuỗi ngày tháng"
+      },
+      "answer": "A",
+      "explainAnswer": "DAY lấy số ngày trong tháng. MONTH lấy tháng; YEAR lấy năm; không trả thứ trong tuần."
+    },
+    {
+      "id": 15,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Máy Scanner được kết nối với máy tính thông qua cổng nào sau đây?",
+      "options": {
+        "A": "VGA",
+        "B": "HDMI",
+        "C": "USB",
+        "D": "PS/2"
+      },
+      "answer": "C",
+      "explainAnswer": "Hầu hết máy quét (scanner) hiện nay kết nối với máy tính qua cổng USB vì tốc độ truyền dữ liệu cao, dễ sử dụng và được hỗ trợ rộng rãi trên mọi hệ điều hành."
+    },
+    {
+      "id": 16,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Trong MS Windows, biểu tượng của thư mục thường có màu gì?",
+      "options": {
+        "A": "Xanh dương",
+        "B": "Đỏ",
+        "C": "Vàng",
+        "D": "Xanh lá"
+      },
+      "answer": "C",
+      "explainAnswer": "Theo mặc định, biểu tượng thư mục (folder) trong Windows có màu vàng, giúp người dùng dễ phân biệt với các loại file khác."
+    },
+    {
+      "id": 17,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Khi đặt mật khẩu cho Gmail của mình, nên đặt mật khẩu như thế nào để đảm bảo tính bảo mật?",
+      "options": {
+        "A": "Mật khẩu là ngày sinh của mình",
+        "B": "Mật khẩu là dãy số từ 0 đến 9 và chữ cái",
+        "C": "Mật khẩu có ít nhất 8 ký tự và có đủ các chữ thường, in hoa, số và các ký tự đặc biệt (~!@#$%^&*())",
+        "D": "Mật khẩu giống tên của địa chỉ thư"
+      },
+      "answer": "C",
+      "explainAnswer": "Mật khẩu mạnh cần đủ dài (tối thiểu 8 ký tự) và kết hợp nhiều loại ký tự: chữ hoa, chữ thường, số và ký tự đặc biệt để tăng độ khó khi bị tấn công dò mật khẩu."
+    },
+    {
+      "id": 18,
+      "chapter": "Phần 4",
+      "sourceChapter": "c2.txt",
+      "question": "Trong MS Word, tùy chọn Uncollated trong thiết lập (setting) khi đặt lệnh in có tác dụng như thế nào?",
+      "options": {
+        "A": "In từng trang văn bản với số bản copy được thiết lập",
+        "B": "In lần lượt từ đầu đến cuối văn bản với từng bản copy",
+        "C": "In tất cả các trang không được đánh dấu",
+        "D": "Chỉ in các trang chẵn"
+      },
+      "answer": "A",
+      "explainAnswer": "Uncollated in từng trang lặp đủ số bản trước khi sang trang kế. Collated mới in từng bộ từ đầu đến cuối."
+    },
+    {
+      "id": 19,
+      "chapter": "Phần 4",
+      "sourceChapter": "c1.txt",
+      "question": "Danh sách các mục chọn trong thực đơn (menu) gọi là gì?",
+      "options": {
+        "A": "Tất cả đều sai",
+        "B": "Menu bar",
+        "C": "Menu options",
+        "D": "Menu pad"
+      },
+      "answer": "C",
+      "explainAnswer": "Danh sách lệnh trong thực đơn gọi là menu options/items. Menu bar là thanh chứa tên menu, không phải bản thân danh sách lệnh."
+    },
+    {
+      "id": 20,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Trong PowerPoint cách nào để xóa bỏ một slide đã chọn?",
+      "options": {
+        "A": "Nhấn Delete trên bàn phím",
+        "B": "Kích chuột phải tại slide đã chọn / Delete Slide",
+        "C": "Cả A và B đều đúng",
+        "D": "Chỉ dùng lệnh Cut"
+      },
+      "answer": "C",
+      "explainAnswer": "Người dùng có thể nhấn phím Delete hoặc chuột phải vào slide và chọn Delete Slide để xóa slide đang được chọn trong PowerPoint."
+    },
+    {
+      "id": 21,
+      "chapter": "Phần 4",
+      "sourceChapter": "c4.txt",
+      "question": "Trong chế độ tạo bảng (Table) của phần mềm Microsoft word, để gộp nhiều ô thành một ô, ta thực hiện?",
+      "options": {
+        "A": "Table Tool/ Split Cells",
+        "B": "Table Tool/Layout/ Split Cells",
+        "C": "Table Tools/ Merge Cells",
+        "D": "Table Tool/Layout/ Merge Cells"
+      },
+      "answer": "D",
+      "explainAnswer": "Gộp ô: Table Tools → Layout → Merge Cells. Split Cells là tách ô."
+    },
+    {
+      "id": 22,
+      "chapter": "Phần 4",
+      "sourceChapter": "c3.txt",
+      "question": "Trong công thức của Microsoft Excel, sử dụng phím nào để chuyển đổi địa chỉ tuyệt đối sang địa chỉ tương đối hoặc ngược lại cho ô hoặc vùng đã chọn?",
+      "options": {
+        "A": "F5",
+        "B": "F2",
+        "C": "F3",
+        "D": "F4"
+      },
+      "answer": "D",
+      "explainAnswer": "F4 xoay tham chiếu tương đối/tuyệt đối khi đang sửa công thức. F2 sửa ô; F5 Go To; F3 dán tên."
+    },
+    {
+      "id": 23,
+      "chapter": "Phần 4",
+      "sourceChapter": "c4.txt",
+      "question": "Trong Powerpoint nút lệnh ScreenShot có chức năng?",
+      "options": {
+        "A": "Chụp ảnh màn hình để chèn vào Slide",
+        "B": "Chèn video vào Slide",
+        "C": "Chèn hình ảnh từ vị trí bất kỳ trong máy vào Slide",
+        "D": "Chèn âm thanh vào Slide"
+      },
+      "answer": "A",
+      "explainAnswer": "Screenshot chụp cửa sổ/màn hình rồi chèn vào slide. Không phải chèn video, ảnh file hay âm thanh."
+    },
+    {
+      "id": 24,
+      "chapter": "Phần 4",
+      "sourceChapter": "c2.txt",
+      "question": "Trong MS Word, để căn lề văn bản thẳng cả hai bên (trái và phải), ta sử dụng tổ hợp phím nào?",
+      "options": {
+        "A": "Ctrl + L",
+        "B": "Ctrl + R",
+        "C": "Ctrl + J",
+        "D": "Ctrl + E"
+      },
+      "answer": "C",
+      "explainAnswer": "Căn đều hai lề là Ctrl+J (Justify). Ctrl+L/R/E lần lượt trái, phải, giữa."
+    },
+    {
+      "id": 25,
+      "chapter": "Phần 4",
+      "sourceChapter": "c1.txt",
+      "question": "Một hệ điều hành cho phép tạo nhiều tài khoản người dùng đăng nhập vào hệ thống, được gọi là gì?",
+      "options": {
+        "A": "Hệ điều hành đa người dùng",
+        "B": "Hệ điều hành đa nhiệm",
+        "C": "Hệ điều hành đa kết nối",
+        "D": "Hệ điều hành đa xử lý"
+      },
+      "answer": "A",
+      "explainAnswer": "Nhiều tài khoản đăng nhập được gọi là hệ điều hành đa người dùng. Đa nhiệm là nhiều tiến trình; đa xử lý là nhiều CPU."
+    },
+    {
+      "id": 26,
+      "chapter": "Phần 4",
+      "sourceChapter": "c1.txt",
+      "question": "Internet có nghĩa là gì:",
+      "options": {
+        "A": "Hệ thống tài liệu kết nối toàn cầu",
+        "B": "Hệ thống mạng máy tính diện rộng",
+        "C": "Hệ thống mạng máy tính quốc gia",
+        "D": "Hệ thống mạng máy tính toàn cầu"
+      },
+      "answer": "D",
+      "explainAnswer": "Internet là mạng máy tính toàn cầu. 'Tài liệu kết nối' mô tả web; mạng quốc gia hay chỉ 'diện rộng' chưa đủ phạm vi toàn cầu."
+    },
+    {
+      "id": 27,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Điều nào sau đây là đúng liên quan đến hệ thống chuyển giọng nói trên giao thức IP?",
+      "options": {
+        "A": "Yêu cầu bắt buộc đường dây điện thoại truyền thống",
+        "B": "Không yêu cầu một đường dây điện thoại truyền thống",
+        "C": "Chỉ hoạt động trên mạng LAN",
+        "D": "Không thể gọi quốc tế"
+      },
+      "answer": "B",
+      "explainAnswer": "VoIP (Voice over IP) truyền giọng nói qua mạng Internet, do đó không cần đường dây điện thoại cố định truyền thống. Người dùng chỉ cần kết nối Internet."
+    },
+    {
+      "id": 28,
+      "chapter": "Phần 4",
+      "sourceChapter": "c4.txt",
+      "question": "Để thiết lập thời gian slide tự động chuyển sau 3 giây, bạn sử dụng lựa chọn nào?",
+      "options": {
+        "A": "View",
+        "B": "Transitions",
+        "C": "Animations",
+        "D": "Cả 3 lựa chọn trên đều sai"
+      },
+      "answer": "B",
+      "explainAnswer": "Thời gian tự chuyển slide đặt ở Transitions (Advance Slide After). Animations là hiệu ứng đối tượng; View không hẹn giờ chuyển."
+    },
+    {
+      "id": 29,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Nút nào trên thanh công cụ của trình duyệt Web cho phép tải lại một trang Web?",
+      "options": {
+        "A": "Back",
+        "B": "Forward",
+        "C": "Refresh / Reload",
+        "D": "Stop"
+      },
+      "answer": "C",
+      "explainAnswer": "Nút Refresh (hoặc Reload) yêu cầu trình duyệt tải lại nội dung mới nhất của trang web hiện tại từ máy chủ."
+    },
+    {
+      "id": 30,
+      "chapter": "Phần 4",
+      "sourceChapter": "c1.txt",
+      "question": "Bộ nhớ RAM và ROM là bộ nhớ gì?",
+      "options": {
+        "A": "Receive memory",
+        "B": "Primary memory",
+        "C": "Secondary memory",
+        "D": "Random access memory"
+      },
+      "answer": "B",
+      "explainAnswer": "RAM và ROM là bộ nhớ chính (primary memory). Secondary là đĩa; Random access memory chỉ mô tả RAM, không gồm ROM."
+    },
+    {
+      "id": 31,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phát biểu sau đây là sai?",
+      "options": {
+        "A": "Phần mềm mã nguồn mở là phần mềm phải mua bản quyền để sử dụng",
+        "B": "Phần mềm mã nguồn mở cho phép người dùng xem và sửa mã nguồn",
+        "C": "Linux là một hệ điều hành mã nguồn mở",
+        "D": "Phần mềm mã nguồn mở thường miễn phí"
+      },
+      "answer": "A",
+      "explainAnswer": "Phát biểu A sai vì phần mềm mã nguồn mở (open source) thường miễn phí và cho phép người dùng tự do sử dụng, nghiên cứu, sửa đổi và phân phối lại. Không bắt buộc phải mua bản quyền như phần mềm thương mại."
+    },
+    {
+      "id": 32,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Công dụng của việc tái chế các bộ phận của máy tính?",
+      "options": {
+        "A": "Tăng tốc độ máy tính",
+        "B": "Giảm ô nhiễm môi trường",
+        "C": "Tăng dung lượng ổ cứng",
+        "D": "Cải thiện bảo mật"
+      },
+      "answer": "B",
+      "explainAnswer": "Tái chế linh kiện máy tính giúp giảm lượng rác thải điện tử độc hại ra môi trường, đồng thời thu hồi được các kim loại quý và vật liệu có thể tái sử dụng."
+    },
+    {
+      "id": 33,
+      "chapter": "Phần 4",
+      "sourceChapter": "c1.txt",
+      "question": "Phần cứng máy tính là gì?",
+      "options": {
+        "A": "Cấu tạo của phần mềm về mặt logic",
+        "B": "Cấu tạo của phần mềm về mặt vật lý",
+        "C": "Cấu tạo của máy tính về mặt logic",
+        "D": "Cấu tạo của máy tính về mặt vật lý"
+      },
+      "answer": "D",
+      "explainAnswer": "Phần cứng là cấu tạo vật lý của máy tính. Logic của phần mềm hay logic của máy không phải định nghĩa hardware."
+    },
+    {
+      "id": 34,
+      "chapter": "Phần 4",
+      "sourceChapter": "c2.txt",
+      "question": "Trong MS Word, Để loại bỏ các hiệu ứng điều chỉnh tự động (AutoCorrect) có sẵn trong phần mềm soạn thảo văn bản tiếng Việt ta thức hiện như sau?",
+      "options": {
+        "A": "Vào File/ Proofing/ AutoCorrect Option/ Tìm mục cần xóa sau đó ấn Delete",
+        "B": "Vào File/ Option/ AutoCorrect Option/ Tìm mục cần xóa sau đó ấn Delete/OK",
+        "C": "Vào Home /Proofing/ AutoCorrect Option/ Tìm mục cần xóa sau đó ấn Delete/OK",
+        "D": "Vào File/ Option/ Proofing/ AutoCorrect Option/ Tìm mục cần xóa sau đó ấn Delete/OK"
+      },
+      "answer": "D",
+      "explainAnswer": "AutoCorrect nằm ở File → Options → Proofing → AutoCorrect Options. Bỏ Proofing hoặc vào Home là sai đường."
+    },
+    {
+      "id": 35,
+      "chapter": "Phần 4",
+      "sourceChapter": "c1.txt",
+      "question": "Số nhị phân là những số nào?",
+      "options": {
+        "A": "Các số 1 và các ký tự l",
+        "B": "Các số 0 và kí tự O",
+        "C": "Các số 1 đến 9",
+        "D": "Các số 1 và 0"
+      },
+      "answer": "D",
+      "explainAnswer": "Hệ nhị phân chỉ dùng hai ký số 0 và 1. Chữ l, chữ O hay các số 1–9 không phải chữ số nhị phân."
+    },
+    {
+      "id": 36,
+      "chapter": "Phần 4",
+      "sourceChapter": "c1.txt",
+      "question": "Thành phần tạo nên mạng máy tính gồm đầy đủ nhất:",
+      "options": {
+        "A": "Chỉ giao thức mạng",
+        "B": "Chỉ máy tính và đường truyền vật lý",
+        "C": "Máy tính, đường truyền, thiết bị mạng và giao thức",
+        "D": "Chỉ Hub, Switch, Router"
+      },
+      "answer": "C",
+      "explainAnswer": "Mạng máy tính cần máy tính (hoặc nút), đường truyền, thiết bị kết nối và giao thức. Thiếu một thành phần thì mạng không vận hành đủ."
+    },
+    {
+      "id": 37,
+      "chapter": "Phần 4",
+      "sourceChapter": "c1.txt",
+      "question": "Công dụng của phím Print Screen là gì?",
+      "options": {
+        "A": "In văn bản hiện hành ra máy in",
+        "B": "In màn hình hiện hành ra máy in",
+        "C": "Không có công dụng gì khi sử dụng 1 mình nó.",
+        "D": "Chụp màn hình hiện hành"
+      },
+      "answer": "D",
+      "explainAnswer": "Print Screen chụp ảnh màn hình vào clipboard. Không in ra máy in; vẫn có tác dụng khi dùng một mình."
+    },
+    {
+      "id": 38,
+      "chapter": "Phần 4",
+      "sourceChapter": "c1.txt",
+      "question": "Hệ điều hành là gì?:",
+      "options": {
+        "A": "Là một phần mềm chạy trên máy tính, dùng để soạn thảo các loại văn bản",
+        "B": "Là một phần mềm chạy trên máy tính, dùng để điều hành, quản lý các thiết bị phần cứng",
+        "C": "Là một phần mềm chạy trên máy tính, dùng để in các loại văn bản",
+        "D": "Là một phần mềm chạy trên máy tính, dùng để tính toán số liệu"
+      },
+      "answer": "B",
+      "explainAnswer": "Hệ điều hành quản lý phần cứng và cung cấp môi trường chạy chương trình. Soạn thảo, in ấn, tính toán là việc của phần mềm ứng dụng."
+    },
+    {
+      "id": 39,
+      "chapter": "Phần 4",
+      "sourceChapter": "c1.txt",
+      "question": "Các đơn vị đo lường khả năng lưu trữ thông tin là:",
+      "options": {
+        "A": "Bit, Byte, KB, MB, GB",
+        "B": "Boolean, Byte, MB",
+        "C": "Đĩa cứng, nhớ",
+        "D": "Byte, Kbyte, MB, GB"
+      },
+      "answer": "A",
+      "explainAnswer": "Chuỗi đơn vị dung lượng chuẩn: bit, byte, KB, MB, GB. Boolean không phải đơn vị lưu trữ; đĩa cứng là thiết bị; KG là nhầm KB."
+    },
+    {
+      "id": 40,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Mạng LAN viết tắt của?",
+      "options": {
+        "A": "Large Area Network",
+        "B": "Local Area Network",
+        "C": "Long Area Network",
+        "D": "Logical Area Network"
+      },
+      "answer": "B",
+      "explainAnswer": "LAN là Local Area Network – mạng cục bộ, kết nối các máy tính trong phạm vi nhỏ như văn phòng, trường học, tòa nhà."
+    },
+    {
+      "id": 41,
+      "chapter": "Phần 4",
+      "sourceChapter": "c4.txt",
+      "question": "Trong PowerPoint mỗi bài thuyết trình có tối đa là bao nhiêu Slide Master ?",
+      "options": {
+        "A": "2",
+        "B": "Không giới hạn",
+        "C": "1",
+        "D": "3"
+      },
+      "answer": "B",
+      "explainAnswer": "PowerPoint cho phép nhiều Slide Master, không khống chế 1–3 bản. 'Không giới hạn' đúng hơn các mốc cứng."
+    },
+    {
+      "id": 42,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Thiết bị nào thực hiện thao tác xuất ra dữ liệu trong số các thiết bị sau?",
+      "options": {
+        "A": "Bàn phím, chuột",
+        "B": "Màn hình, máy in, máy chiếu, loa",
+        "C": "Ổ cứng, USB",
+        "D": "CPU, RAM"
+      },
+      "answer": "B",
+      "explainAnswer": "Thiết bị xuất có nhiệm vụ đưa kết quả xử lý ra ngoài cho người dùng nhận biết. Màn hình, máy in, máy chiếu và loa đều thực hiện chức năng này."
+    },
+    {
+      "id": 43,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phát biểu nào sau đây là sai?",
+      "options": {
+        "A": "Có thể lấy lại dữ liệu sau khi xóa bằng nhấn tổ hợp phím Shift + Delete",
+        "B": "Shift + Delete xóa vĩnh viễn, không đưa vào Recycle Bin",
+        "C": "Delete thông thường đưa tệp vào Recycle Bin",
+        "D": "Có thể khôi phục từ Recycle Bin"
+      },
+      "answer": "A",
+      "explainAnswer": "Phát biểu A sai vì Shift + Delete xóa vĩnh viễn, không còn cơ hội khôi phục dễ dàng từ Recycle Bin. Đây là thao tác cần thận trọng."
+    },
+    {
+      "id": 44,
+      "chapter": "Phần 4",
+      "sourceChapter": "c2.txt",
+      "question": "Trong Micrsoft Word để bật/tắt thanh thước kẻ trên cửa sổ soạn thảo, ta thực hiện?",
+      "options": {
+        "A": "Chọn File/ Word Option/ Ruler",
+        "B": "Chọn View/ Outline",
+        "C": "Chọn View/ Show / đánh dấu/bỏ đánh dấu vào mục Ruler",
+        "D": "Chọn Insert / đánh dấu vào mục Ruler"
+      },
+      "answer": "C",
+      "explainAnswer": "Thước kẻ bật ở View → Show → Ruler. File Options hay Insert không phải chỗ hiện Ruler."
+    },
+    {
+      "id": 45,
+      "chapter": "Phần 4",
+      "sourceChapter": "c1.txt",
+      "question": "Ứng dụng nào dùng để duyệt web?",
+      "options": {
+        "A": "Internet Explorer",
+        "B": "Microsoft Excel",
+        "C": "Microsoft Word",
+        "D": "Windows Explorer"
+      },
+      "answer": "A",
+      "explainAnswer": "Internet Explorer là trình duyệt. Excel/Word là ứng dụng văn phòng; Windows Explorer quản lý tệp, không duyệt web."
+    },
+    {
+      "id": 46,
+      "chapter": "Phần 4",
+      "sourceChapter": "c3.txt",
+      "question": "Trong bảng tính MS Excel, hàm nào sau đây cho phép đếm các giá trị thỏa mãn một điều kiện cho trước:",
+      "options": {
+        "A": "SUMIF",
+        "B": "COUNT",
+        "C": "SUM",
+        "D": "COUNTIF"
+      },
+      "answer": "D",
+      "explainAnswer": "Đếm theo điều kiện là COUNTIF. COUNT đếm ô số không điều kiện; SUM/SUMIF cộng, không đếm."
+    },
+    {
+      "id": 47,
+      "chapter": "Phần 4",
+      "sourceChapter": "c2.txt",
+      "question": "Trong MS Word, Muốn hiển thị đường biên văn bản ta thực hiện?",
+      "options": {
+        "A": "Chọn Insert/Options/Advanced/đánh dấu lựa chọn Show Text Boundaries",
+        "B": "Chọn View/Options/Advanced/đánh dấu lựa chọn Show Text Boundaries",
+        "C": "Chọn Home/Options/Advanced/đánh dấu lựa chọn Show Text Boundaries",
+        "D": "Chọn File/Options/Advanced/đánh dấu lựa chọn Show Text Boundaries"
+      },
+      "answer": "D",
+      "explainAnswer": "Hiện đường biên văn bản: File → Options → Advanced → Show text boundaries. Insert/View/Home không mở Advanced Options."
+    },
+    {
+      "id": 48,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Trong PowerPoint để sao chép đối tượng họa từ định dạng này sang dạng khác ta sử dụng công cụ nào?",
+      "options": {
+        "A": "Copy",
+        "B": "Paste Special",
+        "C": "Format Painter",
+        "D": "Duplicate"
+      },
+      "answer": "B",
+      "explainAnswer": "Paste Special cho phép người dùng chọn định dạng cụ thể khi dán đối tượng (ví dụ dán dưới dạng ảnh, giữ định dạng nguồn, hoặc chỉ lấy văn bản thuần)."
+    },
+    {
+      "id": 49,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phần mềm Text Document dùng để tạo tệp có phần mở rộng là?",
+      "options": {
+        "A": ".doc",
+        "B": ".txt",
+        "C": ".xls",
+        "D": ".ppt"
+      },
+      "answer": "B",
+      "explainAnswer": "Text Document (Notepad) tạo ra các tệp văn bản thuần túy với phần mở rộng .txt, không chứa định dạng phức tạp như Word."
+    },
+    {
+      "id": 50,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Khách nước ngoài muốn biết thông tin về các khách sạn tại Hà Nội, dịch vụ nào dưới đây được sử dụng?",
+      "options": {
+        "A": "Chỉ hỏi người thân",
+        "B": "Trang web hỗ trợ tìm kiếm thông tin Internet miễn phí như Google",
+        "C": "Chỉ dùng thư điện tử",
+        "D": "Chỉ xem ti vi"
+      },
+      "answer": "B",
+      "explainAnswer": "Công cụ tìm kiếm như Google cho phép tìm nhanh thông tin về khách sạn, địa điểm, đánh giá… một cách miễn phí và tiện lợi."
+    },
+    {
+      "id": 51,
+      "chapter": "Phần 4",
+      "sourceChapter": "c3.txt",
+      "question": "Nếu thí sinh đạt từ 5 điểm trở lên, thí sinh đó được xếp loại Đạt, ngược lại nếu dưới 5 điểm, thì xếp loại Không đạt. Công thức nào dưới đây thể hiện đúng điều này (Giả sử ô G6 đang chứa điểm thi)",
+      "options": {
+        "A": "=IF(G6=5,\"Đạt\") ELSE (\"Không đạt\")",
+        "B": "=IF(G6<5,\"Không đạt\",\"Đạt\")",
+        "C": "=IF(G6=5,Đạt, Không đạt)",
+        "D": "=IF(G6=5,\"Đạt\", \"Không đạt\")"
+      },
+      "answer": "B",
+      "explainAnswer": "=IF(G6<5,\"Không đạt\",\"Đạt\") cho mọi điểm ≥5 là Đạt. So đúng bằng 5 thì 6 điểm thành Không đạt; cú pháp ELSE không tồn tại trong Excel."
+    },
+    {
+      "id": 52,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Luật Công nghệ thông tin ra đời và chính thức có hiệu lực từ ngày tháng năm nào?",
+      "options": {
+        "A": "Ngày 29/06/2006 và có hiệu lực 01/01/2007",
+        "B": "Ngày 01/01/2006 và có hiệu lực 29/06/2006",
+        "C": "Ngày 15/08/2005 và có hiệu lực 01/01/2006",
+        "D": "Ngày 30/12/2006 và có hiệu lực 01/07/2007"
+      },
+      "answer": "A",
+      "explainAnswer": "Luật Công nghệ thông tin số 67/2006/QH11 được Quốc hội thông qua ngày 29/06/2006 và chính thức có hiệu lực thi hành từ ngày 01/01/2007."
+    },
+    {
+      "id": 53,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Nút Stop trên cửa sổ trình duyệt dùng để làm gì?",
+      "options": {
+        "A": "Tải lại trang",
+        "B": "Ngừng tải nội dung trang Web",
+        "C": "Quay lại trang trước",
+        "D": "Đi tới trang sau"
+      },
+      "answer": "B",
+      "explainAnswer": "Nút Stop cho phép người dùng dừng quá trình tải trang web đang diễn ra, hữu ích khi trang tải quá lâu hoặc không cần thiết."
+    },
+    {
+      "id": 54,
+      "chapter": "Phần 4",
+      "sourceChapter": "c2.txt",
+      "question": "Tổ hợp phím Ctrl+K có tác dụng gì?",
+      "options": {
+        "A": "Mở hộp thoại Font",
+        "B": "Mở hộp thoại Paragraph",
+        "C": "Mở hộp thoại tìm kiếm",
+        "D": "Mở hộp thoại tạo các liên kết (Hyperlink)"
+      },
+      "answer": "D",
+      "explainAnswer": "Ctrl+K mở hộp Hyperlink. Ctrl+D là Font; Ctrl+F là tìm."
+    },
+    {
+      "id": 55,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phát biểu nào là đúng khi nói đến bộ nhớ RAM và ROM?",
+      "options": {
+        "A": "Cả hai đều là bộ nhớ chỉ đọc",
+        "B": "RAM là bộ nhớ đọc và ghi, ROM là bộ nhớ chỉ đọc",
+        "C": "ROM là bộ nhớ đọc và ghi, RAM là bộ nhớ chỉ đọc",
+        "D": "Cả hai đều mất dữ liệu khi tắt máy"
+      },
+      "answer": "B",
+      "explainAnswer": "RAM cho phép đọc và ghi dữ liệu liên tục trong quá trình làm việc, dữ liệu sẽ mất khi mất điện. ROM chỉ cho phép đọc, dữ liệu được giữ nguyên kể cả khi tắt máy."
+    },
+    {
+      "id": 56,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Nơi để cho người dùng Internet trao đổi thảo luận và tán gẫu với nhau là gì?",
+      "options": {
+        "A": "Email",
+        "B": "Forum",
+        "C": "FTP",
+        "D": "DNS"
+      },
+      "answer": "B",
+      "explainAnswer": "Forum (diễn đàn) là không gian trực tuyến cho phép nhiều người thảo luận, trao đổi ý kiến theo chủ đề. Đây là hình thức giao tiếp cộng đồng phổ biến trên Internet."
+    },
+    {
+      "id": 57,
+      "chapter": "Phần 4",
+      "sourceChapter": "c1.txt",
+      "question": "Phát biểu nào sau đây là sai:",
+      "options": {
+        "A": "Hệ nhị phân có 2 chữ số cơ bản là 0 và 1",
+        "B": "Hệ thập lục phân có 16 chữ số cơ bản là: 0,1,2,3,4,5,6,7,8,9 A,B,C,D,E,F",
+        "C": "Hệ thập phân có 10 chữ số cơ bản là: 0,1,2,3,4,5,6,7,8,9,10",
+        "D": "Hệ bát phân gồm có 0,1,2,3,4,5,6,7"
+      },
+      "answer": "C",
+      "explainAnswer": "Hệ thập phân chỉ có mười ký số 0–9, không có ký số 10. Ba phát biểu kia mô tả đúng hệ nhị phân, hex và bát phân."
+    },
+    {
+      "id": 58,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Nút Back trên thanh công cụ của trình duyệt Web có tác dụng gì?",
+      "options": {
+        "A": "Đi đến trang tiếp theo",
+        "B": "Quay trở lại trang Web trước đó",
+        "C": "Tải lại trang",
+        "D": "Mở tab mới"
+      },
+      "answer": "B",
+      "explainAnswer": "Nút Back (Lùi) đưa người dùng trở về trang web đã xem ngay trước trang hiện tại trong lịch sử duyệt."
+    },
+    {
+      "id": 59,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Lựa chọn nào cho thấy máy tính xách tay có lợi thế hơn so với máy tính để bàn?",
+      "options": {
+        "A": "Hiệu năng xử lý cao hơn",
+        "B": "Máy tính xách tay có thể mang đi bất kỳ đâu",
+        "C": "Dễ nâng cấp phần cứng hơn",
+        "D": "Giá thành rẻ hơn"
+      },
+      "answer": "B",
+      "explainAnswer": "Ưu điểm nổi bật nhất của laptop so với máy để bàn là tính di động. Người dùng có thể mang máy đi làm việc ở nhiều nơi khác nhau nhờ thiết kế gọn nhẹ và tích hợp pin."
+    },
+    {
+      "id": 60,
+      "chapter": "Phần 4",
+      "sourceChapter": "c4.txt",
+      "question": "Trong MS Word, Để áp dụng Style cho một đoạn văn bản bất kì ta thực hiện như thế nào?",
+      "options": {
+        "A": "Chọn đoạn văn bản cần áp dụng Style. Vào Tab Home/ Trong nhóm Styles/ chọn Style muốn áp dụng",
+        "B": "Chọn đoạn văn bản cần áp dụng Style. Vào Tab View/ Trong nhóm Paragraph/ chọn Style muốn áp dụng",
+        "C": "Chọn đoạn văn bản cần áp dụng Style. Vào Tab Review/ Trong nhóm Styles/ chọn Style muốn áp dụng",
+        "D": "Chọn đoạn văn bản cần áp dụng Style. Vào Tab Insert/ Trong nhóm Styles/ chọn Style muốn áp dụng"
+      },
+      "answer": "A",
+      "explainAnswer": "Style áp từ Home → Styles. View/Review/Insert không chứa thư viện Style."
+    },
+    {
+      "id": 61,
+      "chapter": "Phần 4",
+      "sourceChapter": "c4.txt",
+      "question": "Chèn bảng biểu vào slide trong powerpoint ta thực hiện như sau:",
+      "options": {
+        "A": "Table - Insert Table",
+        "B": "Insert - Table",
+        "C": "Table - Insert",
+        "D": "Format - Table"
+      },
+      "answer": "B",
+      "explainAnswer": "Chèn bảng trên slide: Insert → Table. Table-Insert Table không phải đường ribbon chuẩn."
+    },
+    {
+      "id": 62,
+      "chapter": "Phần 4",
+      "sourceChapter": "c2.txt",
+      "question": "Trong MS Word, Chức năng Lower Case có tác dụng?",
+      "options": {
+        "A": "Viết thường ký tự đầu tiên và viết hoa các ký tự còn lại",
+        "B": "Viết hoa ký tự đầu tiên và viết thường các ký tự còn lại",
+        "C": "Viết thường toàn bộ đoạn văn được chọn",
+        "D": "Viết thường ký tự đầu tiên"
+      },
+      "answer": "C",
+      "explainAnswer": "Lowercase chuyển toàn bộ đoạn chọn thành chữ thường. Hoa chữ đầu câu là Sentence case; hoa mỗi từ là Capitalize Each Word."
+    },
+    {
+      "id": 63,
+      "chapter": "Phần 4",
+      "sourceChapter": "c2.txt",
+      "question": "Trong hộp thoại Find and Replace/Find, phần Find what dùng để?",
+      "options": {
+        "A": "Đảm bảo tìm kiếm chính xác",
+        "B": "Tùy chọn nâng cao tìm kiếm",
+        "C": "Điền từ cần tìm kiếm",
+        "D": "Điền từ cần thay thế"
+      },
+      "answer": "C",
+      "explainAnswer": "Find what là ô điền chuỗi cần tìm. Replace with mới là chuỗi thay thế; Match case là tùy chọn chính xác."
+    },
+    {
+      "id": 64,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Các thiết bị: chuột, bàn phím, máy quét thuộc khối chức năng nào?",
+      "options": {
+        "A": "Thiết bị xuất",
+        "B": "Thiết bị nhập",
+        "C": "Khối xử lý",
+        "D": "Bộ nhớ"
+      },
+      "answer": "B",
+      "explainAnswer": "Chuột, bàn phím và máy quét đều có chức năng đưa thông tin từ người dùng hoặc từ tài liệu giấy vào máy tính, do đó chúng thuộc khối thiết bị nhập."
+    },
+    {
+      "id": 65,
+      "chapter": "Phần 4",
+      "sourceChapter": "c5.txt",
+      "question": "Các máy tính được kết nối với nhau trong phạm vi một văn phòng gọi là mạng:",
+      "options": {
+        "A": "MAN",
+        "B": "INTERNET",
+        "C": "WAN",
+        "D": "LAN"
+      },
+      "answer": "D",
+      "explainAnswer": "Văn phòng/tòa nhà là phạm vi LAN. MAN/WAN/Internet rộng hơn nhiều."
+    },
+    {
+      "id": 66,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Có thể hồi phục (restore) các tệp tin bị xóa sau khi nhấn phím Delete bằng cách nào?",
+      "options": {
+        "A": "Mở Documents",
+        "B": "Mở Recycle Bin → Nháy chuột phải vào tệp → Restore",
+        "C": "Mở Recycle Bin → Cut",
+        "D": "Mở Internet Explorer"
+      },
+      "answer": "B",
+      "explainAnswer": "Tệp bị xóa bằng Delete sẽ được đưa vào Recycle Bin. Từ đây người dùng có thể chuột phải và chọn Restore để khôi phục về vị trí cũ."
+    },
+    {
+      "id": 67,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Trang tìm kiếm Google có thể cho ra kết quả tìm kiếm theo?",
+      "options": {
+        "A": "Chỉ văn bản",
+        "B": "Hình ảnh, video, website",
+        "C": "Chỉ hình ảnh",
+        "D": "Chỉ video"
+      },
+      "answer": "B",
+      "explainAnswer": "Google hỗ trợ tìm kiếm đa dạng: trang web, hình ảnh, video, tin tức, bản đồ… giúp người dùng lọc kết quả theo nhu cầu."
+    },
+    {
+      "id": 68,
+      "chapter": "Phần 4",
+      "sourceChapter": "c2.txt",
+      "question": "Khi đang soạn thảo văn bản trên Ms-word muốn xác định tổng số trang của văn bản hiện hành ta quan sát ở?",
+      "options": {
+        "A": "Thanh trạng thái",
+        "B": "Thanh tiêu đề",
+        "C": "Thanh thước kẻ",
+        "D": "Thanh menu"
+      },
+      "answer": "A",
+      "explainAnswer": "Số trang/tổng trang đọc trên thanh trạng thái. Thanh tiêu đề chỉ hiện tên tệp."
+    },
+    {
+      "id": 69,
+      "chapter": "Phần 4",
+      "sourceChapter": "c1.txt",
+      "question": "Trong máy tính, RAM có nghĩa là gì:",
+      "options": {
+        "A": "Là bộ nhớ truy xuất ngẫu nhiên",
+        "B": "Là bộ nhớ chỉ đọc",
+        "C": "Là bộ nhớ chỉ xử lý thông tin",
+        "D": "Là bộ nhớ chỉ ghi"
+      },
+      "answer": "A",
+      "explainAnswer": "RAM cho phép đọc/ghi tại địa chỉ bất kỳ nên gọi là bộ nhớ truy xuất ngẫu nhiên. Bộ nhớ chỉ đọc là ROM; RAM không phải bộ nhớ chỉ xử lý hay chỉ ghi."
+    },
+    {
+      "id": 70,
+      "chapter": "Phần 4",
+      "sourceChapter": "c4.txt",
+      "question": "Mỗi trang trình diễn trong Powerpoint được gọi là?",
+      "options": {
+        "A": "Một Slide",
+        "B": "Một Page",
+        "C": "Một Sheet",
+        "D": "Một Cơ sở dữ liệu"
+      },
+      "answer": "A",
+      "explainAnswer": "Mỗi trang trình chiếu gọi là slide. Page/Sheet là Word/Excel; không phải cơ sở dữ liệu."
+    },
+    {
+      "id": 71,
+      "chapter": "Phần 4",
+      "sourceChapter": "c1.txt",
+      "question": "Thiết bị nào trong các thiết bị sau là thiết bị đầu ra:",
+      "options": {
+        "A": "Bàn phím",
+        "B": "Con chuột",
+        "C": "Máy in",
+        "D": "Máy Scan"
+      },
+      "answer": "C",
+      "explainAnswer": "Máy in đưa thông tin ra giấy, là thiết bị đầu ra. Bàn phím, chuột, máy quét là thiết bị nhập."
+    },
+    {
+      "id": 72,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phần mềm nào dưới đây được cài đặt đầu tiên trong máy tính?",
+      "options": {
+        "A": "Microsoft Word",
+        "B": "Trình duyệt web",
+        "C": "MS Windows",
+        "D": "Phần mềm diệt virus"
+      },
+      "answer": "C",
+      "explainAnswer": "Hệ điều hành (MS Windows) phải được cài đặt đầu tiên vì nó là nền tảng để quản lý phần cứng và cho phép các phần mềm ứng dụng khác chạy được."
+    },
+    {
+      "id": 73,
+      "chapter": "Phần 4",
+      "sourceChapter": "c1.txt",
+      "question": "Muốn mở một tệp tin, thư mục hay chương trình trong Windows theo mặc định thì bạn KHÔNG sử dụng được cách làm nào sau đây?",
+      "options": {
+        "A": "Nháy kép chuột phải",
+        "B": "Nháy chuột trái để chọn và nhấn phím Enter",
+        "C": "Nháy chuột phải và chọn lệnh Open",
+        "D": "Nháy kép chuột trái"
+      },
+      "answer": "A",
+      "explainAnswer": "Nháy kép chuột phải không phải thao tác mở mặc định. Mở chuẩn: nháy kép trái, chọn rồi Enter, hoặc chuột phải → Open."
+    },
+    {
+      "id": 74,
+      "chapter": "Phần 4",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Tệp hoặc thư mục có thuộc tính chỉ đọc là thuộc tính nào?",
+      "options": {
+        "A": "Hidden",
+        "B": "Read Only",
+        "C": "Archive",
+        "D": "System"
+      },
+      "answer": "B",
+      "explainAnswer": "Thuộc tính Read Only (Chỉ đọc) ngăn không cho người dùng chỉnh sửa hoặc xóa nội dung của tệp/thư mục, giúp bảo vệ dữ liệu quan trọng."
+    },
+    {
+      "id": 75,
+      "chapter": "Phần 4",
+      "sourceChapter": "c2.txt",
+      "question": "Trong soạn thảo Word, muốn chèn các kí tự đặc biệt vào văn bản thực hiện như thế nào?",
+      "options": {
+        "A": "Chọn menu Format/ Symbol",
+        "B": "Chọn menu Tools/ Symbol",
+        "C": "Chọn menu Insert/ Symbol",
+        "D": "Chọn menu View/ Symbol"
+      },
+      "answer": "C",
+      "explainAnswer": "Ký tự đặc biệt chèn từ Insert → Symbol. Format, Tools, View không mở bảng Symbol."
+    },
+    {
+      "id": 76,
+      "chapter": "Phần 4",
+      "sourceChapter": "c1.txt",
+      "question": "Để thanh toán tiền qua mạng, người dùng sẽ sử dụng dịch vụ Internet nào:",
+      "options": {
+        "A": "e-banking",
+        "B": "e-government",
+        "C": "e-learning",
+        "D": "teleconference"
+      },
+      "answer": "A",
+      "explainAnswer": "Thanh toán trực tuyến thuộc dịch vụ e-banking. E-government là dịch vụ công; e-learning học trực tuyến; teleconference họp từ xa."
+    },
+    {
+      "id": 77,
+      "chapter": "Phần 4",
+      "sourceChapter": "c1.txt",
+      "question": "Bộ nhớ truy nhập trực tiếp RAM được viết tắt từ cụm từ nào sau đây?",
+      "options": {
+        "A": "Random Access Memory",
+        "B": "Không đáp án nào đúng",
+        "C": "Rewrite Access Memory",
+        "D": "Read Access Memory"
+      },
+      "answer": "A",
+      "explainAnswer": "RAM = Random Access Memory. Rewrite/Read Access Memory không phải tên chuẩn."
+    }
+  ]
+}

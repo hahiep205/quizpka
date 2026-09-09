@@ -1,0 +1,1097 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Tin học văn phòng - Phần 3",
+  "chapter": "Phần 3",
+  "totalQuestions": 78,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Phần 3",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Trong các phần mềm sau, phần mềm nào là phần mềm ứng dụng?",
+      "options": {
+        "A": "Windows 10",
+        "B": "Linux",
+        "C": "Microsoft Word",
+        "D": "BIOS"
+      },
+      "answer": "C",
+      "explainAnswer": "Microsoft Word là phần mềm ứng dụng (application software) dùng để soạn thảo văn bản. Windows và Linux là hệ điều hành, BIOS là firmware."
+    },
+    {
+      "id": 2,
+      "chapter": "Phần 3",
+      "sourceChapter": "c1.txt",
+      "question": "Đặc điểm nào sau đây không phải là tính chất của virus máy tính?",
+      "options": {
+        "A": "Có khả năng lây lan, khi xâm nhập vào một máy, nó chiếm quyền điều khiển máy để tự nhân bản nhằm lây lan từ máy này sang máy khác",
+        "B": "Virus có thể gây nhiễu chương trình hệ thống hoặc phá hỏng dữ liệu",
+        "C": "Virus máy tính có khả năng lây nhiễm qua nguồn điện",
+        "D": "Virus là các chương trình tương đối nhỏ, hiệu quả cao và thường có các cơ chế chống phát hiện"
+      },
+      "answer": "C",
+      "explainAnswer": "Virus là chương trình lây qua tệp, USB, mạng — không lây qua nguồn điện. Khả năng nhân bản, phá dữ liệu và chống phát hiện mới là tính chất virus."
+    },
+    {
+      "id": 3,
+      "chapter": "Phần 3",
+      "sourceChapter": "c4.txt",
+      "question": "Trong Powerpoint nếu chọn 2 Slide và dùng lệnh Duplicate Slide thì tạo ra thêm mấy Slide ?",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "answer": "A",
+      "explainAnswer": "Duplicate Slide nhân bản đúng các slide đang chọn: chọn 2 thì thêm 2 slide. Không nhân 4, 6, 8."
+    },
+    {
+      "id": 4,
+      "chapter": "Phần 3",
+      "sourceChapter": "c4.txt",
+      "question": "Cách thông dụng để xóa slide đang chọn trong PowerPoint là gì?",
+      "options": {
+        "A": "ALT+E+D",
+        "B": "ALT+E+C",
+        "C": "ALT+F+D",
+        "D": "Bấm delete (trên bàn phím)"
+      },
+      "answer": "D",
+      "explainAnswer": "Phím Delete xóa slide đang chọn. Các tổ hợp ALT+E+D là lối menu cổ, không phải cách mặc định mọi phiên bản."
+    },
+    {
+      "id": 5,
+      "chapter": "Phần 3",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "CPU là gì?",
+      "options": {
+        "A": "Bộ nhớ tạm thời",
+        "B": "Bộ xử lý trung tâm của máy tính",
+        "C": "Thiết bị lưu trữ ngoài",
+        "D": "Card đồ họa"
+      },
+      "answer": "B",
+      "explainAnswer": "CPU (Central Processing Unit) là bộ xử lý trung tâm, được ví như \"bộ não\" của máy tính. Nó thực hiện mọi phép tính và điều khiển hoạt động của các thành phần khác."
+    },
+    {
+      "id": 6,
+      "chapter": "Phần 3",
+      "sourceChapter": "c4.txt",
+      "question": "Khi lưu văn bản, ta có thể lưu với các phần mở rộng là?",
+      "options": {
+        "A": ".doc,.xlsx,.pdf",
+        "B": ".docx,.xlsx,.pdf",
+        "C": "docx,.xls,.pdf",
+        "D": ".doc, .docx,.pdf"
+      },
+      "answer": "D",
+      "explainAnswer": "Word lưu .doc, .docx, .pdf. .xlsx/.xls là Excel, không phải phần mở rộng Word."
+    },
+    {
+      "id": 7,
+      "chapter": "Phần 3",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Thông tin nào bắt buộc phải có trong địa chỉ email?",
+      "options": {
+        "A": "Số điện thoại",
+        "B": "Địa chỉ email",
+        "C": "Họ tên đầy đủ",
+        "D": "Ngày sinh"
+      },
+      "answer": "B",
+      "explainAnswer": "Để gửi thư điện tử thành công, địa chỉ email của người nhận là thông tin bắt buộc. Các thông tin khác như họ tên, số điện thoại chỉ là tùy chọn."
+    },
+    {
+      "id": 8,
+      "chapter": "Phần 3",
+      "sourceChapter": "c4.txt",
+      "question": "rong Excel hàm TODAY() trả về:",
+      "options": {
+        "A": "Ngày tháng hiện tại của hệ thống",
+        "B": "Số ngày trong tháng của biến ngày tháng date",
+        "C": "Số năm của biến ngày tháng date",
+        "D": "Số tháng trong năm của biến ngày tháng date"
+      },
+      "answer": "A",
+      "explainAnswer": "TODAY() trả ngày hệ thống hiện tại. DAY/MONTH/YEAR mới tách thành phần ngày-tháng-năm."
+    },
+    {
+      "id": 9,
+      "chapter": "Phần 3",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Tùy chọn nào là mô tả tốt nhất về phần mềm mã nguồn mở?",
+      "options": {
+        "A": "Phần mềm phải mua bản quyền và không được sửa đổi",
+        "B": "Phần mềm với mã nguồn có sẵn và có thể được sửa đổi bởi bất kỳ ai",
+        "C": "Phần mềm chỉ chạy trên Windows",
+        "D": "Phần mềm chỉ dành cho doanh nghiệp lớn"
+      },
+      "answer": "B",
+      "explainAnswer": "Đặc điểm cốt lõi của phần mềm mã nguồn mở là mã nguồn được công khai, cho phép bất kỳ ai cũng có thể xem, sửa đổi, cải tiến và phân phối lại theo giấy phép tương ứng."
+    },
+    {
+      "id": 10,
+      "chapter": "Phần 3",
+      "sourceChapter": "c1.txt",
+      "question": "Đăng một tập tin (file) ảnh lên trên mạng xã hội (như facebook) có nghĩa là gì:",
+      "options": {
+        "A": "Download",
+        "B": "Delete",
+        "C": "Upload",
+        "D": "Rename"
+      },
+      "answer": "C",
+      "explainAnswer": "Đưa file từ máy lên máy chủ/mạng xã hội là upload. Download là tải về; delete xóa; rename đổi tên."
+    },
+    {
+      "id": 11,
+      "chapter": "Phần 3",
+      "sourceChapter": "c5.txt",
+      "question": "Làm thế nào để kết nối Internet?",
+      "options": {
+        "A": "Người dùng đăng kí với một nhà cung cấp dịch vụ Internet để được hỗ trợ cài đặt Internet",
+        "B": "Người dùng đăng kí với một nhà cung cấp dịch vụ Internet (ISP) để được hỗ trợ cài đặt và cấp quyền truy cập Internet • D) Wi-Fi",
+        "C": "Wi-Fi",
+        "D": "Người dùng đăng kí với một nhà cung cấp dịch vụ Internet để được cấp quyền truy cập Internet"
+      },
+      "answer": "A",
+      "explainAnswer": "Kết nối Internet dân dụng: đăng ký ISP để được hạ tầng và quyền truy cập. Wi-Fi chỉ là môi trường không dây, chưa phải điều kiện đủ."
+    },
+    {
+      "id": 12,
+      "chapter": "Phần 3",
+      "sourceChapter": "c1.txt",
+      "question": "Lựa chọn nào sau đây là một phần mềm ứng dụng chạy trên Microsoft Windows:",
+      "options": {
+        "A": "EXCEL",
+        "B": "CMOS",
+        "C": "BIOS",
+        "D": "RAM"
+      },
+      "answer": "A",
+      "explainAnswer": "Excel là phần mềm ứng dụng chạy trên Windows. CMOS/BIOS là firmware; RAM là phần cứng — không phải phần mềm hệ điều hành."
+    },
+    {
+      "id": 13,
+      "chapter": "Phần 3",
+      "sourceChapter": "c4.txt",
+      "question": "Khả năng xử lý của máy tính phụ thuộc chính vào yếu tố nào sau đây?",
+      "options": {
+        "A": "Tốc độ CPU.",
+        "B": "Dung lượng bộ nhớ RAM",
+        "C": "Dung lượng và tốc độ ổ cứng.",
+        "D": "all"
+      },
+      "answer": "A",
+      "explainAnswer": "Năng lực xử lý phụ thuộc chính vào CPU. RAM/ổ đĩa ảnh hưởng đa nhiệm và lưu trữ, không thay xung nhịp xử lý lệnh."
+    },
+    {
+      "id": 14,
+      "chapter": "Phần 3",
+      "sourceChapter": "c1.txt",
+      "question": "Khi lựa chọn máy tính ở chế độ tự động tắt màn hình sau 20 giây, màn hình máy tính tự động tắt khi:",
+      "options": {
+        "A": "Không đụng tới máy tính trong 20 giây",
+        "B": "Không sử dụng máy in trong 20 giây",
+        "C": "Không sử dụng Internet trong 20 giây",
+        "D": "Xuất ra máy in sau 20 giây"
+      },
+      "answer": "A",
+      "explainAnswer": "Tắt màn hình sau 20 giây không thao tác nghĩa là máy idle 20 giây. Máy in hay Internet không phải điều kiện của tùy chọn này."
+    },
+    {
+      "id": 15,
+      "chapter": "Phần 3",
+      "sourceChapter": "c5.txt",
+      "question": "Thuật ngữ viết tắt bằng tiếng Anh của mạng diện rộng là gì?",
+      "options": {
+        "A": "WAN (Wide Area Network)",
+        "B": "GAN (Global Area Network)",
+        "C": "MAN (Metropolitan Area Network)",
+        "D": "LAN (Local Area Network)"
+      },
+      "answer": "A",
+      "explainAnswer": "Mạng diện rộng là WAN. LAN cục bộ; MAN đô thị; GAN không phải thuật ngữ chuẩn trong giáo trình này."
+    },
+    {
+      "id": 16,
+      "chapter": "Phần 3",
+      "sourceChapter": "c4.txt",
+      "question": "Trong Powerpoint lệnh Insert/Shapes dùng để thực hiện công việc gì?",
+      "options": {
+        "A": "Chèn hình vẽ vào Slide",
+        "B": "Chèn công thức toán học vào Slide",
+        "C": "Chèn video vào Slide",
+        "D": "Chèn các file âm thanh vào Slide"
+      },
+      "answer": "A",
+      "explainAnswer": "Insert → Shapes chèn hình vẽ. Công thức là Equation; video/âm thanh là Video/Audio."
+    },
+    {
+      "id": 17,
+      "chapter": "Phần 3",
+      "sourceChapter": "c5.txt",
+      "question": "Câu nào sau đây sai?",
+      "options": {
+        "A": "Giao thức RARP dùng để tìm địa chỉ IP từ địa chỉ vật lý",
+        "B": "Giao thức ARP dùng để tìm địa chỉ vật lý từ địa chỉ IP",
+        "C": "Có thể gán nhiều hơn một địa chỉ IP cho một địa chỉ vật lý",
+        "D": "Địa chỉ vật lý không cố định"
+      },
+      "answer": "D",
+      "explainAnswer": "Địa chỉ vật lý (MAC) gắn với card, tương đối cố định. ARP/RARP mô tả đúng chiều phân giải; một MAC có thể mang nhiều IP."
+    },
+    {
+      "id": 18,
+      "chapter": "Phần 3",
+      "sourceChapter": "c2.txt",
+      "question": "Trong phím tắt dùng cho bảng (Table), tổ hợp phím Ctrl + Tab có chức năng gì?",
+      "options": {
+        "A": "Đến ô tiếp theo",
+        "B": "Lên hàng trên",
+        "C": "Xuống hàng dưới",
+        "D": "Chèn một ký tự Tab vào trong ô của bảng"
+      },
+      "answer": "D",
+      "explainAnswer": "Ctrl+Tab chèn một tab thật vào nội dung ô. Tab thường thì chuyển ô, không chèn ký tự tab."
+    },
+    {
+      "id": 19,
+      "chapter": "Phần 3",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Mozilla Firefox là gì?",
+      "options": {
+        "A": "Hệ điều hành",
+        "B": "Trình duyệt web",
+        "C": "Phần mềm diệt virus",
+        "D": "Phần mềm văn phòng"
+      },
+      "answer": "B",
+      "explainAnswer": "Mozilla Firefox là một trình duyệt web mã nguồn mở phổ biến, cạnh tranh với Chrome, Edge, Safari…"
+    },
+    {
+      "id": 20,
+      "chapter": "Phần 3",
+      "sourceChapter": "c2.txt",
+      "question": "Trong MS Word, để loại bỏ các đường gạch chân màu đỏ hoặc màu xanh xuất hiện trong văn bản tiếng Việt ta làm như sau?",
+      "options": {
+        "A": "Vào File/ Option/Proofing/ Trong mục When correcting spelling and Gramma in Word bỏ tích chọn tất cả các lựa chọn",
+        "B": "Vào Home/ Option/Proofing/ Trong mục When correcting spelling and Gramma in Word bỏ tích chọn tất cả các lựa chọn",
+        "C": "Vào File/ Proofing/Trong mục When correcting spelling and Gramma in Word bỏ tích chọn tất cả các lựa chọn",
+        "D": "Vào File/ Option/ Trong mục When correcting spelling and Gramma in Word bỏ tích chọn tất cả các lựa chọn"
+      },
+      "answer": "A",
+      "explainAnswer": "Tắt gạch đỏ/xanh: File → Options → Proofing, bỏ kiểm tra chính tả/ngữ pháp khi gõ. Home không có Options Proofing đầy đủ."
+    },
+    {
+      "id": 21,
+      "chapter": "Phần 3",
+      "sourceChapter": "c1.txt",
+      "question": "Để giúp cho bảo vệ dữ liệu với trường hợp đĩa cứng trong máy tính bị hỏng, người ta nên làm điều gì:",
+      "options": {
+        "A": "Thường xuyên sao lưu dữ liệu",
+        "B": "Thường xuyên thay đổi mật khẩu máy tính",
+        "C": "Thường xuyên cảnh giác thư giả mạo",
+        "D": "Thường xuyên tắt máy tính khi rời nơi làm việc"
+      },
+      "answer": "A",
+      "explainAnswer": "Hỏng đĩa cứng mất dữ liệu nếu không có bản sao; sao lưu là biện pháp bảo vệ dữ liệu. Đổi mật khẩu, cảnh giác thư giả, tắt máy giải quyết rủi ro khác."
+    },
+    {
+      "id": 22,
+      "chapter": "Phần 3",
+      "sourceChapter": "c3.txt",
+      "question": "Công thức sau =COUNTA(A5,A6) +COUNT(A5,A6). Hỏi kết quả trả về là bao nhiêu nếu A5 có giá trị: 5 và A6 có giá trị là: DUNG",
+      "options": {
+        "A": "5+DUNG",
+        "B": "5",
+        "C": "5DUNG",
+        "D": "3"
+      },
+      "answer": "D",
+      "explainAnswer": "COUNTA đếm ô không rỗng (cả chữ lẫn số); COUNT chỉ đếm số. Một ô số và một ô chữ → 2+1=3."
+    },
+    {
+      "id": 23,
+      "chapter": "Phần 3",
+      "sourceChapter": "c1.txt",
+      "question": "Tốc độ truyền dữ liệu tối đa trên lý thuyết của USB 3.0 là bao nhiêu:",
+      "options": {
+        "A": "1,5 Mbps",
+        "B": "12 Gbps",
+        "C": "300 Mbps",
+        "D": "5 Gbps"
+      },
+      "answer": "D",
+      "explainAnswer": "USB 3.0 SuperSpeed có băng thông lý thuyết 5 Gbps. 1,5 Mbps là USB 1.0; 480 Mbps (không phải Gbps) là USB 2.0."
+    },
+    {
+      "id": 24,
+      "chapter": "Phần 3",
+      "sourceChapter": "c2.txt",
+      "question": "Trong MS Word, tổ hợp phím Ctrl + Alt + Del có tác dụng gì khi máy tính bị đứng?",
+      "options": {
+        "A": "Tắt máy tính ngay lập tức",
+        "B": "Mở trình quản lý tác vụ (Task Manager) hoặc màn hình bảo mật",
+        "C": "Lưu tất cả văn bản đang mở",
+        "D": "In văn bản hiện tại"
+      },
+      "answer": "B",
+      "explainAnswer": "Ctrl+Alt+Del mở màn hình bảo mật/Task Manager khi máy đứng. Không lưu, in hay tắt máy ngay từ Word."
+    },
+    {
+      "id": 25,
+      "chapter": "Phần 3",
+      "sourceChapter": "c2.txt",
+      "question": "Để thay đổi hướng chữ trong một ô trong bảng ta làm thế nào?",
+      "options": {
+        "A": "Chọn ô cần thay đổi hướng chữ/Vào Tab Table Tools/ Design/ Chọn Text Direction",
+        "B": "Chọn ô cần thay đổi hướng chữ/Vào Tab Table Tools/ Layout/ Chọn Text Direction",
+        "C": "Chọn ô cần thay đổi hướng chữ/Vào Tab Insert/ Design/ Chọn Text Direction",
+        "D": "Chọn ô cần thay đổi hướng chữ/Vào Tab Insert/ Layout/ Text Direction"
+      },
+      "answer": "B",
+      "explainAnswer": "Xoay chữ trong ô thuộc Table Tools → Layout → Text Direction. Design đổi kiểu bảng, Insert không có Text Direction cho ô."
+    },
+    {
+      "id": 26,
+      "chapter": "Phần 3",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Thiết bị nào không thể thiếu trong một máy tính?",
+      "options": {
+        "A": "Máy in",
+        "B": "CPU",
+        "C": "Loa",
+        "D": "Webcam"
+      },
+      "answer": "B",
+      "explainAnswer": "CPU là bộ xử lý trung tâm, không có CPU thì máy tính không thể thực hiện bất kỳ phép tính hay lệnh nào. Các thiết bị khác có thể thiếu tùy theo nhu cầu sử dụng."
+    },
+    {
+      "id": 27,
+      "chapter": "Phần 3",
+      "sourceChapter": "c4.txt",
+      "question": "Để thay đổi độ rộng của một ô trong bảng ta làm thế nào?",
+      "options": {
+        "A": "Chọn ô cần thay đổi độ rộng/Vào Table Tools/ Design/ Trong nhóm Cell Size chọn Width",
+        "B": "Chọn ô cần thay đổi độ rộng/ Table Tools/ Layout/ Trong nhóm Cell Size chọn Width",
+        "C": "Chọn ô cần thay đổi độ rộng/Vào Home/ Layout/ Trong nhóm Cell Size chọn Width",
+        "D": "Chọn ô cần thay đổi độ rộng/Vào View/ Layout/ Trong nhóm Cell Size chọn Width"
+      },
+      "answer": "B",
+      "explainAnswer": "Độ rộng ô: Layout → Cell Size → Width. Design lo kiểu viền/nền, không phải Width."
+    },
+    {
+      "id": 28,
+      "chapter": "Phần 3",
+      "sourceChapter": "c5.txt",
+      "question": "Khi đặt mật khẩu cho thư điện tử của mình, nên đặt mật khẩu như thế nào để đảm bảo tính bảo mật?",
+      "options": {
+        "A": "Mật khẩu có ít nhất năm kí tự và có đủ các kí tự như chữ hoa, chữ thường, chữ số",
+        "B": "Mật khẩu là dãy số từ 0 đến 9, và chữ cái",
+        "C": "Mật khẩu giống tên của địa chỉ thư",
+        "D": "Mật khẩu là ngày sinh của mình"
+      },
+      "answer": "A",
+      "explainAnswer": "Mật khẩu mạnh cần đủ dài và trộn hoa, thường, số. Trùng tên hộp thư hay ngày sinh dễ bị đoán."
+    },
+    {
+      "id": 29,
+      "chapter": "Phần 3",
+      "sourceChapter": "c2.txt",
+      "question": "Chức năng nào sau đây dùng để thay đổi kiểu chữ?",
+      "options": {
+        "A": "Tab Home/ nhóm Font/ Decrease Font Size",
+        "B": "Tab Home/ nhóm Font/ Increase Font Size",
+        "C": "Tab Home/ nhóm Font/ Change Case",
+        "D": "Tab Home/ nhóm Font/ Subscript"
+      },
+      "answer": "C",
+      "explainAnswer": "Change Case đổi kiểu chữ hoa/thường (sentence, lower, upper, title). Increase/Decrease Font Size đổi cỡ; Subscript là chỉ số dưới."
+    },
+    {
+      "id": 30,
+      "chapter": "Phần 3",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Trong Windows, muốn tạo một thư mục mới trên ổ đĩa D ta thực hiện?",
+      "options": {
+        "A": "Chuột phải chọn New → Folder",
+        "B": "Nhấn Ctrl + N",
+        "C": "Vào Control Panel",
+        "D": "Nhấn Alt + F4"
+      },
+      "answer": "A",
+      "explainAnswer": "Cách nhanh nhất để tạo thư mục mới là chuột phải vào vùng trống trong thư mục hoặc ổ đĩa, chọn New → Folder, sau đó đặt tên."
+    },
+    {
+      "id": 31,
+      "chapter": "Phần 3",
+      "sourceChapter": "c1.txt",
+      "question": "Việc sử dụng tường lửa (firewall) giúp mạng máy tính của doanh nghiệp điều gì:",
+      "options": {
+        "A": "Ngăn chặn việc mất điện",
+        "B": "Ngăn chặn việc mất thời gian",
+        "C": "Ngăn chặn việc tấn công mạng",
+        "D": "Chống trộm cắp máy tính"
+      },
+      "answer": "C",
+      "explainAnswer": "Tường lửa lọc lưu lượng, ngăn truy cập trái phép. Không chống mất điện, mất thời gian hay trộm máy vật lý."
+    },
+    {
+      "id": 32,
+      "chapter": "Phần 3",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Muốn xem được trang web, máy tính của bạn cần phải cài đặt?",
+      "options": {
+        "A": "Phần mềm diệt virus",
+        "B": "Một chương trình duyệt web",
+        "C": "Microsoft Office",
+        "D": "Phần mềm nén"
+      },
+      "answer": "B",
+      "explainAnswer": "Trình duyệt web (browser) là phần mềm bắt buộc để truy cập và hiển thị nội dung các trang web trên Internet."
+    },
+    {
+      "id": 33,
+      "chapter": "Phần 3",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Tên miền nào hợp lệ?",
+      "options": {
+        "A": "phenikaa,edu.vn",
+        "B": "phenikaa;edu;vn",
+        "C": "phenikaa.edu.vn",
+        "D": "phenikaa,edu;vn"
+      },
+      "answer": "C",
+      "explainAnswer": "Tên miền hợp lệ chỉ sử dụng chữ cái, số, dấu gạch ngang và được phân cấp bằng dấu chấm. Dấu phẩy hoặc dấu chấm phẩy không được phép."
+    },
+    {
+      "id": 34,
+      "chapter": "Phần 3",
+      "sourceChapter": "c5.txt",
+      "question": "Với thư điện tử, phát biểu nào sau đây là sai? (Chọn các phương án đúng)",
+      "options": {
+        "A": "Địa chỉ Email: tinvanphong@gmail.com",
+        "B": "Một người có thể gửi thư cho chính mình ở cùng địa chỉ thư điện tử",
+        "C": "Hai người có thể có địa chỉ thư điện tử giống hệt nhau",
+        "D": "Có thể gửi một thư cho nhiều người cùng lúc"
+      },
+      "answer": "C",
+      "explainAnswer": "Hai người không thể dùng trùng một địa chỉ email. Gửi cho chính mình và gửi nhiều người (Cc/Bcc) đều được; tinvanphong@gmail.com là dạng hợp lệ."
+    },
+    {
+      "id": 35,
+      "chapter": "Phần 3",
+      "sourceChapter": "c3.txt",
+      "question": "Biết vùng dữ liệu từ C2:C10 chứa Tên chức vụ, muốn xem có bao nhiêu Kế toán trong vùng dữ liệu ta thực hiện công thức:",
+      "options": {
+        "A": "=Countif(C2:C10,\"Kế toán\")",
+        "B": "=Countif(C2:C10,'''Kế toán''')",
+        "C": "=Countif(C2:C10,Kế toán)",
+        "D": "=Countif(C2:C10,'Kế toán')"
+      },
+      "answer": "A",
+      "explainAnswer": "COUNTIF(vùng, \"Kế toán\") đếm ô khớp chuỗi. Thiếu dấu ngoặc kép hoặc dùng nháy đơn lệch chuẩn Excel tiếng Việt/Anh."
+    },
+    {
+      "id": 36,
+      "chapter": "Phần 3",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Bit là gì?",
+      "options": {
+        "A": "Đơn vị nhỏ nhất của thông tin, mang giá trị 0 hoặc 1",
+        "B": "Đơn vị bằng 8 byte",
+        "C": "Đơn vị đo dung lượng ổ cứng",
+        "D": "Đơn vị đo tốc độ xử lý của CPU"
+      },
+      "answer": "A",
+      "explainAnswer": "Bit (binary digit) là đơn vị thông tin nhỏ nhất trong máy tính. Mỗi bit chỉ có thể mang một trong hai giá trị nhị phân: 0 hoặc 1."
+    },
+    {
+      "id": 37,
+      "chapter": "Phần 3",
+      "sourceChapter": "c1.txt",
+      "question": "Mạng Internet là mạng thuộc loại mạng nào?",
+      "options": {
+        "A": "WAN",
+        "B": "MAN",
+        "C": "LAN",
+        "D": "GAN"
+      },
+      "answer": "A",
+      "explainAnswer": "Internet là mạng diện rộng toàn cầu, xếp vào WAN. LAN là cục bộ; MAN là đô thị; GAN không phải thuật ngữ TCP/IP phổ biến trong giáo trình này."
+    },
+    {
+      "id": 38,
+      "chapter": "Phần 3",
+      "sourceChapter": "c2.txt",
+      "question": "Trong MS Word, Chế độ nào cho phép hiển thị màn hình với kích thước hiển thị lớn nhất?",
+      "options": {
+        "A": "Web Layout",
+        "B": "Full Screen Reading",
+        "C": "Draft",
+        "D": "Outline"
+      },
+      "answer": "B",
+      "explainAnswer": "Full Screen Reading (hoặc Read Mode) phóng tối đa vùng đọc. Web Layout/Draft/Outline là chế độ soạn khác, không phải màn hình lớn nhất."
+    },
+    {
+      "id": 39,
+      "chapter": "Phần 3",
+      "sourceChapter": "c1.txt",
+      "question": "Những thiết bị nào sau đây là thiết bị xuất của máy tính?",
+      "options": {
+        "A": "Màn hình, máy in.",
+        "B": "Bàn phím, màn hình, loa",
+        "C": "Bàn phím, màn hình, chuột",
+        "D": "Chuột, màn hình, CPU"
+      },
+      "answer": "A",
+      "explainAnswer": "Màn hình và máy in là thiết bị xuất. Bàn phím, chuột là nhập; CPU là khối xử lý; loa là xuất nhưng khi ghép với bàn phím thì cả nhóm không thuần xuất."
+    },
+    {
+      "id": 40,
+      "chapter": "Phần 3",
+      "sourceChapter": "c1.txt",
+      "question": "Ý nghĩa của ký hiệu Hz là gì?",
+      "options": {
+        "A": "Tốc độ kết nối mạng",
+        "B": "Dung lượng tập tin trên đĩa cứng",
+        "C": "Đơn vị chỉ tốc độ xung nhịp của máy tính",
+        "D": "Tốc độ quay của đĩa cứng"
+      },
+      "answer": "C",
+      "explainAnswer": "Hz (hertz) đo tần số, dùng cho xung nhịp CPU. Mạng dùng bps; dung lượng dùng byte; đĩa cứng còn dùng RPM."
+    },
+    {
+      "id": 41,
+      "chapter": "Phần 3",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phát biểu nào sau đây là sai?",
+      "options": {
+        "A": "Internet là mạng toàn cầu",
+        "B": "Internet là dịch vụ do công ty Internet tại Mỹ điều hành và thu phí",
+        "C": "Internet kết nối hàng triệu mạng máy tính",
+        "D": "Internet cung cấp nhiều dịch vụ như web, email, chat"
+      },
+      "answer": "B",
+      "explainAnswer": "Phát biểu B sai. Internet không thuộc sở hữu hay điều hành bởi một công ty nào tại Mỹ. Đây là mạng lưới toàn cầu do nhiều tổ chức và quốc gia cùng duy trì."
+    },
+    {
+      "id": 42,
+      "chapter": "Phần 3",
+      "sourceChapter": "c1.txt",
+      "question": "Các thiết bị: màn hình, loa, máy in, thuộc khối chức năng nào?",
+      "options": {
+        "A": "Thiết bị nhập",
+        "B": "Thiết bị xuất",
+        "C": "Khối xử lý"
+      },
+      "answer": "B",
+      "explainAnswer": "Màn hình, loa, máy in đều đưa thông tin ra ngoài — thiết bị xuất. Không phải nhập hay khối xử lý."
+    },
+    {
+      "id": 43,
+      "chapter": "Phần 3",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phát biểu nào sau đây là đúng?",
+      "options": {
+        "A": "Phần mềm là một tập hợp những câu lệnh được viết bằng một ngôn ngữ lập trình và các dữ liệu hay tài liệu liên quan nhằm tự động thực hiện một số nhiệm vụ",
+        "B": "Phần mềm chỉ bao gồm hệ điều hành",
+        "C": "Phần mềm không cần phần cứng để chạy",
+        "D": "Phần mềm chỉ tồn tại dưới dạng mã nguồn mở"
+      },
+      "answer": "A",
+      "explainAnswer": "Định nghĩa chuẩn của phần mềm là tập hợp các câu lệnh (chương trình) cùng dữ liệu và tài liệu liên quan, được viết bằng ngôn ngữ lập trình để máy tính thực hiện các nhiệm vụ cụ thể."
+    },
+    {
+      "id": 44,
+      "chapter": "Phần 3",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phím tắt nào dùng để đóng cửa sổ hiện hành?",
+      "options": {
+        "A": "Ctrl + W",
+        "B": "Alt + F4",
+        "C": "Ctrl + F4",
+        "D": "Shift + F4"
+      },
+      "answer": "B",
+      "explainAnswer": "Alt + F4 là phím tắt chuẩn trong Windows để đóng cửa sổ đang được kích hoạt. Nếu đang ở màn hình Desktop, tổ hợp này sẽ mở hộp thoại Shut down."
+    },
+    {
+      "id": 45,
+      "chapter": "Phần 3",
+      "sourceChapter": "c4.txt",
+      "question": "Chức năng Animations/ Timing/ Delay dùng để:",
+      "options": {
+        "A": "Thiết lập thời gian chờ trước khi hiệu ứng bắt đầu",
+        "B": "Thiết lập thời gian chờ trước khi slide được trình chiếu",
+        "C": "Thiết lập thời gian hoạt động cho tất cả các hiệu ứng",
+        "D": "Tất cả đều đúng"
+      },
+      "answer": "A",
+      "explainAnswer": "Delay là thời gian chờ trước khi hiệu ứng bắt đầu. Duration là độ dài hiệu ứng, không phải Delay."
+    },
+    {
+      "id": 46,
+      "chapter": "Phần 3",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Trong hệ điều hành Windows 7 khi người dùng muốn rời khỏi máy tính có thể dùng cách nào sau đây để khóa máy tính tạm thời?",
+      "options": {
+        "A": "Bấm Ctrl + Alt + Del, chọn Lock this computer",
+        "B": "Bấm Alt + F4",
+        "C": "Bấm Ctrl + Shift + Esc",
+        "D": "Bấm Windows + D"
+      },
+      "answer": "A",
+      "explainAnswer": "Tổ hợp Ctrl + Alt + Del mở màn hình bảo mật, từ đó người dùng có thể chọn Lock this computer để khóa máy mà không cần đăng xuất, bảo vệ dữ liệu khi tạm thời rời đi."
+    },
+    {
+      "id": 47,
+      "chapter": "Phần 3",
+      "sourceChapter": "c1.txt",
+      "question": "Thành phần giao diện đồ họa nào trong Windows cho phép người dùng thiết lập hệ thống bằng cách thêm phần cứng mới, thêm hoặc gỡ bỏ chương trình và chỉnh sửa tài khoản người dùng, tùy chỉnh âm thanh và hiển thị?",
+      "options": {
+        "A": "Windows Explorer",
+        "B": "Phần mềm người dùng",
+        "C": "Bảng điều khiển (Control Panel)"
+      },
+      "answer": "C",
+      "explainAnswer": "Control Panel (hoặc Settings) dùng để thêm phần cứng, gỡ chương trình, tài khoản, âm thanh, hiển thị. Explorer quản lý tệp."
+    },
+    {
+      "id": 48,
+      "chapter": "Phần 3",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Quy trình tắt máy tính nào sau đây đảm bảo an toàn cho chương trình và dữ liệu?",
+      "options": {
+        "A": "Rút nguồn điện đột ngột",
+        "B": "Ghi dữ liệu vào đĩa, đóng các file chương trình, chọn nút Start/Shut down",
+        "C": "Nhấn giữ nút nguồn 10 giây",
+        "D": "Đóng nắp laptop"
+      },
+      "answer": "B",
+      "explainAnswer": "Cách tắt máy an toàn là lưu toàn bộ dữ liệu đang làm việc, đóng các chương trình, sau đó sử dụng lệnh Shut down từ menu Start. Việc rút điện đột ngột có thể làm hỏng dữ liệu hoặc hệ thống."
+    },
+    {
+      "id": 49,
+      "chapter": "Phần 3",
+      "sourceChapter": "c3.txt",
+      "question": "Nếu muốn tính tổng của vùng D2:D8 với điều kiện là \"Ô tô\" trong vùng dữ liệu A2:A8, ta có công thức:",
+      "options": {
+        "A": "SUMIF(D2:D8,\"Ô tô\",A2:A8)",
+        "B": "SUMIF(A2:A8,\"Ô tô\",D2:D8)",
+        "C": "SUMIF(\"Ô tô\",A2:A8,D2:D8)",
+        "D": "SUMIF(A2:A8,\"Ô tô\")"
+      },
+      "answer": "B",
+      "explainAnswer": "SUMIF(vùng_điều_kiện, tiêu_chuẩn, vùng_cộng): SUMIF(A2:A8,\"Ô tô\",D2:D8). Đảo vùng hay thiếu vùng cộng là sai cú pháp."
+    },
+    {
+      "id": 50,
+      "chapter": "Phần 3",
+      "sourceChapter": "c2.txt",
+      "question": "Trong MS Word, Chức năng Sentence Case có tác dụng?",
+      "options": {
+        "A": "Viết hoa ký tự đầu tiên và viết thường các ký tự còn lại",
+        "B": "Viết thường toàn bộ đoạn văn được chọn",
+        "C": "Viết hoa chữ cái đầu tiên của câu",
+        "D": "Viết thường ký tự đầu tiên"
+      },
+      "answer": "C",
+      "explainAnswer": "Sentence case hoa chữ cái đầu câu. Capitalize Each Word hoa đầu mỗi từ; lowercase viết thường hết."
+    },
+    {
+      "id": 51,
+      "chapter": "Phần 3",
+      "sourceChapter": "c1.txt",
+      "question": "Trong máy tính, phương án nào sau đây là sắp xếp tăng dần của dung lượng bộ nhớ?",
+      "options": {
+        "A": "B, MB, KB, GB",
+        "B": "MB, KB, B, GB",
+        "C": "GB, MB, KB, B",
+        "D": "B, KB, MB, GB"
+      },
+      "answer": "D",
+      "explainAnswer": "Thứ tự tăng dần: Byte < KB < MB < GB. Các phương án còn lại đảo KB/MB hoặc xếp giảm dần."
+    },
+    {
+      "id": 52,
+      "chapter": "Phần 3",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Phát biểu nào sau đây là đúng?",
+      "options": {
+        "A": "Tệp có thể chứa thư mục khác bên trong",
+        "B": "Tệp là đơn vị lưu trữ thông tin nhỏ nhất, không thể chứa tệp hay thư mục khác",
+        "C": "Thư mục không thể chứa tệp",
+        "D": "Tệp và thư mục là như nhau"
+      },
+      "answer": "B",
+      "explainAnswer": "Tệp (file) là đơn vị lưu trữ nhỏ nhất. Thư mục (folder) có thể chứa nhiều tệp và thư mục con, nhưng bản thân một tệp không thể chứa tệp hay thư mục khác."
+    },
+    {
+      "id": 53,
+      "chapter": "Phần 3",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Tùy chọn nào cho phép cải thiện hiệu năng của máy tính?",
+      "options": {
+        "A": "Cài thêm nhiều phần mềm hơn",
+        "B": "Nâng cấp RAM, CPU của máy tính",
+        "C": "Xóa hệ điều hành",
+        "D": "Tắt toàn bộ bảo mật"
+      },
+      "answer": "B",
+      "explainAnswer": "Nâng cấp RAM giúp máy chạy nhiều chương trình cùng lúc mượt hơn, nâng cấp CPU tăng khả năng xử lý. Đây là hai cách phổ biến và hiệu quả để cải thiện hiệu năng."
+    },
+    {
+      "id": 54,
+      "chapter": "Phần 3",
+      "sourceChapter": "c3.txt",
+      "question": "Để giữ cố định hàng được lặp lại qua các trang, ta chọn hàng bên dưới hàng đó và thực hiện:",
+      "options": {
+        "A": "Review\\Freeze Panes",
+        "B": "Page Layout\\Freeze Panes",
+        "C": "Data\\Freeze Panes",
+        "D": "View\\Freeze Panes"
+      },
+      "answer": "D",
+      "explainAnswer": "Freeze Panes nằm ở tab View. Review/Page Layout/Data không đóng băng hàng lặp."
+    },
+    {
+      "id": 55,
+      "chapter": "Phần 3",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Tên tệp trong hệ điều hành Windows gồm mấy phần?",
+      "options": {
+        "A": "1 phần",
+        "B": "2 phần",
+        "C": "3 phần",
+        "D": "4 phần"
+      },
+      "answer": "B",
+      "explainAnswer": "Tên tệp trong Windows gồm hai phần: tên chính và phần mở rộng (extension), được ngăn cách bởi dấu chấm (ví dụ: baocao.docx)."
+    },
+    {
+      "id": 56,
+      "chapter": "Phần 3",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "MBps là đơn vị đo gì?",
+      "options": {
+        "A": "Dung lượng ổ cứng",
+        "B": "Tốc độ truyền dữ liệu",
+        "C": "Tốc độ xử lý CPU",
+        "D": "Dung lượng RAM"
+      },
+      "answer": "B",
+      "explainAnswer": "MBps (Megabyte per second) là đơn vị đo tốc độ truyền dữ liệu, thường dùng để biểu diễn tốc độ đọc/ghi của ổ cứng, USB hoặc tốc độ mạng."
+    },
+    {
+      "id": 57,
+      "chapter": "Phần 3",
+      "sourceChapter": "c2.txt",
+      "question": "Để sắp xếp các cửa sổ văn bản trên màn hình Word theo thứ tự nào đó ta thực hiện như thế nào?",
+      "options": {
+        "A": "Vào Home/ Trong nhóm Window chọn kiểu sắp xếp thích hợp",
+        "B": "Vào Review/ Trong nhóm Window chọn kiểu sắp xếp thích hợp",
+        "C": "Vào Insert/ Trong nhóm Window chọn kiểu sắp xếp thích hợp",
+        "D": "Vào View/ Trong nhóm Window chọn kiểu sắp xếp thích hợp"
+      },
+      "answer": "D",
+      "explainAnswer": "Sắp xếp cửa sổ Word nằm ở tab View nhóm Window. Home/Insert/Review không chứa Arrange All."
+    },
+    {
+      "id": 58,
+      "chapter": "Phần 3",
+      "sourceChapter": "c2.txt",
+      "question": "Thanh Zoom hiển thị 100% có nghĩa là:",
+      "options": {
+        "A": "Văn bản đang được hiển thị ở chế độ Full Screen Reading",
+        "B": "Văn bản được phóng to gấp đôi so với ban đầu",
+        "C": "Văn bản được hiển thị như khi được in ra giấy",
+        "D": "Văn bản đang được hiển thị ở chế độ Website."
+      },
+      "answer": "C",
+      "explainAnswer": "Zoom 100% hiển thị kích thước như khi in. Không phải phóng đôi, Full Screen hay Web Layout."
+    },
+    {
+      "id": 59,
+      "chapter": "Phần 3",
+      "sourceChapter": "c4.txt",
+      "question": "Trong Microsoft Word để ngắt trang ta thực hiện?",
+      "options": {
+        "A": "View/ Page Break",
+        "B": "References/ Captions/ Break",
+        "C": "Insert/ Pages/ Page Break",
+        "D": "Review/ Create/ Page Break"
+      },
+      "answer": "C",
+      "explainAnswer": "Ngắt trang Word: Insert → Pages → Page Break (Ctrl+Enter). View/References/Review không chèn page break."
+    },
+    {
+      "id": 60,
+      "chapter": "Phần 3",
+      "sourceChapter": "c1.txt",
+      "question": "Khi kết nối thành một mạng máy tính cục bộ và các thiết bị, thiết bị nào sau đây có thể được chia sẻ để sử dụng chung:",
+      "options": {
+        "A": "Máy in",
+        "B": "Micro",
+        "C": "Webcam",
+        "D": "Đĩa mềm"
+      },
+      "answer": "A",
+      "explainAnswer": "Trên mạng LAN, máy in là thiết bị xuất điển hình được chia sẻ dùng chung. Micro và webcam ít được xem là tài nguyên chia sẻ cổ điển; đĩa mềm là phương tiện lưu trữ cục bộ đã lỗi thời."
+    },
+    {
+      "id": 61,
+      "chapter": "Phần 3",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Những thiết bị nào sau đây được xếp vào nhóm thiết bị ngoại vi?",
+      "options": {
+        "A": "CPU, RAM, Mainboard",
+        "B": "Bàn phím, chuột, màn hình, máy in",
+        "C": "Ổ cứng, nguồn điện, quạt tản nhiệt",
+        "D": "Card đồ họa, card âm thanh"
+      },
+      "answer": "B",
+      "explainAnswer": "Thiết bị ngoại vi gồm các thiết bị nhập (bàn phím, chuột) và xuất (màn hình, máy in). Các thành phần còn lại thuộc phần cứng nội bộ hoặc card mở rộng gắn trên mainboard."
+    },
+    {
+      "id": 62,
+      "chapter": "Phần 3",
+      "sourceChapter": "c5.txt",
+      "question": "Giao thức được sử dụng ở tầng mạng trong mô hình TCP/IP là?",
+      "options": {
+        "A": "IP, ARP",
+        "B": "TCP, ARP",
+        "C": "ARP, UDP",
+        "D": "TCP, IP"
+      },
+      "answer": "A",
+      "explainAnswer": "Tầng mạng (Internet layer) của TCP/IP gồm IP và ARP (cùng ICMP). TCP/UDP thuộc tầng giao vận."
+    },
+    {
+      "id": 63,
+      "chapter": "Phần 3",
+      "sourceChapter": "c2.txt",
+      "question": "Khi soạn thảo văn bản trong MS Word, muốn di chuyển từ 1 ô này sang ô kế tiếp về bên phải của một bảng (Table) sử dụng phím nào?",
+      "options": {
+        "A": "Ctrl",
+        "B": "Tab",
+        "C": "ESC",
+        "D": "CapsLock"
+      },
+      "answer": "B",
+      "explainAnswer": "Trong bảng, Tab chuyển sang ô bên phải. Ctrl, Esc, CapsLock không phải phím đi giữa các ô."
+    },
+    {
+      "id": 64,
+      "chapter": "Phần 3",
+      "sourceChapter": "c4.txt",
+      "question": "Trong bảng tính MS Excel, để chèn biểu đồ dạng hình cột ta thực hiện:",
+      "options": {
+        "A": "Insert\\Charts\\Column",
+        "B": "Insert\\Charts\\Bar",
+        "C": "Insert\\Charts\\Pine",
+        "D": "Insert\\Charts\\Line"
+      },
+      "answer": "A",
+      "explainAnswer": "Biểu đồ cột Excel: Insert → Charts → Column. Bar là thanh ngang; Line đường; Pie tròn."
+    },
+    {
+      "id": 65,
+      "chapter": "Phần 3",
+      "sourceChapter": "c4.txt",
+      "question": "Trong Microsoft Word để chèn header hoặc footer trên trang văn bản, ta thực hiện?",
+      "options": {
+        "A": "View / Header and Footer",
+        "B": "Insert / Header and Footer",
+        "C": "Insert / Header and Footer / nhấn nút Header hoặc Footer",
+        "D": "Format / Header and Footer"
+      },
+      "answer": "C",
+      "explainAnswer": "Header/Footer chèn từ Insert → Header & Footer. View không còn là chỗ chính trên ribbon hiện đại."
+    },
+    {
+      "id": 66,
+      "chapter": "Phần 3",
+      "sourceChapter": "c5.txt",
+      "question": "Ipv4 được chia thành mấy lớp?",
+      "options": {
+        "A": "5 lớp",
+        "B": "3 lớp",
+        "C": "6 lớp",
+        "D": "4 lớp"
+      },
+      "answer": "A",
+      "explainAnswer": "IPv4 chia 5 lớp A–E. Không phải 3, 4 hay 6 lớp."
+    },
+    {
+      "id": 67,
+      "chapter": "Phần 3",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Thuật ngữ \"RAM\" là từ viết tắt của cụm từ?",
+      "options": {
+        "A": "Read Access Memory",
+        "B": "Random Access Memory",
+        "C": "Rewrite Access Memory",
+        "D": "Rapid Access Memory"
+      },
+      "answer": "B",
+      "explainAnswer": "RAM là Random Access Memory – bộ nhớ truy cập ngẫu nhiên. Đây là bộ nhớ tạm thời, cho phép CPU đọc/ghi dữ liệu nhanh theo vị trí bất kỳ, dữ liệu sẽ mất khi mất điện."
+    },
+    {
+      "id": 68,
+      "chapter": "Phần 3",
+      "sourceChapter": "c4.txt",
+      "question": "Để chèn một bảng(Table) vào văn bản ta làm thế nào?",
+      "options": {
+        "A": "Vào Tab Insert/ Insert Table/ Gõ số hàng số cột",
+        "B": "Vào Tab Insert/ Table/ Insert Table/ Gõ số hàng số cột",
+        "C": "Vào Tab Home/ Table/ Insert Table/ Gõ số hàng số cột",
+        "D": "Vào Tab View/ Table/ Insert Table/ Gõ số hàng số cột"
+      },
+      "answer": "B",
+      "explainAnswer": "Insert → Table → Insert Table. Home/View không có lệnh bảng; thiếu bước Table là sai đường."
+    },
+    {
+      "id": 69,
+      "chapter": "Phần 3",
+      "sourceChapter": "c1.txt",
+      "question": "Hệ thống nhớ của máy tính bao gồm những thành phần nào sau đây?",
+      "options": {
+        "A": "Bộ nhớ ngoài, ROM",
+        "B": "Cache, Bộ nhớ ngoài",
+        "C": "Đĩa quang, Bộ nhớ trong",
+        "D": "Bộ nhớ trong, Bộ nhớ ngoài"
+      },
+      "answer": "D",
+      "explainAnswer": "Hệ thống nhớ gồm bộ nhớ trong (RAM/ROM) và bộ nhớ ngoài (ổ đĩa, USB…). Các cặp còn lại thiếu một phía hoặc chỉ lấy ví dụ hẹp."
+    },
+    {
+      "id": 70,
+      "chapter": "Phần 3",
+      "sourceChapter": "c3.txt",
+      "question": "Công thức sau =MONTH(\"19-Feb-2022\") cho kết quả nào sau đây:",
+      "options": {
+        "A": "2",
+        "B": "\"Feb\"",
+        "C": "Feb",
+        "D": "19"
+      },
+      "answer": "A",
+      "explainAnswer": "MONTH trả về số tháng 1–12; 19-Feb là tháng 2. Không trả 'Feb' hay ngày 19."
+    },
+    {
+      "id": 71,
+      "chapter": "Phần 3",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Các thành phần của tên miền được phân cách bằng ký tự gì?",
+      "options": {
+        "A": "Dấu phẩy",
+        "B": "Dấu chấm",
+        "C": "Dấu gạch ngang",
+        "D": "Dấu gạch chéo"
+      },
+      "answer": "B",
+      "explainAnswer": "Tên miền được phân cấp bằng dấu chấm, ví dụ: www.google.com.vn trong đó .vn là tên miền cấp cao nhất, .com là cấp hai…"
+    },
+    {
+      "id": 72,
+      "chapter": "Phần 3",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Dịch vụ thư điện tử được dùng để làm gì?",
+      "options": {
+        "A": "Chỉ gửi file lớn",
+        "B": "Trao đổi thư thông qua môi trường Internet",
+        "C": "Chỉ chat trực tuyến",
+        "D": "Chỉ xem video"
+      },
+      "answer": "B",
+      "explainAnswer": "Thư điện tử (email) cho phép gửi và nhận thư, tài liệu, hình ảnh… qua mạng Internet một cách nhanh chóng và tiện lợi."
+    },
+    {
+      "id": 73,
+      "chapter": "Phần 3",
+      "sourceChapter": "c3.txt",
+      "question": "Để lọc dữ liệu ta thực hiện?",
+      "options": {
+        "A": "Mở dải lệnh Data → chọn lệnh Sort",
+        "B": "Tất cả đều sai",
+        "C": "Mở dải lệnh Data → chọn lệnh AutoFilter",
+        "D": "Chọn vùng dữ liệu cần lọc→ chọn menu Data → chọn lệnh Filter"
+      },
+      "answer": "D",
+      "explainAnswer": "Lọc dữ liệu: chọn vùng → Data → Filter. Sort là sắp xếp; AutoFilter là tên cũ, thiếu bước chọn vùng."
+    },
+    {
+      "id": 74,
+      "chapter": "Phần 3",
+      "sourceChapter": "c1.txt",
+      "question": "Trong một địa chỉ Email, kí tự nào là kí tự phải có:",
+      "options": {
+        "A": "dấu bằng (=)",
+        "B": "dấu chấm (.)",
+        "C": "dấu chấm than (!)",
+        "D": "ký tự a thương mại (@)"
+      },
+      "answer": "D",
+      "explainAnswer": "Mọi địa chỉ email đều có ký tự @ tách tên hộp thư và máy chủ. Dấu chấm có thể có nhưng không bắt buộc ở mọi địa chỉ; = và ! không phải thành phần bắt buộc."
+    },
+    {
+      "id": 75,
+      "chapter": "Phần 3",
+      "sourceChapter": "c1.txt",
+      "question": "Dữ liệu trong thiết bị nhớ nào sau đây sẽ mất khi mất điện?",
+      "options": {
+        "A": "Đĩa cứng",
+        "B": "Đĩa mềm",
+        "C": "ROM",
+        "D": "RAM"
+      },
+      "answer": "D",
+      "explainAnswer": "RAM mất dữ liệu khi mất điện. Ổ cứng, đĩa mềm, ROM giữ được nội dung."
+    },
+    {
+      "id": 76,
+      "chapter": "Phần 3",
+      "sourceChapter": "Tin học văn phòng",
+      "question": "Khái niệm hệ điều hành là gì?",
+      "options": {
+        "A": "Là một phần mềm chạy trên máy tính, dùng để điều hành, quản lý các thiết bị phần cứng và các tài nguyên phần mềm trên máy tính",
+        "B": "Nghiên cứu phương pháp, kỹ thuật xử lý thông tin bằng máy tính điện tử",
+        "C": "Nghiên cứu về công nghệ phần cứng và phần mềm",
+        "D": "Cung cấp và xử lý các phần cứng và phần mềm"
+      },
+      "answer": "A",
+      "explainAnswer": "Hệ điều hành là phần mềm hệ thống quan trọng nhất, đóng vai trò trung gian giữa người dùng, phần mềm ứng dụng và phần cứng máy tính."
+    },
+    {
+      "id": 77,
+      "chapter": "Phần 3",
+      "sourceChapter": "c2.txt",
+      "question": "Bảng có kích thước 5x6 có nghĩa là?",
+      "options": {
+        "A": "Bảng gồm 30 dòng",
+        "B": "Bảng gồm 5 cột 6 dòng",
+        "C": "Bảng gồm 30 cột",
+        "D": "Bảng gồm 5 dòng 6 cột"
+      },
+      "answer": "B",
+      "explainAnswer": "Trong hộp Insert Table, 5×6 hiểu là 5 cột và 6 hàng. Không phải 5 hàng 6 cột hay 30 dòng/cột."
+    },
+    {
+      "id": 78,
+      "chapter": "Phần 3",
+      "sourceChapter": "c4.txt",
+      "question": "Tại D2 có công thức \"=B1+C1\", khi sao chép sang ô E2 thì E2 có công thức là:",
+      "options": {
+        "A": "C1+D1",
+        "B": "C1+D2",
+        "C": "C2+D2",
+        "D": "C3+D3"
+      },
+      "answer": "A",
+      "explainAnswer": "=B1+C1 ở D2 sao sang E2 dịch một cột: C1+D1. Hàng không đổi vì công thức không dùng hàng 2."
+    }
+  ]
+}
