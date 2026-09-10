@@ -131,9 +131,9 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "hcm-midterm-bank-1", type: "midterm", year: 2026, questionCount: 276, durationMinutes: 60,
+        id: "hcm-midterm-bank-1", type: "midterm", year: 2026, questionCount: 276, durationMinutes: 120,
         title: { en: "Ho Chi Minh Ideology Midterm", vi: "Quiz ôn tập Giữa kỳ - Tư tưởng Hồ Chí Minh" },
-        description: { en: "Midterm set with chapter-by-chapter practice.", vi: "Bộ đề Giữa kỳ, ôn luyện theo từng chương." },
+        description: { en: "A question bank of 276 questions divided into 4 chapters.", vi: "Bộ tài liệu gồm 276 câu hỏi được chia làm 4 chương." },
         questionBanks: [
           "/data/tu-tuong-hcm-giua-ky/tu_tuong_hcm_giua_ky.json",
         ],
@@ -154,9 +154,9 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "hcm-final-bank-1", type: "final", year: 2026, questionCount: 456, durationMinutes: 60,
+        id: "hcm-final-bank-1", type: "final", year: 2026, questionCount: 456, durationMinutes: 240,
         title: { en: "Ho Chi Minh Ideology", vi: "Quiz ôn tập Cuối kỳ - Tư tưởng Hồ Chí Minh" },
-        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
+        description: { en: "A question bank of 456 questions across 6 chapters, covering both midterm and final content.", vi: "Bộ tài liệu gồm 456 câu hỏi chia làm 6 chương, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],
     chapters: [
@@ -179,9 +179,9 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "history-party-midterm-bank-1", type: "midterm", year: 2026, questionCount: 165, durationMinutes: 60,
+        id: "history-party-midterm-bank-1", type: "midterm", year: 2026, questionCount: 165, durationMinutes: 120,
         title: { en: "History of the Communist Party of Vietnam Midterm", vi: "Quiz ôn tập Giữa kỳ - Lịch sử Đảng Cộng sản Việt Nam" },
-        description: { en: "Midterm set with chapter-by-chapter practice.", vi: "Bộ đề Giữa kỳ, ôn luyện theo từng chương." },
+        description: { en: "A question bank of 165 questions divided into 2 chapters.", vi: "Bộ tài liệu gồm 165 câu hỏi được chia làm 2 chương." },
         questionBanks: ["/data/lich-su-dang-giua-ky/his_giua_ky.json"],
       },
     ],
@@ -198,9 +198,9 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "history-party-final-bank-1", type: "final", year: 2026, questionCount: 288, durationMinutes: 60,
+        id: "history-party-final-bank-1", type: "final", year: 2026, questionCount: 288, durationMinutes: 240,
         title: { en: "History of the Communist Party of Vietnam", vi: "Quiz ôn tập Cuối kỳ - Lịch sử Đảng Cộng sản Việt Nam" },
-        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
+        description: { en: "A question bank of 288 questions across 3 chapters, covering both midterm and final content.", vi: "Bộ tài liệu gồm 288 câu hỏi chia làm 3 chương, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],
     chapters: [
@@ -220,9 +220,9 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "mgt-midterm-bank-1", type: "midterm", year: 2026, questionCount: 162, durationMinutes: 60,
+        id: "mgt-midterm-bank-1", type: "midterm", year: 2026, questionCount: 162, durationMinutes: 120,
         title: { en: "Management Midterm", vi: "Quiz ôn tập Giữa kỳ - Quản trị học" },
-        description: { en: "Midterm set with chapter-by-chapter practice.", vi: "Bộ đề Giữa kỳ, ôn luyện theo từng chương." },
+        description: { en: "A question bank of 162 questions divided into 4 chapters.", vi: "Bộ tài liệu gồm 162 câu hỏi được chia làm 4 chương." },
         questionBanks: [
           "/data/quan-tri-hoc-giua-ky/mgt_giua_ky.json",
         ],
@@ -243,9 +243,9 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "management-final-bank-1", type: "final", year: 2026, questionCount: 450, durationMinutes: 60,
+        id: "management-final-bank-1", type: "final", year: 2026, questionCount: 450, durationMinutes: 240,
         title: { en: "Management", vi: "Quiz ôn tập Cuối kỳ - Quản trị học" },
-        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
+        description: { en: "A question bank of 450 questions across 7 chapters, covering both midterm and final content.", vi: "Bộ tài liệu gồm 450 câu hỏi chia làm 7 chương, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],
     chapters: [
@@ -269,9 +269,9 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "philosophy-2-credit-midterm-bank-1", type: "midterm", year: 2026, questionCount: 116, durationMinutes: 60,
+        id: "philosophy-2-credit-midterm-bank-1", type: "midterm", year: 2026, questionCount: 116, durationMinutes: 120,
         title: { en: "Marxist-Leninist Philosophy (2 credits) Midterm", vi: "Quiz ôn tập Giữa kỳ - Triết học Mác - Lênin (2 tín chỉ)" },
-        description: { en: "Midterm set with chapter-by-chapter practice.", vi: "Bộ đề Giữa kỳ, ôn luyện theo từng chương." },
+        description: { en: "A question bank of 116 questions divided into 2 chapters.", vi: "Bộ tài liệu gồm 116 câu hỏi được chia làm 2 chương." },
         questionBanks: ["/data/triet-hoc-mac-lenin-2tc-giua-ky/mln_2tc_giua_ky.json"],
       },
     ],
@@ -288,9 +288,9 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "philosophy-3-credit-midterm-bank-1", type: "midterm", year: 2026, questionCount: 137, durationMinutes: 60,
+        id: "philosophy-3-credit-midterm-bank-1", type: "midterm", year: 2026, questionCount: 137, durationMinutes: 120,
         title: { en: "Marxist-Leninist Philosophy (3 credits) Midterm", vi: "Quiz ôn tập Giữa kỳ - Triết học Mác - Lênin (3 tín chỉ)" },
-        description: { en: "Midterm set with chapter-by-chapter practice.", vi: "Bộ đề Giữa kỳ, ôn luyện theo từng chương." },
+        description: { en: "A question bank of 137 questions divided into 2 chapters.", vi: "Bộ tài liệu gồm 137 câu hỏi được chia làm 2 chương." },
         questionBanks: ["/data/triet-hoc-mac-lenin-3tc-giua-ky/mln_3tc_giua_ky.json"],
       },
     ],
@@ -307,9 +307,9 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "philosophy-2-credit-final-bank-1", type: "final", year: 2026, questionCount: 361, durationMinutes: 60,
+        id: "philosophy-2-credit-final-bank-1", type: "final", year: 2026, questionCount: 361, durationMinutes: 240,
         title: { en: "Marxist-Leninist Philosophy (2 credits)", vi: "Quiz ôn tập Cuối kỳ - Triết học Mác - Lênin (2 tín chỉ)" },
-        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
+        description: { en: "A question bank of 361 questions across 3 chapters, covering both midterm and final content.", vi: "Bộ tài liệu gồm 361 câu hỏi chia làm 3 chương, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],
     chapters: [
@@ -329,9 +329,9 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "philosophy-3-credit-final-bank-1", type: "final", year: 2026, questionCount: 246, durationMinutes: 60,
+        id: "philosophy-3-credit-final-bank-1", type: "final", year: 2026, questionCount: 246, durationMinutes: 240,
         title: { en: "Marxist-Leninist Philosophy (3 credits)", vi: "Quiz ôn tập Cuối kỳ - Triết học Mác - Lênin (3 tín chỉ)" },
-        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
+        description: { en: "A question bank of 246 questions across 2 chapters, covering both midterm and final content.", vi: "Bộ tài liệu gồm 246 câu hỏi chia làm 2 chương, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],
     chapters: [
@@ -349,9 +349,9 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "project-management-final-bank-1", type: "final", year: 2026, questionCount: 219, durationMinutes: 60,
+        id: "project-management-final-bank-1", type: "final", year: 2026, questionCount: 219, durationMinutes: 240,
         title: { en: "Project Management Skills", vi: "Quiz ôn tập - Kỹ năng Quản lý Dự án" },
-        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
+        description: { en: "A question bank of 219 questions across 8 chapters, covering both midterm and final content.", vi: "Bộ tài liệu gồm 219 câu hỏi chia làm 8 chương, bao gồm cả nội dung Giữa và Cuối kỳ." },
         questionBanks: [
           "/data/ky-nang-quan-ly-du-an/chuong_1.json",
           "/data/ky-nang-quan-ly-du-an/chuong_2.json",
@@ -385,9 +385,9 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "scientific-socialism-midterm-bank-1", type: "midterm", year: 2026, questionCount: 103, durationMinutes: 60,
+        id: "scientific-socialism-midterm-bank-1", type: "midterm", year: 2026, questionCount: 103, durationMinutes: 120,
         title: { en: "Scientific Socialism Midterm", vi: "Quiz ôn tập Giữa kỳ - Chủ nghĩa xã hội khoa học" },
-        description: { en: "Midterm set with chapter-by-chapter practice.", vi: "Bộ đề Giữa kỳ, ôn luyện theo từng chương." },
+        description: { en: "A question bank of 103 questions divided into 4 chapters.", vi: "Bộ tài liệu gồm 103 câu hỏi được chia làm 4 chương." },
         questionBanks: [
           "/data/chu-nghia-khoa-hoc-xa-hoi-giua-ky/soc_giua_ky.json",
         ],
@@ -408,9 +408,9 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "scientific-socialism-final-bank-1", type: "final", year: 2026, questionCount: 195, durationMinutes: 60,
+        id: "scientific-socialism-final-bank-1", type: "final", year: 2026, questionCount: 195, durationMinutes: 240,
         title: { en: "Scientific Socialism", vi: "Quiz ôn tập Cuối kỳ - Chủ nghĩa xã hội khoa học" },
-        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
+        description: { en: "A question bank of 195 questions across 7 chapters, covering both midterm and final content.", vi: "Bộ tài liệu gồm 195 câu hỏi chia làm 7 chương, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],
     chapters: [
@@ -433,9 +433,9 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "entrepreneurship-leadership-final-bank-1", type: "final", year: 2026, questionCount: 112, durationMinutes: 60,
+        id: "entrepreneurship-leadership-final-bank-1", type: "final", year: 2026, questionCount: 112, durationMinutes: 240,
         title: { en: "Entrepreneurship and Leadership Skills", vi: "Quiz ôn tập - Kỹ năng Khởi nghiệp và Lãnh đạo" },
-        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
+        description: { en: "A question bank of 112 questions across 5 chapters, covering both midterm and final content.", vi: "Bộ tài liệu gồm 112 câu hỏi chia làm 5 chương, bao gồm cả nội dung Giữa và Cuối kỳ." },
         questionBanks: [
           "/data/ky-nang-khoi-nghiep-va-lanh-dao/chuong_1.json",
           "/data/ky-nang-khoi-nghiep-va-lanh-dao/chuong_2.json",
@@ -463,9 +463,9 @@ export const subjects: Subject[] = [
     category: { en: "Major", vi: "Chuyên ngành" },
     exams: [
       {
-        id: "software-quality-assessment-final-bank-1", type: "final", year: 2026, questionCount: 299, durationMinutes: 60,
+        id: "software-quality-assessment-final-bank-1", type: "final", year: 2026, questionCount: 299, durationMinutes: 240,
         title: { en: "Software Quality Assessment and Testing", vi: "Quiz ôn tập Cuối kỳ - Đánh giá và kiểm định chất lượng phần mềm" },
-        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
+        description: { en: "A question bank of 299 questions across 6 chapters, covering both midterm and final content.", vi: "Bộ tài liệu gồm 299 câu hỏi chia làm 6 chương, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],
     chapters: [
@@ -485,9 +485,9 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "macroeconomics-final-bank-1", type: "final", year: 2026, questionCount: 181, durationMinutes: 60,
+        id: "macroeconomics-final-bank-1", type: "final", year: 2026, questionCount: 181, durationMinutes: 240,
         title: { en: "Microeconomics", vi: "Quiz ôn tập - Kinh tế vi mô" },
-        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
+        description: { en: "A question bank of 181 questions across 5 chapters, covering both midterm and final content.", vi: "Bộ tài liệu gồm 181 câu hỏi chia làm 5 chương, bao gồm cả nội dung Giữa và Cuối kỳ." },
         questionBanks: [
           "/data/kinh_te_vi_mo/chuong_1.json",
           "/data/kinh_te_vi_mo/chuong_2.json",
@@ -515,9 +515,9 @@ export const subjects: Subject[] = [
     category: { en: "Major", vi: "Chuyên ngành" },
     exams: [
       {
-        id: "kinh-te-vi-mo-macro-bank-1", type: "final", year: 2026, questionCount: 183, durationMinutes: 60,
+        id: "kinh-te-vi-mo-macro-bank-1", type: "final", year: 2026, questionCount: 183, durationMinutes: 240,
         title: { en: "Macroeconomics", vi: "Quiz ôn tập Cuối kỳ - Kinh tế vĩ mô" },
-        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
+        description: { en: "A question bank of 183 questions, covering both midterm and final content.", vi: "Bộ tài liệu gồm 183 câu hỏi, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],
     chapters: [
@@ -532,9 +532,9 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "political-economy-midterm-bank-1", type: "midterm", year: 2026, questionCount: 155, durationMinutes: 60,
+        id: "political-economy-midterm-bank-1", type: "midterm", year: 2026, questionCount: 155, durationMinutes: 120,
         title: { en: "Marxist-Leninist Political Economy Midterm", vi: "Quiz ôn tập Giữa kỳ - Kinh tế chính trị Mác - Lênin" },
-        description: { en: "Midterm set with chapter-by-chapter practice.", vi: "Bộ đề Giữa kỳ, ôn luyện theo từng chương." },
+        description: { en: "A question bank of 155 questions divided into 4 chapters.", vi: "Bộ tài liệu gồm 155 câu hỏi được chia làm 4 chương." },
         questionBanks: ["/data/kinh-te-chinh-tri-mac-lenin-giua-ky/pec_giua_ky.json"],
       },
     ],
@@ -553,9 +553,9 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "political-economy-final-bank-1", type: "final", year: 2026, questionCount: 240, durationMinutes: 60,
+        id: "political-economy-final-bank-1", type: "final", year: 2026, questionCount: 240, durationMinutes: 240,
         title: { en: "Marxist-Leninist Political Economy", vi: "Quiz ôn tập Cuối kỳ - Kinh tế chính trị Mác - Lênin" },
-        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
+        description: { en: "A question bank of 240 questions across 6 chapters, covering both midterm and final content.", vi: "Bộ tài liệu gồm 240 câu hỏi chia làm 6 chương, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],
     chapters: [
@@ -577,9 +577,9 @@ export const subjects: Subject[] = [
     category: { en: "Major", vi: "Chuyên ngành" },
     exams: [
       {
-        id: "sec-final-bank-2", type: "final", year: 2026, questionCount: 150, durationMinutes: 90,
+        id: "sec-final-bank-2", type: "final", year: 2026, questionCount: 150, durationMinutes: 240,
         title: { en: "Application & System Security", vi: "Quiz ôn tập Giữa và Cuối kỳ - Bảo mật ứng dụng và hệ thống" },
-        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
+        description: { en: "A question bank of 150 questions across 8 chapters, covering both midterm and final content.", vi: "Bộ tài liệu gồm 150 câu hỏi chia làm 8 chương, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],
     chapters: [
@@ -603,9 +603,9 @@ export const subjects: Subject[] = [
     category: { en: "Major", vi: "Chuyên ngành" },
     exams: [
       {
-        id: "marketing-final-bank-1", type: "final", year: 2026, questionCount: 478, durationMinutes: 60,
+        id: "marketing-final-bank-1", type: "final", year: 2026, questionCount: 478, durationMinutes: 240,
         title: { en: "Principles of Marketing", vi: "Quiz ôn tập Cuối kỳ - Marketing căn bản" },
-        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
+        description: { en: "A question bank of 478 questions across 9 chapters, covering both midterm and final content.", vi: "Bộ tài liệu gồm 478 câu hỏi chia làm 9 chương, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],
     chapters: [
@@ -628,9 +628,9 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "office-it-final-bank-1", type: "final", year: 2026, questionCount: 309, durationMinutes: 60,
+        id: "office-it-final-bank-1", type: "final", year: 2026, questionCount: 309, durationMinutes: 240,
         title: { en: "Office Information Technology", vi: "Quiz ôn tập Cuối kỳ - Tin học văn phòng" },
-        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
+        description: { en: "A question bank of 309 questions across 4 chapters, covering both midterm and final content.", vi: "Bộ tài liệu gồm 309 câu hỏi chia làm 4 chương, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],
     chapters: [
@@ -648,9 +648,9 @@ export const subjects: Subject[] = [
     category: { en: "Major", vi: "Chuyên ngành" },
     exams: [
       {
-        id: "finance-final-bank-1", type: "final", year: 2026, questionCount: 171, durationMinutes: 60,
+        id: "finance-final-bank-1", type: "final", year: 2026, questionCount: 171, durationMinutes: 240,
         title: { en: "Principles of Finance", vi: "Quiz ôn tập Cuối kỳ - Nguyên lý tài chính" },
-        description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
+        description: { en: "A question bank of 171 questions, covering both midterm and final content.", vi: "Bộ tài liệu gồm 171 câu hỏi, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],
     chapters: [
@@ -665,9 +665,9 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "world-civilization-chapters-1-2-bank-1", type: "final", year: 2026, questionCount: 185, durationMinutes: 60,
+        id: "world-civilization-chapters-1-2-bank-1", type: "final", year: 2026, questionCount: 185, durationMinutes: 240,
         title: { en: "World Civilization History", vi: "Quiz ôn tập Giữa và Cuối kỳ - Lịch sử văn minh thế giới" },
-        description: { en: "Includes Midterm and Final sets.", vi: "Gồm 2 bộ đề Giữa kỳ và Cuối kỳ." },
+        description: { en: "A question bank of 185 questions, covering both midterm and final content.", vi: "Bộ tài liệu gồm 185 câu hỏi, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],
     chapters: [
@@ -682,9 +682,9 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "economics-bank-1", type: "final", year: 2026, questionCount: 215, durationMinutes: 60,
+        id: "economics-bank-1", type: "final", year: 2026, questionCount: 215, durationMinutes: 240,
         title: { en: "Economics", vi: "Quiz ôn tập Giữa và Cuối kỳ - Kinh tế học" },
-        description: { en: "Includes Midterm and Final sets.", vi: "Gồm 2 bộ đề Giữa kỳ và Cuối kỳ." },
+        description: { en: "A question bank of 215 questions across 7 chapters, covering both midterm and final content.", vi: "Bộ tài liệu gồm 215 câu hỏi chia làm 7 chương, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],
     chapters: [
@@ -706,9 +706,9 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "phap-luat-dai-cuong-bank-1", type: "final", year: 2026, questionCount: 716, durationMinutes: 60,
+        id: "phap-luat-dai-cuong-bank-1", type: "final", year: 2026, questionCount: 716, durationMinutes: 240,
         title: { en: "Introduction to Law", vi: "Quiz ôn tập Giữa và Cuối kỳ - Pháp luật đại cương" },
-        description: { en: "Includes Midterm and Final sets.", vi: "Gồm 2 bộ đề Giữa kỳ và Cuối kỳ." },
+        description: { en: "A question bank of 716 questions across 6 chapters, covering both midterm and final content.", vi: "Bộ tài liệu gồm 716 câu hỏi chia làm 6 chương, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],
     chapters: [
@@ -729,9 +729,9 @@ export const subjects: Subject[] = [
     category: { en: "Major", vi: "Chuyên ngành" },
     exams: [
       {
-        id: "database-final-bank-1", type: "final", year: 2026, questionCount: 150, durationMinutes: 60,
+        id: "database-final-bank-1", type: "final", year: 2026, questionCount: 150, durationMinutes: 240,
         title: { en: "Database", vi: "Quiz và Đề ôn tập Cuối kỳ - Cơ sở dữ liệu" },
-        description: { en: "Practice by part: theory, SQL and applications.", vi: "Ôn theo từng phần: lý thuyết, SQL và ứng dụng." },
+        description: { en: "A question bank of 150 questions across 3 chapters, covering both midterm and final content.", vi: "Bộ tài liệu gồm 150 câu hỏi chia làm 3 chương, bao gồm cả nội dung Giữa và Cuối kỳ." },
         questionBanks: [
           "/data/co-so-du-lieu/phan_1.json",
           "/data/co-so-du-lieu/phan_2.json",
@@ -754,9 +754,9 @@ export const subjects: Subject[] = [
     category: { en: "Major", vi: "Chuyên ngành" },
     exams: [
       {
-        id: "data-science-ai-bank-1", type: "final", year: 2026, questionCount: 298, durationMinutes: 60,
+        id: "data-science-ai-bank-1", type: "final", year: 2026, questionCount: 298, durationMinutes: 240,
         title: { en: "Data Science and Artificial Intelligence", vi: "Quiz ôn tập Giữa và Cuối kỳ - Khoa học dữ liệu và Trí tuệ nhân tạo" },
-        description: { en: "Includes Midterm and Final sets.", vi: "Gồm 2 bộ đề Giữa kỳ và Cuối kỳ." },
+        description: { en: "A question bank of 298 questions, covering both midterm and final content.", vi: "Bộ tài liệu gồm 298 câu hỏi, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],
   },
@@ -767,9 +767,9 @@ export const subjects: Subject[] = [
     category: { en: "Major", vi: "Chuyên ngành" },
     exams: [
       {
-        id: "intro-data-science-ai-bank-1", type: "final", year: 2026, questionCount: 119, durationMinutes: 60,
+        id: "intro-data-science-ai-bank-1", type: "final", year: 2026, questionCount: 119, durationMinutes: 240,
         title: { en: "Intro Data Science & AI Practice Bank", vi: "Quiz ôn tập Cuối kỳ - Nhập môn Khoa học dữ liệu và Trí tuệ nhân tạo" },
-        description: { en: "Comprehensive final review set.", vi: "Bộ đề tổng hợp ôn tập Cuối kỳ." },
+        description: { en: "A question bank of 119 questions, covering both midterm and final content.", vi: "Bộ tài liệu gồm 119 câu hỏi, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],
   },
@@ -885,9 +885,9 @@ export const subjects: Subject[] = [
         description: { en: "View scanned exam papers and download each image.", vi: "Xem ảnh đề thi trực tiếp và tải từng hình ảnh." },
       },
       {
-        id: "discrete-math-quiz-bank-1", type: "final", year: 2026, questionCount: 80, durationMinutes: 60, hideFromCatalog: true,
+        id: "discrete-math-quiz-bank-1", type: "final", year: 2026, questionCount: 80, durationMinutes: 240, hideFromCatalog: true,
         title: { en: "Discrete Mathematics Quiz", vi: "Quiz ôn tập - Cuối kỳ" },
-        description: { en: "Multiple-choice practice by chapter.", vi: "Ôn luyện trắc nghiệm theo từng chương." },
+        description: { en: "A question bank of 80 questions across 3 chapters, covering both midterm and final content.", vi: "Bộ tài liệu gồm 80 câu hỏi chia làm 3 chương, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],
     chapters: [

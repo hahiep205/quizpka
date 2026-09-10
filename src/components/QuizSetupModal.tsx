@@ -103,7 +103,7 @@ export function QuizSetupModal({
             onClick={() =>
               onStart({
                 questionOrder,
-                answerOrder: "random",
+                answerOrder: "original",
                 mode,
                 timed,
                 durationMinutes,
