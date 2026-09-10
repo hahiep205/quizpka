@@ -37,6 +37,7 @@ export type SubjectId =
   | "giai-tich"
   | "dai-so-tuyen-tinh"
   | "xac-suat-thong-ke"
+  | "toan-roi-rac"
   | "toeic"
 
 export type LocalizedText = {
@@ -69,6 +70,8 @@ export type ChapterOption = {
   noteUrl?: string
   /** When set, selecting this option opens the gated image viewer for a paid document set. */
   documentId?: string
+  /** Optional solution video/page URL shown inside the chapter picker for this option. */
+  solutionUrl?: string
   /** When true, the option stays available for filtering/counts but is hidden from the chapter picker. */
   hidden?: boolean
   count: number
@@ -283,16 +286,16 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "philosophy-3-credit-midterm-bank-1", type: "midterm", year: 2026, questionCount: 124, durationMinutes: 60,
+        id: "philosophy-3-credit-midterm-bank-1", type: "midterm", year: 2026, questionCount: 137, durationMinutes: 60,
         title: { en: "Marxist-Leninist Philosophy (3 credits) Midterm", vi: "Quiz ôn tập Giữa kỳ - Triết học Mác - Lênin (3 tín chỉ)" },
         description: { en: "Midterm set with chapter-by-chapter practice.", vi: "Bộ đề Giữa kỳ, ôn luyện theo từng chương." },
         questionBanks: ["/data/triet-hoc-mac-lenin-3tc-giua-ky/mln_3tc_giua_ky.json"],
       },
     ],
     chapters: [
-      { id: "c12_mid", label: { en: "Chapters 1,2 - Midterm", vi: "Chương 1,2 - Giữa kỳ" }, matches: ["Chương 1", "Chương 2"], count: 124 },
-      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Chương 1"], count: 50 },
-      { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, matches: ["Chương 2"], count: 74 },
+      { id: "c12_mid", label: { en: "Chapters 1,2 - Midterm", vi: "Chương 1,2 - Giữa kỳ" }, matches: ["Chương 1", "Chương 2"], count: 137 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Chương 1"], count: 51 },
+      { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, matches: ["Chương 2"], count: 86 },
     ],
   },
   {
@@ -324,17 +327,17 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "philosophy-3-credit-final-bank-1", type: "final", year: 2026, questionCount: 210, durationMinutes: 60,
+        id: "philosophy-3-credit-final-bank-1", type: "final", year: 2026, questionCount: 246, durationMinutes: 60,
         title: { en: "Marxist-Leninist Philosophy (3 credits)", vi: "Quiz ôn tập Cuối kỳ - Triết học Mác - Lênin (3 tín chỉ)" },
         description: { en: "Practice by chapter, including midterm content.", vi: "Ôn luyện theo từng chương, bao gồm cả nội dung Giữa kỳ." },
       },
     ],
     chapters: [
-      { id: "all", label: { en: "All chapters", vi: "Toàn bộ (210 câu)" }, count: 210 },
-      { id: "c12_mid", label: { en: "Chapters 1,2 - Midterm", vi: "Chương 1,2 - Giữa kỳ" }, matches: ["Chương 1","Chương 2"], count: 124 },
-      { id: "c3_final", label: { en: "Chapter 3 - Final", vi: "Chương 3 - Cuối kỳ" }, matches: ["Chương 3"], count: 86 },
-      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, count: 50 },
-      { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, count: 74 },
+      { id: "all", label: { en: "All chapters", vi: "Toàn bộ (246 câu)" }, count: 246 },
+      { id: "c12_mid", label: { en: "Chapters 1,2 - Midterm", vi: "Chương 1,2 - Giữa kỳ" }, matches: ["Chương 1","Chương 2"], count: 137 },
+      { id: "c3_final", label: { en: "Chapter 3 - Final", vi: "Chương 3 - Cuối kỳ" }, matches: ["Chương 3"], count: 109 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, count: 51 },
+      { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, count: 86 },
     ],
   },
   {
@@ -866,6 +869,22 @@ export const subjects: Subject[] = [
       { id: "de1", label: { en: "Physics 1 - Set 1", vi: "Vật lý 1 - Đề 1" }, documentId: "phy-de-1", count: 2 },
       { id: "de2", label: { en: "Physics 1 - Set 2", vi: "Vật lý 1 - Đề 2" }, documentId: "phy-de-2", count: 2 },
       { id: "de3", label: { en: "Physics 1 - Set 3", vi: "Vật lý 1 - Đề 3" }, documentId: "phy-de-3", count: 2 },
+    ],
+  },
+  {
+    id: "toan-roi-rac",
+    code: "DM101",
+    name: { en: "Discrete Mathematics - Final", vi: "Đề Toán rời rạc - Cuối kỳ" },
+    category: { en: "Major", vi: "Chuyên ngành" },
+    exams: [
+      {
+        id: "discrete-math-final-docs-1", type: "final", year: 2025, questionCount: 0, durationMinutes: 0,
+        title: { en: "Discrete Mathematics - Final", vi: "Đề Toán rời rạc - Cuối kỳ" },
+        description: { en: "View scanned exam papers and download each image.", vi: "Xem ảnh đề thi trực tiếp và tải từng hình ảnh." },
+      },
+    ],
+    chapters: [
+      { id: "de1", label: { en: "Discrete Mathematics - Set 1", vi: "Toán rời rạc - Đề 1" }, documentId: "dm-de-1", solutionUrl: "https://www.youtube.com/watch?v=4qMwuFaWT7U", count: 3 },
     ],
   },
   {

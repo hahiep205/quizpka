@@ -14,6 +14,7 @@ export const appRoutes = {
   resultGuest: "/result4guest",
   authCallback: "/auth/callback",
   policy: "/policy",
+  quiz: "/quiz",
   admin: "/admin",
   adminOverview: "/admin/overview",
   adminUsers: "/admin/users",

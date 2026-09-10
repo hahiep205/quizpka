@@ -92,6 +92,16 @@ export function HcmChapterPickerModal({ open, lang, exam, subject, onClose, onSe
           />
         ))}
       </div>
+      {chapterOptions.find((chapter) => chapter.id === selected)?.solutionUrl ? (
+        <a
+          href={chapterOptions.find((chapter) => chapter.id === selected)?.solutionUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-3 flex items-center justify-center gap-1.5 rounded-[12px] border-2 border-red-100 bg-red-50 px-3 py-2.5 text-[13px] font-extrabold text-red-600 transition-colors hover:bg-red-100 dark:border-red-500/20 dark:bg-red-500/10 dark:text-red-300 dark:hover:bg-red-500/15"
+        >
+          {lang === "vi" ? "Link giải đề của thầy Ngà (YouTube)" : "Solution video by Mr. Nga (YouTube)"}
+        </a>
+      ) : null}
     </PickerModalShell>
   )
 }

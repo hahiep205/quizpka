@@ -6,18 +6,19 @@ import type { Language } from "@/shared/types/app"
 
 type Lang = Language
 
-export function PurchaseDetailDialog({ exam, lang, loading, error, onClose, onConfirm }: {
+export function PurchaseDetailDialog({ exam, lang, loading, error, onClose, onConfirm, defaultAckTerms = false }: {
   exam: ExamCatalogItem | null
   lang: Lang
   loading: boolean
   error: string | null
   onClose: () => void
   onConfirm: () => void
+  defaultAckTerms?: boolean
 }) {
   const isVietnamese = lang === "vi"
   const docSetCount = exam ? (getSubjectById(exam.subjectId)?.chapters ?? []).filter((chapter) => chapter.documentId).length : 0
-  const [ackTerms, setAckTerms] = useState(false)
-  useEffect(() => { setAckTerms(false) }, [exam?.id])
+  const [ackTerms, setAckTerms] = useState(defaultAckTerms)
+  useEffect(() => { setAckTerms(defaultAckTerms) }, [exam?.id, defaultAckTerms])
   return <Dialog
     open={Boolean(exam)}
     onClose={onClose}
