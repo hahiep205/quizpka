@@ -17,6 +17,7 @@ const examFiles: Record<string, string> = {
   "philosophy-2-credit-final-bank-1": "mln101/triet_hoc_mln_2tc.json",
   "history-party-final-bank-1": "his101/lich_su_dang.json",
   "scientific-socialism-final-bank-1": "soc101/chu_nghia_xa_hoi.json",
+  "discrete-math-quiz-bank-1": "dm101/toan_roi_rac_quiz.json",
 }
 const examProducts: Record<string, string> = {
   "data-science-ai-midterm-1": "dsai101",
@@ -37,6 +38,7 @@ const examProducts: Record<string, string> = {
   "philosophy-2-credit-final-bank-1": "mln101",
   "history-party-final-bank-1": "his101",
   "scientific-socialism-final-bank-1": "soc101",
+  "discrete-math-quiz-bank-1": "dm101",
 }
 const sqaExamId = "software-quality-assessment-final-bank-1"
 const marExamId = "marketing-final-bank-1"

@@ -97,6 +97,7 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
   const filteredExams = useMemo(() => {
     const normalized = query.trim().toLowerCase()
     const matches = examCatalog.filter((exam) => {
+      if (exam.hideFromCatalog) return false
       if (exam.subjectId === "toeic") return false
       const categoryKey = exam.category.en === "General" ? "general" : "major"
       const isPaid = getPaidProductId(exam.subjectCode) !== null

@@ -65,7 +65,7 @@ export function QuizDetailPage({ lang, slug }: { lang: Lang; slug: string }) {
 
   if (!subject) return <NotFoundPage lang={lang} />
 
-  const exams = examCatalog.filter((exam) => exam.subjectId === subject.id)
+  const exams = examCatalog.filter((exam) => exam.subjectId === subject.id && !exam.hideFromCatalog)
   const isPaidSubject = getPaidProductId(subject.code) !== null
   const primaryExam = exams[0]
   const docSetCount = (subject.chapters ?? []).filter((chapter) => chapter.documentId).length

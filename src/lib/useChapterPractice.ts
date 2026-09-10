@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { getSubjectById, type ChapterOption, type ExamCatalogItem } from "@/data/subjects"
+import { examCatalog, getSubjectById, type ChapterOption, type ExamCatalogItem, type Subject } from "@/data/subjects"
 import { hasChapterSupport } from "@/data/subjectChapters"
 import { goToPractice } from "@/lib/practiceSession"
 import { beginAttemptSession, currentAttemptSession, logActivityEvent } from "@/features/activity/lib/activityLog"
@@ -7,6 +7,28 @@ import type { QuizSetupValues } from "@/components/QuizSetupModal"
 import { useAuth } from "@/auth/AuthProvider"
 
 type Lang = "en" | "vi"
+
+/**
+ * Môn vừa có đề ảnh vừa có đề quiz (vd. DM101): khi chương được chọn thuộc
+ * loại đề khác với đề đang mở, tự chuyển sang đề cùng môn đúng loại để không
+ * bao giờ rơi vào lỗi tải đề. Đề ảnh nhận biết bằng questionCount 0.
+ */
+export function resolveExamForChapter(
+  subject: Subject | null | undefined,
+  currentExam: ExamCatalogItem,
+  chapter: ChapterOption,
+): ExamCatalogItem {
+  const wantDocs = Boolean(chapter.documentId || chapter.pdfUrl)
+  const currentIsDocs = (currentExam.questionCount ?? 0) === 0
+  if (wantDocs === currentIsDocs || !subject) return currentExam
+  const sibling = examCatalog.find(
+    (exam) =>
+      exam.subjectId === subject.id &&
+      exam.id !== currentExam.id &&
+      ((exam.questionCount ?? 0) === 0) === wantDocs,
+  )
+  return sibling ?? currentExam
+}
 
 export function useChapterPractice(lang: Lang) {
   const { status, user } = useAuth()
@@ -31,18 +53,19 @@ export function useChapterPractice(lang: Lang) {
     const subject = getSubjectById(pickerExam.subjectId)
     const option = subject?.chapters?.find((chapter) => chapter.id === chapterId)
     if (!option) return
+    const effectiveExam = resolveExamForChapter(subject, pickerExam, option)
     if (option?.pdfUrl) {
       setPdfChapter({ title: option.label, url: option.pdfUrl, noteUrl: option.noteUrl ?? null })
       setPickerExam(null)
       return
     }
-    if (option?.documentId && pickerExam) {
-      setImageDoc({ title: option.label, subjectId: pickerExam.subjectId, documentId: option.documentId })
+    if (option?.documentId) {
+      setImageDoc({ title: option.label, subjectId: effectiveExam.subjectId, documentId: option.documentId })
       setPickerExam(null)
       return
     }
     setPendingChapter(chapterId)
-    setSetupExam(pickerExam)
+    setSetupExam(effectiveExam)
     setPickerExam(null)
   }
 

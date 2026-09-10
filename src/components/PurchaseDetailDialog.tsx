@@ -16,7 +16,8 @@ export function PurchaseDetailDialog({ exam, lang, loading, error, onClose, onCo
   defaultAckTerms?: boolean
 }) {
   const isVietnamese = lang === "vi"
-  const docSetCount = exam ? (getSubjectById(exam.subjectId)?.chapters ?? []).filter((chapter) => chapter.documentId).length : 0
+  const isDocsExam = (exam?.questionCount ?? 0) === 0
+  const docSetCount = exam && isDocsExam ? (getSubjectById(exam.subjectId)?.chapters ?? []).filter((chapter) => chapter.documentId).length : 0
   const [ackTerms, setAckTerms] = useState(defaultAckTerms)
   useEffect(() => { setAckTerms(defaultAckTerms) }, [exam?.id, defaultAckTerms])
   return <Dialog

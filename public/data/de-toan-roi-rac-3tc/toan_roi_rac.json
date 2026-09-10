@@ -1,0 +1,427 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Toán rời rạc - Ôn tập Logic, Số học rời rạc và Lý thuyết đồ thị",
+  "chapter": "Ôn tập tổng hợp - Logic toán học, Số học rời rạc và Lý thuyết đồ thị",
+  "totalQuestions": 30,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Chương 1. Logic toán học và suy luận",
+      "sourceChapter": "LOGIC TOÁN HỌC VÀ SUY LUẬN",
+      "question": "Trong các phát biểu sau, phát biểu nào là một mệnh đề?",
+      "options": {
+        "A": "Hãy đóng cửa sổ!",
+        "B": "Bạn có khỏe không?",
+        "C": "Hà Nội là thủ đô của Việt Nam.",
+        "D": "x + 2 = 5."
+      },
+      "answer": "C",
+      "explainAnswer": "Mệnh đề là câu khẳng định có giá trị đúng hoặc sai xác định. Câu C có giá trị chân lý xác định; A là câu mệnh lệnh, B là câu hỏi, còn D phụ thuộc vào giá trị của x."
+    },
+    {
+      "id": 2,
+      "chapter": "Chương 1. Logic toán học và suy luận",
+      "sourceChapter": "LOGIC TOÁN HỌC VÀ SUY LUẬN",
+      "question": "Mệnh đề kéo theo P → Q sai trong trường hợp nào?",
+      "options": {
+        "A": "P đúng và Q đúng",
+        "B": "P đúng và Q sai",
+        "C": "P sai và Q đúng",
+        "D": "P sai và Q sai"
+      },
+      "answer": "B",
+      "explainAnswer": "Mệnh đề P → Q chỉ sai khi P đúng nhưng Q sai. Ba trường hợp còn lại đều cho mệnh đề kéo theo đúng."
+    },
+    {
+      "id": 3,
+      "chapter": "Chương 1. Logic toán học và suy luận",
+      "sourceChapter": "LOGIC TOÁN HỌC VÀ SUY LUẬN",
+      "question": "Mệnh đề nào sau đây tương đương logic với P → Q?",
+      "options": {
+        "A": "P ∨ Q",
+        "B": "¬P ∨ Q",
+        "C": "P ∧ ¬Q",
+        "D": "¬P ∧ Q"
+      },
+      "answer": "B",
+      "explainAnswer": "Mệnh đề kéo theo P → Q tương đương logic với ¬P ∨ Q."
+    },
+    {
+      "id": 4,
+      "chapter": "Chương 1. Logic toán học và suy luận",
+      "sourceChapter": "LOGIC TOÁN HỌC VÀ SUY LUẬN",
+      "question": "Mệnh đề nào sau đây là một hằng đúng?",
+      "options": {
+        "A": "P ∧ ¬P",
+        "B": "P ∨ ¬P",
+        "C": "P ∧ Q",
+        "D": "P → ¬P"
+      },
+      "answer": "B",
+      "explainAnswer": "P ∨ ¬P luôn đúng bất kể P đúng hay sai, nên là hằng đúng. Ngược lại, P ∧ ¬P luôn sai."
+    },
+    {
+      "id": 5,
+      "chapter": "Chương 1. Logic toán học và suy luận",
+      "sourceChapter": "LOGIC TOÁN HỌC VÀ SUY LUẬN",
+      "question": "Phủ định của mệnh đề P ∨ Q là gì?",
+      "options": {
+        "A": "¬P ∨ ¬Q",
+        "B": "¬P ∧ ¬Q",
+        "C": "P ∧ Q",
+        "D": "P ∨ ¬Q"
+      },
+      "answer": "B",
+      "explainAnswer": "Theo định luật De Morgan, ¬(P ∨ Q) tương đương với ¬P ∧ ¬Q."
+    },
+    {
+      "id": 6,
+      "chapter": "Chương 1. Logic toán học và suy luận",
+      "sourceChapter": "LOGIC TOÁN HỌC VÀ SUY LUẬN",
+      "question": "Phủ định của mệnh đề ∀x ∈ R, P(x) là gì?",
+      "options": {
+        "A": "∀x ∈ R, ¬P(x)",
+        "B": "∃x ∈ R, P(x)",
+        "C": "∃x ∈ R, ¬P(x)",
+        "D": "∀x ∈ R, P(x)"
+      },
+      "answer": "C",
+      "explainAnswer": "Phủ định của lượng từ ∀ là ∃ và đồng thời phủ định vị từ. Vì vậy ¬(∀x P(x)) tương đương với ∃x ¬P(x)."
+    },
+    {
+      "id": 7,
+      "chapter": "Chương 1. Logic toán học và suy luận",
+      "sourceChapter": "LOGIC TOÁN HỌC VÀ SUY LUẬN",
+      "question": "Cho P: 'Trời mưa' và Q: 'Đường ướt'. Suy luận nào sau đây là Modus Ponens?",
+      "options": {
+        "A": "P → Q, P, do đó Q",
+        "B": "P → Q, ¬Q, do đó ¬P",
+        "C": "P → Q, Q, do đó P",
+        "D": "P → Q, ¬P, do đó ¬Q"
+      },
+      "answer": "A",
+      "explainAnswer": "Modus Ponens có dạng P → Q, P, suy ra Q."
+    },
+    {
+      "id": 8,
+      "chapter": "Chương 1. Logic toán học và suy luận",
+      "sourceChapter": "LOGIC TOÁN HỌC VÀ SUY LUẬN",
+      "question": "Cho P → Q và ¬Q. Kết luận hợp lệ là gì?",
+      "options": {
+        "A": "P",
+        "B": "Q",
+        "C": "¬P",
+        "D": "¬Q"
+      },
+      "answer": "C",
+      "explainAnswer": "Đây là quy tắc Modus Tollens: từ P → Q và ¬Q suy ra ¬P."
+    },
+    {
+      "id": 9,
+      "chapter": "Chương 1. Logic toán học và suy luận",
+      "sourceChapter": "LOGIC TOÁN HỌC VÀ SUY LUẬN",
+      "question": "Mệnh đề nào sau đây là phản đảo của P → Q?",
+      "options": {
+        "A": "Q → P",
+        "B": "¬P → ¬Q",
+        "C": "¬Q → ¬P",
+        "D": "P → ¬Q"
+      },
+      "answer": "C",
+      "explainAnswer": "Phản đảo của P → Q là ¬Q → ¬P và luôn tương đương logic với mệnh đề ban đầu. Q → P là mệnh đề đảo."
+    },
+    {
+      "id": 10,
+      "chapter": "Chương 1. Logic toán học và suy luận",
+      "sourceChapter": "LOGIC TOÁN HỌC VÀ SUY LUẬN",
+      "question": "Cho P(x): 'x > 2'. Mệnh đề ∃x ∈ R, P(x) có ý nghĩa nào sau đây?",
+      "options": {
+        "A": "Mọi số thực đều lớn hơn 2",
+        "B": "Có ít nhất một số thực lớn hơn 2",
+        "C": "Không có số thực nào lớn hơn 2",
+        "D": "Chỉ có một số thực lớn hơn 2"
+      },
+      "answer": "B",
+      "explainAnswer": "Lượng từ tồn tại ∃ nghĩa là tồn tại ít nhất một phần tử thỏa mãn vị từ."
+    },
+    {
+      "id": 11,
+      "chapter": "Chương 2. Số học rời rạc, đồng dư và hệ cơ số",
+      "sourceChapter": "SỐ HỌC RỜI RẠC, ĐỒNG DƯ VÀ HỆ CƠ SỐ",
+      "question": "Giá trị của (17 + 25) mod 7 là bao nhiêu?",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "5",
+        "D": "6"
+      },
+      "answer": "A",
+      "explainAnswer": "17 + 25 = 42 và 42 chia hết cho 7 nên phần dư bằng 0."
+    },
+    {
+      "id": 12,
+      "chapter": "Chương 2. Số học rời rạc, đồng dư và hệ cơ số",
+      "sourceChapter": "SỐ HỌC RỜI RẠC, ĐỒNG DƯ VÀ HỆ CƠ SỐ",
+      "question": "Ước chung lớn nhất của 84 và 30 là bao nhiêu?",
+      "options": {
+        "A": "3",
+        "B": "6",
+        "C": "12",
+        "D": "14"
+      },
+      "answer": "B",
+      "explainAnswer": "Theo thuật toán Euclid: 84 = 2×30 + 24; 30 = 24 + 6; 24 = 4×6. Vì vậy gcd(84,30) = 6."
+    },
+    {
+      "id": 13,
+      "chapter": "Chương 2. Số học rời rạc, đồng dư và hệ cơ số",
+      "sourceChapter": "SỐ HỌC RỜI RẠC, ĐỒNG DƯ VÀ HỆ CƠ SỐ",
+      "question": "Bội chung nhỏ nhất của 12 và 18 là bao nhiêu?",
+      "options": {
+        "A": "24",
+        "B": "30",
+        "C": "36",
+        "D": "72"
+      },
+      "answer": "C",
+      "explainAnswer": "12 = 2²×3 và 18 = 2×3², nên BCNN = 2²×3² = 36."
+    },
+    {
+      "id": 14,
+      "chapter": "Chương 2. Số học rời rạc, đồng dư và hệ cơ số",
+      "sourceChapter": "SỐ HỌC RỜI RẠC, ĐỒNG DƯ VÀ HỆ CƠ SỐ",
+      "question": "Khẳng định nào sau đây đúng?",
+      "options": {
+        "A": "38 ≡ 4 (mod 6)",
+        "B": "38 ≡ 2 (mod 6)",
+        "C": "38 ≡ 0 (mod 6)",
+        "D": "38 ≡ 5 (mod 6)"
+      },
+      "answer": "B",
+      "explainAnswer": "38 chia 6 được thương 6 và dư 2, nên 38 ≡ 2 (mod 6)."
+    },
+    {
+      "id": 15,
+      "chapter": "Chương 2. Số học rời rạc, đồng dư và hệ cơ số",
+      "sourceChapter": "SỐ HỌC RỜI RẠC, ĐỒNG DƯ VÀ HỆ CƠ SỐ",
+      "question": "Nghịch đảo modulo của 3 theo modulo 7 là số nào?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "5",
+        "D": "6"
+      },
+      "answer": "C",
+      "explainAnswer": "Cần tìm x sao cho 3x ≡ 1 (mod 7). Với x = 5, ta có 15 ≡ 1 (mod 7)."
+    },
+    {
+      "id": 16,
+      "chapter": "Chương 2. Số học rời rạc, đồng dư và hệ cơ số",
+      "sourceChapter": "SỐ HỌC RỜI RẠC, ĐỒNG DƯ VÀ HỆ CƠ SỐ",
+      "question": "Giá trị thập phân của số nhị phân (101101)₂ là bao nhiêu?",
+      "options": {
+        "A": "43",
+        "B": "45",
+        "C": "51",
+        "D": "53"
+      },
+      "answer": "B",
+      "explainAnswer": "(101101)₂ = 1×2⁵ + 1×2³ + 1×2² + 1 = 32 + 8 + 4 + 1 = 45."
+    },
+    {
+      "id": 17,
+      "chapter": "Chương 2. Số học rời rạc, đồng dư và hệ cơ số",
+      "sourceChapter": "SỐ HỌC RỜI RẠC, ĐỒNG DƯ VÀ HỆ CƠ SỐ",
+      "question": "Biểu diễn số thập phân 45 trong hệ nhị phân là gì?",
+      "options": {
+        "A": "101011",
+        "B": "101101",
+        "C": "110101",
+        "D": "111001"
+      },
+      "answer": "B",
+      "explainAnswer": "45 = 32 + 8 + 4 + 1 = 2⁵ + 2³ + 2² + 2⁰ nên biểu diễn nhị phân là 101101."
+    },
+    {
+      "id": 18,
+      "chapter": "Chương 2. Số học rời rạc, đồng dư và hệ cơ số",
+      "sourceChapter": "SỐ HỌC RỜI RẠC, ĐỒNG DƯ VÀ HỆ CƠ SỐ",
+      "question": "Số nào sau đây là số nguyên tố?",
+      "options": {
+        "A": "51",
+        "B": "57",
+        "C": "61",
+        "D": "69"
+      },
+      "answer": "C",
+      "explainAnswer": "61 chỉ có hai ước dương là 1 và 61 nên là số nguyên tố. 51, 57 và 69 đều chia hết cho 3."
+    },
+    {
+      "id": 19,
+      "chapter": "Chương 2. Số học rời rạc, đồng dư và hệ cơ số",
+      "sourceChapter": "SỐ HỌC RỜI RẠC, ĐỒNG DƯ VÀ HỆ CƠ SỐ",
+      "question": "Phân tích số 60 thành thừa số nguyên tố nào sau đây đúng?",
+      "options": {
+        "A": "2 × 3 × 10",
+        "B": "2² × 3 × 5",
+        "C": "2 × 3² × 5",
+        "D": "2³ × 3 × 5"
+      },
+      "answer": "B",
+      "explainAnswer": "60 = 2² × 3 × 5 là phân tích đúng thành các thừa số nguyên tố."
+    },
+    {
+      "id": 20,
+      "chapter": "Chương 2. Số học rời rạc, đồng dư và hệ cơ số",
+      "sourceChapter": "SỐ HỌC RỜI RẠC, ĐỒNG DƯ VÀ HỆ CƠ SỐ",
+      "question": "Theo thuật toán Euclid, gcd(252, 198) bằng bao nhiêu?",
+      "options": {
+        "A": "6",
+        "B": "9",
+        "C": "18",
+        "D": "36"
+      },
+      "answer": "C",
+      "explainAnswer": "252 = 198 + 54; 198 = 3×54 + 36; 54 = 36 + 18; 36 = 2×18. Do đó gcd(252,198) = 18."
+    },
+    {
+      "id": 21,
+      "chapter": "Chương 3. Lý thuyết đồ thị",
+      "sourceChapter": "LÝ THUYẾT ĐỒ THỊ",
+      "question": "Đồ thị đầy đủ K₆ có bao nhiêu cạnh?",
+      "options": {
+        "A": "6",
+        "B": "10",
+        "C": "15",
+        "D": "30"
+      },
+      "answer": "C",
+      "explainAnswer": "Đồ thị đầy đủ Kₙ có n(n−1)/2 cạnh. Với n = 6, số cạnh là 6×5/2 = 15."
+    },
+    {
+      "id": 22,
+      "chapter": "Chương 3. Lý thuyết đồ thị",
+      "sourceChapter": "LÝ THUYẾT ĐỒ THỊ",
+      "question": "Một đồ thị đơn có bốn đỉnh với các bậc lần lượt là 3, 3, 2, 2. Đồ thị có bao nhiêu cạnh?",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "10"
+      },
+      "answer": "B",
+      "explainAnswer": "Tổng bậc các đỉnh là 10. Theo định lý bắt tay, tổng bậc bằng hai lần số cạnh nên số cạnh là 10/2 = 5."
+    },
+    {
+      "id": 23,
+      "chapter": "Chương 3. Lý thuyết đồ thị",
+      "sourceChapter": "LÝ THUYẾT ĐỒ THỊ",
+      "question": "Trong một đồ thị đơn có n đỉnh, bậc lớn nhất của một đỉnh có thể bằng bao nhiêu?",
+      "options": {
+        "A": "n",
+        "B": "n − 1",
+        "C": "n + 1",
+        "D": "2n"
+      },
+      "answer": "B",
+      "explainAnswer": "Trong đồ thị đơn không có khuyên, một đỉnh chỉ có thể nối với n−1 đỉnh còn lại nên bậc tối đa là n−1."
+    },
+    {
+      "id": 24,
+      "chapter": "Chương 3. Lý thuyết đồ thị",
+      "sourceChapter": "LÝ THUYẾT ĐỒ THỊ",
+      "question": "Đồ thị hai phía đầy đủ K₂,₃ có bao nhiêu cạnh?",
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "8",
+        "D": "10"
+      },
+      "answer": "B",
+      "explainAnswer": "Đồ thị hai phía đầy đủ Kₘ,ₙ có m×n cạnh. Với K₂,₃, số cạnh là 2×3 = 6."
+    },
+    {
+      "id": 25,
+      "chapter": "Chương 3. Lý thuyết đồ thị",
+      "sourceChapter": "LÝ THUYẾT ĐỒ THỊ",
+      "question": "Phát biểu nào sau đây mô tả đúng một chu trình trong đồ thị?",
+      "options": {
+        "A": "Một dãy đỉnh không cần có cạnh nối giữa các đỉnh liên tiếp",
+        "B": "Một đường đi bắt đầu và kết thúc tại cùng một đỉnh, không lặp lại đỉnh trung gian",
+        "C": "Một đồ thị có đúng một cạnh",
+        "D": "Một đồ thị không có đỉnh"
+      },
+      "answer": "B",
+      "explainAnswer": "Chu trình là một đường đi khép kín bắt đầu và kết thúc tại cùng một đỉnh; trong chu trình đơn, các đỉnh trung gian không lặp lại."
+    },
+    {
+      "id": 26,
+      "chapter": "Chương 3. Lý thuyết đồ thị",
+      "sourceChapter": "LÝ THUYẾT ĐỒ THỊ",
+      "question": "Đồ thị vô hướng được gọi là liên thông khi nào?",
+      "options": {
+        "A": "Mọi đỉnh đều có cùng bậc",
+        "B": "Mọi cặp đỉnh phân biệt đều có một đường đi nối chúng",
+        "C": "Đồ thị có ít nhất một chu trình",
+        "D": "Đồ thị có số cạnh bằng số đỉnh"
+      },
+      "answer": "B",
+      "explainAnswer": "Đồ thị vô hướng liên thông nếu giữa mọi cặp đỉnh đều tồn tại ít nhất một đường đi nối hai đỉnh."
+    },
+    {
+      "id": 27,
+      "chapter": "Chương 3. Lý thuyết đồ thị",
+      "sourceChapter": "LÝ THUYẾT ĐỒ THỊ",
+      "question": "Điều kiện cần và đủ để một đồ thị vô hướng liên thông có chu trình Euler là gì?",
+      "options": {
+        "A": "Mọi đỉnh đều có bậc lẻ",
+        "B": "Có đúng hai đỉnh bậc lẻ",
+        "C": "Mọi đỉnh đều có bậc chẵn",
+        "D": "Có ít nhất một đỉnh bậc chẵn"
+      },
+      "answer": "C",
+      "explainAnswer": "Một đồ thị vô hướng liên thông có chu trình Euler khi và chỉ khi mọi đỉnh của đồ thị đều có bậc chẵn."
+    },
+    {
+      "id": 28,
+      "chapter": "Chương 3. Lý thuyết đồ thị",
+      "sourceChapter": "LÝ THUYẾT ĐỒ THỊ",
+      "question": "Một đồ thị vô hướng liên thông có đúng hai đỉnh bậc lẻ. Kết luận nào sau đây đúng?",
+      "options": {
+        "A": "Đồ thị có chu trình Euler",
+        "B": "Đồ thị có đường đi Euler nhưng không có chu trình Euler",
+        "C": "Đồ thị không có đường đi Euler",
+        "D": "Đồ thị chắc chắn là đồ thị đầy đủ"
+      },
+      "answer": "B",
+      "explainAnswer": "Đồ thị vô hướng liên thông có đúng hai đỉnh bậc lẻ có đường đi Euler bắt đầu tại một đỉnh lẻ và kết thúc tại đỉnh lẻ còn lại, nhưng không có chu trình Euler."
+    },
+    {
+      "id": 29,
+      "chapter": "Chương 3. Lý thuyết đồ thị",
+      "sourceChapter": "LÝ THUYẾT ĐỒ THỊ",
+      "question": "Đồ thị chu trình C₅ có chu trình Hamilton hay không?",
+      "options": {
+        "A": "Có",
+        "B": "Không",
+        "C": "Chỉ có nếu thêm một cạnh",
+        "D": "Chỉ có nếu bỏ một đỉnh"
+      },
+      "answer": "A",
+      "explainAnswer": "C₅ chính là một chu trình đi qua cả 5 đỉnh đúng một lần trước khi quay về đỉnh xuất phát, nên có chu trình Hamilton."
+    },
+    {
+      "id": 30,
+      "chapter": "Chương 3. Lý thuyết đồ thị",
+      "sourceChapter": "LÝ THUYẾT ĐỒ THỊ",
+      "question": "Một cây có 12 đỉnh thì có bao nhiêu cạnh?",
+      "options": {
+        "A": "10",
+        "B": "11",
+        "C": "12",
+        "D": "24"
+      },
+      "answer": "B",
+      "explainAnswer": "Mọi cây có n đỉnh đều có đúng n−1 cạnh. Với 12 đỉnh, cây có 11 cạnh."
+    }
+  ]
+}

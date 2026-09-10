@@ -53,6 +53,8 @@ export type ExamPaper = {
   durationMinutes: number
   title: LocalizedText
   description: LocalizedText
+  /** When true, hide this exam from catalog listings (it stays reachable by id, e.g. merged into a sibling exam's picker). */
+  hideFromCatalog?: boolean
   /** Optional path to a local question-bank JSON file under /data */
   questionBank?: string
   /** Optional collection of question banks, combined into one grouped exam. */
@@ -879,12 +881,21 @@ export const subjects: Subject[] = [
     exams: [
       {
         id: "discrete-math-final-docs-1", type: "final", year: 2025, questionCount: 0, durationMinutes: 0,
-        title: { en: "Discrete Mathematics - Final", vi: "Đề Toán rời rạc - Cuối kỳ" },
+        title: { en: "Discrete Mathematics - Final", vi: "Đề Toán rời rạc và Quiz ôn tập - Cuối kỳ" },
         description: { en: "View scanned exam papers and download each image.", vi: "Xem ảnh đề thi trực tiếp và tải từng hình ảnh." },
+      },
+      {
+        id: "discrete-math-quiz-bank-1", type: "final", year: 2026, questionCount: 30, durationMinutes: 60, hideFromCatalog: true,
+        title: { en: "Discrete Mathematics Quiz", vi: "Quiz ôn tập - Cuối kỳ" },
+        description: { en: "Multiple-choice practice by chapter.", vi: "Ôn luyện trắc nghiệm theo từng chương." },
       },
     ],
     chapters: [
-      { id: "de1", label: { en: "Discrete Mathematics - Set 1", vi: "Toán rời rạc - Đề 1" }, documentId: "dm-de-1", solutionUrl: "https://www.youtube.com/watch?v=4qMwuFaWT7U", count: 3 },
+      { id: "de1", label: { en: "Discrete Mathematics - Set 1", vi: "Đề Toán rời rạc - Cuối kỳ" }, documentId: "dm-de-1", solutionUrl: "https://www.youtube.com/watch?v=4qMwuFaWT7U", count: 3 },
+      { id: "all", label: { en: "All chapters", vi: "Quiz ôn tập phần trắc nghiệm" }, count: 30 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Chương 1. Logic toán học và suy luận"], hidden: true, count: 10 },
+      { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, matches: ["Chương 2. Số học rời rạc, đồng dư và hệ cơ số"], hidden: true, count: 10 },
+      { id: "c3", label: { en: "Chapter 3", vi: "Chương 3" }, matches: ["Chương 3. Lý thuyết đồ thị"], hidden: true, count: 10 },
     ],
   },
   {

@@ -59,7 +59,7 @@ import { useNotifications } from "@/features/notifications/useNotifications"
 
 type Lang = Language
 type DashboardView = "home" | "leaderboard" | "history" | "purchased" | "notifications" | "settings"
-const paidExams = examCatalog.filter((exam) => getPaidProductId(exam.subjectCode) !== null)
+const paidExams = examCatalog.filter((exam) => !exam.hideFromCatalog && getPaidProductId(exam.subjectCode) !== null)
 
 type DashboardPageProps = {
   lang: Lang
@@ -239,6 +239,7 @@ export function DashboardPage({
   const filteredExams = useMemo(() => {
     const normalized = query.trim().toLocaleLowerCase(lang)
     return examCatalog.filter((exam) => {
+      if (exam.hideFromCatalog) return false
       const isToeic = exam.subjectId === "toeic"
       if (filter === "toeic") {
         if (!isToeic) return false

@@ -1,5 +1,5 @@
 import { useEffect, useId, useRef, useState } from "react"
-import { BookOpen, FileImage, FileText } from "lucide-react"
+import { BookOpen, CirclePlay, ExternalLink, FileImage, FileText } from "lucide-react"
 import { useAuth } from "@/auth/AuthProvider"
 import { logActivityEvent } from "@/features/activity/lib/activityLog"
 import { getChapterOptionsForSubject } from "@/data/subjectChapters"
@@ -82,26 +82,39 @@ export function HcmChapterPickerModal({ open, lang, exam, subject, onClose, onSe
     >
       <div className="grid gap-3">
         {chapterOptions.map((chapter) => (
-          <PickerOptionButton
-            key={chapter.id}
-            active={selected === chapter.id}
-            icon={chapter.documentId ? <FileImage className="h-5 w-5" /> : chapter.pdfUrl ? <FileText className="h-5 w-5" /> : <BookOpen className="h-5 w-5" />}
-            title={chapter.label[lang]}
-            subtitle={chapter.documentId ? `${chapter.count} ${t.images}` : chapter.pdfUrl ? (/\.pdf($|[?#])/i.test(chapter.pdfUrl) ? t.pdf : t.file) : `${chapter.count} ${t.questions}`}
-            onClick={() => setSelected(chapter.id)}
-          />
+          <div key={chapter.id}>
+            <PickerOptionButton
+              active={selected === chapter.id}
+              icon={chapter.documentId ? <FileImage className="h-5 w-5" /> : chapter.pdfUrl ? <FileText className="h-5 w-5" /> : <BookOpen className="h-5 w-5" />}
+              title={chapter.label[lang]}
+              subtitle={chapter.documentId ? `${chapter.count} ${t.images}` : chapter.pdfUrl ? (/\.pdf($|[?#])/i.test(chapter.pdfUrl) ? t.pdf : t.file) : `${chapter.count} ${t.questions}`}
+              onClick={() => setSelected(chapter.id)}
+            />
+            {chapter.solutionUrl ? (
+              <a
+                href={chapter.solutionUrl}
+                target="_blank"
+                rel="noreferrer"
+                onClick={(event) => event.stopPropagation()}
+                className="mt-2 flex min-h-[95px] w-full items-center gap-4 rounded-[12px] border-2 border-red-300 bg-red-50 px-4 py-4 text-left transition-colors hover:bg-red-100 sm:min-h-0 dark:border-red-500/40 dark:bg-red-500/10 dark:hover:bg-red-500/15"
+              >
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[12px] bg-red-500 text-white">
+                  <CirclePlay className="h-5 w-5" strokeWidth={2} />
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className="block line-clamp-2 text-[15px] font-extrabold leading-5 text-red-600 dark:text-red-300">
+                    {lang === "vi" ? "Link giải đề của thầy Ngà" : "Solution video by Mr. Nga"}
+                  </span>
+                  <span className="mt-1 block text-[13px] font-semibold leading-4 text-red-400 dark:text-red-400/80">
+                    {lang === "vi" ? "YouTube · mở trong tab mới" : "YouTube · opens in a new tab"}
+                  </span>
+                </span>
+                <ExternalLink className="h-4 w-4 shrink-0 text-red-400 dark:text-red-400/70" strokeWidth={2} />
+              </a>
+            ) : null}
+          </div>
         ))}
       </div>
-      {chapterOptions.find((chapter) => chapter.id === selected)?.solutionUrl ? (
-        <a
-          href={chapterOptions.find((chapter) => chapter.id === selected)?.solutionUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="mt-3 flex items-center justify-center gap-1.5 rounded-[12px] border-2 border-red-100 bg-red-50 px-3 py-2.5 text-[13px] font-extrabold text-red-600 transition-colors hover:bg-red-100 dark:border-red-500/20 dark:bg-red-500/10 dark:text-red-300 dark:hover:bg-red-500/15"
-        >
-          {lang === "vi" ? "Link giải đề của thầy Ngà (YouTube)" : "Solution video by Mr. Nga (YouTube)"}
-        </a>
-      ) : null}
     </PickerModalShell>
   )
 }
