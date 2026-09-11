@@ -487,14 +487,14 @@ export const subjects: Subject[] = [
     category: { en: "Major", vi: "Chuyên ngành" },
     exams: [
       {
-        id: "research-methodology-final-bank-1", type: "final", year: 2026, questionCount: 120, durationMinutes: 240,
+        id: "research-methodology-final-bank-1", type: "final", year: 2026, questionCount: 196, durationMinutes: 240,
         title: { en: "Scientific Research Methodology", vi: "Quiz ôn tập Cuối kỳ - Phương pháp nghiên cứu khoa học" },
         description: { en: "A question bank of 120 questions, covering both midterm and final content.", vi: "Bộ tài liệu gồm 120 câu hỏi, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],
     chapters: [
-      { id: "all", label: { en: "Research Methodology - Final", vi: "Phương pháp nghiên cứu khoa học - Cuối kỳ" }, count: 120 },
-      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Phương pháp nghiên cứu khoa học"], hidden: true, count: 120 },
+      { id: "all", label: { en: "Research Methodology - Final", vi: "Phương pháp nghiên cứu khoa học - Cuối kỳ" }, count: 196 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Phương pháp nghiên cứu khoa học"], hidden: true, count: 196 },
     ],
   },
   {

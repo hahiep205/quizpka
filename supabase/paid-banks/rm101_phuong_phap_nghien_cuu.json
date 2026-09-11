@@ -1,7 +1,7 @@
 {
-  "title": "Bộ câu hỏi trắc nghiệm Phương pháp nghiên cứu khoa học",
+  "title": "Bộ câu hỏi trắc nghiệm Phương pháp nghiên cứu khoa học trong kinh tế",
   "chapter": "Phương pháp nghiên cứu khoa học",
-  "totalQuestions": 120,
+  "totalQuestions": 196,
   "questions": [
     {
       "id": 1,
@@ -15,7 +15,8 @@
         "D": "Con người, tư duy, tự nhiên"
       },
       "answer": "A",
-      "explainAnswer": "Khoa học là hệ thống tri thức về tư duy, tự nhiên và xã hội."
+      "explainAnswer": "Khoa học là hệ thống tri thức về tư duy, tự nhiên và xã hội.",
+      "image": null
     },
     {
       "id": 2,
@@ -29,7 +30,8 @@
         "D": "Không là tri thức"
       },
       "answer": "A",
-      "explainAnswer": "Đây là tri thức thông thường (kinh nghiệm nghề nghiệp)."
+      "explainAnswer": "Đây là tri thức thông thường (kinh nghiệm nghề nghiệp).",
+      "image": null
     },
     {
       "id": 3,
@@ -43,7 +45,8 @@
         "D": "Không là tri thức"
       },
       "answer": "A",
-      "explainAnswer": "Kinh nghiệm thuộc tri thức thông thường."
+      "explainAnswer": "Kinh nghiệm thuộc tri thức thông thường.",
+      "image": null
     },
     {
       "id": 4,
@@ -57,7 +60,8 @@
         "D": "7"
       },
       "answer": "A",
-      "explainAnswer": "UNESCO phân loại khoa học thành 5 lĩnh vực."
+      "explainAnswer": "UNESCO phân loại khoa học thành 5 lĩnh vực.",
+      "image": null
     },
     {
       "id": 5,
@@ -71,7 +75,8 @@
         "D": "một quá trình tích luỹ kiến thức của nhân loại."
       },
       "answer": "A",
-      "explainAnswer": "Theo quan điểm tích luỹ tri thức, khoa học là hệ thống tri thức về thế giới khách quan."
+      "explainAnswer": "Theo quan điểm tích luỹ tri thức, khoa học là hệ thống tri thức về thế giới khách quan.",
+      "image": null
     },
     {
       "id": 6,
@@ -85,7 +90,8 @@
         "D": "Khoa học về tự nhiên và khoa học chính xác."
       },
       "answer": "A",
-      "explainAnswer": "Khoa học về giáo dục không nằm trong phân loại chính của UNESCO theo nội dung đề."
+      "explainAnswer": "Khoa học về giáo dục không nằm trong phân loại chính của UNESCO theo nội dung đề.",
+      "image": null
     },
     {
       "id": 7,
@@ -99,7 +105,8 @@
         "D": "chia nhóm các ngành có đối tượng nghiên cứu tương đồng nhau."
       },
       "answer": "A",
-      "explainAnswer": "Bản chất là sắp xếp theo hệ thống thứ bậc dựa trên đặc trưng riêng."
+      "explainAnswer": "Bản chất là sắp xếp theo hệ thống thứ bậc dựa trên đặc trưng riêng.",
+      "image": null
     },
     {
       "id": 8,
@@ -113,7 +120,8 @@
         "D": "nhận thức, suy luận, phán đoán."
       },
       "answer": "A",
-      "explainAnswer": "Ba hình thức cơ bản của tư duy: khái niệm – phán đoán – suy luận."
+      "explainAnswer": "Ba hình thức cơ bản của tư duy: khái niệm – phán đoán – suy luận.",
+      "image": null
     },
     {
       "id": 9,
@@ -127,7 +135,8 @@
         "D": "9"
       },
       "answer": "A",
-      "explainAnswer": "Theo tài liệu, khoa học trải qua 6 giai đoạn phát triển."
+      "explainAnswer": "Theo tài liệu, khoa học trải qua 6 giai đoạn phát triển.",
+      "image": null
     },
     {
       "id": 10,
@@ -141,7 +150,8 @@
         "D": "N. Copernicus"
       },
       "answer": "A",
-      "explainAnswer": "Aristotle được xem là người đặt nền móng đầu tiên cho khoa học."
+      "explainAnswer": "Aristotle được xem là người đặt nền móng đầu tiên cho khoa học.",
+      "image": null
     },
     {
       "id": 11,
@@ -155,7 +165,8 @@
         "D": "Thời cổ đại."
       },
       "answer": "D",
-      "explainAnswer": "Thuyết Địa tâm của Ptoleme thuộc thời cổ đại."
+      "explainAnswer": "Thuyết Địa tâm của Ptoleme thuộc thời cổ đại.",
+      "image": null
     },
     {
       "id": 12,
@@ -169,7 +180,8 @@
         "D": "Quy luật ứng dụng nhanh các thành tựu khoa học."
       },
       "answer": "A",
-      "explainAnswer": "Sự phân hóa thành hàng nghìn bộ môn thể hiện quy luật phát triển phân hóa."
+      "explainAnswer": "Sự phân hóa thành hàng nghìn bộ môn thể hiện quy luật phát triển phân hóa.",
+      "image": null
     },
     {
       "id": 13,
@@ -183,7 +195,8 @@
         "D": "Quy luật tích hợp các lĩnh vực khoa học."
       },
       "answer": "A",
-      "explainAnswer": "Việc cải tiến liên tục sản phẩm thể hiện quy luật ứng dụng nhanh thành tựu khoa học."
+      "explainAnswer": "Việc cải tiến liên tục sản phẩm thể hiện quy luật ứng dụng nhanh thành tựu khoa học.",
+      "image": null
     },
     {
       "id": 14,
@@ -197,7 +210,8 @@
         "D": "Quy luật ứng dụng nhanh các thành tựu khoa học."
       },
       "answer": "A",
-      "explainAnswer": "Tốc độ lỗi thời kiến thức nhanh thể hiện quy luật phát triển có gia tốc."
+      "explainAnswer": "Tốc độ lỗi thời kiến thức nhanh thể hiện quy luật phát triển có gia tốc.",
+      "image": null
     },
     {
       "id": 15,
@@ -211,7 +225,8 @@
         "D": "Quy luật ứng dụng nhanh các thành tựu khoa học."
       },
       "answer": "B",
-      "explainAnswer": "Sự tách ra thành các bộ môn độc lập là quy luật phát triển phân hóa."
+      "explainAnswer": "Sự tách ra thành các bộ môn độc lập là quy luật phát triển phân hóa.",
+      "image": null
     },
     {
       "id": 16,
@@ -225,7 +240,8 @@
         "D": "Mô tả chưa giải thích được nguyên nhân phát sinh hiện tượng."
       },
       "answer": "A",
-      "explainAnswer": "Mô tả chưa đi đến bản chất và quy luật bên trong."
+      "explainAnswer": "Mô tả chưa đi đến bản chất và quy luật bên trong.",
+      "image": null
     },
     {
       "id": 17,
@@ -239,7 +255,8 @@
         "D": "Giá trị tinh thần."
       },
       "answer": "A",
-      "explainAnswer": "Sản phẩm của nghiên cứu khoa học luôn là thông tin (tri thức mới)."
+      "explainAnswer": "Sản phẩm của nghiên cứu khoa học luôn là thông tin (tri thức mới).",
+      "image": null
     },
     {
       "id": 18,
@@ -253,7 +270,8 @@
         "D": "Mức độ nhận thức."
       },
       "answer": "C",
-      "explainAnswer": "Chỉ ra nguyên nhân → mức độ giải thích."
+      "explainAnswer": "Chỉ ra nguyên nhân → mức độ giải thích.",
+      "image": null
     },
     {
       "id": 19,
@@ -267,7 +285,8 @@
         "D": "Khoa học cơ bản, khoa học ứng dụng và khoa học xã hội"
       },
       "answer": "A",
-      "explainAnswer": "Vật lý thuộc khoa học tự nhiên, vừa cơ bản vừa có ứng dụng."
+      "explainAnswer": "Vật lý thuộc khoa học tự nhiên, vừa cơ bản vừa có ứng dụng.",
+      "image": null
     },
     {
       "id": 20,
@@ -281,7 +300,8 @@
         "D": "Nghiên cứu dự báo"
       },
       "answer": "A",
-      "explainAnswer": "Định luật vạn vật hấp dẫn là nghiên cứu cơ bản (tìm quy luật)."
+      "explainAnswer": "Định luật vạn vật hấp dẫn là nghiên cứu cơ bản (tìm quy luật).",
+      "image": null
     },
     {
       "id": 21,
@@ -295,7 +315,8 @@
         "D": "Mức độ nghiên cứu và giá trị tri thức."
       },
       "answer": "A",
-      "explainAnswer": "Phân loại dựa trên mục tiêu và sản phẩm."
+      "explainAnswer": "Phân loại dựa trên mục tiêu và sản phẩm.",
+      "image": null
     },
     {
       "id": 22,
@@ -309,7 +330,8 @@
         "D": "nguyên tắc bao hàm."
       },
       "answer": "A",
-      "explainAnswer": "Đây là nguyên tắc phối thuộc."
+      "explainAnswer": "Đây là nguyên tắc phối thuộc.",
+      "image": null
     },
     {
       "id": 23,
@@ -323,7 +345,8 @@
         "D": "Thế kỉ XX - XXI"
       },
       "answer": "A",
-      "explainAnswer": "Họ thuộc thời kỳ Phục hưng (XV-XVII)."
+      "explainAnswer": "Họ thuộc thời kỳ Phục hưng (XV-XVII).",
+      "image": null
     },
     {
       "id": 24,
@@ -337,7 +360,8 @@
         "D": "Thế kỉ XX - XXI"
       },
       "answer": "B",
-      "explainAnswer": "Thế kỷ XVIII-XIX gắn với cách mạng công nghiệp."
+      "explainAnswer": "Thế kỷ XVIII-XIX gắn với cách mạng công nghiệp.",
+      "image": null
     },
     {
       "id": 25,
@@ -351,7 +375,8 @@
         "D": "Chuyển giao công nghệ là chuyển giao thiết bị kỹ thuật, kiến thức về quy trình sản xuất, kinh nghiệm tổ chức quản lý và hoạt động tư vấn trong lĩnh vực sản xuất."
       },
       "answer": "C",
-      "explainAnswer": "Chuyển giao công nghệ không chỉ là chuyển giao quyền sở hữu trí tuệ."
+      "explainAnswer": "Chuyển giao công nghệ không chỉ là chuyển giao quyền sở hữu trí tuệ.",
+      "image": null
     },
     {
       "id": 26,
@@ -365,7 +390,8 @@
         "D": "Sản phẩm nghiên cứu khoa học mang đặc trưng thông tin, sản phẩm công nghệ có đặc trưng tùy theo đầu vào."
       },
       "answer": "A",
-      "explainAnswer": "Sản phẩm khoa học không được định hình trước như vậy."
+      "explainAnswer": "Sản phẩm khoa học không được định hình trước như vậy.",
+      "image": null
     },
     {
       "id": 27,
@@ -379,7 +405,8 @@
         "D": "Xây dựng các cơ sở lý thuyết khoa học mới, bác bỏ các lý thuyết cũ không còn phù hợp."
       },
       "answer": "A",
-      "explainAnswer": "Nội dung cơ bản là phát hiện quy luật vận động của thế giới khách quan."
+      "explainAnswer": "Nội dung cơ bản là phát hiện quy luật vận động của thế giới khách quan.",
+      "image": null
     },
     {
       "id": 28,
@@ -393,7 +420,8 @@
         "D": "Chưa chỉ ra được bản chất, chưa phát hiện được các quy luật của sự vật và chưa hình thành một hệ thống vững chắc."
       },
       "answer": "A",
-      "explainAnswer": "Tri thức thông thường chưa khái quát thành hệ thống quy luật vững chắc như tri thức khoa học."
+      "explainAnswer": "Tri thức thông thường chưa khái quát thành hệ thống quy luật vững chắc như tri thức khoa học.",
+      "image": null
     },
     {
       "id": 29,
@@ -407,7 +435,8 @@
         "D": "Mục tiêu nghiên cứu; Mục đích nghiên cứu; Đối tượng nghiên cứu; Thời gian nghiên cứu; Phạm vi nghiên cứu."
       },
       "answer": "A",
-      "explainAnswer": "Các nhân tố đầy đủ theo tài liệu là chủ thể, mục đích, phương pháp, sản phẩm và giá trị khoa học."
+      "explainAnswer": "Các nhân tố đầy đủ theo tài liệu là chủ thể, mục đích, phương pháp, sản phẩm và giá trị khoa học.",
+      "image": null
     },
     {
       "id": 30,
@@ -421,7 +450,8 @@
         "D": "một quá trình khám phá bản chất các sự vật hiện tượng để tìm ra những tri thức mới."
       },
       "answer": "A",
-      "explainAnswer": "Khái niệm là hình thức tư duy phản ánh thuộc tính chung, bản chất của lớp đối tượng."
+      "explainAnswer": "Khái niệm là hình thức tư duy phản ánh thuộc tính chung, bản chất của lớp đối tượng.",
+      "image": null
     },
     {
       "id": 31,
@@ -435,7 +465,8 @@
         "D": "Đề tài có ý nghĩa khoa học hay không"
       },
       "answer": "D",
-      "explainAnswer": "Căn cứ quan trọng nhất là ý nghĩa khoa học của đề tài."
+      "explainAnswer": "Căn cứ quan trọng nhất là ý nghĩa khoa học của đề tài.",
+      "image": null
     },
     {
       "id": 32,
@@ -449,7 +480,8 @@
         "D": "Phương pháp nghiên cứu."
       },
       "answer": "A",
-      "explainAnswer": "Lịch sử vấn đề nằm trong phần Lý do chọn đề tài."
+      "explainAnswer": "Lịch sử vấn đề nằm trong phần Lý do chọn đề tài.",
+      "image": null
     },
     {
       "id": 33,
@@ -463,7 +495,8 @@
         "D": "Phương pháp nghiên cứu."
       },
       "answer": "A",
-      "explainAnswer": "Đối tượng nghiên cứu trả lời câu hỏi “nghiên cứu gì?”."
+      "explainAnswer": "Đối tượng nghiên cứu trả lời câu hỏi “nghiên cứu gì?”.",
+      "image": null
     },
     {
       "id": 34,
@@ -477,7 +510,8 @@
         "D": "Bao gồm tất cả các đặc điểm trên"
       },
       "answer": "D",
-      "explainAnswer": "Một đề tài tốt cần có đầy đủ các đặc điểm nêu trên."
+      "explainAnswer": "Một đề tài tốt cần có đầy đủ các đặc điểm nêu trên.",
+      "image": null
     },
     {
       "id": 35,
@@ -491,7 +525,8 @@
         "D": "9"
       },
       "answer": "D",
-      "explainAnswer": "Theo tài liệu, đề cương chi tiết gồm 9 phần cơ bản."
+      "explainAnswer": "Theo tài liệu, đề cương chi tiết gồm 9 phần cơ bản.",
+      "image": null
     },
     {
       "id": 36,
@@ -505,7 +540,8 @@
         "D": "Safe - An toàn"
       },
       "answer": "B",
-      "explainAnswer": "S = Specific (Cụ thể, rõ ràng)."
+      "explainAnswer": "S = Specific (Cụ thể, rõ ràng).",
+      "image": null
     },
     {
       "id": 37,
@@ -519,7 +555,8 @@
         "D": "Tự nhiên và xã hội."
       },
       "answer": "A",
-      "explainAnswer": "Đối tượng khoa học cụ thể bao gồm cả thế giới khách quan và phương pháp nhận thức."
+      "explainAnswer": "Đối tượng khoa học cụ thể bao gồm cả thế giới khách quan và phương pháp nhận thức.",
+      "image": null
     },
     {
       "id": 38,
@@ -533,7 +570,8 @@
         "D": "Có tính lịch sử, tính thực tiễn"
       },
       "answer": "D",
-      "explainAnswer": "“Có tính lịch sử, tính thực tiễn” không phải tiêu chuẩn cốt lõi theo nội dung đề."
+      "explainAnswer": "“Có tính lịch sử, tính thực tiễn” không phải tiêu chuẩn cốt lõi theo nội dung đề.",
+      "image": null
     },
     {
       "id": 39,
@@ -547,7 +585,8 @@
         "D": "Toàn vẹn đầy đủ về một nội dung."
       },
       "answer": "D",
-      "explainAnswer": "Trích dẫn trực tiếp là trích dẫn toàn vẹn, đầy đủ nội dung gốc."
+      "explainAnswer": "Trích dẫn trực tiếp là trích dẫn toàn vẹn, đầy đủ nội dung gốc.",
+      "image": null
     },
     {
       "id": 40,
@@ -561,7 +600,8 @@
         "D": "7"
       },
       "answer": "B",
-      "explainAnswer": "Theo Vũ Cao Đàm, quy trình gồm 5 bước."
+      "explainAnswer": "Theo Vũ Cao Đàm, quy trình gồm 5 bước.",
+      "image": null
     },
     {
       "id": 41,
@@ -575,7 +615,8 @@
         "D": "Đảm bảo rằng đề cương được tổ chức và trình bày một cách logic và rõ ràng."
       },
       "answer": "C",
-      "explainAnswer": "Khách quan nghĩa là không bị ảnh hưởng bởi quan điểm cá nhân, có chứng cứ."
+      "explainAnswer": "Khách quan nghĩa là không bị ảnh hưởng bởi quan điểm cá nhân, có chứng cứ.",
+      "image": null
     },
     {
       "id": 42,
@@ -589,7 +630,8 @@
         "D": "Tất cả các trang bìa, mục lục, bảng biểu, lời nói đầu, lời cảm ơn, lời giới thiệu"
       },
       "answer": "A",
-      "explainAnswer": "Các trang mở đầu (tựa đề, lời nói đầu, mục lục…) dùng số La Mã."
+      "explainAnswer": "Các trang mở đầu (tựa đề, lời nói đầu, mục lục…) dùng số La Mã.",
+      "image": null
     },
     {
       "id": 43,
@@ -603,24 +645,11 @@
         "D": "Chủ đề nghiên cứu có tính khả thi"
       },
       "answer": "B",
-      "explainAnswer": "Cần có cơ sở lý thuyết, tính mới và tính khả thi."
+      "explainAnswer": "Cần có cơ sở lý thuyết, tính mới và tính khả thi.",
+      "image": null
     },
     {
       "id": 44,
-      "chapter": "Phương pháp nghiên cứu khoa học",
-      "sourceChapter": "TIÊU CHUẨN ĐỀ TÀI",
-      "question": "Nhận định nào dưới đây là một tiêu chuẩn của một đề tài nghiên cứu?",
-      "options": {
-        "A": "Có cơ sở lý thuyết và khoa học",
-        "B": "Mục tiêu được xác lập là đóng góp mới về tri thức",
-        "C": "Được thể hiện một cách rõ nghĩa và cụ thể về mối quan hệ giữa các yếu tố",
-        "D": "Bao gồm các nhận định trên."
-      },
-      "answer": "D",
-      "explainAnswer": "Tất cả các nhận định trên đều là tiêu chuẩn của đề tài nghiên cứu."
-    },
-    {
-      "id": 45,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "TRÍCH DẪN & ĐỊNH DẠNG",
       "question": "Chọn phát biểu đúng:",
@@ -631,10 +660,11 @@
         "D": "Nếu xuất hiện các cụm từ viết tắt trong luận văn, tác giả bắt buộc phải cung cấp danh mục từ viết tắt."
       },
       "answer": "D",
-      "explainAnswer": "Phải có danh mục từ viết tắt nếu sử dụng."
+      "explainAnswer": "Phải có danh mục từ viết tắt nếu sử dụng.",
+      "image": null
     },
     {
-      "id": 46,
+      "id": 45,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "TRÍCH DẪN",
       "question": "Chọn phát biểu sai:",
@@ -645,10 +675,11 @@
         "D": "Nguyên tắc trích dẫn tài liệu tham khảo là chỉ trích dẫn những tài liệu đã đọc."
       },
       "answer": "A",
-      "explainAnswer": "Không bắt buộc chỉ trích dẫn tài liệu tiếng Việt."
+      "explainAnswer": "Không bắt buộc chỉ trích dẫn tài liệu tiếng Việt.",
+      "image": null
     },
     {
-      "id": 47,
+      "id": 46,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "BÀI BÁO KHOA HỌC",
       "question": "Giá trị của 1 bài báo khoa học thể hiện:",
@@ -659,10 +690,11 @@
         "D": "Khi bài báo được xuất bản trong một tạp chí phổ biến."
       },
       "answer": "A",
-      "explainAnswer": "Giá trị nằm ở kết luận hợp lý dựa trên dữ liệu và kết quả."
+      "explainAnswer": "Giá trị nằm ở kết luận hợp lý dựa trên dữ liệu và kết quả.",
+      "image": null
     },
     {
-      "id": 48,
+      "id": 47,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "CHỈ SỐ XUẤT BẢN",
       "question": "Mã số tiêu chuẩn quốc tế ISSN là mã số gán cho:",
@@ -673,10 +705,11 @@
         "D": "Mã số tiêu chuẩn quốc tế cho một bài báo khoa học"
       },
       "answer": "A",
-      "explainAnswer": "ISSN dành cho xuất bản phẩm nhiều kỳ (tạp chí, báo…)."
+      "explainAnswer": "ISSN dành cho xuất bản phẩm nhiều kỳ (tạp chí, báo…).",
+      "image": null
     },
     {
-      "id": 49,
+      "id": 48,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "TÍNH MỚI",
       "question": "Tính mới trong một công trình nghiên cứu khoa học là:",
@@ -687,10 +720,11 @@
         "D": "thuộc tính bắt buộc của nghiên cứu khoa học."
       },
       "answer": "A",
-      "explainAnswer": "Tính mới là thuộc tính quan trọng nhất."
+      "explainAnswer": "Tính mới là thuộc tính quan trọng nhất.",
+      "image": null
     },
     {
-      "id": 50,
+      "id": 49,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "CHỈ SỐ H-INDEX",
       "question": "Chỉ số H-index của một nhà khoa học là?",
@@ -701,10 +735,11 @@
         "D": "chỉ số đo lường tác động trích dẫn các ấn phẩm thuộc danh mục ISI của nhà khoa học."
       },
       "answer": "A",
-      "explainAnswer": "H-index đo cả số lượng và tác động trích dẫn."
+      "explainAnswer": "H-index đo cả số lượng và tác động trích dẫn.",
+      "image": null
     },
     {
-      "id": 51,
+      "id": 50,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "HỆ THỐNG ISI",
       "question": "Tạp chí AHCI (Arts & Humanities Citation Index) thuộc danh mục ISI chuyên về lĩnh vực nào?",
@@ -715,10 +750,11 @@
         "D": "Khoa học tự nhiên và khoa học xã hội."
       },
       "answer": "C",
-      "explainAnswer": "AHCI chuyên về Nghệ thuật và Nhân văn."
+      "explainAnswer": "AHCI chuyên về Nghệ thuật và Nhân văn.",
+      "image": null
     },
     {
-      "id": 52,
+      "id": 51,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "HỆ THỐNG ISI",
       "question": "Hệ thống tạp chí ISI đã nhóm các tạp chí, bao gồm:",
@@ -729,10 +765,11 @@
         "D": "Science Citation Index Expanded, Social Sciences Citation Index và Arts & Humanities Citation Index."
       },
       "answer": "D",
-      "explainAnswer": "Ba chỉ mục chính của ISI/WoS là SCIE, SSCI và AHCI."
+      "explainAnswer": "Ba chỉ mục chính của ISI/WoS là SCIE, SSCI và AHCI.",
+      "image": null
     },
     {
-      "id": 53,
+      "id": 52,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "LUẬN ĐIỂM KHOA HỌC",
       "question": "Quá trình xây dựng luận điểm khoa học xuất phát từ:",
@@ -743,10 +780,11 @@
         "D": "Việc đề ra các giả thuyết khoa học."
       },
       "answer": "A",
-      "explainAnswer": "Xuất phát từ quan sát nắm bắt sự kiện khoa học."
+      "explainAnswer": "Xuất phát từ quan sát nắm bắt sự kiện khoa học.",
+      "image": null
     },
     {
-      "id": 54,
+      "id": 53,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "TỔNG QUAN TÀI LIỆU",
       "question": "Lựa chọn tài liệu tổng quan tài liệu nghiên cứu là việc:",
@@ -757,10 +795,11 @@
         "D": "Liệt kê các kết quả nghiên cứu liên quan trước đó"
       },
       "answer": "A",
-      "explainAnswer": "Tổng quan là tổng hợp các kết quả nghiên cứu liên quan trước đây."
+      "explainAnswer": "Tổng quan là tổng hợp các kết quả nghiên cứu liên quan trước đây.",
+      "image": null
     },
     {
-      "id": 55,
+      "id": 54,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "GIẢ THUYẾT KHOA HỌC",
       "question": "Thuộc tính nào không phải là thuộc tính của giả thuyết khoa học?",
@@ -771,10 +810,11 @@
         "D": "Tính đa phương án."
       },
       "answer": "A",
-      "explainAnswer": "Giả thuyết có tính giả định, chưa phải là chính xác."
+      "explainAnswer": "Giả thuyết có tính giả định, chưa phải là chính xác.",
+      "image": null
     },
     {
-      "id": 56,
+      "id": 55,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "CHỨNG MINH KHOA HỌC",
       "question": "Các số liệu minh chứng trong nghiên cứu là bộ phận nào trong cấu trúc một chứng minh?",
@@ -785,10 +825,11 @@
         "D": "Luận điểm."
       },
       "answer": "A",
-      "explainAnswer": "Số liệu minh chứng thuộc luận cứ."
+      "explainAnswer": "Số liệu minh chứng thuộc luận cứ.",
+      "image": null
     },
     {
-      "id": 57,
+      "id": 56,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "PHƯƠNG PHÁP DIỄN DỊCH",
       "question": "Trình tự các bước trong quy trình diễn dịch gồm:",
@@ -799,10 +840,11 @@
         "D": "Căn cứ vào các lý thuyết đã có, lập luận và đưa ra kết luận"
       },
       "answer": "C",
-      "explainAnswer": "Diễn dịch: lý thuyết → giả thuyết → kiểm định bằng dữ liệu → kết luận."
+      "explainAnswer": "Diễn dịch: lý thuyết → giả thuyết → kiểm định bằng dữ liệu → kết luận.",
+      "image": null
     },
     {
-      "id": 58,
+      "id": 57,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "GIẢ THUYẾT NGHIÊN CỨU",
       "question": "Một giả thuyết nghiên cứu cần thỏa mãn các yêu cầu sau, loại trừ?",
@@ -813,10 +855,11 @@
         "D": "Có thể suy đoán theo cảm tính"
       },
       "answer": "D",
-      "explainAnswer": "Không được suy đoán theo cảm tính."
+      "explainAnswer": "Không được suy đoán theo cảm tính.",
+      "image": null
     },
     {
-      "id": 59,
+      "id": 58,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "MẪU NGHIÊN CỨU",
       "question": "Quy mô mẫu nghiên cứu trong phân tích định lượng:",
@@ -827,10 +870,11 @@
         "D": "Cần đủ lớn để thực hiện phân tích tương quan và hồi quy"
       },
       "answer": "D",
-      "explainAnswer": "Mẫu định lượng cần đủ lớn cho phân tích thống kê."
+      "explainAnswer": "Trong nghiên cứu định lượng, cỡ mẫu cần đủ lớn và phù hợp với phương pháp phân tích dự kiến, chẳng hạn tương quan hoặc hồi quy.",
+      "image": null
     },
     {
-      "id": 60,
+      "id": 59,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "PHƯƠNG PHÁP LẤY MẪU",
       "question": "Cách lấy mẫu sao cho mỗi đơn vị lấy mẫu đều có xác suất được chọn như nhau là:",
@@ -841,10 +885,11 @@
         "D": "Chọn mẫu từng cụm."
       },
       "answer": "A",
-      "explainAnswer": "Mẫu ngẫu nhiên đơn giản: mỗi đơn vị có xác suất bằng nhau."
+      "explainAnswer": "Mẫu ngẫu nhiên đơn giản: mỗi đơn vị có xác suất bằng nhau.",
+      "image": null
     },
     {
-      "id": 61,
+      "id": 60,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "PHƯƠNG PHÁP LẤY MẪU",
       "question": "Người khảo sát khảo sát các ngôi nhà có số: 13, 18, 23, 28, 33, 38, …. Đây là cách chọn mẫu:",
@@ -855,10 +900,11 @@
         "D": "Chọn mẫu từng cụm."
       },
       "answer": "A",
-      "explainAnswer": "Khoảng cách đều → chọn mẫu hệ thống."
+      "explainAnswer": "Khoảng cách đều → chọn mẫu hệ thống.",
+      "image": null
     },
     {
-      "id": 62,
+      "id": 61,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "CÂU HỎI NGHIÊN CỨU",
       "question": "“Làm sao có thể giảm thiểu các tác động xấu của dịch Covid 19 tới hoạt động kinh doanh của các doanh nghiệp vừa và nhỏ tại Việt Nam?” Đây là:",
@@ -869,10 +915,11 @@
         "D": "Câu hỏi đo lường"
       },
       "answer": "A",
-      "explainAnswer": "Đây là câu hỏi quản lý (practical), không phải câu hỏi nghiên cứu thuần túy."
+      "explainAnswer": "Đây là câu hỏi quản lý (practical), không phải câu hỏi nghiên cứu thuần túy.",
+      "image": null
     },
     {
-      "id": 63,
+      "id": 62,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "TỔNG QUAN TÀI LIỆU",
       "question": "Sử dụng các bài báo đã tổng quan cùng chủ đề nghiên cứu sẽ giúp:",
@@ -883,10 +930,11 @@
         "D": "Không có ý nào ở trên là hợp lý."
       },
       "answer": "B",
-      "explainAnswer": "Giúp nâng cao chất lượng tổng quan và tiết kiệm thời gian."
+      "explainAnswer": "Giúp nâng cao chất lượng tổng quan và tiết kiệm thời gian.",
+      "image": null
     },
     {
-      "id": 64,
+      "id": 63,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "TỔNG QUAN & KHUNG KHÁI NIỆM",
       "question": "Một tác giả viết: “Caves (1971) lý giải động cơ của đầu tư FDI theo chiều ngang và chiều dọc…”. Đoạn viết trên đề cập đến nội dung gì?",
@@ -897,24 +945,11 @@
         "D": "Câu hỏi nghiên cứu"
       },
       "answer": "B",
-      "explainAnswer": "Vừa tổng quan vừa xây dựng khung khái niệm về FDI."
+      "explainAnswer": "Vừa tổng quan vừa xây dựng khung khái niệm về FDI.",
+      "image": null
     },
     {
-      "id": 65,
-      "chapter": "Phương pháp nghiên cứu khoa học",
-      "sourceChapter": "KHUNG PHÂN TÍCH",
-      "question": "Chọn phát biểu sai:",
-      "options": {
-        "A": "Khung phân tích cố định thường được dùng trong nghiên cứu định tính.",
-        "B": "Khung phân tích sơ đồ hóa tất cả các quan hệ các biến số nghiên cứu theo bản chất và trình tự của chúng.",
-        "C": "Khung phân tích cố định thường áp dụng trong nghiên cứu định lượng, thông qua kiểm định hay chứng minh hoặc bác bỏ giả thuyết thống kê.",
-        "D": "Khung phân tích cố định thường áp dụng trong nghiên cứu định lượng."
-      },
-      "answer": "A",
-      "explainAnswer": "Khung phân tích cố định thường dùng cho nghiên cứu định lượng, không phải định tính."
-    },
-    {
-      "id": 66,
+      "id": 64,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "PHƯƠNG PHÁP QUAN SÁT",
       "question": "Chức năng quan trọng nhất của phương pháp quan sát khoa học là:",
@@ -925,10 +960,11 @@
         "D": "Đối chiếu kết quả nghiên cứu lý thuyết với thực tiễn"
       },
       "answer": "A",
-      "explainAnswer": "Chức năng quan trọng nhất là thu thập thông tin thực tiễn."
+      "explainAnswer": "Chức năng quan trọng nhất là thu thập thông tin thực tiễn.",
+      "image": null
     },
     {
-      "id": 67,
+      "id": 65,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "PHƯƠNG PHÁP NGHIÊN CỨU",
       "question": "Phương pháp nghiên cứu khoa học không bao gồm:",
@@ -939,10 +975,11 @@
         "D": "Phương pháp nghiên cứu cụ thể."
       },
       "answer": "A",
-      "explainAnswer": "“Phương pháp nhận biết sự kiện khoa học” không phải là một phân loại chuẩn."
+      "explainAnswer": "“Phương pháp nhận biết sự kiện khoa học” không phải là một phân loại chuẩn.",
+      "image": null
     },
     {
-      "id": 68,
+      "id": 66,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "PHƯƠNG PHÁP LỊCH SỬ",
       "question": "Thao tác tìm quá trình hình thành phát triển của đối tượng là thao tác thuộc về phương pháp nào?",
@@ -953,10 +990,11 @@
         "D": "Phương pháp giả thuyết."
       },
       "answer": "A",
-      "explainAnswer": "Thuộc phương pháp lịch sử."
+      "explainAnswer": "Thuộc phương pháp lịch sử.",
+      "image": null
     },
     {
-      "id": 69,
+      "id": 67,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "PHƯƠNG PHÁP NGHIÊN CỨU",
       "question": "Phương pháp nghiên cứu khoa học được hiểu trên phương diện thông tin như thế nào?",
@@ -967,10 +1005,11 @@
         "D": "Là con đường nghiên cứu khoa học."
       },
       "answer": "A",
-      "explainAnswer": "Trên phương diện thông tin: cách thức thu thập và xử lý thông tin."
+      "explainAnswer": "Trên phương diện thông tin: cách thức thu thập và xử lý thông tin.",
+      "image": null
     },
     {
-      "id": 70,
+      "id": 68,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "PHƯƠNG PHÁP MÔ HÌNH HÓA",
       "question": "Phương pháp xây dựng gần giống với đối tượng nghiên cứu là:",
@@ -981,10 +1020,11 @@
         "D": "Phương pháp quan sát."
       },
       "answer": "A",
-      "explainAnswer": "Mô hình hóa là xây dựng mô hình gần giống đối tượng."
+      "explainAnswer": "Mô hình hóa là xây dựng mô hình gần giống đối tượng.",
+      "image": null
     },
     {
-      "id": 71,
+      "id": 69,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "PHƯƠNG PHÁP QUAN SÁT",
       "question": "Hạn chế cơ bản của phương pháp quan sát là:",
@@ -995,10 +1035,11 @@
         "D": "Vật chất luôn vận động phát triển."
       },
       "answer": "A",
-      "explainAnswer": "Hạn chế cơ bản là mang tính chủ quan của người quan sát."
+      "explainAnswer": "Hạn chế cơ bản là mang tính chủ quan của người quan sát.",
+      "image": null
     },
     {
-      "id": 72,
+      "id": 70,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "CÂU HỎI KHẢO SÁT",
       "question": "“Anh chị hãy nêu ý kiến về nền giáo dục nước ta.…” Loại câu hỏi trên là loại câu hỏi:",
@@ -1009,10 +1050,11 @@
         "D": "Câu hỏi định lượng"
       },
       "answer": "A",
-      "explainAnswer": "Câu hỏi mở (không giới hạn phương án trả lời)."
+      "explainAnswer": "Câu hỏi mở (không giới hạn phương án trả lời).",
+      "image": null
     },
     {
-      "id": 73,
+      "id": 71,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "PHƯƠNG PHÁP ANKÉT",
       "question": "Chọn câu đúng:",
@@ -1023,10 +1065,11 @@
         "D": "Ankét mở là loại câu hỏi mà người trả lời chọn một hay nhiều phương án thích hợp với ý kiến của mình từ các phương án có sẵn."
       },
       "answer": "A",
-      "explainAnswer": "Ankét đóng có sẵn phương án trả lời."
+      "explainAnswer": "Ankét đóng có sẵn phương án trả lời.",
+      "image": null
     },
     {
-      "id": 74,
+      "id": 72,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "PHƯƠNG PHÁP PHÂN LOẠI",
       "question": "Thao tác nghiên cứu tài liệu và sắp xếp thành một hệ thống logic là thao tác của phương pháp nào?",
@@ -1037,10 +1080,11 @@
         "D": "Phương pháp lịch sử."
       },
       "answer": "A",
-      "explainAnswer": "Thuộc phương pháp phân loại, hệ thống hóa lý thuyết."
+      "explainAnswer": "Thuộc phương pháp phân loại, hệ thống hóa lý thuyết.",
+      "image": null
     },
     {
-      "id": 75,
+      "id": 73,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "PHỎNG VẤN SÂU",
       "question": "Nội dung nào sau đây là nhận định SAI khi thực hiện nội dung phỏng vấn sâu?",
@@ -1051,10 +1095,11 @@
         "D": "Các câu hỏi nên là các câu hỏi mở"
       },
       "answer": "C",
-      "explainAnswer": "Trong phỏng vấn sâu có thể linh hoạt thay đổi thứ tự câu hỏi."
+      "explainAnswer": "Trong phỏng vấn sâu có thể linh hoạt thay đổi thứ tự câu hỏi.",
+      "image": null
     },
     {
-      "id": 76,
+      "id": 74,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "PHƯƠNG PHÁP TỔNG QUÁT",
       "question": "Căn cứ vào đâu để chia phương pháp tổng quát thành các phương pháp như: phân tích, tổng hợp, quy nạp, diễn giải, logic, lịch sử, hệ thống-cấu trúc…?",
@@ -1065,38 +1110,11 @@
         "D": "Mục đích của phương pháp."
       },
       "answer": "B",
-      "explainAnswer": "Căn cứ vào đặc điểm của quá trình tư duy."
+      "explainAnswer": "Căn cứ vào đặc điểm của quá trình tư duy.",
+      "image": null
     },
     {
-      "id": 77,
-      "chapter": "Phương pháp nghiên cứu khoa học",
-      "sourceChapter": "KHUNG LÝ THUYẾT",
-      "question": "Chọn phát biểu sai:",
-      "options": {
-        "A": "Khung lý thuyết chính là quy trình tiến hành nghiên cứu.",
-        "B": "Xây dựng khung lý thuyết là bước vận dụng các khái niệm, định nghĩa, lý thuyết, quan điểm để luận giải vấn đề nghiên cứu.",
-        "C": "Một vai trò của khung khái niệm là giúp hình thành ý tưởng về thiết kế nghiên cứu.",
-        "D": "Khung khái niệm được xây dựng trên nền tảng khung lý thuyết."
-      },
-      "answer": "A",
-      "explainAnswer": "Khung lý thuyết không phải là quy trình tiến hành nghiên cứu."
-    },
-    {
-      "id": 78,
-      "chapter": "Phương pháp nghiên cứu khoa học",
-      "sourceChapter": "TỔNG QUAN TÀI LIỆU",
-      "question": "Chọn phát biểu sai:",
-      "options": {
-        "A": "Tổng quan tài liệu là việc liệt kê các kết quả nghiên cứu trước đó theo trình tự nhất định.",
-        "B": "Mục đích của phương pháp diễn dịch là đi đến kết luận, tuy nhiên kết luận không nhất thiết phải đi theo các lý do cho trước.",
-        "C": "Phương pháp nghiên cứu thay đổi có thể cải thiện hoặc nâng cao khả năng luận giải cho nghiên cứu.",
-        "D": "Thiết kế nghiên cứu là việc xác định những bằng chứng cần thiết và cách thức thu thập bằng chứng nhằm trả lời câu hỏi nghiên cứu một cách thuyết phục nhất."
-      },
-      "answer": "A",
-      "explainAnswer": "Tổng quan không chỉ là liệt kê, mà phải phân tích, đánh giá, tổng hợp."
-    },
-    {
-      "id": 79,
+      "id": 75,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "ĐẠO ĐỨC NGHIÊN CỨU",
       "question": "Đặt những câu hỏi để khai thác những thông tin nhạy cảm (sensitive) có thể gây ra ……… cho đối tượng khảo sát.",
@@ -1107,10 +1125,11 @@
         "D": "Tổn hại (harm)"
       },
       "answer": "D",
-      "explainAnswer": "Có thể gây tổn hại (harm) cho đối tượng."
+      "explainAnswer": "Có thể gây tổn hại (harm) cho đối tượng.",
+      "image": null
     },
     {
-      "id": 80,
+      "id": 76,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "ĐẠO ĐỨC NGHIÊN CỨU",
       "question": "Vấn đề đạo đức đặt ra liên quan đến việc tổ chức tài trợ cho nghiên cứu bao gồm:",
@@ -1121,10 +1140,11 @@
         "D": "Tất cả đều sai"
       },
       "answer": "A",
-      "explainAnswer": "Vấn đề đạo đức với nhà tài trợ thường liên quan đến việc sử dụng thông tin sai mục đích."
+      "explainAnswer": "Vấn đề đạo đức với nhà tài trợ thường liên quan đến việc sử dụng thông tin sai mục đích.",
+      "image": null
     },
     {
-      "id": 81,
+      "id": 77,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "TRIẾT HỌC NHẬN THỨC",
       "question": "……… cho rằng kiến thức có được là nhờ khả năng suy luận của con người; ……… cho rằng kiến thức chỉ có được qua kinh nghiệm nhận được của con người.",
@@ -1135,10 +1155,11 @@
         "D": "Chủ nghĩa kinh nghiệm (Empiricism); Chủ nghĩa duy vật (Materialism)"
       },
       "answer": "C",
-      "explainAnswer": "Duy lý (Rationalism) nhấn mạnh suy luận; Kinh nghiệm (Empiricism) nhấn mạnh kinh nghiệm."
+      "explainAnswer": "Duy lý (Rationalism) nhấn mạnh suy luận; Kinh nghiệm (Empiricism) nhấn mạnh kinh nghiệm.",
+      "image": null
     },
     {
-      "id": 82,
+      "id": 78,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "LOẠI HÌNH NGHIÊN CỨU",
       "question": "Mục tiêu của nghiên cứu là “tìm hiểu tại sao một nhóm người sử dụng sản phẩm trong khi nhóm khác thì không?”. Đây là loại hình nghiên cứu:",
@@ -1149,10 +1170,11 @@
         "D": "Nghiên cứu giải thích (Explanatory research)"
       },
       "answer": "D",
-      "explainAnswer": "Tìm hiểu “tại sao” → nghiên cứu giải thích."
+      "explainAnswer": "Tìm hiểu “tại sao” → nghiên cứu giải thích.",
+      "image": null
     },
     {
-      "id": 83,
+      "id": 79,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "CÂU HỎI NGHIÊN CỨU",
       "question": "“Làm thế nào để cải thiện chất lượng dịch vụ/sản phẩm?” là câu hỏi dưới góc nhìn của:",
@@ -1163,10 +1185,11 @@
         "D": "Nhà cung cấp dịch vụ"
       },
       "answer": "D",
-      "explainAnswer": "Góc nhìn của nhà cung cấp dịch vụ."
+      "explainAnswer": "Góc nhìn của nhà cung cấp dịch vụ.",
+      "image": null
     },
     {
-      "id": 84,
+      "id": 80,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "VIẾT VĂN BẢN KHOA HỌC",
       "question": "Điều nào sau đây cần chú ý TRÁNH khi viết văn bản khoa học thuộc ngành kinh tế, kinh doanh và quản lý?",
@@ -1177,10 +1200,11 @@
         "D": "Sử dụng phép ẩn dụ và ngôn ngữ hoa mỹ"
       },
       "answer": "D",
-      "explainAnswer": "Cần tránh phép ẩn dụ và ngôn ngữ hoa mỹ trong văn bản khoa học."
+      "explainAnswer": "Cần tránh phép ẩn dụ và ngôn ngữ hoa mỹ trong văn bản khoa học.",
+      "image": null
     },
     {
-      "id": 85,
+      "id": 81,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "TỔNG QUAN TÀI LIỆU",
       "question": "Điểm bắt đầu cho một tìm kiếm tài liệu phục vụ viết lược khảo lý thuyết (literature review) là:",
@@ -1191,10 +1215,11 @@
         "D": "Dữ liệu sơ cấp"
       },
       "answer": "A",
-      "explainAnswer": "Thường bắt đầu từ dữ liệu cấp ba (bách khoa, handbook, review…)."
+      "explainAnswer": "Thường bắt đầu từ dữ liệu cấp ba (bách khoa, handbook, review…).",
+      "image": null
     },
     {
-      "id": 86,
+      "id": 82,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "TỔNG QUAN TÀI LIỆU",
       "question": "Quá trình lược khảo lý thuyết (literature review) giúp:",
@@ -1205,10 +1230,11 @@
         "D": "Tất cả các nội dung trên"
       },
       "answer": "D",
-      "explainAnswer": "Literature review hỗ trợ xác định phương pháp, khoảng trống và cả thiết kế mẫu."
+      "explainAnswer": "Literature review hỗ trợ xác định phương pháp, khoảng trống và cả thiết kế mẫu.",
+      "image": null
     },
     {
-      "id": 87,
+      "id": 83,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "TRÍCH DẪN",
       "question": "Mục đích của việc trích dẫn và trình bày danh mục tài liệu tham khảo là:",
@@ -1219,10 +1245,11 @@
         "D": "Cho thấy tác giả biết các nguyên tắc trích dẫn."
       },
       "answer": "C",
-      "explainAnswer": "Mục đích chính là xác minh nguồn và tránh đạo văn."
+      "explainAnswer": "Mục đích chính là xác minh nguồn và tránh đạo văn.",
+      "image": null
     },
     {
-      "id": 88,
+      "id": 84,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "TRÍCH DẪN",
       "question": "Khi bạn phát hiện ra rằng một tác giả (1) đã trích dẫn một tác giả khác (2), đó là một thông tin tốt để:",
@@ -1233,10 +1260,11 @@
         "D": "Định vị và đọc bản gốc, gán nó cho tác giả 2"
       },
       "answer": "D",
-      "explainAnswer": "Phải tìm đọc bản gốc và trích dẫn đúng tác giả gốc."
+      "explainAnswer": "Phải tìm đọc bản gốc và trích dẫn đúng tác giả gốc.",
+      "image": null
     },
     {
-      "id": 89,
+      "id": 85,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "ĐẠO VĂN",
       "question": "Phát biểu nào sau đây về đạo văn là chính xác nhất?",
@@ -1247,10 +1275,11 @@
         "D": "Đạo văn là việc chiếm hữu sai trái và sử dụng những ý tưởng, suy nghĩ, ngôn ngữ của người khác và xem chúng như những gì do mình tạo ra."
       },
       "answer": "D",
-      "explainAnswer": "Định nghĩa chuẩn về đạo văn."
+      "explainAnswer": "Định nghĩa chuẩn về đạo văn.",
+      "image": null
     },
     {
-      "id": 90,
+      "id": 86,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "TRÁNH ĐẠO VĂN",
       "question": "Việc nào có thể giúp bạn tránh đạo văn?",
@@ -1261,10 +1290,11 @@
         "D": "Nội dung (1) và (2) đúng."
       },
       "answer": "C",
-      "explainAnswer": "Ghi chú bằng ngôn từ riêng giúp tránh đạo văn."
+      "explainAnswer": "Ghi chú bằng ngôn từ riêng giúp tránh đạo văn.",
+      "image": null
     },
     {
-      "id": 91,
+      "id": 87,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "KHUNG LÝ THUYẾT & KHÁI NIỆM",
       "question": "Khung lý thuyết phát triển từ ………, khung khái niệm mô tả ………",
@@ -1275,10 +1305,11 @@
         "D": "Các lý thuyết nền tảng của nghiên cứu; các nghiên cứu trước"
       },
       "answer": "B",
-      "explainAnswer": "Khung lý thuyết từ các lý thuyết nền; khung khái niệm mô tả các biến/nội dung cụ thể."
+      "explainAnswer": "Khung lý thuyết từ các lý thuyết nền; khung khái niệm mô tả các biến/nội dung cụ thể.",
+      "image": null
     },
     {
-      "id": 92,
+      "id": 88,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "DANH MỤC TÀI LIỆU THAM KHẢO",
       "question": "Điều nào sau đây là đúng khi trình bày phần danh mục tài liệu tham khảo?",
@@ -1289,10 +1320,11 @@
         "D": "APA chỉ có 3 cách khác nhau để định dạng danh mục tài liệu tham khảo mà các tác giả được phép lựa chọn."
       },
       "answer": "B",
-      "explainAnswer": "Phải liệt kê đầy đủ tất cả tài liệu đã trích dẫn."
+      "explainAnswer": "Phải liệt kê đầy đủ tất cả tài liệu đã trích dẫn.",
+      "image": null
     },
     {
-      "id": 93,
+      "id": 89,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "TRÍCH DẪN INTERNET",
       "question": "Khi trích dẫn hoặc sử dụng nguồn từ Internet, bạn KHÔNG cần phải tìm:",
@@ -1303,10 +1335,11 @@
         "D": "Ngày công trình được công bố"
       },
       "answer": "B",
-      "explainAnswer": "Không cần ngày sinh của tác giả."
+      "explainAnswer": "Không cần ngày sinh của tác giả.",
+      "image": null
     },
     {
-      "id": 94,
+      "id": 90,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "HỆ THỐNG TRÍCH DẪN",
       "question": "Theo hiệp hội tâm lý học Hoa Kỳ, hệ thống trích dẫn nguồn phổ biến nhất trong nghiên cứu khoa học xã hội và hành vi là:",
@@ -1317,10 +1350,11 @@
         "D": "MLA"
       },
       "answer": "C",
-      "explainAnswer": "APA là hệ thống phổ biến nhất trong khoa học xã hội và hành vi."
+      "explainAnswer": "APA là hệ thống phổ biến nhất trong khoa học xã hội và hành vi.",
+      "image": null
     },
     {
-      "id": 95,
+      "id": 91,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "ĐÁNH GIÁ CÔNG TRÌNH",
       "question": "Khi đánh giá một công trình khoa học, điều nào sau đây KHÔNG quá quan trọng:",
@@ -1331,10 +1365,11 @@
         "D": "Uy tín của tác giả"
       },
       "answer": "A",
-      "explainAnswer": "Tuổi của tác giả không phải tiêu chí quan trọng."
+      "explainAnswer": "Tuổi của tác giả không phải tiêu chí quan trọng.",
+      "image": null
     },
     {
-      "id": 96,
+      "id": 92,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "QUY TRÌNH NGHIÊN CỨU",
       "question": "Bước đầu tiên trong quá trình nghiên cứu là:",
@@ -1345,10 +1380,11 @@
         "D": "Viết báo cáo"
       },
       "answer": "A",
-      "explainAnswer": "Bước đầu tiên và quan trọng nhất là xác định vấn đề nghiên cứu."
+      "explainAnswer": "Bước đầu tiên và quan trọng nhất là xác định vấn đề nghiên cứu.",
+      "image": null
     },
     {
-      "id": 97,
+      "id": 93,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "ĐẶC ĐIỂM NGHIÊN CỨU KHOA HỌC",
       "question": "Bất cứ kết luận nào cũng phải dựa trên cơ sở kết quả nghiên cứu, kết quả này là chính xác và có thể được xác nhận bởi nhà nghiên cứu và những người khác. Đây là đặc điểm nào của nghiên cứu khoa học?",
@@ -1359,10 +1395,11 @@
         "D": "Tính hệ thống"
       },
       "answer": "B",
-      "explainAnswer": "Tính chính xác và có thể kiểm chứng."
+      "explainAnswer": "Tính chính xác và có thể kiểm chứng.",
+      "image": null
     },
     {
-      "id": 98,
+      "id": 94,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "ĐẶC ĐIỂM NGHIÊN CỨU KHOA HỌC",
       "question": "Quá trình nghiên cứu phải chuẩn xác và không có hạn chế nào. Quá trình được thông qua và các phương thức được sử dụng phải được phản biện nghiêm túc. Đây là đặc điểm nào của nghiên cứu khoa học?",
@@ -1373,10 +1410,11 @@
         "D": "Tính chính xác"
       },
       "answer": "B",
-      "explainAnswer": "Tính phê phán (Critical)."
+      "explainAnswer": "Tính phê phán (Critical).",
+      "image": null
     },
     {
-      "id": 99,
+      "id": 95,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "DỮ LIỆU",
       "question": "Các dữ liệu từ nguồn sau đều là nguồn thứ cấp, TRỪ:",
@@ -1387,10 +1425,11 @@
         "D": "Cơ sở dữ liệu trực tuyến"
       },
       "answer": "C",
-      "explainAnswer": "Nhật ký nghiên cứu của chính nhà nghiên cứu là dữ liệu sơ cấp."
+      "explainAnswer": "Nhật ký nghiên cứu của chính nhà nghiên cứu là dữ liệu sơ cấp.",
+      "image": null
     },
     {
-      "id": 100,
+      "id": 96,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "DỮ LIỆU",
       "question": "Ưu điểm của dữ liệu thứ cấp là:",
@@ -1401,10 +1440,11 @@
         "D": "Không cần kiểm tra chất lượng."
       },
       "answer": "A",
-      "explainAnswer": "Ưu điểm lớn nhất là tiết kiệm chi phí và thời gian."
+      "explainAnswer": "Ưu điểm lớn nhất là tiết kiệm chi phí và thời gian.",
+      "image": null
     },
     {
-      "id": 101,
+      "id": 97,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "DỮ LIỆU",
       "question": "Đặc điểm nào sau đây KHÔNG nói về dữ liệu sơ cấp?",
@@ -1415,10 +1455,11 @@
         "D": "Có thể kiểm soát chất lượng"
       },
       "answer": "C",
-      "explainAnswer": "Chi phí thu thập dữ liệu sơ cấp thường cao, không phải “không đáng kể”."
+      "explainAnswer": "Chi phí thu thập dữ liệu sơ cấp thường cao, không phải “không đáng kể”.",
+      "image": null
     },
     {
-      "id": 102,
+      "id": 98,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "PHƯƠNG PHÁP THU THẬP DỮ LIỆU",
       "question": "Các phương pháp thu thập dữ liệu sơ cấp bao gồm:",
@@ -1429,10 +1470,11 @@
         "D": "Tất cả các phương pháp trên"
       },
       "answer": "D",
-      "explainAnswer": "Cả ba phương pháp đều dùng để thu thập dữ liệu sơ cấp."
+      "explainAnswer": "Cả ba phương pháp đều dùng để thu thập dữ liệu sơ cấp.",
+      "image": null
     },
     {
-      "id": 103,
+      "id": 99,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "PHƯƠNG PHÁP QUAN SÁT",
       "question": "Nhà nghiên cứu âm thầm trở thành 1 thành viên tương tác với nhóm đối tượng được quan sát. Phương pháp thu thập dữ liệu này là:",
@@ -1443,10 +1485,11 @@
         "D": "Quan sát nhập vai"
       },
       "answer": "D",
-      "explainAnswer": "Đây là quan sát nhập vai (covert participant observation)."
+      "explainAnswer": "Đây là quan sát nhập vai (covert participant observation).",
+      "image": null
     },
     {
-      "id": 104,
+      "id": 100,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "PHƯƠNG PHÁP LẤY MẪU",
       "question": "Đối với một cuộc điều tra về sự hài lòng công việc của nhân viên, nhà nghiên cứu mời tất cả 1000 nhân viên và nhắm đến mẫu 200 nam + 200 nữ. Đây là:",
@@ -1457,10 +1500,11 @@
         "D": "Lấy mẫu cụm"
       },
       "answer": "A",
-      "explainAnswer": "Lấy mẫu hạn ngạch (quota)."
+      "explainAnswer": "Lấy mẫu hạn ngạch (quota).",
+      "image": null
     },
     {
-      "id": 105,
+      "id": 101,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "GIẢ THUYẾT NGHIÊN CỨU",
       "question": "Để trả lời cho câu hỏi nghiên cứu “Việc sử dụng thư viện có ảnh hưởng như thế nào đến kết quả học tập của sinh viên”, giả thuyết nghiên cứu nào sau đây là tốt?",
@@ -1471,10 +1515,11 @@
         "D": "Sinh viên học giỏi thường đến thư viện"
       },
       "answer": "A",
-      "explainAnswer": "Giả thuyết phải thể hiện rõ mối quan hệ có thể kiểm định."
+      "explainAnswer": "Giả thuyết phải thể hiện rõ mối quan hệ có thể kiểm định.",
+      "image": null
     },
     {
-      "id": 106,
+      "id": 102,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "CÂU HỎI NGHIÊN CỨU",
       "question": "Phát biểu nào dưới đây là câu hỏi nghiên cứu tốt?",
@@ -1485,10 +1530,11 @@
         "D": "Tại sao sinh viên thích mạng xã hội?"
       },
       "answer": "A",
-      "explainAnswer": "Câu hỏi rõ ràng, có thể nghiên cứu, chỉ ra các yếu tố ảnh hưởng."
+      "explainAnswer": "Câu hỏi rõ ràng, xác định hiện tượng và tập trung vào các yếu tố có thể được nghiên cứu.",
+      "image": null
     },
     {
-      "id": 107,
+      "id": 103,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "MỤC TIÊU NGHIÊN CỨU",
       "question": "Nghiên cứu hành vi sử dụng mạng xã hội của sinh viên, cách phát biểu mục tiêu nào dưới đây là tốt?",
@@ -1499,24 +1545,26 @@
         "D": "Viết báo cáo về mạng xã hội"
       },
       "answer": "A",
-      "explainAnswer": "Mục tiêu rõ ràng, thể hiện mối quan hệ cần làm sáng tỏ."
+      "explainAnswer": "Mục tiêu nêu rõ mối quan hệ cần xác định giữa hành vi sử dụng mạng xã hội và kết quả học tập.",
+      "image": null
     },
     {
-      "id": 108,
+      "id": 104,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "NGHIÊN CỨU MÔ TẢ",
-      "question": "Nghiên cứu mô tả về hành vi sử dụng mạng xã hội của sinh viên có thể phát biểu giả thuyết nghiên cứu nào sau đây?",
+      "question": "Trong một nghiên cứu mô tả thuần túy về hành vi sử dụng mạng xã hội của sinh viên, phát biểu nào phù hợp nhất?",
       "options": {
-        "A": "Không thể phát biểu giả thuyết nghiên cứu cho nghiên cứu này",
-        "B": "Hành vi sử dụng mạng xã hội ảnh hưởng đến kết quả học tập",
-        "C": "Sinh viên sử dụng mạng xã hội nhiều hơn 3 giờ/ngày",
-        "D": "Mạng xã hội làm giảm kết quả học tập"
+        "A": "Không nhất thiết phải đặt giả thuyết kiểm định vì mục tiêu chính là mô tả hiện trạng.",
+        "B": "Hành vi sử dụng mạng xã hội ảnh hưởng đến kết quả học tập.",
+        "C": "Sinh viên sử dụng mạng xã hội nhiều hơn 3 giờ/ngày.",
+        "D": "Mạng xã hội làm giảm kết quả học tập."
       },
       "answer": "A",
-      "explainAnswer": "Nghiên cứu mô tả thuần túy thường không đặt giả thuyết kiểm định."
+      "explainAnswer": "Nghiên cứu mô tả thuần túy chủ yếu mô tả đặc điểm/hiện trạng, không nhất thiết kiểm định quan hệ nhân quả.",
+      "image": null
     },
     {
-      "id": 109,
+      "id": 105,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "ĐẠO ĐỨC NGHIÊN CỨU",
       "question": "Hành vi nào sau đây là tuân thủ chuẩn mực đạo đức trong nghiên cứu?",
@@ -1527,10 +1575,11 @@
         "D": "Không xin phép đối tượng khi ghi âm"
       },
       "answer": "A",
-      "explainAnswer": "Khách quan và trung thực là chuẩn mực đạo đức cơ bản."
+      "explainAnswer": "Khách quan và trung thực là chuẩn mực đạo đức cơ bản.",
+      "image": null
     },
     {
-      "id": 110,
+      "id": 106,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "ĐẠO ĐỨC NGHIÊN CỨU",
       "question": "Giáo sư A yêu cầu dữ liệu từ thí nghiệm. Sinh viên B phát hiện 3 kết quả không đo lường được nên điền số ngẫu nhiên. Hành vi của B là:",
@@ -1541,10 +1590,11 @@
         "D": "Không ảnh hưởng đến kết quả"
       },
       "answer": "B",
-      "explainAnswer": "Đây là hành vi chế tạo và làm sai lệch dữ liệu – vi phạm đạo đức nghiêm trọng."
+      "explainAnswer": "Đây là hành vi chế tạo và làm sai lệch dữ liệu – vi phạm đạo đức nghiêm trọng.",
+      "image": null
     },
     {
-      "id": 111,
+      "id": 107,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "THIẾT KẾ NGHIÊN CỨU",
       "question": "Hai chức năng chính của thiết kế nghiên cứu là:",
@@ -1555,10 +1605,11 @@
         "D": "Chọn mẫu và chọn phương pháp"
       },
       "answer": "C",
-      "explainAnswer": "Hai chức năng chính: xây dựng thủ tục và đảm bảo chất lượng thủ tục."
+      "explainAnswer": "Hai chức năng chính: xây dựng thủ tục và đảm bảo chất lượng thủ tục.",
+      "image": null
     },
     {
-      "id": 112,
+      "id": 108,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "PHƯƠNG PHÁP THU THẬP DỮ LIỆU",
       "question": "Sự khác nhau giữa việc thu thập dữ liệu bằng phỏng vấn và bảng hỏi là:",
@@ -1569,10 +1620,11 @@
         "D": "Phỏng vấn chỉ dùng cho nghiên cứu định tính"
       },
       "answer": "A",
-      "explainAnswer": "Điểm khác biệt cơ bản về vai trò của người thu thập dữ liệu."
+      "explainAnswer": "Điểm khác biệt cơ bản về vai trò của người thu thập dữ liệu.",
+      "image": null
     },
     {
-      "id": 113,
+      "id": 109,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "MỤC TIÊU NGHIÊN CỨU",
       "question": "Phát biểu nào sau đây đúng về quan hệ giữa mục tiêu tổng quát và mục tiêu cụ thể?",
@@ -1583,10 +1635,11 @@
         "D": "Mục tiêu cụ thể bao hàm mục tiêu tổng quát"
       },
       "answer": "A",
-      "explainAnswer": "Mục tiêu cụ thể là các bước/đích đến để đạt mục tiêu tổng quát."
+      "explainAnswer": "Mục tiêu cụ thể là các bước/đích đến để đạt mục tiêu tổng quát.",
+      "image": null
     },
     {
-      "id": 114,
+      "id": 110,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "CÂU HỎI & GIẢ THUYẾT",
       "question": "Phát biểu nào sau đây là ĐÚNG về quan hệ giữa câu hỏi nghiên cứu và giả thuyết nghiên cứu?",
@@ -1597,10 +1650,11 @@
         "D": "Câu hỏi nghiên cứu không cần giả thuyết"
       },
       "answer": "A",
-      "explainAnswer": "Giả thuyết được kiểm định để trả lời câu hỏi nghiên cứu."
+      "explainAnswer": "Giả thuyết được kiểm định để trả lời câu hỏi nghiên cứu.",
+      "image": null
     },
     {
-      "id": 115,
+      "id": 111,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "CỠ MẪU",
       "question": "Quy tắc liên quan đến cỡ mẫu có thể áp dụng trong kiểm tra giả thuyết?",
@@ -1611,10 +1665,11 @@
         "D": "Chỉ cần mẫu thuận tiện"
       },
       "answer": "A",
-      "explainAnswer": "Mẫu càng lớn, ước lượng càng chính xác (sai số mẫu giảm)."
+      "explainAnswer": "Trong các điều kiện khác tương đương, cỡ mẫu lớn hơn thường làm giảm sai số chọn mẫu và tăng độ chính xác của ước lượng.",
+      "image": null
     },
     {
-      "id": 116,
+      "id": 112,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "NGHIÊN CỨU ĐỊNH LƯỢNG",
       "question": "Đặc điểm nào sau đây KHÔNG thuộc về nghiên cứu định lượng?",
@@ -1625,10 +1680,11 @@
         "D": "Nghiên cứu mô tả đặc tính của sự vật hiện tượng theo hướng định tính sâu"
       },
       "answer": "D",
-      "explainAnswer": "Mô tả đặc tính sâu theo hướng định tính không phải đặc điểm của nghiên cứu định lượng."
+      "explainAnswer": "Mô tả đặc tính sâu theo hướng định tính không phải đặc điểm của nghiên cứu định lượng.",
+      "image": null
     },
     {
-      "id": 117,
+      "id": 113,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "DỮ LIỆU",
       "question": "Nhóm nghiên cứu thực hiện nghiên cứu về hành vi sử dụng mạng xã hội của sinh viên TP.HCM. Dữ liệu thu thập trong nghiên cứu này là:",
@@ -1639,13 +1695,14 @@
         "D": "Dữ liệu hỗn hợp"
       },
       "answer": "A",
-      "explainAnswer": "Do nhà nghiên cứu tự thu thập → dữ liệu sơ cấp."
+      "explainAnswer": "Do nhà nghiên cứu tự thu thập → dữ liệu sơ cấp.",
+      "image": null
     },
     {
-      "id": 118,
+      "id": 114,
       "chapter": "Phương pháp nghiên cứu khoa học",
       "sourceChapter": "PHƯƠNG PHÁP BẢNG HỎI",
-      "question": "Thu thập dữ liệu bằng phương pháp bảng hỏi KHÔNG có đặc điểm nào sau đây?",
+      "question": "Thu thập dữ liệu bằng phương pháp bảng hỏi đóng KHÔNG có đặc điểm nào sau đây?",
       "options": {
         "A": "Người cung cấp thông tin có thể đưa thêm thông tin khác nếu muốn",
         "B": "Có thể thu thập trên quy mô lớn",
@@ -1653,35 +1710,1238 @@
         "D": "Người trả lời tự điền"
       },
       "answer": "A",
-      "explainAnswer": "Bảng hỏi (đặc biệt là đóng) hạn chế việc đưa thêm thông tin ngoài phương án."
+      "explainAnswer": "Bảng hỏi đóng giới hạn các phương án trả lời nên người cung cấp thông tin không thể tùy ý bổ sung nội dung ngoài các phương án được thiết kế.",
+      "image": null
+    },
+    {
+      "id": 115,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Theo chương trình học, có bao nhiêu cách để chúng ta có thể đạt được sự hiểu biết về một vấn đề nào đó?",
+      "options": {
+        "A": "2 cách",
+        "B": "3 cách",
+        "C": "4 cách",
+        "D": "5 cách"
+      },
+      "answer": "C",
+      "explainAnswer": "Thường nêu 4 cách: kinh nghiệm, uy quyền/truyền thống, suy luận, và phương pháp khoa học.",
+      "image": null
+    },
+    {
+      "id": 116,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Công ty nghiên cứu Nielsen đã từng thực hiện một nghiên cứu tìm hiểu về thói quen mua sắm của người Việt Nam năm 2015. So với năm 2015, thói quen mua sắm của người Việt Nam có vẻ đã thay đổi nhiều. Vì vậy, để làm mới báo cáo nghiên cứu về vấn đề này, năm 2022, Nielsen đã thực hiện một nghiên cứu cùng về chủ đề này sử dụng mô hình nghiên cứu giống với năm 2015. Sự khác biệt trong nghiên cứu này so với nghiên cứu năm 2015 thể hiện ở...",
+      "options": {
+        "A": "Dữ liệu mới",
+        "B": "Cách tiếp cận mới",
+        "C": "Phương pháp mới",
+        "D": "Cách diễn giải mới"
+      },
+      "answer": "A",
+      "explainAnswer": "Nghiên cứu lặp lại cùng chủ đề với dữ liệu mới → khác biệt ở dữ liệu mới.",
+      "image": null
+    },
+    {
+      "id": 117,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Khoa học là .... được tổ chức theo các lĩnh vực và sử dụng các phương pháp nghiên cứu được cộng đồng khoa học trong ngành chấp nhận?",
+      "options": {
+        "A": "Hệ thống các kinh nghiệm của nhà nghiên cứu",
+        "B": "Hệ thống các quan điểm của nhà khoa học",
+        "C": "Hệ thống nhận thức của nhà khoa học",
+        "D": "Hệ thống tri thức"
+      },
+      "answer": "D",
+      "explainAnswer": "Khoa học là hệ thống tri thức được tổ chức theo lĩnh vực và dùng phương pháp được cộng đồng chấp nhận.",
+      "image": null
+    },
+    {
+      "id": 118,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Đâu là mục đích thật sự của hoạt động nghiên cứu khoa học?",
+      "options": {
+        "A": "Ghi lại các sự kiện khoa học",
+        "B": "Khám phá, mở rộng tri thức/hiểu biết",
+        "C": "Tổng hợp các tri thức kinh nghiệm của cộng đồng",
+        "D": "Tham vọng của nhà nghiên cứu"
+      },
+      "answer": "B",
+      "explainAnswer": "Mục đích thật sự là khám phá, mở rộng tri thức/hiểu biết.",
+      "image": null
     },
     {
       "id": 119,
       "chapter": "Phương pháp nghiên cứu khoa học",
-      "sourceChapter": "PHƯƠNG PHÁP LẤY MẪU",
-      "question": "Nhóm nghiên cứu thực hiện nghiên cứu về hành vi sử dụng mạng xã hội của sinh viên TP.HCM. Phương pháp lấy mẫu nào sau đây có thể sử dụng được?",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Tính hệ thống trong hoạt động nghiên cứu khoa học là?",
       "options": {
-        "A": "Chọn mẫu hệ thống và chọn mẫu thuận tiện",
-        "B": "Chỉ chọn mẫu ngẫu nhiên toàn quốc",
-        "C": "Chỉ chọn mẫu phân tầng toàn quốc",
-        "D": "Không thể lấy mẫu"
+        "A": "Trật tự sắp xếp về sự hiểu biết của nhà khoa học",
+        "B": "Trình tư nghiên cứu đạt tính logic được cộng đồng khoa học trong chuyên ngành chấp nhận",
+        "C": "Tính thứ tự trong việc sắp xếp các nghiên cứu định tính và định lượng",
+        "D": "Quy ước của nhà khoa học"
       },
-      "answer": "A",
-      "explainAnswer": "Có thể kết hợp chọn mẫu hệ thống và thuận tiện tùy điều kiện thực tế."
+      "answer": "B",
+      "explainAnswer": "Tính hệ thống thể hiện ở trình tự nghiên cứu có logic, được tổ chức chặt chẽ và phù hợp với chuẩn mực của chuyên ngành.",
+      "image": null
     },
     {
       "id": 120,
       "chapter": "Phương pháp nghiên cứu khoa học",
-      "sourceChapter": "PHƯƠNG PHÁP THU THẬP DỮ LIỆU",
-      "question": "Nhóm nghiên cứu thực hiện nghiên cứu về hành vi sử dụng mạng xã hội của sinh viên TP.HCM. Phương pháp thu thập dữ liệu nào sau đây phù hợp?",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Gia đình càng giàu, con cái càng dễ thành công. Đây là … .",
       "options": {
-        "A": "Bảng hỏi",
-        "B": "Chỉ quan sát",
-        "C": "Chỉ phỏng vấn sâu",
-        "D": "Chỉ thí nghiệm"
+        "A": "Vấn đề nghiên cứu",
+        "B": "Giả thuyết nghiên cứu",
+        "C": "Câu hỏi nghiên cứu",
+        "D": "Mục đích nghiên cứu"
+      },
+      "answer": "B",
+      "explainAnswer": "Đây là giả thuyết nghiên cứu.",
+      "image": null
+    },
+    {
+      "id": 121,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Trong tuần tới, được ban giám đốc yêu cầu, nhóm của Mạnh phải thực hiện một nghiên cứu điều tra về hứng thú của người tiêu dùng đối với các mặt hàng phụ kiện cho các sản phẩm công nghệ. Ý tưởng của nghiên cứu này xuất phát từ?",
+      "options": {
+        "A": "Nhu cầu thực tiễn công việc",
+        "B": "Nhu cầu tìm hiểu tri thức mới",
+        "C": "Trao đổi, bàn luận với người khác",
+        "D": "Ý tưởng trong các tạp chí khoa học"
       },
       "answer": "A",
-      "explainAnswer": "Bảng hỏi phù hợp để thu thập dữ liệu trên quy mô lớn về hành vi sinh viên."
+      "explainAnswer": "Ý tưởng nghiên cứu xuất phát từ yêu cầu của ban giám đốc để phục vụ công việc của doanh nghiệp, nên nguồn gốc là nhu cầu thực tiễn công việc.",
+      "image": null
+    },
+    {
+      "id": 122,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Một nhà nghiên cứu xác định trong nghiên cứu của họ là \"Có tồn tại ảnh hưởng của thông tin truyền miệng trên mạng tới quyết định mua của khách hàng với dịch vụ hàng hay không?. Đây là một ví dụ về:?",
+      "options": {
+        "A": "Xác định vấn đề nghiên cứu",
+        "B": "Câu hỏi nghiên cứu",
+        "C": "Mục đích nghiên cứu",
+        "D": "Giả thuyết nghiên cứu"
+      },
+      "answer": "B",
+      "explainAnswer": "Đây là câu hỏi nghiên cứu (dạng yes/no về mối quan hệ).",
+      "image": null
+    },
+    {
+      "id": 123,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Phương pháp định tính thường được sử dụng nhiều nhất trong loại nghiên cứu nào?",
+      "options": {
+        "A": "Nghiên cứu thăm dò/ khám phá",
+        "B": "Nghiên cứu mô tả",
+        "C": "Nghiên cứu nhân quả/ giải thích",
+        "D": "Nghiên cứu cơ bản"
+      },
+      "answer": "A",
+      "explainAnswer": "Định tính dùng nhiều nhất trong nghiên cứu thăm dò/khám phá.",
+      "image": null
+    },
+    {
+      "id": 124,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Số lượng đối tượng phỏng vấn tham gia trong một phỏng vấn sâu là?",
+      "options": {
+        "A": "1 người",
+        "B": "4 người",
+        "C": "8-10 người",
+        "D": "trên 10 người"
+      },
+      "answer": "A",
+      "explainAnswer": "Phỏng vấn sâu thường là 1 người (one-on-one).",
+      "image": null
+    },
+    {
+      "id": 125,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Một nhà nghiên cứu dân tộc học muốn khám phá lý do một cộng đồng dân tộc thiểu số hay xuất hiện tình trạng tảo hôn. Nhà nghiên cứu tham gia vào cộng đồng để quan sát họ nhưng không cho họ biết. Đây là phương pháp quan sát nào?",
+      "options": {
+        "A": "Quan sát tham gia như thành viên",
+        "B": "Tham gia chủ động để quan sát",
+        "C": "Tham gia thụ động để quan sát",
+        "D": "Quan sát thuần tuý"
+      },
+      "answer": "A",
+      "explainAnswer": "Không tiết lộ danh tính nhà nghiên cứu → quan sát tham gia như thành viên (covert).",
+      "image": null
+    },
+    {
+      "id": 126,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Một doanh nghiệp sản xuất bao cao su cần tìm hiểu nhu cầu sử dụng của khách hàng (kiểu đáng, mùi thơm....), đâu là phương pháp nghiên cứu thích hợp nhất để thu được thông tin của khách hàng?",
+      "options": {
+        "A": "Sử dụng phương pháp quan sát cá nhân người sử dụng",
+        "B": "Sử dụng phương pháp thảo luận nhóm với những người sử dụng",
+        "C": "Thảo luận tay đôi ẩn danh từng người sử dụng",
+        "D": "Sử dụng khảo sát"
+      },
+      "answer": "C",
+      "explainAnswer": "Chủ đề nhạy cảm → thảo luận tay đôi ẩn danh phù hợp nhất.",
+      "image": null
+    },
+    {
+      "id": 127,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Trong một phân tích ảnh hưởng của thời gian tự học đến kết quả học tập của sinh viên tại trường đại học thì..",
+      "options": {
+        "A": "Thời gian tự học là biến phụ thuộc, kết quả học tập là biến độc lập",
+        "B": "Kết quả học tập là biến điều tiết, thời gian tự học là biến kiểm soát",
+        "C": "Thời gian tự học là biến độc lập, kết quả học tập là biến phụ thuộc",
+        "D": "Thời gian tự học là biến quan sát, kết quả học tập là biến tiềm ẩn"
+      },
+      "answer": "C",
+      "explainAnswer": "Thời gian tự học = biến độc lập; kết quả học tập = biến phụ thuộc.",
+      "image": null
+    },
+    {
+      "id": 128,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Có hàng trăm lí do khác nhau nhưng năm lí do được đề cập nhiều nhất giải thích tại sao người Việt Nam ngại đi ô tô ra đường là sợ kẹt xe, khó điều khiển, khó tìm chỗ để xe, sợ va chạm trầy xước và chưa có bằng lái xe. Đây có khả năng là kết quả của loại nghiên cứu nào nhất?",
+      "options": {
+        "A": "Nghiên cứu định tính",
+        "B": "Nghiên cứu định lượng",
+        "C": "Nghiên cứu ứng dụng",
+        "D": "Nghiên cứu cơ bản"
+      },
+      "answer": "A",
+      "explainAnswer": "Liệt kê lý do từ người trả lời → kết quả điển hình của nghiên cứu định tính.",
+      "image": null
+    },
+    {
+      "id": 129,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Người ta sử dụng các câu hỏi có mã là QUA1, QUA2, QUA3, và QUA4 để đánh giá chất lượng dịch vụ của một loại dịch vụ nào đó. Vậy “chất lượng dịch vụ” được gọi là gì…?",
+      "options": {
+        "A": "Biến kiểm soát",
+        "B": "Biến điều tiết",
+        "C": "Biến tiềm ẩn",
+        "D": "Biến quan sát"
+      },
+      "answer": "C",
+      "explainAnswer": "Chất lượng dịch vụ là biến tiềm ẩn (latent), các QUA1-4 là biến quan sát.",
+      "image": null
+    },
+    {
+      "id": 130,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Mục đích của nghiên cứu định lượng thường là…?",
+      "options": {
+        "A": "Giải thích các hiện tượng khoa học",
+        "B": "Đánh giá, kiểm định các giả thuyết nghiên cứu có được từ lý thuyết",
+        "C": "Mô tả các vấn đề chưa biết rõ",
+        "D": "Khám phá các yếu tố có liên quan đến chủ đề nghiên cứu"
+      },
+      "answer": "B",
+      "explainAnswer": "Định lượng thường dùng để đánh giá, kiểm định giả thuyết từ lý thuyết.",
+      "image": null
+    },
+    {
+      "id": 131,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Sự khác nhau cơ bản về loại dữ liệu sử dụng trong nghiên cứu định tính và nghiên cứu định lượng là:",
+      "options": {
+        "A": "Dữ liệu định tính thường có cấu trúc hoàn toàn, còn dữ liệu định lượng luôn phi cấu trúc.",
+        "B": "Dữ liệu định tính và định lượng đều phải được biểu diễn bằng số ngay từ khi thu thập.",
+        "C": "Dữ liệu định tính thường là văn bản, lời nói hoặc dữ liệu phi cấu trúc; dữ liệu định lượng thường ở dạng số và có cấu trúc.",
+        "D": "Hai loại dữ liệu không có điểm khác biệt về hình thức và cách xử lý."
+      },
+      "answer": "C",
+      "explainAnswer": "Định tính thường thu thập dữ liệu phi cấu trúc như lời nói, văn bản và quan sát; định lượng thường sử dụng dữ liệu dạng số có cấu trúc.",
+      "image": null
+    },
+    {
+      "id": 132,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Nghiên cứu này nên được thực hiện vì hiện tại chưa có nghiên cứu tương tự được thực hiện ở Việt Nam. Đây là câu nói giải thích cho khía cạnh nào của một nghiên cứu khoa học?",
+      "options": {
+        "A": "Vấn đề nghiên cứu",
+        "B": "Giả thuyết nghiên cứu",
+        "C": "Câu hỏi nghiên cứu",
+        "D": "Khoảng trống nghiên cứu"
+      },
+      "answer": "D",
+      "explainAnswer": "Giải thích khoảng trống nghiên cứu (research gap).",
+      "image": null
+    },
+    {
+      "id": 133,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Một nhà nghiên cứu muốn tìm hiểu các tác động của thông tin truyền miệng trên mạng đến quyết định mua của khách hàng với dịch vụ đồ ăn nhanh. Đây là một ví dụ về:?",
+      "options": {
+        "A": "Xác định vấn đề nghiên cứu",
+        "B": "Câu hỏi nghiên cứu",
+        "C": "Mục đích nghiên cứu",
+        "D": "Giả thuyết nghiên cứu"
+      },
+      "answer": "A",
+      "explainAnswer": "Đây là xác định vấn đề nghiên cứu.",
+      "image": null
+    },
+    {
+      "id": 134,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Trong các đáp án dưới đây, đáp án nào là vấn đề nghiên cứu?",
+      "options": {
+        "A": "Quản lý yếu kém là nguyên nhân chính dẫn đến mất trật tự công cộng",
+        "B": "Các vụ đánh nhau gây mất trật tự công cộng thường xuyên xảy ra gần đây",
+        "C": "Tìm hiểu nguyên nhân gây mất trật tự công cộng",
+        "D": "Xác định các nguy cơ đến việc tự gây rối mất trật tự công cộng"
+      },
+      "answer": "B",
+      "explainAnswer": "Các vụ đánh nhau gây mất trật tự… là hiện tượng/vấn đề cần nghiên cứu.",
+      "image": null
+    },
+    {
+      "id": 135,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Nghiên cứu đầu tiên về một chủ đề nào đó thường là loại nghiên cứu nào?",
+      "options": {
+        "A": "Nghiên cứu định lượng",
+        "B": "Nghiên cứu hỗn hợp",
+        "C": "Nghiêm cứu thăm dò/ khám phá",
+        "D": "Nghiên cứu giải thích"
+      },
+      "answer": "C",
+      "explainAnswer": "Nghiên cứu đầu tiên thường là thăm dò/khám phá.",
+      "image": null
+    },
+    {
+      "id": 136,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Dựa theo tính bão hòa trong nghiên cứu. Thời điểm tốt để kết thúc nghiên cứu là khi?",
+      "options": {
+        "A": "Số lượng đối tượng phỏng vấn đạt mục tiêu đề ra",
+        "B": "Các thành viên trong nhóm nghiên cứu đã cảm thấy thỏa mãn với kết quả",
+        "C": "Những lần phỏng vấn gần nhất không mang lại dữ liệu mới",
+        "D": "Phần mềm Nvivo chỉ báo nghiên cứu nên được kết thúc"
+      },
+      "answer": "C",
+      "explainAnswer": "Kết thúc khi những lần phỏng vấn gần nhất không mang lại dữ liệu mới (bão hòa).",
+      "image": null
+    },
+    {
+      "id": 137,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Để nghiên cứu về hành vi của mọi người khi hát karaoke, Linh quyết định tham gia vào một buổi karaoke với các bạn học hồi trung học. Các thành viên tham gia buổi karaoke hôm đó rất bất ngờ vì bình thường Linh không tham gia các sự kiện này bao giờ. Đây là loại quan sát nào?",
+      "options": {
+        "A": "Chỉ quan sát",
+        "B": "Quan sát như một thành viên",
+        "C": "Quan sát chủ động",
+        "D": "Quan sát bị động"
+      },
+      "answer": "B",
+      "explainAnswer": "Tham gia với tư cách thành viên → quan sát như một thành viên.",
+      "image": null
+    },
+    {
+      "id": 138,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Khi nhà nghiên cứu tiến hành thực hiện một nghiên cứu hỗn hợp với các nghiên cứu định lượng trước, sau đó thiết kế các nghiên cứu định tính như phỏng vấn sâu để làm rõ thêm những điểm chưa rõ ràng của nghiên cứu định lượng. Đây là phương pháp hỗn hợp nào?",
+      "options": {
+        "A": "Hỗn hợp đa phương pháp",
+        "B": "Hỗn hợp gắn kết",
+        "C": "Hỗn hợp giải thích",
+        "D": "Hỗn hợp khám phá"
+      },
+      "answer": "C",
+      "explainAnswer": "Định lượng trước → định tính sau để giải thích = hỗn hợp giải thích (explanatory sequential).",
+      "image": null
+    },
+    {
+      "id": 139,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Trong chương trình học, trình tự thực hiện một nghiên cứu hỗn hợp được phân chia làm bao nhiêu bước?",
+      "options": {
+        "A": "6 bước",
+        "B": "7 bước",
+        "C": "8 bước",
+        "D": "9 bước"
+      },
+      "answer": "B",
+      "explainAnswer": "Theo chương trình học thường là 7 bước.",
+      "image": null
+    },
+    {
+      "id": 140,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Việc sử dụng các biện pháp bảo vệ những người yếu thế (trẻ em, người khuyết tật, người nghèo…) trong tiến hành nghiên cứu thuộc về nguyên tắc nào của đạo đức nghiên cứu?",
+      "options": {
+        "A": "Đảm bảo sự công bằng",
+        "B": "Tôn trọng con người",
+        "C": "Đem lại lợi ích/ không ác (thiện tính)",
+        "D": "Thực hiện quyền tự quyết"
+      },
+      "answer": "B",
+      "explainAnswer": "Bảo vệ các nhóm yếu thế là một cách tôn trọng con người và chú ý đến những hạn chế về khả năng tự bảo vệ của họ.",
+      "image": null
+    },
+    {
+      "id": 141,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Đâu KHÔNG phải là vi phạm về nguyên tắc tôn trọng con người trong nghiên cứu?",
+      "options": {
+        "A": "Ép buộc đối tượng tham gia vào nghiên cứu",
+        "B": "Không cung cấp đầy đủ thông tin về các nguy cơ của nghiên cứu cho người tham gia",
+        "C": "Cung cấp các thông tin riêng tư của người tham gia nghiên cứu cho bên thứ ba",
+        "D": "Điều chỉnh dữ liệu của người tham gia để cho phù hợp với kết luận của nhà nghiên cứu"
+      },
+      "answer": "D",
+      "explainAnswer": "Điều chỉnh dữ liệu vi phạm tính trung thực/khách quan, không phải nguyên tắc tôn trọng con người.",
+      "image": null
+    },
+    {
+      "id": 142,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Câu hỏi có lí do “Lí do chính bạn muốn đi du lịch là gì” là câu hỏi thường được sử dụng trong loại nghiên cứu nào?",
+      "options": {
+        "A": "Nghiên cứu định tính",
+        "B": "Nghiên cứu định lượng",
+        "C": "Nghiên cứu giải thích",
+        "D": "Nghiên cứu khoa học tự nhiên"
+      },
+      "answer": "A",
+      "explainAnswer": "Câu hỏi mở 'lí do chính…' điển hình của nghiên cứu định tính.",
+      "image": null
+    },
+    {
+      "id": 143,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Chọn mẫu định tính là phương pháp chọn mẫu dựa trên?",
+      "options": {
+        "A": "Mẫu lý thuyết dựa trên cơ chế bão hòa",
+        "B": "Mẫu có tính đại diện cao cho quần thể thông tin",
+        "C": "Mẫu có quy mô lớn",
+        "D": "Mẫu chọn theo phương pháp phân tầng"
+      },
+      "answer": "A",
+      "explainAnswer": "Chọn mẫu định tính dựa trên mẫu lý thuyết và cơ chế bão hòa.",
+      "image": null
+    },
+    {
+      "id": 144,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Trong một nghiên cứu tìm hiểu về ảnh hưởng của năng lực thành viên dự án đến kết quả dự án đầu tư thì?",
+      "options": {
+        "A": "Kết quả dự án đầu tư là biến độc lập, năng lực thành viên dự án là biến phụ thuộc",
+        "B": "Kết quả dự án đầu tư là biến phụ thuộc, năng lực thành viên dự án là biến độc lập",
+        "C": "Năng lực thành viên dự án là biến kiểm soát, kết quả dự án đầu tư là biến phụ thuộc",
+        "D": "Năng lực thành viên dự án là biến tiềm ẩn, kết quả dự án đầu tư là biến biến độc lập"
+      },
+      "answer": "B",
+      "explainAnswer": "Năng lực = độc lập; Kết quả dự án = phụ thuộc.",
+      "image": null
+    },
+    {
+      "id": 145,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Loại câu hỏi nào thường được sử dụng trong nghiên cứu định lượng?",
+      "options": {
+        "A": "Câu hỏi không cấu trúc",
+        "B": "Câu hỏi bán cấu trúc",
+        "C": "Câu hỏi đóng",
+        "D": "Câu hỏi mở"
+      },
+      "answer": "C",
+      "explainAnswer": "Câu hỏi đóng có các phương án trả lời được định trước, thuận lợi cho mã hóa và phân tích thống kê.",
+      "image": null
+    },
+    {
+      "id": 146,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Phương pháp hỗn hợp và đa phương pháp khác nhau ở chỗ nào?",
+      "options": {
+        "A": "Phương pháp hỗn hợp chỉ sử dụng dữ liệu định tính, còn đa phương pháp chỉ sử dụng dữ liệu định lượng.",
+        "B": "Phương pháp hỗn hợp chỉ sử dụng nghiên cứu định lượng trước, còn đa phương pháp chỉ sử dụng định tính trước.",
+        "C": "Hai khái niệm này hoàn toàn giống nhau.",
+        "D": "Phương pháp hỗn hợp kết hợp định tính và định lượng có sự liên kết/phụ thuộc giữa các giai đoạn; đa phương pháp sử dụng nhiều phương pháp tương đối độc lập."
+      },
+      "answer": "D",
+      "explainAnswer": "Hỗn hợp có sự kết hợp và liên kết giữa định tính – định lượng; đa phương pháp sử dụng nhiều phương pháp nhưng không nhất thiết phụ thuộc vào nhau.",
+      "image": null
+    },
+    {
+      "id": 147,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Nhà nghiên cứu tiến hành một nghiên cứu về tình trạng tảo hôn trong một cộng đồng thiểu số với những phát hiện tình trạng tảo hôn liên quan chặt chẽ đến \"điều kiện kinh tế\" và \"trình độ học vấn\". Sau đó, tiến hành một khảo sát với một nhóm cư dân để ước lượng ảnh hưởng của điều kiện kinh tế và trình độ học vấn đến xác suất tảo hôn của các cặp vợ/chồng. Đây là dạng nghiên cứu hỗn hợp nào?",
+      "options": {
+        "A": "Hỗn hợp đa phương pháp",
+        "B": "Hỗn hợp gắn kết",
+        "C": "Hỗn hợp giải thích",
+        "D": "Hỗn hợp khám phá"
+      },
+      "answer": "D",
+      "explainAnswer": "Định tính được thực hiện trước để phát hiện các yếu tố, sau đó định lượng được dùng để kiểm tra/ước lượng chúng; đây là hỗn hợp khám phá (exploratory sequential).",
+      "image": null
+    },
+    {
+      "id": 148,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Những tiêu chuẩn, giá trị hay quy tắc để xác định những hành vi phù hợp, có thể chấp nhận được trong hoạt động nghiên cứu gọi là?",
+      "options": {
+        "A": "Giá trị đạo đức",
+        "B": "Đạo đức nghiên cứu",
+        "C": "Nguyên tắc đạo đức trong nghiên cứu",
+        "D": "Đạo đức kinh doanh và văn hóa nghiên cứu"
+      },
+      "answer": "B",
+      "explainAnswer": "Những tiêu chuẩn, giá trị và quy tắc định hướng hành vi phù hợp trong nghiên cứu được gọi là đạo đức nghiên cứu.",
+      "image": null
+    },
+    {
+      "id": 149,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Tính khách quan trong phương pháp nghiên cứu khoa học là gì?",
+      "options": {
+        "A": "Thực hiện nghiên cứu đúng theo quy trình",
+        "B": "Đơn giản hóa kết quả nghiên cứu",
+        "C": "Đảm bảo sự sáng tạo trong nghiên cứu",
+        "D": "Phản ảnh chân thực nhất kết quả nghiên cứu"
+      },
+      "answer": "D",
+      "explainAnswer": "Tính khách quan yêu cầu kết quả phản ánh trung thực dữ liệu và hiện thực nghiên cứu, hạn chế ảnh hưởng của quan điểm cá nhân.",
+      "image": null
+    },
+    {
+      "id": 150,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Khi phân loại nghiên cứu theo mục đích, ba loại nghiên cứu phổ biến là:",
+      "options": {
+        "A": "Nghiên cứu khám phá, nghiên cứu giải thích và nghiên cứu hỗn hợp",
+        "B": "Nghiên cứu cơ bản, nghiên cứu ứng dụng và nghiên cứu triển khai",
+        "C": "Nghiên cứu mô tả, nghiên cứu tương quan/nhân quả và nghiên cứu khám phá",
+        "D": "Nghiên cứu định lượng, nghiên cứu định tính và nghiên cứu hỗn hợp"
+      },
+      "answer": "C",
+      "explainAnswer": "Theo mục đích, nghiên cứu thường gồm khám phá/thăm dò, mô tả và giải thích/nhân quả.",
+      "image": null
+    },
+    {
+      "id": 151,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Đâu không phải là một yếu tố quyết định tính khả thi của một dự án nghiên cứu?",
+      "options": {
+        "A": "Khả năng thu hút sự chú ý của xã hội, cộng đồng đối với dự án",
+        "B": "Khả năng tiếp cận đối tượng điều tra và nguồn dữ liệu",
+        "C": "Khả năng tiếp cận các nguồn lực (nhân lực, tài chính, trang thiết bị) phù hợp để thực hiện",
+        "D": "Khả năng phân tích dữ liệu nghiên cứ"
+      },
+      "answer": "A",
+      "explainAnswer": "Khả năng thu hút sự chú ý của xã hội không phải yếu tố quyết định tính khả thi.",
+      "image": null
+    },
+    {
+      "id": 152,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Đâu KHÔNG phải là một tiêu chí của khung FINER khi đánh giá một câu hỏi/nghiên cứu?",
+      "options": {
+        "A": "Khả thi (Feasible)",
+        "B": "Thú vị (Interesting)",
+        "C": "Có tính mới (Novel)",
+        "D": "Đáng tin cậy (Reliable)"
+      },
+      "answer": "D",
+      "explainAnswer": "FINER gồm Feasible, Interesting, Novel, Ethical và Relevant; không có Reliable.",
+      "image": null
+    },
+    {
+      "id": 153,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Đâu là định nghĩa chính xác nhất về nghiên cứu khoa học là?",
+      "options": {
+        "A": "Câu 34. Câu văn dưới đây sử dụng hình thức trích dẫn gì?",
+        "B": "Hoạt động có hệ thống và khách quan nhằm khám phá, phát triển và kiểm chứng những kiến",
+        "C": "Kết quả phân tích từ dữ liệu khảo sát bằng bảng hỏi",
+        "D": "J., 2007, 2011; Nguyễn, Đ.T.& Nguyễn, T.M.T.,"
+      },
+      "answer": "B",
+      "explainAnswer": "Nghiên cứu khoa học là hoạt động có hệ thống và khách quan nhằm khám phá, phát triển và kiểm chứng tri thức.",
+      "image": null
+    },
+    {
+      "id": 154,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Khái niệm nào sau đây mô tả đúng về “vấn đề nghiên cứu” trong nghiên cứu khoa học?",
+      "options": {
+        "A": "Một hiện tượng đã được giải thích rõ ràng và không còn tranh cãi.",
+        "B": "Một điểm hoặc hiện tượng chưa rõ ràng, còn gây tranh cãi, cần được làm sáng tỏ.",
+        "C": "Một giả thuyết đã được kiểm chứng qua nhiều nghiên cứu thực nghiệm.",
+        "D": "Một kết quả nghiên cứu đã được công bố trên các tạp chí khoa học uy tín."
+      },
+      "answer": "B",
+      "explainAnswer": "Vấn đề nghiên cứu là một điểm hoặc hiện tượng chưa rõ, còn tranh cãi hoặc chưa được giải thích đầy đủ và cần được làm sáng tỏ.",
+      "image": null
+    },
+    {
+      "id": 155,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Đặc điểm nào sau đây đúng với phương pháp nghiên cứu định tính?",
+      "options": {
+        "A": "Sử dụng dữ liệu dạng số và các phân tích thống kê.",
+        "B": "Tập trung vào việc kiểm định giả thuyết bằng các phép thử định lượng",
+        "C": "Sử dụng dữ liệu dạng văn bản, phỏng vấn, quan sát để hiểu sâu về hiện tượng.",
+        "D": "Chỉ áp dụng cho các nghiên cứu trong lĩnh vực tự nhiên."
+      },
+      "answer": "C",
+      "explainAnswer": "Định tính dùng dữ liệu văn bản, phỏng vấn, quan sát để hiểu sâu.",
+      "image": null
+    },
+    {
+      "id": 156,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Đâu là đặc điểm nổi bật của nghiên cứu định lượng?",
+      "options": {
+        "A": "Sử dụng dữ liệu dạng số và phân tích bằng các phương pháp thống kê.",
+        "B": "Sử dụng phỏng vấn sâu và quan sát hiện trường để thu thập dữ liệu chính",
+        "C": "Không cần dựa vào giả thuyết nghiên cứu trước khi thu thập dữ liệu.",
+        "D": "Chủ yếu áp dụng cho các lĩnh vực nghệ thuật và nhân văn."
+      },
+      "answer": "A",
+      "explainAnswer": "Dùng dữ liệu số và phân tích thống kê.",
+      "image": null
+    },
+    {
+      "id": 157,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Một bộ câu hỏi khảo sát tốt trong nghiên cứu định lượng cần đảm bảo điều gì?",
+      "options": {
+        "A": "Có càng nhiều câu hỏi và câu hỏi càng đa dạng càng tốt để thu thập nhiều thông tin.",
+        "B": "Sử dụng nhiều câu hỏi phức tạp và khai thác sâu để đánh giá kiến thức người trả lời.",
+        "C": "Tập trung cao, đơn giản, cho câu trả lời chính xác và liên quan đến nghiên cứu.",
+        "D": "Chỉ cần tập trung vào các câu hỏi mở hoặc bán cấu trúc để hiểu sâu vấn đề."
+      },
+      "answer": "C",
+      "explainAnswer": "Tập trung, đơn giản, cho câu trả lời chính xác và liên quan.",
+      "image": null
+    },
+    {
+      "id": 158,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Một quy trình nghiên cứu khoa học thường bắt đầu bằng bước nào?",
+      "options": {
+        "A": "Xác định và lựa chọn vấn đề nghiên cứu phù hợp.",
+        "B": "Phân tích dữ liệu thu thập được từ thực tế.",
+        "C": "Tham khảo các nghiên cứu và lý thuyết có trước.",
+        "D": "Đánh giá tác động của kết quả nghiên cứu đến xã hội."
+      },
+      "answer": "A",
+      "explainAnswer": "Bắt đầu bằng xác định và lựa chọn vấn đề nghiên cứu.",
+      "image": null
+    },
+    {
+      "id": 159,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Đâu là mục đích chính của việc xây dựng giả thuyết nghiên cứu?",
+      "options": {
+        "A": "Để trình bày kết quả nghiên cứu một cách logic.",
+        "B": "Để tổng hợp các tài liệu liên quan đến đề tài nghiên cứu.",
+        "C": "Để dự đoán mối quan hệ giữa các biến số trong nghiên cứu.",
+        "D": "Để xác định phương pháp phân tích dữ liệu phù hợp nhất."
+      },
+      "answer": "C",
+      "explainAnswer": "Dự đoán mối quan hệ giữa các biến số.",
+      "image": null
+    },
+    {
+      "id": 160,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Phương pháp nào sau đây thường được sử dụng trong nghiên cứu định tính?",
+      "options": {
+        "A": "Khảo sát bằng bảng câu hỏi với mẫu lớn.",
+        "B": "Thực nghiệm với các biến số kiểm soát chặt chẽ.",
+        "C": "Phỏng vấn sâu, thảo luận nhóm, quan sát tham dự.",
+        "D": "Phân tích dữ liệu bằng phần mềm thống kê chuyên dụng."
+      },
+      "answer": "C",
+      "explainAnswer": "Phỏng vấn sâu, thảo luận nhóm và quan sát tham dự là các phương pháp thường dùng để thu thập dữ liệu định tính.",
+      "image": null
+    },
+    {
+      "id": 161,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Đặc điểm nào sau đây KHÔNG phải là ưu điểm của nghiên cứu định tính?",
+      "options": {
+        "A": "Giúp hiểu sâu sắc về hiện tượng nghiên cứu.",
+        "B": "Cho phép linh hoạt trong quá trình thu thập dữ liệu.",
+        "C": "Dễ dàng tổng quát hóa kết quả cho toàn bộ quần thể.",
+        "D": "Có thể phát hiện các khía cạnh mới chưa từng được đề cập."
+      },
+      "answer": "C",
+      "explainAnswer": "Định tính khó tổng quát hóa cho toàn quần thể.",
+      "image": null
+    },
+    {
+      "id": 162,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Biến phụ thuộc trong nghiên cứu định lượng được hiểu là gì?",
+      "options": {
+        "A": "Là biến do nhà nghiên cứu kiểm soát hoàn toàn.",
+        "B": "Là biến chịu tác động hoặc thay đổi khi biến độc lập thay đổi.",
+        "C": "Là biến không được đo lường trong nghiên cứu.",
+        "D": "Là biến chỉ dùng để mô tả đối tượng nghiên cứu."
+      },
+      "answer": "B",
+      "explainAnswer": "Biến chịu tác động khi biến độc lập thay đổi.",
+      "image": null
+    },
+    {
+      "id": 163,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Khi nào nên sử dụng phương pháp khảo sát bằng bảng câu hỏi đóng?",
+      "options": {
+        "A": "Khi cần thu thập dữ liệu từ mẫu lớn và phân tích bằng thống kê.",
+        "B": "Khi muốn tìm hiểu sâu về cảm xúc, động cơ của đối tượng nghiên cứu.",
+        "C": "Khi chỉ cần mô tả hiện tượng mà không cần kiểm định giả thuyết.",
+        "D": "Khi không có đủ thời gian để phân tích dữ liệu."
+      },
+      "answer": "A",
+      "explainAnswer": "Khi cần mẫu lớn và phân tích thống kê.",
+      "image": null
+    },
+    {
+      "id": 164,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Một trong những nguyên tắc khi viết tiêu đề báo cáo khoa học là gì?",
+      "options": {
+        "A": "Phản ánh nội dung chính của nghiên cứu một cách ngắn gọn, cụ thể.",
+        "B": "Sử dụng càng nhiều từ khóa càng tốt để tiêu đề nổi bật",
+        "C": "Khuyến khích bắt đầu tiêu đề bằng từ “Nghiên cứu về…”.",
+        "D": "Nên sử dụng các từ viết tắt để tiết kiệm số lượng từ và giảm độ dài của tiêu đề"
+      },
+      "answer": "A",
+      "explainAnswer": "Tiêu đề báo cáo khoa học nên phản ánh đúng nội dung chính, ngắn gọn và cụ thể.",
+      "image": null
+    },
+    {
+      "id": 165,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Thiết kế nghiên cứu hỗn hợp đa phương pháp có đặc điểm gì?",
+      "options": {
+        "A": "Thu thập đồng thời cả dữ liệu định lượng và định tính để so sánh kết quả.",
+        "B": "Chỉ ưu tiên dữ liệu định lượng và phân tích trước.",
+        "C": "Chỉ ưu tiên dữ liệu định tính và phân tích sau.",
+        "D": "Không cần phân tích sự giống và khác nhau giữa hai loại dữ liệu."
+      },
+      "answer": "A",
+      "explainAnswer": "Thu thập đồng thời cả định lượng và định tính để so sánh.",
+      "image": null
+    },
+    {
+      "id": 166,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Một trong những bước quan trọng khi xây dựng bảng câu hỏi khảo sát là gì?",
+      "options": {
+        "A": "Đảm bảo mỗi câu hỏi chỉ thể hiện một khía cạnh duy nhất.",
+        "B": "Gộp nhiều ý vào một câu hỏi để tiết kiệm thời gian khảo sát.",
+        "C": "Sử dụng các câu hỏi phức tạp để kiểm tra kiến thức người trả lời.",
+        "D": "Đặt các câu hỏi quan trọng ở cuối bảng câu hỏi."
+      },
+      "answer": "A",
+      "explainAnswer": "Mỗi câu hỏi chỉ thể hiện một khía cạnh duy nhất.",
+      "image": null
+    },
+    {
+      "id": 167,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Đâu là một trong những ưu điểm của phương pháp nghiên cứu trường hợp (case study)?",
+      "options": {
+        "A": "Cho phép nghiên cứu sâu về một đối tượng hoặc hiện tượng cụ thể.",
+        "B": "Dễ dàng tổng quát hóa kết quả cho toàn bộ quần thể.",
+        "C": "Không cần thu thập dữ liệu thực tế.",
+        "D": "Chỉ phù hợp với các nghiên cứu định lượng."
+      },
+      "answer": "A",
+      "explainAnswer": "Cho phép nghiên cứu sâu về một đối tượng/hiện tượng cụ thể.",
+      "image": null
+    },
+    {
+      "id": 168,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Khi tiến hành nghiên cứu tài liệu, nhà nghiên cứu cần chú ý điều gì?",
+      "options": {
+        "A": "Lựa chọn tài liệu có nguồn gốc rõ ràng, đáng tin cậy và liên quan đến đề tài.",
+        "B": "Chỉ sử dụng tài liệu mới xuất bản trong vòng 1 năm để đảm bảo tính cập nhật",
+        "C": "Có thể sử dụng bất kỳ tài liệu nào có nội dung liên quan.",
+        "D": "Tập trung tổng hợp tài liệu mà không cần phân tích nội dung."
+      },
+      "answer": "A",
+      "explainAnswer": "Lựa chọn tài liệu nguồn gốc rõ ràng, đáng tin cậy, liên quan.",
+      "image": null
+    },
+    {
+      "id": 169,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Đâu là một trong những ưu điểm của phương pháp phỏng vấn sâu?",
+      "options": {
+        "A": "Giúp khai thác thông tin chi tiết, sâu sắc về chủ đề nghiên cứu.",
+        "B": "Dễ dàng khái quát kết quả nghiên cứu cho toàn bộ quần thể",
+        "C": "Không cần xây dựng kịch bản trước vì những người tham gia sẽ tương tác với nhau.",
+        "D": "Chỉ phù hợp với các nghiên cứu về khoa học tự nhiên và nghiên cứu ứng dụng."
+      },
+      "answer": "A",
+      "explainAnswer": "Khai thác thông tin chi tiết, sâu sắc.",
+      "image": null
+    },
+    {
+      "id": 170,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Nhà nghiên cứu tìm cách trả lời câu hỏi “chúng ta muốn khám phá cái gì” được gọi là?",
+      "options": {
+        "A": "Xác định vấn đề nghiên cứu",
+        "B": "Tìm khoảng trống nghiên cứu",
+        "C": "Đặt giả thuyết nghiên cứu",
+        "D": "Xây dựng mô hình nghiên cứu"
+      },
+      "answer": "A",
+      "explainAnswer": "Xác định vấn đề nghiên cứu.",
+      "image": null
+    },
+    {
+      "id": 171,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Khi nghiên cứu có liên quan đến con người hoặc động vật thường cần phải có sự phê duyệt từ phía đơn vị nào?",
+      "options": {
+        "A": "Phê duyệt của hội đồng học thuật chuyên môn của đơn vị",
+        "B": "Phê duyệt từ Hội đồng đánh giá đạo đức nghiên cứu",
+        "C": "Phê duyệt từ kiểm toán viên tài chính từ nhà tài trợ",
+        "D": "Được chấp nhận tại hội thảo khoa học hoặc đơn vị bình duyệt"
+      },
+      "answer": "B",
+      "explainAnswer": "Cần phê duyệt từ Hội đồng đánh giá đạo đức nghiên cứu.",
+      "image": null
+    },
+    {
+      "id": 172,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Tiêu chuẩn FINER KHÔNG bao gồm yếu tố nào sau đây?",
+      "options": {
+        "A": "Feasible (Khả thi)",
+        "B": "Interesting (Thú vị)",
+        "C": "Ethical (Đạo đức)",
+        "D": "Reliable (Đáng tin cậy)"
+      },
+      "answer": "D",
+      "explainAnswer": "FINER = Feasible, Interesting, Novel, Ethical, Relevant. Không có Reliable.",
+      "image": null
+    },
+    {
+      "id": 173,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Ví dụ nào sau đây là minh họa tốt nhất về nghiên cứu ứng dụng?",
+      "options": {
+        "A": "Nghiên cứu cấu trúc nguyên tử để hiểu lý thuyết",
+        "B": "Phát triển một loại pin nhiên liệu mới để cung cấp năng lượng cho xe điện",
+        "C": "Hình thành lý thuyết mới về nguồn gốc lịch sử và tiến hóa của con người",
+        "D": "Khám phá các ngôn ngữ cổ đại để hiểu về nền văn minh đã biến mất"
+      },
+      "answer": "B",
+      "explainAnswer": "Phát triển pin nhiên liệu mới cho xe điện nhằm giải quyết một ứng dụng thực tiễn là ví dụ điển hình của nghiên cứu ứng dụng.",
+      "image": null
+    },
+    {
+      "id": 174,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Thuật ngữ \"bão hòa thông tin\" trong nghiên cứu định tính có nghĩa là gì?",
+      "options": {
+        "A": "Thu thập dữ liệu cho đến khi không còn thông tin mới được đưa ra",
+        "B": "Phân tích dữ liệu cho đến khi có thể tìm ra ý nghĩa thống kê",
+        "C": "Tuyển số lượng lớn người tham gia",
+        "D": "Tóm tắt kết quả tổng quát trong một báo cáo"
+      },
+      "answer": "A",
+      "explainAnswer": "Bão hòa thông tin đạt được khi thu thập thêm dữ liệu không còn tạo ra thông tin hoặc chủ đề mới đáng kể.",
+      "image": null
+    },
+    {
+      "id": 175,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Một nhà nghiên cứu phát biểu trong nghiên cứu của họ “Nghiên cứu làm rõ mối quan hệ tích cực giữa năng lực động của doanh nghiệp tới khả năng thích ứng của doanh nghiệp hậu đại dịch COVID”. Đây là ví dụ về:?",
+      "options": {
+        "A": "Vấn đề nghiên cứu",
+        "B": "Mục tiêu nghiên cứu",
+        "C": "Câu hỏi nghiên cứu",
+        "D": "Giả thuyết nghiên cứu"
+      },
+      "answer": "D",
+      "explainAnswer": "Đây là giả thuyết nghiên cứu.",
+      "image": null
+    },
+    {
+      "id": 176,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Một nhà nghiên cứu muốn tìm hiểu về hiệu quả và hạn chế của chương trình HerVenture của Quỹ Cherie Blair cho phụ nữ đối với các doanh nghiệp vừa và nhỏ do phụ nữ làm chủ. Công cụ nào là phù hợp trong để thu thập thông từ các nữ chủ doanh nghiệp tham gia chương trình:?",
+      "options": {
+        "A": "Thảo luận tay đôi",
+        "B": "Thảo luận nhóm",
+        "C": "Quan sát",
+        "D": "Bảng khảo sát"
+      },
+      "answer": "B",
+      "explainAnswer": "Thảo luận nhóm phù hợp để thu thập thông tin từ nữ chủ doanh nghiệp.",
+      "image": null
+    },
+    {
+      "id": 177,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Các hình thức mã hóa dữ liệu thường được sử dụng trong phương pháp Lý thuyết nền:?",
+      "options": {
+        "A": "Mã hóa mở, mã hóa đóng, mã hóa chọn lọc",
+        "B": "Mã hóa mở, mã hóa phân tầng, mã hóa theo trục",
+        "C": "Mã hóa theo trục, mã hóa phân tầng, mã hóa chọn lọc",
+        "D": "Mã hóa mở, mã hóa chọn lọc, mã hóa theo trục"
+      },
+      "answer": "D",
+      "explainAnswer": "Lý thuyết nền thường sử dụng mã hóa mở, mã hóa theo trục và mã hóa chọn lọc.",
+      "image": null
+    },
+    {
+      "id": 178,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Khi phân loại biến nghiên cứu theo quan hệ trong mô hình nghiên cứu, biến nào được sử dụng để điều chỉnh các đặc điểm đặc hữu trong một phân tích?",
+      "options": {
+        "A": "Biến độc lập",
+        "B": "Biến trung gian",
+        "C": "Biến điều tiết",
+        "D": "Biến kiểm soát"
+      },
+      "answer": "D",
+      "explainAnswer": "Biến kiểm soát.",
+      "image": null
+    },
+    {
+      "id": 179,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Một nhà nghiên cứu muốn tìm hiểu văn hóa và lối sống của một cộng đồng địa phương. Nhà nghiên cứu đã đến địa phương đó, thông báo về mục đích nghiên cứu của mình và xin phép người dân được cùng tham gia vào các hoạt động sinh hoạt và văn hóa của họ. Đây là ví dụ của hình thức quan sát nào:?",
+      "options": {
+        "A": "Tham gia chủ động để quan sát",
+        "B": "Tham gia như một thành viên",
+        "C": "Tham gia thụ động để quan sát",
+        "D": "Quan sát thuần túy"
+      },
+      "answer": "A",
+      "explainAnswer": "Nhà nghiên cứu chủ động tham gia vào hoạt động của cộng đồng sau khi thông báo mục đích nghiên cứu; đây là tham gia chủ động để quan sát.",
+      "image": null
+    },
+    {
+      "id": 180,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Cho bảng thông tin dưới đây SUB Chuẩn chủ quan Mức độ đồng ý SUB1 Tại trường đại học của tôi, sinh viên được khuyến khích để theo đuổi các ý tưởng 1 2 3 4 5 SUB2 Tại trường đại học của tôi, tôi có cơ hội được gặp những người có ý tưởng khởi nghiệp tốt 1 2 3 4 5 SUB3 Tôi nghĩ rằng khả năng khởi nghiệp có thể được đào tạo 1 2 3 4 5 SUB4 Tôi biết nhiều sinh viên tại trường của tôi đang triển khai các start up thành công 1 2 3 4 5 SUB5 Tại trường của tôi, có rất nhiều hoạt động hỗ trợ sinh viên để sáng tạo những ý tưởng khởi nghiệp kinh doanh 1 2 3 4 5 1 Rất không đồng ý, 2 Không đồng ý; 3 Trung lập, 4 Đồng ý; 5 Đồng ý Phát biểu nào sau đây là đúng?",
+      "options": {
+        "A": "SUB là biến quan sát và phụ thuộc",
+        "B": "SUB1 – SUB5 là thang đo Chuẩn chủ quan",
+        "C": "SUB1 – SUB5 là các biến tiềm ẩn",
+        "D": "SUB1 - SUB5 là các câu hỏi bán cấu trúc."
+      },
+      "answer": "B",
+      "explainAnswer": "SUB là khái niệm/thang đo “Chuẩn chủ quan”; SUB1–SUB5 là các biến quan sát dùng để đo khái niệm này.",
+      "image": null
+    },
+    {
+      "id": 181,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Trong nghiên cứu khoa học, nguồn dữ liệu nào dưới đây được xem là dữ liệu sơ cấp (primary data)?",
+      "options": {
+        "A": "Dữ liệu tổng hợp từ Wikipedia",
+        "B": "Bài báo khoa học đã công bố trên tạp chí",
+        "C": "Dữ liệu thu thập từ khảo sát của nhà nghiên cứu",
+        "D": "Dự liệu từ báo cáo và khảo sát từ các tổ chức quốc tế"
+      },
+      "answer": "C",
+      "explainAnswer": "Dữ liệu do chính nhà nghiên cứu thu thập từ khảo sát là dữ liệu sơ cấp.",
+      "image": null
+    },
+    {
+      "id": 182,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Nội dung phần đầu của một đoạn văn như sau: Theo Ringov (2017) nghiên cứu về năng lực động doanh nghiệp đã trở thành một trong những dòng nghiên cứu chính về chiến lược kinh doanh gần đây. Lý thuyết năng lực động được xem là một trong những lý thuyết thích hợp để giúp doanh nghiệp xây dựng lợi thế cạnh tranh trong bối cảnh thị trường có nhiều biến động (Teece, 2007, 2011; Nguyễn Đình Thọ & Nguyễn Thị Mai Trang, 2009). Đối với câu văn đầu tiên, hình thức trích dẫn Ringov (2017) được sử dụng ở đây là?",
+      "options": {
+        "A": "trích dẫn gián tiếp",
+        "B": "trích dẫn trực tiếp",
+        "C": "trích dẫn kết hợp",
+        "D": "trích dẫn hỗn hợp"
+      },
+      "answer": "A",
+      "explainAnswer": "Tác giả diễn đạt lại ý của Ringov rồi ghi nguồn, không chép nguyên văn; đây là trích dẫn gián tiếp.",
+      "image": null
+    },
+    {
+      "id": 183,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Câu văn dưới đây sử dụng hình thức trích dẫn gì? “Năng lực động là khả năng của doanh nghiệp trong việc tích hợp, xây dựng và tái cấu trúc các năng lực bên trong và bên ngoài” (Teece, 2011, tr. 1395)?",
+      "options": {
+        "A": "trích dẫn gián tiếp",
+        "B": "trích dẫn trực tiếp",
+        "C": "trích dẫn bối cảnh",
+        "D": "trích dẫn hỗn hợp"
+      },
+      "answer": "B",
+      "explainAnswer": "Có dấu ngoặc kép + số trang → trích dẫn trực tiếp.",
+      "image": null
+    },
+    {
+      "id": 184,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Đâu là định nghĩa đúng nhất về hành vi đạo văn trong nghiên cứu học thuật?",
+      "options": {
+        "A": "Việc sử dụng từ ngữ của người khác với sự cho phép bằng lời nói",
+        "B": "Việc sử dụng ý tưởng hoặc câu chữ của người khác mà không ghi nguồn",
+        "C": "Việc lặp lại chính ý kiến của bản thân trong các bài viết khác nhau",
+        "D": "Việc dẫn nguồn bằng ngôn ngữ không chuẩn"
+      },
+      "answer": "B",
+      "explainAnswer": "Sử dụng ý tưởng/câu chữ của người khác mà không ghi nguồn.",
+      "image": null
+    },
+    {
+      "id": 185,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Dưới dây là định dạng 1 tài liệu tham khảo như sau, hãy chỉnh sửa phù hợp nếu định dạng chưa chính xác theo phong cách APA 5 Downloaded by . Nguyễn Đình Thọ & Nguyễn Thị Mai Trang. (2009). Định hướng kinh doanh, năng lực sáng tạo, năng lực marketing và kết quả kinh doanh của doanh nghiệp. Tạp chí Phát triển Kinh tế, 229, 19–24.",
+      "options": {
+        "A": "Tài liệu chưa chính xác; cần sửa cách định dạng tên bài báo và tên tạp chí theo APA.",
+        "B": "Tài liệu chưa chính xác; cần đổi tên tác giả thành Nguyễn, Đ. T. và Nguyễn, T.",
+        "C": "Tài liệu chưa chính xác; cần đổi tên tác giả thành Thọ, N. Đ. và Trang, N. T. M.",
+        "D": "Tài liệu đã được trình bày chính xác và không cần chỉnh sửa."
+      },
+      "answer": "A",
+      "explainAnswer": "Theo cách trình bày APA, tiêu đề bài báo dùng kiểu chữ thường, còn tên tạp chí được định dạng riêng theo quy tắc của APA.",
+      "image": null
+    },
+    {
+      "id": 186,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Dưới đây một câu văn có phần nội dung thông tin tham khảo từ hai nguồn tài liệu, tuy nhiên chưa được chính xác. Hãy sửa lại trích dẫn sao cho chính xác Theo quan điểm của lý thuyết năng lực động doanh nghiệp có thể sử dụng các dạng năng lực cốt lõi là những năng lực tạo ra giá trị, hiếm, khó bắt chước, khó thay thế và hướng tới đáp ứng sự thay đổi của thị trường để thiết lập lợi thế cạnh tranh và đạt được hiệu quả (Teece et al., 1997; Eisenhardt & Martin, 2000)?",
+      "options": {
+        "A": "(Eisenhardt & Martin, 2000; Teece et al., 1997)",
+        "B": "(Teece và cộng sự, 1997; Eisenhardt & Martin, 2000)",
+        "C": "Teece và đồng nghiệp (1997), Eisenhardt & Martin (2000)",
+        "D": "(Eisenhardt & Martin, 2000; Teece và cộng sự, 1997)"
+      },
+      "answer": "A",
+      "explainAnswer": "Với trích dẫn nhiều nguồn trong cùng ngoặc, các nguồn được sắp xếp theo thứ tự chữ cái của họ tác giả; năm và cách viết tác giả cũng phải thống nhất.",
+      "image": null
+    },
+    {
+      "id": 187,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Dưới đây là phần thông tin tóm tắt (Abstract) của một bài báo “Tác động của sự khiêm tốn về mặt trí tuệ của sinh viên, năng lực giảng viên tới kiến thức thu nhận của sinh viên kinh tế: Vai trò trung gian của động lực học tập”. Nhận định nào dưới đây là chính xác? Nghiên cứu này có mục đích đánh giá ảnh hưởng của các thành phần trong sự khiêm tốn về mặt trí tuệ của sinh viên và năng lực giảng viên tới kiến thức thu nhận thông qua vai trò trung gian của động lực học tập. Mô hình nghiên cứu được xây dựng dựa trên việc mở rộng lý thuyết về sự khiêm tốn về mặt trí tuệ trong đánh giá tác động tới kiến thức thu nhận trong lĩnh vực giáo dục đại học. Kết quả phân tích từ dữ liệu khảo sát bằng bảng hỏi có cấu trúc của 538 sinh viên các trường Đại học tại Hà Nội cho thấy một số thành phần sự khiêm tốn về mặt trí tuệ và năng lực giảng viên có tác động tích cực đến động lực học tập và kiến thức thu nhận của sinh viên. Động lực học tập cũng được tìm thấy có vai trò trung gian trong mối quan hệ giữa sự khiêm tốn về mặt trí tuệ, năng lực giảng viên tới kiến thức thu nhận. Cuối cùng, nghiên cứu cũng cung cấp một vài hàm ý quan trọng cho các trường đại học để cải tiến chương trình học thúc đẩy cải thiện kiến thức thu nhận của sinh viên trong các học phần của chương trình đào tạo.",
+      "options": {
+        "A": "Nghiên cứu này sử dụng phương pháp định lượng, thu thập dữ liệu sơ cấp",
+        "B": "Nghiên cứu của sử dụng phương pháp hỗn hợp, thu thập dữ liệu sơ cấp",
+        "C": "Nghiên cứu này sử dụng phương pháp định tính với dữ liệu từ phỏng vấn sâu",
+        "D": "Nghiên cứu này sử dụng phương pháp hỗn hợp với cả dữ liệu thứ cấp và sơ cấp"
+      },
+      "answer": "A",
+      "explainAnswer": "Dữ liệu được thu thập bằng bảng hỏi có cấu trúc từ 538 sinh viên, nên đây là nghiên cứu định lượng sử dụng dữ liệu sơ cấp.",
+      "image": null
+    },
+    {
+      "id": 188,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Dựa vào mô hình nghiên cứu được trình bày, nhận định nào là phù hợp nhất về các biến nghiên cứu?",
+      "options": {
+        "A": "Các biến/khái niệm nghiên cứu trong mô hình được biểu diễn dưới dạng biến tiềm ẩn.",
+        "B": "Các biến/khái niệm nghiên cứu trong mô hình đều là biến quan sát.",
+        "C": "Tất cả các biến nghiên cứu đều là biến độc lập.",
+        "D": "Tất cả các biến nghiên cứu đều là biến phụ thuộc."
+      },
+      "answer": "A",
+      "explainAnswer": "Trong mô hình SEM, các khái niệm như năng lực, động lực hoặc kiến thức có thể được biểu diễn dưới dạng biến tiềm ẩn được đo bằng các biến quan sát.",
+      "image": null
+    },
+    {
+      "id": 189,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Trong những khía cạnh sau đây, khía cạnh nào KHÔNG PHẢI là một trong những đặc điểm của phương pháp khoa học?",
+      "options": {
+        "A": "Khả năng kiểm tra",
+        "B": "Tính tái lập",
+        "C": "Tính khách quan",
+        "D": "Tính ngẫu nhiên"
+      },
+      "answer": "D",
+      "explainAnswer": "Tính ngẫu nhiên không phải đặc điểm của phương pháp khoa học.",
+      "image": null
+    },
+    {
+      "id": 190,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Ý tưởng nghiên cứu của cá nhân có thể tham khảo/xuất phát từ nguồn nào nhiều nhất trong các nguồn sau:?",
+      "options": {
+        "A": "Thầy cô/giảng viên hướng dẫn",
+        "B": "Bạn bè/đồng nghiệp nghiên cứu",
+        "C": "Đọc các tạp chí chuyên ngành, tham gia các hội thảo, hội nghị chuyên ngành",
+        "D": "Quan sát cuộc sống xung quanh"
+      },
+      "answer": "C",
+      "explainAnswer": "Đọc các tạp chí chuyên ngành và tham gia hội thảo giúp cập nhật khoảng trống, hướng nghiên cứu và các vấn đề đang được quan tâm.",
+      "image": null
+    },
+    {
+      "id": 191,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Nội dung nào sau đây là một ưu điểm của việc sử dụng nhóm nghiên cứu/tư vấn bên trong tổ chức?",
+      "options": {
+        "A": "Các thành viên nội bộ hiểu rõ cấu trúc, bộ máy và cách vận hành của tổ chức.",
+        "B": "Nhóm nghiên cứu bên trong luôn có kinh nghiệm đa dạng hơn mọi đơn vị bên ngoài.",
+        "C": "Mọi khuyến nghị của nhóm nội bộ đều chắc chắn được chấp nhận.",
+        "D": "Chi phí nghiên cứu nội bộ luôn cao hơn nghiên cứu bên ngoài."
+      },
+      "answer": "A",
+      "explainAnswer": "Nhóm nội bộ thường có sẵn hiểu biết về cấu trúc, quy trình và cách vận hành của tổ chức nên giảm thời gian tìm hiểu bối cảnh.",
+      "image": null
+    },
+    {
+      "id": 192,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Đặc điểm nào sau đây KHÔNG PHẢI của Lý thuyết nền?",
+      "options": {
+        "A": "Tính đại diện",
+        "B": "Tính đồng thời",
+        "C": "Tính bão hòa",
+        "D": "Tính mở"
+      },
+      "answer": "A",
+      "explainAnswer": "Lý thuyết nền không nhấn mạnh tính đại diện (generalizability).",
+      "image": null
+    },
+    {
+      "id": 193,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Số lượng người tham gia một thảo luận nhóm phù hợp khoảng bao nhiêu người?",
+      "options": {
+        "A": "1 người",
+        "B": "2 người",
+        "C": "6 – 8 người",
+        "D": "Trên 10 người"
+      },
+      "answer": "C",
+      "explainAnswer": "Thảo luận nhóm phù hợp khoảng 6–8 người.",
+      "image": null
+    },
+    {
+      "id": 194,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Đâu là một trong những tiêu chí đánh giá chất lượng đề tài nghiên cứu?",
+      "options": {
+        "A": "Đề tài có tính mới, tính thực tiễn và khả năng ứng dụng cao.",
+        "B": "Đề tài có nhiều trang tài liệu tham khảo.",
+        "C": "Đề tài sử dụng nhiều thuật ngữ chuyên ngành.",
+        "D": "Đề tài chỉ cần phù hợp với sở thích cá nhân."
+      },
+      "answer": "A",
+      "explainAnswer": "Tính mới, thực tiễn và khả năng ứng dụng cao.",
+      "image": null
+    },
+    {
+      "id": 195,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Khi phân tích dữ liệu định tính, điều gì cần tránh?",
+      "options": {
+        "A": "Mã hóa dữ liệu và xác định chủ đề chính.",
+        "B": "Phân tích dữ liệu mà không ghi chép lại quá trình hoặc không kiểm tra độ tin cậy.",
+        "C": "Sử dụng phần mềm hỗ trợ phân tích nội dung.",
+        "D": "Đối chiếu kết quả với các nghiên cứu trước đó."
+      },
+      "answer": "B",
+      "explainAnswer": "Trong phân tích định tính cần ghi chép quy trình và kiểm tra độ tin cậy; bỏ qua các bước này làm giảm tính minh bạch và khả năng kiểm chứng.",
+      "image": null
+    },
+    {
+      "id": 196,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG ÔN TẬP NCKH TRONG KINH TẾ - PHENIKAA",
+      "question": "Phát biểu nào dưới đây là một giả thuyết nghiên cứu có thể kiểm định?",
+      "options": {
+        "A": "Gia đình giàu có",
+        "B": "Thu nhập của gia đình càng cao thì điểm trung bình học tập của con càng cao.",
+        "C": "Tìm hiểu sự khác nhau về điều kiện kinh tế giữa các gia đình.",
+        "D": "Gia đình có điều kiện kinh tế."
+      },
+      "answer": "B",
+      "explainAnswer": "Giả thuyết cần phát biểu mối quan hệ giữa các biến theo cách có thể thu thập dữ liệu và kiểm định; ở đây là thu nhập gia đình và điểm trung bình học tập.",
+      "image": null
     }
   ]
 }
