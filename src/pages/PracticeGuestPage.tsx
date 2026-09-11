@@ -7,6 +7,8 @@ import {
   type PracticeSessionPayload,
 } from "@/lib/practiceSession"
 import { getSubjectById, examCatalog } from "@/data/subjects"
+import { useSubjectOverrides } from "@/hooks/useSubjectOverrides"
+import { applySubjectDisplayOverrides, getSubjectDisplayName } from "@/features/admin/lib/subjectDisplay"
 import { tadvExamOptions } from "@/data/tadvExams"
 import { dsaiExamOptions } from "@/data/dsaiExams"
 import { getToeicScopeOption } from "@/data/toeic"
@@ -39,6 +41,7 @@ export function PracticeGuestPage({
   const [payload, setPayload] = useState<PracticeSessionPayload | null | undefined>(
     undefined
   )
+  const displayOverrides = useSubjectOverrides()
 
   useEffect(() => {
     setPayload(readPracticeSession())
@@ -46,7 +49,7 @@ export function PracticeGuestPage({
 
   const exam = useMemo(() => {
     if (!payload) return null
-    const found = examCatalog.find((item) => item.id === payload.examId) ?? null
+    const found = applySubjectDisplayOverrides(examCatalog, displayOverrides).find((item) => item.id === payload.examId) ?? null
     if (found) {
       if (payload.toeicScope) {
         const opt = getToeicScopeOption(payload.toeicScope, payload.examId)
@@ -102,12 +105,14 @@ export function PracticeGuestPage({
       }
     }
     return null
-  }, [payload])
+  }, [displayOverrides, payload])
 
   const subject = useMemo(() => {
     if (!payload) return null
-    return getSubjectById(payload.subjectId)
-  }, [payload])
+    const found = getSubjectById(payload.subjectId)
+    if (!found) return null
+    return { ...found, name: getSubjectDisplayName(found, displayOverrides.get(found.id)) }
+  }, [displayOverrides, lang, payload])
 
   if (payload === undefined) {
     return (

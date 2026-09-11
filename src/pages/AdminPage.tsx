@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react"
-import { Activity, Banknote, BarChart3, CheckCircle2, Clock3, History, LayoutGrid, LogOut, Megaphone, RefreshCw, Search, Send, ShieldAlert, UserRound, Users, WalletCards, X, type LucideIcon } from "lucide-react"
+import { Activity, Banknote, BarChart3, BookOpen, CheckCircle2, Clock3, History, LayoutGrid, LogOut, Megaphone, RefreshCw, Search, Send, ShieldAlert, UserRound, Users, WalletCards, X, type LucideIcon } from "lucide-react"
 import { MobileTabBar } from "@/components/MobileTabBar"
 import brandLogo from "@/assets/logo.png"
 import { useAuth } from "@/auth/AuthProvider"
@@ -27,6 +27,7 @@ import { fetchAdminNotificationHistory, fetchNotificationBatchDetails, fetchNoti
 import { fetchAllAdminPayments, sortAdminPaymentsByCreatedAt, type AdminPayment, type PaymentStatus } from "@/features/admin/api/adminPayments"
 import { grantAdminPurchase, fetchAdminProducts, type AdminProduct } from "@/features/admin/api/adminEntitlements"
 import { deleteSupportReport, fetchSupportReports, updateSupportStatus, type SupportReport, type SupportStatus, type SupportType } from "@/features/support/api/supportReports"
+import { SubjectManager } from "@/features/admin/ui/SubjectManager"
 
 function formatAdminDuration(totalSeconds: number): string {
   const s = Math.max(0, Math.round(totalSeconds))
@@ -66,7 +67,7 @@ function PaymentStatusBadge({ status }: { status: PaymentStatus }) {
 
 
 type Props = { lang: "vi" | "en" }
-type AdminSection = "overview" | "users" | "notifications" | "payment" | "sendquiz" | "supports" | "timeline" | "attempts"
+type AdminSection = "overview" | "users" | "notifications" | "payment" | "sendquiz" | "supports" | "timeline" | "attempts" | "subject"
 
 const EVENT_FILTERS: Array<"all" | ActivityEventType> = ["all", "login", "open_exam", "view_exam_detail", "start_attempt", "submit_attempt", "abandon_attempt", "retry_wrong", "purchase_start", "purchase_success", "search_exam", "view_notifications", "read_notification", "devtools_attempt", "view_dashboard", "view_leaderboard", "update_profile"]
 
@@ -96,6 +97,7 @@ const SECTION_NAV: Array<{ key: AdminSection; icon: LucideIcon; vi: string; en: 
   { key: "payment", icon: WalletCards, vi: "Giao dịch", en: "Payments" },
   { key: "sendquiz", icon: Send, vi: "Cấp môn học", en: "Grant access" },
   { key: "supports", icon: ShieldAlert, vi: "Báo lỗi", en: "Support" },
+  { key: "subject", icon: BookOpen, vi: "Môn học", en: "Subjects" },
   { key: "timeline", icon: Activity, vi: "Luồng HĐ", en: "Timeline" },
   { key: "attempts", icon: History, vi: "Lịch sử", en: "History" },
 ]
@@ -107,6 +109,7 @@ const SECTION_PATHS: Record<AdminSection, AppPath> = {
   payment: appRoutes.adminPayment,
   sendquiz: appRoutes.adminSendQuiz,
   supports: appRoutes.adminSupports,
+  subject: appRoutes.adminSubject,
   timeline: appRoutes.adminTimeline,
   attempts: appRoutes.adminAttempts,
 }
@@ -117,6 +120,7 @@ function getAdminView(path: string): AdminSection {
   if (path === appRoutes.adminPayment) return "payment"
   if (path === appRoutes.adminSendQuiz) return "sendquiz"
   if (path === appRoutes.adminSupports) return "supports"
+  if (path === appRoutes.adminSubject) return "subject"
   if (path === appRoutes.adminTimeline) return "timeline"
   if (path === appRoutes.adminAttempts) return "attempts"
   return "overview"
@@ -650,6 +654,8 @@ export function AdminPage({ lang }: Props) {
             ? lang === "vi" ? "Cấp quyền môn học" : "Grant access"
             : section === "supports"
               ? lang === "vi" ? "Báo lỗi từ user" : "Support"
+              : section === "subject"
+                ? lang === "vi" ? "Quản lý môn học" : "Manage subjects"
               : section === "timeline"
                 ? lang === "vi" ? "Luồng hoạt động" : "Activity"
                 : section === "attempts"
@@ -1292,6 +1298,10 @@ export function AdminPage({ lang }: Props) {
                   ) : null}
                 </section>
               </>
+            ) : null}
+
+            {section === "subject" ? (
+              <SubjectManager lang={lang} />
             ) : null}
           </div>
         </main>

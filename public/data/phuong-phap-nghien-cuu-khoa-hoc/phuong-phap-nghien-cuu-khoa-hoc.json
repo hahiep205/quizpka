@@ -1,0 +1,1687 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Phương pháp nghiên cứu khoa học",
+  "chapter": "Phương pháp nghiên cứu khoa học",
+  "totalQuestions": 120,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "KHÁI NIỆM KHOA HỌC & TRI THỨC",
+      "question": "Khoa học là hệ thống các tri thức về:",
+      "options": {
+        "A": "Tư duy, tự nhiên, xã hội",
+        "B": "Tự nhiên",
+        "C": "Xã hội, tự nhiên",
+        "D": "Con người, tư duy, tự nhiên"
+      },
+      "answer": "A",
+      "explainAnswer": "Khoa học là hệ thống tri thức về tư duy, tự nhiên và xã hội."
+    },
+    {
+      "id": 2,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "KHÁI NIỆM KHOA HỌC & TRI THỨC",
+      "question": "Một người thợ sửa xe làm nghề 30 năm thì có khả năng sửa xe nhanh chóng chính xác. Đó là tri thức gì?",
+      "options": {
+        "A": "Tri thức thông thường",
+        "B": "Tri thức khoa học",
+        "C": "Tri thức khoa học và tri thức thông thường",
+        "D": "Không là tri thức"
+      },
+      "answer": "A",
+      "explainAnswer": "Đây là tri thức thông thường (kinh nghiệm nghề nghiệp)."
+    },
+    {
+      "id": 3,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "KHÁI NIỆM KHOA HỌC & TRI THỨC",
+      "question": "Kinh nghiệm là tri thức gì?",
+      "options": {
+        "A": "Tri thức thông thường",
+        "B": "Tri thức khoa học",
+        "C": "Tri thức khoa học và tri thức thông thường",
+        "D": "Không là tri thức"
+      },
+      "answer": "A",
+      "explainAnswer": "Kinh nghiệm thuộc tri thức thông thường."
+    },
+    {
+      "id": 4,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "PHÂN LOẠI KHOA HỌC",
+      "question": "UNESCO đã phân loại khoa học thành mấy lĩnh vực?",
+      "options": {
+        "A": "5",
+        "B": "2",
+        "C": "3",
+        "D": "7"
+      },
+      "answer": "A",
+      "explainAnswer": "UNESCO phân loại khoa học thành 5 lĩnh vực."
+    },
+    {
+      "id": 5,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "KHÁI NIỆM KHOA HỌC",
+      "question": "Xét trên quan điểm của quá trình tích luỹ tri thức thì khoa học là:",
+      "options": {
+        "A": "một hệ thống tri thức về thế giới khách quan.",
+        "B": "một hình thái ý thức xã hội.",
+        "C": "một quá trình phát triển nhận thức.",
+        "D": "một quá trình tích luỹ kiến thức của nhân loại."
+      },
+      "answer": "A",
+      "explainAnswer": "Theo quan điểm tích luỹ tri thức, khoa học là hệ thống tri thức về thế giới khách quan."
+    },
+    {
+      "id": 6,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "PHÂN LOẠI KHOA HỌC",
+      "question": "Lĩnh vực nào không có trong phân loại khoa học của UNESCO?",
+      "options": {
+        "A": "Khoa học về giáo dục.",
+        "B": "Khoa học về nông nghiệp.",
+        "C": "Khoa học về sức khoẻ.",
+        "D": "Khoa học về tự nhiên và khoa học chính xác."
+      },
+      "answer": "A",
+      "explainAnswer": "Khoa học về giáo dục không nằm trong phân loại chính của UNESCO theo nội dung đề."
+    },
+    {
+      "id": 7,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "PHÂN LOẠI KHOA HỌC",
+      "question": "Bản chất của phân loại khoa học là:",
+      "options": {
+        "A": "sắp xếp các ngành khoa học theo hệ thống thứ bậc trên cơ sở các đặc trưng riêng của chúng.",
+        "B": "phân định rõ từng lĩnh vực khoa học.",
+        "C": "chia nhóm các ngành có phương pháp nghiên cứu tương đồng nhau.",
+        "D": "chia nhóm các ngành có đối tượng nghiên cứu tương đồng nhau."
+      },
+      "answer": "A",
+      "explainAnswer": "Bản chất là sắp xếp theo hệ thống thứ bậc dựa trên đặc trưng riêng."
+    },
+    {
+      "id": 8,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "TƯ DUY KHOA HỌC",
+      "question": "Quá trình tư duy được tiến hành với các hình thức:",
+      "options": {
+        "A": "khái niệm, suy luận, phán đoán.",
+        "B": "suy luận, phán đoán.",
+        "C": "mô tả, khái niệm, suy luận, phán đoán.",
+        "D": "nhận thức, suy luận, phán đoán."
+      },
+      "answer": "A",
+      "explainAnswer": "Ba hình thức cơ bản của tư duy: khái niệm – phán đoán – suy luận."
+    },
+    {
+      "id": 9,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "LỊCH SỬ PHÁT TRIỂN KHOA HỌC",
+      "question": "Khoa học qua mấy giai đoạn phát triển?",
+      "options": {
+        "A": "6",
+        "B": "5",
+        "C": "8",
+        "D": "9"
+      },
+      "answer": "A",
+      "explainAnswer": "Theo tài liệu, khoa học trải qua 6 giai đoạn phát triển."
+    },
+    {
+      "id": 10,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "LỊCH SỬ PHÁT TRIỂN KHOA HỌC",
+      "question": "Người đặt nền móng đầu tiên cho khoa học là:",
+      "options": {
+        "A": "Aristotle",
+        "B": "G. Galilei",
+        "C": "I. Newton",
+        "D": "N. Copernicus"
+      },
+      "answer": "A",
+      "explainAnswer": "Aristotle được xem là người đặt nền móng đầu tiên cho khoa học."
+    },
+    {
+      "id": 11,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "LỊCH SỬ PHÁT TRIỂN KHOA HỌC",
+      "question": "Thuyết Địa tâm của Ptoleme ra đời trong giai đoạn phát triển nào của khoa học?",
+      "options": {
+        "A": "Thế kỉ XV - XVII.",
+        "B": "Thời trung cổ.",
+        "C": "Thế kỉ XVIII - XIX.",
+        "D": "Thời cổ đại."
+      },
+      "answer": "D",
+      "explainAnswer": "Thuyết Địa tâm của Ptoleme thuộc thời cổ đại."
+    },
+    {
+      "id": 12,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "QUY LUẬT PHÁT TRIỂN KHOA HỌC",
+      "question": "Ngày nay khoa học được phân ra trên 2000 bộ môn là minh chứng cho quy luật nào của sự phát triển khoa học?",
+      "options": {
+        "A": "Quy luật phát triển phân hóa của khoa học.",
+        "B": "Quy luật phát triển có gia tốc tất cả các lĩnh vực khoa học.",
+        "C": "Quy luật tích hợp các lĩnh vực khoa học.",
+        "D": "Quy luật ứng dụng nhanh các thành tựu khoa học."
+      },
+      "answer": "A",
+      "explainAnswer": "Sự phân hóa thành hàng nghìn bộ môn thể hiện quy luật phát triển phân hóa."
+    },
+    {
+      "id": 13,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "QUY LUẬT PHÁT TRIỂN KHOA HỌC",
+      "question": "Sản phẩm hàng hóa thường xuyên cải tiến mẫu mã và chất lượng ngày một nâng cao là minh chứng cho quy luật nào của sự phát triển khoa học?",
+      "options": {
+        "A": "Quy luật ứng dụng nhanh các thành tựu khoa học.",
+        "B": "Quy luật phát triển có gia tốc tất cả các lĩnh vực khoa học.",
+        "C": "Quy luật phát triển phân hóa của khoa học.",
+        "D": "Quy luật tích hợp các lĩnh vực khoa học."
+      },
+      "answer": "A",
+      "explainAnswer": "Việc cải tiến liên tục sản phẩm thể hiện quy luật ứng dụng nhanh thành tựu khoa học."
+    },
+    {
+      "id": 14,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "QUY LUẬT PHÁT TRIỂN KHOA HỌC",
+      "question": "Giai đoạn cuối thế kỉ XX, một nửa kiến thức về công nghệ bị lỗi thời trong vòng 5 năm là minh chứng cho quy luật nào của sự phát triển khoa học?",
+      "options": {
+        "A": "Quy luật phát triển có gia tốc tất cả các lĩnh vực khoa học.",
+        "B": "Quy luật phát triển phân hóa của khoa học.",
+        "C": "Quy luật tích hợp các lĩnh vực khoa học.",
+        "D": "Quy luật ứng dụng nhanh các thành tựu khoa học."
+      },
+      "answer": "A",
+      "explainAnswer": "Tốc độ lỗi thời kiến thức nhanh thể hiện quy luật phát triển có gia tốc."
+    },
+    {
+      "id": 15,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "QUY LUẬT PHÁT TRIỂN KHOA HỌC",
+      "question": "Từ thời kì Phục hưng, bắt đầu từ các môn khoa học tự nhiên sau đó đến các môn khoa học xã hội tách khỏi triết học và trở thành những bộ môn khoa học độc lập thể hiện quy luật gì của phát triển khoa học?",
+      "options": {
+        "A": "Quy luật phát triển có gia tốc tất cả các lĩnh vực khoa học.",
+        "B": "Quy luật phát triển phân hóa của khoa học.",
+        "C": "Quy luật tích hợp các lĩnh vực khoa học.",
+        "D": "Quy luật ứng dụng nhanh các thành tựu khoa học."
+      },
+      "answer": "B",
+      "explainAnswer": "Sự tách ra thành các bộ môn độc lập là quy luật phát triển phân hóa."
+    },
+    {
+      "id": 16,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "CẤP ĐỘ NHẬN THỨC",
+      "question": "Khoa học mô tả dừng lại ở mức độ nhận thức thực tiễn và kinh nghiệm bởi vì:",
+      "options": {
+        "A": "Mô tả chưa đạt tới trình độ thiết lập được các mối quan hệ có tính quy luật, bản chất bên trong của đối tượng.",
+        "B": "Mô tả chỉ cho ta hình ảnh về hiện thực.",
+        "C": "Mô tả chỉ có tính định tính.",
+        "D": "Mô tả chưa giải thích được nguyên nhân phát sinh hiện tượng."
+      },
+      "answer": "A",
+      "explainAnswer": "Mô tả chưa đi đến bản chất và quy luật bên trong."
+    },
+    {
+      "id": 17,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "SẢN PHẨM NGHIÊN CỨU",
+      "question": "Trong mọi trường hợp, sản phẩm của nghiên cứu khoa học là:",
+      "options": {
+        "A": "Thông tin.",
+        "B": "Của cải vật chất.",
+        "C": "Văn hoá nghệ thuật.",
+        "D": "Giá trị tinh thần."
+      },
+      "answer": "A",
+      "explainAnswer": "Sản phẩm của nghiên cứu khoa học luôn là thông tin (tri thức mới)."
+    },
+    {
+      "id": 18,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "CẤP ĐỘ NHẬN THỨC",
+      "question": "Kết luận của giáo sư Tôn Thất Tùng: “Nguyên nhân gây bệnh viêm phù tuỵ cấp ở xứ Đông Dương là do con giun” là kết quả nghiên cứu ở mức độ nào?",
+      "options": {
+        "A": "Mức độ phát hiện.",
+        "B": "Mức độ mô tả.",
+        "C": "Mức độ giải thích.",
+        "D": "Mức độ nhận thức."
+      },
+      "answer": "C",
+      "explainAnswer": "Chỉ ra nguyên nhân → mức độ giải thích."
+    },
+    {
+      "id": 19,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "PHÂN LOẠI NGHIÊN CỨU",
+      "question": "Vật lý học là khoa học gì?",
+      "options": {
+        "A": "Khoa học cơ bản, khoa học ứng dụng và khoa học tự nhiên",
+        "B": "Khoa học tự nhiên, khoa học cơ bản và khoa học xã hội",
+        "C": "Khoa học tự nhiên, khoa học ứng dụng và khoa học xã hội",
+        "D": "Khoa học cơ bản, khoa học ứng dụng và khoa học xã hội"
+      },
+      "answer": "A",
+      "explainAnswer": "Vật lý thuộc khoa học tự nhiên, vừa cơ bản vừa có ứng dụng."
+    },
+    {
+      "id": 20,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "LOẠI HÌNH NGHIÊN CỨU",
+      "question": "Nghiên cứu Định luật vạn vật hấp dẫn của Newton thuộc loại hình nghiên cứu nào?",
+      "options": {
+        "A": "Nghiên cứu cơ bản",
+        "B": "Nghiên cứu ứng dụng",
+        "C": "Nghiên cứu triển khai",
+        "D": "Nghiên cứu dự báo"
+      },
+      "answer": "A",
+      "explainAnswer": "Định luật vạn vật hấp dẫn là nghiên cứu cơ bản (tìm quy luật)."
+    },
+    {
+      "id": 21,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "LOẠI HÌNH NGHIÊN CỨU",
+      "question": "Dựa vào loại hình cơ sở nào để phân chia thành các loại hình nghiên cứu khoa học?",
+      "options": {
+        "A": "Mục tiêu nghiên cứu và sản phẩm thu được.",
+        "B": "Mục đích nghiên cứu và đối tượng nghiên cứu.",
+        "C": "Đối tượng và sản phẩm thu được.",
+        "D": "Mức độ nghiên cứu và giá trị tri thức."
+      },
+      "answer": "A",
+      "explainAnswer": "Phân loại dựa trên mục tiêu và sản phẩm."
+    },
+    {
+      "id": 22,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "NGUYÊN TẮC PHÂN LOẠI",
+      "question": "“Tri thức có sau xuất phát từ tri thức có trước và bao hàm tri thức có trước như một yếu tố tất yếu”. Nguyên tắc phân loại khoa học như vậy được gọi là:",
+      "options": {
+        "A": "nguyên tắc phối thuộc.",
+        "B": "nguyên tắc phối hợp.",
+        "C": "nguyên tắc khách quan.",
+        "D": "nguyên tắc bao hàm."
+      },
+      "answer": "A",
+      "explainAnswer": "Đây là nguyên tắc phối thuộc."
+    },
+    {
+      "id": 23,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "LỊCH SỬ PHÁT TRIỂN KHOA HỌC",
+      "question": "Các nhà khoa học có ảnh hưởng lớn đến sự phát triển khoa học nhân loại như N. Copernicus, G. Galilei, I. Newton ra đời trong giai đoạn phát triển nào của khoa học?",
+      "options": {
+        "A": "Thế kỉ XV - XVII (thời kì Phục hưng)",
+        "B": "Thời trung cổ",
+        "C": "Thế kỉ XVIII - XIX",
+        "D": "Thế kỉ XX - XXI"
+      },
+      "answer": "A",
+      "explainAnswer": "Họ thuộc thời kỳ Phục hưng (XV-XVII)."
+    },
+    {
+      "id": 24,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "LỊCH SỬ PHÁT TRIỂN KHOA HỌC",
+      "question": "Giai đoạn nào trong quá trình phát triển, Khoa học có ảnh hưởng mạnh mẽ đến sự phát triển của xã hội, đặc biệt là tiến trình công nghiệp hoá trên quy mô toàn cầu?",
+      "options": {
+        "A": "Thế kỉ XV - XVII (thời kì Phục hưng)",
+        "B": "Thế kỉ XVIII - XIX",
+        "C": "Thế kỉ XIX - XX",
+        "D": "Thế kỉ XX - XXI"
+      },
+      "answer": "B",
+      "explainAnswer": "Thế kỷ XVIII-XIX gắn với cách mạng công nghiệp."
+    },
+    {
+      "id": 25,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "CHUYỂN GIAO CÔNG NGHỆ",
+      "question": "Nội dung nào sau đây chưa đúng về chuyển giao công nghệ?",
+      "options": {
+        "A": "Chuyển giao công nghệ là chuyển giao thiết bị kỹ thuật và kiến thức về quy trình sản xuất.",
+        "B": "Chuyển giao công nghệ là sự gặp gỡ giữa khoa học và thị trường.",
+        "C": "Chuyển giao công nghệ là chuyển giao quyền sở hữu trí tuệ.",
+        "D": "Chuyển giao công nghệ là chuyển giao thiết bị kỹ thuật, kiến thức về quy trình sản xuất, kinh nghiệm tổ chức quản lý và hoạt động tư vấn trong lĩnh vực sản xuất."
+      },
+      "answer": "C",
+      "explainAnswer": "Chuyển giao công nghệ không chỉ là chuyển giao quyền sở hữu trí tuệ."
+    },
+    {
+      "id": 26,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐẶC ĐIỂM KHOA HỌC & CÔNG NGHỆ",
+      "question": "Nội dung nào chưa đúng khi so sánh các đặc điểm của khoa học và công nghệ?",
+      "options": {
+        "A": "Sản phẩm nghiên cứu khoa học được định hình trước, sản phẩm công nghệ mang tính thị trường.",
+        "B": "Quá trình nghiên cứu khoa học mang tính xác suất, quá trình điều hành công nghệ mang tính xác định.",
+        "C": "Phát minh khoa học tồn tại mãi với thời gian, sáng chế công nghệ tồn tại hoặc tiêu vong theo lịch sử tiến bộ kỹ thuật.",
+        "D": "Sản phẩm nghiên cứu khoa học mang đặc trưng thông tin, sản phẩm công nghệ có đặc trưng tùy theo đầu vào."
+      },
+      "answer": "A",
+      "explainAnswer": "Sản phẩm khoa học không được định hình trước như vậy."
+    },
+    {
+      "id": 27,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "NỘI DUNG NGHIÊN CỨU KHOA HỌC",
+      "question": "Phát biểu nào thuộc nội dung cơ bản của nghiên cứu khoa học?",
+      "options": {
+        "A": "Phát hiện quy luật vận động của thế giới khách quan (tự nhiên, xã hội và con người).",
+        "B": "Là quá trình tìm kiếm và xây dựng đội ngũ cán bộ nghiên cứu đáp ứng yêu cầu của từng giai đoạn phát triển.",
+        "C": "Tìm kiếm nguồn kinh phí đáp ứng yêu cầu thực hiện các đề tài nghiên cứu.",
+        "D": "Xây dựng các cơ sở lý thuyết khoa học mới, bác bỏ các lý thuyết cũ không còn phù hợp."
+      },
+      "answer": "A",
+      "explainAnswer": "Nội dung cơ bản là phát hiện quy luật vận động của thế giới khách quan."
+    },
+    {
+      "id": 28,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "TRI THỨC THÔNG THƯỜNG",
+      "question": "Nội dung nào không đúng về tri thức thông thường?",
+      "options": {
+        "A": "Là hệ thống tri thức khái quát về các sự vật hiện tượng của thế giới và về các quy luật vận động của chúng.",
+        "B": "Được con người sử dụng, trao đổi với nhau, truyền đạt cho nhau, mỗi ngày đều được bổ sung, hoàn thiện.",
+        "C": "Được tạo ra từ phép quy nạp đơn giản, không có mô hình lý thuyết.",
+        "D": "Chưa chỉ ra được bản chất, chưa phát hiện được các quy luật của sự vật và chưa hình thành một hệ thống vững chắc."
+      },
+      "answer": "A",
+      "explainAnswer": "Tri thức thông thường chưa khái quát thành hệ thống quy luật vững chắc như tri thức khoa học."
+    },
+    {
+      "id": 29,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "HOẠT ĐỘNG NGHIÊN CỨU",
+      "question": "Hoạt động nghiên cứu bao gồm các nhân tố:",
+      "options": {
+        "A": "Chủ thể nghiên cứu; Mục đích nghiên cứu; Phương pháp nghiên cứu; Sản phẩm nghiên cứu; Giá trị khoa học của kết quả nghiên cứu.",
+        "B": "Chủ thể nghiên cứu; Phương pháp nghiên cứu; Phạm vi nghiên cứu; Người nghiên cứu; Thời gian nghiên cứu.",
+        "C": "Đối tượng nghiên cứu; Phạm vi nghiên cứu; Phương pháp nghiên cứu; Kết quả nghiên cứu.",
+        "D": "Mục tiêu nghiên cứu; Mục đích nghiên cứu; Đối tượng nghiên cứu; Thời gian nghiên cứu; Phạm vi nghiên cứu."
+      },
+      "answer": "A",
+      "explainAnswer": "Các nhân tố đầy đủ theo tài liệu là chủ thể, mục đích, phương pháp, sản phẩm và giá trị khoa học."
+    },
+    {
+      "id": 30,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "HÌNH THỨC TƯ DUY",
+      "question": "“Khái niệm” là:",
+      "options": {
+        "A": "hình thức của tư duy, một tư tưởng phản ánh những dấu hiệu thuộc tính chung, bản chất của một lớp đối tượng.",
+        "B": "hình thức của tư duy, một tư tưởng phản ánh những dấu hiệu thuộc tính chung, bản chất của một lớp đối tượng, là tập hợp các đối tượng có các dấu hiệu được nêu trong nội hàm của khái niệm ấy.",
+        "C": "quá trình nhận thức hay tư duy của con người bắt đầu từ những tri giác hay bằng những quan sát sự vật hiện thực tác động vào giác quan.",
+        "D": "một quá trình khám phá bản chất các sự vật hiện tượng để tìm ra những tri thức mới."
+      },
+      "answer": "A",
+      "explainAnswer": "Khái niệm là hình thức tư duy phản ánh thuộc tính chung, bản chất của lớp đối tượng."
+    },
+    {
+      "id": 31,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ TÀI NGHIÊN CỨU",
+      "question": "Việc xác định đề tài có thể xem xét dựa vào căn cứ nào sau đây?",
+      "options": {
+        "A": "Quan điểm cá nhân",
+        "B": "Thời gian rảnh",
+        "C": "Nhu cầu của người khác",
+        "D": "Đề tài có ý nghĩa khoa học hay không"
+      },
+      "answer": "D",
+      "explainAnswer": "Căn cứ quan trọng nhất là ý nghĩa khoa học của đề tài."
+    },
+    {
+      "id": 32,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG NGHIÊN CỨU",
+      "question": "Phân tích lịch sử vấn đề nghiên cứu thuộc phần nào trong đề cương nghiên cứu?",
+      "options": {
+        "A": "Lý do chọn đề tài.",
+        "B": "Mục tiêu nghiên cứu.",
+        "C": "Đối tượng nghiên cứu.",
+        "D": "Phương pháp nghiên cứu."
+      },
+      "answer": "A",
+      "explainAnswer": "Lịch sử vấn đề nằm trong phần Lý do chọn đề tài."
+    },
+    {
+      "id": 33,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG NGHIÊN CỨU",
+      "question": "Phần nào trong đề cương nghiên cứu trả lời cho câu hỏi “Đề tài nghiên cứu gì?”",
+      "options": {
+        "A": "Đối tượng nghiên cứu.",
+        "B": "Lý do chọn đề tài.",
+        "C": "Mục tiêu nghiên cứu.",
+        "D": "Phương pháp nghiên cứu."
+      },
+      "answer": "A",
+      "explainAnswer": "Đối tượng nghiên cứu trả lời câu hỏi “nghiên cứu gì?”."
+    },
+    {
+      "id": 34,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐÁNH GIÁ ĐỀ TÀI",
+      "question": "Đặc điểm để đánh giá một đề tài tốt:",
+      "options": {
+        "A": "Có tính mới và độc đáo",
+        "B": "Có phạm vi giới hạn và xử lí vấn đề tương đối trọn vẹn",
+        "C": "Thể hiện bằng một bản báo cáo kết quả nghiên cứu",
+        "D": "Bao gồm tất cả các đặc điểm trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Một đề tài tốt cần có đầy đủ các đặc điểm nêu trên."
+    },
+    {
+      "id": 35,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỀ CƯƠNG NGHIÊN CỨU",
+      "question": "Đề cương chi tiết của đề tài gồm mấy phần cơ bản?",
+      "options": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9"
+      },
+      "answer": "D",
+      "explainAnswer": "Theo tài liệu, đề cương chi tiết gồm 9 phần cơ bản."
+    },
+    {
+      "id": 36,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "MỤC TIÊU SMART",
+      "question": "Khi thiết lập mục tiêu theo mô hình SMART, chữ cái S có nghĩa là gì?",
+      "options": {
+        "A": "Supportive - Hỗ trợ",
+        "B": "Specific - Cụ thể, rõ ràng",
+        "C": "Strong - Mạnh mẽ",
+        "D": "Safe - An toàn"
+      },
+      "answer": "B",
+      "explainAnswer": "S = Specific (Cụ thể, rõ ràng)."
+    },
+    {
+      "id": 37,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỐI TƯỢNG KHOA HỌC",
+      "question": "Đối tượng của khoa học cụ thể là:",
+      "options": {
+        "A": "Thế giới khách quan đang vận động và phương pháp nhận thức thế giới khách quan đó.",
+        "B": "Thế giới khách quan đang vận động và phát triển.",
+        "C": "Cách thức để tác động vào tự nhiên mang lại sản phẩm cho con người.",
+        "D": "Tự nhiên và xã hội."
+      },
+      "answer": "A",
+      "explainAnswer": "Đối tượng khoa học cụ thể bao gồm cả thế giới khách quan và phương pháp nhận thức."
+    },
+    {
+      "id": 38,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "TIÊU CHUẨN ĐỀ TÀI",
+      "question": "Nhận định nào dưới đây KHÔNG phải là một tiêu chuẩn của một đề tài nghiên cứu?",
+      "options": {
+        "A": "Có cơ sở lý thuyết và khoa học",
+        "B": "Mục tiêu được xác lập là đóng góp mới về tri thức",
+        "C": "Được thể hiện một cách rõ nghĩa và cụ thể về mối quan hệ giữa các yếu tố",
+        "D": "Có tính lịch sử, tính thực tiễn"
+      },
+      "answer": "D",
+      "explainAnswer": "“Có tính lịch sử, tính thực tiễn” không phải tiêu chuẩn cốt lõi theo nội dung đề."
+    },
+    {
+      "id": 39,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "TRÍCH DẪN",
+      "question": "Trích dẫn trực tiếp là trích dẫn:",
+      "options": {
+        "A": "Đầy đủ một luận điểm",
+        "B": "Một phần nội dung",
+        "C": "Toàn vẹn một khái niệm",
+        "D": "Toàn vẹn đầy đủ về một nội dung."
+      },
+      "answer": "D",
+      "explainAnswer": "Trích dẫn trực tiếp là trích dẫn toàn vẹn, đầy đủ nội dung gốc."
+    },
+    {
+      "id": 40,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "QUY TRÌNH NGHIÊN CỨU",
+      "question": "Theo Vũ Cao Đàm, quy trình nghiên cứu một đề tài khoa học gồm mấy bước?",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7"
+      },
+      "answer": "B",
+      "explainAnswer": "Theo Vũ Cao Đàm, quy trình gồm 5 bước."
+    },
+    {
+      "id": 41,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "TIÊU CHUẨN ĐỀ CƯƠNG",
+      "question": "Tiêu chuẩn đánh giá đề cương nghiên cứu “khách quan” có ý nghĩa gì?",
+      "options": {
+        "A": "Đảm bảo rằng đề cương không có sự trùng lặp với các nghiên cứu trước đó.",
+        "B": "Đảm bảo rằng đề cương được viết bằng cách sử dụng các từ ngữ chính xác và thuyết phục.",
+        "C": "Đảm bảo rằng đề cương không bị ảnh hưởng bởi quan điểm cá nhân của người viết, tránh giả định, tránh những câu văn không có chứng cứ.",
+        "D": "Đảm bảo rằng đề cương được tổ chức và trình bày một cách logic và rõ ràng."
+      },
+      "answer": "C",
+      "explainAnswer": "Khách quan nghĩa là không bị ảnh hưởng bởi quan điểm cá nhân, có chứng cứ."
+    },
+    {
+      "id": 42,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐỊNH DẠNG LUẬN VĂN",
+      "question": "Các trang sau đây trong luận văn được đánh chữ số la mã thường:",
+      "options": {
+        "A": "Các trang tựa đề, lời nói đầu, lời cảm ơn, mục lục, danh mục bảng biểu",
+        "B": "Trang bìa, mục lục, bảng biểu, lời nói đầu, lời cảm ơn, lời giới thiệu",
+        "C": "Trang bìa trong, mục lục, bảng biểu, lời nói đầu, lời cảm ơn, lời giới thiệu",
+        "D": "Tất cả các trang bìa, mục lục, bảng biểu, lời nói đầu, lời cảm ơn, lời giới thiệu"
+      },
+      "answer": "A",
+      "explainAnswer": "Các trang mở đầu (tựa đề, lời nói đầu, mục lục…) dùng số La Mã."
+    },
+    {
+      "id": 43,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "TIÊU CHUẨN ĐỀ TÀI",
+      "question": "Tiêu chuẩn để một chủ đề dự kiến có thể phát triển thành một đề tài nghiên cứu:",
+      "options": {
+        "A": "Chủ đề và ý tưởng nghiên cứu dựa trên kinh nghiệm cá nhân về các vấn đề thực tiễn được báo chí đăng tải",
+        "B": "Chủ đề nghiên cứu có cơ sở lý thuyết, khoa học về một vấn đề chưa biết, cần được biết và có tính khả thi",
+        "C": "Chủ đề nghiên cứu được thể hiện tường minh mục tiêu nghiên cứu",
+        "D": "Chủ đề nghiên cứu có tính khả thi"
+      },
+      "answer": "B",
+      "explainAnswer": "Cần có cơ sở lý thuyết, tính mới và tính khả thi."
+    },
+    {
+      "id": 44,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "TIÊU CHUẨN ĐỀ TÀI",
+      "question": "Nhận định nào dưới đây là một tiêu chuẩn của một đề tài nghiên cứu?",
+      "options": {
+        "A": "Có cơ sở lý thuyết và khoa học",
+        "B": "Mục tiêu được xác lập là đóng góp mới về tri thức",
+        "C": "Được thể hiện một cách rõ nghĩa và cụ thể về mối quan hệ giữa các yếu tố",
+        "D": "Bao gồm các nhận định trên."
+      },
+      "answer": "D",
+      "explainAnswer": "Tất cả các nhận định trên đều là tiêu chuẩn của đề tài nghiên cứu."
+    },
+    {
+      "id": 45,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "TRÍCH DẪN & ĐỊNH DẠNG",
+      "question": "Chọn phát biểu đúng:",
+      "options": {
+        "A": "Các tài liệu trích dẫn không cần thể hiện trong danh mục tài liệu tham khảo.",
+        "B": "Để tránh lãng phí và tạo khoảng trống trong văn bản, người viết báo cáo nghiên cứu hoặc luận văn cần đặt tiêu đề của một chương ngay cuối trang và phần nội dung ứng với tiêu đề này được bắt đầu ở trang kế tiếp.",
+        "C": "Khi viết báo cáo khoa học, luận văn, bài báo khoa học, cần sử dụng cùng lúc bảng số liệu và biểu đồ minh họa cùng một vấn đề nhằm làm rõ nội dung cần viết.",
+        "D": "Nếu xuất hiện các cụm từ viết tắt trong luận văn, tác giả bắt buộc phải cung cấp danh mục từ viết tắt."
+      },
+      "answer": "D",
+      "explainAnswer": "Phải có danh mục từ viết tắt nếu sử dụng."
+    },
+    {
+      "id": 46,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "TRÍCH DẪN",
+      "question": "Chọn phát biểu sai:",
+      "options": {
+        "A": "Tài liệu được trích dẫn trong nghiên cứu tổng quan nên là tài liệu tiếng Việt mà thôi.",
+        "B": "Thông tin về học hàm, học vị, địa vị xã hội không ghi trong nội dung trích dẫn.",
+        "C": "Cách ghi trích dẫn cần được thống nhất cho toàn bộ văn bản.",
+        "D": "Nguyên tắc trích dẫn tài liệu tham khảo là chỉ trích dẫn những tài liệu đã đọc."
+      },
+      "answer": "A",
+      "explainAnswer": "Không bắt buộc chỉ trích dẫn tài liệu tiếng Việt."
+    },
+    {
+      "id": 47,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "BÀI BÁO KHOA HỌC",
+      "question": "Giá trị của 1 bài báo khoa học thể hiện:",
+      "options": {
+        "A": "Khi có kết luận hợp lý dựa trên các dữ liệu và kết quả đạt được",
+        "B": "Bởi sự nhìn nhận cần thêm nghiên cứu bổ sung",
+        "C": "Khi tác giả xác nhận rằng cần phải có thêm nghiên cứu hoàn chỉnh",
+        "D": "Khi bài báo được xuất bản trong một tạp chí phổ biến."
+      },
+      "answer": "A",
+      "explainAnswer": "Giá trị nằm ở kết luận hợp lý dựa trên dữ liệu và kết quả."
+    },
+    {
+      "id": 48,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "CHỈ SỐ XUẤT BẢN",
+      "question": "Mã số tiêu chuẩn quốc tế ISSN là mã số gán cho:",
+      "options": {
+        "A": "Mã số tiêu chuẩn quốc tế cho xuất bản phẩm nhiều kỳ",
+        "B": "Mã số tiêu chuẩn quốc tế cho một quyển sách được xuất bản",
+        "C": "Mã số tiêu chuẩn quốc tế cho một luận án tiến sĩ",
+        "D": "Mã số tiêu chuẩn quốc tế cho một bài báo khoa học"
+      },
+      "answer": "A",
+      "explainAnswer": "ISSN dành cho xuất bản phẩm nhiều kỳ (tạp chí, báo…)."
+    },
+    {
+      "id": 49,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "TÍNH MỚI",
+      "question": "Tính mới trong một công trình nghiên cứu khoa học là:",
+      "options": {
+        "A": "thuộc tính quan trọng nhất của nghiên cứu khoa học",
+        "B": "thuộc tính tất yếu của nghiên cứu khoa học",
+        "C": "thuộc tính quy định của nghiên cứu khoa học",
+        "D": "thuộc tính bắt buộc của nghiên cứu khoa học."
+      },
+      "answer": "A",
+      "explainAnswer": "Tính mới là thuộc tính quan trọng nhất."
+    },
+    {
+      "id": 50,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "CHỈ SỐ H-INDEX",
+      "question": "Chỉ số H-index của một nhà khoa học là?",
+      "options": {
+        "A": "chỉ số đo lường cả năng suất (số lượng) và tác động trích dẫn các ấn phẩm của nhà khoa học.",
+        "B": "chỉ số đo lường năng suất (số lượng) các ấn phẩm của nhà khoa học.",
+        "C": "chỉ số đo lường tác động trích dẫn các ấn phẩm của nhà khoa học.",
+        "D": "chỉ số đo lường tác động trích dẫn các ấn phẩm thuộc danh mục ISI của nhà khoa học."
+      },
+      "answer": "A",
+      "explainAnswer": "H-index đo cả số lượng và tác động trích dẫn."
+    },
+    {
+      "id": 51,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "HỆ THỐNG ISI",
+      "question": "Tạp chí AHCI (Arts & Humanities Citation Index) thuộc danh mục ISI chuyên về lĩnh vực nào?",
+      "options": {
+        "A": "Khoa học tự nhiên",
+        "B": "Khoa học xã hội",
+        "C": "Nghệ thuật và nhân văn",
+        "D": "Khoa học tự nhiên và khoa học xã hội."
+      },
+      "answer": "C",
+      "explainAnswer": "AHCI chuyên về Nghệ thuật và Nhân văn."
+    },
+    {
+      "id": 52,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "HỆ THỐNG ISI",
+      "question": "Hệ thống tạp chí ISI đã nhóm các tạp chí, bao gồm:",
+      "options": {
+        "A": "Science Citation Index Expanded (SCIE) và Emerging Sources Citation Index (ESCI)",
+        "B": "Social Sciences Citation Index (SSCI) và Emerging Sources Citation Index (ESCI)",
+        "C": "Arts & Humanities Citation Index (AHCI) và Emerging Sources Citation Index (ESCI)",
+        "D": "Science Citation Index Expanded, Social Sciences Citation Index và Arts & Humanities Citation Index."
+      },
+      "answer": "D",
+      "explainAnswer": "Ba chỉ mục chính của ISI/WoS là SCIE, SSCI và AHCI."
+    },
+    {
+      "id": 53,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "LUẬN ĐIỂM KHOA HỌC",
+      "question": "Quá trình xây dựng luận điểm khoa học xuất phát từ:",
+      "options": {
+        "A": "Quan sát nắm bắt sự kiện khoa học.",
+        "B": "Phát hiện các mâu thuẫn trong các bài báo khoa học.",
+        "C": "Việc tự đặt các giả thiết phù hợp.",
+        "D": "Việc đề ra các giả thuyết khoa học."
+      },
+      "answer": "A",
+      "explainAnswer": "Xuất phát từ quan sát nắm bắt sự kiện khoa học."
+    },
+    {
+      "id": 54,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "TỔNG QUAN TÀI LIỆU",
+      "question": "Lựa chọn tài liệu tổng quan tài liệu nghiên cứu là việc:",
+      "options": {
+        "A": "Tổng hợp các kết quả nghiên cứu trước đây liên quan đến vấn đề nghiên cứu",
+        "B": "Phát hiện những sai sót để kiến nghị thay đổi những nghiên cứu.",
+        "C": "Phân tích và đánh giá kết quả nghiên cứu của một vấn đề khác",
+        "D": "Liệt kê các kết quả nghiên cứu liên quan trước đó"
+      },
+      "answer": "A",
+      "explainAnswer": "Tổng quan là tổng hợp các kết quả nghiên cứu liên quan trước đây."
+    },
+    {
+      "id": 55,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "GIẢ THUYẾT KHOA HỌC",
+      "question": "Thuộc tính nào không phải là thuộc tính của giả thuyết khoa học?",
+      "options": {
+        "A": "Tính chính xác.",
+        "B": "Tính dị biến.",
+        "C": "Tính giả định.",
+        "D": "Tính đa phương án."
+      },
+      "answer": "A",
+      "explainAnswer": "Giả thuyết có tính giả định, chưa phải là chính xác."
+    },
+    {
+      "id": 56,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "CHỨNG MINH KHOA HỌC",
+      "question": "Các số liệu minh chứng trong nghiên cứu là bộ phận nào trong cấu trúc một chứng minh?",
+      "options": {
+        "A": "Luận cứ.",
+        "B": "Luận chứng.",
+        "C": "Phương pháp.",
+        "D": "Luận điểm."
+      },
+      "answer": "A",
+      "explainAnswer": "Số liệu minh chứng thuộc luận cứ."
+    },
+    {
+      "id": 57,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "PHƯƠNG PHÁP DIỄN DỊCH",
+      "question": "Trình tự các bước trong quy trình diễn dịch gồm:",
+      "options": {
+        "A": "Căn cứ vào các dữ liệu thu thập được tổng hợp thành các lý thuyết",
+        "B": "Thông qua các quan sát (dữ liệu thu thập được) tổng hợp mô tả các hiện tượng để xây dựng các lý thuyết",
+        "C": "Dựa trên các lý thuyết đã có đưa ra các giả thuyết sau đó kiểm định các giả thuyết thông qua các dữ liệu thu thập được để đưa ra các kết luận",
+        "D": "Căn cứ vào các lý thuyết đã có, lập luận và đưa ra kết luận"
+      },
+      "answer": "C",
+      "explainAnswer": "Diễn dịch: lý thuyết → giả thuyết → kiểm định bằng dữ liệu → kết luận."
+    },
+    {
+      "id": 58,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "GIẢ THUYẾT NGHIÊN CỨU",
+      "question": "Một giả thuyết nghiên cứu cần thỏa mãn các yêu cầu sau, loại trừ?",
+      "options": {
+        "A": "Có khảo lược tài liệu tổng quan tài liệu (Literature Review), thu thập thông tin",
+        "B": "Có thể thực nghiệm (test) để kiểm chứng",
+        "C": "Có mối quan hệ nhân - quả (Cause - effect)",
+        "D": "Có thể suy đoán theo cảm tính"
+      },
+      "answer": "D",
+      "explainAnswer": "Không được suy đoán theo cảm tính."
+    },
+    {
+      "id": 59,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "MẪU NGHIÊN CỨU",
+      "question": "Quy mô mẫu nghiên cứu trong phân tích định lượng:",
+      "options": {
+        "A": "Không cần quá nhiều mẫu trong nghiên cứu",
+        "B": "Càng lớn càng tốt trên cơ sở thu thập mẫu tùy tiện",
+        "C": "Thường là nhỏ, nhưng đảm bảo các thông tin thu thập được đến mức bão hòa",
+        "D": "Cần đủ lớn để thực hiện phân tích tương quan và hồi quy"
+      },
+      "answer": "D",
+      "explainAnswer": "Mẫu định lượng cần đủ lớn cho phân tích thống kê."
+    },
+    {
+      "id": 60,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "PHƯƠNG PHÁP LẤY MẪU",
+      "question": "Cách lấy mẫu sao cho mỗi đơn vị lấy mẫu đều có xác suất được chọn như nhau là:",
+      "options": {
+        "A": "Chọn mẫu ngẫu nhiên.",
+        "B": "Chọn mẫu hệ thống.",
+        "C": "Chọn mẫu phân tầng.",
+        "D": "Chọn mẫu từng cụm."
+      },
+      "answer": "A",
+      "explainAnswer": "Mẫu ngẫu nhiên đơn giản: mỗi đơn vị có xác suất bằng nhau."
+    },
+    {
+      "id": 61,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "PHƯƠNG PHÁP LẤY MẪU",
+      "question": "Người khảo sát khảo sát các ngôi nhà có số: 13, 18, 23, 28, 33, 38, …. Đây là cách chọn mẫu:",
+      "options": {
+        "A": "Chọn mẫu hệ thống.",
+        "B": "Chọn mẫu ngẫu nhiên.",
+        "C": "Chọn mẫu phân tầng.",
+        "D": "Chọn mẫu từng cụm."
+      },
+      "answer": "A",
+      "explainAnswer": "Khoảng cách đều → chọn mẫu hệ thống."
+    },
+    {
+      "id": 62,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "CÂU HỎI NGHIÊN CỨU",
+      "question": "“Làm sao có thể giảm thiểu các tác động xấu của dịch Covid 19 tới hoạt động kinh doanh của các doanh nghiệp vừa và nhỏ tại Việt Nam?” Đây là:",
+      "options": {
+        "A": "Câu hỏi quản lý nhằm giải quyết vấn đề tồn tại",
+        "B": "Câu hỏi nghiên cứu",
+        "C": "Mục tiêu nghiên cứu",
+        "D": "Câu hỏi đo lường"
+      },
+      "answer": "A",
+      "explainAnswer": "Đây là câu hỏi quản lý (practical), không phải câu hỏi nghiên cứu thuần túy."
+    },
+    {
+      "id": 63,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "TỔNG QUAN TÀI LIỆU",
+      "question": "Sử dụng các bài báo đã tổng quan cùng chủ đề nghiên cứu sẽ giúp:",
+      "options": {
+        "A": "Thay đổi hoàn toàn kết quả nghiên cứu.",
+        "B": "Nâng cao khả năng tổng quan và tiết kiệm thời gian của nhà nghiên cứu.",
+        "C": "Giảm khả năng kết luận của nghiên cứu",
+        "D": "Không có ý nào ở trên là hợp lý."
+      },
+      "answer": "B",
+      "explainAnswer": "Giúp nâng cao chất lượng tổng quan và tiết kiệm thời gian."
+    },
+    {
+      "id": 64,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "TỔNG QUAN & KHUNG KHÁI NIỆM",
+      "question": "Một tác giả viết: “Caves (1971) lý giải động cơ của đầu tư FDI theo chiều ngang và chiều dọc…”. Đoạn viết trên đề cập đến nội dung gì?",
+      "options": {
+        "A": "Tổng quan nghiên cứu",
+        "B": "Tổng quan nghiên cứu và khung khái niệm",
+        "C": "Phương pháp nghiên cứu.",
+        "D": "Câu hỏi nghiên cứu"
+      },
+      "answer": "B",
+      "explainAnswer": "Vừa tổng quan vừa xây dựng khung khái niệm về FDI."
+    },
+    {
+      "id": 65,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "KHUNG PHÂN TÍCH",
+      "question": "Chọn phát biểu sai:",
+      "options": {
+        "A": "Khung phân tích cố định thường được dùng trong nghiên cứu định tính.",
+        "B": "Khung phân tích sơ đồ hóa tất cả các quan hệ các biến số nghiên cứu theo bản chất và trình tự của chúng.",
+        "C": "Khung phân tích cố định thường áp dụng trong nghiên cứu định lượng, thông qua kiểm định hay chứng minh hoặc bác bỏ giả thuyết thống kê.",
+        "D": "Khung phân tích cố định thường áp dụng trong nghiên cứu định lượng."
+      },
+      "answer": "A",
+      "explainAnswer": "Khung phân tích cố định thường dùng cho nghiên cứu định lượng, không phải định tính."
+    },
+    {
+      "id": 66,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "PHƯƠNG PHÁP QUAN SÁT",
+      "question": "Chức năng quan trọng nhất của phương pháp quan sát khoa học là:",
+      "options": {
+        "A": "Thu thập thông tin thực tiễn",
+        "B": "Kiểm chứng các giả thuyết đã có",
+        "C": "Kiểm chứng các lý thuyết đã có",
+        "D": "Đối chiếu kết quả nghiên cứu lý thuyết với thực tiễn"
+      },
+      "answer": "A",
+      "explainAnswer": "Chức năng quan trọng nhất là thu thập thông tin thực tiễn."
+    },
+    {
+      "id": 67,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "PHƯƠNG PHÁP NGHIÊN CỨU",
+      "question": "Phương pháp nghiên cứu khoa học không bao gồm:",
+      "options": {
+        "A": "Phương pháp nhận biết sự kiện khoa học.",
+        "B": "Phương pháp luận.",
+        "C": "Phương pháp hệ.",
+        "D": "Phương pháp nghiên cứu cụ thể."
+      },
+      "answer": "A",
+      "explainAnswer": "“Phương pháp nhận biết sự kiện khoa học” không phải là một phân loại chuẩn."
+    },
+    {
+      "id": 68,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "PHƯƠNG PHÁP LỊCH SỬ",
+      "question": "Thao tác tìm quá trình hình thành phát triển của đối tượng là thao tác thuộc về phương pháp nào?",
+      "options": {
+        "A": "Phương pháp lịch sử.",
+        "B": "Phương pháp phân tích tổng hợp lý thuyết.",
+        "C": "Phương pháp phân loại, hệ thống hóa lý thuyết.",
+        "D": "Phương pháp giả thuyết."
+      },
+      "answer": "A",
+      "explainAnswer": "Thuộc phương pháp lịch sử."
+    },
+    {
+      "id": 69,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "PHƯƠNG PHÁP NGHIÊN CỨU",
+      "question": "Phương pháp nghiên cứu khoa học được hiểu trên phương diện thông tin như thế nào?",
+      "options": {
+        "A": "Là cách thức, con đường, phương tiện thu thập và xử lý thông tin.",
+        "B": "Là cách thức chứng minh luận điểm từ các thông tin đã có.",
+        "C": "Là hoạt động có chủ thể, sử dụng các thao tác tác động để khám phá đối tượng.",
+        "D": "Là con đường nghiên cứu khoa học."
+      },
+      "answer": "A",
+      "explainAnswer": "Trên phương diện thông tin: cách thức thu thập và xử lý thông tin."
+    },
+    {
+      "id": 70,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "PHƯƠNG PHÁP MÔ HÌNH HÓA",
+      "question": "Phương pháp xây dựng gần giống với đối tượng nghiên cứu là:",
+      "options": {
+        "A": "Phương pháp mô hình hóa.",
+        "B": "Phương pháp thí nghiệm",
+        "C": "Phương pháp chuyên gia",
+        "D": "Phương pháp quan sát."
+      },
+      "answer": "A",
+      "explainAnswer": "Mô hình hóa là xây dựng mô hình gần giống đối tượng."
+    },
+    {
+      "id": 71,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "PHƯƠNG PHÁP QUAN SÁT",
+      "question": "Hạn chế cơ bản của phương pháp quan sát là:",
+      "options": {
+        "A": "Các quan sát đều do con người thực hiện.",
+        "B": "Máy móc thiết bị có khi còn thô sơ lạc hậu.",
+        "C": "Thiết bị hiện đại quá khó để sử dụng.",
+        "D": "Vật chất luôn vận động phát triển."
+      },
+      "answer": "A",
+      "explainAnswer": "Hạn chế cơ bản là mang tính chủ quan của người quan sát."
+    },
+    {
+      "id": 72,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "CÂU HỎI KHẢO SÁT",
+      "question": "“Anh chị hãy nêu ý kiến về nền giáo dục nước ta.…” Loại câu hỏi trên là loại câu hỏi:",
+      "options": {
+        "A": "Câu hỏi mở.",
+        "B": "Câu hỏi đóng.",
+        "C": "Câu hỏi kết hợp.",
+        "D": "Câu hỏi định lượng"
+      },
+      "answer": "A",
+      "explainAnswer": "Câu hỏi mở (không giới hạn phương án trả lời)."
+    },
+    {
+      "id": 73,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "PHƯƠNG PHÁP ANKÉT",
+      "question": "Chọn câu đúng:",
+      "options": {
+        "A": "Ankét đóng là hình thức người điều tra đưa ra câu hỏi cùng với đó là các phương án trả lời.",
+        "B": "Có 2 loại ankét: đóng và mở.",
+        "C": "Phương pháp điều tra bằng ankét chỉ được thực hiện trên một phạm vi hẹp.",
+        "D": "Ankét mở là loại câu hỏi mà người trả lời chọn một hay nhiều phương án thích hợp với ý kiến của mình từ các phương án có sẵn."
+      },
+      "answer": "A",
+      "explainAnswer": "Ankét đóng có sẵn phương án trả lời."
+    },
+    {
+      "id": 74,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "PHƯƠNG PHÁP PHÂN LOẠI",
+      "question": "Thao tác nghiên cứu tài liệu và sắp xếp thành một hệ thống logic là thao tác của phương pháp nào?",
+      "options": {
+        "A": "Phương pháp phân loại, hệ thống hóa lý thuyết.",
+        "B": "Phương pháp phân tích tổng hợp lý thuyết.",
+        "C": "Phương pháp giả thuyết.",
+        "D": "Phương pháp lịch sử."
+      },
+      "answer": "A",
+      "explainAnswer": "Thuộc phương pháp phân loại, hệ thống hóa lý thuyết."
+    },
+    {
+      "id": 75,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "PHỎNG VẤN SÂU",
+      "question": "Nội dung nào sau đây là nhận định SAI khi thực hiện nội dung phỏng vấn sâu?",
+      "options": {
+        "A": "Cần phải xin phép và được sự đồng ý khi sử dụng các thiết bị ghi âm, ghi hình trong quá trình phỏng vấn.",
+        "B": "Không nên gợi mở định hướng trả lời cho đối tượng được phỏng vấn",
+        "C": "Không được thay đổi thứ tự các câu hỏi đã được chuẩn bị",
+        "D": "Các câu hỏi nên là các câu hỏi mở"
+      },
+      "answer": "C",
+      "explainAnswer": "Trong phỏng vấn sâu có thể linh hoạt thay đổi thứ tự câu hỏi."
+    },
+    {
+      "id": 76,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "PHƯƠNG PHÁP TỔNG QUÁT",
+      "question": "Căn cứ vào đâu để chia phương pháp tổng quát thành các phương pháp như: phân tích, tổng hợp, quy nạp, diễn giải, logic, lịch sử, hệ thống-cấu trúc…?",
+      "options": {
+        "A": "Mức độ cụ thể của phương pháp.",
+        "B": "Đặc điểm của quá trình tư duy.",
+        "C": "Công cụ hỗ trợ của phương pháp.",
+        "D": "Mục đích của phương pháp."
+      },
+      "answer": "B",
+      "explainAnswer": "Căn cứ vào đặc điểm của quá trình tư duy."
+    },
+    {
+      "id": 77,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "KHUNG LÝ THUYẾT",
+      "question": "Chọn phát biểu sai:",
+      "options": {
+        "A": "Khung lý thuyết chính là quy trình tiến hành nghiên cứu.",
+        "B": "Xây dựng khung lý thuyết là bước vận dụng các khái niệm, định nghĩa, lý thuyết, quan điểm để luận giải vấn đề nghiên cứu.",
+        "C": "Một vai trò của khung khái niệm là giúp hình thành ý tưởng về thiết kế nghiên cứu.",
+        "D": "Khung khái niệm được xây dựng trên nền tảng khung lý thuyết."
+      },
+      "answer": "A",
+      "explainAnswer": "Khung lý thuyết không phải là quy trình tiến hành nghiên cứu."
+    },
+    {
+      "id": 78,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "TỔNG QUAN TÀI LIỆU",
+      "question": "Chọn phát biểu sai:",
+      "options": {
+        "A": "Tổng quan tài liệu là việc liệt kê các kết quả nghiên cứu trước đó theo trình tự nhất định.",
+        "B": "Mục đích của phương pháp diễn dịch là đi đến kết luận, tuy nhiên kết luận không nhất thiết phải đi theo các lý do cho trước.",
+        "C": "Phương pháp nghiên cứu thay đổi có thể cải thiện hoặc nâng cao khả năng luận giải cho nghiên cứu.",
+        "D": "Thiết kế nghiên cứu là việc xác định những bằng chứng cần thiết và cách thức thu thập bằng chứng nhằm trả lời câu hỏi nghiên cứu một cách thuyết phục nhất."
+      },
+      "answer": "A",
+      "explainAnswer": "Tổng quan không chỉ là liệt kê, mà phải phân tích, đánh giá, tổng hợp."
+    },
+    {
+      "id": 79,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐẠO ĐỨC NGHIÊN CỨU",
+      "question": "Đặt những câu hỏi để khai thác những thông tin nhạy cảm (sensitive) có thể gây ra ……… cho đối tượng khảo sát.",
+      "options": {
+        "A": "Thoải mái (comfort)",
+        "B": "Ảnh hưởng tính bảo mật (confidentiality)",
+        "C": "Phân biệt đối xử (discrimination)",
+        "D": "Tổn hại (harm)"
+      },
+      "answer": "D",
+      "explainAnswer": "Có thể gây tổn hại (harm) cho đối tượng."
+    },
+    {
+      "id": 80,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐẠO ĐỨC NGHIÊN CỨU",
+      "question": "Vấn đề đạo đức đặt ra liên quan đến việc tổ chức tài trợ cho nghiên cứu bao gồm:",
+      "options": {
+        "A": "Sử dụng thông tin sai mục đích",
+        "B": "Duy trì tính bảo mật",
+        "C": "Tìm kiếm sự đồng thuận của người tham gia",
+        "D": "Tất cả đều sai"
+      },
+      "answer": "A",
+      "explainAnswer": "Vấn đề đạo đức với nhà tài trợ thường liên quan đến việc sử dụng thông tin sai mục đích."
+    },
+    {
+      "id": 81,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "TRIẾT HỌC NHẬN THỨC",
+      "question": "……… cho rằng kiến thức có được là nhờ khả năng suy luận của con người; ……… cho rằng kiến thức chỉ có được qua kinh nghiệm nhận được của con người.",
+      "options": {
+        "A": "Chủ nghĩa kinh nghiệm (Empiricism); Chủ nghĩa duy lý (Rationalism)",
+        "B": "Chủ nghĩa duy vật (Materialism); Chủ nghĩa duy tâm (Idealism)",
+        "C": "Chủ nghĩa duy lý (Rationalism); Chủ nghĩa kinh nghiệm (Empiricism)",
+        "D": "Chủ nghĩa kinh nghiệm (Empiricism); Chủ nghĩa duy vật (Materialism)"
+      },
+      "answer": "C",
+      "explainAnswer": "Duy lý (Rationalism) nhấn mạnh suy luận; Kinh nghiệm (Empiricism) nhấn mạnh kinh nghiệm."
+    },
+    {
+      "id": 82,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "LOẠI HÌNH NGHIÊN CỨU",
+      "question": "Mục tiêu của nghiên cứu là “tìm hiểu tại sao một nhóm người sử dụng sản phẩm trong khi nhóm khác thì không?”. Đây là loại hình nghiên cứu:",
+      "options": {
+        "A": "Nghiên cứu tương quan (Correlational research)",
+        "B": "Nghiên cứu mô tả (Descriptive research)",
+        "C": "Nghiên cứu khám phá (Exploratory research)",
+        "D": "Nghiên cứu giải thích (Explanatory research)"
+      },
+      "answer": "D",
+      "explainAnswer": "Tìm hiểu “tại sao” → nghiên cứu giải thích."
+    },
+    {
+      "id": 83,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "CÂU HỎI NGHIÊN CỨU",
+      "question": "“Làm thế nào để cải thiện chất lượng dịch vụ/sản phẩm?” là câu hỏi dưới góc nhìn của:",
+      "options": {
+        "A": "Người tiêu dùng",
+        "B": "Nội dung (1), (2) và (3) đều đúng",
+        "C": "Chuyên gia",
+        "D": "Nhà cung cấp dịch vụ"
+      },
+      "answer": "D",
+      "explainAnswer": "Góc nhìn của nhà cung cấp dịch vụ."
+    },
+    {
+      "id": 84,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "VIẾT VĂN BẢN KHOA HỌC",
+      "question": "Điều nào sau đây cần chú ý TRÁNH khi viết văn bản khoa học thuộc ngành kinh tế, kinh doanh và quản lý?",
+      "options": {
+        "A": "Các thuật ngữ đều có diễn giải rõ ràng, chính xác",
+        "B": "Sử dụng lựa chọn từ chính xác",
+        "C": "Hạn chế sử dụng thuật ngữ khoa học",
+        "D": "Sử dụng phép ẩn dụ và ngôn ngữ hoa mỹ"
+      },
+      "answer": "D",
+      "explainAnswer": "Cần tránh phép ẩn dụ và ngôn ngữ hoa mỹ trong văn bản khoa học."
+    },
+    {
+      "id": 85,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "TỔNG QUAN TÀI LIỆU",
+      "question": "Điểm bắt đầu cho một tìm kiếm tài liệu phục vụ viết lược khảo lý thuyết (literature review) là:",
+      "options": {
+        "A": "Dữ liệu cấp ba (tertiary data)",
+        "B": "Các dữ liệu khác",
+        "C": "Dữ liệu thứ cấp",
+        "D": "Dữ liệu sơ cấp"
+      },
+      "answer": "A",
+      "explainAnswer": "Thường bắt đầu từ dữ liệu cấp ba (bách khoa, handbook, review…)."
+    },
+    {
+      "id": 86,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "TỔNG QUAN TÀI LIỆU",
+      "question": "Quá trình lược khảo lý thuyết (literature review) giúp:",
+      "options": {
+        "A": "Xác định phương pháp thu thập dữ liệu",
+        "B": "Xác định khoảng trống nghiên cứu",
+        "C": "Xác định mẫu trong nghiên cứu",
+        "D": "Tất cả các nội dung trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Literature review hỗ trợ xác định phương pháp, khoảng trống và cả thiết kế mẫu."
+    },
+    {
+      "id": 87,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "TRÍCH DẪN",
+      "question": "Mục đích của việc trích dẫn và trình bày danh mục tài liệu tham khảo là:",
+      "options": {
+        "A": "Cho biết tên các tác giả nghiên cứu cùng chủ đề.",
+        "B": "Làm nghiên cứu dài ra, đủ số từ yêu cầu.",
+        "C": "Xác minh trích dẫn và tránh đạo văn.",
+        "D": "Cho thấy tác giả biết các nguyên tắc trích dẫn."
+      },
+      "answer": "C",
+      "explainAnswer": "Mục đích chính là xác minh nguồn và tránh đạo văn."
+    },
+    {
+      "id": 88,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "TRÍCH DẪN",
+      "question": "Khi bạn phát hiện ra rằng một tác giả (1) đã trích dẫn một tác giả khác (2), đó là một thông tin tốt để:",
+      "options": {
+        "A": "Sử dụng tài liệu và gán nó cho tác giả 1",
+        "B": "Không sử dụng tài liệu này",
+        "C": "Sử dụng tài liệu và gán nó cho tác giả 2",
+        "D": "Định vị và đọc bản gốc, gán nó cho tác giả 2"
+      },
+      "answer": "D",
+      "explainAnswer": "Phải tìm đọc bản gốc và trích dẫn đúng tác giả gốc."
+    },
+    {
+      "id": 89,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐẠO VĂN",
+      "question": "Phát biểu nào sau đây về đạo văn là chính xác nhất?",
+      "options": {
+        "A": "Thật dễ dàng để “sao chép và dán” từ internet mà ngày nay mọi người đều làm như vậy. Nếu một tài liệu tham khảo thích hợp được đưa ra, điều này không gây tác hại gì.",
+        "B": "Làm thế nào chúng ta có thể nói chắc chắn ý tưởng của chúng ta đến từ đâu? Chúng ta không thể đưa ra một tài liệu tham khảo cho tất cả mọi thứ.",
+        "C": "Đạo văn là một tội ác khủng khiếp đến nỗi những người bị kết tội phải có nghĩa vụ phải đeo một chữ “plagiarism” đỏ tươi trên quần áo của họ.",
+        "D": "Đạo văn là việc chiếm hữu sai trái và sử dụng những ý tưởng, suy nghĩ, ngôn ngữ của người khác và xem chúng như những gì do mình tạo ra."
+      },
+      "answer": "D",
+      "explainAnswer": "Định nghĩa chuẩn về đạo văn."
+    },
+    {
+      "id": 90,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "TRÁNH ĐẠO VĂN",
+      "question": "Việc nào có thể giúp bạn tránh đạo văn?",
+      "options": {
+        "A": "Thay đổi bề ngoài các từ được sử dụng trong các bài báo được xuất bản.",
+        "B": "Cắt và dán chính xác từ các tài liệu được xuất bản.",
+        "C": "Ghi chú bằng các ngôn từ riêng của mình.",
+        "D": "Nội dung (1) và (2) đúng."
+      },
+      "answer": "C",
+      "explainAnswer": "Ghi chú bằng ngôn từ riêng giúp tránh đạo văn."
+    },
+    {
+      "id": 91,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "KHUNG LÝ THUYẾT & KHÁI NIỆM",
+      "question": "Khung lý thuyết phát triển từ ………, khung khái niệm mô tả ………",
+      "options": {
+        "A": "Các nội dung gắn liền với vấn đề nghiên cứu cụ thể; lý thuyết/vấn đề của nghiên cứu",
+        "B": "Lý thuyết của nghiên cứu; các nội dung gắn liền với vấn đề nghiên cứu cụ thể",
+        "C": "Cơ sở của vấn đề nghiên cứu; các phần nền tảng của nghiên cứu",
+        "D": "Các lý thuyết nền tảng của nghiên cứu; các nghiên cứu trước"
+      },
+      "answer": "B",
+      "explainAnswer": "Khung lý thuyết từ các lý thuyết nền; khung khái niệm mô tả các biến/nội dung cụ thể."
+    },
+    {
+      "id": 92,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "DANH MỤC TÀI LIỆU THAM KHẢO",
+      "question": "Điều nào sau đây là đúng khi trình bày phần danh mục tài liệu tham khảo?",
+      "options": {
+        "A": "Phần danh mục tài liệu tham khảo không có hướng dẫn định dạng nghiêm ngặt.",
+        "B": "Phần danh mục tài liệu tham khảo liệt kê tất cả các trích dẫn trong báo cáo nghiên cứu.",
+        "C": "Tác giả chỉ chọn các tài liệu tham khảo chính mà mình trích dẫn trong phần còn lại của báo cáo và đưa chúng vào phần danh mục tài liệu tham khảo.",
+        "D": "APA chỉ có 3 cách khác nhau để định dạng danh mục tài liệu tham khảo mà các tác giả được phép lựa chọn."
+      },
+      "answer": "B",
+      "explainAnswer": "Phải liệt kê đầy đủ tất cả tài liệu đã trích dẫn."
+    },
+    {
+      "id": 93,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "TRÍCH DẪN INTERNET",
+      "question": "Khi trích dẫn hoặc sử dụng nguồn từ Internet, bạn KHÔNG cần phải tìm:",
+      "options": {
+        "A": "Ngày cập nhật gần nhất",
+        "B": "Ngày sinh của tác giả",
+        "C": "Ngày truy cập",
+        "D": "Ngày công trình được công bố"
+      },
+      "answer": "B",
+      "explainAnswer": "Không cần ngày sinh của tác giả."
+    },
+    {
+      "id": 94,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "HỆ THỐNG TRÍCH DẪN",
+      "question": "Theo hiệp hội tâm lý học Hoa Kỳ, hệ thống trích dẫn nguồn phổ biến nhất trong nghiên cứu khoa học xã hội và hành vi là:",
+      "options": {
+        "A": "Harvard",
+        "B": "Chicago",
+        "C": "APA",
+        "D": "MLA"
+      },
+      "answer": "C",
+      "explainAnswer": "APA là hệ thống phổ biến nhất trong khoa học xã hội và hành vi."
+    },
+    {
+      "id": 95,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐÁNH GIÁ CÔNG TRÌNH",
+      "question": "Khi đánh giá một công trình khoa học, điều nào sau đây KHÔNG quá quan trọng:",
+      "options": {
+        "A": "Tuổi của tác giả",
+        "B": "Số lượt trích dẫn",
+        "C": "Tạp chí công bố",
+        "D": "Uy tín của tác giả"
+      },
+      "answer": "A",
+      "explainAnswer": "Tuổi của tác giả không phải tiêu chí quan trọng."
+    },
+    {
+      "id": 96,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "QUY TRÌNH NGHIÊN CỨU",
+      "question": "Bước đầu tiên trong quá trình nghiên cứu là:",
+      "options": {
+        "A": "Xác định vấn đề nghiên cứu",
+        "B": "Lập kế hoạch nghiên cứu",
+        "C": "Thu thập dữ liệu",
+        "D": "Viết báo cáo"
+      },
+      "answer": "A",
+      "explainAnswer": "Bước đầu tiên và quan trọng nhất là xác định vấn đề nghiên cứu."
+    },
+    {
+      "id": 97,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐẶC ĐIỂM NGHIÊN CỨU KHOA HỌC",
+      "question": "Bất cứ kết luận nào cũng phải dựa trên cơ sở kết quả nghiên cứu, kết quả này là chính xác và có thể được xác nhận bởi nhà nghiên cứu và những người khác. Đây là đặc điểm nào của nghiên cứu khoa học?",
+      "options": {
+        "A": "Tính khách quan",
+        "B": "Tính chính xác và có thể kiểm chứng (Valid and verifiable)",
+        "C": "Tính phê phán",
+        "D": "Tính hệ thống"
+      },
+      "answer": "B",
+      "explainAnswer": "Tính chính xác và có thể kiểm chứng."
+    },
+    {
+      "id": 98,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐẶC ĐIỂM NGHIÊN CỨU KHOA HỌC",
+      "question": "Quá trình nghiên cứu phải chuẩn xác và không có hạn chế nào. Quá trình được thông qua và các phương thức được sử dụng phải được phản biện nghiêm túc. Đây là đặc điểm nào của nghiên cứu khoa học?",
+      "options": {
+        "A": "Tính khách quan",
+        "B": "Tính phê phán (Critical)",
+        "C": "Tính hệ thống",
+        "D": "Tính chính xác"
+      },
+      "answer": "B",
+      "explainAnswer": "Tính phê phán (Critical)."
+    },
+    {
+      "id": 99,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "DỮ LIỆU",
+      "question": "Các dữ liệu từ nguồn sau đều là nguồn thứ cấp, TRỪ:",
+      "options": {
+        "A": "Sách, tạp chí",
+        "B": "Báo cáo thống kê",
+        "C": "Nhật ký nghiên cứu của nhà nghiên cứu",
+        "D": "Cơ sở dữ liệu trực tuyến"
+      },
+      "answer": "C",
+      "explainAnswer": "Nhật ký nghiên cứu của chính nhà nghiên cứu là dữ liệu sơ cấp."
+    },
+    {
+      "id": 100,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "DỮ LIỆU",
+      "question": "Ưu điểm của dữ liệu thứ cấp là:",
+      "options": {
+        "A": "Tiết kiệm chi phí cho nghiên cứu.",
+        "B": "Luôn phù hợp với mục tiêu nghiên cứu.",
+        "C": "Luôn cập nhật nhất.",
+        "D": "Không cần kiểm tra chất lượng."
+      },
+      "answer": "A",
+      "explainAnswer": "Ưu điểm lớn nhất là tiết kiệm chi phí và thời gian."
+    },
+    {
+      "id": 101,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "DỮ LIỆU",
+      "question": "Đặc điểm nào sau đây KHÔNG nói về dữ liệu sơ cấp?",
+      "options": {
+        "A": "Do nhà nghiên cứu tự thu thập",
+        "B": "Phù hợp với mục tiêu nghiên cứu cụ thể",
+        "C": "Chi phí thu thập dữ liệu thường không đáng kể",
+        "D": "Có thể kiểm soát chất lượng"
+      },
+      "answer": "C",
+      "explainAnswer": "Chi phí thu thập dữ liệu sơ cấp thường cao, không phải “không đáng kể”."
+    },
+    {
+      "id": 102,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "PHƯƠNG PHÁP THU THẬP DỮ LIỆU",
+      "question": "Các phương pháp thu thập dữ liệu sơ cấp bao gồm:",
+      "options": {
+        "A": "Phương pháp phỏng vấn",
+        "B": "Phương pháp quan sát",
+        "C": "Phương pháp bảng hỏi",
+        "D": "Tất cả các phương pháp trên"
+      },
+      "answer": "D",
+      "explainAnswer": "Cả ba phương pháp đều dùng để thu thập dữ liệu sơ cấp."
+    },
+    {
+      "id": 103,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "PHƯƠNG PHÁP QUAN SÁT",
+      "question": "Nhà nghiên cứu âm thầm trở thành 1 thành viên tương tác với nhóm đối tượng được quan sát. Phương pháp thu thập dữ liệu này là:",
+      "options": {
+        "A": "Quan sát tham dự (participant observation)",
+        "B": "Quan sát không tham dự",
+        "C": "Quan sát có cấu trúc",
+        "D": "Quan sát nhập vai"
+      },
+      "answer": "D",
+      "explainAnswer": "Đây là quan sát nhập vai (covert participant observation)."
+    },
+    {
+      "id": 104,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "PHƯƠNG PHÁP LẤY MẪU",
+      "question": "Đối với một cuộc điều tra về sự hài lòng công việc của nhân viên, nhà nghiên cứu mời tất cả 1000 nhân viên và nhắm đến mẫu 200 nam + 200 nữ. Đây là:",
+      "options": {
+        "A": "Lấy mẫu hạn ngạch (quota sampling)",
+        "B": "Lấy mẫu ngẫu nhiên đơn giản",
+        "C": "Lấy mẫu phân tầng",
+        "D": "Lấy mẫu cụm"
+      },
+      "answer": "A",
+      "explainAnswer": "Lấy mẫu hạn ngạch (quota)."
+    },
+    {
+      "id": 105,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "GIẢ THUYẾT NGHIÊN CỨU",
+      "question": "Để trả lời cho câu hỏi nghiên cứu “Việc sử dụng thư viện có ảnh hưởng như thế nào đến kết quả học tập của sinh viên”, giả thuyết nghiên cứu nào sau đây là tốt?",
+      "options": {
+        "A": "Tần suất mượn sách của thư viện có ảnh hưởng tích cực đến điểm trung bình học tập của sinh viên",
+        "B": "Sinh viên thích sử dụng thư viện",
+        "C": "Thư viện có nhiều sách",
+        "D": "Sinh viên học giỏi thường đến thư viện"
+      },
+      "answer": "A",
+      "explainAnswer": "Giả thuyết phải thể hiện rõ mối quan hệ có thể kiểm định."
+    },
+    {
+      "id": 106,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "CÂU HỎI NGHIÊN CỨU",
+      "question": "Phát biểu nào dưới đây là câu hỏi nghiên cứu tốt?",
+      "options": {
+        "A": "Hành vi sử dụng mạng xã hội của sinh viên chịu ảnh hưởng của những yếu tố nào?",
+        "B": "Sinh viên có sử dụng mạng xã hội không?",
+        "C": "Mạng xã hội có tốt không?",
+        "D": "Tại sao sinh viên thích mạng xã hội?"
+      },
+      "answer": "A",
+      "explainAnswer": "Câu hỏi rõ ràng, có thể nghiên cứu, chỉ ra các yếu tố ảnh hưởng."
+    },
+    {
+      "id": 107,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "MỤC TIÊU NGHIÊN CỨU",
+      "question": "Nghiên cứu hành vi sử dụng mạng xã hội của sinh viên, cách phát biểu mục tiêu nào dưới đây là tốt?",
+      "options": {
+        "A": "Nghiên cứu nhằm xác định ảnh hưởng của hành vi sử dụng mạng xã hội đến kết quả học tập của sinh viên",
+        "B": "Tìm hiểu về mạng xã hội",
+        "C": "Khảo sát sinh viên",
+        "D": "Viết báo cáo về mạng xã hội"
+      },
+      "answer": "A",
+      "explainAnswer": "Mục tiêu rõ ràng, thể hiện mối quan hệ cần làm sáng tỏ."
+    },
+    {
+      "id": 108,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "NGHIÊN CỨU MÔ TẢ",
+      "question": "Nghiên cứu mô tả về hành vi sử dụng mạng xã hội của sinh viên có thể phát biểu giả thuyết nghiên cứu nào sau đây?",
+      "options": {
+        "A": "Không thể phát biểu giả thuyết nghiên cứu cho nghiên cứu này",
+        "B": "Hành vi sử dụng mạng xã hội ảnh hưởng đến kết quả học tập",
+        "C": "Sinh viên sử dụng mạng xã hội nhiều hơn 3 giờ/ngày",
+        "D": "Mạng xã hội làm giảm kết quả học tập"
+      },
+      "answer": "A",
+      "explainAnswer": "Nghiên cứu mô tả thuần túy thường không đặt giả thuyết kiểm định."
+    },
+    {
+      "id": 109,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐẠO ĐỨC NGHIÊN CỨU",
+      "question": "Hành vi nào sau đây là tuân thủ chuẩn mực đạo đức trong nghiên cứu?",
+      "options": {
+        "A": "Khách quan và trung thực khi phân tích kết quả nghiên cứu",
+        "B": "Bỏ qua dữ liệu không phù hợp với giả thuyết",
+        "C": "Sao chép kết quả của người khác",
+        "D": "Không xin phép đối tượng khi ghi âm"
+      },
+      "answer": "A",
+      "explainAnswer": "Khách quan và trung thực là chuẩn mực đạo đức cơ bản."
+    },
+    {
+      "id": 110,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "ĐẠO ĐỨC NGHIÊN CỨU",
+      "question": "Giáo sư A yêu cầu dữ liệu từ thí nghiệm. Sinh viên B phát hiện 3 kết quả không đo lường được nên điền số ngẫu nhiên. Hành vi của B là:",
+      "options": {
+        "A": "Chấp nhận được vì cần nộp đúng hạn",
+        "B": "Chế và làm sai lệch dữ liệu nghiên cứu (Fabricating and falsifying research data)",
+        "C": "Chỉ là sai sót nhỏ",
+        "D": "Không ảnh hưởng đến kết quả"
+      },
+      "answer": "B",
+      "explainAnswer": "Đây là hành vi chế tạo và làm sai lệch dữ liệu – vi phạm đạo đức nghiêm trọng."
+    },
+    {
+      "id": 111,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "THIẾT KẾ NGHIÊN CỨU",
+      "question": "Hai chức năng chính của thiết kế nghiên cứu là:",
+      "options": {
+        "A": "Thu thập dữ liệu và phân tích dữ liệu",
+        "B": "Xác định vấn đề và viết báo cáo",
+        "C": "Xây dựng thủ tục/hậu cần cần thiết và đảm bảo chất lượng của các thủ tục hợp lệ, khách quan, chính xác",
+        "D": "Chọn mẫu và chọn phương pháp"
+      },
+      "answer": "C",
+      "explainAnswer": "Hai chức năng chính: xây dựng thủ tục và đảm bảo chất lượng thủ tục."
+    },
+    {
+      "id": 112,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "PHƯƠNG PHÁP THU THẬP DỮ LIỆU",
+      "question": "Sự khác nhau giữa việc thu thập dữ liệu bằng phỏng vấn và bảng hỏi là:",
+      "options": {
+        "A": "Người phỏng vấn có thể hỏi, giải thích nếu cần và ghi lại câu trả lời còn bảng hỏi do chính người trả lời ghi vào",
+        "B": "Không có sự khác biệt",
+        "C": "Bảng hỏi linh hoạt hơn",
+        "D": "Phỏng vấn chỉ dùng cho nghiên cứu định tính"
+      },
+      "answer": "A",
+      "explainAnswer": "Điểm khác biệt cơ bản về vai trò của người thu thập dữ liệu."
+    },
+    {
+      "id": 113,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "MỤC TIÊU NGHIÊN CỨU",
+      "question": "Phát biểu nào sau đây đúng về quan hệ giữa mục tiêu tổng quát và mục tiêu cụ thể?",
+      "options": {
+        "A": "Mục tiêu cụ thể chỉ ra những đích đến khác nhau của nghiên cứu để đạt được mục tiêu tổng quát",
+        "B": "Mục tiêu tổng quát chi tiết hơn mục tiêu cụ thể",
+        "C": "Hai loại mục tiêu độc lập với nhau",
+        "D": "Mục tiêu cụ thể bao hàm mục tiêu tổng quát"
+      },
+      "answer": "A",
+      "explainAnswer": "Mục tiêu cụ thể là các bước/đích đến để đạt mục tiêu tổng quát."
+    },
+    {
+      "id": 114,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "CÂU HỎI & GIẢ THUYẾT",
+      "question": "Phát biểu nào sau đây là ĐÚNG về quan hệ giữa câu hỏi nghiên cứu và giả thuyết nghiên cứu?",
+      "options": {
+        "A": "Kiểm định giả thuyết nghiên cứu sẽ giúp trả lời câu hỏi nghiên cứu",
+        "B": "Câu hỏi nghiên cứu và giả thuyết độc lập",
+        "C": "Giả thuyết luôn có trước câu hỏi",
+        "D": "Câu hỏi nghiên cứu không cần giả thuyết"
+      },
+      "answer": "A",
+      "explainAnswer": "Giả thuyết được kiểm định để trả lời câu hỏi nghiên cứu."
+    },
+    {
+      "id": 115,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "CỠ MẪU",
+      "question": "Quy tắc liên quan đến cỡ mẫu có thể áp dụng trong kiểm tra giả thuyết?",
+      "options": {
+        "A": "Kích thước mẫu càng lớn thì ước tính càng chính xác",
+        "B": "Mẫu nhỏ luôn tốt hơn",
+        "C": "Cỡ mẫu không ảnh hưởng đến kết quả",
+        "D": "Chỉ cần mẫu thuận tiện"
+      },
+      "answer": "A",
+      "explainAnswer": "Mẫu càng lớn, ước lượng càng chính xác (sai số mẫu giảm)."
+    },
+    {
+      "id": 116,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "NGHIÊN CỨU ĐỊNH LƯỢNG",
+      "question": "Đặc điểm nào sau đây KHÔNG thuộc về nghiên cứu định lượng?",
+      "options": {
+        "A": "Sử dụng số liệu và phân tích thống kê",
+        "B": "Kiểm định giả thuyết",
+        "C": "Mẫu lớn",
+        "D": "Nghiên cứu mô tả đặc tính của sự vật hiện tượng theo hướng định tính sâu"
+      },
+      "answer": "D",
+      "explainAnswer": "Mô tả đặc tính sâu theo hướng định tính không phải đặc điểm của nghiên cứu định lượng."
+    },
+    {
+      "id": 117,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "DỮ LIỆU",
+      "question": "Nhóm nghiên cứu thực hiện nghiên cứu về hành vi sử dụng mạng xã hội của sinh viên TP.HCM. Dữ liệu thu thập trong nghiên cứu này là:",
+      "options": {
+        "A": "Dữ liệu sơ cấp",
+        "B": "Dữ liệu thứ cấp",
+        "C": "Dữ liệu cấp ba",
+        "D": "Dữ liệu hỗn hợp"
+      },
+      "answer": "A",
+      "explainAnswer": "Do nhà nghiên cứu tự thu thập → dữ liệu sơ cấp."
+    },
+    {
+      "id": 118,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "PHƯƠNG PHÁP BẢNG HỎI",
+      "question": "Thu thập dữ liệu bằng phương pháp bảng hỏi KHÔNG có đặc điểm nào sau đây?",
+      "options": {
+        "A": "Người cung cấp thông tin có thể đưa thêm thông tin khác nếu muốn",
+        "B": "Có thể thu thập trên quy mô lớn",
+        "C": "Chi phí tương đối thấp",
+        "D": "Người trả lời tự điền"
+      },
+      "answer": "A",
+      "explainAnswer": "Bảng hỏi (đặc biệt là đóng) hạn chế việc đưa thêm thông tin ngoài phương án."
+    },
+    {
+      "id": 119,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "PHƯƠNG PHÁP LẤY MẪU",
+      "question": "Nhóm nghiên cứu thực hiện nghiên cứu về hành vi sử dụng mạng xã hội của sinh viên TP.HCM. Phương pháp lấy mẫu nào sau đây có thể sử dụng được?",
+      "options": {
+        "A": "Chọn mẫu hệ thống và chọn mẫu thuận tiện",
+        "B": "Chỉ chọn mẫu ngẫu nhiên toàn quốc",
+        "C": "Chỉ chọn mẫu phân tầng toàn quốc",
+        "D": "Không thể lấy mẫu"
+      },
+      "answer": "A",
+      "explainAnswer": "Có thể kết hợp chọn mẫu hệ thống và thuận tiện tùy điều kiện thực tế."
+    },
+    {
+      "id": 120,
+      "chapter": "Phương pháp nghiên cứu khoa học",
+      "sourceChapter": "PHƯƠNG PHÁP THU THẬP DỮ LIỆU",
+      "question": "Nhóm nghiên cứu thực hiện nghiên cứu về hành vi sử dụng mạng xã hội của sinh viên TP.HCM. Phương pháp thu thập dữ liệu nào sau đây phù hợp?",
+      "options": {
+        "A": "Bảng hỏi",
+        "B": "Chỉ quan sát",
+        "C": "Chỉ phỏng vấn sâu",
+        "D": "Chỉ thí nghiệm"
+      },
+      "answer": "A",
+      "explainAnswer": "Bảng hỏi phù hợp để thu thập dữ liệu trên quy mô lớn về hành vi sinh viên."
+    }
+  ]
+}

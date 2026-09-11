@@ -18,6 +18,7 @@ const subjectProducts: Record<string, string> = {
   "dai-so-tuyen-tinh": "dst101",
   "xac-suat-thong-ke": "xst101",
   "toan-roi-rac": "dm101",
+  "tieng-anh-1": "ta101",
 }
 
 const documentFiles: Record<string, string[]> = {
@@ -34,6 +35,7 @@ const documentFiles: Record<string, string[]> = {
   "dm-de-1": ["dm101/de1-img1.png", "dm101/de1-img2.png", "dm101/de1-img3.png"],
   "dm-de-2": ["dm101/de-tu-luan-2-img1.png", "dm101/de-tu-luan-2-img2.png"],
   "dm-de-3": ["dm101/de-tu-luan-3-img1.png", "dm101/de-tu-luan-3-img2.png"],
+  "ta1-cau-truc-de": ["ta101/cau-truc-de.png"],
 }
 
 // Each document belongs to exactly one product. The requested document must
@@ -53,6 +55,7 @@ const documentProducts: Record<string, string> = {
   "dm-de-1": "dm101",
   "dm-de-2": "dm101",
   "dm-de-3": "dm101",
+  "ta1-cau-truc-de": "ta101",
 }
 
 function json(body: unknown, status: number, req: Request) {

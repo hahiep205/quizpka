@@ -22,6 +22,7 @@ export const appRoutes = {
   adminPayment: "/admin/payment",
   adminSendQuiz: "/admin/sendquiz",
   adminSupports: "/admin/supports",
+  adminSubject: "/admin/subject",
   adminTimeline: "/admin/timeline",
   adminAttempts: "/admin/attempts",
 } as const

@@ -38,6 +38,17 @@ export type PartNavigationItem = {
   label: string
 }
 
+/**
+ * Part-tile sidebar (TADV style) is shown for parts-based banks with more
+ * than one part group. TOEIC keeps its own sidebar branch. Flat banks have
+ * no partTitle, so every question is its own group and this stays false.
+ */
+export function shouldShowPartNavigation(subjectCode: string, questions: Question[]): boolean {
+  if (subjectCode === "TOEIC01") return false
+  if (!questions.some((question) => question.partTitle)) return false
+  return buildPartStartIndices(questions).length > 1
+}
+
 /** Navigation tiles "Part N - Section" used by TADV exams. */
 export function buildPartNavigationItems(questions: Question[], startIndices: number[]): PartNavigationItem[] {
   return startIndices.map((startIndex, index) => {

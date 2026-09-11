@@ -53,6 +53,8 @@ import { LeaderboardView } from "@/components/LeaderboardView"
 import { DirectNotificationPopup } from "@/components/DirectNotificationPopup"
 import { formatTime } from "@/features/quiz/lib/quizHelpers"
 import { createPaidCheckout, getPaidProductId, hasProductPurchase } from "@/lib/purchases"
+import { useSubjectOverrides } from "@/hooks/useSubjectOverrides"
+import { applySubjectDisplayOverrides, filterVisibleSubjectExams } from "@/features/admin/lib/subjectDisplay"
 import type { ContactModalType } from "@/components/ContactModal"
 import type { UserNotification } from "@/features/notifications/api/notifications"
 import { useNotifications } from "@/features/notifications/useNotifications"
@@ -236,9 +238,14 @@ export function DashboardPage({
     return () => window.removeEventListener("popstate", syncView)
   }, [])
 
+  const displayOverrides = useSubjectOverrides()
+  const displayedCatalog = useMemo(
+    () => applySubjectDisplayOverrides(filterVisibleSubjectExams(examCatalog, displayOverrides), displayOverrides),
+    [displayOverrides],
+  )
   const filteredExams = useMemo(() => {
     const normalized = query.trim().toLocaleLowerCase(lang)
-    return examCatalog.filter((exam) => {
+    return displayedCatalog.filter((exam) => {
       if (exam.hideFromCatalog) return false
       const isToeic = exam.subjectId === "toeic"
       if (filter === "toeic") {
@@ -260,7 +267,7 @@ export function DashboardPage({
       const haystack = `${exam.title[lang]} ${exam.subjectName[lang]} ${exam.subjectCode}`.toLocaleLowerCase(lang)
       return matchesFilter && (!normalized || haystack.includes(normalized))
     })
-  }, [filter, lang, query])
+  }, [displayedCatalog, filter, lang, query])
 
   const navigate = (view: DashboardView) => {
     setActiveView(view)
@@ -472,6 +479,11 @@ function PurchasedView({ lang, onStartExam }: { lang: Lang; onStartExam: (exam: 
   const [loading, setLoading] = useState(true)
   const [ownedIds, setOwnedIds] = useState<string[]>([])
   const [error, setError] = useState(false)
+  const displayOverrides = useSubjectOverrides()
+  const displayedPaidExams = useMemo(
+    () => applySubjectDisplayOverrides(filterVisibleSubjectExams(paidExams, displayOverrides), displayOverrides),
+    [displayOverrides],
+  )
   useEffect(() => {
     let mounted = true
     if (!user?.id) {
@@ -495,7 +507,7 @@ function PurchasedView({ lang, onStartExam }: { lang: Lang; onStartExam: (exam: 
     <section className="space-y-5">
       {loading ? <Card variant="dashed" className="py-12 text-center"><p className="text-sm font-bold text-slate-500">{lang === "vi" ? "Đang kiểm tra giao dịch…" : "Checking purchases…"}</p></Card> : null}
       {!loading && error ? <Card variant="dashed" className="py-12 text-center"><p className="text-sm font-bold text-red-500">{lang === "vi" ? "Không thể tải danh sách tài liệu đã mua." : "Could not load purchased materials."}</p></Card> : null}
-      {!loading && !error && ownedIds.length ? paidExams.filter((exam) => ownedIds.includes(exam.id)).map((purchasedExam) => (
+      {!loading && !error && ownedIds.length ? displayedPaidExams.filter((exam) => ownedIds.includes(exam.id)).map((purchasedExam) => (
         <article key={purchasedExam.id} className="group relative overflow-hidden rounded-[20px] border-2 border-emerald-200 bg-white shadow-[0_4px_0_rgba(16,185,129,0.14)] transition-transform hover:-translate-y-0.5 dark:border-emerald-500/20 dark:bg-slate-900 dark:shadow-none">
           <div aria-hidden="true" className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-emerald-400 to-[#1CB0F6]" />
           <div aria-hidden="true" className="pointer-events-none absolute -right-12 -top-16 h-44 w-44 rounded-full bg-emerald-100/60 blur-2xl dark:bg-emerald-500/10" />

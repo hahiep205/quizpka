@@ -26,6 +26,8 @@ const examFiles: Record<string, string> = {
   "history-party-final-bank-1": "his101/lich_su_dang.json",
   "scientific-socialism-final-bank-1": "soc101/chu_nghia_xa_hoi.json",
   "discrete-math-quiz-bank-1": "dm101/toan_roi_rac_quiz.json",
+  "english-1-final-bank-1": "ta101/tieng_anh_1_quiz.json",
+  "research-methodology-final-bank-1": "rm101/phuong_phap_nghien_cuu.json",
 }
 const subjectProducts: Record<string, string> = {
   "khoa-hoc-du-lieu-va-tri-tue-nhan-tao": "dsai101",
@@ -47,6 +49,8 @@ const subjectProducts: Record<string, string> = {
   "lich-su-dang-cong-san-viet-nam": "his101",
   "chu-nghia-xa-hoi-khoa-hoc": "soc101",
   "toan-roi-rac": "dm101",
+  "tieng-anh-1": "ta101",
+  "phuong-phap-nghien-cuu-khoa-hoc": "rm101",
 }
 const sqaFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json", "chuong_6.json"]
 const secFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json", "chuong_6.json.gz", "chuong_7.json", "chuong_8.json"]

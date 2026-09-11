@@ -16,6 +16,8 @@ import { logActivityEvent } from "@/features/activity/lib/activityLog"
 import { useAuth } from "@/auth/AuthProvider"
 import { appRoutes, navigate } from "@/app/navigation"
 import { NotFoundPage } from "@/pages/NotFoundPage"
+import { useSubjectOverrides } from "@/hooks/useSubjectOverrides"
+import { applySubjectDisplayOverrides, filterVisibleSubjectExams, getSubjectDisplayName, isSubjectVisible } from "@/features/admin/lib/subjectDisplay"
 import { documentsCopy as copy } from "@/shared/i18n"
 import type { Language } from "@/shared/types/app"
 
@@ -62,10 +64,18 @@ export function QuizDetailPage({ lang, slug }: { lang: Lang; slug: string }) {
   } = useExamLaunch(lang)
   const nudge = useLoginNudge()
   const { user } = useAuth()
+  const displayOverrides = useSubjectOverrides()
 
-  if (!subject) return <NotFoundPage lang={lang} />
+  if (!subject || !isSubjectVisible(subject.id, displayOverrides)) return <NotFoundPage lang={lang} />
+  const displayName = getSubjectDisplayName(subject, displayOverrides.get(subject.id))
 
-  const exams = examCatalog.filter((exam) => exam.subjectId === subject.id && !exam.hideFromCatalog)
+  const exams = applySubjectDisplayOverrides(
+    filterVisibleSubjectExams(
+      examCatalog.filter((exam) => exam.subjectId === subject.id && !exam.hideFromCatalog),
+      displayOverrides,
+    ),
+    displayOverrides,
+  )
   const isPaidSubject = getPaidProductId(subject.code) !== null
   const primaryExam = exams[0]
   const docSetCount = (subject.chapters ?? []).filter((chapter) => chapter.documentId).length
@@ -126,7 +136,7 @@ export function QuizDetailPage({ lang, slug }: { lang: Lang; slug: string }) {
             </span>
           </div>
           <h1 className="mt-3 text-2xl font-black leading-8 tracking-[-0.02em] text-[#100F3E] sm:text-[32px] sm:leading-10 dark:text-white">
-            {subject.name[lang]}
+            {displayName[lang]}
           </h1>
         </div>
         <div className="border-t border-slate-100 p-5 sm:p-8 dark:border-white/10">

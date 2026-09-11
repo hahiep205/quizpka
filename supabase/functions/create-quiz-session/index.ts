@@ -18,6 +18,8 @@ const examFiles: Record<string, string> = {
   "history-party-final-bank-1": "his101/lich_su_dang.json",
   "scientific-socialism-final-bank-1": "soc101/chu_nghia_xa_hoi.json",
   "discrete-math-quiz-bank-1": "dm101/toan_roi_rac_quiz.json",
+  "english-1-final-bank-1": "ta101/tieng_anh_1_quiz.json",
+  "research-methodology-final-bank-1": "rm101/phuong_phap_nghien_cuu.json",
 }
 const examProducts: Record<string, string> = {
   "data-science-ai-midterm-1": "dsai101",
@@ -39,6 +41,8 @@ const examProducts: Record<string, string> = {
   "history-party-final-bank-1": "his101",
   "scientific-socialism-final-bank-1": "soc101",
   "discrete-math-quiz-bank-1": "dm101",
+  "english-1-final-bank-1": "ta101",
+  "research-methodology-final-bank-1": "rm101",
 }
 const sqaExamId = "software-quality-assessment-final-bank-1"
 const marExamId = "marketing-final-bank-1"
@@ -54,6 +58,12 @@ async function loadMultiBank(admin: any, directory: string, files: string[]): Pr
     return await file.json() as { questions?: BankQuestion[] }
   }))
   return { questions: banks.flatMap((item, bankIndex) => (item.questions ?? []).map((question) => ({ ...question, id: `${bankIndex}-${String(question.id)}` }))) }
+}
+
+function flattenBankParts(bank: { questions?: any[]; parts?: Array<{ questions?: any[] }> }): any[] {
+  if (Array.isArray(bank.questions) && bank.questions.length) return bank.questions
+  if (Array.isArray(bank.parts)) return bank.parts.flatMap((part) => part.questions ?? [])
+  return bank.questions ?? []
 }
 
 function toDisplayQuestions(bank: { questions?: Array<{ id: string | number; question: string; options?: Record<string, string>; explainAnswer?: string }> }) {
@@ -102,7 +112,7 @@ Deno.serve(async (req) => {
       const { data: existingFile, error: existingDownloadError } = await admin.storage.from("paid-question-banks").download(objectPath)
       if (existingDownloadError || !existingFile) return json({ error: "Question bank unavailable" }, 503, req)
       const existingBank = JSON.parse(await existingFile.text()) as { questions?: Array<{ id: string | number; question: string; options?: Record<string, string>; explainAnswer?: string }> }
-      const existingQuestions = (existingBank.questions ?? []).map((question) => ({ id: String(question.id), prompt: question.question, options: Object.keys(question.options ?? {}).sort().map((key) => question.options?.[key] ?? ""), explanation: question.explainAnswer }))
+      const existingQuestions = flattenBankParts(existingBank).map((question) => ({ id: String(question.id), prompt: question.question, options: Object.keys(question.options ?? {}).sort().map((key) => question.options?.[key] ?? ""), explanation: question.explainAnswer }))
       return json({ sessionId: existing.id, examId: existing.exam_id, subjectId: existing.subject_id, startedAt: existing.started_at, expiresAt: existing.expires_at, status: existing.status, result: existing.result, questions: existingQuestions }, 200, req)
     }
     let bank: { questions?: Array<{ id: string | number; question: string; options?: Record<string, string>; answer: string; explainAnswer?: string }> }
@@ -115,7 +125,7 @@ Deno.serve(async (req) => {
       if (downloadError || !file) return json({ error: "Question bank unavailable" }, 503, req)
       bank = JSON.parse(await file.text())
     }
-    const sourceQuestions = Array.isArray(bank.questions) ? bank.questions : []
+    const sourceQuestions = flattenBankParts(bank)
     const sessionId = crypto.randomUUID()
     const durationMinutes = 60
     const sessionQuestions = sourceQuestions.map((question, position) => {

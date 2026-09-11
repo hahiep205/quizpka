@@ -31,6 +31,7 @@ import {
   getCurrentPartStartIndex,
   getPartKey,
   getPartQuestions,
+  shouldShowPartNavigation,
   stripPart6GroupSuffix,
   type ToeicGroup,
 } from "@/features/quiz/lib/quizGrouping"
@@ -147,7 +148,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
   const currentPartIndex = partStartIndices.indexOf(currentPartStartIndex)
   const previousPartIndex = currentPartIndex > 0 ? partStartIndices[currentPartIndex - 1] : undefined
   const nextPartIndex = currentPartIndex < partStartIndices.length - 1 ? partStartIndices[currentPartIndex + 1] : undefined
-  const showPartNavigation = subject.code === "TADV01" && partStartIndices.length === 9
+  const showPartNavigation = shouldShowPartNavigation(subject.code, questions)
   const partNavigationItems = useMemo(() => buildPartNavigationItems(questions, partStartIndices), [partStartIndices, questions])
 
   const isToeic = subject.code === "TOEIC01"

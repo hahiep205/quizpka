@@ -26,11 +26,19 @@ const examFiles: Record<string, string> = {
   "history-party-final-bank-1": "his101/lich_su_dang.json",
   "scientific-socialism-final-bank-1": "soc101/chu_nghia_xa_hoi.json",
   "discrete-math-quiz-bank-1": "dm101/toan_roi_rac_quiz.json",
+  "english-1-final-bank-1": "ta101/tieng_anh_1_quiz.json",
+  "research-methodology-final-bank-1": "rm101/phuong_phap_nghien_cuu.json",
 }
 const sqaFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json", "chuong_6.json"]
 const marFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json", "chuong_6.json", "chuong_7.json", "chuong_8.json", "chuong_9.json"]
 const sqaExamId = "software-quality-assessment-final-bank-1"
 const marExamId = "marketing-final-bank-1"
+
+function flattenBankParts(bank: { questions?: any[]; parts?: Array<{ questions?: any[] }> }): any[] {
+  if (Array.isArray(bank.questions) && bank.questions.length) return bank.questions
+  if (Array.isArray(bank.parts)) return bank.parts.flatMap((part) => part.questions ?? [])
+  return bank.questions ?? []
+}
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: cors(req) })
@@ -96,7 +104,7 @@ Deno.serve(async (req) => {
         if (downloadError || !file) return json({ error: "Question bank unavailable" }, 503, req)
         bank = JSON.parse(await file.text())
       }
-      questions = (bank.questions ?? []).map((question) => ({ id: String(question.id), prompt: question.question, options: Object.keys(question.options ?? {}).sort().map((key) => question.options?.[key] ?? ""), explanation: question.explainAnswer }))
+      questions = flattenBankParts(bank).map((question) => ({ id: String(question.id), prompt: question.question, options: Object.keys(question.options ?? {}).sort().map((key) => question.options?.[key] ?? ""), explanation: question.explainAnswer }))
     }
     return json({
       sessionId: session.id,

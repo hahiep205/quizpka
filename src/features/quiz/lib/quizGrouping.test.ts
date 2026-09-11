@@ -10,6 +10,7 @@ import {
   getCurrentPartStartIndex,
   getPartKey,
   getPartQuestions,
+  shouldShowPartNavigation,
   stripPart6GroupSuffix,
 } from "@/features/quiz/lib/quizGrouping"
 
@@ -99,5 +100,16 @@ describe("quizGrouping", () => {
   it("strips the internal part6 group suffix from display titles", () => {
     expect(stripPart6GroupSuffix("Reading - Part 6 - part6_group_1_2")).toBe("Reading - Part 6")
     expect(stripPart6GroupSuffix("Reading - Part 7 - Group 1")).toBe("Reading - Part 7 - Group 1")
+  })
+
+  it("shows part tiles for parts-based banks like TADV and TA101, never for flat banks or TOEIC", () => {
+    const tadvLike = [question("a", "PART 1: X"), question("b", "PART 1: X"), question("c", "PART 2: Y")]
+    expect(shouldShowPartNavigation("TADV01", tadvLike)).toBe(true)
+    const ta101Like = [question("a", "Part 1"), question("b", "Part 2")]
+    expect(shouldShowPartNavigation("TA101", ta101Like)).toBe(true)
+    const flat = [question("a"), question("b")]
+    expect(shouldShowPartNavigation("MAR101", flat)).toBe(false)
+    expect(shouldShowPartNavigation("TOEIC01", toeicQuestions)).toBe(false)
+    expect(shouldShowPartNavigation("TA101", [question("a", "Part 1")])).toBe(false)
   })
 })

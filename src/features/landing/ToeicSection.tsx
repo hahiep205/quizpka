@@ -8,6 +8,8 @@ import { goToPractice } from "@/lib/practiceSession"
 import { toeicSectionCopy as copy } from "@/shared/i18n"
 import { getToeicScopeOption } from "@/data/toeic"
 import { useAuth } from "@/auth/AuthProvider"
+import { useSubjectOverrides } from "@/hooks/useSubjectOverrides"
+import { applySubjectDisplayOverrides, isSubjectVisible } from "@/features/admin/lib/subjectDisplay"
 import { CatalogExamCard } from "@/components/CatalogExamCard"
 
 type Lang = "en" | "vi"
@@ -21,15 +23,16 @@ export function ToeicSection({ lang }: { lang: Lang }) {
   const [selectedExamId, setSelectedExamId] = useState<string>("toeic-test-01")
   const nudge = useLoginNudge()
 
+  const displayOverrides = useSubjectOverrides()
   const subject = getSubjectById("toeic")
-  const examCatalogItems: ExamCatalogItem[] = subject
-    ? subject.exams.map((exam) => ({
+  const examCatalogItems: ExamCatalogItem[] = subject && isSubjectVisible(subject.id, displayOverrides)
+    ? applySubjectDisplayOverrides(subject.exams.map((exam) => ({
         ...exam,
         subjectId: subject.id,
         subjectCode: subject.code,
         subjectName: subject.name,
         category: subject.category,
-      }))
+      })), displayOverrides)
     : []
   const baseExam = examCatalogItems.find((exam) => exam.id === selectedExamId) ?? null
 

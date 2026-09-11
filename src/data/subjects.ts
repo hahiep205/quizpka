@@ -2,6 +2,7 @@ type ExamType = "midterm" | "final"
 
 export type SubjectId =
   | "tieng-anh-dau-vao"
+  | "tieng-anh-1"
   | "tu-tuong-ho-chi-minh"
   | "lich-su-dang-cong-san-viet-nam-giua-ky"
   | "lich-su-dang-cong-san-viet-nam"
@@ -21,6 +22,7 @@ export type SubjectId =
   | "kinh-te-chinh-tri-mac-lenin-giua-ky"
   | "kinh-te-chinh-tri-mac-lenin"
   | "ky-nang-khoi-nghiep-va-lanh-dao"
+  | "phuong-phap-nghien-cuu-khoa-hoc"
   | "bao-mat-ung-dung-he-thong"
   | "marketing-can-ban"
   | "tin-hoc-van-phong"
@@ -122,6 +124,28 @@ export const subjects: Subject[] = [
         description: { en: "Includes 3 reference tests; pick one to start.", vi: "Gồm 3 đề tham khảo, chọn 1 đề để làm bài." },
         questionBanks: ["/data/tadv/tadv-reading.json", "/data/tadv/tadv-listening.json"],
       },
+    ],
+  },
+  {
+    id: "tieng-anh-1",
+    code: "TA101",
+    name: { en: "English 1 - Final", vi: "Quiz ôn tập Cuối kỳ - Tiếng Anh 1" },
+    category: { en: "General", vi: "Đại cương" },
+    exams: [
+      {
+        id: "english-1-structure-docs-1", type: "final", year: 2026, questionCount: 0, durationMinutes: 0,
+        title: { en: "English 1 - Final", vi: "Quiz ôn tập Cuối kỳ - Tiếng Anh 1" },
+        description: { en: "View the exam structure image and practice the final quiz.", vi: "Xem ảnh cấu trúc đề thi và ôn luyện quiz cuối kỳ." },
+      },
+      {
+        id: "english-1-final-bank-1", type: "final", year: 2026, questionCount: 40, durationMinutes: 60, hideFromCatalog: true,
+        title: { en: "English 1 - Final", vi: "Tiếng Anh 1 - Cuối kỳ" },
+        description: { en: "120-question practice following the exam structure.", vi: "Ôn luyện 120 câu hỏi theo cấu trúc đề thi." },
+      },
+    ],
+    chapters: [
+      { id: "cau-truc-de", label: { en: "Exam structure", vi: "Cấu trúc đề khi đi thi" }, documentId: "ta1-cau-truc-de", count: 1 },
+      { id: "all", label: { en: "English 1 - Final", vi: "Tiếng Anh 1 - Cuối kỳ" }, count: 40 },
     ],
   },
   {
@@ -454,6 +478,23 @@ export const subjects: Subject[] = [
       { id: "c3", label: { en: "Chapter 3", vi: "Chương 3" }, count: 30 },
       { id: "c4", label: { en: "Chapter 4", vi: "Chương 4" }, count: 24 },
       { id: "c5", label: { en: "Chapter 5", vi: "Chương 5" }, count: 18 },
+    ],
+  },
+  {
+    id: "phuong-phap-nghien-cuu-khoa-hoc",
+    code: "RM101",
+    name: { en: "Scientific Research Methodology", vi: "Quiz ôn tập Cuối kỳ - Phương pháp nghiên cứu khoa học" },
+    category: { en: "Major", vi: "Chuyên ngành" },
+    exams: [
+      {
+        id: "research-methodology-final-bank-1", type: "final", year: 2026, questionCount: 120, durationMinutes: 240,
+        title: { en: "Scientific Research Methodology", vi: "Quiz ôn tập Cuối kỳ - Phương pháp nghiên cứu khoa học" },
+        description: { en: "A question bank of 120 questions, covering both midterm and final content.", vi: "Bộ tài liệu gồm 120 câu hỏi, bao gồm cả nội dung Giữa và Cuối kỳ." },
+      },
+    ],
+    chapters: [
+      { id: "all", label: { en: "Research Methodology - Final", vi: "Phương pháp nghiên cứu khoa học - Cuối kỳ" }, count: 120 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Phương pháp nghiên cứu khoa học"], hidden: true, count: 120 },
     ],
   },
   {

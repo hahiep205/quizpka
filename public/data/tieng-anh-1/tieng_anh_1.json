@@ -1,0 +1,540 @@
+{
+  "title": "Bộ câu hỏi Tiếng Anh 1 - Theo cấu trúc đề KHTP TA1 (Phenikaa)",
+  "totalParts": 7,
+  "totalQuestions": 40,
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "Phần 1: Nghe 5 hội thoại",
+      "instruction": "Nghe 5 hội thoại. Chọn đáp án đúng A / B / C / D.",
+      "note": "Đã loại bỏ toàn bộ câu Listening theo yêu cầu (không có audio).",
+      "questions": []
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "Phần 2: Nghe 1 đoạn hội thoại",
+      "instruction": "Nghe 1 đoạn hội thoại. Chọn đáp án đúng A / B / C / D.",
+      "note": "Đã loại bỏ toàn bộ câu Listening theo yêu cầu (không có audio).",
+      "questions": []
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "Phần 3: Hoàn thành câu (Từ vựng, ngữ pháp)",
+      "instruction": "Chọn đáp án đúng A / B / C / D để hoàn thành câu. (Từ vựng, ngữ pháp)",
+      "questions": [
+        {
+          "id": 1,
+          "question": "We were so sad … you leave.",
+          "options": {
+            "A": "See",
+            "B": "To see",
+            "C": "Seeing",
+            "D": "Saw"
+          },
+          "answer": "B",
+          "explainAnswer": "Cấu trúc 'sad to do something'."
+        },
+        {
+          "id": 2,
+          "question": "It’s hard … in the forest.",
+          "options": {
+            "A": "For living",
+            "B": "To live",
+            "C": "To living",
+            "D": "For live"
+          },
+          "answer": "B",
+          "explainAnswer": "Cấu trúc 'It is + adj + to V'."
+        },
+        {
+          "id": 3,
+          "question": "Everyone … here straight after work at around five tomorrow.",
+          "options": {
+            "A": "Meets",
+            "B": "Will meet",
+            "C": "Is going to",
+            "D": "Is meeting"
+          },
+          "answer": "D",
+          "explainAnswer": "Present continuous cho kế hoạch đã sắp xếp."
+        },
+        {
+          "id": 4,
+          "question": "George … to Helen last year.",
+          "options": {
+            "A": "Got engaged",
+            "B": "Got engagement",
+            "C": "Met and socialized",
+            "D": "Became marriage"
+          },
+          "answer": "A",
+          "explainAnswer": "Get engaged to someone = đính hôn."
+        },
+        {
+          "id": 5,
+          "question": "You can’t learn … a car if you are below 18.",
+          "options": {
+            "A": "To drive",
+            "B": "Leave",
+            "C": "Catch",
+            "D": "Prepare"
+          },
+          "answer": "A",
+          "explainAnswer": "Learn to V."
+        },
+        {
+          "id": 6,
+          "question": "When a person retires, he will get a …",
+          "options": {
+            "A": "licence",
+            "B": "certificate",
+            "C": "degree",
+            "D": "pension"
+          },
+          "answer": "D",
+          "explainAnswer": "Pension = lương hưu."
+        },
+        {
+          "id": 7,
+          "question": "We can’t … to buy a new house.",
+          "options": {
+            "A": "Afford",
+            "B": "Pay",
+            "C": "Find",
+            "D": "Hope"
+          },
+          "answer": "A",
+          "explainAnswer": "Afford = có đủ khả năng tài chính."
+        },
+        {
+          "id": 8,
+          "question": "The driver intends … right.",
+          "options": {
+            "A": "Turning",
+            "B": "Turn",
+            "C": "To turn",
+            "D": "To turning"
+          },
+          "answer": "C",
+          "explainAnswer": "Intend + to V."
+        },
+        {
+          "id": 9,
+          "question": "We plan to get … when we both finish university.",
+          "options": {
+            "A": "Pension",
+            "B": "Married",
+            "C": "Ready",
+            "D": "Back"
+          },
+          "answer": "B",
+          "explainAnswer": "Get married = kết hôn."
+        },
+        {
+          "id": 10,
+          "question": "The film was so … that we slept until the end.",
+          "options": {
+            "A": "Massive",
+            "B": "Miserable",
+            "C": "Wonderful",
+            "D": "Dull"
+          },
+          "answer": "D",
+          "explainAnswer": "Dull = nhàm chán."
+        },
+        {
+          "id": 11,
+          "question": "Patricia’s sick. She … to work tomorrow.",
+          "options": {
+            "A": "‘s not be going",
+            "B": "Doesn’t go",
+            "C": "‘s not going",
+            "D": "Intends"
+          },
+          "answer": "C",
+          "explainAnswer": "Present continuous phủ định cho kế hoạch tương lai."
+        },
+        {
+          "id": 12,
+          "question": "Washington DC became … capital city and the President still lives in … White House today.",
+          "options": {
+            "A": "A-a",
+            "B": "A-The",
+            "C": "No article-the",
+            "D": "The- the"
+          },
+          "answer": "D",
+          "explainAnswer": "Dùng 'the' với White House và capital city trong ngữ cảnh này."
+        },
+        {
+          "id": 13,
+          "question": "Over three hundred million people live in … United States of America",
+          "options": {
+            "A": "A",
+            "B": "An",
+            "C": "The",
+            "D": "– (no article)"
+          },
+          "answer": "C",
+          "explainAnswer": "The United States of America."
+        },
+        {
+          "id": 14,
+          "question": "… is a solid, hard material such as iron, steel, or gold.",
+          "options": {
+            "A": "Plastic",
+            "B": "Leather",
+            "C": "Metal",
+            "D": "Paper"
+          },
+          "answer": "C",
+          "explainAnswer": "Metal = kim loại."
+        },
+        {
+          "id": 15,
+          "question": "I bought … book about art for my friend.",
+          "options": {
+            "A": "A",
+            "B": "The",
+            "C": "An",
+            "D": "– (no article)"
+          },
+          "answer": "A",
+          "explainAnswer": "A + book (phụ âm)."
+        },
+        {
+          "id": 16,
+          "question": "A lot of people think we eat … meat and … vegetables.",
+          "options": {
+            "A": "Much – few",
+            "B": "Many – little",
+            "C": "Much – little",
+            "D": "Many – few"
+          },
+          "answer": "A",
+          "explainAnswer": "Much + danh từ không đếm được; few + danh từ đếm được."
+        },
+        {
+          "id": 17,
+          "question": "The factory doesn’t use renewable …, like solar or wind power.",
+          "options": {
+            "A": "Machines",
+            "B": "Computers",
+            "C": "Energy",
+            "D": "Electricity"
+          },
+          "answer": "C",
+          "explainAnswer": "Renewable energy."
+        },
+        {
+          "id": 18,
+          "question": "There are … old phones for sale at the market.",
+          "options": {
+            "A": "Any",
+            "B": "A little",
+            "C": "Much",
+            "D": "Some"
+          },
+          "answer": "D",
+          "explainAnswer": "Some dùng trong câu khẳng định."
+        },
+        {
+          "id": 19,
+          "question": "The driest part in the world is a …",
+          "options": {
+            "A": "Sea",
+            "B": "Fog",
+            "C": "River",
+            "D": "Desert"
+          },
+          "answer": "D",
+          "explainAnswer": "Desert = sa mạc."
+        },
+        {
+          "id": 20,
+          "question": "I’m tired. I’ll take a … for five minutes.",
+          "options": {
+            "A": "Time",
+            "B": "Break",
+            "C": "Care",
+            "D": "Day"
+          },
+          "answer": "B",
+          "explainAnswer": "Take a break = nghỉ giải lao."
+        }
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "Phần 4: Đọc đoạn văn (Zoe’s problem)",
+      "instruction": "Đọc đoạn văn. Chọn đáp án đúng A / B / C / D để trả lời câu hỏi.",
+      "passage": "I'm writing to you because of my problem at home. I'm having a really hard time at the moment. I have arguments with my parents about everything! For example, my mum and dad never knock before coming into my bedroom! When I'm sitting at my desk doing my homework, my mom interrupts me. She tells me how untidy my room is and says that I need to clean it. She says that it's impossible to do homework and listen to music at the same time and tells me switch off completely. But she doesn't realize that the music helps my concentration. Please help. I don't know what to do!\n\nOur expert says …\nYou want your parents to treat you with respect. But show them respect, too. You say you have a lot to do but I'm sure your mother is also busy. You don't want to tidy your bedroom when you're doing homework. So, decide on a time that is convenient for you. Tell your mom what time that is. Then make sure you do it! As for the music, parents and teenagers always argue about music. Speak to your mom calmly. Explain that it helps you to study. But keep it to a reasonable volume or use headphones. And finally, your bedroom. Maybe your parents don't realise that you're not a little child any more. Explain why you think it's important to have a private space.",
+      "questions": [
+        {
+          "id": 21,
+          "question": "Zoe is angry with her mum because she says her mum doesn’t…",
+          "options": {
+            "A": "Tidy Zoe’s bedroom",
+            "B": "Realise how busy Zoe is.",
+            "C": "Want Zoe do her homework",
+            "D": "Hope Zoe to go to bed early"
+          },
+          "answer": "B",
+          "explainAnswer": "Zoe phàn nàn mẹ không nhận ra cô bận rộn."
+        },
+        {
+          "id": 22,
+          "question": "Zoe’s mom has a problem with Zoe’s music because she…",
+          "options": {
+            "A": "Doesn’t think it helps Zoe concentrate.",
+            "B": "Finds it is terrible.",
+            "C": "Doesn’t like the style music.",
+            "D": "Can’t do her work with loud music."
+          },
+          "answer": "A",
+          "explainAnswer": "Mẹ cho rằng không thể làm bài và nghe nhạc cùng lúc."
+        },
+        {
+          "id": 23,
+          "question": "The expert thinks that Zoe’s mum …",
+          "options": {
+            "A": "Is right to tell Zoe to tidy her room.",
+            "B": "is right to stop Zoe in the middle of her homework.",
+            "C": "is right to decide what time Zoe should clean her room.",
+            "D": "Is wrong not to leave you a private space."
+          },
+          "answer": "A",
+          "explainAnswer": "Chuyên gia ủng hộ việc dọn phòng vào thời gian phù hợp."
+        },
+        {
+          "id": 24,
+          "question": "The expert thinks that Zoe can do what she likes with her music …",
+          "options": {
+            "A": "Because parents are never happy with their children’s music.",
+            "B": "If she talks to them about it",
+            "C": "When she is in her room",
+            "D": "Within certain limits"
+          },
+          "answer": "D",
+          "explainAnswer": "Giữ âm lượng hợp lý hoặc dùng tai nghe."
+        },
+        {
+          "id": 25,
+          "question": "According to the expert, what should Zoe do about her bedroom?",
+          "options": {
+            "A": "Never clean it",
+            "B": "Decide a convenient time and clean it",
+            "C": "Ask her mother to clean it",
+            "D": "Lock the door all the time"
+          },
+          "answer": "B",
+          "explainAnswer": "Chuyên gia khuyên chọn thời gian thuận tiện rồi dọn phòng."
+        }
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "Phần 5: Đọc đoạn văn (Environment & Electronic products)",
+      "instruction": "Đọc đoạn văn. Chọn đáp án đúng A / B / C / D để trả lời câu hỏi.",
+      "passage": "As we all know, petrol and plastic are two things that come from petroleum, or oil. A lot of oil comes from the rainforests through a process called extraction. This has a very adverse effect on the rainforests, so using fewer oil products can help save them. Just think twice before asking your parents to use petrol to drive you somewhere in the car. Ride your bike, walk or take the bus whenever possible. Save plastic by choosing glass bottles and by reusing the plastic containers and bottles that you already have. If you have a plastic water bottle, don't throw it away and buy a new one. Wash it and use it again and again.\n\nIf we don't do something soon, electronic products will create serious problems for the environment. We use more and more energy because we buy more and more electronic gadgets. If this situation continues, each house will need an incredible quantity of energy. The popularity of computers and games consoles has created an enormous need for more power. In the 1970s homes contained, on average, just 17 electronic products. But now some people think that they won't be able to brush their teeth if they do not have an electric toothbrush. And if we forget to switch off all these electronic gadgets we will use up all of our electricity for nothing.",
+      "questions": [
+        {
+          "id": 26,
+          "question": "According to the passage, using fewer products from oil can help save …",
+          "options": {
+            "A": "Cars",
+            "B": "Plastic water bottles",
+            "C": "Rainforest",
+            "D": "Glass bottles"
+          },
+          "answer": "C",
+          "explainAnswer": "Khai thác dầu ảnh hưởng xấu đến rừng mưa nhiệt đới."
+        },
+        {
+          "id": 27,
+          "question": "According to the passage, to save plastic containers and bottles, you can …",
+          "options": {
+            "A": "Buy new ones",
+            "B": "Throw them away",
+            "C": "Sell them",
+            "D": "Reuse them"
+          },
+          "answer": "D",
+          "explainAnswer": "Tái sử dụng chai nhựa."
+        },
+        {
+          "id": 28,
+          "question": "Which one is NOT true?",
+          "options": {
+            "A": "In the 1970s, each home contained 17 electronic products.",
+            "B": "Now people can brush their teeth with an electric toothbrush.",
+            "C": "Home electronic gadgets can use up all electricity for nothing if they are not turned off.",
+            "D": "Home electronic gadgets do not use much power."
+          },
+          "answer": "D",
+          "explainAnswer": "Thiết bị điện tử tiêu thụ rất nhiều điện."
+        },
+        {
+          "id": 29,
+          "question": "What will electronic products cause?",
+          "options": {
+            "A": "Huge need for more power",
+            "B": "Environmental pollution",
+            "C": "Less energy usage",
+            "D": "Popularity of computers and games consoles."
+          },
+          "answer": "A",
+          "explainAnswer": "Tạo ra nhu cầu điện năng khổng lồ."
+        },
+        {
+          "id": 30,
+          "question": "What does the writer suggest to save the rainforests?",
+          "options": {
+            "A": "Use more petrol",
+            "B": "Ride a bike, walk or take the bus",
+            "C": "Buy more plastic bottles",
+            "D": "Stay at home all the time"
+          },
+          "answer": "B",
+          "explainAnswer": "Đi xe đạp, đi bộ hoặc đi xe buýt thay vì dùng xe hơi."
+        }
+      ]
+    },
+    {
+      "partNumber": 6,
+      "partTitle": "Phần 6: Dựng câu hoàn chỉnh từ các từ gợi ý",
+      "instruction": "Dựng câu hoàn chỉnh từ các từ gợi ý. Chọn đáp án A / B / C / D.",
+      "note": "Nguồn tài liệu gốc ít câu dạng dựng câu. Dưới đây là các câu được chọn/adapt gần nhất với dạng này.",
+      "questions": [
+        {
+          "id": 31,
+          "question": "I / play / golf / later / today",
+          "options": {
+            "A": "I like playing golf later today.",
+            "B": "I’d like to play golf later today.",
+            "C": "I likes playing golf later today.",
+            "D": "I am liking to play golf later today."
+          },
+          "answer": "B",
+          "explainAnswer": "Would like to V diễn tả mong muốn."
+        },
+        {
+          "id": 32,
+          "question": "We / plan / get / married / when / both / finish / university",
+          "options": {
+            "A": "We plan to get pension when we both finish university.",
+            "B": "We plan to get married when we both finish university.",
+            "C": "We plan get married when we both finish university.",
+            "D": "We plan to get ready when we both finish university."
+          },
+          "answer": "B",
+          "explainAnswer": "Plan to get married."
+        },
+        {
+          "id": 33,
+          "question": "The driver / intend / turn / right",
+          "options": {
+            "A": "The driver intends turning right.",
+            "B": "The driver intends turn right.",
+            "C": "The driver intends to turn right.",
+            "D": "The driver intends to turning right."
+          },
+          "answer": "C",
+          "explainAnswer": "Intend + to V."
+        },
+        {
+          "id": 34,
+          "question": "If / you / work / quickly / you / finish / sooner",
+          "options": {
+            "A": "If you work more quickly, you will finish sooner than you expected.",
+            "B": "If you work far quickly, you will finish sooner.",
+            "C": "If you work much quickly, you will finish sooner.",
+            "D": "If you work a little quickly, you will finish sooner."
+          },
+          "answer": "A",
+          "explainAnswer": "More quickly = so sánh hơn của trạng từ."
+        },
+        {
+          "id": 35,
+          "question": "They / take / enormous risk / crossing / lake / stormy weather",
+          "options": {
+            "A": "They come an enormous risk crossing the lake in such stormy weather.",
+            "B": "They take an enormous risk crossing the lake in such stormy weather.",
+            "C": "They plan an enormous risk crossing the lake in such stormy weather.",
+            "D": "They try an enormous risk crossing the lake in such stormy weather."
+          },
+          "answer": "B",
+          "explainAnswer": "Take a risk = chấp nhận rủi ro."
+        }
+      ]
+    },
+    {
+      "partNumber": 7,
+      "partTitle": "Phần 7: Chọn câu có cùng ý nghĩa",
+      "instruction": "Chọn câu có cùng ý nghĩa với câu cho sẵn. Chọn đáp án đúng A / B / C / D.",
+      "note": "Nguồn tài liệu gốc ít câu dạng paraphrase. Dưới đây là các câu được chọn/adapt gần nhất.",
+      "questions": [
+        {
+          "id": 36,
+          "question": "You can’t learn to drive a car if you are below 18.",
+          "options": {
+            "A": "People under 18 are not allowed to learn to drive.",
+            "B": "People under 18 must learn to drive.",
+            "C": "People under 18 can leave a car.",
+            "D": "People under 18 should prepare a car."
+          },
+          "answer": "A",
+          "explainAnswer": "Cùng ý: dưới 18 tuổi không được học lái xe."
+        },
+        {
+          "id": 37,
+          "question": "We can’t afford to buy a new house.",
+          "options": {
+            "A": "We have enough money to buy a new house.",
+            "B": "We don’t have enough money to buy a new house.",
+            "C": "We hope to buy a new house.",
+            "D": "We can find a new house easily."
+          },
+          "answer": "B",
+          "explainAnswer": "Can’t afford = không đủ tiền."
+        },
+        {
+          "id": 38,
+          "question": "The film was so dull that we slept until the end.",
+          "options": {
+            "A": "The film was very interesting so we stayed awake.",
+            "B": "The film was very boring so we fell asleep.",
+            "C": "The film was wonderful and we enjoyed it.",
+            "D": "The film was massive and long."
+          },
+          "answer": "B",
+          "explainAnswer": "Dull = boring → ngủ."
+        },
+        {
+          "id": 39,
+          "question": "You mustn’t play the ball on the ground in table tennis.",
+          "options": {
+            "A": "You have to play the ball on the ground.",
+            "B": "You don’t have to play the ball on the ground.",
+            "C": "You are not allowed to play the ball on the ground.",
+            "D": "You can play the ball on the ground if you want."
+          },
+          "answer": "C",
+          "explainAnswer": "Mustn’t = không được phép."
+        },
+        {
+          "id": 40,
+          "question": "You can wear anything to go swimming. You don’t have to wear uniform.",
+          "options": {
+            "A": "You must wear a uniform to go swimming.",
+            "B": "It is not necessary to wear a uniform when you go swimming.",
+            "C": "You have to wear a uniform when you go swimming.",
+            "D": "You should wear a uniform to go swimming."
+          },
+          "answer": "B",
+          "explainAnswer": "Don’t have to = không cần thiết."
+        }
+      ]
+    }
+  ]
+}

@@ -13,6 +13,8 @@ import { DsaiPickerModal } from "@/components/DsaiPickerModal"
 import { cn } from "@/lib/utils"
 import { documentsCopy as copy } from "@/shared/i18n"
 import { useExamLaunch } from "@/lib/useExamLaunch"
+import { useSubjectOverrides } from "@/hooks/useSubjectOverrides"
+import { applySubjectDisplayOverrides, filterVisibleSubjectExams } from "@/features/admin/lib/subjectDisplay"
 import { CatalogExamCard } from "@/components/CatalogExamCard"
 import { PaymentModal } from "@/components/PaymentModal"
 import { PurchaseDetailDialog } from "@/components/PurchaseDetailDialog"
@@ -94,9 +96,14 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
     }
   }
 
+  const displayOverrides = useSubjectOverrides()
+  const displayedCatalog = useMemo(
+    () => applySubjectDisplayOverrides(filterVisibleSubjectExams(examCatalog, displayOverrides), displayOverrides),
+    [displayOverrides],
+  )
   const filteredExams = useMemo(() => {
     const normalized = query.trim().toLowerCase()
-    const matches = examCatalog.filter((exam) => {
+    const matches = displayedCatalog.filter((exam) => {
       if (exam.hideFromCatalog) return false
       if (exam.subjectId === "toeic") return false
       const categoryKey = exam.category.en === "General" ? "general" : "major"
@@ -122,7 +129,7 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
     return typeFilter === "all"
       ? matches.sort((a, b) => Number(b.id === FEATURED_EXAM_ID) - Number(a.id === FEATURED_EXAM_ID))
       : matches
-  }, [query, typeFilter])
+  }, [displayedCatalog, query, typeFilter])
 
   return (
     <section
