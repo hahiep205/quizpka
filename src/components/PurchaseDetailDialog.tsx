@@ -78,6 +78,15 @@ export function PurchaseDetailDialog({ exam, lang, loading, error, onClose, onCo
           </p>
         </div>
       ) : null}
+      {exam && docSetCount === 0 ? (
+        <div className="mt-4 rounded-[14px] border-2 border-amber-200 bg-amber-50 p-4 dark:border-amber-500/20 dark:bg-amber-500/10">
+          <p className="text-xs font-bold leading-5 text-amber-800 dark:text-amber-200">
+            {isVietnamese
+              ? "Tất các bộ tài liệu quiz ôn tập đều là tài liệu được sưu tầm, gom nhặt từ các đợt thi của các năm trước, bao gồm cả các tài liệu từ nhiều nguồn khác trên internet. Lưu ý: Các câu hỏi, dạng bài có thể được trường thay đổi theo từng năm. Chỉ nên dùng để ôn tập dạng bài, tham khảo, KHÔNG NÊN ÔM TỦ!"
+              : "All quiz review materials are collected from previous years, including materials from various other sources on the internet. Note: the university may change questions and formats each year. Use them to practice question types and for reference only — DO NOT bank on past papers!"}
+          </p>
+        </div>
+      ) : null}
       {error ? <p role="alert" className="mt-4 rounded-xl bg-red-50 px-3 py-2 text-sm font-bold text-red-600 dark:bg-red-500/10 dark:text-red-300">{error}</p> : null}
     </div>
     <footer className="grid grid-cols-2 gap-2 border-t border-slate-100 p-4 sm:px-6 dark:border-white/10">
