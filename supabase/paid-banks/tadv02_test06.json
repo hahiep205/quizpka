@@ -1,0 +1,758 @@
+{
+  "title": "Đề Thi Tiếng Anh Tổng Hợp - Test 6",
+  "totalParts": 6,
+  "totalQuestions": 50,
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "PART 1: Short Conversations (Pictures)",
+      "instruction": "For each question, choose the correct answer. You will hear each recording twice.",
+      "audioUrl": "tadv-traphi/test06/part1-audio.mp3",
+      "imageUrl": null,
+      "passage": null,
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 1,
+          "question": "How did Carrie hurt her leg?",
+          "audioTimestamp": null,
+          "transcript": "Boy: Hi, Carrie. Are you OK?\nCarrie: My leg hurts a bit, that’s all.\nBoy: Oh, you were in the running race yesterday and you nearly fell, didn’t you?\nCarrie: Yes, but actually I hurt my leg when I was coming down the stairs at home.\nBoy: Ouch! I hurt mine quite badly when I fell off my bike when we went cycling together.",
+          "options": {
+            "A": "running race",
+            "B": "falling off a bike",
+            "C": "coming down the stairs"
+          },
+          "answer": "C",
+          "explainAnswer": "Carrie bị đau chân khi đi xuống cầu thang ở nhà."
+        },
+        {
+          "id": 2,
+          "question": "Which backpack has the boy bought?",
+          "audioTimestamp": null,
+          "transcript": "Girl: Is that a new backpack?\nBoy: Yes. Remember I was looking at some online with one big pocket on the outside?\nGirl: Yes, and with a picture of a star.\nBoy: Well, I saw this one in the market. It’s the same except it’s got two small pockets instead of one big one.\nGirl: Yeah. I might get one, too.",
+          "options": {
+            "A": "one big pocket + star",
+            "B": "two small pockets + star",
+            "C": "no star"
+          },
+          "answer": "B",
+          "explainAnswer": "Ba lô có hình ngôi sao và hai túi nhỏ bên ngoài."
+        },
+        {
+          "id": 3,
+          "question": "Where will Daisy have her birthday party?",
+          "audioTimestamp": null,
+          "transcript": "Boy: Daisy, have you decided to have your birthday party in your garden like last year?\nDaisy: Mum said I should have it at the sports club because I want to invite a lot of my friends.\nBoy: But what about food? There isn’t a restaurant there.\nDaisy: Exactly, so, actually, Mum’s agreed to do the same as last year.",
+          "options": {
+            "A": "in the garden",
+            "B": "at the sports club",
+            "C": "at a restaurant"
+          },
+          "answer": "A",
+          "explainAnswer": "Mẹ đồng ý tổ chức ở vườn như năm ngoái vì câu lạc bộ thể thao không có nhà hàng."
+        },
+        {
+          "id": 4,
+          "question": "Which job does Dylan’s dad do now?",
+          "audioTimestamp": null,
+          "transcript": "Girl: I saw your dad at the hospital yesterday, Dylan. He was helping an old lady. Is he a doctor?\nDylan: He works at the hospital, but he drives an ambulance. He loves his job.\nGirl: Has he always had that job?\nDylan: He was an office worker before. He did that for a long time, but he said it was boring.",
+          "options": {
+            "A": "doctor",
+            "B": "office worker",
+            "C": "ambulance driver"
+          },
+          "answer": "C",
+          "explainAnswer": "Bố Dylan hiện là tài xế xe cứu thương."
+        },
+        {
+          "id": 5,
+          "question": "What did they both do yesterday?",
+          "audioTimestamp": null,
+          "transcript": "Boy: It was great at the beach yesterday, wasn’t it? Why didn’t you come sailing?\nGirl: I didn’t have enough time. I had to be home by four o’clock. But I loved going surfing.\nBoy: That was the best thing for me, too. Shall we play beach volleyball next time?\nGirl: Yes, that’s one of my favourite sports!",
+          "options": {
+            "A": "surfing",
+            "B": "sailing",
+            "C": "beach volleyball"
+          },
+          "answer": "A",
+          "explainAnswer": "Cả hai đều thích lướt sóng nhất hôm qua."
+        }
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "PART 2: Listening - New School",
+      "instruction": "You will hear Nadia and Tom talking about their new school. For each question, choose the correct answer A, B or C.",
+      "audioUrl": "tadv-traphi/test06/part2-audio.mp3",
+      "imageUrl": null,
+      "passage": null,
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 6,
+          "question": "How will Nadia get to their new school?",
+          "audioTimestamp": null,
+          "transcript": "Nadia: Hi, Tom. We start our new school next week.\nTom: Yes, how are you going to get there, Nadia?\nNadia: It’s not far, so I don’t need to take a bus. I’ll cycle because I’ll have too many heavy books to walk there.\nTom: I’ve got my new uniform.\nNadia: Me too! My jacket’s fantastic!\nTom: The blue shirt’s best, I think. Not boring like the trousers!\nNadia: There are a lot of students in the new school.\nTom: I know the number exactly. Mum told me: one thousand and fifty-five. Our told school only had around eight hundred.\nNadia: My first school only had about four hundred and seventy-five children.\nTom: Chemistry is a new subject for us.\nNadia: Yes, I don’t know if I’ll like it, but I love maths, so I think I will. Will we study biology?\nTom: I’m not sure. We’ll find out on our first day.\nNadia: Oh yeah, we’ll talk to all our teachers before we go to our class. In the second week, they’ll show us how to use the library. There’ll be a quiz about it.\nTom: Great!",
+          "options": {
+            "A": "by bike",
+            "B": "by bus",
+            "C": "on foot"
+          },
+          "answer": "A",
+          "explainAnswer": "Nadia sẽ đạp xe vì sách nặng, không đi bộ được."
+        },
+        {
+          "id": 7,
+          "question": "What doesn’t Tom like about the school uniform?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "the jacket",
+            "B": "the shirt",
+            "C": "the trousers"
+          },
+          "answer": "C",
+          "explainAnswer": "Tom thấy quần (trousers) nhàm chán."
+        },
+        {
+          "id": 8,
+          "question": "How many students are there in the new school?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "under 500",
+            "B": "about 800",
+            "C": "more than 1000"
+          },
+          "answer": "C",
+          "explainAnswer": "Trường mới có 1.055 học sinh."
+        },
+        {
+          "id": 9,
+          "question": "Which subject does Nadia like?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "chemistry",
+            "B": "maths",
+            "C": "biology"
+          },
+          "answer": "B",
+          "explainAnswer": "Nadia yêu thích môn toán (maths)."
+        },
+        {
+          "id": 10,
+          "question": "What will they do on the first day?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "have a class quiz",
+            "B": "visit the school library",
+            "C": "meet all their teachers"
+          },
+          "answer": "C",
+          "explainAnswer": "Ngày đầu tiên sẽ gặp tất cả giáo viên."
+        }
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "PART 3: Grammar",
+      "instruction": "For questions 11-25, choose the correct answer by clicking the best option.",
+      "audioUrl": null,
+      "imageUrl": null,
+      "passage": null,
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 11,
+          "question": "The chef usually ___ fresh herbs to make the soup taste rich.",
+          "options": {
+            "A": "adds",
+            "B": "add",
+            "C": "is adding",
+            "D": "added"
+          },
+          "answer": "A",
+          "explainAnswer": "Thói quen → hiện tại đơn. Chủ ngữ 'The chef' → adds.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 12,
+          "question": "You ___ feed the animals in the zoo because human food makes them sick.",
+          "options": {
+            "A": "mustn't",
+            "B": "don't have to",
+            "C": "can",
+            "D": "have to"
+          },
+          "answer": "A",
+          "explainAnswer": "Cấm cho động vật ăn thức ăn của người → mustn't.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 13,
+          "question": "This electric car is much ___ than traditional petrol vehicles.",
+          "options": {
+            "A": "quieter",
+            "B": "quiet",
+            "C": "quietest",
+            "D": "more quiet"
+          },
+          "answer": "A",
+          "explainAnswer": "So sánh hơn của tính từ ngắn → quieter.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 14,
+          "question": "Last month, our team ___ a national competition in mathematics.",
+          "options": {
+            "A": "won",
+            "B": "win",
+            "C": "winning",
+            "D": "has won"
+          },
+          "answer": "A",
+          "explainAnswer": "Có 'Last month' → quá khứ đơn: won.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 15,
+          "question": "How ___ apples did you pick from the orchard yesterday?",
+          "options": {
+            "A": "many",
+            "B": "much",
+            "C": "a little",
+            "D": "little"
+          },
+          "answer": "A",
+          "explainAnswer": "Apples đếm được → how many.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 16,
+          "question": "Mind the gap between the platform and the train! You ___ fall.",
+          "options": {
+            "A": "might",
+            "B": "will be",
+            "C": "falling",
+            "D": "fall"
+          },
+          "answer": "A",
+          "explainAnswer": "Cảnh báo khả năng xảy ra → might fall.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 17,
+          "question": "They ___ in this research laboratory since the project started last year.",
+          "options": {
+            "A": "have worked",
+            "B": "worked",
+            "C": "are working",
+            "D": "work"
+          },
+          "answer": "A",
+          "explainAnswer": "Có 'since' → hiện tại hoàn thành: have worked.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 18,
+          "question": "If the temperature drops below zero, water ___ into ice.",
+          "options": {
+            "A": "freezes",
+            "B": "freeze",
+            "C": "will freeze",
+            "D": "frozen"
+          },
+          "answer": "A",
+          "explainAnswer": "Câu điều kiện loại 0 (sự thật) → freezes.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 19,
+          "question": "By the time we reached the cinema, the movie ___ already ended.",
+          "options": {
+            "A": "had",
+            "B": "has",
+            "C": "was",
+            "D": "have"
+          },
+          "answer": "A",
+          "explainAnswer": "Hành động xảy ra trước → quá khứ hoàn thành: had ended.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 20,
+          "question": "The new hospital ___ by the mayor during the ceremony yesterday.",
+          "options": {
+            "A": "was opened",
+            "B": "opens",
+            "C": "is opened",
+            "D": "opening"
+          },
+          "answer": "A",
+          "explainAnswer": "Bị động quá khứ đơn: was opened.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 21,
+          "question": "The captain announced that the flight ___ delayed due to bad weather.",
+          "options": {
+            "A": "would be",
+            "B": "will be",
+            "C": "is",
+            "D": "has been"
+          },
+          "answer": "A",
+          "explainAnswer": "Tường thuật → would be.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 22,
+          "question": "If I lived closer to the beach, I ___ surfing every morning.",
+          "options": {
+            "A": "would go",
+            "B": "will go",
+            "C": "go",
+            "D": "gone"
+          },
+          "answer": "A",
+          "explainAnswer": "Câu điều kiện loại 2 → would go.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 23,
+          "question": "The clock is hanging on the wall right ___ the fireplace.",
+          "options": {
+            "A": "above",
+            "B": "under",
+            "C": "between",
+            "D": "inside"
+          },
+          "answer": "A",
+          "explainAnswer": "Phía trên lò sưởi → above.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 24,
+          "question": "My aunt ___ live in London, but she moved to Manchester last year.",
+          "options": {
+            "A": "used to",
+            "B": "is used to",
+            "C": "use to",
+            "D": "was used to"
+          },
+          "answer": "A",
+          "explainAnswer": "Thói quen trong quá khứ → used to.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 25,
+          "question": "The room was completely silent; ___ said a word during the presentation.",
+          "options": {
+            "A": "nobody",
+            "B": "somebody",
+            "C": "anybody",
+            "D": "everybody"
+          },
+          "answer": "A",
+          "explainAnswer": "Không ai nói gì → nobody.",
+          "audioTimestamp": null,
+          "transcript": null
+        }
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "PART 4: Vocabulary",
+      "instruction": "For questions 26-40, choose the correct answer by clicking the best option.",
+      "audioUrl": null,
+      "imageUrl": null,
+      "passage": null,
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 26,
+          "question": "Maintaining a balanced ____ is crucial for preventing heart disease.",
+          "options": {
+            "A": "diet",
+            "B": "luggage",
+            "C": "ticket",
+            "D": "platform"
+          },
+          "answer": "A",
+          "explainAnswer": "Diet nghĩa là chế độ ăn uống.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 27,
+          "question": "Many young children enjoy taking lessons in classical ____ to improve their flexibility.",
+          "options": {
+            "A": "ballet",
+            "B": "advert",
+            "C": "mixture",
+            "D": "abbreviation"
+          },
+          "answer": "A",
+          "explainAnswer": "Ballet nghĩa là múa ba-lê.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 28,
+          "question": "Passengers should remain seated until the plane comes to a complete ____.",
+          "options": {
+            "A": "stop",
+            "B": "fare",
+            "C": "rank",
+            "D": "gate"
+          },
+          "answer": "A",
+          "explainAnswer": "Complete stop nghĩa là dừng hẳn.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 29,
+          "question": "A polite ____ helped us carry our heavy bags to our hotel room.",
+          "options": {
+            "A": "porter",
+            "B": "cooker",
+            "C": "solution",
+            "D": "islander"
+          },
+          "answer": "A",
+          "explainAnswer": "Porter nghĩa là người khuân vác / phục vụ hành lý.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 30,
+          "question": "The outdoor swimming pool is ____ to all hotel guests free of charge.",
+          "options": {
+            "A": "accessible",
+            "B": "delighted",
+            "C": "formal",
+            "D": "native"
+          },
+          "answer": "A",
+          "explainAnswer": "Accessible nghĩa là có thể sử dụng / tiếp cận được.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 31,
+          "question": "The happy couple sent out invitation cards for their upcoming ____.",
+          "options": {
+            "A": "wedding",
+            "B": "disgusting",
+            "C": "massive",
+            "D": "native"
+          },
+          "answer": "A",
+          "explainAnswer": "Wedding nghĩa là đám cưới.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 32,
+          "question": "Canoeing down the wild river was a thrilling ____ for the youth club.",
+          "options": {
+            "A": "excursion",
+            "B": "moustache",
+            "C": "experiment",
+            "D": "education"
+          },
+          "answer": "A",
+          "explainAnswer": "Excursion nghĩa là chuyến đi / dã ngoại.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 33,
+          "question": "Birds of prey use their sharp ____ to capture small mammals on the ground.",
+          "options": {
+            "A": "claws",
+            "B": "pumps",
+            "C": "pipes",
+            "D": "turbines"
+          },
+          "answer": "A",
+          "explainAnswer": "Claws nghĩa là móng vuốt.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 34,
+          "question": "Engineers constructed a wide ____ to transport water across the dry region.",
+          "options": {
+            "A": "canal",
+            "B": "ceiling",
+            "C": "bone",
+            "D": "stone"
+          },
+          "answer": "A",
+          "explainAnswer": "Canal nghĩa là kênh đào.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 35,
+          "question": "Drivers must stay alert to prevent a fatal ____ on the foggy highway.",
+          "options": {
+            "A": "pileup",
+            "B": "sentence",
+            "C": "shadow",
+            "D": "signal"
+          },
+          "answer": "A",
+          "explainAnswer": "Pileup nghĩa là vụ tai nạn liên hoàn.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 36,
+          "question": "A historic stone ____ was erected in the park to commemorate the victory.",
+          "options": {
+            "A": "column",
+            "B": "sand",
+            "C": "storm",
+            "D": "space"
+          },
+          "answer": "A",
+          "explainAnswer": "Column nghĩa là cột đá / đài tưởng niệm.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 37,
+          "question": "The cultural center staged an impressive theatrical ____ that received great reviews.",
+          "options": {
+            "A": "show",
+            "B": "scorpion",
+            "C": "destination",
+            "D": "ingredient"
+          },
+          "answer": "A",
+          "explainAnswer": "Show nghĩa là buổi biểu diễn.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 38,
+          "question": "The photographer used ____ lighting to highlight the details of the model's face.",
+          "options": {
+            "A": "dramatic",
+            "B": "vending",
+            "C": "remote",
+            "D": "wireless"
+          },
+          "answer": "A",
+          "explainAnswer": "Dramatic lighting nghĩa là ánh sáng kịch tính / ấn tượng.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 39,
+          "question": "The museum restored a rare ____ grandfather clock from the eighteenth century.",
+          "options": {
+            "A": "vintage",
+            "B": "date",
+            "C": "full",
+            "D": "part"
+          },
+          "answer": "A",
+          "explainAnswer": "Vintage nghĩa là cổ điển / thuộc thời kỳ trước.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 40,
+          "question": "The security alarm alerted police when a ____ attempted to force open the back door.",
+          "options": {
+            "A": "housebreaker",
+            "B": "painting",
+            "C": "soldier",
+            "D": "music"
+          },
+          "answer": "A",
+          "explainAnswer": "Housebreaker nghĩa là kẻ đột nhập nhà.",
+          "audioTimestamp": null,
+          "transcript": null
+        }
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "PART 5: Notices / Signs",
+      "instruction": "For each question, choose the correct answer A, B or C.",
+      "audioUrl": null,
+      "imageUrl": null,
+      "passage": null,
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 41,
+          "question": "Jennie has to",
+          "options": {
+            "A": "ask another garage to fit her tyres.",
+            "B": "arrange a time for the garage to fit the new tyres.",
+            "C": "collect the new tyres from the garage."
+          },
+          "answer": "B",
+          "explainAnswer": "Jennie cần sắp xếp thời gian để gara lắp lốp mới.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "imageUrl": "tadv-traphi/test06/part5-image-test6/1.png"
+        },
+        {
+          "id": 42,
+          "question": "What does Mrs Swan want to do today?",
+          "options": {
+            "A": "repair damage done to the library",
+            "B": "discover how a window got broken",
+            "C": "find out who uses the library"
+          },
+          "answer": "B",
+          "explainAnswer": "Bà Swan muốn tìm hiểu cửa sổ bị vỡ như thế nào.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "imageUrl": "tadv-traphi/test06/part5-image-test6/2.png"
+        },
+        {
+          "id": 43,
+          "question": "What does the notice about the computer game mean?",
+          "options": {
+            "A": "The owner of the computer game that is for sale has never used it.",
+            "B": "The computer game is for sale because the owner is too old for it.",
+            "C": "The person selling the computer game no longer wants to play with it."
+          },
+          "answer": "A",
+          "explainAnswer": "Chủ sở hữu chưa từng sử dụng game này.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "imageUrl": "tadv-traphi/test06/part5-image-test6/3.png"
+        },
+        {
+          "id": 44,
+          "question": "What does the notice about internet access mean?",
+          "options": {
+            "A": "There is a charge for internet access at weekends.",
+            "B": "Students must always pay to use the internet in the afternoons.",
+            "C": "It doesn't cost anything to use the internet on weekday mornings."
+          },
+          "answer": "C",
+          "explainAnswer": "Sử dụng internet vào buổi sáng ngày thường miễn phí.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "imageUrl": "tadv-traphi/test06/part5-image-test6/4.png"
+        },
+        {
+          "id": 45,
+          "question": "Amanda regrets that she",
+          "options": {
+            "A": "didn't recognise her tennis hero from his photo.",
+            "B": "couldn't climb high enough to photograph her tennis hero.",
+            "C": "didn't have her photograph taken with her tennis hero."
+          },
+          "answer": "C",
+          "explainAnswer": "Amanda tiếc vì không chụp được ảnh cùng thần tượng quần vợt.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "imageUrl": "tadv-traphi/test06/part5-image-test6/5.png"
+        }
+      ]
+    },
+    {
+      "partNumber": 6,
+      "partTitle": "PART 6: Reading - Would you like to be an astronaut?",
+      "instruction": "Read the text and answer the questions. For each question, choose the correct answer A, B or C.",
+      "audioUrl": null,
+      "imageUrl": null,
+      "passage": "You don’t have to be Superman to fly in space. Many men and women from many different countries have done it. For example, the European Space Agency (ESA) now has 14 astronauts from 8 different countries.\n\nThe first thing is this - you need to be sure it’s the job that you really want to do. It requires a lot of hard work and several years of study at university before astronaut training even begins. Most people start this between 27 and 37 years of age. Many astronauts also train to become pilots first.\n\nAstronauts come from all over Europe and the world, and it’s important that they can speak the same languages. They have to speak English, and they are given Russian lessons. Some also learn another language, for example Japanese, as a number of astronauts are Japanese speakers.\n\nIf you are still at school and you’d like to be an astronaut when you’re older, it’s not too early to start developing the skills you will need. Playing video games is a great thing to do, as it helps you to think quickly and clearly. This is what you will need to do when you travel in space.\n\nAnother good thing to do is sports, especially team sports. They make you fit, of course, but more importantly, they help you learn how to do things together with your colleagues. So, maybe planning a game of football for next weekend isn’t a bad idea?",
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 46,
+          "question": "The first paragraph says that",
+          "options": {
+            "A": "lots of people can be an astronaut.",
+            "B": "there are astronauts from all countries.",
+            "C": "only 14 people from Europe have become astronauts."
+          },
+          "answer": "A",
+          "explainAnswer": "Nhiều người từ nhiều quốc gia khác nhau đã trở thành phi hành gia.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 47,
+          "question": "The writer says",
+          "options": {
+            "A": "you need to be a pilot before you become an astronaut.",
+            "B": "it’s important to know that being an astronaut is right for you.",
+            "C": "when you start training to be an astronaut, you must be between 27 and 37."
+          },
+          "answer": "B",
+          "explainAnswer": "Điều quan trọng nhất là phải chắc chắn đây là công việc bạn thực sự muốn làm.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 48,
+          "question": "Which languages do ESA astronauts know how to speak after training?",
+          "options": {
+            "A": "English and Russian",
+            "B": "English and Japanese",
+            "C": "English, Japanese and Russian"
+          },
+          "answer": "A",
+          "explainAnswer": "Họ phải nói tiếng Anh và được học tiếng Nga.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 49,
+          "question": "Why can playing video games be useful if you want to be an astronaut?",
+          "options": {
+            "A": "There are many video games about space travel.",
+            "B": "Video games can teach you to think fast.",
+            "C": "Video games help you to understand how computers work."
+          },
+          "answer": "B",
+          "explainAnswer": "Chơi game giúp suy nghĩ nhanh và rõ ràng – kỹ năng cần thiết khi bay vào vũ trụ.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 50,
+          "question": "How can sports help you to become an astronaut?",
+          "options": {
+            "A": "They help you to get fit.",
+            "B": "They give you something to do in your free time.",
+            "C": "They help you to work well with other people."
+          },
+          "answer": "C",
+          "explainAnswer": "Thể thao đồng đội giúp học cách làm việc cùng đồng nghiệp.",
+          "audioTimestamp": null,
+          "transcript": null
+        }
+      ]
+    }
+  ]
+}

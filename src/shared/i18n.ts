@@ -675,7 +675,7 @@ export const tadvPickerCopy = {
   },
   vi: {
     title: "Chọn đề tham khảo",
-    subtitle: "Chọn 1 trong 3 đề tham khảo để làm bài",
+    subtitle: "Chọn 1 đề để làm bài",
     close: "Đóng",
     cancel: "Hủy",
     continue: "Bắt đầu",

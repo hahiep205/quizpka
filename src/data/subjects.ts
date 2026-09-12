@@ -58,6 +58,8 @@ export type ExamPaper = {
   description: LocalizedText
   /** Optional label (e.g. update date) shown in the catalog meta row in place of the chapter count. */
   updatedLabel?: LocalizedText
+  /** Optional text replacing the "{count} questions" segment in the catalog meta row. */
+  questionCountLabel?: LocalizedText
   /** When true, hide this exam from catalog listings (it stays reachable by id, e.g. merged into a sibling exam's picker). */
   hideFromCatalog?: boolean
   /** Optional path to a local question-bank JSON file under /data */
@@ -124,8 +126,7 @@ export const subjects: Subject[] = [
         questionCount: 50,
         durationMinutes: 60,
         title: { en: "English Placement Mock Test", vi: "Thi thử Tiếng Anh Đầu Vào" },
-        description: { en: "Free English placement mock test with Phenikaa University's latest sample exam.", vi: "Thi thử Tiếng Anh đầu vào miễn phí với bộ đề mẫu mới nhất của Đại học Phenikaa." },
-        updatedLabel: { en: "Updated: 13/09/2026", vi: "Ngày update: 13/09/2026" },
+        description: { en: "Free English placement mock test with Phenikaa University's latest sample exam.", vi: "Thỉ thử Tiếng anh đầu vào miễn phí với bộ đề mẫu mới nhất của Đại học Phenikaa." },
         questionBanks: ["/data/tadv/test01/test01.json"],
       },
     ],
@@ -159,7 +160,7 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "english-paid-tests-bank-1", type: "final", year: 2026, questionCount: 100, durationMinutes: 60,
+        id: "english-paid-tests-bank-1", type: "final", year: 2026, questionCount: 250, durationMinutes: 60,
         title: { en: "English Placement Practice Tests", vi: "Quiz ôn tập Tiếng Anh Đầu Vào - 5 Bộ đề ôn tập" },
         description: { en: "5 practice tests of 50 Listening and Reading questions following the school's sample exam structure, with equivalent level and difficulty. For practice and reference.", vi: "Gồm 5 bộ đề ôn tập, mỗi đề 50 câu Nghe và Đọc theo cấu trúc đề thi mẫu của trường, với mức độ - độ khó tương đương. Dùng để ôn tập, tham khảo." },
       },
@@ -172,6 +173,21 @@ export const subjects: Subject[] = [
         id: "english-paid-test03-bank-1", type: "final", year: 2026, questionCount: 50, durationMinutes: 60, hideFromCatalog: true,
         title: { en: "English Placement Practice Test 2", vi: "Tiếng Anh Đầu Vào - Đề ôn tập 2" },
         description: { en: "Test 3: 50 Listening and Reading questions following the school's sample exam structure. For practice and reference.", vi: "Đề số 3: 50 câu Nghe và Đọc theo cấu trúc đề thi mẫu của trường. Dùng để ôn tập, tham khảo." },
+      },
+      {
+        id: "english-paid-test04-bank-1", type: "final", year: 2026, questionCount: 50, durationMinutes: 60, hideFromCatalog: true,
+        title: { en: "English Placement Practice Test 3", vi: "Tiếng Anh Đầu Vào - Đề ôn tập 3" },
+        description: { en: "Test 4: 50 Listening and Reading questions following the school's sample exam structure. For practice and reference.", vi: "Đề số 4: 50 câu Nghe và Đọc theo cấu trúc đề thi mẫu của trường. Dùng để ôn tập, tham khảo." },
+      },
+      {
+        id: "english-paid-test05-bank-1", type: "final", year: 2026, questionCount: 50, durationMinutes: 60, hideFromCatalog: true,
+        title: { en: "English Placement Practice Test 4", vi: "Tiếng Anh Đầu Vào - Đề ôn tập 4" },
+        description: { en: "Test 5: 50 Listening and Reading questions following the school's sample exam structure. For practice and reference.", vi: "Đề số 5: 50 câu Nghe và Đọc theo cấu trúc đề thi mẫu của trường. Dùng để ôn tập, tham khảo." },
+      },
+      {
+        id: "english-paid-test06-bank-1", type: "final", year: 2026, questionCount: 50, durationMinutes: 60, hideFromCatalog: true,
+        title: { en: "English Placement Practice Test 5", vi: "Tiếng Anh Đầu Vào - Đề ôn tập 5" },
+        description: { en: "Test 6: 50 Listening and Reading questions following the school's sample exam structure. For practice and reference.", vi: "Đề số 6: 50 câu Nghe và Đọc theo cấu trúc đề thi mẫu của trường. Dùng để ôn tập, tham khảo." },
       },
     ],
   },

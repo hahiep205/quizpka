@@ -1,7 +1,12 @@
 const SAVE_KEYS = ["u", "s"]
+const DEVTOOLS_KEYS = ["i", "j", "c"]
 
-function isBlockedShortcut(e: KeyboardEvent): boolean {
+export function isBlockedShortcut(e: KeyboardEvent): boolean {
   const k = (e.key || "").toLowerCase()
+  if (e.key === "F12") return true
+  if ((e.ctrlKey && e.shiftKey) || (e.metaKey && e.altKey)) {
+    if (DEVTOOLS_KEYS.includes(k)) return true
+  }
   return (e.ctrlKey && SAVE_KEYS.includes(k)) || (e.metaKey && SAVE_KEYS.includes(k))
 }
 

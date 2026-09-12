@@ -50,6 +50,7 @@ export function CatalogExamCard({
       </div>
       <ExamMetaRow
         questionCount={exam.questionCount}
+        questionCountLabel={exam.questionCountLabel}
         chapterCount={exam.updatedLabel ? 0 : chapterCount}
         durationMinutes={exam.durationMinutes}
         questionsLabel={questionsLabel}

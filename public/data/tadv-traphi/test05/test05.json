@@ -1,0 +1,758 @@
+{
+  "title": "Đề Thi Tiếng Anh Tổng Hợp - Test 5",
+  "totalParts": 6,
+  "totalQuestions": 50,
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "PART 1: Short Conversations (Pictures)",
+      "instruction": "For each question, choose the correct answer. You will hear each recording twice.",
+      "audioUrl": "tadv-traphi/test05/part1-audio.mp3",
+      "imageUrl": null,
+      "passage": null,
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 1,
+          "question": "How will Luciana invite her friends to her birthday party?",
+          "audioTimestamp": null,
+          "transcript": "Astrid: Luciana, are you going to email your friends to invite them to your birthday party?\nLuciana: Or do you think I should phone them? Then I can find out quickly if they can come or not.\nAstrid: You’ll need a lot of time! Your sister sent her friends invitations by post - that was nice.\nLuciana: Your first idea’s best. I’ll do that.",
+          "options": {
+            "A": "by phone",
+            "B": "by post",
+            "C": "by email"
+          },
+          "answer": "C",
+          "explainAnswer": "Luciana chọn ý tưởng đầu tiên của Astrid: gửi email."
+        },
+        {
+          "id": 2,
+          "question": "What does Charlie want to borrow from his brother, James?",
+          "audioTimestamp": null,
+          "transcript": "Charlie: James, I’m going to the park to meet some friends. I’m going to wear my new jeans.\nJames: Cool. Do you want to borrow my trainers, the ones that are a bit small for me now?\nCharlie: Actually, I need some sunglasses … and you’ve got two pairs.\nJames: OK, but make sure you bring them back.\nCharlie: OK. Thanks.",
+          "options": {
+            "A": "trainers",
+            "B": "sunglasses",
+            "C": "jeans"
+          },
+          "answer": "B",
+          "explainAnswer": "Charlie muốn mượn kính râm (sunglasses)."
+        },
+        {
+          "id": 3,
+          "question": "How will Carol get to her dance class?",
+          "audioTimestamp": null,
+          "transcript": "Carol: Dad, can you drive me to my dance class? It’s at six thirty.\nDad: Oh, I won’t be back from work until about seven. Sorry, Carol.\nCarol: OK, I’ll walk there with Tessa.\nDad: … or take the bus?\nCarol: That’s not so good for Tessa. There isn’t a bus stop near her house. Don’t worry, it’s not far.",
+          "options": {
+            "A": "walk",
+            "B": "by bus",
+            "C": "by car"
+          },
+          "answer": "A",
+          "explainAnswer": "Carol sẽ đi bộ cùng Tessa vì bố về muộn và xe buýt không thuận tiện."
+        },
+        {
+          "id": 4,
+          "question": "Which film do they decide to watch first?",
+          "audioTimestamp": null,
+          "transcript": "Aidan: There are lots of good new films, like the one about a man who climbs Mount Everest.\nHolly: That sounds exciting. And there’s another new one about a dance competition.\nAidan: Oh, yes. Or what about Zuta? It’s about life in the future.\nHolly: Let’s watch that next weekend when our cousins come. And the competition one now?\nAidan: Yeah, I think they’ll enjoy Zuta.",
+          "options": {
+            "A": "the dance competition film",
+            "B": "the Mount Everest film",
+            "C": "Zuta"
+          },
+          "answer": "A",
+          "explainAnswer": "Họ quyết định xem phim về cuộc thi nhảy trước, còn Zuta để tuần sau."
+        },
+        {
+          "id": 5,
+          "question": "Which T-shirt does the girl like best?",
+          "audioTimestamp": null,
+          "transcript": "Boy: Are you going to get that T-shirt with a picture of a surfboard on it?\nGirl: I liked that one, I saw it in the shop, but I’ve just seen one with a dolphin on it in this magazine.\nBoy: But look at this website. The T-shirt with a picture of an island’s fantastic!\nGirl: Yes, but the one in the magazine’s my favourite.",
+          "options": {
+            "A": "surfboard",
+            "B": "island",
+            "C": "dolphin"
+          },
+          "answer": "C",
+          "explainAnswer": "Cô gái thích nhất áo có hình cá heo trên tạp chí."
+        }
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "PART 2: Listening - Buying a Skateboard",
+      "instruction": "You will hear Dan talking to a shop assistant in a sports shop. For each question, choose the correct answer A, B or C.",
+      "audioUrl": "tadv-traphi/test05/part2-audio.mp3",
+      "imageUrl": null,
+      "passage": null,
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 6,
+          "question": "Dan thinks plastic skateboards are",
+          "audioTimestamp": null,
+          "transcript": "Dan: Can you help me? I’d like to find out about buying a skateboard.\nMan: Do you want one made of wood or plastic?\nDan: Plastic. I know they aren’t always cheap, but all my friends have plastic ones. My brother’s plastic board has strong, heavy wheels.\nMan: OK. What colour would you like?\nDan: Those purple ones look great and the yellows are fun, buy grey’s a better colour for me.\nMan: Good. Now let’s think about how wide your skateboard should be. It’s actually in centremetres. Are you a beginner?\nDan: Yes.\nMan: The widest ones, twenty centimetres, are best for advanced skateboarders. Then there’s eighteen centimetre ones, but for people who are new to the sport sixteen’s good.\nDan: OK. On the poster on the wall, it says there’s a free gift this month. What is it?\nMan: The poster next to the backpacks? Yes, we can give you a pair of gloves.\nDan: I like those scarves, too. I’ll have to come with my dad to buy my skateboard.\nMan: Good idea. Remember the store isn’t open on a Wednesday.\nDan: I think my dad’s busy on Saturday, so we’ll come on Friday.\nMan: Fine",
+          "options": {
+            "A": "cheap.",
+            "B": "popular.",
+            "C": "light."
+          },
+          "answer": "B",
+          "explainAnswer": "Dan nói tất cả bạn bè đều có ván nhựa → phổ biến (popular)."
+        },
+        {
+          "id": 7,
+          "question": "What colour skateboard does Dan prefer?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "purple",
+            "B": "yellow",
+            "C": "grey"
+          },
+          "answer": "C",
+          "explainAnswer": "Dan thích màu xám hơn (grey’s a better colour for me)."
+        },
+        {
+          "id": 8,
+          "question": "The shop assistant says the best skateboard for Dan is about",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "16 cm wide.",
+            "B": "18 cm wide.",
+            "C": "20 cm wide."
+          },
+          "answer": "A",
+          "explainAnswer": "Vì Dan là người mới bắt đầu, nhân viên khuyên bản rộng 16 cm."
+        },
+        {
+          "id": 9,
+          "question": "What free gift can Dan get from the shop?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "a backpack",
+            "B": "some gloves",
+            "C": "a scarf"
+          },
+          "answer": "B",
+          "explainAnswer": "Quà tặng miễn phí là một đôi găng tay (gloves)."
+        },
+        {
+          "id": 10,
+          "question": "When will Dan buy a skateboard?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "on Wednesday",
+            "B": "on Friday",
+            "C": "on Saturday"
+          },
+          "answer": "B",
+          "explainAnswer": "Bố bận thứ Bảy, cửa hàng đóng cửa thứ Tư → họ sẽ đến vào thứ Sáu."
+        }
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "PART 3: Grammar",
+      "instruction": "For questions 11-25, choose the correct answer by clicking the best option.",
+      "audioUrl": null,
+      "imageUrl": null,
+      "passage": null,
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 11,
+          "question": "My sister usually ___ her school bag before going to sleep.",
+          "options": {
+            "A": "prepares",
+            "B": "prepare",
+            "C": "is preparing",
+            "D": "prepared"
+          },
+          "answer": "A",
+          "explainAnswer": "Thói quen → hiện tại đơn. Chủ ngữ 'My sister' → prepares.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 12,
+          "question": "You ___ use your mobile phone during the final exam under any circumstances.",
+          "options": {
+            "A": "mustn't",
+            "B": "don't have to",
+            "C": "can",
+            "D": "should"
+          },
+          "answer": "A",
+          "explainAnswer": "Cấm dùng điện thoại trong thi → mustn't.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 13,
+          "question": "This new sofa is much ___ than the wooden chair in the kitchen.",
+          "options": {
+            "A": "more comfortable",
+            "B": "comfortable",
+            "C": "most comfortable",
+            "D": "as comfortable"
+          },
+          "answer": "A",
+          "explainAnswer": "So sánh hơn của tính từ dài → more comfortable.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 14,
+          "question": "Two days ago, our family ___ a wonderful movie at the local cinema.",
+          "options": {
+            "A": "watched",
+            "B": "watches",
+            "C": "watching",
+            "D": "has watched"
+          },
+          "answer": "A",
+          "explainAnswer": "Có 'Two days ago' → quá khứ đơn: watched.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 15,
+          "question": "There are only ___ open seats left in the conference hall today.",
+          "options": {
+            "A": "a few",
+            "B": "much",
+            "C": "a little",
+            "D": "little"
+          },
+          "answer": "A",
+          "explainAnswer": "Seats đếm được → a few.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 16,
+          "question": "Be careful with that heavy vase! You ___ drop it on the floor.",
+          "options": {
+            "A": "are going to",
+            "B": "will",
+            "C": "drop",
+            "D": "dropped"
+          },
+          "answer": "A",
+          "explainAnswer": "Cảnh báo dựa trên tình huống hiện tại → be going to.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 17,
+          "question": "Mr. Johnson ___ English at this university for more than ten years.",
+          "options": {
+            "A": "has taught",
+            "B": "taught",
+            "C": "teaches",
+            "D": "is teaching"
+          },
+          "answer": "A",
+          "explainAnswer": "Có 'for more than ten years' → hiện tại hoàn thành: has taught.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 18,
+          "question": "If we leave early tomorrow morning, we ___ the heavy traffic easily.",
+          "options": {
+            "A": "will avoid",
+            "B": "avoided",
+            "C": "avoiding",
+            "D": "would avoid"
+          },
+          "answer": "A",
+          "explainAnswer": "Câu điều kiện loại 1 → will avoid.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 19,
+          "question": "Before the doctor arrived, the nurse ___ already taken the patient's temperature.",
+          "options": {
+            "A": "had",
+            "B": "has",
+            "C": "was",
+            "D": "have"
+          },
+          "answer": "A",
+          "explainAnswer": "Hành động xảy ra trước → quá khứ hoàn thành: had taken.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 20,
+          "question": "The ancient castle ___ by thousands of international visitors last summer.",
+          "options": {
+            "A": "was visited",
+            "B": "visits",
+            "C": "is visited",
+            "D": "visited"
+          },
+          "answer": "A",
+          "explainAnswer": "Bị động quá khứ đơn: was visited.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 21,
+          "question": "The tour guide mentioned that the bus ___ at eight o'clock the next morning.",
+          "options": {
+            "A": "would leave",
+            "B": "will leave",
+            "C": "leaves",
+            "D": "has left"
+          },
+          "answer": "A",
+          "explainAnswer": "Tường thuật → would leave.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 22,
+          "question": "If I spoke fluent Japanese, I ___ for that job in Tokyo.",
+          "options": {
+            "A": "would apply",
+            "B": "will apply",
+            "C": "apply",
+            "D": "applied"
+          },
+          "answer": "A",
+          "explainAnswer": "Câu điều kiện loại 2 → would apply.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 23,
+          "question": "The post office is situated directly ___ the main entrance of the hospital.",
+          "options": {
+            "A": "opposite",
+            "B": "inside",
+            "C": "between",
+            "D": "through"
+          },
+          "answer": "A",
+          "explainAnswer": "Đối diện → opposite.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 24,
+          "question": "When my uncle lived in the countryside, he ___ go fishing every weekend.",
+          "options": {
+            "A": "used to",
+            "B": "is used to",
+            "C": "use to",
+            "D": "was used to"
+          },
+          "answer": "A",
+          "explainAnswer": "Thói quen trong quá khứ → used to.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 25,
+          "question": "Is there ___ inside the classroom, or has everybody already left?",
+          "options": {
+            "A": "anybody",
+            "B": "somebody",
+            "C": "nobody",
+            "D": "everywhere"
+          },
+          "answer": "A",
+          "explainAnswer": "Câu hỏi → anybody.",
+          "audioTimestamp": null,
+          "transcript": null
+        }
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "PART 4: Vocabulary",
+      "instruction": "For questions 26-40, choose the correct answer by clicking the best option.",
+      "audioUrl": null,
+      "imageUrl": null,
+      "passage": null,
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 26,
+          "question": "Regular meditation can help reduce stress and improve your mental ____.",
+          "options": {
+            "A": "well-being",
+            "B": "luggage",
+            "C": "currency",
+            "D": "passport"
+          },
+          "answer": "A",
+          "explainAnswer": "Well-being nghĩa là sức khỏe tinh thần / hạnh phúc.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 27,
+          "question": "My little brother spends hours reading comic books about space ____.",
+          "options": {
+            "A": "exploration",
+            "B": "advertisement",
+            "C": "dictionary",
+            "D": "container"
+          },
+          "answer": "A",
+          "explainAnswer": "Space exploration nghĩa là thám hiểm không gian.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 28,
+          "question": "Passengers must present their passport and ticket at the departure ____.",
+          "options": {
+            "A": "counter",
+            "B": "aisle",
+            "C": "rank",
+            "D": "fare"
+          },
+          "answer": "A",
+          "explainAnswer": "Departure counter nghĩa là quầy làm thủ tục khởi hành.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 29,
+          "question": "The experienced ____ guided the hiking group safely through the steep mountain pass.",
+          "options": {
+            "A": "climber",
+            "B": "cooker",
+            "C": "solution",
+            "D": "climate"
+          },
+          "answer": "A",
+          "explainAnswer": "Climber nghĩa là người leo núi / hướng dẫn viên leo núi.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 30,
+          "question": "The hotel conference room is fully ____ with audio and projection systems.",
+          "options": {
+            "A": "equipped",
+            "B": "formal",
+            "C": "disgusting",
+            "D": "native"
+          },
+          "answer": "A",
+          "explainAnswer": "Equipped nghĩa là được trang bị đầy đủ.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 31,
+          "question": "The young couple decided to get ____ after dating for six years.",
+          "options": {
+            "A": "married",
+            "B": "massive",
+            "C": "wireless",
+            "D": "crowded"
+          },
+          "answer": "A",
+          "explainAnswer": "Get married nghĩa là kết hôn.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 32,
+          "question": "Sailing across the ocean on a wooden yacht was an unforgettable ____ for the crew.",
+          "options": {
+            "A": "voyage",
+            "B": "experiment",
+            "C": "moustache",
+            "D": "education"
+          },
+          "answer": "A",
+          "explainAnswer": "Voyage nghĩa là chuyến đi biển dài.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 33,
+          "question": "The giant octopus used its powerful ____ to grab prey underwater.",
+          "options": {
+            "A": "tentacles",
+            "B": "pumps",
+            "C": "pipes",
+            "D": "turbines"
+          },
+          "answer": "A",
+          "explainAnswer": "Tentacles nghĩa là xúc tu của bạch tuộc.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 34,
+          "question": "Deep under the mountain, the workers excavated a wide drainage ____.",
+          "options": {
+            "A": "trench",
+            "B": "ceiling",
+            "C": "bone",
+            "D": "stone"
+          },
+          "answer": "A",
+          "explainAnswer": "Trench nghĩa là mương / rãnh thoát nước.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 35,
+          "question": "Drivers must slow down on wet roads to prevent their vehicles from a serious ____.",
+          "options": {
+            "A": "skid",
+            "B": "overhear",
+            "C": "search",
+            "D": "obstacle"
+          },
+          "answer": "A",
+          "explainAnswer": "Skid nghĩa là trượt bánh.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 36,
+          "question": "The town council decided to install a grand marble ____ in the public garden.",
+          "options": {
+            "A": "fountain",
+            "B": "sand",
+            "C": "storm",
+            "D": "space"
+          },
+          "answer": "A",
+          "explainAnswer": "Fountain nghĩa là đài phun nước.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 37,
+          "question": "The opera company will give a live musical ____ at the grand theater tomorrow.",
+          "options": {
+            "A": "performance",
+            "B": "ingredient",
+            "C": "luggage",
+            "D": "reptile"
+          },
+          "answer": "A",
+          "explainAnswer": "Performance nghĩa là buổi biểu diễn.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 38,
+          "question": "The interior designer selected ____ fabrics to make the living room feel warm.",
+          "options": {
+            "A": "soft",
+            "B": "vending",
+            "C": "remote",
+            "D": "wireless"
+          },
+          "answer": "A",
+          "explainAnswer": "Soft fabrics nghĩa là vải mềm.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 39,
+          "question": "The archeologists uncovered a set of ____ tools buried under the dirt.",
+          "options": {
+            "A": "primitive",
+            "B": "date",
+            "C": "full",
+            "D": "part"
+          },
+          "answer": "A",
+          "explainAnswer": "Primitive tools nghĩa là công cụ nguyên thủy.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 40,
+          "question": "The store manager alerted security when he saw a suspicious ____ near the register.",
+          "options": {
+            "A": "intruder",
+            "B": "painting",
+            "C": "soldier",
+            "D": "music"
+          },
+          "answer": "A",
+          "explainAnswer": "Intruder nghĩa là kẻ xâm nhập.",
+          "audioTimestamp": null,
+          "transcript": null
+        }
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "PART 5: Notices / Signs",
+      "instruction": "For each question, choose the correct answer A, B or C.",
+      "audioUrl": null,
+      "imageUrl": null,
+      "passage": null,
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 41,
+          "question": "What does the notice about the bus service mean?",
+          "options": {
+            "A": "This bus service cannot be used by college staff unless they show ID cards.",
+            "B": "Students can get their ID cards on the bus.",
+            "C": "Students are not allowed on the bus unless they have ID cards."
+          },
+          "answer": "C",
+          "explainAnswer": "Học sinh phải có thẻ ID mới được lên xe buýt.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "imageUrl": "tadv-traphi/test05/part5-image-test5/1.png"
+        },
+        {
+          "id": 42,
+          "question": "What does Laura want?",
+          "options": {
+            "A": "Laura liked the jumper Jane bought, but needs it in a different size.",
+            "B": "Laura wants to try to get the same jumper in a different colour.",
+            "C": "Laura received two jumpers which were the same, so wants to exchange one."
+          },
+          "answer": "B",
+          "explainAnswer": "Laura muốn đổi sang màu khác của cùng loại áo.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "imageUrl": "tadv-traphi/test05/part5-image-test5/2.png"
+        },
+        {
+          "id": 43,
+          "question": "What will the library do?",
+          "options": {
+            "A": "have shorter opening hours until next Friday.",
+            "B": "change its opening hours next Friday.",
+            "C": "open again to students next Friday."
+          },
+          "answer": "B",
+          "explainAnswer": "Thư viện sẽ thay đổi giờ mở cửa vào thứ Sáu tuần sau.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "imageUrl": "tadv-traphi/test05/part5-image-test5/3.png"
+        },
+        {
+          "id": 44,
+          "question": "What does Jo think about the sightseeing tour?",
+          "options": {
+            "A": "Jo is pleased with the number of things she saw from the bus.",
+            "B": "Jo regrets not having walked around the city to look at the sights.",
+            "C": "Jo thinks there are better sightseeing tours than the one she took."
+          },
+          "answer": "A",
+          "explainAnswer": "Jo hài lòng vì đã nhìn thấy nhiều thứ từ trên xe buýt.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "imageUrl": "tadv-traphi/test05/part5-image-test5/4.png"
+        },
+        {
+          "id": 45,
+          "question": "What does the parking notice mean?",
+          "options": {
+            "A": "Customers may park outside the market for up to three hours.",
+            "B": "You may unload your vehicle here at any time.",
+            "C": "Customers may park here at times when vehicles are not unloading."
+          },
+          "answer": "C",
+          "explainAnswer": "Khách hàng có thể đỗ xe khi không có xe đang dỡ hàng.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "imageUrl": "tadv-traphi/test05/part5-image-test5/5.png"
+        }
+      ]
+    },
+    {
+      "partNumber": 6,
+      "partTitle": "PART 6: Reading - Seo-yun Cho",
+      "instruction": "Read the text and answer the questions. For each question, choose the correct answer A, B or C.",
+      "audioUrl": null,
+      "imageUrl": null,
+      "passage": "Seo-yun Cho doesn’t have time for hobbies because she spends all her time playing video games. ‘I practise as much as I can so I will improve,’ she says. ‘This is what I really need to do.’\n\nSeo-yun and her friends are members of KS Fireflies 6, a video game team. She and the other members share a flat in Seoul’s business district. Since they all left school, they have managed to make playing video games their life.\n\nEveryday, Seo-yun gets up after a good night’s sleep at 10 a.m. and goes for a jog for an hour, before sitting down at her computer and starting to play. She and her friends have a few breaks to eat and relax during the day and the evening, but Seo-yun thinks that after midnight is when she has more fun playing than at any other time. She usually goes to bed at 3 a.m.\n\nSeo-yun and the rest of the team need to train hard and keep fit, as top players need to do about 30 mouse-clicks a minute. Video games are big business in South Korea, and the best players (like KS Fireflies 6) usually become even better-known than top baseball or volleyball players.\n\nSome people might get bored after playing video games for an hour or two. But these guys are actually getting paid to do something they love as a job. Many of them would even like to do it for free!",
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 46,
+          "question": "What is the most important thing for Seo-yun Cho?",
+          "options": {
+            "A": "trying new video games",
+            "B": "getting better at video games",
+            "C": "finding enough time to play video games"
+          },
+          "answer": "B",
+          "explainAnswer": "Cô ấy luyện tập thật nhiều để tiến bộ hơn.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 47,
+          "question": "Seo-yun and her friends",
+          "options": {
+            "A": "live together.",
+            "B": "went to school together.",
+            "C": "have a business together."
+          },
+          "answer": "A",
+          "explainAnswer": "Họ sống chung một căn hộ ở Seoul.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 48,
+          "question": "What does Seo-yun say about playing games at night?",
+          "options": {
+            "A": "It’s when she feels happiest.",
+            "B": "It’s the time that she most enjoys playing.",
+            "C": "It sometimes makes her tired."
+          },
+          "answer": "B",
+          "explainAnswer": "Sau nửa đêm là lúc cô chơi vui nhất.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 49,
+          "question": "What does the writer say about sports?",
+          "options": {
+            "A": "Seo-yun and her friends play a lot of sports video games.",
+            "B": "Seo-yun and her friends play sports to get fit.",
+            "C": "Seo-yun and her friends are more famous than some sports players."
+          },
+          "answer": "C",
+          "explainAnswer": "Các game thủ hàng đầu nổi tiếng hơn cả cầu thủ bóng chày hay bóng chuyền.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 50,
+          "question": "Why does the writer think that Seo-yun and her friends are lucky?",
+          "options": {
+            "A": "because they earn a lot of money",
+            "B": "because they don’t need to look for another job",
+            "C": "because they are doing something that they love"
+          },
+          "answer": "C",
+          "explainAnswer": "Họ được trả tiền để làm điều mình yêu thích.",
+          "audioTimestamp": null,
+          "transcript": null
+        }
+      ]
+    }
+  ]
+}

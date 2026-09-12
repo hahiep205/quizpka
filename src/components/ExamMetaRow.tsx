@@ -12,6 +12,7 @@ export function ExamMetaRow({
   className,
   examSetCount = 0,
   updateLabel,
+  questionCountLabel,
 }: {
   questionCount: number
   chapterCount: number
@@ -21,13 +22,14 @@ export function ExamMetaRow({
   className?: string
   examSetCount?: number
   updateLabel?: { en: string; vi: string }
+  questionCountLabel?: { en: string; vi: string }
 }) {
   return (
     <div className={cn("flex flex-nowrap items-center gap-x-2 overflow-hidden", className)}>
-      {questionCount > 0 ? (
+      {(questionCountLabel ?? questionCount > 0) ? (
         <span className="inline-flex min-w-0 items-center gap-1 sm:gap-1.5">
           <FileText className="h-3 w-3 shrink-0 sm:h-3.5 sm:w-3.5" strokeWidth={1.75} />
-          <span className="truncate whitespace-nowrap">{questionCount} {questionsLabel}</span>
+          <span className="truncate whitespace-nowrap">{questionCountLabel ? questionCountLabel[lang] : `${questionCount} ${questionsLabel}`}</span>
         </span>
       ) : null}
       {examSetCount > 0 ? (

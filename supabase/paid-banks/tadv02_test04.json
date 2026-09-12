@@ -1,0 +1,758 @@
+{
+  "title": "Đề Thi Tiếng Anh Tổng Hợp - Test 4",
+  "totalParts": 6,
+  "totalQuestions": 50,
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "PART 1: Short Conversations (Pictures)",
+      "instruction": "For each question, choose the correct answer. You will hear each recording twice.",
+      "audioUrl": "tadv-traphi/test04/part1-audio.mp3",
+      "imageUrl": null,
+      "passage": null,
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 1,
+          "question": "How much did the boy’s football shirt cost?",
+          "audioTimestamp": null,
+          "transcript": "Emily: Did you spend all your birthday money on your new football shirt?\nPhil: Grandma gave me thirty-five pounds but it was only twenty pounds fifty in the sports shop in the city centre.\nEmily: That sounds expensive to me. My new T-shirt was only eleven seventy-five.\nPhil: But football shirts are always more expensive than other shirts.\nEmily: Oh.",
+          "options": {
+            "A": "£11.75",
+            "B": "£20.50",
+            "C": "£35.00"
+          },
+          "answer": "B",
+          "explainAnswer": "Áo bóng đá chỉ có giá 20 pounds 50 (twenty pounds fifty)."
+        },
+        {
+          "id": 2,
+          "question": "What did Sophie enjoy doing most at the weekend?",
+          "audioTimestamp": null,
+          "transcript": "Alex: What did you do at the weekend, Sophie?\nSophie: I went to the beach with my family. We played volleyball, but my foot hurt, so I wasn’t very good.\nAlex: Oh.\nSophie: Then, I went swimming with my little brother. That was OK, but my dad taught me how to fish, and that was really cool!\nAlex: Really? I think fishing’s boring!",
+          "options": {
+            "A": "playing volleyball",
+            "B": "swimming",
+            "C": "fishing"
+          },
+          "answer": "C",
+          "explainAnswer": "Sophie nói câu cá 'was really cool' – cô thích nhất."
+        },
+        {
+          "id": 3,
+          "question": "Where did Paul stay on holiday this year?",
+          "audioTimestamp": null,
+          "transcript": "Izzy: Hi, Paul. Did you have a good holiday?\nPaul: Yeah, great. We went on holiday with my cousins again this year. Remember, last year we stayed on a boat?\nIzzy: Yes, did you do that this year, too?\nPaul: Mum wanted to stay in a hotel with a big swimming pool, but everyone else wanted to go camping. So we did that.",
+          "options": {
+            "A": "camping",
+            "B": "on a boat",
+            "C": "in a hotel"
+          },
+          "answer": "A",
+          "explainAnswer": "Mọi người muốn đi cắm trại nên họ đã cắm trại."
+        },
+        {
+          "id": 4,
+          "question": "Which subject will they study first today?",
+          "audioTimestamp": null,
+          "transcript": "Sam: Hi, Anna. Have you seen the new timetable for today?\nAnna: No, aren’t we having maths first? That’s what we usually do on Tuesdays as soon as we get to school.\nSam: Maths is the third lesson, after geography.\nAnna: So chemistry before that.\nSam: Exactly! Anyway, I’ve finished my geography project - finally!",
+          "options": {
+            "A": "maths",
+            "B": "chemistry",
+            "C": "geography"
+          },
+          "answer": "B",
+          "explainAnswer": "Tiết 1 là chemistry, sau đó geography, rồi mới đến maths."
+        },
+        {
+          "id": 5,
+          "question": "Why was Tina late for school today?",
+          "audioTimestamp": null,
+          "transcript": "Colby: Tina, why were you late for school today?\nTina: Well, I got up at seven. My phone always wakes me up then, but when the bus came, it didn’t stop because it was full!\nColby: So what did you do?\nTina: I went home and asked Mum to give me a lift. The traffic wasn’t bad, but I was still fifteen minutes late!",
+          "options": {
+            "A": "She woke up late.",
+            "B": "The traffic was bad.",
+            "C": "The bus was full and didn’t stop."
+          },
+          "answer": "C",
+          "explainAnswer": "Xe buýt đầy người nên không dừng, Tina phải về nhà nhờ mẹ chở."
+        }
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "PART 2: Listening - Class Party",
+      "instruction": "You will hear Tommy talking to his friend Olga about their class party. For each question, choose the correct answer A, B or C.",
+      "audioUrl": "tadv-traphi/test04/part2-audio.mp3",
+      "imageUrl": null,
+      "passage": null,
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 6,
+          "question": "Which date is the class party?",
+          "audioTimestamp": null,
+          "transcript": "Tommy: Olga, you’re coming to the class party at school, aren’t you?\nOlga: Yes, Tommy. I’m glad it’s at the end of June because I’m having my birthday party on the first of July.\nTommy: And the twenty-eighth’s better than the twenty-fifth because it’s a Friday!\nOlga: What are you going to wear?\nTommy: Either my black jeans or blue shorts.\nOlga: Wear your new black T-shirt with blue shorts.\nTommy: OK.\nOlga: I’m a bit worried about the party.\nTommy: Why? You’re not singing in front of everyone like in the school concert or playing the guitar like last year.\nOlga: But I’ve got to help make sure everything’s clean and tidy after the party, and that might take a long time.\nTommy: I don’t think so. Actually, I’ll probably arrive late.\nOlga: Why?\nTommy: I want to be in the tennis match at my sports club. I won’t have time to get the bus, but my mum will drive me to the party.\nOlga: Oh, OK. Is your mum cooking some food for the party?\nTommy: Yes, and we’ll bring some paper plates. And you’ve got some balloons, haven’t you?\nOlga: That’s right",
+          "options": {
+            "A": "25th June",
+            "B": "28th June",
+            "C": "1st July"
+          },
+          "answer": "B",
+          "explainAnswer": "Tiệc lớp vào ngày 28 tháng 6 (Friday), tốt hơn ngày 25."
+        },
+        {
+          "id": 7,
+          "question": "What does Olga think Tommy should wear to the party?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "his black jeans",
+            "B": "his blue shorts",
+            "C": "his green T-shirt"
+          },
+          "answer": "B",
+          "explainAnswer": "Olga khuyên mặc áo thun đen mới với quần short xanh."
+        },
+        {
+          "id": 8,
+          "question": "What’s Olga worried about?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "singing at the party",
+            "B": "playing the guitar",
+            "C": "helping tidy up"
+          },
+          "answer": "C",
+          "explainAnswer": "Olga lo phải giúp dọn dẹp sau tiệc, có thể mất nhiều thời gian."
+        },
+        {
+          "id": 9,
+          "question": "Why will Tommy arrive at the party late?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "He’ll have to wait for a lift.",
+            "B": "There aren’t many buses.",
+            "C": "He wants to play tennis first."
+          },
+          "answer": "C",
+          "explainAnswer": "Tommy muốn chơi tennis trước, nên sẽ đến muộn."
+        },
+        {
+          "id": 10,
+          "question": "What’s Olga going to take to the party?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "some balloons",
+            "B": "some paper plates",
+            "C": "some food"
+          },
+          "answer": "A",
+          "explainAnswer": "Olga sẽ mang bóng bay (balloons)."
+        }
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "PART 3: Grammar",
+      "instruction": "For questions 11-25, choose the correct answer by clicking the best option.",
+      "audioUrl": null,
+      "imageUrl": null,
+      "passage": null,
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 11,
+          "question": "My mother usually ___ organic vegetables from the local market.",
+          "options": {
+            "A": "buys",
+            "B": "buy",
+            "C": "is buying",
+            "D": "bought"
+          },
+          "answer": "A",
+          "explainAnswer": "Thói quen → hiện tại đơn. Chủ ngữ 'My mother' → buys.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 12,
+          "question": "Visitors ___ take photos inside the gallery because cameras are strictly prohibited.",
+          "options": {
+            "A": "must not",
+            "B": "don't have to",
+            "C": "can",
+            "D": "should"
+          },
+          "answer": "A",
+          "explainAnswer": "Cấm chụp ảnh → must not.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 13,
+          "question": "Traveling by bullet train is much ___ than taking the local bus.",
+          "options": {
+            "A": "faster",
+            "B": "more fast",
+            "C": "fastest",
+            "D": "the fastest"
+          },
+          "answer": "A",
+          "explainAnswer": "So sánh hơn của tính từ ngắn → faster.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 14,
+          "question": "Last Friday, our class ___ a modern art museum in the city center.",
+          "options": {
+            "A": "visited",
+            "B": "visit",
+            "C": "visiting",
+            "D": "has visited"
+          },
+          "answer": "A",
+          "explainAnswer": "Có 'Last Friday' → quá khứ đơn: visited.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 15,
+          "question": "There is only ___ sugar left in the bowl, so we need to get some more.",
+          "options": {
+            "A": "a little",
+            "B": "many",
+            "C": "a few",
+            "D": "few"
+          },
+          "answer": "A",
+          "explainAnswer": "Sugar không đếm được → a little.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 16,
+          "question": "Look at those thick dark clouds! It ___ rain very heavily soon.",
+          "options": {
+            "A": "is going to",
+            "B": "will",
+            "C": "rains",
+            "D": "was raining"
+          },
+          "answer": "A",
+          "explainAnswer": "Có dấu hiệu rõ → be going to.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 17,
+          "question": "He ___ in this international company for five years and loves his job.",
+          "options": {
+            "A": "has worked",
+            "B": "worked",
+            "C": "works",
+            "D": "is working"
+          },
+          "answer": "A",
+          "explainAnswer": "Có 'for five years' → hiện tại hoàn thành: has worked.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 18,
+          "question": "If you practice speaking English every day, your vocabulary ___ rapidly.",
+          "options": {
+            "A": "will improve",
+            "B": "improves",
+            "C": "improved",
+            "D": "improving"
+          },
+          "answer": "A",
+          "explainAnswer": "Câu điều kiện loại 1 → will improve.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 19,
+          "question": "When we arrived at the concert hall, the band ___ already started performing.",
+          "options": {
+            "A": "had",
+            "B": "has",
+            "C": "was",
+            "D": "have"
+          },
+          "answer": "A",
+          "explainAnswer": "Hành động xảy ra trước → quá khứ hoàn thành: had started.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 20,
+          "question": "The new city bridge ___ by skilled engineers two years ago.",
+          "options": {
+            "A": "was built",
+            "B": "builds",
+            "C": "is built",
+            "D": "building"
+          },
+          "answer": "A",
+          "explainAnswer": "Bị động quá khứ đơn: was built.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 21,
+          "question": "The teacher explained that the final exam ___ held in Room 302.",
+          "options": {
+            "A": "would be",
+            "B": "will be",
+            "C": "is",
+            "D": "has been"
+          },
+          "answer": "A",
+          "explainAnswer": "Tường thuật → would be.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 22,
+          "question": "If I had more free time this weekend, I ___ join the hiking club.",
+          "options": {
+            "A": "would",
+            "B": "will",
+            "C": "can",
+            "D": "must"
+          },
+          "answer": "A",
+          "explainAnswer": "Câu điều kiện loại 2 → would + V.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 23,
+          "question": "The small coffee shop is situated ___ the bookshop and the bakery.",
+          "options": {
+            "A": "between",
+            "B": "inside",
+            "C": "near to",
+            "D": "opposite of"
+          },
+          "answer": "A",
+          "explainAnswer": "Nằm giữa hai địa điểm → between.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 24,
+          "question": "My grandfather ___ live in a small countryside village when he was young.",
+          "options": {
+            "A": "used to",
+            "B": "is used to",
+            "C": "use to",
+            "D": "was used to"
+          },
+          "answer": "A",
+          "explainAnswer": "Thói quen trong quá khứ → used to.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 25,
+          "question": "I looked around the empty office, but there was ___ there to help me.",
+          "options": {
+            "A": "nobody",
+            "B": "somebody",
+            "C": "anybody",
+            "D": "everywhere"
+          },
+          "answer": "A",
+          "explainAnswer": "Câu phủ định → nobody.",
+          "audioTimestamp": null,
+          "transcript": null
+        }
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "PART 4: Vocabulary",
+      "instruction": "For questions 26-40, choose the correct answer by clicking the best option.",
+      "audioUrl": null,
+      "imageUrl": null,
+      "passage": null,
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 26,
+          "question": "Eating fresh fruit and exercising daily will improve your overall ____.",
+          "options": {
+            "A": "fitness",
+            "B": "passport",
+            "C": "schedule",
+            "D": "fuel"
+          },
+          "answer": "A",
+          "explainAnswer": "Fitness nghĩa là thể lực / sức khỏe.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 27,
+          "question": "My uncle likes watching ____ on TV because he is a big fan of combat sports.",
+          "options": {
+            "A": "boxing",
+            "B": "advertisement",
+            "C": "dictionary",
+            "D": "container"
+          },
+          "answer": "A",
+          "explainAnswer": "Boxing là môn quyền anh.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 28,
+          "question": "Please show your passport and boarding ____ at the check-in desk.",
+          "options": {
+            "A": "pass",
+            "B": "rank",
+            "C": "fare",
+            "D": "platform"
+          },
+          "answer": "A",
+          "explainAnswer": "Boarding pass là thẻ lên máy bay.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 29,
+          "question": "The friendly ____ gave us detailed directions to the historic castle.",
+          "options": {
+            "A": "guide",
+            "B": "solution",
+            "C": "cooker",
+            "D": "climate"
+          },
+          "answer": "A",
+          "explainAnswer": "Guide nghĩa là hướng dẫn viên.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 30,
+          "question": "The conference room is ____ for our meeting starting at two o'clock.",
+          "options": {
+            "A": "suitable",
+            "B": "formal",
+            "C": "disgusting",
+            "D": "native"
+          },
+          "answer": "A",
+          "explainAnswer": "Suitable nghĩa là phù hợp / thích hợp.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 31,
+          "question": "They plan to get ____ next month and host a big wedding ceremony.",
+          "options": {
+            "A": "married",
+            "B": "massive",
+            "C": "wireless",
+            "D": "crowded"
+          },
+          "answer": "A",
+          "explainAnswer": "Get married nghĩa là kết hôn.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 32,
+          "question": "Hiking through the dense rainforest was an unforgettable ____ for the team.",
+          "options": {
+            "A": "expedition",
+            "B": "experiment",
+            "C": "education",
+            "D": "moustache"
+          },
+          "answer": "A",
+          "explainAnswer": "Expedition nghĩa là chuyến thám hiểm.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 33,
+          "question": "Dolphins use their powerful ____ to swim rapidly through the ocean.",
+          "options": {
+            "A": "fins",
+            "B": "pumps",
+            "C": "pipes",
+            "D": "turbines"
+          },
+          "answer": "A",
+          "explainAnswer": "Fins nghĩa là vây của cá heo.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 34,
+          "question": "Engineers built a long ____ under the sea to connect the two islands.",
+          "options": {
+            "A": "passage",
+            "B": "ceiling",
+            "C": "bone",
+            "D": "stone"
+          },
+          "answer": "A",
+          "explainAnswer": "Passage nghĩa là đường hầm / lối đi dưới biển.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 35,
+          "question": "The fast-moving vehicles might ____ if the drivers do not obey the speed limit.",
+          "options": {
+            "A": "crash",
+            "B": "overhear",
+            "C": "search",
+            "D": "obstacle"
+          },
+          "answer": "A",
+          "explainAnswer": "Crash nghĩa là va chạm / tai nạn.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 36,
+          "question": "A giant bronze ____ was built in the square to honor national heroes.",
+          "options": {
+            "A": "monument",
+            "B": "sand",
+            "C": "storm",
+            "D": "space"
+          },
+          "answer": "A",
+          "explainAnswer": "Monument nghĩa là đài tưởng niệm.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 37,
+          "question": "The cultural center is hosting a craft ____ showcasing handmade pottery.",
+          "options": {
+            "A": "fair",
+            "B": "performance",
+            "C": "scorpion",
+            "D": "destination"
+          },
+          "answer": "A",
+          "explainAnswer": "Craft fair nghĩa là hội chợ thủ công.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 38,
+          "question": "The painter used ____ shades of blue and orange to create a dramatic sunset.",
+          "options": {
+            "A": "vivid",
+            "B": "vending",
+            "C": "remote",
+            "D": "wireless"
+          },
+          "answer": "A",
+          "explainAnswer": "Vivid nghĩa là sống động / rực rỡ.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 39,
+          "question": "They discovered an ____ gold coin hidden inside the old chest.",
+          "options": {
+            "A": "ancient",
+            "B": "date",
+            "C": "full",
+            "D": "part"
+          },
+          "answer": "A",
+          "explainAnswer": "Ancient nghĩa là cổ xưa.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 40,
+          "question": "The alert security guard caught the ____ trying to break into the store.",
+          "options": {
+            "A": "burglar",
+            "B": "painting",
+            "C": "soldier",
+            "D": "music"
+          },
+          "answer": "A",
+          "explainAnswer": "Burglar nghĩa là kẻ đột nhập / trộm cắp.",
+          "audioTimestamp": null,
+          "transcript": null
+        }
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "PART 5: Notices / Signs",
+      "instruction": "For each question, choose the correct answer A, B or C.",
+      "audioUrl": null,
+      "imageUrl": null,
+      "passage": null,
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 41,
+          "question": "What does the notice about the music system mean?",
+          "options": {
+            "A": "The members of the gym think the music system is very useful.",
+            "B": "When using the music system in the gym, please remember to switch it off.",
+            "C": "If you put on some music, consider the other people in the gym."
+          },
+          "answer": "C",
+          "explainAnswer": "Khi bật nhạc, hãy nghĩ đến người khác trong phòng gym.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "imageUrl": "tadv-traphi/test04/part5-image-test4/1.png"
+        },
+        {
+          "id": 42,
+          "question": "The writer is",
+          "options": {
+            "A": "going home with the rest of the group tomorrow.",
+            "B": "going on a boat with members of the group tomorrow.",
+            "C": "going out with the whole group tomorrow."
+          },
+          "answer": "B",
+          "explainAnswer": "Người viết sẽ đi thuyền cùng một số thành viên trong nhóm vào ngày mai.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "imageUrl": "tadv-traphi/test04/part5-image-test4/2.png"
+        },
+        {
+          "id": 43,
+          "question": "What should you do with the books?",
+          "options": {
+            "A": "You should return your books to the assistant in the correct order.",
+            "B": "The books are easy to find because they are all arranged by level.",
+            "C": "You should replace books in the order that you found them."
+          },
+          "answer": "A",
+          "explainAnswer": "Nên trả sách cho nhân viên theo đúng thứ tự.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "imageUrl": "tadv-traphi/test04/part5-image-test4/3.png"
+        },
+        {
+          "id": 44,
+          "question": "What does the notice about the hotel door mean?",
+          "options": {
+            "A": "Use this button to call hotel staff if you cannot get in.",
+            "B": "If you cannot lock the door, please contact hotel reception.",
+            "C": "Press this button to unlock the entrance door."
+          },
+          "answer": "A",
+          "explainAnswer": "Nhấn nút để gọi nhân viên khách sạn nếu không vào được.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "imageUrl": "tadv-traphi/test04/part5-image-test4/4.png"
+        },
+        {
+          "id": 45,
+          "question": "What should David do?",
+          "options": {
+            "A": "He should remind Carla that someone is picking her up for band practice.",
+            "B": "He should check Carla is dressed properly and take her to band practice.",
+            "C": "He should make Carla practise before she goes to her school band meeting."
+          },
+          "answer": "B",
+          "explainAnswer": "David cần kiểm tra trang phục của Carla và đưa cô ấy đến buổi tập ban nhạc.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "imageUrl": "tadv-traphi/test04/part5-image-test4/5.png"
+        }
+      ]
+    },
+    {
+      "partNumber": 6,
+      "partTitle": "PART 6: Reading - Ocean View Hotel",
+      "instruction": "Read the text and answer the questions. For each question, choose the correct answer A, B or C.",
+      "audioUrl": null,
+      "imageUrl": null,
+      "passage": "I’m usually sad to say goodbye to my cousins after visiting them in Australia. But last June I wasn’t. We had to change planes in the Middle East on the way back and had to stay overnight. I just couldn’t wait to get to our hotel.\n\nThe first thing I noticed in the hotel was all the glass. It was really bright, so I don’t know why all the lights were on in the building! There was also loud rock music playing, which I loved (but my parents didn’t)! There weren’t many people waiting at the reception, so we were soon in our rooms.\n\nThe garden wasn’t what I expected. ‘Dad’, I said, ‘you told me there was a pool!’ He took me back into the reception area and then up in the lift to the 39th floor and out onto the top of the building. ‘Here it is,’ he said. It was amazing! Swimming under the clouds was awesome.\n\nI’ve stayed in some great hotels around the world, but nothing as cool as that one! I saw photographs of it before I went, but they don’t really show how large the building is. I couldn’t believe it. Everything is huge - the building, the pool, the meals (which were delicious, too, by the way)! There’s so much to do and see there. I hope we can go back again and stay for longer!",
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 46,
+          "question": "The writer says that last June, she felt",
+          "options": {
+            "A": "excited about where she was going.",
+            "B": "sad because she was leaving her cousins.",
+            "C": "angry because of the delay in her journey."
+          },
+          "answer": "A",
+          "explainAnswer": "Cô ấy không buồn mà rất háo hức muốn đến khách sạn.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 47,
+          "question": "What was the hotel like inside?",
+          "options": {
+            "A": "dark",
+            "B": "noisy",
+            "C": "busy"
+          },
+          "answer": "B",
+          "explainAnswer": "Trong khách sạn có nhạc rock to, nên khá ồn ào.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 48,
+          "question": "Where was the hotel’s pool?",
+          "options": {
+            "A": "in the hotel garden",
+            "B": "on the roof of the hotel",
+            "C": "close to the hotel’s reception area"
+          },
+          "answer": "B",
+          "explainAnswer": "Hồ bơi nằm trên tầng 39 – nóc tòa nhà.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 49,
+          "question": "What do we learn about the writer in the last paragraph?",
+          "options": {
+            "A": "She hasn’t visited many hotels in her life.",
+            "B": "She didn’t have time to see everything in the hotel.",
+            "C": "She didn’t know the hotel is so big."
+          },
+          "answer": "C",
+          "explainAnswer": "Cô ấy không ngờ khách sạn lớn đến vậy, dù đã xem ảnh trước.",
+          "audioTimestamp": null,
+          "transcript": null
+        },
+        {
+          "id": 50,
+          "question": "Why has the writer written this text?",
+          "options": {
+            "A": "to describe what the hotel looks like",
+            "B": "to say how the hotel could improve",
+            "C": "to explain why she loved the hotel"
+          },
+          "answer": "C",
+          "explainAnswer": "Bài viết giải thích lý do cô ấy yêu thích khách sạn này.",
+          "audioTimestamp": null,
+          "transcript": null
+        }
+      ]
+    }
+  ]
+}
