@@ -34,6 +34,7 @@ export type BankQuestion = {
   audioTimestamp?: string
   chapter?: string
   image?: string
+  imageUrl?: string
 }
 
 export type BankFile = {

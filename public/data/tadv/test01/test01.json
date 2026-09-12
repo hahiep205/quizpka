@@ -1,0 +1,758 @@
+{
+  "title": "Đề Thi Tiếng Anh Tổng Hợp - Test 1",
+  "totalParts": 6,
+  "totalQuestions": 50,
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "PART 1: Short Announcements or Instructions",
+      "instruction": "In this part, you will hear 5 short announcements or instructions. You will hear each recording twice. For questions 1-5, choose the correct answer by clicking the best option. Before you listen, you have 20 seconds to look at the questions.",
+      "audioUrl": "tadv/test01/part1-audio.mp3",
+      "imageUrl": null,
+      "passage": null,
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 1,
+          "question": "What time are they meeting tomorrow?",
+          "audioTimestamp": "0:10",
+          "transcript": "Are we still meeting in town tomorrow?\nYes, but I have to go to the dentist's at 2.\nI'll be there for about half an hour.\nOK, let's meet at 3 then.\nSounds good.",
+          "options": {
+            "A": "2:00",
+            "B": "2:30",
+            "C": "3:00"
+          },
+          "answer": "C",
+          "explainAnswer": "Người nói phải đi nha sĩ lúc 2 giờ và mất khoảng nửa tiếng, nên họ quyết định gặp nhau lúc 3 giờ."
+        },
+        {
+          "id": 2,
+          "question": "When will they work on their project?",
+          "audioTimestamp": "0:32",
+          "transcript": "Shall we work on our project on Monday evening?\nI've got basketball practice on Monday.\nCan we do Tuesday or Thursday?\nI'm not free on Thursday, but I can do Tuesday.\nOK, that's great.",
+          "options": {
+            "A": "Monday",
+            "B": "Tuesday",
+            "C": "Thursday"
+          },
+          "answer": "B",
+          "explainAnswer": "Thứ Hai có bóng rổ, thứ Năm không rảnh, nên họ chọn làm vào thứ Ba (Tuesday)."
+        },
+        {
+          "id": 3,
+          "question": "How will they travel to Brighton tomorrow?",
+          "audioTimestamp": "0:57",
+          "transcript": "Shall we get the bus or the train to Brighton?\nMy mum said that she can take us.\nShe isn't working tomorrow.\nOh, that's great. I prefer to go by car.\nYes, the last time we took the train, it was delayed.",
+          "options": {
+            "A": "car",
+            "B": "bus",
+            "C": "train"
+          },
+          "answer": "A",
+          "explainAnswer": "Mẹ của một người sẽ chở họ đi bằng xe hơi. Họ cũng nói thích đi ô tô hơn vì lần trước đi tàu bị trễ."
+        },
+        {
+          "id": 4,
+          "question": "What did the boy eat?",
+          "audioTimestamp": "1:23",
+          "transcript": "What was your meal like yesterday?\nIt was all right. Anna had a really nice pasta dish.\nWhat about you?\nI wanted fish, but they didn't have any, so I had chicken.\nIt wasn't bad.",
+          "options": {
+            "A": "pasta",
+            "B": "fish",
+            "C": "chicken"
+          },
+          "answer": "C",
+          "explainAnswer": "Cậu bé muốn ăn cá nhưng hết, nên cuối cùng đã ăn thịt gà (chicken)."
+        },
+        {
+          "id": 5,
+          "question": "Which present is from the girl's mother?",
+          "audioTimestamp": "1:46",
+          "transcript": "Did you get any nice presents for your birthday?\nWell, I asked my mum for a mobile phone,\nbut she didn't know which one to get me.\nDid she give you money then?\nYes, so I might get a phone or I might buy some clothes.\nI don't know yet.",
+          "options": {
+            "A": "a mobile phone",
+            "B": "some clothes",
+            "C": "money"
+          },
+          "answer": "C",
+          "explainAnswer": "Mẹ không biết mua điện thoại nào nên đã cho tiền. Cô gái chưa quyết định sẽ dùng tiền để mua điện thoại hay quần áo."
+        }
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "PART 2: Listening - Conversation about a Computer Game",
+      "instruction": "You will hear Luis talking to his friend Charlotte about a computer game. For each question, choose the correct answer A, B or C.",
+      "audioUrl": "tadv/test01/part2-audio.mp3",
+      "imageUrl": null,
+      "passage": null,
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 6,
+          "question": "Where did Luis first find out about the game?",
+          "audioTimestamp": null,
+          "transcript": "Luis: Charlotte! I’ve got the computer game called Green Space.\nCharlotte: Where did you find out about it, Luis?\nLuis: I borrowed a magazine from a schoolfriend and there was an ad for it. I asked my mum and she bought it for me from their website.\nCharlotte: I really like that game. It’s not new, but it’s my favourite game because it isn’t easy. I play it a lot, which is strange because it’s not funny at all! Who are you going to play it with?\nLuis: Well, my brother’s too busy studying, and my cousin Amy only likes board games. But my granddad has lots of time, so I want to play with him. How long do you usually play it for?\nCharlotte: When I was sick last Wednesday, I played for an hour and a half. Then, on Friday, an hour. And on Saturday, three quarters of an hour! Which part do you like best?\nLuis: Crossing the river’s really good, but the bit I enjoy most is finding something to eat. The part about building a hut’s my least favourite.",
+          "options": {
+            "A": "from a game website",
+            "B": "from a school friend",
+            "C": "from a magazine advertisement"
+          },
+          "answer": "C",
+          "explainAnswer": "Luis nói rõ: anh mượn tạp chí của bạn học và thấy quảng cáo game ở đó. Vì vậy đáp án đúng là từ quảng cáo trên tạp chí."
+        },
+        {
+          "id": 7,
+          "question": "Charlotte likes the game because",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "it’s funny.",
+            "B": "it’s hard.",
+            "C": "it’s new."
+          },
+          "answer": "B",
+          "explainAnswer": "Charlotte thích game vì 'it isn’t easy' (không dễ). Cô ấy cũng nói game không hề vui và cũng không mới."
+        },
+        {
+          "id": 8,
+          "question": "Who does Luis want to play the game with?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "his brother",
+            "B": "his granddad",
+            "C": "his cousin"
+          },
+          "answer": "B",
+          "explainAnswer": "Luis nói anh trai bận học, em họ chỉ thích board games, còn ông nội thì có nhiều thời gian nên anh muốn chơi với ông."
+        },
+        {
+          "id": 9,
+          "question": "How long did Charlotte play the game for last Saturday?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "forty-five minutes",
+            "B": "one hour",
+            "C": "one hour and thirty minutes"
+          },
+          "answer": "A",
+          "explainAnswer": "Charlotte kể: thứ Bảy cô chơi 'three quarters of an hour' (ba phần tư giờ), tức là 45 phút."
+        },
+        {
+          "id": 10,
+          "question": "Which part of the game does Luis like best?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "finding food",
+            "B": "building a hut",
+            "C": "crossing the river"
+          },
+          "answer": "A",
+          "explainAnswer": "Luis nói phần anh thích nhất là 'finding something to eat' (tìm đồ ăn). Phần vượt sông cũng hay nhưng không bằng."
+        }
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "PART 3: Grammar",
+      "instruction": "For questions 11-25, choose the correct answer by clicking the best option.",
+      "audioUrl": null,
+      "imageUrl": null,
+      "passage": null,
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 11,
+          "question": "Every morning, she ___ up early and makes breakfast for her family.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "get",
+            "B": "gets",
+            "C": "is getting",
+            "D": "got"
+          },
+          "answer": "B",
+          "explainAnswer": "Đây là thói quen hàng ngày nên dùng thì hiện tại đơn. Chủ ngữ 'she' nên động từ thêm -s → gets."
+        },
+        {
+          "id": 12,
+          "question": "You ___ touch the paintings in the museum because it's not allowed.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "mustn't",
+            "B": "don't have to",
+            "C": "can",
+            "D": "have to"
+          },
+          "answer": "A",
+          "explainAnswer": "Câu có nghĩa cấm đoán (không được phép chạm vào). 'Mustn't' dùng để diễn tả sự cấm đoán."
+        },
+        {
+          "id": 13,
+          "question": "This new laptop is much ___ than my old one from last year.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "more light",
+            "B": "lightest",
+            "C": "lighter",
+            "D": "the lightest"
+          },
+          "answer": "C",
+          "explainAnswer": "So sánh hơn của tính từ ngắn 'light' là 'lighter'. Câu có 'than' nên dùng dạng so sánh hơn."
+        },
+        {
+          "id": 14,
+          "question": "Last weekend, we ___ to the beach and had an amazing picnic together.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "going",
+            "B": "gone",
+            "C": "went",
+            "D": "go"
+          },
+          "answer": "C",
+          "explainAnswer": "Có mốc thời gian 'Last weekend' nên dùng thì quá khứ đơn. Động từ go ở quá khứ là went."
+        },
+        {
+          "id": 15,
+          "question": "There aren't ___ students in the library today; it's almost completely empty.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "many",
+            "B": "some",
+            "C": "a little",
+            "D": "much"
+          },
+          "answer": "A",
+          "explainAnswer": "'Students' là danh từ đếm được số nhiều. Trong câu phủ định ta dùng 'many'."
+        },
+        {
+          "id": 16,
+          "question": "Don't worry about the dishes; I ___ wash them after we finish dinner.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "will",
+            "B": "going to",
+            "C": "am going to",
+            "D": "would"
+          },
+          "answer": "A",
+          "explainAnswer": "Đây là quyết định đưa ra ngay lúc nói nên dùng 'will'."
+        },
+        {
+          "id": 17,
+          "question": "I ___ to Paris three times, but my last trip was in 2019.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "went",
+            "B": "have been",
+            "C": "was going",
+            "D": "had been"
+          },
+          "answer": "B",
+          "explainAnswer": "Nói về kinh nghiệm (đã từng đến Paris ba lần) nên dùng hiện tại hoàn thành: have been."
+        },
+        {
+          "id": 18,
+          "question": "If she ___ harder for the exam, she will definitely pass it easily.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "studies",
+            "B": "study",
+            "C": "will study",
+            "D": "studied"
+          },
+          "answer": "A",
+          "explainAnswer": "Câu điều kiện loại 1: If + hiện tại đơn, will + động từ. Chủ ngữ 'she' nên dùng studies."
+        },
+        {
+          "id": 19,
+          "question": "When I called her, she told me she ___ already left the office early.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "has",
+            "B": "was",
+            "C": "had",
+            "D": "have"
+          },
+          "answer": "C",
+          "explainAnswer": "Hành động 'rời văn phòng' xảy ra trước lúc cô ấy nói → dùng quá khứ hoàn thành: had left."
+        },
+        {
+          "id": 20,
+          "question": "The Eiffel Tower ___ by millions of tourists from around the world every year.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "visits",
+            "B": "is visiting",
+            "C": "is visited",
+            "D": "visited"
+          },
+          "answer": "C",
+          "explainAnswer": "Câu bị động (Tháp Eiffel được hàng triệu người thăm) ở thì hiện tại đơn → is visited."
+        },
+        {
+          "id": 21,
+          "question": "She said that she ___ to the party the following evening with her friends.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "would go",
+            "B": "will go",
+            "C": "goes",
+            "D": "has gone"
+          },
+          "answer": "A",
+          "explainAnswer": "Đây là câu tường thuật. 'Will' khi tường thuật lùi thành 'would'."
+        },
+        {
+          "id": 22,
+          "question": "If I ___ more free time, I would learn to play the guitar.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "had",
+            "B": "have",
+            "C": "will have",
+            "D": "would have"
+          },
+          "answer": "A",
+          "explainAnswer": "Câu điều kiện loại 2 (giả định trái với hiện tại): If + quá khứ đơn, would + động từ → If I had..."
+        },
+        {
+          "id": 23,
+          "question": "The bookshop is located ___ the bank and the café on the high street.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "near",
+            "B": "next to",
+            "C": "between",
+            "D": "opposite"
+          },
+          "answer": "C",
+          "explainAnswer": "Nằm ở giữa hai địa điểm (ngân hàng và quán cà phê) → dùng between."
+        },
+        {
+          "id": 24,
+          "question": "My grandfather ___ smoke a lot, but he quit years ago for his health.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "uses to",
+            "B": "was used to",
+            "C": "used to",
+            "D": "didn't used to"
+          },
+          "answer": "C",
+          "explainAnswer": "'Used to' dùng để nói về thói quen trong quá khứ mà bây giờ không còn nữa."
+        },
+        {
+          "id": 25,
+          "question": "I looked everywhere for my keys but I couldn't find them ___ in the house.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "anywhere",
+            "B": "somewhere",
+            "C": "nowhere",
+            "D": "everywhere"
+          },
+          "answer": "A",
+          "explainAnswer": "Trong câu phủ định (couldn't find) ta dùng 'anywhere'."
+        }
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "PART 4: Vocabulary",
+      "instruction": "For questions 26-40, choose the correct answer by clicking the best option.",
+      "audioUrl": null,
+      "imageUrl": null,
+      "passage": null,
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 26,
+          "question": "My new ____ includes walking to work and eating more vegetables.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "health",
+            "B": "lifestyle",
+            "C": "yoga",
+            "D": "ring"
+          },
+          "answer": "B",
+          "explainAnswer": "Lifestyle nghĩa là lối sống. Đi bộ đi làm và ăn nhiều rau chính là thay đổi lối sống."
+        },
+        {
+          "id": 27,
+          "question": "My brother watches ____ on TV because he likes strong sports.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "wrestling",
+            "B": "advert",
+            "C": "mixture",
+            "D": "abbreviation"
+          },
+          "answer": "A",
+          "explainAnswer": "Wrestling là môn đấu vật, thuộc loại thể thao mạnh nên phù hợp nhất."
+        },
+        {
+          "id": 28,
+          "question": "Please walk down the ____ to find your seat on the plane.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "fare",
+            "B": "gate",
+            "C": "aisle",
+            "D": "rank"
+          },
+          "answer": "C",
+          "explainAnswer": "Aisle là lối đi giữa các hàng ghế trên máy bay."
+        },
+        {
+          "id": 29,
+          "question": "The young ____ helped visitors find fresh fruit near the harbor.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "cooker",
+            "B": "solution",
+            "C": "islander",
+            "D": "lucky"
+          },
+          "answer": "C",
+          "explainAnswer": "Islander nghĩa là người dân đảo. Người này giúp du khách tìm trái cây gần bến cảng."
+        },
+        {
+          "id": 30,
+          "question": "The meeting room is ____ after lunch, so we can study there.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "available",
+            "B": "delighted",
+            "C": "formal",
+            "D": "local"
+          },
+          "answer": "A",
+          "explainAnswer": "Available nghĩa là trống / có sẵn. Phòng họp trống sau giờ ăn trưa nên có thể dùng để học."
+        },
+        {
+          "id": 31,
+          "question": "Anna is ____ to Tom, and they will marry next summer.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "engaged",
+            "B": "disgusting",
+            "C": "massive",
+            "D": "native"
+          },
+          "answer": "A",
+          "explainAnswer": "Engaged nghĩa là đã đính hôn. Họ sẽ cưới vào mùa hè năm sau."
+        },
+        {
+          "id": 32,
+          "question": "They went on an exciting ____ in the mountains last summer.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "moustache",
+            "B": "adventure",
+            "C": "experiment",
+            "D": "education"
+          },
+          "answer": "B",
+          "explainAnswer": "Adventure nghĩa là cuộc phiêu lưu / chuyến đi thú vị. Rất hợp với bối cảnh trên núi."
+        },
+        {
+          "id": 33,
+          "question": "The whales moved quickly through the water with their strong ____.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "flippers",
+            "B": "pumps",
+            "C": "pipes",
+            "D": "turbines"
+          },
+          "answer": "A",
+          "explainAnswer": "Flippers là vây của cá voi, giúp chúng bơi nhanh."
+        },
+        {
+          "id": 34,
+          "question": "The train went through a long ____ under the mountain yesterday.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "ceiling",
+            "B": "bone",
+            "C": "tunnel",
+            "D": "stone"
+          },
+          "answer": "C",
+          "explainAnswer": "Tunnel nghĩa là đường hầm. Tàu đi qua đường hầm dưới núi."
+        },
+        {
+          "id": 35,
+          "question": "The two cars might ____ if they drive too fast on this road.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "overhear",
+            "B": "obstacle",
+            "C": "collide",
+            "D": "search"
+          },
+          "answer": "C",
+          "explainAnswer": "Collide nghĩa là va chạm. Hai xe có thể đâm vào nhau nếu chạy quá nhanh."
+        },
+        {
+          "id": 36,
+          "question": "The tourists took photos beside the tall ____ in the city square.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "statue",
+            "B": "sand",
+            "C": "storm",
+            "D": "space"
+          },
+          "answer": "A",
+          "explainAnswer": "Statue nghĩa là bức tượng. Du khách chụp ảnh bên cạnh bức tượng cao."
+        },
+        {
+          "id": 37,
+          "question": "We visited an interesting ____ showing old photos and paintings at the library.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "exhibition",
+            "B": "performance",
+            "C": "scorpion",
+            "D": "destination"
+          },
+          "answer": "A",
+          "explainAnswer": "Exhibition nghĩa là triển lãm. Triển lãm trưng bày ảnh cũ và tranh."
+        },
+        {
+          "id": 38,
+          "question": "The artist used ____ colors to make the picture look bright.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "vending",
+            "B": "wireless",
+            "C": "contrasting",
+            "D": "remote"
+          },
+          "answer": "C",
+          "explainAnswer": "Contrasting colors nghĩa là màu tương phản. Dùng màu tương phản giúp bức tranh nổi bật, sáng sủa."
+        },
+        {
+          "id": 39,
+          "question": "She found some ____ photos in a box yesterday.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "part",
+            "B": "date",
+            "C": "old",
+            "D": "full"
+          },
+          "answer": "C",
+          "explainAnswer": "Old photos nghĩa là những tấm ảnh cũ. Đây là lựa chọn tự nhiên và hợp nghĩa nhất."
+        },
+        {
+          "id": 40,
+          "question": "The brave shopkeeper called the police when he saw the ____ outside.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "robber",
+            "B": "painting",
+            "C": "soldier",
+            "D": "music"
+          },
+          "answer": "A",
+          "explainAnswer": "Robber nghĩa là tên cướp. Người bán hàng dũng cảm gọi cảnh sát khi thấy tên cướp."
+        }
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "PART 5: Notices / Signs",
+      "instruction": "For each question, choose the correct answer A, B or C.",
+      "audioUrl": null,
+      "imageUrl": null,
+      "passage": null,
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 41,
+          "question": "Tony wants Elsa to",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "ask her boss for a week's holiday starting tomorrow.",
+            "B": "find out if she can have time off next month.",
+            "C": "go away with him next week for a month."
+          },
+          "answer": "B",
+          "explainAnswer": "Tony muốn Elsa hỏi xem cô có thể xin nghỉ phép vào tháng sau không.",
+          "imageUrl": "tadv/test01/part5-image-test1/1.png"
+        },
+        {
+          "id": 42,
+          "question": "What does the notice mean?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "Ring and tell us if you are satisfied with the service we have delivered.",
+            "B": "Telephone us if arrangements for collecting goods are not satisfactory.",
+            "C": "Call us to take the goods back if you are not satisfied with them."
+          },
+          "answer": "C",
+          "explainAnswer": "Thông báo yêu cầu khách hàng gọi lại để trả hàng nếu không hài lòng với sản phẩm.",
+          "imageUrl": "tadv/test01/part5-image-test1/2.png"
+        },
+        {
+          "id": 43,
+          "question": "What does the notice say about Ruth?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "Ruth has kept to her plan despite the change in the weather.",
+            "B": "Ruth may not visit the coast if the bad weather continues.",
+            "C": "Ruth intends to leave the mountains early to visit the coast."
+          },
+          "answer": "B",
+          "explainAnswer": "Ruth có thể sẽ không đi biển nếu thời tiết xấu vẫn còn tiếp diễn.",
+          "imageUrl": "tadv/test01/part5-image-test1/3.png"
+        },
+        {
+          "id": 44,
+          "question": "What should you do with the food?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "Remove this food from the container before placing in a microwave oven.",
+            "B": "It is advisable to use a suitable container for cooking this food.",
+            "C": "You should avoid putting this food in a microwave oven."
+          },
+          "answer": "C",
+          "explainAnswer": "Thông báo khuyên không nên cho loại thức ăn này vào lò vi sóng.",
+          "imageUrl": "tadv/test01/part5-image-test1/4.png"
+        },
+        {
+          "id": 45,
+          "question": "What will happen after 1st January?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "You will have to pay more to borrow DVDs after 1st January.",
+            "B": "Please return all borrowed DVDs before 1st January.",
+            "C": "There will be additional DVDs to borrow from 1st January."
+          },
+          "answer": "A",
+          "explainAnswer": "Sau ngày 1 tháng 1, phí mượn DVD sẽ tăng lên. (Path ảnh sẽ bổ sung sau)",
+          "imageUrl": "tadv/test01/part5-image-test1/5.png"
+        }
+      ]
+    },
+    {
+      "partNumber": 6,
+      "partTitle": "PART 6: Reading - Will’s Blog",
+      "instruction": "Read the blog and answer the questions. For each question, choose the correct answer A, B or C.",
+      "audioUrl": null,
+      "imageUrl": null,
+      "passage": "One day my dad said, ‘Why don’t we have a street party?’ This means that the street is closed so cars can’t use it, and people put tables and chairs out in the street, then have a party! Dad said there was one in 1977 and he still remembers it well. Everyone loved it! I couldn’t believe that since 1977 they never had another one. If it was so good, why not do it again?\n\nWe started to organise it, together with some other people. I helped to make the web page, so everyone on the street knew about the party and could post their old photos from the party in 1977. There were some pictures of my dad when he was a kid, together with his friends, who have moved away from the street now. It was interesting to see that the buildings on the street haven’t changed at all!\n\nMy mum was a bit worried about the party. 'But a lot of people on the street don’t really know each other', she said. 'What if they don’t have anything to talk about?' I just said, 'Relax, Mum. It’ll be great.'\n\nSo, what was the party like? It was fantastic! My friends and I really liked speaking to an old lady called Louisa. She’s 89 and was telling us about when she and her friends were our age. So now I always chat to her when I see her on the street. I didn’t know who she was before, so I’m glad we had the party.",
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 46,
+          "question": "Why was Will surprised?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "His father wanted to have a street party.",
+            "B": "There hasn’t been a street party for a long time.",
+            "C": "Many people remembered the last street party."
+          },
+          "answer": "B",
+          "explainAnswer": "Will ngạc nhiên vì từ năm 1977 đến nay chưa ai tổ chức lại bữa tiệc đường phố, dù lần trước rất thành công."
+        },
+        {
+          "id": 47,
+          "question": "What did the photos from 1977 show?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "The street still looks the same now.",
+            "B": "There are more children living in the street now.",
+            "C": "The same people still live on the street now."
+          },
+          "answer": "A",
+          "explainAnswer": "Will nhận xét các tòa nhà trên phố gần như không thay đổi gì so với năm 1977."
+        },
+        {
+          "id": 48,
+          "question": "Why was Will’s mother worried?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "She thought that the party was too expensive.",
+            "B": "She thought that people might not come to the party.",
+            "C": "She thought that the guests might not talk to each other."
+          },
+          "answer": "C",
+          "explainAnswer": "Mẹ Will lo lắng vì nhiều người trên phố không quen biết nhau, sợ họ sẽ không có gì để nói chuyện."
+        },
+        {
+          "id": 49,
+          "question": "Will and his friends enjoyed",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "hearing Louisa’s stories.",
+            "B": "meeting Louisa’s friends.",
+            "C": "telling Louisa about their lives."
+          },
+          "answer": "A",
+          "explainAnswer": "Will và bạn bè rất thích nghe bà Louisa kể chuyện về thời còn trẻ của bà."
+        },
+        {
+          "id": 50,
+          "question": "What is the best title for the article?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "Why I love street parties",
+            "B": "The street party we had",
+            "C": "How to have a street party"
+          },
+          "answer": "B",
+          "explainAnswer": "Bài viết kể lại toàn bộ quá trình tổ chức và diễn biến của buổi tiệc đường phố mà họ đã làm. Tiêu đề phù hợp nhất là 'The street party we had'."
+        }
+      ]
+    }
+  ]
+}

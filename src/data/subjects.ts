@@ -55,6 +55,8 @@ export type ExamPaper = {
   durationMinutes: number
   title: LocalizedText
   description: LocalizedText
+  /** Optional label (e.g. update date) shown in the catalog meta row in place of the chapter count. */
+  updatedLabel?: LocalizedText
   /** When true, hide this exam from catalog listings (it stays reachable by id, e.g. merged into a sibling exam's picker). */
   hideFromCatalog?: boolean
   /** Optional path to a local question-bank JSON file under /data */
@@ -118,11 +120,12 @@ export const subjects: Subject[] = [
         id: "tadv-sample",
         type: "final",
         year: 2026,
-        questionCount: 55,
+        questionCount: 50,
         durationMinutes: 60,
         title: { en: "English Placement Mock Test", vi: "Thi thử Tiếng Anh Đầu Vào" },
-        description: { en: "Includes 3 reference tests; pick one to start.", vi: "Gồm 3 đề tham khảo, chọn 1 đề để làm bài." },
-        questionBanks: ["/data/tadv/tadv-reading.json", "/data/tadv/tadv-listening.json"],
+        description: { en: "Free English placement mock test with Phenikaa University's latest sample exam.", vi: "Thi thử Tiếng Anh đầu vào miễn phí với bộ đề mẫu mới nhất của Đại học Phenikaa." },
+        updatedLabel: { en: "Updated: 13/09/2026", vi: "Ngày update: 13/09/2026" },
+        questionBanks: ["/data/tadv/test01/test01.json"],
       },
     ],
   },

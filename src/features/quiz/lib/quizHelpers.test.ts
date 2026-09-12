@@ -23,6 +23,23 @@ describe("quiz helpers", () => {
     expect(mapBankQuestions(flatBank, "exam", { ...practiceSetup, mode: "exam" })).toHaveLength(5)
   })
 
+  it("keeps per-question images, falling back to the part image", () => {
+    const bank = {
+      parts: [{
+        partNumber: 5,
+        partTitle: "Part 5",
+        imageUrl: "tadv/reading_part5.png",
+        questions: [
+          { id: 1, question: "Q1", options: { A: "a" }, answer: "A", imageUrl: "tadv/test01/part5-image-test1/1.png" },
+          { id: 2, question: "Q2", options: { A: "a" }, answer: "A" },
+        ],
+      }],
+    }
+    const [first, second] = mapBankQuestions(bank, "exam", practiceSetup)
+    expect(first.imageUrl).toBe("/data/tadv/test01/part5-image-test1/1.png")
+    expect(second.imageUrl).toBe("/data/tadv/reading_part5.png")
+  })
+
   it("formats clock time into HH:MM:SS", () => {
     expect(formatClockTime(0)).toBe("00:00:00")
     expect(formatClockTime(7200)).toBe("02:00:00")

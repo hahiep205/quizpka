@@ -5,25 +5,15 @@ export type TadvExamOption = {
   title: LocalizedText
   description: LocalizedText
   questionBanks: string[]
+  questionCount?: number
 }
 
 export const tadvExamOptions: TadvExamOption[] = [
   {
-    id: "english-placement-reference-1",
-    title: { en: "English Placement Test - Reference 1", vi: "Tiếng Anh Đầu Vào - Đề tham khảo 1" },
-    description: { en: "55 questions across Listening and Reading, organized by part with shared audio and passages.", vi: "55 câu hỏi Nghe và Đọc, được phân theo Part với audio và nội dung chung." },
-    questionBanks: ["/data/tadv/tadv-reading.json", "/data/tadv/tadv-listening.json"],
-  },
-  {
-    id: "english-placement-reference-2",
-    title: { en: "English Placement Test - Reference 2", vi: "Tiếng Anh Đầu Vào - Đề tham khảo 2" },
-    description: { en: "55 questions across Listening and Reading, organized by part with shared audio and passages.", vi: "55 câu hỏi Nghe và Đọc, được phân theo Part với audio và nội dung chung." },
-    questionBanks: ["/data/tadv/tadv2-reading.json", "/data/tadv/tadv2-listening.json"],
-  },
-  {
-    id: "english-placement-reference-3",
-    title: { en: "English Placement Test - Reference 3", vi: "Tiếng Anh Đầu Vào - Đề tham khảo 3" },
-    description: { en: "55 questions across Listening and Reading, organized by part with shared audio and passages.", vi: "55 câu hỏi Nghe và Đọc, được phân theo Part với audio và nội dung chung." },
-    questionBanks: ["/data/tadv/tadv3-reading.json", "/data/tadv/tadv3-listening.json"],
+    id: "english-placement-reference-4",
+    title: { en: "English Placement Test - Reference 4", vi: "Tiếng Anh Đầu Vào - Bộ đề mẫu mới nhất được cập nhập ngày 09/09/26." },
+    description: { en: "50 questions across Listening and Reading, organized by part with shared audio and passages.", vi: "50 câu hỏi Nghe và Đọc, được phân theo Part với audio và nội dung chung." },
+    questionBanks: ["/data/tadv/test01/test01.json"],
+    questionCount: 50,
   },
 ]

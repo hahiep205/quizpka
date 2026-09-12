@@ -84,7 +84,7 @@ export function TadvPickerModal({ open, lang, exam, subject, onClose, onSelect }
             active={selected === opt.id}
             icon={<BookOpen className="h-5 w-5" />}
             title={opt.title[lang]}
-            subtitle={`55 ${t.questions}`}
+            subtitle={`${opt.questionCount ?? 55} ${t.questions}`}
             onClick={() => setSelected(opt.id)}
           />
         ))}

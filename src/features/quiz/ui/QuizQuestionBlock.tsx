@@ -14,8 +14,10 @@ export const QuizQuestionBlock = memo(function QuizQuestionBlock({
   compact = false,
   hideExplanation = false,
   locked = false,
+  showImage = true,
   t,
   onAnswer,
+  onZoomImage,
 }: {
   question: Question
   questionNumber: number
@@ -24,8 +26,10 @@ export const QuizQuestionBlock = memo(function QuizQuestionBlock({
   compact?: boolean
   hideExplanation?: boolean
   locked?: boolean
+  showImage?: boolean
   t: (typeof quizCopy)["en" | "vi"]
   onAnswer: (questionId: string, answer: AnswerValue) => void
+  onZoomImage?: (url: string) => void
 }) {
   const isTextResponse = question.options.length === 0
   const textAnswer = typeof selected === "string" ? selected : ""
@@ -36,6 +40,33 @@ export const QuizQuestionBlock = memo(function QuizQuestionBlock({
     <section className={cn("border-b border-[#E5E5E5] pb-8 last:border-b-0 last:pb-0 dark:border-white/10", compact && "pb-5")}>
       <p className="lp-label mb-2 text-[12px] uppercase tracking-[0.12em]">{t.question} {questionNumber}</p>
       <h2 className={cn("whitespace-pre-line", compact ? "text-[13px] leading-5 font-bold tracking-normal sm:text-[13px]" : "lp-card-title text-[18px] leading-8 sm:text-[20px]")}><MathText text={question.prompt} /></h2>
+      {showImage && question.imageUrl ? (
+        <div className="mb-5 overflow-hidden rounded-[12px] border-2 border-[#E5E5E5] bg-white dark:border-white/10 dark:bg-slate-900">
+          {onZoomImage ? (
+            <button
+              type="button"
+              className="block w-full cursor-zoom-in"
+              onClick={() => question.imageUrl && onZoomImage(question.imageUrl)}
+              aria-label={t.imageZoomLabel}
+            >
+              <img
+                src={question.imageUrl}
+                alt=""
+                className="h-auto w-full object-contain"
+                loading="lazy"
+              />
+            </button>
+          ) : (
+            <img
+              src={question.imageUrl}
+              alt=""
+              className="h-auto w-full object-contain"
+              loading="lazy"
+            />
+          )}
+          <p className="px-3 py-2 text-center text-[11px] font-semibold text-slate-400 dark:text-slate-500">{t.imageZoomHint}</p>
+        </div>
+      ) : null}
       <div className={cn("mt-5 flex flex-col gap-3", compact && "mt-3 gap-1.5 sm:grid sm:grid-cols-2 sm:gap-2")}>
         {isTextResponse ? (
           <>

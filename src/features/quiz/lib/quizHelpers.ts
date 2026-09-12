@@ -13,6 +13,13 @@ export function shuffle<T>(items: T[]) {
   return list
 }
 
+/** Resolves a bank image reference to a web path (absolute/http URLs pass through). */
+function toWebImagePath(value: unknown): string | undefined {
+  if (typeof value !== "string" || !value) return undefined
+  if (/^(https?:)?\/\//.test(value) || value.startsWith("/")) return value
+  return `/data/${value}`
+}
+
 export function mapBankItems(
   items: BankQuestion[],
   examId: string,
@@ -32,8 +39,8 @@ export function mapBankItems(
       acceptedAnswers: pairs.length ? undefined : acceptedAnswers,
       explanation: item.explainAnswer ?? item.explanation ?? item.explain_answer ?? item.explanation_text ?? item.reason,
       audioTimestamp: item.audioTimestamp,
-      imageUrl: item.image ? `/data/${item.image}` : undefined,
       ...context,
+      imageUrl: toWebImagePath(item.imageUrl) ?? (item.image ? `/data/${item.image}` : undefined) ?? context.imageUrl,
     }
   })
 }

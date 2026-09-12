@@ -143,6 +143,20 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
   const currentPartKey = useMemo(() => (current ? getPartKey(current) : ""), [current])
   const partQuestions = useMemo(() => getPartQuestions(questions, currentPartKey), [currentPartKey, questions])
   const partQuestionIds = useMemo(() => new Set(partQuestions.map((question) => question.id)), [partQuestions])
+  // Show a question's image inside its own block, but only at its first
+  // occurrence: banks sharing one image across a part (e.g. TADV reading)
+  // keep a single image, while per-question images (e.g. TA1 Part 5 signs)
+  // each render with their own question.
+  const partImageVisibility = useMemo(() => {
+    const seen = new Set<string>()
+    const visibility = new Map<string, boolean>()
+    for (const question of partQuestions) {
+      const url = question.imageUrl
+      visibility.set(question.id, !url || !seen.has(url))
+      if (url) seen.add(url)
+    }
+    return visibility
+  }, [partQuestions])
   const partStartIndices = useMemo(() => buildPartStartIndices(questions), [questions])
   const currentPartStartIndex = useMemo(() => getCurrentPartStartIndex(questions, partQuestions), [partQuestions, questions])
   const currentPartIndex = partStartIndices.indexOf(currentPartStartIndex)
@@ -567,7 +581,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
             <p className="lp-label text-[12px] uppercase tracking-[0.12em]">{subject.code} · {t.modeHard}</p>
             <p className="lp-card-meta">{getExamTitle(exam, lang)}</p>
           </div>
-          <QuestionMedia question={hardCurrent} t={t} onZoomImage={(url) => setLightboxImage(url)} />
+          <QuestionMedia question={hardCurrent} t={t} onZoomImage={(url) => setLightboxImage(url)} hideImage />
           <QuizQuestionBlock
             question={hardCurrent}
             questionNumber={hardPos + 1}
@@ -577,6 +591,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
             hideExplanation={hideExplanation}
             t={t}
             onAnswer={handleHardAnswer}
+            onZoomImage={(url) => setLightboxImage(url)}
           />
           <div className="mt-8 flex flex-row gap-3 sm:justify-end">
             <button
@@ -625,7 +640,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
             <p className="lp-label text-[12px] uppercase tracking-[0.12em]">{subject.code} · {setup.mode === "practice" || forcePractice ? t.modePractice : t.modeExam}</p>
             <p className="lp-card-meta">{getExamTitle(exam, lang)}</p>
           </div>
-          <QuestionMedia question={current} t={t} onZoomImage={(url) => setLightboxImage(url)} />
+          <QuestionMedia question={current} t={t} onZoomImage={(url) => setLightboxImage(url)} hideImage />
           <div className="space-y-5">
             {partQuestions.map((question) => (
               <QuizQuestionBlock
@@ -636,8 +651,10 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
                 isPractice={isPractice}
                 compact
                 hideExplanation={hideExplanation}
+                showImage={partImageVisibility.get(question.id) ?? true}
                 t={t}
                 onAnswer={handleAnswer}
+                onZoomImage={(url) => setLightboxImage(url)}
               />
             ))}
           </div>
@@ -710,10 +727,11 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
   )
 }
 
-function QuestionMedia({ question, t, onZoomImage }: {
+function QuestionMedia({ question, t, onZoomImage, hideImage = false }: {
   question: Question
   t: (typeof copy)["en" | "vi"]
   onZoomImage: (url: string) => void
+  hideImage?: boolean
 }) {
   const displayPartTitle = question.partTitle ? stripPart6GroupSuffix(question.partTitle) : undefined
   return (
@@ -724,7 +742,7 @@ function QuestionMedia({ question, t, onZoomImage }: {
           {question.instruction ? <p className={question.partTitle ? "mt-1" : ""}>{question.instruction}</p> : null}
         </div>
       ) : null}
-      {question.imageUrl ? (
+      {!hideImage && question.imageUrl ? (
         <div className="mb-5 overflow-hidden rounded-[12px] border-2 border-[#E5E5E5] bg-white dark:border-white/10 dark:bg-slate-900">
           <button
             type="button"
