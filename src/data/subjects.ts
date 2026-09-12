@@ -3,6 +3,7 @@ type ExamType = "midterm" | "final"
 export type SubjectId =
   | "tieng-anh-dau-vao"
   | "tieng-anh-1"
+  | "tadv-traphi"
   | "tu-tuong-ho-chi-minh"
   | "lich-su-dang-cong-san-viet-nam-giua-ky"
   | "lich-su-dang-cong-san-viet-nam"
@@ -149,6 +150,29 @@ export const subjects: Subject[] = [
     chapters: [
       { id: "cau-truc-de", label: { en: "Exam structure", vi: "Cấu trúc đề khi đi thi" }, documentId: "ta1-cau-truc-de", count: 1 },
       { id: "all", label: { en: "English 1 - Final", vi: "Tiếng Anh 1 - Cuối kỳ" }, count: 40 },
+    ],
+  },
+  {
+    id: "tadv-traphi",
+    code: "TADV02",
+    name: { en: "5 New English Placement Practice Tests", vi: "5 Bộ đề quiz ôn tập Tiếng Anh đầu vào mới" },
+    category: { en: "General", vi: "Đại cương" },
+    exams: [
+      {
+        id: "english-paid-tests-bank-1", type: "final", year: 2026, questionCount: 100, durationMinutes: 60,
+        title: { en: "English Placement Practice Tests", vi: "Quiz ôn tập Tiếng Anh Đầu Vào - 5 Bộ đề ôn tập" },
+        description: { en: "5 practice tests of 50 Listening and Reading questions following the school's sample exam structure, with equivalent level and difficulty. For practice and reference.", vi: "Gồm 5 bộ đề ôn tập, mỗi đề 50 câu Nghe và Đọc theo cấu trúc đề thi mẫu của trường, với mức độ - độ khó tương đương. Dùng để ôn tập, tham khảo." },
+      },
+      {
+        id: "english-paid-test02-bank-1", type: "final", year: 2026, questionCount: 50, durationMinutes: 60, hideFromCatalog: true,
+        title: { en: "English Placement Practice Test 1", vi: "Tiếng Anh Đầu Vào - Đề ôn tập 1" },
+        description: { en: "Test 2: 50 Listening and Reading questions following the school's sample exam structure. For practice and reference.", vi: "Đề số 2: 50 câu Nghe và Đọc theo cấu trúc đề thi mẫu của trường. Dùng để ôn tập, tham khảo." },
+      },
+      {
+        id: "english-paid-test03-bank-1", type: "final", year: 2026, questionCount: 50, durationMinutes: 60, hideFromCatalog: true,
+        title: { en: "English Placement Practice Test 2", vi: "Tiếng Anh Đầu Vào - Đề ôn tập 2" },
+        description: { en: "Test 3: 50 Listening and Reading questions following the school's sample exam structure. For practice and reference.", vi: "Đề số 3: 50 câu Nghe và Đọc theo cấu trúc đề thi mẫu của trường. Dùng để ôn tập, tham khảo." },
+      },
     ],
   },
   {

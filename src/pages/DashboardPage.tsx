@@ -29,6 +29,7 @@ import { PdfViewerModal } from "@/components/PdfViewerModal"
 import { ImageDocViewerModal } from "@/components/ImageDocViewerModal"
 import { TadvPickerModal } from "@/components/TadvPickerModal"
 import { DsaiPickerModal } from "@/components/DsaiPickerModal"
+import { tadvPaidExamOptions } from "@/data/tadvPaidExams"
 import { ToeicScopePickerModal } from "@/components/ToeicScopePickerModal"
 import { getToeicScopeOption, type ToeicScope } from "@/data/toeic"
 import { Card } from "@/components/ui/card"
@@ -52,7 +53,7 @@ import { DashboardStatCard, dashboardStatGridClass } from "@/components/Dashboar
 import { LeaderboardView } from "@/components/LeaderboardView"
 import { DirectNotificationPopup } from "@/components/DirectNotificationPopup"
 import { formatTime } from "@/features/quiz/lib/quizHelpers"
-import { createPaidCheckout, getPaidProductId, hasProductPurchase } from "@/lib/purchases"
+import { createPaidCheckout, formatSubjectPrice, getPaidProductId, hasProductPurchase } from "@/lib/purchases"
 import { useSubjectOverrides } from "@/hooks/useSubjectOverrides"
 import { applySubjectDisplayOverrides, filterVisibleSubjectExams } from "@/features/admin/lib/subjectDisplay"
 import type { ContactModalType } from "@/components/ContactModal"
@@ -230,6 +231,9 @@ export function DashboardPage({
     dsaiPickerExam,
     handleDsaiSelect,
     setDsaiPickerExam,
+    tadvPaidPickerExam,
+    handleTadvPaidSelect,
+    setTadvPaidPickerExam,
   } = useExamLaunch(lang)
 
   useEffect(() => {
@@ -409,6 +413,16 @@ export function DashboardPage({
         subject={dsaiPickerExam ? getSubjectById(dsaiPickerExam.subjectId) : null}
         onClose={() => setDsaiPickerExam(null)}
         onSelect={handleDsaiSelect}
+      />
+
+      <DsaiPickerModal
+        open={Boolean(tadvPaidPickerExam)}
+        lang={lang}
+        exam={tadvPaidPickerExam}
+        subject={tadvPaidPickerExam ? getSubjectById(tadvPaidPickerExam.subjectId) : null}
+        onClose={() => setTadvPaidPickerExam(null)}
+        onSelect={handleTadvPaidSelect}
+        options={tadvPaidExamOptions}
       />
 
       <QuizSetupModal
@@ -840,7 +854,7 @@ function HomeDashboard({
                 questionsLabel={t.questions}
                 footer={
                   <button type="button" className="lp-btn lp-btn--primary lp-btn--sm lp-btn--block mt-3 px-2 text-[12px] sm:mt-5 sm:px-4 sm:text-sm" onClick={() => onStartExam(exam)}>
-                    {getPaidProductId(exam.subjectCode) !== null ? "10.000 VND" : t.start}
+                    {formatSubjectPrice(exam.subjectCode) ?? t.start}
                     <ArrowRight className="hidden h-4 w-4 sm:inline" />
                   </button>
                 }

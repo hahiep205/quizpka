@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { X } from "lucide-react"
 import { Dialog } from "@/components/ui/dialog"
 import { getSubjectById, type ExamCatalogItem } from "@/data/subjects"
+import { formatSubjectPrice } from "@/lib/purchases"
 import type { Language } from "@/shared/types/app"
 
 type Lang = Language
@@ -91,7 +92,7 @@ export function PurchaseDetailDialog({ exam, lang, loading, error, onClose, onCo
     </div>
     <footer className="grid grid-cols-2 gap-2 border-t border-slate-100 p-4 sm:px-6 dark:border-white/10">
       <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={onClose} disabled={loading}>{isVietnamese ? "Hủy" : "Cancel"}</button>
-      <button type="button" className="lp-btn lp-btn--primary lp-btn--sm" onClick={onConfirm} disabled={loading || !ackTerms}>{loading ? (isVietnamese ? "Đang tạo đơn..." : "Creating...") : "10.000 VND"}</button>
+      <button type="button" className="lp-btn lp-btn--primary lp-btn--sm" onClick={onConfirm} disabled={loading || !ackTerms}>{loading ? (isVietnamese ? "Đang tạo đơn..." : "Creating...") : (exam ? formatSubjectPrice(exam.subjectCode) ?? "10.000 VND" : "10.000 VND")}</button>
     </footer>
   </Dialog>
 }

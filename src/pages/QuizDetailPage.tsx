@@ -8,9 +8,10 @@ import { PdfViewerModal } from "@/components/PdfViewerModal"
 import { ImageDocViewerModal } from "@/components/ImageDocViewerModal"
 import { TadvPickerModal } from "@/components/TadvPickerModal"
 import { DsaiPickerModal } from "@/components/DsaiPickerModal"
+import { tadvPaidExamOptions } from "@/data/tadvPaidExams"
 import { PaymentModal } from "@/components/PaymentModal"
 import { PurchaseDetailDialog } from "@/components/PurchaseDetailDialog"
-import { createPaidCheckout, getPaidProductId, hasProductPurchase } from "@/lib/purchases"
+import { createPaidCheckout, formatSubjectPrice, getPaidProductId, hasProductPurchase } from "@/lib/purchases"
 import { useExamLaunch } from "@/lib/useExamLaunch"
 import { logActivityEvent } from "@/features/activity/lib/activityLog"
 import { useAuth } from "@/auth/AuthProvider"
@@ -61,6 +62,9 @@ export function QuizDetailPage({ lang, slug }: { lang: Lang; slug: string }) {
     dsaiPickerExam,
     handleDsaiSelect,
     setDsaiPickerExam,
+    tadvPaidPickerExam,
+    handleTadvPaidSelect,
+    setTadvPaidPickerExam,
   } = useExamLaunch(lang)
   const nudge = useLoginNudge()
   const { user } = useAuth()
@@ -194,7 +198,7 @@ export function QuizDetailPage({ lang, slug }: { lang: Lang; slug: string }) {
                 className="lp-btn lp-btn--primary lp-btn--sm lp-btn--block"
                 onClick={() => tryExam(primaryExam)}
               >
-                {getPaidProductId(primaryExam.subjectCode) !== null ? "10.000 VND" : t.start}
+                {formatSubjectPrice(primaryExam.subjectCode) ?? t.start}
               </button>
             </div>
           </div>
@@ -271,6 +275,16 @@ export function QuizDetailPage({ lang, slug }: { lang: Lang; slug: string }) {
         subject={dsaiPickerExam ? getSubjectById(dsaiPickerExam.subjectId) : null}
         onClose={() => setDsaiPickerExam(null)}
         onSelect={handleDsaiSelect}
+      />
+
+      <DsaiPickerModal
+        open={Boolean(tadvPaidPickerExam)}
+        lang={lang}
+        exam={tadvPaidPickerExam}
+        subject={tadvPaidPickerExam ? getSubjectById(tadvPaidPickerExam.subjectId) : null}
+        onClose={() => setTadvPaidPickerExam(null)}
+        onSelect={handleTadvPaidSelect}
+        options={tadvPaidExamOptions}
       />
 
       <QuizSetupModal

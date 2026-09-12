@@ -30,6 +30,7 @@ export function getPaidProductId(subjectCode: string): string | null {
   if (subjectCode === "DM101") return "dm101"
   if (subjectCode === "TA101") return "ta101"
   if (subjectCode === "RM101") return "rm101"
+  if (subjectCode === "TADV02") return "tadv02"
   return null
 }
 
@@ -71,6 +72,24 @@ export async function createPaidCheckout(productId = "dsai101") {
 }
 
 export const createDsaiCheckout = () => createPaidCheckout("dsai101")
+
+const PRODUCT_PRICES_VND: Record<string, number> = {
+  tadv02: 20000,
+}
+
+export function getProductPriceVnd(productId: string): number {
+  return PRODUCT_PRICES_VND[productId] ?? 10000
+}
+
+export function formatProductPrice(productId: string): string {
+  return `${new Intl.NumberFormat("vi-VN").format(getProductPriceVnd(productId))} VND`
+}
+
+/** Display price for a subject card CTA, or null when the subject is free. */
+export function formatSubjectPrice(subjectCode: string): string | null {
+  const productId = getPaidProductId(subjectCode)
+  return productId === null ? null : formatProductPrice(productId)
+}
 
 export async function hasProductPurchase(userId: string, productId: string) {
   const { data, error } = await supabase.from("purchases").select("id").eq("user_id", userId).eq("product_id", productId).eq("status", "paid").maybeSingle()

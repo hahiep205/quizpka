@@ -2,6 +2,7 @@ import { useState } from "react"
 import type { ExamCatalogItem } from "@/data/subjects"
 import { tadvExamOptions } from "@/data/tadvExams"
 import { dsaiExamOptions } from "@/data/dsaiExams"
+import { tadvPaidExamOptions } from "@/data/tadvPaidExams"
 import { useChapterPractice } from "@/lib/useChapterPractice"
 
 type Lang = "en" | "vi"
@@ -14,6 +15,8 @@ type Lang = "en" | "vi"
  *   chapter picker / setup modal.
  * - Clicking a "khoa-hoc-du-lieu-va-tri-tue-nhan-tao" exam opens
  *   DsaiPickerModal to choose the midterm or final set.
+ * - Clicking a "tadv-traphi" exam opens DsaiPickerModal with the paid
+ *   test options instead.
  * - Selecting an option swaps the exam id/title/description/banks in place
  *   and forwards it to the quiz setup modal.
  */
@@ -21,12 +24,15 @@ export function useExamLaunch(lang: Lang) {
   const practice = useChapterPractice(lang)
   const [tadvPickerExam, setTadvPickerExam] = useState<ExamCatalogItem | null>(null)
   const [dsaiPickerExam, setDsaiPickerExam] = useState<ExamCatalogItem | null>(null)
+  const [tadvPaidPickerExam, setTadvPaidPickerExam] = useState<ExamCatalogItem | null>(null)
 
   const handleTryNow = (exam: ExamCatalogItem) => {
     if (exam.subjectId === "tieng-anh-dau-vao") {
       setTadvPickerExam(exam)
     } else if (exam.subjectId === "khoa-hoc-du-lieu-va-tri-tue-nhan-tao") {
       setDsaiPickerExam(exam)
+    } else if (exam.subjectId === "tadv-traphi") {
+      setTadvPaidPickerExam(exam)
     } else {
       practice.handleTryNow(exam)
     }
@@ -61,14 +67,32 @@ export function useExamLaunch(lang: Lang) {
     setDsaiPickerExam(null)
   }
 
+  const handleTadvPaidSelect = (examId: string) => {
+    const opt = tadvPaidExamOptions.find((o) => o.id === examId)
+    if (!opt || !tadvPaidPickerExam) return
+    const newExam: ExamCatalogItem = {
+      ...tadvPaidPickerExam,
+      id: opt.id,
+      title: opt.title,
+      description: opt.description,
+      questionCount: opt.questionCount,
+      durationMinutes: opt.durationMinutes,
+    }
+    practice.setSetupExam(newExam)
+    setTadvPaidPickerExam(null)
+  }
+
   return {
     ...practice,
     tadvPickerExam,
     dsaiPickerExam,
+    tadvPaidPickerExam,
     handleTryNow,
     handleTadvSelect,
     handleDsaiSelect,
+    handleTadvPaidSelect,
     setTadvPickerExam,
     setDsaiPickerExam,
+    setTadvPaidPickerExam,
   }
 }

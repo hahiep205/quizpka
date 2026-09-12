@@ -2,7 +2,7 @@ import { useEffect, useId, useRef, useState } from "react"
 import { BookOpen } from "lucide-react"
 import { useAuth } from "@/auth/AuthProvider"
 import { logActivityEvent } from "@/features/activity/lib/activityLog"
-import { dsaiExamOptions } from "@/data/dsaiExams"
+import { dsaiExamOptions, type DsaiExamOption } from "@/data/dsaiExams"
 import type { ExamCatalogItem, Subject } from "@/data/subjects"
 import { getExamTitle } from "@/data/subjects"
 import { dsaiPickerCopy as copy } from "@/shared/i18n"
@@ -17,20 +17,21 @@ type Props = {
   subject: Subject | null
   onClose: () => void
   onSelect: (examId: string) => void
+  options?: DsaiExamOption[]
 }
 
-export function DsaiPickerModal({ open, lang, exam, subject, onClose, onSelect }: Props) {
+export function DsaiPickerModal({ open, lang, exam, subject, onClose, onSelect, options = dsaiExamOptions }: Props) {
   const titleId = useId()
   const { user } = useAuth()
   const [visible, setVisible] = useState(false)
   const [state, setState] = useState<"open" | "closed">("closed")
-  const [selected, setSelected] = useState<string>(dsaiExamOptions[0].id)
+  const [selected, setSelected] = useState<string>(options[0].id)
   const loggedExamRef = useRef<string | null>(null)
   const t = copy[lang]
 
   useEffect(() => {
     if (open && exam) {
-      setSelected(dsaiExamOptions[0].id)
+      setSelected(options[0].id)
       setVisible(true)
       setState("open")
       if (user?.id && loggedExamRef.current !== exam.id) {
@@ -78,7 +79,7 @@ export function DsaiPickerModal({ open, lang, exam, subject, onClose, onSelect }
       }
     >
       <div className="grid gap-3">
-        {dsaiExamOptions.map((opt) => (
+        {options.map((opt) => (
           <PickerOptionButton
             key={opt.id}
             active={selected === opt.id}

@@ -20,6 +20,8 @@ const examFiles: Record<string, string> = {
   "discrete-math-quiz-bank-1": "dm101/toan_roi_rac_quiz.json",
   "english-1-final-bank-1": "ta101/tieng_anh_1_quiz.json",
   "research-methodology-final-bank-1": "rm101/phuong_phap_nghien_cuu.json",
+  "english-paid-test02-bank-1": "tadv02/test02.json",
+  "english-paid-test03-bank-1": "tadv02/test03.json",
 }
 const examProducts: Record<string, string> = {
   "data-science-ai-midterm-1": "dsai101",
@@ -43,6 +45,8 @@ const examProducts: Record<string, string> = {
   "discrete-math-quiz-bank-1": "dm101",
   "english-1-final-bank-1": "ta101",
   "research-methodology-final-bank-1": "rm101",
+  "english-paid-test02-bank-1": "tadv02",
+  "english-paid-test03-bank-1": "tadv02",
 }
 const sqaExamId = "software-quality-assessment-final-bank-1"
 const marExamId = "marketing-final-bank-1"

@@ -28,6 +28,8 @@ const examFiles: Record<string, string> = {
   "discrete-math-quiz-bank-1": "dm101/toan_roi_rac_quiz.json",
   "english-1-final-bank-1": "ta101/tieng_anh_1_quiz.json",
   "research-methodology-final-bank-1": "rm101/phuong_phap_nghien_cuu.json",
+  "english-paid-test02-bank-1": "tadv02/test02.json",
+  "english-paid-test03-bank-1": "tadv02/test03.json",
 }
 const sqaFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json", "chuong_6.json"]
 const marFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json", "chuong_6.json", "chuong_7.json", "chuong_8.json", "chuong_9.json"]

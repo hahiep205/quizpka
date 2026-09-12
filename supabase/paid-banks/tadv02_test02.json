@@ -1,0 +1,758 @@
+{
+  "title": "Đề Thi Tiếng Anh Tổng Hợp - Test 2",
+  "totalParts": 6,
+  "totalQuestions": 50,
+  "parts": [
+    {
+      "partNumber": 1,
+      "partTitle": "PART 1: Short Conversations (Pictures)",
+      "instruction": "For each question, choose the correct answer. You will hear each recording twice.",
+      "audioUrl": "tadv-traphi/test02/part1-audio.mp3",
+      "imageUrl": null,
+      "passage": null,
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 1,
+          "question": "What are they going to have for lunch?",
+          "audioTimestamp": "0:00",
+          "transcript": "Mum: Pete, would you like some pasta for lunch today?\nPete: There’s some pizza left … We didn’t eat it all last night.\nMum: Don’t you want something different? I can make a salad if you don’t want pasta.\nPete: I’m fine with the same as last night.\nMum: OK then. Lunch won’t be long.",
+          "options": {
+            "A": "pasta",
+            "B": "salad",
+            "C": "pizza"
+          },
+          "answer": "C",
+          "explainAnswer": "Pete muốn ăn lại món pizza còn thừa từ tối hôm trước, không muốn pasta hay salad."
+        },
+        {
+          "id": 2,
+          "question": "Which family are Emily’s new neighbours?",
+          "audioTimestamp": null,
+          "transcript": "Emily: A new family has moved into the flat next to us. I met them yesterday.\nSean: What are they like?\nEmily: Great. There’s the grandma, she’s really friendly, and two children, about my age, I think.\nSean: Like you and your brother?\nEmily: Just girls. Their dad’s a photographer and their mum’s a teacher.",
+          "options": {
+            "A": "grandma + parents + 1 boy + 1 girl",
+            "B": "parents + 2 boys",
+            "C": "grandma + parents + 2 girls"
+          },
+          "answer": "C",
+          "explainAnswer": "Gia đình mới có bà ngoại, bố (nhiếp ảnh gia), mẹ (giáo viên) và hai cô bé."
+        },
+        {
+          "id": 3,
+          "question": "What was Oscar doing when Isabel phoned him?",
+          "audioTimestamp": null,
+          "transcript": "Isabel: Hi, Oscar, it’s Isabel.\nOscar: Oh, hi. How are you? Listen, I can’t talk for long, sorry.\nIsabel: No problem. Are you having your dinner?\nOscar: I’m helping my dad move the furniture in my bedroom. And then we’re going to paint the walls.\nIsabel: Wow! Don’t worry, I’ll send you a text later. Have fun painting!",
+          "options": {
+            "A": "moving furniture",
+            "B": "having dinner",
+            "C": "painting the walls"
+          },
+          "answer": "A",
+          "explainAnswer": "Oscar đang giúp bố chuyển đồ đạc trong phòng ngủ. Việc sơn tường sẽ làm sau."
+        },
+        {
+          "id": 4,
+          "question": "Why didn’t Niesha go to the party?",
+          "audioTimestamp": null,
+          "transcript": "Boy: Hi, Niesha, why didn’t you go to Jack’s party on Saturday? Were you sick?\nNiesha: I was when I missed the sports day at school, but I missed the party because we were driving back from holiday.\nBoy: Did you visit your aunt - the one who’s a chef?\nNiesha: Yes, we had amazing dinners every night!",
+          "options": {
+            "A": "She was travelling back from holiday.",
+            "B": "She was sick.",
+            "C": "She was visiting her aunt."
+          },
+          "answer": "A",
+          "explainAnswer": "Niesha không đi tiệc vì lúc đó đang trên đường lái xe về từ kỳ nghỉ."
+        },
+        {
+          "id": 5,
+          "question": "Where’s Oliver’s phone now?",
+          "audioTimestamp": null,
+          "transcript": "Oliver: Have you seen my mobile anywhere?\nPoppy: I think it was on the kitchen table earlier.\nOliver: I’ve used it since then … did I put it on the desk afterwards?\nPoppy: You often leave it on the sofa when you’re watching TV.\nOliver: Ah, I was right. Look - I couldn’t see it because of the books.",
+          "options": {
+            "A": "on the kitchen table",
+            "B": "on the desk",
+            "C": "on the sofa"
+          },
+          "answer": "B",
+          "explainAnswer": "Oliver tìm thấy điện thoại trên bàn học (desk), bị sách che khuất."
+        }
+      ]
+    },
+    {
+      "partNumber": 2,
+      "partTitle": "PART 2: Listening - Camping Trip",
+      "instruction": "You will hear Jasmine talking to her aunt about a camping trip. For each question, choose the correct answer A, B or C.",
+      "audioUrl": "tadv-traphi/test02/part2-audio.mp3",
+      "imageUrl": null,
+      "passage": null,
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 6,
+          "question": "Where did Jasmine and her aunt go swimming?",
+          "audioTimestamp": null,
+          "transcript": "Jasmine: Thank you for taking me camping with you last weekend, Aunt Lizzie.\nLizzie: It was great, wasn’t it, Jasmine? Especially when we went swimming. It was too windy to swim in the sea, but the lake was great anyway. Perhaps next time we can try the river.\nJasmine: Sleeping in a tent was new for me. I was worried about it on the first night, but I soon found out how exciting it is! My brother was very unhappy that he couldn’t come with us.\nLizzie: Cooking was fun. Well, sometimes. It was difficult to cook the omelette, but I loved grilling the steak on a barbecue. Did you like the pasta I made?\nJasmine: Yes, I was really hungry that day.\nLizzie: The campsite was quite big, but it’s a pity they didn’t have anywhere to buy food and things. And the showers were a bit dirty, but OK. Which activity did you like best?\nJasmine: Well, running in the forest was OK, but hard. But fishing was amazing, even more fun than cycling!\nLizzie: I’m glad you had a good time.",
+          "options": {
+            "A": "in the sea",
+            "B": "in the river",
+            "C": "in the lake"
+          },
+          "answer": "C",
+          "explainAnswer": "Trời quá gió nên không bơi được ở biển. Họ đã bơi ở hồ (lake)."
+        },
+        {
+          "id": 7,
+          "question": "How did Jasmine feel about sleeping in a tent to start with?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "excited",
+            "B": "afraid",
+            "C": "unhappy"
+          },
+          "answer": "B",
+          "explainAnswer": "Jasmine nói ban đầu cô lo lắng (worried) về việc ngủ trong lều, tức là cảm thấy sợ."
+        },
+        {
+          "id": 8,
+          "question": "What did Jasmine’s aunt like cooking?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "omelette",
+            "B": "steak",
+            "C": "pasta"
+          },
+          "answer": "B",
+          "explainAnswer": "Dì Lizzie nói nấu omelette khó, nhưng rất thích nướng steak trên bếp than."
+        },
+        {
+          "id": 9,
+          "question": "Jasmine’s aunt thought the campsite",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "needed a shop.",
+            "B": "had good showers.",
+            "C": "was too small."
+          },
+          "answer": "A",
+          "explainAnswer": "Dì Lizzie tiếc vì khu cắm trại không có chỗ bán đồ ăn và vật dụng (needed a shop)."
+        },
+        {
+          "id": 10,
+          "question": "Which activity did Jasmine like best?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "cycling",
+            "B": "fishing",
+            "C": "running"
+          },
+          "answer": "B",
+          "explainAnswer": "Jasmine thích câu cá nhất, còn thú vị hơn cả đi xe đạp."
+        }
+      ]
+    },
+    {
+      "partNumber": 3,
+      "partTitle": "PART 3: Grammar",
+      "instruction": "For questions 11-25, choose the correct answer by clicking the best option.",
+      "audioUrl": null,
+      "imageUrl": null,
+      "passage": null,
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 11,
+          "question": "He usually ___ coffee before going to work every morning.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "drink",
+            "B": "drinks",
+            "C": "is drinking",
+            "D": "drank"
+          },
+          "answer": "B",
+          "explainAnswer": "Thói quen hàng ngày → hiện tại đơn. Chủ ngữ 'He' nên dùng drinks."
+        },
+        {
+          "id": 12,
+          "question": "You ___ park your car here because it is a private area.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "shouldn't",
+            "B": "don't have to",
+            "C": "must not",
+            "D": "might not"
+          },
+          "answer": "C",
+          "explainAnswer": "Cấm đậu xe ở khu vực riêng tư → must not (không được phép)."
+        },
+        {
+          "id": 13,
+          "question": "This red coat is much ___ than the blue one I tried on earlier.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "expensive",
+            "B": "more expensive",
+            "C": "most expensive",
+            "D": "as expensive"
+          },
+          "answer": "B",
+          "explainAnswer": "So sánh hơn của tính từ dài → more expensive."
+        },
+        {
+          "id": 14,
+          "question": "Yesterday, they ___ a famous actor while walking in the park.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "meet",
+            "B": "met",
+            "C": "meeting",
+            "D": "have met"
+          },
+          "answer": "B",
+          "explainAnswer": "Có 'Yesterday' → quá khứ đơn: met."
+        },
+        {
+          "id": 15,
+          "question": "There is only ___ milk left in the fridge, so we need to buy more.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "a little",
+            "B": "many",
+            "C": "a few",
+            "D": "few"
+          },
+          "answer": "A",
+          "explainAnswer": "Milk là danh từ không đếm được → dùng a little."
+        },
+        {
+          "id": 16,
+          "question": "Look at those dark clouds! It ___ rain very soon.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "will",
+            "B": "is going to",
+            "C": "rains",
+            "D": "is raining"
+          },
+          "answer": "B",
+          "explainAnswer": "Có dấu hiệu rõ ràng (mây đen) → dùng be going to để dự đoán."
+        },
+        {
+          "id": 17,
+          "question": "We ___ in this city since 2015, and we love living here.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "lived",
+            "B": "are living",
+            "C": "have lived",
+            "D": "live"
+          },
+          "answer": "C",
+          "explainAnswer": "Có 'since 2015' → hiện tại hoàn thành: have lived."
+        },
+        {
+          "id": 18,
+          "question": "If the weather ___ good tomorrow, we will go for a hike in the hills.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "is",
+            "B": "will be",
+            "C": "was",
+            "D": "be"
+          },
+          "answer": "A",
+          "explainAnswer": "Câu điều kiện loại 1: If + hiện tại đơn, will + V."
+        },
+        {
+          "id": 19,
+          "question": "By the time the train arrived at the station, we ___ for over two hours.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "waited",
+            "B": "have waited",
+            "C": "had waited",
+            "D": "were waiting"
+          },
+          "answer": "C",
+          "explainAnswer": "Hành động chờ xảy ra trước khi tàu đến → quá khứ hoàn thành: had waited."
+        },
+        {
+          "id": 20,
+          "question": "This popular song ___ by a famous composer in the 19th century.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "wrote",
+            "B": "was written",
+            "C": "is written",
+            "D": "had written"
+          },
+          "answer": "B",
+          "explainAnswer": "Bị động quá khứ đơn: was written."
+        },
+        {
+          "id": 21,
+          "question": "He told me that he ___ his homework before coming to the class.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "finishes",
+            "B": "has finished",
+            "C": "had finished",
+            "D": "will finish"
+          },
+          "answer": "C",
+          "explainAnswer": "Tường thuật + hành động hoàn thành trước → quá khứ hoàn thành: had finished."
+        },
+        {
+          "id": 22,
+          "question": "If I won the lottery, I ___ a large house near the ocean.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "will buy",
+            "B": "would buy",
+            "C": "bought",
+            "D": "buy"
+          },
+          "answer": "B",
+          "explainAnswer": "Câu điều kiện loại 2: If + quá khứ đơn, would + V."
+        },
+        {
+          "id": 23,
+          "question": "The laptop is sitting ___ the wooden table in the living room.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "under",
+            "B": "on",
+            "C": "in",
+            "D": "among"
+          },
+          "answer": "B",
+          "explainAnswer": "Laptop đặt trên bàn → on the table."
+        },
+        {
+          "id": 24,
+          "question": "When I was a child, I ___ play football with my friends every afternoon.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "used to",
+            "B": "am used to",
+            "C": "use to",
+            "D": "got used to"
+          },
+          "answer": "A",
+          "explainAnswer": "Thói quen trong quá khứ → used to."
+        },
+        {
+          "id": 25,
+          "question": "There is ___ at the front door asking to speak with the manager.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "anyone",
+            "B": "someone",
+            "C": "no one",
+            "D": "everywhere"
+          },
+          "answer": "B",
+          "explainAnswer": "Có người đang ở cửa → someone."
+        }
+      ]
+    },
+    {
+      "partNumber": 4,
+      "partTitle": "PART 4: Vocabulary",
+      "instruction": "For questions 26-40, choose the correct answer by clicking the best option.",
+      "audioUrl": null,
+      "imageUrl": null,
+      "passage": null,
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 26,
+          "question": "She joined a gym to improve her physical ____ and stay active.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "fitness",
+            "B": "recipe",
+            "C": "passport",
+            "D": "climate"
+          },
+          "answer": "A",
+          "explainAnswer": "Fitness nghĩa là thể lực / sức khỏe thể chất."
+        },
+        {
+          "id": 27,
+          "question": "My brother loves watching ____ because he enjoys speed and sports cars.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "racing",
+            "B": "audience",
+            "C": "vocabulary",
+            "D": "container"
+          },
+          "answer": "A",
+          "explainAnswer": "Racing là đua xe, phù hợp với sở thích tốc độ và xe thể thao."
+        },
+        {
+          "id": 28,
+          "question": "Passengers must show their boarding ____ before entering the airplane.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "pass",
+            "B": "fuel",
+            "C": "luggage",
+            "D": "platform"
+          },
+          "answer": "A",
+          "explainAnswer": "Boarding pass là thẻ lên máy bay."
+        },
+        {
+          "id": 29,
+          "question": "The friendly ____ recommended the best local restaurant in the village.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "resident",
+            "B": "kitchen",
+            "C": "shadow",
+            "D": "century"
+          },
+          "answer": "A",
+          "explainAnswer": "Resident nghĩa là cư dân / người địa phương."
+        },
+        {
+          "id": 30,
+          "question": "We were ____ to hear that our team won the final championship match.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "thrilled",
+            "B": "ancient",
+            "C": "artificial",
+            "D": "narrow"
+          },
+          "answer": "A",
+          "explainAnswer": "Thrilled nghĩa là rất vui / phấn khích."
+        },
+        {
+          "id": 31,
+          "question": "They decided to get ____ after celebrating five years of dating.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "married",
+            "B": "polluted",
+            "C": "bitter",
+            "D": "optional"
+          },
+          "answer": "A",
+          "explainAnswer": "Get married nghĩa là kết hôn."
+        },
+        {
+          "id": 32,
+          "question": "Going on a safari trip was a memorable ____ for the whole family.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "experience",
+            "B": "sentence",
+            "C": "blanket",
+            "D": "instrument"
+          },
+          "answer": "A",
+          "explainAnswer": "Experience nghĩa là trải nghiệm."
+        },
+        {
+          "id": 33,
+          "question": "Eagles have powerful ____ that help them catch prey from great heights.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "talons",
+            "B": "tires",
+            "C": "buttons",
+            "D": "cushions"
+          },
+          "answer": "A",
+          "explainAnswer": "Talons là móng vuốt của chim săn mồi."
+        },
+        {
+          "id": 34,
+          "question": "The ships sailed safely into the harbor through the wide ____.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "channel",
+            "B": "carpet",
+            "C": "shoulder",
+            "D": "mirror"
+          },
+          "answer": "A",
+          "explainAnswer": "Channel nghĩa là kênh / luồng lạch vào cảng."
+        },
+        {
+          "id": 35,
+          "question": "Drivers should lower their speed to avoid an unexpected ____ on the road.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "crash",
+            "B": "salary",
+            "C": "sculpture",
+            "D": "souvenir"
+          },
+          "answer": "A",
+          "explainAnswer": "Crash nghĩa là vụ va chạm / tai nạn."
+        },
+        {
+          "id": 36,
+          "question": "The city council decided to build a modern ____ over the river.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "bridge",
+            "B": "cloud",
+            "C": "valley",
+            "D": "desert"
+          },
+          "answer": "A",
+          "explainAnswer": "Bridge nghĩa là cây cầu."
+        },
+        {
+          "id": 37,
+          "question": "Thousands of music lovers attended the annual ____ in the city park.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "festival",
+            "B": "ingredient",
+            "C": "luggage",
+            "D": "reptile"
+          },
+          "answer": "A",
+          "explainAnswer": "Festival nghĩa là lễ hội."
+        },
+        {
+          "id": 38,
+          "question": "The room was decorated with ____ flowers to create a warm atmosphere.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "colorful",
+            "B": "dangerous",
+            "C": "crowded",
+            "D": "frozen"
+          },
+          "answer": "A",
+          "explainAnswer": "Colorful flowers nghĩa là hoa nhiều màu sắc."
+        },
+        {
+          "id": 39,
+          "question": "He repaired the ____ chair using a hammer and some strong nails.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "broken",
+            "B": "heavy",
+            "C": "shallow",
+            "D": "smooth"
+          },
+          "answer": "A",
+          "explainAnswer": "Broken chair nghĩa là chiếc ghế bị hỏng."
+        },
+        {
+          "id": 40,
+          "question": "The security guard caught the ____ who tried to steal valuable items.",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "thief",
+            "B": "painter",
+            "C": "audience",
+            "D": "musician"
+          },
+          "answer": "A",
+          "explainAnswer": "Thief nghĩa là kẻ trộm."
+        }
+      ]
+    },
+    {
+      "partNumber": 5,
+      "partTitle": "PART 5: Notices / Signs",
+      "instruction": "For each question, choose the correct answer A, B or C.",
+      "audioUrl": null,
+      "imageUrl": null,
+      "passage": null,
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 41,
+          "question": "What does the notice mean?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "This shop will sell customers' watches within twelve months.",
+            "B": "This shop will keep customers' watches for up to twelve months.",
+            "C": "This shop will look after customers' watches for more than twelve months."
+          },
+          "answer": "B",
+          "explainAnswer": "Cửa hàng sẽ giữ đồng hồ của khách tối đa 12 tháng.",
+          "imageUrl": "tadv-traphi/test02/part5-image-test2/1.png"
+        },
+        {
+          "id": 42,
+          "question": "What does the notice say about Philippe and Stefano?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "Philippe and Stefano missed each other at the stadium.",
+            "B": "Stefano had to leave without Philippe to get to work.",
+            "C": "Stefano has given up waiting for Philippe to arrive."
+          },
+          "answer": "C",
+          "explainAnswer": "Stefano đã hết chờ Philippe và rời đi.",
+          "imageUrl": "tadv-traphi/test02/part5-image-test2/2.png"
+        },
+        {
+          "id": 43,
+          "question": "What is the last day for returning forms?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "Parents must return forms this week if their child is going on Friday's trip.",
+            "B": "Parents cannot go on next month's trip unless they return their forms by Friday.",
+            "C": "The last day for returning completed forms for the trip is Friday."
+          },
+          "answer": "C",
+          "explainAnswer": "Hạn cuối nộp đơn là thứ Sáu.",
+          "imageUrl": "tadv-traphi/test02/part5-image-test2/3.png"
+        },
+        {
+          "id": 44,
+          "question": "Gabi wants Jo to",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "change an arrangement.",
+            "B": "cancel a regular event.",
+            "C": "come to a business meeting."
+          },
+          "answer": "A",
+          "explainAnswer": "Gabi muốn Jo thay đổi một kế hoạch đã hẹn.",
+          "imageUrl": "tadv-traphi/test02/part5-image-test2/4.png"
+        },
+        {
+          "id": 45,
+          "question": "What does the notice say about the lift?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "It is not possible to use the lift above the ground floor today.",
+            "B": "The lift will not be going to the basement today.",
+            "C": "The stairs between the basement and the ground floor are closed today."
+          },
+          "answer": "B",
+          "explainAnswer": "Hôm nay thang máy không xuống tầng hầm.",
+          "imageUrl": "tadv-traphi/test02/part5-image-test2/5.png"
+        }
+      ]
+    },
+    {
+      "partNumber": 6,
+      "partTitle": "PART 6: Reading - Starting photography",
+      "instruction": "Read the text and answer the questions. For each question, choose the correct answer A, B or C.",
+      "audioUrl": null,
+      "imageUrl": null,
+      "passage": "Have you ever wanted to take better pictures of your family, of your dinner or of your cat? Well, I can help you. In fact, that’s what makes photography such a fantastic hobby. It doesn’t matter if you have a nice new camera or just use your phone. We photographers are always trying to improve. We want today’s to be more interesting than yesterday’s.\n\nIn my photography classes, I’ll show you how to find your own style, not just take the same photos as all your friends. But you’ll need to be out of bed early and take pictures in the best light, before it gets too bright. We’ll talk more about light in Week 1.\n\nActually, I’ve never read a book about photography, and I get bored watching videos on the net. I started to understand more about photography by looking at my own photos. I thought about what was wrong with them and decided how to do better next time. And in Week 2, I’ll ask you to do the same with photos you have taken.\n\nDo you want to know what I think? I don’t think there’s anyone who can’t take amazing photos. Not everyone wants to, and that’s cool. But if you do, come along to Room 4D on Wednesdays after lunch from 1:30 to 2:00.",
+      "referenceNotices": null,
+      "questions": [
+        {
+          "id": 46,
+          "question": "Why does Mrs Howells enjoy photography?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "She loves using her new camera.",
+            "B": "She likes taking photos of her family.",
+            "C": "She enjoys trying to take better pictures."
+          },
+          "answer": "C",
+          "explainAnswer": "Bà ấy thích nhiếp ảnh vì luôn cố gắng chụp ảnh ngày hôm nay đẹp hơn ngày hôm qua."
+        },
+        {
+          "id": 47,
+          "question": "What advice does Mrs Howells give?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "Take pictures with your friends.",
+            "B": "Don’t take photos if it is dark.",
+            "C": "Take photos early in the morning."
+          },
+          "answer": "C",
+          "explainAnswer": "Bà khuyên dậy sớm để chụp ảnh khi ánh sáng còn đẹp, trước khi trời quá sáng."
+        },
+        {
+          "id": 48,
+          "question": "How did Mrs Howells learn about photography?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "from books",
+            "B": "from her mistakes",
+            "C": "from videos on the web"
+          },
+          "answer": "B",
+          "explainAnswer": "Bà học bằng cách xem lại ảnh của chính mình, nhận ra lỗi và sửa lần sau."
+        },
+        {
+          "id": 49,
+          "question": "Mrs Howells believes that",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "everybody should learn photography.",
+            "B": "photography is a great hobby for everyone.",
+            "C": "everybody can take good photos if they want to."
+          },
+          "answer": "C",
+          "explainAnswer": "Bà tin rằng ai cũng có thể chụp được ảnh đẹp nếu họ muốn."
+        },
+        {
+          "id": 50,
+          "question": "Why has Mrs Howells written this text?",
+          "audioTimestamp": null,
+          "transcript": null,
+          "options": {
+            "A": "to ask pupils what they like photographing",
+            "B": "to tell pupils about a photography course",
+            "C": "to answer pupils’ questions about photography"
+          },
+          "answer": "B",
+          "explainAnswer": "Bài viết nhằm giới thiệu khóa học nhiếp ảnh vào thứ Tư hàng tuần."
+        }
+      ]
+    }
+  ]
+}
