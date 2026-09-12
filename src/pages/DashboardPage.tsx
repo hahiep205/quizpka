@@ -744,7 +744,7 @@ function DashboardTopbar({ lang, view, onlineCount = 0 }: Pick<DashboardPageProp
           </a>
         )}
 
-        <a href="/" className="hidden min-w-0 flex-1 sm:block" aria-label={topbarTitle}>
+        <a href="/" className="hidden min-w-0 flex-1 lg:block" aria-label={topbarTitle}>
           <h2 className="truncate bg-gradient-to-r from-[#7DD3FC] via-[#1CB0F6] to-[#0A4FD6] bg-clip-text text-2xl font-black tracking-[-0.025em] text-transparent sm:text-[32px] lg:text-[36px]">{topbarTitle}</h2>
         </a>
 
