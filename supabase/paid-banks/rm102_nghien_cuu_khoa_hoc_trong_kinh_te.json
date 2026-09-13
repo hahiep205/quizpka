@@ -1,0 +1,1942 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Phương pháp nghiên cứu khoa học trong kinh tế",
+  "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+  "totalQuestions": 129,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Khi thu thập dữ liệu, các thông tin có thể gây ra lo ngại và quấy rầy đối tượng khảo sát. Nghiên cứu viên cần:",
+      "options": {
+        "A": "Chuyển hướng nghiên cứu khác",
+        "B": "Tiến hành các bước để loại bỏ những điều này (thông báo, xin sự đồng ý, ngưng khảo sát ngay khi đối tượng yêu cầu)",
+        "C": "Có thể thu thập thông tin nếu được trả thù lao",
+        "D": "Có thể thu thập thông tin và giữ bí mật"
+      },
+      "answer": "B",
+      "explainAnswer": "Cần thông báo cho người tham gia, xin sự đồng ý và dừng khảo sát khi họ yêu cầu để giảm hoặc loại bỏ lo ngại, quấy rầy.",
+      "image": null
+    },
+    {
+      "id": 2,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Khi viết phần khảo lược các nghiên cứu thuộc ngành kinh tế, kinh doanh và quản lý, điểm nào sau đây cần TRÁNH thực hiện",
+      "options": {
+        "A": "Mang tính học thuật và hoàn toàn không thể ứng dụng trong thực tế. (2)",
+        "B": "Sử dụng các qui trình, phương pháp và kỹ thuật đã được kiểm định về tính hiệu lực và đáng tin cậy. (1)",
+        "C": "Được thiết kế mang tính chủ quan và thiên lệch. (3)",
+        "D": "Nội dung (1), (2) và (3) đều đúng."
+      },
+      "answer": "D",
+      "explainAnswer": "Các điểm (1), (2) và (3) đều là những điều cần tránh khi viết lược khảo: không nên tuyệt đối hóa tính hàn lâm, không nên chủ quan và thiên lệch, đồng thời phải dùng phương pháp có cơ sở và đáng tin cậy.",
+      "image": null
+    },
+    {
+      "id": 3,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Phát biểu nào sau đây là SAI về nghiên cứu khoa học:",
+      "options": {
+        "A": "Được thực hiện trong một khuôn khổ của các triết lý",
+        "B": "Được thiết kế để tránh thiên lệch và chủ quan",
+        "C": "Mang tính học thuật và không thể ứng dụng trong thực tế",
+        "D": "Sử dụng các qui trình, phương pháp và kỹ thuật đã được kiểm định về tính hiệu lực và đáng tin cậy"
+      },
+      "answer": "C",
+      "explainAnswer": "Nghiên cứu khoa học có thể có giá trị ứng dụng trong thực tế; vì vậy phát biểu cho rằng nghiên cứu khoa học không thể ứng dụng là sai.",
+      "image": null
+    },
+    {
+      "id": 4,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Hình thành thiết kế nghiên cứu (reseach design) là một bước trong giai đoạn nào của quy trình nghiên cứu:",
+      "options": {
+        "A": "Thực hiện nghiên cứu (3)",
+        "B": "Lập kế hoạch nghiên cứu (2)",
+        "C": "Quyết định vấn đề nghiên cứu (1)",
+        "D": "Nội dung (1) (2) (3) đều đúng"
+      },
+      "answer": "B",
+      "explainAnswer": "Thiết kế nghiên cứu thuộc giai đoạn lập kế hoạch nghiên cứu, nơi xác định cách thức, dữ liệu và phương pháp để trả lời câu hỏi nghiên cứu.",
+      "image": null
+    },
+    {
+      "id": 5,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Lựa chọn nào sau đây KHÔNG bị coi là vi phạm đạo đức trong nghiên cứu:",
+      "options": {
+        "A": "Sử dụng ý tưởng nghiên cứu của người khác.",
+        "B": "Sử dụng dữ liệu từ người tham gia dưới sự đồng ý của họ.",
+        "C": "Giấu diếm người tham gia và thu thập dữ liệu qua các phương tiện họ không biết.",
+        "D": "Đạo văn (plagiarism) tác phẩm của người khác."
+      },
+      "answer": "B",
+      "explainAnswer": "Sử dụng dữ liệu từ người tham gia sau khi đã có sự đồng ý phù hợp là hành vi tuân thủ nguyên tắc đạo đức nghiên cứu.",
+      "image": null
+    },
+    {
+      "id": 6,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Nghiên cứu khoa học có đặc điểm:",
+      "options": {
+        "A": "Có sự kế thừa và phát triển đóng góp vào tri thức của nhân loại",
+        "B": "Các lựa chọn trên đều đúng",
+        "C": "Tuân theo các quy trình nghiêm ngặt",
+        "D": "Các lĩnh vực nghiên cứu khác nhau có các phương pháp nghiên cứu khác nhau"
+      },
+      "answer": "B",
+      "explainAnswer": "Cả ba đặc điểm đều phù hợp: nghiên cứu có tính kế thừa và phát triển tri thức, tuân theo quy trình nghiêm ngặt và phương pháp có thể khác nhau giữa các lĩnh vực.",
+      "image": null
+    },
+    {
+      "id": 7,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Nghiên cứu tìm hiểu loại dịch vụ tiền gửi nào phù hợp với khách hàng của ngân hàng và mức độ sử dụng của dịch vụ đó là nghiên cứu:",
+      "options": {
+        "A": "Kết hợp giữa nghiên cứu định tính và nghiên cứu định lượng",
+        "B": "Kết hợp giữa nghiên cứu tương quan và nghiên cứu định tính",
+        "C": "Kết hợp giữa nghiên cứu cơ bản và nghiên cứu ứng dụng",
+        "D": "Kết hợp giữa nghiên cứu khám phá và nghiên cứu tương quan"
+      },
+      "answer": "D",
+      "explainAnswer": "Câu hỏi vừa khám phá dịch vụ phù hợp với khách hàng, vừa xem xét mức độ sử dụng; vì vậy phù hợp với nghiên cứu khám phá kết hợp nghiên cứu tương quan.",
+      "image": null
+    },
+    {
+      "id": 8,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Thứ tự để viết một bài nghiên cứu:",
+      "options": {
+        "A": "Tóm tắt, xem xét tài liệu, lý thuyết và giả thuyết, phương pháp và dữ liệu, kết quả và thảo luận, kết luận, danh mục tài liệu tham khảo",
+        "B": "Giới thiệu, lý thuyết và giả thuyết, lược khảo nghiên cứu liên quan, phương pháp và dữ liệu, kết quả và thảo luận, kết luận, tóm tắt, danh mục tài liệu tham khảo",
+        "C": "Phương pháp và dữ liệu, lý thuyết và giả thuyết, lược khảo nghiên cứu liên quan, kết quả và thảo luận, kết luận, tóm tắt, danh mục tài liệu tham khảo",
+        "D": "Lược khảo nghiên cứu liên quan, lý thuyết và các giả thuyết, phương pháp và dữ liệu, kết quả và thảo luận, kết luận, giới thiệu, tóm tắt, danh mục tài liệu tham khảo"
+      },
+      "answer": "A",
+      "explainAnswer": "Theo cấu trúc được sử dụng trong bộ câu hỏi, bài nghiên cứu bắt đầu bằng tóm tắt, sau đó đến lược khảo/lý thuyết, phương pháp, kết quả và thảo luận, kết luận và tài liệu tham khảo.",
+      "image": null
+    },
+    {
+      "id": 9,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Các loại nghiên cứu nào sau đây là phân loại theo tính ứng dụng:",
+      "options": {
+        "A": "Nghiên cứu định tính (Qualitative research)",
+        "B": "Nghiên cứu định lượng (Quantitative research)",
+        "C": "Nghiên cứu tương quan (Correlational research)",
+        "D": "Nghiên cứu cơ bản (Pure research)"
+      },
+      "answer": "D",
+      "explainAnswer": "Nghiên cứu cơ bản (pure research) được phân loại theo tính ứng dụng, đối lập với nghiên cứu ứng dụng.",
+      "image": null
+    },
+    {
+      "id": 10,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "\"Chiến lược tốt nhất để thúc đẩy doanh số bán hàng của sản phẩm X?\" là câu hỏi dưới góc nhìn của:",
+      "options": {
+        "A": "Chuyên gia",
+        "B": "Nhà quản lý hoặc lập kế hoạch",
+        "C": "Người tiêu dùng",
+        "D": "Nhà cung cấp dịch vụ"
+      },
+      "answer": "B",
+      "explainAnswer": "Câu hỏi về chiến lược thúc đẩy doanh số hướng tới quyết định quản lý và lập kế hoạch kinh doanh.",
+      "image": null
+    },
+    {
+      "id": 11,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Tại sao cần dành thời gian viết phần tóm tắt cho một báo cáo nghiên cứu?",
+      "options": {
+        "A": "Người phản biện chỉ xem lại phần tóm tắt.",
+        "B": "Người đọc đôi khi sử dụng nó để quyết định nếu họ muốn đọc toàn bộ bài viết.",
+        "C": "Đây là cơ hội duy nhất để bạn báo cáo các ứng dụng và thế mạnh của nghiên cứu.",
+        "D": "Nó chỉ là cơ hội để thảo luận về nghiên cứu của riêng bạn về nghiên cứu."
+      },
+      "answer": "B",
+      "explainAnswer": "Tóm tắt giúp người đọc nhanh chóng nắm nội dung chính và quyết định có đọc toàn bộ báo cáo hay không.",
+      "image": null
+    },
+    {
+      "id": 12,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Vấn đề đạo đức đặt ra liên quan đến việc tổ chức tài trợ cho nghiên cứu bao gồm:",
+      "options": {
+        "A": "Tìm kiếm sự đồng thuận của người tham gia (2)",
+        "B": "Sử dụng thông tin sai mục đích (3)",
+        "C": "Duy trì tính bảo mật (1)",
+        "D": "Nội dung (1), (2) và (3) đều sai"
+      },
+      "answer": "B",
+      "explainAnswer": "Sử dụng thông tin sai mục đích là vấn đề đạo đức liên quan đến trách nhiệm và cách sử dụng nguồn lực/thông tin trong nghiên cứu.",
+      "image": null
+    },
+    {
+      "id": 13,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Câu hỏi 17 Nhóm Nam, Hoa, Châu muốn thực hiện một đề tài nghiên cứu khoa học liên quan đến chuyên ngành Tài chính. Đề xuất quy trình nghiên cứu của nhóm.",
+      "options": {
+        "A": "Lên kế hoạch, quyết định vấn đề nghiên cứu, thực hiện nghiên cứu",
+        "B": "Viết đề cương nghiên cứu, lên kế hoạch, thực hiện nghiên cứu",
+        "C": "Quyết định vấn đề nghiên cứu, lập kế hoạch, thực hiện nghiên cứu",
+        "D": "Thu thập dữ liệu, quyết định vấn đề nghiên cứu, viết đề cương nghiên cứu"
+      },
+      "answer": "C",
+      "explainAnswer": "Quy trình hợp lý là xác định vấn đề nghiên cứu, lập kế hoạch rồi thực hiện nghiên cứu.",
+      "image": null
+    },
+    {
+      "id": 14,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Lợi thế của phương pháp hỗn hợp (sử dụng kết hợp định tính và định lượng):",
+      "options": {
+        "A": "Cần có lý do rõ ràng cho việc kết hợp cả hai cách tiếp cận.",
+        "B": "Đòi hỏi nhà nghiên cứu có kỹ năng đa dạng về phương pháp.",
+        "C": "Có thể vừa lý giải hiện tượng vừa phát hiện các mối quan hệ giữa các khái niệm.",
+        "D": "Cả A, B và C đều đúng."
+      },
+      "answer": "D",
+      "explainAnswer": "Phương pháp hỗn hợp có thể giúp giải thích hiện tượng, phát hiện mối quan hệ và bổ sung góc nhìn giữa định tính và định lượng; đồng thời đòi hỏi kỹ năng đa dạng và phải có lý do rõ ràng cho việc kết hợp.",
+      "image": null
+    },
+    {
+      "id": 15,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Khi viết một nghiên cứu định tính, phần nào sau đây là không phù hợp?",
+      "options": {
+        "A": "Giới thiệu, định vị nghiên cứu trong bối cảnh lý thuyết.",
+        "B": "Thảo luận về những phát hiện chính liên quan đến các câu hỏi nghiên cứu.",
+        "C": "Quyết định chấp nhận hoặc từ chối giả thuyết.",
+        "D": "Giải thích về thiết kế của nghiên cứu."
+      },
+      "answer": "C",
+      "explainAnswer": "Nghiên cứu định tính thường tập trung khám phá và diễn giải sâu; việc quyết định chấp nhận hoặc từ chối giả thuyết theo cách kiểm định là đặc trưng hơn của nghiên cứu định lượng.",
+      "image": null
+    },
+    {
+      "id": 16,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Triết lý nền tảng của nghiên cứu định lượng",
+      "options": {
+        "A": "Chủ nghĩa kinh nghiệm (Empiricism); Chủ nghĩa duy lý (Rationalism)",
+        "B": "Chủ nghĩa duy vật (Materialism); Chủ nghĩa duy tâm (Idealism)",
+        "C": "Chủ nghĩa kinh nghiệm (Empiricism); Chủ nghĩa duy vật (Materialism)",
+        "D": "Chủ nghĩa duy lý (Rationalism); Chủ nghĩa kinh nghiệm (Empiricism)"
+      },
+      "answer": "D",
+      "explainAnswer": "Theo nội dung bộ câu hỏi, nghiên cứu định lượng được gắn với chủ nghĩa duy lý và chủ nghĩa kinh nghiệm.",
+      "image": null
+    },
+    {
+      "id": 17,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Phần giới thiệu của một nghiên cứu nhằm:",
+      "options": {
+        "A": "Xác định trọng tâm cụ thể (mục tiêu) của nghiên cứu. (1)",
+        "B": "Thu hút sự chú ý của độc giả. (3)",
+        "C": "Nội dung (1), (2) và (3) đều đúng.",
+        "D": "Trình bày lý do nghiên cứu. (2)"
+      },
+      "answer": "C",
+      "explainAnswer": "Phần giới thiệu có thể xác định trọng tâm/mục tiêu, nêu lý do nghiên cứu và thu hút sự chú ý của người đọc.",
+      "image": null
+    },
+    {
+      "id": 18,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Chọn mẫu là một bước trong giai đoạn nào của quy trình nghiên cứu:",
+      "options": {
+        "A": "Nội dung (1), (2) và (3) đều đúng",
+        "B": "Thực hiện nghiên cứu (3)",
+        "C": "Xác định vấn đề nghiên cứu (1)",
+        "D": "Lập kế hoạch nghiên cứu (2)"
+      },
+      "answer": "D",
+      "explainAnswer": "Chọn mẫu là một nội dung của lập kế hoạch nghiên cứu, cùng với thiết kế và chuẩn bị cách thu thập dữ liệu.",
+      "image": null
+    },
+    {
+      "id": 19,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Đối với dữ liệu thứ cấp, không có vấn đề về đạo đức khi tiến hành nghiên cứu vì:",
+      "options": {
+        "A": "Dữ liệu này đã được thu thập trước đó (1)",
+        "B": "Dữ liệu này do bên thu thập chịu trách nhiệm (3)",
+        "C": "Dữ liệu này được công bố công khai (2)",
+        "D": "Nội dung (1), (2) và (3) đều sai"
+      },
+      "answer": "D",
+      "explainAnswer": "Dữ liệu thứ cấp vẫn có thể đặt ra vấn đề đạo đức; việc đã được thu thập, do bên khác quản lý hoặc công khai không tự động loại bỏ mọi trách nhiệm đạo đức.",
+      "image": null
+    },
+    {
+      "id": 20,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Nghiên cứu được thực hiện với mục tiêu khám phá một lĩnh vực ít được biết đến hoặc điều tra các khả năng thực hiện một nghiên cứu cụ thể.",
+      "options": {
+        "A": "Nghiên cứu định tính (Qualitative research)",
+        "B": "Nghiên cứu khám phá (Exploratory research)",
+        "C": "Nghiên cứu định lượng (Quantitative research)",
+        "D": "Nghiên cứu cơ bản (Pure research)"
+      },
+      "answer": "B",
+      "explainAnswer": "Nghiên cứu khám phá nhằm tìm hiểu lĩnh vực còn ít được biết đến hoặc mở ra khả năng cho nghiên cứu tiếp theo.",
+      "image": null
+    },
+    {
+      "id": 21,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Tất cả những điều sau đây là những tình huống thường yêu cầu nghiên cứu định tính NGOẠI TRỪ:",
+      "options": {
+        "A": "khi cần bằng chứng có tính kết luận rõ ràng",
+        "B": "khi khó phát triển các quyết định hoặc các mục tiêu nghiên cứu cụ thể và có tính hành động",
+        "C": "khi cần một cách tiếp cận mới để nghiên cứu một số vấn đề",
+        "D": "khi mục tiêu nghiên cứu là phát triển sự hiểu biết về một số hiện tượng rất chi tiết và sâu sắc"
+      },
+      "answer": "A",
+      "explainAnswer": "Khi cần bằng chứng mang tính kết luận rõ ràng, nghiên cứu định lượng thường phù hợp hơn nghiên cứu định tính.",
+      "image": null
+    },
+    {
+      "id": 22,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Nghiên cứu khám phá (exploratory research) là phân loại theo:",
+      "options": {
+        "A": "Tính ứng dụng của nghiên cứu (1)",
+        "B": "Mục tiêu của nghiên cứu (2)",
+        "C": "Phương thức nghiên cứu (3)",
+        "D": "Nội dung (1), (2) và (3) đều đúng"
+      },
+      "answer": "B",
+      "explainAnswer": "Nghiên cứu khám phá là cách phân loại theo mục tiêu của nghiên cứu.",
+      "image": null
+    },
+    {
+      "id": 23,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "ạn thiết lập nghiên cứu của mình bằng cách giảm thiểu tác động của các yếu tố khác ảnh hưởng đến mối quan hệ đó. Đây là đặc điểm nào của nghiên cứu khoa học:",
+      "options": {
+        "A": "Tính hệ thống (systematic)",
+        "B": "Tính nghiêm ngặt (rigorous)",
+        "C": "Tính kiểm soát (controlled)",
+        "D": "Tính thực nghiệm (empirical)"
+      },
+      "answer": "C",
+      "explainAnswer": "Giảm thiểu tác động của các yếu tố khác lên mối quan hệ đang nghiên cứu thể hiện tính kiểm soát (controlled).",
+      "image": null
+    },
+    {
+      "id": 24,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "\"Những ảnh hưởng lâu dài của sản phẩm/dịch vụ khách hàng đang sử dụng là gì?\" là câu hỏi dưới góc nhìn của:",
+      "options": {
+        "A": "Nhà quản lý/ lập kế hoạch",
+        "B": "Nhà cung cấp dịch vụ",
+        "C": "Chuyên gia",
+        "D": "Người tiêu dùng"
+      },
+      "answer": "D",
+      "explainAnswer": "Câu hỏi về ảnh hưởng lâu dài của sản phẩm/dịch vụ đối với chính người đang sử dụng thuộc góc nhìn người tiêu dùng.",
+      "image": null
+    },
+    {
+      "id": 25,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Tại sao khi viết một nghiên cứu, cần chú trọng viết nhấn mạnh các phần tóm tắt, giới thiệu và kết luận?",
+      "options": {
+        "A": "Vì đây là những phần duy nhất chứa câu hỏi nghiên cứu và kết quả tổng thể của dự án nghiên cứu",
+        "B": "Vì đây thường là những phần mà độc giả đọc đầu tiên",
+        "C": "Vì đây là những phần ngắn nhất của nghiên cứu",
+        "D": "Vì khả năng kiểm tra tính xác thực của nghiên cứu"
+      },
+      "answer": "B",
+      "explainAnswer": "Tóm tắt, giới thiệu và kết luận thường là những phần người đọc chú ý sớm nên cần viết rõ và cô đọng.",
+      "image": null
+    },
+    {
+      "id": 26,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Báo cáo nghiên cứu cuối cùng KHÔNG thể là:",
+      "options": {
+        "A": "Bằng chứng của một dự án nghiên cứu.",
+        "B": "Một đề xuất/đề cương nghiên cứu.",
+        "C": "Một cơ sở để ra quyết định.",
+        "D": "Dữ liệu thứ cấp cho các nghiên cứu tương lai."
+      },
+      "answer": "B",
+      "explainAnswer": "Báo cáo nghiên cứu cuối cùng trình bày nghiên cứu đã hoàn thành; đề xuất/đề cương là tài liệu được lập trước khi nghiên cứu hoàn tất.",
+      "image": null
+    },
+    {
+      "id": 27,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Vấn đề nào sau đây cần chú ý trong quá trình viết nghiên cứu?",
+      "options": {
+        "A": "Phong cách viết và dùng từ không khoa học (2)",
+        "B": "Không có lược khảo lý thuyết (1)",
+        "C": "Lý thuyết định nghĩa không đầy đủ (3)",
+        "D": "Nội dung (1), (2) và (3) đều đúng."
+      },
+      "answer": "D",
+      "explainAnswer": "Cả ba vấn đề đều cần được chú ý khi viết nghiên cứu: lược khảo, cách viết và định nghĩa lý thuyết phải rõ ràng.",
+      "image": null
+    },
+    {
+      "id": 28,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Quá trình nghiên cứu phải chuẩn xác và không có hạn chế nào. Quá trình được thông qua và các phương thức được sử dụng phải được phản biện nghiêm túc. Đây là đặc điểm nào của nghiên cứu khoa học:",
+      "options": {
+        "A": "Tính kiểm soát (Controlled)",
+        "B": "Tính hệ thống (Systematic)",
+        "C": "Tính nghiêm ngặt (Rigorous)",
+        "D": "Tính phê phán (Critical)"
+      },
+      "answer": "C",
+      "explainAnswer": "Mô tả nhấn mạnh việc nghiên cứu phải được thực hiện chặt chẽ và các phương pháp được phản biện nghiêm túc, phù hợp nhất với tính nghiêm ngặt.",
+      "image": null
+    },
+    {
+      "id": 29,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Mục tiêu của nghiên cứu là \"tìm hiểu tại sao chính sách hỗ trợ tín dụng cho người nghèo có hiệu quả đối với nhóm người này mà không phải nhóm người khác\". Đây là loại hình nghiên cứu:",
+      "options": {
+        "A": "Nghiên cứu mô tả (Descriptive research)",
+        "B": "Nghiên cứu giải thích (Explanatory research)",
+        "C": "Nghiên cứu tương quan (Correlational research)",
+        "D": "Nghiên cứu khám phá (Exploratory research)"
+      },
+      "answer": "B",
+      "explainAnswer": "Câu hỏi tìm hiểu tại sao chính sách có hiệu quả với nhóm này nhưng không với nhóm khác nhằm giải thích nguyên nhân, nên là nghiên cứu giải thích.",
+      "image": null
+    },
+    {
+      "id": 30,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Trước khi nộp luận văn tốt nghiệp, bạn cần đảm bảo rằng:",
+      "options": {
+        "A": "Bài viết của bạn không có ngôn ngữ phân biệt giới tính, phân biệt chủng tộc, ngôn từ gây chán ghét (1)",
+        "B": "Nội dung (1), (2) và (3) đều đúng.",
+        "C": "Bạn đã hiệu đính nó kỹ lưỡng (3)",
+        "D": "Có những ý kiến đóng góp từ chuyên gia (như giảng viên hướng dẫn, đồng học, đồng nghiệp) (2)"
+      },
+      "answer": "B",
+      "explainAnswer": "Trước khi nộp luận văn cần nhận phản hồi, dùng ngôn ngữ phù hợp và hiệu đính kỹ; do đó cả ba nội dung đều cần bảo đảm.",
+      "image": null
+    },
+    {
+      "id": 31,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Trong quy trình nghiên cứu của Kumar đề xuất, lược khảo lý thuyết KHÔNG liên quan đến bước nào sau đây:",
+      "options": {
+        "A": "Hình thành thiết kế nghiên cứu",
+        "B": "Thu thập dữ liệu",
+        "C": "Chọn mẫu",
+        "D": "Xác định vấn đề nghiên cứu"
+      },
+      "answer": "B",
+      "explainAnswer": "Lược khảo lý thuyết có thể hỗ trợ xác định vấn đề, thiết kế và chọn mẫu; thu thập dữ liệu là bước thực hiện trực tiếp nên không phải trọng tâm của lược khảo.",
+      "image": null
+    },
+    {
+      "id": 32,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Người nghiên cứu phải cẩn thận trong việc đảm bảo rằng các quy trình được tuân thủ để tìm câu trả lời cho các câu hỏi có tính liên quan, phù hợp và hợp lý. Đây là đặc điểm nào của nghiên cứu khoa học:",
+      "options": {
+        "A": "Tính thực nghiệm (Empirical)",
+        "B": "Tính nghiêm ngặt (rigorous)",
+        "C": "Tính hệ thống (systematic)",
+        "D": "Tính kiểm soát (controlled)"
+      },
+      "answer": "B",
+      "explainAnswer": "Việc tuân thủ quy trình để tìm câu trả lời phù hợp, hợp lý và liên quan nhấn mạnh tính nghiêm ngặt của nghiên cứu.",
+      "image": null
+    },
+    {
+      "id": 33,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Phương pháp kết hợp định tính và định lượng KHÔNG phù hợp trong trường hợp:",
+      "options": {
+        "A": "Nhà nghiên cứu thực hiện một nghiên cứu với nhiều mục tiêu",
+        "B": "Nhà nghiên cứu cần tìm sự giải thích cho kết quả nghiên cứu của mình",
+        "C": "Chỉ có thông tin đầy đủ và chính xác từ một nguồn duy nhất",
+        "D": "Nhà nghiên cứu muốn khám phá từ cả hai quan điểm"
+      },
+      "answer": "C",
+      "explainAnswer": "Nếu một nguồn đã cung cấp thông tin đầy đủ và chính xác cho mục tiêu nghiên cứu thì việc kết hợp thêm phương pháp có thể không cần thiết.",
+      "image": null
+    },
+    {
+      "id": 34,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Các bước trong giai đoạn lập kế hoạch nghiên cứu là:",
+      "options": {
+        "A": "Chọn mẫu, quyết định vấn đề nghiên cứu, viết đề cương nghiên cứu",
+        "B": "Quyết định vấn đề nghiên cứu, chọn mẫu, thiết kế nghiên cứu, thu thập dữ liệu",
+        "C": "Thiết kế nghiên cứu, xây dựng công cụ thu thập dữ liệu, chọn mẫu, viết đề cương nghiên cứu",
+        "D": "Viết đề cương nghiên cứu, chọn mẫu, thiết kế nghiên cứu, thu thập dữ liệu"
+      },
+      "answer": "C",
+      "explainAnswer": "Thiết kế nghiên cứu, xây dựng công cụ, chọn mẫu và viết đề cương là các hoạt động lập kế hoạch; thu thập dữ liệu thuộc giai đoạn thực hiện.",
+      "image": null
+    },
+    {
+      "id": 35,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Loại nghiên cứu nào sau đây là phân loại theo mục tiêu nghiên cứu:",
+      "options": {
+        "A": "Nghiên cứu định tính (Qualitative research)",
+        "B": "Nghiên cứu cơ bản (Pure research)",
+        "C": "Nghiên cứu định lượng (Quantitative research)",
+        "D": "Nghiên cứu tương quan (Correlational research)"
+      },
+      "answer": "D",
+      "explainAnswer": "Nghiên cứu tương quan là một loại nghiên cứu được phân loại theo mục tiêu nghiên cứu trong khung kiến thức của bộ câu hỏi.",
+      "image": null
+    },
+    {
+      "id": 36,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Xử lý dữ liệu là một bước trong giai đoạn nào của quy trình nghiên cứu:",
+      "options": {
+        "A": "Quyết định vấn đề nghiên cứu (1)",
+        "B": "Lập kế hoạch nghiên cứu (2)",
+        "C": "Thực hiện nghiên cứu (3)",
+        "D": "Nội dung (1), (2) và (3) đều đúng"
+      },
+      "answer": "C",
+      "explainAnswer": "Xử lý dữ liệu diễn ra sau khi thu thập dữ liệu và thuộc giai đoạn thực hiện nghiên cứu.",
+      "image": null
+    },
+    {
+      "id": 37,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Bất cứ kết luận nào cũng phải dựa trên cơ sở kết quả nghiên cứu, kết quả này là chính xác và có thể được xác nhận bởi nhà nghiên cứu và những người khác. Đây là đặc điểm nào của nghiên cứu khoa học:",
+      "options": {
+        "A": "Tính chính xác và có thể kiểm chứng (Valid and verifiable)",
+        "B": "Tính kiểm soát (Controlled)",
+        "C": "Tính hệ thống (Systematic)",
+        "D": "Tính nghiêm ngặt (Rigorous)"
+      },
+      "answer": "A",
+      "explainAnswer": "Kết luận khoa học phải dựa trên kết quả có cơ sở, chính xác và có thể được kiểm chứng bởi người khác.",
+      "image": null
+    },
+    {
+      "id": 38,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Nghiên cứu định tính thường tập trung trả lời câu hỏi nào, còn nghiên cứu định lượng thường tập trung trả lời câu hỏi nào?",
+      "options": {
+        "A": "Bản chất/lý do/cách thức; mức độ/bao nhiêu và mối quan hệ có thể lượng hóa.",
+        "B": "Bao nhiêu; tại sao và như thế nào.",
+        "C": "Chọn mẫu; viết đề cương.",
+        "D": "Thu thập dữ liệu; xử lý dữ liệu."
+      },
+      "answer": "A",
+      "explainAnswer": "Định tính thường tập trung vào câu hỏi về bản chất, lý do và cách thức; định lượng tập trung đo lường mức độ, lượng hoặc mối quan hệ có thể lượng hóa.",
+      "image": null
+    },
+    {
+      "id": 39,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Sự lựa chọn giữa phương pháp định lượng và định tính phụ thuộc vào:",
+      "options": {
+        "A": "Cách thu thập dữ liệu và xử lý dữ liệu",
+        "B": "Mục tiêu nghiên cứu và ứng dụng của kết quả nghiên cứu",
+        "C": "Các lý thuyết và nghiên cứu trước",
+        "D": "Câu hỏi nghiên cứu và loại hình nghiên cứu thực hiện"
+      },
+      "answer": "D",
+      "explainAnswer": "Việc chọn định tính hay định lượng trước hết phải phù hợp với câu hỏi nghiên cứu và loại hình nghiên cứu cần thực hiện.",
+      "image": null
+    },
+    {
+      "id": 40,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Khi viết phần tóm tắt, người viết cần chú ý:",
+      "options": {
+        "A": "Bao gồm diễn giải cho tính hợp lệ của các chỉ số",
+        "B": "Không nêu câu hỏi nghiên cứu",
+        "C": "Ngắn gọn và đủ các nội dung chính",
+        "D": "Bao gồm các tranh luận về cách của các nhà nghiên cứu khác cùng lĩnh vực"
+      },
+      "answer": "C",
+      "explainAnswer": "Phần tóm tắt cần ngắn gọn nhưng phải chứa các nội dung chính của nghiên cứu, giúp người đọc nhanh chóng nắm được công trình.",
+      "image": null
+    },
+    {
+      "id": 41,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Điều nào sau đây là SAI? Thực hiện nghiên cứu là tìm câu trả lời cho câu hỏi nghiên cứu, điều này có nghĩa là quy trình áp dụng:",
+      "options": {
+        "A": "Được thiết kế khách quan và không thiên vị",
+        "B": "Cố gắng che giấu một lợi ích được đầu tư trong nghiên cứu",
+        "C": "Được thực hiện trong khuôn khổ lý thuyết",
+        "D": "Sử dụng các quy trình, phương pháp và kỹ thuật đã được kiểm tra về tính hợp lệ và độ tin cậy"
+      },
+      "answer": "B",
+      "explainAnswer": "Che giấu lợi ích được đầu tư trong nghiên cứu làm giảm tính minh bạch và khách quan nên là hành vi sai.",
+      "image": null
+    },
+    {
+      "id": 42,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Mục tiêu của nghiên cứu là \"tìm hiểu tại sao một nhóm người sử dụng sản phẩm trong khi nhóm khác thì không?\". Đây là loại hình nghiên cứu:",
+      "options": {
+        "A": "Nghiên cứu khám phá (Exploratory research)",
+        "B": "Nghiên cứu tương quan (Correlational research)",
+        "C": "Nghiên cứu giải thích (Explanatory research)",
+        "D": "Nghiên cứu mô tả (Descriptive research)"
+      },
+      "answer": "C",
+      "explainAnswer": "Từ khóa “tại sao” cho thấy mục tiêu là tìm nguyên nhân hoặc cơ chế giải thích sự khác biệt, phù hợp với nghiên cứu giải thích.",
+      "image": null
+    },
+    {
+      "id": 43,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Viết đề cương nghiên cứu là một bước trong giai đoạn nào của quy trình nghiên cứu:",
+      "options": {
+        "A": "Lập kế hoạch nghiên cứu (2)",
+        "B": "Quyết định vấn đề nghiên cứu (1)",
+        "C": "Thực hiện nghiên cứu (3)",
+        "D": "Nội dung (1), (2) và (3) đều đúng"
+      },
+      "answer": "A",
+      "explainAnswer": "Viết đề cương là hoạt động chuẩn bị và lập kế hoạch trước khi triển khai nghiên cứu.",
+      "image": null
+    },
+    {
+      "id": 44,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Phương thức áp dụng để thực hiện một nghiên cứu phải tuân theo một trình tự logic nhất định. Các bước khác nhau không thể được thực hiện một cách ngẫu nhiên. Đây là đặc điểm nào của nghiên cứu khoa học:",
+      "options": {
+        "A": "Tính thực nghiệm (Empirical)",
+        "B": "Tính hệ thống (Systematic)",
+        "C": "Tính kiểm soát (Controlled)",
+        "D": "Tính nghiêm ngặt (Rigorous)"
+      },
+      "answer": "B",
+      "explainAnswer": "Việc các bước nghiên cứu phải theo một trình tự logic thể hiện tính hệ thống (systematic).",
+      "image": null
+    },
+    {
+      "id": 45,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Điều nào sau đây cần chú ý TRÁNH khi viết văn bản khoa học thuộc ngành kinh tế, kinh doanh và quản lý:",
+      "options": {
+        "A": "Viết lược khảo lý thuyết",
+        "B": "Xác định nghiên cứu vấn đề gì",
+        "C": "Chọn mẫu nghiên cứu",
+        "D": "Thu thập dữ liệu"
+      },
+      "answer": "D",
+      "explainAnswer": "Văn bản khoa học nên tránh ngôn ngữ hoa mỹ, ẩn dụ hoặc cảm tính; các hoạt động lược khảo, xác định vấn đề, chọn mẫu và thu thập dữ liệu không phải là điều cần tránh.",
+      "image": null
+    },
+    {
+      "id": 46,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Nghiên cứu định tính và nghiên cứu định lượng khác nhau ở các điểm:",
+      "options": {
+        "A": "Triết lý nền tảng (underpinning philosophy) (1)",
+        "B": "Nội dung (1), (2) và (3) đều đúng",
+        "C": "Phương thức nghiên cứu (approach to enquiry) (2)",
+        "D": "Mục đích chính của nghiên cứu (main purpose of investigation) (3)"
+      },
+      "answer": "B",
+      "explainAnswer": "Theo nội dung câu hỏi, định tính và định lượng khác nhau về triết lý nền tảng, phương thức tiếp cận và mục đích chính; vì vậy cả (1), (2), (3) đều đúng.",
+      "image": null
+    },
+    {
+      "id": 47,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Đặc điểm của nghiên cứu khoa học là:",
+      "options": {
+        "A": "Có tính hệ thống (systematic) (3)",
+        "B": "Có tính nghiêm ngặt (rigorous) (2)",
+        "C": "Được kiểm soát (controlled) (1)",
+        "D": "Nội dung (1), (2) và (3) đều đúng"
+      },
+      "answer": "D",
+      "explainAnswer": "Tính hệ thống, tính nghiêm ngặt và tính kiểm soát đều là các đặc điểm được nêu trong bộ kiến thức.",
+      "image": null
+    },
+    {
+      "id": 48,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Một lược khảo lý thuyết được xem là thành công khi:",
+      "options": {
+        "A": "Đánh giá hiện trạng kiến thức bằng cách so sánh các nghiên cứu và hướng tiếp cận liên quan.",
+        "B": "Chỉ liệt kê thật nhiều tài liệu mà không cần đánh giá.",
+        "C": "Chỉ tóm tắt kết quả của một nghiên cứu duy nhất.",
+        "D": "Chỉ tập trung vào số lượng tài liệu được trích dẫn."
+      },
+      "answer": "A",
+      "explainAnswer": "Một lược khảo tốt phải đánh giá hiện trạng tri thức bằng cách so sánh các nghiên cứu và các hướng tiếp cận, từ đó chỉ ra điểm giống, khác và khoảng trống.",
+      "image": null
+    },
+    {
+      "id": 49,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Khi đánh giá về tạp chí hữu ích đối với chủ đề nghiên cứu, tiêu chí nào sau đây là quan trọng?",
+      "options": {
+        "A": "Nhà xuất bản phù hợp",
+        "B": "Nội dung phù hợp với nghiên cứu",
+        "C": "Số trang phù hợp",
+        "D": "Biên tập viên phù hợp"
+      },
+      "answer": "B",
+      "explainAnswer": "Tiêu chí quan trọng nhất là nội dung của tạp chí có phù hợp với chủ đề và mục tiêu nghiên cứu hay không.",
+      "image": null
+    },
+    {
+      "id": 50,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Trước khi tìm kiếm tài liệu để viết lược khảo nghiên cứu, bạn nên xác định khung thời gian tìm kiếm của bạn. Tại sao?",
+      "options": {
+        "A": "Giúp tìm kiếm nhiều tài liệu nhất",
+        "B": "Tránh thư viện quá đông người",
+        "C": "Không phải chịu các chi phí không cần thiết",
+        "D": "Giúp làm việc hiệu quả nhất"
+      },
+      "answer": "D",
+      "explainAnswer": "Xác định khung thời gian giúp giới hạn phạm vi tìm kiếm và sử dụng thời gian hiệu quả hơn.",
+      "image": null
+    },
+    {
+      "id": 51,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Một lược khảo lý thuyết (literature review) khoa học là:",
+      "options": {
+        "A": "Bắt đầu trong thư viện, sau đó đi đến cơ sở dữ liệu trực tuyến và cuối cùng là đến internet",
+        "B": "Một quy trình có thể nhân rộng, khoa học và minh bạch",
+        "C": "Quan tâm như nhau đối với các tài liệu nghiên cứu về vấn đề mình quan tâm",
+        "D": "Một quy trình quản lý thời gian có trách nhiệm, chuyên nghiệp về vấn đề mình nghiên cứu"
+      },
+      "answer": "B",
+      "explainAnswer": "Lược khảo khoa học cần được thực hiện theo quy trình có cơ sở, có thể kiểm tra, minh bạch và có khả năng tái lập.",
+      "image": null
+    },
+    {
+      "id": 52,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Các nhà nghiên cứu cần cẩn trọng đối với tài liệu trực tuyến, trong quá trình tìm tài liệu phục vụ viết lược khảo lý thuyết. Tại sao?",
+      "options": {
+        "A": "Không đảm bảo chất lượng",
+        "B": "Các tài liệu còn mới, chưa được kiểm chứng",
+        "C": "Không có tên tác giả",
+        "D": "Các tài liệu đã được sử dụng trước đó"
+      },
+      "answer": "A",
+      "explainAnswer": "Tài liệu trực tuyến có chất lượng không đồng đều; vì vậy cần kiểm tra nguồn, tác giả, tính học thuật và độ tin cậy trước khi sử dụng.",
+      "image": null
+    },
+    {
+      "id": 53,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Những nội dung nào sau đây đều có thể cần đến lược khảo lý thuyết (literature review)?",
+      "options": {
+        "A": "Làm rõ ý tưởng, thiết lập cơ sở lý thuyết và phát triển phương pháp nghiên cứu.",
+        "B": "Chỉ khi thu thập dữ liệu.",
+        "C": "Chỉ sau khi đã phân tích dữ liệu.",
+        "D": "Chỉ khi viết kết luận."
+      },
+      "answer": "A",
+      "explainAnswer": "Theo các nội dung được liệt kê, cả ba giai đoạn đều cần lược khảo lý thuyết; vì vậy phương án A là lựa chọn phù hợp nhất.",
+      "image": null
+    },
+    {
+      "id": 54,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Hoạt động nào sau đây đều hữu ích trong quá trình lược khảo nghiên cứu?",
+      "options": {
+        "A": "Theo dõi nguồn gốc của tài liệu.",
+        "B": "Quản lý thông tin trích dẫn.",
+        "C": "Tạo danh sách theo dõi các tài liệu phù hợp.",
+        "D": "Cả A, B và C đều đúng."
+      },
+      "answer": "D",
+      "explainAnswer": "Theo các lựa chọn, theo dõi nguồn gốc, quản lý định dạng trích dẫn và tạo danh sách theo dõi tài liệu đều là các thao tác hữu ích khi lược khảo nghiên cứu.",
+      "image": null
+    },
+    {
+      "id": 55,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Trong một nghiên cứu, phần nội dung bao gồm tổng hợp, phê bình các nghiên cứu liên quan của một chủ đề được xác định cẩn thận được gọi là:",
+      "options": {
+        "A": "Vấn đề nghiên cứu",
+        "B": "Phân tích tổng hợp",
+        "C": "Lược khảo lý thuyết",
+        "D": "Giả thuyết nghiên cứu"
+      },
+      "answer": "C",
+      "explainAnswer": "Phần tổng hợp và phê bình các nghiên cứu liên quan đến một chủ đề được xác định là lược khảo lý thuyết.",
+      "image": null
+    },
+    {
+      "id": 56,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Lược khảo lý thuyết có thể hỗ trợ nhà nghiên cứu ở những nội dung nào sau đây?",
+      "options": {
+        "A": "Thu thập dữ liệu.",
+        "B": "Thiết kế phương pháp tiếp cận.",
+        "C": "Bình luận và đánh giá các nghiên cứu trước đây.",
+        "D": "Cả A, B và C đều có thể được hỗ trợ."
+      },
+      "answer": "D",
+      "explainAnswer": "Lược khảo lý thuyết có thể hỗ trợ làm rõ ý tưởng, xây dựng cơ sở lý thuyết và phát triển phương pháp; do đó cả ba nội dung đều liên quan.",
+      "image": null
+    },
+    {
+      "id": 57,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Điều nào sau đây KHÔNG ĐÚNG khi viết danh mục tài liệu tham khảo?",
+      "options": {
+        "A": "Danh mục tài liệu tham khảo giúp chứng minh cách tiếp cận vấn đề nghiên cứu.",
+        "B": "Danh mục tài liệu tham khảo nhằm ghi nhận các trích dẫn.",
+        "C": "Danh mục tài liệu tham khảo nhằm chứng minh các tài liệu tham khảo đã sử dụng.",
+        "D": "Danh mục tài liệu tham khảo nhằm đảm bảo một danh sách tham khảo đủ dài."
+      },
+      "answer": "D",
+      "explainAnswer": "Danh mục tài liệu tham khảo không nhằm làm danh sách dài một cách hình thức; nó phải phản ánh các nguồn thực sự được sử dụng và trích dẫn.",
+      "image": null
+    },
+    {
+      "id": 58,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Trong báo cáo nghiên cứu, phần lược khảo lý thuyết thường được trình bày ở đâu?",
+      "options": {
+        "A": "Trong phần tóm tắt.",
+        "B": "Trong phần phương pháp nghiên cứu.",
+        "C": "Sau phần giới thiệu.",
+        "D": "Chỉ ở phần kết luận."
+      },
+      "answer": "C",
+      "explainAnswer": "Trong cấu trúc thông thường, lược khảo lý thuyết được trình bày sau phần giới thiệu và trước các phần phương pháp/kết quả.",
+      "image": null
+    },
+    {
+      "id": 59,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Lược khảo lý thuyết bao gồm nhiều giai đoạn. Giai đoạn đầu tiên của việc lược khảo lý thuyết là gì?",
+      "options": {
+        "A": "Tìm kiếm các nghiên cứu liên quan thông qua tìm kiếm các từ khóa (keywords)",
+        "B": "Trao đổi với đồng nghiệp về cấu trúc bài viết lược khảo lý thuyết",
+        "C": "Đọc chi tiết và so sánh, đánh giá các nghiên cứu liên quan",
+        "D": "Viết báo cáo lược khảo lý thuyết"
+      },
+      "answer": "A",
+      "explainAnswer": "Bước đầu thường là xác định từ khóa và tìm kiếm các nghiên cứu liên quan, sau đó mới đọc, đánh giá và tổng hợp.",
+      "image": null
+    },
+    {
+      "id": 60,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Các tài liệu có phản biện là:",
+      "options": {
+        "A": "Không chắc tốt hơn với các tài liệu không được phản biện",
+        "B": "Được đánh giá trước khi xuất bản để đảm bảo chất lượng",
+        "C": "Được đánh giá bởi các độc giả của tạp chí để đảm bảo chất lượng",
+        "D": "Không có sẵn trên internet"
+      },
+      "answer": "B",
+      "explainAnswer": "Tài liệu có phản biện được các chuyên gia đánh giá trước khi xuất bản, nhằm kiểm tra chất lượng học thuật.",
+      "image": null
+    },
+    {
+      "id": 61,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Lược khảo lý thuyết (literature review) được xem là tốt khi nó đảm bảo được chức năng nào sau đây?",
+      "options": {
+        "A": "Đánh giá các nghiên cứu liên quan và định vị nghiên cứu hiện tại trong bối cảnh chung",
+        "B": "Các lựa chọn trên đều đúng",
+        "C": "Xây dựng sự liên kết giữa các tài liệu nghiên cứu",
+        "D": "Góp phần định hình phương pháp nghiên cứu"
+      },
+      "answer": "B",
+      "explainAnswer": "Lược khảo tốt vừa đánh giá và định vị nghiên cứu, vừa liên kết các tài liệu và góp phần định hình phương pháp; vì vậy cả các lựa chọn đều đúng.",
+      "image": null
+    },
+    {
+      "id": 62,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Mục đích của việc trích dẫn và trình bày danh mục tài liệu tham khảo là:",
+      "options": {
+        "A": "Cho thấy tác giả biết nguyên tắc trích dẫn.",
+        "B": "Làm nghiên cứu dài ra, đủ số từ yêu cầu.",
+        "C": "Xác minh nguồn trích dẫn và tránh đạo văn.",
+        "D": "Thay thế hoàn toàn phần lược khảo lý thuyết."
+      },
+      "answer": "C",
+      "explainAnswer": "Trích dẫn và tài liệu tham khảo giúp người đọc kiểm tra nguồn, ghi nhận đóng góp của người khác và giảm nguy cơ đạo văn.",
+      "image": null
+    },
+    {
+      "id": 63,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Khi bạn phát hiện ra rằng một tác giả (1) đã trích dẫn một tác giả khác (2), đó là một thông tin tốt để:",
+      "options": {
+        "A": "Sử dụng tài liệu và gán nó cho tác giả 1",
+        "B": "Không sử dụng tài liệu này",
+        "C": "Sử dụng tài liệu và gán nó cho tác giả 2",
+        "D": "Định vị và đọc bản gốc, gán nó cho tác giả 2"
+      },
+      "answer": "D",
+      "explainAnswer": "Khi tác giả (1) trích dẫn tác giả (2), nên tìm và đọc nguồn gốc của (2) nếu có thể rồi trích dẫn đúng nguồn gốc.",
+      "image": null
+    },
+    {
+      "id": 64,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Phát biểu nào sau đây về đạo văn là chính xác nhất?",
+      "options": {
+        "A": "Thật dễ dàng để \"sao chép và dán\" từ internet mà ngày nay mọi người đều làm như vậy. Nếu một tài liệu tham khảo thích hợp được đưa ra, điều này không gây tác hại gì.",
+        "B": "Làm thế nào chúng ta có thể nói chắc chắn ý tưởng của chúng ta đến từ đâu? Chúng ta không thể đưa ra một tài liệu tham khảo cho tất cả mọi thứ",
+        "C": "Đạo văn là một tội ác khủng khiếp đến nỗi những người bị kết tội phải có nghĩa vụ phải đeo một chữ \"plagiarism\" đỏ tươi trên quần áo của họ.",
+        "D": "Đạo văn là việc chiếm hữu sai trái và sử dụng những ý tưởng, suy nghĩ, ngôn ngữ của người khác và xem chúng như những gì do mình tạo ra."
+      },
+      "answer": "D",
+      "explainAnswer": "Đạo văn là sử dụng ý tưởng, ngôn ngữ hoặc nội dung của người khác nhưng trình bày như sản phẩm của mình.",
+      "image": null
+    },
+    {
+      "id": 65,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Các nguồn nào sau đây có thể được sử dụng để tìm tài liệu nghiên cứu, nhưng cần đánh giá độ tin cậy trước khi trích dẫn?",
+      "options": {
+        "A": "Giảng viên/chuyên gia, báo chí và mạng xã hội.",
+        "B": "Chỉ mạng xã hội.",
+        "C": "Chỉ báo chí.",
+        "D": "Chỉ giảng viên/chuyên gia."
+      },
+      "answer": "A",
+      "explainAnswer": "Nguồn tài liệu nghiên cứu có thể đến từ giảng viên/chuyên gia, báo chí và mạng xã hội; tuy nhiên mức độ học thuật và độ tin cậy cần được đánh giá trước khi sử dụng.",
+      "image": null
+    },
+    {
+      "id": 66,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Việc nào sau đây giúp giảm nguy cơ đạo văn khi viết nghiên cứu?",
+      "options": {
+        "A": "Ghi nhận và trích dẫn các lý thuyết, nghiên cứu trước có sử dụng.",
+        "B": "Sao chép nội dung rồi thay đổi vài từ mà không ghi nguồn.",
+        "C": "Chỉ ghi nguồn ở cuối bài nhưng không đánh dấu phần sử dụng trong nội dung.",
+        "D": "Không cần trích dẫn nếu tài liệu tìm thấy trên Internet."
+      },
+      "answer": "A",
+      "explainAnswer": "Sử dụng và ghi nhận đúng các lý thuyết nền tảng và nghiên cứu trước giúp truy xuất nguồn và tránh trình bày ý tưởng của người khác như của mình.",
+      "image": null
+    },
+    {
+      "id": 67,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Điểm bắt đầu phù hợp để định hướng một tìm kiếm tài liệu phục vụ lược khảo lý thuyết là:",
+      "options": {
+        "A": "Các nguồn tổng hợp/cấp ba để xác định thuật ngữ, từ khóa và nguồn gốc cần truy tìm.",
+        "B": "Chỉ dữ liệu sơ cấp do chính nhà nghiên cứu thu thập.",
+        "C": "Chỉ các bài đăng mạng xã hội.",
+        "D": "Chỉ dữ liệu định lượng."
+      },
+      "answer": "A",
+      "explainAnswer": "Dữ liệu cấp ba hoặc các nguồn tổng hợp có thể là điểm khởi đầu để định hướng từ khóa và nguồn tài liệu, sau đó cần truy tìm nguồn học thuật gốc.",
+      "image": null
+    },
+    {
+      "id": 68,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Quá trình lược khảo lý thuyết (literature review) giúp:",
+      "options": {
+        "A": "Xác định phương pháp thu thập dữ liệu.",
+        "B": "Xác định khoảng trống nghiên cứu.",
+        "C": "Hỗ trợ định hướng mẫu và thiết kế nghiên cứu.",
+        "D": "Cả A, B và C đều đúng."
+      },
+      "answer": "D",
+      "explainAnswer": "Lược khảo có thể giúp xác định cách thu thập dữ liệu, khoảng trống nghiên cứu và thông tin liên quan đến mẫu; theo cấu trúc lựa chọn, cả ba đều được xem là hỗ trợ.",
+      "image": null
+    },
+    {
+      "id": 69,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Điều nào sau đây là đúng khi trình bày phần danh mục tài liệu tham khảo?",
+      "options": {
+        "A": "Không có hướng dẫn định dạng nghiêm ngặt.",
+        "B": "Liệt kê tất cả mọi tài liệu tác giả từng đọc.",
+        "C": "Liệt kê các tài liệu thực sự được trích dẫn/sử dụng trong báo cáo theo chuẩn định dạng yêu cầu.",
+        "D": "Chỉ cần liệt kê tài liệu có tên tác giả nổi tiếng."
+      },
+      "answer": "C",
+      "explainAnswer": "Danh mục tài liệu tham khảo nên liệt kê các tài liệu thực sự được trích dẫn/sử dụng trong báo cáo, không phải một danh sách dài tùy ý.",
+      "image": null
+    },
+    {
+      "id": 70,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Khi trích dẫn hoặc sử dụng nguồn từ Internet, bạn KHÔNG cần phải tìm:",
+      "options": {
+        "A": "Ngày cập nhật gần nhất.",
+        "B": "Ngày sinh của tác giả.",
+        "C": "Ngày truy cập.",
+        "D": "Ngày công trình được công bố."
+      },
+      "answer": "B",
+      "explainAnswer": "Ngày sinh của tác giả không phải thông tin cần thiết cho việc trích dẫn nguồn Internet; ngày công bố, cập nhật và truy cập có thể quan trọng tùy loại nguồn.",
+      "image": null
+    },
+    {
+      "id": 71,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Khi xem xét phương pháp nghiên cứu của các nghiên cứu trước:",
+      "options": {
+        "A": "Chỉ xem có bao nhiêu nghiên cứu dùng phương pháp đó.",
+        "B": "Chỉ xem phương pháp có cho kết quả mong muốn hay không.",
+        "C": "Đánh giá phương pháp, kết quả, khó khăn và mức độ phù hợp với nghiên cứu hiện tại.",
+        "D": "Bỏ qua phương pháp và chỉ đọc kết luận."
+      },
+      "answer": "C",
+      "explainAnswer": "Khi xem xét phương pháp trước đây, nên tổng hợp các phương pháp, đánh giá kết quả/khó khăn và xem xét mức độ sử dụng của chúng; vì vậy các nội dung nêu đều có thể hữu ích.",
+      "image": null
+    },
+    {
+      "id": 72,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Danh mục tài liệu tham khảo để:",
+      "options": {
+        "A": "Cung cấp thông tin để xác định và kiểm tra các nguồn đã được trích dẫn.",
+        "B": "Làm cho bài nghiên cứu dài hơn.",
+        "C": "Thay thế phần kết quả nghiên cứu.",
+        "D": "Chỉ để chứng minh tác giả đọc nhiều sách."
+      },
+      "answer": "A",
+      "explainAnswer": "Danh mục tài liệu tham khảo giúp cung cấp thông tin để xác định và kiểm tra các nguồn đã được trích dẫn.",
+      "image": null
+    },
+    {
+      "id": 73,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Lợi ích của việc sử dụng trích dẫn theo quy định là:",
+      "options": {
+        "A": "Cung cấp bằng chứng cho lập luận.",
+        "B": "Cả A, C và D đều đúng.",
+        "C": "Cho thấy lập luận có cơ sở học thuật.",
+        "D": "Giúp tránh đạo văn."
+      },
+      "answer": "B",
+      "explainAnswer": "Trích dẫn đúng giúp hỗ trợ lập luận bằng bằng chứng, thể hiện cơ sở học thuật và giảm nguy cơ đạo văn; vì vậy cả ba nội dung đều đúng.",
+      "image": null
+    },
+    {
+      "id": 74,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Phương thức nào KHÔNG được các nhà nghiên cứu sử dụng để lưu trữ danh mục tài liệu tham khảo?",
+      "options": {
+        "A": "Dữ liệu bảng",
+        "B": "Bảng tính",
+        "C": "Phần mềm chuyên dụng",
+        "D": "Thẻ viết tay"
+      },
+      "answer": "A",
+      "explainAnswer": "“Dữ liệu bảng” không phải là một phương thức lưu trữ danh mục tài liệu tham khảo theo nghĩa quản lý tài liệu; bảng tính, phần mềm chuyên dụng hoặc thẻ ghi chép có thể được sử dụng.",
+      "image": null
+    },
+    {
+      "id": 75,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Một ấn phẩm nghiên cứu khoa học uy tín thường KHÔNG CÓ:",
+      "options": {
+        "A": "Số quảng cáo trong ấn phẩm. (2)",
+        "B": "Độc giả. (1)",
+        "C": "Chỉ số trích dẫn. (3)",
+        "D": "Nội dung (1), (2) và (3) đều đúng."
+      },
+      "answer": "A",
+      "explainAnswer": "Một ấn phẩm nghiên cứu khoa học uy tín không được đánh giá bằng số lượng quảng cáo; độc giả và chỉ số trích dẫn là những đặc điểm có thể liên quan đến ấn phẩm.",
+      "image": null
+    },
+    {
+      "id": 76,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Chọn câu chính xác nhất về một ví dụ trình bày tuân thủ theo quy định của APA về tài liệu tham khảo:",
+      "options": {
+        "A": "Bryman, A. (2012). Social research methods. Oxford University Press.",
+        "B": "(2016). Social research methods. Oxford: oxford university press.",
+        "C": "Bryman (2012, fourth edition), Oxford University Press.",
+        "D": "Bryman, Alan, Social Research Methods (2012: OUP)."
+      },
+      "answer": "A",
+      "explainAnswer": "Một tài liệu APA đầy đủ cần có tác giả, năm, tên tác phẩm và thông tin xuất bản; các phương án còn lại thiếu hoặc sai nhiều thành phần.",
+      "image": null
+    },
+    {
+      "id": 77,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Trong nghiên cứu của mình, bạn muốn đề cập đến nghiên cứu của Jones, Smith, Hu, Johnson, Benson và Mark (2012). Bạn nên trích dẫn tài liệu tham khảo này như thế nào trong lần đầu tiên bạn sử dụng nó theo chuẩn APA6:",
+      "options": {
+        "A": "Jones, Smith, Hu, Johnson, Benson, and Mark (2012).",
+        "B": "Jones và cộng sự (2012).",
+        "C": "Jones et al. (2012).",
+        "D": "Jones (2012)."
+      },
+      "answer": "C",
+      "explainAnswer": "Với APA 6, lần đầu trích dẫn tác phẩm có từ 6 tác giả trở lên dùng họ tác giả đầu tiên kèm “et al.”; vì vậy “Jones và cộng sự (2012)” là lựa chọn phù hợp nhất trong các phương án.",
+      "image": null
+    },
+    {
+      "id": 78,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Nguồn nào sau đây phù hợp nhất để tìm các bài nghiên cứu phục vụ lược khảo lý thuyết?",
+      "options": {
+        "A": "Một trang web không rõ tác giả và nguồn gốc.",
+        "B": "Một tạp chí học thuật có phản biện.",
+        "C": "Một bài đăng quảng cáo trên mạng xã hội.",
+        "D": "Một diễn đàn không kiểm chứng."
+      },
+      "answer": "B",
+      "explainAnswer": "“Review of educational research” là tên một tạp chí học thuật phù hợp với việc tìm tài liệu; các lựa chọn khác không phải tên tạp chí rõ ràng hoặc là địa chỉ web chung.",
+      "image": null
+    },
+    {
+      "id": 79,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Định dạng tham khảo nào chính xác cho một cuốn sách theo quy định của APA?",
+      "options": {
+        "A": "Weinberg, R. S., & Gould, D. (2011). Foundations of sport and exercise psychology. Human Kinetics.",
+        "B": "Weinberg, R. S. and Gould,",
+        "C": "Foundations of sport and exercise psychology, R. S. Weinberg, &",
+        "D": "(2011). Foundations of sport and exercise psychology. Human Kinetics: Champaign, IL."
+      },
+      "answer": "A",
+      "explainAnswer": "Trong các lựa chọn, A gần với định dạng APA nhất vì có tác giả, năm, tên sách, nhà xuất bản và địa điểm; tuy nhiên cần chuẩn hóa viết hoa và dấu câu khi dùng bản APA chính thức.",
+      "image": null
+    },
+    {
+      "id": 80,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Tại sao các nhà nghiên cứu phải bao gồm lược khảo lý thuyết (literature review) trong bài nghiên cứu?",
+      "options": {
+        "A": "Nội dung (1), (2) và (3) đều đúng.",
+        "B": "Vì đó là thói quen của các nhà nghiên cứu.",
+        "C": "Vì giúp xác định các nhà nghiên cứu cùng hướng.",
+        "D": "Vì chỉ cần tổng hợp nghiên cứu trước đây, không cần đánh giá."
+      },
+      "answer": "A",
+      "explainAnswer": "Lược khảo lý thuyết giúp tổng hợp nghiên cứu trước, xác định hướng nghiên cứu và đặt nghiên cứu hiện tại trong bối cảnh; theo cấu trúc câu hỏi, các nội dung (1), (2), (3) đều đúng.",
+      "image": null
+    },
+    {
+      "id": 81,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Tại sao cần xem lại các nghiên cứu trước?",
+      "options": {
+        "A": "Để đảm bảo số trang nghiên cứu.",
+        "B": "Để có danh sách tài liệu càng dài càng tốt.",
+        "C": "Để tránh phải xây dựng câu hỏi nghiên cứu.",
+        "D": "Để hiểu nghiên cứu trước và xác định vị trí/khoảng trống của nghiên cứu hiện tại."
+      },
+      "answer": "D",
+      "explainAnswer": "Xem lại nghiên cứu trước giúp hiểu những gì đã được thực hiện và xác định vị trí của nghiên cứu hiện tại; đây là mục đích cốt lõi.",
+      "image": null
+    },
+    {
+      "id": 82,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Khi viết nghiên cứu, cần tuân thủ các chuẩn mực về cách viết trích dẫn nhằm:",
+      "options": {
+        "A": "Chỉ đánh giá các câu chuyện về doanh nghiệp.",
+        "B": "Đánh giá diễn giải mà không cần tài liệu tham khảo.",
+        "C": "Chỉ trình bày kết quả mà không quan tâm phương pháp và lý thuyết.",
+        "D": "Xem xét các góc nhìn, lý thuyết, phương pháp, dữ liệu và kết quả liên quan đến chủ đề."
+      },
+      "answer": "D",
+      "explainAnswer": "Lược khảo tốt xem xét các góc nhìn, lý thuyết, phương pháp, dữ liệu và kết quả liên quan đến chủ đề nghiên cứu.",
+      "image": null
+    },
+    {
+      "id": 83,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Nguồn tài liệu để lược khảo lý thuyết có thể bao gồm:",
+      "options": {
+        "A": "Cả B, C và D đều đúng.",
+        "B": "Tạp chí khoa học.",
+        "C": "Hội nghị khoa học.",
+        "D": "Sách khoa học."
+      },
+      "answer": "A",
+      "explainAnswer": "Tạp chí khoa học, sách khoa học và kỷ yếu/hội nghị khoa học đều có thể là nguồn cho lược khảo, miễn là được đánh giá về độ tin cậy và mức độ phù hợp.",
+      "image": null
+    },
+    {
+      "id": 84,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Một nguồn tài liệu chuẩn thường phải đạt tiêu chuẩn nào sau đây:",
+      "options": {
+        "A": "Tìm thấy từ bất kỳ trang web nào.",
+        "B": "Chỉ cần do một trường đại học nổi tiếng công bố.",
+        "C": "Không cần đánh giá nguồn nếu có trên Internet.",
+        "D": "Được phản biện bởi chuyên gia là một dấu hiệu quan trọng về chất lượng học thuật."
+      },
+      "answer": "D",
+      "explainAnswer": "Nguồn được phản biện bởi chuyên gia thường có cơ chế kiểm soát chất lượng học thuật tốt hơn; tuy nhiên vẫn cần đánh giá cụ thể từng nguồn.",
+      "image": null
+    },
+    {
+      "id": 85,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Trích dẫn (citation) là gì?",
+      "options": {
+        "A": "Ghi nhận lập luận, kết quả hoặc ý tưởng từ các nghiên cứu liên quan mà mình sử dụng.",
+        "B": "Viết tên tất cả tác giả cùng chủ đề dù không sử dụng.",
+        "C": "Tìm toàn văn một bài báo.",
+        "D": "Liệt kê tài liệu không được sử dụng."
+      },
+      "answer": "A",
+      "explainAnswer": "Citation là việc ghi nhận nguồn của lập luận, ý tưởng, dữ liệu hoặc kết quả nghiên cứu liên quan được sử dụng trong công trình.",
+      "image": null
+    },
+    {
+      "id": 86,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Theo hiệp hội tâm lý học Hoa Kỳ, hệ thống trích dẫn nguồn phổ biến nhất trong nghiên cứu khoa học xã hội và hành vi là:",
+      "options": {
+        "A": "Harvard.",
+        "B": "Chicago.",
+        "C": "APA.",
+        "D": "MLA."
+      },
+      "answer": "C",
+      "explainAnswer": "APA là hệ thống do American Psychological Association phát triển và được sử dụng phổ biến trong khoa học xã hội và hành vi.",
+      "image": null
+    },
+    {
+      "id": 87,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Khi đánh giá một công trình khoa học, điều nào sau đây KHÔNG quá quan trọng:",
+      "options": {
+        "A": "Tuổi của tác giả.",
+        "B": "Số lượt trích dẫn.",
+        "C": "Tạp chí công bố.",
+        "D": "Chất lượng phương pháp và bằng chứng."
+      },
+      "answer": "A",
+      "explainAnswer": "Tuổi của tác giả không phải tiêu chí cốt lõi để đánh giá chất lượng của một công trình; cần chú trọng nội dung, phương pháp, bằng chứng và nguồn công bố.",
+      "image": null
+    },
+    {
+      "id": 88,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Trình tự các bước thực hiện trong lược khảo lý thuyết và các nghiên cứu trước đây:",
+      "options": {
+        "A": "Phát triển khung lý thuyết → khung khái niệm → tìm lý thuyết hiện có → lược khảo.",
+        "B": "Tìm lý thuyết hiện có → lược khảo tài liệu → phát triển khung lý thuyết → phát triển khung khái niệm.",
+        "C": "Phát triển khung lý thuyết → khung khái niệm → lược khảo → tìm lý thuyết hiện có.",
+        "D": "Lược khảo → khung khái niệm → tìm lý thuyết hiện có → khung lý thuyết."
+      },
+      "answer": "B",
+      "explainAnswer": "Trình tự hợp lý là tìm các lý thuyết hiện có, lược khảo tài liệu, rồi phát triển khung lý thuyết và khung khái niệm dựa trên kết quả lược khảo.",
+      "image": null
+    },
+    {
+      "id": 89,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Đặt những câu hỏi để khai thác những thông tin nhạy cảm (sensitive) có thể gây ra ............cho đối tượng khảo sát.",
+      "options": {
+        "A": "Thoải mái (comfort)",
+        "B": "Ảnh hưởng tính bảo mật (confidentiality)",
+        "C": "Phân biệt đối xử (discrimination)",
+        "D": "Tổn hại (harm)"
+      },
+      "answer": "D",
+      "explainAnswer": "Câu hỏi nhạy cảm có thể gây tổn hại cho người tham gia, chẳng hạn tạo khó chịu, rủi ro về riêng tư hoặc hậu quả xã hội.",
+      "image": null
+    },
+    {
+      "id": 90,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "\"Làm thế nào để cải thiện chất lượng dịch vụ/sản phẩm?\" là câu hỏi dưới góc nhìn của:",
+      "options": {
+        "A": "Người tiêu dùng (2)",
+        "B": "Nội dung (1), (2) và (3) đều đúng",
+        "C": "Chuyên gia (3)",
+        "D": "Nhà cung cấp dịch vụ (1)"
+      },
+      "answer": "D",
+      "explainAnswer": "“Làm thế nào để cải thiện chất lượng dịch vụ/sản phẩm?” hướng đến hành động cải thiện của nhà cung cấp dịch vụ.",
+      "image": null
+    },
+    {
+      "id": 91,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Bước đầu tiên của giai đoạn quyết định vấn đề nghiên cứu là:",
+      "options": {
+        "A": "Chọn mẫu nghiên cứu",
+        "B": "Xác định nghiên cứu vấn đề gì",
+        "C": "Viết lược khảo lý thuyết",
+        "D": "Thu thập dữ liệu"
+      },
+      "answer": "B",
+      "explainAnswer": "Bước đầu tiên là xác định rõ nghiên cứu vấn đề gì; chọn mẫu và thu thập dữ liệu chỉ diễn ra sau khi vấn đề và kế hoạch đã được xác định.",
+      "image": null
+    },
+    {
+      "id": 92,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Mọi kết luận đưa ra đều dựa trên bằng chứng cụ thể được thu thập từ thông tin thu thập được từ các trải nghiệm hoặc quan sát thực tế. Đây là đặc điểm nào của nghiên cứu khoa học:",
+      "options": {
+        "A": "Tính kiểm soát (controlled)",
+        "B": "Tính thực nghiệm (empirical)",
+        "C": "Tính nghiêm ngặt (rigorous)",
+        "D": "Tính hệ thống (systematic)"
+      },
+      "answer": "B",
+      "explainAnswer": "Dựa trên trải nghiệm hoặc quan sát thực tế là đặc trưng của tính thực nghiệm (empirical).",
+      "image": null
+    },
+    {
+      "id": 93,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Khoa đang diễn giải các bài đăng trên blog của người tiêu dùng trên Internet. Loại nào sau đây mô tả đúng nhất về loại nghiên cứu mà Khoa đang tiến hành?",
+      "options": {
+        "A": "Nghiên cứu kinh doanh phụ thuộc",
+        "B": "Nghiên cứu định lượng",
+        "C": "Nghiên cứu kinh doanh độc lập",
+        "D": "Nghiên cứu định tính"
+      },
+      "answer": "D",
+      "explainAnswer": "Diễn giải nội dung các bài đăng trên blog để hiểu phản ứng và ý nghĩa của người tiêu dùng phù hợp nhất với nghiên cứu định tính.",
+      "image": null
+    },
+    {
+      "id": 94,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Hành vi nào sau đây trong nghiên cứu bị xem là vi phạm đạo đức?",
+      "options": {
+        "A": "Gây phân biệt đối xử (3)",
+        "B": "Nội dung (1), (2) và (3) đều đúng",
+        "C": "Gây bất lợi cho người tham gia (1)",
+        "D": "Để lộ thông tin (2)"
+      },
+      "answer": "B",
+      "explainAnswer": "Gây phân biệt đối xử, gây bất lợi cho người tham gia và để lộ thông tin đều có thể vi phạm đạo đức; vì vậy cả ba đều đúng.",
+      "image": null
+    },
+    {
+      "id": 95,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Đóng góp quan trọng nhất của một nghiên cứu khoa học khi được xuất bản là:",
+      "options": {
+        "A": "Đóng góp về danh tiếng (reputation) của đơn vị",
+        "B": "Để các nhà nghiên cứu phát triển (researcher development)",
+        "C": "Đóng góp về kiến thức (knowledge)",
+        "D": "Đóng góp về tài chính (finance)"
+      },
+      "answer": "C",
+      "explainAnswer": "Đóng góp cốt lõi của nghiên cứu khoa học là tạo ra hoặc phát triển tri thức; danh tiếng hay tài chính không phải đóng góp khoa học cốt lõi.",
+      "image": null
+    },
+    {
+      "id": 96,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Mục tiêu chính của ______ là mô tả bản chất/nguyên nhân/sự thay đổi một hiện tượng, tình huống, vấn đề. Mục tiêu chính của ______ là đo lường mức độ thay đổi của một hiện tượng, tình huống, vấn đề.",
+      "options": {
+        "A": "Nghiên cứu kết hợp; Nghiên cứu định lượng",
+        "B": "Nghiên cứu định tính; Nghiên cứu định lượng",
+        "C": "Nghiên cứu định lượng; Nghiên cứu định tính",
+        "D": "Nghiên cứu mô tả; Nghiên cứu khám phá"
+      },
+      "answer": "B",
+      "explainAnswer": "Định tính thường nhằm hiểu bản chất, nguyên nhân và diễn biến của hiện tượng; định lượng thường đo lường mức độ thay đổi bằng dữ liệu có thể lượng hóa.",
+      "image": null
+    },
+    {
+      "id": 97,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Loại hình nghiên cứu được thực hiện chủ yếu để đạt được các kiến thức mới mang tính nền tảng của các hiện tượng và các sự kiện thực tế quan sát được, mà không nhằm sử dụng theo dự định nào.",
+      "options": {
+        "A": "Nghiên cứu ứng dụng (Applied research) (1)",
+        "B": "Nghiên cứu công nghiệp (Industrial research) (3)",
+        "C": "Nội dung (1), (2) và (3) đều đúng",
+        "D": "Nghiên cứu cơ bản (Pure research) (2)"
+      },
+      "answer": "D",
+      "explainAnswer": "Nghiên cứu cơ bản nhằm tạo ra kiến thức nền tảng mới mà không nhất thiết hướng tới một ứng dụng cụ thể ngay lập tức.",
+      "image": null
+    },
+    {
+      "id": 98,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Đặc điểm nào phản ánh rõ nhất tính khoa học của một nghiên cứu?",
+      "options": {
+        "A": "Dựa chủ yếu vào kinh nghiệm cá nhân của nhà nghiên cứu.",
+        "B": "Có quy trình và phương pháp được tổ chức một cách có hệ thống.",
+        "C": "Chỉ cần sử dụng số liệu định lượng.",
+        "D": "Luôn phải tiến hành thí nghiệm."
+      },
+      "answer": "B",
+      "explainAnswer": "Tính khoa học thể hiện ở quy trình và phương pháp được tổ chức có hệ thống.",
+      "image": null
+    },
+    {
+      "id": 99,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Một nghiên cứu được xem là có tính hệ thống khi:",
+      "options": {
+        "A": "Nhà nghiên cứu sử dụng càng nhiều phương pháp càng tốt.",
+        "B": "Các bước nghiên cứu được thực hiện theo một trình tự logic và có cơ sở.",
+        "C": "Nghiên cứu sử dụng mẫu có kích thước rất lớn.",
+        "D": "Kết quả nghiên cứu phù hợp với kỳ vọng ban đầu."
+      },
+      "answer": "B",
+      "explainAnswer": "Tính hệ thống = trình tự logic và có cơ sở.",
+      "image": null
+    },
+    {
+      "id": 100,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Nghiên cứu hàn lâm chủ yếu hướng tới mục tiêu nào?",
+      "options": {
+        "A": "Giải quyết ngay một vấn đề kinh doanh cụ thể.",
+        "B": "Tạo ra và phát triển tri thức, lý thuyết và nền tảng khoa học.",
+        "C": "Tăng doanh thu cho doanh nghiệp.",
+        "D": "Thương mại hóa kết quả nghiên cứu trong thời gian ngắn."
+      },
+      "answer": "B",
+      "explainAnswer": "Nghiên cứu hàn lâm hướng tới tạo ra và phát triển tri thức, lý thuyết.",
+      "image": null
+    },
+    {
+      "id": 101,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Ví dụ nào phù hợp nhất với nghiên cứu ứng dụng?",
+      "options": {
+        "A": "Tìm hiểu cơ chế hình thành hành vi tiết kiệm của con người.",
+        "B": "Phân tích bản chất của động cơ tiêu dùng.",
+        "C": "Xây dựng mô hình dự báo nhu cầu điện của hộ gia đình để hỗ trợ doanh nghiệp cung ứng.",
+        "D": "Phát triển một lý thuyết mới về hành vi kinh tế."
+      },
+      "answer": "C",
+      "explainAnswer": "Nghiên cứu ứng dụng hướng tới giải quyết vấn đề thực tiễn cụ thể.",
+      "image": null
+    },
+    {
+      "id": 102,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Trong tiêu chuẩn FINER, chữ N đề cập đến:",
+      "options": {
+        "A": "Tính cần thiết (Necessary).",
+        "B": "Tính mới (Novel).",
+        "C": "Tính trung lập (Neutral).",
+        "D": "Tính định lượng (Numerical)."
+      },
+      "answer": "B",
+      "explainAnswer": "N = Novel (Tính mới).",
+      "image": null
+    },
+    {
+      "id": 103,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Một nhóm nghiên cứu muốn khảo sát toàn bộ sinh viên Việt Nam nhưng chỉ có nguồn lực để khảo sát sinh viên tại Hà Nội. Vấn đề này trước hết liên quan đến tiêu chuẩn nào của FINER?",
+      "options": {
+        "A": "Interesting.",
+        "B": "Novel.",
+        "C": "Feasible.",
+        "D": "Ethical."
+      },
+      "answer": "C",
+      "explainAnswer": "Liên quan đến tính khả thi (Feasible).",
+      "image": null
+    },
+    {
+      "id": 104,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Phát biểu nào dưới đây phù hợp nhất với câu hỏi nghiên cứu?",
+      "options": {
+        "A": "Tác động của AI đến năng suất lao động của nhân viên văn phòng.",
+        "B": "Đánh giá tác động của AI đến năng suất lao động.",
+        "C": "AI có tác động như thế nào đến năng suất lao động của nhân viên văn phòng?",
+        "D": "AI làm tăng năng suất lao động của nhân viên văn phòng."
+      },
+      "answer": "C",
+      "explainAnswer": "Câu hỏi nghiên cứu thường dùng từ để hỏi (như thế nào, tại sao…).",
+      "image": null
+    },
+    {
+      "id": 105,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Trong quy trình nghiên cứu, việc lựa chọn phương pháp thu thập dữ liệu và chiến lược chọn mẫu thuộc giai đoạn:",
+      "options": {
+        "A": "Xác định vấn đề.",
+        "B": "Thiết kế nghiên cứu.",
+        "C": "Phân tích dữ liệu.",
+        "D": "Viết báo cáo."
+      },
+      "answer": "B",
+      "explainAnswer": "Thuộc giai đoạn thiết kế nghiên cứu.",
+      "image": null
+    },
+    {
+      "id": 106,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Một nghiên cứu về mức độ hài lòng của khách hàng ngân hàng xác định tất cả khách hàng cá nhân của ngân hàng trong năm 2026 là tổng thể nghiên cứu. Khi đó, 500 khách hàng được chọn để khảo sát là:",
+      "options": {
+        "A": "Biến nghiên cứu.",
+        "B": "Tổng thể.",
+        "C": "Mẫu nghiên cứu.",
+        "D": "Đơn vị phân tích."
+      },
+      "answer": "C",
+      "explainAnswer": "500 khách hàng được chọn = mẫu nghiên cứu.",
+      "image": null
+    },
+    {
+      "id": 107,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Một doanh nghiệp nhận thấy mức độ hài lòng của khách hàng giảm đáng kể trong năm 2026 nhưng chưa xác định được nguyên nhân. Nội dung nào dưới đây thể hiện rõ nhất vấn đề nghiên cứu?",
+      "options": {
+        "A": "Sự hài lòng của khách hàng.",
+        "B": "Nghiên cứu hành vi khách hàng.",
+        "C": "Mức độ hài lòng của khách hàng đang giảm và cần xác định các yếu tố dẫn đến sự suy giảm này.",
+        "D": "Khảo sát 500 khách hàng của doanh nghiệp."
+      },
+      "answer": "C",
+      "explainAnswer": "Vấn đề nghiên cứu nêu rõ hiện tượng và nhu cầu làm rõ nguyên nhân.",
+      "image": null
+    },
+    {
+      "id": 108,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Nhà nghiên cứu phân tích nội dung các bài đăng trên mạng xã hội để tìm hiểu cách người tiêu dùng phản ứng với quảng cáo. Phương pháp này gần nhất với:",
+      "options": {
+        "A": "Phân tích diễn ngôn/văn bản.",
+        "B": "Thiết kế thực nghiệm.",
+        "C": "Điều tra mẫu xác suất.",
+        "D": "Phân tích hồi quy."
+      },
+      "answer": "A",
+      "explainAnswer": "Phân tích nội dung bài đăng = phân tích diễn ngôn/văn bản.",
+      "image": null
+    },
+    {
+      "id": 109,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Một hạn chế thường gặp của nghiên cứu tình huống là:",
+      "options": {
+        "A": "Không thể sử dụng phỏng vấn.",
+        "B": "Không thể nghiên cứu hiện tượng trong bối cảnh thực tế.",
+        "C": "Khả năng khái quát hóa cho tổng thể rộng có thể bị hạn chế.",
+        "D": "Chỉ có thể sử dụng dữ liệu định lượng."
+      },
+      "answer": "C",
+      "explainAnswer": "Hạn chế chính của case study là khả năng khái quát hóa thấp.",
+      "image": null
+    },
+    {
+      "id": 110,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Nếu muốn tìm hiểu sâu lý do sinh viên quyết định bỏ học, phương pháp thu thập dữ liệu nào phù hợp nhất?",
+      "options": {
+        "A": "Quan sát hành vi của sinh viên trong lớp học.",
+        "B": "Thảo luận nhóm với các sinh viên đang học.",
+        "C": "Phỏng vấn sâu các sinh viên đã quyết định bỏ học.",
+        "D": "Khảo sát bằng bảng hỏi đối với toàn bộ sinh viên."
+      },
+      "answer": "C",
+      "explainAnswer": "Phỏng vấn sâu phù hợp để tìm hiểu sâu lý do.",
+      "image": null
+    },
+    {
+      "id": 111,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Trong một cuộc thảo luận nhóm, nếu một người liên tục chi phối cuộc trao đổi, người điều phối nên:",
+      "options": {
+        "A": "Cho người đó tiếp tục nói đến khi hết ý.",
+        "B": "Dừng cuộc thảo luận ngay lập tức.",
+        "C": "Điều tiết cuộc thảo luận và tạo cơ hội cho các thành viên khác phát biểu.",
+        "D": "Bỏ qua toàn bộ ý kiến của người đó."
+      },
+      "answer": "C",
+      "explainAnswer": "Người điều phối cần điều tiết để mọi thành viên có cơ hội phát biểu.",
+      "image": null
+    },
+    {
+      "id": 112,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Trong nghiên cứu định lượng, bảng hỏi thường được sử dụng nhằm:",
+      "options": {
+        "A": "Thu thập dữ liệu có thể mã hóa và phân tích thống kê.",
+        "B": "Thay thế hoàn toàn lý thuyết.",
+        "C": "Chỉ thu thập dữ liệu dạng văn bản dài.",
+        "D": "Loại bỏ nhu cầu chọn mẫu."
+      },
+      "answer": "A",
+      "explainAnswer": "Bảng hỏi phục vụ thu thập dữ liệu có cấu trúc để phân tích thống kê.",
+      "image": null
+    },
+    {
+      "id": 113,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Một nhà nghiên cứu muốn kiểm tra tác động của ánh sáng phòng học đến kết quả làm bài. Sinh viên được chia ngẫu nhiên thành hai nhóm với hai điều kiện ánh sáng khác nhau. Đây là:",
+      "options": {
+        "A": "Nghiên cứu mô tả.",
+        "B": "Nghiên cứu thí nghiệm.",
+        "C": "Nghiên cứu tình huống.",
+        "D": "Nghiên cứu dân tộc học."
+      },
+      "answer": "B",
+      "explainAnswer": "Chia ngẫu nhiên + kiểm soát điều kiện = nghiên cứu thí nghiệm.",
+      "image": null
+    },
+    {
+      "id": 114,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Trong giả thuyết “Chất lượng dịch vụ ảnh hưởng tích cực đến sự hài lòng của khách hàng”, sự hài lòng là:",
+      "options": {
+        "A": "Biến độc lập.",
+        "B": "Biến phụ thuộc.",
+        "C": "Biến điều tiết.",
+        "D": "Biến kiểm soát."
+      },
+      "answer": "B",
+      "explainAnswer": "Sự hài lòng chịu tác động → biến phụ thuộc.",
+      "image": null
+    },
+    {
+      "id": 115,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Biến điều tiết có chức năng chủ yếu là:",
+      "options": {
+        "A": "Là kết quả cuối cùng của mô hình.",
+        "B": "Thay đổi mức độ hoặc hướng của mối quan hệ giữa các biến.",
+        "C": "Luôn nằm ở vị trí biến phụ thuộc.",
+        "D": "Chỉ dùng để đo đặc điểm cá nhân."
+      },
+      "answer": "B",
+      "explainAnswer": "Biến điều tiết thay đổi mức độ/hướng quan hệ giữa các biến.",
+      "image": null
+    },
+    {
+      "id": 116,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Phát biểu nào dưới đây phù hợp nhất với chủ đề nghiên cứu?",
+      "options": {
+        "A": "Tỷ lệ nghỉ việc của nhân viên tại doanh nghiệp X tăng từ 8% lên 20% trong hai năm gần đây.",
+        "B": "Các yếu tố ảnh hưởng đến quyết định nghỉ việc của nhân viên.",
+        "C": "Vì sao tỷ lệ nghỉ việc của nhân viên tại doanh nghiệp X tăng?",
+        "D": "Do chính sách tiền lương chưa phù hợp nên nhân viên nghỉ việc."
+      },
+      "answer": "B",
+      "explainAnswer": "Chủ đề nghiên cứu thường là cụm danh từ nêu vấn đề/yếu tố cần nghiên cứu.",
+      "image": null
+    },
+    {
+      "id": 117,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Một mô hình nghiên cứu chủ yếu thể hiện:",
+      "options": {
+        "A": "Nội dung chi tiết của từng câu hỏi khảo sát.",
+        "B": "Các biến nghiên cứu và mối quan hệ được giả định giữa chúng.",
+        "C": "Danh mục tài liệu tham khảo.",
+        "D": "Kết quả thống kê cuối cùng."
+      },
+      "answer": "B",
+      "explainAnswer": "Mô hình thể hiện các biến và mối quan hệ giả định.",
+      "image": null
+    },
+    {
+      "id": 118,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Điểm khác biệt cơ bản giữa chọn mẫu trong nghiên cứu định lượng và định tính là:",
+      "options": {
+        "A": "Định lượng thường quan tâm đến tính đại diện; định tính thường chú trọng chiều sâu và bão hòa thông tin.",
+        "B": "Định tính luôn cần mẫu lớn hơn định lượng.",
+        "C": "Định lượng không cần xác định tổng thể.",
+        "D": "Hai phương pháp luôn sử dụng cùng một cách chọn mẫu."
+      },
+      "answer": "A",
+      "explainAnswer": "Định lượng → đại diện; Định tính → chiều sâu & bão hòa.",
+      "image": null
+    },
+    {
+      "id": 119,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Trong nghiên cứu định tính, việc tiếp tục thu thập dữ liệu cho đến khi thông tin mới không còn xuất hiện đáng kể được gọi là:",
+      "options": {
+        "A": "Đại diện thống kê.",
+        "B": "Bão hòa thông tin.",
+        "C": "Ngẫu nhiên hóa.",
+        "D": "Kiểm định giả thuyết."
+      },
+      "answer": "B",
+      "explainAnswer": "Bão hòa thông tin (theoretical saturation).",
+      "image": null
+    },
+    {
+      "id": 120,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Ví dụ nào sau đây là dữ liệu định lượng?",
+      "options": {
+        "A": "Nhật ký phỏng vấn người lao động.",
+        "B": "Bản ghi âm cuộc thảo luận nhóm.",
+        "C": "Tỷ lệ thất nghiệp của Việt Nam giai đoạn 2015–2025.",
+        "D": "Nội dung các bài đăng trên Facebook."
+      },
+      "answer": "C",
+      "explainAnswer": "Tỷ lệ thất nghiệp là dữ liệu số → định lượng.",
+      "image": null
+    },
+    {
+      "id": 121,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Nguồn nào sau đây phù hợp nhất với dữ liệu thứ cấp?",
+      "options": {
+        "A": "Nhà nghiên cứu trực tiếp khảo sát 500 hộ gia đình.",
+        "B": "Nhà nghiên cứu phỏng vấn 20 chuyên gia.",
+        "C": "Cơ sở dữ liệu thống kê được cơ quan nhà nước công bố.",
+        "D": "Nhà nghiên cứu tổ chức thảo luận nhóm."
+      },
+      "answer": "C",
+      "explainAnswer": "Dữ liệu do cơ quan nhà nước công bố là dữ liệu thứ cấp.",
+      "image": null
+    },
+    {
+      "id": 122,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Nghiên cứu hỗn hợp được hiểu là nghiên cứu:",
+      "options": {
+        "A": "Chỉ sử dụng nhiều kỹ thuật định lượng.",
+        "B": "Kết hợp dữ liệu/phương pháp định tính và định lượng trong cùng nghiên cứu theo thiết kế phù hợp.",
+        "C": "Chỉ sử dụng dữ liệu thứ cấp.",
+        "D": "Chỉ sử dụng phỏng vấn sâu."
+      },
+      "answer": "B",
+      "explainAnswer": "Nghiên cứu hỗn hợp kết hợp định tính và định lượng.",
+      "image": null
+    },
+    {
+      "id": 123,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Theo nội dung học phần, Creswell & Clark (2007) đề cập đến bao nhiêu thiết kế nghiên cứu hỗn hợp?",
+      "options": {
+        "A": "2.",
+        "B": "3.",
+        "C": "4.",
+        "D": "5."
+      },
+      "answer": "C",
+      "explainAnswer": "Creswell & Clark thường nêu 4 thiết kế chính (hoặc 5 tùy phiên bản).",
+      "image": null
+    },
+    {
+      "id": 124,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Hành vi nào sau đây là đạo văn?",
+      "options": {
+        "A": "Diễn giải ý tưởng của tác giả và ghi nguồn.",
+        "B": "Trích dẫn nguyên văn và ghi rõ nguồn.",
+        "C": "Sao chép ý tưởng hoặc nội dung của người khác nhưng trình bày như sản phẩm của mình.",
+        "D": "Tổng hợp nhiều nghiên cứu và lập danh mục tài liệu tham khảo."
+      },
+      "answer": "C",
+      "explainAnswer": "Đạo văn là chiếm hữu ý tưởng/nội dung của người khác như của mình.",
+      "image": null
+    },
+    {
+      "id": 125,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Tự đạo văn (self-plagiarism) là:",
+      "options": {
+        "A": "Sử dụng lại sản phẩm học thuật của chính mình mà không công bố/ghi nhận phù hợp.",
+        "B": "Trích dẫn bài báo của người khác.",
+        "C": "Sử dụng dữ liệu thứ cấp.",
+        "D": "Viết lại một câu theo cách diễn đạt khác."
+      },
+      "answer": "A",
+      "explainAnswer": "Self-plagiarism = tái sử dụng sản phẩm của chính mình mà không ghi nhận phù hợp.",
+      "image": null
+    },
+    {
+      "id": 126,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Cấu trúc IMRaD thường bao gồm:",
+      "options": {
+        "A": "Introduction – Methods – Results – Discussion.",
+        "B": "Introduction – Model – References – Discussion.",
+        "C": "Introduction – Results – Methods – Data.",
+        "D": "Methods – Introduction – Results – References."
+      },
+      "answer": "A",
+      "explainAnswer": "IMRaD = Introduction, Methods, Results, Discussion.",
+      "image": null
+    },
+    {
+      "id": 127,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Trong bài nghiên cứu theo cấu trúc IMRaD, phần Methods chủ yếu trình bày:",
+      "options": {
+        "A": "Những đóng góp lý thuyết của nghiên cứu.",
+        "B": "Cách nghiên cứu được thực hiện, dữ liệu và phương pháp phân tích.",
+        "C": "Các khuyến nghị chính sách.",
+        "D": "Kết luận cuối cùng."
+      },
+      "answer": "B",
+      "explainAnswer": "Methods mô tả cách thực hiện, dữ liệu và phương pháp phân tích.",
+      "image": null
+    },
+    {
+      "id": 128,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Một nghiên cứu trước tiên sử dụng khảo sát định lượng để phát hiện xu hướng bất thường; sau đó tiến hành phỏng vấn để giải thích sâu hơn. Đây là:",
+      "options": {
+        "A": "Hỗn hợp khám phá.",
+        "B": "Hỗn hợp giải thích.",
+        "C": "Hỗn hợp đa phương pháp.",
+        "D": "Nghiên cứu định tính thuần túy."
+      },
+      "answer": "B",
+      "explainAnswer": "Định lượng trước → định tính sau = hỗn hợp giải thích (explanatory sequential).",
+      "image": null
+    },
+    {
+      "id": 129,
+      "chapter": "Phương pháp nghiên cứu khoa học trong kinh tế",
+      "sourceChapter": "NCKH TRONG KINH TẾ - BỘ CÂU HỎI ÔN TẬP",
+      "question": "Một nghiên cứu tiến hành phỏng vấn sâu trước, từ kết quả phỏng vấn xây dựng bảng hỏi để khảo sát trên mẫu lớn. Thiết kế này phù hợp nhất với:",
+      "options": {
+        "A": "Hỗn hợp giải thích.",
+        "B": "Hỗn hợp khám phá.",
+        "C": "Hỗn hợp đa phương pháp.",
+        "D": "Nghiên cứu định lượng."
+      },
+      "answer": "B",
+      "explainAnswer": "Định tính trước → định lượng sau = hỗn hợp khám phá (exploratory sequential).",
+      "image": null
+    }
+  ]
+}

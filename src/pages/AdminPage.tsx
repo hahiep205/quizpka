@@ -637,7 +637,6 @@ export function AdminPage({ lang }: Props) {
   }
 
   const grantUsers = users.filter((user) => {
-    if (user.role === "admin") return false
     const query = grantUserQuery.trim().toLowerCase()
     if (!query) return true
     return [user.displayName, user.email, user.id].some((value) => value?.toLowerCase().includes(query))

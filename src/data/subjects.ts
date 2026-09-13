@@ -24,6 +24,7 @@ export type SubjectId =
   | "kinh-te-chinh-tri-mac-lenin"
   | "ky-nang-khoi-nghiep-va-lanh-dao"
   | "phuong-phap-nghien-cuu-khoa-hoc"
+  | "nghien-cuu-khoa-hoc-trong-kinh-te"
   | "bao-mat-ung-dung-he-thong"
   | "marketing-can-ban"
   | "tin-hoc-van-phong"
@@ -538,6 +539,23 @@ export const subjects: Subject[] = [
     chapters: [
       { id: "all", label: { en: "Research Methodology - Final", vi: "Phương pháp nghiên cứu khoa học - Cuối kỳ" }, count: 117 },
       { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Phương pháp nghiên cứu khoa học"], hidden: true, count: 117 },
+    ],
+  },
+  {
+    id: "nghien-cuu-khoa-hoc-trong-kinh-te",
+    code: "RM102",
+    name: { en: "Research in Economics", vi: "Quiz ôn tập Cuối kỳ - Nghiên cứu khoa học trong kinh tế" },
+    category: { en: "Major", vi: "Chuyên ngành" },
+    exams: [
+      {
+        id: "nghien-cuu-khoa-hoc-trong-kinh-te-final-bank-1", type: "final", year: 2026, questionCount: 129, durationMinutes: 240,
+        title: { en: "Research in Economics", vi: "Quiz ôn tập Cuối kỳ - Nghiên cứu khoa học trong kinh tế" },
+        description: { en: "A question bank of 129 questions, covering both midterm and final content.", vi: "Bộ tài liệu gồm 129 câu hỏi, bao gồm cả nội dung Giữa và Cuối kỳ." },
+      },
+    ],
+    chapters: [
+      { id: "all", label: { en: "Research in Economics - Final", vi: "Nghiên cứu khoa học trong kinh tế - Cuối kỳ" }, count: 129 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Phương pháp nghiên cứu khoa học trong kinh tế"], hidden: true, count: 129 },
     ],
   },
   {

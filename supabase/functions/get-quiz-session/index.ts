@@ -28,6 +28,7 @@ const examFiles: Record<string, string> = {
   "discrete-math-quiz-bank-1": "dm101/toan_roi_rac_quiz.json",
   "english-1-final-bank-1": "ta101/tieng_anh_1_quiz.json",
   "research-methodology-final-bank-1": "rm101/phuong_phap_nghien_cuu.json",
+  "nghien-cuu-khoa-hoc-trong-kinh-te-final-bank-1": "rm102/nghien_cuu_khoa_hoc_trong_kinh_te.json",
   "english-paid-test02-bank-1": "tadv02/test02.json",
   "english-paid-test03-bank-1": "tadv02/test03.json",
   "english-paid-test04-bank-1": "tadv02/test04.json",
