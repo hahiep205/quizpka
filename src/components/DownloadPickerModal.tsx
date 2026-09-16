@@ -1,5 +1,5 @@
 import { useEffect, useId, useRef, useState } from "react"
-import { BookOpen, CirclePlay, Download, ExternalLink, FileImage, FileText } from "lucide-react"
+import { BookOpen, CirclePlay, Download, ExternalLink, FileImage, FileText, Volume2 } from "lucide-react"
 import { useAuth } from "@/auth/AuthProvider"
 import { logActivityEvent } from "@/features/activity/lib/activityLog"
 import { getChapterOptionsForSubject } from "@/data/subjectChapters"
@@ -107,6 +107,36 @@ export function DownloadPickerModal({ open, lang, exam, subject, onClose, onConf
             />
           ))}
         </div>
+        {(() => {
+          const tracks = tadvExamOptions.find((opt) => opt.id === selected)?.audioTracks ?? []
+          if (!tracks.length) return null
+          return (
+            <div className="mt-4">
+              <p className="lp-label mb-2">{lang === "vi" ? "File nghe kèm theo (MP3)" : "Included audio files (MP3)"}</p>
+              <div className="grid gap-2">
+                {tracks.map((track) => (
+                  <a
+                    key={track.url}
+                    href={track.url}
+                    download={track.fileName}
+                    className="flex w-full items-center gap-4 rounded-[12px] border-2 border-[#E5E5E5] bg-white px-4 py-3 text-left transition-all hover:border-[#B3E5FC] dark:border-white/10 dark:bg-slate-900"
+                  >
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[12px] bg-[#F6F7FB] text-[#1CB0F6] dark:bg-white/5">
+                      <Volume2 className="h-5 w-5" />
+                    </span>
+                    <span className="min-w-0 flex-1">
+                      <span className="block line-clamp-2 text-[15px] font-extrabold leading-5 text-[#100F3E] dark:text-white">{track.label[lang]}</span>
+                      <span className="mt-1 block text-[13px] font-semibold leading-4 text-slate-500 dark:text-slate-400">MP3 · {lang === "vi" ? "nhấn để tải về" : "tap to download"}</span>
+                    </span>
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-[#E8F7FE] text-[#1CB0F6] dark:bg-sky-500/10">
+                      <Download className="h-4 w-4" strokeWidth={2} />
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )
+        })()}
       </PickerModalShell>
     )
   }
