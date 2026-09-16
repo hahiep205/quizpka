@@ -2,8 +2,10 @@ import { describe, expect, it } from "vitest"
 import type { ExamCatalogItem } from "@/data/subjects"
 import {
   applySubjectDisplayOverrides,
+  filterDownloadableSubjectExams,
   filterVisibleSubjectExams,
   getSubjectDisplayName,
+  isSubjectDownloadable,
   isSubjectVisible,
   overrideMapBySubject,
 } from "@/features/admin/lib/subjectDisplay"
@@ -39,8 +41,8 @@ describe("subject display overrides", () => {
 
   it("applies name/title/note per subject and filters hidden subjects", () => {
     const map = overrideMapBySubject([
-      { subjectId: "a", nameVi: "Tên mới", nameEn: null, titleVi: null, titleEn: "New Title", noteVi: "Ghi chú mới", noteEn: null, visible: true },
-      { subjectId: "b", nameVi: null, nameEn: null, titleVi: null, titleEn: null, noteVi: null, noteEn: null, visible: false },
+      { subjectId: "a", nameVi: "Tên mới", nameEn: null, titleVi: null, titleEn: "New Title", noteVi: "Ghi chú mới", noteEn: null, visible: true, downloadable: true },
+      { subjectId: "b", nameVi: null, nameEn: null, titleVi: null, titleEn: null, noteVi: null, noteEn: null, visible: false, downloadable: true },
     ])
     const [applied] = applySubjectDisplayOverrides([exam("e1", A)], map)
     expect(applied.subjectName).toEqual({ en: "Orig Name", vi: "Tên mới" })
@@ -52,8 +54,21 @@ describe("subject display overrides", () => {
 
   it("treats blank override text as keep-original", () => {
     const map = overrideMapBySubject([
-      { subjectId: "a", nameVi: "   ", nameEn: null, titleVi: null, titleEn: null, noteVi: null, noteEn: null, visible: true },
+      { subjectId: "a", nameVi: "   ", nameEn: null, titleVi: null, titleEn: null, noteVi: null, noteEn: null, visible: true, downloadable: true },
     ])
     expect(getSubjectDisplayName({ name: { en: "N", vi: "T" } }, map.get(A))).toEqual({ en: "N", vi: "T" })
+  })
+
+  it("gates PDF downloads per subject, defaulting to allowed", () => {
+    const empty = overrideMapBySubject([])
+    expect(isSubjectDownloadable(A, empty)).toBe(true)
+    expect(filterDownloadableSubjectExams([exam("e1", A)], empty)).toBeDefined()
+    const map = overrideMapBySubject([
+      { subjectId: "a", nameVi: null, nameEn: null, titleVi: null, titleEn: null, noteVi: null, noteEn: null, visible: true, downloadable: false },
+      { subjectId: "b", nameVi: null, nameEn: null, titleVi: null, titleEn: null, noteVi: null, noteEn: null, visible: true, downloadable: true },
+    ])
+    expect(isSubjectDownloadable(A, map)).toBe(false)
+    expect(isSubjectDownloadable(B, map)).toBe(true)
+    expect(filterDownloadableSubjectExams([exam("e1", A), exam("e2", B)], map).map((e) => e.id)).toEqual(["e2"])
   })
 })

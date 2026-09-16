@@ -9,6 +9,8 @@ export type SubjectDisplayOverride = {
   noteVi: string | null
   noteEn: string | null
   visible: boolean
+  /** PDF download permission for /dashboard/downloads. Absent rows default to true. */
+  downloadable: boolean
 }
 
 type OverrideRow = {
@@ -20,6 +22,7 @@ type OverrideRow = {
   note_vi: string | null
   note_en: string | null
   visible: boolean
+  downloadable: boolean | null
 }
 
 function toOverride(row: OverrideRow): SubjectDisplayOverride {
@@ -32,13 +35,14 @@ function toOverride(row: OverrideRow): SubjectDisplayOverride {
     noteVi: row.note_vi,
     noteEn: row.note_en,
     visible: row.visible,
+    downloadable: row.downloadable ?? true,
   }
 }
 
 export async function fetchSubjectOverrides(): Promise<SubjectDisplayOverride[]> {
   const { data, error } = await supabase
     .from("subject_display_overrides")
-    .select("subject_id,name_vi,name_en,title_vi,title_en,note_vi,note_en,visible")
+    .select("subject_id,name_vi,name_en,title_vi,title_en,note_vi,note_en,visible,downloadable")
   if (error) throw new Error(error.message)
   return ((data ?? []) as OverrideRow[]).map(toOverride)
 }
@@ -52,6 +56,7 @@ export type SaveSubjectOverrideInput = {
   noteVi?: string | null
   noteEn?: string | null
   visible: boolean
+  downloadable?: boolean | null
 }
 
 export async function saveSubjectOverride(input: SaveSubjectOverrideInput): Promise<void> {
@@ -64,6 +69,7 @@ export async function saveSubjectOverride(input: SaveSubjectOverrideInput): Prom
     p_note_vi: input.noteVi ?? null,
     p_note_en: input.noteEn ?? null,
     p_visible: input.visible,
+    p_downloadable: input.downloadable ?? true,
   })
   if (error) throw new Error(error.message)
 }

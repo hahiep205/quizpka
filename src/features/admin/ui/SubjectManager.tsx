@@ -82,6 +82,7 @@ export function SubjectManager({ lang }: { lang: Lang }) {
         noteVi: draft.noteVi.trim() || null,
         noteEn: draft.noteEn.trim() || null,
         visible: draft.visible,
+        downloadable: overrides.get(subject.id)?.downloadable ?? true,
       })
       await refreshSubjectOverrides()
       setEditingId(null)
@@ -99,7 +100,7 @@ export function SubjectManager({ lang }: { lang: Lang }) {
     setSavingId(subject.id)
     setResult(null)
     try {
-      await saveSubjectOverride({ subjectId: subject.id, visible: true })
+      await saveSubjectOverride({ subjectId: subject.id, visible: true, downloadable: true })
       await refreshSubjectOverrides()
       setEditingId(null)
       setDraft(null)
@@ -126,6 +127,7 @@ export function SubjectManager({ lang }: { lang: Lang }) {
         noteVi: current?.noteVi ?? null,
         noteEn: current?.noteEn ?? null,
         visible,
+        downloadable: current?.downloadable ?? true,
       })
       await refreshSubjectOverrides()
       setResult({ ok: true, message: lang === "vi" ? `Đã ${visible ? "hiện" : "ẩn"} môn ${subject.code}.` : `${subject.code} is now ${visible ? "visible" : "hidden"}.` })

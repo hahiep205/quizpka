@@ -7,6 +7,7 @@ import {
   CheckCircle2,
   ChevronDown,
   Clock3,
+  Download,
   FileText,
   Flame,
   History,
@@ -55,14 +56,16 @@ import { DirectNotificationPopup } from "@/components/DirectNotificationPopup"
 import { formatTime } from "@/features/quiz/lib/quizHelpers"
 import { createPaidCheckout, formatSubjectPrice, getPaidProductId, hasProductPurchase } from "@/lib/purchases"
 import { useSubjectOverrides } from "@/hooks/useSubjectOverrides"
-import { applySubjectDisplayOverrides, filterVisibleSubjectExams } from "@/features/admin/lib/subjectDisplay"
+import { applySubjectDisplayOverrides, filterDownloadableSubjectExams, filterVisibleSubjectExams } from "@/features/admin/lib/subjectDisplay"
 import type { ContactModalType } from "@/components/ContactModal"
 import type { UserNotification } from "@/features/notifications/api/notifications"
 import { useNotifications } from "@/features/notifications/useNotifications"
+import { DownloadPickerModal } from "@/components/DownloadPickerModal"
 
 type Lang = Language
-type DashboardView = "home" | "leaderboard" | "history" | "purchased" | "notifications" | "settings"
+type DashboardView = "home" | "leaderboard" | "history" | "purchased" | "downloads" | "notifications" | "settings"
 const paidExams = examCatalog.filter((exam) => !exam.hideFromCatalog && getPaidProductId(exam.subjectCode) !== null)
+const freeExams = examCatalog.filter((exam) => !exam.hideFromCatalog && exam.subjectId !== "toeic" && getPaidProductId(exam.subjectCode) === null)
 
 type DashboardPageProps = {
   lang: Lang
@@ -81,6 +84,7 @@ const navItems: Array<{
     { key: "leaderboard", icon: SidebarRankingIcon },
     { key: "history", icon: SidebarHistoryIcon },
     { key: "purchased", icon: ShoppingBag },
+    { key: "downloads", icon: SidebarDownloadsIcon },
     { key: "notifications", icon: Bell },
     { key: "settings", icon: SidebarSettingsIcon },
   ]
@@ -105,6 +109,10 @@ function SidebarSettingsIcon({ className }: { className?: string }) {
   return <SidebarSvg className={className}><path d="M12 1L14.09 3.26L17.14 2.82L18.5 5.59L21.27 6.95L20.83 10L23.09 12L20.83 14L21.27 17.05L18.5 18.41L17.14 21.18L14.09 20.74L12 23L9.91 20.74L6.86 21.18L5.5 18.41L2.73 17.05L3.17 14L.91 12L3.17 10L2.73 6.95L5.5 5.59L6.86 2.82L9.91 3.26L12 1ZM12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8ZM12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10Z" /></SidebarSvg>
 }
 
+function SidebarDownloadsIcon({ className }: { className?: string }) {
+  return <SidebarSvg className={className}><path d="M12 2C12 2 12 2 12 2C12 2 12 2 12 2M12 2V14M12 14L8 10M12 14L16 10M3 17V19C3 19.5523 3.44772 20 4 20H20C20.5523 20 21 19.5523 21 19V17" /></SidebarSvg>
+}
+
 const mobileNavLabels = {
   vi: {
     home: "Trang chủ",
@@ -112,6 +120,7 @@ const mobileNavLabels = {
     history: "Lịch sử",
     settings: "Cài đặt",
     purchased: "Đã mua",
+    downloads: "Tải về",
     notifications: "Thông báo",
   },
   en: {
@@ -120,6 +129,7 @@ const mobileNavLabels = {
     history: "History",
     settings: "Settings",
     purchased: "Purchased",
+    downloads: "Downloads",
     notifications: "Notifications",
   },
 } as const
@@ -130,6 +140,7 @@ const mobileNavIcons: Record<DashboardView, ComponentType<{ className?: string }
   history: History,
   settings: Settings,
   purchased: ShoppingBag,
+  downloads: Download,
   notifications: Bell,
 } as const
 
@@ -236,6 +247,9 @@ export function DashboardPage({
     setTadvPaidPickerExam,
   } = useExamLaunch(lang)
 
+  const [downloadPickerExam, setDownloadPickerExam] = useState<ExamCatalogItem | null>(null)
+  const downloadPickerSubject = downloadPickerExam ? getSubjectById(downloadPickerExam.subjectId) : null
+
   useEffect(() => {
     const syncView = () => setActiveView(getDashboardView(getCurrentPath()))
     window.addEventListener("popstate", syncView)
@@ -280,6 +294,7 @@ export function DashboardPage({
       leaderboard: appRoutes.dashboardLeaderboard,
       history: appRoutes.dashboardHistory,
       purchased: appRoutes.dashboardPurchased,
+      downloads: appRoutes.dashboardDownloads,
       notifications: appRoutes.dashboardNotifications,
       settings: appRoutes.dashboardSettings,
     }
@@ -355,6 +370,7 @@ export function DashboardPage({
           {activeView === "leaderboard" ? <LeaderboardView lang={lang} /> : null}
           {activeView === "history" ? <EmptyView lang={lang} view="history" /> : null}
           {activeView === "purchased" ? <PurchasedView lang={lang} onStartExam={(exam) => void handlePaidTryNow(exam)} /> : null}
+          {activeView === "downloads" ? <DownloadsView lang={lang} onRequestDownload={setDownloadPickerExam} /> : null}
           {activeView === "notifications" ? <NotificationsView lang={lang} /> : null}
           {activeView === "settings" ? (
             <SettingsView
@@ -475,6 +491,81 @@ export function DashboardPage({
         }}
         onStart={handleToeicSetupStart}
       />
+
+      <DownloadPickerModal
+        open={Boolean(downloadPickerExam)}
+        lang={lang}
+        exam={downloadPickerExam}
+        subject={downloadPickerSubject}
+        onClose={() => setDownloadPickerExam(null)}
+        onConfirm={async (chapterId) => {
+          const exam = downloadPickerExam
+          const subject = downloadPickerSubject
+          if (!exam || !subject) return
+          logActivityEvent(dashboardUser?.id, "view_exam_detail", { examId: exam.id, chapterId, intent: "download_pdf" })
+          // Keep modal open while generating; close optimistically after start
+          const prevExam = exam
+          const prevSubject = subject
+          setDownloadPickerExam(null)
+          try {
+            const { fetchQuestionsForPdf } = await import("@/features/downloads/lib/fetchFreePdfData")
+            const { generateFreePdf, downloadBlob, pdfFilename } = await import("@/features/downloads/lib/generateFreePdf")
+            const { getChapterOptionsForSubject } = await import("@/data/subjectChapters")
+            const { tadvExamOptions } = await import("@/data/tadvExams")
+            // Resolve chapterLabel for cover
+            let chapterLabel = chapterId === "all" ? (lang === "vi" ? "Toàn bộ" : "All") : chapterId
+            const chOpts = getChapterOptionsForSubject(prevSubject.id) ?? []
+            const found = chOpts.find((c) => c.id === chapterId)
+            if (found) chapterLabel = found.label[lang]
+            const tadvOpt = tadvExamOptions.find((o) => o.id === chapterId)
+            if (tadvOpt) chapterLabel = tadvOpt.title[lang]
+
+            // TADV special: fetch its own banks
+            let questions
+            if (tadvOpt) {
+              const { parseQuestionBank } = await import("@/features/quiz/lib/questionBankSchema")
+              const banks = await Promise.all(
+                tadvOpt.questionBanks.map(async (url) => {
+                  const r = await fetch(url)
+                  if (!r.ok) throw new Error(`HTTP ${r.status}`)
+                  return parseQuestionBank(await r.json(), url)
+                })
+              )
+              const flat = banks.flatMap((b, bi) => {
+                if ((b as unknown as { parts?: { questions: unknown[]; partTitle: string }[] }).parts?.length) {
+                  const parts = (b as unknown as { parts: { questions: { id: string | number; chapter?: string }[]; partTitle: string }[] }).parts
+                  return parts.flatMap((part) =>
+                    part.questions.map((q) => ({ ...(q as Record<string, unknown>), id: `${bi}-${String((q as { id: unknown }).id)}`, chapter: (q as { chapter?: string }).chapter ?? part.partTitle } as Record<string, unknown>))
+                  )
+                }
+                return (b.questions ?? []).map((q) => ({ ...q, id: `${bi}-${String(q.id)}` }))
+              })
+              questions = (flat as unknown as { question: string; options?: Record<string, string>; answer: string; explainAnswer?: string; explanation?: string; chapter?: string; imageUrl?: string; image?: string }[]).map((item, idx) => ({
+                index: idx + 1,
+                prompt: item.question,
+                options: Object.keys(item.options ?? {}).sort().map((k) => ({ key: k, text: String(item.options?.[k] ?? "") })),
+                answer: item.answer,
+                explanation: (item.explainAnswer ?? item.explanation ?? (item as unknown as Record<string,string>).explain_answer ?? null) as string | null,
+                chapter: (item.chapter as string) ?? null,
+                imageUrl: (() => {
+                  const raw = (item as unknown as Record<string, string>).imageUrl ?? (item as unknown as Record<string, string>).image ?? null
+                  if (!raw) return null
+                  if (/^(https?:)?\/\//.test(raw) || raw.startsWith("/")) return raw
+                  return `/data/${raw}`
+                })(),
+              }))
+            } else {
+              questions = await fetchQuestionsForPdf(prevSubject, prevExam, chapterId)
+            }
+
+            const blob = await generateFreePdf(prevSubject, prevExam, chapterLabel, questions, dashboardUser?.email ?? null)
+            downloadBlob(blob, pdfFilename(prevSubject, chapterId))
+          } catch (e) {
+            const msg = e instanceof Error ? e.message : String(e)
+            window.alert(lang === "vi" ? `Không tạo được PDF: ${msg}` : `Failed to generate PDF: ${msg}`)
+          }
+        }}
+      />
     </div>
   )
 }
@@ -483,9 +574,102 @@ function getDashboardView(path: string): DashboardView {
   if (path === appRoutes.dashboardLeaderboard) return "leaderboard"
   if (path === appRoutes.dashboardHistory) return "history"
   if (path === appRoutes.dashboardPurchased) return "purchased"
+  if (path === appRoutes.dashboardDownloads) return "downloads"
   if (path === appRoutes.dashboardNotifications) return "notifications"
   if (path === appRoutes.dashboardSettings) return "settings"
   return "home"
+}
+
+function DownloadsView({ lang, onRequestDownload }: { lang: Lang; onRequestDownload: (exam: ExamCatalogItem) => void }) {
+  const [query, setQuery] = useState("")
+  const displayOverrides = useSubjectOverrides()
+  const displayedFreeExams = useMemo(
+    () => applySubjectDisplayOverrides(filterDownloadableSubjectExams(filterVisibleSubjectExams(freeExams, displayOverrides), displayOverrides), displayOverrides),
+    [displayOverrides],
+  )
+  const filtered = useMemo(() => {
+    const q = query.trim().toLocaleLowerCase(lang)
+    return displayedFreeExams.filter((exam) => {
+      if (!q) return true
+      const hay = `${exam.title[lang]} ${exam.subjectName[lang]} ${exam.subjectCode}`.toLocaleLowerCase(lang)
+      return hay.includes(q)
+    })
+  }, [displayedFreeExams, query, lang])
+
+  return (
+    <section className="dashboard-reveal space-y-5">
+      {/* Header intro — đồng bộ PurchasedView / HomeDashboard spacing */}
+      <div className="rounded-[16px] border border-[#B3E5FC] bg-[#E8F7FE] px-4 py-3.5 dark:border-sky-500/20 dark:bg-sky-500/10 sm:px-5">
+        <p className="flex items-start gap-2.5 text-[13px] font-semibold leading-5 text-[#0B6FA8] dark:text-sky-200">
+          <FileText className="mt-0.5 h-4 w-4 shrink-0" strokeWidth={2} />
+          <span>
+            {lang === "vi"
+              ? "Hiện tại, bạn có thể tải về các bộ tài liệu ôn tập miễn phí ở định dạng PDF để in ra. Mỗi tệp bao gồm cả phần Câu hỏi và Đáp án."
+              : "You can now download free study materials as printable PDFs. Each file includes both Questions and Answers."}
+          </span>
+        </p>
+      </div>
+
+      {/* Search */}
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+        <label className="relative block min-w-0 flex-1 sm:max-w-[420px]">
+          <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+          <input
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder={lang === "vi" ? "Tìm môn, mã môn..." : "Search by subject, code..."}
+            className="h-11 w-full rounded-[12px] border-2 border-[#E5E5E5] bg-white pl-10 pr-3 text-sm font-bold text-[#100F3E] shadow-[0_3px_0_#DCDCDC] outline-none transition focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-900 dark:text-white dark:shadow-[0_3px_0_rgba(0,0,0,0.35)]"
+          />
+        </label>
+      </div>
+
+      <div className="flex items-center justify-between">
+        <p className="text-xs font-bold text-slate-500 dark:text-slate-400">
+          {lang === "vi" ? `${filtered.length} bộ tài liệu miễn phí` : `${filtered.length} free sets`}
+        </p>
+        {query ? (
+          <button
+            type="button"
+            onClick={() => { setQuery("") }}
+            className="text-xs font-extrabold text-[#1CB0F6] hover:underline"
+          >
+            {lang === "vi" ? "Xóa lọc" : "Clear filters"}
+          </button>
+        ) : null}
+      </div>
+
+      {filtered.length ? (
+        <div className="grid grid-cols-2 gap-2.5 sm:gap-4 md:grid-cols-2 2xl:grid-cols-3">
+          {filtered.map((exam) => (
+            <CatalogExamCard
+              key={exam.id}
+              exam={exam}
+              lang={lang}
+              categoryLabel={exam.category.en === "General" ? (lang === "vi" ? "Đại cương" : "General") : (lang === "vi" ? "Chuyên ngành" : "Major")}
+              questionsLabel={lang === "vi" ? "câu hỏi" : "questions"}
+              footer={
+                <button
+                  type="button"
+                  className="lp-btn lp-btn--secondary lp-btn--sm lp-btn--block mt-3 gap-1.5 px-2 text-[12px] sm:mt-5 sm:px-4 sm:text-sm"
+                  onClick={() => onRequestDownload(exam)}
+                >
+                  <Download className="h-4 w-4" strokeWidth={2} />
+                  {lang === "vi" ? "Tải PDF" : "Download PDF"}
+                </button>
+              }
+            />
+          ))}
+        </div>
+      ) : (
+        <Card variant="dashed" className="py-14 text-center">
+          <FileText className="mx-auto h-9 w-9 text-slate-300" />
+          <p className="mt-3 text-sm font-bold text-slate-500">
+            {lang === "vi" ? "Không tìm thấy tài liệu phù hợp." : "No matching materials found."}
+          </p>
+        </Card>
+      )}
+    </section>
+  )
 }
 
 function PurchasedView({ lang, onStartExam }: { lang: Lang; onStartExam: (exam: ExamCatalogItem) => void }) {
@@ -690,19 +874,23 @@ function DashboardTopbar({ lang, view, onlineCount = 0 }: Pick<DashboardPageProp
             ? t.settingsTitle
             : view === "purchased"
               ? t.purchasedTitle
-              : lang === "vi" ? "Quiz dành cho PKAers" : "Quiz for PKAers"
+              : view === "downloads"
+                ? lang === "vi" ? "Tải tài liệu miễn phí" : "Free Downloads"
+                : lang === "vi" ? "Quiz dành cho PKAers" : "Quiz for PKAers"
   const pageMeta =
     view === "leaderboard"
       ? { icon: Trophy, title: t.leaderboardTitle }
       : view === "history"
         ? { icon: History, title: t.historyTitle }
-        : view === "notifications"
-          ? { icon: Bell, title: t.notificationsTitle }
-          : view === "settings"
-            ? { icon: Settings, title: t.settingsTitle }
-            : view === "purchased"
-              ? { icon: ShoppingBag, title: lang === "vi" ? "Quiz đã mua" : "Purchased quizzes" }
-              : null
+        : view === "downloads"
+          ? { icon: Download, title: lang === "vi" ? "Tải tài liệu miễn phí" : "Free Downloads" }
+          : view === "notifications"
+            ? { icon: Bell, title: t.notificationsTitle }
+            : view === "settings"
+              ? { icon: Settings, title: t.settingsTitle }
+              : view === "purchased"
+                ? { icon: ShoppingBag, title: lang === "vi" ? "Quiz đã mua" : "Purchased quizzes" }
+                : null
   const PageIcon = pageMeta?.icon
   return (
     <header className="sticky top-0 z-30 bg-white/80 pt-[env(safe-area-inset-top)] backdrop-blur-2xl dark:bg-[#18191A]/80">
@@ -721,6 +909,10 @@ function DashboardTopbar({ lang, view, onlineCount = 0 }: Pick<DashboardPageProp
               <span className="name-logo">{pageMeta.title}</span>
             </a>
           ) : view === "notifications" ? (
+            <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={pageMeta.title}>
+              <span className="name-logo">{pageMeta.title}</span>
+            </a>
+          ) : view === "downloads" ? (
             <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={pageMeta.title}>
               <span className="name-logo">{pageMeta.title}</span>
             </a>

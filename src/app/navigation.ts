@@ -6,6 +6,7 @@ export const appRoutes = {
   dashboardLeaderboard: "/dashboard/leaderboard",
   dashboardHistory: "/dashboard/history",
   dashboardPurchased: "/dashboard/purchased",
+  dashboardDownloads: "/dashboard/downloads",
   dashboardNotifications: "/dashboard/notifications",
   dashboardSettings: "/dashboard/settings",
   practice: "/practice",
@@ -23,6 +24,7 @@ export const appRoutes = {
   adminSendQuiz: "/admin/sendquiz",
   adminSupports: "/admin/supports",
   adminSubject: "/admin/subject",
+  adminDownloads: "/admin/downloads",
   adminTimeline: "/admin/timeline",
   adminAttempts: "/admin/attempts",
 } as const

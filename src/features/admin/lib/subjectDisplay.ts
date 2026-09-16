@@ -58,3 +58,16 @@ export function filterVisibleSubjectExams(
   if (overrides.size === 0) return exams
   return exams.filter((exam) => isSubjectVisible(exam.subjectId, overrides))
 }
+
+export function isSubjectDownloadable(subjectId: string, overrides: Map<string, SubjectDisplayOverride>): boolean {
+  return overrides.get(subjectId)?.downloadable ?? true
+}
+
+/** Drops catalog items whose subject is gated from PDF download at /admin/downloads. */
+export function filterDownloadableSubjectExams(
+  exams: ExamCatalogItem[],
+  overrides: Map<string, SubjectDisplayOverride>,
+): ExamCatalogItem[] {
+  if (overrides.size === 0) return exams
+  return exams.filter((exam) => isSubjectDownloadable(exam.subjectId, overrides))
+}
