@@ -42,6 +42,7 @@ export type SubjectId =
   | "dai-so-tuyen-tinh"
   | "xac-suat-thong-ke"
   | "toan-roi-rac"
+  | "thong-ke-trong-kinh-doanh"
   | "toeic"
 
 export type LocalizedText = {
@@ -1000,6 +1001,29 @@ export const subjects: Subject[] = [
       { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Logic mệnh đề", "Logic vị từ", "Quy tắc suy diễn"], hidden: true, count: 31 },
       { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, matches: ["Số học modulo", "Hệ đếm"], hidden: true, count: 20 },
       { id: "c3", label: { en: "Chapter 3", vi: "Chương 3" }, matches: ["Lý thuyết đồ thị"], hidden: true, count: 29 },
+    ],
+  },
+  {
+    id: "thong-ke-trong-kinh-doanh",
+    code: "STA201",
+    name: { en: "Business Statistics - Final", vi: "Quiz ôn tập và Đề Cuối kỳ - Thống kê trong kinh doanh" },
+    category: { en: "Major", vi: "Chuyên ngành" },
+    exams: [
+      {
+        id: "business-statistics-docs-1", type: "final", year: 2025, questionCount: 0, durationMinutes: 0,
+        title: { en: "Business Statistics - Final Review & Exams", vi: "Quiz ôn tập và Đề Cuối kỳ - Thống kê trong kinh doanh" },
+        description: { en: "174-question final quiz plus final exam papers from previous years.", vi: "Gồm quiz ôn tập trắc nghiệm 174 câu và Đề thi cuối kỳ của các năm trước." },
+      },
+      {
+        id: "business-statistics-quiz-bank-1", type: "final", year: 2026, questionCount: 174, durationMinutes: 240, hideFromCatalog: true,
+        title: { en: "Business Statistics Quiz", vi: "Thống kê trong kinh doanh - Quiz ôn tập trắc nghiệm Cuối kỳ" },
+        description: { en: "A question bank of 174 multiple-choice questions for final review.", vi: "Bộ tài liệu gồm 174 câu hỏi trắc nghiệm ôn tập Cuối kỳ." },
+      },
+    ],
+    chapters: [
+      { id: "de1", label: { en: "Business Statistics - Final Exam Sets", vi: "Đề thi Cuối kỳ của các năm trước" }, documentId: "tkkd-de-1", count: 8 },
+      { id: "all", label: { en: "Business Statistics - Final Quiz", vi: "Thống kê trong kinh doanh - Quiz ôn tập trắc nghiệm Cuối kỳ" }, count: 174 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Thống kê Kinh doanh"], hidden: true, count: 174 },
     ],
   },
   {

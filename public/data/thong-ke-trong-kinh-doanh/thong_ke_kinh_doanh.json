@@ -1,0 +1,2443 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm ôn tập môn Thống kê Kinh doanh - Đại học Phenikaa",
+  "chapter": "Thống kê Kinh doanh",
+  "totalQuestions": 174,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Một biến ngẫu nhiên có phân phối mũ với thời gian chờ trung bình là 4 ngày. Giá trị của tham số tỷ lệ λ của phân phối này bằng bao nhiêu?",
+      "options": {
+        "A": "0.10",
+        "B": "0.20",
+        "C": "0.25",
+        "D": "4.00"
+      },
+      "answer": "C",
+      "explainAnswer": "Với phân phối mũ tham số hóa theo tốc độ λ, kỳ vọng E(X)=1/λ. Do E(X)=4 nên λ=1/4=0.25."
+    },
+    {
+      "id": 2,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong kiểm định giả thuyết một phía, với alpha = 10%, giá trị p-value tính được p= 0.13. Kết luận được đưa ra:",
+      "options": {
+        "A": "Không kết luận được",
+        "B": "Không bác bỏ H0",
+        "C": "Bác bỏ H0",
+        "D": "Bác bỏ Ha"
+      },
+      "answer": "B",
+      "explainAnswer": "Vì p-value = 0.13 lớn hơn mức ý nghĩa α = 0.10 nên chưa đủ bằng chứng để bác bỏ giả thuyết H0."
+    },
+    {
+      "id": 3,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Khoảng tin cậy 99% của hệ số hồi quy của biến độc lập X1 nằm từ -2.25 (âm) đến -1.25 (âm) thì phát biểu nào là đúng nhất?",
+      "options": {
+        "A": "Khoảng tin cậy không có ý nghĩa",
+        "B": "Biến độc lập không tác động lên biến phụ thuộc ở mức ý nghĩa 10%",
+        "C": "Hệ số beta khác 0 ở mức ý nghĩa 1%",
+        "D": "Biến độc lập không tác động lên biến phụ thuộc"
+      },
+      "answer": "C",
+      "explainAnswer": "Khoảng tin cậy 99% nằm hoàn toàn phía âm và không chứa giá trị 0, do đó hệ số beta khác 0 có ý nghĩa thống kê ở mức 1%."
+    },
+    {
+      "id": 4,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Sự khác biệt giữa thang đo định danh và thang đo thứ bậc?",
+      "options": {
+        "A": "Thang đo thứ bậc cho biết mức độ hơn kém, trong khi thang đo định danh thì không",
+        "B": "Thang đo thứ bậc liệt kê các khả năng có thể xảy ra, trong khi thang đo định danh cho phép thấy sự so sánh giữa các khả năng có thể xảy ra",
+        "C": "Thang đo thứ bậc là thang đo định tính, thang đo định danh là thang đo định lượng",
+        "D": "Thang đo định danh là thang đo định tính, thang đo thứ bậc là thang đo định lượng"
+      },
+      "answer": "A",
+      "explainAnswer": "Thang đo thứ bậc cho phép so sánh mức độ hơn kém giữa các giá trị, trong khi thang đo định danh chỉ phân loại mà không có thứ tự."
+    },
+    {
+      "id": 5,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Ví dụ nào sau đây nên sử dụng kiểm định hai mẫu độc lập:",
+      "options": {
+        "A": "So sánh tỉ lệ nam nữ trong một lớp học",
+        "B": "So sánh mức tiêu thụ điện của một hộ gia đình giữa mùa hè và mùa đông",
+        "C": "So sánh mức độ hài lòng của khách hàng giữa hai cửa hàng khác nhau",
+        "D": "So sánh điểm thi giữa hai thời điểm của cùng một người"
+      },
+      "answer": "C",
+      "explainAnswer": "So sánh mức độ hài lòng giữa hai cửa hàng khác nhau là trường hợp hai mẫu độc lập. Các phương án còn lại thuộc mẫu cặp hoặc không phù hợp."
+    },
+    {
+      "id": 6,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong thống kê cơ bản, điểm thi được coi là biến đo trên thang đo nào khi khoảng cách giữa các mức điểm được giả định là bằng nhau?",
+      "options": {
+        "A": "Định danh (nominal)",
+        "B": "Thứ bậc (ordinal)",
+        "C": "Khoảng (interval)",
+        "D": "Tỷ lệ (ratio)"
+      },
+      "answer": "C",
+      "explainAnswer": "Khi các khoảng cách giữa các mức điểm được coi là bằng nhau nhưng không có mốc 0 tuyệt đối mang ý nghĩa 'không có đại lượng', điểm thi được xử lý như thang đo khoảng."
+    },
+    {
+      "id": 7,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Dữ liệu được đo lường bởi thang đo định danh:",
+      "options": {
+        "A": "Phải ở dạng chữ",
+        "B": "Có thể là ở dạng số hoặc không phải số",
+        "C": "Phải là dạng số",
+        "D": "Có thể xếp hạng để so sánh mức độ hơn kém"
+      },
+      "answer": "B",
+      "explainAnswer": "Dữ liệu định danh chỉ mang ý nghĩa phân loại, có thể thể hiện bằng chữ hoặc bằng số (như mã số)."
+    },
+    {
+      "id": 8,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Thang đo nào có điểm 0 tuyệt đối, nghĩa là giá trị 0 biểu thị sự vắng mặt của đại lượng được đo?",
+      "options": {
+        "A": "Định danh (nominal)",
+        "B": "Tỷ lệ (ratio)",
+        "C": "Khoảng (interval)",
+        "D": "Thứ bậc (ordinal)"
+      },
+      "answer": "B",
+      "explainAnswer": "Thang đo tỷ lệ có mốc 0 tuyệt đối, nên có thể so sánh cả hiệu số và tỷ số giữa các giá trị."
+    },
+    {
+      "id": 9,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Phương pháp lấy mẫu phân tầng là gì?",
+      "options": {
+        "A": "Lấy mẫu từ các nhóm không phân biệt trong tổng thể",
+        "B": "Lấy mẫu từ các đối tượng dễ tiếp cận trong tổng thể",
+        "C": "Lấy mẫu từ các nhóm đã được chia thành các tầng dựa trên đặc điểm cụ thể",
+        "D": "Lấy mẫu từ một nhóm mẫu ngẫu nhiên trong toàn bộ tổng thể"
+      },
+      "answer": "C",
+      "explainAnswer": "Lấy mẫu phân tầng là chia tổng thể thành các tầng theo đặc điểm rồi lấy mẫu ngẫu nhiên từ mỗi tầng."
+    },
+    {
+      "id": 10,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Thang đo nào phù hợp cho dữ liệu định lượng:",
+      "options": {
+        "A": "Thứ bậc hoặc Định danh",
+        "B": "Chỉ thang đo Tỷ lệ",
+        "C": "Chỉ thang đo khoảng",
+        "D": "Khoảng hoặc Tỷ lệ"
+      },
+      "answer": "D",
+      "explainAnswer": "Dữ liệu định lượng được đo bằng thang đo khoảng hoặc thang đo tỷ lệ."
+    },
+    {
+      "id": 11,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Phương pháp lấy mẫu cụm là gì?",
+      "options": {
+        "A": "Lấy mẫu từ các nhóm đã được chia thành các tầng dựa trên đặc điểm cụ thể",
+        "B": "Lấy mẫu bằng cách chia tổng thể thành các nhóm nhỏ, chọn ngẫu nhiên một số nhóm và khảo sát toàn bộ các đối tượng trong nhóm được chọn",
+        "C": "Lấy mẫu dựa trên việc chọn các đối tượng dễ tiếp cận nhất hoặc thuận tiện nhất",
+        "D": "Lấy mẫu bằng cách chọn phần tử đầu tiên ngẫu nhiên, sau đó chọn các phần tử tiếp theo theo quy tắc cách đều"
+      },
+      "answer": "B",
+      "explainAnswer": "Lấy mẫu cụm: chia tổng thể thành các nhóm (cụm), chọn ngẫu nhiên một số cụm rồi khảo sát toàn bộ đối tượng trong các cụm được chọn."
+    },
+    {
+      "id": 12,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "(1): Thời gian tự học ở nhà của sinh viên (đơn vị là giờ). Đây là thang đo nào?",
+      "options": {
+        "A": "Thứ bậc",
+        "B": "Tỷ lệ",
+        "C": "Khoảng",
+        "D": "Định danh"
+      },
+      "answer": "B",
+      "explainAnswer": "Thời gian có điểm 0 tuyệt đối (không học) và tỷ lệ có ý nghĩa nên thuộc thang đo tỷ lệ."
+    },
+    {
+      "id": 13,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Biểu đồ thể hiện mối quan hệ giữa doanh thu và chi phí được sử dụng phổ biến là?",
+      "options": {
+        "A": "Biểu đồ thanh (bar)",
+        "B": "Biểu đồ tròn (pie)",
+        "C": "Biểu đồ phân phối (histogram)",
+        "D": "Biểu đồ phân tán (scatter)"
+      },
+      "answer": "D",
+      "explainAnswer": "Biểu đồ phân tán (scatter) được dùng để thể hiện mối quan hệ giữa hai biến định lượng như doanh thu và chi phí."
+    },
+    {
+      "id": 14,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Chi phí cho một vé xem phim là ví dụ của dữ liệu:",
+      "options": {
+        "A": "Định tính",
+        "B": "Định lượng",
+        "C": "Định danh",
+        "D": "Phân loại"
+      },
+      "answer": "B",
+      "explainAnswer": "Chi phí là giá trị số đo được nên thuộc dữ liệu định lượng."
+    },
+    {
+      "id": 15,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong trường hợp tổng thể chuẩn và độ lệch chuẩn tổng thể σ đã biết, thống kê nào được dùng để kiểm định trung bình tổng thể?",
+      "options": {
+        "A": "Z",
+        "B": "t với n−1 bậc tự do",
+        "C": "F",
+        "D": "χ²"
+      },
+      "answer": "A",
+      "explainAnswer": "Khi σ của tổng thể đã biết và tổng thể chuẩn, kiểm định trung bình sử dụng thống kê Z. Không cần áp dụng điều kiện n≥30 như một điều kiện bắt buộc."
+    },
+    {
+      "id": 16,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Dữ liệu về chỉ số GDP, CPI của Việt Nam từ 2000 đến 2023 là:",
+      "options": {
+        "A": "Dữ liệu chéo",
+        "B": "Dữ liệu định tính",
+        "C": "Dữ liệu bảng",
+        "D": "Dữ liệu chuỗi thời gian"
+      },
+      "answer": "D",
+      "explainAnswer": "Dữ liệu GDP, CPI được thu thập theo từng năm nên là dữ liệu chuỗi thời gian."
+    },
+    {
+      "id": 17,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Biểu đồ thanh (bar) được sử dụng để mô tả hoặc chẩn đoán về điều gì sau đây?",
+      "options": {
+        "A": "Mối quan hệ về mặt dữ liệu giữa hai biến định tính",
+        "B": "Số lượng hoặc tỷ lệ các phân nhóm của thang đo định danh hoặc thứ bậc",
+        "C": "Mối quan hệ về mặt dữ liệu của hai biến ở thang đo tỷ lệ",
+        "D": "Một xu hướng tuyến tính giữa hai biến định lượng"
+      },
+      "answer": "B",
+      "explainAnswer": "Biểu đồ thanh dùng để mô tả số lượng hoặc tỷ lệ của các nhóm thuộc thang đo định danh hoặc thứ bậc."
+    },
+    {
+      "id": 18,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong khảo sát về tình hình làm thêm của sinh viên Đại học, 25% sinh viên tham gia khảo sát thuộc chuyên ngành công nghệ thông tin. Số liệu 25% là ví dụ của:",
+      "options": {
+        "A": "Thống kê mô tả",
+        "B": "Thống kê suy diễn",
+        "C": "Mẫu",
+        "D": "Tổng thể"
+      },
+      "answer": "A",
+      "explainAnswer": "Con số 25% được tính trực tiếp từ mẫu khảo sát nên là thống kê mô tả."
+    },
+    {
+      "id": 19,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Một báo cáo trình bày tỷ lệ sinh viên đi làm thêm trong học kỳ vừa qua dựa trên dữ liệu đã thu thập từ mẫu khảo sát. Hoạt động này thuộc loại nào?",
+      "options": {
+        "A": "Thống kê suy diễn",
+        "B": "Thống kê mô tả",
+        "C": "Kiểm định giả thuyết",
+        "D": "Hồi quy"
+      },
+      "answer": "B",
+      "explainAnswer": "Việc tính và trình bày tỷ lệ của chính mẫu khảo sát là thống kê mô tả; chưa suy rộng kết quả từ mẫu ra tổng thể."
+    },
+    {
+      "id": 20,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Tham số nào thể hiện xu hướng trung tâm của dữ liệu không có phân phối chuẩn",
+      "options": {
+        "A": "Trung vị",
+        "B": "Trung bình",
+        "C": "Khoảng biến thiên",
+        "D": "Hệ số biến thiên"
+      },
+      "answer": "A",
+      "explainAnswer": "Khi dữ liệu không tuân theo phân phối chuẩn, trung vị là thước đo xu hướng trung tâm phù hợp hơn trung bình."
+    },
+    {
+      "id": 21,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Giám đốc doanh nghiệp A tính toán tiền lương bình quân năm của lao động làm việc tại doanh nghiệp từ 2015 đến 2020. Số liệu này là ví dụ của:",
+      "options": {
+        "A": "Thống kê mô tả",
+        "B": "Thống kê suy diễn",
+        "C": "Mẫu",
+        "D": "Tổng thể"
+      },
+      "answer": "A",
+      "explainAnswer": "Tính toán trên toàn bộ lao động của doanh nghiệp nên là thống kê mô tả."
+    },
+    {
+      "id": 22,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Đâu là lợi thế khi sử dụng biểu đồ hình tròn (pie chart) để mô tả dữ liệu",
+      "options": {
+        "A": "Dễ dàng thực hiện với dữ liệu định lượng",
+        "B": "Dễ dàng thực hiện với các biến ở thang đo tỷ lệ",
+        "C": "Dễ nhận biết sự khác biệt hoặc diễn giải dữ liệu khi số nhóm được phân chia nhiều",
+        "D": "Dễ dàng nhận biết được sự khác biệt theo tần số, tần suất hoặc tỷ lệ theo nhóm (có ít nhóm)"
+      },
+      "answer": "D",
+      "explainAnswer": "Biểu đồ hình tròn dễ nhận biết sự khác biệt về tỷ lệ khi số nhóm phân chia ít."
+    },
+    {
+      "id": 23,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Chiều cao trung bình của một mẫu 200 sinh viên Đại học Phenikaa là 167 cm. Như vậy, chiều cao trung bình của toàn thể sinh viên Đại học Phenikaa:",
+      "options": {
+        "A": "Phải lớn hơn 167 vì tổng thể luôn lớn hơn mẫu",
+        "B": "Phải nhỏ hơn 167, vì mẫu là một phần của tổng thể",
+        "C": "Không bằng 167",
+        "D": "Xung quanh giá trị 167"
+      },
+      "answer": "D",
+      "explainAnswer": "Trung bình mẫu là ước lượng của trung bình tổng thể, do đó chiều cao trung bình của toàn trường sẽ dao động quanh giá trị 167 cm."
+    },
+    {
+      "id": 24,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Dữ liệu được thu về dựa trên việc khảo sát sự hài lòng của sinh viên về dịch vụ của công ty Topsurvey được gọi là?",
+      "options": {
+        "A": "Dữ liệu bảng",
+        "B": "Dữ liệu thứ cấp",
+        "C": "Dữ liệu sơ cấp",
+        "D": "Dữ liệu phân loại"
+      },
+      "answer": "C",
+      "explainAnswer": "Dữ liệu được thu thập trực tiếp từ khảo sát nên là dữ liệu sơ cấp."
+    },
+    {
+      "id": 25,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Khi một mẫu là một tập con của tổng thể, giá trị trung bình mẫu luôn:",
+      "options": {
+        "A": "Nhỏ hơn giá trị trung bình tổng thể",
+        "B": "Lớn hơn giá trị trung bình tổng thể",
+        "C": "Bằng giá trị trung bình tổng thể",
+        "D": "Chạy quanh giá trị trung bình tổng thể"
+      },
+      "answer": "D",
+      "explainAnswer": "Trung bình mẫu không cố định mà dao động xung quanh giá trị trung bình của tổng thể."
+    },
+    {
+      "id": 26,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Với biến chi phí cửa hàng có phân phối chuẩn. Với giá trị trung bình là 50 triệu đồng và độ lệch chuẩn là 2. Như vậy, trung vị sẽ xấp xỉ:",
+      "options": {
+        "A": "50",
+        "B": "60",
+        "C": "52",
+        "D": "80"
+      },
+      "answer": "A",
+      "explainAnswer": "Với phân phối chuẩn, trung vị bằng trung bình, do đó trung vị xấp xỉ 50."
+    },
+    {
+      "id": 27,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Thang đo nào có thể là ở dạng số hoặc chữ? .",
+      "options": {
+        "A": "Định danh",
+        "B": "Tỷ lệ",
+        "C": "Khoảng",
+        "D": "Định lượng"
+      },
+      "answer": "A",
+      "explainAnswer": "Thang đo định danh chỉ mang ý nghĩa phân loại nên có thể biểu diễn bằng số hoặc bằng chữ."
+    },
+    {
+      "id": 28,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Để xem xét mối quan hệ tuyến tính giữa hai biến sử dụng thang đo tỷ lệ như chi phí và doanh thu bán hàng. Tham số nào sau đây là phù hợp hơn? .",
+      "options": {
+        "A": "Phương sai",
+        "B": "Hệ số tương quan",
+        "C": "Hệ số biến thiên",
+        "D": "Mode"
+      },
+      "answer": "B",
+      "explainAnswer": "Hệ số tương quan đo lường mức độ và chiều hướng quan hệ tuyến tính giữa hai biến định lượng."
+    },
+    {
+      "id": 29,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Đâu không phải là ví dụ của thống kê mô tả",
+      "options": {
+        "A": "Biểu đồ tần suất mô tả chiều cao trung bình của sinh viên Đại học Phenikaa",
+        "B": "Ước lượng số lượng sinh viên K17 đạt học lực giỏi và xuất sắc trong Kì 1 năm học 2024-2025",
+        "C": "Bảng tóm tắt dữ liệu thời gian làm thêm trung bình theo chuyên ngành theo học của sinh viên Đại học",
+        "D": "Tỷ lệ sinh viên Nam đi làm thêm trong kỳ học vừa qua"
+      },
+      "answer": "B",
+      "explainAnswer": "Ước lượng số lượng sinh viên đạt học lực giỏi là suy luận về tổng thể nên thuộc thống kê suy diễn."
+    },
+    {
+      "id": 30,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Phương trình hồi quy tổng thể được gọi là gì?",
+      "options": {
+        "A": "Phương trình hồi quy ước lượng (mẫu)",
+        "B": "Hàm phân phối xác suất",
+        "C": "Phương trình hồi quy tổng thể",
+        "D": "Phương trình tương quan"
+      },
+      "answer": "C",
+      "explainAnswer": "Phương trình hồi quy tổng thể mô tả quan hệ giữa biến phụ thuộc và các biến giải thích trong tổng thể, thường có dạng Y=β₀+β₁X+ε."
+    },
+    {
+      "id": 31,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Phương trình hồi quy về ảnh hưởng của việc học lại tới điểm tổng kết trung bình môn học. Hệ số xác định cho biết thông tin gì?",
+      "options": {
+        "A": "Sai số chuẩn của ước lượng",
+        "B": "Học lại giải thích được bao nhiêu % thay đổi của điểm tổng kết trung bình",
+        "C": "Xác định mức độ tác động của việc học lại tới điểm tổng kết trung bình",
+        "D": "Học lại nhiều làm điểm tổng kết trung bình tăng lên bao nhiêu"
+      },
+      "answer": "B",
+      "explainAnswer": "Hệ số xác định R² cho biết tỷ lệ phần trăm biến thiên của biến phụ thuộc được giải thích bởi các biến độc lập trong mô hình."
+    },
+    {
+      "id": 32,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "15% sinh viên của một trường Đại học đang học chuyên ngành Kinh tế, 20% học Tài chính, 35% học Quản trị kinh doanh và 30% học Kế toán. Biểu đồ nào có thể được sử dụng để trình bày các dữ liệu này là",
+      "options": {
+        "A": "Biểu đồ đường",
+        "B": "Chỉ biểu đồ cột",
+        "C": "Chỉ biểu đồ tròn",
+        "D": "Cả biểu đồ cột và biểu đồ tròn"
+      },
+      "answer": "D",
+      "explainAnswer": "Dữ liệu tỷ lệ phần trăm các chuyên ngành có thể trình bày bằng cả biểu đồ cột và biểu đồ tròn."
+    },
+    {
+      "id": 33,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Hệ số tương quan nhận giá trị từ:",
+      "options": {
+        "A": "-1 đến 1",
+        "B": "Bất cứ giá trị nào",
+        "C": "0 đến 1",
+        "D": "0.5 đến 1"
+      },
+      "answer": "A",
+      "explainAnswer": "Hệ số tương quan luôn nhận giá trị trong khoảng từ −1 đến 1."
+    },
+    {
+      "id": 34,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Tổng các tần suất tương đối của tất cả các nhóm trong một bảng phân phối bằng:",
+      "options": {
+        "A": "0",
+        "B": "100%",
+        "C": "50%",
+        "D": "Không xác định"
+      },
+      "answer": "B",
+      "explainAnswer": "Tần suất tương đối của toàn bộ các nhóm cộng lại bằng 1, tương đương 100%."
+    },
+    {
+      "id": 35,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Cách trình bày đồ họa phổ biến nhất của dữ liệu định lượng là:",
+      "options": {
+        "A": "Biểu đồ tần suất (histogram)",
+        "B": "Biểu đồ tròn",
+        "C": "Biểu đồ cột",
+        "D": "Biểu đồ tròn hoặc biểu đồ cột"
+      },
+      "answer": "A",
+      "explainAnswer": "Biểu đồ tần suất (histogram) là cách trình bày đồ họa phổ biến nhất cho dữ liệu định lượng."
+    },
+    {
+      "id": 36,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Biểu đồ tần suất (histogram) là",
+      "options": {
+        "A": "một dạng biểu diễn đồ họa về tần suất hoặc phân phối tần suất tương đối",
+        "B": "một phương pháp đồ họa để biểu diễn tần suất tích lũy hoặc phân phối tần suất tương đối tích lũy",
+        "C": "lịch sử của các phần tử dữ liệu",
+        "D": "giống như biểu đồ hình tròn"
+      },
+      "answer": "A",
+      "explainAnswer": "Histogram là dạng biểu đồ thể hiện tần suất hoặc tần suất tương đối của dữ liệu định lượng đã được nhóm."
+    },
+    {
+      "id": 37,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Một nhà nghiên cứu muốn kiểm định xem thu nhập trung bình ở Hà Nội và Thành phố Hồ Chí Minh có khác nhau hay không. Giả thuyết đối H₁ phù hợp là:",
+      "options": {
+        "A": "H₁: μ₁−μ₂=0",
+        "B": "H₁: μ₁−μ₂<0",
+        "C": "H₁: μ₁−μ₂≠0",
+        "D": "H₁: μ₁−μ₂>0"
+      },
+      "answer": "C",
+      "explainAnswer": "Vì câu hỏi chỉ kiểm tra 'có khác nhau hay không' mà không chỉ định hướng, đây là kiểm định hai phía: H₁: μ₁−μ₂≠0."
+    },
+    {
+      "id": 38,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Phương pháp đồ họa nào được dùng để mô tả mối quan hệ giữa hai biến?",
+      "options": {
+        "A": "Biểu đồ hình tròn",
+        "B": "Bảng chéo",
+        "C": "Biểu đồ chấm",
+        "D": "Biểu đồ tần suất"
+      },
+      "answer": "C",
+      "explainAnswer": "Biểu đồ chấm (scatter plot) dùng để mô tả mối quan hệ giữa hai biến định lượng."
+    },
+    {
+      "id": 39,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Đâu KHÔNG phải là một đặc điểm của phân phối chuẩn hoá",
+      "options": {
+        "A": "Diện tích dưới đường phân phối bằng 1",
+        "B": "Đường phân phối có tính đối xứng",
+        "C": "Trung bình và độ lệch chuẩn bằng 1",
+        "D": "Trung bình luôn bằng 0"
+      },
+      "answer": "C",
+      "explainAnswer": "Phân phối chuẩn hóa có trung bình bằng 0 và độ lệch chuẩn bằng 1, không phải cả hai cùng bằng 1."
+    },
+    {
+      "id": 40,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Nếu 2 mẫu có giá trị trung bình là bằng nhau, thì:",
+      "options": {
+        "A": "Độ lệch chuẩn của hai mẫu phải bằng nhau",
+        "B": "Trung vị của hai mẫu phải bằng nhau",
+        "C": "Giá trị mode của hai mẫu phải bằng nhau",
+        "D": "Các tham số thống kê khác như độ lệch chuẩn, trung vị, mode giữa hai nhóm không cần thiết phải bằng nhau"
+      },
+      "answer": "D",
+      "explainAnswer": "Hai mẫu có cùng trung bình không có nghĩa là độ lệch chuẩn, trung vị hay mode cũng phải bằng nhau."
+    },
+    {
+      "id": 41,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Cách phổ biến nào sau đây có thể giúp phát hiện hiện tượng phương sai sai số thay đổi?",
+      "options": {
+        "A": "Kiểm định về hệ số VIF",
+        "B": "Vẽ đồ thị scatter plot giữa biến độc lập và biến phụ thuộc",
+        "C": "Kiểm định Breusch-Pagan hoặc White",
+        "D": "Kiểm định Durbin-Watson"
+      },
+      "answer": "C",
+      "explainAnswer": "Kiểm định Breusch-Pagan hoặc White là các kiểm định chuyên dụng để phát hiện hiện tượng phương sai sai số thay đổi."
+    },
+    {
+      "id": 42,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Khi tính giá trị trung bình, giá trị của ∑xi sẽ được chia bởi:",
+      "options": {
+        "A": "n-1",
+        "B": "n",
+        "C": "n+1",
+        "D": "n-2"
+      },
+      "answer": "B",
+      "explainAnswer": "Công thức trung bình số học là tổng các giá trị chia cho số quan sát n."
+    },
+    {
+      "id": 43,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": ". Kiểm định t về hệ số beta trong hồi quy có ý nghĩa gì?",
+      "options": {
+        "A": "Kiểm tra khoảng tin cậy của hệ số beta",
+        "B": "Kiểm tra cho từng hệ số hồi quy với một giá trị nào đó (thường là so sánh hệ số hồi quy có bằng 0 hay không)",
+        "C": "Mức ý nghĩa của mô hình",
+        "D": "Kiểm tra đồng thời các biến độc lập không ảnh hưởng tới biến phụ thuộc"
+      },
+      "answer": "B",
+      "explainAnswer": "Kiểm định t dùng để kiểm tra từng hệ số hồi quy có khác 0 hay không (thường so sánh với giá trị 0)."
+    },
+    {
+      "id": 44,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Bảng phân phối tần suất cho biến vùng miền (Bắc, Trung, Nam) là bảng tóm tắt dữ liệu cho thấy:",
+      "options": {
+        "A": "Số lượng hoặc tỷ lệ của từng nhóm vùng miền",
+        "B": "Số lượng của từng trình độ học vấn",
+        "C": "Tần suất phần trăm của từng cấp học",
+        "D": "Giá trị trung bình của thu nhập"
+      },
+      "answer": "A",
+      "explainAnswer": "Bảng phân phối tần suất của biến vùng miền cho biết số quan sát hoặc tỷ lệ quan sát thuộc từng nhóm Bắc, Trung và Nam."
+    },
+    {
+      "id": 45,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Một doanh nghiệp muốn kiểm tra phát biểu của trưởng phòng kinh doanh về trung bình doanh thu năm 2024 cao hơn so với năm 2023. Kiểm định giả thuyết KHÔNG nào là đúng?",
+      "options": {
+        "A": "H0: μ_{2024} - μ_{2023} \\ge 0",
+        "B": "H0: μ_{2024} - μ_{2023} \\le 0",
+        "C": "H0: μ_{2024} - μ_{2023} < 0",
+        "D": "H0: μ_{2024} - μ_{2023} > 0"
+      },
+      "answer": "B",
+      "explainAnswer": "Để kiểm định doanh thu 2024 cao hơn 2023, giả thuyết không đặt ở dạng H0: μ2024 − μ2023 ≤ 0."
+    },
+    {
+      "id": 46,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Phân phối Student (phân phối t) thường được sử dụng để suy luận về trung bình tổng thể khi độ lệch chuẩn tổng thể σ chưa biết, đặc biệt khi cỡ mẫu nhỏ.",
+      "options": {
+        "A": "Khi σ chưa biết, đặc biệt với mẫu nhỏ",
+        "B": "Chỉ khi σ đã biết",
+        "C": "Chỉ với dữ liệu định danh",
+        "D": "Chỉ khi cỡ mẫu bằng 30"
+      },
+      "answer": "A",
+      "explainAnswer": "Khi σ chưa biết, ta thay σ bằng độ lệch chuẩn mẫu s và sử dụng phân phối t; phân phối t đặc biệt quan trọng khi cỡ mẫu nhỏ."
+    },
+    {
+      "id": 47,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Dữ liệu về tuổi với các giá trị nhận là số tuổi thực của người trả lời phiếu khảo sát (đơn vị là tuổi). Biến tuổi này đang sử dụng thang đo gì?",
+      "options": {
+        "A": "Định danh",
+        "B": "Thứ bậc",
+        "C": "Tỷ lệ",
+        "D": "Khoảng"
+      },
+      "answer": "C",
+      "explainAnswer": "Tuổi thực có điểm 0 tuyệt đối và tỷ lệ có ý nghĩa nên thuộc thang đo tỷ lệ."
+    },
+    {
+      "id": 48,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Giá trị của độ lệch chuẩn không bao giờ có thể là",
+      "options": {
+        "A": "Lớn hơn giá trị phương sai",
+        "B": "Bằng 0",
+        "C": "Nhận giá trị âm",
+        "D": "Nhỏ hơn phương sai"
+      },
+      "answer": "C",
+      "explainAnswer": "Độ lệch chuẩn được tính từ căn bậc hai của phương sai nên không bao giờ nhận giá trị âm."
+    },
+    {
+      "id": 49,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Phát biểu nào mô tả đúng lấy mẫu xác suất?",
+      "options": {
+        "A": "Mỗi phần tử của tổng thể có xác suất được chọn đã biết và lớn hơn 0",
+        "B": "Chỉ chọn những phần tử dễ tiếp cận",
+        "C": "Chỉ chọn những người tự nguyện tham gia",
+        "D": "Không cần xác định cách chọn mẫu"
+      },
+      "answer": "A",
+      "explainAnswer": "Trong lấy mẫu xác suất, mỗi phần tử của tổng thể có một xác suất được chọn đã biết và khác 0; các xác suất không nhất thiết phải bằng nhau."
+    },
+    {
+      "id": 50,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Sai lầm loại I trong kiểm định giả thuyết là:",
+      "options": {
+        "A": "Không bác bỏ H0 khi nó sai",
+        "B": "Dùng sai cỡ mẫu",
+        "C": "Bác bỏ H0 khi nó đúng",
+        "D": "Chọn sai thống kê"
+      },
+      "answer": "C",
+      "explainAnswer": "Sai lầm loại I xảy ra khi bác bỏ giả thuyết H0 trong khi thực tế H0 lại đúng."
+    },
+    {
+      "id": 51,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Phát biểu nào sau đây là đúng khi cỡ mẫu tăng lên thì:",
+      "options": {
+        "A": "Khoảng biến thiên tăng lên",
+        "B": "Trung bình giảm đi",
+        "C": "Khoảng biến thiên thu hẹp lại",
+        "D": "Trung bình mẫu gần tới trung bình tổng thể"
+      },
+      "answer": "D",
+      "explainAnswer": "Khi cỡ mẫu tăng, trung bình mẫu sẽ tiến gần hơn tới trung bình của tổng thể theo luật số lớn."
+    },
+    {
+      "id": 52,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong kiểm định hai phía ở mức ý nghĩa 5% với cỡ mẫu đủ lớn, thống kê kiểm định có giá trị t=−2.34. Kết luận nào phù hợp nếu dùng ngưỡng xấp xỉ ±1.96?",
+      "options": {
+        "A": "Bác bỏ H₀ vì |t|>1.96",
+        "B": "Không bác bỏ H₀ vì |t|<1.96",
+        "C": "Luôn chấp nhận H₀",
+        "D": "Không thể kết luận vì t âm"
+      },
+      "answer": "A",
+      "explainAnswer": "Với kiểm định hai phía ở mức 5% và ngưỡng xấp xỉ ±1.96, |−2.34|=2.34>1.96 nên bác bỏ H₀. Với mẫu nhỏ cần dùng giá trị tới hạn t phù hợp với bậc tự do."
+    },
+    {
+      "id": 53,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Hệ số tương quan (correlation) chạy trong khoảng:",
+      "options": {
+        "A": "Từ 0 tới 1",
+        "B": "Từ âm vô cùng tới dương vô cùng",
+        "C": "Từ -1 tới 1",
+        "D": "Từ -1 tới 0"
+      },
+      "answer": "C",
+      "explainAnswer": "Hệ số tương quan luôn nằm trong khoảng từ −1 đến +1."
+    },
+    {
+      "id": 54,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Kiểm định cho tất cả các hệ số hồi quy đồng thời bằng 0 là kiểm định gì trong phân tích hồi quy bội?",
+      "options": {
+        "A": "Đa cộng tuyến",
+        "B": "F",
+        "C": "Phương sai thay đổi",
+        "D": "t"
+      },
+      "answer": "B",
+      "explainAnswer": "Kiểm định F dùng để kiểm tra giả thuyết tất cả các hệ số hồi quy đồng thời bằng 0."
+    },
+    {
+      "id": 55,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Độ lệch chuẩn là 20. =7200. Tính n?",
+      "options": {
+        "A": "16",
+        "B": "19",
+        "C": "21",
+        "D": "14"
+      },
+      "answer": "B",
+      "explainAnswer": "Phương sai s² = 20² = 400. Nếu tổng bình phương độ lệch = 7200 thì n − 1 = 7200/400 = 18 → n = 19."
+    },
+    {
+      "id": 56,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Giả sử trong một công ty kế toán, trung bình mỗi ngày có 5 khách hàng yêu cầu báo cáo tài chính. Hàm phân phối nào có thể được sử dụng để tính xác suất có bao nhiêu khách hàng yêu cầu báo cáo trong một ngày, khi số yêu cầu là ngẫu nhiên và độc lập? .",
+      "options": {
+        "A": "Phân phối Poisson",
+        "B": "Phân phối nhị thức",
+        "C": "Phân phối chuẩn",
+        "D": "Phân phối đều"
+      },
+      "answer": "A",
+      "explainAnswer": "Số sự kiện xảy ra trong một khoảng thời gian cố định với trung bình không đổi tuân theo phân phối Poisson."
+    },
+    {
+      "id": 57,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Cho một dữ liệu như sau: 15; 12; 16; 18; 15; 16; 17; 15; 12; 14 Tính tứ phân vị thứ 3 (phân vị 75th)",
+      "options": {
+        "A": "16",
+        "B": "19",
+        "C": "15",
+        "D": "22"
+      },
+      "answer": "A",
+      "explainAnswer": "Sắp xếp dữ liệu tăng dần rồi lấy phân vị 75%. Với 10 quan sát, Q3 = 16."
+    },
+    {
+      "id": 58,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Cho dữ liệu sau Nhóm Tần số 50-54 4 55-59 3 60-64 2 65-69 5 70-74 2 75-79 5 . Giá trị trung bình là",
+      "options": {
+        "A": "62.00",
+        "B": "64.50",
+        "C": "65.10",
+        "D": "67.00"
+      },
+      "answer": "C",
+      "explainAnswer": "Trung bình nhóm được tính bằng trung bình có trọng số: (52×4+57×3+62×2+67×5+72×2+77×5)/(4+3+2+5+2+5)=65.095≈65.10."
+    },
+    {
+      "id": 59,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong một biểu đồ hộp (box plot), giá trị dữ liệu x được coi là giá trị bất thường nếu:",
+      "options": {
+        "A": "x < Q1 – 1.0(IQR) or x > Q3 + 1.0(IQR)",
+        "B": "x < Q2 – 1.0(IQR) or x > Q2 + 1.0(IQR)",
+        "C": "x < Q1 – 1.5(IQR) or x > Q3 + 1.5(IQR)",
+        "D": "x < Q2 – 1.5(IQR) or x > Q2 + 1.5(IQR)"
+      },
+      "answer": "C",
+      "explainAnswer": "Trong biểu đồ hộp, giá trị được coi là bất thường (outlier) nếu nằm ngoài khoảng Q1 − 1.5×IQR hoặc Q3 + 1.5×IQR."
+    },
+    {
+      "id": 60,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Cho dữ liệu: 40; 54; 64; 60; 46; 52; 56; 52 Tính độ lệch chuẩn:",
+      "options": {
+        "A": "7.56",
+        "B": "7.07",
+        "C": "7.66",
+        "D": "8.00"
+      },
+      "answer": "A",
+      "explainAnswer": "Với 8 quan sát, độ lệch chuẩn mẫu là s=√[Σ(xᵢ−x̄)²/(n−1)]≈7.56. Nếu chia cho n để tính độ lệch chuẩn tổng thể của chính 8 giá trị thì kết quả khoảng 7.07."
+    },
+    {
+      "id": 61,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Biến ngẫu nhiên được mô tả nhận bất kỳ giá trị nào trong một khoảng hay nhiều khoảng giá trị nhất định được gọi là:",
+      "options": {
+        "A": "Biến ngẫu nhiên rời rạc",
+        "B": "Biến ngẫu nhiên liên tục",
+        "C": "Biến ngẫu nhiên có thể nhận mọi giá trị thực trong một khoảng",
+        "D": "Biến định tính định danh"
+      },
+      "answer": "B",
+      "explainAnswer": "Biến ngẫu nhiên liên tục có thể nhận vô số giá trị trong một khoảng trên trục số thực."
+    },
+    {
+      "id": 62,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Một ngân hàng thực hiện các khoản vay cho khách hàng. Nhờ kinh nghiệm trong quá khứ họ nhận thấy tỷ lệ không trả nợ được của khách vào khoảng 1% và giả định tỷ lệ này không khác biệt giữa các khách hàng vay do việc thẩm định tín dụng khá chặt chẽ. Yêu cầu của giám đốc chi nhánh muốn biết xác suất có 2 trong 10 khách hàng vay không trả được nợ. Bộ phận tín dụng sử dụng dạng hàm phân phối xác suất nào trong trường hợp này để tính toán.",
+      "options": {
+        "A": "Phân phối đều",
+        "B": "Phân phối nhị thức",
+        "C": "Phân phối chuẩn",
+        "D": "Phân phối Poisson"
+      },
+      "answer": "B",
+      "explainAnswer": "Số khách không trả nợ trong mẫu cố định với xác suất không đổi tuân theo phân phối nhị thức."
+    },
+    {
+      "id": 63,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Một chốt cảnh sát theo dõi tình hình vi phạm giao thông của người tham gia giao thông. Quan sát cho thấy số người vi phạm trung bình trong giờ hành chính là gần như sau với trung bình là 5 người mỗi giờ. Đồng thời số vi phạm nhiều hay ít của các giờ là không liên quan đến nhau. Trưởng phòng cảnh sát muốn tính xác suất có 3 vi phạm trong một giờ nào đó thì họ cần sử dụng hàm xác suất nào?",
+      "options": {
+        "A": "Phân phối đều",
+        "B": "Phân phối nhị thức",
+        "C": "Phân phối chuẩn",
+        "D": "Phân phối Poisson"
+      },
+      "answer": "D",
+      "explainAnswer": "Số sự kiện (vi phạm) xảy ra trong một khoảng thời gian với trung bình không đổi tuân theo phân phối Poisson."
+    },
+    {
+      "id": 64,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong một quá trình Poisson có tốc độ λ không đổi theo thời gian, thời gian chờ giữa hai sự kiện liên tiếp có phân phối nào?",
+      "options": {
+        "A": "Mũ (Exponential)",
+        "B": "Nhị thức (Binomial)",
+        "C": "Chuẩn (Normal)",
+        "D": "Đều (Uniform)"
+      },
+      "answer": "A",
+      "explainAnswer": "Với quá trình Poisson có tốc độ λ không đổi, thời gian giữa hai sự kiện liên tiếp tuân theo phân phối mũ với tham số λ."
+    },
+    {
+      "id": 65,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Số lượng khách hàng vào một cửa hàng trong một ngày là ví dụ của:",
+      "options": {
+        "A": "Biến ngẫu nhiên liên tục",
+        "B": "Biến ngẫu nhiên rời rạc",
+        "C": "Biến ngẫu nhiên liên tục hoặc rời rạc phụ thuộc vào số lượng khách hàng là chẵn hay lẻ",
+        "D": "Biến ngẫu nhiên liên tục hoặc rời rạc phụ thuộc vào giới tính của khách hàng"
+      },
+      "answer": "B",
+      "explainAnswer": "Số lượng khách hàng là biến đếm số nguyên nên thuộc biến ngẫu nhiên rời rạc."
+    },
+    {
+      "id": 66,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "20% tổng sinh viên của một lớp học gồm 400 sinh viên có kế hoạch đi học Thạc sĩ. Độ lệch chuẩn của phân phối nhị thức này là:",
+      "options": {
+        "A": "8",
+        "B": "20",
+        "C": "12",
+        "D": "24"
+      },
+      "answer": "A",
+      "explainAnswer": "Độ lệch chuẩn của phân phối nhị thức = √[np(1−p)] = √(400×0.2×0.8) = 8."
+    },
+    {
+      "id": 67,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Phân phối Poisson là một dạng của:",
+      "options": {
+        "A": "Phân phối xác suất liên tục",
+        "B": "Phân phối xác suất rời rạc",
+        "C": "Phân phối xác suất chuẩn",
+        "D": "Phân phối xác suất student"
+      },
+      "answer": "B",
+      "explainAnswer": "Phân phối Poisson là một phân phối xác suất rời rạc."
+    },
+    {
+      "id": 68,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Kỳ vọng toán của phân phối nhị thức là:",
+      "options": {
+        "A": "(n-1)(1-p)",
+        "B": "n(1-p)",
+        "C": "np",
+        "D": "(n-1)p"
+      },
+      "answer": "C",
+      "explainAnswer": "Kỳ vọng toán của phân phối nhị thức bằng np."
+    },
+    {
+      "id": 69,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong chuẩn hóa Z=(X−μ)/σ, nếu z>0 thì quan sát X:",
+      "options": {
+        "A": "Nhỏ hơn trung bình μ",
+        "B": "Bằng trung bình μ",
+        "C": "Lớn hơn trung bình μ",
+        "D": "Luôn bằng 0"
+      },
+      "answer": "C",
+      "explainAnswer": "Vì σ>0, z>0 tương đương X−μ>0, do đó X>μ; quan sát nằm phía trên trung bình."
+    },
+    {
+      "id": 70,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Phân phối nhị thức với p=0.4 và cỡ mẫu là 150. Phương sai là:",
+      "options": {
+        "A": "36",
+        "B": "6",
+        "C": "81",
+        "D": "9"
+      },
+      "answer": "A",
+      "explainAnswer": "Phương sai của phân phối nhị thức = np(1−p) = 150 × 0.4 × 0.6 = 36."
+    },
+    {
+      "id": 71,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Hãy xem xét phân phối xác suất sau: x f(x) 10 0.2 20 0.4 30 0.3 40 0.1 Tính kỳ vọng toán và độ lệch chuẩn:",
+      "options": {
+        "A": "23 và 3",
+        "B": "23 và 9",
+        "C": "30 và 3",
+        "D": "30 và 9"
+      },
+      "answer": "B",
+      "explainAnswer": "Kỳ vọng E(X) = 10×0.2 + 20×0.4 + 30×0.3 + 40×0.1 = 23. Độ lệch chuẩn tính được khoảng 9."
+    },
+    {
+      "id": 72,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Điểm trung tâm của đường cong phân phối chuẩn là:",
+      "options": {
+        "A": "Độ lệch chuẩn của phân phối",
+        "B": "Giá trị không âm",
+        "C": "Giá trị trung bình của phân phối",
+        "D": "Luôn bằng 1"
+      },
+      "answer": "C",
+      "explainAnswer": "Đường cong phân phối chuẩn đối xứng quanh giá trị trung bình, đó chính là điểm trung tâm."
+    },
+    {
+      "id": 73,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Tính chất nào là của phân phối chuẩn hóa:",
+      "options": {
+        "A": "Không đối xứng",
+        "B": "Tổng diện tích dưới đường cong chuẩn hóa luôn bằng 1",
+        "C": "99.72% giá trị của biến ngẫu nhiên nằm trong khoảng cộng trừ 1 độ lệch chuẩn so với giá trị trung bình",
+        "D": "Giá trị trung bình bằng giá trị trung vị và lớn hơn Mode"
+      },
+      "answer": "B",
+      "explainAnswer": "Tổng diện tích dưới đường cong phân phối chuẩn hóa luôn bằng 1."
+    },
+    {
+      "id": 74,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Đối với biến ngẫu nhiên liên tục X phân phối đều trên [a,b], hàm mật độ xác suất của X là:",
+      "options": {
+        "A": "f(x)=1/(b−a), a≤x≤b",
+        "B": "f(x)=1/(a+b), a≤x≤b",
+        "C": "f(x)=b−a, a≤x≤b",
+        "D": "f(x)=a+b, a≤x≤b"
+      },
+      "answer": "A",
+      "explainAnswer": "Phân phối đều trên [a,b] có hàm mật độ f(x)=1/(b−a) với a≤x≤b và bằng 0 ngoài khoảng này."
+    },
+    {
+      "id": 75,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Biến x tuân theo phân phối đều giữa 70 và 100. Xác suất để x có giá trị từ 80 tới 95 là:",
+      "options": {
+        "A": "0.5",
+        "B": "0.75",
+        "C": "0.25",
+        "D": "1"
+      },
+      "answer": "A",
+      "explainAnswer": "Xác suất = độ dài khoảng quan tâm chia cho độ dài toàn khoảng = (95 − 80)/(100 − 70) = 0.5."
+    },
+    {
+      "id": 76,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Tính P(−2.25 ≤ z≤ 1.87)",
+      "options": {
+        "A": "0.9662",
+        "B": "0.9571",
+        "C": "0.9693",
+        "D": "0.9772"
+      },
+      "answer": "A",
+      "explainAnswer": "Tra bảng phân phối chuẩn, P(−2.25 ≤ Z ≤ 1.87) ≈ 0.9662."
+    },
+    {
+      "id": 77,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "X là biến ngẫu nhiên tuân theo phân phối chuẩn với trung bình bằng 7 và độ lệch chuẩn là 2. Xác suất để X nằm giữa 6.32 và 7.35 là:",
+      "options": {
+        "A": "0.3669",
+        "B": "0.5695",
+        "C": "0.2026",
+        "D": "0.9364"
+      },
+      "answer": "C",
+      "explainAnswer": "Chuẩn hóa hai đầu mút rồi tra bảng phân phối chuẩn, xác suất khoảng 0.2026."
+    },
+    {
+      "id": 78,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Giảng viên môn Thống kê trong kinh doanh lưu ý rằng điểm thi của sinh viên của ông được phân phối chuẩn với điểm trung bình là 7.3 và độ lệch chuẩn là 1.1. Giảng viên tính toán rằng 8.75% sinh viên đạt điểm Giỏi. Điểm tối thiểu cần đạt để đạt điểm Giỏi là bao nhiêu? (làm tròn lên)",
+      "options": {
+        "A": "8",
+        "B": "8.5",
+        "C": "9",
+        "D": "9.5"
+      },
+      "answer": "C",
+      "explainAnswer": "Tỷ lệ 8.75% nằm ở đuôi phải tương ứng z ≈ 1.36. Điểm tối thiểu ≈ 7.3 + 1.36 × 1.1 ≈ 8.8, làm tròn lên thành 9."
+    },
+    {
+      "id": 79,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Điểm thi kết thúc môn Thống kê của toàn bộ sinh viên có độ lệch chuẩn là 2.4. Một mẫu gồm 50 sinh viên được chọn từ tổng thể này. Tính xác suất để giá trị trung bình mẫu nằm trong khoảng ± 1 so với giá trị trung bình của tổng thể?",
+      "options": {
+        "A": "1",
+        "B": "0.9984",
+        "C": "0.9968",
+        "D": "0.0016"
+      },
+      "answer": "C",
+      "explainAnswer": "SE = 2.4/√50 ≈ 0.339. P(|Z| < 1/0.339) ≈ P(|Z| < 2.95) ≈ 0.9968."
+    },
+    {
+      "id": 80,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Khi tăng kích thước mẫu,",
+      "options": {
+        "A": "Sai số chuẩn của trung bình sẽ giảm",
+        "B": "Sai số chuẩn của trung bình sẽ tăng",
+        "C": "Độ lệch chuẩn của tổng thể giảm",
+        "D": "Trung bình của tổng thể sẽ tang"
+      },
+      "answer": "A",
+      "explainAnswer": "Sai số chuẩn của trung bình tỷ lệ nghịch với căn bậc hai của cỡ mẫu, nên cỡ mẫu tăng thì sai số chuẩn giảm."
+    },
+    {
+      "id": 81,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong ước lượng điểm hoặc ước lượng khoảng:",
+      "options": {
+        "A": "Dữ liệu từ mẫu được sử dụng để suy diễn ước lượng điểm hoặc khoảng của tham số của tổng thể",
+        "B": "Dữ liệu từ tổng thể được sử dụng để suy diễn ước lượng điểm hoặc khoảng của tham . số của mẫu",
+        "C": "Dữ liệu của mẫu được dung để ước lượng điểm hoặc ước lượng khoảng của mẫu",
+        "D": "Trung bình của mẫu và của tổng thể là bằng nhau"
+      },
+      "answer": "A",
+      "explainAnswer": "Ước lượng điểm và ước lượng khoảng đều dùng thông tin từ mẫu để suy luận về tham số của tổng thể."
+    },
+    {
+      "id": 82,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Ký hiệu nào thường được dùng cho ước lượng điểm của tỷ lệ tổng thể p?",
+      "options": {
+        "A": "p̂",
+        "B": "p",
+        "C": "μ",
+        "D": "σ"
+      },
+      "answer": "A",
+      "explainAnswer": "p là tham số tỷ lệ của tổng thể; p̂ (p-hat) là tỷ lệ mẫu, thường được dùng làm ước lượng điểm cho p."
+    },
+    {
+      "id": 83,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Phương pháp chọn mẫu nào không phải chọn mẫu xác suất?",
+      "options": {
+        "A": "Chọn mẫu phân tầng",
+        "B": "Chọn mẫu có hệ thống",
+        "C": "Chọn mẫu theo nhóm, cụm",
+        "D": "Chọn mẫu thuận tiện"
+      },
+      "answer": "D",
+      "explainAnswer": "Lấy mẫu thuận tiện không dựa trên xác suất nên thuộc phương pháp lấy mẫu phi xác suất."
+    },
+    {
+      "id": 84,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Mẫu ngẫu nhiên có kích thước 64 được lấy từ một tổng thể vô hạn có giá trị trung bình và độ lệch chuẩn lần lượt là 280 và 12. Phân phối của tổng thể là không xác định. Giá trị trung bình và sai số chuẩn của trung bình là",
+      "options": {
+        "A": "280 và 12",
+        "B": "280 và 2",
+        "C": "280 và 1.5",
+        "D": "64 và 1.5"
+      },
+      "answer": "C",
+      "explainAnswer": "Trung bình mẫu = 280, sai số chuẩn = 12/√64 = 1.5."
+    },
+    {
+      "id": 85,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Một tổng thể có giá trị trung bình là 82 và độ lệch chuẩn là 9. Một mẫu gồm 121 quan sát sẽ được lấy. Xác suất để giá trị trung bình mẫu lớn hơn 84.5 là bao nhiêu?",
+      "options": {
+        "A": "0.818",
+        "B": "0.9989",
+        "C": "0.0011",
+        "D": "0.182"
+      },
+      "answer": "C",
+      "explainAnswer": "SE = 9/√121 = 0.818. z = (84.5 − 82)/0.818 ≈ 3.06 → P(Z > 3.06) ≈ 0.0011."
+    },
+    {
+      "id": 86,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Mẫu ngẫu nhiên có kích thước 800 được lấy từ một tổng thể vô hạn có tỷ lệ tổng thể là 0.35. Sai số chuẩn của tỷ lệ là bao nhiêu?",
+      "options": {
+        "A": "0.2275",
+        "B": "0.0169",
+        "C": "0.0546",
+        "D": "0.0372"
+      },
+      "answer": "B",
+      "explainAnswer": "Sai số chuẩn của tỷ lệ = √[p(1−p)/n] = √(0.35×0.65/800) ≈ 0.0169."
+    },
+    {
+      "id": 87,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Một mẫu gồm 300 quan sát sẽ được lấy từ một tổng thể vô hạn. Tỷ lệ tổng thể bằng 0.7. Xác suất để tỷ lệ mẫu lớn hơn 0.65 là bao nhiêu?",
+      "options": {
+        "A": "0.0294",
+        "B": "0.9706",
+        "C": "0.0654",
+        "D": "0.9346"
+      },
+      "answer": "B",
+      "explainAnswer": "SE ≈ 0.0265. z = (0.65 − 0.7)/0.0265 ≈ −1.89 → P(p̂ > 0.65) ≈ 0.9706."
+    },
+    {
+      "id": 88,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Một mẫu gồm 500 sinh viên Đại học Phenikaa, trong đó 275 sinh viên là nữ. Sai số chuẩn của tỷ lệ là:",
+      "options": {
+        "A": "0.0216",
+        "B": "0.0223",
+        "C": "0.0235",
+        "D": "0.0358"
+      },
+      "answer": "B",
+      "explainAnswer": "p̂ = 275/500 = 0.55. SE = √(0.55×0.45/500) ≈ 0.0223."
+    },
+    {
+      "id": 89,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Dữ liệu chiều cao của 8 bạn sinh viên như sau: 167; 175; 158; 164; 159; 162; 170; 168 Ước lượng điểm của giá trị trung bình tổng thể là:",
+      "options": {
+        "A": "165.4",
+        "B": "168.2",
+        "C": "170.4",
+        "D": "167.6"
+      },
+      "answer": "A",
+      "explainAnswer": "Trung bình mẫu = (167+175+158+164+159+162+170+168)/8 = 165.375 ≈ 165.4."
+    },
+    {
+      "id": 90,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong ước lượng khoảng, nếu cỡ mẫu càng lớn, khoảng ước lượng sẽ: .",
+      "options": {
+        "A": "Trở nên rộng hơn",
+        "B": "Không thay đổi",
+        "C": "Trở nên hẹp hơn",
+        "D": "Càng gần 1.96"
+      },
+      "answer": "C",
+      "explainAnswer": "Khi cỡ mẫu tăng, sai số chuẩn giảm nên khoảng tin cậy trở nên hẹp hơn."
+    },
+    {
+      "id": 91,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Từ một tổng thể có phương sai là 484, một mẫu gồm 256 phần tử được chọn. Với mức độ tin cậy 99%, sai số của khoảng ước lượng là:",
+      "options": {
+        "A": "2.695",
+        "B": "3.545",
+        "C": "2.260",
+        "D": "2.543"
+      },
+      "answer": "B",
+      "explainAnswer": "Phương sai = 484 nên σ = 22. Sai số biên ở độ tin cậy 99% = 2.576 × 22 / √256 ≈ 3.545."
+    },
+    {
+      "id": 92,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Một mẫu gồm 26 sinh viên tham gia khảo sát về điểm Ielts. Giá trị trung bình của mẫu là 5.5. Bậc tự do trong tham số kiểm định t là:",
+      "options": {
+        "A": "26",
+        "B": "25",
+        "C": "27",
+        "D": "24"
+      },
+      "answer": "B",
+      "explainAnswer": "Bậc tự do của phân phối t khi ước lượng trung bình là n − 1 = 25."
+    },
+    {
+      "id": 93,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Nếu độ tin cậy là 99%, mức ý nghĩa thống kê sẽ là:",
+      "options": {
+        "A": "0.01",
+        "B": "0.1",
+        "C": "0.05",
+        "D": "0.025"
+      },
+      "answer": "A",
+      "explainAnswer": "Mức ý nghĩa α = 1 − độ tin cậy = 1 − 0.99 = 0.01."
+    },
+    {
+      "id": 94,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Khi số bậc tự do của phân phối t tăng, sự khác biệt giữa phân phối t và phân phối chuẩn sẽ:",
+      "options": {
+        "A": "Không thay đổi",
+        "B": "Dao động",
+        "C": "Trở nên nhỏ hơn",
+        "D": "Trở nên lớn hơn"
+      },
+      "answer": "C",
+      "explainAnswer": "Khi bậc tự do tăng, phân phối t ngày càng gần với phân phối chuẩn."
+    },
+    {
+      "id": 95,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Khi σ của tổng thể chưa biết và dùng độ lệch chuẩn mẫu s, phân phối nào được dùng để xây dựng khoảng tin cậy cho μ theo phương pháp t?",
+      "options": {
+        "A": "t với n bậc tự do",
+        "B": "Chuẩn với n bậc tự do",
+        "C": "t với n−1 bậc tự do",
+        "D": "F với n−1 bậc tự do"
+      },
+      "answer": "C",
+      "explainAnswer": "Khi σ chưa biết và thay bằng s, khoảng tin cậy cho μ theo phân phối t sử dụng n−1 bậc tự do. Với mẫu lớn, phân phối t tiến gần phân phối chuẩn."
+    },
+    {
+      "id": 96,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Một khoảng ước lượng 95% cho giá trị trung bình tổng thể được xác định là từ 105 đến 130. Với cùng dữ liệu, nếu hệ số tin cậy tăng lên tới 99%, khoảng ước lượng cho giá trị trung bình của tổng thể sẽ:",
+      "options": {
+        "A": "Trở nên hẹp hơn",
+        "B": "Trở nên rộng hơn",
+        "C": "Không đổi",
+        "D": "Không đáp án nào đúng"
+      },
+      "answer": "B",
+      "explainAnswer": "Độ tin cậy càng cao thì khoảng ước lượng càng rộng để đảm bảo xác suất bao phủ lớn hơn."
+    },
+    {
+      "id": 97,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Một mẫu ngẫu nhiên gồm 64 quan sát có giá trị trung bình là 20, trung vị là 21, và kiểu là 22. Độ lệch chuẩn của tổng thể được biết là 4.8. Khoảng ước lượng 99% cho giá trị trung bình tổng thể là:",
+      "options": {
+        "A": "18.45 tới 21.55",
+        "B": "19.82 tới 22.54",
+        "C": "19.01 tới 20.99",
+        "D": "18.82 tới 21.18"
+      },
+      "answer": "A",
+      "explainAnswer": "ME = 2.576 × 4.8/√64 = 1.545. Khoảng 20 ± 1.545 → 18.45 đến 21.55."
+    },
+    {
+      "id": 98,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Một mẫu ngẫu nhiên gồm 250 sinh viên Đại học Phenikaa cho thấy độ tuổi trung bình là 25 tuổi và độ lệch chuẩn mẫu là 2 tuổi. Khoảng ước lượng 99% cho độ tuổi trung bình thực tế của tất cả sinh viên trong trường đại học là:",
+      "options": {
+        "A": "24.7 tới 25.3",
+        "B": "24.5 tới 25.5",
+        "C": "24.0 tới 26.0",
+        "D": "23.6 tới 24.8"
+      },
+      "answer": "A",
+      "explainAnswer": "ME = 2.576 × 2/√250 ≈ 0.326. Khoảng 25 ± 0.326 → 24.7 đến 25.3."
+    },
+    {
+      "id": 99,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Tại cuộc khảo sát tháng 7 năm 2024, trong số 500 sinh viên trường Đại học Phenikaa được hỏi họ có sử dụng Iphone hay không? 263 sinh viên trả lời có. Hãy cung cấp ước lượng khoảng cho tỷ lệ sử dụng Iphone với khoảng tin cậy 95%.",
+      "options": {
+        "A": "0.42 tới 0.53",
+        "B": "0.45 tới 0.58",
+        "C": "0.48 tới 0.57",
+        "D": "0.50 tới 0.62"
+      },
+      "answer": "C",
+      "explainAnswer": "p̂ = 263/500 = 0.526. Khoảng tin cậy 95% khoảng 0.48 đến 0.57."
+    },
+    {
+      "id": 100,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Một mẫu ngẫu nhiên gồm 25 bạn sinh viên Đại học Phenikaa trả lời câu hỏi về mức thu nhập hàng tháng của gia đình. Trung bình mẫu và độ lệch chuẩn mẫu lần lượt là 43 triệu đồng và 6 triệu đồng. Với độ tin cậy 99%, hãy ước lượng khoảng cho mức thu nhập hàng tháng trung bình của tổng thể.",
+      "options": {
+        "A": "[39.64; 46.36]",
+        "B": "[39.64; 43.36]",
+        "C": "[40.64; 46.36]",
+        "D": "[38.64; 47.36]"
+      },
+      "answer": "A",
+      "explainAnswer": "Với n=25, x̄=43, s=6, df=24 và độ tin cậy 99%, t₀.005,24≈2.797. Sai số biên≈2.797×6/√25≈3.356, nên khoảng tin cậy là [43−3.356; 43+3.356]≈[39.64;46.36]."
+    },
+    {
+      "id": 101,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Sai lầm loại mấy xảy ra nếu bạn không bác bỏ H 0 khi thực tế H 0 sai:",
+      "options": {
+        "A": "Sai lầm loại II",
+        "B": "Sai lầm loại I",
+        "C": "Sai lầm loại I hoặc loại II tùy thuộc vào mức ý nghĩa thống kê",
+        "D": "Sai lầm loại I hoặc loại II tùy thuộc vào năng lực kiểm định"
+      },
+      "answer": "A",
+      "explainAnswer": "Không bác bỏ H0 trong khi H0 thực tế sai chính là sai lầm loại II."
+    },
+    {
+      "id": 102,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Độ mạnh của kiểm định là:",
+      "options": {
+        "A": "α",
+        "B": "β",
+        "C": "1- α",
+        "D": "1- β"
+      },
+      "answer": "D",
+      "explainAnswer": "Độ mạnh của kiểm định bằng 1 − β, trong đó β là xác suất mắc sai lầm loại II."
+    },
+    {
+      "id": 103,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Nếu kiểm định không bác bỏ H₀, phát biểu nào sau đây là hợp lý?",
+      "options": {
+        "A": "Chắc chắn H₀ đúng",
+        "B": "Có thể chưa đủ bằng chứng để bác bỏ H₀; một nguyên nhân có thể là cỡ mẫu chưa đủ lớn",
+        "C": "Chắc chắn H₀ sai",
+        "D": "Luôn phải tăng mức ý nghĩa α"
+      },
+      "answer": "B",
+      "explainAnswer": "Không bác bỏ H₀ không có nghĩa là chứng minh H₀ đúng. Một nguyên nhân có thể là dữ liệu chưa cung cấp đủ bằng chứng, chẳng hạn cỡ mẫu còn nhỏ hoặc hiệu ứng thực sự nhỏ."
+    },
+    {
+      "id": 104,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Sai lầm trong bác bỏ giả thuyết không khi mà nó đúng là:",
+      "options": {
+        "A": "Sai lầm loại II",
+        "B": "Sai lầm loại I",
+        "C": "Luôn luôn bác bỏ",
+        "D": "Sai lầm loại II hoặc loại I tùy thuộc giá trị mức ý nghĩa thống kê"
+      },
+      "answer": "B",
+      "explainAnswer": "Bác bỏ H0 khi H0 thực tế đúng là định nghĩa của sai lầm loại I."
+    },
+    {
+      "id": 105,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Nếu H 0 không bị bác bỏ ở mức ý nghĩa 5%, nó sẽ:",
+      "options": {
+        "A": "cũng không bị bác bỏ ở mức ý nghĩa 1%",
+        "B": "bị bác bỏ ở mức ý nghĩa 1%",
+        "C": "bị bác bỏ ở mức ý nghĩa 1% nếu cỡ mẫu nhỏ",
+        "D": "không bị bác bỏ hoặc có thể bị bác bỏ tùy thuộc cỡ mẫu"
+      },
+      "answer": "A",
+      "explainAnswer": "Nếu không bác bỏ ở α = 5% thì cũng không bác bỏ ở α = 1% (mức nghiêm ngặt hơn)."
+    },
+    {
+      "id": 106,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong kiểm định 2 phía, nếu α =1 % và cỡ mẫu là 19 thì",
+      "options": {
+        "A": "t=2.878",
+        "B": "t=2.861",
+        "C": "t=2.898",
+        "D": "t=2.539"
+      },
+      "answer": "A",
+      "explainAnswer": "df = 18, kiểm định hai phía α = 1%, giá trị t tới hạn ≈ 2.878."
+    },
+    {
+      "id": 107,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong kiểm định hai phía với α =5 %, p-value được xác định là 0.01.",
+      "options": {
+        "A": "Bác bỏ giả thuyết H 0",
+        "B": "Không thể bác bỏ giả thuyết H 0",
+        "C": "Có thể bác bỏ giả thuyết H 0 tùy thuộc vào cỡ mẫu",
+        "D": "Không đáp án nào đúng"
+      },
+      "answer": "A",
+      "explainAnswer": "p-value = 0.01 < α = 0.05 nên bác bỏ giả thuyết H0."
+    },
+    {
+      "id": 108,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong kiểm định 1 phía, nếu α =10 % và cỡ mẫu là 18 thì",
+      "options": {
+        "A": "1.333",
+        "B": "1.645",
+        "C": "1.96",
+        "D": "2.110"
+      },
+      "answer": "A",
+      "explainAnswer": "Với kiểm định một phía, α=0.10 và df=17, giá trị tới hạn t≈1.333 (giá trị bảng có thể được làm tròn thành 1.33)."
+    },
+    {
+      "id": 109,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong kiểm định phía trái, nếu thống kê kiểm định là z=−2.54 thì p-value xấp xỉ bằng:",
+      "options": {
+        "A": "0.0055",
+        "B": "0.0228",
+        "C": "0.9945",
+        "D": "0.5000"
+      },
+      "answer": "A",
+      "explainAnswer": "Với kiểm định phía trái, p-value=P(Z≤−2.54)=1−Φ(2.54)≈0.0055."
+    },
+    {
+      "id": 110,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Thời gian trung bình làm việc mỗi tuần của giảng viên là 42 giờ vào năm 2018. Người ta tin rằng, COVID-19 đã làm giảm thời gian làm việc của giảng viên trong năm 2020. Để kiểm định điều này, giả thuyết nghiên cứu là:",
+      "options": {
+        "A": "H0: μ < 42 Ha: μ ≥ 42",
+        "B": "H0 : μ ≥ 42 Ha : μ < 42",
+        "C": "H0: μ > 42 Ha: μ ≤ 42",
+        "D": "H0: μ = 42 Ha: μ ≠ 42"
+      },
+      "answer": "B",
+      "explainAnswer": "Muốn chứng minh thời gian làm việc giảm, đặt H0: μ ≥ 42 và Ha: μ < 42."
+    },
+    {
+      "id": 111,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Một nhà nghiên cứu muốn kiểm định xem tiền thuê nhà trung bình có tăng lên trên 4 triệu đồng hay không. Cặp giả thuyết phù hợp là:",
+      "options": {
+        "A": "H₀: μ≤4; H₁: μ>4",
+        "B": "H₀: μ<4; H₁: μ≥4",
+        "C": "H₀: μ=4; H₁: μ<4",
+        "D": "H₀: μ>4; H₁: μ≤4"
+      },
+      "answer": "A",
+      "explainAnswer": "Vì mục tiêu nghiên cứu là chứng minh μ>4, giả thuyết đối là H₁: μ>4; phần còn lại thuộc H₀: μ≤4."
+    },
+    {
+      "id": 112,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Khảo sát năm 2023 cho thấy điểm trung bình học kì II năm 2023 của sinh viên Đại học Phenikaa là 6.7. Phòng QLĐT cho rằng, không có sự thay đổi trong điểm trung bình học kì I năm 2024 so với học kì II năm 2023. Thực hiện khảo sát với 1 mẫu 300 sinh viên, và xây dựng giả thuyết nghiên cứu:",
+      "options": {
+        "A": "H0: μ < 6.7Ha: μ ≥ 6.7",
+        "B": "H0: μ ≥ 6.7Ha: μ < 6.7",
+        "C": "H0: μ > 6.7Ha: μ ≤ 6.7",
+        "D": "H0 : μ = 6.7 Ha : μ ≠ 6.7"
+      },
+      "answer": "D",
+      "explainAnswer": "Kiểm định không thay đổi là kiểm định hai phía: H0: μ = 6.7, Ha: μ ≠ 6.7."
+    },
+    {
+      "id": 113,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Một nghiên cứu muốn kiểm định tỷ lệ p có lớn hơn 0.25 hay không. Với mẫu n=1500 có 230 trường hợp thành công, cặp giả thuyết và giá trị thống kê Z nào phù hợp?",
+      "options": {
+        "A": "H₀:p≤0.25; H₁:p>0.25; Z≈−8.64",
+        "B": "H₀:p=0.25; H₁:p<0.25; Z≈−8.64",
+        "C": "H₀:p≥0.25; H₁:p<0.25; Z≈8.64",
+        "D": "H₀:p=0.25; H₁:p>0.25; Z≈5.32"
+      },
+      "answer": "A",
+      "explainAnswer": "p̂=230/1500≈0.1533. Với kiểm định một phía phải, Z=(p̂−0.25)/√[0.25×0.75/1500]≈−8.64. Có thể viết H₀:p=0.25 thay cho H₀:p≤0.25 khi tính thống kê dưới giả thuyết biên."
+    },
+    {
+      "id": 114,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Một nghiên cứu muốn kiểm định tỷ lệ p có thấp hơn 0.80 hay không. Với n=100 và p̂=0.72, p-value của kiểm định một phía trái xấp xỉ bằng:",
+      "options": {
+        "A": "0.0228",
+        "B": "0.0288",
+        "C": "0.5000",
+        "D": "0.9772"
+      },
+      "answer": "A",
+      "explainAnswer": "Z=(0.72−0.80)/√[0.80×0.20/100]=−2.00. Với kiểm định phía trái, p-value=P(Z≤−2.00)≈0.0228."
+    },
+    {
+      "id": 115,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Hai cách tiếp cận để đưa ra kết luận bác bỏ hay không bác bỏ giả thuyết không là:",
+      "options": {
+        "A": "Thống kê kiểm định và hệ số mức ý nghĩa thống kê",
+        "B": "Thống kê kiểm định và hệ số p- value",
+        "C": "Sai lầm loại I và loại II",
+        "D": "Kiểm định một phía và hai phía"
+      },
+      "answer": "B",
+      "explainAnswer": "Hai cách phổ biến để kết luận bác bỏ hay không bác bỏ H0 là so sánh thống kê kiểm định với giá trị tới hạn, hoặc so sánh p-value với α."
+    },
+    {
+      "id": 116,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Nếu khả năng mắc sai lầm loại I cao, một giá trị nhỏ hơn nên được chọn là:",
+      "options": {
+        "A": "Tham số kiểm định",
+        "B": "Hệ số tin cậy",
+        "C": "Hệ số ý nghĩa thống kê",
+        "D": "Giá trị tới hạn"
+      },
+      "answer": "C",
+      "explainAnswer": "Để giảm nguy cơ mắc sai lầm loại I, người ta chọn mức ý nghĩa α nhỏ hơn."
+    },
+    {
+      "id": 117,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Khi kiểm định chênh lệch giữa hai tỷ lệ tổng thể p₁ và p₂ theo hướng p₁ lớn hơn p₂, giả thuyết đối phù hợp là:",
+      "options": {
+        "A": "H₁:p₁−p₂>0",
+        "B": "H₁:p₁−p₂<0",
+        "C": "H₁:p₁−p₂=0",
+        "D": "H₁:p₁−p₂≤0"
+      },
+      "answer": "A",
+      "explainAnswer": "Nếu mục tiêu là kiểm định p₁>p₂ thì giả thuyết đối phải là H₁:p₁−p₂>0; giả thuyết không thường được đặt ở dạng p₁−p₂≤0."
+    },
+    {
+      "id": 118,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Để xây dựng một ước lượng khoảng cho sự khác biệt giữa hai giá trị trung bình của hai quần thể khi độ lệch chuẩn của hai quần thể không biết và có thể giả định rằng hai quần thể có phương sai bằng nhau, chúng ta phải sử dụng phân phối t (giả sử n1 là cỡ mẫu của mẫu 1 và n2 là cỡ mẫu của mẫu 2). Tính bậc tự do",
+      "options": {
+        "A": "n1-1",
+        "B": "n2-1",
+        "C": "n1+n2-1",
+        "D": "n1+n2- 2"
+      },
+      "answer": "D",
+      "explainAnswer": "Khi giả định hai phương sai bằng nhau, bậc tự do của phân phối t là n1 + n2 − 2."
+    },
+    {
+      "id": 119,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong kiểm định t hai mẫu độc lập với giả định hai tổng thể có phương sai bằng nhau, bậc tự do của thống kê t là:",
+      "options": {
+        "A": "n₁+n₂−2",
+        "B": "n₁+n₂−1",
+        "C": "n₁+n₂",
+        "D": "n₁−n₂"
+      },
+      "answer": "A",
+      "explainAnswer": "Với kiểm định t hai mẫu độc lập sử dụng phương sai gộp và giả định phương sai hai tổng thể bằng nhau, df=n₁+n₂−2. Nếu dùng Welch t-test thì bậc tự do được tính theo công thức khác."
+    },
+    {
+      "id": 120,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Nếu hai mẫu độc lập lớn được lấy từ hai quần thể, phân phối mẫu của sự khác biệt giữa hai trung bình mẫu:",
+      "options": {
+        "A": "có thể được xấp xỉ bởi bất kỳ phân phối nào",
+        "B": "sẽ có phương sai bằng một",
+        "C": "có thể được xấp xỉ bởi phân phối chuẩn",
+        "D": "sẽ có giá trị trung bình bằng một"
+      },
+      "answer": "C",
+      "explainAnswer": "Với hai mẫu độc lập đủ lớn, phân phối mẫu của hiệu hai trung bình xấp xỉ phân phối chuẩn."
+    },
+    {
+      "id": 121,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Hai nhóm có trung bình lần lượt là x̄₁=6.5 và x̄₂=7.2. Chênh lệch trung bình x̄₁−x̄₂ bằng:",
+      "options": {
+        "A": "−0.7",
+        "B": "0.7",
+        "C": "13.7",
+        "D": "1.07"
+      },
+      "answer": "A",
+      "explainAnswer": "x̄₁−x̄₂=6.5−7.2=−0.7."
+    },
+    {
+      "id": 122,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Một nhóm có các cặp giá trị trước và sau như dữ liệu trong câu. Nếu định nghĩa d=sau−trước, chênh lệch trung bình d̄ bằng:",
+      "options": {
+        "A": "−0.0183",
+        "B": "0.0183",
+        "C": "0.183",
+        "D": "1.833"
+      },
+      "answer": "B",
+      "explainAnswer": "Tính từng d=sau−trước rồi lấy trung bình cho 6 cặp cho kết quả d̄≈0.0183. Dấu dương cho biết giá trị sau trung bình cao hơn trước khoảng 0.0183 đơn vị."
+    },
+    {
+      "id": 123,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Kết quả khảo sát về sự ưa thích của khách hàng với 2 sản phẩm như sau Sản phẩm Cỡ mẫu Số khách thích sản phẩm Iphone 700 568 Samsung 852 624 . Sai số của - là",
+      "options": {
+        "A": "0.025",
+        "B": "0.044",
+        "C": "0.0212",
+        "D": "0.0268"
+      },
+      "answer": "C",
+      "explainAnswer": "Sai số chuẩn của hiệu hai tỷ lệ ưa thích iPhone và Samsung được tính khoảng 0.0212."
+    },
+    {
+      "id": 124,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong hai phương pháp sản xuất, một công ty muốn xác định phương pháp có thời gian hoàn thành trung bình nhỏ hơn. Một mẫu công nhân được chọn, và mỗi công nhân sẽ lần lượt sử dụng một phương pháp rồi sau đó sử dụng phương pháp kia. Quy trình lấy mẫu được sử dụng để thu thập dữ liệu về thời gian hoàn thành dựa trên:",
+      "options": {
+        "A": "Mẫu độc lập",
+        "B": "Mẫu gộp",
+        "C": "Mẫu cặp",
+        "D": "Mẫu tuyến tính"
+      },
+      "answer": "C",
+      "explainAnswer": "Mỗi công nhân thực hiện cả hai phương pháp nên đây là thiết kế mẫu cặp."
+    },
+    {
+      "id": 125,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong hồi quy tuyến tính đơn giản, Y = β0 + β1 X +ε. X và Y lần lượt là:",
+      "options": {
+        "A": "Biến phụ thuộc và biến độc lập",
+        "B": "Biến độc lập và biến xác suất",
+        "C": "Biến xác suất và biến phụ thuộc",
+        "D": "Biến độc lập và biến phụ thuộc"
+      },
+      "answer": "D",
+      "explainAnswer": "Trong mô hình hồi quy, X là biến độc lập và Y là biến phụ thuộc."
+    },
+    {
+      "id": 126,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong hồi quy tuyến tính đơn giản, β1 và ε lần lượt là:",
+      "options": {
+        "A": "Hệ số góc và sai số ngẫu nhiên",
+        "B": "Sai số ngẫu nhiên và hệ số biến thiên",
+        "C": "Hệ số biến thiên và hệ số góc",
+        "D": "Không đáp án nào đúng"
+      },
+      "answer": "A",
+      "explainAnswer": "β1 là hệ số góc (hệ số hồi quy), ε là sai số ngẫu nhiên."
+    },
+    {
+      "id": 127,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong hồi quy tuyến tính, sai số ngẫu nhiên ε sẽ có giá trị trung bình hoặc kỳ vọng toán là bao nhiêu:",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "ε",
+        "D": "μ"
+      },
+      "answer": "A",
+      "explainAnswer": "Một giả định quan trọng của mô hình hồi quy là kỳ vọng của sai số ngẫu nhiên bằng 0."
+    },
+    {
+      "id": 128,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong hồi quy tuyến tính đơn giản, Y = β0 + β1 X +ε được gọi là:",
+      "options": {
+        "A": "Mô hình hồi quy",
+        "B": "Phương trình hồi quy",
+        "C": "Phương trình hồi quy ước lượng",
+        "D": "Phương trình tương quan"
+      },
+      "answer": "A",
+      "explainAnswer": "Phương trình chứa cả sai số ε là mô hình (phương trình) hồi quy tổng thể."
+    },
+    {
+      "id": 129,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Phân tích hồi quy giữa doanh thu (triệu đồng) với chi phí quảng cáo (triệu đồng) có kết quả như sau = 30 + 5x Phương trình trên giải thích:",
+      "options": {
+        "A": "Nếu chi phí quảng cáo tăng 1 triệu đồng, doanh thu sẽ tăng thêm 5 triệu đồng",
+        "B": "Nếu chi phí quảng cáo tăng 1 đồng, doanh thu sẽ tăng thêm 5 triệu đồng",
+        "C": "Nếu chi phí quảng cáo tăng 1 triệu đồng, doanh thu sẽ tăng thêm 35 triệu đồng",
+        "D": "Nếu chi phí quảng cáo giảm 1 triệu đồng, doanh thu sẽ tăng thêm 5 triệu đồng"
+      },
+      "answer": "A",
+      "explainAnswer": "Hệ số 5 nghĩa là khi chi phí quảng cáo tăng 1 triệu đồng thì doanh thu tăng thêm 5 triệu đồng."
+    },
+    {
+      "id": 130,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Nếu ESS=200; RSS=300, tính R 2",
+      "options": {
+        "A": "0.6",
+        "B": "0.5",
+        "C": "0.4",
+        "D": "0.3"
+      },
+      "answer": "C",
+      "explainAnswer": "Tổng biến thiên TSS = ESS + RSS = 200 + 300 = 500. Hệ số xác định R² = 200/500 = 0.4."
+    },
+    {
+      "id": 131,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Đâu không phải là giả định của OLS:",
+      "options": {
+        "A": "Mẫu là ngẫu nhiên, độc lập",
+        "B": "Mẫu là biến liên tục, bao gồm cả giá trị bất thường",
+        "C": "Kỳ vọng toán của sai số bằng 0",
+        "D": "Phương sai của các sai số không đổi"
+      },
+      "answer": "B",
+      "explainAnswer": "OLS không yêu cầu mẫu phải là biến liên tục hay chứa giá trị bất thường; các giả định chính là về sai số."
+    },
+    {
+      "id": 132,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong mô hình hồi quy tuyến tính bội, phát biểu nào mô tả đúng ý nghĩa của hệ số xác định R²?",
+      "options": {
+        "A": "Tỷ lệ biến thiên của Y được mô hình giải thích",
+        "B": "Xác suất H₀ đúng",
+        "C": "Độ lệch chuẩn của phần dư",
+        "D": "Số biến độc lập trong mô hình"
+      },
+      "answer": "A",
+      "explainAnswer": "R² cho biết tỷ lệ biến thiên của biến phụ thuộc Y được giải thích bởi các biến độc lập trong mô hình."
+    },
+    {
+      "id": 133,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong bảng kết quả hồi quy, nếu hệ số của biến X là b=3.20 với sai số chuẩn SE(b)=1.00, thống kê t để kiểm định H₀:β=0 là:",
+      "options": {
+        "A": "0.31",
+        "B": "2.20",
+        "C": "3.20",
+        "D": "4.20"
+      },
+      "answer": "C",
+      "explainAnswer": "Thống kê t=b/SE(b)=3.20/1.00=3.20."
+    },
+    {
+      "id": 134,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong hồi quy tuyến tính bội, kiểm định F tổng thể được dùng để kiểm tra giả thuyết nào?",
+      "options": {
+        "A": "Tất cả hệ số góc bằng 0",
+        "B": "Chỉ hệ số chặn bằng 0",
+        "C": "Tất cả biến độc lập có tương quan hoàn hảo",
+        "D": "Phần dư luôn bằng 0"
+      },
+      "answer": "A",
+      "explainAnswer": "Kiểm định F tổng thể thường kiểm tra H₀:β₁=β₂=...=βₖ=0 so với H₁: ít nhất một hệ số góc khác 0."
+    },
+    {
+      "id": 135,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Nếu R²=0.64 trong một mô hình hồi quy tuyến tính, cách diễn giải phù hợp là:",
+      "options": {
+        "A": "64% biến thiên của Y được mô hình giải thích",
+        "B": "64% quan sát được dự đoán đúng tuyệt đối",
+        "C": "Xác suất mô hình đúng là 64%",
+        "D": "Sai số của mô hình là 64%"
+      },
+      "answer": "A",
+      "explainAnswer": "R²=0.64 nghĩa là khoảng 64% biến thiên quan sát của Y được giải thích bởi các biến độc lập trong mô hình."
+    },
+    {
+      "id": 136,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Nếu một hệ số hồi quy có b=−7.682 và SE(b)=2.630, thống kê t để kiểm định H₀:β=0 xấp xỉ bằng:",
+      "options": {
+        "A": "−2.92",
+        "B": "−5.05",
+        "C": "2.92",
+        "D": "−10.31"
+      },
+      "answer": "A",
+      "explainAnswer": "t=b/SE(b)=−7.682/2.630≈−2.92."
+    },
+    {
+      "id": 137,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong hồi quy tuyến tính bội, nếu muốn kiểm định ý nghĩa thống kê của toàn bộ nhóm biến độc lập, kiểm định nào thường được sử dụng?",
+      "options": {
+        "A": "Kiểm định F",
+        "B": "Kiểm định t cho một hệ số",
+        "C": "Kiểm định Z cho một trung bình",
+        "D": "Kiểm định χ² độc lập"
+      },
+      "answer": "A",
+      "explainAnswer": "Kiểm định F tổng thể đánh giá giả thuyết rằng tất cả các hệ số góc của các biến độc lập đồng thời bằng 0."
+    },
+    {
+      "id": 138,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Mô hình hồi quy bao gồm 5 biến độc lập và 146 quan sát. Giá trị t quan trọng để kiểm tra sự ý nghĩa của từng hệ số của biến độc lập sẽ có:",
+      "options": {
+        "A": "146 bậc tự do",
+        "B": "140 bậc tự do",
+        "C": "141 bậc tự do",
+        "D": "5 bậc tự do"
+      },
+      "answer": "B",
+      "explainAnswer": "Bậc tự do của t = n − k − 1 = 146 − 5 − 1 = 140."
+    },
+    {
+      "id": 139,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Cho phương trình hồi quy ước lượng như sau: = 7 + 3x1 + 9x2 Nếu x1 tăng bởi 1 đơn vị, giữ nguyên x2, y sẽ dự báo tăng bởi bao nhiêu đơn vị:",
+      "options": {
+        "A": "3",
+        "B": "9",
+        "C": "7",
+        "D": "10"
+      },
+      "answer": "A",
+      "explainAnswer": "Khi x1 tăng 1 đơn vị (giữ x2 không đổi) thì y tăng thêm 3 đơn vị."
+    },
+    {
+      "id": 140,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Cho RSS=700; ESS=300. Tính F của mô hình:",
+      "options": {
+        "A": "400",
+        "B": "200",
+        "C": "1000",
+        "D": "Không đủ dữ kiện để có kết quả"
+      },
+      "answer": "D",
+      "explainAnswer": "Thiếu thông tin về số biến độc lập và cỡ mẫu nên không tính được F."
+    },
+    {
+      "id": 141,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Cho bảng kết quả hồi quy dưới đây với một mẫu 16 quan sát Hệ số hồi quy ước lượng Sai số chuẩn . Constant 12.924 4.425 x1 -7.682 2.630 x2 45.216 12.560 Diễn giải hệ số hồi quy của x1",
+      "options": {
+        "A": "1 đơn vị thay đổi của x1 sẽ dẫn tới 7.682 đơn vị giảm trong y",
+        "B": "Nếu tăng x1 bởi 1 đơn vị, y sẽ tăng bởi 7.682 đơn vị nếu tất cả các biến khác không đổi",
+        "C": "Nếu tăng x1 bởi 1 đơn vị, y sẽ giảm bởi 7.682 đơn vị nếu x2 không đổi",
+        "D": "Nếu tăng x1 bởi 1 đơn vị, y sẽ tăng bởi 7.682 đơn vị"
+      },
+      "answer": "C",
+      "explainAnswer": "Hệ số −7.682 nghĩa là khi x1 tăng 1 đơn vị (giữ x2 cố định) thì y giảm 7.682 đơn vị."
+    },
+    {
+      "id": 142,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Với hệ số hồi quy b=−7.682 và SE(b)=2.630, thống kê t để kiểm định H₀:β=0 là:",
+      "options": {
+        "A": "−2.92",
+        "B": "2.92",
+        "C": "−0.29",
+        "D": "−10.31"
+      },
+      "answer": "A",
+      "explainAnswer": "t=−7.682/2.630≈−2.92. Giá trị âm phản ánh hệ số ước lượng âm."
+    },
+    {
+      "id": 143,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Với thống kê t≈−2.92 trong kiểm định hai phía ở mức ý nghĩa 5%, kết luận nào phù hợp khi bậc tự do khoảng 13?",
+      "options": {
+        "A": "Bác bỏ H₀ vì |t| lớn hơn giá trị tới hạn khoảng 2.16",
+        "B": "Không bác bỏ H₀ vì |t|<1",
+        "C": "Không thể dùng kiểm định t",
+        "D": "Luôn chấp nhận H₀"
+      },
+      "answer": "A",
+      "explainAnswer": "Với df≈13 và kiểm định hai phía α=0.05, |t|≈2.92 lớn hơn t tới hạn khoảng 2.16, nên bác bỏ H₀:β=0."
+    },
+    {
+      "id": 144,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Với thống kê t≈−2.92 trong kiểm định hai phía ở mức ý nghĩa 1% và bậc tự do khoảng 13, kết luận nào phù hợp?",
+      "options": {
+        "A": "Bác bỏ H₀ vì |t|>3.50",
+        "B": "Không bác bỏ H₀ vì |t| nhỏ hơn giá trị tới hạn khoảng 3.01",
+        "C": "Bác bỏ H₀ vì t<0",
+        "D": "Luôn bác bỏ H₀ ở mọi mức ý nghĩa"
+      },
+      "answer": "B",
+      "explainAnswer": "Với df≈13 và kiểm định hai phía α=0.01, giá trị tới hạn khoảng ±3.01. Vì |−2.92|<3.01 nên chưa đủ bằng chứng để bác bỏ H₀."
+    },
+    {
+      "id": 145,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong phân tích hồi quy, theo quy ước thường dùng trong nhiều giáo trình, VIF lớn hơn 10 thường được xem là dấu hiệu của:",
+      "options": {
+        "A": "Đa cộng tuyến nghiêm trọng",
+        "B": "Phương sai sai số bằng 0",
+        "C": "Tự tương quan chắc chắn",
+        "D": "Phân phối chuẩn của phần dư"
+      },
+      "answer": "A",
+      "explainAnswer": "VIF cao cho thấy biến giải thích có quan hệ tuyến tính mạnh với các biến giải thích khác. Ngưỡng 10 là một quy ước thường gặp; một số tài liệu dùng ngưỡng thấp hơn như 5."
+    },
+    {
+      "id": 146,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Biện pháp nào sau đây có thể giúp xử lý hiện tượng đa cộng tuyến trong hồi quy?",
+      "options": {
+        "A": "Loại bỏ hoặc gộp các biến giải thích có thông tin trùng lặp",
+        "B": "Luôn tăng α trong kiểm định",
+        "C": "Đổi đơn vị đo của biến là đủ để loại bỏ đa cộng tuyến",
+        "D": "Luôn xóa biến phụ thuộc Y"
+      },
+      "answer": "A",
+      "explainAnswer": "Có thể xem xét loại bỏ, gộp hoặc biến đổi các biến giải thích có thông tin trùng lặp; trong một số trường hợp cũng có thể dùng thêm dữ liệu hoặc các phương pháp như hồi quy Ridge."
+    },
+    {
+      "id": 147,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Hậu quả của hiện tượng đa cộng tuyến",
+      "options": {
+        "A": "Sai số chuẩn của các ước lượng nhỏ",
+        "B": "Giá trị t lớn",
+        "C": "Khoảng tin cậy 95% rộng",
+        "D": "Không nghiêm trọng"
+      },
+      "answer": "C",
+      "explainAnswer": "Đa cộng tuyến làm sai số chuẩn của các hệ số tăng lên, khiến khoảng tin cậy rộng và khó kết luận."
+    },
+    {
+      "id": 148,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Bảng, biểu đồ hay phương trình cung cấp thông tin về xác suất xảy ra tương ứng với các giá trị của một biến ngẫu nhiên rời rạc x gọi là",
+      "options": {
+        "A": "Hàm mật độ phân phối xác suất",
+        "B": "Hàm phân phối xác suất tích lũy",
+        "C": "Hàm phân phối xác suất",
+        "D": "Hàm phân phối nhị thức tích lũy"
+      },
+      "answer": "C",
+      "explainAnswer": "Hàm phân phối xác suất cho biết xác suất tương ứng với từng giá trị của biến ngẫu nhiên rời rạc."
+    },
+    {
+      "id": 149,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Phân phối tần suất tích lũy là:",
+      "options": {
+        "A": "thiết bị đồ họa để trình bày dữ liệu theo danh mục",
+        "B": "bảng tóm tắt của một tập dữ liệu hiển thị tần suất tương đối",
+        "C": "bảng tóm tắt của một tập dữ liệu hiển thị tổng tần suất",
+        "D": "bảng tóm tắt của một tập dữ liệu hiển thị tần suất của các mục trong mỗi lớp không chồng lấn"
+      },
+      "answer": "C",
+      "explainAnswer": "Phân phối tần suất tích lũy là bảng tóm tắt dữ liệu thể hiện tổng tần suất từ nhóm đầu đến từng nhóm."
+    },
+    {
+      "id": 150,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "15% sinh viên trong trường Đại học Phenikaa thuộc khoa Kinh tế-Kinh doanh, 20% thuộc khoa Dược, 35% thuộc khoa Công nghệ thông tin và 30% đến từ các khoa khác. Các thiết bị đồ họa có thể được sử dụng để trình bày dữ liệu này là...",
+      "options": {
+        "A": "biểu đồ đường",
+        "B": "cả biểu đồ thanh và biểu đồ hình tròn",
+        "C": "chỉ biểu đồ thanh",
+        "D": "chỉ biểu đồ hình tròn"
+      },
+      "answer": "B",
+      "explainAnswer": "Dữ liệu tỷ lệ các khoa có thể trình bày bằng cả biểu đồ thanh và biểu đồ hình tròn."
+    },
+    {
+      "id": 151,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Một mẫu gồm 40 sinh viên, trong đó có 20 nữ và 20 nam, có các chiều cao được liệt kê trong dữ liệu của câu hỏi. Giá trị nhỏ nhất của mẫu là:",
+      "options": {
+        "A": "150; 160",
+        "B": "149; 162",
+        "C": "149; 160",
+        "D": "150; 162"
+      },
+      "answer": "C",
+      "explainAnswer": "Sửa thông tin cỡ mẫu từ 50 thành 40 để khớp với dữ liệu được liệt kê. Giá trị nhỏ nhất vẫn được xác định bằng cách tìm chiều cao thấp nhất trong toàn bộ các quan sát."
+    },
+    {
+      "id": 152,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong 1 mẫu 800 sinh viên Đại học Phenikaa, 30% là sinh viên chuyên ngành Kinh doanh quốc tế. Dựa trên thông tin trên, báo cáo của nhà trường có ghi \"30% của tổng sinh viên tại trường đại học Phenikaa là sinh viên Kinh doanh quốc tế\". Nhận định từ báo cáo trên là ví dụ của:",
+      "options": {
+        "A": "Thống kê mô tả",
+        "B": "Cỡ mẫu (Sample)",
+        "C": "Tổng thể (population)",
+        "D": "Thống kê suy diễn"
+      },
+      "answer": "D",
+      "explainAnswer": "Báo cáo suy ra tỷ lệ của toàn trường từ mẫu nên đây là thống kê suy diễn."
+    },
+    {
+      "id": 153,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Lấy mẫu thuận tiện là một ví dụ về cách lấy mẫu",
+      "options": {
+        "A": "Lấy mẫu xác suất",
+        "B": "Lấy mẫu ngẫu nhiên giản đơn",
+        "C": "Lấy mẫu phi xác suất",
+        "D": "Lấy mẫu mạng quan hệ"
+      },
+      "answer": "C",
+      "explainAnswer": "Lấy mẫu thuận tiện không dựa trên xác suất nên thuộc nhóm lấy mẫu phi xác suất."
+    },
+    {
+      "id": 154,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Một mẫu ngẫu nhiên đơn giản gồm 36 quan sát được lấy từ một quần thể lớn. Giá trị trung bình mẫu và độ lệch chuẩn được xác định lần lượt là 360 và 120. Sai số chuẩn của giá trị trung bình là:",
+      "options": {
+        "A": "3",
+        "B": "20",
+        "C": "3,33",
+        "D": "10"
+      },
+      "answer": "B",
+      "explainAnswer": "Sai số chuẩn của trung bình = độ lệch chuẩn mẫu / √n = 120 / √36 = 20."
+    },
+    {
+      "id": 155,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Đo nhiệt độ cơ thể là một ví dụ về biến sử dụng....",
+      "options": {
+        "A": "Thang đo thứ bậc (Ordinal)",
+        "B": "Thang đo tỷ lệ (Ratio)",
+        "C": "Thang đo tỷ lệ (Ratio) hoặc Thang đo thứ bậc (Ordinal)",
+        "D": "Thang đo khoảng (Interval)"
+      },
+      "answer": "D",
+      "explainAnswer": "Nhiệt độ có khoảng cách đều nhưng điểm 0 không phải tuyệt đối (0°C không phải không có nhiệt) nên thuộc thang đo khoảng."
+    },
+    {
+      "id": 156,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Điều kiện nào sau đây là điều kiện bắt buộc đối với hàm xác suất rời rạc?",
+      "options": {
+        "A": "∑f(x) = 1 cho tất cả các giá trị của x",
+        "B": "∑f(x) < 0 cho tất cả các giá trị của x",
+        "C": "f(x) < 0 cho tất cả các giá trị của x",
+        "D": "∑f(x) ≥ 1 cho tất cả các giá trị của x"
+      },
+      "answer": "A",
+      "explainAnswer": "Tổng xác suất của mọi giá trị có thể của biến rời rạc phải bằng 1."
+    },
+    {
+      "id": 157,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Để trực quan hóa mối quan hệ giữa hai biến định lượng, biểu đồ nào phù hợp nhất?",
+      "options": {
+        "A": "Biểu đồ tròn",
+        "B": "Bảng chéo",
+        "C": "Biểu đồ phân tán",
+        "D": "Biểu đồ cột"
+      },
+      "answer": "C",
+      "explainAnswer": "Biểu đồ phân tán (scatter plot) biểu diễn các cặp giá trị của hai biến định lượng, giúp quan sát dạng và chiều của mối quan hệ giữa chúng."
+    },
+    {
+      "id": 158,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Tỷ lệ thay đổi của biến phụ thuộc (Y) được giải thích bằng phương trình hồi quy qua các biến độc lập được đo lường bằng",
+      "options": {
+        "A": "Hệ số tương quan",
+        "B": "Sai số chuẩn của ước lượng",
+        "C": "Hệ số xác định",
+        "D": "Ước lượng khoảng tin cậy"
+      },
+      "answer": "C",
+      "explainAnswer": "Hệ số xác định R² đo lường tỷ lệ biến thiên của Y được giải thích bởi các biến độc lập."
+    },
+    {
+      "id": 159,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Đối với ước tính khoảng của mu khi được biết giá trị của sigma và sử dụng mẫu lớn, phân phối thích hợp để sử dụng là",
+      "options": {
+        "A": "phân phối t với n-1 bậc tự do",
+        "B": "phân phối t với n+1 bậc tự do",
+        "C": "phân phối t với n bậc tự do",
+        "D": "phân phối chuẩn"
+      },
+      "answer": "D",
+      "explainAnswer": "Khi đã biết σ và mẫu lớn, dùng phân phối chuẩn để xây dựng khoảng tin cậy."
+    },
+    {
+      "id": 160,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "500 sinh viên trong tổng số gần 17.000 sinh viên trường Đại học Phenikaa tham gia cuộc khảo sát nghiên cứu về sức khỏe tinh thần của người trẻ. 500 sinh viên trong nghiên cứu này là ví dụ về:",
+      "options": {
+        "A": "một điều tra dân số",
+        "B": "một quan sát",
+        "C": "một mẫu",
+        "D": "một tổng thể"
+      },
+      "answer": "C",
+      "explainAnswer": "500 sinh viên được chọn từ tổng thể gần 17.000 sinh viên nên là một mẫu."
+    },
+    {
+      "id": 161,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Một doanh nghiệp có doanh thu của 10 năm lần lượt là các giá trị trong dữ liệu câu hỏi. Nếu tổng doanh thu là 135.8, doanh thu trung bình là:",
+      "options": {
+        "A": "13.85",
+        "B": "13.58",
+        "C": "7.13",
+        "D": "14.58"
+      },
+      "answer": "B",
+      "explainAnswer": "Doanh thu trung bình = tổng doanh thu/số năm = 135.8/10 = 13.58."
+    },
+    {
+      "id": 162,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Cho X là một biến ngẫu nhiên phân phối chuẩn với trung bình μ = 7 và độ lệch chuẩn σ = 2. Xác suất X nằm giữa 6.48 và 7.56 là:",
+      "options": {
+        "A": "0.0476",
+        "B": "0.2128",
+        "C": "0.5000",
+        "D": "0.9524"
+      },
+      "answer": "B",
+      "explainAnswer": "Với X~N(7,2), hiểu σ=2: z₁=(6.48−7)/2=−0.26 và z₂=(7.56−7)/2=0.28. Do đó P(6.48<X<7.56)=Φ(0.28)−Φ(−0.26)≈0.6103−0.3974≈0.2129, xấp xỉ 0.2128 theo bảng Z."
+    },
+    {
+      "id": 163,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Số giờ làm việc thêm (mỗi tuần) của 400 sinh viên Đại học Phenikaa được hiển thị bên dưới. Số giờ Tần số 0 - 9 20 10 - 19 80 20 - 29 200 30 - 39 100 Tần suất của sinh viên làm việc 0 - 9 giờ mỗi tuần là",
+      "options": {
+        "A": "0.25",
+        "B": "0.50",
+        "C": "0.20",
+        "D": "0.05"
+      },
+      "answer": "D",
+      "explainAnswer": "Tần suất của nhóm 0–9 giờ = số quan sát trong nhóm / tổng số = 20 / 400 = 0.05."
+    },
+    {
+      "id": 164,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Tham số thống kê phản ánh vị trí có nhiều khả năng chịu ảnh hưởng của những giá trị cực đoan/bất thường (outlier) trong tập dữ liệu là:",
+      "options": {
+        "A": "Khoảng biến thiên",
+        "B": "Trung vị",
+        "C": "Mode",
+        "D": "Trung bình"
+      },
+      "answer": "D",
+      "explainAnswer": "Trung bình bị ảnh hưởng mạnh bởi các giá trị bất thường (outlier), trong khi trung vị và mode ít bị ảnh hưởng hơn."
+    },
+    {
+      "id": 165,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Giảng viên X hỏi sinh viên lớp Thống kê N05 về độ tuổi của sinh viên trong lớp. Dựa vào thông tin thu thập được, giảng viên X kết luận rằng, độ tuổi trung bình của tất cả sinh viên trong trường Đại học Phenikaa là 24 tuổi. Ví dụ này là:",
+      "options": {
+        "A": "Thống kê mô tả",
+        "B": "Một thí nghiệm",
+        "C": "Thống kê suy diễn",
+        "D": "Không đáp án nào đúng"
+      },
+      "answer": "C",
+      "explainAnswer": "Từ mẫu lớp N05 suy ra kết luận về toàn trường nên đây là thống kê suy diễn."
+    },
+    {
+      "id": 166,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "3% khách hàng của một công ty thế chấp không trả nợ. Một mẫu gồm 5 khách hàng được chọn. Xác suất để có đúng hai khách hàng trong mẫu không trả nợ là bao nhiêu?",
+      "options": {
+        "A": "0.0082",
+        "B": "0.08",
+        "C": "0.03",
+        "D": "0.0077"
+      },
+      "answer": "A",
+      "explainAnswer": "Dùng phân phối nhị thức n=5, p=0.03, P(X=2) ≈ 0.0082."
+    },
+    {
+      "id": 167,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Biểu đồ phân tán (scatter) thường được sử dụng để mô tả hoặc chuẩn đoán về điều gì sau đây",
+      "options": {
+        "A": "Mối quan hệ về mặt dữ liệu giữa hai biến định tính",
+        "B": "Mối quan hệ về mặt dữ liệu của một biến định tính và một biến định lượng",
+        "C": "Mối quan hệ về mặt dữ liệu của hai biến định lượng",
+        "D": "Một xu hướng tuyến tính dương giữa hai biến bất kỳ"
+      },
+      "answer": "C",
+      "explainAnswer": "Biểu đồ phân tán dùng để quan sát mối quan hệ giữa hai biến định lượng."
+    },
+    {
+      "id": 168,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Trong một mẫu gồm 400 cử tri, 360 người cho biết họ ủng hộ thống đốc đương nhiệm. Khoảng tin cậy 95% của những cử tri không ủng hộ người đương nhiệm là",
+      "options": {
+        "A": "0,871 đến 0,929",
+        "B": "0,765 đến 0,835",
+        "C": "0,071 đến 0,129",
+        "D": "0,120 đến 0,280"
+      },
+      "answer": "C",
+      "explainAnswer": "Tỷ lệ không ủng hộ = 40/400 = 0.1. Khoảng tin cậy 95% khoảng 0.071 đến 0.129."
+    },
+    {
+      "id": 169,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Các tính chất để xem xét một ước lượng tốt hay không?",
+      "options": {
+        "A": "Không chệch, hiệu quả, và vững",
+        "B": "không chệch, hiệu quả, và không vững",
+        "C": "không chệch, không hiệu quả, không vững",
+        "D": "chệch, hiệu quả, và vững"
+      },
+      "answer": "A",
+      "explainAnswer": "Một ước lượng tốt cần có ba tính chất: không chệch, hiệu quả và vững."
+    },
+    {
+      "id": 170,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Tâm của đường cong chuẩn (hàm phân phối xác suất chuẩn)",
+      "options": {
+        "A": "là độ lệch chuẩn",
+        "B": "luôn bằng 0",
+        "C": "luôn luôn dương",
+        "D": "là giá trị trung bình của phân phối"
+      },
+      "answer": "D",
+      "explainAnswer": "Đường cong phân phối chuẩn đối xứng quanh giá trị trung bình, đó chính là tâm của phân phối."
+    },
+    {
+      "id": 171,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Đại lượng đo lường độ phân tán bị ảnh hưởng nhiều nhất bởi các giá trị bất thường (outlier) là:",
+      "options": {
+        "A": "Độ lệch chuẩn",
+        "B": "Khoảng biến thiên (Range)",
+        "C": "Phương sai",
+        "D": "Độ trải giữa (IQR)"
+      },
+      "answer": "B",
+      "explainAnswer": "Khoảng biến thiên (range) chỉ dùng hai giá trị lớn nhất và nhỏ nhất nên bị ảnh hưởng mạnh nhất bởi outlier."
+    },
+    {
+      "id": 172,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Biểu đồ phổ biến nhất của dữ liệu định lượng là",
+      "options": {
+        "A": "Biểu đồ chấm",
+        "B": "Biểu đồ thanh",
+        "C": "Biểu đồ tần suất/ hình cột",
+        "D": "Biểu đồ tròn"
+      },
+      "answer": "C",
+      "explainAnswer": "Biểu đồ tần suất (histogram) là dạng phổ biến nhất để mô tả dữ liệu định lượng."
+    },
+    {
+      "id": 173,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Cho dãy số đã sắp xếp gồm 8 quan sát: 8.25, 8.25, 8.50, 9.25, 9.75, 10.25, 11.75, 12.50. Theo cách chia tứ phân vị bằng trung vị của nửa trên, Q3 bằng:",
+      "options": {
+        "A": "9.75",
+        "B": "10.25",
+        "C": "10.50",
+        "D": "11.00"
+      },
+      "answer": "D",
+      "explainAnswer": "Nửa trên gồm 9.75, 10.25, 11.75, 12.50. Trung vị của nửa trên là (10.25+11.75)/2=11.00, nên Q3=11.00."
+    },
+    {
+      "id": 174,
+      "chapter": "Thống kê Kinh doanh",
+      "sourceChapter": "Thống kê Kinh doanh",
+      "question": "Dữ liệu là gì?",
+      "options": {
+        "A": "luôn mang tính phân loại",
+        "B": "nguyên liệu thô của thống kê",
+        "C": "luôn không phải dạng số",
+        "D": "luôn ở dạng số"
+      },
+      "answer": "B",
+      "explainAnswer": "Dữ liệu là nguyên liệu thô dùng để phân tích thống kê, có thể ở dạng số hoặc không phải số."
+    }
+  ]
+}

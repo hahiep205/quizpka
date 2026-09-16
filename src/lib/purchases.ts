@@ -32,6 +32,7 @@ export function getPaidProductId(subjectCode: string): string | null {
   if (subjectCode === "RM101") return "rm101"
   if (subjectCode === "RM102") return "rm102"
   if (subjectCode === "TADV02") return "tadv02"
+  if (subjectCode === "STA201") return "sta201"
   return null
 }
 

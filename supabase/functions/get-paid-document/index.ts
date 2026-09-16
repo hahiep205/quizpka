@@ -19,6 +19,7 @@ const subjectProducts: Record<string, string> = {
   "xac-suat-thong-ke": "xst101",
   "toan-roi-rac": "dm101",
   "tieng-anh-1": "ta101",
+  "thong-ke-trong-kinh-doanh": "sta201",
 }
 
 const documentFiles: Record<string, string[]> = {
@@ -36,6 +37,7 @@ const documentFiles: Record<string, string[]> = {
   "dm-de-2": ["dm101/de-tu-luan-2-img1.png", "dm101/de-tu-luan-2-img2.png"],
   "dm-de-3": ["dm101/de-tu-luan-3-img1.png", "dm101/de-tu-luan-3-img2.png"],
   "ta1-cau-truc-de": ["ta101/cau-truc-de.png"],
+  "tkkd-de-1": ["sta201/tkkd-de-cuoi-ky-1.png", "sta201/tkkd-de-cuoi-ky-2.png", "sta201/tkkd-de-cuoi-ky-3.png", "sta201/tkkd-de-cuoi-ky-4.png", "sta201/tkkd-de-cuoi-ky-5.png", "sta201/tkkd-de-cuoi-ky-6.png", "sta201/tkkd-de-cuoi-ky-7.png", "sta201/tkkd-de-cuoi-ky-8.png"],
 }
 
 // Each document belongs to exactly one product. The requested document must
@@ -56,6 +58,7 @@ const documentProducts: Record<string, string> = {
   "dm-de-2": "dm101",
   "dm-de-3": "dm101",
   "ta1-cau-truc-de": "ta101",
+  "tkkd-de-1": "sta201",
 }
 
 function json(body: unknown, status: number, req: Request) {
