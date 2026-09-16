@@ -27,6 +27,7 @@ const examFiles: Record<string, string> = {
   "english-paid-test05-bank-1": "tadv02/test05.json",
   "english-paid-test06-bank-1": "tadv02/test06.json",
   "business-statistics-quiz-bank-1": "sta201/thong_ke_kinh_doanh.json",
+  "database-final-bank-1": "db101/co_so_du_lieu.json",
 }
 const examProducts: Record<string, string> = {
   "data-science-ai-midterm-1": "dsai101",
@@ -57,6 +58,7 @@ const examProducts: Record<string, string> = {
   "english-paid-test05-bank-1": "tadv02",
   "english-paid-test06-bank-1": "tadv02",
   "business-statistics-quiz-bank-1": "sta201",
+  "database-final-bank-1": "db101",
 }
 const sqaExamId = "software-quality-assessment-final-bank-1"
 const marExamId = "marketing-final-bank-1"
@@ -155,7 +157,7 @@ Deno.serve(async (req) => {
     })
     const startedAt = new Date().toISOString()
     const expiresAt = new Date(Date.now() + durationMinutes * 60_000).toISOString()
-    const subjectId = productId === "sqa101" ? "danh-gia-va-kiem-dinh-chat-luong-phan-mem" : productId === "idsai101" ? "nhap-mon-khoa-hoc-du-lieu-va-tri-tue-nhan-tao" : productId === "mar101" ? "marketing-can-ban" : productId === "mac102" ? "kinh-te-vi-mo-macro" : productId === "oit101" ? "tin-hoc-van-phong" : productId === "fin101" ? "nguyen-ly-tai-chinh" : productId === "civ101" ? "lich-su-van-minh-the-gioi" : productId === "eco101" ? "kinh-te-hoc" : productId === "law101" ? "phap-luat-dai-cuong" : productId === "hcm101" ? "tu-tuong-ho-chi-minh" : productId === "mgt101" ? "quan-tri-hoc" : productId === "mln102" ? "triet-hoc-mac-lenin-3tc" : productId === "pec101" ? "kinh-te-chinh-tri-mac-lenin" : productId === "mln101" ? "triet-hoc-mac-lenin-2tc" : productId === "his101" ? "lich-su-dang-cong-san-viet-nam" : productId === "soc101" ? "chu-nghia-xa-hoi-khoa-hoc" : productId === "dm101" ? "toan-roi-rac" : productId === "ta101" ? "tieng-anh-1" : productId === "rm101" ? "phuong-phap-nghien-cuu-khoa-hoc" : productId === "rm102" ? "nghien-cuu-khoa-hoc-trong-kinh-te" : productId === "tadv02" ? "tadv-traphi" : productId === "sta201" ? "thong-ke-trong-kinh-doanh" : "khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
+    const subjectId = productId === "sqa101" ? "danh-gia-va-kiem-dinh-chat-luong-phan-mem" : productId === "idsai101" ? "nhap-mon-khoa-hoc-du-lieu-va-tri-tue-nhan-tao" : productId === "mar101" ? "marketing-can-ban" : productId === "mac102" ? "kinh-te-vi-mo-macro" : productId === "oit101" ? "tin-hoc-van-phong" : productId === "fin101" ? "nguyen-ly-tai-chinh" : productId === "civ101" ? "lich-su-van-minh-the-gioi" : productId === "eco101" ? "kinh-te-hoc" : productId === "law101" ? "phap-luat-dai-cuong" : productId === "hcm101" ? "tu-tuong-ho-chi-minh" : productId === "mgt101" ? "quan-tri-hoc" : productId === "mln102" ? "triet-hoc-mac-lenin-3tc" : productId === "pec101" ? "kinh-te-chinh-tri-mac-lenin" : productId === "mln101" ? "triet-hoc-mac-lenin-2tc" : productId === "his101" ? "lich-su-dang-cong-san-viet-nam" : productId === "soc101" ? "chu-nghia-xa-hoi-khoa-hoc" : productId === "dm101" ? "toan-roi-rac" : productId === "ta101" ? "tieng-anh-1" : productId === "rm101" ? "phuong-phap-nghien-cuu-khoa-hoc" : productId === "rm102" ? "nghien-cuu-khoa-hoc-trong-kinh-te" : productId === "tadv02" ? "tadv-traphi" : productId === "sta201" ? "thong-ke-trong-kinh-doanh" : productId === "db101" ? "co-so-du-lieu" : "khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
     const { error: sessionError } = await admin.from("quiz_sessions").insert({ id: sessionId, user_id: user.id, exam_id: examId, subject_id: subjectId, duration_minutes: durationMinutes, idempotency_key: idempotencyKey, started_at: startedAt, expires_at: expiresAt })
     if (sessionError) throw sessionError
     const { error: questionsError } = await admin.from("quiz_session_questions").insert(sessionQuestions)

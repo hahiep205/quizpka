@@ -39,6 +39,7 @@ export function QuizDetailPage({ lang, slug }: { lang: Lang; slug: string }) {
   const subject = resolveQuizSubject(slug)
   const [payment, setPayment] = useState<{ payment: { qrUrl: string } } | null>(null)
   const [paymentProductId, setPaymentProductId] = useState("dsai101")
+  const [paymentOrderId, setPaymentOrderId] = useState<string | null>(null)
   const [purchaseExam, setPurchaseExam] = useState<ExamCatalogItem | null>(null)
   const [purchaseLoading, setPurchaseLoading] = useState(false)
   const [purchaseError, setPurchaseError] = useState<string | null>(null)
@@ -109,6 +110,7 @@ export function QuizDetailPage({ lang, slug }: { lang: Lang; slug: string }) {
       }
       if (!result.payment) throw new Error("Chưa cấu hình thông tin tài khoản thanh toán")
       setPaymentProductId(productId)
+      setPaymentOrderId(result.orderId ?? null)
       setPurchaseExam(null)
       setPayment({ payment: result.payment })
       logActivityEvent(user?.id, "purchase_start", { productId, orderId: result.orderId ?? null })
@@ -311,10 +313,12 @@ export function QuizDetailPage({ lang, slug }: { lang: Lang; slug: string }) {
         lang={lang}
         payment={payment?.payment ?? null}
         productId={paymentProductId}
+        orderId={paymentOrderId}
         userId={user?.id}
-        onClose={() => setPayment(null)}
+        onClose={() => { setPayment(null); setPaymentOrderId(null) }}
         onPaid={() => {
           setPayment(null)
+          setPaymentOrderId(null)
           window.location.href = "/dashboard/purchased?payment=success"
         }}
       />

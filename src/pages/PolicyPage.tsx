@@ -33,7 +33,7 @@ const copy: Record<Language, Copy> = {
     title: "Chính sách & Quy định sử dụng",
     intro:
       "Đọc kỹ các nội dung dưới đây trước khi sử dụng Quizpka và mua các môn ôn tập trả phí. Tiếp tục sử dụng dịch vụ đồng nghĩa bạn đã hiểu và đồng ý toàn bộ chính sách này.",
-    perks: ["10.000 VND / môn", "Kích hoạt gần như tức thì", "Không giới hạn lượt, vĩnh viễn"],
+    perks: ["Kích hoạt gần như tức thì", "Không giới hạn lượt số lượt làm quiz", "Hạn sử dụng vĩnh viễn"],
     toc: "Mục lục",
     sections: [
       {

@@ -168,8 +168,11 @@ function asRecord(value: unknown): Record<string, unknown> {
 }
 
 const VALID_EVENTS: ActivityEventType[] = [
-  "login", "view_dashboard", "open_exam", "start_attempt",
-  "submit_attempt", "retry_wrong", "view_leaderboard", "update_profile",
+  "login", "view_dashboard", "open_exam", "view_exam_detail", "start_attempt",
+  "submit_attempt", "abandon_attempt", "retry_wrong", "devtools_attempt",
+  "view_leaderboard", "update_profile", "search_exam",
+  "view_notifications", "read_notification",
+  "purchase_start", "purchase_success",
   "download_pdf",
 ]
 
@@ -231,8 +234,8 @@ export const ACTIVITY_LABELS: Record<ActivityEventType, string> = {
   update_profile: "Sửa profile",
   devtools_attempt: "Mở devtools",
   abandon_attempt: "Thoát giữa chừng",
-  purchase_start: "Mở thanh toán",
-  purchase_success: "Thanh toán xong",
+  purchase_start: "Tạo QR thanh toán",
+  purchase_success: "Thanh toán thành công",
   search_exam: "Tìm bộ đề",
   view_notifications: "Xem thông báo",
   read_notification: "Đọc thông báo",

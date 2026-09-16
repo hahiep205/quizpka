@@ -38,6 +38,7 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
   const [typeFilter, setTypeFilter] = useState<CategoryFilter>("all")
   const [payment, setPayment] = useState<{ payment: { qrUrl: string } } | null>(null)
   const [paymentProductId, setPaymentProductId] = useState("dsai101")
+  const [paymentOrderId, setPaymentOrderId] = useState<string | null>(null)
   const [purchaseExam, setPurchaseExam] = useState<ExamCatalogItem | null>(null)
   const [purchaseLoading, setPurchaseLoading] = useState(false)
   const [purchaseError, setPurchaseError] = useState<string | null>(null)
@@ -90,6 +91,7 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
       }
       if (!result.payment) throw new Error("Chưa cấu hình thông tin tài khoản thanh toán")
       setPaymentProductId(productId)
+      setPaymentOrderId(result.orderId ?? null)
       setPurchaseExam(null)
       setPayment({ payment: result.payment })
       logActivityEvent(user?.id, "purchase_start", { productId, orderId: result.orderId ?? null })
@@ -316,10 +318,12 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
         lang={lang}
         payment={payment?.payment ?? null}
         productId={paymentProductId}
+        orderId={paymentOrderId}
         userId={user?.id}
-        onClose={() => setPayment(null)}
+        onClose={() => { setPayment(null); setPaymentOrderId(null) }}
         onPaid={() => {
           setPayment(null)
+          setPaymentOrderId(null)
           window.location.href = "/dashboard/purchased?payment=success"
         }}
       />

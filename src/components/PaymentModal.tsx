@@ -11,12 +11,13 @@ type PaymentModalProps = {
   lang: Lang
   payment?: { qrUrl: string } | null
   productId?: string
+  orderId?: string | null
   userId?: string
   onClose: () => void
   onPaid: () => void
 }
 
-export function PaymentModal({ open, lang, payment, productId = "dsai101", userId, onClose, onPaid }: PaymentModalProps) {
+export function PaymentModal({ open, lang, payment, productId = "dsai101", orderId = null, userId, onClose, onPaid }: PaymentModalProps) {
   const [paid, setPaid] = useState(false)
   const [checking, setChecking] = useState(false)
   const [error, setError] = useState(false)
@@ -26,9 +27,9 @@ export function PaymentModal({ open, lang, payment, productId = "dsai101", userI
     setPaid(true)
     if (!successLoggedRef.current) {
       successLoggedRef.current = true
-      logActivityEvent(userId, "purchase_success", { productId })
+      logActivityEvent(userId, "purchase_success", { productId, orderId: orderId ?? null })
     }
-  }, [productId, userId])
+  }, [productId, orderId, userId])
 
   useEffect(() => {
     if (!open) {

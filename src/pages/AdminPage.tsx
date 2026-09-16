@@ -70,7 +70,7 @@ function PaymentStatusBadge({ status }: { status: PaymentStatus }) {
 type Props = { lang: "vi" | "en" }
 type AdminSection = "overview" | "users" | "notifications" | "payment" | "sendquiz" | "supports" | "timeline" | "attempts" | "subject" | "downloads"
 
-const EVENT_FILTERS: Array<"all" | ActivityEventType> = ["all", "login", "open_exam", "view_exam_detail", "start_attempt", "submit_attempt", "abandon_attempt", "retry_wrong", "purchase_start", "purchase_success", "search_exam", "view_notifications", "read_notification", "devtools_attempt", "view_dashboard", "view_leaderboard", "update_profile"]
+const EVENT_FILTERS: Array<"all" | ActivityEventType> = ["all", "login", "open_exam", "view_exam_detail", "start_attempt", "submit_attempt", "abandon_attempt", "retry_wrong", "purchase_start", "purchase_success", "search_exam", "view_notifications", "read_notification", "devtools_attempt", "view_dashboard", "view_leaderboard", "update_profile", "download_pdf"]
 
 const EVENT_TONES: Record<ActivityEventType, string> = {
   login: "bg-emerald-50 text-emerald-500 dark:bg-emerald-500/10",
@@ -1450,7 +1450,7 @@ function AdminMobileNav({ lang, section, onNavigate }: { lang: "vi" | "en"; sect
 function summarizeMetadata(e: ActivityEvent): string {
   const m = e.metadata
   const parts: string[] = []
-  for (const k of ["examId", "subjectId", "mode", "score", "accuracy"]) {
+  for (const k of ["productId", "orderId", "examId", "subjectId", "mode", "score", "accuracy", "query"]) {
     const v: unknown = m[k]
     if (v === undefined || v === null || v === "") continue
     parts.push(`${k}=${typeof v === "object" ? JSON.stringify(v) : String(v as string | number | boolean)}`)

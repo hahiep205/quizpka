@@ -835,11 +835,6 @@ export const subjects: Subject[] = [
         id: "database-final-bank-1", type: "final", year: 2026, questionCount: 150, durationMinutes: 240,
         title: { en: "Database", vi: "Quiz và Đề ôn tập Cuối kỳ - Cơ sở dữ liệu" },
         description: { en: "A question bank of 150 questions across 3 chapters, covering both midterm and final content.", vi: "Bộ tài liệu gồm 150 câu hỏi chia làm 3 chương, bao gồm cả nội dung Giữa và Cuối kỳ." },
-        questionBanks: [
-          "/data/co-so-du-lieu/phan_1.json",
-          "/data/co-so-du-lieu/phan_2.json",
-          "/data/co-so-du-lieu/phan_3.json",
-        ],
       },
     ],
     chapters: [
@@ -847,7 +842,6 @@ export const subjects: Subject[] = [
       { id: "c1", label: { en: "Part 1 - CSDL Theory", vi: "Phần 1 - Lý thuyết CSDL (Khi đi thi sẽ là 2 câu Tự luận)" }, matches: ["Phần 1"], count: 50 },
       { id: "c2", label: { en: "Part 2 - SQL", vi: "Phần 2 - Trắc SQL (Khi đi thi sẽ là 12 câu Trắc nghiệm)" }, matches: ["Phần 2"], count: 50 },
       { id: "c3", label: { en: "Part 3 - Advanced CSDL & Applications", vi: "Phần 3 - CSDL mở rộng & ứng dụng (Khi đi thi sẽ là 8 câu Tự luận)" }, matches: ["Phần 3"], count: 50 },
-      { id: "de-suutam", label: { en: "Collected exams from previous periods", vi: "Đề sưu tầm của các đợt thi trước" }, pdfUrl: "/data/co-so-du-lieu/De_thi_Co_so_du_lieu.pdf", count: 0 },
     ],
   },
   {

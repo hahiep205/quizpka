@@ -1,0 +1,2106 @@
+﻿{
+    "title":  "Bộ câu hỏi trắc nghiệm Cơ sở dữ liệu - Ôn tập Cuối kỳ",
+    "totalQuestions":  150,
+    "questions":  [
+                      {
+                          "id":  1,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.1 â€“ MĂ´ hĂ¬nh thá»±c thá»ƒ â€“ liĂªn káº¿t (ER)",
+                          "question":  "Trong mĂ´ hĂ¬nh thá»±c thá»ƒ â€“ liĂªn káº¿t (ER), khĂ¡i niá»‡m â€œthá»±c thá»ƒâ€ (entity) Ä‘Æ°á»£c hiá»ƒu lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Má»™t cĂ¢u truy váº¥n SQL Ä‘á»ƒ láº¥y dá»¯ liá»‡u",
+                                          "B":  "Má»™t thuá»™c tĂ­nh dĂ¹ng lĂ m khoĂ¡ chĂ­nh",
+                                          "C":  "Má»™t báº£ng lÆ°u dá»¯ liá»‡u trong cÆ¡ sá»Ÿ dá»¯ liá»‡u",
+                                          "D":  "Má»™t Ä‘á»‘i tÆ°á»£ng cá»¥ thá»ƒ hoáº·c trá»«u tÆ°á»£ng cá»§a tháº¿ giá»›i thá»±c mĂ  ta cáº§n lÆ°u trá»¯ thĂ´ng tin"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "Thá»±c thá»ƒ lĂ  Ä‘á»‘i tÆ°á»£ng cá»§a tháº¿ giá»›i thá»±c (vĂ­ dá»¥ PhĂ¢n xÆ°á»Ÿng, Linh kiá»‡n, Äá»™ng cÆ¡) cáº§n lÆ°u trá»¯; â€œbáº£ngâ€ lĂ  cĂ¡ch cĂ i Ä‘áº·t thá»±c thá»ƒ trong mĂ´ hĂ¬nh quan há»‡, khĂ´ng pháº£i Ä‘á»‹nh nghÄ©a cá»§a thá»±c thá»ƒ."
+                      },
+                      {
+                          "id":  2,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.1 â€“ MĂ´ hĂ¬nh thá»±c thá»ƒ â€“ liĂªn káº¿t (ER)",
+                          "question":  "Táº­p thá»±c thá»ƒ (entity set) trong mĂ´ hĂ¬nh ER lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Táº­p há»£p cĂ¡c thá»±c thá»ƒ cĂ¹ng loáº¡i, cĂ³ chung má»™t táº­p thuá»™c tĂ­nh",
+                                          "B":  "Táº­p há»£p cĂ¡c thuá»™c tĂ­nh cá»§a má»™t thá»±c thá»ƒ",
+                                          "C":  "Táº­p há»£p cĂ¡c khoĂ¡ chĂ­nh cá»§a lÆ°á»£c Ä‘á»“",
+                                          "D":  "Táº­p há»£p cĂ¡c má»‘i quan há»‡ giá»¯a cĂ¡c báº£ng"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "VĂ­ dá»¥ táº­p thá»±c thá»ƒ LINHKIEN gá»“m táº¥t cáº£ cĂ¡c linh kiá»‡n â€“ cĂ¡c thá»±c thá»ƒ cĂ¹ng loáº¡i, cĂ¹ng táº­p thuá»™c tĂ­nh."
+                      },
+                      {
+                          "id":  3,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.1 â€“ MĂ´ hĂ¬nh thá»±c thá»ƒ â€“ liĂªn káº¿t (ER)",
+                          "question":  "Trong mĂ´ hĂ¬nh ER, thuá»™c tĂ­nh (attribute) dĂ¹ng Ä‘á»ƒ lĂ m gĂ¬?",
+                          "options":  {
+                                          "A":  "MĂ´ táº£ cĂ¡c Ä‘áº·c Ä‘iá»ƒm, tĂ­nh cháº¥t cá»§a má»™t thá»±c thá»ƒ hoáº·c má»™t má»‘i quan há»‡",
+                                          "B":  "LÆ°u trá»¯ káº¿t quáº£ truy váº¥n",
+                                          "C":  "XĂ¡c Ä‘á»‹nh sá»‘ báº£ng cá»§a cÆ¡ sá»Ÿ dá»¯ liá»‡u",
+                                          "D":  "Tá»± Ä‘á»™ng táº¡o liĂªn káº¿t giá»¯a cĂ¡c báº£ng"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "Thuá»™c tĂ­nh mĂ´ táº£ Ä‘áº·c trÆ°ng: vĂ­ dá»¥ thá»±c thá»ƒ Linh kiá»‡n cĂ³ thuá»™c tĂ­nh MĂ£ linh kiá»‡n, TĂªn linh kiá»‡n."
+                      },
+                      {
+                          "id":  4,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.1 â€“ MĂ´ hĂ¬nh thá»±c thá»ƒ â€“ liĂªn káº¿t (ER)",
+                          "question":  "Thuá»™c tĂ­nh khoĂ¡ (key attribute) trong mĂ´ hĂ¬nh ER cĂ³ vai trĂ² gĂ¬?",
+                          "options":  {
+                                          "A":  "Äá»‹nh danh duy nháº¥t má»—i thá»±c thá»ƒ trong má»™t táº­p thá»±c thá»ƒ",
+                                          "B":  "Cho phĂ©p lÆ°u nhiá»u giĂ¡ trá»‹ trĂ¹ng láº·p",
+                                          "C":  "Cho phĂ©p giĂ¡ trá»‹ NULL",
+                                          "D":  "LÆ°u trá»¯ dá»¯ liá»‡u kiá»ƒu vÄƒn báº£n dĂ i"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "VĂ­ dá»¥ MĂ£ linh kiá»‡n dĂ¹ng Ä‘á»ƒ phĂ¢n biá»‡t duy nháº¥t tá»«ng linh kiá»‡n; má»—i thá»±c thá»ƒ cĂ³ giĂ¡ trá»‹ thuá»™c tĂ­nh khoĂ¡ khĂ¡c nhau."
+                      },
+                      {
+                          "id":  5,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.1 â€“ MĂ´ hĂ¬nh thá»±c thá»ƒ â€“ liĂªn káº¿t (ER)",
+                          "question":  "Cho mĂ´ hĂ¬nh: â€œMá»™t PhĂ¢n xÆ°á»Ÿng sáº£n xuáº¥t nhiá»u Linh kiá»‡n; má»—i Linh kiá»‡n thuá»™c vá» Ä‘Ăºng má»™t PhĂ¢n xÆ°á»Ÿngâ€. Báº£n sá»‘ cá»§a má»‘i quan há»‡ PhĂ¢n xÆ°á»Ÿng â€“ Linh kiá»‡n lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "1 â€“ n",
+                                          "B":  "n â€“ m",
+                                          "C":  "1 â€“ 1",
+                                          "D":  "KhĂ´ng xĂ¡c Ä‘á»‹nh Ä‘Æ°á»£c"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "Má»™t phĂ¢n xÆ°á»Ÿng tÆ°Æ¡ng á»©ng nhiá»u linh kiá»‡n, cĂ²n má»—i linh kiá»‡n thuá»™c má»™t phĂ¢n xÆ°á»Ÿng nĂªn Ä‘Ă¢y lĂ  quan há»‡ 1 â€“ nhiá»u (1 â€“ n)."
+                      },
+                      {
+                          "id":  6,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.1 â€“ MĂ´ hĂ¬nh thá»±c thá»ƒ â€“ liĂªn káº¿t (ER)",
+                          "question":  "Theo Ä‘á» máº«u: â€œMá»™t Linh kiá»‡n cĂ³ máº·t trong nhiá»u Äá»™ng cÆ¡; má»™t Äá»™ng cÆ¡ gá»“m nhiá»u Linh kiá»‡nâ€. Kiá»ƒu liĂªn káº¿t giá»¯a Linh kiá»‡n vĂ  Äá»™ng cÆ¡ lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "KhĂ´ng cĂ³ liĂªn káº¿t",
+                                          "B":  "n â€“ m (nhiá»u â€“ nhiá»u)",
+                                          "C":  "1 â€“ n",
+                                          "D":  "1 â€“ 1"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "Má»—i linh kiá»‡n náº±m trong nhiá»u Ä‘á»™ng cÆ¡ vĂ  má»—i Ä‘á»™ng cÆ¡ dĂ¹ng nhiá»u linh kiá»‡n nĂªn Ä‘Ă¢y lĂ  quan há»‡ nhiá»u â€“ nhiá»u (n â€“ m)."
+                      },
+                      {
+                          "id":  7,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.1 â€“ MĂ´ hĂ¬nh thá»±c thá»ƒ â€“ liĂªn káº¿t (ER)",
+                          "question":  "Má»‘i quan há»‡ bá»™ ba (ternary relationship) khĂ¡c má»‘i quan há»‡ nhá»‹ phĂ¢n (binary relationship) á»Ÿ Ä‘iá»ƒm nĂ o?",
+                          "options":  {
+                                          "A":  "LiĂªn quan Ä‘áº¿n ba táº­p thá»±c thá»ƒ thay vĂ¬ hai",
+                                          "B":  "KhĂ´ng cĂ³ Ä‘iá»ƒm gĂ¬ khĂ¡c nhau",
+                                          "C":  "CĂ³ ba khoĂ¡ chĂ­nh",
+                                          "D":  "CĂ³ Ä‘Ăºng ba thuá»™c tĂ­nh"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "Báº­c cá»§a má»‘i quan há»‡ xĂ¡c Ä‘á»‹nh bá»Ÿi sá»‘ táº­p thá»±c thá»ƒ tham gia: nhá»‹ phĂ¢n lĂ  hai, bá»™ ba lĂ  ba táº­p thá»±c thá»ƒ."
+                      },
+                      {
+                          "id":  8,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.1 â€“ MĂ´ hĂ¬nh thá»±c thá»ƒ â€“ liĂªn káº¿t (ER)",
+                          "question":  "Khi chuyá»ƒn má»‘i quan há»‡ nhiá»u â€“ nhiá»u (n â€“ m) giá»¯a Linh kiá»‡n vĂ  Äá»™ng cÆ¡ sang mĂ´ hĂ¬nh quan há»‡, cĂ¡ch lĂ m Ä‘Ăºng lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Bá» qua má»‘i quan há»‡ nĂ y",
+                                          "B":  "Táº¡o má»™t báº£ng trung gian gá»“m khoĂ¡ chĂ­nh cá»§a cáº£ hai báº£ng vĂ  cĂ¡c thuá»™c tĂ­nh riĂªng cá»§a quan há»‡ (náº¿u cĂ³)",
+                                          "C":  "Äáº·t khoĂ¡ ngoáº¡i á»Ÿ má»™t trong hai báº£ng lĂ  Ä‘á»§",
+                                          "D":  "GhĂ©p táº¥t cáº£ thuá»™c tĂ­nh cá»§a hai thá»±c thá»ƒ vĂ o má»™t báº£ng duy nháº¥t"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "Quan há»‡ n â€“ m khĂ´ng thá»ƒ biá»ƒu diá»…n báº±ng má»™t khoĂ¡ ngoáº¡i Ä‘Æ¡n thuáº§n; pháº£i táº¡o báº£ng trung gian (báº£ng quan há»‡ liĂªn káº¿t) chá»©a khoĂ¡ chĂ­nh cá»§a cáº£ hai phĂ­a."
+                      },
+                      {
+                          "id":  9,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.1 â€“ MĂ´ hĂ¬nh thá»±c thá»ƒ â€“ liĂªn káº¿t (ER)",
+                          "question":  "VĂ¬ sao khi thiáº¿t káº¿, ta khĂ´ng nĂªn gá»™p thĂ´ng tin Linh kiá»‡n vĂ  Äá»™ng cÆ¡ vĂ o cĂ¹ng má»™t báº£ng duy nháº¥t?",
+                          "options":  {
+                                          "A":  "VĂ¬ dá»¯ liá»‡u lÆ°u trĂªn Ä‘Ä©a sáº½ quĂ¡ lá»›n",
+                                          "B":  "VĂ¬ lĂ m dÆ° thá»«a dá»¯ liá»‡u vĂ  gĂ¢y dá»‹ thÆ°á»ng khi cáº­p nháº­t (thĂªm, sá»­a, xoĂ¡)",
+                                          "C":  "VĂ¬ khi Ä‘Ă³ báº£ng khĂ´ng cĂ³ khoĂ¡ chĂ­nh",
+                                          "D":  "VĂ¬ SQL khĂ´ng cho phĂ©p báº£ng cĂ³ nhiá»u cá»™t"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "Gá»™p hai thá»±c thá»ƒ cĂ³ quan há»‡ n â€“ m vĂ o má»™t báº£ng lĂ m má»—i linh kiá»‡n bá»‹ láº·p láº¡i cho tá»«ng Ä‘á»™ng cÆ¡, gĂ¢y dÆ° thá»«a vĂ  dá»‹ thÆ°á»ng cáº­p nháº­t."
+                      },
+                      {
+                          "id":  10,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.1 â€“ MĂ´ hĂ¬nh thá»±c thá»ƒ â€“ liĂªn káº¿t (ER)",
+                          "question":  "Má»™t thuá»™c tĂ­nh láº·p (multivalued attribute) â€“ vĂ­ dá»¥ má»™t Ä‘á»™ng cÆ¡ cĂ³ nhiá»u â€œphá»¥ tĂ¹ng Ä‘i kĂ¨mâ€ â€“ nĂªn Ä‘Æ°á»£c thiáº¿t káº¿ tháº¿ nĂ o cho chuáº©n?",
+                          "options":  {
+                                          "A":  "Bá» qua thuá»™c tĂ­nh Ä‘Ă³",
+                                          "B":  "Táº¡o sáºµn má»™t sá»‘ cá»™t cá»‘ Ä‘á»‹nh, khĂ´ng giá»›i háº¡n sá»‘ lÆ°á»£ng",
+                                          "C":  "TĂ¡ch thĂ nh má»™t báº£ng riĂªng hoáº·c báº£ng quan há»‡ liĂªn káº¿t",
+                                          "D":  "LÆ°u thĂ nh má»™t chuá»—i phĂ¢n cĂ¡ch bá»Ÿi dáº¥u pháº©y trong má»™t cá»™t"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "Chuáº©n hoĂ¡ yĂªu cáº§u má»—i Ă´ chá»‰ chá»©a má»™t giĂ¡ trá»‹; thuá»™c tĂ­nh Ä‘a trá»‹ pháº£i Ä‘Æ°á»£c tĂ¡ch thĂ nh báº£ng riĂªng Ä‘á»ƒ trĂ¡nh dÆ° thá»«a vĂ  khĂ³ truy váº¥n."
+                      },
+                      {
+                          "id":  11,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.1 â€“ MĂ´ hĂ¬nh thá»±c thá»ƒ â€“ liĂªn káº¿t (ER)",
+                          "question":  "Thuá»™c tĂ­nh káº¿t há»£p (composite attribute) lĂ  thuá»™c tĂ­nh nhÆ° tháº¿ nĂ o?",
+                          "options":  {
+                                          "A":  "CĂ³ kiá»ƒu dá»¯ liá»‡u sá»‘",
+                                          "B":  "CĂ³ thá»ƒ nháº­n nhiá»u giĂ¡ trá»‹ cĂ¹ng lĂºc",
+                                          "C":  "ÄÆ°á»£c táº¡o thĂ nh tá»« nhiá»u thĂ nh pháº§n nhá» hÆ¡n, vĂ­ dá»¥ Há» tĂªn gá»“m Há», Äá»‡m, TĂªn",
+                                          "D":  "LĂ  khoĂ¡ ngoáº¡i cá»§a báº£ng khĂ¡c"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "Thuá»™c tĂ­nh káº¿t há»£p phĂ¢n rĂ£ Ä‘Æ°á»£c thĂ nh cĂ¡c thuá»™c tĂ­nh thĂ nh pháº§n; khi cĂ i Ä‘áº·t cĂ³ thá»ƒ giá»¯ nguyĂªn hoáº·c tĂ¡ch thĂ nh cĂ¡c cá»™t riĂªng."
+                      },
+                      {
+                          "id":  12,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.1 â€“ MĂ´ hĂ¬nh thá»±c thá»ƒ â€“ liĂªn káº¿t (ER)",
+                          "question":  "Vá»›i mĂ´ hĂ¬nh PHANXUONG(MaPX, TenPX), LINHKIEN(MaLK, TenLK), DONGCO(MaDC, TenDC), Ä‘á»ƒ biáº¿t â€œmá»™t Ä‘á»™ng cÆ¡ gá»“m nhá»¯ng linh kiá»‡n nĂ oâ€, truy váº¥n pháº£i dá»±a vĂ o Ä‘Ă¢u?",
+                          "options":  {
+                                          "A":  "Báº£ng PHANXUONG",
+                                          "B":  "Chá»‰ báº£ng DONGCO",
+                                          "C":  "KhĂ´ng thá»ƒ truy váº¥n Ä‘Æ°á»£c vĂ¬ thiáº¿u thĂ´ng tin",
+                                          "D":  "Báº£ng trung gian liĂªn káº¿t LINHKIEN â€“ DONGCO"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "ThĂ´ng tin â€œÄ‘á»™ng cÆ¡ gá»“m linh kiá»‡n nĂ oâ€ náº±m á»Ÿ quan há»‡ n â€“ m, pháº£i cĂ³ báº£ng trung gian chá»©a cáº·p (MaLK, MaDC)."
+                      },
+                      {
+                          "id":  13,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.1 â€“ MĂ´ hĂ¬nh thá»±c thá»ƒ â€“ liĂªn káº¿t (ER)",
+                          "question":  "Quan há»‡ â€œSáº£n xuáº¥tâ€ giá»¯a PhĂ¢n xÆ°á»Ÿng vĂ  Linh kiá»‡n cáº§n lÆ°u thĂªm â€œSá»‘ lÆ°á»£ng sáº£n xuáº¥tâ€ vĂ  â€œNgĂ y sáº£n xuáº¥tâ€. Hai thĂ´ng tin nĂ y nĂªn Ä‘Æ°á»£c gĂ¡n cho Ä‘á»‘i tÆ°á»£ng nĂ o trong mĂ´ hĂ¬nh ER?",
+                          "options":  {
+                                          "A":  "Má»‘i quan há»‡ Sáº£n xuáº¥t (thuá»™c tĂ­nh cá»§a quan há»‡ â€“ relationship attribute)",
+                                          "B":  "KhĂ´ng lÆ°u trá»¯ Ä‘Æ°á»£c",
+                                          "C":  "Thá»±c thá»ƒ PhĂ¢n xÆ°á»Ÿng",
+                                          "D":  "Thá»±c thá»ƒ Linh kiá»‡n"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "Sá»‘ lÆ°á»£ng, ngĂ y sáº£n xuáº¥t mĂ´ táº£ báº£n thĂ¢n sá»± liĂªn káº¿t giá»¯a phĂ¢n xÆ°á»Ÿng vĂ  linh kiá»‡n, nĂªn lĂ  thuá»™c tĂ­nh cá»§a má»‘i quan há»‡."
+                      },
+                      {
+                          "id":  14,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.1 â€“ MĂ´ hĂ¬nh thá»±c thá»ƒ â€“ liĂªn káº¿t (ER)",
+                          "question":  "KhĂ¡i niá»‡m nĂ o sau Ä‘Ă¢y KHĂ”NG thuá»™c mĂ´ hĂ¬nh thá»±c thá»ƒ â€“ liĂªn káº¿t?",
+                          "options":  {
+                                          "A":  "Thá»±c thá»ƒ",
+                                          "B":  "Chá»‰ má»¥c (index)",
+                                          "C":  "Má»‘i quan há»‡",
+                                          "D":  "Thuá»™c tĂ­nh"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "Chá»‰ má»¥c lĂ  ká»¹ thuáº­t tÄƒng tá»‘c truy váº¥n á»Ÿ má»©c váº­t lĂ½, khĂ´ng náº±m trong mĂ´ hĂ¬nh ER (mĂ´ hĂ¬nh á»Ÿ má»©c khĂ¡i niá»‡m)."
+                      },
+                      {
+                          "id":  15,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.2 â€“ MĂ´ hĂ¬nh quan há»‡, khoĂ¡ \u0026 phá»¥ thuá»™c hĂ m",
+                          "question":  "MĂ´ hĂ¬nh quan há»‡ (relational model) biá»ƒu diá»…n dá»¯ liá»‡u dÆ°á»›i dáº¡ng nĂ o?",
+                          "options":  {
+                                          "A":  "CĂ¢y phĂ¢n cáº¥p cha â€“ con",
+                                          "B":  "Táº­p cĂ¡c tĂ i liá»‡u JSON",
+                                          "C":  "Báº£ng (quan há»‡) gá»“m cĂ¡c dĂ²ng vĂ  cá»™t",
+                                          "D":  "Äá»“ thá»‹ cĂ¡c nĂºt vĂ  cáº¡nh"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "ÄÆ¡n vá»‹ trung tĂ¢m cá»§a mĂ´ hĂ¬nh quan há»‡ lĂ  quan há»‡ (báº£ng) â€“ táº­p há»£p cĂ¡c bá»™ sáº¯p thĂ nh dĂ²ng, má»—i dĂ²ng gá»“m cĂ¡c cá»™t thuá»™c tĂ­nh."
+                      },
+                      {
+                          "id":  16,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.2 â€“ MĂ´ hĂ¬nh quan há»‡, khoĂ¡ \u0026 phá»¥ thuá»™c hĂ m",
+                          "question":  "Trong mĂ´ hĂ¬nh quan há»‡, má»™t â€œbá»™â€ (tuple) tÆ°Æ¡ng á»©ng vá»›i gĂ¬?",
+                          "options":  {
+                                          "A":  "Má»™t chá»‰ má»¥c",
+                                          "B":  "Má»™t cá»™t cá»§a báº£ng",
+                                          "C":  "ToĂ n bá»™ báº£ng",
+                                          "D":  "Má»™t dĂ²ng cá»§a báº£ng"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "Má»—i dĂ²ng cá»§a quan há»‡ lĂ  má»™t bá»™ dá»¯ liá»‡u biá»ƒu diá»…n má»™t thá»±c thá»ƒ hoáº·c má»™t thá»ƒ hiá»‡n cá»§a quan há»‡."
+                      },
+                      {
+                          "id":  17,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.2 â€“ MĂ´ hĂ¬nh quan há»‡, khoĂ¡ \u0026 phá»¥ thuá»™c hĂ m",
+                          "question":  "KhĂ¡i niá»‡m â€œlÆ°á»£c Ä‘á»“ quan há»‡â€ (relation schema) Ä‘Æ°á»£c hiá»ƒu lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Báº£ng trung gian cá»§a quan há»‡ n â€“ m",
+                                          "B":  "Dá»¯ liá»‡u hiá»‡n cĂ³ trong báº£ng táº¡i má»™t thá»i Ä‘iá»ƒm",
+                                          "C":  "Má»™t cĂ¢u truy váº¥n SQL",
+                                          "D":  "TĂªn quan há»‡ cĂ¹ng táº­p há»£p cĂ¡c thuá»™c tĂ­nh vĂ  miá»n giĂ¡ trá»‹ cá»§a chĂºng"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "LÆ°á»£c Ä‘á»“ quan há»‡ lĂ  pháº§n cáº¥u trĂºc (mĂ´ táº£), cĂ²n â€œthá»ƒ hiá»‡nâ€ cá»§a quan há»‡ lĂ  dá»¯ liá»‡u thá»±c táº¿ táº¡i má»™t thá»i Ä‘iá»ƒm."
+                      },
+                      {
+                          "id":  18,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.2 â€“ MĂ´ hĂ¬nh quan há»‡, khoĂ¡ \u0026 phá»¥ thuá»™c hĂ m",
+                          "question":  "â€œNgĂ´iâ€ (degree) cá»§a má»™t quan há»‡ Ä‘Æ°á»£c xĂ¡c Ä‘á»‹nh bá»Ÿi yáº¿u tá»‘ nĂ o?",
+                          "options":  {
+                                          "A":  "Sá»‘ quan há»‡ trong cÆ¡ sá»Ÿ dá»¯ liá»‡u",
+                                          "B":  "Sá»‘ dĂ²ng cá»§a quan há»‡",
+                                          "C":  "Sá»‘ khoĂ¡ ngoáº¡i",
+                                          "D":  "Sá»‘ thuá»™c tĂ­nh (cá»™t) cá»§a quan há»‡"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "NgĂ´i cá»§a quan há»‡ lĂ  sá»‘ thuá»™c tĂ­nh; vĂ­ dá»¥ quan há»‡ LINHKIEN(MaLK, TenLK) cĂ³ ngĂ´i báº±ng 2."
+                      },
+                      {
+                          "id":  19,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.2 â€“ MĂ´ hĂ¬nh quan há»‡, khoĂ¡ \u0026 phá»¥ thuá»™c hĂ m",
+                          "question":  "â€œLá»±c lÆ°á»£ngâ€ (cardinality) cá»§a má»™t quan há»‡ lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Sá»‘ khoĂ¡ chĂ­nh",
+                                          "B":  "Sá»‘ dĂ²ng (sá»‘ bá»™) cá»§a quan há»‡",
+                                          "C":  "Sá»‘ cá»™t cá»§a quan há»‡",
+                                          "D":  "KĂ­ch thÆ°á»›c dá»¯ liá»‡u trĂªn Ä‘Ä©a"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "Lá»±c lÆ°á»£ng (sá»‘ bá»™) cá»§a quan há»‡ thay Ä‘á»•i theo dá»¯ liá»‡u; ngĂ´i (sá»‘ thuá»™c tĂ­nh) lĂ  cá»‘ Ä‘á»‹nh theo lÆ°á»£c Ä‘á»“."
+                      },
+                      {
+                          "id":  20,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.2 â€“ MĂ´ hĂ¬nh quan há»‡, khoĂ¡ \u0026 phá»¥ thuá»™c hĂ m",
+                          "question":  "Phá»¥ thuá»™c hĂ m X â†’ Y trĂªn lÆ°á»£c Ä‘á»“ quan há»‡ R cĂ³ nghÄ©a lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Thuá»™c tĂ­nh Y quyáº¿t Ä‘á»‹nh giĂ¡ trá»‹ cá»§a X",
+                                          "B":  "X pháº£i lĂ  khoĂ¡ chĂ­nh cá»§a quan há»‡",
+                                          "C":  "X vĂ  Y pháº£i cĂ³ cĂ¹ng kiá»ƒu dá»¯ liá»‡u",
+                                          "D":  "Vá»›i má»i cáº·p bá»™ t1, t2 báº¥t ká»³, náº¿u t1[X] = t2[X] thĂ¬ t1[Y] = t2[Y]"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "X â†’ Y nghÄ©a lĂ  giĂ¡ trá»‹ cá»§a X xĂ¡c Ä‘á»‹nh duy nháº¥t giĂ¡ trá»‹ cá»§a Y: hai bá»™ trĂ¹ng nhau trĂªn X thĂ¬ pháº£i trĂ¹ng nhau trĂªn Y."
+                      },
+                      {
+                          "id":  21,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.2 â€“ MĂ´ hĂ¬nh quan há»‡, khoĂ¡ \u0026 phá»¥ thuá»™c hĂ m",
+                          "question":  "Phá»¥ thuá»™c hĂ m X â†’ Y Ä‘Æ°á»£c gá»i lĂ  phá»¥ thuá»™c hĂ m hiá»ƒn nhiĂªn (trivial) khi nĂ o?",
+                          "options":  {
+                                          "A":  "Y â† X",
+                                          "B":  "Y lĂ  khoĂ¡ chĂ­nh cá»§a X",
+                                          "C":  "X khĂ´ng xuáº¥t hiá»‡n trong quan há»‡",
+                                          "D":  "X vĂ  Y rá»i nhau"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "Phá»¥ thuá»™c hĂ m hiá»ƒn nhiĂªn khi váº¿ pháº£i lĂ  táº­p con cá»§a váº¿ trĂ¡i, vĂ­ dá»¥ AB â†’ A; nĂ³ luĂ´n Ä‘Ăºng trong má»i quan há»‡."
+                      },
+                      {
+                          "id":  22,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.2 â€“ MĂ´ hĂ¬nh quan há»‡, khoĂ¡ \u0026 phá»¥ thuá»™c hĂ m",
+                          "question":  "Cho quan há»‡ SINHVIEN(MaSV, Ten, Lop). Phá»¥ thuá»™c hĂ m nĂ o sau Ä‘Ă¢y lĂ  phá»¥ thuá»™c hĂ m hiá»ƒn nhiĂªn?",
+                          "options":  {
+                                          "A":  "Lop â†’ MaSV",
+                                          "B":  "Ten â†’ Lop",
+                                          "C":  "MaSV, Ten â†’ MaSV",
+                                          "D":  "MaSV â†’ Ten"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "MaSV, Ten â†’ MaSV cĂ³ váº¿ pháº£i (MaSV) lĂ  táº­p con cá»§a váº¿ trĂ¡i nĂªn lĂ  phá»¥ thuá»™c hĂ m hiá»ƒn nhiĂªn, luĂ´n Ä‘Ăºng."
+                      },
+                      {
+                          "id":  23,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.2 â€“ MĂ´ hĂ¬nh quan há»‡, khoĂ¡ \u0026 phá»¥ thuá»™c hĂ m",
+                          "question":  "Giáº£ sá»­ má»—i MaSV lĂ  duy nháº¥t vĂ  xĂ¡c Ä‘á»‹nh hoĂ n toĂ n Ten, Lop cá»§a sinh viĂªn. Phá»¥ thuá»™c hĂ m nĂ o Ä‘Ăºng vá»›i báº£ng SINHVIEN?",
+                          "options":  {
+                                          "A":  "Ten â†’ MaSV",
+                                          "B":  "Lop â†’ MaSV",
+                                          "C":  "MaSV â†’ Ten, Lop",
+                                          "D":  "MaSV â†’ Lop vĂ  Lop â†’ MaSV"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "MĂ£ sinh viĂªn duy nháº¥t nĂªn biáº¿t MaSV ta xĂ¡c Ä‘á»‹nh Ä‘Æ°á»£c Ten vĂ  Lop, tá»©c MaSV â†’ Ten, Lop."
+                      },
+                      {
+                          "id":  24,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.2 â€“ MĂ´ hĂ¬nh quan há»‡, khoĂ¡ \u0026 phá»¥ thuá»™c hĂ m",
+                          "question":  "Hai táº­p phá»¥ thuá»™c hĂ m F vĂ  G Ä‘Æ°á»£c gá»i lĂ  tÆ°Æ¡ng Ä‘Æ°Æ¡ng khi nĂ o?",
+                          "options":  {
+                                          "A":  "CĂ¡c phá»¥ thuá»™c hĂ m cá»§a F vĂ  G cĂ³ cĂ¹ng váº¿ trĂ¡i",
+                                          "B":  "F vĂ  G cĂ³ cĂ¹ng sá»‘ lÆ°á»£ng phá»¥ thuá»™c hĂ m",
+                                          "C":  "F lĂ  táº­p con cá»§a G",
+                                          "D":  "Bao Ä‘Ă³ng cá»§a F báº±ng bao Ä‘Ă³ng cá»§a G (Fâº = Gâº)"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "F tÆ°Æ¡ng Ä‘Æ°Æ¡ng G khi má»i phá»¥ thuá»™c hĂ m suy dáº«n Ä‘Æ°á»£c tá»« F cÅ©ng suy dáº«n Ä‘Æ°á»£c tá»« G vĂ  ngÆ°á»£c láº¡i, tá»©c Fâº = Gâº."
+                      },
+                      {
+                          "id":  25,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.2 â€“ MĂ´ hĂ¬nh quan há»‡, khoĂ¡ \u0026 phá»¥ thuá»™c hĂ m",
+                          "question":  "Cho R(A, B, C, D) vá»›i F = {A â†’ B, B â†’ C}. Tá»« F suy ra Ä‘Æ°á»£c A â†’ C nhá» quy táº¯c suy diá»…n nĂ o?",
+                          "options":  {
+                                          "A":  "Báº¯c cáº§u",
+                                          "B":  "Há»£p (union)",
+                                          "C":  "Pháº£n xáº¡",
+                                          "D":  "TÄƒng trÆ°á»Ÿng"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "Quy táº¯c báº¯c cáº§u: náº¿u X â†’ Y vĂ  Y â†’ Z thĂ¬ X â†’ Z. á» Ä‘Ă¢y A â†’ B, B â†’ C nĂªn A â†’ C."
+                      },
+                      {
+                          "id":  26,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.2 â€“ MĂ´ hĂ¬nh quan há»‡, khoĂ¡ \u0026 phá»¥ thuá»™c hĂ m",
+                          "question":  "Trong mĂ´ hĂ¬nh quan há»‡, â€œkhoĂ¡ chĂ­nhâ€ (primary key) lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Báº¥t ká»³ thuá»™c tĂ­nh nĂ o trong quan há»‡",
+                                          "B":  "Thuá»™c tĂ­nh (hoáº·c táº­p thuá»™c tĂ­nh) Ä‘Æ°á»£c chá»n Ä‘á»ƒ Ä‘á»‹nh danh duy nháº¥t má»—i bá»™ vĂ  khĂ´ng nháº­n giĂ¡ trá»‹ NULL",
+                                          "C":  "Thuá»™c tĂ­nh cĂ³ thá»ƒ chá»©a nhiá»u giĂ¡ trá»‹ trĂ¹ng láº·p",
+                                          "D":  "Má»™t khoĂ¡ ngoáº¡i tham chiáº¿u sang báº£ng khĂ¡c"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "KhoĂ¡ chĂ­nh lĂ  táº­p thuá»™c tĂ­nh tá»‘i thiá»ƒu xĂ¡c Ä‘á»‹nh duy nháº¥t bá»™, Ä‘Æ°á»£c há»‡ quáº£n trá»‹ tá»± Ä‘á»™ng Ä‘áº£m báº£o tĂ­nh duy nháº¥t vĂ  khĂ´ng NULL."
+                      },
+                      {
+                          "id":  27,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.2 â€“ MĂ´ hĂ¬nh quan há»‡, khoĂ¡ \u0026 phá»¥ thuá»™c hĂ m",
+                          "question":  "KhoĂ¡ ngoáº¡i (foreign key) Ä‘Æ°á»£c dĂ¹ng vá»›i má»¥c Ä‘Ă­ch chĂ­nh nĂ o?",
+                          "options":  {
+                                          "A":  "Kiá»ƒm tra miá»n giĂ¡ trá»‹ cá»§a thuá»™c tĂ­nh",
+                                          "B":  "TÄƒng tá»‘c Ä‘á»™ truy váº¥n",
+                                          "C":  "Äá»‹nh danh duy nháº¥t cĂ¡c bá»™ trong cĂ¹ng má»™t báº£ng",
+                                          "D":  "Thá»ƒ hiá»‡n má»‘i quan há»‡ giá»¯a hai báº£ng báº±ng cĂ¡ch tham chiáº¿u Ä‘áº¿n khoĂ¡ chĂ­nh cá»§a báº£ng khĂ¡c"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "KhoĂ¡ ngoáº¡i lĂ  táº­p thuá»™c tĂ­nh trong báº£ng nĂ y tham chiáº¿u khoĂ¡ chĂ­nh cá»§a báº£ng khĂ¡c, giĂºp thá»±c thi tĂ­nh toĂ n váº¹n tham chiáº¿u."
+                      },
+                      {
+                          "id":  28,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.2 â€“ MĂ´ hĂ¬nh quan há»‡, khoĂ¡ \u0026 phá»¥ thuá»™c hĂ m",
+                          "question":  "â€œSiĂªu khoĂ¡â€ (superkey) cá»§a má»™t quan há»‡ R lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Táº­p cĂ¡c khoĂ¡ ngoáº¡i cá»§a R",
+                                          "B":  "Táº­p thuá»™c tĂ­nh mĂ  giĂ¡ trá»‹ cá»§a nĂ³ xĂ¡c Ä‘á»‹nh duy nháº¥t cĂ¡c bá»™ cá»§a R (cĂ³ thá»ƒ chá»©a thuá»™c tĂ­nh thá»«a)",
+                                          "C":  "Táº­p thuá»™c tĂ­nh tá»‘i thiá»ƒu xĂ¡c Ä‘á»‹nh duy nháº¥t bá»™",
+                                          "D":  "Má»™t thuá»™c tĂ­nh báº¥t ká»³ cá»§a R"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "SiĂªu khoĂ¡ chá»‰ cáº§n Ä‘á»§ Ä‘iá»u kiá»‡n xĂ¡c Ä‘á»‹nh duy nháº¥t bá»™; nĂ³ cĂ³ thá»ƒ chá»©a thuá»™c tĂ­nh thá»«a, vĂ­ dá»¥ (MaSV, Ten) váº«n lĂ  siĂªu khoĂ¡ náº¿u MaSV lĂ  khoĂ¡."
+                      },
+                      {
+                          "id":  29,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.2 â€“ MĂ´ hĂ¬nh quan há»‡, khoĂ¡ \u0026 phá»¥ thuá»™c hĂ m",
+                          "question":  "KhoĂ¡ tá»‘i thiá»ƒu (candidate key) khĂ¡c siĂªu khoĂ¡ á»Ÿ Ä‘iá»ƒm nĂ o?",
+                          "options":  {
+                                          "A":  "KhĂ´ng cĂ³ sá»± khĂ¡c biá»‡t nĂ o",
+                                          "B":  "KhĂ´ng chá»©a thuá»™c tĂ­nh thá»«a: má»i táº­p con thá»±c sá»± cá»§a nĂ³ Ä‘á»u khĂ´ng pháº£i lĂ  siĂªu khoĂ¡",
+                                          "C":  "Pháº£i cĂ³ kiá»ƒu dá»¯ liá»‡u sá»‘",
+                                          "D":  "LuĂ´n chá»‰ gá»“m má»™t thuá»™c tĂ­nh"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "KhoĂ¡ tá»‘i thiá»ƒu lĂ  siĂªu khoĂ¡ Ä‘á»“ng thá»i tá»‘i tiá»ƒu (bá» báº¥t ká»³ thuá»™c tĂ­nh nĂ o thĂ¬ khĂ´ng cĂ²n xĂ¡c Ä‘á»‹nh duy nháº¥t bá»™)."
+                      },
+                      {
+                          "id":  30,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.2 â€“ MĂ´ hĂ¬nh quan há»‡, khoĂ¡ \u0026 phá»¥ thuá»™c hĂ m",
+                          "question":  "Cho lÆ°á»£c Ä‘á»“ R(A, B, C, D) vá»›i F = {A â†’ B, B â†’ C, C â†’ D}. KhoĂ¡ tá»‘i thiá»ƒu cá»§a R lĂ  táº­p nĂ o?",
+                          "options":  {
+                                          "A":  "B",
+                                          "B":  "A",
+                                          "C":  "C",
+                                          "D":  "D"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "Aâº = {A, B, C, D} = R nĂªn A lĂ  siĂªu khoĂ¡; cĂ¡c táº­p con cá»§a A khĂ´ng xĂ¡c Ä‘á»‹nh Ä‘Æ°á»£c gĂ¬ nĂªn A lĂ  khoĂ¡ tá»‘i thiá»ƒu duy nháº¥t."
+                      },
+                      {
+                          "id":  31,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.2 â€“ MĂ´ hĂ¬nh quan há»‡, khoĂ¡ \u0026 phá»¥ thuá»™c hĂ m",
+                          "question":  "Cho R(A, B, C, D) vá»›i F = {A â†’ B, B â†’ A, B â†’ C, C â†’ D}. PhĂ¡t biá»ƒu nĂ o sau Ä‘Ă¢y Ä‘Ăºng?",
+                          "options":  {
+                                          "A":  "Chá»‰ B lĂ  khoĂ¡ tá»‘i thiá»ƒu",
+                                          "B":  "Chá»‰ A lĂ  khoĂ¡ tá»‘i thiá»ƒu",
+                                          "C":  "R khĂ´ng cĂ³ khoĂ¡ tá»‘i thiá»ƒu nĂ o",
+                                          "D":  "Cáº£ A vĂ  B Ä‘á»u lĂ  khoĂ¡ tá»‘i thiá»ƒu"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "Aâº = R vĂ  Bâº = R; Ä‘á»“ng thá»i A, B lĂ  cĂ¡c táº­p con thá»±c sá»± khĂ´ng pháº£i siĂªu khoĂ¡ nĂªn cáº£ hai Ä‘á»u lĂ  khoĂ¡ tá»‘i thiá»ƒu."
+                      },
+                      {
+                          "id":  32,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.2 â€“ MĂ´ hĂ¬nh quan há»‡, khoĂ¡ \u0026 phá»¥ thuá»™c hĂ m",
+                          "question":  "Cho quan há»‡ SANXUAT(MaPX, MaLK, TenLK) vá»›i phá»¥ thuá»™c hĂ m MaLK â†’ TenLK. KhoĂ¡ cá»§a quan há»‡ lĂ  (MaPX, MaLK). Nháº­n xĂ©t nĂ o Ä‘Ăºng?",
+                          "options":  {
+                                          "A":  "TenLK phá»¥ thuá»™c bá»™ pháº­n vĂ o khoĂ¡, gĂ¢y dÆ° thá»«a dá»¯ liá»‡u khi linh kiá»‡n Ä‘Æ°á»£c sáº£n xuáº¥t á»Ÿ nhiá»u phĂ¢n xÆ°á»Ÿng",
+                                          "B":  "TenLK phá»¥ thuá»™c hĂ m Ä‘áº§y Ä‘á»§ vĂ o khoĂ¡ nĂªn dá»¯ liá»‡u hoĂ n toĂ n chuáº©n",
+                                          "C":  "TenLK khĂ´ng cĂ³ quan há»‡ gĂ¬ vá»›i khoĂ¡",
+                                          "D":  "Quan há»‡ khĂ´ng cáº§n khoĂ¡ ngoáº¡i"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "TenLK chá»‰ phá»¥ thuá»™c vĂ o MaLK (má»™t pháº§n cá»§a khoĂ¡) nĂªn bá»‹ láº·p láº¡i á»Ÿ má»i dĂ²ng cá»§a cĂ¹ng linh kiá»‡n â€“ Ä‘Ă¢y lĂ  phá»¥ thuá»™c hĂ m bá»™ pháº­n, cáº§n tĂ¡ch báº£ng."
+                      },
+                      {
+                          "id":  33,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.2 â€“ MĂ´ hĂ¬nh quan há»‡, khoĂ¡ \u0026 phá»¥ thuá»™c hĂ m",
+                          "question":  "Äiá»u kiá»‡n cáº§n vĂ  Ä‘á»§ Ä‘á»ƒ táº­p thuá»™c tĂ­nh K lĂ  khoĂ¡ cá»§a lÆ°á»£c Ä‘á»“ R lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "K khĂ´ng chá»©a thuá»™c tĂ­nh NULL",
+                                          "B":  "Kâº = R (bao Ä‘Ă³ng cá»§a K báº±ng toĂ n bá»™ thuá»™c tĂ­nh) vĂ  K tá»‘i thiá»ƒu",
+                                          "C":  "K lĂ  táº­p cĂ¡c khoĂ¡ ngoáº¡i",
+                                          "D":  "K cĂ³ Ă­t nháº¥t hai thuá»™c tĂ­nh"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "K pháº£i lĂ  siĂªu khoĂ¡ (bao Ä‘Ă³ng báº±ng R) vĂ  tá»‘i tiá»ƒu â€“ khĂ´ng cĂ³ táº­p con thá»±c sá»± nĂ o cÅ©ng lĂ  siĂªu khoĂ¡."
+                      },
+                      {
+                          "id":  34,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.2 â€“ MĂ´ hĂ¬nh quan há»‡, khoĂ¡ \u0026 phá»¥ thuá»™c hĂ m",
+                          "question":  "Miá»n giĂ¡ trá»‹ (domain) cá»§a má»™t thuá»™c tĂ­nh lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "KhoĂ¡ chĂ­nh cá»§a báº£ng chá»©a thuá»™c tĂ­nh",
+                                          "B":  "Sá»‘ dĂ²ng cá»§a báº£ng chá»©a thuá»™c tĂ­nh",
+                                          "C":  "Táº­p há»£p cĂ¡c giĂ¡ trá»‹ há»£p lá»‡ mĂ  thuá»™c tĂ­nh Ä‘Ă³ cĂ³ thá»ƒ nháº­n",
+                                          "D":  "TĂªn cá»§a báº£ng chá»©a thuá»™c tĂ­nh"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "VĂ­ dá»¥ thuá»™c tĂ­nh DiemThi cĂ³ miá»n giĂ¡ trá»‹ lĂ  Ä‘oáº¡n [0, 100] hoáº·c lĂ  táº­p sá»‘ thá»±c há»£p lá»‡."
+                      },
+                      {
+                          "id":  35,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.2 â€“ MĂ´ hĂ¬nh quan há»‡, khoĂ¡ \u0026 phá»¥ thuá»™c hĂ m",
+                          "question":  "Chuyá»ƒn quan há»‡ 1 â€“ n giá»¯a PHANXUONG (1) vĂ  LINHKIEN (n) sang mĂ´ hĂ¬nh quan há»‡, cĂ¡ch lĂ m Ä‘Ăºng lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Äáº·t khoĂ¡ ngoáº¡i MaPX (khoĂ¡ chĂ­nh cá»§a bĂªn 1) vĂ o báº£ng LINHKIEN (bĂªn nhiá»u)",
+                                          "B":  "KhĂ´ng biá»ƒu diá»…n Ä‘Æ°á»£c quan há»‡ 1 â€“ n",
+                                          "C":  "Äáº·t khoĂ¡ ngoáº¡i MaLK vĂ o báº£ng PHANXUONG",
+                                          "D":  "Táº¡o thĂªm báº£ng trung gian"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "Quan há»‡ 1 â€“ n thá»ƒ hiá»‡n báº±ng cĂ¡ch Ä‘Æ°a khoĂ¡ chĂ­nh cá»§a bĂªn â€œmá»™tâ€ lĂ m khoĂ¡ ngoáº¡i sang báº£ng bĂªn â€œnhiá»uâ€."
+                      },
+                      {
+                          "id":  36,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.2 â€“ MĂ´ hĂ¬nh quan há»‡, khoĂ¡ \u0026 phá»¥ thuá»™c hĂ m",
+                          "question":  "Bao Ä‘Ă³ng Xâº cá»§a táº­p thuá»™c tĂ­nh X Ä‘á»‘i vá»›i táº­p phá»¥ thuá»™c hĂ m F lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Táº­p táº¥t cáº£ cĂ¡c thuá»™c tĂ­nh suy dáº«n Ä‘Æ°á»£c tá»« X thĂ´ng qua F",
+                                          "B":  "Sá»‘ phá»¥ thuá»™c hĂ m cĂ³ váº¿ trĂ¡i chá»©a X",
+                                          "C":  "Táº­p cĂ¡c khoĂ¡ ngoáº¡i cá»§a X",
+                                          "D":  "Táº­p cĂ¡c bá»™ dá»¯ liá»‡u cĂ³ giĂ¡ trá»‹ X"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "Xâº gá»“m X vĂ  má»i thuá»™c tĂ­nh cĂ³ thá»ƒ suy ra tá»« X báº±ng cĂ¡c phá»¥ thuá»™c hĂ m trong F; dĂ¹ng Ä‘á»ƒ kiá»ƒm tra X cĂ³ pháº£i siĂªu khoĂ¡ khĂ´ng (Xâº = R)."
+                      },
+                      {
+                          "id":  37,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.3 â€“ TiĂªn Ä‘á» Armstrong, bao Ä‘Ă³ng \u0026 khoĂ¡",
+                          "question":  "Ná»™i dung cá»§a tiĂªn Ä‘á» pháº£n xáº¡ (reflexivity) trong há»‡ tiĂªn Ä‘á» Armstrong lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Náº¿u Y â† X thĂ¬ X â†’ Y",
+                                          "B":  "Náº¿u X â†’ Y thĂ¬ XZ â†’ YZ",
+                                          "C":  "Náº¿u X â†’ Y vĂ  Y â†’ Z thĂ¬ X â†’ Z",
+                                          "D":  "Náº¿u X â†’ Y thĂ¬ Y â†’ X"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "TiĂªn Ä‘á» pháº£n xáº¡: má»i táº­p con cá»§a X Ä‘á»u Ä‘Æ°á»£c xĂ¡c Ä‘á»‹nh bá»Ÿi X, tá»©c Y â† X kĂ©o theo X â†’ Y (Ä‘Ă¢y cÅ©ng chĂ­nh lĂ  phá»¥ thuá»™c hĂ m hiá»ƒn nhiĂªn)."
+                      },
+                      {
+                          "id":  38,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.3 â€“ TiĂªn Ä‘á» Armstrong, bao Ä‘Ă³ng \u0026 khoĂ¡",
+                          "question":  "Ná»™i dung cá»§a tiĂªn Ä‘á» tÄƒng trÆ°á»Ÿng (augmentation) trong há»‡ tiĂªn Ä‘á» Armstrong lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Náº¿u X â†’ Y thĂ¬ XZ â†’ YZ",
+                                          "B":  "Náº¿u Y â† X thĂ¬ X â†’ Y",
+                                          "C":  "Náº¿u X â†’ Y thĂ¬ Y â†’ X",
+                                          "D":  "Náº¿u X â†’ Y vĂ  Y â†’ Z thĂ¬ X â†’ Z"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "TiĂªn Ä‘á» tÄƒng trÆ°á»Ÿng: khi X xĂ¡c Ä‘á»‹nh Y, thĂªm cĂ¹ng má»™t táº­p thuá»™c tĂ­nh Z vĂ o cáº£ hai váº¿ thĂ¬ XZ váº«n xĂ¡c Ä‘á»‹nh YZ."
+                      },
+                      {
+                          "id":  39,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.3 â€“ TiĂªn Ä‘á» Armstrong, bao Ä‘Ă³ng \u0026 khoĂ¡",
+                          "question":  "Ná»™i dung cá»§a tiĂªn Ä‘á» báº¯c cáº§u (transitivity) trong há»‡ tiĂªn Ä‘á» Armstrong lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Náº¿u Y â† X thĂ¬ X â†’ Y",
+                                          "B":  "Náº¿u X â†’ Y vĂ  Y â†’ Z thĂ¬ X â†’ Z",
+                                          "C":  "Náº¿u X â†’ Y thĂ¬ Y â†’ X",
+                                          "D":  "Náº¿u X â†’ Y thĂ¬ XZ â†’ YZ"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "TiĂªn Ä‘á» báº¯c cáº§u: phá»¥ thuá»™c hĂ m cĂ³ tĂ­nh truyá»n â€“ X xĂ¡c Ä‘á»‹nh Y, Y xĂ¡c Ä‘á»‹nh Z thĂ¬ X xĂ¡c Ä‘á»‹nh Z."
+                      },
+                      {
+                          "id":  40,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.3 â€“ TiĂªn Ä‘á» Armstrong, bao Ä‘Ă³ng \u0026 khoĂ¡",
+                          "question":  "Tá»« X â†’ Y vĂ  X â†’ Z, theo quy táº¯c suy diá»…n bá»• sung â€œhá»£pâ€ (union) ta suy ra Ä‘Æ°á»£c gĂ¬?",
+                          "options":  {
+                                          "A":  "X â†’ YZ",
+                                          "B":  "Y â†’ Z",
+                                          "C":  "XZ â†’ Y",
+                                          "D":  "XY â†’ Z"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "Quy táº¯c há»£p: náº¿u X xĂ¡c Ä‘á»‹nh Y vĂ  X xĂ¡c Ä‘á»‹nh Z thĂ¬ X xĂ¡c Ä‘á»‹nh há»£p cá»§a Y vĂ  Z, tá»©c X â†’ YZ."
+                      },
+                      {
+                          "id":  41,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.3 â€“ TiĂªn Ä‘á» Armstrong, bao Ä‘Ă³ng \u0026 khoĂ¡",
+                          "question":  "Tá»« X â†’ YZ, theo quy táº¯c suy diá»…n bá»• sung â€œphĂ¢n rĂ£â€ (decomposition) ta suy ra Ä‘Æ°á»£c gĂ¬?",
+                          "options":  {
+                                          "A":  "Y â†’ X",
+                                          "B":  "Chá»‰ X â†’ Z",
+                                          "C":  "Cáº£ X â†’ Y vĂ  X â†’ Z",
+                                          "D":  "Chá»‰ X â†’ Y"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "Quy táº¯c phĂ¢n rĂ£: náº¿u X xĂ¡c Ä‘á»‹nh má»™t táº­p thuá»™c tĂ­nh YZ thĂ¬ X xĂ¡c Ä‘á»‹nh tá»«ng táº­p con cá»§a nĂ³, tá»©c X â†’ Y vĂ  X â†’ Z."
+                      },
+                      {
+                          "id":  42,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.3 â€“ TiĂªn Ä‘á» Armstrong, bao Ä‘Ă³ng \u0026 khoĂ¡",
+                          "question":  "Quy táº¯c suy diá»…n â€œgiáº£ báº¯c cáº§uâ€ (pseudotransitivity) phĂ¡t biá»ƒu nhÆ° tháº¿ nĂ o?",
+                          "options":  {
+                                          "A":  "Náº¿u X â†’ Y vĂ  WY â†’ Z thĂ¬ WX â†’ Z",
+                                          "B":  "Náº¿u Y â† X thĂ¬ X â†’ Y",
+                                          "C":  "Náº¿u X â†’ Y thĂ¬ Y â†’ X",
+                                          "D":  "Náº¿u X â†’ Y thĂ¬ XZ â†’ YZ"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "Giáº£ báº¯c cáº§u lĂ  dáº¡ng tá»•ng quĂ¡t cá»§a báº¯c cáº§u: X â†’ Y káº¿t há»£p vá»›i WY â†’ Z cho ta WX â†’ Z."
+                      },
+                      {
+                          "id":  43,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.3 â€“ TiĂªn Ä‘á» Armstrong, bao Ä‘Ă³ng \u0026 khoĂ¡",
+                          "question":  "Há»‡ tiĂªn Ä‘á» Armstrong Ä‘Æ°á»£c Ä‘Ă¡nh giĂ¡ lĂ  Ä‘Ăºng Ä‘áº¯n (sound) vĂ  Ä‘áº§y Ä‘á»§ (complete). Ă nghÄ©a cá»§a hai tĂ­nh cháº¥t nĂ y lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Chá»‰ Ă¡p dá»¥ng cho mĂ´ hĂ¬nh ER",
+                                          "B":  "Ăp dá»¥ng Ä‘Æ°á»£c cho má»i há»‡ quáº£n trá»‹ cÆ¡ sá»Ÿ dá»¯ liá»‡u",
+                                          "C":  "Má»i phá»¥ thuá»™c hĂ m suy ra Ä‘Æ°á»£c Ä‘á»u Ä‘Ăºng vĂ  má»i phá»¥ thuá»™c hĂ m Ä‘Ăºng Ä‘á»u suy ra Ä‘Æ°á»£c tá»« F",
+                                          "D":  "Chá»‰ cáº§n Ä‘Ăºng, khĂ´ng cáº§n Ä‘áº§y Ä‘á»§"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "ÄĂºng Ä‘áº¯n: khĂ´ng suy ra phá»¥ thuá»™c hĂ m sai. Äáº§y Ä‘á»§: má»i phá»¥ thuá»™c hĂ m thuá»™c bao Ä‘Ă³ng Fâº Ä‘á»u suy dáº«n Ä‘Æ°á»£c báº±ng cĂ¡c tiĂªn Ä‘á»."
+                      },
+                      {
+                          "id":  44,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.3 â€“ TiĂªn Ä‘á» Armstrong, bao Ä‘Ă³ng \u0026 khoĂ¡",
+                          "question":  "Cho F = {ZY â†’ C; Y â†’ D; CD â†’ E; CE â†’ GH; G â†’ Z}. BÆ°á»›c Ä‘áº§u tiĂªn Ä‘á»ƒ chá»©ng minh ZY â†’ E, ta cĂ³ thá»ƒ suy ra ZY â†’ Y nhá» quy táº¯c nĂ o?",
+                          "options":  {
+                                          "A":  "TÄƒng trÆ°á»Ÿng",
+                                          "B":  "Báº¯c cáº§u",
+                                          "C":  "Thay tháº¿ tá»« giáº£ thiáº¿t",
+                                          "D":  "Pháº£n xáº¡ (Y â† ZY)"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "VĂ¬ Y lĂ  táº­p con cá»§a ZY nĂªn theo tiĂªn Ä‘á» pháº£n xáº¡ ta cĂ³ ZY â†’ Y."
+                      },
+                      {
+                          "id":  45,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.3 â€“ TiĂªn Ä‘á» Armstrong, bao Ä‘Ă³ng \u0026 khoĂ¡",
+                          "question":  "Tiáº¿p tá»¥c chá»©ng minh ZY â†’ E vá»›i F = {ZY â†’ C; Y â†’ D; CD â†’ E; CE â†’ GH; G â†’ Z}. Tá»« ZY â†’ Y vĂ  Y â†’ D, ta suy ra Ä‘Æ°á»£c gĂ¬?",
+                          "options":  {
+                                          "A":  "ZY â†’ CD",
+                                          "B":  "KhĂ´ng suy ra Ä‘Æ°á»£c gĂ¬",
+                                          "C":  "D â†’ ZY",
+                                          "D":  "ZY â†’ D (nhá» báº¯c cáº§u)"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "Ăp dá»¥ng báº¯c cáº§u cho ZY â†’ Y vĂ  Y â†’ D, ta Ä‘Æ°á»£c ZY â†’ D."
+                      },
+                      {
+                          "id":  46,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.3 â€“ TiĂªn Ä‘á» Armstrong, bao Ä‘Ă³ng \u0026 khoĂ¡",
+                          "question":  "Tá»« ZY â†’ C (giáº£ thiáº¿t) vĂ  ZY â†’ D (Ä‘Ă£ chá»©ng minh), ta suy ra Ä‘Æ°á»£c gĂ¬?",
+                          "options":  {
+                                          "A":  "ZY â†’ CD (nhá» quy táº¯c há»£p)",
+                                          "B":  "CD â†’ ZY",
+                                          "C":  "ZY â†’ GH",
+                                          "D":  "C â†’ D"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "Quy táº¯c há»£p: cĂ¹ng váº¿ trĂ¡i ZY xĂ¡c Ä‘á»‹nh C vĂ  D nĂªn ZY xĂ¡c Ä‘á»‹nh cáº£ CD."
+                      },
+                      {
+                          "id":  47,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.3 â€“ TiĂªn Ä‘á» Armstrong, bao Ä‘Ă³ng \u0026 khoĂ¡",
+                          "question":  "Káº¿t thĂºc chá»©ng minh: tá»« ZY â†’ CD vĂ  CD â†’ E (giáº£ thiáº¿t), quy táº¯c nĂ o cho phĂ©p káº¿t luáº­n ZY â†’ E?",
+                          "options":  {
+                                          "A":  "Há»£p",
+                                          "B":  "Báº¯c cáº§u",
+                                          "C":  "Pháº£n xáº¡",
+                                          "D":  "TÄƒng trÆ°á»Ÿng"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "Báº¯c cáº§u: ZY â†’ CD vĂ  CD â†’ E kĂ©o theo ZY â†’ E. Váº­y ZY â†’ E thuá»™c bao Ä‘Ă³ng cá»§a F."
+                      },
+                      {
+                          "id":  48,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.3 â€“ TiĂªn Ä‘á» Armstrong, bao Ä‘Ă³ng \u0026 khoĂ¡",
+                          "question":  "Vá»›i F = {ZY â†’ C; Y â†’ D; CD â†’ E; CE â†’ GH; G â†’ Z}, hĂ£y tĂ­nh bao Ä‘Ă³ng (ZY)âº. Káº¿t quáº£ lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "{Z, Y, C, D}",
+                                          "B":  "{Z, Y, D}",
+                                          "C":  "{Z, Y, C, D, E, G, H}",
+                                          "D":  "{Z, Y, G, H}"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "(ZY)âº báº¯t Ä‘áº§u tá»« {Z, Y}; dĂ¹ng Yâ†’D Ä‘Æ°á»£c D; ZYâ†’C Ä‘Æ°á»£c C; CDâ†’E Ä‘Æ°á»£c E; CEâ†’GH Ä‘Æ°á»£c G, H. Káº¿t quáº£ {Z, Y, C, D, E, G, H} = R."
+                      },
+                      {
+                          "id":  49,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.3 â€“ TiĂªn Ä‘á» Armstrong, bao Ä‘Ă³ng \u0026 khoĂ¡",
+                          "question":  "Vá»›i F = {ZY â†’ C; Y â†’ D; CD â†’ E; CE â†’ GH; G â†’ Z}, phĂ¡t biá»ƒu nĂ o Ä‘Ăºng vá» vai trĂ² cá»§a ZY?",
+                          "options":  {
+                                          "A":  "ZY lĂ  khoĂ¡ tá»‘i thiá»ƒu (candidate key) duy nháº¥t cá»§a lÆ°á»£c Ä‘á»“",
+                                          "B":  "Chá»‰ Y má»›i lĂ  khoĂ¡",
+                                          "C":  "ZY lĂ  siĂªu khoĂ¡ nhÆ°ng khĂ´ng pháº£i khoĂ¡ tá»‘i thiá»ƒu",
+                                          "D":  "ZY khĂ´ng pháº£i lĂ  khoĂ¡"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "(ZY)âº = R nĂªn ZY lĂ  siĂªu khoĂ¡; kiá»ƒm tra Zâº = {Z} vĂ  Yâº = {Y, D} Ä‘á»u khĂ¡c R nĂªn ZY tá»‘i tiá»ƒu â€“ váº­y ZY lĂ  khoĂ¡ tá»‘i thiá»ƒu (vĂ  lĂ  khoĂ¡ duy nháº¥t)."
+                      },
+                      {
+                          "id":  50,
+                          "chapter":  "Pháº§n 1",
+                          "sourceChapter":  "NhĂ³m 1.3 â€“ TiĂªn Ä‘á» Armstrong, bao Ä‘Ă³ng \u0026 khoĂ¡",
+                          "question":  "Cho F = {A â†’ BC, B â†’ D, D â†’ E}. So sĂ¡nh bao Ä‘Ă³ng Aâº vĂ  Bâº, káº¿t luáº­n nĂ o Ä‘Ăºng?",
+                          "options":  {
+                                          "A":  "KhĂ´ng tĂ­nh Ä‘Æ°á»£c",
+                                          "B":  "Aâº = {A, B, C, D, E} vĂ  Bâº = {B, D, E}",
+                                          "C":  "Cáº£ hai báº±ng nhau",
+                                          "D":  "Aâº = {A, B, C} vĂ  Bâº = {B, D}"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "Aâº: Aâ†’BC Ä‘Æ°á»£c {A,B,C}; Bâ†’D Ä‘Æ°á»£c D; Dâ†’E Ä‘Æ°á»£c E â†’ {A,B,C,D,E}. Bâº: Bâ†’D Ä‘Æ°á»£c {B,D}; Dâ†’E Ä‘Æ°á»£c E â†’ {B,D,E}."
+                      },
+                      {
+                          "id":  51,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.1 â€“ SELECT cÆ¡ báº£n, toĂ¡n tá»­ \u0026 LIKE",
+                          "question":  "CĂ¢u lá»‡nh SQL nĂ o sau Ä‘Ă¢y KHĂ”NG thá»±c thi Ä‘Æ°á»£c trong MySQL?",
+                          "options":  {
+                                          "A":  "SELECT * FROM Lop;",
+                                          "B":  "SELECT COUNT(*) FROM Lop;",
+                                          "C":  "FROM Lop;",
+                                          "D":  "SELECT Lop.cot1 = Lop.cot2 FROM Lop;"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "â€œFROM Lop;â€ thiáº¿u má»‡nh Ä‘á» SELECT â€“ má»‡nh Ä‘á» SELECT lĂ  báº¯t buá»™c vĂ  pháº£i Ä‘á»©ng Ä‘áº§u. Hai lá»‡nh cĂ²n láº¡i Ä‘á»u há»£p lá»‡ (lá»‡nh so sĂ¡nh cá»™t tráº£ vá» 1/0 cho tá»«ng dĂ²ng)."
+                      },
+                      {
+                          "id":  52,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.1 â€“ SELECT cÆ¡ báº£n, toĂ¡n tá»­ \u0026 LIKE",
+                          "question":  "CĂ¢u lá»‡nh SELECT DISTINCT(TenSV) FROM HoTenSinhVien; tráº£ vá» káº¿t quáº£ nhÆ° tháº¿ nĂ o?",
+                          "options":  {
+                                          "A":  "Lá»—i vĂ¬ DISTINCT khĂ´ng dĂ¹ng vá»›i hĂ m",
+                                          "B":  "CĂ¡c giĂ¡ trá»‹ TenSV chá»‰ xuáº¥t hiá»‡n Ä‘Ăºng má»™t láº§n (khĂ´ng trĂ¹ng láº·p)",
+                                          "C":  "CĂ¡c giĂ¡ trá»‹ TenSV giá»‘ng há»‡t nhau (chá»‰ má»™t giĂ¡ trá»‹)",
+                                          "D":  "CĂ¡c giĂ¡ trá»‹ TenSV cĂ³ thá»ƒ xuáº¥t hiá»‡n nhiá»u láº§n trong káº¿t quáº£"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "Tá»« khoĂ¡ DISTINCT loáº¡i bá» cĂ¡c giĂ¡ trá»‹ trĂ¹ng láº·p: má»—i giĂ¡ trá»‹ TenSV khĂ¡c nhau chá»‰ xuáº¥t hiá»‡n má»™t láº§n."
+                      },
+                      {
+                          "id":  53,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.1 â€“ SELECT cÆ¡ báº£n, toĂ¡n tá»­ \u0026 LIKE",
+                          "question":  "SELECT * FROM offices WHERE country NOT IN (\u0027Vietnam\u0027, \u0027China\u0027); tráº£ vá» gĂ¬?",
+                          "options":  {
+                                          "A":  "Báº£ng dá»¯ liá»‡u cĂ³ cá»™t country chá»‰ lĂ  Vietnam",
+                                          "B":  "Báº£ng dá»¯ liá»‡u cĂ³ cá»™t country khĂ´ng pháº£i Vietnam vĂ  khĂ´ng pháº£i China",
+                                          "C":  "Báº£ng dá»¯ liá»‡u cĂ³ cá»™t country lĂ  Vietnam vĂ  China",
+                                          "D":  "Báº£ng dá»¯ liá»‡u cĂ³ cá»™t country chá»‰ lĂ  China"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "NOT IN (\u0027Vietnam\u0027,\u0027China\u0027) lá»c cĂ¡c dĂ²ng cĂ³ giĂ¡ trá»‹ country khĂ¡c cáº£ hai giĂ¡ trá»‹ Ä‘Ă£ liá»‡t kĂª."
+                      },
+                      {
+                          "id":  54,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.1 â€“ SELECT cÆ¡ báº£n, toĂ¡n tá»­ \u0026 LIKE",
+                          "question":  "SELECT * FROM SinhVien WHERE ten LIKE \u0027T%G\u0027; tráº£ vá» cĂ¡c dĂ²ng cĂ³ ten nhÆ° tháº¿ nĂ o?",
+                          "options":  {
+                                          "A":  "Chá»‰ Ä‘Ăºng chuá»—i \u0027T%G\u0027",
+                                          "B":  "Báº¯t Ä‘áº§u báº±ng chá»¯ T vĂ  káº¿t thĂºc báº±ng chá»¯ G",
+                                          "C":  "Chá»‰ gá»“m Ä‘Ăºng 3 kĂ½ tá»± T vĂ  G",
+                                          "D":  "Báº¯t Ä‘áº§u báº±ng T hoáº·c káº¿t thĂºc báº±ng G"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "KĂ½ tá»± % Ä‘áº¡i diá»‡n cho chuá»—i báº¥t ká»³ (ká»ƒ cáº£ rá»—ng): \u0027T%G\u0027 khá»›p má»i chuá»—i báº¯t Ä‘áº§u báº±ng T vĂ  káº¿t thĂºc báº±ng G."
+                      },
+                      {
+                          "id":  55,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.1 â€“ SELECT cÆ¡ báº£n, toĂ¡n tá»­ \u0026 LIKE",
+                          "question":  "Trong má»‡nh Ä‘á» LIKE, kĂ½ tá»± gáº¡ch dÆ°á»›i \u0027_\u0027 cĂ³ Ă½ nghÄ©a gĂ¬?",
+                          "options":  {
+                                          "A":  "KĂ½ tá»± \u0027a\u0027 hoáº·c \u0027A\u0027",
+                                          "B":  "Chuá»—i kĂ½ tá»± báº¥t ká»³ (cĂ³ thá»ƒ rá»—ng)",
+                                          "C":  "ÄĂºng má»™t kĂ½ tá»± báº¥t ká»³",
+                                          "D":  "KĂ½ tá»± gáº¡ch dÆ°á»›i"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "\u0027_\u0027 khá»›p Ä‘Ăºng má»™t kĂ½ tá»± báº¥t ká»³, vĂ­ dá»¥ \u0027Nguy_n\u0027 khá»›p \u0027Nguyen\u0027 vĂ  \u0027Nguyin\u0027; \u0027%\u0027 khá»›p nhiá»u kĂ½ tá»±."
+                      },
+                      {
+                          "id":  56,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.1 â€“ SELECT cÆ¡ báº£n, toĂ¡n tá»­ \u0026 LIKE",
+                          "question":  "WHERE diem BETWEEN 5 AND 7 lá»c cĂ¡c dĂ²ng cĂ³ Ä‘iá»u kiá»‡n gĂ¬?",
+                          "options":  {
+                                          "A":  "diem trong Ä‘oáº¡n tá»« 5 Ä‘áº¿n 7, bao gá»“m cáº£ 5 vĂ  7",
+                                          "B":  "diem nhá» hÆ¡n 5",
+                                          "C":  "diem lá»›n hÆ¡n 5 vĂ  nhá» hÆ¡n 7",
+                                          "D":  "diem Ä‘Ăºng báº±ng 5 hoáº·c 7"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "BETWEEN lĂ  bao gá»“m cáº£ hai Ä‘áº§u mĂºt, tÆ°Æ¡ng Ä‘Æ°Æ¡ng (diem \u003e= 5 AND diem \u003c= 7)."
+                      },
+                      {
+                          "id":  57,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.1 â€“ SELECT cÆ¡ báº£n, toĂ¡n tá»­ \u0026 LIKE",
+                          "question":  "SELECT TenSV FROM SinhVien ORDER BY TenSV DESC; sáº¯p xáº¿p káº¿t quáº£ theo thá»© tá»± nĂ o?",
+                          "options":  {
+                                          "A":  "Theo mĂ£ sinh viĂªn",
+                                          "B":  "TÄƒng dáº§n theo TenSV",
+                                          "C":  "Giáº£m dáº§n theo TenSV",
+                                          "D":  "Ngáº«u nhiĂªn"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "ORDER BY ... DESC sáº¯p xáº¿p giáº£m dáº§n (Zâ†’A); máº·c Ä‘á»‹nh (ASC) lĂ  tÄƒng dáº§n."
+                      },
+                      {
+                          "id":  58,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.1 â€“ SELECT cÆ¡ báº£n, toĂ¡n tá»­ \u0026 LIKE",
+                          "question":  "Káº¿t quáº£ cá»§a cĂ¢u lá»‡nh SELECT 5 \u003e 3; trong MySQL lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "NULL",
+                                          "B":  "1 (TRUE)",
+                                          "C":  "Lá»—i cĂº phĂ¡p",
+                                          "D":  "0 (FALSE)"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "MySQL biá»ƒu diá»…n giĂ¡ trá»‹ Ä‘Ăºng lĂ  1, sai lĂ  0; nĂªn 5 \u003e 3 tráº£ vá» 1."
+                      },
+                      {
+                          "id":  59,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.1 â€“ SELECT cÆ¡ báº£n, toĂ¡n tá»­ \u0026 LIKE",
+                          "question":  "SELECT Lop.cot1 = Lop.cot2 FROM Lop; tráº£ vá» gĂ¬ cho má»—i dĂ²ng cá»§a báº£ng Lop?",
+                          "options":  {
+                                          "A":  "Chuá»—i ná»‘i giĂ¡ trá»‹ cot1 vĂ  cot2",
+                                          "B":  "Chá»‰ cĂ¡c dĂ²ng cĂ³ cot1 báº±ng cot2",
+                                          "C":  "GiĂ¡ trá»‹ 1 náº¿u cot1 báº±ng cot2, ngÆ°á»£c láº¡i 0",
+                                          "D":  "Lá»—i vĂ¬ khĂ´ng so sĂ¡nh Ä‘Æ°á»£c hai cá»™t"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "Biá»ƒu thá»©c so sĂ¡nh trong má»‡nh Ä‘á» SELECT tráº£ vá» 1 (Ä‘Ăºng) hoáº·c 0 (sai) tÆ°Æ¡ng á»©ng tá»«ng dĂ²ng â€“ lá»‡nh nĂ y hoĂ n toĂ n há»£p lá»‡."
+                      },
+                      {
+                          "id":  60,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.1 â€“ SELECT cÆ¡ báº£n, toĂ¡n tá»­ \u0026 LIKE",
+                          "question":  "Trong MySQL, láº¥y 10 dĂ²ng Ä‘áº§u tiĂªn cá»§a báº£ng SinhVien báº±ng cĂ¢u lá»‡nh nĂ o?",
+                          "options":  {
+                                          "A":  "SELECT FIRST 10 * FROM SinhVien;",
+                                          "B":  "SELECT * FROM SinhVien LIMIT 10;",
+                                          "C":  "SELECT * FROM SinhVien WHERE ROWNUM \u003c= 10;",
+                                          "D":  "SELECT TOP 10 * FROM SinhVien;"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "MySQL dĂ¹ng LIMIT; TOP thuá»™c SQL Server, ROWNUM thuá»™c Oracle, FIRST khĂ´ng pháº£i cĂº phĂ¡p SQL chuáº©n."
+                      },
+                      {
+                          "id":  61,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.1 â€“ SELECT cÆ¡ báº£n, toĂ¡n tá»­ \u0026 LIKE",
+                          "question":  "SELECT TenSV FROM SinhVien WHERE TenSV IS NULL; tráº£ vá» cĂ¡c dĂ²ng nhÆ° tháº¿ nĂ o?",
+                          "options":  {
+                                          "A":  "TenSV khĂ´ng cĂ³ giĂ¡ trá»‹ (NULL)",
+                                          "B":  "TenSV báº±ng chuá»—i rá»—ng \u0027\u0027",
+                                          "C":  "Lá»—i vĂ¬ khĂ´ng so sĂ¡nh NULL Ä‘Æ°á»£c",
+                                          "D":  "TenSV báº±ng chuá»—i \u0027NULL\u0027"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "NULL pháº£i kiá»ƒm tra báº±ng IS NULL / IS NOT NULL; khĂ´ng dĂ¹ng dáº¥u \u0027=\u0027 vĂ¬ NULL khĂ´ng báº±ng gĂ¬ ká»ƒ cáº£ NULL."
+                      },
+                      {
+                          "id":  62,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.1 â€“ SELECT cÆ¡ báº£n, toĂ¡n tá»­ \u0026 LIKE",
+                          "question":  "WHERE (diem \u003e= 5) AND (diem \u003c= 10) tÆ°Æ¡ng Ä‘Æ°Æ¡ng vá»›i Ä‘iá»u kiá»‡n nĂ o dÆ°á»›i Ä‘Ă¢y?",
+                          "options":  {
+                                          "A":  "diem NOT BETWEEN 5 AND 10",
+                                          "B":  "diem IN (5, 10)",
+                                          "C":  "diem LIKE \u00275%\u0027",
+                                          "D":  "diem BETWEEN 5 AND 10"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "BETWEEN 5 AND 10 lĂ  cĂ¡ch viáº¿t gá»n cá»§a (diem \u003e= 5) AND (diem \u003c= 10), bao gá»“m cáº£ hai Ä‘áº§u mĂºt."
+                      },
+                      {
+                          "id":  63,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.2 â€“ HĂ m gom nhĂ³m \u0026 GROUP BY",
+                          "question":  "SELECT SUM(officecode) FROM employees; tráº£ vá» káº¿t quáº£ gĂ¬?",
+                          "options":  {
+                                          "A":  "Tá»•ng cĂ¡c giĂ¡ trá»‹ cá»§a cá»™t officecode",
+                                          "B":  "GiĂ¡ trá»‹ lá»›n nháº¥t cá»§a cá»™t officecode",
+                                          "C":  "GiĂ¡ trá»‹ nhá» nháº¥t cá»§a cá»™t officecode",
+                                          "D":  "Sá»‘ dĂ²ng cá»§a báº£ng employees"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "HĂ m SUM tĂ­nh tá»•ng cĂ¡c giĂ¡ trá»‹ sá»‘ cá»§a cá»™t Ä‘Æ°á»£c chá»‰ Ä‘á»‹nh."
+                      },
+                      {
+                          "id":  64,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.2 â€“ HĂ m gom nhĂ³m \u0026 GROUP BY",
+                          "question":  "Muá»‘n tĂ­nh Ä‘iá»ƒm trung bĂ¬nh cá»§a cá»™t DiemThi, hĂ m Ä‘Ăºng cá»§a MySQL lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "MEAN(DiemThi)",
+                                          "B":  "AVG(DiemThi)",
+                                          "C":  "Average(DiemThi)",
+                                          "D":  "MEDIAN(DiemThi)"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "HĂ m trung bĂ¬nh cá»™ng trong MySQL lĂ  AVG (Average khĂ´ng pháº£i tĂªn hĂ m há»£p lá»‡ cá»§a MySQL); MEDIAN khĂ¡c trung bĂ¬nh cá»™ng."
+                      },
+                      {
+                          "id":  65,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.2 â€“ HĂ m gom nhĂ³m \u0026 GROUP BY",
+                          "question":  "SELECT COUNT(*) FROM employees; tráº£ vá» gĂ¬?",
+                          "options":  {
+                                          "A":  "Sá»‘ giĂ¡ trá»‹ khĂ¡c NULL cá»§a cá»™t Ä‘áº§u tiĂªn",
+                                          "B":  "Tá»•ng cĂ¡c giĂ¡ trá»‹ sá»‘ trong báº£ng",
+                                          "C":  "Tá»•ng sá»‘ cá»™t cá»§a báº£ng employees",
+                                          "D":  "Tá»•ng sá»‘ dĂ²ng cá»§a báº£ng employees"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "COUNT(*) Ä‘áº¿m toĂ n bá»™ sá»‘ dĂ²ng cá»§a báº£ng, khĂ´ng phĂ¢n biá»‡t NULL."
+                      },
+                      {
+                          "id":  66,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.2 â€“ HĂ m gom nhĂ³m \u0026 GROUP BY",
+                          "question":  "HĂ m gom nhĂ³m nĂ o tráº£ vá» giĂ¡ trá»‹ lá»›n nháº¥t cá»§a má»™t cá»™t?",
+                          "options":  {
+                                          "A":  "MAX",
+                                          "B":  "COUNT",
+                                          "C":  "AVG",
+                                          "D":  "SUM"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "MAX tráº£ vá» giĂ¡ trá»‹ lá»›n nháº¥t; SUM lĂ  tá»•ng, COUNT lĂ  sá»‘ lÆ°á»£ng, AVG lĂ  trung bĂ¬nh."
+                      },
+                      {
+                          "id":  67,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.2 â€“ HĂ m gom nhĂ³m \u0026 GROUP BY",
+                          "question":  "HĂ m gom nhĂ³m nĂ o tráº£ vá» giĂ¡ trá»‹ nhá» nháº¥t cá»§a má»™t cá»™t?",
+                          "options":  {
+                                          "A":  "MAX",
+                                          "B":  "AVG",
+                                          "C":  "MIN",
+                                          "D":  "COUNT"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "MIN tráº£ vá» giĂ¡ trá»‹ nhá» nháº¥t trong cá»™t; náº¿u cá»™t rá»—ng káº¿t quáº£ lĂ  NULL."
+                      },
+                      {
+                          "id":  68,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.2 â€“ HĂ m gom nhĂ³m \u0026 GROUP BY",
+                          "question":  "Sá»± khĂ¡c nhau giá»¯a COUNT(cot) vĂ  COUNT(*) lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "COUNT(cot) Ä‘áº¿m cáº£ giĂ¡ trá»‹ NULL",
+                                          "B":  "COUNT(*) bá» qua cĂ¡c dĂ²ng trĂ¹ng láº·p",
+                                          "C":  "KhĂ´ng cĂ³ sá»± khĂ¡c nhau",
+                                          "D":  "COUNT(cot) Ä‘áº¿m sá»‘ giĂ¡ trá»‹ KHĂ”NG NULL cá»§a cá»™t; COUNT(*) Ä‘áº¿m toĂ n bá»™ sá»‘ dĂ²ng"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "COUNT(*) Ä‘áº¿m má»i dĂ²ng; COUNT(cot) chá»‰ Ä‘áº¿m cĂ¡c dĂ²ng cĂ³ giĂ¡ trá»‹ khĂ¡c NULL á»Ÿ cá»™t cot."
+                      },
+                      {
+                          "id":  69,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.2 â€“ HĂ m gom nhĂ³m \u0026 GROUP BY",
+                          "question":  "SELECT Lop, COUNT(*) FROM SinhVien GROUP BY Lop; cho biáº¿t káº¿t quáº£ nĂ o?",
+                          "options":  {
+                                          "A":  "Sá»‘ sinh viĂªn cá»§a tá»«ng lá»›p",
+                                          "B":  "Lá»—i cĂº phĂ¡p",
+                                          "C":  "Tá»•ng sá»‘ sinh viĂªn toĂ n trÆ°á»ng",
+                                          "D":  "Danh sĂ¡ch chi tiáº¿t sinh viĂªn tá»«ng lá»›p"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "GROUP BY Lop chia cĂ¡c dĂ²ng thĂ nh nhĂ³m theo lá»›p; COUNT(*) Ä‘áº¿m sá»‘ dĂ²ng cá»§a tá»«ng nhĂ³m, tá»©c sá»‘ sinh viĂªn má»—i lá»›p."
+                      },
+                      {
+                          "id":  70,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.2 â€“ HĂ m gom nhĂ³m \u0026 GROUP BY",
+                          "question":  "Thá»© tá»± Ä‘Ăºng cá»§a cĂ¡c má»‡nh Ä‘á» trong má»™t cĂ¢u lá»‡nh SELECT cĂ³ Ä‘áº§y Ä‘á»§ lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "HAVING â†’ WHERE â†’ GROUP BY â†’ ORDER BY",
+                                          "B":  "ORDER BY â†’ WHERE â†’ GROUP BY â†’ HAVING",
+                                          "C":  "GROUP BY â†’ WHERE â†’ HAVING â†’ ORDER BY",
+                                          "D":  "WHERE â†’ GROUP BY â†’ HAVING â†’ ORDER BY"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "Thá»© tá»± chuáº©n: SELECT ... FROM ... WHERE ... GROUP BY ... HAVING ... ORDER BY ..."
+                      },
+                      {
+                          "id":  71,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.2 â€“ HĂ m gom nhĂ³m \u0026 GROUP BY",
+                          "question":  "CĂ¢u lá»‡nh SELECT DiemThi1, DiemThi2 FROM MonHoc GROUP BY DiemThi1 WHERE DiemThi1 \u003e 4; cĂ³ thá»±c thi Ä‘Æ°á»£c khĂ´ng? VĂ¬ sao?",
+                          "options":  {
+                                          "A":  "KhĂ´ng, vĂ¬ sai tĂªn báº£ng MonHoc",
+                                          "B":  "KhĂ´ng, vĂ¬ má»‡nh Ä‘á» WHERE pháº£i Ä‘á»©ng TRÆ¯á»C GROUP BY",
+                                          "C":  "CĂ³, cĂ¢u lá»‡nh hoĂ n toĂ n Ä‘Ăºng",
+                                          "D":  "KhĂ´ng, vĂ¬ thiáº¿u má»‡nh Ä‘á» SELECT"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "Trong MySQL, WHERE pháº£i Ä‘á»©ng trÆ°á»›c GROUP BY; Ä‘iá»u kiá»‡n lá»c theo nhĂ³m sau khi gom nhĂ³m pháº£i dĂ¹ng HAVING."
+                      },
+                      {
+                          "id":  72,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.2 â€“ HĂ m gom nhĂ³m \u0026 GROUP BY",
+                          "question":  "Má»‡nh Ä‘á» HAVING dĂ¹ng Ä‘á»ƒ lĂ m gĂ¬?",
+                          "options":  {
+                                          "A":  "Thay tháº¿ hoĂ n toĂ n cho WHERE",
+                                          "B":  "Sáº¯p xáº¿p káº¿t quáº£ truy váº¥n",
+                                          "C":  "Lá»c cĂ¡c dĂ²ng trÆ°á»›c khi gom nhĂ³m",
+                                          "D":  "Lá»c cĂ¡c NHĂ“M sau GROUP BY theo Ä‘iá»u kiá»‡n (thÆ°á»ng chá»©a hĂ m gom nhĂ³m)"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "HAVING lá»c theo Ä‘iá»u kiá»‡n cá»§a nhĂ³m (vĂ­ dá»¥ COUNT(*) \u003e 10), Ă¡p dá»¥ng sau GROUP BY; WHERE lá»c dĂ²ng trÆ°á»›c khi gom nhĂ³m."
+                      },
+                      {
+                          "id":  73,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.3 â€“ Subquery \u0026 JOIN",
+                          "question":  "Subquery xuáº¥t hiá»‡n á»Ÿ má»‡nh Ä‘á» FROM tráº£ vá» káº¿t quáº£ dáº¡ng nĂ o?",
+                          "options":  {
+                                          "A":  "Má»™t cá»™t thuá»™c tĂ­nh",
+                                          "B":  "Má»™t kiá»ƒu dá»¯ liá»‡u",
+                                          "C":  "Má»™t báº£ng (derived table â€“ báº£ng dáº«n xuáº¥t)",
+                                          "D":  "Má»™t giĂ¡ trá»‹ Ä‘Æ¡n"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "Subquery trong FROM pháº£i tráº£ vá» má»™t táº­p dĂ²ng, Ä‘Æ°á»£c MySQL coi nhÆ° báº£ng táº¡m (derived table) Ä‘á»ƒ truy váº¥n tiáº¿p."
+                      },
+                      {
+                          "id":  74,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.3 â€“ Subquery \u0026 JOIN",
+                          "question":  "Subquery dĂ¹ng vá»›i toĂ¡n tá»­ \u0027=\u0027 trong má»‡nh Ä‘á» WHERE pháº£i tráº£ vá» dáº¡ng gĂ¬?",
+                          "options":  {
+                                          "A":  "Nhiá»u cá»™t cĂ¹ng lĂºc",
+                                          "B":  "Má»™t báº£ng nhiá»u dĂ²ng",
+                                          "C":  "GiĂ¡ trá»‹ NULL luĂ´n",
+                                          "D":  "Má»™t giĂ¡ trá»‹ Ä‘Æ¡n (scalar)"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "PhĂ©p so sĂ¡nh \u0027=\u0027 yĂªu cáº§u má»™t giĂ¡ trá»‹ duy nháº¥t; náº¿u subquery tráº£ vá» nhiá»u dĂ²ng sáº½ bĂ¡o lá»—i, pháº£i dĂ¹ng IN, ANY, ALL..."
+                      },
+                      {
+                          "id":  75,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.3 â€“ Subquery \u0026 JOIN",
+                          "question":  "Subquery dĂ¹ng vá»›i tá»« khoĂ¡ IN trong WHERE tráº£ vá» dáº¡ng dá»¯ liá»‡u nĂ o?",
+                          "options":  {
+                                          "A":  "Má»™t báº£ng nhiá»u cá»™t",
+                                          "B":  "Danh sĂ¡ch cĂ¡c giĂ¡ trá»‹ (má»™t cá»™t, nhiá»u dĂ²ng)",
+                                          "C":  "Má»™t giĂ¡ trá»‹ Ä‘Æ¡n",
+                                          "D":  "KhĂ´ng Ä‘Æ°á»£c phĂ©p dĂ¹ng IN vá»›i subquery"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "IN kiá»ƒm tra giĂ¡ trá»‹ cĂ³ náº±m trong táº­p há»£p; subquery tráº£ vá» má»™t cá»™t nhiá»u dĂ²ng lĂ  dáº¡ng phĂ¹ há»£p nháº¥t."
+                      },
+                      {
+                          "id":  76,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.3 â€“ Subquery \u0026 JOIN",
+                          "question":  "INNER JOIN báº£ng A vá»›i báº£ng B cĂ³ Ă½ nghÄ©a gĂ¬?",
+                          "options":  {
+                                          "A":  "Láº¥y toĂ n bá»™ dĂ²ng cá»§a B báº¥t ká»ƒ khá»›p hay khĂ´ng",
+                                          "B":  "Láº¥y toĂ n bá»™ dĂ²ng cá»§a cáº£ hai báº£ng (tĂ­ch Äá» cĂ¡c)",
+                                          "C":  "Láº¥y toĂ n bá»™ dĂ²ng cá»§a A báº¥t ká»ƒ khá»›p hay khĂ´ng",
+                                          "D":  "Tráº£ vá» pháº§n chung: chá»‰ cĂ¡c dĂ²ng cá»§a A vĂ  B thoáº£ Ä‘iá»u kiá»‡n ná»‘i"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "INNER JOIN chá»‰ giá»¯ cĂ¡c cáº·p dĂ²ng thoáº£ Ä‘iá»u kiá»‡n ná»‘i giá»¯a hai báº£ng; dĂ²ng khĂ´ng cĂ³ cáº·p tÆ°Æ¡ng á»©ng sáº½ bá»‹ loáº¡i."
+                      },
+                      {
+                          "id":  77,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.3 â€“ Subquery \u0026 JOIN",
+                          "question":  "LEFT JOIN báº£ng A vá»›i báº£ng B tráº£ vá» gĂ¬?",
+                          "options":  {
+                                          "A":  "ToĂ n bá»™ dĂ²ng cá»§a B",
+                                          "B":  "ToĂ n bá»™ dĂ²ng cá»§a A, ghĂ©p cĂ¡c dĂ²ng khá»›p cá»§a B (khĂ´ng khá»›p thĂ¬ pháº§n B lĂ  NULL)",
+                                          "C":  "CĂ¡c dĂ²ng chá»‰ cĂ³ á»Ÿ B",
+                                          "D":  "Chá»‰ cĂ¡c dĂ²ng khá»›p giá»¯a A vĂ  B"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "LEFT JOIN giá»¯ nguyĂªn toĂ n bá»™ dĂ²ng bĂªn trĂ¡i (A); dĂ²ng khĂ´ng tĂ¬m tháº¥y cáº·p á»Ÿ B sáº½ cĂ³ giĂ¡ trá»‹ NULL á»Ÿ cĂ¡c cá»™t cá»§a B."
+                      },
+                      {
+                          "id":  78,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.3 â€“ Subquery \u0026 JOIN",
+                          "question":  "RIGHT JOIN báº£ng A vá»›i báº£ng B tráº£ vá» gĂ¬?",
+                          "options":  {
+                                          "A":  "ToĂ n bá»™ dĂ²ng cá»§a B, ghĂ©p cĂ¡c dĂ²ng khá»›p cá»§a A (khĂ´ng khá»›p thĂ¬ pháº§n A lĂ  NULL)",
+                                          "B":  "ToĂ n bá»™ dĂ²ng cá»§a A",
+                                          "C":  "Chá»‰ cĂ¡c dĂ²ng khá»›p giá»¯a A vĂ  B",
+                                          "D":  "CĂ¡c dĂ²ng chá»‰ cĂ³ á»Ÿ A"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "RIGHT JOIN giá»¯ toĂ n bá»™ dĂ²ng bĂªn pháº£i (B); Ä‘Ă¢y lĂ  phĂ©p Ä‘á»‘i xá»©ng cá»§a LEFT JOIN."
+                      },
+                      {
+                          "id":  79,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.3 â€“ Subquery \u0026 JOIN",
+                          "question":  "CROSS JOIN (tĂ­ch Äá» cĂ¡c) báº£ng A cĂ³ m dĂ²ng vá»›i báº£ng B cĂ³ n dĂ²ng cho káº¿t quáº£ bao nhiĂªu dĂ²ng?",
+                          "options":  {
+                                          "A":  "m + n dĂ²ng",
+                                          "B":  "max(m, n) dĂ²ng",
+                                          "C":  "min(m, n) dĂ²ng",
+                                          "D":  "m Ă— n dĂ²ng"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "TĂ­ch Äá» cĂ¡c ghĂ©p má»—i dĂ²ng cá»§a A vá»›i má»i dĂ²ng cá»§a B nĂªn tá»•ng sá»‘ dĂ²ng lĂ  tĂ­ch m Ă— n."
+                      },
+                      {
+                          "id":  80,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.3 â€“ Subquery \u0026 JOIN",
+                          "question":  "SELECT * FROM Lop, SinhVien; (khĂ´ng cĂ³ má»‡nh Ä‘á» WHERE) tráº£ vá» gĂ¬?",
+                          "options":  {
+                                          "A":  "TĂ­ch Äá» cĂ¡c cá»§a hai báº£ng (má»i cáº·p dĂ²ng)",
+                                          "B":  "Lá»—i cĂº phĂ¡p",
+                                          "C":  "Tá»•ng há»£p cĂ¡c dĂ²ng giá»‘ng nhau",
+                                          "D":  "Pháº§n giao cá»§a hai báº£ng"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "Liá»‡t kĂª nhiá»u báº£ng trong FROM khĂ´ng cĂ³ Ä‘iá»u kiá»‡n ná»‘i táº¡o ra tĂ­ch Äá» cĂ¡c; thá»±c táº¿ thÆ°á»ng pháº£i kĂ¨m Ä‘iá»u kiá»‡n ná»‘i trong WHERE."
+                      },
+                      {
+                          "id":  81,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.3 â€“ Subquery \u0026 JOIN",
+                          "question":  "Trong MySQL, cĂ³ thá»ƒ JOIN má»™t View vá»›i má»™t Table khĂ´ng?",
+                          "options":  {
+                                          "A":  "Chá»‰ khi View cĂ³ chá»‰ má»¥c",
+                                          "B":  "KhĂ´ng, View khĂ´ng tham gia JOIN Ä‘Æ°á»£c",
+                                          "C":  "CĂ³, vĂ¬ View lĂ  báº£ng áº£o nĂªn dĂ¹ng Ä‘Æ°á»£c nhÆ° má»™t báº£ng trong cĂ¢u lá»‡nh JOIN",
+                                          "D":  "Chá»‰ JOIN Ä‘Æ°á»£c View vá»›i View"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "View lĂ  báº£ng áº£o (lÆ°u cĂ¢u truy váº¥n), báº£n thĂ¢n nĂ³ tráº£ vá» má»™t táº­p dĂ²ng nĂªn hoĂ n toĂ n cĂ³ thá»ƒ JOIN vá»›i báº£ng tháº­t."
+                      },
+                      {
+                          "id":  82,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.3 â€“ Subquery \u0026 JOIN",
+                          "question":  "SELECT * FROM Lop WHERE Lop.col1 = SinhVien.col1; (giáº£ sá»­ chá»‰ cĂ³ báº£ng Lop trong FROM) â€“ cĂ¢u lá»‡nh nĂ y tháº¿ nĂ o?",
+                          "options":  {
+                                          "A":  "Thá»±c thi Ä‘Æ°á»£c vĂ  tá»± Ä‘á»™ng thá»±c hiá»‡n JOIN",
+                                          "B":  "Thá»±c thi Ä‘Æ°á»£c vĂ  tráº£ vá» cĂ¡c dĂ²ng cĂ³ col1 báº±ng nhau",
+                                          "C":  "KhĂ´ng thá»±c thi Ä‘Æ°á»£c vĂ¬ báº£ng SinhVien khĂ´ng cĂ³ trong FROM nĂªn cá»™t SinhVien.col1 khĂ´ng tá»“n táº¡i trong pháº¡m vi truy váº¥n",
+                                          "D":  "Thá»±c thi Ä‘Æ°á»£c nhÆ°ng luĂ´n tráº£ vá» báº£ng rá»—ng"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "MySQL chá»‰ nháº­n biáº¿t cĂ¡c báº£ng khai bĂ¡o trong FROM; SinhVien khĂ´ng cĂ³ á»Ÿ Ä‘Ă³ nĂªn bĂ¡o lá»—i Unknown column \u0027SinhVien.col1\u0027."
+                      },
+                      {
+                          "id":  83,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.4 â€“ DDL \u0026 DML",
+                          "question":  "CĂ¢u lá»‡nh táº¡o cÆ¡ sá»Ÿ dá»¯ liá»‡u tĂªn CSDL lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "CREATE DATABASE CSDL;",
+                                          "B":  "CREATE TABLE CSDL;",
+                                          "C":  "MAKE DATABASE CSDL;",
+                                          "D":  "NEW DATABASE CSDL;"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "DDL táº¡o CSDL dĂ¹ng CREATE DATABASE tĂªn_csdl; cĂ²n CREATE TABLE dĂ¹ng Ä‘á»ƒ táº¡o báº£ng."
+                      },
+                      {
+                          "id":  84,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.4 â€“ DDL \u0026 DML",
+                          "question":  "CĂ¢u lá»‡nh xoĂ¡ (ká»ƒ cáº£ toĂ n bá»™ dá»¯ liá»‡u bĂªn trong) cÆ¡ sá»Ÿ dá»¯ liá»‡u tĂªn CSDL lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "DROP DATABASE CSDL;",
+                                          "B":  "REMOVE DATABASE CSDL;",
+                                          "C":  "DROP TABLE CSDL;",
+                                          "D":  "DELETE DATABASE CSDL;"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "DROP DATABASE xoĂ¡ toĂ n bá»™ CSDL gá»“m má»i báº£ng vĂ  dá»¯ liá»‡u; lá»‡nh nĂ y khĂ´ng thá»ƒ hoĂ n tĂ¡c."
+                      },
+                      {
+                          "id":  85,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.4 â€“ DDL \u0026 DML",
+                          "question":  "Äá»ƒ thĂªm dá»¯ liá»‡u vĂ o má»™t báº£ng, dĂ¹ng cĂ¢u lá»‡nh nĂ o?",
+                          "options":  {
+                                          "A":  "UPDATE ...",
+                                          "B":  "INSERT INTO ...",
+                                          "C":  "DELETE FROM ...",
+                                          "D":  "SELECT ..."
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "INSERT dĂ¹ng Ä‘á»ƒ thĂªm dĂ²ng má»›i; UPDATE sá»­a dá»¯ liá»‡u; DELETE xoĂ¡ dá»¯ liá»‡u; SELECT truy váº¥n."
+                      },
+                      {
+                          "id":  86,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.4 â€“ DDL \u0026 DML",
+                          "question":  "Äá»ƒ sá»­a giĂ¡ trá»‹ cá»§a má»™t sá»‘ dĂ²ng trong báº£ng theo Ä‘iá»u kiá»‡n, dĂ¹ng cĂ¢u lá»‡nh nĂ o?",
+                          "options":  {
+                                          "A":  "UPDATE bang SET cot = gia_tri WHERE dieu_kien;",
+                                          "B":  "CREATE TABLE bang ...;",
+                                          "C":  "SELECT cot FROM bang WHERE dieu_kien;",
+                                          "D":  "INSERT INTO bang VALUES (...);"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "UPDATE ... SET ... WHERE ... cáº­p nháº­t giĂ¡ trá»‹ cĂ¡c dĂ²ng thoáº£ Ä‘iá»u kiá»‡n; thiáº¿u WHERE sáº½ sá»­a toĂ n bá»™ báº£ng."
+                      },
+                      {
+                          "id":  87,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.4 â€“ DDL \u0026 DML",
+                          "question":  "Sá»± khĂ¡c nhau giá»¯a DELETE FROM Bang; (khĂ´ng WHERE) vĂ  TRUNCATE TABLE Bang; trong MySQL lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "TRUNCATE khĂ´ng xoĂ¡ Ä‘Æ°á»£c dá»¯ liá»‡u",
+                                          "B":  "DELETE xoĂ¡ luĂ´n cáº¥u trĂºc báº£ng",
+                                          "C":  "Hai lá»‡nh giá»‘ng há»‡t nhau",
+                                          "D":  "TRUNCATE xoĂ¡ toĂ n bá»™ dĂ²ng nhanh hÆ¡n vĂ  khĂ´ng ghi log tá»«ng dĂ²ng; DELETE xoĂ¡ tá»«ng dĂ²ng, cĂ³ thá»ƒ kĂ¨m WHERE"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "TRUNCATE xoĂ¡ toĂ n bá»™ dĂ²ng theo kiá»ƒu tháº£ báº£ng rá»“i táº¡o láº¡i â€“ nhanh, khĂ´ng kĂ­ch hoáº¡t trigger; DELETE xoĂ¡ tá»«ng dĂ²ng, cĂ³ Ä‘iá»u kiá»‡n vĂ  kĂ­ch hoáº¡t trigger."
+                      },
+                      {
+                          "id":  88,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.4 â€“ DDL \u0026 DML",
+                          "question":  "KhĂ¡c biá»‡t chĂ­nh giá»¯a DROP TABLE Bang; vĂ  DELETE FROM Bang; lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Cáº£ hai Ä‘á»u xoĂ¡ cáº¥u trĂºc báº£ng",
+                                          "B":  "Cáº£ hai Ä‘á»u chá»‰ xoĂ¡ dá»¯ liá»‡u",
+                                          "C":  "DROP TABLE xoĂ¡ toĂ n bá»™ cáº¥u trĂºc vĂ  dá»¯ liá»‡u cá»§a báº£ng; DELETE FROM chá»‰ xoĂ¡ dá»¯ liá»‡u (dĂ²ng), báº£ng váº«n cĂ²n",
+                                          "D":  "DROP TABLE chá»‰ xoĂ¡ dá»¯ liá»‡u"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "DROP TABLE lĂ  DDL xoĂ¡ vÄ©nh viá»…n báº£ng; DELETE FROM lĂ  DML xoĂ¡ dĂ²ng, báº£ng vĂ  lÆ°á»£c Ä‘á»“ váº«n tá»“n táº¡i."
+                      },
+                      {
+                          "id":  89,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.4 â€“ DDL \u0026 DML",
+                          "question":  "CREATE TABLE temp_SinhVien1 LIKE SinhVien; táº¡o ra báº£ng temp_SinhVien1 nhÆ° tháº¿ nĂ o?",
+                          "options":  {
+                                          "A":  "Lá»‡nh khĂ´ng thá»±c thi Ä‘Æ°á»£c",
+                                          "B":  "Giá»‘ng há»‡t cáº¥u trĂºc báº£ng SinhVien (ká»ƒ cáº£ khoĂ¡, chá»‰ má»¥c) nhÆ°ng KHĂ”NG chá»©a dá»¯ liá»‡u",
+                                          "C":  "Má»™t báº£ng trá»‘ng khĂ´ng cĂ³ cá»™t nĂ o",
+                                          "D":  "Giá»‘ng cáº¥u trĂºc vĂ  kĂ¨m toĂ n bá»™ dá»¯ liá»‡u cá»§a SinhVien"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "CREATE TABLE ... LIKE ... chá»‰ sao chĂ©p cáº¥u trĂºc (cá»™t, rĂ ng buá»™c, chá»‰ má»¥c), khĂ´ng sao chĂ©p dá»¯ liá»‡u."
+                      },
+                      {
+                          "id":  90,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.4 â€“ DDL \u0026 DML",
+                          "question":  "CREATE TABLE temp_SinhVien2 AS (SELECT * FROM SinhVien); táº¡o ra báº£ng temp_SinhVien2 nhÆ° tháº¿ nĂ o?",
+                          "options":  {
+                                          "A":  "Táº¡o báº£ng trá»‘ng khĂ´ng cá»™t",
+                                          "B":  "KhĂ´ng thá»ƒ táº¡o báº£ng báº±ng cĂ¡ch nĂ y",
+                                          "C":  "Táº¡o báº£ng má»›i cĂ³ cáº¥u trĂºc theo káº¿t quáº£ SELECT vĂ  sao chĂ©p toĂ n bá»™ dá»¯ liá»‡u vĂ o",
+                                          "D":  "Chá»‰ táº¡o cáº¥u trĂºc, khĂ´ng cĂ³ dá»¯ liá»‡u"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "CREATE TABLE ... AS SELECT vá»«a táº¡o báº£ng vá»«a chĂ¨n toĂ n bá»™ káº¿t quáº£ truy váº¥n; tuy nhiĂªn nĂ³ khĂ´ng tá»± Ä‘á»™ng sao chĂ©p khoĂ¡ chĂ­nh/chá»‰ má»¥c."
+                      },
+                      {
+                          "id":  91,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.4 â€“ DDL \u0026 DML",
+                          "question":  "So sĂ¡nh hai báº£ng táº¡o bá»Ÿi CREATE TABLE ... LIKE vĂ  CREATE TABLE ... AS SELECT tá»« cĂ¹ng báº£ng SinhVien, nháº­n xĂ©t nĂ o Ä‘Ăºng?",
+                          "options":  {
+                                          "A":  "Báº£ng LIKE cĂ³ dá»¯ liá»‡u, báº£ng AS SELECT rá»—ng",
+                                          "B":  "Cáº£ hai Ä‘á»u rá»—ng",
+                                          "C":  "Báº£ng LIKE giá»¯ nguyĂªn khoĂ¡ chĂ­nh/ chá»‰ má»¥c nhÆ°ng rá»—ng; báº£ng AS SELECT cĂ³ dá»¯ liá»‡u nhÆ°ng khĂ´ng tá»± Ä‘á»™ng cĂ³ khoĂ¡ chĂ­nh/ chá»‰ má»¥c",
+                                          "D":  "Cáº£ hai Ä‘á»u cĂ³ dá»¯ liá»‡u"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "LIKE sao chĂ©p cáº¥u trĂºc Ä‘áº§y Ä‘á»§ (kĂ¨m rĂ ng buá»™c) khĂ´ng dá»¯ liá»‡u; AS SELECT cĂ³ dá»¯ liá»‡u nhÆ°ng khĂ´ng káº¿ thá»«a rĂ ng buá»™c khoĂ¡."
+                      },
+                      {
+                          "id":  92,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.4 â€“ DDL \u0026 DML",
+                          "question":  "Tá»« khoĂ¡ nĂ o dĂ¹ng Ä‘á»ƒ xĂ¡c Ä‘á»‹nh khoĂ¡ chĂ­nh cá»§a thuá»™c tĂ­nh khi táº¡o báº£ng trong MySQL?",
+                          "options":  {
+                                          "A":  "FOREIGN KEY",
+                                          "B":  "UNIQUE",
+                                          "C":  "PRIMARY KEY",
+                                          "D":  "INDEX"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "PRIMARY KEY khai bĂ¡o khoĂ¡ chĂ­nh (duy nháº¥t, khĂ´ng NULL); FOREIGN KEY lĂ  khoĂ¡ ngoáº¡i; UNIQUE lĂ  rĂ ng buá»™c duy nháº¥t."
+                      },
+                      {
+                          "id":  93,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.5 â€“ View, Trigger, Stored Procedure \u0026 Function",
+                          "question":  "Trong MySQL, Ä‘á»‘i tÆ°á»£ng nĂ o LUĂ”N tráº£ vá» má»™t giĂ¡ trá»‹ khi Ä‘Æ°á»£c gá»i?",
+                          "options":  {
+                                          "A":  "Function",
+                                          "B":  "View",
+                                          "C":  "Trigger",
+                                          "D":  "Stored Procedure"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "Function (hĂ m) báº¯t buá»™c tráº£ vá» má»™t giĂ¡ trá»‹ (RETURNS ...); Stored Procedure cĂ³ thá»ƒ khĂ´ng tráº£ vá» giĂ¡ trá»‹, Trigger khĂ´ng Ä‘Æ°á»£c gá»i trá»±c tiáº¿p."
+                      },
+                      {
+                          "id":  94,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.5 â€“ View, Trigger, Stored Procedure \u0026 Function",
+                          "question":  "Stored Procedure khĂ¡c Function á»Ÿ Ä‘iá»ƒm nĂ o?",
+                          "options":  {
+                                          "A":  "Function khĂ´ng dĂ¹ng Ä‘Æ°á»£c trong SELECT",
+                                          "B":  "Procedure luĂ´n tráº£ vá» má»™t giĂ¡ trá»‹",
+                                          "C":  "KhĂ´ng cĂ³ sá»± khĂ¡c nhau",
+                                          "D":  "Procedure cĂ³ thá»ƒ khĂ´ng tráº£ vá» giĂ¡ trá»‹, dĂ¹ng CALL Ä‘á»ƒ gá»i; Function luĂ´n tráº£ vá» má»™t giĂ¡ trá»‹ vĂ  dĂ¹ng trong biá»ƒu thá»©c"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "Stored Procedure gá»i báº±ng CALL, cĂ³ thá»ƒ nháº­n tham sá»‘ IN/OUT/INOUT vĂ  khĂ´ng báº¯t buá»™c tráº£ vá»; Function tráº£ vá» má»™t giĂ¡ trá»‹ vĂ  dĂ¹ng Ä‘Æ°á»£c trong biá»ƒu thá»©c SELECT."
+                      },
+                      {
+                          "id":  95,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.5 â€“ View, Trigger, Stored Procedure \u0026 Function",
+                          "question":  "View trong MySQL Ä‘Æ°á»£c hiá»ƒu lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Má»™t loáº¡i chá»‰ má»¥c",
+                                          "B":  "Báº£ng áº£o Ä‘Æ°á»£c Ä‘á»‹nh nghÄ©a bá»Ÿi má»™t cĂ¢u lá»‡nh SELECT, khĂ´ng tá»± lÆ°u trá»¯ dá»¯ liá»‡u",
+                                          "C":  "Báº£ng tháº­t lÆ°u dá»¯ liá»‡u trĂªn Ä‘Ä©a",
+                                          "D":  "Má»™t báº£ng táº¡m chá»‰ dĂ¹ng trong má»™t phiĂªn"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "View khĂ´ng chá»©a dá»¯ liá»‡u váº­t lĂ½; má»—i láº§n truy váº¥n nĂ³ thá»±c thi cĂ¢u lá»‡nh SELECT Ä‘á»‹nh nghÄ©a nĂªn cĂ³ thá»ƒ xem nhÆ° báº£ng áº£o."
+                      },
+                      {
+                          "id":  96,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.5 â€“ View, Trigger, Stored Procedure \u0026 Function",
+                          "question":  "Táº¡o View tá»« báº£ng SinhVien, sau Ä‘Ă³ DROP VIEW. Dá»¯ liá»‡u báº£ng SinhVien cĂ³ bá»‹ máº¥t khĂ´ng?",
+                          "options":  {
+                                          "A":  "CĂ³, toĂ n bá»™ dá»¯ liá»‡u báº£ng SinhVien bá»‹ xoĂ¡ theo",
+                                          "B":  "KhĂ´ng, nhÆ°ng báº£ng SinhVien bá»‹ máº¥t cáº¥u trĂºc",
+                                          "C":  "CĂ³, chá»‰ pháº§n dá»¯ liá»‡u mĂ  View hiá»ƒn thá»‹ bá»‹ xoĂ¡",
+                                          "D":  "KhĂ´ng, vĂ¬ View chá»‰ lĂ  báº£ng áº£o khĂ´ng lÆ°u dá»¯ liá»‡u; xoĂ¡ View khĂ´ng áº£nh hÆ°á»Ÿng báº£ng gá»‘c"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "View chá»‰ lÆ°u cĂ¢u truy váº¥n Ä‘á»‹nh nghÄ©a; DROP VIEW chá»‰ xoĂ¡ Ä‘á»‹nh nghÄ©a View, dá»¯ liá»‡u trong báº£ng gá»‘c váº«n nguyĂªn váº¹n."
+                      },
+                      {
+                          "id":  97,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.5 â€“ View, Trigger, Stored Procedure \u0026 Function",
+                          "question":  "Trigger lĂ  gĂ¬ trong cÆ¡ sá»Ÿ dá»¯ liá»‡u?",
+                          "options":  {
+                                          "A":  "Má»™t rĂ ng buá»™c khoĂ¡ ngoáº¡i",
+                                          "B":  "Má»™t báº£ng áº£o",
+                                          "C":  "Äá»‘i tÆ°á»£ng tá»± Ä‘á»™ng thá»±c thi khi xáº£y ra sá»± kiá»‡n (INSERT, UPDATE, DELETE) trĂªn báº£ng",
+                                          "D":  "Má»™t hĂ m tráº£ vá» giĂ¡ trá»‹"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "Trigger gáº¯n vá»›i báº£ng vĂ  tá»± Ä‘á»™ng kĂ­ch hoáº¡t trÆ°á»›c/sau cĂ¡c sá»± kiá»‡n DML (BEFORE/AFTER INSERT, UPDATE, DELETE)."
+                      },
+                      {
+                          "id":  98,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.5 â€“ View, Trigger, Stored Procedure \u0026 Function",
+                          "question":  "Trong MySQL, trigger cĂ³ thá»ƒ Ä‘Æ°á»£c khai bĂ¡o kĂ­ch hoáº¡t vĂ o nhá»¯ng thá»i Ä‘iá»ƒm nĂ o?",
+                          "options":  {
+                                          "A":  "Chá»‰ AFTER INSERT",
+                                          "B":  "BEFORE hoáº·c AFTER cĂ¡c sá»± kiá»‡n INSERT, UPDATE, DELETE",
+                                          "C":  "Báº¥t ká»³ lĂºc nĂ o ngÆ°á»i dĂ¹ng muá»‘n",
+                                          "D":  "Chá»‰ BEFORE SELECT"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "MySQL há»— trá»£ trigger BEFORE/AFTER + INSERT/UPDATE/DELETE, tá»•ng cá»™ng 6 kiá»ƒu báº¯t Ä‘áº§u báº±ng hai tĂªn nĂ y."
+                      },
+                      {
+                          "id":  99,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.5 â€“ View, Trigger, Stored Procedure \u0026 Function",
+                          "question":  "Trong trigger BEFORE INSERT, tá»« khoĂ¡ NEW dĂ¹ng Ä‘á»ƒ lĂ m gĂ¬?",
+                          "options":  {
+                                          "A":  "Khai bĂ¡o biáº¿n cá»¥c bá»™",
+                                          "B":  "Gá»i má»™t stored procedure",
+                                          "C":  "Tham chiáº¿u Ä‘áº¿n dĂ²ng cÅ© trÆ°á»›c khi sá»­a",
+                                          "D":  "Tham chiáº¿u Ä‘áº¿n dĂ²ng dá»¯ liá»‡u má»›i Ä‘ang Ä‘Æ°á»£c chĂ¨n (NEW.cot)"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "NEW cho phĂ©p truy cáº­p/ sá»­a giĂ¡ trá»‹ cá»§a dĂ²ng má»›i trong trigger INSERT vĂ  UPDATE; OLD dĂ¹ng cho dĂ²ng cÅ© trong UPDATE/DELETE."
+                      },
+                      {
+                          "id":  100,
+                          "chapter":  "Pháº§n 2",
+                          "sourceChapter":  "NhĂ³m 2.5 â€“ View, Trigger, Stored Procedure \u0026 Function",
+                          "question":  "Cho trigger BEFORE INSERT trĂªn báº£ng DiemThi: IF NEW.diem \u003c 5 THEN SIGNAL ... END IF. Khi INSERT dĂ²ng cĂ³ diem = 100, Ä‘iá»u gĂ¬ xáº£y ra?",
+                          "options":  {
+                                          "A":  "Trigger tá»± sá»­a diem thĂ nh 5",
+                                          "B":  "INSERT thĂ nh cĂ´ng vĂ¬ 100 khĂ´ng nhá» hÆ¡n 5 nĂªn Ä‘iá»u kiá»‡n IF khĂ´ng thoáº£, trigger khĂ´ng cháº·n",
+                                          "C":  "INSERT tháº¥t báº¡i vĂ¬ 100 vÆ°á»£t ngÆ°á»¡ng",
+                                          "D":  "Trigger bĂ¡o lá»—i vĂ¬ 100 \u003e 5"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "Äiá»u kiá»‡n cháº·n trong trigger lĂ  diem \u003c 5; vá»›i diem = 100 Ä‘iá»u kiá»‡n sai nĂªn SIGNAL khĂ´ng Ä‘Æ°á»£c gá»i, dĂ²ng Ä‘Æ°á»£c chĂ¨n bĂ¬nh thÆ°á»ng."
+                      },
+                      {
+                          "id":  101,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.1 â€“ Giao dá»‹ch (Transaction) \u0026 ACID",
+                          "question":  "Giao dá»‹ch (transaction) trong cÆ¡ sá»Ÿ dá»¯ liá»‡u Ä‘Æ°á»£c hiá»ƒu lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Má»™t báº£ng táº¡m lÆ°u káº¿t quáº£",
+                                          "B":  "Má»™t cĂ¢u lá»‡nh SELECT báº¥t ká»³",
+                                          "C":  "Má»™t chá»‰ má»¥c trĂªn báº£ng",
+                                          "D":  "Má»™t chuá»—i cĂ¡c thao tĂ¡c dá»¯ liá»‡u Ä‘Æ°á»£c thá»±c hiá»‡n nhÆ° má»™t Ä‘Æ¡n vá»‹ khĂ´ng thá»ƒ tĂ¡ch rá»i (hoáº·c thá»±c hiá»‡n háº¿t, hoáº·c khĂ´ng thá»±c hiá»‡n gĂ¬)"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "Giao dá»‹ch nhĂ³m cĂ¡c thao tĂ¡c (INSERT/UPDATE/DELETE...) thĂ nh má»™t thao tĂ¡c logic: náº¿u má»™t bÆ°á»›c lá»—i, toĂ n bá»™ giao dá»‹ch bá»‹ há»§y (ROLLBACK)."
+                      },
+                      {
+                          "id":  102,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.1 â€“ Giao dá»‹ch (Transaction) \u0026 ACID",
+                          "question":  "TĂ­nh nguyĂªn tá»­ (Atomicity) cá»§a giao dá»‹ch nghÄ©a lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Giao dá»‹ch cháº¡y Ä‘á»™c láº­p vá»›i nhau",
+                                          "B":  "Giao dá»‹ch khĂ´ng bao giá» bá»‹ lá»—i",
+                                          "C":  "ToĂ n bá»™ giao dá»‹ch hoáº·c thá»±c hiá»‡n trá»n váº¹n, hoáº·c khĂ´ng cĂ³ thao tĂ¡c nĂ o Ä‘Æ°á»£c ghi nháº­n",
+                                          "D":  "Dá»¯ liá»‡u Ä‘Æ°á»£c lÆ°u vÄ©nh viá»…n sau khi káº¿t thĂºc"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "Atomicity Ä‘áº£m báº£o khĂ´ng cĂ³ tráº¡ng thĂ¡i â€œná»­a chá»«ngâ€: há»ng á»Ÿ bÆ°á»›c nĂ o thĂ¬ má»i bÆ°á»›c Ä‘á»u bá»‹ hoĂ n tĂ¡c."
+                      },
+                      {
+                          "id":  103,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.1 â€“ Giao dá»‹ch (Transaction) \u0026 ACID",
+                          "question":  "TĂ­nh nháº¥t quĂ¡n (Consistency) cá»§a giao dá»‹ch nghÄ©a lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Dá»¯ liá»‡u khĂ´ng bao giá» Ä‘á»•i",
+                                          "B":  "Giao dá»‹ch chá»‰ Ä‘á»c dá»¯ liá»‡u",
+                                          "C":  "Giao dá»‹ch Ä‘Æ°á»£c thá»±c thi nhanh",
+                                          "D":  "Giao dá»‹ch Ä‘Æ°a cÆ¡ sá»Ÿ dá»¯ liá»‡u tá»« tráº¡ng thĂ¡i nháº¥t quĂ¡n nĂ y sang tráº¡ng thĂ¡i nháº¥t quĂ¡n khĂ¡c, má»i rĂ ng buá»™c toĂ n váº¹n Ä‘Æ°á»£c thoáº£"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "Sau khi giao dá»‹ch káº¿t thĂºc, má»i rĂ ng buá»™c (khoĂ¡, duy nháº¥t, khĂ´ng NULL...) Ä‘á»u cĂ²n Ä‘Æ°á»£c Ä‘áº£m báº£o â€“ CSDL nháº¥t quĂ¡n."
+                      },
+                      {
+                          "id":  104,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.1 â€“ Giao dá»‹ch (Transaction) \u0026 ACID",
+                          "question":  "TĂ­nh cĂ´ láº­p (Isolation) cá»§a giao dá»‹ch nghÄ©a lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Há»‡ thá»‘ng chá»‰ cho phĂ©p má»™t giao dá»‹ch táº¡i má»™t thá»i Ä‘iá»ƒm",
+                                          "B":  "Má»—i giao dá»‹ch dĂ¹ng má»™t cÆ¡ sá»Ÿ dá»¯ liá»‡u riĂªng",
+                                          "C":  "CĂ¡c giao dá»‹ch thá»±c hiá»‡n Ä‘á»“ng thá»i khĂ´ng nhĂ¬n tháº¥y dá»¯ liá»‡u trung gian (chÆ°a commit) cá»§a nhau, á»Ÿ má»©c Ä‘á»™ do má»©c cĂ´ láº­p quy Ä‘á»‹nh",
+                                          "D":  "Má»—i giao dá»‹ch cháº¡y trĂªn má»™t mĂ¡y tĂ­nh riĂªng"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "Isolation ngÄƒn cĂ¡c giao dá»‹ch tÆ°Æ¡ng tĂ¡c theo cĂ¡ch gĂ¢y há»ng dá»¯ liá»‡u; má»©c cĂ´ láº­p (isolation level) quyáº¿t Ä‘á»‹nh má»©c Ä‘á»™ nhĂ¬n tháº¥y láº«n nhau."
+                      },
+                      {
+                          "id":  105,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.1 â€“ Giao dá»‹ch (Transaction) \u0026 ACID",
+                          "question":  "TĂ­nh bá»n vá»¯ng (Durability) cá»§a giao dá»‹ch nghÄ©a lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Sau khi COMMIT, dá»¯ liá»‡u Ä‘Æ°á»£c lÆ°u vÄ©nh viá»…n vĂ  an toĂ n ká»ƒ cáº£ khi há»‡ thá»‘ng gáº·p sá»± cá»‘",
+                                          "B":  "Giao dá»‹ch khĂ´ng thá»ƒ bá»‹ ROLLBACK",
+                                          "C":  "Dá»¯ liá»‡u chá»‰ tá»“n táº¡i trong bá»™ nhá»› RAM",
+                                          "D":  "Báº£ng khĂ´ng thá»ƒ bá»‹ xoĂ¡"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "Durability Ä‘áº£m báº£o káº¿t quáº£ Ä‘Ă£ commit khĂ´ng bá»‹ máº¥t khi máº¥t Ä‘iá»‡n hay sáº­p há»‡ thá»‘ng."
+                      },
+                      {
+                          "id":  106,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.1 â€“ Giao dá»‹ch (Transaction) \u0026 ACID",
+                          "question":  "Lá»‡nh nĂ o dĂ¹ng Ä‘á»ƒ xĂ¡c nháº­n vĂ  lÆ°u vÄ©nh viá»…n (commit) giao dá»‹ch Ä‘ang thá»±c hiá»‡n?",
+                          "options":  {
+                                          "A":  "ROLLBACK",
+                                          "B":  "SAVEPOINT",
+                                          "C":  "BEGIN TRANSACTION",
+                                          "D":  "COMMIT"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "COMMIT káº¿t thĂºc giao dá»‹ch thĂ nh cĂ´ng vĂ  ghi nháº­n vÄ©nh viá»…n má»i thay Ä‘á»•i."
+                      },
+                      {
+                          "id":  107,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.1 â€“ Giao dá»‹ch (Transaction) \u0026 ACID",
+                          "question":  "Lá»‡nh nĂ o dĂ¹ng Ä‘á»ƒ há»§y bá» giao dá»‹ch vĂ  khĂ´i phá»¥c dá»¯ liá»‡u vá» tráº¡ng thĂ¡i trÆ°á»›c khi giao dá»‹ch báº¯t Ä‘áº§u?",
+                          "options":  {
+                                          "A":  "COMMIT",
+                                          "B":  "DELETE",
+                                          "C":  "ROLLBACK",
+                                          "D":  "SAVEPOINT"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "ROLLBACK hoĂ n tĂ¡c toĂ n bá»™ thay Ä‘á»•i chÆ°a commit cá»§a giao dá»‹ch hiá»‡n táº¡i (hoáº·c vá» SAVEPOINT náº¿u cĂ³)."
+                      },
+                      {
+                          "id":  108,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.1 â€“ Giao dá»‹ch (Transaction) \u0026 ACID",
+                          "question":  "Giao dá»‹ch A cáº­p nháº­t dá»¯ liá»‡u chÆ°a COMMIT; giao dá»‹ch B Ä‘á»c Ä‘Æ°á»£c giĂ¡ trá»‹ Ä‘Ă³. Hiá»‡n tÆ°á»£ng nĂ y gá»i lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Äá»c bĂ³ng ma (phantom read)",
+                                          "B":  "Äá»c khĂ´ng láº·p láº¡i (non-repeatable read)",
+                                          "C":  "Äá»c dá»¯ liá»‡u báº©n (dirty read)",
+                                          "D":  "Máº¥t cáº­p nháº­t (lost update)"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "Dirty read xáº£y ra khi má»™t giao dá»‹ch Ä‘á»c dá»¯ liá»‡u do giao dá»‹ch khĂ¡c cáº­p nháº­t nhÆ°ng CHÆ¯A commit."
+                      },
+                      {
+                          "id":  109,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.1 â€“ Giao dá»‹ch (Transaction) \u0026 ACID",
+                          "question":  "Trong cĂ¹ng má»™t giao dá»‹ch, Ä‘á»c má»™t dĂ²ng hai láº§n nhÆ°ng nháº­n hai giĂ¡ trá»‹ khĂ¡c nhau vĂ¬ giao dá»‹ch khĂ¡c Ä‘Ă£ sá»­a vĂ  commit. ÄĂ¢y lĂ  hiá»‡n tÆ°á»£ng gĂ¬?",
+                          "options":  {
+                                          "A":  "Báº¿ táº¯c (deadlock)",
+                                          "B":  "Äá»c bĂ³ng ma (phantom read)",
+                                          "C":  "Äá»c dá»¯ liá»‡u báº©n (dirty read)",
+                                          "D":  "Äá»c khĂ´ng láº·p láº¡i (non-repeatable read)"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "Non-repeatable read: giĂ¡ trá»‹ cá»§a cĂ¹ng má»™t dĂ²ng thay Ä‘á»•i giá»¯a hai láº§n Ä‘á»c vĂ¬ dĂ²ng Ä‘Ă³ bá»‹ cáº­p nháº­t vĂ  commit bá»Ÿi giao dá»‹ch khĂ¡c."
+                      },
+                      {
+                          "id":  110,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.1 â€“ Giao dá»‹ch (Transaction) \u0026 ACID",
+                          "question":  "Cháº¡y cĂ¹ng má»™t truy váº¥n hai láº§n trong má»™t giao dá»‹ch nhÆ°ng sá»‘ dĂ²ng tráº£ vá» khĂ¡c nhau vĂ¬ giao dá»‹ch khĂ¡c Ä‘Ă£ chĂ¨n thĂªm dĂ²ng má»›i. Hiá»‡n tÆ°á»£ng nĂ y gá»i lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Äá»c dá»¯ liá»‡u báº©n (dirty read)",
+                                          "B":  "Máº¥t cáº­p nháº­t (lost update)",
+                                          "C":  "Cuá»‘n chiáº¿u há»§y (cascading rollback)",
+                                          "D":  "Äá»c bĂ³ng ma (phantom read)"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "Phantom read: táº­p dĂ²ng káº¿t quáº£ thay Ä‘á»•i (xuáº¥t hiá»‡n/ biáº¿n máº¥t) do giao dá»‹ch khĂ¡c INSERT/DELETE trong lĂºc thá»±c thi."
+                      },
+                      {
+                          "id":  111,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.1 â€“ Giao dá»‹ch (Transaction) \u0026 ACID",
+                          "question":  "Má»©c cĂ´ láº­p (isolation level) máº·c Ä‘á»‹nh cá»§a MySQL vá»›i bá»™ lÆ°u trá»¯ InnoDB lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "READ COMMITTED",
+                                          "B":  "READ UNCOMMITTED",
+                                          "C":  "REPEATABLE READ",
+                                          "D":  "SERIALIZABLE"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "InnoDB máº·c Ä‘á»‹nh dĂ¹ng REPEATABLE READ: cĂ¡c láº§n Ä‘á»c trong giao dá»‹ch tháº¥y nháº¥t quĂ¡n cĂ¹ng má»™t áº£nh dá»¯ liá»‡u."
+                      },
+                      {
+                          "id":  112,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.1 â€“ Giao dá»‹ch (Transaction) \u0026 ACID",
+                          "question":  "Má»©c cĂ´ láº­p nĂ o cao nháº¥t, buá»™c cĂ¡c giao dá»‹ch tuáº§n tá»± hoĂ¡ nhÆ° cháº¡y láº§n lÆ°á»£t, loáº¡i bá» má»i hiá»‡n tÆ°á»£ng báº¥t thÆ°á»ng?",
+                          "options":  {
+                                          "A":  "READ COMMITTED",
+                                          "B":  "READ UNCOMMITTED",
+                                          "C":  "SERIALIZABLE",
+                                          "D":  "REPEATABLE READ"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "SERIALIZABLE lĂ  má»©c an toĂ n nháº¥t (thÆ°á»ng khoĂ¡ pháº¡m vi), Ä‘á»•i láº¡i hiá»‡u nÄƒng tháº¥p nháº¥t."
+                      },
+                      {
+                          "id":  113,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.2 â€“ Äiá»u khiá»ƒn tÆ°Æ¡ng tranh \u0026 khoĂ¡",
+                          "question":  "KhoĂ¡ chia sáº» (shared lock â€“ S) cho phĂ©p giao dá»‹ch lĂ m gĂ¬?",
+                          "options":  {
+                                          "A":  "Chá»‰ má»™t giao dá»‹ch duy nháº¥t Ä‘Æ°á»£c Ä‘á»c",
+                                          "B":  "XoĂ¡ dá»¯ liá»‡u",
+                                          "C":  "Äá»c dá»¯ liá»‡u; nhiá»u giao dá»‹ch cĂ³ thá»ƒ cĂ¹ng giá»¯ khoĂ¡ chia sáº» trĂªn má»™t Ä‘á»‘i tÆ°á»£ng nhÆ°ng khĂ´ng ai Ä‘Æ°á»£c ghi",
+                                          "D":  "Äá»c vĂ  ghi dá»¯ liá»‡u"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "Shared lock tÆ°Æ¡ng thĂ­ch vá»›i nhau (nhiá»u S cĂ¹ng tá»“n táº¡i) nhÆ°ng khĂ´ng tÆ°Æ¡ng thĂ­ch vá»›i exclusive lock."
+                      },
+                      {
+                          "id":  114,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.2 â€“ Äiá»u khiá»ƒn tÆ°Æ¡ng tranh \u0026 khoĂ¡",
+                          "question":  "KhoĂ¡ Ä‘á»™c quyá»n (exclusive lock â€“ X) cĂ³ Ä‘áº·c Ä‘iá»ƒm gĂ¬?",
+                          "options":  {
+                                          "A":  "KhĂ´ng cáº§n thiáº¿t trong thá»±c táº¿",
+                                          "B":  "Nhiá»u giao dá»‹ch cĂ¹ng ghi Ä‘Æ°á»£c",
+                                          "C":  "Chá»‰ cho phĂ©p Ä‘á»c",
+                                          "D":  "Chá»‰ giao dá»‹ch sá»Ÿ há»¯u khoĂ¡ Ä‘Æ°á»£c Ä‘á»c/ ghi; cĂ¡c giao dá»‹ch khĂ¡c pháº£i chá», ká»ƒ cáº£ khi chá»‰ muá»‘n Ä‘á»c"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "Exclusive lock cáº¥m má»i giao dá»‹ch khĂ¡c truy cáº­p Ä‘á»‘i tÆ°á»£ng Ä‘ang bá»‹ khoĂ¡ cho Ä‘áº¿n khi khoĂ¡ Ä‘Æ°á»£c nháº£."
+                      },
+                      {
+                          "id":  115,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.2 â€“ Äiá»u khiá»ƒn tÆ°Æ¡ng tranh \u0026 khoĂ¡",
+                          "question":  "Báº¿ táº¯c (deadlock) xáº£y ra khi nĂ o?",
+                          "options":  {
+                                          "A":  "Hai hoáº·c nhiá»u giao dá»‹ch chá» khoĂ¡ cá»§a nhau, táº¡o thĂ nh vĂ²ng chá» khĂ´ng thá»ƒ káº¿t thĂºc",
+                                          "B":  "CÆ¡ sá»Ÿ dá»¯ liá»‡u háº¿t dung lÆ°á»£ng",
+                                          "C":  "Má»™t giao dá»‹ch cháº¡y lĂ¢u hÆ¡n thá»i gian quy Ä‘á»‹nh",
+                                          "D":  "Má»™t cĂ¢u lá»‡nh SELECT sai cĂº phĂ¡p"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "Deadlock lĂ  tráº¡ng thĂ¡i má»—i giao dá»‹ch giá»¯ tĂ i nguyĂªn mĂ  giao dá»‹ch khĂ¡c cáº§n vĂ  Ä‘á»u chá» nhau, khĂ´ng ai tiáº¿n tá»›i Ä‘Æ°á»£c."
+                      },
+                      {
+                          "id":  116,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.2 â€“ Äiá»u khiá»ƒn tÆ°Æ¡ng tranh \u0026 khoĂ¡",
+                          "question":  "Váº¥n Ä‘á» â€œmáº¥t cáº­p nháº­tâ€ (lost update) xáº£y ra khi nĂ o?",
+                          "options":  {
+                                          "A":  "Má»™t giao dá»‹ch bá»‹ ROLLBACK",
+                                          "B":  "Hai giao dá»‹ch cĂ¹ng Ä‘á»c má»™t giĂ¡ trá»‹ cÅ©, cĂ¹ng tĂ­nh toĂ¡n vĂ  ghi Ä‘Ă¨; káº¿t quáº£ cáº­p nháº­t cá»§a giao dá»‹ch trÆ°á»›c bá»‹ máº¥t",
+                                          "C":  "QuĂ¡ trĂ¬nh sao lÆ°u dá»¯ liá»‡u",
+                                          "D":  "Má»™t báº£ng bá»‹ xoĂ¡"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "Lost update lĂ  trÆ°á»ng há»£p kinh Ä‘iá»ƒn cá»§a tÆ°Æ¡ng tranh: cáº­p nháº­t sau ghi Ä‘Ă¨ cáº­p nháº­t trÆ°á»›c vĂ¬ cáº£ hai dá»±a trĂªn giĂ¡ trá»‹ ban Ä‘áº§u."
+                      },
+                      {
+                          "id":  117,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.2 â€“ Äiá»u khiá»ƒn tÆ°Æ¡ng tranh \u0026 khoĂ¡",
+                          "question":  "Giao thá»©c khoĂ¡ hai pha (two-phase locking â€“ 2PL) quy Ä‘á»‹nh Ä‘iá»u gĂ¬?",
+                          "options":  {
+                                          "A":  "Giao dá»‹ch Ä‘Æ°á»£c chia lĂ m hai ná»­a báº±ng nhau",
+                                          "B":  "Giao dá»‹ch tráº£i qua pha tÄƒng trÆ°á»Ÿng (chá»‰ xin khoĂ¡) rá»“i pha co (chá»‰ nháº£ khoĂ¡); khĂ´ng Ä‘Æ°á»£c xin khoĂ¡ sau khi Ä‘Ă£ nháº£ khoĂ¡",
+                                          "C":  "Má»—i khoĂ¡ chá»‰ Ä‘Æ°á»£c cáº¥p Ä‘Ăºng hai láº§n",
+                                          "D":  "Chá»‰ Ä‘Æ°á»£c khoĂ¡ tá»‘i Ä‘a hai báº£ng"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "2PL Ä‘áº£m báº£o lá»‹ch kháº£ tuáº§n tá»± (serializable); nhá» Ä‘Ă³ trĂ¡nh Ä‘Æ°á»£c cĂ¡c hiá»‡n tÆ°á»£ng báº¥t thÆ°á»ng khi tÆ°Æ¡ng tranh."
+                      },
+                      {
+                          "id":  118,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.2 â€“ Äiá»u khiá»ƒn tÆ°Æ¡ng tranh \u0026 khoĂ¡",
+                          "question":  "PhĂ¢n biá»‡t Ä‘iá»u khiá»ƒn tÆ°Æ¡ng tranh láº¡c quan (optimistic) vĂ  bi quan (pessimistic)?",
+                          "options":  {
+                                          "A":  "Láº¡c quan khoĂ¡ tĂ i nguyĂªn ngay tá»« Ä‘áº§u",
+                                          "B":  "Láº¡c quan: giáº£ Ä‘á»‹nh Ă­t xung Ä‘á»™t, thao tĂ¡c khĂ´ng khoĂ¡ vĂ  kiá»ƒm tra xung Ä‘á»™t khi COMMIT; Bi quan: khoĂ¡ dá»¯ liá»‡u ngay trÆ°á»›c khi thao tĂ¡c",
+                                          "C":  "Hai cĂ¡ch hoĂ n toĂ n giá»‘ng nhau",
+                                          "D":  "Bi quan khĂ´ng sá»­ dá»¥ng khoĂ¡"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "Optimistic kiá»ƒm tra khi commit (tháº¥t báº¡i thĂ¬ thá»±c hiá»‡n láº¡i); pessimistic khĂ³a trÆ°á»›c Ä‘á»ƒ ngÄƒn xung Ä‘á»™t tá»« Ä‘áº§u."
+                      },
+                      {
+                          "id":  119,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.2 â€“ Äiá»u khiá»ƒn tÆ°Æ¡ng tranh \u0026 khoĂ¡",
+                          "question":  "Trong MySQL, lá»‡nh nĂ o khoĂ¡ tÆ°á»ng minh má»™t báº£ng Ä‘á»ƒ cĂ¡c phiĂªn khĂ¡c khĂ´ng ghi Ä‘Æ°á»£c?",
+                          "options":  {
+                                          "A":  "LOCK DATABASE bang;",
+                                          "B":  "RESERVE TABLE bang;",
+                                          "C":  "BEGIN TRANSACTION ONLY;",
+                                          "D":  "LOCK TABLES bang WRITE;"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "LOCK TABLES ... WRITE/READ khoĂ¡ báº£ng theo Ă½ muá»‘n; cáº§n UNLOCK TABLES Ä‘á»ƒ nháº£ khoĂ¡; InnoDB thÆ°á»ng quáº£n lĂ½ khoĂ¡ tá»± Ä‘á»™ng."
+                      },
+                      {
+                          "id":  120,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.2 â€“ Äiá»u khiá»ƒn tÆ°Æ¡ng tranh \u0026 khoĂ¡",
+                          "question":  "Khi xáº£y ra deadlock, InnoDB cá»§a MySQL xá»­ lĂ½ nhÆ° tháº¿ nĂ o?",
+                          "options":  {
+                                          "A":  "Táº¯t toĂ n bá»™ cÆ¡ sá»Ÿ dá»¯ liá»‡u",
+                                          "B":  "Chá» Ä‘á»£i vĂ´ háº¡n Ä‘áº¿n khi háº¿t bá»™ nhá»›",
+                                          "C":  "Bá» qua vĂ  tiáº¿p tá»¥c cháº¡y",
+                                          "D":  "Tá»± chá»n má»™t giao dá»‹ch lĂ m â€œnáº¡n nhĂ¢nâ€ Ä‘á»ƒ ROLLBACK, nháº£ khoĂ¡ cho giao dá»‹ch cĂ²n láº¡i tiáº¿p tá»¥c"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "InnoDB phĂ¡t hiá»‡n chu trĂ¬nh chá» vĂ  tá»± Ä‘á»™ng há»§y má»™t giao dá»‹ch (bĂ¡o lá»—i deadlock) Ä‘á»ƒ phĂ¡ vá»¡ báº¿ táº¯c."
+                      },
+                      {
+                          "id":  121,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.3 â€“ Chá»‰ má»¥c \u0026 tá»‘i Æ°u truy váº¥n",
+                          "question":  "Chá»‰ má»¥c (index) trong cÆ¡ sá»Ÿ dá»¯ liá»‡u dĂ¹ng Ä‘á»ƒ lĂ m gĂ¬?",
+                          "options":  {
+                                          "A":  "TÄƒng tá»‘c truy váº¥n (tĂ¬m kiáº¿m, lá»c, sáº¯p xáº¿p, ná»‘i báº£ng) nhá» cáº¥u trĂºc dá»¯ liá»‡u phá»¥ trá»£",
+                                          "B":  "MĂ£ hoĂ¡ dá»¯ liá»‡u",
+                                          "C":  "LÆ°u trá»¯ dá»¯ liá»‡u chĂ­nh cá»§a báº£ng",
+                                          "D":  "Giá»›i háº¡n sá»‘ dĂ²ng cá»§a báº£ng"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "Index giĂºp MySQL tĂ¬m dĂ²ng nhanh hÆ¡n thay vĂ¬ quĂ©t toĂ n bá»™ báº£ng (full scan), giá»‘ng má»¥c lá»¥c sĂ¡ch."
+                      },
+                      {
+                          "id":  122,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.3 â€“ Chá»‰ má»¥c \u0026 tá»‘i Æ°u truy váº¥n",
+                          "question":  "Cáº¥u trĂºc chá»‰ má»¥c phá»• biáº¿n nháº¥t cá»§a MySQL InnoDB lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Danh sĂ¡ch liĂªn káº¿t",
+                                          "B":  "Äá»“ thá»‹ vĂ´ hÆ°á»›ng",
+                                          "C":  "CĂ¢y B-tree (B+tree)",
+                                          "D":  "Máº£ng tuyáº¿n tĂ­nh"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "InnoDB dĂ¹ng cĂ¢y B+tree cho chá»‰ má»¥c chĂ­nh vĂ  phá»¥, há»— trá»£ tĂ¬m kiáº¿m, pháº¡m vi, sáº¯p xáº¿p hiá»‡u quáº£."
+                      },
+                      {
+                          "id":  123,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.3 â€“ Chá»‰ má»¥c \u0026 tá»‘i Æ°u truy váº¥n",
+                          "question":  "Chá»‰ má»¥c thÆ°á»ng phĂ¡t huy hiá»‡u quáº£ nháº¥t khi Ä‘áº·t trĂªn cá»™t nĂ o?",
+                          "options":  {
+                                          "A":  "Cá»™t khĂ´ng bao giá» dĂ¹ng trong truy váº¥n",
+                                          "B":  "Cá»™t xuáº¥t hiá»‡n trong WHERE/JOIN/ORDER BY vĂ  cĂ³ Ä‘á»™ chá»n lá»c cao (nhiá»u giĂ¡ trá»‹ khĂ¡c nhau)",
+                                          "C":  "Cá»™t chá»‰ cĂ³ vĂ i giĂ¡ trá»‹ khĂ¡c nhau (vĂ­ dá»¥ giá»›i tĂ­nh)",
+                                          "D":  "Cá»™t kiá»ƒu TEXT lá»›n"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "Cá»™t chá»n lá»c cao giĂºp thu háº¹p nhanh sá»‘ dĂ²ng pháº£i Ä‘á»c; cá»™t Ă­t giĂ¡ trá»‹ khĂ¡c nhau Ă­t khi Ä‘Æ°á»£c dĂ¹ng chá»‰ má»¥c."
+                      },
+                      {
+                          "id":  124,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.3 â€“ Chá»‰ má»¥c \u0026 tá»‘i Æ°u truy váº¥n",
+                          "question":  "PhĂ¢n biá»‡t chá»‰ má»¥c clustered vĂ  non-clustered trong InnoDB?",
+                          "options":  {
+                                          "A":  "Clustered (chá»‰ má»¥c cá»¥m): dá»¯ liá»‡u Ä‘Æ°á»£c sáº¯p xáº¿p theo khoĂ¡ chá»‰ má»¥c, máº·c Ä‘á»‹nh lĂ  khoĂ¡ chĂ­nh; Non-clustered: chá»‰ má»¥c phá»¥ chá»‰ chá»©a giĂ¡ trá»‹ khoĂ¡ trá» vá» dĂ²ng dá»¯ liá»‡u",
+                                          "B":  "Clustered khĂ´ng tá»“n táº¡i trong InnoDB",
+                                          "C":  "Hai loáº¡i hoĂ n toĂ n giá»‘ng nhau",
+                                          "D":  "Non-clustered lÆ°u trá»±c tiáº¿p dá»¯ liá»‡u"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "InnoDB luĂ´n cĂ³ má»™t clustered index (thÆ°á»ng lĂ  PRIMARY KEY); cĂ¡c index khĂ¡c lĂ  secondary, lÆ°u giĂ¡ trá»‹ khoĂ¡ chĂ­nh Ä‘á»ƒ truy vá» dĂ²ng."
+                      },
+                      {
+                          "id":  125,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.3 â€“ Chá»‰ má»¥c \u0026 tá»‘i Æ°u truy váº¥n",
+                          "question":  "CĂ¢u lá»‡nh táº¡o chá»‰ má»¥c trĂªn cá»™t Ten cá»§a báº£ng SinhVien lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "ADD INDEX idx_ten TO SinhVien(Ten);",
+                                          "B":  "CREATE INDEX idx_ten ON SinhVien(Ten);",
+                                          "C":  "NEW INDEX idx_ten FOR SinhVien(Ten);",
+                                          "D":  "INDEX TABLE SinhVien(Ten);"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "CĂº phĂ¡p táº¡o chá»‰ má»¥c: CREATE INDEX tĂªn ON báº£ng(cá»™t); cĂ³ thá»ƒ dĂ¹ng thĂªm UNIQUE/FULLTEXT."
+                      },
+                      {
+                          "id":  126,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.3 â€“ Chá»‰ má»¥c \u0026 tá»‘i Æ°u truy váº¥n",
+                          "question":  "NhÆ°á»£c Ä‘iá»ƒm cá»§a viá»‡c táº¡o quĂ¡ nhiá»u chá»‰ má»¥c trĂªn má»™t báº£ng lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "KhĂ´ng cĂ³ nhÆ°á»£c Ä‘iá»ƒm nĂ o",
+                                          "B":  "LĂ m truy váº¥n luĂ´n nhanh hÆ¡n",
+                                          "C":  "Tá»± Ä‘á»™ng xoĂ¡ dá»¯ liá»‡u cÅ©",
+                                          "D":  "Tá»‘n lÆ°u trá»¯ vĂ  lĂ m cháº­m INSERT/UPDATE/DELETE vĂ¬ má»—i thay Ä‘á»•i pháº£i cáº­p nháº­t láº¡i cĂ¡c chá»‰ má»¥c"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "CĂ¢n báº±ng giá»¯a tá»‘c Ä‘á»™ Ä‘á»c (lá»£i Ă­ch cá»§a index) vĂ  chi phĂ­ ghi/ lÆ°u trá»¯ â€“ khĂ´ng nĂªn chá»‰ má»¥c hoĂ¡ má»i cá»™t."
+                      },
+                      {
+                          "id":  127,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.3 â€“ Chá»‰ má»¥c \u0026 tá»‘i Æ°u truy váº¥n",
+                          "question":  "Vá»›i chá»‰ má»¥c káº¿t há»£p (composite index) trĂªn (cotA, cotB, cotC), thá»© tá»± cá»™t cĂ³ quan trá»ng khĂ´ng?",
+                          "options":  {
+                                          "A":  "Chá»‰ má»¥c káº¿t há»£p khĂ´ng tá»“n táº¡i",
+                                          "B":  "Chá»‰ cá»™t cuá»‘i cĂ¹ng má»›i quan trá»ng",
+                                          "C":  "KhĂ´ng, thá»© tá»± khĂ´ng áº£nh hÆ°á»Ÿng",
+                                          "D":  "CĂ³ â€“ chá»‰ má»¥c phĂ¡t huy khi Ä‘iá»u kiá»‡n truy váº¥n dĂ¹ng cĂ¡c cá»™t Ä‘áº§u tiĂªn (quy táº¯c leftmost prefix)"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "MySQL dĂ¹ng Ä‘Æ°á»£c chá»‰ má»¥c káº¿t há»£p khi WHERE khá»›p tiá»n tá»‘ trĂ¡i cá»§a chá»‰ má»¥c, vĂ­ dá»¥ (cotA) hoáº·c (cotA, cotB)."
+                      },
+                      {
+                          "id":  128,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.3 â€“ Chá»‰ má»¥c \u0026 tá»‘i Æ°u truy váº¥n",
+                          "question":  "TrÆ°á»ng há»£p nĂ o MySQL cĂ³ thá»ƒ KHĂ”NG dĂ¹ng Ä‘Æ°á»£c chá»‰ má»¥c trĂªn cá»™t dĂ¹ cá»™t Ä‘Ă£ Ä‘Æ°á»£c Ä‘Ă¡nh chá»‰ má»¥c?",
+                          "options":  {
+                                          "A":  "Bá»c hĂ m lĂªn cá»™t trong Ä‘iá»u kiá»‡n (WHERE YEAR(ngay) = 2024), so sĂ¡nh khĂ¡c kiá»ƒu dá»¯ liá»‡u, hoáº·c LIKE cĂ³ % á»Ÿ Ä‘áº§u máº«u",
+                                          "B":  "Khi báº£ng cĂ³ Ă­t hÆ¡n 10 cá»™t",
+                                          "C":  "Khi cĂ¢u lá»‡nh cĂ³ má»‡nh Ä‘á» WHERE",
+                                          "D":  "KhĂ´ng cĂ³ trÆ°á»ng há»£p nĂ o"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "Ăp hĂ m hoáº·c Ä‘á»•i kiá»ƒu lĂ m máº¥t giĂ¡ trá»‹ so sĂ¡nh trá»±c tiáº¿p trĂªn chá»‰ má»¥c; % Ä‘á»©ng Ä‘áº§u ngÄƒn dĂ¹ng index vĂ¬ khĂ´ng biáº¿t tiá»n tá»‘."
+                      },
+                      {
+                          "id":  129,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.3 â€“ Chá»‰ má»¥c \u0026 tá»‘i Æ°u truy váº¥n",
+                          "question":  "CĂ¢u lá»‡nh EXPLAIN SELECT ... trong MySQL dĂ¹ng Ä‘á»ƒ lĂ m gĂ¬?",
+                          "options":  {
+                                          "A":  "Sá»­a dá»¯ liá»‡u cá»§a báº£ng",
+                                          "B":  "Thá»±c thi truy váº¥n vĂ  tráº£ vá» dá»¯ liá»‡u",
+                                          "C":  "XoĂ¡ toĂ n bá»™ chá»‰ má»¥c",
+                                          "D":  "Xem káº¿ hoáº¡ch thá»±c thi cá»§a truy váº¥n: báº£ng nĂ o, cĂ³ dĂ¹ng chá»‰ má»¥c khĂ´ng, cĂ¡ch ná»‘i báº£ng ra sao"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "EXPLAIN khĂ´ng tráº£ vá» dá»¯ liá»‡u mĂ  cho biáº¿t chiáº¿n lÆ°á»£c thá»±c thi, giĂºp phĂ¡t hiá»‡n full scan hoáº·c thiáº¿u index."
+                      },
+                      {
+                          "id":  130,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.3 â€“ Chá»‰ má»¥c \u0026 tá»‘i Æ°u truy váº¥n",
+                          "question":  "KhoĂ¡ chĂ­nh (PRIMARY KEY) trong InnoDB tá»± Ä‘á»™ng Ä‘i kĂ¨m loáº¡i chá»‰ má»¥c nĂ o?",
+                          "options":  {
+                                          "A":  "KhĂ´ng táº¡o chá»‰ má»¥c nĂ o",
+                                          "B":  "Chá»‰ má»¥c toĂ n vÄƒn (fulltext)",
+                                          "C":  "Chá»‰ má»¥c cá»¥m (clustered index) sáº¯p xáº¿p dá»¯ liá»‡u theo khoĂ¡ chĂ­nh",
+                                          "D":  "Chá»‰ má»¥c báº£ng bÄƒm (hash table) lÆ°u riĂªng"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "InnoDB dĂ¹ng khoĂ¡ chĂ­nh lĂ m clustered index â€“ dá»¯ liá»‡u váº­t lĂ½ Ä‘Æ°á»£c tá»• chá»©c theo thá»© tá»± khoĂ¡ chĂ­nh; nĂªn chá»n khoĂ¡ chĂ­nh ngáº¯n, á»•n Ä‘á»‹nh."
+                      },
+                      {
+                          "id":  131,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.4 â€“ An toĂ n, phĂ¢n quyá»n \u0026 sao lÆ°u",
+                          "question":  "CĂ¢u lá»‡nh cáº¥p quyá»n SELECT trĂªn báº£ng SinhVien cho ngÆ°á»i dĂ¹ng \u0027nhanvien\u0027 trong MySQL lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "ALLOW SELECT TO \u0027nhanvien\u0027;",
+                                          "B":  "ENABLE SELECT FOR \u0027nhanvien\u0027;",
+                                          "C":  "PERMIT \u0027nhanvien\u0027 SELECT SinhVien;",
+                                          "D":  "GRANT SELECT ON csdl.SinhVien TO \u0027nhanvien\u0027@\u0027localhost\u0027;"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "GRANT quyá»n ON Ä‘á»‘i_tÆ°á»£ng TO ngÆ°á»i_dĂ¹ng; sau Ä‘Ă³ thÆ°á»ng dĂ¹ng FLUSH PRIVILEGES náº¿u sá»­a trá»±c tiáº¿p báº£ng quyá»n."
+                      },
+                      {
+                          "id":  132,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.4 â€“ An toĂ n, phĂ¢n quyá»n \u0026 sao lÆ°u",
+                          "question":  "CĂ¢u lá»‡nh thu há»“i quyá»n SELECT cá»§a ngÆ°á»i dĂ¹ng \u0027nhanvien\u0027 trĂªn báº£ng SinhVien lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "REVOKE SELECT ON csdl.SinhVien FROM \u0027nhanvien\u0027@\u0027localhost\u0027;",
+                                          "B":  "REMOVE SELECT FROM \u0027nhanvien\u0027;",
+                                          "C":  "DROP PRIVILEGE \u0027nhanvien\u0027;",
+                                          "D":  "DISALLOW \u0027nhanvien\u0027 SELECT;"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "REVOKE quyá»n ON Ä‘á»‘i_tÆ°á»£ng FROM ngÆ°á»i_dĂ¹ng dĂ¹ng Ä‘á»ƒ thu há»“i quyá»n Ä‘Ă£ cáº¥p."
+                      },
+                      {
+                          "id":  133,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.4 â€“ An toĂ n, phĂ¢n quyá»n \u0026 sao lÆ°u",
+                          "question":  "Danh sĂ¡ch tĂ i khoáº£n ngÆ°á»i dĂ¹ng cá»§a MySQL Ä‘Æ°á»£c lÆ°u trong báº£ng nĂ o cá»§a cÆ¡ sá»Ÿ dá»¯ liá»‡u mysql?",
+                          "options":  {
+                                          "A":  "mysql.accounts",
+                                          "B":  "mysql.user",
+                                          "C":  "mysql.indexes",
+                                          "D":  "mysql.tables"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "Báº£ng mysql.user lÆ°u tĂ i khoáº£n, máº­t kháº©u (dáº¡ng bÄƒm) vĂ  quyá»n toĂ n cá»¥c; quyá»n cáº¥p tháº¥p hÆ¡n á»Ÿ mysql.db, mysql.tables_priv..."
+                      },
+                      {
+                          "id":  134,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.4 â€“ An toĂ n, phĂ¢n quyá»n \u0026 sao lÆ°u",
+                          "question":  "CĂ¢u lá»‡nh táº¡o ngÆ°á»i dĂ¹ng má»›i \u0027quantri\u0027 trong MySQL lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "ADD USER \u0027quantri\u0027 WITH PASSWORD \u0027matkhau\u0027;",
+                                          "B":  "NEW USER \u0027quantri\u0027 PASSWORD \u0027matkhau\u0027;",
+                                          "C":  "CREATE USER \u0027quantri\u0027@\u0027localhost\u0027 IDENTIFIED BY \u0027matkhau\u0027;",
+                                          "D":  "MAKE USER \u0027quantri\u0027 IDENTIFIED \u0027matkhau\u0027;"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "CREATE USER táº¡o tĂ i khoáº£n; viá»‡c cáº¥p quyá»n thá»±c hiá»‡n sau Ä‘Ă³ báº±ng GRANT."
+                      },
+                      {
+                          "id":  135,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.4 â€“ An toĂ n, phĂ¢n quyá»n \u0026 sao lÆ°u",
+                          "question":  "NguyĂªn táº¯c â€œquyá»n tá»‘i thiá»ƒuâ€ (least privilege) trong quáº£n trá»‹ cÆ¡ sá»Ÿ dá»¯ liá»‡u lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Chá»‰ dĂ¹ng duy nháº¥t tĂ i khoáº£n root",
+                                          "B":  "Cáº¥p toĂ n quyá»n cho má»i tĂ i khoáº£n Ä‘á»ƒ thuáº­n tiá»‡n",
+                                          "C":  "Chá»‰ cáº¥p cho má»—i ngÆ°á»i dĂ¹ng Ä‘Ăºng cĂ¡c quyá»n cáº§n thiáº¿t cho cĂ´ng viá»‡c cá»§a há»",
+                                          "D":  "KhĂ´ng cáº§n phĂ¢n quyá»n trong há»‡ thá»‘ng ná»™i bá»™"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "Cáº¥p quyá»n tá»‘i thiá»ƒu giáº£m thiá»ƒu rá»§i ro lá»™, sá»­a hoáº·c xoĂ¡ dá»¯ liá»‡u do tĂ i khoáº£n bá»‹ chiáº¿m dá»¥ng hay thao tĂ¡c nháº§m."
+                      },
+                      {
+                          "id":  136,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.4 â€“ An toĂ n, phĂ¢n quyá»n \u0026 sao lÆ°u",
+                          "question":  "SQL Injection lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Má»™t lá»—i do pháº§n cá»©ng lá»—i thá»i",
+                                          "B":  "Ká»¹ thuáº­t táº¥n cĂ´ng chĂ¨n mĂ£ SQL Ä‘á»™c háº¡i vĂ o cĂ¢u truy váº¥n thĂ´ng qua dá»¯ liá»‡u nháº­p cá»§a ngÆ°á»i dĂ¹ng",
+                                          "C":  "Má»™t tĂ­nh nÄƒng báº£o máº­t cá»§a MySQL",
+                                          "D":  "CĂ¡ch nĂ©n cÆ¡ sá»Ÿ dá»¯ liá»‡u Ä‘á»ƒ tiáº¿t kiá»‡m Ä‘Ä©a"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "Náº¿u dá»¯ liá»‡u nháº­p Ä‘Æ°á»£c ná»‘i tháº³ng vĂ o cĂ¢u SQL, káº» táº¥n cĂ´ng cĂ³ thá»ƒ chĂ¨n Ä‘iá»u kiá»‡n/ cĂ¢u lá»‡nh Ä‘á»ƒ rĂ² rá»‰ hoáº·c phĂ¡ dá»¯ liá»‡u."
+                      },
+                      {
+                          "id":  137,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.4 â€“ An toĂ n, phĂ¢n quyá»n \u0026 sao lÆ°u",
+                          "question":  "CĂ¡ch phĂ²ng chá»‘ng SQL Injection hiá»‡u quáº£ nháº¥t khi viáº¿t truy váº¥n?",
+                          "options":  {
+                                          "A":  "DĂ¹ng tĂ i khoáº£n root cho má»i truy váº¥n",
+                                          "B":  "Táº¯t tĂ­nh nÄƒng SQL cá»§a mĂ¡y chá»§",
+                                          "C":  "DĂ¹ng cĂ¢u lá»‡nh chuáº©n bá»‹ sáºµn (prepared statement) vá»›i tham sá»‘ rĂ ng buá»™c, trĂ¡nh ná»‘i chuá»—i nháº­p liá»‡u trá»±c tiáº¿p",
+                                          "D":  "XoĂ¡ toĂ n bá»™ dá»¯ liá»‡u ngÆ°á»i dĂ¹ng nháº­p"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "Prepared statement tĂ¡ch tham sá»‘ khá»i cĂ¢u lá»‡nh nĂªn dá»¯ liá»‡u nháº­p khĂ´ng thá»ƒ thay Ä‘á»•i cĂº phĂ¡p SQL."
+                      },
+                      {
+                          "id":  138,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.4 â€“ An toĂ n, phĂ¢n quyá»n \u0026 sao lÆ°u",
+                          "question":  "CĂ´ng cá»¥ sao lÆ°u dá»¯ liá»‡u phá»• biáº¿n Ä‘i kĂ¨m MySQL lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "format",
+                                          "B":  "tar",
+                                          "C":  "mysqldump",
+                                          "D":  "cp"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "mysqldump xuáº¥t cÆ¡ sá»Ÿ dá»¯ liá»‡u ra tá»‡p vÄƒn báº£n chá»©a cĂ¢u lá»‡nh CREATE/INSERT Ä‘á»ƒ tĂ¡i táº¡o láº¡i sau nĂ y."
+                      },
+                      {
+                          "id":  139,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.4 â€“ An toĂ n, phĂ¢n quyá»n \u0026 sao lÆ°u",
+                          "question":  "Sao lÆ°u váº­t lĂ½ (physical backup) khĂ¡c sao lÆ°u logic (logical backup) á»Ÿ Ä‘iá»ƒm nĂ o?",
+                          "options":  {
+                                          "A":  "Logic sao chĂ©p táº­p tin dá»¯ liá»‡u",
+                                          "B":  "Hai cĂ¡ch hoĂ n toĂ n giá»‘ng nhau",
+                                          "C":  "Váº­t lĂ½: sao chĂ©p trá»±c tiáº¿p cĂ¡c táº­p tin dá»¯ liá»‡u; Logic: xuáº¥t ra tá»‡p lá»‡nh SQL/ dá»¯ liá»‡u cĂ³ thá»ƒ tĂ¡i táº¡o láº¡i",
+                                          "D":  "Váº­t lĂ½ xuáº¥t ra tá»‡p SQL"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "Physical backup nhanh, sao chĂ©p nguyĂªn khá»‘i, pháº£i khĂ´i phá»¥c trĂªn cĂ¹ng ná»n táº£ng; logical backup (vĂ­ dá»¥ mysqldump) linh hoáº¡t, dá»… di chuyá»ƒn."
+                      },
+                      {
+                          "id":  140,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.4 â€“ An toĂ n, phĂ¢n quyá»n \u0026 sao lÆ°u",
+                          "question":  "Äá»ƒ khĂ´i phá»¥c cÆ¡ sá»Ÿ dá»¯ liá»‡u tá»« tá»‡p sao lÆ°u backup.sql Ä‘Ă£ táº¡o báº±ng mysqldump, dĂ¹ng cĂ¡ch nĂ o?",
+                          "options":  {
+                                          "A":  "load backup.sql",
+                                          "B":  "restore backup.sql",
+                                          "C":  "importtable csdl backup.sql",
+                                          "D":  "mysql -u user -p csdl \u003c backup.sql (hoáº·c lá»‡nh SOURCE backup.sql trong mysql)"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "mysqldump táº¡o tá»‡p vÄƒn báº£n; mysql Ä‘á»c láº¡i tá»‡p Ä‘á»ƒ thá»±c thi cĂ¡c cĂ¢u lá»‡nh tĂ¡i táº¡o dá»¯ liá»‡u."
+                      },
+                      {
+                          "id":  141,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.5 â€“ Há»‡ QT CSDL, NoSQL \u0026 á»©ng dá»¥ng",
+                          "question":  "Há»‡ quáº£n trá»‹ cÆ¡ sá»Ÿ dá»¯ liá»‡u (DBMS) lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "Pháº§n má»m quáº£n lĂ½ viá»‡c táº¡o láº­p, lÆ°u trá»¯, truy váº¥n, cáº­p nháº­t vĂ  báº£o máº­t dá»¯ liá»‡u",
+                                          "B":  "Má»™t pháº§n cá»©ng lÆ°u trá»¯",
+                                          "C":  "Má»™t giao thá»©c máº¡ng",
+                                          "D":  "Má»™t ngĂ´n ngá»¯ láº­p trĂ¬nh"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "DBMS (vĂ­ dá»¥ MySQL, SQL Server, Oracle, PostgreSQL) cung cáº¥p táº§ng giá»¯a ngÆ°á»i dĂ¹ng/ á»©ng dá»¥ng vĂ  dá»¯ liá»‡u váº­t lĂ½."
+                      },
+                      {
+                          "id":  142,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.5 â€“ Há»‡ QT CSDL, NoSQL \u0026 á»©ng dá»¥ng",
+                          "question":  "Kiáº¿n trĂºc ba má»©c (3-schema) cá»§a DBMS gá»“m nhá»¯ng má»©c nĂ o?",
+                          "options":  {
+                                          "A":  "Má»©c Ä‘á»c â€“ má»©c ghi â€“ má»©c xoĂ¡",
+                                          "B":  "Má»©c trong (internal) â€“ má»©c khĂ¡i niá»‡m (conceptual) â€“ má»©c ngoĂ i (external)",
+                                          "C":  "Má»©c dá»¯ liá»‡u â€“ má»©c báº£ng â€“ má»©c khoĂ¡",
+                                          "D":  "Má»©c trĂªn â€“ má»©c giá»¯a â€“ má»©c dÆ°á»›i"
+                                      },
+                          "answer":  "B",
+                          "explainAnswer":  "Ba má»©c tĂ¡ch biá»‡t cĂ¡ch nhĂ¬n cá»§a ngÆ°á»i dĂ¹ng, lÆ°á»£c Ä‘á»“ logic vĂ  biá»ƒu diá»…n váº­t lĂ½ â€“ ná»n táº£ng cá»§a tĂ­nh Ä‘á»™c láº­p dá»¯ liá»‡u."
+                      },
+                      {
+                          "id":  143,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.5 â€“ Há»‡ QT CSDL, NoSQL \u0026 á»©ng dá»¥ng",
+                          "question":  "TĂ­nh Ä‘á»™c láº­p dá»¯ liá»‡u (data independence) trong DBMS mang láº¡i lá»£i Ă­ch gĂ¬?",
+                          "options":  {
+                                          "A":  "Má»i chÆ°Æ¡ng trĂ¬nh Ä‘á»u dĂ¹ng chung má»™t báº£ng",
+                                          "B":  "Dá»¯ liá»‡u khĂ´ng bao giá» thay Ä‘á»•i",
+                                          "C":  "KhĂ´ng cáº§n quáº£n trá»‹ viĂªn",
+                                          "D":  "Thay Ä‘á»•i cáº¥u trĂºc lÆ°u trá»¯/ lÆ°á»£c Ä‘á»“ á»Ÿ má»©c tháº¥p khĂ´ng lĂ m há»ng chÆ°Æ¡ng trĂ¬nh á»©ng dá»¥ng á»Ÿ má»©c cao"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "Nhá» tĂ¡ch cĂ¡c má»©c, sá»­a Ä‘á»•i váº­t lĂ½ hoáº·c logic Ä‘Æ°á»£c che giáº¥u khá»i á»©ng dá»¥ng, giáº£m chi phĂ­ báº£o trĂ¬."
+                      },
+                      {
+                          "id":  144,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.5 â€“ Há»‡ QT CSDL, NoSQL \u0026 á»©ng dá»¥ng",
+                          "question":  "NoSQL thÆ°á»ng Ä‘Æ°á»£c hiá»ƒu lĂ  gĂ¬?",
+                          "options":  {
+                                          "A":  "NhĂ³m há»‡ cÆ¡ sá»Ÿ dá»¯ liá»‡u phi quan há»‡, linh hoáº¡t vá» lÆ°á»£c Ä‘á»“, hÆ°á»›ng tá»›i má»Ÿ rá»™ng ngang vĂ  dá»¯ liá»‡u lá»›n",
+                                          "B":  "Má»™t phiĂªn báº£n khĂ´ng cáº§n máº­t kháº©u cá»§a SQL",
+                                          "C":  "Má»™t loáº¡i pháº§n cá»©ng má»›i",
+                                          "D":  "SQL bá» má»‡nh Ä‘á» SELECT"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "NoSQL (Not Only SQL) gá»“m cĂ¡c mĂ´ hĂ¬nh document, key-value, column-family, graph â€“ phĂ¹ há»£p dá»¯ liá»‡u phi cáº¥u trĂºc, quy mĂ´ lá»›n."
+                      },
+                      {
+                          "id":  145,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.5 â€“ Há»‡ QT CSDL, NoSQL \u0026 á»©ng dá»¥ng",
+                          "question":  "MongoDB thuá»™c loáº¡i cÆ¡ sá»Ÿ dá»¯ liá»‡u NoSQL nĂ o?",
+                          "options":  {
+                                          "A":  "Cá»­a hĂ ng khoĂ¡ â€“ giĂ¡ trá»‹ thuáº§n tuĂ½",
+                                          "B":  "CÆ¡ sá»Ÿ dá»¯ liá»‡u quan há»‡",
+                                          "C":  "Cá»­a hĂ ng tĂ i liá»‡u (document store) lÆ°u dá»¯ liá»‡u dáº¡ng JSON/BSON",
+                                          "D":  "CÆ¡ sá»Ÿ dá»¯ liá»‡u Ä‘á»“ thá»‹"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "MongoDB lÆ°u má»—i báº£n ghi lĂ  má»™t tĂ i liá»‡u (document) dáº¡ng JSON/BSON, khĂ´ng cá»‘ Ä‘á»‹nh lÆ°á»£c Ä‘á»“ cá»™t."
+                      },
+                      {
+                          "id":  146,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.5 â€“ Há»‡ QT CSDL, NoSQL \u0026 á»©ng dá»¥ng",
+                          "question":  "MĂ´ hĂ¬nh NoSQL nĂ o phĂ¹ há»£p nháº¥t Ä‘á»ƒ biá»ƒu diá»…n quan há»‡ phá»©c táº¡p kiá»ƒu máº¡ng xĂ£ há»™i (báº¡n bĂ¨, ngÆ°á»i theo dĂµi)?",
+                          "options":  {
+                                          "A":  "Cá»­a hĂ ng khoĂ¡ â€“ giĂ¡ trá»‹",
+                                          "B":  "CÆ¡ sá»Ÿ dá»¯ liá»‡u quan há»‡ thuáº§n",
+                                          "C":  "Cá»­a hĂ ng tĂ i liá»‡u",
+                                          "D":  "CÆ¡ sá»Ÿ dá»¯ liá»‡u Ä‘á»“ thá»‹ (graph database) â€“ vĂ­ dá»¥ Neo4j"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "Graph database lÆ°u nĂºt (thá»±c thá»ƒ) vĂ  cáº¡nh (quan há»‡), truy váº¥n Ä‘Æ°á»ng Ä‘i sĂ¢u hiá»‡u quáº£ â€“ ráº¥t há»£p máº¡ng xĂ£ há»™i."
+                      },
+                      {
+                          "id":  147,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.5 â€“ Há»‡ QT CSDL, NoSQL \u0026 á»©ng dá»¥ng",
+                          "question":  "Äá»‹nh lĂ½ CAP trong há»‡ phĂ¢n tĂ¡n phĂ¡t biá»ƒu há»‡ thá»‘ng chá»‰ báº£o Ä‘áº£m Ä‘á»“ng thá»i tá»‘i Ä‘a hai trong ba tĂ­nh cháº¥t nĂ o?",
+                          "options":  {
+                                          "A":  "MĂ£ hoĂ¡, nĂ©n, lÆ°u trá»¯",
+                                          "B":  "Nhanh, ráº», Ä‘Ăºng",
+                                          "C":  "Báº£o máº­t, toĂ n váº¹n, kháº£ dá»¥ng",
+                                          "D":  "Nháº¥t quĂ¡n (Consistency), kháº£ dá»¥ng (Availability), chá»‹u phĂ¢n máº£nh (Partition tolerance)"
+                                      },
+                          "answer":  "D",
+                          "explainAnswer":  "CAP: khi máº¡ng phĂ¢n máº£nh (P) xáº£y ra, há»‡ thá»‘ng pháº£i chá»n giá»¯a nháº¥t quĂ¡n (C) vĂ  kháº£ dá»¥ng (A)."
+                      },
+                      {
+                          "id":  148,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.5 â€“ Há»‡ QT CSDL, NoSQL \u0026 á»©ng dá»¥ng",
+                          "question":  "TĂ¬nh huá»‘ng nĂ o thĂ­ch há»£p dĂ¹ng cÆ¡ sá»Ÿ dá»¯ liá»‡u quan há»‡ (SQL) hÆ¡n NoSQL?",
+                          "options":  {
+                                          "A":  "Cáº§n quĂ©t Ä‘á»“ thá»‹ quan há»‡ sĂ¢u nhiá»u táº§ng",
+                                          "B":  "Chá»‰ cáº§n lÆ°u cache theo khoĂ¡ â€“ giĂ¡ trá»‹ tá»‘c Ä‘á»™ cao",
+                                          "C":  "Dá»¯ liá»‡u cĂ³ cáº¥u trĂºc á»•n Ä‘á»‹nh, cáº§n giao dá»‹ch ACID máº¡nh vĂ  truy váº¥n ná»‘i báº£ng phá»©c táº¡p (ngĂ¢n hĂ ng, hoĂ¡ Ä‘Æ¡n)",
+                                          "D":  "Dá»¯ liá»‡u hoĂ n toĂ n phi cáº¥u trĂºc, khĂ´ng biáº¿t trÆ°á»›c lÆ°á»£c Ä‘á»“"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "SQL máº¡nh vá» rĂ ng buá»™c, chuáº©n hoĂ¡, ACID vĂ  JOIN; NoSQL Æ°u tháº¿ vá» lÆ°á»£c Ä‘á»“ linh hoáº¡t, má»Ÿ rá»™ng ngang."
+                      },
+                      {
+                          "id":  149,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.5 â€“ Há»‡ QT CSDL, NoSQL \u0026 á»©ng dá»¥ng",
+                          "question":  "PhĂ¢n biá»‡t OLTP vĂ  OLAP?",
+                          "options":  {
+                                          "A":  "OLTP lĂ  phĂ¢n tĂ­ch dá»¯ liá»‡u",
+                                          "B":  "OLAP lĂ  xá»­ lĂ½ giao dá»‹ch ngĂ¢n hĂ ng",
+                                          "C":  "OLTP: xá»­ lĂ½ giao dá»‹ch trá»±c tuyáº¿n, nhiá»u thao tĂ¡c ghi nhá», thá»i gian thá»±c; OLAP: phĂ¢n tĂ­ch dá»¯ liá»‡u lá»›n, chá»§ yáº¿u Ä‘á»c, há»— trá»£ ra quyáº¿t Ä‘á»‹nh",
+                                          "D":  "Hai khĂ¡i niá»‡m giá»‘ng há»‡t nhau"
+                                      },
+                          "answer":  "C",
+                          "explainAnswer":  "OLTP (vĂ­ dá»¥ bĂ¡n hĂ ng trá»±c tuyáº¿n) tá»‘i Æ°u ghi nhanh; OLAP (kho dá»¯ liá»‡u) tá»‘i Æ°u truy váº¥n tá»•ng há»£p trĂªn dá»¯ liá»‡u lá»‹ch sá»­."
+                      },
+                      {
+                          "id":  150,
+                          "chapter":  "Pháº§n 3",
+                          "sourceChapter":  "NhĂ³m 3.5 â€“ Há»‡ QT CSDL, NoSQL \u0026 á»©ng dá»¥ng",
+                          "question":  "Kho dá»¯ liá»‡u (data warehouse) thÆ°á»ng Ä‘Æ°á»£c thiáº¿t káº¿ theo mĂ´ hĂ¬nh nĂ o?",
+                          "options":  {
+                                          "A":  "MĂ´ hĂ¬nh sao (star schema) vá»›i báº£ng sá»± kiá»‡n (fact) vĂ  cĂ¡c báº£ng chiá»u (dimension)",
+                                          "B":  "Chá»‰ má»™t báº£ng duy nháº¥t",
+                                          "C":  "MĂ´ hĂ¬nh phĂ¢n cáº¥p cĂ¢y",
+                                          "D":  "Dáº¡ng tá»‡p pháº³ng CSV"
+                                      },
+                          "answer":  "A",
+                          "explainAnswer":  "Star schema tá»‘i Æ°u cho truy váº¥n tá»•ng há»£p: báº£ng fact chá»©a sá»‘ liá»‡u, cĂ¡c báº£ng dimension chá»©a ngá»¯ cáº£nh (thá»i gian, sáº£n pháº©m, khu vá»±c)."
+                      }
+                  ]
+}

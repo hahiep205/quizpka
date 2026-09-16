@@ -35,6 +35,7 @@ const examFiles: Record<string, string> = {
   "english-paid-test05-bank-1": "tadv02/test05.json",
   "english-paid-test06-bank-1": "tadv02/test06.json",
   "business-statistics-quiz-bank-1": "sta201/thong_ke_kinh_doanh.json",
+  "database-final-bank-1": "db101/co_so_du_lieu.json",
 }
 const subjectProducts: Record<string, string> = {
   "khoa-hoc-du-lieu-va-tri-tue-nhan-tao": "dsai101",
@@ -61,6 +62,7 @@ const subjectProducts: Record<string, string> = {
   "nghien-cuu-khoa-hoc-trong-kinh-te": "rm102",
   "tadv-traphi": "tadv02",
   "thong-ke-trong-kinh-doanh": "sta201",
+  "co-so-du-lieu": "db101",
 }
 const sqaFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json", "chuong_6.json"]
 const secFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json", "chuong_6.json.gz", "chuong_7.json", "chuong_8.json"]
