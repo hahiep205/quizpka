@@ -32,22 +32,56 @@ type CoverTocGroup = { group: string; qRef: string; aRef: string }
 
 // pdfmake's browser build needs its VFS registered explicitly when bundled by Vite.
 // This embeds Roboto in the generated PDF, including Vietnamese diacritics.
-const vfs = (vfsModule as unknown as { default?: Record<string, string> }).default ?? (vfsModule as unknown as Record<string, string>)
-const pdfMakeCandidates = [
-  pdfMakeModule,
-  (pdfMakeModule as unknown as { default?: unknown }).default,
-  ((pdfMakeModule as unknown as { default?: { default?: unknown } }).default)?.default,
-].filter(Boolean) as unknown[]
-const pdfMake = pdfMakeCandidates.find((candidate) => typeof (candidate as { addVirtualFileSystem?: unknown }).addVirtualFileSystem === "function") as {
-  addVirtualFileSystem: (files: Record<string, string>) => void
-  createPdf: (definition: PdfMakeDoc) => { getBlob: () => Promise<Blob> }
-}
-const pdfMakeApi = pdfMake as unknown as {
+type PdfMakeApi = {
   addVirtualFileSystem: (files: Record<string, string>) => void
   addFonts: (fonts: Record<string, Record<string, string>>) => void
   createPdf: (definition: PdfMakeDoc) => { getBlob: () => Promise<Blob> }
 }
-pdfMakeApi.addVirtualFileSystem(vfs)
+
+function unwrapDefaultExport(value: unknown): unknown {
+  const seen = new Set<unknown>()
+  let current = value
+  while (current !== null && (typeof current === "object" || typeof current === "function") && !seen.has(current)) {
+    seen.add(current)
+    const next = (current as { default?: unknown }).default
+    if (next === undefined || next === null || seen.has(next)) break
+    current = next
+  }
+  return current
+}
+
+function isPdfMakeInstance(value: unknown): value is PdfMakeApi {
+  if (value === null || (typeof value !== "object" && typeof value !== "function")) return false
+  // Bundler CJS/ESM interop namespaces expose getters only. Calling addFonts on
+  // one of them throws "Cannot set property fonts ... which has only a getter"
+  // (seen in production while local dev kept working), so skip them outright.
+  if ((value as { [Symbol.toStringTag]?: unknown })[Symbol.toStringTag] === "Module") return false
+  const candidate = value as Record<string, unknown>
+  if (typeof candidate["addVirtualFileSystem"] !== "function") return false
+  if (typeof candidate["createPdf"] !== "function") return false
+  // The real singleton owns a writable `fonts` data property (set in its constructor).
+  const descriptor = Object.getOwnPropertyDescriptor(candidate, "fonts")
+  return !!descriptor && descriptor.writable === true
+}
+
+function resolvePdfMake(): PdfMakeApi {
+  // The bundle self-registers its singleton on globalThis on import.
+  const fromBundle = (globalThis as { pdfMake?: unknown }).pdfMake
+  const candidates: unknown[] = [fromBundle, unwrapDefaultExport(pdfMakeModule), pdfMakeModule]
+  for (const candidate of candidates) {
+    if (isPdfMakeInstance(candidate)) return candidate
+  }
+  throw new Error("pdfMake singleton instance not found (only interop namespaces resolved)")
+}
+
+function resolveVfs(): Record<string, string> {
+  const unwrapped = unwrapDefaultExport(vfsModule)
+  if (unwrapped !== null && typeof unwrapped === "object") return unwrapped as Record<string, string>
+  return vfsModule as unknown as Record<string, string>
+}
+
+const pdfMakeApi = resolvePdfMake()
+pdfMakeApi.addVirtualFileSystem(resolveVfs())
 pdfMakeApi.addFonts({ [BODY_FONT]: { ...TIMES_NEW_ROMAN_URLS } })
 
 export async function generateFreePdf(
