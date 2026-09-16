@@ -559,7 +559,18 @@ export function DashboardPage({
             }
 
             const blob = await generateFreePdf(prevSubject, prevExam, chapterLabel, questions, dashboardUser?.email ?? null)
-            downloadBlob(blob, pdfFilename(prevSubject, chapterId))
+            const filename = pdfFilename(prevSubject, chapterId)
+            downloadBlob(blob, filename)
+            logActivityEvent(dashboardUser?.id, "download_pdf", {
+              examId: prevExam.id,
+              subjectId: prevSubject.id,
+              subjectCode: prevSubject.code,
+              chapterId,
+              chapterLabel,
+              questionCount: questions.length,
+              email: dashboardUser?.email ?? null,
+              filename,
+            })
           } catch (e) {
             const msg = e instanceof Error ? e.message : String(e)
             window.alert(lang === "vi" ? `Không tạo được PDF: ${msg}` : `Failed to generate PDF: ${msg}`)

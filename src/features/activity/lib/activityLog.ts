@@ -17,6 +17,7 @@ export type ActivityEventType =
   | "view_notifications"
   | "read_notification"
   | "view_exam_detail"
+  | "download_pdf"
 
 export type ActivityEvent = {
   id: number
@@ -169,6 +170,7 @@ function asRecord(value: unknown): Record<string, unknown> {
 const VALID_EVENTS: ActivityEventType[] = [
   "login", "view_dashboard", "open_exam", "start_attempt",
   "submit_attempt", "retry_wrong", "view_leaderboard", "update_profile",
+  "download_pdf",
 ]
 
 export function parseActivityRows(rows: unknown): ActivityEvent[] {
@@ -235,6 +237,7 @@ export const ACTIVITY_LABELS: Record<ActivityEventType, string> = {
   view_notifications: "Xem thông báo",
   read_notification: "Đọc thông báo",
   view_exam_detail: "Xem chi tiết đề",
+  download_pdf: "Tải PDF",
 }
 
 function csvCell(value: string | number | null | undefined): string {

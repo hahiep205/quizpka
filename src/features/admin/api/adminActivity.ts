@@ -83,3 +83,19 @@ export async function fetchAllPracticeAttempts(userId?: string): Promise<AdminAt
     offset += result.attempts.length
   }
 }
+
+/** Lịch sử tải PDF (mới nhất trước) cho /admin/downloads. */
+export async function fetchDownloadHistory(limit = 200): Promise<AdminTimelineResult> {
+  try {
+    const { data, error } = await supabase
+      .from("user_activity_events")
+      .select("id,user_id,event_type,metadata,created_at")
+      .eq("event_type", "download_pdf")
+      .order("id", { ascending: false })
+      .limit(limit)
+    if (error) return { ok: false, events: [], error: `Không đọc được lịch sử tải về: ${error.message}` }
+    return { ok: true, events: parseActivityRows(data) }
+  } catch (err) {
+    return { ok: false, events: [], error: err instanceof Error ? err.message : "Unknown error" }
+  }
+}

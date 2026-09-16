@@ -89,6 +89,7 @@ const EVENT_TONES: Record<ActivityEventType, string> = {
   view_notifications: "bg-sky-50 text-sky-600 dark:bg-sky-500/10",
   read_notification: "bg-blue-50 text-blue-600 dark:bg-blue-500/10",
   view_exam_detail: "bg-lime-50 text-lime-700 dark:bg-lime-500/10",
+  download_pdf: "bg-teal-50 text-teal-600 dark:bg-teal-500/10",
 }
 
 const SECTION_NAV: Array<{ key: AdminSection; icon: LucideIcon; vi: string; en: string }> = [
