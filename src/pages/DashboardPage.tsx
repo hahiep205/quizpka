@@ -45,7 +45,9 @@ import { navigate as navigateApp, appRoutes, getCurrentPath, type AppPath } from
 import { readStorage, writeStorage } from "@/lib/storage"
 import { logActivityEvent } from "@/features/activity/lib/activityLog"
 import { computeLearningStats, formatLearningDuration } from "@/lib/learningStats"
-import { goToPractice, readPracticeHistory } from "@/lib/practiceSession"
+import { goToPractice } from "@/lib/practiceSession"
+import type { PracticeHistoryItem } from "@/lib/practiceSession"
+import { useSyncedHistory } from "@/features/history/api/userHistory"
 import { MobileTabBar } from "@/components/MobileTabBar"
 import { CatalogExamCard } from "@/components/CatalogExamCard"
 import { PaymentModal } from "@/components/PaymentModal"
@@ -972,9 +974,7 @@ function DashboardTopbar({ lang, view, onlineCount = 0 }: Pick<DashboardPageProp
 function LearningStatsGrid({ lang, className }: { lang: Lang; className?: string }) {
   const t = copy[lang]
   const { user } = useAuth()
-  const userId = user?.id
-  const userCreatedAt = user?.created_at
-  const history = useMemo(() => userId ? readPracticeHistory(userId, userCreatedAt) : [], [userCreatedAt, userId])
+  const { history } = useSyncedHistory(user?.id, user?.created_at)
   const stats = useMemo(() => computeLearningStats(history, "all"), [history])
 
   return (
@@ -1084,18 +1084,16 @@ function EmptyView({ lang, view }: { lang: Lang; view: "history" }) {
   const t = copy[lang]
   const { user } = useAuth()
   const userId = user?.id
-  const userCreatedAt = user?.created_at
-  const [history, setHistory] = useState(() => userId ? readPracticeHistory(userId, userCreatedAt) : [])
+  const { history, loading, error } = useSyncedHistory(userId, user?.created_at)
   const [detailItemId, setDetailItemId] = useState<string | null>(null)
   const [wrongListItemId, setWrongListItemId] = useState<string | null>(null)
   const detailItem = history.find((item) => item.id === detailItemId)
   const wrongListItem = history.find((item) => item.id === wrongListItemId)
 
   useEffect(() => {
-    setHistory(userId ? readPracticeHistory(userId, userCreatedAt) : [])
     setDetailItemId(null)
     setWrongListItemId(null)
-  }, [userCreatedAt, userId])
+  }, [userId])
 
   const retryWrong = (item: (typeof history)[number]) => {
     const ids = item.wrongQuestions?.map((question) => question.id) ?? []
@@ -1115,6 +1113,12 @@ function EmptyView({ lang, view }: { lang: Lang; view: "history" }) {
   return (
     <section className="dashboard-reveal mx-auto max-w-4xl">
       <LearningStatsGrid lang={lang} className="mb-4 sm:hidden" />
+      {error ? (
+        <p role="alert" className="mb-3 rounded-[12px] border-2 border-amber-200 bg-amber-50 px-4 py-3 text-[13px] font-bold text-amber-800 dark:border-amber-500/20 dark:bg-amber-500/10 dark:text-amber-200">Không tải được lịch sử từ tài khoản, đang hiện bản lưu trên thiết bị này.</p>
+      ) : null}
+      {loading && !history.length ? (
+        <p className="mb-3 text-sm font-bold text-slate-400">Đang tải lịch sử từ tài khoản…</p>
+      ) : null}
       {history.length ? (
         <div className="overflow-hidden rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none sm:rounded-[20px]">
           <div className="overflow-x-auto">
@@ -1170,7 +1174,7 @@ function EmptyView({ lang, view }: { lang: Lang; view: "history" }) {
   )
 }
 
-type HistoryItem = ReturnType<typeof readPracticeHistory>[number]
+type HistoryItem = PracticeHistoryItem
 
 function HistoryAttemptRow({ item, lang, onOpen }: {
   item: HistoryItem

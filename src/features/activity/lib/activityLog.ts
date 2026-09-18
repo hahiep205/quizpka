@@ -94,7 +94,7 @@ export function logActivityEvent(
   })()
 }
 
-/** Mirror a completed client quiz for admin history. Scores remain unverified. */
+/** Mirror a completed client quiz for synced cross-device history. */
 export async function submitClientReportedAttempt(input: {
   historyId: string
   examId: string
@@ -108,6 +108,11 @@ export async function submitClientReportedAttempt(input: {
   durationSeconds: number
   retryOf?: string
   retryNumber?: number
+  setup?: Record<string, unknown>
+  lang?: string
+  chapterId?: string
+  toeicScope?: string
+  wrongQuestions?: Array<Record<string, unknown>>
 }): Promise<void> {
   const { error } = await supabase.rpc("submit_free_attempt", {
     p_history_id: input.historyId,
@@ -122,6 +127,11 @@ export async function submitClientReportedAttempt(input: {
     p_duration_seconds: input.durationSeconds,
     p_retry_of: input.retryOf ?? null,
     p_retry_number: input.retryNumber ?? null,
+    p_setup: (input.setup ?? {}) as never,
+    p_lang: input.lang ?? "vi",
+    p_chapter_id: input.chapterId ?? null,
+    p_toeic_scope: input.toeicScope ?? null,
+    p_wrong_questions: (input.wrongQuestions ?? []) as never,
   })
   if (error) throw error
 }

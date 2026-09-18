@@ -88,6 +88,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
   const [hardFinalAnswers, setHardFinalAnswers] = useState<Record<string, AnswerValue>>({})
   const [activeRetryNumber, setActiveRetryNumber] = useState(retryNumber)
   const historySaved = useRef(false)
+  const [syncError, setSyncError] = useState<string | null>(null)
   const retryRootHistoryId = useRef(retryOfHistoryId)
   const lastSavedHistoryId = useRef<string | undefined>(undefined)
   const retryStorageKey = `quiz-retry-${exam.id}-${chapterId ?? "all"}-${toeicScope ?? "noscope"}`
@@ -234,22 +235,38 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
       retryNumber: activeRetryNumber ?? null,
       sessionId: endAttemptSession(exam.id),
     })
-    void submitClientReportedAttempt({
-      historyId,
-      examId: exam.id,
-      subjectId: subject.id,
-      title: getExamTitle(exam, lang),
-      mode: setup.mode,
-      score: stats.score10,
-      correct,
-      total: questions.length,
-      accuracy,
-      durationSeconds: elapsedSeconds,
-      retryOf: activeRetryNumber ? retryRootHistoryId.current : undefined,
-      retryNumber: activeRetryNumber,
-    }).catch(() => {
-      // The server mirror is best-effort and must not block the result screen.
-    })
+    // Bắt buộc online mới cho nộp bài: lịch sử server là nguồn thật cho mọi thiết bị.
+    // Local chỉ là cache hiển thị tức thì, không thay thế server.
+    if (typeof navigator !== "undefined" && navigator.onLine === false) {
+      setSyncError("Bạn đang offline. Hãy bật mạng rồi nộp lại để lưu lịch sử đa thiết bị.")
+      return
+    }
+    void (async () => {
+      try {
+        await submitClientReportedAttempt({
+          historyId,
+          examId: exam.id,
+          subjectId: subject.id,
+          title: getExamTitle(exam, lang),
+          mode: setup.mode,
+          score: stats.score10,
+          correct,
+          total: questions.length,
+          accuracy,
+          durationSeconds: elapsedSeconds,
+          retryOf: activeRetryNumber ? retryRootHistoryId.current : undefined,
+          retryNumber: activeRetryNumber,
+          setup: setup as unknown as Record<string, unknown>,
+          lang,
+          chapterId,
+          toeicScope,
+          wrongQuestions: historyItem.wrongQuestions as unknown as Array<Record<string, unknown>>,
+        })
+        setSyncError(null)
+      } catch (submitError) {
+        setSyncError(submitError instanceof Error ? submitError.message : "Không đồng bộ được lịch sử. Hãy kiểm tra mạng rồi nộp lại.")
+      }
+    })()
   }, [activeRetryNumber, answers, chapterId, elapsedSeconds, exam, finished, hardMastered, hardProgress, hardWrongCounts, isHard, lang, questions, setup, stats.correct, stats.score10, status, subject.id, toeicScope, user, wrongQuestions])
 
   const handleAnswer = useCallback((questionId: string, answer: AnswerValue) => {
@@ -423,7 +440,10 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
                 </div>
               </div>
             ) : null}
-            <div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
+          {syncError ? (
+            <p role="alert" className="mt-4 rounded-[12px] border-2 border-amber-200 bg-amber-50 px-4 py-3 text-[13px] font-bold text-amber-800 dark:border-amber-500/20 dark:bg-amber-500/10 dark:text-amber-200">{syncError}</p>
+          ) : null}
+          <div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
               <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={handleExit}>{t.backDocs}</button>
               {hardCompletedAll ? (
                 <>
@@ -711,6 +731,9 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
         <Dialog open onClose={() => setConfirmOpen(false)} title={t.confirmTitle} closeLabel={t.confirmNo} className="z-[95]" panelClassName="max-h-[calc(100dvh_-_2rem)] w-full max-w-[420px] rounded-[16px] border-2 border-[#E5E5E5] bg-white p-5 shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 sm:p-6">
             <h3 className="lp-modal-title text-[20px]">{t.confirmTitle}</h3>
             <p className="lp-modal-desc mt-2">{t.confirmDesc}</p>
+            {typeof navigator !== "undefined" && navigator.onLine === false ? (
+              <p role="alert" className="mt-3 rounded-[12px] border-2 border-amber-200 bg-amber-50 px-3 py-2 text-[13px] font-bold text-amber-800">Bạn đang offline. Cần có mạng mới nộp được để lưu lịch sử đa thiết bị.</p>
+            ) : null}
             <div className="mt-5 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
               <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={() => setConfirmOpen(false)}>{t.confirmNo}</button>
               <button type="button" className="lp-btn lp-btn--primary lp-btn--sm" onClick={() => { setConfirmOpen(false); setFinished(true) }}>{t.confirmYes}</button>
