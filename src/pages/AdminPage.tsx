@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { Activity, Banknote, BarChart3, BookOpen, CheckCircle2, Clock3, Download, History, LayoutGrid, LogOut, Megaphone, RefreshCw, Search, Send, ShieldAlert, UserRound, Users, WalletCards, X, type LucideIcon } from "lucide-react"
 import { MobileTabBar } from "@/components/MobileTabBar"
-import brandLogo from "@/assets/logo.png"
+import brandLogo from "@/assets/logo.webp"
 import { useAuth } from "@/auth/AuthProvider"
 import { DashboardStatCard, dashboardStatGridClass } from "@/components/DashboardStatCard"
 import { Card } from "@/components/ui/card"

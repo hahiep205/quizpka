@@ -23,7 +23,7 @@ import {
   LogOut,
   X,
 } from "lucide-react"
-import brandLogo from "@/assets/logo.png"
+import brandLogo from "@/assets/logo.webp"
 import { QuizSetupModal, type QuizSetupValues } from "@/components/QuizSetupModal"
 import { HcmChapterPickerModal } from "@/components/HcmChapterPickerModal"
 import { PdfViewerModal } from "@/components/PdfViewerModal"
@@ -36,6 +36,7 @@ import { getToeicScopeOption, type ToeicScope } from "@/data/toeic"
 import { Card } from "@/components/ui/card"
 import { Dialog } from "@/components/ui/dialog"
 import { examCatalog, getSubjectById, type ExamCatalogItem } from "@/data/subjects"
+import { toMediaUrl } from "@/lib/mediaUrl"
 import { cn, modalBodyClass, modalFooterClass, modalFrameClass, modalHeaderClass } from "@/lib/utils"
 import { dashboardCopy as copy } from "@/shared/i18n"
 import { useExamLaunch } from "@/lib/useExamLaunch"
@@ -553,12 +554,7 @@ export function DashboardPage({
                 answer: item.answer,
                 explanation: (item.explainAnswer ?? item.explanation ?? (item as unknown as Record<string,string>).explain_answer ?? null) as string | null,
                 chapter: (item.chapter as string) ?? null,
-                imageUrl: (() => {
-                  const raw = (item as unknown as Record<string, string>).imageUrl ?? (item as unknown as Record<string, string>).image ?? null
-                  if (!raw) return null
-                  if (/^(https?:)?\/\//.test(raw) || raw.startsWith("/")) return raw
-                  return `/data/${raw}`
-                })(),
+                imageUrl: toMediaUrl((item as unknown as Record<string, string>).imageUrl ?? (item as unknown as Record<string, string>).image) ?? null,
               }))
             } else {
               questions = await fetchQuestionsForPdf(prevSubject, prevExam, chapterId)

@@ -117,7 +117,11 @@ export function useSyncedHistory(userId: string | undefined, userCreatedAt?: str
         if (cancelled) return
         const serverIds = new Set(server.map((item) => item.id))
         const missing = local.filter((item) => !serverIds.has(item.id))
-        setHistory([...missing, ...server].slice(0, 100))
+        // Hiển thị mới nhất trước: gộp rồi sort theo completedAt giảm dần.
+        const merged = [...missing, ...server].sort(
+          (a, b) => Date.parse(b.completedAt) - Date.parse(a.completedAt),
+        )
+        setHistory(merged.slice(0, 100))
         setError(null)
         // Backfill bài local cũ lên server để các thiết bị khác thấy (best-effort).
         for (const item of missing.slice(0, 20)) {

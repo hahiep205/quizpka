@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest"
 import { formatClockTime, isAnswerCorrect, mapBankQuestions } from "@/features/quiz/lib/quizHelpers"
+import { R2_PUBLIC_BASE } from "@/lib/mediaUrl"
 
 const practiceSetup = { questionOrder: "original", answerOrder: "original", mode: "practice", timed: false, durationMinutes: 0 } as const
 
@@ -29,6 +30,7 @@ describe("quiz helpers", () => {
         partNumber: 5,
         partTitle: "Part 5",
         imageUrl: "tadv/reading_part5.png",
+        audioUrl: "tadv/test01/part1-audio.mp3",
         questions: [
           { id: 1, question: "Q1", options: { A: "a" }, answer: "A", imageUrl: "tadv/test01/part5-image-test1/1.png" },
           { id: 2, question: "Q2", options: { A: "a" }, answer: "A" },
@@ -36,8 +38,10 @@ describe("quiz helpers", () => {
       }],
     }
     const [first, second] = mapBankQuestions(bank, "exam", practiceSetup)
-    expect(first.imageUrl).toBe("/data/tadv/test01/part5-image-test1/1.png")
-    expect(second.imageUrl).toBe("/data/tadv/reading_part5.png")
+    expect(first.imageUrl).toBe(`${R2_PUBLIC_BASE}/tadv/test01/1.png`)
+    expect(first.audioUrl).toBe(`${R2_PUBLIC_BASE}/tadv/test01/part1-audio.mp3`)
+    expect(second.imageUrl).toBe(`${R2_PUBLIC_BASE}/tadv/reading_part5.png`)
+    expect(second.audioUrl).toBe(`${R2_PUBLIC_BASE}/tadv/test01/part1-audio.mp3`)
   })
 
   it("formats clock time into HH:MM:SS", () => {

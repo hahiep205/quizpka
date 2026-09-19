@@ -2,6 +2,7 @@ import { hasChapterSupport, filterQuestionsBySubjectChapter } from "@/data/subje
 import type { ExamCatalogItem, Subject } from "@/data/subjects"
 import { parseQuestionBank, QuestionBankDataError } from "@/features/quiz/lib/questionBankSchema"
 import type { BankFile, BankQuestion } from "@/features/quiz/model/quiz.types"
+import { toMediaUrl } from "@/lib/mediaUrl"
 
 export type PdfQuestion = {
   index: number
@@ -35,12 +36,6 @@ function combineQuestions(banks: BankFile[]): BankQuestion[] {
     }
     return (bank.questions ?? []).map((q) => ({ ...q, id: `${bankIndex}-${String(q.id)}` }))
   })
-}
-
-function toWebImagePath(value: unknown): string | null {
-  if (typeof value !== "string" || !value) return null
-  if (/^(https?:)?\/\//.test(value) || value.startsWith("/")) return value
-  return `/data/${value}`
 }
 
 export async function fetchQuestionsForPdf(
@@ -77,7 +72,7 @@ export async function fetchQuestionsForPdf(
     const optionKeys = Object.keys(item.options ?? {}).sort()
     const options = optionKeys.map((k) => ({ key: k, text: String(item.options?.[k] ?? "") }))
     const explanation = item.explainAnswer ?? item.explanation ?? item.explain_answer ?? item.explanation_text ?? item.reason ?? null
-    const imageUrl = toWebImagePath((item as Record<string, unknown>).imageUrl) ?? toWebImagePath((item as Record<string, unknown>).image) ?? null
+    const imageUrl = toMediaUrl((item as Record<string, unknown>).imageUrl) ?? toMediaUrl((item as Record<string, unknown>).image) ?? null
     return {
       index: idx + 1,
       prompt: item.question,

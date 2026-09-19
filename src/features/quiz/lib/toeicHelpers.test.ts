@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest"
 import { adaptToeicBank } from "@/features/quiz/lib/toeicHelpers"
 import { parseToeicBank, ToeicDataError } from "@/features/quiz/lib/toeicSchema"
+import { R2_PUBLIC_BASE } from "@/lib/mediaUrl"
 
 const setup = { questionOrder: "original", answerOrder: "original", mode: "practice", timed: false, durationMinutes: 0 } as const
 const part1File = "/data/toeic-test/Test-01/Part1/test01-part1.json"
@@ -9,7 +10,7 @@ describe("TOEIC validation and adapter", () => {
   it("validates and maps a Part 1 question with media", () => {
     const bank = parseToeicBank([{ id: 1, prompt: "Look at the picture", audio: "q1.mp3", image: "q1.webp", options: { A: "A", B: "B" }, correct_answer: "B" }], part1File)
     const [question] = adaptToeicBank(bank, part1File, "toeic-test-01", setup)
-    expect(question).toMatchObject({ correctIndex: 1, audioUrl: "/data/toeic-test/Test-01/Part1/q1.mp3", imageUrl: "/data/toeic-test/Test-01/Part1/q1.webp" })
+    expect(question).toMatchObject({ correctIndex: 1, audioUrl: `${R2_PUBLIC_BASE}/toeic/Test-01/Part1/q1.mp3`, imageUrl: `${R2_PUBLIC_BASE}/toeic/Test-01/Part1/q1.webp` })
   })
 
   it("creates one combined passage for a Part 7 multi-document group", () => {

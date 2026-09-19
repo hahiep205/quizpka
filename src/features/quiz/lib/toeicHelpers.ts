@@ -4,6 +4,7 @@ import { shuffle } from "@/features/quiz/lib/quizHelpers"
 import { getToeicPartFromFile, parseToeicBank, ToeicDataError } from "@/features/quiz/lib/toeicSchema"
 import type { Question } from "@/features/quiz/model/quiz.types"
 import type { RawToeicBank, RawToeicQuestion } from "@/features/quiz/model/toeic.types"
+import { toMediaUrl } from "@/lib/mediaUrl"
 
 const OPTION_KEYS = ["A", "B", "C", "D", "E", "F"] as const
 
@@ -13,7 +14,7 @@ function getDirectory(file: string) {
 }
 
 function assetUrl(directory: string, filename?: string) {
-  return filename ? `${directory}/${filename}` : undefined
+  return filename ? toMediaUrl(`${directory}/${filename}`) : undefined
 }
 
 function explanationFor(item: RawToeicQuestion): Pick<Question, "explanation" | "detailedExplanation"> {

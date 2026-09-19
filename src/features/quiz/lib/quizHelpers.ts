@@ -1,6 +1,7 @@
 import type { Question, BankQuestion, BankFile, AnswerValue } from "@/features/quiz/model/quiz.types"
 import type { QuizSetupValues } from "@/components/QuizSetupModal"
 import type { ExamPaper } from "@/data/subjects"
+import { toMediaUrl } from "@/lib/mediaUrl"
 
 const OPTION_KEYS = ["A", "B", "C", "D", "E", "F"] as const
 
@@ -11,13 +12,6 @@ export function shuffle<T>(items: T[]) {
     ;[list[i], list[j]] = [list[j], list[i]]
   }
   return list
-}
-
-/** Resolves a bank image reference to a web path (absolute/http URLs pass through). */
-function toWebImagePath(value: unknown): string | undefined {
-  if (typeof value !== "string" || !value) return undefined
-  if (/^(https?:)?\/\//.test(value) || value.startsWith("/")) return value
-  return `/data/${value}`
 }
 
 export function mapBankItems(
@@ -40,7 +34,7 @@ export function mapBankItems(
       explanation: item.explainAnswer ?? item.explanation ?? item.explain_answer ?? item.explanation_text ?? item.reason,
       audioTimestamp: item.audioTimestamp,
       ...context,
-      imageUrl: toWebImagePath(item.imageUrl) ?? (item.image ? `/data/${item.image}` : undefined) ?? context.imageUrl,
+      imageUrl: toMediaUrl(item.imageUrl) ?? toMediaUrl(item.image) ?? context.imageUrl,
     }
   })
 }
@@ -54,8 +48,8 @@ export function mapBankQuestions(bank: BankFile, examId: string, setup: QuizSetu
         instruction: part.instruction,
         passage: part.passage,
         referenceNotices: part.referenceNotices,
-        audioUrl: part.audioUrl ? `/data/${part.audioUrl}` : undefined,
-        imageUrl: part.imageUrl ? `/data/${part.imageUrl}` : undefined,
+        audioUrl: toMediaUrl(part.audioUrl),
+        imageUrl: toMediaUrl(part.imageUrl),
       })
     )
     const flat = (setup.questionOrder === "random" ? shuffle(partGroups) : partGroups).flat()

@@ -58,12 +58,12 @@ scripts/validate-data.js  validates published question banks and media links dur
 
 ## Question-bank conventions
 
-- General subject banks are JSON files referenced by `questionBank` or `questionBanks` in `src/data/subjects.ts`. Each bank lives in its own subfolder under `public/data` (e.g. `public/data/tu-tuong-hcm/`, `public/data/tadv/`); TADV media paths inside those JSON files are relative to `/data` and include the subfolder (e.g. `tadv/audio_part_1_listening.mp3`).
+- General subject banks are JSON files referenced by `questionBank` or `questionBanks` in `src/data/subjects.ts`. Each bank lives in its own subfolder under `public/data` (e.g. `public/data/tu-tuong-hcm/`, `public/data/tadv/`). TADV media paths inside those JSON files stay relative (e.g. `tadv/test01/part1-audio.mp3`); `toMediaUrl` in `src/lib/mediaUrl.ts` serves TADV audio/images, TOEIC audio/images (`toeic-test/` → `toeic/`), and the hero videos from R2, flattening `part5-image-testN/` folders.
 - The optional manual source mirror lives in the repository root: `sync:data` copies `data/General/<subject>/**` into `public/data/<subject>/` (preserving nested folders such as `triet-hoc-mac-lenin/{2tc,3tc}`) and maps `data/Major/*.json` through `scripts/sync-data.js`.
 - TOEIC banks live under `public/data/toeic-test/Test-XX/PartN/`.
 - Each TOEIC JSON file must match its folder part. The loader validates the required question text, options shape, and answer fields at runtime.
 - Parts 1, 2 and 5 are arrays of questions; Parts 3, 4 and 6 are arrays of groups; Part 7 is an object with `groups`.
-- Relative media names (`audio`, `image`) are resolved from the bank file's directory. Keep media and its JSON bank together.
+- Relative media names (`audio`, `image`) are resolved from the bank file's directory, then rewritten to R2. JSON banks stay under `public/data/toeic-test/`.
 - Update the counts, file paths, and metadata together in `src/data/toeic.ts`; do not rely on a count inferred from the UI.
 
 ## Testing

@@ -1,4 +1,5 @@
 import { GoogleIcon } from "@/shared/icons/GoogleIcon"
+import { toMediaUrl } from "@/lib/mediaUrl"
 import type { Theme } from "@/shared/types/app"
 
 function QuizPreviewCard({ theme }: { theme: Theme }) {
@@ -22,7 +23,7 @@ function QuizPreviewCard({ theme }: { theme: Theme }) {
 
         <video
           className="mt-2 w-full max-h-[340px] rounded-lg object-contain"
-          src={theme === "dark" ? "/animo-column-drift-720p-dark.webm" : "/animo-column-drift-720p.webm"}
+          src={theme === "dark" ? toMediaUrl("/animo-column-drift-720p-dark.webm") : toMediaUrl("/animo-column-drift-720p.webm")}
           autoPlay
           muted
           loop

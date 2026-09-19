@@ -1,9 +1,9 @@
-import liet from "@/assets/Liet.png"
-import kem from "@/assets/Kem.png"
-import qua from "@/assets/Qua.png"
-import tam from "@/assets/Tam.png"
-import kha from "@/assets/Kha.png"
-import perfect from "@/assets/Perfect.png"
+import liet from "@/assets/Liet.webp"
+import kem from "@/assets/Kem.webp"
+import qua from "@/assets/Qua.webp"
+import tam from "@/assets/Tam.webp"
+import kha from "@/assets/Kha.webp"
+import perfect from "@/assets/Perfect.webp"
 
 export function getStampSrc(score: number): string {
   if (score < 1) return liet

@@ -1,7 +1,7 @@
 import { useEffect, useState, type ReactNode } from "react"
 import { Languages, LogOut, Menu, Moon, Sun, X } from "lucide-react"
 import { cn } from "@/lib/utils"
-import brandLogo from "@/assets/logo.png"
+import brandLogo from "@/assets/logo.webp"
 import { GoogleIcon } from "@/shared/icons/GoogleIcon"
 import { useAuth } from "@/auth/AuthProvider"
 import { appRoutes, navigate } from "@/app/navigation"

@@ -1,4 +1,5 @@
 import type { LocalizedText } from "@/data/subjects"
+import { toMediaUrl } from "@/lib/mediaUrl"
 
 export type TadvAudioTrack = {
   label: LocalizedText
@@ -26,12 +27,12 @@ export const tadvExamOptions: TadvExamOption[] = [
     audioTracks: [
       {
         label: { en: "Part 1: Listening - Short Announcements or Instructions", vi: "Part 1: Listening - Short Announcements or Instructions" },
-        url: "/data/tadv/test01/part1-audio.mp3",
+        url: toMediaUrl("tadv/test01/part1-audio.mp3"),
         fileName: "TADV-Part1-Listening.mp3",
       },
       {
         label: { en: "Part 2: Listening - Conversation about a Computer Game", vi: "Part 2: Listening - Conversation about a Computer Game" },
-        url: "/data/tadv/test01/part2-audio.mp3",
+        url: toMediaUrl("tadv/test01/part2-audio.mp3"),
         fileName: "TADV-Part2-Listening.mp3",
       },
     ],
