@@ -84,28 +84,21 @@ function validateGeneralBank(value, file) {
   validateGeneralMedia(value, file)
 }
 
+function isR2HostedMedia(value) {
+  if (/^(https?:)?\/\//.test(value)) return true
+  const relativePath = value.startsWith("/data/") ? value.slice("/data/".length) : value.startsWith("/") ? value.slice(1) : value
+  return relativePath.startsWith("tadv/") || relativePath.startsWith("tadv-traphi/") || relativePath.startsWith("toeic-test/")
+}
+
 function validateGeneralMedia(value, file) {
   const visit = (node) => {
     if (Array.isArray(node)) return node.forEach(visit)
     if (!isRecord(node)) return
     for (const key of ["audioUrl", "imageUrl", "image"]) {
-      if (typeof node[key] === "string") {
+      if (typeof node[key] === "string" && !isR2HostedMedia(node[key])) {
         const assetPath = node[key].startsWith("/") ? join(projectRoot, "public", node[key]) : join(publicDataDirectory, node[key])
         if (!existsSync(assetPath)) fail(file, `referenced ${key} file is missing: ${node[key]}`)
       }
-    }
-    Object.values(node).forEach(visit)
-  }
-  visit(value)
-}
-
-function validateToeicMedia(value, file) {
-  const directory = dirname(file)
-  const visit = (node) => {
-    if (Array.isArray(node)) return node.forEach(visit)
-    if (!isRecord(node)) return
-    for (const key of ["audio", "image"]) {
-      if (typeof node[key] === "string" && !existsSync(join(directory, node[key]))) fail(file, `referenced ${key} file is missing: ${node[key]}`)
     }
     Object.values(node).forEach(visit)
   }
@@ -124,14 +117,12 @@ if (!existsSync(publicDataDirectory)) {
       continue
     }
     const partMatch = file.replaceAll("\\", "/").match(/\/toeic-test\/Test-\d+\/Part([1-7])\//)
-    if (partMatch) {
-      validateToeicBank(value, file, Number(partMatch[1]))
-      validateToeicMedia(value, file)
-    } else validateGeneralBank(value, file)
+    if (partMatch) validateToeicBank(value, file, Number(partMatch[1]))
+    else validateGeneralBank(value, file)
   }
 }
 
 if (failures > 0) {
   console.error(`[validate-data] failed with ${failures} issue(s)`)
   process.exitCode = 1
-} else console.log("[validate-data] all public question banks and TOEIC media are valid")
+} else console.log("[validate-data] all public question banks are valid")
