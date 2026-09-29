@@ -1269,7 +1269,7 @@ function HistoryAttemptDialog({ item, lang, onClose, onShowWrong, onRetry }: {
       </div>
       <button type="button" className="lp-btn lp-btn--secondary lp-btn--icon shrink-0" onClick={onClose} aria-label={lang === "vi" ? "Đóng" : "Close"}><X className="h-4 w-4" /></button>
     </div>
-    <div className="max-h-[min(65dvh,520px)] overflow-y-auto p-4 sm:p-6">
+    <div className="max-h-[min(65dvh,360px)] overflow-y-auto p-4 sm:p-6">
       <div className="rounded-[16px] bg-gradient-to-br from-[#E8F7FE] to-white p-4 dark:from-sky-500/10 dark:to-slate-900">
         <p className="text-xs font-black uppercase tracking-wide text-slate-400">{lang === "vi" ? "Điểm số" : "Score"}</p>
         <p className="mt-1 text-4xl font-black text-[#1CB0F6]">{item?.score.toFixed(1)}<span className="text-lg text-slate-400">/10</span></p>

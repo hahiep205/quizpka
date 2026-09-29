@@ -36,7 +36,7 @@ export function PurchaseDetailDialog({ exam, lang, loading, error, onClose, onCo
       </div>
       <button type="button" className="lp-btn lp-btn--secondary lp-btn--icon shrink-0" onClick={onClose} disabled={loading} aria-label={isVietnamese ? "Hủy" : "Cancel"}><X className="h-4 w-4" /></button>
     </header>
-    <div className="max-h-[min(60dvh,450px)] overflow-y-auto p-4 sm:p-6">
+    <div className="max-h-[min(60dvh,360px)] overflow-y-auto p-4 sm:p-6">
       <div className="rounded-[16px] border border-sky-100 bg-[#F4FBFF] p-4 dark:border-sky-500/15 dark:bg-sky-500/[0.06]">
         <p className="text-xs font-black uppercase tracking-[0.08em] text-slate-400">{isVietnamese ? "Ghi chú" : "Note"}</p>
         <p className="mt-2 text-sm font-semibold leading-6 text-slate-600 dark:text-slate-300">{exam?.description[lang]}</p>
