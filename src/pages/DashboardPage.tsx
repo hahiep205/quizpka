@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ComponentType } from "react"
 import {
+  ArrowLeft,
   ArrowRight,
   BarChart3,
   Bell,
@@ -358,9 +359,9 @@ export function DashboardPage({
       <DesktopSidebar activeView={activeView} lang={lang} unreadNotificationCount={unreadNotificationCount} onNavigate={navigate} />
 
       <div className="lg:pl-[200px]">
-        <DashboardTopbar lang={lang} view={activeView} onlineCount={onlineCount} />
+        <DashboardTopbar lang={lang} view={activeView} onlineCount={onlineCount} unreadNotificationCount={unreadNotificationCount} />
 
-        <main className="mx-auto w-full max-w-[1440px] px-3 pb-[calc(108px+env(safe-area-inset-bottom))] pt-4 min-[380px]:px-4 sm:px-6 sm:pt-6 md:px-8 lg:px-8 lg:pb-12 lg:pt-8 xl:px-10">
+        <main className={cn("mx-auto w-full max-w-[1440px] px-3 pt-4 min-[380px]:px-4 sm:px-6 sm:pt-6 md:px-8 lg:px-8 lg:pb-12 lg:pt-8 xl:px-10", activeView === "notifications" ? "pb-[calc(24px+env(safe-area-inset-bottom))]" : "pb-[calc(108px+env(safe-area-inset-bottom))]")}>
           {activeView === "home" ? (
             <HomeDashboard
               lang={lang}
@@ -389,7 +390,7 @@ export function DashboardPage({
         </main>
       </div>
 
-      <MobileNav activeView={activeView} lang={lang} unreadNotificationCount={unreadNotificationCount} onNavigate={navigate} />
+      {activeView === "notifications" ? null : <MobileNav activeView={activeView} lang={lang} unreadNotificationCount={unreadNotificationCount} onNavigate={navigate} />}
 
       <HcmChapterPickerModal
         open={Boolean(hcmPickerExam)}
@@ -874,7 +875,7 @@ function DesktopSidebar({
   )
 }
 
-function DashboardTopbar({ lang, view, onlineCount = 0 }: Pick<DashboardPageProps, "lang" | "onlineCount"> & { view: DashboardView }) {
+function DashboardTopbar({ lang, view, onlineCount = 0, unreadNotificationCount = 0 }: Pick<DashboardPageProps, "lang" | "onlineCount"> & { view: DashboardView; unreadNotificationCount?: number }) {
   const t = copy[lang]
   const topbarTitle =
     view === "leaderboard"
@@ -922,9 +923,20 @@ function DashboardTopbar({ lang, view, onlineCount = 0 }: Pick<DashboardPageProp
               <span className="name-logo">{pageMeta.title}</span>
             </a>
           ) : view === "notifications" ? (
-            <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={pageMeta.title}>
-              <span className="name-logo">{pageMeta.title}</span>
-            </a>
+            <div className="flex min-w-0 flex-1 items-center gap-1 lg:hidden">
+              <button
+                type="button"
+                onClick={() => navigateApp(appRoutes.dashboard)}
+                aria-label={lang === "vi" ? "Quay lại dashboard" : "Back to dashboard"}
+                title={lang === "vi" ? "Quay lại" : "Back"}
+                className="relative inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#F0F2F5] text-[#050505] transition-colors hover:bg-[#E4E6EB] active:scale-95 dark:bg-[#3A3B3C] dark:text-[#E4E6EB] dark:hover:bg-[#4E4F50]"
+              >
+                <ArrowLeft className="h-5 w-5" strokeWidth={2} />
+              </button>
+              <a href="/" className="flex flex-1 items-center justify-center text-[27px]" aria-label={pageMeta.title}>
+                <span className="name-logo">{pageMeta.title}</span>
+              </a>
+            </div>
           ) : view === "downloads" ? (
             <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={pageMeta.title}>
               <span className="name-logo">{pageMeta.title}</span>
@@ -953,9 +965,21 @@ function DashboardTopbar({ lang, view, onlineCount = 0 }: Pick<DashboardPageProp
           <h2 className="truncate bg-gradient-to-r from-[#7DD3FC] via-[#1CB0F6] to-[#0A4FD6] bg-clip-text text-2xl font-black tracking-[-0.025em] text-transparent sm:text-[32px] lg:text-[36px]">{topbarTitle}</h2>
         </a>
 
-        <div className="ml-auto">
+        <div className={view === "notifications" ? "ml-auto hidden lg:block" : "ml-auto"}>
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-[#F0F2F5] px-2.5 py-1 text-[11px] font-semibold text-emerald-600 dark:bg-[#3A3B3C] dark:text-emerald-300" title={lang === "vi" ? "Số người đang truy cập website" : "People currently visiting the website"}>
+            <button
+              type="button"
+              onClick={() => navigateApp(appRoutes.dashboardNotifications)}
+              aria-label={lang === "vi" ? "Thông báo" : "Notifications"}
+              title={lang === "vi" ? "Thông báo" : "Notifications"}
+              className="relative inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#F0F2F5] text-[#050505] transition-colors hover:bg-[#E4E6EB] active:scale-95 lg:hidden dark:bg-[#3A3B3C] dark:text-[#E4E6EB] dark:hover:bg-[#4E4F50]"
+            >
+              <span className="flex h-5 w-5 shrink-0 items-center justify-center">
+                <Bell className="h-[19px] w-[19px]" aria-hidden="true" />
+              </span>
+              {unreadNotificationCount > 0 ? <span className="absolute right-0.5 top-0.5 min-w-4 rounded-full bg-red-500 px-1 text-center text-[10px] font-black leading-4 text-white ring-2 ring-white dark:ring-slate-900">{unreadNotificationCount > 99 ? "99+" : unreadNotificationCount}</span> : null}
+            </button>
+            <span className="hidden items-center gap-1.5 rounded-full bg-[#F0F2F5] px-2.5 py-1 text-[11px] font-semibold text-emerald-600 lg:inline-flex dark:bg-[#3A3B3C] dark:text-emerald-300" title={lang === "vi" ? "Số người đang truy cập website" : "People currently visiting the website"}>
               <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
               <span>Live</span>
               <span className="font-black tabular-nums text-slate-700 dark:text-slate-200">{onlineCount}</span>
@@ -1406,7 +1430,7 @@ function MobileNav({ activeView, lang, unreadNotificationCount, onNavigate }: { 
       ariaLabel="Mobile dashboard"
       activeKey={activeView}
       onNavigate={onNavigate}
-      items={navItems.map((item) => ({
+      items={navItems.filter((item) => item.key !== "notifications").map((item) => ({
         key: item.key,
         icon: mobileNavIcons[item.key],
         label: mobileNavLabels[lang][item.key as keyof typeof mobileNavLabels["vi"]],

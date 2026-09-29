@@ -7,6 +7,7 @@ import { DashboardStatCard, dashboardStatGridClass } from "@/components/Dashboar
 import { Card } from "@/components/ui/card"
 import { Dialog } from "@/components/ui/dialog"
 import { fetchAllAdminUsers, setAdminUserStatus } from "@/features/admin/api/adminUsers"
+import { fetchBlockedViewStat } from "@/features/admin/api/blockedViews"
 import { fetchAllActivityTimeline, fetchAllPracticeAttempts, fetchPracticeAttempts, fetchUserActivity } from "@/features/admin/api/adminActivity"
 import { ACTIVITY_LABELS, parseActivityRows, parseAttemptRows, type ActivityEvent, type ActivityEventType, type PracticeAttemptRow } from "@/features/activity/lib/activityLog"
 import { bucketHoursToday, eventsByType, filterByDays, topSubjects } from "@/features/admin/lib/adminOverview"
@@ -1491,6 +1492,8 @@ function UserDrawer({ user, lang, currentUserId, onStatusChange, onClose }: { us
   const [blockReason, setBlockReason] = useState("")
   const [statusSaving, setStatusSaving] = useState(false)
   const [statusError, setStatusError] = useState<string | null>(null)
+  const [blockedView, setBlockedView] = useState<{ viewCount: number; lastViewedAt: string | null } | null>(null)
+  const [blockedViewError, setBlockedViewError] = useState<string | null>(null)
   const userFlags = useMemo(() => detectUserAnomalies(userAttempts, userEvents), [userAttempts, userEvents])
   const isSelf = currentUserId !== null && currentUserId === user.id
   const isAdminAccount = user.role === "admin"
@@ -1503,6 +1506,11 @@ function UserDrawer({ user, lang, currentUserId, onStatusChange, onClose }: { us
     let cancelled = false
     void fetchUserActivity(user.id, 200).then((r) => { if (!cancelled) setUserEvents(r.events) })
     void fetchPracticeAttempts(user.id, 200).then((r) => { if (!cancelled) setUserAttempts(r.attempts) })
+    setBlockedView(null)
+    setBlockedViewError(null)
+    void fetchBlockedViewStat(user.id)
+      .then((r) => { if (!cancelled) setBlockedView({ viewCount: r.viewCount, lastViewedAt: r.lastViewedAt }) })
+      .catch((err: unknown) => { if (!cancelled) setBlockedViewError(err instanceof Error ? err.message : "Không đọc được log xem lý do khóa.") })
     return () => { cancelled = true }
   }, [user.id])
   return (
@@ -1549,6 +1557,15 @@ function UserDrawer({ user, lang, currentUserId, onStatusChange, onClose }: { us
                 Lý do khóa: {user.blockedReason ?? "(không có lý do — tài khoản khóa trước khi có tính năng này)"}
               </p>
             ) : null}
+            <p className="mt-2 rounded-lg bg-sky-50 px-3 py-2 text-xs font-bold leading-5 text-sky-700 dark:bg-sky-500/10 dark:text-sky-300">
+              {blockedViewError
+                ? `Không đọc được log xem lý do: ${blockedViewError}`
+                : blockedView === null
+                  ? "Đang kiểm tra user đã xem lý do khóa chưa…"
+                  : blockedView.viewCount > 0
+                    ? `Đã xem lý do khóa: ${blockedView.viewCount} lần${blockedView.lastViewedAt ? `, lần cuối ${formatTime(blockedView.lastViewedAt, lang)}` : ""}`
+                    : "Chưa xem: user chưa mở app sau khi bị khóa."}
+            </p>
             {statusError ? <p role="alert" className="mt-2 text-xs font-bold text-red-600">{statusError}</p> : null}
             {user.status === "active" ? (
               <div className="mt-2.5 space-y-2">

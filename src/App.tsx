@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useMemo, useState } from "react"
+import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react"
 import { appRoutes, navigate, useAppPath } from "@/app/navigation"
 import type { ContactModalType } from "@/components/ContactModal"
 import { DocumentsPage } from "@/pages/DocumentsPage"
@@ -282,7 +282,15 @@ function AccessDeniedScreen() {
 }
 
 function BlockedAccountScreen({ reason, onSignOut }: { reason: string | null; onSignOut: () => void }) {
-  return <main className="mx-auto flex min-h-svh max-w-md flex-col items-center justify-center gap-3 px-6 text-center"><h1 className="text-xl font-semibold">Tài khoản đã bị khóa</h1>{reason ? <p className="rounded-xl bg-red-50 px-4 py-3 text-sm font-semibold leading-6 text-red-700 dark:bg-red-500/10 dark:text-red-300">Lý do: {reason}</p> : null}<p className="text-sm text-slate-500">Vui lòng liên hệ quản trị viên để được hỗ trợ.</p><div className="flex flex-wrap items-center justify-center gap-2"><a href="/" className="lp-btn lp-btn--secondary">Về trang chủ</a><button type="button" className="lp-btn lp-btn--primary" onClick={onSignOut}>Đăng xuất</button></div></main>
+  const [countdown, setCountdown] = useState(10)
+  const onSignOutRef = useRef(onSignOut)
+  onSignOutRef.current = onSignOut
+  useEffect(() => {
+    if (countdown <= 0) { onSignOutRef.current(); return }
+    const timer = window.setTimeout(() => setCountdown((v) => v - 1), 1000)
+    return () => window.clearTimeout(timer)
+  }, [countdown])
+  return <main className="mx-auto flex min-h-svh max-w-md flex-col items-center justify-center gap-3 px-6 text-center"><h1 className="text-xl font-semibold">Tài khoản đã bị khóa</h1>{reason ? <p className="rounded-xl bg-red-50 px-4 py-3 text-sm font-semibold leading-6 text-red-700 dark:bg-red-500/10 dark:text-red-300">Lý do: {reason}</p> : null}<p className="text-sm text-slate-500">Vui lòng liên hệ quản trị viên để được hỗ trợ.</p><p role="status" className="text-sm font-semibold text-slate-400">Tự động đăng xuất sau {countdown} giây…</p><div className="flex flex-wrap items-center justify-center gap-2"><a href="/" className="lp-btn lp-btn--secondary">Về trang chủ</a><button type="button" className="lp-btn lp-btn--primary" onClick={onSignOut}>Đăng xuất ngay</button></div></main>
 }
 
 

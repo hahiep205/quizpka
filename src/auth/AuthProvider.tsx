@@ -2,6 +2,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState, t
 import type { Session, User } from "@supabase/supabase-js"
 import { supabase } from "@/lib/supabase"
 import { logActivityEvent } from "@/features/activity/lib/activityLog"
+import { logBlockedAccountView } from "@/features/admin/api/blockedViews"
 import type { AuthContextValue, AuthProfile, AuthStatus } from "./auth.types"
 
 const AuthContext = createContext<AuthContextValue | null>(null)
@@ -29,7 +30,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     try {
       const nextProfile = await loadProfile(currentUser)
       setStatus(nextProfile?.status === "blocked" ? "blocked" : "authenticated")
-      if (nextProfile?.status !== "blocked") {
+      if (nextProfile?.status === "blocked") {
+        // Tài khoản bị chặn vẫn ghi 1 log "đã xem lý do khóa" để admin biết
+        // họ đã đọc thông báo chưa (bảng riêng, không dùng user_activity_events
+        // vì RLS chỉ cho active user ghi vào đó).
+        logBlockedAccountView(currentUser.id)
+      } else {
         logActivityEvent(currentUser.id, "login", { provider: currentUser.app_metadata?.provider ?? "google" }, { oncePerSessionKey: `login:${currentUser.id}` })
       }
     } catch {
