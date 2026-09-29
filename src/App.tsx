@@ -67,7 +67,7 @@ export default function App() {
   useEffect(() => {
     if (pathname !== appRoutes.home) return
     if (status === "authenticated") return
-    if (readStorage("quizpka-login-announcement-dismissed") === getTodayKey()) return
+    if (readStorage("quizpka-login-announcement-dismissed-v2") === getTodayKey()) return
     const timer = window.setTimeout(() => setAnnouncementOpen(true), 1000)
     return () => window.clearTimeout(timer)
   }, [pathname, status])
@@ -92,7 +92,7 @@ export default function App() {
 
   const closeAnnouncement = () => setAnnouncementOpen(false)
   const handleDontShowToday = () => {
-    writeStorage("quizpka-login-announcement-dismissed", getTodayKey())
+    writeStorage("quizpka-login-announcement-dismissed-v2", getTodayKey())
     setAnnouncementOpen(false)
   }
   const handleFeedback = () => {
@@ -101,7 +101,7 @@ export default function App() {
   }
   const handleShare = () => {
     setAnnouncementOpen(false)
-    openContact("Contribute")
+    openContact("Report")
   }
 
   const shellClassName =
@@ -270,7 +270,7 @@ export default function App() {
 }
 
 function LoginRequiredScreen({ onLogin }: { onLogin: () => void }) {
-  return <main className="mx-auto flex min-h-svh max-w-md flex-col items-center justify-center gap-4 px-6 text-center"><h1 className="text-xl font-semibold">Vui lòng đăng nhập để tiếp tục</h1><button type="button" className="lp-btn lp-btn--primary" onClick={onLogin}>Đăng nhập với Google</button></main>
+  return <main className="mx-auto flex min-h-svh max-w-md flex-col items-center justify-center gap-4 px-6 text-center"><h1 className="text-xl font-semibold">Chức năng đăng nhập đang bảo trì</h1><p className="text-sm text-slate-500">Website vừa bị tấn công, bị spam tool phá nên đang bảo trì chức năng đăng nhập để backup dữ liệu. Bạn vẫn có thể làm các bài quiz mà không cần đăng nhập.</p><button type="button" className="lp-btn lp-btn--primary disabled:opacity-60" onClick={onLogin} disabled aria-disabled="true" title="Đang bảo trì">Đang bảo trì</button><a href="/" className="lp-btn lp-btn--secondary">Về trang chủ</a></main>
 }
 
 function RouteLoading() {

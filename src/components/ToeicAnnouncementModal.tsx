@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Check, FileUp, MessageCircle, Sparkles, X } from "lucide-react"
+import { AlertTriangle, Check, MessageCircle, Sparkles, X } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { GradientBackground } from "@/components/ui/gradient-background"
 import { toeicAnnouncementCopy as copy } from "@/shared/i18n"
@@ -108,7 +108,7 @@ export function ToeicAnnouncementModal({ open, lang, onClose, onDontShowToday, o
               onClick={onShare}
               className="lp-btn lp-btn--primary lp-btn--sm min-w-0 justify-center whitespace-normal text-center leading-4"
             >
-              <FileUp className="h-4 w-4 shrink-0" />
+              <AlertTriangle className="h-4 w-4 shrink-0" />
               {t.share}
             </button>
             <button

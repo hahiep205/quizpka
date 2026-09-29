@@ -6,6 +6,7 @@ import { examCatalog, getSubjectById, type ExamCatalogItem } from "@/data/subjec
 import { QuizSetupModal } from "@/components/QuizSetupModal"
 import { HcmChapterPickerModal } from "@/components/HcmChapterPickerModal"
 import { LoginNudgeModal, useLoginNudge } from "@/components/LoginNudgeModal"
+import { LoginRequiredModal } from "@/components/LoginRequiredModal"
 import { PdfViewerModal } from "@/components/PdfViewerModal"
 import { ImageDocViewerModal } from "@/components/ImageDocViewerModal"
 import { TadvPickerModal } from "@/components/TadvPickerModal"
@@ -42,6 +43,7 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
   const [purchaseExam, setPurchaseExam] = useState<ExamCatalogItem | null>(null)
   const [purchaseLoading, setPurchaseLoading] = useState(false)
   const [purchaseError, setPurchaseError] = useState<string | null>(null)
+  const [loginRequiredOpen, setLoginRequiredOpen] = useState(false)
   const {
     pickerExam: hcmPickerExam,
     setupExam,
@@ -78,6 +80,8 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
 
   const confirmPurchase = async () => {
     if (!purchaseExam || purchaseLoading) return
+    // Chưa đăng nhập thì hiện modal yêu cầu login thay vì gọi mua (tránh lỗi "Auth session missing!").
+    if (!user?.id) { setLoginRequiredOpen(true); return }
     const productId = getPaidProductId(purchaseExam.subjectCode)
     if (!productId) return
     setPurchaseLoading(true)
@@ -96,7 +100,14 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
       setPayment({ payment: result.payment })
       logActivityEvent(user?.id, "purchase_start", { productId, orderId: result.orderId ?? null })
     } catch (error) {
-      setPurchaseError(error instanceof Error ? error.message : "Không thể tạo thanh toán. Vui lòng thử lại.")
+      const message = error instanceof Error ? error.message : "Không thể tạo thanh toán. Vui lòng thử lại."
+      // Phiên hết hạn giữa chừng (khách / token hết hạn) thì cũng hiện modal yêu cầu login.
+      if (!user?.id || /auth session missing|phiên đăng nhập đã hết hạn|jwt|session/i.test(message)) {
+        setPurchaseError(null)
+        setLoginRequiredOpen(true)
+        return
+      }
+      setPurchaseError(message)
     } finally {
       setPurchaseLoading(false)
     }
@@ -247,6 +258,12 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
         lang={lang}
         onSkip={nudge.skipNudge}
         onClose={nudge.closeNudge}
+      />
+
+      <LoginRequiredModal
+        open={loginRequiredOpen}
+        lang={lang}
+        onClose={() => setLoginRequiredOpen(false)}
       />
 
       <PdfViewerModal

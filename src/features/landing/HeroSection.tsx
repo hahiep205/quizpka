@@ -64,7 +64,7 @@ export function HeroSection({ t, onOpenLogin, onOpenDashboard, authenticated, th
             </p>
 
             <div className="lp-cta-row mt-9">
-              <button type="button" className="lp-btn lp-btn--primary" onClick={authenticated ? onOpenDashboard : onOpenLogin}>
+              <button type="button" className="lp-btn lp-btn--primary disabled:opacity-60" onClick={authenticated ? onOpenDashboard : onOpenLogin} disabled={!authenticated} aria-disabled={!authenticated ? "true" : undefined} title={!authenticated ? t.loginGoogle : undefined}>
                 {!authenticated && <span className="flex h-[22px] w-[22px] items-center justify-center rounded-full bg-white/15"><GoogleIcon className="h-[18px] w-[18px]" /></span>}
                 {authenticated ? t.dashboardAccess : t.loginGoogle}
               </button>
