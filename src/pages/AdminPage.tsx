@@ -6,7 +6,7 @@ import { useAuth } from "@/auth/AuthProvider"
 import { DashboardStatCard, dashboardStatGridClass } from "@/components/DashboardStatCard"
 import { Card } from "@/components/ui/card"
 import { Dialog } from "@/components/ui/dialog"
-import { fetchAllAdminUsers } from "@/features/admin/api/adminUsers"
+import { fetchAllAdminUsers, setAdminUserStatus } from "@/features/admin/api/adminUsers"
 import { fetchAllActivityTimeline, fetchAllPracticeAttempts, fetchPracticeAttempts, fetchUserActivity } from "@/features/admin/api/adminActivity"
 import { ACTIVITY_LABELS, parseActivityRows, parseAttemptRows, type ActivityEvent, type ActivityEventType, type PracticeAttemptRow } from "@/features/activity/lib/activityLog"
 import { bucketHoursToday, eventsByType, filterByDays, topSubjects } from "@/features/admin/lib/adminOverview"
@@ -1088,6 +1088,7 @@ export function AdminPage({ lang }: Props) {
                                 <td className="px-4 py-3">
                                   <span className="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-black text-slate-500 dark:bg-white/10 dark:text-slate-300">{u.role}</span>{" "}
                                   <span className={cn("rounded-full px-2.5 py-1 text-[11px] font-black", u.status === "active" ? "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300" : "bg-red-50 text-red-600 dark:bg-red-500/10 dark:text-red-300")}>{u.status}</span>
+                                  {u.status === "blocked" && u.blockedReason ? <p className="mt-1 max-w-[220px] truncate text-[11px] font-bold text-red-500" title={u.blockedReason}>Lý do: {u.blockedReason}</p> : null}
                                 </td>
                                 <td className="px-4 py-3 text-center">
                                   {(flagCountByUser.get(u.id) ?? 0) > 0 ? (
@@ -1139,6 +1140,7 @@ export function AdminPage({ lang }: Props) {
                             <span className={cn("rounded-full px-2 py-0.5 text-[11px] font-black", u.status === "active" ? "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300" : "bg-red-50 text-red-600 dark:bg-red-500/10 dark:text-red-300")}>{u.status}</span>
                             <span className="ml-auto text-[11px] font-bold text-slate-400">{formatTime(u.lastActiveAt, lang)}</span>
                           </div>
+                          {u.status === "blocked" && u.blockedReason ? <p className="mt-1.5 truncate text-[11px] font-bold text-red-500">Lý do khóa: {u.blockedReason}</p> : null}
                           <div className="mt-2.5 grid grid-cols-4 gap-1.5">
                             <MobileUserStat value={String(u.attempts)} label={lang === "vi" ? "Lượt" : "Tries"} />
                             <MobileUserStat value={`${u.averageAccuracy}%`} label="Acc" />
@@ -1319,7 +1321,15 @@ export function AdminPage({ lang }: Props) {
 
       <AdminMobileNav lang={lang} section={section} onNavigate={goSection} />
 
-      {selected ? <UserDrawer user={selected} lang={lang} onClose={() => setSelectedId(null)} /> : null}
+      {selected ? <UserDrawer user={selected} lang={lang} currentUserId={profile?.id ?? null} onStatusChange={(next) => {
+        setUsers((prev) => prev.map((u) => u.id === next.id ? next : u))
+        setUserCounts((prev) => {
+          const wasBlocked = selected.status === "blocked"
+          const isBlocked = next.status === "blocked"
+          if (wasBlocked === isBlocked) return prev
+          return { total: prev.total, active: prev.active + (isBlocked ? -1 : 1), blocked: prev.blocked + (isBlocked ? 1 : -1) }
+        })
+      }} onClose={() => setSelectedId(null)} /> : null}
       {section === "notifications" && selectedNotification ? <NotificationHistoryDetail key={selectedNotification.id} notification={selectedNotification} refresh={notificationDetailRefresh} lang={lang} onClose={() => setSelectedNotification(null)} /> : null}
     </div>
   )
@@ -1475,10 +1485,15 @@ function FlagBadge({ flag }: { flag: AnomalyFlag }) {
   )
 }
 
-function UserDrawer({ user, lang, onClose }: { user: AdminUser; lang: "vi" | "en"; onClose: () => void }) {
+function UserDrawer({ user, lang, currentUserId, onStatusChange, onClose }: { user: AdminUser; lang: "vi" | "en"; currentUserId: string | null; onStatusChange: (next: AdminUser) => void; onClose: () => void }) {
   const [userEvents, setUserEvents] = useState<ActivityEvent[]>([])
   const [userAttempts, setUserAttempts] = useState<PracticeAttemptRow[]>([])
+  const [blockReason, setBlockReason] = useState("")
+  const [statusSaving, setStatusSaving] = useState(false)
+  const [statusError, setStatusError] = useState<string | null>(null)
   const userFlags = useMemo(() => detectUserAnomalies(userAttempts, userEvents), [userAttempts, userEvents])
+  const isSelf = currentUserId !== null && currentUserId === user.id
+  const isAdminAccount = user.role === "admin"
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose() }
     window.addEventListener("keydown", onKey)
@@ -1523,6 +1538,75 @@ function UserDrawer({ user, lang, onClose }: { user: AdminUser; lang: "vi" | "en
           <DrawerRow label="Ngày login đầu (created_at)" value={formatTime(user.createdAt, lang)} />
           <DrawerRow label="Hoạt động gần nhất" value={formatTime(user.lastActiveAt, lang)} />
           <DrawerRow label="Hiện trên leaderboard" value={user.leaderboardVisible ? "true" : "false"} />
+          <div className="rounded-xl border-2 border-slate-100 bg-slate-50/60 px-3.5 py-3 dark:border-white/10 dark:bg-white/5">
+            <p className="text-xs font-black uppercase tracking-wide text-slate-400">Trạng thái tài khoản</p>
+            <p className="mt-1.5 flex flex-wrap items-center gap-1.5 text-[11px] font-black">
+              <span className={cn("rounded-full px-2 py-0.5", user.status === "active" ? "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300" : "bg-red-50 text-red-600 dark:bg-red-500/10 dark:text-red-300")}>{user.status === "active" ? "Đang hoạt động" : "Đã khóa"}</span>
+              {user.status === "blocked" && user.blockedAt ? <span className="font-bold text-slate-400">từ {formatTime(user.blockedAt, lang)}</span> : null}
+            </p>
+            {user.status === "blocked" ? (
+              <p className="mt-2 rounded-lg bg-red-50 px-3 py-2 text-xs font-bold leading-5 text-red-700 dark:bg-red-500/10 dark:text-red-300">
+                Lý do khóa: {user.blockedReason ?? "(không có lý do — tài khoản khóa trước khi có tính năng này)"}
+              </p>
+            ) : null}
+            {statusError ? <p role="alert" className="mt-2 text-xs font-bold text-red-600">{statusError}</p> : null}
+            {user.status === "active" ? (
+              <div className="mt-2.5 space-y-2">
+                <label htmlFor="admin-block-reason" className="text-xs font-black text-slate-500 dark:text-slate-300">Lý do khóa <span className="text-red-500">*</span></label>
+                <textarea
+                  id="admin-block-reason"
+                  rows={3}
+                  maxLength={500}
+                  value={blockReason}
+                  onChange={(e) => setBlockReason(e.target.value)}
+                  disabled={statusSaving || isSelf || isAdminAccount}
+                  placeholder="Ví dụ: Spam đáp án, gian lận thi, ngôn từ không phù hợp… (hiển thị cho user khi login)"
+                  className="w-full resize-y rounded-xl border-2 border-[#E5E5E5] bg-white px-3 py-2.5 text-xs font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white"
+                />
+                <div className="flex items-center justify-between gap-2">
+                  <span className="text-[11px] font-bold text-slate-400">{blockReason.trim().length}/500</span>
+                  <button
+                    type="button"
+                    disabled={statusSaving || isSelf || isAdminAccount || !blockReason.trim()}
+                    onClick={() => {
+                      if (!blockReason.trim() || !window.confirm(`Khóa tài khoản ${user.displayName ?? user.email ?? user.id} với lý do đã nhập? User sẽ thấy lý do này khi login.`)) return
+                      setStatusError(null)
+                      setStatusSaving(true)
+                      void setAdminUserStatus(user.id, "blocked", blockReason.trim())
+                        .then((res) => { setBlockReason(""); onStatusChange({ ...user, status: res.status, blockedReason: res.blockedReason, blockedAt: res.blockedAt }) })
+                        .catch((err: unknown) => setStatusError(err instanceof Error ? err.message : "Không thể khóa tài khoản."))
+                        .finally(() => setStatusSaving(false))
+                    }}
+                    className="lp-btn lp-btn--secondary lp-btn--sm shrink-0 text-red-600"
+                    title={isSelf ? "Không thể khóa chính mình" : isAdminAccount ? "Không thể khóa tài khoản admin" : "Khóa tài khoản kèm lý do"}
+                  >
+                    {statusSaving ? "Đang khóa..." : "Khóa tài khoản"}
+                  </button>
+                </div>
+                {isSelf ? <p className="text-[11px] font-bold text-amber-600">Không thể khóa chính mình.</p> : null}
+                {!isSelf && isAdminAccount ? <p className="text-[11px] font-bold text-amber-600">Không thể khóa tài khoản admin.</p> : null}
+              </div>
+            ) : (
+              <div className="mt-2.5">
+                <button
+                  type="button"
+                  disabled={statusSaving || isSelf}
+                  onClick={() => {
+                    if (!window.confirm(`Mở khóa tài khoản ${user.displayName ?? user.email ?? user.id}?`)) return
+                    setStatusError(null)
+                    setStatusSaving(true)
+                    void setAdminUserStatus(user.id, "active")
+                      .then((res) => onStatusChange({ ...user, status: res.status, blockedReason: res.blockedReason, blockedAt: res.blockedAt }))
+                      .catch((err: unknown) => setStatusError(err instanceof Error ? err.message : "Không thể mở khóa tài khoản."))
+                      .finally(() => setStatusSaving(false))
+                  }}
+                  className="lp-btn lp-btn--primary lp-btn--sm"
+                >
+                  {statusSaving ? "Đang mở..." : "Mở khóa tài khoản"}
+                </button>
+              </div>
+            )}
+          </div>
           <div>
             <p className="text-xs font-black uppercase tracking-wide text-slate-400">
               Rủi ro {userFlags.length ? `(score ${riskScore(userFlags)})` : "(sạch)"}

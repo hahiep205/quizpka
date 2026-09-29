@@ -1,5 +1,5 @@
 import { supabase } from "@/lib/supabase"
-import { parseAdminUsers, type AdminUser } from "@/features/admin/lib/adminStats"
+import { parseAdminUsers, type AdminStatus, type AdminUser } from "@/features/admin/lib/adminStats"
 
 export type FetchAdminResult =
   | { ok: true; users: AdminUser[]; hasMore: boolean; totalUsers: number; activeUsers: number; blockedUsers: number }
@@ -16,7 +16,7 @@ export async function fetchAdminUsers(page = 0, pageSize = 1000): Promise<FetchA
     const from = Math.max(0, Math.floor(page)) * safePageSize
     const to = from + safePageSize - 1
     const [profilesRes, activeProfilesRes, blockedProfilesRes, statsRes] = await Promise.all([
-      supabase.from("profiles").select("id,email,display_name,avatar_url,role,status,created_at", { count: "exact" }).order("created_at", { ascending: false }).range(from, to),
+      supabase.from("profiles").select("id,email,display_name,avatar_url,role,status,blocked_reason,blocked_at,created_at", { count: "exact" }).order("created_at", { ascending: false }).range(from, to),
       supabase.from("profiles").select("id", { count: "exact", head: true }).eq("status", "active"),
       supabase.from("profiles").select("id", { count: "exact", head: true }).eq("status", "blocked"),
       supabase.from("user_learning_stats").select("user_id,attempts,average_accuracy,total_duration_seconds,subjects_reviewed,points,week_attempts,week_average_accuracy,week_points,visible,updated_at", { count: "exact" }).range(from, to),
@@ -48,4 +48,22 @@ export async function fetchAllAdminUsers(): Promise<FetchAdminResult> {
     page += 1
   }
   return { ...current, users, hasMore: false }
+}
+
+export type SetUserStatusResult = { status: AdminStatus; blockedReason: string | null; blockedAt: string | null }
+
+/** Khóa / mở khóa tài khoản kèm lý do. Lý do bắt buộc khi khóa, hiển thị cho user lúc login. */
+export async function setAdminUserStatus(userId: string, status: AdminStatus, reason?: string): Promise<SetUserStatusResult> {
+  const { data, error } = await supabase.rpc("admin_set_user_status", {
+    p_user_id: userId,
+    p_status: status,
+    p_reason: status === "blocked" ? (reason ?? "") : null,
+  })
+  if (error) throw new Error(error.message)
+  const row = data as { status?: string; blocked_reason?: string | null; blocked_at?: string | null } | null
+  return {
+    status: row?.status === "blocked" ? "blocked" : "active",
+    blockedReason: typeof row?.blocked_reason === "string" && row.blocked_reason.length > 0 ? row.blocked_reason : null,
+    blockedAt: typeof row?.blocked_at === "string" && row.blocked_at.length > 0 ? row.blocked_at : null,
+  }
 }

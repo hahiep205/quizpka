@@ -13,7 +13,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const loadProfile = useCallback(async (currentUser: User | null) => {
     if (!currentUser) { setProfile(null); return null }
-    const { data, error } = await supabase.from("profiles").select("id,email,display_name,avatar_url,role,status").eq("id", currentUser.id).single()
+    const { data, error } = await supabase.from("profiles").select("id,email,display_name,avatar_url,role,status,blocked_reason,blocked_at").eq("id", currentUser.id).single()
     if (error) throw error
     const nextProfile = data as AuthProfile
     setProfile(nextProfile)
@@ -67,7 +67,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       p_display_name: updates.display_name ?? null,
     })
     if (error) throw error
-    setProfile(data as AuthProfile)
+    const updated = data as AuthProfile
+    setProfile((current) => (current ? { ...current, ...updated, blocked_reason: current.blocked_reason, blocked_at: current.blocked_at } : updated))
     logActivityEvent(user.id, "update_profile", { fields: Object.keys(updates) })
   }, [user])
 

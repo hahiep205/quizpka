@@ -24,8 +24,17 @@ export function LeaderboardView({ lang }: { lang: Language }) {
   useEffect(() => {
     if (!userId) return
     let cancelled = false
-    void fetchLeaderboard("all", userId).then((rows) => {
-      if (!cancelled) setRemoteEntries(rows)
+    // P1: cache 60s + dedupe in-flight để StrictMode / remount
+    // không tạo thêm request. Script spam trước đây bắn hàng chục
+    // req/s vào user_learning_stats; cache này triệt tiêu refetch vô ý.
+    const cached = readLeaderboardCache(userId)
+    if (cached) {
+      setRemoteEntries(cached)
+      return
+    }
+    const promise = getLeaderboardInflight(userId)
+    void promise.then((rows) => {
+      if (!cancelled && rows) setRemoteEntries(rows)
     })
     return () => {
       cancelled = true
@@ -216,4 +225,37 @@ function MiniStat({ value, label }: { value: string; label: string }) {
       <p className="truncate text-[10px] font-bold text-slate-400">{label}</p>
     </div>
   )
+}
+
+// P1: cache module-level 60s + dedupe promise đang bay.
+// Không dùng localStorage để tránh rò rỉ BXH sang user khác trên máy chung.
+const LEADERBOARD_CACHE_TTL_MS = 60_000
+const leaderboardCache = new Map<string, { at: number; rows: LeaderboardEntry[] }>()
+const leaderboardInflight = new Map<string, Promise<LeaderboardEntry[] | null>>()
+
+function readLeaderboardCache(userId: string): LeaderboardEntry[] | null {
+  const hit = leaderboardCache.get(userId)
+  if (!hit) return null
+  if (Date.now() - hit.at > LEADERBOARD_CACHE_TTL_MS) {
+    leaderboardCache.delete(userId)
+    return null
+  }
+  return hit.rows
+}
+
+function getLeaderboardInflight(userId: string): Promise<LeaderboardEntry[] | null> {
+  const running = leaderboardInflight.get(userId)
+  if (running) return running
+  const promise = fetchLeaderboard("all", userId, { limit: 100 })
+    .then((rows) => {
+      leaderboardCache.set(userId, { at: Date.now(), rows })
+      leaderboardInflight.delete(userId)
+      return rows
+    })
+    .catch(() => {
+      leaderboardInflight.delete(userId)
+      return null
+    })
+  leaderboardInflight.set(userId, promise)
+  return promise
 }

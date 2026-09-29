@@ -48,8 +48,9 @@ export async function createPaidCheckout(productId = "dsai101") {
   }
   const accessToken = session?.access_token
   if (!accessToken) throw new Error("Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.")
-  const { data: verifiedSession, error: verifyError } = await supabase.auth.getUser(accessToken)
-  if (verifyError || !verifiedSession.user) throw new Error("Phiên đăng nhập không hợp lệ. Vui lòng đăng xuất và đăng nhập lại.")
+  // P1: bỏ supabase.auth.getUser(accessToken) ở client (tiết kiệm 1 hit
+  // GET /auth/v1/user mỗi lần bấm mua). Edge function create-sepay-checkout
+  // đã verify JWT server-side bằng getUserWithTimeout + check profiles.status.
   const { data, error } = await supabase.functions.invoke("create-sepay-checkout", {
     body: { productId },
     headers: { Authorization: `Bearer ${accessToken}` },

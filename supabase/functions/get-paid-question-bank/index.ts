@@ -1,12 +1,9 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
+import { clientIp, corsHeaders, getUserWithTimeout, jsonWithCors, rateGate } from "../_shared/edge-guard.ts"
 
-const cors = (req: Request) => ({
-  "Access-Control-Allow-Origin": req.headers.get("origin") ?? Deno.env.get("SITE_URL") ?? "",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-  "Access-Control-Allow-Methods": "POST, OPTIONS",
-  "Content-Type": "application/json",
-  "Vary": "Origin",
-})
+// P1: CORS whitelist (was: echo any Origin). Contract unchanged (full bank
+// JSON); Egress is cut by per-user/IP rate gates + private browser cache
+// (banks are static) + the frontend in-memory bank cache.
 
 const examFiles: Record<string, string> = {
   "data-science-ai-midterm-1": "dsai101/khoa_hoc_du_lieu_va_tri_tue_nhan_tao_midle.json",
@@ -69,32 +66,42 @@ const secFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.j
 const marFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json", "chuong_6.json", "chuong_7.json", "chuong_8.json", "chuong_9.json"]
 
 Deno.serve(async (req) => {
-  if (req.method === "OPTIONS") return new Response("ok", { headers: cors(req) })
-  if (req.method !== "POST") return new Response(JSON.stringify({ error: "Method not allowed" }), { status: 405, headers: cors(req) })
+  if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders(req) })
+  if (req.method !== "POST") return new Response(JSON.stringify({ error: "Method not allowed" }), { status: 405, headers: corsHeaders(req) })
   try {
     const authorization = req.headers.get("Authorization")
-    if (!authorization) return new Response(JSON.stringify({ error: "Authentication required" }), { status: 401, headers: cors(req) })
+    if (!authorization) return new Response(JSON.stringify({ error: "Authentication required" }), { status: 401, headers: corsHeaders(req) })
     const input = await req.json().catch(() => null) as { examId?: unknown; subjectId?: unknown } | null
     const examId = typeof input?.examId === "string" ? input.examId : ""
     const subjectId = typeof input?.subjectId === "string" ? input.subjectId : ""
     const productId = subjectProducts[subjectId]
-    if (!productId) return new Response(JSON.stringify({ error: "Unknown subject" }), { status: 400, headers: cors(req) })
+    if (!productId) return new Response(JSON.stringify({ error: "Unknown subject" }), { status: 400, headers: corsHeaders(req) })
     const objectPath = examFiles[examId]
-    if (!objectPath && subjectId !== "danh-gia-va-kiem-dinh-chat-luong-phan-mem" && subjectId !== "bao-mat-ung-dung-he-thong" && subjectId !== "marketing-can-ban") return new Response(JSON.stringify({ error: "Unknown exam" }), { status: 400, headers: cors(req) })
+    if (!objectPath && subjectId !== "danh-gia-va-kiem-dinh-chat-luong-phan-mem" && subjectId !== "bao-mat-ung-dung-he-thong" && subjectId !== "marketing-can-ban") return new Response(JSON.stringify({ error: "Unknown exam" }), { status: 400, headers: corsHeaders(req) })
     const projectUrl = Deno.env.get("SUPABASE_URL")!
-    const userClient = createClient(projectUrl, Deno.env.get("SUPABASE_ANON_KEY")!, { global: { headers: { Authorization: authorization } } })
-    const { data: { user }, error: userError } = await userClient.auth.getUser()
-    if (userError || !user) return new Response(JSON.stringify({ error: "Authentication required" }), { status: 401, headers: cors(req) })
     const admin = createClient(projectUrl, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!)
+    // P1: pre-auth flood gate (shape already validated above, cheap reject).
+    const ipGate = await rateGate(admin, req, `bank:ip:${clientIp(req)}`, 240, 3600)
+    if (ipGate) return ipGate
+    const userClient = createClient(projectUrl, Deno.env.get("SUPABASE_ANON_KEY")!, { global: { headers: { Authorization: authorization } } })
+    const bearer = authorization.match(/^Bearer\s+(.+)$/i)?.[1] ?? ""
+    // P1: hard timeout so hung Auth responses can't pile up isolates under flood.
+    const user = await getUserWithTimeout(userClient, bearer, 8000).catch(() => null)
+    if (!user) return new Response(JSON.stringify({ error: "Authentication required" }), { status: 401, headers: corsHeaders(req) })
+    // P1: per-user gate — a scraper with a stolen token is capped at 120 banks/h.
+    const userGate = await rateGate(admin, req, `bank:user:${user.id}`, 120, 3600)
+    if (userGate) return userGate
     const { data: profile, error: profileError } = await admin.from("profiles").select("status").eq("id", user.id).single()
-    if (profileError || profile.status !== "active") return new Response(JSON.stringify({ error: "Account is not active" }), { status: 403, headers: cors(req) })
+    if (profileError || profile.status !== "active") return new Response(JSON.stringify({ error: "Account is not active" }), { status: 403, headers: corsHeaders(req) })
     const { data: purchase, error: purchaseError } = await admin.from("purchases").select("id").eq("user_id", user.id).eq("product_id", productId).eq("status", "paid").maybeSingle()
     if (purchaseError) throw purchaseError
-    if (!purchase) return new Response(JSON.stringify({ error: "Purchase required" }), { status: 403, headers: cors(req) })
+    if (!purchase) return new Response(JSON.stringify({ error: "Purchase required" }), { status: 403, headers: corsHeaders(req) })
+    // P1: banks are static — allow private browser caching to cut repeat Egress.
+    const cacheHeaders = corsHeaders(req, { "Content-Type": "application/json", "Cache-Control": "private, max-age=86400" })
     if (objectPath) {
       const { data: file, error: downloadError } = await admin.storage.from("paid-question-banks").download(objectPath)
-      if (downloadError || !file) return new Response(JSON.stringify({ error: "Question bank unavailable" }), { status: 503, headers: cors(req) })
-      return new Response(await file.text(), { status: 200, headers: cors(req) })
+      if (downloadError || !file) return new Response(JSON.stringify({ error: "Question bank unavailable" }), { status: 503, headers: corsHeaders(req) })
+      return new Response(await file.text(), { status: 200, headers: cacheHeaders })
     }
     const files = subjectId === "bao-mat-ung-dung-he-thong" ? secFiles : subjectId === "marketing-can-ban" ? marFiles : sqaFiles
     const directory = subjectId === "bao-mat-ung-dung-he-thong" ? "sec301" : subjectId === "marketing-can-ban" ? "mar101" : "sqa101"
@@ -104,9 +111,9 @@ Deno.serve(async (req) => {
       const body = fileName.endsWith(".gz") ? await new Response(file.stream().pipeThrough(new DecompressionStream("gzip"))).text() : await file.text()
       return JSON.parse(body) as { questions?: unknown[] }
     }))
-    return new Response(JSON.stringify({ title: subjectId === "bao-mat-ung-dung-he-thong" ? "SEC301" : subjectId === "marketing-can-ban" ? "MAR101 Final" : "SQA101 Final", questions: banks.flatMap((bank, bankIndex) => (bank.questions ?? []).map((question) => ({ ...(question as Record<string, unknown>), id: `${bankIndex}-${String((question as { id?: unknown }).id ?? "")}` }))) }), { status: 200, headers: cors(req) })
+    return new Response(JSON.stringify({ title: subjectId === "bao-mat-ung-dung-he-thong" ? "SEC301" : subjectId === "marketing-can-ban" ? "MAR101 Final" : "SQA101 Final", questions: banks.flatMap((bank, bankIndex) => (bank.questions ?? []).map((question) => ({ ...(question as Record<string, unknown>), id: `${bankIndex}-${String((question as { id?: unknown }).id ?? "")}` }))) }), { status: 200, headers: corsHeaders(req) })
   } catch (error) {
     console.error("Get paid question bank failed", error)
-    return new Response(JSON.stringify({ error: "Unable to load question bank" }), { status: 500, headers: cors(req) })
+    return new Response(JSON.stringify({ error: "Unable to load question bank" }), { status: 500, headers: corsHeaders(req) })
   }
 })

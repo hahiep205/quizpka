@@ -8,6 +8,8 @@ export type AuthProfile = {
   avatar_url: string | null
   role: "user" | "admin"
   status: "active" | "blocked"
+  blocked_reason?: string | null
+  blocked_at?: string | null
 }
 export type AuthContextValue = {
   status: AuthStatus

@@ -12,7 +12,7 @@ vi.mock("@/auth/AuthProvider", () => ({ useAuth: () => ({ profile: null, signOut
 vi.mock("@/lib/supabase", () => ({ supabase: { channel: api.channel, removeChannel: api.remove } }))
 vi.mock("@/hooks/useOnlinePresence", () => ({ useOnlineUserIds: () => new Set(["u1"]) }))
 vi.mock("@/features/notifications/api/notifications", () => ({ fetchAdminNotificationHistory: api.history, fetchNotificationRecipients: api.recipients, fetchNotificationBatchRecipients: vi.fn(), fetchNotificationBatchDetails: vi.fn(), sendAdminNotifications: vi.fn(), revokeAdminNotification: vi.fn() }))
-vi.mock("@/features/admin/api/adminUsers", () => ({ fetchAllAdminUsers: api.users }))
+vi.mock("@/features/admin/api/adminUsers", () => ({ fetchAllAdminUsers: api.users, setAdminUserStatus: vi.fn() }))
 vi.mock("@/features/admin/api/adminActivity", () => ({ fetchAllActivityTimeline: api.events, fetchAllPracticeAttempts: api.attempts, fetchUserActivity: vi.fn(), fetchPracticeAttempts: vi.fn() }))
 vi.mock("@/features/admin/api/adminPayments", async (importOriginal) => ({ ...(await importOriginal<typeof import("@/features/admin/api/adminPayments")>()), fetchAllAdminPayments: api.payments }))
 vi.mock("@/features/admin/api/adminEntitlements", () => ({ fetchAdminProducts: api.products, grantAdminPurchase: vi.fn() }))
@@ -27,8 +27,8 @@ beforeEach(() => {
   api.users.mockResolvedValue({
     ok: true,
     users: [
-      { id: "u1", email: "a@test", displayName: "Alice", avatarUrl: null, role: "user", status: "active", createdAt: null, attempts: 5, averageAccuracy: 80, totalDurationSeconds: 60, subjectsReviewed: 1, points: 10, weekAttempts: 1, weekAverageAccuracy: 80, weekPoints: 2, leaderboardVisible: true, lastActiveAt: "2026-09-09T00:00:00Z" },
-      { id: "u2", email: "b@test", displayName: "Bob", avatarUrl: null, role: "user", status: "active", createdAt: null, attempts: 3, averageAccuracy: 70, totalDurationSeconds: 30, subjectsReviewed: 1, points: 5, weekAttempts: 0, weekAverageAccuracy: 0, weekPoints: 0, leaderboardVisible: true, lastActiveAt: "2026-09-08T00:00:00Z" },
+      { id: "u1", email: "a@test", displayName: "Alice", avatarUrl: null, role: "user", status: "active", blockedReason: null, blockedAt: null, createdAt: null, attempts: 5, averageAccuracy: 80, totalDurationSeconds: 60, subjectsReviewed: 1, points: 10, weekAttempts: 1, weekAverageAccuracy: 80, weekPoints: 2, leaderboardVisible: true, lastActiveAt: "2026-09-09T00:00:00Z" },
+      { id: "u2", email: "b@test", displayName: "Bob", avatarUrl: null, role: "user", status: "active", blockedReason: null, blockedAt: null, createdAt: null, attempts: 3, averageAccuracy: 70, totalDurationSeconds: 30, subjectsReviewed: 1, points: 5, weekAttempts: 0, weekAverageAccuracy: 0, weekPoints: 0, leaderboardVisible: true, lastActiveAt: "2026-09-08T00:00:00Z" },
     ],
     totalUsers: 2, activeUsers: 2, blockedUsers: 0,
   })

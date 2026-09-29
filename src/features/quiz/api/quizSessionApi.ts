@@ -77,8 +77,12 @@ export async function enqueueQuizSessionSubmission(
   answers: Record<string, number | string>,
   idempotencyKey: string,
 ) {
-  const { data: { user }, error: userError } = await supabase.auth.getUser()
-  if (userError || !user) throw new QuizSessionApiError("Authentication required")
+  // P1: dùng getSession (đọc local, không tốn 1 hit GET /auth/v1/user).
+  // getUser() trước đây mỗi lần submit lại gọi Auth server — script spam
+  // submit là cháy quota. JWT vẫn được Edge Function/RPC verify server-side.
+  const { data: { session }, error: sessionError } = await supabase.auth.getSession()
+  const user = session?.user ?? null
+  if (sessionError || !user) throw new QuizSessionApiError("Authentication required")
   const { data, error } = await supabase.rpc("enqueue_attempt_submission", {
     p_session_id: sessionId,
     p_user_id: user.id,

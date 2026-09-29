@@ -163,14 +163,101 @@ const LEADERBOARD_SELECT =
 const LEADERBOARD_SELECT_LEGACY =
   "user_id, display_name, avatar_url, visible, subjects_reviewed, attempts, average_accuracy, total_duration_seconds, points, week_subjects_reviewed, week_attempts, week_average_accuracy, week_total_duration_seconds, week_points"
 
-export async function fetchLeaderboard(period: LearningPeriod, currentUserId?: string): Promise<LeaderboardEntry[]> {
+/** Server-side cap: UI chỉ hiển thị top 10, RPC giới hạn tối đa 200. */
+export const LEADERBOARD_LIMIT_DEFAULT = 100
+export const LEADERBOARD_LIMIT_MAX = 200
+
+function clampLeaderboardLimit(limit?: number): number {
+  if (!Number.isFinite(limit as number)) return LEADERBOARD_LIMIT_DEFAULT
+  return Math.min(Math.max(Math.floor(limit as number), 1), LEADERBOARD_LIMIT_MAX)
+}
+
+function dedupeRows(rows: LearningStatsRow[]): LearningStatsRow[] {
+  const byId = new Map<string, LearningStatsRow>()
+  for (const row of rows) {
+    if (!byId.has(row.user_id)) byId.set(row.user_id, row)
+  }
+  return [...byId.values()]
+}
+
+export async function fetchLeaderboard(
+  period: LearningPeriod,
+  currentUserId?: string,
+  options?: { limit?: number },
+): Promise<LeaderboardEntry[]> {
+  const limit = clampLeaderboardLimit(options?.limit)
   try {
-    let query = await supabase.from("user_learning_stats").select(LEADERBOARD_SELECT)
-    if (query.error) {
-      query = await supabase.from("user_learning_stats").select(LEADERBOARD_SELECT_LEGACY)
+    // P2: đường chính — Edge Function get-leaderboard (cache isolate 60s +
+    // rate-limit IP/user + Cache-Control public, max-age=60 kèm Vary:
+    // Authorization). Client không còn chạm PostgREST trực tiếp ở đường happy-path.
+    try {
+      const { data: fnData, error: fnError } = await supabase.functions.invoke("get-leaderboard", {
+        body: { limit },
+      })
+      if (!fnError && Array.isArray(fnData)) {
+        const rows = parseLearningStatsRows(fnData).filter(
+          (row) => row.visible || row.user_id === currentUserId,
+        )
+        if (rows.length > 0) return rows.map((row) => toLeaderboardEntry(row, period, currentUserId))
+      } else if (fnError && /too many requests/i.test(fnError.message ?? "")) {
+        // Bị rate-limit ở edge: dừng luôn, không rớt xuống các đường rẻ hơn.
+        return []
+      }
+      // Function chưa deploy / lỗi thoáng qua: rớt xuống RPC rồi direct.
+    } catch {
+      // Lỗi mạng invoke: rớt xuống các đường fallback bên dưới.
     }
-    if (query.error) return []
-    return parseLearningStatsRows(query.data)
+
+    // P1: đường dự phòng — RPC server-side đã ORDER BY + LIMIT + rate-limit.
+    // Một request dù bị lộ JWT cũng chỉ tốn 1 RPC nhỏ, không full-scan.
+    const { data: rpcData, error: rpcError } = await supabase.rpc("get_leaderboard_top", {
+      p_limit: limit,
+    })
+    if (!rpcError && Array.isArray(rpcData)) {
+      const rows = parseLearningStatsRows(rpcData).filter(
+        (row) => row.visible || row.user_id === currentUserId,
+      )
+      // RPC đã trả cả dòng của chính mình (kể cả khi ẩn) để tính hạng "you".
+      if (rows.length > 0) return rows.map((row) => toLeaderboardEntry(row, period, currentUserId))
+      // RPC trống (bảng legacy / chưa migrate): rớt xuống fallback bên dưới.
+    }
+    // Bị rate-limit thì dừng luôn — không fallback sang SELECT trực tiếp,
+    // nếu không rào 30 req/phút sẽ bị bypass bởi chính client này.
+    if (rpcError && /too many requests/i.test((rpcError as { message?: string }).message ?? "")) {
+      return []
+    }
+
+    // P1 fallback: 2 query nhỏ có giới hạn thay vì 1 full-scan.
+    // 1) top visible đã sắp xếp server-side, 2) dòng của chính mình.
+    const publicQuery = supabase
+      .from("user_learning_stats")
+      .select(LEADERBOARD_SELECT)
+      .eq("visible", true)
+      .order("points", { ascending: false })
+      .limit(limit)
+    const ownQuery = currentUserId
+      ? supabase.from("user_learning_stats").select(LEADERBOARD_SELECT).eq("user_id", currentUserId).maybeSingle()
+      : null
+    const [pubRes, ownRes] = await Promise.all([
+      publicQuery,
+      ownQuery ?? Promise.resolve({ data: null, error: null } as never),
+    ])
+    let rows = parseLearningStatsRows((pubRes as { data: unknown }).data)
+    if ((pubRes as { error: unknown }).error) {
+      // Cột month_* chưa có (DB cũ): thử select legacy.
+      const legacy = await supabase
+        .from("user_learning_stats")
+        .select(LEADERBOARD_SELECT_LEGACY)
+        .eq("visible", true)
+        .order("points", { ascending: false })
+        .limit(limit)
+      if (legacy.error) return []
+      rows = parseLearningStatsRows(legacy.data)
+    }
+    const ownRow = ownRes && "data" in (ownRes as object)
+      ? parseLearningStatsRows((ownRes as { data: unknown }).data ? [(ownRes as { data: unknown }).data] : [])
+      : []
+    return dedupeRows([...ownRow, ...rows])
       .filter((row) => row.visible || row.user_id === currentUserId)
       .map((row) => toLeaderboardEntry(row, period, currentUserId))
   } catch {

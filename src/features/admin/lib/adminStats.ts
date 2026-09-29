@@ -8,6 +8,8 @@ export type AdminUser = {
   avatarUrl: string | null
   role: AdminRole
   status: AdminStatus
+  blockedReason: string | null
+  blockedAt: string | null
   createdAt: string | null
   attempts: number
   averageAccuracy: number
@@ -92,6 +94,8 @@ export function parseAdminUsers(profilesRows: unknown, statsRows: unknown): Admi
       avatarUrl: asStringOrNull(row.avatar_url),
       role: row.role === "admin" ? "admin" : "user",
       status: row.status === "blocked" ? "blocked" : "active",
+      blockedReason: asStringOrNull(row.blocked_reason),
+      blockedAt: asStringOrNull(row.blocked_at),
       createdAt: asStringOrNull(row.created_at),
       attempts: asInt(stats?.attempts),
       averageAccuracy: asInt(stats?.average_accuracy),
@@ -203,11 +207,12 @@ function csvCell(value: string | number | null): string {
 }
 
 export function toAdminCsv(users: AdminUser[]): string {
-  const header = ["id", "email", "display_name", "role", "status", "created_at", "last_active_at", "attempts", "week_attempts", "avg_accuracy", "points", "week_points", "subjects_reviewed", "total_duration_seconds", "leaderboard_visible"]
+  const header = ["id", "email", "display_name", "role", "status", "blocked_reason", "blocked_at", "created_at", "last_active_at", "attempts", "week_attempts", "avg_accuracy", "points", "week_points", "subjects_reviewed", "total_duration_seconds", "leaderboard_visible"]
   const lines = [header.join(",")]
   for (const u of users) {
     lines.push([
       csvCell(u.id), csvCell(u.email), csvCell(u.displayName), csvCell(u.role), csvCell(u.status),
+      csvCell(u.blockedReason), csvCell(u.blockedAt),
       csvCell(u.createdAt), csvCell(u.lastActiveAt), csvCell(u.attempts), csvCell(u.weekAttempts),
       csvCell(u.averageAccuracy), csvCell(u.points), csvCell(u.weekPoints),
       csvCell(u.subjectsReviewed), csvCell(u.totalDurationSeconds), csvCell(u.leaderboardVisible ? "true" : "false"),

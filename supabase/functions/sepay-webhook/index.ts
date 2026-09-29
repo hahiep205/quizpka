@@ -1,6 +1,11 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
+import { clientIp, rateGate, secretsEqual } from "../_shared/edge-guard.ts"
 
-const cors = { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "content-type, x-secret-key", "Access-Control-Allow-Methods": "POST, OPTIONS" }
+// P1: server-to-server webhook — no CORS headers at all (browsers never call
+// this). Constant-time secret compare, generic order-id shape check (the old
+// prefix allowlist silently dropped legit prefixes like TA2/STA/DB/PHY),
+// timestamp freshness anti-replay, per-IP rate gate, upsert dedup on the
+// partial unique indexes (provider,event_id) / (provider,transaction_id).
 
 function text(value: unknown) {
   return typeof value === "string" || typeof value === "number" ? String(value) : ""
@@ -11,15 +16,38 @@ function amount(value: unknown) {
   return Number.isFinite(parsed) ? parsed : null
 }
 
+// Order ids are "<PREFIX>-<20 upper-alnum>" (see create-sepay-checkout).
+// Shape check only — existence is decided by the DB lookup.
+function looksLikeOrderId(value: string) {
+  return /^[A-Z0-9]{2,6}-[A-Z0-9]{10,32}$/.test(value)
+}
+
+function payloadTimestampMs(payload: Record<string, unknown>): number | null {
+  const raw = payload.timestamp ?? (payload.transaction as Record<string, unknown> | undefined)?.timestamp
+  if (typeof raw === "number" && Number.isFinite(raw)) return raw > 1e12 ? raw : raw * 1000
+  if (typeof raw === "string" && raw) {
+    const parsed = Date.parse(raw)
+    return Number.isFinite(parsed) ? parsed : null
+  }
+  return null
+}
+
 Deno.serve(async (req) => {
-  if (req.method === "OPTIONS") return new Response("ok", { headers: cors })
+  if (req.method === "OPTIONS") return new Response("ok")
   if (req.method !== "POST") return new Response("Method Not Allowed", { status: 405 })
 
   const receivedSecret = req.headers.get("x-secret-key") ?? req.headers.get("authorization")?.replace(/^Apikey\s+/i, "")
   const expectedSecret = Deno.env.get("SEPAY_SECRET_KEY") ?? ""
-  if (!receivedSecret || !expectedSecret || receivedSecret !== expectedSecret) return new Response("Invalid secret", { status: 401 })
+  if (!receivedSecret || !expectedSecret || !secretsEqual(receivedSecret, expectedSecret)) {
+    return new Response("Invalid secret", { status: 401 })
+  }
 
   try {
+    const admin = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!)
+    // P1: flood gate for forged-but correctly-signed replays / retry storms.
+    const ipGate = await rateGate(admin, req, `webhook:ip:${clientIp(req)}`, 600, 3600)
+    if (ipGate) return ipGate
+
     const payload = await req.json() as Record<string, unknown>
     const payloadOrder = payload.order as Record<string, unknown> | undefined
     const transaction = payload.transaction as Record<string, unknown> | undefined
@@ -30,23 +58,25 @@ Deno.serve(async (req) => {
     const transferType = text(payload.transferType).toLowerCase()
     const isBankIn = transferType === "in"
     const isPaidCheckout = payload.notification_type === "ORDER_PAID" && ["CAPTURED", "APPROVED", "PAID"].includes(status)
-    // SePay's "Send test" payload may not contain an order created by QuizPKA.
-    // Acknowledge unrelated transactions so SePay does not retry them forever.
-    if ((!suppliedOrderId || !/^(DSAI|IDSAI|SQA|SEC|MAR|MAC|OIT|FIN|CIV|ECO|LAW)-[A-Z0-9]+$/.test(suppliedOrderId)) && !transferContent) {
-      console.info("Ignored webhook without QuizPKA payment code")
-      return Response.json({ success: true, ignored: true }, { headers: cors })
+    // Silent ignore (no logs — probes would turn logs into a billing vector).
+    if ((!looksLikeOrderId(suppliedOrderId)) && !transferContent) {
+      return Response.json({ success: true, ignored: true })
     }
-    if (!isBankIn && !isPaidCheckout) return Response.json({ success: true }, { headers: cors })
+    if (!isBankIn && !isPaidCheckout) return Response.json({ success: true })
 
-    const admin = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!)
+    // P1: anti-replay — SePay retries are minutes apart; a day-old payload is a replay.
+    const ts = payloadTimestampMs(payload)
+    if (ts !== null && Math.abs(Date.now() - ts) > 24 * 60 * 60 * 1000) {
+      return Response.json({ success: true, ignored: true })
+    }
+
     let orderQuery = admin.from("orders").select("order_id,user_id,product_id,amount_vnd,currency,status,provider_transaction_id,provider_event_id,transfer_content")
     if (transferContent) orderQuery = orderQuery.eq("transfer_content", transferContent)
     else orderQuery = orderQuery.eq("order_id", suppliedOrderId)
     const { data: order, error: orderError } = await orderQuery.maybeSingle()
     if (orderError) throw orderError
     if (!order) {
-      console.info("Ignored webhook for unknown QuizPKA payment code", transferContent || suppliedOrderId)
-      return Response.json({ success: true, ignored: true }, { headers: cors })
+      return Response.json({ success: true, ignored: true })
     }
     const orderId = order.order_id
 
@@ -58,16 +88,32 @@ Deno.serve(async (req) => {
 
     const transactionId = text(transaction?.transaction_id ?? transaction?.id ?? payload.referenceCode) || null
     const eventId = text(transaction?.id ?? payload.id ?? payload.timestamp) || null
-    const { data: paymentEvent, error: eventError } = await admin.from("payment_events").insert({
+    // P1: dedup via upsert on the partial unique index instead of
+    // insert + fragile "duplicate" message matching.
+    const row = {
       provider: "sepay",
       event_id: eventId,
       transaction_id: transactionId,
       order_id: orderId,
       payload,
       status: "received",
-    }).select("id").maybeSingle()
-    if (eventError && !eventError.message.toLowerCase().includes("duplicate")) throw eventError
-    if (!paymentEvent && (eventId || transactionId)) return Response.json({ ok: true, duplicate: true }, { headers: cors })
+    }
+    let paymentEventId: string | null = null
+    if (eventId) {
+      const { data, error } = await admin.from("payment_events")
+        .upsert(row, { onConflict: "provider,event_id", ignoreDuplicates: true })
+        .select("id").maybeSingle()
+      if (error) throw error
+      paymentEventId = data?.id ?? null
+      if (!paymentEventId) return Response.json({ ok: true, duplicate: true })
+    } else {
+      const { data, error } = await admin.from("payment_events").insert(row).select("id").maybeSingle()
+      if (error) {
+        if (error.message.toLowerCase().includes("duplicate")) return Response.json({ ok: true, duplicate: true })
+        throw error
+      }
+      paymentEventId = data?.id ?? null
+    }
     const { data: result, error: completionError } = await admin.rpc("complete_paid_order", {
       p_order_id: orderId,
       p_transaction_id: transactionId,
@@ -75,13 +121,12 @@ Deno.serve(async (req) => {
       p_payload: payload,
     })
     if (completionError) throw completionError
-    if (paymentEvent) {
-      const { error: eventUpdateError } = await admin.from("payment_events").update({ status: "processed", processed_at: new Date().toISOString() }).eq("id", paymentEvent.id)
+    if (paymentEventId) {
+      const { error: eventUpdateError } = await admin.from("payment_events").update({ status: "processed", processed_at: new Date().toISOString() }).eq("id", paymentEventId)
       if (eventUpdateError) throw eventUpdateError
     }
-    return Response.json({ success: true, ...result }, { headers: cors })
-  } catch (error) {
-    console.error("SePay webhook processing failed", error)
+    return Response.json({ success: true, ...result })
+  } catch {
     return new Response("Webhook processing failed", { status: 500 })
   }
 })
