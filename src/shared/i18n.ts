@@ -782,8 +782,8 @@ export const toeicPickerCopy = {
 export const toeicAnnouncementCopy = {
   en: {
     badge: "Emergency maintenance",
-    title: "Site was hit by a spam-tool attack",
-    desc: "Sign-in is under maintenance while we back up data after a spam-tool attack. You can still take the quizzes below without signing in.",
+    title: "Site was hit by a DoS attack",
+    desc: "The site was hit by a DoS attack, spam tools burned through our quota, by the person with email \"kie*thi***tran*8@gmail.com\", so the site is currently maintaining the sign-in function to back up data. Expected to finish maintenance before 03/10. You can still take the quizzes below for free without signing in.",
     benefits: [
       "Google sign-in is temporarily locked for data backup",
       "You can still take the quizzes below as a guest",
@@ -796,8 +796,8 @@ export const toeicAnnouncementCopy = {
   },
   vi: {
     badge: "Bảo trì khẩn cấp",
-    title: "Website vừa bị tấn công spam tool",
-    desc: "Website vừa bị tấn công, bị spam tool phá nên đang bảo trì chức năng đăng nhập để backup dữ liệu. Bạn vẫn có thể làm các bài quiz bên dưới mà không cần đăng nhập.",
+    title: "Website vừa bị tấn công DoS",
+    desc: "Website vừa bị tấn công DoS, bị spam tool phá đốt sạch quota, bởi người có mail \"kie*thi***tran*8@gmail.com\" nên hiện tại web đang bảo trì chức năng đăng nhập để backup lại dữ liệu. Dự kiến bảo trì xong trước ngày 03/10. Bạn vẫn có thể làm các bài quiz bên dưới miễn phí mà không cần đăng nhập.",
     benefits: [
       "Đăng nhập Google đang tạm khóa để backup dữ liệu",
       "Bạn vẫn làm các bài quiz bên dưới mà không cần đăng nhập",

@@ -13,7 +13,8 @@
     "preview": "vite preview",
     "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
     "sync:data": "node ./scripts/sync-data.js",
-    "validate:data": "node ./scripts/validate-data.js"
+    "validate:data": "node ./scripts/validate-data.js",
+    "find:user-ip": "node ./scripts/find-user-ip.js"
   },
   "dependencies": {
     "@fontsource/noto-sans": "^5.3.0",
