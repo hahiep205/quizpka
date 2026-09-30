@@ -502,7 +502,7 @@ export const loginCopy = {
   },
   vi: {
     title: "Đăng nhập nhanh",
-    note: "Website vừa bị tấn công, bị spam tool phá nên đang bảo trì chức năng đăng nhập để backup dữ liệu. Bạn vẫn có thể làm các bài quiz bên dưới mà không cần đăng nhập.",
+    note: "Quizpka vừa bị tấn công, bị spam tool phá nên đang bảo trì chức năng đăng nhập để backup lại toàn bộ dữ liệu. Bạn vẫn có thể làm các bài quiz bên dưới mà không cần đăng nhập.",
     signIn: "Đang bảo trì",
     signingIn: "Đang bảo trì…",
     error: "Chức năng đăng nhập đang bảo trì. Vui lòng quay lại sau.",
@@ -529,7 +529,7 @@ export const loginNudgeCopy = {
   },
   vi: {
     title: "Đăng nhập để học trọn vẹn",
-    subtitle: "Website vừa bị tấn công, bị spam tool phá nên đang bảo trì chức năng đăng nhập để backup dữ liệu. Bạn vẫn có thể làm các bài quiz bên dưới mà không cần đăng nhập:",
+    subtitle: "Quizpka vừa bị tấn công, bị spam tool phá nên đang bảo trì chức năng đăng nhập để backup lại toàn bộ dữ liệu. Bạn vẫn có thể làm các bài quiz bên dưới mà không cần đăng nhập:",
     benefits: [
       { title: "Lưu lịch sử làm bài", desc: "Mọi lượt làm được giữ lại để xem bất cứ lúc nào." },
       { title: "Làm lại câu sai", desc: "Tự động gom câu sai để luyện lại trọng tâm." },
@@ -796,12 +796,12 @@ export const toeicAnnouncementCopy = {
   },
   vi: {
     badge: "Bảo trì khẩn cấp",
-    title: "Website vừa bị tấn công DoS",
-    desc: "Website vừa bị tấn công DoS, bị spam tool phá đốt sạch quota, bởi người có mail \"kie*thi***tran*8@gmail.com\" nên hiện tại web đang bảo trì chức năng đăng nhập để backup lại dữ liệu. Dự kiến bảo trì xong trước ngày 03/10. Bạn vẫn có thể làm các bài quiz bên dưới miễn phí mà không cần đăng nhập.",
+    title: "Quizpka vừa bị tấn công DoS",
+    desc: "Quizpka vừa bị tấn công DoS, bị spam tool phá đốt sạch quota, bởi một user có mail \"kie*thi***tran*8@gmail.com\" - K18, nên hiện tại web đang bảo trì chức năng đăng nhập để backup lại toàn bộ dữ liệu. Dự kiến bảo trì xong trước ngày 03/10. Bạn vẫn có thể làm các bài quiz bên dưới miễn phí mà không cần đăng nhập.",
     benefits: [
       "Đăng nhập Google đang tạm khóa để backup dữ liệu",
       "Bạn vẫn làm các bài quiz bên dưới mà không cần đăng nhập",
-      "Đăng nhập sẽ mở lại ngay sau khi bảo trì xong",
+      "Đăng nhập sẽ mở lại ngay sau khi bảo trì xong, dự kiến trước ngày 03/10",
     ],
     share: "Báo lỗi",
     feedback: "Góp ý",
