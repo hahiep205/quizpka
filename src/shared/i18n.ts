@@ -781,13 +781,13 @@ export const toeicPickerCopy = {
 
 export const toeicAnnouncementCopy = {
   en: {
-    badge: "Emergency maintenance",
-    title: "Site was hit by a DoS attack",
-    desc: "The site was hit by a DoS attack, spam tools burned through our quota, by the person with email \"kie*thi***tran*8@gmail.com\", so the site is currently maintaining the sign-in function to back up data. Expected to finish maintenance before 03/10. You can still take the quizzes below for free without signing in.",
+    badge: "Announcement",
+    title: "Sign-in is back to normal",
+    desc: "The site has just been restored after a DoS attack, so errors may still occur. If you run into an error, please go to Settings and report it so we can fix it.",
     benefits: [
-      "Google sign-in is temporarily locked for data backup",
-      "You can still take the quizzes below as a guest",
-      "Sign-in will reopen as soon as maintenance is done",
+      "Google sign-in is working again",
+      "The site was just restored, some errors may still occur",
+      "Found a bug? Go to Settings and report it",
     ],
     share: "Report issue",
     feedback: "Feedback",
@@ -795,13 +795,13 @@ export const toeicAnnouncementCopy = {
     close: "Close",
   },
   vi: {
-    badge: "Bảo trì khẩn cấp",
-    title: "Quizpka vừa bị tấn công DoS",
-    desc: "Quizpka vừa bị tấn công DoS, bị spam tool phá đốt sạch quota, bởi một user có mail \"kie*thi***tran*8@gmail.com\" - K18, nên hiện tại web đang bảo trì chức năng đăng nhập để backup lại toàn bộ dữ liệu. Dự kiến bảo trì xong trước ngày 03/10. Bạn vẫn có thể làm các bài quiz bên dưới miễn phí mà không cần đăng nhập.",
+    badge: "Thông báo",
+    title: "Đã có thể đăng nhập trở lại bình thường",
+    desc: "Website mới được khôi phục sau khi bị tấn công DoS nên có thể sẽ có lỗi phát sinh. Nếu gặp lỗi, bạn hãy vào Cài đặt và bấm Báo lỗi để chúng mình xử lý nhé.",
     benefits: [
-      "Đăng nhập Google đang tạm khóa để backup dữ liệu",
-      "Bạn vẫn làm các bài quiz bên dưới mà không cần đăng nhập",
-      "Đăng nhập sẽ mở lại ngay sau khi bảo trì xong, dự kiến trước ngày 03/10",
+      "Đăng nhập Google đã hoạt động trở lại",
+      "Website mới khôi phục sau DoS, có thể còn lỗi phát sinh",
+      "Gặp lỗi? Vào Cài đặt và bấm Báo lỗi giúp chúng mình",
     ],
     share: "Báo lỗi",
     feedback: "Góp ý",

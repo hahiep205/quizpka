@@ -21,7 +21,7 @@ export function MobileTabBar<K extends string>({
 }) {
   const containerRef = useRef<HTMLDivElement>(null)
   const buttonRefs = useRef(new Map<K, HTMLButtonElement>())
-  const [indicator, setIndicator] = useState({ left: 0, width: 64, ready: false })
+  const [indicator, setIndicator] = useState({ left: 0, width: 72, ready: false })
 
   // Đo vị trí ô icon đang active để viên pill trượt tới đúng chỗ.
   useLayoutEffect(() => {
@@ -79,7 +79,7 @@ export function MobileTabBar<K extends string>({
             >
               <span
                 className={cn(
-                  "flex h-[48px] w-[64px] items-center justify-center rounded-[20px] transition-[transform,color] duration-200 ease-out active:scale-95",
+                  "flex h-[48px] w-[72px] items-center justify-center rounded-[20px] transition-[transform,color] duration-200 ease-out active:scale-95",
                   isActive
                     ? "text-[#1CB0F6] dark:text-[#4C9AFF]"
                     : "bg-transparent text-[#131313] dark:text-[#F2F2F7]",
