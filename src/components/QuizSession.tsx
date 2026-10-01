@@ -22,6 +22,7 @@ import { useQuizQuestions } from "@/features/quiz/hooks/useQuizQuestions"
 import { useQuizTimer } from "@/features/quiz/hooks/useQuizTimer"
 import { useRetryHistory } from "@/features/quiz/hooks/useRetryHistory"
 import { applyCorrect, applyWrong, buildHardQueue } from "@/features/quiz/lib/quizHard"
+import { formatPromptText } from "@/features/quiz/lib/formatPrompt"
 import {
   buildPartNavigationItems,
   buildPartStartIndices,
@@ -389,6 +390,9 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
   if (error || questions.length === 0) return (
     <CenterCard>
       <p className="lp-modal-desc text-[15px]">{t.loadError}</p>
+      {error ? (
+        <p className="mx-auto mt-3 max-w-full break-words rounded-[12px] bg-slate-100 px-4 py-3 text-left font-mono text-[12px] font-semibold leading-5 text-slate-600 dark:bg-white/5 dark:text-slate-300">{error.message}</p>
+      ) : null}
       <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:justify-center">
         <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={handleExit}>{t.backDocs}</button>
         <button type="button" className="lp-btn lp-btn--primary lp-btn--sm" onClick={reload}>{t.retry}</button>
@@ -429,7 +433,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
                 <div className="space-y-3">
                   {hardWeakQuestions.map((q) => (
                     <div key={q.id} className="rounded-[10px] border border-[#EECB8A] bg-white px-3 py-2.5 dark:border-amber-500/20 dark:bg-slate-900">
-                      <p className="text-[13px] font-bold leading-5 text-[#100F3E] dark:text-white">{q.prompt}</p>
+                      <p className="whitespace-pre-line text-[13px] font-bold leading-5 text-[#100F3E] dark:text-white">{formatPromptText(q.prompt)}</p>
                       <p className="mt-1 text-[12px] font-semibold text-emerald-700 dark:text-emerald-300">
                         <span className="font-extrabold">{t.rightAnswer}:</span>{" "}
                         {q.correctIndex === undefined ? q.acceptedAnswers?.join(" / ") : `${String.fromCharCode(65 + q.correctIndex)}. ${q.options[q.correctIndex]}`}

@@ -1,5 +1,6 @@
 import { useMemo } from "react"
 import katex from "katex"
+import { replaceCanvasEquationImages } from "@/lib/canvasEquations"
 
 function escapeHtml(text: string): string {
   return text
@@ -14,11 +15,12 @@ const MATH_PATTERN = /\\\[([\s\S]*?)\\\]|\\\(([\s\S]*?)\\\)|\$\$([\s\S]*?)\$\$/g
 
 /** Render `\(...\)` / `\[...\]` / `$$...$$` segments with KaTeX; other text is HTML-escaped. */
 export function renderMathHtml(text: string): string {
+  const clean = replaceCanvasEquationImages(text)
   let html = ""
   let lastIndex = 0
   MATH_PATTERN.lastIndex = 0
-  for (let match = MATH_PATTERN.exec(text); match; match = MATH_PATTERN.exec(text)) {
-    html += escapeHtml(text.slice(lastIndex, match.index))
+  for (let match = MATH_PATTERN.exec(clean); match; match = MATH_PATTERN.exec(clean)) {
+    html += escapeHtml(clean.slice(lastIndex, match.index))
     const tex = match[1] ?? match[2] ?? match[3] ?? ""
     const displayMode = match[1] !== undefined || match[3] !== undefined
     try {
@@ -28,7 +30,7 @@ export function renderMathHtml(text: string): string {
     }
     lastIndex = match.index + match[0].length
   }
-  html += escapeHtml(text.slice(lastIndex))
+  html += escapeHtml(clean.slice(lastIndex))
   return html
 }
 

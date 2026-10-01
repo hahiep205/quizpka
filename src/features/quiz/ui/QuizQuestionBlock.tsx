@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils"
 import { isAnswerCorrect } from "@/features/quiz/lib/quizHelpers"
 import type { Question, AnswerValue } from "@/features/quiz/model/quiz.types"
 import { DetailedAnalysisContent } from "@/features/quiz/ui/DetailedAnalysisContent"
+import { formatPromptText } from "@/features/quiz/lib/formatPrompt"
 import { MathText } from "@/components/MathText"
 import { quizCopy } from "@/shared/i18n"
 
@@ -39,7 +40,7 @@ export const QuizQuestionBlock = memo(function QuizQuestionBlock({
   return (
     <section className={cn("border-b border-[#E5E5E5] pb-8 last:border-b-0 last:pb-0 dark:border-white/10", compact && "pb-5")}>
       <p className="lp-label mb-2 text-[12px] uppercase tracking-[0.12em]">{t.question} {questionNumber}</p>
-      <h2 className={cn("whitespace-pre-line", compact ? "text-[13px] leading-5 font-bold tracking-normal sm:text-[13px]" : "lp-card-title text-[18px] leading-8 sm:text-[20px]")}><MathText text={question.prompt} /></h2>
+      <h2 className={cn("whitespace-pre-line", compact ? "text-[13px] leading-5 font-bold tracking-normal sm:text-[13px]" : "lp-card-title text-[18px] leading-8 sm:text-[20px]")}><MathText text={formatPromptText(question.prompt)} /></h2>
       {showImage && question.imageUrl ? (
         <div className="mb-5 overflow-hidden rounded-[12px] border-2 border-[#E5E5E5] bg-white dark:border-white/10 dark:bg-slate-900">
           {onZoomImage ? (

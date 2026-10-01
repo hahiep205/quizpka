@@ -3,6 +3,7 @@ import type { Content, TableCell } from "pdfmake/build/pdfmake"
 import type { TDocumentDefinitions } from "pdfmake/interfaces"
 import * as vfsModule from "pdfmake/build/vfs_fonts"
 import type { PdfQuestion } from "./fetchFreePdfData"
+import { formatPromptText } from "@/features/quiz/lib/formatPrompt"
 import type { ExamCatalogItem, Subject } from "@/data/subjects"
 
 const TEXT = "#111827"
@@ -310,7 +311,7 @@ function makeQuestionBlock(question: PdfQuestion, images: Map<string, string>, b
         { text: String(question.index), style: "numberCircle", width: 24 },
         // pdfmake chỉ ghi nhận vị trí cho id gắn trên node text lá (id trên block
         // unbreakable/container khiến pageReference báo "Page reference id not found").
-        { text: question.prompt, style: "prompt", width: "*", ...(blockId ? { id: blockId } : {}) },
+        { text: formatPromptText(question.prompt), style: "prompt", width: "*", ...(blockId ? { id: blockId } : {}) },
       ],
       columnGap: 7,
     },
@@ -325,7 +326,7 @@ function makeExplanationBlock(question: PdfQuestion, blockId?: string): Content 
   return {
     stack: [
       { columns: [{ text: `Câu ${question.index}`, bold: true, ...(blockId ? { id: blockId } : {}) }, { text: `Đáp án: ${question.answer}`, bold: true, alignment: "right" }] },
-      { text: question.prompt, style: "explanationPrompt" },
+      { text: formatPromptText(question.prompt), style: "explanationPrompt" },
       { text: question.explanation || "Không có giải thích chi tiết.", style: "explanation" },
     ],
     unbreakable: true,

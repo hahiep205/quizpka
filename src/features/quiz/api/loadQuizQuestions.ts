@@ -6,7 +6,23 @@ import { buildFallbackQuestions, mapBankQuestions } from "@/features/quiz/lib/qu
 import { parseQuestionBank, QuestionBankDataError } from "@/features/quiz/lib/questionBankSchema"
 import { loadToeicQuestions } from "@/features/quiz/lib/toeicHelpers"
 import type { BankFile, BankPart, Question } from "@/features/quiz/model/quiz.types"
+import { FunctionsHttpError } from "@supabase/supabase-js"
 import { supabase } from "@/lib/supabase"
+
+/** Extract the server-sent reason (e.g. "Purchase required") instead of the
+ *  generic "Edge Function returned a non-2xx status code", mirroring quizSessionApi. */
+async function paidBankErrorMessage(error: unknown): Promise<string> {
+  if (error instanceof FunctionsHttpError) {
+    try {
+      const payload = await error.context.clone().json() as { error?: unknown; message?: unknown }
+      if (typeof payload.error === "string" && payload.error) return payload.error
+      if (typeof payload.message === "string" && payload.message) return payload.message
+    } catch {
+      // Fall through to the generic SDK message.
+    }
+  }
+  return error instanceof Error ? error.message : String(error)
+}
 
 async function fetchBank(url: string, signal: AbortSignal): Promise<BankFile> {
   let response: Response
@@ -61,8 +77,19 @@ export async function loadQuizQuestions({ subject, exam, setup, chapterId, toeic
   } else if (subject.id === "khoa-hoc-du-lieu-va-tri-tue-nhan-tao" || subject.id === "nhap-mon-khoa-hoc-du-lieu-va-tri-tue-nhan-tao" || subject.id === "danh-gia-va-kiem-dinh-chat-luong-phan-mem" || subject.id === "bao-mat-ung-dung-he-thong" || subject.id === "marketing-can-ban" || subject.id === "kinh-te-vi-mo-macro" || subject.id === "tin-hoc-van-phong" || subject.id === "nguyen-ly-tai-chinh" || subject.id === "lich-su-van-minh-the-gioi" || subject.id === "kinh-te-hoc" || subject.id === "phap-luat-dai-cuong" || subject.id === "tu-tuong-ho-chi-minh" || subject.id === "quan-tri-hoc" || subject.id === "kinh-te-chinh-tri-mac-lenin" || subject.id === "lich-su-dang-cong-san-viet-nam" || subject.id === "triet-hoc-mac-lenin-2tc" || subject.id === "triet-hoc-mac-lenin-3tc" || subject.id === "chu-nghia-xa-hoi-khoa-hoc" || subject.id === "toan-roi-rac" || subject.id === "tieng-anh-1" || subject.id === "phuong-phap-nghien-cuu-khoa-hoc" || subject.id === "nghien-cuu-khoa-hoc-trong-kinh-te" || subject.id === "tadv-traphi" || subject.id === "thong-ke-trong-kinh-doanh" || subject.id === "co-so-du-lieu") {
     const { data, error } = await supabase.functions.invoke("get-paid-question-bank", { body: { examId: exam.id, subjectId: subject.id } })
     if (signal.aborted) throw new DOMException("Aborted", "AbortError")
-    if (error) throw new QuestionBankDataError(exam.id, error.message)
-    const bank = parseQuestionBank(data, exam.id)
+    if (error) throw new QuestionBankDataError(exam.id, await paidBankErrorMessage(error))
+    // The SDK parses the function response by Content-Type: a bank served as
+    // text/plain arrives as a raw JSON string instead of an object. Accept it
+    // so a server header regression can never break paid subjects again.
+    let payload: unknown = data
+    if (typeof payload === "string") {
+      try {
+        payload = JSON.parse(payload)
+      } catch {
+        throw new QuestionBankDataError(exam.id, "response is not valid JSON")
+      }
+    }
+    const bank = parseQuestionBank(payload, exam.id)
     const filteredBank = chapterId && chapterId !== "all" && bank.questions && hasChapterSupport(subject.id)
       ? { ...bank, questions: filterQuestionsBySubjectChapter(subject.id, bank.questions, chapterId) }
       : bank

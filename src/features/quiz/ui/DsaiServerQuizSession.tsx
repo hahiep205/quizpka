@@ -5,6 +5,7 @@ import { useAuth } from "@/auth/AuthProvider"
 import { getExamTitle, type Subject, type ExamPaper } from "@/data/subjects"
 import { appRoutes, navigate } from "@/app/navigation"
 import { MathText } from "@/components/MathText"
+import { formatPromptText } from "@/features/quiz/lib/formatPrompt"
 import { useQuizSession } from "@/features/quiz/hooks/useQuizSession"
 import { formatTime } from "@/features/quiz/lib/quizHelpers"
 import { savePracticeHistory } from "@/lib/practiceSession"
@@ -235,7 +236,7 @@ export function DsaiServerQuizSession({ lang, subject, exam, setup, initialSessi
             {questions.map((question, index) => {
               const review = reviewById.get(question.id)
               const correctOption = review?.correctAnswer === null || review?.correctAnswer === undefined ? "" : question.options[review.correctAnswer]
-              return <section key={question.id} className="border-b border-[#E5E5E5] pb-5 last:border-b-0 last:pb-0 dark:border-white/10"><p className="lp-label mb-2">{copy.question} {index + 1}</p><p className="whitespace-pre-line text-[15px] font-bold leading-6"><MathText text={question.prompt} /></p><p className={review?.isCorrect ? "mt-2 font-bold text-emerald-600" : "mt-2 font-bold text-rose-600"}>{review?.isCorrect ? "✓" : "✗"} <MathText text={correctOption ?? ""} /></p></section>
+              return <section key={question.id} className="border-b border-[#E5E5E5] pb-5 last:border-b-0 last:pb-0 dark:border-white/10"><p className="lp-label mb-2">{copy.question} {index + 1}</p><p className="whitespace-pre-line text-[15px] font-bold leading-6"><MathText text={formatPromptText(question.prompt)} /></p><p className={review?.isCorrect ? "mt-2 font-bold text-emerald-600" : "mt-2 font-bold text-rose-600"}>{review?.isCorrect ? "✓" : "✗"} <MathText text={correctOption ?? ""} /></p></section>
             })}
           </div>
         </div>
@@ -262,7 +263,7 @@ export function DsaiServerQuizSession({ lang, subject, exam, setup, initialSessi
           <div className="mb-5 flex flex-wrap items-center justify-between gap-2"><p className="lp-label text-[12px] uppercase tracking-[0.12em]">{subject.code} · {setup.mode === "practice" ? copy.practiceMode : copy.examMode}</p><p className="lp-card-meta">{subject.name[lang]}</p></div>
           <section className="border-b border-[#E5E5E5] pb-5 last:border-b-0 last:pb-0 dark:border-white/10">
             <p className="lp-label mb-2 text-[12px] uppercase tracking-[0.12em]">{copy.question} {currentIndex + 1}</p>
-            <h2 className="whitespace-pre-line text-[13px] font-bold leading-5 tracking-normal sm:text-[13px]"><MathText text={current.prompt} /></h2>
+            <h2 className="whitespace-pre-line text-[13px] font-bold leading-5 tracking-normal sm:text-[13px]"><MathText text={formatPromptText(current.prompt)} /></h2>
             <div className="mt-3 flex flex-col gap-1.5 sm:grid sm:grid-cols-2 sm:gap-2">
               {current.options.map((option, index) => <button key={`${current.id}-${index}`} type="button" className={`flex w-full items-center gap-1.5 rounded-[9px] border-2 px-2.5 py-1.5 text-left text-[12px] font-semibold transition-all duration-100 sm:gap-2 sm:px-3 sm:py-2 ${answers[current.id] === index ? "border-[#1CB0F6] bg-[#1CB0F6] text-white shadow-[0_3px_0_#189CD8]" : "border-[#E5E5E5] bg-white text-[#4B4B4B] shadow-[0_3px_0_#DCDCDC] hover:-translate-y-px dark:border-white/10 dark:bg-slate-900 dark:text-slate-200"}`} onClick={() => setAnswers((value) => ({ ...value, [current.id]: index }))}><span className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-2 text-[9px] font-extrabold sm:h-6 sm:w-6 sm:text-[10px] ${answers[current.id] === index ? "border-white/40 bg-white/15 text-white" : "border-[#E5E5E5] bg-[#F6F7FB] text-[#100F3E] dark:border-white/15 dark:bg-transparent dark:text-white"}`}>{String.fromCharCode(65 + index)}</span><span className="flex-1 font-bold leading-4"><MathText text={option} /></span></button>)}
             </div>

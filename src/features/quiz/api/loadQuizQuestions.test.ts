@@ -94,6 +94,22 @@ describe("quiz question loader", () => {
     })
   })
 
+  it("accepts a paid bank served as raw JSON text (text/plain Content-Type)", async () => {
+    const marSubject = getSubjectById("marketing-can-ban")!
+    const marExam = marSubject.exams[0]
+    invokeMock.mockResolvedValue({ data: JSON.stringify({ title: "MAR101 Final", questions: [
+      { id: "0-1", chapter: "Chương 1. Tổng quan về Marketing", question: "Q1", answer: "A", options: { A: "Correct" } },
+      { id: "0-2", chapter: "Chương 2. Nghiên cứu Marketing", question: "Q2", answer: "A", options: { A: "Correct" } },
+    ] }), error: null })
+
+    const questions = await loadQuizQuestions({ subject: marSubject, exam: marExam, setup, chapterId: "all", signal: new AbortController().signal })
+
+    expect(questions.map((question) => question.prompt).sort()).toEqual(["Q1", "Q2"])
+    expect(invokeMock).toHaveBeenCalledWith("get-paid-question-bank", {
+      body: { examId: "marketing-final-bank-1", subjectId: "marketing-can-ban" },
+    })
+  })
+
   it("loads the paid SOC101 final bank through the gated function (not fallback)", async () => {
     const socSubject = getSubjectById("chu-nghia-xa-hoi-khoa-hoc")!
     const socExam = socSubject.exams[0]

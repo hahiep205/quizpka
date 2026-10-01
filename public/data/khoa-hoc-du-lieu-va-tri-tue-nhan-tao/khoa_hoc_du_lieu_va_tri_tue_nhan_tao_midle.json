@@ -1,0 +1,1432 @@
+{
+  "title": "Bộ câu hỏi trắc nghiệm Khoa học dữ liệu và trí tuệ nhân tạo - Kiểm tra giữa kỳ [N04]",
+  "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+  "totalQuestions": 95,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Quy định của bài kiểm tra giữa kỳ: Sinh viên được sử dụng tài liệu như vở ghi, sách Sinh viên điền kết quả vào trong canvas và viết câu trả lời ra phiếu trả lời (với câu hỏi trắc nghiệm chỉ viết phương án A, B, C, ...) Sinh viên mang máy tính hoặc điện thoại di động để truy cập canvas làm bài Sinh viên sử dụng Excel, máy tính cầm tay hoặc điện thoại để tính toán bài tập Sinh viên không được phép: Sử dụng chatGPT hay ứng dụng AI làm bài, sinh viên vi vi phạm quy định thì sẽ có hệ số trung thực bằng không. Sử dụng ứng dụng nhắn tin trao đổi bài, sinh viên vi vi phạm quy định thì sẽ nộp bài ngay ở thời điểm bị phát hiện Bạn đã đọc kỹ quy định kiểm tra giữa kỳ chưa?",
+      "options": {
+        "A": "Tôi đã đọc kỹ",
+        "B": "Tôi chưa đọc kỹ",
+        "C": "Tôi mới đọc một phần quy định",
+        "D": "Tôi không quan tâm đến quy định"
+      },
+      "answer": "A",
+      "explainAnswer": "Đây là câu hỏi xác nhận quy chế thi. Đáp án đúng là đã đọc kỹ, vì sinh viên chỉ được làm bài khi nắm rõ quy định về tài liệu, thiết bị và các hành vi bị cấm.",
+      "image": null
+    },
+    {
+      "id": 2,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Bạn có tham dự buổi học hôm nay không?",
+      "options": {
+        "A": "Không",
+        "B": "Có",
+        "C": "Tôi vào trễ một phần buổi học",
+        "D": "Tôi xin vắng buổi học này"
+      },
+      "answer": "B",
+      "explainAnswer": "Đây là câu điểm danh. Đáp án đúng là Có, vì sinh viên đang có mặt làm bài kiểm tra giữa kỳ trong buổi học hôm nay.",
+      "image": null
+    },
+    {
+      "id": 3,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu \\(\\{ X,Y\\} = \\left\\{ {({x_1},{y_1}),({x_1},{y_1}), \\ldots ,({x_N},{y_N})} \\right\\}\\) . Sử dụng mô hình hồi quy tuyến tính \\(\\hat y=bx\\) , khi đó tham số \\(b\\) được tính bằng biểu thức nào dưới đây:",
+      "options": {
+        "A": "\\(b=\\frac{{\\sum\\limits_{i = 1}^N {x_i^2} \\sum\\limits_{i = 1}^N {{y_i}} - \\sum\\limits_{i = 1}^N {{x_i}} \\sum\\limits_{i = 1}^N {{x_i}{y_i}} }}{{N\\sum\\limits_{i = 1}^N {x_i^2} - {{\\left( {\\sum\\limits_{i = 1}^N {{x_i}} } \\right)}^2}}}\\)",
+        "B": "\\(b=\\frac{{N\\sum\\limits_{i = 1}^N {{x_i}{y_i}} - \\sum\\limits_{i = 1}^N {{x_i}} \\sum\\limits_{i = 1}^N {{y_i}} }}{{N\\sum\\limits_{i = 1}^N {x_i^2} - {{\\left( {\\sum\\limits_{i = 1}^N {{x_i}} } \\right)}^2}}}\\)",
+        "C": "\\(b=\\frac{{\\sum\\limits_{i = 1}^N {{x_i}{y_i}} }}{{\\sum\\limits_{i = 1}^N {x_i^2} }}\\)",
+        "D": "\\(b=\\frac{{\\sum\\limits_{i = 1}^N {{x_i}{y_i}} }}{{N\\sum\\limits_{i = 1}^N {x_i^2} }}\\)"
+      },
+      "answer": "C",
+      "explainAnswer": "Với mô hình qua gốc tọa độ ŷ=bx (không có hệ số chặn a), cực tiểu hóa tổng bình phương sai số cho ra b=Σxᵢyᵢ/Σxᵢ². Hai công thức còn lại là của mô hình đầy đủ ŷ=a+bx nên không dùng ở đây.",
+      "image": null
+    },
+    {
+      "id": 4,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Để xác định độ phân tán của một tập dữ liệu người ta dùng đại lượng nào sau đây",
+      "options": {
+        "A": "Khoảng cách giữa giá trị lớn nhất và giá trị nhỏ nhất",
+        "B": "Giá trị trung bình",
+        "C": "Phương sai",
+        "D": "Giá trị nhỏ nhất"
+      },
+      "answer": "C",
+      "explainAnswer": "Độ phân tán cho biết dữ liệu trải rộng quanh giá trị trung tâm thế nào, thước đo chuẩn là phương sai (trung bình bình phương độ lệch). Khoảng max-min chỉ là miền biến thiên, còn trung bình hay min không đo phân tán.",
+      "image": null
+    },
+    {
+      "id": 5,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho hàm số \\(y=f\\left(x\\right)\\) , gọi \\(f'(x)\\) là đạo hàm của hàm số, \\(\\eta\\) là hệ số học (learning rate). Công thưc truy hồi của phương pháp giảm độ dốc (gradient descent) là:",
+      "options": {
+        "A": "\\(x_{t+1} = x_t - \\eta f'(x_t)\\)",
+        "B": "\\(x_{t+1} = x_t - \\eta f(x_t)\\)",
+        "C": "\\(y_{t+1} = y_t - \\eta f(x_t)\\)",
+        "D": "\\(y_{t+1} = y_t - \\eta f'(x_t)\\)"
+      },
+      "answer": "A",
+      "explainAnswer": "Gradient descent đi ngược hướng đạo hàm để tìm cực tiểu: x_{t+1}=x_t−ηf'(x_t). Dùng f(x_t) thay cho đạo hàm, hay cập nhật y thay vì x, đều sai bản chất của phương pháp.",
+      "image": null
+    },
+    {
+      "id": 6,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Nếu tập dữ liệu có số lượng phần tử chẵn, trung vị được xác định như thế nào?",
+      "options": {
+        "A": "Chọn phần tử ở vị trí giữa",
+        "B": "Chọn giá trị nhỏ nhất",
+        "C": "Lấy giá trị trung bình của hai phần tử nằm ở giữa",
+        "D": "Chọn giá trị lớn nhất"
+      },
+      "answer": "C",
+      "explainAnswer": "Khi N chẵn không có phần tử chính giữa duy nhất, trung vị là trung bình cộng của hai phần tử nằm giữa sau khi sắp xếp. Chọn một phần tử giữa, min hay max đều sai định nghĩa.",
+      "image": null
+    },
+    {
+      "id": 7,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu về hai đại lượng X và Y: \\(\\{ X,Y\\} = \\left\\{ {({x_1},{y_1}),({x_1},{y_1}), \\ldots ,({x_N},{y_N})} \\right\\}\\) . Đại lượng nào được định nghĩa bằng biểu thức dưới đây \\(\\frac{{\\sum\\limits_{i = 1}^N {({x_i} - \\bar x)({y_i} - \\bar y)} }}{{\\sqrt {\\sum\\limits_{i = 1}^N {{{({x_i} - \\bar x)}^2}} } \\sqrt {\\sum\\limits_{i = 1}^N {{{({y_i} - \\bar y)}^2}} } }}\\)",
+      "options": {
+        "A": "Hệ số tương quan",
+        "B": "Độ lệch chuẩn",
+        "C": "Phương sai",
+        "D": "Hệ số xác định"
+      },
+      "answer": "A",
+      "explainAnswer": "Biểu thức trên chính là công thức hệ số tương quan Pearson r, đo mức liên quan tuyến tính giữa X và Y. Độ lệch chuẩn, phương sai và hệ số xác định có công thức hoàn toàn khác.",
+      "image": null
+    },
+    {
+      "id": 8,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu \\(\\{ X,Y\\} = \\left\\{ {({x_1},{y_1}),({x_1},{y_1}), \\ldots ,({x_N},{y_N})} \\right\\}\\) . Sử dụng mô hình hồi quy tuyến tính \\(\\hat y=a+bx\\) , khi đó tham số xác định \\(R^{2} \\) được tính bằng biểu thức nào dưới đây:",
+      "options": {
+        "A": "\\(1 - \\frac{{\\sum\\limits_{i = 1}^N {{{\\left( {a + b{x_i} - {y_i}} \\right)}^2}} }}{{\\sum\\limits_{i = 1}^N {{{\\left( {{y_i} - \\bar y} \\right)}^2}} }}\\)",
+        "B": "\\(\\frac{{\\sum\\limits_{i = 1}^N {({x_i} - \\bar x)({y_i} - \\bar y)} }}{{\\sqrt {\\sum\\limits_{i = 1}^N {{{({x_i} - \\bar x)}^2}} } \\sqrt {\\sum\\limits_{i = 1}^N {{{({y_i} - \\bar y)}^2}} } }}\\)",
+        "C": "\\(\\frac{1}{N}\\sum\\limits_{i = 1}^N {{{\\left[ {{y_i} - (a + b{x_i})} \\right]}^2}} \\)",
+        "D": "\\(1 - \\frac{{\\sum\\limits_{i = 1}^N {{{\\left( {{y_i} - \\bar y} \\right)}^2}} }}{{\\sum\\limits_{i = 1}^N {{{\\left( {a + b{x_i} - {y_i}} \\right)}^2}} }}\\)"
+      },
+      "answer": "A",
+      "explainAnswer": "Hệ số xác định R²=1−SS_res/SS_tot, trong đó tử số là tổng bình phương phần dư của mô hình ŷ=a+bxᵢ và mẫu số là tổng biến thiên của y. Đáp án B là hệ số tương quan r, đáp án C là hàm thất thoát MSE.",
+      "image": null
+    },
+    {
+      "id": 9,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu \\(X=\\{ x_1, x_2, \\dots, x_N \\}\\) . Gọi \\(\\bar x\\) là giá trị trung bình của tập dữ liệu. Phương sai của tập dữ liệu được tính bằng biểu thức nào dưới đây:",
+      "options": {
+        "A": "\\(\\sum\\limits_{i = 1}^N {{{\\left( {{x_i} - \\bar x} \\right)}^2}} \\)",
+        "B": "\\(\\frac{1}{N}\\sum\\limits_{i = 1}^N {\\left| {{x_i} - \\bar x} \\right|} \\)",
+        "C": "\\(\\sqrt {\\frac{1}{N}\\sum\\limits_{i = 1}^N {{{\\left( {{x_i} - \\bar x} \\right)}^2}} } \\)",
+        "D": "\\(\\frac{1}{N}\\sum\\limits_{i = 1}^N {{{\\left( {{x_i} - \\bar x} \\right)}^2}} \\)"
+      },
+      "answer": "D",
+      "explainAnswer": "Phương sai tổng thể là trung bình của bình phương độ lệch khỏi trung bình: (1/N)Σ(xᵢ−x̄)². Thiếu hệ số 1/N, dùng trị tuyệt đối hay thêm căn bậc hai (độ lệch chuẩn) đều không còn là phương sai.",
+      "image": null
+    },
+    {
+      "id": 10,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu \\(\\{ X,Y\\} = \\left\\{ {({x_1},{y_1}),({x_1},{y_1}), \\ldots ,({x_N},{y_N})} \\right\\}\\) . Sử dụng mô hình hồi quy tuyến tính \\(\\hat y=a+bx\\) , khi đó tham số \\(a\\) được tính bằng biểu thức nào dưới đây:",
+      "options": {
+        "A": "\\(a = \\frac{{\\sum\\limits_{i = 1}^N {{x_i}{y_i}} }}{{\\sum\\limits_{i = 1}^N {x_i^2} }}\\)",
+        "B": "\\(a= \\frac{{\\sum\\limits_{i = 1}^N {x_i^2} \\sum\\limits_{i = 1}^N {{y_i}} - \\sum\\limits_{i = 1}^N {{x_i}} \\sum\\limits_{i = 1}^N {{x_i}{y_i}} }}{{N\\sum\\limits_{i = 1}^N {x_i^2} - {{\\left( {\\sum\\limits_{i = 1}^N {{x_i}} } \\right)}^2}}}\\)",
+        "C": "\\(a = \\frac{{N\\sum\\limits_{i = 1}^N {{x_i}{y_i}} - \\sum\\limits_{i = 1}^N {{x_i}} \\sum\\limits_{i = 1}^N {{y_i}} }}{{N\\sum\\limits_{i = 1}^N {x_i^2} - {{\\left( {\\sum\\limits_{i = 1}^N {{x_i}} } \\right)}^2}}}\\)",
+        "D": "\\(a = \\bar y + b\\bar x\\)"
+      },
+      "answer": "B",
+      "explainAnswer": "Với mô hình ŷ=a+bx, giải hệ phương trình chuẩn cho ra a=(Σx²Σy−ΣxΣxy)/(NΣx²−(Σx)²). Đáp án A là b của mô hình qua gốc, đáp án C là b của mô hình đầy đủ, nên đều sai khi hỏi a.",
+      "image": null
+    },
+    {
+      "id": 11,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu \\(\\{ X,Y\\} = \\left\\{ {({x_1},{y_1}),({x_1},{y_1}), \\ldots ,({x_N},{y_N})} \\right\\}\\) . Sử dụng mô hình hồi quy tuyến tính \\(\\hat y=a+bx\\) . Đại lượng nào được định nghĩa bằng biểu thức dưới đây: \\(\\frac{1}{N}\\sum\\limits_{i = 1}^N {{{\\left[ {{y_i} - (a + b{x_i})} \\right]}^2}} \\)",
+      "options": {
+        "A": "Độ lệch chuẩn",
+        "B": "Phương sai",
+        "C": "Hệ số xác định R2",
+        "D": "Hàm thất thoát (Loss function)"
+      },
+      "answer": "D",
+      "explainAnswer": "Biểu thức (1/N)Σ[yᵢ−(a+bxᵢ)]² là sai số bình phương trung bình giữa giá trị thật và dự báo, tức hàm thất thoát (loss/MSE) dùng để tối ưu mô hình. Nó không phải độ lệch chuẩn, phương sai hay R².",
+      "image": null
+    },
+    {
+      "id": 12,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu \\(\\{ X,Y\\} = \\left\\{ {({x_1},{y_1}),({x_1},{y_1}), \\ldots ,({x_N},{y_N})} \\right\\}\\) . Gọi \\(r\\) là hệ số tương quan giữa đại lượng \\(X\\) và đại lượng \\(Y\\) , và \\(R^2\\) là hệ số xác định của mô hình hồi quy tuyến tính \\(\\hat y=a+bx\\) . Phát biểu nào sau đây đúng",
+      "options": {
+        "A": "\\(R^2=1+r\\)",
+        "B": "\\(R^2=r^2\\)",
+        "C": "\\(R^2=r\\)",
+        "D": "\\(R^2=1-r^2\\)"
+      },
+      "answer": "B",
+      "explainAnswer": "Với hồi quy tuyến tính đơn ŷ=a+bx, hệ số xác định bằng bình phương hệ số tương quan: R²=r². Các dạng R²=1+r hay R²=r đều sai về mặt công thức và miền giá trị.",
+      "image": null
+    },
+    {
+      "id": 13,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu về hai đại lượng X và Y: \\(\\{ X,Y\\} = \\left\\{ {({x_1},{y_1}),({x_1},{y_1}), \\ldots ,({x_N},{y_N})} \\right\\}\\) . Đại lượng nào được định nghĩa bằng biểu thức dưới đây \\(\\frac{{\\sum\\limits_{i = 1}^N {{x_i}{y_i}} }}{{\\sum\\limits_{i = 1}^N {x_i^2} }}\\)",
+      "options": {
+        "A": "Tham số \\(a\\) của mô hình hồi quy tuyến tính \\(\\hat y = a+ bx\\)",
+        "B": "Tham số \\(b\\) của mô hình hồi quy tuyến tính \\(\\hat y = a+ bx\\)",
+        "C": "Tham số \\(b\\) của mô hình hồi quy tuyến tính \\(\\hat y = bx\\)",
+        "D": "Tham số \\(a\\) của mô hình hồi quy tuyến tính \\(\\hat y = a+ bx\\)"
+      },
+      "answer": "C",
+      "explainAnswer": "Biểu thức Σxᵢyᵢ/Σxᵢ² chính là nghiệm tối ưu của mô hình qua gốc ŷ=bx. Nó không phải a hay b của mô hình đầy đủ ŷ=a+bx vì mô hình đó còn hệ số chặn và công thức phức tạp hơn.",
+      "image": null
+    },
+    {
+      "id": 14,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu \\(\\{ X,Y\\} = \\left\\{ {({x_1},{y_1}),({x_1},{y_1}), \\ldots ,({x_N},{y_N})} \\right\\}\\) . Sử dụng mô hình hồi quy tuyến tính \\(\\hat y=a+bx\\) , khi đó tham số \\(b\\) được tính bằng biểu thức nào dưới đây:",
+      "options": {
+        "A": "\\(b=\\frac{{\\sum\\limits_{i = 1}^N {{x_i}{y_i}} }}{{\\sum\\limits_{i = 1}^N {x_i^2} }}\\)",
+        "B": "\\(b=\\frac{{\\sum\\limits_{i = 1}^N {x_i^2} \\sum\\limits_{i = 1}^N {{y_i}} - \\sum\\limits_{i = 1}^N {{x_i}} \\sum\\limits_{i = 1}^N {{x_i}{y_i}} }}{{N\\sum\\limits_{i = 1}^N {x_i^2} - {{\\left( {\\sum\\limits_{i = 1}^N {{x_i}} } \\right)}^2}}}\\)",
+        "C": "\\(b=\\frac{{N\\sum\\limits_{i = 1}^N {{x_i}{y_i}} - \\sum\\limits_{i = 1}^N {{x_i}} \\sum\\limits_{i = 1}^N {{y_i}} }}{{N\\sum\\limits_{i = 1}^N {x_i^2} - {{\\left( {\\sum\\limits_{i = 1}^N {{x_i}} } \\right)}^2}}}\\)",
+        "D": "\\(b=\\frac{{\\sum\\limits_{i = 1}^N {{y_i}} }}{{\\sum\\limits_{i = 1}^N {{x_i}} }}\\)"
+      },
+      "answer": "C",
+      "explainAnswer": "Với mô hình đầy đủ ŷ=a+bx, hệ số góc b=(NΣxy−ΣxΣy)/(NΣx²−(Σx)²). Đáp án A là b của mô hình qua gốc, đáp án B là a của mô hình đầy đủ, nên không đúng khi hỏi b.",
+      "image": null
+    },
+    {
+      "id": 15,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Để xác định các tham số A và B trong mô hình \\(Y(X) = AB^X\\) bằng mô hình hồi quy tuyến tính thì ta phải tuyến tính hóa bằng cách đổi biến như thế nào?",
+      "options": {
+        "A": "\\(y= Y\\) và \\(x=\\ln X\\)",
+        "B": "\\(y= Y\\) và \\(x=X\\)",
+        "C": "\\(y=\\ln Y\\) và \\(x=\\ln X\\)",
+        "D": "\\(y=\\ln Y\\) và \\(x=X\\)"
+      },
+      "answer": "D",
+      "explainAnswer": "Lấy logarit hai vế Y=ABˣ được lnY=lnA+X·lnB, tức đặt y=lnY và x=X thì được đường thẳng y=a+bx. Các cách đổi biến còn lại không tuyến tính hóa được hàm mũ theo X.",
+      "image": null
+    },
+    {
+      "id": 16,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu \\(\\{ X,Y\\} = \\left\\{ {({x_1},{y_1}),({x_1},{y_1}), \\ldots ,({x_N},{y_N})} \\right\\}\\) . Gọi \\(r\\) là hệ số tương quan giữa đại lượng \\(X\\) và đại lượng \\(Y\\) , và \\(R^2\\) là hệ số xác định của mô hình hồi quy tuyến tính \\(\\hat y=bx\\) . Phát biểu nào sau đây đúng:",
+      "options": {
+        "A": "\\(R^2 = 1 - \\frac{{\\sum\\limits_{i = 1}^N {{{\\left( { b{x_i} - {y_i}} \\right)}^2}} }}{{\\sum\\limits_{i = 1}^N {{{\\left( {{y_i} - \\bar y} \\right)}^2}} }}\\)",
+        "B": "\\(R^2 = r\\)",
+        "C": "\\(R^{2}=r^2 \\)",
+        "D": "\\(R^2 = 1 + r\\)"
+      },
+      "answer": "A",
+      "explainAnswer": "Với mô hình qua gốc ŷ=bx không có số hạng tự do, R² phải tính trực tiếp bằng 1−Σ(bxᵢ−yᵢ)²/Σ(yᵢ−ȳ)². Quan hệ R²=r² chỉ đúng cho mô hình đầy đủ ŷ=a+bx, nên không áp dụng ở đây.",
+      "image": null
+    },
+    {
+      "id": 17,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Để xác định các tham số A và B trong mô hình \\(Y(X) = AX^B\\) bằng mô hình hồi quy tuyến tính thì ta phải tuyến tính hóa bằng cách đổi biến như thế nào?",
+      "options": {
+        "A": "\\(y=Y\\) và \\(x= X\\)",
+        "B": "\\(y=\\ln Y\\) và \\(x=\\ln X\\)",
+        "C": "\\(y= Y\\) và \\(x=\\ln X\\)",
+        "D": "\\(y=\\ln Y\\) và \\(x=X\\)"
+      },
+      "answer": "B",
+      "explainAnswer": "Lấy logarit Y=AXᴮ được lnY=lnA+B·lnX, tức đặt y=lnY và x=lnX thì được đường thẳng. Giữ nguyên Y hay X đều không khử được dạng lũy thừa.",
+      "image": null
+    },
+    {
+      "id": 18,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu \\(X=\\{ x_1, x_2, \\dots, x_N \\}\\) . Gọi \\(\\bar x\\) là giá trị trung bình của tập dữ liệu. Độ lệch chuẩn của tập dữ liệu được tính bằng biểu thức nào dưới đây:",
+      "options": {
+        "A": "\\(\\frac{1}{N}\\sum\\limits_{i = 1}^N {\\left| {{x_i} - \\bar x} \\right|} \\)",
+        "B": "\\(\\sqrt {\\frac{1}{N}\\sum\\limits_{i = 1}^N {{{\\left( {{x_i} - \\bar x} \\right)}^2}} } \\)",
+        "C": "\\(\\frac{1}{N}\\sum\\limits_{i = 1}^N {{{\\left( {{x_i} - \\bar x} \\right)}^2}} \\)",
+        "D": "\\(\\sum\\limits_{i = 1}^N {{{\\left( {{x_i} - \\bar x} \\right)}^2}} \\)"
+      },
+      "answer": "B",
+      "explainAnswer": "Độ lệch chuẩn là căn bậc hai của phương sai: √[(1/N)Σ(xᵢ−x̄)²]. Dùng trung bình trị tuyệt đối là MAD, còn thiếu căn bậc hai thì mới chỉ là phương sai.",
+      "image": null
+    },
+    {
+      "id": 19,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu X và Y được biểu diễn bởi đồ thị dưới đây. Kết luận nào sau đây là đúng.",
+      "options": {
+        "A": "Hệ số tương quan tuyến tính \\(r=1\\)",
+        "B": "Hệ số tương quan tuyến tính \\(0.95<r\\:<1\\)",
+        "C": "Hệ số tương quan tuyến tính \\(r=-1\\)",
+        "D": "Hệ số tương quan tuyến tính \\(-0.95>r\\:>-1\\)"
+      },
+      "answer": "D",
+      "explainAnswer": "Đồ thị cho thấy các điểm gần như nằm trên đường thẳng dốc xuống nhưng vẫn có nhiễu nhẹ, nên tương quan âm rất mạnh mà chưa đạt −1 tuyệt đối, tức −1<r<−0.95.",
+      "image": null
+    },
+    {
+      "id": 20,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu X và Y được biểu diễn bởi đồ thị dưới đây. Kết luận nào sau đây là đúng.",
+      "options": {
+        "A": "Hệ số tương quan tuyến tính \\(r=0.9\\)",
+        "B": "Hệ số tương quan tuyến tính \\(r=0.5\\)",
+        "C": "Hệ số tương quan tuyến tính \\(r=0.072\\)",
+        "D": "Hệ số tương quan tuyến tính \\(r=1\\)"
+      },
+      "answer": "C",
+      "explainAnswer": "Đám mây điểm gần như không có xu hướng tuyến tính rõ rệt, các điểm phân tán rộng nên hệ số tương quan rất gần 0, ở đây r≈0.072.",
+      "image": null
+    },
+    {
+      "id": 21,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu X và Y được biểu diễn bởi đồ thị dưới đây. Kết luận nào sau đây là đúng.",
+      "options": {
+        "A": "Hệ số tương quan tuyến tính \\(r=0.154\\)",
+        "B": "Hệ số tương quan tuyến tính \\(r=-0.751\\)",
+        "C": "Hệ số tương quan tuyến tính \\(r=0.751\\)",
+        "D": "Hệ số tương quan tuyến tính \\(r=0.981\\)"
+      },
+      "answer": "C",
+      "explainAnswer": "Các điểm có xu hướng tăng khá rõ nhưng vẫn phân tán quanh đường thẳng, tương ứng tương quan dương mức khá với r≈0.751.",
+      "image": null
+    },
+    {
+      "id": 22,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu X và Y được biểu diễn bởi đồ thị dưới đây. Kết luận nào sau đây là đúng.",
+      "options": {
+        "A": "Hệ số tương quan tuyến tính \\(0.95<r\\:<1\\)",
+        "B": "Hệ số tương quan tuyến tính \\(r=1\\)",
+        "C": "Hệ số tương quan tuyến tính \\(r<0.5\\)",
+        "D": "Hệ số tương quan tuyến tính \\(-1<r\\:<-0.95\\)"
+      },
+      "answer": "A",
+      "explainAnswer": "Các điểm bám rất sát đường thẳng dốc lên, tương quan dương gần như hoàn hảo nên 0.95<r<1, chứ chưa đạt đúng bằng 1.",
+      "image": null
+    },
+    {
+      "id": 23,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu X và Y được biểu diễn bởi đồ thị dưới đây. Kết luận nào sau đây là đúng.",
+      "options": {
+        "A": "Hệ số tương quan tuyến tính \\(r=-0.989\\)",
+        "B": "Hệ số tương quan tuyến tính \\(r=0.776\\)",
+        "C": "Hệ số tương quan tuyến tính \\(r=0.989\\)",
+        "D": "Hệ số tương quan tuyến tính \\(r=-0.776\\)"
+      },
+      "answer": "D",
+      "explainAnswer": "Đồ thị dốc xuống với các điểm phân tán vừa phải quanh đường thẳng, tương ứng tương quan âm mức khá với r≈−0.776.",
+      "image": null
+    },
+    {
+      "id": 24,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu gồm 3 dữ liệu: X= [46, 81, 22] . Hãy tính giá trị trung bình của tập dữ liệu X. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "49.67",
+        "B": "54.67",
+        "C": "43.67",
+        "D": "60.67"
+      },
+      "answer": "A",
+      "explainAnswer": "Giá trị trung bình x̄=(1/N)Σxᵢ. Cộng toàn bộ các giá trị rồi chia cho số phần tử được 49.67.",
+      "image": null
+    },
+    {
+      "id": 25,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu gồm 3 dữ liệu: X= [88, 93, 18] . Hãy tính phương sai của tập dữ liệu X. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "1197.22",
+        "B": "1172.22",
+        "C": "1140.22",
+        "D": "1230.22"
+      },
+      "answer": "B",
+      "explainAnswer": "Phương sai tổng thể var=(1/N)Σ(xᵢ−x̄)². Tính trung bình, lấy bình phương độ lệch rồi lấy trung bình được 1172.22.",
+      "image": null
+    },
+    {
+      "id": 26,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu gồm 3 dữ liệu: X= [67, 82, 80] . Hãy tính độ lệch chuẩn của tập dữ liệu X. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "7.65",
+        "B": "5.65",
+        "C": "6.65",
+        "D": "8.50"
+      },
+      "answer": "C",
+      "explainAnswer": "Độ lệch chuẩn là căn bậc hai của phương sai: √[(1/N)Σ(xᵢ−x̄)²]. Tính toán cho tập đã cho được 6.65.",
+      "image": null
+    },
+    {
+      "id": 27,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu X= [1, 1] và Y= [7, 0] . Giả sử ta xây dựng mô hình hồi mô tả mối quan hệ giữa Y và X như sau: Y= a+bX, với a= 4 , và b= 4 . Hãy tính hàm thất thoát của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "37.50",
+        "B": "26.50",
+        "C": "43.50",
+        "D": "32.50"
+      },
+      "answer": "D",
+      "explainAnswer": "Hàm thất thoát MSE=(1/N)Σ[yᵢ−(a+bxᵢ)]². Thay từng cặp (xᵢ,yᵢ) và a,b đã cho rồi lấy trung bình được 32.50.",
+      "image": null
+    },
+    {
+      "id": 28,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu gồm 5 dữ liệu: X= [70, 88, 54, 44, 98] . Hãy tính giá trị trung bình của tập dữ liệu X. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "70.80",
+        "B": "75.80",
+        "C": "64.80",
+        "D": "81.80"
+      },
+      "answer": "A",
+      "explainAnswer": "Giá trị trung bình x̄=(1/N)Σxᵢ. Cộng toàn bộ các giá trị rồi chia cho số phần tử được 70.80.",
+      "image": null
+    },
+    {
+      "id": 29,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu gồm 5 dữ liệu: X= [80, 93, 98, 10, 92] . Hãy tính phương sai của tập dữ liệu X. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "1103.24",
+        "B": "1078.24",
+        "C": "1046.24",
+        "D": "1136.24"
+      },
+      "answer": "B",
+      "explainAnswer": "Phương sai tổng thể var=(1/N)Σ(xᵢ−x̄)². Tính trung bình, lấy bình phương độ lệch rồi lấy trung bình được 1078.24.",
+      "image": null
+    },
+    {
+      "id": 30,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu gồm 5 dữ liệu: X= [72, 29, 105, 23, 120] . Hãy tính độ lệch chuẩn của tập dữ liệu X. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "44.04",
+        "B": "33.04",
+        "C": "39.04",
+        "D": "50.04"
+      },
+      "answer": "C",
+      "explainAnswer": "Độ lệch chuẩn là căn bậc hai của phương sai: √[(1/N)Σ(xᵢ−x̄)²]. Tính toán cho tập đã cho được 39.04.",
+      "image": null
+    },
+    {
+      "id": 31,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 5 dữ liệu: X= [22, 24, 5, 34, 3] và Y= [31, 33, 21, 83, 22] . Hãy tính hệ số tương quan giữa hai bộ dữ liệu. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "0.89",
+        "B": "0.76",
+        "C": "0.94",
+        "D": "0.82"
+      },
+      "answer": "D",
+      "explainAnswer": "Hệ số tương quan Pearson r=Σ(xᵢ−x̄)(yᵢ−ȳ)/[√Σ(xᵢ−x̄)²·√Σ(yᵢ−ȳ)²]. Thay hai bộ dữ liệu vào công thức được r=0.82, cho thấy mức liên quan tuyến tính tương ứng.",
+      "image": null
+    },
+    {
+      "id": 32,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 5 dữ liệu: X= [18, 15, -4, 48, 11] và Y= [76, 13, 28, 167, 55] . Giả sử ta xây dựng mô hình mô tả mối quan hệ giữa Y và X như sau Y=bX. Sử dụng phương pháp hồi quy tuyến tính hãy xác định hệ số b của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "3.37",
+        "B": "4.37",
+        "C": "2.37",
+        "D": "5.22"
+      },
+      "answer": "A",
+      "explainAnswer": "Với mô hình qua gốc Y=bX, nghiệm bình phương tối thiểu là b=Σxᵢyᵢ/Σxᵢ². Thay số liệu vào được b=3.37.",
+      "image": null
+    },
+    {
+      "id": 33,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 5 dữ liệu: X= [42, 19, 23, 27, -3] và Y= [201, 81, 124, 122, 11] . Giả sử ta xây dựng mô hình hồi quy tuyến tính mô tả mối quan hệ giữa Y và X như sau Y=bX. Hãy tính hệ số xác định R2 của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "1.02",
+        "B": "0.95",
+        "C": "0.89",
+        "D": "1.07"
+      },
+      "answer": "B",
+      "explainAnswer": "Với mô hình Y=bX, tính b=Σxy/Σx² rồi tính R²=1−Σ(yᵢ−bxᵢ)²/Σ(yᵢ−ȳ)² được 0.95. Giá trị gần 1 nghĩa là mô hình giải thích tốt biến thiên của Y.",
+      "image": null
+    },
+    {
+      "id": 34,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 5 dữ liệu: X= [13, 37, 50, 4, 46] và Y= [78, 206, 277, 16, 279] . Giả sử ta xây dựng mô hình mô tả mối quan hệ giữa Y và X như sau Y=a+bX. Sử dụng phương pháp hồi quy tuyến tính hãy xác định hệ số b của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "6.81",
+        "B": "4.81",
+        "C": "5.81",
+        "D": "7.66"
+      },
+      "answer": "C",
+      "explainAnswer": "Với mô hình Y=a+bX, hệ số góc b=(NΣxy−ΣxΣy)/(NΣx²−(Σx)²). Thay số liệu vào được b=5.81.",
+      "image": null
+    },
+    {
+      "id": 35,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 5 dữ liệu: X= [20, 16, 30, 6, 16] và Y= [106, 53, 145, 25, 51] . Giả sử ta xây dựng mô hình hồi quy tuyến tính mô tả mối quan hệ giữa Y và X như sau Y=a+bX. Hãy tính hệ số xác định R2 của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "0.97",
+        "B": "0.84",
+        "C": "1.02",
+        "D": "0.90"
+      },
+      "answer": "D",
+      "explainAnswer": "Lập mô hình Y=a+bX bằng bình phương tối thiểu, rồi tính R²=1−Σ(yᵢ−a−bxᵢ)²/Σ(yᵢ−ȳ)² được 0.90.",
+      "image": null
+    },
+    {
+      "id": 36,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu X= [-9, 15, 5, -6, -8] và Y= [-46, 74, 26, -30, -41] . Giả sử ta xây dựng mô hình hồi mô tả mối quan hệ giữa Y và X như sau: Y= a+bX, với a= 1 , và b= 5 . Hãy tính hàm thất thoát của mô hình.",
+      "options": {
+        "A": "2.60",
+        "B": "3.60",
+        "C": "1.60",
+        "D": "4.45"
+      },
+      "answer": "A",
+      "explainAnswer": "Hàm thất thoát MSE=(1/N)Σ[yᵢ−(a+bxᵢ)]². Thay từng cặp (xᵢ,yᵢ) và a,b đã cho rồi lấy trung bình được 2.60.",
+      "image": null
+    },
+    {
+      "id": 37,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu X= [12, 45, -20, 44, 0] và Y= [36, 135, -60, 130, -1] . Giả sử ta xây dựng mô hình hồi mô tả mối quan hệ giữa Y và X như sau: Y= a+bX, với a= 2 , và b= 3 . Hãy tính hàm thất thoát của mô hình.",
+      "options": {
+        "A": "8.40",
+        "B": "7.40",
+        "C": "6.40",
+        "D": "9.25"
+      },
+      "answer": "B",
+      "explainAnswer": "Hàm thất thoát MSE=(1/N)Σ[yᵢ−(a+bxᵢ)]². Thay từng cặp (xᵢ,yᵢ) và a,b đã cho rồi lấy trung bình được 7.40.",
+      "image": null
+    },
+    {
+      "id": 38,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu gồm 7 dữ liệu: X= [42, 50, 27, 86, 28, 57, 20] . Hãy tính giá trị trung bình của tập dữ liệu X. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "49.29",
+        "B": "38.29",
+        "C": "44.29",
+        "D": "55.29"
+      },
+      "answer": "C",
+      "explainAnswer": "Giá trị trung bình x̄=(1/N)Σxᵢ. Cộng toàn bộ các giá trị rồi chia cho số phần tử được 44.29.",
+      "image": null
+    },
+    {
+      "id": 39,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu gồm 7 dữ liệu: X= [105, 83, 126, 105, 34, 108, 11] . Hãy tính phương sai của tập dữ liệu X. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "1598.63",
+        "B": "1541.63",
+        "C": "1631.63",
+        "D": "1573.63"
+      },
+      "answer": "D",
+      "explainAnswer": "Phương sai tổng thể var=(1/N)Σ(xᵢ−x̄)². Tính trung bình, lấy bình phương độ lệch rồi lấy trung bình được 1573.63.",
+      "image": null
+    },
+    {
+      "id": 40,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu gồm 7 dữ liệu: X= [150, 102, 74, 134, 107, 107, 142] . Hãy tính độ lệch chuẩn của tập dữ liệu X. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "24.71",
+        "B": "29.71",
+        "C": "18.71",
+        "D": "35.71"
+      },
+      "answer": "A",
+      "explainAnswer": "Độ lệch chuẩn là căn bậc hai của phương sai: √[(1/N)Σ(xᵢ−x̄)²]. Tính toán cho tập đã cho được 24.71.",
+      "image": null
+    },
+    {
+      "id": 41,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 7 dữ liệu: X= [32, 13, 11, 29, 16, 12, 26] và Y= [75, 31, 12, 70, 26, 22, 40] . Hãy tính hệ số tương quan giữa hai bộ dữ liệu. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "1.01",
+        "B": "0.94",
+        "C": "0.88",
+        "D": "1.06"
+      },
+      "answer": "B",
+      "explainAnswer": "Hệ số tương quan Pearson r=Σ(xᵢ−x̄)(yᵢ−ȳ)/[√Σ(xᵢ−x̄)²·√Σ(yᵢ−ȳ)²]. Thay hai bộ dữ liệu vào công thức được r=0.94, cho thấy mức liên quan tuyến tính tương ứng.",
+      "image": null
+    },
+    {
+      "id": 42,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 7 dữ liệu: X= [-11, -6, -6, -2, 4, 50, 12] và Y= [-1, -15, 12, 23, 4, 96, 52] . Giả sử ta xây dựng mô hình mô tả mối quan hệ giữa Y và X như sau Y=bX. Sử dụng phương pháp hồi quy tuyến tính hãy xác định hệ số b của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "2.90",
+        "B": "0.90",
+        "C": "1.90",
+        "D": "3.75"
+      },
+      "answer": "C",
+      "explainAnswer": "Với mô hình qua gốc Y=bX, nghiệm bình phương tối thiểu là b=Σxᵢyᵢ/Σxᵢ². Thay số liệu vào được b=1.90.",
+      "image": null
+    },
+    {
+      "id": 43,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Một quốc gia ghi nhận dữ liệu GDP (tỷ USD) trong 10 năm qua, được biểu diễn trong bảng dưới đây: STT Năm (X) GDP (Y) (tỷ USD) 1 1.0 39.52 2 2.0 43.24 3 3.0 46.20 4 4.0 43.40 5 5.0 49.87 6 6.0 57.63 7 7.0 55.71 8 8.0 62.13 9 9.0 66.92 10 10.0 70.11 GDP được dự đoán tuân theo mô hình tăng trưởng theo cấp số nhân: \\(Y=A\\cdot B^{X }\\) Trong đó: Y: GDP (tỷ USD) tại năm thứ X, A: GDP ban đầu tại năm X=0, B: Hệ số tăng trưởng hàng năm, X: số năm kể từ năm đầu tiên Sử dụng mô hình hồi quy tuyến tính hãy xác định GDP ban đầu A (kết quả làm tròn đến 3 chữ số).",
+      "options": {
+        "A": "36.918",
+        "B": "36.882",
+        "C": "36.937",
+        "D": "36.903"
+      },
+      "answer": "D",
+      "explainAnswer": "Tuyến tính hóa Y=A·Bˣ bằng y=lnY, x=X thành y=a+bx; hồi quy được a rồi suy ra A=eᵃ=36.903 (tỷ USD).",
+      "image": null
+    },
+    {
+      "id": 44,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 7 dữ liệu: X= [12, 39, 29, 25, 1, 29, 29] và Y= [71, 138, 94, 103, -12, 118, 137] . Giả sử ta xây dựng mô hình mô tả mối quan hệ giữa Y và X như sau Y=a+bX. Sử dụng phương pháp hồi quy tuyến tính hãy xác định hệ số b của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "3.82",
+        "B": "4.82",
+        "C": "2.82",
+        "D": "5.67"
+      },
+      "answer": "A",
+      "explainAnswer": "Với mô hình Y=a+bX, hệ số góc b=(NΣxy−ΣxΣy)/(NΣx²−(Σx)²). Thay số liệu vào được b=3.82.",
+      "image": null
+    },
+    {
+      "id": 45,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 7 dữ liệu: X= [10, 6, 12, 27, 22, 18, 43] và Y= [39, -5, 50, 90, 86, 47, 152] . Giả sử ta xây dựng mô hình mô tả mối quan hệ giữa Y và X như sau Y=a+bX. Sử dụng phương pháp hồi quy tuyến tính hãy xác định hệ số a của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "-8.81",
+        "B": "-9.81",
+        "C": "-10.81",
+        "D": "-7.96"
+      },
+      "answer": "B",
+      "explainAnswer": "Với mô hình Y=a+bX, tính b theo công thức bình phương tối thiểu rồi suy ra a=ȳ−b·x̄ được a=-9.81.",
+      "image": null
+    },
+    {
+      "id": 46,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ dữ liệu về số lượng học viên (X) và doanh thu (Y) của một trung tâm ngoại ngữ X= [155, 111, 132, 121, 116, 138, 157, 159, 148, 104] và Y= [636, 440, 538, 500, 448, 563, 625, 634, 600, 425] (triệu đồng). Giả sử ta xây dựng mô hình hồi quy tuyến tính mô tả mối quan hệ doanh thu (Y) và số lượng học viên (X) như sau Y=aX+b. Sử dụng mô hình này hãy dự đoán doanh thu (triệu đồng) của trung tâm khi có số học viên X= 178 Lưu ý: Kết quả được làm tròn đến phần nguyên. Ví dụ: - Nếu kết quả là 1.00 thì ghi là 1 - Nếu kết quả là 1.5 thì ghi là 2 - Nếu kết quả là 1.49 thì ghi là 1",
+      "options": {
+        "A": "726",
+        "B": "711",
+        "C": "719",
+        "D": "734"
+      },
+      "answer": "C",
+      "explainAnswer": "Lập mô hình Y=a+bX bằng hồi quy tuyến tính từ dữ liệu mẫu, rồi thay giá trị X cần dự báo vào phương trình được 719.",
+      "image": null
+    },
+    {
+      "id": 47,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ dữ liệu về số lượng học viên (X) và doanh thu (Y) của một trung tâm ngoại ngữ X= [125, 107, 132, 144, 165, 114, 168, 125, 106, 170] và Y= [121, 99, 127, 145, 165, 125, 180, 111, 99, 173] (triệu đồng). Giả sử ta xây dựng mô hình hồi quy tuyến tính mô tả mối quan hệ doanh thu (Y) và số lượng học viên (X) như sau Y=a+bX. Sử dụng mô hình này hãy dự đoán doanh thu (triệu đồng) của trung tâm khi có số học viên X= 173 Lưu ý: Kết quả được làm tròn đến phần nguyên. Ví dụ: - Nếu kết quả là 1.00 thì ghi là 1 - Nếu kết quả là 1.5 thì ghi là 2 - Nếu kết quả là 1.49 thì ghi là 1",
+      "options": {
+        "A": "185",
+        "B": "170",
+        "C": "193",
+        "D": "178"
+      },
+      "answer": "D",
+      "explainAnswer": "Lập mô hình Y=a+bX bằng hồi quy tuyến tính từ dữ liệu mẫu, rồi thay giá trị X cần dự báo vào phương trình được 178.",
+      "image": null
+    },
+    {
+      "id": 48,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu gồm 10 dữ liệu: X= [82, 71, 94, 77, 31, 38, 17, 54, 9, 67] . Hãy tính giá trị trung bình của tập dữ liệu X. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "54.00",
+        "B": "59.00",
+        "C": "48.00",
+        "D": "65.00"
+      },
+      "answer": "A",
+      "explainAnswer": "Giá trị trung bình x̄=(1/N)Σxᵢ. Cộng toàn bộ các giá trị rồi chia cho số phần tử được 54.00.",
+      "image": null
+    },
+    {
+      "id": 49,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu: 25, 15, 30, 20, 10. Trung vị của tập dữ liệu sau là bao nhiêu?",
+      "options": {
+        "A": "21",
+        "B": "20",
+        "C": "19",
+        "D": "22"
+      },
+      "answer": "B",
+      "explainAnswer": "Sắp xếp tập dữ liệu tăng dần rồi lấy giá trị giữa (trung bình hai giá trị giữa nếu số phần tử chẵn) được 20.",
+      "image": null
+    },
+    {
+      "id": 50,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu: 2, 7, 5, 9, 6, Trung vị của tập dữ liệu sau là bao nhiêu?",
+      "options": {
+        "A": "7",
+        "B": "5",
+        "C": "6",
+        "D": "8"
+      },
+      "answer": "C",
+      "explainAnswer": "Sắp xếp tập dữ liệu tăng dần rồi lấy giá trị giữa (trung bình hai giá trị giữa nếu số phần tử chẵn) được 6.",
+      "image": null
+    },
+    {
+      "id": 51,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu: 5, 3, 8, 1, 9. Trung vị của tập dữ liệu sau là bao nhiêu?",
+      "options": {
+        "A": "6",
+        "B": "4",
+        "C": "7",
+        "D": "5"
+      },
+      "answer": "D",
+      "explainAnswer": "Sắp xếp tập dữ liệu tăng dần rồi lấy giá trị giữa (trung bình hai giá trị giữa nếu số phần tử chẵn) được 5.",
+      "image": null
+    },
+    {
+      "id": 52,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu: 25, 20, 15, 30, 22, 28. Trung vị của tập này là:",
+      "options": {
+        "A": "23.5",
+        "B": "24.5",
+        "C": "22.5",
+        "D": "25.5"
+      },
+      "answer": "A",
+      "explainAnswer": "Sắp xếp tập dữ liệu tăng dần rồi lấy giá trị giữa (trung bình hai giá trị giữa nếu số phần tử chẵn) được 23.5.",
+      "image": null
+    },
+    {
+      "id": 53,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Tập dữ liệu: 18, 14, 16, 19, 21, 20. Trung vị của tập này là bao nhiêu?",
+      "options": {
+        "A": "19.5",
+        "B": "18.5",
+        "C": "17.5",
+        "D": "20.5"
+      },
+      "answer": "B",
+      "explainAnswer": "Sắp xếp tập dữ liệu tăng dần rồi lấy giá trị giữa (trung bình hai giá trị giữa nếu số phần tử chẵn) được 18.5.",
+      "image": null
+    },
+    {
+      "id": 54,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Trung vị của tập hợp sau: 7, 3, 9, 12, 6, 8 là bao nhiêu?",
+      "options": {
+        "A": "8.5",
+        "B": "6.5",
+        "C": "7.5",
+        "D": "9.5"
+      },
+      "answer": "C",
+      "explainAnswer": "Sắp xếp tập dữ liệu tăng dần rồi lấy giá trị giữa (trung bình hai giá trị giữa nếu số phần tử chẵn) được 7.5.",
+      "image": null
+    },
+    {
+      "id": 55,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu gồm 10 dữ liệu: X= [5, 58, 97, 36, 15, 100, 5, 107, 125, 113] . Hãy tính độ lệch chuẩn của tập dữ liệu X. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "50.27",
+        "B": "39.27",
+        "C": "56.27",
+        "D": "45.27"
+      },
+      "answer": "D",
+      "explainAnswer": "Độ lệch chuẩn là căn bậc hai của phương sai: √[(1/N)Σ(xᵢ−x̄)²]. Tính toán cho tập đã cho được 45.27.",
+      "image": null
+    },
+    {
+      "id": 56,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu gồm 10 dữ liệu: X= [37, 41, 86, 41, 19, 73, 47, 15, 24, 138] . Hãy tính phương sai của tập dữ liệu X. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "1272.69",
+        "B": "1297.69",
+        "C": "1240.69",
+        "D": "1330.69"
+      },
+      "answer": "A",
+      "explainAnswer": "Phương sai tổng thể var=(1/N)Σ(xᵢ−x̄)². Tính trung bình, lấy bình phương độ lệch rồi lấy trung bình được 1272.69.",
+      "image": null
+    },
+    {
+      "id": 57,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 10 dữ liệu: X= [22, 5, 23, 8, 10, 5, 22, 35, 33, 34] và Y= [24, -8, 36, -5, 19, -10, 23, 19, 22, 33] . Hãy tính hệ số tương quan giữa hai bộ dữ liệu. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "0.85",
+        "B": "0.78",
+        "C": "0.72",
+        "D": "0.90"
+      },
+      "answer": "B",
+      "explainAnswer": "Hệ số tương quan Pearson r=Σ(xᵢ−x̄)(yᵢ−ȳ)/[√Σ(xᵢ−x̄)²·√Σ(yᵢ−ȳ)²]. Thay hai bộ dữ liệu vào công thức được r=0.78, cho thấy mức liên quan tuyến tính tương ứng.",
+      "image": null
+    },
+    {
+      "id": 58,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 10 dữ liệu: X= [-8, -2, 34, 25, 27, 4, 41, 27, 28, -20] và Y= [-38, 15, 109, 71, 71, -7, 125, 70, 70, -71] . Giả sử ta xây dựng mô hình mô tả mối quan hệ giữa Y và X như sau Y=bX. Sử dụng phương pháp hồi quy tuyến tính hãy xác định hệ số b của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "3.92",
+        "B": "1.92",
+        "C": "2.92",
+        "D": "4.77"
+      },
+      "answer": "C",
+      "explainAnswer": "Với mô hình qua gốc Y=bX, nghiệm bình phương tối thiểu là b=Σxᵢyᵢ/Σxᵢ². Thay số liệu vào được b=2.92.",
+      "image": null
+    },
+    {
+      "id": 59,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 10 dữ liệu: X= [6, 18, 3, 22, -8, 15, 38, 29, -15, 11] và Y= [27, 77, 51, 55, -31, 31, 136, 95, -32, 54] . Giả sử ta xây dựng mô hình hồi quy tuyến tính mô tả mối quan hệ giữa Y và X như sau Y=bX. Hãy tính hệ số xác định R2 của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "0.93",
+        "B": "0.80",
+        "C": "0.98",
+        "D": "0.86"
+      },
+      "answer": "D",
+      "explainAnswer": "Với mô hình Y=bX, tính b=Σxy/Σx² rồi tính R²=1−Σ(yᵢ−bxᵢ)²/Σ(yᵢ−ȳ)² được 0.86. Giá trị gần 1 nghĩa là mô hình giải thích tốt biến thiên của Y.",
+      "image": null
+    },
+    {
+      "id": 60,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 10 dữ liệu: X= [4, 45, 13, 36, 30, 6, 8, 4, 47, 42] và Y= [26, 170, 76, 109, 73, 37, -1, 28, 124, 140] . Giả sử ta xây dựng mô hình mô tả mối quan hệ giữa Y và X như sau Y=a+bX. Sử dụng phương pháp hồi quy tuyến tính hãy xác định hệ số a của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "10.90",
+        "B": "11.90",
+        "C": "9.90",
+        "D": "12.75"
+      },
+      "answer": "A",
+      "explainAnswer": "Với mô hình Y=a+bX, tính b theo công thức bình phương tối thiểu rồi suy ra a=ȳ−b·x̄ được a=10.90.",
+      "image": null
+    },
+    {
+      "id": 61,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 10 dữ liệu: X= [4, 43, 29, 0, 14, 50, 8, 27, 14, 13] và Y= [-3, 251, 171, 7, 75, 319, 33, 164, 58, 49] . Giả sử ta xây dựng mô hình mô tả mối quan hệ giữa Y và X như sau Y=a+bX. Sử dụng phương pháp hồi quy tuyến tính hãy xác định hệ số a của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "-18.38",
+        "B": "-19.38",
+        "C": "-20.38",
+        "D": "-17.53"
+      },
+      "answer": "B",
+      "explainAnswer": "Với mô hình Y=a+bX, tính b theo công thức bình phương tối thiểu rồi suy ra a=ȳ−b·x̄ được a=-19.38.",
+      "image": null
+    },
+    {
+      "id": 62,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 10 dữ liệu: X= [26, 21, 40, 16, 2, 17, 6, 28, 27, 3] và Y= [54, 26, 82, 14, 1, 33, 29, 41, 52, -9] . Giả sử ta xây dựng mô hình mô tả mối quan hệ giữa Y và X như sau Y=a+bX. Sử dụng phương pháp hồi quy tuyến tính hãy xác định hệ số b của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "2.98",
+        "B": "0.98",
+        "C": "1.98",
+        "D": "3.83"
+      },
+      "answer": "C",
+      "explainAnswer": "Với mô hình Y=a+bX, hệ số góc b=(NΣxy−ΣxΣy)/(NΣx²−(Σx)²). Thay số liệu vào được b=1.98.",
+      "image": null
+    },
+    {
+      "id": 63,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 10 dữ liệu: X= [38, 4, 49, 12, 19, 17, 9, 9, 15, 31] và Y= [111, 22, 171, 45, 45, 119, -1, 41, 58, 139] . Giả sử ta xây dựng mô hình hồi quy tuyến tính mô tả mối quan hệ giữa Y và X như sau Y=a+bX. Hãy tính hệ số xác định R2 của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "0.84",
+        "B": "0.71",
+        "C": "0.89",
+        "D": "0.77"
+      },
+      "answer": "D",
+      "explainAnswer": "Lập mô hình Y=a+bX bằng bình phương tối thiểu, rồi tính R²=1−Σ(yᵢ−a−bxᵢ)²/Σ(yᵢ−ȳ)² được 0.77.",
+      "image": null
+    },
+    {
+      "id": 64,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu X= [39, 9, 38, 27, 14, 39, -11, -3, 41, 1] và Y= [117, 28, 109, 85, 42, 118, -37, -7, 124, 1] . Giả sử ta xây dựng mô hình hồi mô tả mối quan hệ giữa Y và X như sau: Y= a+bX, với a= 6 , và b= 3 . Hãy tính hàm thất thoát của mô hình.",
+      "options": {
+        "A": "45.20",
+        "B": "50.20",
+        "C": "39.20",
+        "D": "56.20"
+      },
+      "answer": "A",
+      "explainAnswer": "Hàm thất thoát MSE=(1/N)Σ[yᵢ−(a+bxᵢ)]². Thay từng cặp (xᵢ,yᵢ) và a,b đã cho rồi lấy trung bình được 45.20.",
+      "image": null
+    },
+    {
+      "id": 65,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ dữ liệu về số lượng học viên (X) và doanh thu (Y) của một trung tâm ngoại ngữ X= [112, 168, 110, 118, 125, 120, 163, 166, 138, 103] và Y= [110, 158, 101, 115, 113, 110, 175, 155, 139, 110] (triệu đồng). Giả sử ta xây dựng mô hình hồi quy tuyến tính mô tả mối quan hệ doanh thu (Y) và số lượng học viên (X) như sau Y=a+bX. Sử dụng mô hình này hãy dự đoán doanh thu (triệu đồng) của trung tâm khi có số học viên X= 172 Lưu ý: Kết quả được làm tròn đến phần nguyên. Ví dụ: - Nếu kết quả là 1.00 thì ghi là 1 - Nếu kết quả là 1.5 thì ghi là 2 - Nếu kết quả là 1.49 thì ghi là 1",
+      "options": {
+        "A": "175",
+        "B": "168",
+        "C": "160",
+        "D": "183"
+      },
+      "answer": "B",
+      "explainAnswer": "Lập mô hình Y=a+bX bằng hồi quy tuyến tính từ dữ liệu mẫu, rồi thay giá trị X cần dự báo vào phương trình được 168.",
+      "image": null
+    },
+    {
+      "id": 66,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ dữ liệu về số lượng học viên (X) và doanh thu (Y) của một trung tâm ngoại ngữ X= [152, 155, 122, 109, 158, 143, 161, 136, 166, 129] và Y= [304, 301, 246, 219, 324, 288, 333, 266, 321, 266] (triệu đồng). Giả sử ta xây dựng mô hình hồi quy tuyến tính mô tả mối quan hệ doanh thu (Y) và số lượng học viên (X) như sau Y=a+bX. Sử dụng mô hình này hãy dự đoán doanh thu (triệu đồng) của trung tâm khi có số học viên X= 178 Lưu ý: Kết quả được làm tròn đến phần nguyên. Ví dụ: - Nếu kết quả là 1.00 thì ghi là 1 - Nếu kết quả là 1.5 thì ghi là 2 - Nếu kết quả là 1.49 thì ghi là 1",
+      "options": {
+        "A": "361",
+        "B": "346",
+        "C": "354",
+        "D": "369"
+      },
+      "answer": "C",
+      "explainAnswer": "Lập mô hình Y=a+bX bằng hồi quy tuyến tính từ dữ liệu mẫu, rồi thay giá trị X cần dự báo vào phương trình được 354.",
+      "image": null
+    },
+    {
+      "id": 67,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Trong một thí nghiệm đo nồng độ dung dịch dựa trên hiện tượng độ hấp thụ ánh sáng của dung dịch phụ thuộc vào nồng độ dung dịch. Cho bộ dữ liệu sự phụ thuộc của độ hấp thụ (Y) vào nồng độ dung dịch (X) của một một dung dịch: Y= [348, 18, 363, 270, 300, 56, 222, 81, 183] (phần nghìn) và X= [84, 7, 88, 69, 77, 10, 56, 20, 50] (%). Giả sử ta xây dựng mô hình hồi quy tuyến tính mô tả mối quan hệ giữa độ hấp thụ (Y) và nồng độ dung dịch (X) như sau Y=a+bX. Sử dụng mô hình này hãy dự đoán độ hấp thụ (phần nghìn) của dung dịch khi dung dịch có nồng độ X= 177 Lưu ý: Kết quả được làm tròn đến phần nguyên. Ví dụ: - Nếu kết quả là 1.00 thì ghi là 1 - Nếu kết quả là 1.49 thì ghi là 1 - Nếu kết quả là 1.69 thì ghi là 2",
+      "options": {
+        "A": "719",
+        "B": "704",
+        "C": "727",
+        "D": "712"
+      },
+      "answer": "D",
+      "explainAnswer": "Lập mô hình Y=a+bX bằng hồi quy tuyến tính từ dữ liệu mẫu, rồi thay giá trị X cần dự báo vào phương trình được 712.",
+      "image": null
+    },
+    {
+      "id": 68,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Trong một thí nghiệm đo nồng độ dung dịch dựa trên hiện tượng độ hấp thụ ánh sáng của dung dịch phụ thuộc vào nồng độ dung dịch. Cho bộ dữ liệu sự phụ thuộc của độ hấp thụ (Y) vào nồng độ dung dịch (X) của một một dung dịch: Y= [240, 373, 139, 182, 106, 409, 366, 137, 247] (phần nghìn) và X= [60, 96, 32, 43, 22, 99, 87, 38, 61] (%). Giả sử ta xây dựng mô hình hồi quy tuyến tính mô tả mối quan hệ giữa độ hấp thụ (Y) và nồng độ dung dịch (X) như sau Y=a+bX. Sử dụng mô hình này hãy dự đoán độ hấp thụ (phần nghìn) của dung dịch khi dung dịch có nồng độ X= 174 Lưu ý: Kết quả được làm tròn đến phần nguyên. Ví dụ: - Nếu kết quả là 1.00 thì ghi là 1 - Nếu kết quả là 1.49 thì ghi là 1 - Nếu kết quả là 1.69 thì ghi là 2",
+      "options": {
+        "A": "697",
+        "B": "704",
+        "C": "689",
+        "D": "712"
+      },
+      "answer": "A",
+      "explainAnswer": "Lập mô hình Y=a+bX bằng hồi quy tuyến tính từ dữ liệu mẫu, rồi thay giá trị X cần dự báo vào phương trình được 697.",
+      "image": null
+    },
+    {
+      "id": 69,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Một quốc gia ghi nhận dữ liệu GDP (tỷ USD) trong 10 năm qua, được biểu diễn trong bảng dưới đây: STT Năm (X) GDP (Y) (tỷ USD) 1 1.0 20.22 2 2.0 22.31 3 3.0 34.50 4 4.0 36.08 5 5.0 43.43 6 6.0 54.02 7 7.0 71.46 8 8.0 81.50 9 9.0 104.13 10 10.0 135.56 GDP được dự đoán tuân theo mô hình tăng trưởng theo cấp số nhân: \\(Y=A\\cdot B^{X }\\) Trong đó: Y: GDP (tỷ USD) tại năm thứ X, A: GDP ban đầu tại năm X=0, B: Hệ số tăng trưởng hàng năm, X: số năm kể từ năm đầu tiên Sử dụng mô hình hồi quy tuyến tính hãy xác định hệ số tăng trưởng B (kết quả làm tròn đến 3 chữ số).",
+      "options": {
+        "A": "1.247",
+        "B": "1.232",
+        "C": "1.211",
+        "D": "1.266"
+      },
+      "answer": "B",
+      "explainAnswer": "Tuyến tính hóa Y=A·Bˣ bằng y=lnY, x=X thành y=a+bx; hồi quy được b rồi suy ra B=eᵇ=1.232.",
+      "image": null
+    },
+    {
+      "id": 70,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu gồm 15 dữ liệu: X= [20, 89, 84, 84, 87, 9, 20, 59, 86, 43, 41, 5, 32, 58, 23] . Hãy tính giá trị trung bình của tập dữ liệu X. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "54.33",
+        "B": "43.33",
+        "C": "49.33",
+        "D": "60.33"
+      },
+      "answer": "C",
+      "explainAnswer": "Giá trị trung bình x̄=(1/N)Σxᵢ. Cộng toàn bộ các giá trị rồi chia cho số phần tử được 49.33.",
+      "image": null
+    },
+    {
+      "id": 71,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu gồm 15 dữ liệu: X= [125, 102, 120, 139, 56, 5, 77, 64, 121, 28, 138, 139, 128, 69, 111] . Hãy tính độ lệch chuẩn của tập dữ liệu X. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "46.14",
+        "B": "35.14",
+        "C": "52.14",
+        "D": "41.14"
+      },
+      "answer": "D",
+      "explainAnswer": "Độ lệch chuẩn là căn bậc hai của phương sai: √[(1/N)Σ(xᵢ−x̄)²]. Tính toán cho tập đã cho được 41.14.",
+      "image": null
+    },
+    {
+      "id": 72,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho tập dữ liệu gồm 15 dữ liệu: X= [144, 88, 37, 26, 102, 21, 9, 88, 13, 68, 16, 33, 90, 70, 60] . Hãy tính phương sai của tập dữ liệu X. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "1470.09",
+        "B": "1495.09",
+        "C": "1438.09",
+        "D": "1528.09"
+      },
+      "answer": "A",
+      "explainAnswer": "Phương sai tổng thể var=(1/N)Σ(xᵢ−x̄)². Tính trung bình, lấy bình phương độ lệch rồi lấy trung bình được 1470.09.",
+      "image": null
+    },
+    {
+      "id": 73,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 15 dữ liệu: X= [33, 14, 34, 10, 9, 22, 2, 10, 35, 31, 10, 14, 12, 9, 14] và Y= [39, -1, 40, -6, 28, 10, 13, 3, 50, 23, 7, -5, 6, 17, -2] . Hãy tính hệ số tương quan giữa hai bộ dữ liệu. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "0.79",
+        "B": "0.72",
+        "C": "0.66",
+        "D": "0.84"
+      },
+      "answer": "B",
+      "explainAnswer": "Hệ số tương quan Pearson r=Σ(xᵢ−x̄)(yᵢ−ȳ)/[√Σ(xᵢ−x̄)²·√Σ(yᵢ−ȳ)²]. Thay hai bộ dữ liệu vào công thức được r=0.72, cho thấy mức liên quan tuyến tính tương ứng.",
+      "image": null
+    },
+    {
+      "id": 74,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 15 dữ liệu: X= [18, 19, 8, 14, 11, 19, 34, 24, 17, 12, 14, 10, 29, 10, 3] và Y= [26, 11, 12, 16, 18, 10, 40, 34, 17, 21, 18, 2, 19, 9, 3] . Hãy tính hệ số tương quan giữa hai bộ dữ liệu. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "0.82",
+        "B": "0.69",
+        "C": "0.75",
+        "D": "0.87"
+      },
+      "answer": "C",
+      "explainAnswer": "Hệ số tương quan Pearson r=Σ(xᵢ−x̄)(yᵢ−ȳ)/[√Σ(xᵢ−x̄)²·√Σ(yᵢ−ȳ)²]. Thay hai bộ dữ liệu vào công thức được r=0.75, cho thấy mức liên quan tuyến tính tương ứng.",
+      "image": null
+    },
+    {
+      "id": 75,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 15 dữ liệu: X= [9, 21, 4, 9, 16, 23, 19, 12, 14, 25, 12, 24, 9, 20, 23] và Y= [-5, 21, 8, 2, 6, 35, 9, 13, 5, 20, 27, 30, -4, 10, 29] . Hãy tính hệ số tương quan giữa hai bộ dữ liệu. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "0.77",
+        "B": "0.64",
+        "C": "0.82",
+        "D": "0.70"
+      },
+      "answer": "D",
+      "explainAnswer": "Hệ số tương quan Pearson r=Σ(xᵢ−x̄)(yᵢ−ȳ)/[√Σ(xᵢ−x̄)²·√Σ(yᵢ−ȳ)²]. Thay hai bộ dữ liệu vào công thức được r=0.70, cho thấy mức liên quan tuyến tính tương ứng.",
+      "image": null
+    },
+    {
+      "id": 76,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 15 dữ liệu: X= [-10, -2, 22, 23, 19, 40, 45, 26, 48, -10, 29, -10, 21, -17, 21] và Y= [-71, -26, 135, 121, 141, 245, 292, 167, 264, -69, 153, -74, 120, -104, 112] . Giả sử ta xây dựng mô hình mô tả mối quan hệ giữa Y và X như sau Y=bX. Sử dụng phương pháp hồi quy tuyến tính hãy xác định hệ số b của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "5.99",
+        "B": "6.99",
+        "C": "4.99",
+        "D": "7.84"
+      },
+      "answer": "A",
+      "explainAnswer": "Với mô hình qua gốc Y=bX, nghiệm bình phương tối thiểu là b=Σxᵢyᵢ/Σxᵢ². Thay số liệu vào được b=5.99.",
+      "image": null
+    },
+    {
+      "id": 77,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 15 dữ liệu: X= [29, 35, 27, 8, 32, 42, -20, 33, 26, 5, 14, 13, -20, -18, 25] và Y= [60, 115, 21, -30, 85, 103, -35, 80, 67, 11, -2, 73, -62, -36, 63] . Giả sử ta xây dựng mô hình mô tả mối quan hệ giữa Y và X như sau Y=bX. Sử dụng phương pháp hồi quy tuyến tính hãy xác định hệ số b của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "3.37",
+        "B": "2.37",
+        "C": "1.37",
+        "D": "4.22"
+      },
+      "answer": "B",
+      "explainAnswer": "Với mô hình qua gốc Y=bX, nghiệm bình phương tối thiểu là b=Σxᵢyᵢ/Σxᵢ². Thay số liệu vào được b=2.37.",
+      "image": null
+    },
+    {
+      "id": 78,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 15 dữ liệu: X= [33, 37, -8, -17, 19, -18, 16, 18, -1, 36, -9, 33, 39, 39, -6] và Y= [51, 43, 14, -17, 29, -34, 18, 3, -2, 14, -13, 34, 63, 53, -2] . Giả sử ta xây dựng mô hình mô tả mối quan hệ giữa Y và X như sau Y=bX. Sử dụng phương pháp hồi quy tuyến tính hãy xác định hệ số b của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "2.17",
+        "B": "0.17",
+        "C": "1.17",
+        "D": "3.02"
+      },
+      "answer": "C",
+      "explainAnswer": "Với mô hình qua gốc Y=bX, nghiệm bình phương tối thiểu là b=Σxᵢyᵢ/Σxᵢ². Thay số liệu vào được b=1.17.",
+      "image": null
+    },
+    {
+      "id": 79,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 15 dữ liệu: X= [-17, 39, 37, 12, 40, 44, -11, -5, 37, 28, 14, 7, 32, 50, 6] và Y= [-102, 176, 120, 10, 192, 197, -13, -5, 110, 98, 60, 21, 113, 217, 58] . Giả sử ta xây dựng mô hình hồi quy tuyến tính mô tả mối quan hệ giữa Y và X như sau Y=bX. Hãy tính hệ số xác định R2 của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "0.99",
+        "B": "0.86",
+        "C": "1.04",
+        "D": "0.92"
+      },
+      "answer": "D",
+      "explainAnswer": "Với mô hình Y=bX, tính b=Σxy/Σx² rồi tính R²=1−Σ(yᵢ−bxᵢ)²/Σ(yᵢ−ȳ)² được 0.92. Giá trị gần 1 nghĩa là mô hình giải thích tốt biến thiên của Y.",
+      "image": null
+    },
+    {
+      "id": 80,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 15 dữ liệu: X= [3, 21, 10, -2, -18, 5, 48, 8, 25, 30, 30, 7, 21, 26, 0] và Y= [40, 56, 5, -6, -56, 36, 126, 4, 45, 117, 66, 41, 76, 72, -14] . Giả sử ta xây dựng mô hình hồi quy tuyến tính mô tả mối quan hệ giữa Y và X như sau Y=bX. Hãy tính hệ số xác định R2 của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "0.84",
+        "B": "0.91",
+        "C": "0.78",
+        "D": "0.96"
+      },
+      "answer": "A",
+      "explainAnswer": "Với mô hình Y=bX, tính b=Σxy/Σx² rồi tính R²=1−Σ(yᵢ−bxᵢ)²/Σ(yᵢ−ȳ)² được 0.84. Giá trị gần 1 nghĩa là mô hình giải thích tốt biến thiên của Y.",
+      "image": null
+    },
+    {
+      "id": 81,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 15 dữ liệu: X= [41, -10, -4, 12, -6, -9, -16, -18, -3, 21, 44, 9, -16, 12, 37] và Y= [120, -33, -9, 45, -10, -34, -62, -31, -24, 43, 138, 50, -48, 29, 111] . Giả sử ta xây dựng mô hình hồi quy tuyến tính mô tả mối quan hệ giữa Y và X như sau Y=bX. Hãy tính hệ số xác định R2 của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "1.03",
+        "B": "0.96",
+        "C": "0.90",
+        "D": "1.08"
+      },
+      "answer": "B",
+      "explainAnswer": "Với mô hình Y=bX, tính b=Σxy/Σx² rồi tính R²=1−Σ(yᵢ−bxᵢ)²/Σ(yᵢ−ȳ)² được 0.96. Giá trị gần 1 nghĩa là mô hình giải thích tốt biến thiên của Y.",
+      "image": null
+    },
+    {
+      "id": 82,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 15 dữ liệu: X= [7, 35, 16, 13, 21, 49, 21, 35, 15, 21, 17, 34, 17, 30, 10] và Y= [56, 183, 78, 39, 88, 225, 79, 146, 55, 100, 112, 163, 121, 135, 92] . Giả sử ta xây dựng mô hình mô tả mối quan hệ giữa Y và X như sau Y=a+bX. Sử dụng phương pháp hồi quy tuyến tính hãy xác định hệ số a của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "19.55",
+        "B": "17.55",
+        "C": "18.55",
+        "D": "20.40"
+      },
+      "answer": "C",
+      "explainAnswer": "Với mô hình Y=a+bX, tính b theo công thức bình phương tối thiểu rồi suy ra a=ȳ−b·x̄ được a=18.55.",
+      "image": null
+    },
+    {
+      "id": 83,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 15 dữ liệu: X= [48, 10, 21, 3, 1, 8, 6, 46, 28, 28, 12, 17, 36, 28, 14] và Y= [259, 31, 85, 28, 17, 20, 12, 210, 135, 153, 69, 78, 190, 149, 73] . Giả sử ta xây dựng mô hình mô tả mối quan hệ giữa Y và X như sau Y=a+bX. Sử dụng phương pháp hồi quy tuyến tính hãy xác định hệ số b của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "6.15",
+        "B": "4.15",
+        "C": "7.00",
+        "D": "5.15"
+      },
+      "answer": "D",
+      "explainAnswer": "Với mô hình Y=a+bX, hệ số góc b=(NΣxy−ΣxΣy)/(NΣx²−(Σx)²). Thay số liệu vào được b=5.15.",
+      "image": null
+    },
+    {
+      "id": 84,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 15 dữ liệu: X= [3, 25, 46, 32, 6, 16, 3, 16, 48, 22, 48, 5, 27, 46, 23] và Y= [-10, 137, 291, 178, 26, 96, 29, 71, 304, 143, 274, 29, 146, 303, 147] . Giả sử ta xây dựng mô hình mô tả mối quan hệ giữa Y và X như sau Y=a+bX. Sử dụng phương pháp hồi quy tuyến tính hãy xác định hệ số b của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "6.39",
+        "B": "7.39",
+        "C": "5.39",
+        "D": "8.24"
+      },
+      "answer": "A",
+      "explainAnswer": "Với mô hình Y=a+bX, hệ số góc b=(NΣxy−ΣxΣy)/(NΣx²−(Σx)²). Thay số liệu vào được b=6.39.",
+      "image": null
+    },
+    {
+      "id": 85,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 15 dữ liệu: X= [42, 30, 22, 21, 12, 6, 20, 36, 9, 48, 5, 11, 18, 21, 27] và Y= [92, 52, 78, 18, 30, 39, 17, 103, 20, 63, -29, 47, 23, 69, 48] . Giả sử ta xây dựng mô hình mô tả mối quan hệ giữa Y và X như sau Y=a+bX. Sử dụng phương pháp hồi quy tuyến tính hãy xác định hệ số a của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "5.62",
+        "B": "4.62",
+        "C": "3.62",
+        "D": "6.47"
+      },
+      "answer": "B",
+      "explainAnswer": "Với mô hình Y=a+bX, tính b theo công thức bình phương tối thiểu rồi suy ra a=ȳ−b·x̄ được a=4.62.",
+      "image": null
+    },
+    {
+      "id": 86,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 15 dữ liệu: X= [46, 22, 13, 27, 45, 3, 24, 20, 49, 33, 38, 14, 49, 29, 21] và Y= [173, 79, 46, 86, 159, 29, 107, 77, 197, 127, 139, 77, 208, 91, 57] . Giả sử ta xây dựng mô hình mô tả mối quan hệ giữa Y và X như sau Y=a+bX. Sử dụng phương pháp hồi quy tuyến tính hãy xác định hệ số a của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "3.61",
+        "B": "1.61",
+        "C": "2.61",
+        "D": "4.46"
+      },
+      "answer": "C",
+      "explainAnswer": "Với mô hình Y=a+bX, tính b theo công thức bình phương tối thiểu rồi suy ra a=ȳ−b·x̄ được a=2.61.",
+      "image": null
+    },
+    {
+      "id": 87,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 15 dữ liệu: X= [2, 5, 46, 42, 21, 27, 27, 46, 4, 0, 49, 31, 0, 40, 49] và Y= [41, 1, 4, 66, -11, 56, -13, 60, 23, -32, 78, -2, -23, 63, 32] . Giả sử ta xây dựng mô hình hồi quy tuyến tính mô tả mối quan hệ giữa Y và X như sau Y=a+bX. Hãy tính hệ số xác định R2 của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "0.42",
+        "B": "0.29",
+        "C": "0.47",
+        "D": "0.35"
+      },
+      "answer": "D",
+      "explainAnswer": "Lập mô hình Y=a+bX bằng bình phương tối thiểu, rồi tính R²=1−Σ(yᵢ−a−bxᵢ)²/Σ(yᵢ−ȳ)² được 0.35.",
+      "image": null
+    },
+    {
+      "id": 88,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Cho bộ hai bộ dữ liệu, mỗi bộ có 15 dữ liệu: X= [8, 47, 5, 39, 47, 30, 45, 20, 17, 49, 29, 0, 26, 30, 27] và Y= [97, 290, 78, 190, 271, 188, 303, 142, 118, 303, 165, 46, 119, 202, 204] . Giả sử ta xây dựng mô hình hồi quy tuyến tính mô tả mối quan hệ giữa Y và X như sau Y=a+bX. Hãy tính hệ số xác định R2 của mô hình. Lưu ý: Kết quả được làm tròn đến 2 số thập phân. Ví dụ: - Nếu kết quả là 1 thì ghi là 1.00 - Nếu kết quả là 1.5 thì ghi là 1.50 - Nếu kết quả là 1.513 thì ghi là 1.51 - Nếu kết quả là 1.516 thì ghi là 1.52",
+      "options": {
+        "A": "0.91",
+        "B": "0.98",
+        "C": "0.85",
+        "D": "1.03"
+      },
+      "answer": "A",
+      "explainAnswer": "Lập mô hình Y=a+bX bằng bình phương tối thiểu, rồi tính R²=1−Σ(yᵢ−a−bxᵢ)²/Σ(yᵢ−ȳ)² được 0.91.",
+      "image": null
+    },
+    {
+      "id": 89,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Một nhà khoa học đang nghiên cứu quá trình làm nguội của một vật thể trong môi trường xung quanh. Nhiệt độ của vật thể sau một khoảng thời gian \\(t\\) có thể được mô tả bởi phương trình sau: \\(y\\left(t\\right)=a\\cdot e^{-t/T}\\) Trong đó: \\(y(t)\\) là nhiệt độ (đơn vị là độ C) của vật thể sau thời gian \\(t\\) (phút) \\(a\\) là nhiệt độ ban đầu của vật thể (khi \\(t=0\\) ) \\(T\\) là hằng số thời gian làm nguội (đơn vị phút), mô tả tốc độ làm nguội của vật thể. Để sử dụng mô hình hồi quy tuyến tính xác định các hệ số \\(a\\) và \\(T\\) của mô hình, nhà nghiên cứu đã tuyến tính hóa đồ thị bằng cách đổi biến như sau \\(Y=\\ln y\\) , \\(X=t\\) Khi đó phương trình (1) trở thành tuyến tính: \\(Y=A + BX\\) (2) trong đó \\(A=\\ln a\\) \\(B=-\\frac{1}{T}\\) Dữ liệu thu thập được về quá trình làm nguội của vật thể như sau: Thời gian (phút) Nhiệt độ 1 7 399 2 18 323 3 9 383 4 7 399 5 15 342 6 4 423 7 12 362 8 18 323 9 19 317 Dựa trên bảng số liệu hãy xác định : \\(A=\\) . Kết quả được làm tròn đến 3 chữ số thập phân. \\(B=\\) . Kết quả được làm tròn đến 3 chữ số thập phân. Hệ số xác định của mô hình tuyến tính (2): R2= . Kết quả được làm tròn đến 3 chữ số thập phân. Giá trị nhiệt độ ban đầu: \\(a=\\) độ C (các kết quả làm tròn thành số nguyên). Hằng số thời gian làm nguội: \\(T=\\) (phút) (các kết quả làm tròn thành số nguyên).",
+      "options": {
+        "A": "A=6.123; B=-0.019; R2=0.999; a=456; T=53",
+        "B": "A=6.089; B=-0.021; R2=0.982; a=441; T=48",
+        "C": "A=6.210; B=-0.015; R2=0.971; a=498; T=67",
+        "D": "A=5.998; B=-0.025; R2=0.965; a=403; T=40"
+      },
+      "answer": "A",
+      "explainAnswer": "Logarit hóa y(t)=a·e^(−t/T) thành Y=ln y=A+BX với X=t. Hồi quy tuyến tính trên ln(nhiệt độ) theo thời gian cho A≈6.123, B≈−0.019, R²≈0.999; suy ra a=e^A≈456°C và T=−1/B≈53 phút.",
+      "image": null
+    },
+    {
+      "id": 90,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Một nhà nghiên cứu đang thu thập dữ liệu về sự tăng trưởng của một loại vi khuẩn trong điều kiện lý tưởng. Số lượng vi khuẩn theo thời gian có thể được mô tả bằng hàm mũ có dạng: \\(Y\\left(X\\right)=A\\cdot B^X\\) , \\((A,B>0)\\) (1) Trong đó: \\(Y\\left(X\\right)\\) là số lượng vi khuẩn sau thời gian \\(X\\) giờ. \\(A\\) là số lượng vi khuẩn ban đầu (khi \\(X=0\\) ). \\(B\\) là hệ số tăng trưởng. Để sử dụng mô hình hồi quy tuyến tính xác định các hệ số \\(A\\) và \\(B\\) của mô hình, nhà nghiên cứu đã tuyến tính hóa đồ thị bằng cách đổi biến như sau \\(y=\\ln Y\\) , \\(x=X\\) Khi đó phương trình (1) trở thành tuyến tính: \\(y=a + bx\\) (2) trong đó \\(a=\\ln A\\) hay \\(A=e^{a} \\) , \\(b=\\ln B\\) hay \\(B=e^{b}\\) , Số liệu thu thập được như bảng sau: STT Thời gian (giờ) Số lượng vi khuẩn 1 1 607 2 2 617 3 3 637 4 4 677 5 8 1877 6 9 3157 7 9 3157 8 11 10837 9 14 82517 10 16 328277 Dựa vào bảng số liệu này, bạn hãy xác định Các tham số A và B của mô hình tuyến tính: \\(a=\\) . Kết quả được làm tròn đến 3 chữ số thập phân. \\(b=\\) . Kết quả được làm tròn đến 3 chữ số thập phân. Hệ số xác định của mô hình tuyến tính (2): R2= . Kết quả được làm tròn đến 3 chữ số thập phân. Các tham số a và b của mô hình (1): A = (kết quả được làm tròn đến phần nguyên) B = (kết quả được làm tròn đến phần nguyên)",
+      "options": {
+        "A": "a=4.812; b=0.385; R2=0.874; A=123; B=2",
+        "B": "a=5.127; b=0.409; R2=0.901; A=169; B=2",
+        "C": "a=5.430; b=0.452; R2=0.915; A=228; B=2",
+        "D": "a=4.655; b=0.361; R2=0.852; A=105; B=1"
+      },
+      "answer": "B",
+      "explainAnswer": "Đặt y=lnY, x=X để đưa Y=A·Bˣ về y=a+bx. Hồi quy trên log số lượng vi khuẩn cho a≈5.127, b≈0.409, R²≈0.901; suy ra A=eᵃ≈169 và B=eᵇ≈2.",
+      "image": null
+    },
+    {
+      "id": 91,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Trong một thí nghiệm đo nồng độ dung dịch dựa trên hiện tượng độ hấp thụ ánh sáng của dung dịch phụ thuộc vào nồng độ dung dịch. Cho bộ dữ liệu sự phụ thuộc của độ hấp thụ (Y) vào nồng độ dung dịch (X) của một một dung dịch: Y= [429, 277, 297, 352, 498, 430, 663, 350, 874] (phần nghìn) và X= [47, 29, 33, 39, 55, 46, 73, 37, 95] (%). Giả sử ta xây dựng mô hình hồi quy tuyến tính mô tả mối quan hệ giữa độ hấp thụ (Y) và nồng độ dung dịch (X) như sau Y=a+bX. Sử dụng mô hình này hãy xác định nồng độ dung dịch (%) khi dung dịch có độ hấp thụ Y= 83 (phần nghìn). Lưu ý: Kết quả được làm tròn đến phần nguyên và không ghi đơn vị. Ví dụ: - Nếu kết quả là 1.00 thì ghi là 1 - Nếu kết quả là 1.49 thì ghi là 1 - Nếu kết quả là 1.69 thì ghi là 2",
+      "options": {
+        "A": "10",
+        "B": "8",
+        "C": "11",
+        "D": "9"
+      },
+      "answer": "D",
+      "explainAnswer": "Lập mô hình Y=a+bX bằng hồi quy, rồi giải ngược X=(Y−a)/b với Y=83 được X≈9.",
+      "image": null
+    },
+    {
+      "id": 92,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Một nhà nghiên cứu đang thu thập dữ liệu về sự tăng trưởng của một loại vi khuẩn trong điều kiện lý tưởng. Số lượng vi khuẩn theo thời gian có thể được mô tả bằng hàm mũ có dạng: \\(Y\\left(X\\right)=A\\cdot B^X\\) , \\((A,B>0)\\) (1) Trong đó: \\(Y\\left(X\\right)\\) là số lượng vi khuẩn sau thời gian \\(X\\) giờ. \\(A\\) là số lượng vi khuẩn ban đầu (khi \\(X=0\\) ). \\(B\\) là hệ số tăng trưởng. Để sử dụng mô hình hồi quy tuyến tính xác định các hệ số \\(A\\) và \\(B\\) của mô hình, nhà nghiên cứu đã tuyến tính hóa đồ thị bằng cách đổi biến như sau \\(y=\\ln Y\\) , \\(x=X\\) Khi đó phương trình (1) trở thành tuyến tính: \\(y=a + bx\\) (2) trong đó \\(a=\\ln A\\) hay \\(A=e^{a} \\) , \\(b=\\ln B\\) hay \\(B=e^{b}\\) , Số liệu thu thập được như bảng sau: STT Thời gian (giờ) Số lượng vi khuẩn 1 1 807 2 2 907 3 2 907 4 3 1407 5 7 391407 6 9 9766407 7 12 1220703907 8 14 30517578907 9 17 3814697266407 10 20 476837158203907 Dựa vào bảng số liệu này, bạn hãy xác định Các tham số A và B của mô hình tuyến tính: \\(a=\\) . Kết quả được làm tròn đến 3 chữ số thập phân. \\(b=\\) . Kết quả được làm tròn đến 3 chữ số thập phân. Hệ số xác định của mô hình tuyến tính (2): R2= . Kết quả được làm tròn đến 3 chữ số thập phân. Các tham số a và b của mô hình (1): A = (kết quả được làm tròn đến phần nguyên) B = (kết quả được làm tròn đến phần nguyên)",
+      "options": {
+        "A": "a=3.634; b=1.472; R2=0.994; A=38; B=4",
+        "B": "a=3.412; b=1.385; R2=0.981; A=30; B=4",
+        "C": "a=3.890; b=1.560; R2=0.988; A=49; B=5",
+        "D": "a=3.205; b=1.310; R2=0.972; A=25; B=4"
+      },
+      "answer": "A",
+      "explainAnswer": "Tuyến tính hóa Y=A·Bˣ bằng y=lnY, x=X. Hồi quy cho a≈3.634, b≈1.472 với R²≈0.994, từ đó A=eᵃ≈38 và B=eᵇ≈4.",
+      "image": null
+    },
+    {
+      "id": 93,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Một nhà khoa học đang nghiên cứu quá trình làm nguội của một vật thể trong môi trường xung quanh. Nhiệt độ của vật thể sau một khoảng thời gian \\(t\\) có thể được mô tả bởi phương trình sau: \\(y\\left(t\\right)=a\\cdot e^{-t/T}\\) Trong đó: \\(y(t)\\) là nhiệt độ (đơn vị là độ C) của vật thể sau thời gian \\(t\\) (phút) \\(a\\) là nhiệt độ ban đầu của vật thể (khi \\(t=0\\) ) \\(T\\) là hằng số thời gian làm nguội (đơn vị phút), mô tả tốc độ làm nguội của vật thể. Để sử dụng mô hình hồi quy tuyến tính xác định các hệ số \\(a\\) và \\(T\\) của mô hình, nhà nghiên cứu đã tuyến tính hóa đồ thị bằng cách đổi biến như sau \\(Y=\\ln y\\) , \\(X=t\\) Khi đó phương trình (1) trở thành tuyến tính: \\(Y=A + BX\\) (2) trong đó \\(A=\\ln a\\) \\(B=-\\frac{1}{T}\\) Dữ liệu thu thập được về quá trình làm nguội của vật thể như sau: Thời gian (phút) Nhiệt độ 1 4 424 2 1 452 3 20 304 4 9 382 5 15 337 6 6 407 7 6 407 8 6 407 9 18 317 Dựa trên bảng số liệu hãy xác định : \\(A=\\) . Kết quả được làm tròn đến 3 chữ số thập phân. \\(B=\\) . Kết quả được làm tròn đến 3 chữ số thập phân. Hệ số xác định của mô hình tuyến tính (2): R2= . Kết quả được làm tròn đến 3 chữ số thập phân. Giá trị nhiệt độ ban đầu: \\(a=\\) độ C (các kết quả làm tròn thành số nguyên). Hằng số thời gian làm nguội: \\(T=\\) (phút) (các kết quả làm tròn thành số nguyên).",
+      "options": {
+        "A": "A=6.089; B=-0.018; R2=0.992; a=441; T=56",
+        "B": "A=6.210; B=-0.024; R2=0.988; a=498; T=42",
+        "C": "A=6.134; B=-0.021; R2=1.000; a=461; T=48",
+        "D": "A=5.975; B=-0.019; R2=0.981; a=394; T=53"
+      },
+      "answer": "C",
+      "explainAnswer": "Đặt Y=ln y, X=t để đưa y=a·e^(−t/T) về Y=A+BX. Hồi quy cho A≈6.134, B≈−0.021, R²≈1.000; suy ra a=e^A≈461°C và T=−1/B≈48 phút.",
+      "image": null
+    },
+    {
+      "id": 94,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Một quốc gia ghi nhận dữ liệu GDP (tỷ USD) trong 10 năm qua, được biểu diễn trong bảng dưới đây: STT Năm (X) GDP (Y) (tỷ USD) 1 1.0 25.46 2 2.0 27.38 3 3.0 30.86 4 4.0 33.99 5 5.0 38.91 6 6.0 38.75 7 7.0 44.70 8 8.0 59.97 9 9.0 71.80 10 10.0 82.48 GDP được dự đoán tuân theo mô hình tăng trưởng theo cấp số nhân: \\(Y=A\\cdot B^{X }\\) Trong đó: Y: GDP (tỷ USD) tại năm thứ X, A: GDP ban đầu tại năm X=0, B: Hệ số tăng trưởng hàng năm, X: số năm kể từ năm đầu tiên Sử dụng mô hình hồi quy tuyến tính hãy xác định hệ số tăng trưởng B (kết quả làm tròn đến 3 chữ số).",
+      "options": {
+        "A": "1.154",
+        "B": "1.118",
+        "C": "1.139",
+        "D": "1.173"
+      },
+      "answer": "C",
+      "explainAnswer": "Tuyến tính hóa Y=A·Bˣ bằng y=lnY, x=X thành y=a+bx; hồi quy được b rồi suy ra B=eᵇ=1.139.",
+      "image": null
+    },
+    {
+      "id": 95,
+      "chapter": "Khoa học dữ liệu và trí tuệ nhân tạo",
+      "sourceChapter": "Kiểm tra giữa kỳ [N04]",
+      "question": "Một nhà nghiên cứu đang thu thập dữ liệu về sự tăng trưởng của một loại vi khuẩn trong điều kiện lý tưởng. Số lượng vi khuẩn theo thời gian có thể được mô tả bằng hàm mũ có dạng: \\(Y\\left(X\\right)=A\\cdot B^X\\) , \\((A,B>0)\\) (1) Trong đó: \\(Y\\left(X\\right)\\) là số lượng vi khuẩn sau thời gian \\(X\\) giờ. \\(A\\) là số lượng vi khuẩn ban đầu (khi \\(X=0\\) ). \\(B\\) là hệ số tăng trưởng. Để sử dụng mô hình hồi quy tuyến tính xác định các hệ số \\(A\\) và \\(B\\) của mô hình, nhà nghiên cứu đã tuyến tính hóa đồ thị bằng cách đổi biến như sau \\(y=\\ln Y\\) , \\(x=X\\) Khi đó phương trình (1) trở thành tuyến tính: \\(y=a + bx\\) (2) trong đó \\(a=\\ln A\\) hay \\(A=e^{a} \\) , \\(b=\\ln B\\) hay \\(B=e^{b}\\) , Số liệu thu thập được như bảng sau: STT Thời gian (giờ) Số lượng vi khuẩn 1 7 44690 2 6 15530 3 19 23245230290 4 12 10629770 5 6 15530 6 14 95660330 7 20 69735688970 8 4 2570 9 6 15530 10 1 1010 Dựa vào bảng số liệu này, bạn hãy xác định Các tham số A và B của mô hình tuyến tính: \\(a=\\) . Kết quả được làm tròn đến 3 chữ số thập phân. \\(b=\\) . Kết quả được làm tròn đến 3 chữ số thập phân. Hệ số xác định của mô hình tuyến tính (2): R2= . Kết quả được làm tròn đến 3 chữ số thập phân. Các tham số a và b của mô hình (1): A = (kết quả được làm tròn đến phần nguyên) B = (kết quả được làm tròn đến phần nguyên)",
+      "options": {
+        "A": "a=3.812; b=0.968; R2=0.971; A=45; B=3",
+        "B": "a=4.285; b=1.102; R2=0.979; A=72; B=3",
+        "C": "a=3.650; b=0.940; R2=0.962; A=38; B=3",
+        "D": "a=4.040; b=1.025; R2=0.987; A=57; B=3"
+      },
+      "answer": "D",
+      "explainAnswer": "Dùng y=lnY, x=X để tuyến tính hóa Y=A·Bˣ. Hồi quy cho a≈4.040, b≈1.025, R²≈0.987; suy ra A=eᵃ≈57 và B=eᵇ≈3.",
+      "image": null
+    }
+  ]
+}

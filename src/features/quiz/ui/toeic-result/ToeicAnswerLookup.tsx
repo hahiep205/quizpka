@@ -5,6 +5,7 @@ import { getToeicPartNumber } from "@/features/quiz/lib/toeicCategories"
 import type { ToeicPartRange } from "@/features/quiz/lib/toeicResultStats"
 import { quizCopy } from "@/shared/i18n"
 import { DetailedAnalysisContent } from "@/features/quiz/ui/DetailedAnalysisContent"
+import { formatPromptText } from "@/features/quiz/lib/formatPrompt"
 import { MathText } from "@/components/MathText"
 import { getToeicAnswerStatus, getAnswerLabel, type ToeicAnswerStatus, type ToeicResultCopy } from "./toeicResultShared"
 
@@ -124,7 +125,7 @@ function QuestionModal({
             ) : null}
           </div>
           {question.prompt ? (
-            <p className="whitespace-pre-line text-[13.5px] font-semibold italic leading-6 text-[#100F3E] dark:text-slate-100"><MathText text={question.prompt} /></p>
+            <p className="whitespace-pre-line text-[13.5px] font-semibold italic leading-6 text-[#100F3E] dark:text-slate-100"><MathText text={formatPromptText(question.prompt)} /></p>
           ) : null}
           {question.options.length > 0 ? (
             <div className="space-y-1.5">

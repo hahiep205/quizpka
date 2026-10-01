@@ -9,7 +9,7 @@ const cors = (req: Request) => ({
 
 const json = (body: unknown, status: number, req: Request) => Response.json(body, { status, headers: cors(req) })
 const examFiles: Record<string, string> = {
-  "data-science-ai-midterm-1": "dsai101/khoa_hoc_du_lieu_va_tri_tue_nhan_tao_midle.json",
+  "data-science-ai-midterm-1": "dsai101/khoa_hoc_du_lieu_va_tri_tue_nhan_tao_middle.json",
   "data-science-ai-final-1": "dsai101/khoa_hoc_du_lieu_va_tri_tue_nhan_tao_final.json",
   "intro-data-science-ai-bank-1": "idsai101/nhap_mon_khdl_ttnt.json",
   "kinh-te-vi-mo-macro-bank-1": "mac102/kinh_te_vi_mo.json",
