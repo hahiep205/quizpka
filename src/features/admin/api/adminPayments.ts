@@ -29,7 +29,6 @@ type OrderRow = {
   provider_transaction_id: string | null
   paid_at: string | null
   created_at: string
-  products: { name: string } | Array<{ name: string }> | null
 }
 
 export function sortAdminPaymentsByCreatedAt(payments: AdminPayment[]): AdminPayment[] {
@@ -42,13 +41,12 @@ export function sortAdminPaymentsByCreatedAt(payments: AdminPayment[]): AdminPay
   })
 }
 
-function parseOrder(row: OrderRow): AdminPayment {
-  const product = Array.isArray(row.products) ? row.products[0] : row.products
+function parseOrder(row: OrderRow, productNames: Map<string, string>): AdminPayment {
   return {
     orderId: row.order_id,
     userId: row.user_id,
     productId: row.product_id,
-    productName: product?.name ?? row.product_id,
+    productName: productNames.get(row.product_id) ?? row.product_id,
     amountVnd: Number(row.amount_vnd) || 0,
     currency: row.currency,
     status: row.status,
@@ -60,18 +58,26 @@ function parseOrder(row: OrderRow): AdminPayment {
 
 export async function fetchAllAdminPayments(): Promise<AdminPaymentsResult> {
   const payments: AdminPayment[] = []
-  let offset = 0
   try {
+    // Lấy tên sản phẩm bằng query riêng thay vì embed `products(name)`.
+    // Embed phụ thuộc FK orders.product_id -> products.id trong schema cache
+    // của PostgREST nên vỡ với lỗi "Could not find a relationship...".
+    const productNames = new Map<string, string>()
+    const { data: productRows } = await supabase.from("products").select("id,name")
+    for (const row of (productRows as unknown as Array<{ id: string; name: string }> | null) ?? []) {
+      if (row?.id) productNames.set(row.id, row.name ?? row.id)
+    }
+    let offset = 0
     while (true) {
       const { data, error } = await supabase
         .from("orders")
-        .select("order_id,user_id,product_id,amount_vnd,currency,status,provider_transaction_id,paid_at,created_at,products(name)")
+        .select("order_id,user_id,product_id,amount_vnd,currency,status,provider_transaction_id,paid_at,created_at")
         .order("created_at", { ascending: false })
         .order("order_id", { ascending: false })
         .range(offset, offset + 999)
       if (error) return { ok: false, payments: [], error: `Không đọc được giao dịch: ${error.message}` }
-      const rows = (data as unknown as OrderRow[]).map(parseOrder)
-      payments.push(...rows)
+      const rows = (data as unknown as OrderRow[] | null) ?? []
+      payments.push(...rows.map((row) => parseOrder(row, productNames)))
       if (rows.length < 1000) return { ok: true, payments }
       offset += rows.length
     }

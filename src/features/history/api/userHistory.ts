@@ -2,7 +2,8 @@ import { useEffect, useState } from "react"
 import { supabase } from "@/lib/supabase"
 import { readPracticeHistory, type PracticeHistoryItem } from "@/lib/practiceSession"
 import { submitClientReportedAttempt } from "@/features/activity/lib/activityLog"
-import { getSubjectById } from "@/data/subjects"
+import { examCatalog, getSubjectById } from "@/data/subjects"
+import { getPaidProductId } from "@/lib/purchases"
 
 type ServerAttemptRow = {
   history_id: string
@@ -92,6 +93,20 @@ export async function fetchUserHistory(userId: string, limit = 100): Promise<Pra
 }
 
 /**
+ * submit_free_attempt luôn từ chối môn/đề trả phí bằng lỗi 400 P0001
+ * ('Paid quiz must use a verified session') nên backfill phải bỏ qua,
+ * kẻo mỗi lần F5 dashboard lại spam request lỗi.
+ */
+function isPaidAttempt(subjectId: string, examId: string): boolean {
+  const subject = getSubjectById(subjectId)
+  if (subject && getPaidProductId(subject.code)) return true
+  const exam = examCatalog.find((item) => item.id === examId)
+  const examSubject = exam ? getSubjectById(exam.subjectId) : undefined
+  if (examSubject && getPaidProductId(examSubject.code)) return true
+  return false
+}
+
+/**
  * Lịch sử đồng bộ đa thiết bị: server là nguồn thật.
  * Merge thêm bài local chưa kịp lên server (hiển thị ngay) và backfill 1 lần.
  */
@@ -124,7 +139,9 @@ export function useSyncedHistory(userId: string | undefined, userCreatedAt?: str
         setHistory(merged.slice(0, 100))
         setError(null)
         // Backfill bài local cũ lên server để các thiết bị khác thấy (best-effort).
+        // Bỏ qua bài trả phí: RPC luôn 400, không bao giờ sync được.
         for (const item of missing.slice(0, 20)) {
+          if (isPaidAttempt(item.subjectId, item.examId)) continue
           void submitClientReportedAttempt({
             historyId: item.id,
             examId: item.examId,

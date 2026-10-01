@@ -294,15 +294,13 @@ export function SiteHeader({
               <li className="mobile-menu-item">
                 <button
                   type="button"
-                  className="lp-btn lp-btn--secondary lp-btn--sm lp-btn--block w-full min-w-0 disabled:opacity-60"
+                  className="lp-btn lp-btn--secondary lp-btn--sm lp-btn--block w-full min-w-0"
                   onClick={() => {
                     setMobileOpen(false)
                     if (authenticated) void signOut().then(() => navigate(appRoutes.home, { replace: true }))
                     else onOpenLogin()
                   }}
-                  disabled={status === "loading" || !authenticated}
-                  aria-disabled={!authenticated ? "true" : undefined}
-                  title={!authenticated ? t.loginGoogle : undefined}
+                  disabled={status === "loading"}
                 >
                   {authenticated ? <LogOut className="h-5 w-5 shrink-0" /> : <GoogleIcon className="h-5 w-5 shrink-0" />}
                   {authenticated ? (lang === "vi" ? "Đăng xuất" : "Sign out") : t.loginGoogle}

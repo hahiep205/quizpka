@@ -906,21 +906,29 @@ function DashboardTopbar({ lang, view, onlineCount = 0, unreadNotificationCount 
                 ? { icon: ShoppingBag, title: lang === "vi" ? "Quiz đã mua" : "Purchased quizzes" }
                 : null
   const PageIcon = pageMeta?.icon
+  // Mobile: ẩn cụm chuông/Live và căn giữa tiêu đề ở 5 trang này.
+  const hideMobileActions =
+    view === "leaderboard" ||
+    view === "history" ||
+    view === "purchased" ||
+    view === "downloads" ||
+    view === "settings"
+  const mobileTitleClass = "flex flex-1 items-center justify-center text-center text-[27px] lg:hidden"
   return (
     <header className="sticky top-0 z-30 bg-white/80 pt-[env(safe-area-inset-top)] backdrop-blur-2xl dark:bg-[#18191A]/80">
       <div className="mx-auto flex h-14 w-full max-w-[1440px] items-center justify-between px-3 sm:h-16 sm:px-6 md:px-8 lg:h-[72px] lg:px-8 xl:px-10">
         {pageMeta && PageIcon ? (
           view === "leaderboard" ? (
-            <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={pageMeta.title}>
+            <a href="/" className={mobileTitleClass} aria-label={pageMeta.title}>
               <span className="name-logo">{pageMeta.title}</span>
             </a>
           ) : view === "history" ? (
-            <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={lang === "vi" ? "Lịch sử làm quiz" : pageMeta.title}>
-              <span className="name-logo">{lang === "vi" ? "Lịch sử làm quiz" : pageMeta.title}</span>
+            <a href="/" className={mobileTitleClass} aria-label={lang === "vi" ? "Lịch sử làm quiz" : pageMeta.title}>
+              <span className="name-logo">{lang === "vi" ? "Lịch sử" : pageMeta.title}</span>
             </a>
           ) : view === "purchased" ? (
-            <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={pageMeta.title}>
-              <span className="name-logo">{pageMeta.title}</span>
+            <a href="/" className={mobileTitleClass} aria-label={pageMeta.title}>
+              <span className="name-logo">{lang === "vi" ? "Đã mua" : pageMeta.title}</span>
             </a>
           ) : view === "notifications" ? (
             <div className="flex min-w-0 flex-1 items-center gap-1 lg:hidden">
@@ -938,11 +946,11 @@ function DashboardTopbar({ lang, view, onlineCount = 0, unreadNotificationCount 
               </a>
             </div>
           ) : view === "downloads" ? (
-            <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={pageMeta.title}>
-              <span className="name-logo">{pageMeta.title}</span>
+            <a href="/" className={mobileTitleClass} aria-label={pageMeta.title}>
+              <span className="name-logo">{lang === "vi" ? "Tài liệu miễn phí" : pageMeta.title}</span>
             </a>
           ) : view === "settings" ? (
-            <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={pageMeta.title}>
+            <a href="/" className={mobileTitleClass} aria-label={pageMeta.title}>
               <span className="name-logo">{pageMeta.title}</span>
             </a>
           ) : (
@@ -956,8 +964,8 @@ function DashboardTopbar({ lang, view, onlineCount = 0, unreadNotificationCount 
             </div>
           )
         ) : (
-          <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label="Quiz for PKAers">
-            <span className="name-logo">Quiz for PKAers</span>
+          <a href="/" className="flex items-center text-[27px] lg:hidden" aria-label={lang === "vi" ? "Quiz dành cho PKAers" : "Quiz for PKAers"}>
+            <span className="name-logo">{lang === "vi" ? "Quiz dành cho PKAers" : "Quiz for PKAers"}</span>
           </a>
         )}
 
@@ -965,7 +973,7 @@ function DashboardTopbar({ lang, view, onlineCount = 0, unreadNotificationCount 
           <h2 className="truncate bg-gradient-to-r from-[#7DD3FC] via-[#1CB0F6] to-[#0A4FD6] bg-clip-text text-2xl font-black tracking-[-0.025em] text-transparent sm:text-[32px] lg:text-[36px]">{topbarTitle}</h2>
         </a>
 
-        <div className={view === "notifications" ? "ml-auto hidden lg:block" : "ml-auto"}>
+        <div className={view === "notifications" || hideMobileActions ? "ml-auto hidden lg:block" : "ml-auto"}>
           <div className="flex items-center gap-2">
             <button
               type="button"
@@ -1390,8 +1398,7 @@ function SettingsView({ lang, theme, onToggleLang, onToggleTheme, onOpenContact 
           <div className="min-w-0">
             <h3 className="text-lg font-black text-[#100F3E] dark:text-white">{t.supportTitle}</h3>
           </div>
-          <div className="grid w-full shrink-0 grid-cols-1 gap-2 sm:grid-cols-3 md:w-auto md:min-w-[540px]">
-            <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm w-full whitespace-normal text-center" onClick={() => onOpenContact("Contribute")}>{t.contribute}</button>
+          <div className="grid w-full shrink-0 grid-cols-1 gap-2 sm:grid-cols-2 md:w-auto md:min-w-[540px]">
             <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm w-full whitespace-normal text-center" onClick={() => onOpenContact("Support")}>{t.support}</button>
             <button type="button" className="lp-btn lp-btn--primary lp-btn--sm w-full whitespace-normal text-center" onClick={() => onOpenContact("Report")}>Báo lỗi</button>
           </div>

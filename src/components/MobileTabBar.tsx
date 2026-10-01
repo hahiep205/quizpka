@@ -1,4 +1,4 @@
-import type { ComponentType } from "react"
+import { useLayoutEffect, useRef, useState, type ComponentType } from "react"
 import { cn } from "@/lib/utils"
 
 export type MobileTabItem<K extends string> = {
@@ -19,18 +19,58 @@ export function MobileTabBar<K extends string>({
   onNavigate: (key: K) => void
   ariaLabel: string
 }) {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const buttonRefs = useRef(new Map<K, HTMLButtonElement>())
+  const [indicator, setIndicator] = useState({ left: 0, width: 64, ready: false })
+
+  // Đo vị trí ô icon đang active để viên pill trượt tới đúng chỗ.
+  useLayoutEffect(() => {
+    const update = () => {
+      const container = containerRef.current
+      const button = buttonRefs.current.get(activeKey)
+      if (!container || !button) return
+      const containerRect = container.getBoundingClientRect()
+      const target = button.querySelector("span")?.getBoundingClientRect() ?? button.getBoundingClientRect()
+      setIndicator({
+        left: target.left - containerRect.left,
+        width: target.width,
+        ready: true,
+      })
+    }
+    update()
+    window.addEventListener("resize", update)
+    return () => window.removeEventListener("resize", update)
+  }, [activeKey, items.length])
+
   return (
     <nav
       className="pointer-events-none fixed inset-x-0 bottom-0 z-[300] px-4 pb-[calc(10px+env(safe-area-inset-bottom))] lg:hidden"
       aria-label={ariaLabel}
     >
-      <div className="pointer-events-auto mx-auto flex h-[68px] max-w-[430px] items-center rounded-full bg-white/90 px-2 shadow-[0_12px_32px_rgba(0,0,0,0.14),0_2px_6px_rgba(0,0,0,0.06)] ring-1 ring-black/[0.06] backdrop-blur-2xl dark:bg-[#2C2C2E]/90 dark:ring-white/12">
+      <div
+        ref={containerRef}
+        className="pointer-events-auto relative mx-auto flex h-[60px] max-w-[430px] items-center rounded-full bg-white/90 px-2 shadow-[0_12px_32px_rgba(0,0,0,0.14),0_2px_6px_rgba(0,0,0,0.06)] ring-1 ring-black/[0.06] backdrop-blur-2xl dark:bg-[#2C2C2E]/90 dark:ring-white/12"
+      >
+        {/* Viên pill trượt mượt theo tab active */}
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute top-1/2 h-[48px] -translate-y-1/2 rounded-[20px] bg-[#EBF4FE] transition-[left,width] duration-[420ms] ease-[cubic-bezier(0.32,0.72,0,1)] dark:bg-[#1CB0F6]/20"
+          style={{
+            left: indicator.left,
+            width: indicator.width,
+            opacity: indicator.ready ? 1 : 0,
+          }}
+        />
         {items.map((item) => {
           const Icon = item.icon
           const isActive = activeKey === item.key
           return (
             <button
               key={item.key}
+              ref={(element) => {
+                if (element) buttonRefs.current.set(item.key, element)
+                else buttonRefs.current.delete(item.key)
+              }}
               type="button"
               aria-current={isActive ? "page" : undefined}
               aria-label={item.label}
@@ -39,14 +79,14 @@ export function MobileTabBar<K extends string>({
             >
               <span
                 className={cn(
-                  "flex h-[52px] w-[52px] items-center justify-center rounded-[20px] transition-[background-color,transform,color] duration-200 ease-out active:scale-95",
+                  "flex h-[48px] w-[64px] items-center justify-center rounded-[20px] transition-[transform,color] duration-200 ease-out active:scale-95",
                   isActive
-                    ? "bg-[#EBF4FE] text-[#1CB0F6] dark:bg-[#1CB0F6]/20 dark:text-[#4C9AFF]"
+                    ? "text-[#1CB0F6] dark:text-[#4C9AFF]"
                     : "bg-transparent text-[#131313] dark:text-[#F2F2F7]",
                 )}
               >
                 <Icon
-                  className="h-[26px] w-[26px]"
+                  className="h-[24px] w-[24px]"
                 />
               </span>
               {item.badge ? <span className="absolute -right-1 -top-1 min-w-5 rounded-full bg-red-500 px-1 text-center text-[10px] font-black leading-5 text-white ring-2 ring-white dark:ring-[#2C2C2E]">{item.badge > 99 ? "99+" : item.badge}</span> : null}

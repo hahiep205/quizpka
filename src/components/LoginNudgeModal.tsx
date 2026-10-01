@@ -56,11 +56,17 @@ export function LoginNudgeModal({
   onClose: () => void
 }) {
   const t = copy[lang]
+  const { signInWithGoogle } = useAuth()
+  const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   const handleLogin = () => {
-    // Đang bảo trì: không cho đăng nhập.
-    setError(t.error)
+    setLoading(true)
+    setError(null)
+    void signInWithGoogle().catch(() => {
+      setLoading(false)
+      setError(t.error)
+    })
   }
 
   return (
@@ -110,19 +116,18 @@ export function LoginNudgeModal({
           type="button"
           className="lp-btn lp-btn--secondary lp-btn--sm"
           onClick={onSkip}
+          disabled={loading}
         >
           {t.skip}
         </button>
         <button
           type="button"
-          className="lp-btn lp-btn--primary lp-btn--sm opacity-60"
+          className="lp-btn lp-btn--primary lp-btn--sm"
           onClick={handleLogin}
-          disabled
-          aria-disabled="true"
-          title={t.signIn}
+          disabled={loading}
         >
           <GoogleIcon className="h-4 w-4 shrink-0" />
-          {t.signIn}
+          {loading ? t.signingIn : t.signIn}
         </button>
       </div>
     </Dialog>

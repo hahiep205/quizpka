@@ -57,9 +57,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return () => { mounted = false; subscription.unsubscribe() }
   }, [applySession])
 
-  // TẠM THỜI BẢO TRÌ: chặn đăng nhập Google do bị spam tool tấn công, đang backup dữ liệu.
   const signInWithGoogle = useCallback(async () => {
-    throw new Error("LOGIN_MAINTENANCE")
+    const { error } = await supabase.auth.signInWithOAuth({ provider: "google", options: { redirectTo: `${window.location.origin}/auth/callback` } })
+    if (error) throw error
   }, [])
 
   const signOut = useCallback(async () => {

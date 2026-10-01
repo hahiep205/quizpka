@@ -2,6 +2,7 @@ import { X } from "lucide-react"
 import { Dialog } from "@/components/ui/dialog"
 import { loginCopy as copy } from "@/shared/i18n"
 import { GoogleIcon } from "@/shared/icons/GoogleIcon"
+import { useAuth } from "@/auth/AuthProvider"
 import { useState } from "react"
 
 type LoginModalProps = {
@@ -14,11 +15,17 @@ type LoginModalProps = {
 
 export function LoginModal({ open, onClose, lang = "vi" }: LoginModalProps) {
   const t = copy[lang]
+  const { signInWithGoogle } = useAuth()
+  const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   const handleLogin = () => {
-    // Đang bảo trì: không cho đăng nhập, chỉ hiển thị thông báo.
-    setError(t.error)
+    setLoading(true)
+    setError(null)
+    void signInWithGoogle().catch(() => {
+      setLoading(false)
+      setError(t.error)
+    })
   }
 
   return (
@@ -39,14 +46,12 @@ export function LoginModal({ open, onClose, lang = "vi" }: LoginModalProps) {
 
           <button
             type="button"
-            className="lp-btn lp-btn--primary min-h-11 w-full justify-center gap-2 px-4 text-center leading-4 opacity-60 sm:min-h-12"
+            className="lp-btn lp-btn--primary min-h-11 w-full justify-center gap-2 px-4 text-center leading-4 sm:min-h-12"
             onClick={handleLogin}
-            disabled
-            aria-disabled="true"
-            title={t.signIn}
+            disabled={loading}
           >
             <GoogleIcon className="h-4 w-4 shrink-0 sm:h-5 sm:w-5" />
-            <span className="min-w-0">{t.signIn}</span>
+            <span className="min-w-0">{loading ? t.signingIn : t.signIn}</span>
           </button>
         </div>
     </Dialog>
