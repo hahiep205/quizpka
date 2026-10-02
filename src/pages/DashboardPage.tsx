@@ -613,8 +613,10 @@ function DownloadsView({ lang, onRequestDownload }: { lang: Lang; onRequestDownl
   return (
     <section className="dashboard-reveal space-y-5">
       {/* Header intro — đồng bộ PurchasedView / HomeDashboard spacing */}
-      <div className="rounded-[16px] border border-[#B3E5FC] bg-[#E8F7FE] px-4 py-3.5 dark:border-sky-500/20 dark:bg-sky-500/10 sm:px-5">
-        <p className="flex items-start gap-2.5 text-[13px] font-semibold leading-5 text-[#0B6FA8] dark:text-sky-200">
+      <div className="relative overflow-hidden rounded-[16px] bg-gradient-to-br from-[#1CB0F6] via-[#1593d6] to-[#0B5ED7] px-4 py-3.5 text-white shadow-[0_4px_0_#0b6cb8] dark:shadow-[0_4px_0_rgba(0,0,0,0.45)] sm:px-5">
+        <div aria-hidden="true" className="pointer-events-none absolute -right-8 -top-10 h-28 w-28 rounded-full bg-white/15" />
+        <div aria-hidden="true" className="pointer-events-none absolute -bottom-10 -left-6 h-20 w-20 rounded-full bg-white/10" />
+        <p className="relative flex items-start gap-2.5 text-[13px] font-semibold leading-5 text-white">
           <FileText className="mt-0.5 h-4 w-4 shrink-0" strokeWidth={2} />
           <span>
             {lang === "vi"
@@ -720,37 +722,38 @@ function PurchasedView({ lang, onStartExam }: { lang: Lang; onStartExam: (exam: 
       {loading ? <Card variant="dashed" className="py-12 text-center"><p className="text-sm font-bold text-slate-500">{lang === "vi" ? "Đang kiểm tra giao dịch…" : "Checking purchases…"}</p></Card> : null}
       {!loading && error ? <Card variant="dashed" className="py-12 text-center"><p className="text-sm font-bold text-red-500">{lang === "vi" ? "Không thể tải danh sách tài liệu đã mua." : "Could not load purchased materials."}</p></Card> : null}
       {!loading && !error && ownedIds.length ? displayedPaidExams.filter((exam) => ownedIds.includes(exam.id)).map((purchasedExam) => (
-        <article key={purchasedExam.id} className="group relative overflow-hidden rounded-[20px] border-2 border-emerald-200 bg-white shadow-[0_4px_0_rgba(16,185,129,0.14)] transition-transform hover:-translate-y-0.5 dark:border-emerald-500/20 dark:bg-slate-900 dark:shadow-none">
-          <div aria-hidden="true" className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-emerald-400 to-[#1CB0F6]" />
-          <div aria-hidden="true" className="pointer-events-none absolute -right-12 -top-16 h-44 w-44 rounded-full bg-emerald-100/60 blur-2xl dark:bg-emerald-500/10" />
+        <article key={purchasedExam.id} className="group relative overflow-hidden rounded-[20px] bg-gradient-to-br from-[#1CB0F6] via-[#1593d6] to-[#0B5ED7] text-white shadow-[0_4px_0_#0b6cb8] transition-transform hover:-translate-y-0.5 dark:shadow-[0_4px_0_rgba(0,0,0,0.45)]">
+          <div aria-hidden="true" className="pointer-events-none absolute -right-10 -top-14 h-44 w-44 rounded-full bg-white/15" />
+          <div aria-hidden="true" className="pointer-events-none absolute -bottom-16 right-24 h-40 w-40 rounded-full bg-white/10" />
+          <div aria-hidden="true" className="pointer-events-none absolute -left-8 -bottom-10 h-28 w-28 rounded-full bg-white/10" />
           <div className="relative p-4 pl-5 sm:p-6 sm:pl-7">
             <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between md:gap-8">
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-3">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px] bg-emerald-500 text-white shadow-[0_3px_0_#059669] dark:shadow-none sm:h-12 sm:w-12">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px] bg-white/15 text-white sm:h-12 sm:w-12">
                     <CheckCircle2 className="h-6 w-6" strokeWidth={2.5} />
                   </span>
                   <div className="min-w-0">
-                    <span className="inline-flex rounded-full bg-emerald-50 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.06em] text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300">{lang === "vi" ? "Đã mở khóa" : "Unlocked"}</span>
-                    <p className="mt-1 text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#129BDC]">{purchasedExam.subjectCode}</p>
+                    <span className="inline-flex rounded-full bg-white/15 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.06em] text-white">{lang === "vi" ? "Đã mở khóa" : "Unlocked"}</span>
+                    <p className="mt-1 hidden text-[11px] font-extrabold uppercase tracking-[0.08em] text-white/80">{purchasedExam.subjectCode}</p>
                   </div>
                 </div>
-                <h3 className="mt-4 text-lg font-black leading-7 tracking-[-0.02em] text-[#100F3E] dark:text-white sm:text-xl">{purchasedExam.subjectName[lang]}</h3>
-                <p className="mt-1.5 line-clamp-2 text-sm font-semibold leading-6 text-slate-500 dark:text-slate-400">{purchasedExam.description[lang]}</p>
+                <h3 className="mt-4 text-lg font-black leading-7 tracking-[-0.02em] text-white sm:text-xl">{purchasedExam.subjectName[lang]}</h3>
+                <p className="mt-1.5 line-clamp-2 text-sm font-semibold leading-6 text-white/75">{purchasedExam.description[lang]}</p>
                 <div className="mt-4 flex flex-wrap gap-2">
-                  <span className="inline-flex items-center gap-1.5 rounded-[10px] bg-[#E8F7FE] px-3 py-2 text-xs font-extrabold text-[#129BDC] dark:bg-sky-500/10 dark:text-sky-300">
+                  <span className="inline-flex items-center gap-1.5 rounded-[10px] bg-white/15 px-3 py-2 text-xs font-extrabold text-white">
                     <FileText className="h-3.5 w-3.5" />{purchasedExam.questionCount} {lang === "vi" ? "câu hỏi" : "questions"}
                   </span>
-                  <span className="inline-flex items-center gap-1.5 rounded-[10px] bg-violet-50 px-3 py-2 text-xs font-extrabold text-violet-600 dark:bg-violet-500/10 dark:text-violet-300">
+                  <span className="inline-flex items-center gap-1.5 rounded-[10px] bg-white/15 px-3 py-2 text-xs font-extrabold text-white">
                     <Clock3 className="h-3.5 w-3.5" />{purchasedExam.durationMinutes} {lang === "vi" ? "phút" : "minutes"}
                   </span>
                 </div>
               </div>
               <div className="md:w-44 md:shrink-0">
-                <button type="button" className="lp-btn lp-btn--primary lp-btn--block min-h-11 shadow-[0_3px_0_#0786C2] md:w-full" onClick={() => onStartExam(purchasedExam)}>
+                <button type="button" className="lp-btn lp-btn--secondary lp-btn--block min-h-11 shadow-[0_3px_0_rgba(0,0,0,0.25)] md:w-full" onClick={() => onStartExam(purchasedExam)}>
                   {lang === "vi" ? "Ôn tập ngay" : "Practice now"}<ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </button>
-                <p className="mt-2 hidden text-center text-[10px] font-bold text-slate-400 md:block">{lang === "vi" ? "Truy cập không giới hạn" : "Unlimited access"}</p>
+                <p className="mt-2 hidden text-center text-[10px] font-bold text-white/70 md:block">{lang === "vi" ? "Truy cập không giới hạn" : "Unlimited access"}</p>
               </div>
             </div>
           </div>

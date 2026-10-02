@@ -27,16 +27,16 @@ export function PurchaseDetailDialog({ exam, lang, loading, error, onClose, onCo
     title={isVietnamese ? "Thông tin môn học" : "Subject details"}
     closeLabel={isVietnamese ? "Hủy" : "Cancel"}
     className="z-[85]"
-    panelClassName="w-full max-w-[560px] overflow-hidden rounded-[20px] border-2 border-[#E5E5E5] bg-white shadow-[0_7px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none"
+    panelClassName="flex h-[min(544px,calc(100dvh-2rem))] max-h-[calc(100dvh-2rem)] w-full max-w-[560px] flex-col overflow-hidden rounded-[20px] border-2 border-[#E5E5E5] bg-white shadow-[0_7px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none"
   >
-    <header className="flex min-h-[100px] items-start justify-between gap-4 border-b border-slate-100 px-4 py-4 sm:px-6 sm:py-5 dark:border-white/10">
+    <header className="flex min-h-[86px] shrink-0 items-start justify-between gap-4 border-b border-slate-100 px-4 py-3 sm:px-6 sm:py-5 dark:border-white/10">
       <div className="min-w-0">
         <p className="text-[10px] font-black uppercase tracking-[0.12em] text-[#129BDC]">{isVietnamese ? "Quiz dành cho PKAers" : "Quiz for PKAers"}</p>
-        <h2 className="mt-1 text-xl font-black leading-7 text-[#100F3E] dark:text-white sm:text-2xl">{exam?.subjectName[lang]}</h2>
+        <h2 title={exam?.subjectName[lang]} className="mt-1 line-clamp-2 text-lg font-black leading-6 text-[#100F3E] dark:text-white sm:text-2xl sm:leading-7">{exam?.subjectName[lang]}</h2>
       </div>
       <button type="button" className="lp-btn lp-btn--secondary lp-btn--icon shrink-0" onClick={onClose} disabled={loading} aria-label={isVietnamese ? "Hủy" : "Cancel"}><X className="h-4 w-4" /></button>
     </header>
-    <div className="max-h-[min(60dvh,360px)] overflow-y-auto p-4 sm:p-6">
+    <div className="min-h-0 flex-1 overflow-y-auto p-4 sm:p-6">
       <div className="rounded-[16px] border border-sky-100 bg-[#F4FBFF] p-4 dark:border-sky-500/15 dark:bg-sky-500/[0.06]">
         <p className="text-xs font-black uppercase tracking-[0.08em] text-slate-400">{isVietnamese ? "Ghi chú" : "Note"}</p>
         <p className="mt-2 text-sm font-semibold leading-6 text-slate-600 dark:text-slate-300">{exam?.description[lang]}</p>
@@ -90,7 +90,7 @@ export function PurchaseDetailDialog({ exam, lang, loading, error, onClose, onCo
       ) : null}
       {error ? <p role="alert" className="mt-4 rounded-xl bg-red-50 px-3 py-2 text-sm font-bold text-red-600 dark:bg-red-500/10 dark:text-red-300">{error}</p> : null}
     </div>
-    <footer className="grid grid-cols-2 gap-2 border-t border-slate-100 p-4 sm:px-6 dark:border-white/10">
+    <footer className="grid shrink-0 grid-cols-2 gap-2 border-t border-slate-100 p-4 sm:px-6 dark:border-white/10">
       <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={onClose} disabled={loading}>{isVietnamese ? "Hủy" : "Cancel"}</button>
       <button type="button" className="lp-btn lp-btn--primary lp-btn--sm" onClick={onConfirm} disabled={loading || !ackTerms}>{loading ? (isVietnamese ? "Đang tạo đơn..." : "Creating...") : (exam ? formatSubjectPrice(exam.subjectCode) ?? "10.000 VND" : "10.000 VND")}</button>
     </footer>

@@ -481,6 +481,12 @@ html.dark .lp-modal-desc {
   max-height: min(760px, 92dvh);
 }
 
+/* Bản gọn cho nhóm picker modal: body còn ~380px trên mobile
+   (544 = 380 body + 86 header + 76 footer + ~2 viền). */
+.lp-modal-frame--compact {
+  height: min(544px, calc(100dvh - 2rem));
+}
+
 @media (min-width: 640px) {
   .lp-modal-frame {
     height: auto;

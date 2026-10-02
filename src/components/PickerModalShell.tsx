@@ -38,7 +38,7 @@ export function PickerModalShell({
         aria-modal="true"
         aria-labelledby={titleId}
         data-state={state}
-        className={cn("contact-modal-panel relative z-10 m-auto max-w-[560px] shadow-[var(--shadow-3)]", modalFrameClass)}
+        className={cn("contact-modal-panel relative z-10 m-auto max-w-[560px] shadow-[var(--shadow-3)]", modalFrameClass, "lp-modal-frame--compact")}
       >
         <div className={modalHeaderClass}>
           <div>

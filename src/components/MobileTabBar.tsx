@@ -21,7 +21,7 @@ export function MobileTabBar<K extends string>({
 }) {
   const containerRef = useRef<HTMLDivElement>(null)
   const buttonRefs = useRef(new Map<K, HTMLButtonElement>())
-  const [indicator, setIndicator] = useState({ left: 0, width: 72, ready: false })
+  const [indicator, setIndicator] = useState({ left: 0, width: 68, ready: false })
 
   // Đo vị trí ô icon đang active để viên pill trượt tới đúng chỗ.
   useLayoutEffect(() => {
@@ -49,12 +49,12 @@ export function MobileTabBar<K extends string>({
     >
       <div
         ref={containerRef}
-        className="pointer-events-auto relative mx-auto flex h-[60px] max-w-[430px] items-center rounded-full bg-white/90 px-2 shadow-[0_12px_32px_rgba(0,0,0,0.14),0_2px_6px_rgba(0,0,0,0.06)] ring-1 ring-black/[0.06] backdrop-blur-2xl dark:bg-[#2C2C2E]/90 dark:ring-white/12"
+        className="pointer-events-auto relative mx-auto flex h-[54px] max-w-[430px] items-center rounded-full bg-white/90 px-2 shadow-[0_12px_32px_rgba(0,0,0,0.14),0_2px_6px_rgba(0,0,0,0.06)] ring-1 ring-black/[0.06] backdrop-blur-2xl dark:bg-[#2C2C2E]/90 dark:ring-white/12"
       >
         {/* Viên pill trượt mượt theo tab active */}
         <span
           aria-hidden="true"
-          className="pointer-events-none absolute top-1/2 h-[48px] -translate-y-1/2 rounded-[20px] bg-[#EBF4FE] transition-[left,width] duration-[420ms] ease-[cubic-bezier(0.32,0.72,0,1)] dark:bg-[#1CB0F6]/20"
+          className="pointer-events-none absolute top-1/2 h-[42px] -translate-y-1/2 rounded-[20px] bg-[#EBF4FE] transition-[left,width] duration-[420ms] ease-[cubic-bezier(0.32,0.72,0,1)] dark:bg-[#1CB0F6]/20"
           style={{
             left: indicator.left,
             width: indicator.width,
@@ -79,14 +79,14 @@ export function MobileTabBar<K extends string>({
             >
               <span
                 className={cn(
-                  "flex h-[48px] w-[72px] items-center justify-center rounded-[20px] transition-[transform,color] duration-200 ease-out active:scale-95",
+                  "flex h-[42px] w-[68px] items-center justify-center rounded-[20px] transition-[transform,color] duration-200 ease-out active:scale-95",
                   isActive
                     ? "text-[#1CB0F6] dark:text-[#4C9AFF]"
                     : "bg-transparent text-[#131313] dark:text-[#F2F2F7]",
                 )}
               >
                 <Icon
-                  className="h-[24px] w-[24px]"
+                  className="h-[21px] w-[21px]"
                 />
               </span>
               {item.badge ? <span className="absolute -right-1 -top-1 min-w-5 rounded-full bg-red-500 px-1 text-center text-[10px] font-black leading-5 text-white ring-2 ring-white dark:ring-[#2C2C2E]">{item.badge > 99 ? "99+" : item.badge}</span> : null}
