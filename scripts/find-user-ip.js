@@ -1,9 +1,15 @@
 /**
  * Tim dia chi IP cua 1 user chi dinh qua Supabase Logs Explorer API.
  *
- * Cach dung:
- *   SUPABASE_ACCESS_TOKEN=sbp_xxx node ./scripts/find-user-ip.js <user-id-hoac-email> [--hours 24]
- *   SUPABASE_ACCESS_TOKEN=sbp_xxx node ./scripts/find-user-ip.js 24100093@st.phenikaa-uni.edu.vn --hours 12
+ * TRANG THAI: TAM DUNG tu 2026-10-02 — bi khoa theo mac dinh de bao ve han muc
+ * "Log Query" cua Supabase (free plan 100 GB/thang; project da dung 51 GB chi
+ * trong 2 ngay 01-02/10 vi cac truy van window 24h lap lai). Mo khoa co chu dich:
+ *   SUPABASE_ACCESS_TOKEN=sbp_xxx node ./scripts/find-user-ip.js <user-id> --allow --hours 6
+ * (--hours bat buoc khai bao ro, toi da 12h; mac dinh 6h neu bo trong)
+ *
+ * Cach dung khi da bat:
+ *   SUPABASE_ACCESS_TOKEN=sbp_xxx node ./scripts/find-user-ip.js <user-id-hoac-email> --allow [--hours 6]
+ *   SUPABASE_ACCESS_TOKEN=sbp_xxx node ./scripts/find-user-ip.js 24100093@st.phenikaa-uni.edu.vn --allow --hours 12
  *
  * Can lay SUPABASE_ACCESS_TOKEN (Personal Access Token) o:
  *   Supabase Dashboard -> Account (avatar goc trai duoi) -> Access Tokens -> Generate New Token
@@ -24,21 +30,25 @@ const API_BASE = "https://api.supabase.com/v1";
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
 function usage() {
-  console.log(`[find-user-ip] Cach dung:
-  SUPABASE_ACCESS_TOKEN=sbp_xxx node ./scripts/find-user-ip.js <user-id-hoac-email> [--hours 24] [--ref <project-ref>]
+  console.log(`[find-user-ip] Cach dung (can --allow vi dang bi tam dung):
+  SUPABASE_ACCESS_TOKEN=sbp_xxx node ./scripts/find-user-ip.js <user-id-hoac-email> --allow [--hours 6] [--ref <project-ref>]
 
   Vi du:
-  SUPABASE_ACCESS_TOKEN=sbp_xxx node ./scripts/find-user-ip.js d787b921-4ed7-4df0-b2f4-75252f4a2ff7 --hours 24`);
+  SUPABASE_ACCESS_TOKEN=sbp_xxx node ./scripts/find-user-ip.js d787b921-4ed7-4df0-b2f4-75252f4a2ff7 --allow --hours 6`);
 }
 
 function parseArgs(argv) {
-  const out = { target: null, hours: 24, ref: process.env.SUPABASE_PROJECT_REF ?? "qwbujoppcqpnummhpfbs" };
+  const out = { target: null, hours: 6, ref: process.env.SUPABASE_PROJECT_REF ?? "qwbujoppcqpnummhpfbs" };
   const rest = [];
   for (let i = 0; i < argv.length; i++) {
-    if (argv[i] === "--hours" && argv[i + 1]) out.hours = Math.max(1, Math.min(24 * 30, Number(argv[++i]) || 24));
+    if (argv[i] === "--hours" && argv[i + 1]) out.hours = Math.max(1, Math.min(24 * 30, Number(argv[++i]) || 6));
     else if (argv[i] === "--ref" && argv[i + 1]) out.ref = argv[++i];
     else if (argv[i] === "--help" || argv[i] === "-h") { usage(); process.exit(0); }
     else rest.push(argv[i]);
+  }
+  if (out.hours > 12) {
+    console.log(`[find-user-ip] CANH BAO: giam --hours tu ${out.hours} xuong 12 de bao ve han muc Log Query (free plan chi giu log ~24h, window lon = quet nhieu GB moi lan chay).`);
+    out.hours = 12;
   }
   out.target = rest[0] ?? null;
   return out;
@@ -84,7 +94,18 @@ function pad(value, width) {
 }
 
 async function main() {
-  const { target, hours, ref } = parseArgs(process.argv.slice(2));
+  // TAM DUNG 2026-10-02: moi lan chay voi window lon (vd --hours 24) quet gan
+  // toan bo retention 1 ngay cua edge_logs — hang GB "Log Query" moi run, va
+  // project da dung 51.18 GB chi trong 01-02/10/2026 (han muc free: 100 GB/thang).
+  // Mac dinh TU CHOI chay. Bat co chu dich bang --allow; --hours se bi ep <= 12.
+  const argv = process.argv.slice(2);
+  if (!argv.includes("--allow")) {
+    console.log("[find-user-ip] TAM DUNG: script bi khoa de bao ve han muc 'Log Query' (free plan 100 GB/thang).");
+    console.log("[find-user-ip] Ly do: moi lan chay window lon quet gan toan bo log 1 ngay cua edge_logs — project da dung 51 GB chi trong 2 ngay 01-02/10.");
+    console.log("[find-user-ip] Neu thuc su can dieu tra: them co --allow va chi dinh --hours nho (<= 12), vi du: node ./scripts/find-user-ip.js <user-id> --allow --hours 6");
+    process.exit(2);
+  }
+  const { target, hours, ref } = parseArgs(argv.filter((a) => a !== "--allow"));
   const token = process.env.SUPABASE_ACCESS_TOKEN;
   if (!target) { usage(); process.exit(1); }
   if (!token) throw new Error("Thieu SUPABASE_ACCESS_TOKEN (Personal Access Token lay tu Dashboard -> Account -> Access Tokens).");

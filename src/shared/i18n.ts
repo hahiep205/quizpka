@@ -810,34 +810,4 @@ export const toeicAnnouncementCopy = {
   },
 } as const
 
-export const communityChatCopy = {
-  en: {
-    title: "Community Chat",
-    beta: "Beta",
-    subtitle: "Chat with PKA students - Civilized and polite~",
-    online: "Online",
-    placeholder: "Type a message...",
-    send: "Send",
-    close: "Close",
-    closeModal: "Close modal",
-    empty: "No messages yet. Be the first to say hello!",
-    comingSoon: "Realtime chat coming soon",
-    comingSoonDesc: "Community chat is being built. Stay tuned - you will be able to chat as guest without login.",
-    channelGeneral: "General",
-  },
-  vi: {
-    title: "Chat cộng đồng",
-    beta: "Beta",
-    subtitle: "Trò chuyện cùng sinh viên PKA - Văn minh, lịch sự~",
-    online: "Đang online",
-    placeholder: "Nhập tin nhắn...",
-    send: "Gửi",
-    close: "Đóng",
-    closeModal: "Đóng modal",
-    empty: "Chưa có tin nhắn nào. Hãy là người đầu tiên chào nhé!",
-    comingSoon: "Sắp ra mắt chat realtime",
-    comingSoonDesc: "Tính năng chat cộng đồng đang được xây dựng. Bạn sẽ có thể chat với tư cách khách mà không cần đăng nhập.",
-    channelGeneral: "Chung",
-  },
-} as const
 

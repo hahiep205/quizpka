@@ -8,6 +8,7 @@ import { Card } from "@/components/ui/card"
 import { Dialog } from "@/components/ui/dialog"
 import { fetchAllAdminUsers, setAdminUserStatus } from "@/features/admin/api/adminUsers"
 import { fetchBlockedViewStat } from "@/features/admin/api/blockedViews"
+import { fetchUserLoginEvents, type LoginEvent } from "@/features/admin/api/loginEvents"
 import { fetchAllActivityTimeline, fetchAllPracticeAttempts, fetchPracticeAttempts, fetchUserActivity } from "@/features/admin/api/adminActivity"
 import { ACTIVITY_LABELS, parseActivityRows, parseAttemptRows, type ActivityEvent, type ActivityEventType, type PracticeAttemptRow } from "@/features/activity/lib/activityLog"
 import { bucketHoursToday, eventsByType, filterByDays, topSubjects } from "@/features/admin/lib/adminOverview"
@@ -755,11 +756,11 @@ export function AdminPage({ lang }: Props) {
 
             {section === "payment" ? (
               <section className="scroll-mt-24 space-y-4 sm:space-y-5">
-                <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+                <div className={dashboardStatGridClass}>
                   <DashboardStatCard icon={Banknote} value={formatVnd(paymentKpis.revenue)} label="Doanh thu hôm nay" tone="green" />
                   <DashboardStatCard icon={CheckCircle2} value={String(paymentKpis.paid)} label="Giao dịch thành công" tone="blue" />
                   <DashboardStatCard icon={Clock3} value={String(paymentKpis.pending)} label="Đang chờ thanh toán" tone="orange" />
-                  <DashboardStatCard icon={ShieldAlert} value={String(paymentKpis.unsuccessful)} label="Thất bại / hoàn tiền" tone="violet" />
+                  <DashboardStatCard icon={ShieldAlert} value={String(paymentKpis.unsuccessful)} label="Thất bại / bị hủy" tone="violet" />
                 </div>
                 <Card className="space-y-3 p-4 sm:p-5">
                   <div className="flex flex-col gap-3 sm:flex-row">
@@ -1489,6 +1490,8 @@ function FlagBadge({ flag }: { flag: AnomalyFlag }) {
 function UserDrawer({ user, lang, currentUserId, onStatusChange, onClose }: { user: AdminUser; lang: "vi" | "en"; currentUserId: string | null; onStatusChange: (next: AdminUser) => void; onClose: () => void }) {
   const [userEvents, setUserEvents] = useState<ActivityEvent[]>([])
   const [userAttempts, setUserAttempts] = useState<PracticeAttemptRow[]>([])
+  const [loginEvents, setLoginEvents] = useState<LoginEvent[]>([])
+  const [loginEventsError, setLoginEventsError] = useState<string | null>(null)
   const [blockReason, setBlockReason] = useState("")
   const [statusSaving, setStatusSaving] = useState(false)
   const [statusError, setStatusError] = useState<string | null>(null)
@@ -1506,6 +1509,11 @@ function UserDrawer({ user, lang, currentUserId, onStatusChange, onClose }: { us
     let cancelled = false
     void fetchUserActivity(user.id, 200).then((r) => { if (!cancelled) setUserEvents(r.events) })
     void fetchPracticeAttempts(user.id, 200).then((r) => { if (!cancelled) setUserAttempts(r.attempts) })
+    setLoginEvents([])
+    setLoginEventsError(null)
+    void fetchUserLoginEvents(user.id)
+      .then((events) => { if (!cancelled) setLoginEvents(events) })
+      .catch((err: unknown) => { if (!cancelled) setLoginEventsError(err instanceof Error ? err.message : "Không đọc được lịch sử IP đăng nhập.") })
     setBlockedView(null)
     setBlockedViewError(null)
     void fetchBlockedViewStat(user.id)
@@ -1546,6 +1554,20 @@ function UserDrawer({ user, lang, currentUserId, onStatusChange, onClose }: { us
           <DrawerRow label="Ngày login đầu (created_at)" value={formatTime(user.createdAt, lang)} />
           <DrawerRow label="Hoạt động gần nhất" value={formatTime(user.lastActiveAt, lang)} />
           <DrawerRow label="Hiện trên leaderboard" value={user.leaderboardVisible ? "true" : "false"} />
+          <div>
+            <p className="text-xs font-black uppercase tracking-wide text-slate-400">Lịch sử IP đăng nhập ({loginEvents.length})</p>
+            <div className="mt-2 space-y-1.5">
+              {loginEventsError ? <p className="text-xs font-semibold text-red-500">Không đọc được lịch sử IP: {loginEventsError}</p> : null}
+              {!loginEventsError && loginEvents.length === 0 ? <p className="text-xs font-semibold text-slate-400">Chưa có IP đăng nhập được ghi nhận từ khi bật tính năng.</p> : null}
+              {loginEvents.map((event) => (
+                <div key={event.id} className="rounded-xl bg-slate-50 px-3 py-2 text-xs font-semibold dark:bg-white/5">
+                  <span className="font-black text-[#100F3E] dark:text-white font-mono">{event.ipAddress}</span>
+                  <span className="text-slate-400"> · {formatTime(event.loggedInAt, lang)}{event.provider ? ` · ${event.provider}` : ""}</span>
+                  {event.userAgent ? <span className="mt-0.5 block truncate text-[11px] font-medium text-slate-400" title={event.userAgent}>{event.userAgent}</span> : null}
+                </div>
+              ))}
+            </div>
+          </div>
           <div className="rounded-xl border-2 border-slate-100 bg-slate-50/60 px-3.5 py-3 dark:border-white/10 dark:bg-white/5">
             <p className="text-xs font-black uppercase tracking-wide text-slate-400">Trạng thái tài khoản</p>
             <p className="mt-1.5 flex flex-wrap items-center gap-1.5 text-[11px] font-black">

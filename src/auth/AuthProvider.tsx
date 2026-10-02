@@ -1,5 +1,5 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react"
-import type { Session, User } from "@supabase/supabase-js"
+import type { AuthChangeEvent, Session, User } from "@supabase/supabase-js"
 import { supabase } from "@/lib/supabase"
 import { logActivityEvent } from "@/features/activity/lib/activityLog"
 import { logBlockedAccountView } from "@/features/admin/api/blockedViews"
@@ -21,7 +21,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return nextProfile
   }, [])
 
-  const applySession = useCallback(async (session: Session | null) => {
+  const applySession = useCallback(async (session: Session | null, authEvent?: AuthChangeEvent) => {
     const currentUser = session?.user ?? null
     setUser(currentUser)
     if (!currentUser) { setProfile(null); setStatus("anonymous"); return }
@@ -37,6 +37,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         logBlockedAccountView(currentUser.id)
       } else {
         logActivityEvent(currentUser.id, "login", { provider: currentUser.app_metadata?.provider ?? "google" }, { oncePerSessionKey: `login:${currentUser.id}` })
+        if (authEvent === "SIGNED_IN") {
+          void supabase.functions.invoke("record-login-event", {
+            body: { provider: currentUser.app_metadata?.provider ?? "google" },
+          })
+        }
       }
     } catch {
       // Fail closed when authorization data cannot be verified.
@@ -52,7 +57,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     // querying the database synchronously here can deadlock the auth lock.
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       if (!mounted) return
-      window.setTimeout(() => { if (mounted) void applySession(session) }, 0)
+      window.setTimeout(() => { if (mounted) void applySession(session, _event) }, 0)
     })
     return () => { mounted = false; subscription.unsubscribe() }
   }, [applySession])
