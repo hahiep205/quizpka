@@ -16,8 +16,10 @@ Khi cần đọc log Supabase:
    API — KHÔNG bị đo Log Query) và các bảng sẵn có (`user_login_events`,
    `security_metrics_daily`, `cron.job_run_details`). Log API chỉ dùng cho thứ
    DB không có: lỗi GoTrue, gateway status, IP/user-agent realtime.
-4. `scripts/find-user-ip.js` đang **TẠM DỤNG**: từ chối chạy nếu thiếu cờ
-   `--allow`; `--hours` bị ép ≤ 12. Không bật trừ khi điều tra sự cố có chủ đích.
+4. `scripts/find-user-ip.js` đã bị **XÓA khỏi repo** (03/10/2026) vì góp phần đốt
+   70 GB/100 GB Log Query. Bản lưu tại `trash/scripts/find-user-ip.js` — KHÔNG
+   tái tạo hoặc khôi phục nếu không có yêu cầu rõ ràng từ người dùng; thay vào đó
+   dùng template 3h-window trong `docs/log-query-hygiene.md`.
 
 Chi tiết + template query sẵn dùng: `docs/log-query-hygiene.md`.
 

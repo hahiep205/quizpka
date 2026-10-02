@@ -47,7 +47,7 @@ Content-Type: application/json
 Thay `<START>`/`<END>` bằng ISO time (ví dụ `2026-10-02T10:00:00Z`), mặc định
 chênh nhau 3 giờ.
 
-Edge — request theo user/path (khi cần điều tra mà find-user-ip đang bị khóa):
+Edge — request theo user/path (điều tra user/path khi cần):
 
 ```sql
 select log_attributes['request.headers.cf_connecting_ip'] as ip,
@@ -88,13 +88,10 @@ where timestamp >= '<START>' and timestamp < '<END>'
 group by source order by rows desc
 ```
 
-## 4. `scripts/find-user-ip.js` đang TẠM DỤNG
+## 4. `scripts/find-user-ip.js` đã bị XÓA
 
-Từ 2026-10-02 script mặc định từ chối chạy (mỗi lần window 24h quét gần trọn
-retention 1 ngày của `edge_logs`). Mở có chủ đích bằng:
-
-```
-node ./scripts/find-user-ip.js <user-id> --allow --hours 6
-```
-
-`--hours` bị ép tối đa 12. Chi tiết trong header của script.
+Xóa ngày 03/10/2026 sau khi Log Query usage lên 70 GB/100 GB chỉ trong 1 ngày —
+mỗi lần chạy window 24h của nó quét gần trọn retention 1 ngày của `edge_logs`.
+Bản gốc nằm tại `trash/scripts/find-user-ip.js` (thùng rác, không xóa, không
+dùng). Nếu tương lai cần tra IP theo user: dùng template Edge ở mục 3 với
+window 3h thay vì khôi phục script này.
