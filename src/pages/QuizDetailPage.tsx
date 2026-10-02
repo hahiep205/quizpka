@@ -45,6 +45,7 @@ export function QuizDetailPage({ lang, slug }: { lang: Lang; slug: string }) {
   const [purchaseLoading, setPurchaseLoading] = useState(false)
   const [purchaseError, setPurchaseError] = useState<string | null>(null)
   const [loginRequiredOpen, setLoginRequiredOpen] = useState(false)
+  const [ackTerms, setAckTerms] = useState(false)
   const {
     pickerExam: hcmPickerExam,
     setupExam,
@@ -86,7 +87,6 @@ export function QuizDetailPage({ lang, slug }: { lang: Lang; slug: string }) {
   const isPaidSubject = getPaidProductId(subject.code) !== null
   const primaryExam = exams[0]
   const docSetCount = (subject.chapters ?? []).filter((chapter) => chapter.documentId).length
-  const [ackTerms, setAckTerms] = useState(false)
   const visibleChapters = (subject.chapters ?? []).filter((chapter) => !chapter.hidden)
 
   const tryExam = (exam: ExamCatalogItem) => nudge.requestNudge(async () => { try {

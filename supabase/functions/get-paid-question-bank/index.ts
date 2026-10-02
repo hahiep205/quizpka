@@ -1,5 +1,5 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
-import { clientIp, corsHeaders, getUserWithTimeout, jsonWithCors, rateGate } from "../_shared/edge-guard.ts"
+import { clientIp, corsHeaders, getUserWithTimeout, logServerError, rateGate, requestBodyLimit, readJsonBody } from "../_shared/edge-guard.ts"
 
 // P1: CORS whitelist (was: echo any Origin). Contract unchanged (full bank
 // JSON); Egress is cut by per-user/IP rate gates + private browser cache
@@ -60,28 +60,35 @@ const subjectProducts: Record<string, string> = {
   "tadv-traphi": "tadv02",
   "thong-ke-trong-kinh-doanh": "sta201",
   "co-so-du-lieu": "db101",
+  "ky-nang-khoi-nghiep-va-lanh-dao": "ent101",
+  "ky-nang-quan-ly-du-an": "pm101",
 }
 const sqaFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json", "chuong_6.json"]
 const secFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json", "chuong_6.json.gz", "chuong_7.json", "chuong_8.json"]
 const marFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json", "chuong_6.json", "chuong_7.json", "chuong_8.json", "chuong_9.json"]
+const entFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json"]
+const pmFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json", "chuong_6.json", "chuong_7.json", "chuong_8.json"]
+const bankCache = new Map<string, { body: string; etag: string }>()
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders(req) })
   if (req.method !== "POST") return new Response(JSON.stringify({ error: "Method not allowed" }), { status: 405, headers: corsHeaders(req) })
   try {
+    const bodyLimit = requestBodyLimit(req, 16 * 1024)
+    if (bodyLimit) return bodyLimit
     const authorization = req.headers.get("Authorization")
     if (!authorization) return new Response(JSON.stringify({ error: "Authentication required" }), { status: 401, headers: corsHeaders(req) })
-    const input = await req.json().catch(() => null) as { examId?: unknown; subjectId?: unknown } | null
+    const input = await readJsonBody(req, 16 * 1024) as { examId?: unknown; subjectId?: unknown } | null
     const examId = typeof input?.examId === "string" ? input.examId : ""
     const subjectId = typeof input?.subjectId === "string" ? input.subjectId : ""
     const productId = subjectProducts[subjectId]
     if (!productId) return new Response(JSON.stringify({ error: "Unknown subject" }), { status: 400, headers: corsHeaders(req) })
     const objectPath = examFiles[examId]
-    if (!objectPath && subjectId !== "danh-gia-va-kiem-dinh-chat-luong-phan-mem" && subjectId !== "bao-mat-ung-dung-he-thong" && subjectId !== "marketing-can-ban") return new Response(JSON.stringify({ error: "Unknown exam" }), { status: 400, headers: corsHeaders(req) })
+    if (!objectPath && subjectId !== "danh-gia-va-kiem-dinh-chat-luong-phan-mem" && subjectId !== "bao-mat-ung-dung-he-thong" && subjectId !== "marketing-can-ban" && subjectId !== "ky-nang-khoi-nghiep-va-lanh-dao" && subjectId !== "ky-nang-quan-ly-du-an") return new Response(JSON.stringify({ error: "Unknown exam" }), { status: 400, headers: corsHeaders(req) })
     const projectUrl = Deno.env.get("SUPABASE_URL")!
     const admin = createClient(projectUrl, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!)
     // P1: pre-auth flood gate (shape already validated above, cheap reject).
-    const ipGate = await rateGate(admin, req, `bank:ip:${clientIp(req)}`, 240, 3600)
+    const ipGate = await rateGate(admin, req, `bank:ip:${clientIp(req)}`, 50, 600, true)
     if (ipGate) return ipGate
     const userClient = createClient(projectUrl, Deno.env.get("SUPABASE_ANON_KEY")!, { global: { headers: { Authorization: authorization } } })
     const bearer = authorization.match(/^Bearer\s+(.+)$/i)?.[1] ?? ""
@@ -89,8 +96,10 @@ Deno.serve(async (req) => {
     const user = await getUserWithTimeout(userClient, bearer, 8000).catch(() => null)
     if (!user) return new Response(JSON.stringify({ error: "Authentication required" }), { status: 401, headers: corsHeaders(req) })
     // P1: per-user gate — a scraper with a stolen token is capped at 120 banks/h.
-    const userGate = await rateGate(admin, req, `bank:user:${user.id}`, 120, 3600)
+    const userGate = await rateGate(admin, req, `bank:user:${user.id}`, 20, 3600, true)
     if (userGate) return userGate
+    const resourceGate = await rateGate(admin, req, `bank:user:${user.id}:${subjectId}:${examId}`, 20, 3600)
+    if (resourceGate) return resourceGate
     const { data: profile, error: profileError } = await admin.from("profiles").select("status").eq("id", user.id).single()
     if (profileError || profile.status !== "active") return new Response(JSON.stringify({ error: "Account is not active" }), { status: 403, headers: corsHeaders(req) })
     const { data: purchase, error: purchaseError } = await admin.from("purchases").select("id").eq("user_id", user.id).eq("product_id", productId).eq("status", "paid").maybeSingle()
@@ -98,22 +107,38 @@ Deno.serve(async (req) => {
     if (!purchase) return new Response(JSON.stringify({ error: "Purchase required" }), { status: 403, headers: corsHeaders(req) })
     // P1: banks are static — allow private browser caching to cut repeat Egress.
     const cacheHeaders = corsHeaders(req, { "Content-Type": "application/json", "Cache-Control": "private, max-age=86400" })
+    const cacheKey = `${subjectId}:${examId}`
+    const cached = bankCache.get(cacheKey)
+    if (cached) {
+      if (req.headers.get("if-none-match") === cached.etag) return new Response(null, { status: 304, headers: corsHeaders(req, { ETag: cached.etag, "Cache-Control": "private, max-age=86400" }) })
+      return new Response(cached.body, { status: 200, headers: corsHeaders(req, { "Content-Type": "application/json", "Cache-Control": "private, max-age=86400", ETag: cached.etag }) })
+    }
     if (objectPath) {
       const { data: file, error: downloadError } = await admin.storage.from("paid-question-banks").download(objectPath)
       if (downloadError || !file) return new Response(JSON.stringify({ error: "Question bank unavailable" }), { status: 503, headers: corsHeaders(req) })
-      return new Response(await file.text(), { status: 200, headers: cacheHeaders })
+      const body = await file.text()
+      const hash = await crypto.subtle.digest("SHA-1", new TextEncoder().encode(body))
+      const etag = `"${Array.from(new Uint8Array(hash)).map((byte) => byte.toString(16).padStart(2, "0")).join("")}"`
+      bankCache.set(cacheKey, { body, etag })
+      if (req.headers.get("if-none-match") === etag) return new Response(null, { status: 304, headers: { ...cacheHeaders, ETag: etag } })
+      return new Response(body, { status: 200, headers: { ...cacheHeaders, ETag: etag } })
     }
-    const files = subjectId === "bao-mat-ung-dung-he-thong" ? secFiles : subjectId === "marketing-can-ban" ? marFiles : sqaFiles
-    const directory = subjectId === "bao-mat-ung-dung-he-thong" ? "sec301" : subjectId === "marketing-can-ban" ? "mar101" : "sqa101"
+    const files = subjectId === "bao-mat-ung-dung-he-thong" ? secFiles : subjectId === "marketing-can-ban" ? marFiles : subjectId === "ky-nang-khoi-nghiep-va-lanh-dao" ? entFiles : subjectId === "ky-nang-quan-ly-du-an" ? pmFiles : sqaFiles
+    const directory = subjectId === "bao-mat-ung-dung-he-thong" ? "sec301" : subjectId === "marketing-can-ban" ? "mar101" : subjectId === "ky-nang-khoi-nghiep-va-lanh-dao" ? "ent101" : subjectId === "ky-nang-quan-ly-du-an" ? "pm101" : "sqa101"
     const banks = await Promise.all(files.map(async (fileName) => {
       const { data: file, error } = await admin.storage.from("paid-question-banks").download(`${directory}/${fileName}`)
       if (error || !file) throw new Error("Question bank unavailable")
       const body = fileName.endsWith(".gz") ? await new Response(file.stream().pipeThrough(new DecompressionStream("gzip"))).text() : await file.text()
       return JSON.parse(body) as { questions?: unknown[] }
     }))
-    return new Response(JSON.stringify({ title: subjectId === "bao-mat-ung-dung-he-thong" ? "SEC301" : subjectId === "marketing-can-ban" ? "MAR101 Final" : "SQA101 Final", questions: banks.flatMap((bank, bankIndex) => (bank.questions ?? []).map((question) => ({ ...(question as Record<string, unknown>), id: `${bankIndex}-${String((question as { id?: unknown }).id ?? "")}` }))) }), { status: 200, headers: corsHeaders(req) })
-  } catch (error) {
-    console.error("Get paid question bank failed", error)
+    const body = JSON.stringify({ title: subjectId === "bao-mat-ung-dung-he-thong" ? "SEC301" : subjectId === "marketing-can-ban" ? "MAR101 Final" : subjectId === "ky-nang-khoi-nghiep-va-lanh-dao" ? "ENT101 Final" : subjectId === "ky-nang-quan-ly-du-an" ? "PM101 Final" : "SQA101 Final", questions: banks.flatMap((bank, bankIndex) => (bank.questions ?? []).map((question) => ({ ...(question as Record<string, unknown>), id: `${bankIndex}-${String((question as { id?: unknown }).id ?? "")}` }))) })
+    const hash = await crypto.subtle.digest("SHA-1", new TextEncoder().encode(body))
+    const etag = `"${Array.from(new Uint8Array(hash)).map((byte) => byte.toString(16).padStart(2, "0")).join("")}"`
+    bankCache.set(cacheKey, { body, etag })
+    if (req.headers.get("if-none-match") === etag) return new Response(null, { status: 304, headers: corsHeaders(req, { ETag: etag, "Cache-Control": "private, max-age=86400" }) })
+    return new Response(body, { status: 200, headers: corsHeaders(req, { "Content-Type": "application/json", "Cache-Control": "private, max-age=86400", ETag: etag }) })
+  } catch {
+    logServerError("paid_question_bank_failed")
     return new Response(JSON.stringify({ error: "Unable to load question bank" }), { status: 500, headers: corsHeaders(req) })
   }
 })

@@ -45,6 +45,14 @@ export type PracticeAttemptRow = {
 }
 
 const SESSION_LOGGED_KEY = "quizpka-activity-session-v1"
+const ACTIVITY_THROTTLE_MS: Partial<Record<ActivityEventType, number>> = {
+  view_dashboard: 24 * 60 * 60_000,
+  view_leaderboard: 60_000,
+  view_notifications: 5 * 60_000,
+  search_exam: 2_000,
+  devtools_attempt: 60_000,
+}
+const ACTIVITY_THROTTLE_KEY = "quizpka-activity-throttle-v1"
 
 function readSessionLogged(): Record<string, number> {
   try {
@@ -65,6 +73,43 @@ function markSessionLogged(key: string): void {
   }
 }
 
+function activityThrottleKey(eventType: ActivityEventType, metadata: Record<string, unknown>): string {
+  const resource = metadata.examId ?? metadata.documentId ?? metadata.notificationId ?? metadata.query ?? "global"
+  const resourceText = typeof resource === "string" || typeof resource === "number" ? String(resource) : "global"
+  return `${eventType}:${resourceText.slice(0, 100)}`
+}
+
+function shouldSendActivity(eventType: ActivityEventType, metadata: Record<string, unknown>): boolean {
+  const windowMs = ACTIVITY_THROTTLE_MS[eventType]
+  if (!windowMs) {
+    if (eventType !== "devtools_attempt" && eventType !== "search_exam") return true
+    return Math.random() < (eventType === "devtools_attempt" ? 0.01 : 0.1)
+  }
+  try {
+    const raw = sessionStorage.getItem(ACTIVITY_THROTTLE_KEY)
+    const state = raw ? JSON.parse(raw) as Record<string, number> : {}
+    const key = activityThrottleKey(eventType, metadata)
+    const now = Date.now()
+    if (state[key] && now - state[key] < windowMs) return false
+    state[key] = now
+    sessionStorage.setItem(ACTIVITY_THROTTLE_KEY, JSON.stringify(state))
+  } catch {
+    // Activity logging must never break the user flow.
+  }
+  return true
+}
+
+function sanitizeActivityMetadata(metadata: Record<string, unknown>): Record<string, unknown> {
+  const allowed = new Set(["provider", "examId", "subjectId", "chapterId", "documentId", "intent", "mode", "count", "notificationId", "combo", "orderId", "query"])
+  const result: Record<string, unknown> = {}
+  for (const [key, value] of Object.entries(metadata)) {
+    if (!allowed.has(key)) continue
+    if (typeof value === "string") result[key] = value.slice(0, key === "query" ? 60 : 160)
+    else if (typeof value === "number" || typeof value === "boolean" || value === null) result[key] = value
+  }
+  return result
+}
+
 /**
  * Ghi 1 event hoạt động. Best-effort: không throw, RLS thiếu thì bỏ qua.
  * `oncePerSessionKey` dùng để chống spam event view/login lặp lại.
@@ -76,6 +121,8 @@ export function logActivityEvent(
   options: { oncePerSessionKey?: string } = {},
 ): void {
   if (!userId) return
+  const safeMetadata = sanitizeActivityMetadata(metadata)
+  if (!shouldSendActivity(eventType, safeMetadata)) return
   if (options.oncePerSessionKey) {
     const logged = readSessionLogged()
     if (logged[options.oncePerSessionKey]) return
@@ -83,10 +130,9 @@ export function logActivityEvent(
   }
   void (async () => {
     try {
-      await supabase.from("user_activity_events").insert({
-        user_id: userId,
-        event_type: eventType,
-        metadata,
+      await supabase.rpc("record_activity_event", {
+        p_event_type: eventType,
+        p_metadata: safeMetadata,
       })
     } catch {
       // Bảng chưa migrate hoặc mất mạng -> bỏ qua, không vỡ UX.

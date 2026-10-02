@@ -1,4 +1,5 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
+import { clientIp, corsHeaders, logServerError, rateGate, readJsonBody, requestBodyLimit } from "../_shared/edge-guard.ts"
 
 const examFiles: Record<string, string> = {
   "data-science-ai-midterm-1": "dsai101/khoa_hoc_du_lieu_va_tri_tue_nhan_tao_middle.json",
@@ -59,11 +60,17 @@ const examProducts: Record<string, string> = {
   "english-paid-test06-bank-1": "tadv02",
   "business-statistics-quiz-bank-1": "sta201",
   "database-final-bank-1": "db101",
+  "entrepreneurship-leadership-final-bank-1": "ent101",
+  "project-management-final-bank-1": "pm101",
 }
 const sqaExamId = "software-quality-assessment-final-bank-1"
 const marExamId = "marketing-final-bank-1"
+const entExamId = "entrepreneurship-leadership-final-bank-1"
+const pmExamId = "project-management-final-bank-1"
 const marFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json", "chuong_6.json", "chuong_7.json", "chuong_8.json", "chuong_9.json"]
 const sqaFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json", "chuong_6.json"]
+const entFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json"]
+const pmFiles = ["chuong_1.json", "chuong_2.json", "chuong_3.json", "chuong_4.json", "chuong_5.json", "chuong_6.json", "chuong_7.json", "chuong_8.json"]
 
 type BankQuestion = { id: string | number; question: string; options?: Record<string, string>; answer: string; explainAnswer?: string }
 
@@ -87,7 +94,7 @@ function toDisplayQuestions(bank: { questions?: Array<{ id: string | number; que
 }
 
 function headers(req: Request) {
-  return { "Access-Control-Allow-Origin": req.headers.get("origin") ?? Deno.env.get("SITE_URL") ?? "", "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type", "Access-Control-Allow-Methods": "POST, OPTIONS", "Vary": "Origin" }
+  return corsHeaders(req)
 }
 function json(body: unknown, status: number, req: Request) { return Response.json(body, { status, headers: headers(req) }) }
 
@@ -95,19 +102,25 @@ Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: headers(req) })
   if (req.method !== "POST") return json({ error: "Method not allowed" }, 405, req)
   try {
+    const bodyLimit = requestBodyLimit(req, 16 * 1024)
+    if (bodyLimit) return bodyLimit
+    const projectUrl = Deno.env.get("SUPABASE_URL")!
+    const admin = createClient(projectUrl, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!)
+    const ipGate = await rateGate(admin, req, `quiz:create:ip:${clientIp(req)}`, 50, 600, true)
+    if (ipGate) return ipGate
     const authorization = req.headers.get("Authorization")
     if (!authorization) return json({ error: "Authentication required" }, 401, req)
-    const projectUrl = Deno.env.get("SUPABASE_URL")!
     const userClient = createClient(projectUrl, Deno.env.get("SUPABASE_ANON_KEY")!, { global: { headers: { Authorization: authorization } } })
     const { data: { user }, error: userError } = await userClient.auth.getUser()
     if (userError || !user) return json({ error: "Authentication required" }, 401, req)
-    const input = await req.json().catch(() => null) as { examId?: unknown; idempotencyKey?: unknown } | null
+    const input = await readJsonBody(req, 16 * 1024) as { examId?: unknown; idempotencyKey?: unknown } | null
     const examId = typeof input?.examId === "string" ? input.examId : ""
     const idempotencyKey = typeof input?.idempotencyKey === "string" && input.idempotencyKey.length >= 16 && input.idempotencyKey.length <= 100 ? input.idempotencyKey : ""
     const objectPath = examFiles[examId]
     const productId = examProducts[examId]
-    if ((!objectPath && examId !== sqaExamId && examId !== marExamId) || !productId || !idempotencyKey) return json({ error: "Invalid session request" }, 400, req)
-    const admin = createClient(projectUrl, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!)
+    if ((!objectPath && examId !== sqaExamId && examId !== marExamId && examId !== entExamId && examId !== pmExamId) || !productId || !idempotencyKey) return json({ error: "Invalid session request" }, 400, req)
+    const userGate = await rateGate(admin, req, `quiz:create:user:${user.id}`, 50, 3600, true)
+    if (userGate) return userGate
     const { data: profile, error: profileError } = await admin.from("profiles").select("status").eq("id", user.id).single()
     if (profileError) return json({ error: "Unable to verify account" }, 500, req)
     if (profile.status !== "active") return json({ error: "Account is blocked" }, 403, req)
@@ -125,17 +138,37 @@ Deno.serve(async (req) => {
         const existingBank = await loadMultiBank(admin, "mar101", marFiles)
         return json({ sessionId: existing.id, examId: existing.exam_id, subjectId: existing.subject_id, startedAt: existing.started_at, expiresAt: existing.expires_at, status: existing.status, result: existing.result, questions: toDisplayQuestions(existingBank) }, 200, req)
       }
+      if (examId === entExamId) {
+        const existingBank = await loadMultiBank(admin, "ent101", entFiles)
+        return json({ sessionId: existing.id, examId: existing.exam_id, subjectId: existing.subject_id, startedAt: existing.started_at, expiresAt: existing.expires_at, status: existing.status, result: existing.result, questions: toDisplayQuestions(existingBank) }, 200, req)
+      }
+      if (examId === pmExamId) {
+        const existingBank = await loadMultiBank(admin, "pm101", pmFiles)
+        return json({ sessionId: existing.id, examId: existing.exam_id, subjectId: existing.subject_id, startedAt: existing.started_at, expiresAt: existing.expires_at, status: existing.status, result: existing.result, questions: toDisplayQuestions(existingBank) }, 200, req)
+      }
       const { data: existingFile, error: existingDownloadError } = await admin.storage.from("paid-question-banks").download(objectPath)
       if (existingDownloadError || !existingFile) return json({ error: "Question bank unavailable" }, 503, req)
       const existingBank = JSON.parse(await existingFile.text()) as { questions?: Array<{ id: string | number; question: string; options?: Record<string, string>; explainAnswer?: string }> }
       const existingQuestions = flattenBankParts(existingBank).map((question) => ({ id: String(question.id), prompt: question.question, options: Object.keys(question.options ?? {}).sort().map((key) => question.options?.[key] ?? ""), explanation: question.explainAnswer }))
       return json({ sessionId: existing.id, examId: existing.exam_id, subjectId: existing.subject_id, startedAt: existing.started_at, expiresAt: existing.expires_at, status: existing.status, result: existing.result, questions: existingQuestions }, 200, req)
     }
+    const { data: activeSession, error: activeSessionError } = await admin.from("quiz_sessions")
+      .select("id,exam_id,subject_id,started_at,expires_at,status,result,idempotency_key")
+      .eq("user_id", user.id).eq("exam_id", examId).eq("status", "active")
+      .gt("expires_at", new Date().toISOString()).maybeSingle()
+    if (activeSessionError) throw activeSessionError
+    if (activeSession) {
+      return json({ error: "Active quiz session already exists", sessionId: activeSession.id }, 409, req)
+    }
     let bank: { questions?: Array<{ id: string | number; question: string; options?: Record<string, string>; answer: string; explainAnswer?: string }> }
     if (examId === sqaExamId) {
       bank = await loadMultiBank(admin, "sqa101", sqaFiles)
     } else if (examId === marExamId) {
       bank = await loadMultiBank(admin, "mar101", marFiles)
+    } else if (examId === entExamId) {
+      bank = await loadMultiBank(admin, "ent101", entFiles)
+    } else if (examId === pmExamId) {
+      bank = await loadMultiBank(admin, "pm101", pmFiles)
     } else {
       const { data: file, error: downloadError } = await admin.storage.from("paid-question-banks").download(objectPath)
       if (downloadError || !file) return json({ error: "Question bank unavailable" }, 503, req)
@@ -143,7 +176,7 @@ Deno.serve(async (req) => {
     }
     const sourceQuestions = flattenBankParts(bank)
     const sessionId = crypto.randomUUID()
-    const durationMinutes = 60
+    const durationMinutes = examId === entExamId || examId === pmExamId ? 240 : 60
     const sessionQuestions = sourceQuestions.map((question, position) => {
       const keys = Object.keys(question.options ?? {}).sort()
       const correctIndex = keys.indexOf(question.answer)
@@ -157,15 +190,15 @@ Deno.serve(async (req) => {
     })
     const startedAt = new Date().toISOString()
     const expiresAt = new Date(Date.now() + durationMinutes * 60_000).toISOString()
-    const subjectId = productId === "sqa101" ? "danh-gia-va-kiem-dinh-chat-luong-phan-mem" : productId === "idsai101" ? "nhap-mon-khoa-hoc-du-lieu-va-tri-tue-nhan-tao" : productId === "mar101" ? "marketing-can-ban" : productId === "mac102" ? "kinh-te-vi-mo-macro" : productId === "oit101" ? "tin-hoc-van-phong" : productId === "fin101" ? "nguyen-ly-tai-chinh" : productId === "civ101" ? "lich-su-van-minh-the-gioi" : productId === "eco101" ? "kinh-te-hoc" : productId === "law101" ? "phap-luat-dai-cuong" : productId === "hcm101" ? "tu-tuong-ho-chi-minh" : productId === "mgt101" ? "quan-tri-hoc" : productId === "mln102" ? "triet-hoc-mac-lenin-3tc" : productId === "pec101" ? "kinh-te-chinh-tri-mac-lenin" : productId === "mln101" ? "triet-hoc-mac-lenin-2tc" : productId === "his101" ? "lich-su-dang-cong-san-viet-nam" : productId === "soc101" ? "chu-nghia-xa-hoi-khoa-hoc" : productId === "dm101" ? "toan-roi-rac" : productId === "ta101" ? "tieng-anh-1" : productId === "rm101" ? "phuong-phap-nghien-cuu-khoa-hoc" : productId === "rm102" ? "nghien-cuu-khoa-hoc-trong-kinh-te" : productId === "tadv02" ? "tadv-traphi" : productId === "sta201" ? "thong-ke-trong-kinh-doanh" : productId === "db101" ? "co-so-du-lieu" : "khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
+    const subjectId = productId === "sqa101" ? "danh-gia-va-kiem-dinh-chat-luong-phan-mem" : productId === "idsai101" ? "nhap-mon-khoa-hoc-du-lieu-va-tri-tue-nhan-tao" : productId === "mar101" ? "marketing-can-ban" : productId === "mac102" ? "kinh-te-vi-mo-macro" : productId === "oit101" ? "tin-hoc-van-phong" : productId === "fin101" ? "nguyen-ly-tai-chinh" : productId === "civ101" ? "lich-su-van-minh-the-gioi" : productId === "eco101" ? "kinh-te-hoc" : productId === "law101" ? "phap-luat-dai-cuong" : productId === "hcm101" ? "tu-tuong-ho-chi-minh" : productId === "mgt101" ? "quan-tri-hoc" : productId === "mln102" ? "triet-hoc-mac-lenin-3tc" : productId === "pec101" ? "kinh-te-chinh-tri-mac-lenin" : productId === "mln101" ? "triet-hoc-mac-lenin-2tc" : productId === "his101" ? "lich-su-dang-cong-san-viet-nam" : productId === "soc101" ? "chu-nghia-xa-hoi-khoa-hoc" : productId === "dm101" ? "toan-roi-rac" : productId === "ta101" ? "tieng-anh-1" : productId === "rm101" ? "phuong-phap-nghien-cuu-khoa-hoc" : productId === "rm102" ? "nghien-cuu-khoa-hoc-trong-kinh-te" : productId === "tadv02" ? "tadv-traphi" : productId === "sta201" ? "thong-ke-trong-kinh-doanh" : productId === "db101" ? "co-so-du-lieu" : productId === "ent101" ? "ky-nang-khoi-nghiep-va-lanh-dao" : productId === "pm101" ? "ky-nang-quan-ly-du-an" : "khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
     const { error: sessionError } = await admin.from("quiz_sessions").insert({ id: sessionId, user_id: user.id, exam_id: examId, subject_id: subjectId, duration_minutes: durationMinutes, idempotency_key: idempotencyKey, started_at: startedAt, expires_at: expiresAt })
     if (sessionError) throw sessionError
     const { error: questionsError } = await admin.from("quiz_session_questions").insert(sessionQuestions)
     if (questionsError) throw questionsError
     const displayQuestions = sourceQuestions.map((question) => ({ id: String(question.id), prompt: question.question, options: Object.keys(question.options ?? {}).sort().map((key) => question.options?.[key] ?? ""), explanation: question.explainAnswer }))
     return json({ sessionId, examId, subjectId, startedAt, expiresAt, status: "active", questions: displayQuestions }, 200, req)
-  } catch (error) {
-    console.error("Create quiz session failed", error)
+  } catch {
+    logServerError("quiz_session_create_failed")
     return json({ error: "Unable to create quiz session" }, 500, req)
   }
 })

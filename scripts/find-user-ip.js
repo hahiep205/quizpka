@@ -32,7 +32,7 @@ function usage() {
 }
 
 function parseArgs(argv) {
-  const out = { target: null, hours: 24, ref: process.env.SUPABASE_PROJECT_REF ?? "mbhzkugcfovdthjdjqtx" };
+  const out = { target: null, hours: 24, ref: process.env.SUPABASE_PROJECT_REF ?? "qwbujoppcqpnummhpfbs" };
   const rest = [];
   for (let i = 0; i < argv.length; i++) {
     if (argv[i] === "--hours" && argv[i + 1]) out.hours = Math.max(1, Math.min(24 * 30, Number(argv[++i]) || 24));

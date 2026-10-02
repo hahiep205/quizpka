@@ -296,7 +296,7 @@ def main():
   [string]$DbPassword = $env:SUPABASE_DB_PASSWORD,
   [string]$DbHost = "aws-0-ap-southeast-1.pooler.supabase.com",
   [int]$DbPort = 5432,
-  [string]$DbUser = "postgres.mbhzkugcfovdthjdjqtx",
+  [string]$DbUser = "postgres.qwbujoppcqpnummhpfbs",
   [string]$DbName = "postgres"
 )
 $ErrorActionPreference = "Stop"

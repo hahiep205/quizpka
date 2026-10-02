@@ -1,5 +1,5 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
-import { clientIp, rateGate, secretsEqual } from "../_shared/edge-guard.ts"
+import { clientIp, logServerError, rateGate, requestBodyLimit, secretsEqual } from "../_shared/edge-guard.ts"
 
 // P1: server-to-server webhook — no CORS headers at all (browsers never call
 // this). Constant-time secret compare, generic order-id shape check (the old
@@ -43,9 +43,11 @@ Deno.serve(async (req) => {
   }
 
   try {
+    const bodyLimit = requestBodyLimit(req, 128 * 1024)
+    if (bodyLimit) return new Response("Request too large", { status: 413 })
     const admin = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!)
     // P1: flood gate for forged-but correctly-signed replays / retry storms.
-    const ipGate = await rateGate(admin, req, `webhook:ip:${clientIp(req)}`, 600, 3600)
+    const ipGate = await rateGate(admin, req, `webhook:ip:${clientIp(req)}`, 600, 3600, true)
     if (ipGate) return ipGate
 
     const payload = await req.json() as Record<string, unknown>
@@ -84,7 +86,7 @@ Deno.serve(async (req) => {
     if (receivedAmount === null || receivedAmount !== Number(order.amount_vnd)) return new Response("Amount mismatch", { status: 422 })
     const receivedCurrency = text(transaction?.transaction_currency ?? payloadOrder?.order_currency ?? payload.currency).toUpperCase()
     if (receivedCurrency && receivedCurrency !== order.currency) return new Response("Currency mismatch", { status: 422 })
-    if (order.status === "canceled" || order.status === "refunded" || order.status === "failed") return new Response("Order state conflict", { status: 409 })
+    if (order.status === "canceled" || order.status === "refunded" || order.status === "failed") return Response.json({ success: true, ignored: true }, { status: 200 })
 
     const transactionId = text(transaction?.transaction_id ?? transaction?.id ?? payload.referenceCode) || null
     const eventId = text(transaction?.id ?? payload.id ?? payload.timestamp) || null
@@ -127,6 +129,7 @@ Deno.serve(async (req) => {
     }
     return Response.json({ success: true, ...result })
   } catch {
+    logServerError("sepay_webhook_processing_failed")
     return new Response("Webhook processing failed", { status: 500 })
   }
 })

@@ -7,6 +7,8 @@ const PRODUCTION_ORIGINS = [
   "https://quizpka.online",
   "https://www.quizpka.online",
 ];
+const errorLogTimes = new Map<string, number>();
+const metricTimes = new Map<string, number>();
 
 function isAllowedOrigin(origin: string): boolean {
   if (PRODUCTION_ORIGINS.includes(origin)) return true;
@@ -51,11 +53,49 @@ function tooMany(req: Request, windowSeconds: number): Response {
   });
 }
 
+export function requestBodyLimit(req: Request, maxBytes: number): Response | null {
+  const rawLength = req.headers.get("content-length")
+  const length = rawLength ? Number(rawLength) : NaN
+  if (Number.isFinite(length) && length > maxBytes) {
+    return jsonWithCors(req, { error: "Request body too large" }, 413)
+  }
+  return null
+}
+
+export async function readJsonBody(req: Request, maxBytes: number): Promise<unknown | null> {
+  const body = await req.text()
+  if (new TextEncoder().encode(body).byteLength > maxBytes) return null
+  try {
+    return JSON.parse(body) as unknown
+  } catch {
+    return null
+  }
+}
+
+export function logServerError(code: string): void {
+  const now = Date.now();
+  const last = errorLogTimes.get(code) ?? 0;
+  if (now - last < 60_000) return;
+  errorLogTimes.set(code, now);
+  console.error(code);
+}
+
+async function recordSecurityMetric(admin: any, key: string): Promise<void> {
+  const now = Date.now();
+  const last = metricTimes.get(key) ?? 0;
+  if (now - last < 60_000) return;
+  metricTimes.set(key, now);
+  try {
+    await admin.rpc("increment_security_metric", { p_metric_key: key, p_amount: 1 });
+  } catch {
+    // Metrics must never change the request outcome or create a retry loop.
+  }
+}
+
 /**
  * Fixed-window rate gate backed by public.check_edge_rate_limit().
- * Fail-open on DB errors so a rate-table outage never locks out real users
- * (Cloudflare WAF from P0 remains the outer shield). Silent: no logging,
- * because floods would turn logs into a billing vector (see P0).
+ * The caller selects fail-open or fail-closed per endpoint. Silent: no
+ * per-request logging, because floods would turn logs into a billing vector.
  */
 export async function rateGate(
   // deno-lint-ignore no-explicit-any
@@ -64,6 +104,7 @@ export async function rateGate(
   bucket: string,
   limit: number,
   windowSeconds: number,
+  failClosed = false,
 ): Promise<Response | null> {
   try {
     const { data, error } = await admin.rpc("check_edge_rate_limit", {
@@ -71,11 +112,16 @@ export async function rateGate(
       p_limit: limit,
       p_window_seconds: windowSeconds,
     });
-    if (error) return null;
+    if (error) {
+      if (failClosed) await recordSecurityMetric(admin, "rate_limit_backend_failure");
+      return failClosed ? tooMany(req, 30) : null;
+    }
     if (data === true) return null;
+    await recordSecurityMetric(admin, "rate_limit_rejected");
     return tooMany(req, windowSeconds);
   } catch {
-    return null;
+    if (failClosed) await recordSecurityMetric(admin, "rate_limit_backend_failure");
+    return failClosed ? tooMany(req, 30) : null;
   }
 }
 

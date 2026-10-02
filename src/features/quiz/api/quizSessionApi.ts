@@ -31,11 +31,13 @@ export type QuizSessionResult = {
 
 export class QuizSessionApiError extends Error {
   readonly status: number | undefined
+  readonly sessionId: string | undefined
 
-  constructor(message: string, status?: number) {
+  constructor(message: string, status?: number, sessionId?: string) {
     super(message)
     this.name = "QuizSessionApiError"
     this.status = status
+    this.sessionId = sessionId
   }
 }
 
@@ -51,12 +53,19 @@ async function invoke<T>(functionName: string, body: Record<string, unknown>): P
     if (context instanceof Response) {
       try {
         const payload = await context.clone().json() as { error?: unknown; message?: unknown }
-        if (typeof payload.error === "string") message = payload.error
+          if (typeof payload.error === "string") message = payload.error
         else if (typeof payload.message === "string") message = payload.message
       } catch {
         // Keep the SDK error when the function did not return JSON.
       }
-      throw new QuizSessionApiError(message, context.status)
+      let sessionId: string | undefined
+      try {
+        const payload = await context.clone().json() as { sessionId?: unknown }
+        sessionId = typeof payload.sessionId === "string" ? payload.sessionId : undefined
+      } catch {
+        // No structured recovery data.
+      }
+      throw new QuizSessionApiError(message, context.status, sessionId)
     }
     if (error.name === "FunctionsRelayError") message = `${message} (Edge Function unavailable)`
     throw new QuizSessionApiError(message)

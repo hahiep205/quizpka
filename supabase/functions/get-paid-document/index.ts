@@ -1,12 +1,7 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
+import { clientIp, corsHeaders, logServerError, rateGate, requestBodyLimit, readJsonBody } from "../_shared/edge-guard.ts"
 
-const cors = (req: Request) => ({
-  "Access-Control-Allow-Origin": req.headers.get("origin") ?? Deno.env.get("SITE_URL") ?? "",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-  "Access-Control-Allow-Methods": "POST, OPTIONS",
-  "Content-Type": "application/json",
-  "Vary": "Origin",
-})
+const cors = (req: Request) => corsHeaders(req, { "Content-Type": "application/json" })
 
 // Paid image-document sets. Storage paths are never taken from client input:
 // only these whitelisted document ids can be resolved.
@@ -69,9 +64,15 @@ Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: cors(req) })
   if (req.method !== "POST") return json({ error: "Method not allowed" }, 405, req)
   try {
+    const bodyLimit = requestBodyLimit(req, 16 * 1024)
+    if (bodyLimit) return bodyLimit
+    const projectUrl = Deno.env.get("SUPABASE_URL")!
+    const admin = createClient(projectUrl, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!)
+    const ipGate = await rateGate(admin, req, `document:ip:${clientIp(req)}`, 50, 600, true)
+    if (ipGate) return ipGate
     const authorization = req.headers.get("Authorization")
     if (!authorization) return json({ error: "Authentication required" }, 401, req)
-    const input = await req.json().catch(() => null) as { subjectId?: unknown; documentId?: unknown } | null
+    const input = await readJsonBody(req, 16 * 1024) as { subjectId?: unknown; documentId?: unknown } | null
     const subjectId = typeof input?.subjectId === "string" ? input.subjectId : ""
     const documentId = typeof input?.documentId === "string" ? input.documentId : ""
     const productId = subjectProducts[subjectId]
@@ -79,11 +80,13 @@ Deno.serve(async (req) => {
     if (!productId || !objectPaths || documentProducts[documentId] !== productId) {
       return json({ error: "Unknown document" }, 400, req)
     }
-    const projectUrl = Deno.env.get("SUPABASE_URL")!
     const userClient = createClient(projectUrl, Deno.env.get("SUPABASE_ANON_KEY")!, { global: { headers: { Authorization: authorization } } })
     const { data: { user }, error: userError } = await userClient.auth.getUser()
     if (userError || !user) return json({ error: "Authentication required" }, 401, req)
-    const admin = createClient(projectUrl, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!)
+    const userGate = await rateGate(admin, req, `document:user:${user.id}`, 30, 600, true)
+    if (userGate) return userGate
+    const resourceGate = await rateGate(admin, req, `document:user:${user.id}:${documentId}`, 20, 600, true)
+    if (resourceGate) return resourceGate
     const { data: profile, error: profileError } = await admin.from("profiles").select("status").eq("id", user.id).single()
     if (profileError || profile.status !== "active") return json({ error: "Account is not active" }, 403, req)
     const { data: purchase, error: purchaseError } = await admin.from("purchases").select("id").eq("user_id", user.id).eq("product_id", productId).eq("status", "paid").maybeSingle()
@@ -95,9 +98,9 @@ Deno.serve(async (req) => {
       if (item.error || !item.signedUrl) throw new Error("Document unavailable")
       return { url: item.signedUrl, name: objectPaths[index].split("/").pop() ?? `image-${index + 1}.jpg` }
     })
-    return json({ images }, 200, req)
-  } catch (error) {
-    console.error("Get paid document failed", error)
+    return new Response(JSON.stringify({ images }), { status: 200, headers: corsHeaders(req, { "Content-Type": "application/json", "Cache-Control": "private, max-age=300" }) })
+  } catch {
+    logServerError("paid_document_failed")
     return json({ error: "Unable to load document" }, 500, req)
   }
 })

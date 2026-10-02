@@ -70,25 +70,41 @@ export type LoadQuizQuestionsInput = {
   signal: AbortSignal
 }
 
+const paidBankCache = new Map<string, unknown>()
+const paidBankInFlight = new Map<string, Promise<unknown>>()
+
+async function loadPaidBank(examId: string, subjectId: string): Promise<unknown> {
+  const key = `${subjectId}:${examId}`
+  const cached = paidBankCache.get(key)
+  if (cached) return cached
+  const existing = paidBankInFlight.get(key)
+  if (existing) return existing
+  const request = supabase.functions.invoke("get-paid-question-bank", { body: { examId, subjectId } })
+    .then(async ({ data, error }) => {
+      if (error) throw new QuestionBankDataError(examId, await paidBankErrorMessage(error))
+      let payload: unknown = data
+      if (typeof payload === "string") {
+        try {
+          payload = JSON.parse(payload)
+        } catch {
+          throw new QuestionBankDataError(examId, "response is not valid JSON")
+        }
+      }
+      paidBankCache.set(key, payload)
+      return payload
+    })
+    .finally(() => paidBankInFlight.delete(key))
+  paidBankInFlight.set(key, request)
+  return request
+}
+
 export async function loadQuizQuestions({ subject, exam, setup, chapterId, toeicScope, signal }: LoadQuizQuestionsInput): Promise<Question[]> {
   let questions: Question[]
   if (subject.id === "toeic" && toeicScope) {
     questions = await loadToeicQuestions(toeicScope, exam.id, setup, signal)
-  } else if (subject.id === "khoa-hoc-du-lieu-va-tri-tue-nhan-tao" || subject.id === "nhap-mon-khoa-hoc-du-lieu-va-tri-tue-nhan-tao" || subject.id === "danh-gia-va-kiem-dinh-chat-luong-phan-mem" || subject.id === "bao-mat-ung-dung-he-thong" || subject.id === "marketing-can-ban" || subject.id === "kinh-te-vi-mo-macro" || subject.id === "tin-hoc-van-phong" || subject.id === "nguyen-ly-tai-chinh" || subject.id === "lich-su-van-minh-the-gioi" || subject.id === "kinh-te-hoc" || subject.id === "phap-luat-dai-cuong" || subject.id === "tu-tuong-ho-chi-minh" || subject.id === "quan-tri-hoc" || subject.id === "kinh-te-chinh-tri-mac-lenin" || subject.id === "lich-su-dang-cong-san-viet-nam" || subject.id === "triet-hoc-mac-lenin-2tc" || subject.id === "triet-hoc-mac-lenin-3tc" || subject.id === "chu-nghia-xa-hoi-khoa-hoc" || subject.id === "toan-roi-rac" || subject.id === "tieng-anh-1" || subject.id === "phuong-phap-nghien-cuu-khoa-hoc" || subject.id === "nghien-cuu-khoa-hoc-trong-kinh-te" || subject.id === "tadv-traphi" || subject.id === "thong-ke-trong-kinh-doanh" || subject.id === "co-so-du-lieu") {
-    const { data, error } = await supabase.functions.invoke("get-paid-question-bank", { body: { examId: exam.id, subjectId: subject.id } })
+  } else if (subject.id === "khoa-hoc-du-lieu-va-tri-tue-nhan-tao" || subject.id === "nhap-mon-khoa-hoc-du-lieu-va-tri-tue-nhan-tao" || subject.id === "danh-gia-va-kiem-dinh-chat-luong-phan-mem" || subject.id === "bao-mat-ung-dung-he-thong" || subject.id === "marketing-can-ban" || subject.id === "kinh-te-vi-mo-macro" || subject.id === "tin-hoc-van-phong" || subject.id === "nguyen-ly-tai-chinh" || subject.id === "lich-su-van-minh-the-gioi" || subject.id === "kinh-te-hoc" || subject.id === "phap-luat-dai-cuong" || subject.id === "tu-tuong-ho-chi-minh" || subject.id === "quan-tri-hoc" || subject.id === "kinh-te-chinh-tri-mac-lenin" || subject.id === "lich-su-dang-cong-san-viet-nam" || subject.id === "triet-hoc-mac-lenin-2tc" || subject.id === "triet-hoc-mac-lenin-3tc" || subject.id === "chu-nghia-xa-hoi-khoa-hoc" || subject.id === "toan-roi-rac" || subject.id === "tieng-anh-1" || subject.id === "phuong-phap-nghien-cuu-khoa-hoc" || subject.id === "nghien-cuu-khoa-hoc-trong-kinh-te" || subject.id === "tadv-traphi" || subject.id === "thong-ke-trong-kinh-doanh" || subject.id === "co-so-du-lieu" || subject.id === "ky-nang-khoi-nghiep-va-lanh-dao" || subject.id === "ky-nang-quan-ly-du-an") {
     if (signal.aborted) throw new DOMException("Aborted", "AbortError")
-    if (error) throw new QuestionBankDataError(exam.id, await paidBankErrorMessage(error))
-    // The SDK parses the function response by Content-Type: a bank served as
-    // text/plain arrives as a raw JSON string instead of an object. Accept it
-    // so a server header regression can never break paid subjects again.
-    let payload: unknown = data
-    if (typeof payload === "string") {
-      try {
-        payload = JSON.parse(payload)
-      } catch {
-        throw new QuestionBankDataError(exam.id, "response is not valid JSON")
-      }
-    }
+    const payload = await loadPaidBank(exam.id, subject.id)
     const bank = parseQuestionBank(payload, exam.id)
     const filteredBank = chapterId && chapterId !== "all" && bank.questions && hasChapterSupport(subject.id)
       ? { ...bank, questions: filterQuestionsBySubjectChapter(subject.id, bank.questions, chapterId) }

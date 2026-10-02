@@ -1,5 +1,5 @@
 import { useCallback, useRef, useState } from "react"
-import { createQuizSession, enqueueQuizSessionSubmission, getQuizSession, submitQuizSession, type QuizSessionResponse, type QuizSessionResult } from "@/features/quiz/api/quizSessionApi"
+import { createQuizSession, enqueueQuizSessionSubmission, getQuizSession, QuizSessionApiError, submitQuizSession, type QuizSessionResponse, type QuizSessionResult } from "@/features/quiz/api/quizSessionApi"
 
 export function useQuizSession() {
   const [session, setSession] = useState<QuizSessionResponse | null>(null)
@@ -9,6 +9,27 @@ export function useQuizSession() {
   const [submissionPending, setSubmissionPending] = useState(false)
   const idempotencyKeyRef = useRef<string | null>(null)
   const [idempotencyKey, setIdempotencyKey] = useState<string | null>(null)
+
+  const resumeSession = useCallback(async (sessionId: string, key?: string) => {
+    setLoading(true)
+    setError(null)
+    if (key) {
+      idempotencyKeyRef.current = key
+      setIdempotencyKey(key)
+    }
+    try {
+      const current = await getQuizSession(sessionId)
+      setSession((previous) => previous ? { ...previous, ...current } : current)
+      if (current.result) setResult(current.result)
+      return current
+    } catch (cause) {
+      const nextError = cause instanceof Error ? cause : new Error(String(cause))
+      setError(nextError)
+      throw nextError
+    } finally {
+      setLoading(false)
+    }
+  }, [])
 
   const start = useCallback(async (examId: string) => {
     setLoading(true)
@@ -22,13 +43,16 @@ export function useQuizSession() {
       if (nextSession.result) setResult(nextSession.result)
       return nextSession
     } catch (cause) {
+      if (cause instanceof QuizSessionApiError && cause.status === 409 && cause.sessionId) {
+        return resumeSession(cause.sessionId, key)
+      }
       const nextError = cause instanceof Error ? cause : new Error(String(cause))
       setError(nextError)
       throw nextError
     } finally {
       setLoading(false)
     }
-  }, [])
+  }, [resumeSession])
 
   const submit = useCallback(async (answers: Record<string, number | string>) => {
     if (!session || !idempotencyKeyRef.current) throw new Error("Quiz session is not ready")
@@ -55,27 +79,6 @@ export function useQuizSession() {
     }
   }, [session])
 
-  const resume = useCallback(async (sessionId: string, idempotencyKey?: string) => {
-    setLoading(true)
-    setError(null)
-    if (idempotencyKey) {
-      idempotencyKeyRef.current = idempotencyKey
-      setIdempotencyKey(idempotencyKey)
-    }
-    try {
-      const current = await getQuizSession(sessionId)
-      setSession((previous) => previous ? { ...previous, ...current } : current)
-      if (current.result) setResult(current.result)
-      return current
-    } catch (cause) {
-      const nextError = cause instanceof Error ? cause : new Error(String(cause))
-      setError(nextError)
-      throw nextError
-    } finally {
-      setLoading(false)
-    }
-  }, [])
-
   return {
     session,
     result,
@@ -85,6 +88,6 @@ export function useQuizSession() {
     idempotencyKey,
     start,
     submit,
-    resume,
+    resume: resumeSession,
   }
 }

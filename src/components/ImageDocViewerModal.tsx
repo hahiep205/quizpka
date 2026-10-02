@@ -9,6 +9,27 @@ type Lang = "en" | "vi"
 
 type DocImage = { url: string; name: string }
 
+const documentCache = new Map<string, { images: DocImage[]; expiresAt: number }>()
+const documentRequests = new Map<string, Promise<DocImage[]>>()
+
+async function loadDocumentImages(subjectId: string, documentId: string): Promise<DocImage[]> {
+  const key = `${subjectId}:${documentId}`
+  const cached = documentCache.get(key)
+  if (cached && cached.expiresAt > Date.now() + 60_000) return cached.images
+  const current = documentRequests.get(key)
+  if (current) return current
+  const request = supabase.functions.invoke("get-paid-document", { body: { subjectId, documentId } })
+    .then(({ data, error }) => {
+      const rows = (data as { images?: DocImage[] } | null)?.images
+      if (error || !Array.isArray(rows) || !rows.length) throw new Error("Document unavailable")
+      documentCache.set(key, { images: rows, expiresAt: Date.now() + 55 * 60_000 })
+      return rows
+    })
+    .finally(() => documentRequests.delete(key))
+  documentRequests.set(key, request)
+  return request
+}
+
 type Props = {
   open: boolean
   lang: Lang
@@ -63,16 +84,10 @@ export function ImageDocViewerModal({ open, lang, title, subjectId, documentId, 
     setLoading(true)
     setError(false)
     setImages([])
-    void supabase.functions
-      .invoke("get-paid-document", { body: { subjectId, documentId } })
-      .then(({ data, error: invokeError }) => {
+    void loadDocumentImages(subjectId, documentId)
+      .then((rows) => {
         if (cancelled) return
-        const rows = (data as { images?: DocImage[] } | null)?.images
-        if (invokeError || !Array.isArray(rows) || !rows.length) {
-          setError(true)
-        } else {
-          setImages(rows)
-        }
+        setImages(rows)
       })
       .catch(() => {
         if (!cancelled) setError(true)
@@ -168,13 +183,8 @@ export function ImageDocViewerModal({ open, lang, title, subjectId, documentId, 
                 onClick={() => {
                   setError(false)
                   setLoading(true)
-                  void supabase.functions
-                    .invoke("get-paid-document", { body: { subjectId, documentId } })
-                    .then(({ data, error: invokeError }) => {
-                      const rows = (data as { images?: DocImage[] } | null)?.images
-                      if (invokeError || !Array.isArray(rows) || !rows.length) setError(true)
-                      else setImages(rows)
-                    })
+                   void loadDocumentImages(subjectId!, documentId!)
+                     .then((rows) => setImages(rows))
                     .catch(() => setError(true))
                     .finally(() => setLoading(false))
                 }}

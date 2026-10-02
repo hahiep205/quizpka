@@ -2,7 +2,7 @@
 # Chay:  $env:SUPABASE_DB_PASSWORD="..."; .\scripts\backup-database.ps1
 # Hoac:  .\scripts\backup-database.ps1 -DbPassword "..."   (khong khuyen nghi: hien lich su shell)
 #
-# Lay password: Supabase Dashboard -> project mbhzkugcfovdthjdjqtx -> Settings -> Database
+# Lay password: Supabase Dashboard -> project qwbujoppcqpnummhpfbs -> Settings -> Database
 #   -> Database password (neu quen: Reset database password) -> copy.
 # Yeu cau: pg_dump trong PATH. Neu chua co: winget install -e --id PostgreSQL.PostgreSQL.17
 #   (sau do mo lai terminal) hoac https://www.postgresql.org/download/windows/
@@ -11,7 +11,7 @@
 
 param(
   [string]$DbPassword = $env:SUPABASE_DB_PASSWORD,
-  [string]$ProjectRef = "mbhzkugcfovdthjdjqtx",
+  [string]$ProjectRef = "qwbujoppcqpnummhpfbs",
   [string]$DbHost,
   [int]$DbPort = 5432,
   [string]$DbUser,
