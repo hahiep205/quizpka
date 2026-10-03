@@ -103,4 +103,35 @@ export async function hasProductPurchase(userId: string, productId: string) {
   return Boolean(data)
 }
 
+/**
+ * Batch replacement for N x hasProductPurchase calls.
+ * Fetches all owned product_ids in ONE request with `in()`
+ * instead of one request per product (33 -> 1).
+ */
+export async function getOwnedProductIds(userId: string, productIds: readonly string[]): Promise<Set<string>> {
+  const unique = [...new Set(productIds.filter(Boolean))]
+  if (!userId || unique.length === 0) return new Set()
+  const { data, error } = await supabase
+    .from("purchases")
+    .select("product_id")
+    .eq("user_id", userId)
+    .eq("status", "paid")
+    .in("product_id", unique)
+  if (error) throw error
+  return new Set(((data ?? []) as { product_id: string }[]).map((row) => row.product_id))
+}
+
+const ALL_PAID_PRODUCT_IDS = [
+  "dsai101", "idsai101", "sqa101", "sec301", "mar101", "mac102", "oit101",
+  "fin101", "civ101", "eco101", "law101", "hcm101", "mgt101", "phy101",
+  "ppt101", "ppt102", "gt101", "dst101", "xst101", "mln102", "pec101",
+  "mln101", "his101", "soc101", "dm101", "ta101", "rm101", "rm102",
+  "tadv02", "sta201", "db101", "ent101", "pm101",
+]
+
+/** All paid product_ids (single source of truth for batch checks). */
+export function getAllPaidProductIds(): string[] {
+  return [...ALL_PAID_PRODUCT_IDS]
+}
+
 export const hasDsaiPurchase = (userId: string) => hasProductPurchase(userId, "dsai101")

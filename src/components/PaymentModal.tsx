@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react"
 import { Check, LoaderCircle, RefreshCw, X } from "lucide-react"
 import { hasProductPurchase } from "@/lib/purchases"
+import { markEntitlementOwned } from "@/features/entitlements/useEntitlements"
 import { logActivityEvent } from "@/features/activity/lib/activityLog"
 import { cn } from "@/lib/utils"
 
@@ -39,10 +40,13 @@ export function PaymentModal({ open, lang, payment, productId = "dsai101", order
     }
     if (!userId) return
     let active = true
+    // Poll bypasses the entitlements cache on purpose: a payment can land
+    // between polls, and a cached "not owned" must not hide it.
     const check = async () => {
       setChecking(true)
       try {
         if (active && await hasProductPurchase(userId, productId)) {
+          markEntitlementOwned(userId, productId)
           markPaid()
           onPaid()
         }
@@ -89,6 +93,7 @@ export function PaymentModal({ open, lang, payment, productId = "dsai101", order
     setError(false)
     try {
       if (await hasProductPurchase(userId, productId)) {
+        markEntitlementOwned(userId, productId)
         markPaid()
         onPaid()
       }

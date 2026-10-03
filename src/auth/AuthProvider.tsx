@@ -2,6 +2,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState, t
 import type { AuthChangeEvent, Session, User } from "@supabase/supabase-js"
 import { supabase } from "@/lib/supabase"
 import { logActivityEvent } from "@/features/activity/lib/activityLog"
+import { clearEntitlementsCache } from "@/features/entitlements/useEntitlements"
 import { logBlockedAccountView } from "@/features/admin/api/blockedViews"
 import type { AuthContextValue, AuthProfile, AuthStatus } from "./auth.types"
 
@@ -24,7 +25,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const applySession = useCallback(async (session: Session | null, authEvent?: AuthChangeEvent) => {
     const currentUser = session?.user ?? null
     setUser(currentUser)
-    if (!currentUser) { setProfile(null); setStatus("anonymous"); return }
+    if (!currentUser) { setProfile(null); setStatus("anonymous"); clearEntitlementsCache(); return }
 
     setProfile(createFallbackProfile(currentUser))
     try {
@@ -70,6 +71,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const signOut = useCallback(async () => {
     const { error } = await supabase.auth.signOut()
     if (error) throw error
+    clearEntitlementsCache()
   }, [])
 
   const updateProfile = useCallback(async (updates: { display_name?: string }) => {

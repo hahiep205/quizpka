@@ -20,7 +20,8 @@ import { applySubjectDisplayOverrides, filterVisibleSubjectExams } from "@/featu
 import { CatalogExamCard } from "@/components/CatalogExamCard"
 import { PaymentModal } from "@/components/PaymentModal"
 import { PurchaseDetailDialog } from "@/components/PurchaseDetailDialog"
-import { createPaidCheckout, formatSubjectPrice, getPaidProductId, hasProductPurchase } from "@/lib/purchases"
+import { createPaidCheckout, formatSubjectPrice, getPaidProductId } from "@/lib/purchases"
+import { loadEntitlements, markEntitlementOwned } from "@/features/entitlements/useEntitlements"
 import { logActivityEvent } from "@/features/activity/lib/activityLog"
 import { useAuth } from "@/auth/AuthProvider"
 
@@ -72,7 +73,7 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
   const { user } = useAuth()
   const tryExam = (exam: ExamCatalogItem) => nudge.requestNudge(async () => { try {
     const productId = getPaidProductId(exam.subjectCode)
-    if (!productId || (user?.id && await hasProductPurchase(user.id, productId))) return handleTryNow(exam)
+    if (!productId || (user?.id && (await loadEntitlements(user.id, [productId])).has(productId))) return handleTryNow(exam)
     setPurchaseError(null)
     setPurchaseExam(exam)
     } catch (error) { window.alert(error instanceof Error ? error.message : "Không thể tạo thanh toán. Vui lòng thử lại.") }
@@ -89,6 +90,7 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
     try {
       const result = await createPaidCheckout(productId)
       if (result.owned) {
+        if (user?.id) markEntitlementOwned(user.id, productId)
         setPurchaseExam(null)
         handleTryNow(purchaseExam)
         return

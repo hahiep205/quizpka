@@ -58,7 +58,8 @@ import { DashboardStatCard, dashboardStatGridClass } from "@/components/Dashboar
 import { LeaderboardView } from "@/components/LeaderboardView"
 import { DirectNotificationPopup } from "@/components/DirectNotificationPopup"
 import { formatTime } from "@/features/quiz/lib/quizHelpers"
-import { createPaidCheckout, formatSubjectPrice, getPaidProductId, hasProductPurchase } from "@/lib/purchases"
+import { createPaidCheckout, formatSubjectPrice, getAllPaidProductIds, getPaidProductId } from "@/lib/purchases"
+import { loadEntitlements, markEntitlementOwned, useEntitlements } from "@/features/entitlements/useEntitlements"
 import { useSubjectOverrides } from "@/hooks/useSubjectOverrides"
 import { applySubjectDisplayOverrides, filterDownloadableSubjectExams, filterVisibleSubjectExams } from "@/features/admin/lib/subjectDisplay"
 import type { ContactModalType } from "@/components/ContactModal"
@@ -169,7 +170,7 @@ export function DashboardPage({
     try {
       const productId = getPaidProductId(exam.subjectCode)
       if (!productId) return handleTryNow(exam)
-      if (dashboardUser?.id && await hasProductPurchase(dashboardUser.id, productId)) return handleTryNow(exam)
+      if (dashboardUser?.id && (await loadEntitlements(dashboardUser.id, [productId])).has(productId)) return handleTryNow(exam)
       setPurchaseError(null)
       setPurchaseExam(exam)
     } catch (error) { window.alert(error instanceof Error ? error.message : "Không thể tạo thanh toán. Vui lòng thử lại.") }
@@ -184,6 +185,7 @@ export function DashboardPage({
     try {
       const result = await createPaidCheckout(productId)
       if (result.owned) {
+        if (dashboardUser?.id) markEntitlementOwned(dashboardUser.id, productId)
         setPurchaseExam(null)
         handleTryNow(purchaseExam)
         return
@@ -690,32 +692,24 @@ function DownloadsView({ lang, onRequestDownload }: { lang: Lang; onRequestDownl
 
 function PurchasedView({ lang, onStartExam }: { lang: Lang; onStartExam: (exam: ExamCatalogItem) => void }) {
   const { user } = useAuth()
-  const [loading, setLoading] = useState(true)
-  const [ownedIds, setOwnedIds] = useState<string[]>([])
-  const [error, setError] = useState(false)
   const displayOverrides = useSubjectOverrides()
   const displayedPaidExams = useMemo(
     () => applySubjectDisplayOverrides(filterVisibleSubjectExams(paidExams, displayOverrides), displayOverrides),
     [displayOverrides],
   )
-  useEffect(() => {
-    let mounted = true
-    if (!user?.id) {
-      setLoading(false)
-      return
-    }
-    void Promise.all(paidExams.map(async (exam) => (await hasProductPurchase(user.id, getPaidProductId(exam.subjectCode) ?? "") ? exam.id : null)))
-      .then((values) => { if (mounted) setOwnedIds(values.filter((value): value is string => value !== null)) })
-      .catch(() => {
-        if (mounted) setError(true)
-      })
-      .finally(() => {
-        if (mounted) setLoading(false)
-      })
-    return () => {
-      mounted = false
-    }
-  }, [user?.id])
+  // One batched /purchases request for all 33 products (was N x hasProductPurchase).
+  const allPaidProductIds = useMemo(() => getAllPaidProductIds(), [])
+  const { owned, loading, error } = useEntitlements(user?.id, allPaidProductIds)
+  const ownedIds = useMemo(
+    () =>
+      paidExams
+        .filter((exam) => {
+          const productId = getPaidProductId(exam.subjectCode)
+          return productId !== null && owned.has(productId)
+        })
+        .map((exam) => exam.id),
+    [owned],
+  )
 
   return (
     <section className="space-y-5">
