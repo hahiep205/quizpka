@@ -2,17 +2,16 @@ import { createClient } from "@supabase/supabase-js"
 
 // VITE_SUPABASE_URL luôn là URL Supabase thật (https://<ref>.supabase.co).
 //
-// Same-origin proxy (bỏ CORS preflight — mỗi preflight là 1 dòng log edge
-// phía Supabase):
-// - Mặc định: mọi host https (deploy Vercel: apex/www/preview) dùng base
-//   `${location.origin}/sb` qua rewrite trong vercel.json — luôn same-origin
-//   nên trình duyệt không gửi preflight. Base bắt buộc tuyệt đối vì
-//   supabase-js derive mọi URL con bằng `new URL(path, base)`.
-// - Local dev (http/localhost): gọi thẳng Supabase (Vite dev không có /sb).
-// - VITE_SUPABASE_PROXY_URL đè default: đặt absolute URL để ép dùng proxy
-//   khác, hoặc "off" để tắt proxy dù đang chạy https (cần build lại).
-// WebSocket realtime KHÔNG qua được proxy (Vercel không upgrade WS) nên luôn
-// được trỏ thẳng về endpoint wss của Supabase bên dưới.
+// Same-origin proxy /sb (vercel.json rewrite) hiện TẮT theo mặc định:
+// thực nghiệm 2026-10-04 qua edge_rate_limits cho thấy Supabase gateway
+// KHÔNG nhận được IP client qua Vercel rewrite (mọi request hiện IP egress
+// Vercel chung) — giữ proxy bật sẽ gộp rate-limit theo IP của toàn bộ user
+// và làm mất giá trị lịch sử IP đăng nhập. Chỉ bật lại khi đã có cơ chế
+// truyền IP client đáng tin (vd. Vercel middleware gắn header riêng).
+//
+// Khi bật: đặt VITE_SUPABASE_PROXY_URL=<absolute base> (vd.
+// https://quizpka.online/sb) rồi build lại. Base bắt buộc tuyệt đối vì
+// supabase-js derive mọi URL con bằng `new URL(path, base)`.
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
 
@@ -21,9 +20,7 @@ if (!supabaseUrl || !supabaseAnonKey) {
 }
 
 const rawProxy = (import.meta.env.VITE_SUPABASE_PROXY_URL ?? "").trim()
-const proxyUrl = rawProxy
-  ? (rawProxy.toLowerCase() === "off" ? "" : rawProxy)
-  : (typeof location !== "undefined" && location.protocol === "https:" ? `${location.origin}/sb` : "")
+const proxyUrl = rawProxy && rawProxy.toLowerCase() !== "off" ? rawProxy : ""
 
 // storageKey của auth-js derive từ hostname của base URL (`sb-<host[0]>-auth-token`).
 // Ghim theo hostname THẬT để bật proxy không làm mọi user bị logged-out.
