@@ -222,8 +222,9 @@ export function AdminPage({ lang }: Props) {
   const [attemptsError, setAttemptsError] = useState<string | null>(null)
   const [eventFilter, setEventFilter] = useState<"all" | ActivityEventType>("all")
   const [timelineQuery, setTimelineQuery] = useState("")
-  // Activity log is capped at the newest 3000 events (~1 day), so the
-  // default window matches the retained data instead of an empty 7-day range.
+  // Activity log is capped at the newest 3000 events by the hourly prune job
+  // (migration 20261004110000), so the default window matches the retained
+  // data instead of an empty 7-day range.
   const [rangeDays] = useState(1)
   const [page, setPage] = useState(0)
   const [timelinePage, setTimelinePage] = useState(0)
