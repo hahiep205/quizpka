@@ -95,3 +95,13 @@ mỗi lần chạy window 24h của nó quét gần trọn retention 1 ngày c�
 Bản gốc nằm tại `trash/scripts/find-user-ip.js` (thùng rác, không xóa, không
 dùng). Nếu tương lai cần tra IP theo user: dùng template Edge ở mục 3 với
 window 3h thay vì khôi phục script này.
+
+## 5. Đợt cắt giảm 2026-10-04: giảm VOLUME log từ gốc
+
+Quy tắc đọc (mục 1–2) chỉ giữ được khi volume log nhỏ — mỗi lần đọc quét toàn
+bộ log trong window, nên volume càng nhỏ scan càng rẻ. Migration
+`20261004100000…20261004100200` + thay đổi frontend/edge-functions giảm
+~65–75% request (mỗi request = 1+ dòng log edge): Admin bỏ dump bảng nguyên
+vẹn, notifications về 1 digest RPC, bỏ poll 60s, gộp rate-gate edge, same-origin
+proxy bỏ preflight. Sau khi deploy 24–48h, so sánh bằng **MỘT** query tổng hợp
+window 3h ở mục 3 — cấm mở Log Explorer window 24h/7d để "xem tổng thể".

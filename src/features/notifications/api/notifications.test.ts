@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from "vitest"
 import {
-  fetchAdminNotificationHistory, fetchNotificationBatchDetails, fetchNotificationBatchRecipients, fetchNotificationRecipients,
-  fetchNotifications, fetchUnreadDirectNotification, fetchUnreadNotificationCount,
+  fetchAdminNotificationHistory, fetchNotificationBatchDetails, fetchNotificationBatchRecipients, fetchNotificationDigest, fetchNotificationRecipients,
+  fetchNotifications,
   markAllNotificationsRead, markNotificationRead, parseNotification,
   revokeAdminNotification, sendAdminNotifications,
 } from "./notifications"
@@ -74,19 +74,27 @@ describe("notification batches API", () => {
     })
   })
 
-  it("fetches only the first unread direct notification and handles an empty inbox", async () => {
-    rpc.mockResolvedValueOnce({ data: [row], error: null }).mockResolvedValueOnce({ data: [], error: null })
-    await expect(fetchUnreadDirectNotification()).resolves.toEqual(parseNotification(row))
-    expect(rpc).toHaveBeenLastCalledWith("list_my_notifications", {
-      p_before_created_at: null, p_before_id: null, p_limit: 1, p_unread_only: true, p_direct_only: true,
+  it("fetches count + direct + first pages in ONE digest RPC", async () => {
+    rpc.mockResolvedValue({ data: { unread_count: 3, direct: row, items_all: [row], items_unread: [row] }, error: null })
+    await expect(fetchNotificationDigest({ includeUnread: true, dismissedIds: [1, 2] })).resolves.toEqual({
+      unreadCount: 3,
+      direct: parseNotification(row),
+      itemsAll: [parseNotification(row)],
+      itemsUnread: [parseNotification(row)],
     })
-    await expect(fetchUnreadDirectNotification()).resolves.toBeNull()
+    expect(rpc).toHaveBeenCalledExactlyOnceWith("get_my_notification_digest", {
+      p_include_unread: true, p_dismissed_ids: [1, 2], p_limit: 30,
+    })
   })
 
-  it("gets the server's unread count rather than counting a page", async () => {
-    rpc.mockResolvedValue({ data: 305, error: null })
-    await expect(fetchUnreadNotificationCount()).resolves.toBe(305)
-    expect(rpc).toHaveBeenCalledExactlyOnceWith("count_my_unread_notifications")
+  it("returns a null unread page when not requested and caps dismissed ids at 100", async () => {
+    rpc.mockResolvedValue({ data: { unread_count: 0, direct: null, items_all: [], items_unread: null }, error: null })
+    await expect(fetchNotificationDigest({ includeUnread: false, dismissedIds: Array.from({ length: 150 }, (_, index) => index + 1) })).resolves.toEqual({
+      unreadCount: 0, direct: null, itemsAll: [], itemsUnread: null,
+    })
+    expect(rpc).toHaveBeenLastCalledWith("get_my_notification_digest", {
+      p_include_unread: false, p_dismissed_ids: Array.from({ length: 100 }, (_, index) => index + 1), p_limit: 30,
+    })
   })
 
   it("maps batch history without grouping similar batches or eagerly fetching recipients", async () => {
@@ -157,8 +165,7 @@ describe("notification batches API", () => {
 
   it.each([
     ["inbox", () => fetchNotifications()],
-    ["direct", () => fetchUnreadDirectNotification()],
-    ["count", () => fetchUnreadNotificationCount()],
+    ["digest", () => fetchNotificationDigest({ includeUnread: false, dismissedIds: [] })],
     ["history", () => fetchAdminNotificationHistory()],
     ["batch details", () => fetchNotificationBatchDetails(7)],
     ["batch recipients", () => fetchNotificationBatchRecipients(7)],

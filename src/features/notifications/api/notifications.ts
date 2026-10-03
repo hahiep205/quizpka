@@ -74,22 +74,38 @@ export async function fetchNotifications(
   return ((data ?? []) as NotificationRow[]).map(parseNotification)
 }
 
-export async function fetchUnreadDirectNotification(): Promise<UserNotification | null> {
-  const { data, error } = await supabase.rpc("list_my_notifications", {
-    p_before_created_at: null,
-    p_before_id: null,
-    p_limit: 1,
-    p_unread_only: true,
-    p_direct_only: true,
-  })
-  if (error) throw notificationError(error)
-  return data?.[0] ? parseNotification(data[0] as NotificationRow) : null
+export type NotificationDigest = {
+  unreadCount: number
+  direct: UserNotification | null
+  itemsAll: UserNotification[]
+  itemsUnread: UserNotification[] | null
 }
 
-export async function fetchUnreadNotificationCount(): Promise<number> {
-  const { data, error } = await supabase.rpc("count_my_unread_notifications")
+/** Một round-trip thay cho cặp count + list trực tiếp (xem get_my_notification_digest). */
+export async function fetchNotificationDigest(options: {
+  includeUnread: boolean
+  dismissedIds: number[]
+}): Promise<NotificationDigest> {
+  const { data, error } = await supabase.rpc("get_my_notification_digest", {
+    p_include_unread: options.includeUnread,
+    p_dismissed_ids: options.dismissedIds.slice(0, 100),
+    p_limit: 30,
+  })
   if (error) throw notificationError(error)
-  return Number(data ?? 0)
+  const result = (data ?? {}) as {
+    unread_count?: number
+    direct?: NotificationRow | null
+    items_all?: NotificationRow[] | null
+    items_unread?: NotificationRow[] | null
+  }
+  return {
+    unreadCount: Number(result.unread_count ?? 0),
+    direct: result.direct ? parseNotification(result.direct) : null,
+    itemsAll: (result.items_all ?? []).map(parseNotification),
+    itemsUnread: result.items_unread === null || result.items_unread === undefined
+      ? null
+      : result.items_unread.map(parseNotification),
+  }
 }
 
 export async function fetchAdminNotificationHistory(cursor?: NotificationCursor): Promise<AdminNotificationHistory[]> {

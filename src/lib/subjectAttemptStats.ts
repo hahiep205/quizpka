@@ -159,6 +159,12 @@ export async function loadSubjectAttemptCounts(): Promise<AttemptCounts> {
 
 export async function incrementSubjectAttempt(subjectId: string): Promise<void> {
   if (!getSubjectById(subjectId)) return
+  // RPC chỉ có EXECUTE cho authenticated: client mất session (vd. in-app
+  // browser chặn localStorage) sẽ luôn nhận 401/42501 và sinh log lỗi vô ích.
+  // getSession() đọc localStorage, không tốn network; đếm optimistic phía
+  // dưới vẫn chạy cho UI.
+  const { data: { session } } = await supabase.auth.getSession()
+  if (!session) return
   const optimistic = (cachedCounts[subjectId] ?? 0) + 1
   emitSubjectAttemptCounts({ ...cachedCounts, [subjectId]: optimistic })
 

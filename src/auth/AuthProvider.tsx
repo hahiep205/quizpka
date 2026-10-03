@@ -8,6 +8,10 @@ import type { AuthContextValue, AuthProfile, AuthStatus } from "./auth.types"
 
 const AuthContext = createContext<AuthContextValue | null>(null)
 
+// In-flight dedupe: INITIAL_SESSION + SIGNED_IN có thể về liên tiếp cho cùng
+// user (OAuth callback) — dùng chung 1 promise để không gọi GET profiles 2 lần.
+let inflightProfile: { userId: string; promise: Promise<AuthProfile | null> } | null = null
+
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [status, setStatus] = useState<AuthStatus>("loading")
   const [user, setUser] = useState<User | null>(null)
@@ -22,14 +26,27 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return nextProfile
   }, [])
 
+  const loadProfileOnce = useCallback((currentUser: User) => {
+    if (inflightProfile?.userId === currentUser.id) return inflightProfile.promise
+    const promise = loadProfile(currentUser).finally(() => {
+      if (inflightProfile?.promise === promise) inflightProfile = null
+    })
+    inflightProfile = { userId: currentUser.id, promise }
+    return promise
+  }, [loadProfile])
+
   const applySession = useCallback(async (session: Session | null, authEvent?: AuthChangeEvent) => {
     const currentUser = session?.user ?? null
     setUser(currentUser)
     if (!currentUser) { setProfile(null); setStatus("anonymous"); clearEntitlementsCache(); return }
 
+    // Token refresh chứng tỏ session còn sống; profile đã load lúc sign-in.
+    // Bỏ qua để không đốt thêm 1 GET /rest/v1/profiles mỗi lần refresh.
+    if (authEvent === "TOKEN_REFRESHED") return
+
     setProfile(createFallbackProfile(currentUser))
     try {
-      const nextProfile = await loadProfile(currentUser)
+      const nextProfile = await loadProfileOnce(currentUser)
       setStatus(nextProfile?.status === "blocked" ? "blocked" : "authenticated")
       if (nextProfile?.status === "blocked") {
         // Tài khoản bị chặn vẫn ghi 1 log "đã xem lý do khóa" để admin biết
@@ -49,18 +66,25 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setProfile(null)
       setStatus("blocked")
     }
-  }, [loadProfile])
+  }, [loadProfileOnce])
 
   useEffect(() => {
     let mounted = true
-    void supabase.auth.getSession().then(({ data }) => { if (mounted) void applySession(data.session) })
+    // auth-js luôn emit INITIAL_SESSION ngay sau subscribe (có hoặc không có
+    // session) — không gọi getSession() riêng nữa để tránh load profiles 2 lần
+    // mỗi lần tải trang. Timeout fallback chỉ là dây an toàn phòng hờ.
+    const fallback = window.setTimeout(() => {
+      if (!mounted) return
+      void supabase.auth.getSession().then(({ data }) => { if (mounted) void applySession(data.session) })
+    }, 1500)
     // Supabase recommends deferring follow-up queries from this callback;
     // querying the database synchronously here can deadlock the auth lock.
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
       if (!mounted) return
-      window.setTimeout(() => { if (mounted) void applySession(session, _event) }, 0)
+      window.clearTimeout(fallback)
+      window.setTimeout(() => { if (mounted) void applySession(session, event) }, 0)
     })
-    return () => { mounted = false; subscription.unsubscribe() }
+    return () => { mounted = false; window.clearTimeout(fallback); subscription.unsubscribe() }
   }, [applySession])
 
   const signInWithGoogle = useCallback(async () => {

@@ -1,5 +1,5 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
-import { clientIp, corsHeaders, logServerError, rateGate, requestBodyLimit, readJsonBody } from "../_shared/edge-guard.ts"
+import { clientIp, corsHeaders, logServerError, rateGate, rateGates, requestBodyLimit, readJsonBody } from "../_shared/edge-guard.ts"
 
 const cors = (req: Request) => corsHeaders(req, { "Content-Type": "application/json" })
 
@@ -83,10 +83,13 @@ Deno.serve(async (req) => {
     const userClient = createClient(projectUrl, Deno.env.get("SUPABASE_ANON_KEY")!, { global: { headers: { Authorization: authorization } } })
     const { data: { user }, error: userError } = await userClient.auth.getUser()
     if (userError || !user) return json({ error: "Authentication required" }, 401, req)
-    const userGate = await rateGate(admin, req, `document:user:${user.id}`, 30, 600, true)
-    if (userGate) return userGate
-    const resourceGate = await rateGate(admin, req, `document:user:${user.id}:${documentId}`, 20, 600, true)
-    if (resourceGate) return resourceGate
+    // Log-cost: user + resource gates share ONE check_edge_rate_limits
+    // round-trip (the pre-auth IP gate above must stay its own earlier call).
+    const gateResponse = await rateGates(admin, req, [
+      { bucket: `document:user:${user.id}`, limit: 30, windowSeconds: 600, failClosed: true },
+      { bucket: `document:user:${user.id}:${documentId}`, limit: 20, windowSeconds: 600, failClosed: true },
+    ])
+    if (gateResponse) return gateResponse
     const { data: profile, error: profileError } = await admin.from("profiles").select("status").eq("id", user.id).single()
     if (profileError || profile.status !== "active") return json({ error: "Account is not active" }, 403, req)
     const { data: purchase, error: purchaseError } = await admin.from("purchases").select("id").eq("user_id", user.id).eq("product_id", productId).eq("status", "paid").maybeSingle()

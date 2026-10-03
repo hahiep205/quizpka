@@ -6,27 +6,24 @@ import { useAuth } from "@/auth/AuthProvider"
 import { DashboardStatCard, dashboardStatGridClass } from "@/components/DashboardStatCard"
 import { Card } from "@/components/ui/card"
 import { Dialog } from "@/components/ui/dialog"
-import { fetchAllAdminUsers, setAdminUserStatus } from "@/features/admin/api/adminUsers"
+import { fetchAdminUsersPage, setAdminUserStatus, type FetchAdminUsersPageOptions } from "@/features/admin/api/adminUsers"
 import { fetchBlockedViewStat } from "@/features/admin/api/blockedViews"
 import { fetchUserLoginEvents, type LoginEvent } from "@/features/admin/api/loginEvents"
-import { fetchAllActivityTimeline, fetchAllPracticeAttempts, fetchPracticeAttempts, fetchUserActivity } from "@/features/admin/api/adminActivity"
-import { ACTIVITY_LABELS, parseActivityRows, parseAttemptRows, type ActivityEvent, type ActivityEventType, type PracticeAttemptRow } from "@/features/activity/lib/activityLog"
+import { fetchAdminAttempts, fetchAdminEvents, fetchPracticeAttempts, fetchUserActivity } from "@/features/admin/api/adminActivity"
+import { ACTIVITY_LABELS, parseAttemptRows, type ActivityEvent, type ActivityEventType, type PracticeAttemptRow } from "@/features/activity/lib/activityLog"
 import { bucketHoursToday, eventsByType, filterByDays, topSubjects } from "@/features/admin/lib/adminOverview"
 import { ANOMALY_META, detectAllAnomalies, detectUserAnomalies, riskScore, type AnomalyFlag, type AnomalySeverity } from "@/features/admin/lib/anomalyDetectors"
 import { supabase } from "@/lib/supabase"
 import { useOnlineUserIds } from "@/hooks/useOnlinePresence"
 import {
-  computeAdminKpis,
-  filterAdminUsers,
-  filterByTab,
-  sortAdminUsers,
+  type AdminKpis,
   type AdminSortKey,
   type AdminUser,
 } from "@/features/admin/lib/adminStats"
 import { appRoutes, getCurrentPath, navigate, type AppPath } from "@/app/navigation"
 import { cn } from "@/lib/utils"
 import { fetchAdminNotificationHistory, fetchNotificationBatchDetails, fetchNotificationBatchRecipients, fetchNotificationRecipients, revokeAdminNotification, sendAdminNotifications, type AdminNotificationHistory, type NotificationRecipient } from "@/features/notifications/api/notifications"
-import { fetchAllAdminPayments, sortAdminPaymentsByCreatedAt, type AdminPayment, type PaymentStatus } from "@/features/admin/api/adminPayments"
+import { fetchAdminOrders, sortAdminPaymentsByCreatedAt, todayMidnightISO, type AdminPayment, type PaymentStatus } from "@/features/admin/api/adminPayments"
 import { grantAdminPurchase, fetchAdminProducts, type AdminProduct } from "@/features/admin/api/adminEntitlements"
 import { deleteSupportReport, fetchSupportReports, updateSupportStatus, type SupportReport, type SupportStatus, type SupportType } from "@/features/support/api/supportReports"
 import { SubjectManager } from "@/features/admin/ui/SubjectManager"
@@ -138,10 +135,27 @@ const TIMELINE_PAGE_SIZE = 20
 const ATTEMPTS_PAGE_SIZE = 20
 const PAYMENT_PAGE_SIZE = 20
 
+const EMPTY_KPIS: AdminKpis = {
+  totalLogined: 0,
+  activeAccount: 0,
+  blockedAccount: 0,
+  active7d: 0,
+  active30d: 0,
+  totalAttempts: 0,
+  avgAccuracy: 0,
+  totalDurationSeconds: 0,
+  new7d: 0,
+  newToday: 0,
+}
+
 export function AdminPage({ lang }: Props) {
   const { profile, signOut } = useAuth()
   const [users, setUsers] = useState<AdminUser[]>([])
+  const [usersTotal, setUsersTotal] = useState(0)
+  const [kpisState, setKpisState] = useState<AdminKpis | null>(null)
   const [userCounts, setUserCounts] = useState({ total: 0, active: 0, blocked: 0 })
+  const [queryDebounced, setQueryDebounced] = useState("")
+  const [grantUsers, setGrantUsers] = useState<AdminUser[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [query, setQuery] = useState("")
@@ -155,6 +169,10 @@ export function AdminPage({ lang }: Props) {
   const [sortKey, setSortKey] = useState<AdminSortKey | "risk">("lastActive")
   const [sortDir, setSortDir] = useState<"asc" | "desc">("desc")
   const [selectedId, setSelectedId] = useState<string | null>(null)
+  // Cache AdminUser theo id cho UserDrawer: drawer có thể mở từ timeline /
+  // attempts (user không nằm trên trang hiện tại) — fetch 1 dòng khi thiếu.
+  const [userCache, setUserCache] = useState<Map<string, AdminUser>>(new Map())
+  const [usersReloadToken, setUsersReloadToken] = useState(0)
   const [notificationRecipients, setNotificationRecipients] = useState<NotificationRecipient[]>([])
   const [notificationRecipientQuery, setNotificationRecipientQuery] = useState("")
   const [notificationRecipientOffset, setNotificationRecipientOffset] = useState(0)
@@ -265,6 +283,14 @@ export function AdminPage({ lang }: Props) {
     }
   }, [section, loadNotificationHistory])
 
+  const loadPayments = useCallback(() => {
+    void fetchAdminOrders(todayMidnightISO()).then((res) => {
+      if (!mountedRef.current) return
+      setPayments(res.payments)
+      setPaymentsError(res.ok ? null : res.error)
+    })
+  }, [])
+
   const reload = useCallback(() => {
     setError(null)
     setLoading(false)
@@ -274,40 +300,68 @@ export function AdminPage({ lang }: Props) {
       setNotificationRefresh((value) => value + 1)
       return
     }
-    if (section !== "supports") {
-      setLoading(true)
-      void fetchAllAdminUsers().then((res) => {
-        if (!mountedRef.current) return
-        setUsers(res.users)
-        setUserCounts({ total: res.totalUsers, active: res.activeUsers, blocked: res.blockedUsers })
-        setError(res.ok ? null : res.error)
-        setLoading(false)
-      })
-    }
     if (["overview", "users", "timeline", "attempts"].includes(section)) {
-      void fetchAllActivityTimeline().then((res) => {
+      // P-log-cost: 1 request/bảng thay cho vòng dump 1000 dòng/trang.
+      void fetchAdminEvents().then((res) => {
         if (!mountedRef.current) return
         setEvents(res.events)
         setEventsError(res.ok ? null : res.error)
       })
-      void fetchAllPracticeAttempts().then((res) => {
+      void fetchAdminAttempts().then((res) => {
         if (!mountedRef.current) return
         setAttempts(res.attempts)
         setAttemptsError(res.ok ? null : res.error)
       })
+      setUsersReloadToken((value) => value + 1)
     }
-    if (["overview", "payment", "sendquiz"].includes(section)) {
-      void fetchAllAdminPayments().then((res) => {
-        if (!mountedRef.current) return
-        setPayments(res.payments)
-        setPaymentsError(res.ok ? null : res.error)
-      })
-    }
+    if (["overview", "payment", "sendquiz"].includes(section)) loadPayments()
     if (section === "payment" || section === "sendquiz") void fetchAdminProducts().then(setAdminProducts).catch(() => setAdminProducts([]))
     if (section === "supports") void fetchSupportReports().then((reports) => { setSupportReports(reports); setSupportsError(null) }).catch((error: unknown) => setSupportsError(error instanceof Error ? error.message : "Không đọc được báo lỗi."))
-  }, [section, loadNotificationHistory])
+  }, [section, loadNotificationHistory, loadPayments])
 
   useEffect(() => { reload() }, [reload])
+
+  // Debounce ô search users để không bắn 1 RPC mỗi phím.
+  useEffect(() => {
+    const timer = window.setTimeout(() => setQueryDebounced(query), 300)
+    return () => window.clearTimeout(timer)
+  }, [query])
+
+  // Sort thường: paging chạy server-side. onlineOnly / sort "risk": lọc/sort
+  // phía client trên một cửa sổ 100 dòng (flags chỉ tồn tại phía client).
+  const serverPaged = !onlineOnly && sortKey !== "risk"
+
+  // User picker (sendquiz): server-side search thay cho dump toàn bộ users.
+  useEffect(() => {
+    if (section !== "sendquiz") return
+    let cancelled = false
+    const timer = window.setTimeout(() => {
+      void fetchAdminUsersPage({ query: grantUserQuery, role: "user", sort: "displayName", desc: false, limit: 30 }).then((res) => {
+        if (!cancelled) setGrantUsers(res.users)
+      })
+    }, 300)
+    return () => { cancelled = true; window.clearTimeout(timer) }
+  }, [section, grantUserQuery])
+
+  // Cache user cho UserDrawer: hydrate từ trang hiện tại; khi drawer mở từ
+  // timeline/attempts với user lạ thì fetch đúng 1 dòng đó.
+  useEffect(() => {
+    setUserCache((prev) => {
+      if (users.every((u) => prev.has(u.id))) return prev
+      const next = new Map(prev)
+      for (const u of users) next.set(u.id, u)
+      return next
+    })
+  }, [users])
+  useEffect(() => {
+    if (!selectedId || userCache.has(selectedId)) return
+    let cancelled = false
+    void fetchAdminUsersPage({ userIds: [selectedId], limit: 1 }).then((res) => {
+      const u = res.users[0]
+      if (u && !cancelled) setUserCache((prev) => { const next = new Map(prev); next.set(u.id, u); return next })
+    })
+    return () => { cancelled = true }
+  }, [selectedId, userCache])
   useEffect(() => {
     if (section !== "notifications") return
     let cancelled = false
@@ -341,17 +395,16 @@ export function AdminPage({ lang }: Props) {
     if (getCurrentPath() === appRoutes.admin) navigate(appRoutes.adminOverview, { replace: true })
   }, [])
 
-  // Realtime: prepend event/attempt mới khi đang mở /admin (optional, im lặng khi tắt).
+  // Realtime: prepend attempt mới khi đang mở /admin (optional, im lặng khi tắt).
+  // Bỏ listener user_activity_events: bảng đã bị gỡ khỏi publication
+  // supabase_realtime (20261002045635_remove_activity_realtime.sql) nên
+  // listener đó không bao giờ fire.
   useEffect(() => {
     if (!["overview", "users", "timeline", "attempts"].includes(section)) { setLive(false); return }
     let channel: ReturnType<typeof supabase.channel> | null = null
     try {
       channel = supabase
         .channel("admin-observability")
-        .on("postgres_changes", { event: "INSERT", schema: "public", table: "user_activity_events" }, (payload) => {
-          const rows = parseActivityRows([payload.new])
-          if (rows.length) setEvents((prev) => [...rows, ...prev].slice(0, 2000))
-        })
         .on("postgres_changes", { event: "INSERT", schema: "public", table: "practice_attempts" }, (payload) => {
           const rows = parseAttemptRows([payload.new])
           if (rows.length) setAttempts((prev) => [...rows, ...prev].slice(0, 2000))
@@ -366,20 +419,55 @@ export function AdminPage({ lang }: Props) {
   }, [section])
 
   // Reset về trang 1 mỗi khi đổi filter/sort.
-  useEffect(() => { setPage(0) }, [query, role, status, onlineOnly, sortKey, sortDir])
+  useEffect(() => { setPage(0) }, [queryDebounced, role, status, onlineOnly, sortKey, sortDir])
 
   useEffect(() => { setTimelinePage(0) }, [eventFilter, timelineQuery, onlyAnomaly, rangeDays, section])
   useEffect(() => { setAttemptsPage(0) }, [onlyAnomaly, rangeDays, section])
   useEffect(() => { setPaymentPage(0) }, [paymentQuery, paymentStatus, paymentProduct])
 
-  const kpis = useMemo(() => ({ ...computeAdminKpis(users), totalLogined: userCounts.total, activeAccount: userCounts.active, blockedAccount: userCounts.blocked }), [userCounts, users])
-  // Flags bất thường trên toàn bộ dữ liệu đã tải (A1/A2/A3/A6/A7).
+  const kpis = useMemo<AdminKpis>(() => ({ ...(kpisState ?? EMPTY_KPIS), totalLogined: userCounts.total, activeAccount: userCounts.active, blockedAccount: userCounts.blocked }), [kpisState, userCounts])
+  // Flags bất thường trên dữ liệu đã tải (A1/A2/A3/A6/A7).
   const allFlags = useMemo(() => detectAllAnomalies(attempts, events), [attempts, events])
   const flagCountByUser = useMemo(() => {
     const m = new Map<string, number>()
     for (const f of allFlags) m.set(f.userId, (m.get(f.userId) ?? 0) + 1)
     return m
   }, [allFlags])
+  const flaggedUserIds = useMemo(
+    () => [...flagCountByUser.entries()].filter(([, count]) => count > 0).sort((a, b) => b[1] - a[1]).slice(0, 200).map(([id]) => id),
+    [flagCountByUser],
+  )
+  const flaggedUserIdsKey = sortKey === "risk" ? flaggedUserIds.join(",") : ""
+
+  // P-log-cost: users search/filter/sort/paging qua public.admin_list_users
+  // (1 request thay cho fan-out 4 request/trang + dump cả bảng).
+  const usersFetchToken = useRef(0)
+  useEffect(() => {
+    if (!["overview", "users", "timeline", "attempts"].includes(section)) return
+    const request = ++usersFetchToken.current
+    setLoading(true)
+    const options: FetchAdminUsersPageOptions = serverPaged
+      ? { query: queryDebounced, role, status, sort: sortKey, desc: sortDir === "desc", offset: page * USER_PAGE_SIZE, limit: USER_PAGE_SIZE }
+      : sortKey === "risk"
+        ? { userIds: flaggedUserIdsKey ? flaggedUserIdsKey.split(",") : [], limit: 100 }
+        : { query: queryDebounced, role, status, limit: 100 }
+    const timer = window.setTimeout(() => {
+      void fetchAdminUsersPage(options).then((res) => {
+        if (!mountedRef.current || request !== usersFetchToken.current) return
+        if (res.ok && serverPaged && res.total > 0 && page * USER_PAGE_SIZE >= res.total) {
+          setPage(Math.max(0, Math.ceil(res.total / USER_PAGE_SIZE) - 1))
+          return
+        }
+        setUsers(res.users)
+        setUsersTotal(res.total)
+        setKpisState(res.kpis)
+        if (res.kpis) setUserCounts({ total: res.kpis.totalLogined, active: res.kpis.activeAccount, blocked: res.kpis.blockedAccount })
+        setError(res.ok ? null : res.error)
+        setLoading(false)
+      })
+    }, 300)
+    return () => window.clearTimeout(timer)
+  }, [section, queryDebounced, role, status, sortKey, sortDir, onlineOnly, serverPaged, page, usersReloadToken, flaggedUserIdsKey])
   const flagsByEventId = useMemo(() => {
     const m = new Map<number, AnomalyFlag[]>()
     for (const f of allFlags) for (const id of f.evidence.eventIds ?? []) {
@@ -402,32 +490,35 @@ export function AdminPage({ lang }: Props) {
   const anomalyUserCount = flagCountByUser.size
 
   const visible = useMemo(() => {
-    const byTab = filterByTab(users, "logined")
-    const byFilter = filterAdminUsers(byTab, { query, role, status })
-    const byOnline = onlineOnly ? byFilter.filter((u) => onlineIds.has(u.id)) : byFilter
+    const byOnline = onlineOnly ? users.filter((u) => onlineIds.has(u.id)) : users
     if (sortKey === "risk") {
       return [...byOnline].sort((a, b) =>
         (flagCountByUser.get(b.id) ?? 0) - (flagCountByUser.get(a.id) ?? 0)
         || Date.parse(b.lastActiveAt ?? "") - Date.parse(a.lastActiveAt ?? ""),
       )
     }
-    return sortAdminUsers(byOnline, sortKey, sortDir)
-  }, [flagCountByUser, onlineIds, onlineOnly, query, role, sortDir, sortKey, status, users])
+    return byOnline
+  }, [flagCountByUser, onlineIds, onlineOnly, sortKey, users])
 
-  const pageCount = Math.max(1, Math.ceil(visible.length / USER_PAGE_SIZE))
+  const pageCount = serverPaged
+    ? Math.max(1, Math.ceil(usersTotal / USER_PAGE_SIZE))
+    : Math.max(1, Math.ceil(visible.length / USER_PAGE_SIZE))
   const safePage = Math.min(page, pageCount - 1)
   const pagedUsers = useMemo(
-    () => visible.slice(safePage * USER_PAGE_SIZE, safePage * USER_PAGE_SIZE + USER_PAGE_SIZE),
-    [safePage, visible],
+    () => serverPaged ? visible : visible.slice(safePage * USER_PAGE_SIZE, safePage * USER_PAGE_SIZE + USER_PAGE_SIZE),
+    [safePage, serverPaged, visible],
   )
 
+  // Tên user cho timeline/attempts/flags: RPC events/attempts đã join sẵn
+  // display_name/email, cộng với trang users hiện tại (ưu tiên bản mới).
   const nameById = useMemo(() => {
     const m = new Map<string, string>()
+    for (const e of events) { if (e.displayName || e.email) m.set(e.userId, e.displayName ?? e.email ?? "") }
+    for (const a of attempts) { if (a.displayName || a.email) m.set(a.userId, a.displayName ?? a.email ?? "") }
     for (const u of users) m.set(u.id, u.displayName ?? u.email ?? u.id.slice(0, 8))
     return m
-  }, [users])
+  }, [attempts, events, users])
 
-  const userById = useMemo(() => new Map(users.map((user) => [user.id, user])), [users])
   const paymentProductOptions = useMemo(() => {
     const byId = new Map<string, string>()
     for (const product of adminProducts) byId.set(product.id, product.name)
@@ -447,13 +538,12 @@ export function AdminPage({ lang }: Props) {
       if (paymentStatus !== "latest" && paymentStatus !== "all" && payment.status !== paymentStatus) return false
       if (paymentProduct !== "all" && payment.productId !== paymentProduct) return false
       if (!q) return true
-      const user = userById.get(payment.userId)
-      return [payment.orderId, payment.transactionId, payment.productName, payment.productId, payment.userId, user?.displayName, user?.email]
+      return [payment.orderId, payment.transactionId, payment.productName, payment.productId, payment.userId, payment.userDisplayName, payment.userEmail]
         .some((value) => value?.toLowerCase().includes(q))
     })
     if (paymentStatus !== "latest") return filtered
     return sortAdminPaymentsByCreatedAt(filtered)
-  }, [paymentQuery, paymentStatus, paymentProduct, payments, userById])
+  }, [paymentQuery, paymentStatus, paymentProduct, payments])
   // KPI giao dịch chỉ tính trong ngày hôm nay (0h–23h59 giờ địa phương),
   // dùng cùng mốc thời gian hiển thị ở cột "Thời gian tạo đơn".
   const paymentKpis = useMemo(() => {
@@ -539,7 +629,7 @@ export function AdminPage({ lang }: Props) {
   const evTypeMax = useMemo(() => Math.max(1, ...evTypeCounts.map((c) => c.count)), [evTypeCounts])
   const subjectTops = useMemo(() => topSubjects(rangedAttempts), [rangedAttempts])
 
-  const selected = users.find((u) => u.id === selectedId) ?? null
+  const selected = selectedId ? userCache.get(selectedId) ?? null : null
 
   const goSection = (key: AdminSection) => {
     setSection(key)
@@ -606,9 +696,8 @@ export function AdminPage({ lang }: Props) {
     void grantAdminPurchase({ userId: grantUserId, productId: grantProductId })
       .then((result) => {
         setGrantResult({ ok: true, message: result.alreadyGranted ? "User đã có quyền môn học này. Không có thay đổi mới." : "Đã cấp quyền truy cập môn học cho user." })
-        return fetchAllAdminPayments()
+        loadPayments()
       })
-      .then((result) => { setPayments(result.payments); setPaymentsError(result.ok ? null : result.error) })
       .catch((err: unknown) => setGrantResult({ ok: false, message: err instanceof Error ? err.message : "Không thể cấp quyền môn học." }))
       .finally(() => setGrantSending(false))
   }
@@ -643,12 +732,6 @@ export function AdminPage({ lang }: Props) {
       .finally(() => setUpdatingSupportId(null))
   }
 
-  const grantUsers = users.filter((user) => {
-    const query = grantUserQuery.trim().toLowerCase()
-    if (!query) return true
-    return [user.displayName, user.email, user.id].some((value) => value?.toLowerCase().includes(query))
-  })
-
   const adminTopbarTitle =
     section === "users"
       ? lang === "vi" ? "Người dùng" : "Users"
@@ -681,8 +764,8 @@ export function AdminPage({ lang }: Props) {
           <div className="dashboard-reveal space-y-6 sm:space-y-8">
             {error && section !== "notifications" && section !== "supports" ? (
               <div className="rounded-[16px] border-2 border-amber-200 bg-amber-50 p-4 text-sm font-semibold text-amber-800 shadow-[0_3px_0_#f5d78e] sm:rounded-[20px] sm:p-5 dark:border-amber-500/20 dark:bg-amber-500/10 dark:text-amber-200 dark:shadow-none">
-                <p className="font-black">Chưa đọc được full data: {error}</p>
-                <p className="mt-1">Hãy chạy file <code>supabase/migrations/*_admin_read.sql</code> trong Supabase SQL editor để mở policy cho role=admin.</p>
+                <p className="font-black">Không đọc được dữ liệu admin: {error}</p>
+                <p className="mt-1">RPC admin_list_* yêu cầu <code>public.is_admin()</code> (role=admin, status=active). Kiểm tra migration <code>20261004100200_admin_list_rpcs.sql</code> đã chạy trên prod chưa.</p>
               </div>
             ) : null}
             {section === "notifications" ? (
@@ -772,7 +855,7 @@ export function AdminPage({ lang }: Props) {
                 </Card>
                 {paymentsError ? <Card variant="dashed" className="p-5 text-sm font-bold text-red-600">{paymentsError}</Card> : null}
                 {!paymentsError && !filteredPayments.length ? <Card variant="dashed" className="py-14 text-center"><WalletCards className="mx-auto h-9 w-9 text-slate-300" /><p className="mt-3 text-sm font-bold text-slate-500">Chưa có giao dịch phù hợp.</p></Card> : null}
-                {pagedPayments.length ? <div className="overflow-x-auto rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none"><table className="w-full min-w-[900px] text-left text-sm"><thead><tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-wide text-slate-400 dark:bg-white/5"><th className="px-4 py-3">User</th><th className="px-4 py-3">Môn học</th><th className="px-4 py-3">Mã đơn</th><th className="px-4 py-3 text-right">Số tiền</th><th className="px-4 py-3">Trạng thái</th><th className="px-4 py-3">Thời gian tạo đơn</th></tr></thead><tbody>{pagedPayments.map((payment) => { const user = userById.get(payment.userId); return <tr key={payment.orderId} className="border-t border-slate-100 dark:border-white/5"><td className="px-4 py-3"><p className="font-extrabold text-[#100F3E] dark:text-white">{user?.displayName ?? "(chưa đặt tên)"}</p><p className="text-xs font-semibold text-slate-400">{user?.email ?? payment.userId}</p></td><td className="max-w-[240px] px-4 py-3 font-bold text-slate-600 dark:text-slate-300">{payment.productName}</td><td className="px-4 py-3 font-mono text-xs text-slate-500">{payment.orderId}<span className="block text-[10px] text-slate-400">{payment.transactionId ?? "Chưa có mã giao dịch"}</span></td><td className="px-4 py-3 text-right font-black text-[#129BDC]">{formatVnd(payment.amountVnd)}</td><td className="px-4 py-3"><PaymentStatusBadge status={payment.status} /></td><td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(payment.createdAt, lang)}</td></tr> })}</tbody></table></div> : null}
+                {pagedPayments.length ? <div className="overflow-x-auto rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none"><table className="w-full min-w-[900px] text-left text-sm"><thead><tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-wide text-slate-400 dark:bg-white/5"><th className="px-4 py-3">User</th><th className="px-4 py-3">Môn học</th><th className="px-4 py-3">Mã đơn</th><th className="px-4 py-3 text-right">Số tiền</th><th className="px-4 py-3">Trạng thái</th><th className="px-4 py-3">Thời gian tạo đơn</th></tr></thead><tbody>{pagedPayments.map((payment) => <tr key={payment.orderId} className="border-t border-slate-100 dark:border-white/5"><td className="px-4 py-3"><p className="font-extrabold text-[#100F3E] dark:text-white">{payment.userDisplayName ?? "(chưa đặt tên)"}</p><p className="text-xs font-semibold text-slate-400">{payment.userEmail ?? payment.userId}</p></td><td className="max-w-[240px] px-4 py-3 font-bold text-slate-600 dark:text-slate-300">{payment.productName}</td><td className="px-4 py-3 font-mono text-xs text-slate-500">{payment.orderId}<span className="block text-[10px] text-slate-400">{payment.transactionId ?? "Chưa có mã giao dịch"}</span></td><td className="px-4 py-3 text-right font-black text-[#129BDC]">{formatVnd(payment.amountVnd)}</td><td className="px-4 py-3"><PaymentStatusBadge status={payment.status} /></td><td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(payment.createdAt, lang)}</td></tr>)}</tbody></table></div> : null}
                 {filteredPayments.length > PAYMENT_PAGE_SIZE ? <div className="flex items-center justify-between"><p className="text-sm font-bold text-slate-400">Hiển thị {safePaymentPage * PAYMENT_PAGE_SIZE + 1}–{Math.min(filteredPayments.length, safePaymentPage * PAYMENT_PAGE_SIZE + PAYMENT_PAGE_SIZE)} / {filteredPayments.length}</p><div className="flex gap-2"><button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safePaymentPage === 0} onClick={() => setPaymentPage(safePaymentPage - 1)}>← Trước</button><button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safePaymentPage >= paymentPageCount - 1} onClick={() => setPaymentPage(safePaymentPage + 1)}>Sau →</button></div></div> : null}
               </section>
             ) : null}
@@ -793,7 +876,7 @@ export function AdminPage({ lang }: Props) {
                       <option value="">Chọn user...</option>
                       {grantUsers.map((user) => <option key={user.id} value={user.id}>{user.displayName ?? "(chưa đặt tên)"} · {user.email ?? user.id}</option>)}
                     </select>
-                    <p className="mt-1 text-xs font-semibold text-slate-400">Hiển thị {grantUsers.length}/{users.filter((user) => user.role !== "admin").length} user.</p>
+                    <p className="mt-1 text-xs font-semibold text-slate-400">Hiển thị {grantUsers.length} user khớp (tối đa 30, chỉ role user).</p>
                   </div>
                   <div>
                     <label htmlFor="grant-product" className="text-sm font-black">Môn học trả phí</label>
@@ -1153,9 +1236,9 @@ export function AdminPage({ lang }: Props) {
                       ))}
                     </div>
                   ) : null}
-                  {visible.length > USER_PAGE_SIZE ? (
+                  {pageCount > 1 ? (
                     <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                      <p className="text-sm font-bold text-slate-400">Hiển thị {safePage * USER_PAGE_SIZE + 1}–{Math.min(visible.length, safePage * USER_PAGE_SIZE + USER_PAGE_SIZE)} / {visible.length}</p>
+                      <p className="text-sm font-bold text-slate-400">Hiển thị {safePage * USER_PAGE_SIZE + 1}–{Math.min(serverPaged ? usersTotal : visible.length, safePage * USER_PAGE_SIZE + USER_PAGE_SIZE)} / {serverPaged ? usersTotal : visible.length}</p>
                       <div className="flex gap-2">
                         <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safePage === 0} onClick={() => setPage(safePage - 1)}>← Trước</button>
                         <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safePage >= pageCount - 1} onClick={() => setPage(safePage + 1)}>Sau →</button>

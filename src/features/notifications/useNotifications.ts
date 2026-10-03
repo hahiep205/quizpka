@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useSyncExternalStore } from "react"
 import { useAuth } from "@/auth/AuthProvider"
 import { supabase } from "@/lib/supabase"
-import { fetchNotifications, fetchUnreadDirectNotification, fetchUnreadNotificationCount, markAllNotificationsRead, markNotificationRead, type UserNotification } from "./api/notifications"
+import { fetchNotificationDigest, fetchNotifications, markAllNotificationsRead, markNotificationRead, type UserNotification } from "./api/notifications"
 
 type Filter = "all" | "unread"
 type Page = { items: UserNotification[]; hasMore: boolean; loading: boolean; error: string | null; pages: number }
@@ -34,21 +34,6 @@ function createStore(userId: string | null) {
   }
   const current = (token: number) => active && token === revision
 
-  async function findDirect(token: number) {
-    const first = await fetchUnreadDirectNotification()
-    if (!first || !dismissed.has(first.id)) return first
-    let cursor: ReturnType<typeof cursorOf> | undefined
-    // A dismissed newest row must not hide older pending direct notifications.
-    while (current(token)) {
-      const items = await fetchNotifications(cursor, { unreadOnly: true, directOnly: true })
-      const next = items.find((item) => !dismissed.has(item.id))
-      if (next) return next
-      if (items.length < 30) return null
-      cursor = cursorOf(items[items.length - 1])
-    }
-    return null
-  }
-
   async function refresh() {
     if (!active || state.mutating) return
     clearTimeout(timer)
@@ -56,23 +41,28 @@ function createStore(userId: string | null) {
     const filters = (["all", "unread"] as const).filter((filter) => state[filter].pages > 0)
     for (const filter of filters) publish({ [filter]: { ...state[filter], loading: true } })
     publish({ error: null })
-    await Promise.all([
-      fetchUnreadNotificationCount()
-        .then((unreadCount) => { if (current(token)) publish({ unreadCount }) })
-        .catch((error: unknown) => { if (current(token)) publish({ error: errorMessage(error) }) }),
-      findDirect(token)
-        .then((direct) => { if (current(token)) publish({ direct }) })
-        .catch((error: unknown) => { if (current(token)) publish({ error: errorMessage(error) }) }),
-      ...filters.map(async (filter) => {
-        try {
-          // Refresh only the first page, never replay an arbitrarily long cursor chain.
-          const items = await fetchNotifications(undefined, { unreadOnly: filter === "unread" })
-          if (current(token)) publish({ [filter]: { items, hasMore: items.length === 30, pages: 1, loading: false, error: null } })
-        } catch (error) {
-          if (current(token)) publish({ [filter]: { ...state[filter], loading: false, error: errorMessage(error) } })
-        }
-      }),
-    ])
+    // Một round-trip duy nhất (digest) thay cho cặp count + list trực tiếp;
+    // vòng lặp "direct mới nhất bị dismiss thì đi tìm direct cũ hơn" đã dời
+    // xuống server qua p_dismissed_ids.
+    try {
+      const digest = await fetchNotificationDigest({ includeUnread: filters.includes("unread"), dismissedIds: [...dismissed] })
+      if (!current(token)) return
+      const direct = digest.direct && !dismissed.has(digest.direct.id) ? digest.direct : null
+      publish({
+        unreadCount: digest.unreadCount,
+        direct,
+        all: filters.includes("all")
+          ? { items: digest.itemsAll, hasMore: digest.itemsAll.length === 30, pages: 1, loading: false, error: null }
+          : { ...state.all, loading: false },
+        unread: filters.includes("unread") && digest.itemsUnread
+          ? { items: digest.itemsUnread, hasMore: digest.itemsUnread.length === 30, pages: 1, loading: false, error: null }
+          : { ...state.unread, loading: false },
+      })
+    } catch (error) {
+      if (current(token)) {
+        publish({ error: errorMessage(error), all: { ...state.all, loading: false }, unread: { ...state.unread, loading: false } })
+      }
+    }
   }
 
   function invalidate() {
@@ -112,14 +102,15 @@ function createStore(userId: string | null) {
     window.addEventListener("focus", onVisible)
     window.addEventListener("online", onVisible)
     document.addEventListener("visibilitychange", onVisible)
-    const interval = setInterval(onVisible, 60_000)
+    // Không poll định kỳ: realtime (kênh recipient-notifications) + focus /
+    // online / visibilitychange đã phủ đủ. Poll 60s cũ sinh 2-4 RPC mỗi phút
+    // kể cả khi không mở notification UI.
     dispose = () => {
       void supabase.removeChannel(channel)
       subscription.unsubscribe()
       window.removeEventListener("focus", onVisible)
       window.removeEventListener("online", onVisible)
       document.removeEventListener("visibilitychange", onVisible)
-      clearInterval(interval)
     }
     void refresh()
   }

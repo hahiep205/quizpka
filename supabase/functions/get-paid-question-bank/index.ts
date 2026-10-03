@@ -1,5 +1,5 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
-import { clientIp, corsHeaders, getUserWithTimeout, logServerError, rateGate, requestBodyLimit, readJsonBody } from "../_shared/edge-guard.ts"
+import { clientIp, corsHeaders, getUserWithTimeout, logServerError, rateGate, rateGates, requestBodyLimit, readJsonBody } from "../_shared/edge-guard.ts"
 
 // P1: CORS whitelist (was: echo any Origin). Contract unchanged (full bank
 // JSON); Egress is cut by per-user/IP rate gates + private browser cache
@@ -96,10 +96,15 @@ Deno.serve(async (req) => {
     const user = await getUserWithTimeout(userClient, bearer, 8000).catch(() => null)
     if (!user) return new Response(JSON.stringify({ error: "Authentication required" }), { status: 401, headers: corsHeaders(req) })
     // P1: per-user gate — a scraper with a stolen token is capped at 120 banks/h.
-    const userGate = await rateGate(admin, req, `bank:user:${user.id}`, 20, 3600, true)
-    if (userGate) return userGate
-    const resourceGate = await rateGate(admin, req, `bank:user:${user.id}:${subjectId}:${examId}`, 20, 3600)
-    if (resourceGate) return resourceGate
+    // Log-cost: user + resource gates share ONE check_edge_rate_limits
+    // round-trip (the pre-auth IP gate above must stay its own earlier call).
+    // On RPC backend error the merged call fails closed (strictest policy);
+    // the standalone resource gate used to fail open.
+    const gateResponse = await rateGates(admin, req, [
+      { bucket: `bank:user:${user.id}`, limit: 20, windowSeconds: 3600, failClosed: true },
+      { bucket: `bank:user:${user.id}:${subjectId}:${examId}`, limit: 20, windowSeconds: 3600, failClosed: false },
+    ])
+    if (gateResponse) return gateResponse
     const { data: profile, error: profileError } = await admin.from("profiles").select("status").eq("id", user.id).single()
     if (profileError || profile.status !== "active") return new Response(JSON.stringify({ error: "Account is not active" }), { status: 403, headers: corsHeaders(req) })
     const { data: purchase, error: purchaseError } = await admin.from("purchases").select("id").eq("user_id", user.id).eq("product_id", productId).eq("status", "paid").maybeSingle()

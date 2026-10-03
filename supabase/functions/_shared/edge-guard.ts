@@ -125,6 +125,56 @@ export async function rateGate(
   }
 }
 
+export type RateGateSpec = {
+  bucket: string;
+  limit: number;
+  windowSeconds: number;
+  failClosed: boolean;
+};
+
+/**
+ * Multi-gate variant of rateGate: evaluates several gates in ONE
+ * check_edge_rate_limits round-trip — each separate call is its own edge
+ * log line on both sides. The RPC short-circuits at the first rejected
+ * gate, so later buckets are not consumed — identical to sequential
+ * rateGate() calls. Only pairs that run back-to-back (post-auth) may be
+ * merged; a pre-auth IP gate must stay its own earlier call so floods are
+ * still dropped before auth work.
+ */
+export async function rateGates(
+  // deno-lint-ignore no-explicit-any
+  admin: any,
+  req: Request,
+  gates: RateGateSpec[],
+): Promise<Response | null> {
+  if (gates.length === 0) return null;
+  // On RPC backend error the strictest per-gate policy wins (matches the
+  // sequential flow: a fail-closed gate before the error already 429'd).
+  const failClosed = gates.some((gate) => gate.failClosed);
+  try {
+    const { data, error } = await admin.rpc("check_edge_rate_limits", {
+      p_gates: gates.map((gate) => ({
+        bucket: gate.bucket,
+        limit: gate.limit,
+        window_seconds: gate.windowSeconds,
+      })),
+    });
+    if (error) {
+      if (failClosed) await recordSecurityMetric(admin, "rate_limit_backend_failure");
+      return failClosed ? tooMany(req, 30) : null;
+    }
+    if (data?.allowed === true) return null;
+    const results: unknown[] = Array.isArray(data?.results) ? data.results : [];
+    const rejectedIndex = results.findIndex((value) => value !== true);
+    const rejected = rejectedIndex >= 0 ? gates[rejectedIndex] : gates[0];
+    await recordSecurityMetric(admin, "rate_limit_rejected");
+    return tooMany(req, rejected.windowSeconds);
+  } catch {
+    if (failClosed) await recordSecurityMetric(admin, "rate_limit_backend_failure");
+    return failClosed ? tooMany(req, 30) : null;
+  }
+}
+
 /**
  * supabase.auth.getUser with a hard timeout. Without this, a slow/hung Auth
  * response holds the isolate; under flood that multiplies invocations cost.

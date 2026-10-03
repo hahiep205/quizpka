@@ -6,8 +6,7 @@ import { useNotifications } from "./useNotifications"
 const mocks = vi.hoisted(() => ({
   userId: "",
   fetchNotifications: vi.fn(),
-  fetchUnreadDirectNotification: vi.fn(),
-  fetchUnreadNotificationCount: vi.fn(),
+  fetchNotificationDigest: vi.fn(),
   markNotificationRead: vi.fn(),
   markAllNotificationsRead: vi.fn(),
   channel: vi.fn(),
@@ -21,8 +20,7 @@ vi.mock("@/auth/AuthProvider", () => ({
 }))
 vi.mock("./api/notifications", () => ({
   fetchNotifications: mocks.fetchNotifications,
-  fetchUnreadDirectNotification: mocks.fetchUnreadDirectNotification,
-  fetchUnreadNotificationCount: mocks.fetchUnreadNotificationCount,
+  fetchNotificationDigest: mocks.fetchNotificationDigest,
   markNotificationRead: mocks.markNotificationRead,
   markAllNotificationsRead: mocks.markAllNotificationsRead,
 }))
@@ -35,6 +33,7 @@ vi.mock("@/lib/supabase", () => ({
 }))
 
 type Handler = { config: { event: string; table: string; filter?: string }; callback: () => void }
+type Digest = { unreadCount: number; direct: UserNotification | null; itemsAll: UserNotification[]; itemsUnread: UserNotification[] | null }
 let handlers: Handler[]
 let unsubscribe: ReturnType<typeof vi.fn>
 let authChanged: (event: string, session: { user: { id: string } } | null) => void
@@ -43,6 +42,9 @@ let nextUser = 0
 
 function notification(id: number, direct = false): UserNotification {
   return { id, batchId: id, title: `Notice ${id}`, message: "Message", readAt: null, createdAt: "2026-09-07T00:00:00Z", isDirect: direct }
+}
+function digest(overrides: Partial<Digest> = {}): Digest {
+  return { unreadCount: 0, direct: null, itemsAll: [], itemsUnread: null, ...overrides }
 }
 function deferred<T>() {
   let resolve!: (value: T) => void
@@ -68,8 +70,7 @@ beforeEach(() => {
   handlers = []
   unsubscribe = vi.fn()
   mocks.fetchNotifications.mockResolvedValue([])
-  mocks.fetchUnreadDirectNotification.mockResolvedValue(null)
-  mocks.fetchUnreadNotificationCount.mockResolvedValue(0)
+  mocks.fetchNotificationDigest.mockResolvedValue(digest())
   mocks.markNotificationRead.mockResolvedValue(undefined)
   mocks.markAllNotificationsRead.mockResolvedValue(undefined)
   mocks.getSession.mockImplementation(async () => ({ data: { session: { user: { id: mocks.userId } } }, error: null }))
@@ -96,8 +97,7 @@ afterEach(() => {
 
 describe("useNotifications", () => {
   it("shares one subscription and exact count across consumers, disposing after the last unmount", async () => {
-    mocks.fetchNotifications.mockResolvedValue([notification(1)])
-    mocks.fetchUnreadNotificationCount.mockResolvedValue(127)
+    mocks.fetchNotificationDigest.mockResolvedValue(digest({ unreadCount: 127, itemsAll: [notification(1)] }))
     const list = renderHook(() => useNotifications("all"))
     const badge = renderHook(() => useNotifications())
     await tick()
@@ -118,16 +118,16 @@ describe("useNotifications", () => {
     badge.unmount()
     expect(mocks.removeChannel).toHaveBeenCalledTimes(1)
     expect(unsubscribe).toHaveBeenCalledTimes(1)
-    const calls = mocks.fetchUnreadNotificationCount.mock.calls.length
+    // Không còn poll định kỳ: đứng yên 2 phút không sinh thêm request nào.
+    const calls = mocks.fetchNotificationDigest.mock.calls.length
     await tick(120_000)
-    act(() => { window.dispatchEvent(new Event("focus")); window.dispatchEvent(new Event("online")) })
-    await tick()
-    expect(mocks.fetchUnreadNotificationCount).toHaveBeenCalledTimes(calls)
+    expect(mocks.fetchNotificationDigest).toHaveBeenCalledTimes(calls)
     expect(vi.getTimerCount()).toBe(0)
   })
 
-  it("uses server unread filtering and resets both cached lists to one page on polling", async () => {
+  it("uses server unread filtering and resets both cached lists to one page on refresh", async () => {
     const first = Array.from({ length: 30 }, (_, i) => notification(100 - i))
+    mocks.fetchNotificationDigest.mockResolvedValue(digest({ itemsAll: first, itemsUnread: first }))
     mocks.fetchNotifications.mockImplementation(async (cursor) => cursor ? [notification(1)] : first)
     const hook = renderHook(({ filter }: { filter: "all" | "unread" }) => useNotifications(filter), { initialProps: { filter: "all" } })
     await tick()
@@ -140,12 +140,13 @@ describe("useNotifications", () => {
     await act(async () => { await hook.result.current.loadMore() })
     expect(mocks.fetchNotifications).toHaveBeenLastCalledWith({ createdAt: first[29].createdAt, id: first[29].id }, { unreadOnly: true })
     expect(hook.result.current.page.items).toHaveLength(31)
-    mocks.fetchNotifications.mockClear()
+    mocks.fetchNotificationDigest.mockClear().mockResolvedValue(digest({ unreadCount: 30, itemsAll: first, itemsUnread: first }))
     await tick(60_000)
-    expect(mocks.fetchNotifications.mock.calls).toEqual([
-      [undefined, { unreadOnly: false }],
-      [undefined, { unreadOnly: true }],
-    ])
+    expect(mocks.fetchNotificationDigest).not.toHaveBeenCalled()
+    act(() => { window.dispatchEvent(new Event("focus")) })
+    await tick()
+    expect(mocks.fetchNotificationDigest).toHaveBeenCalledTimes(1)
+    expect(mocks.fetchNotificationDigest).toHaveBeenLastCalledWith({ includeUnread: true, dismissedIds: [] })
     expect(hook.result.current.all.items).toHaveLength(30)
     expect(hook.result.current.unread.items).toHaveLength(30)
     expect(hook.result.current.page.pages).toBe(1)
@@ -154,9 +155,7 @@ describe("useNotifications", () => {
 
   it.each(["single", "all"])("rejects %s read failures and shares the error without acknowledging the popup", async (kind) => {
     const item = notification(1, true)
-    mocks.fetchNotifications.mockResolvedValue([item])
-    mocks.fetchUnreadDirectNotification.mockResolvedValue(item)
-    mocks.fetchUnreadNotificationCount.mockResolvedValue(40)
+    mocks.fetchNotificationDigest.mockResolvedValue(digest({ unreadCount: 40, direct: item, itemsAll: [item], itemsUnread: [item] }))
     const failure = new Error("Acknowledgment failed")
     mocks.markNotificationRead.mockRejectedValue(failure)
     mocks.markAllNotificationsRead.mockRejectedValue(failure)
@@ -175,27 +174,17 @@ describe("useNotifications", () => {
   })
 
   it("ignores old user query results after switching accounts", async () => {
-    const oldList = deferred<UserNotification[]>()
-    const oldCount = deferred<number>()
-    const oldDirect = deferred<UserNotification | null>()
-    mocks.fetchNotifications.mockReturnValue(oldList.promise)
-    mocks.fetchUnreadNotificationCount.mockReturnValue(oldCount.promise)
-    mocks.fetchUnreadDirectNotification.mockReturnValue(oldDirect.promise)
+    const oldDigest = deferred<Digest>()
+    mocks.fetchNotificationDigest.mockReturnValue(oldDigest.promise)
     const hook = renderHook(() => useNotifications("all"))
     await tick()
     mocks.userId = `user-${++nextUser}`
-    mocks.fetchNotifications.mockResolvedValue([notification(2)])
-    mocks.fetchUnreadNotificationCount.mockResolvedValue(8)
-    mocks.fetchUnreadDirectNotification.mockResolvedValue(notification(2, true))
+    mocks.fetchNotificationDigest.mockResolvedValue(digest({ unreadCount: 8, direct: notification(2, true), itemsAll: [notification(2)] }))
     hook.rerender()
     expect(hook.result.current.page.items).toEqual([])
     expect(hook.result.current.direct).toBeNull()
     await tick()
-    await act(async () => {
-      oldList.resolve([notification(1)])
-      oldCount.resolve(99)
-      oldDirect.resolve(notification(1, true))
-    })
+    await act(async () => { oldDigest.resolve(digest({ unreadCount: 99, direct: notification(1, true), itemsAll: [notification(1)] })) })
     expect(hook.result.current.page.items.map((item) => item.id)).toEqual([2])
     expect(hook.result.current.direct?.id).toBe(2)
     expect(hook.result.current.unreadCount).toBe(8)
@@ -205,7 +194,7 @@ describe("useNotifications", () => {
   it("ignores a pending mutation after sign-out and a new user mount", async () => {
     const write = deferred<void>()
     mocks.markNotificationRead.mockReturnValue(write.promise)
-    mocks.fetchUnreadDirectNotification.mockResolvedValue(notification(1, true))
+    mocks.fetchNotificationDigest.mockResolvedValue(digest({ direct: notification(1, true) }))
     const hook = renderHook(() => useNotifications())
     await tick()
     let mutation!: Promise<void>
@@ -214,23 +203,21 @@ describe("useNotifications", () => {
     act(() => authChanged("SIGNED_OUT", null))
     expect(hook.result.current.direct).toBeNull()
     mocks.userId = `user-${++nextUser}`
-    mocks.fetchUnreadDirectNotification.mockResolvedValue(notification(2, true))
-    mocks.fetchUnreadNotificationCount.mockResolvedValue(7)
+    mocks.fetchNotificationDigest.mockResolvedValue(digest({ unreadCount: 7, direct: notification(2, true) }))
     hook.rerender()
     await tick()
-    const calls = mocks.fetchUnreadNotificationCount.mock.calls.length
+    const calls = mocks.fetchNotificationDigest.mock.calls.length
     await act(async () => { write.resolve(); await mutation })
     expect(hook.result.current.direct?.id).toBe(2)
     expect(hook.result.current.unreadCount).toBe(7)
     expect(hook.result.current.mutationError).toBeNull()
-    expect(mocks.fetchUnreadNotificationCount).toHaveBeenCalledTimes(calls)
+    expect(mocks.fetchNotificationDigest).toHaveBeenCalledTimes(calls)
   })
 
   it("clears revoked content immediately and rejects stale in-flight pagination", async () => {
     const first = Array.from({ length: 30 }, (_, i) => notification(100 - i))
     mocks.fetchNotifications.mockResolvedValue(first)
-    mocks.fetchUnreadDirectNotification.mockResolvedValue(notification(100, true))
-    mocks.fetchUnreadNotificationCount.mockResolvedValue(30)
+    mocks.fetchNotificationDigest.mockResolvedValue(digest({ unreadCount: 30, direct: notification(100, true), itemsAll: first, itemsUnread: first }))
     const hook = renderHook(() => useNotifications("all"))
     await tick()
     const pending = deferred<UserNotification[]>()
@@ -245,8 +232,7 @@ describe("useNotifications", () => {
     await act(async () => { pending.resolve([notification(1)]); await more })
     expect(hook.result.current.page.items).toEqual([])
     mocks.fetchNotifications.mockResolvedValue([])
-    mocks.fetchUnreadDirectNotification.mockResolvedValue(null)
-    mocks.fetchUnreadNotificationCount.mockResolvedValue(0)
+    mocks.fetchNotificationDigest.mockResolvedValue(digest({ itemsUnread: [] }))
     await tick()
     expect(hook.result.current.page.items).toEqual([])
     expect(hook.result.current.page.loading).toBe(false)
@@ -255,22 +241,17 @@ describe("useNotifications", () => {
 
   it("debounces recipient updates and synchronizes another tab's acknowledgment", async () => {
     const item = notification(1, true)
-    mocks.fetchNotifications.mockResolvedValue([item])
-    mocks.fetchUnreadDirectNotification.mockResolvedValue(item)
-    mocks.fetchUnreadNotificationCount.mockResolvedValue(1)
+    mocks.fetchNotificationDigest.mockResolvedValue(digest({ unreadCount: 1, direct: item, itemsAll: [item], itemsUnread: [item] }))
     const hook = renderHook(() => useNotifications("unread"))
     await tick()
-    mocks.fetchNotifications.mockClear().mockResolvedValue([])
-    mocks.fetchUnreadDirectNotification.mockResolvedValue(null)
-    mocks.fetchUnreadNotificationCount.mockClear().mockResolvedValue(0)
+    mocks.fetchNotificationDigest.mockClear().mockResolvedValue(digest({ itemsUnread: [] }))
     emit("notification_recipients")
     emit("notification_recipients")
     emit("notification_recipients", "INSERT")
     await tick(249)
-    expect(mocks.fetchNotifications).not.toHaveBeenCalled()
+    expect(mocks.fetchNotificationDigest).not.toHaveBeenCalled()
     await tick(1)
-    expect(mocks.fetchNotifications).toHaveBeenCalledTimes(1)
-    expect(mocks.fetchUnreadNotificationCount).toHaveBeenCalledTimes(1)
+    expect(mocks.fetchNotificationDigest).toHaveBeenCalledTimes(1)
     expect(hook.result.current.direct).toBeNull()
     expect(hook.result.current.page.items).toEqual([])
     expect(hook.result.current.unreadCount).toBe(0)
@@ -279,21 +260,24 @@ describe("useNotifications", () => {
   it("advances direct notifications after reads, preserves dismissals, and receives new deliveries", async () => {
     const first = notification(3, true)
     const second = notification(2, true)
-    mocks.fetchUnreadDirectNotification.mockResolvedValue(first)
+    mocks.fetchNotificationDigest.mockResolvedValue(digest({ direct: first }))
     const hook = renderHook(() => useNotifications())
     await tick()
-    mocks.fetchUnreadDirectNotification.mockResolvedValue(second)
+    mocks.fetchNotificationDigest.mockResolvedValue(digest({ direct: second }))
     await act(async () => { await hook.result.current.markRead(first.id) })
     expect(hook.result.current.direct).toEqual(second)
-    mocks.fetchNotifications.mockResolvedValue([second, notification(1, true)])
+    // Dismiss gửi dismissed IDs xuống digest: direct mới nhất bị ẩn, server
+    // trả về direct cũ hơn đầu tiên chưa bị dismiss.
+    mocks.fetchNotificationDigest.mockResolvedValue(digest({ direct: notification(1, true) }))
     act(() => hook.result.current.dismissDirect())
     await tick()
+    expect(mocks.fetchNotificationDigest).toHaveBeenLastCalledWith({ includeUnread: false, dismissedIds: [2] })
     expect(hook.result.current.direct?.id).toBe(1)
     hook.unmount()
     const remount = renderHook(() => useNotifications())
     await tick()
     expect(remount.result.current.direct?.id).toBe(1)
-    mocks.fetchUnreadDirectNotification.mockResolvedValue(notification(4, true))
+    mocks.fetchNotificationDigest.mockResolvedValue(digest({ direct: notification(4, true) }))
     emit("notification_recipients", "INSERT")
     await tick()
     expect(remount.result.current.direct?.id).toBe(4)
@@ -302,14 +286,14 @@ describe("useNotifications", () => {
   it("refreshes on focus, online and subscription recovery", async () => {
     const hook = renderHook(() => useNotifications())
     await tick()
-    mocks.fetchUnreadNotificationCount.mockClear().mockResolvedValue(12)
+    mocks.fetchNotificationDigest.mockClear().mockResolvedValue(digest({ unreadCount: 12 }))
     act(() => {
       window.dispatchEvent(new Event("focus"))
       window.dispatchEvent(new Event("online"))
       subscribed("SUBSCRIBED")
     })
     await tick()
-    expect(mocks.fetchUnreadNotificationCount).toHaveBeenCalledTimes(1)
+    expect(mocks.fetchNotificationDigest).toHaveBeenCalledTimes(1)
     expect(hook.result.current.unreadCount).toBe(12)
   })
 })

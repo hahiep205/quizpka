@@ -6,7 +6,6 @@
 const baseUrl = process.env.SUPABASE_FUNCTIONS_URL
 const token = process.env.QUIZPKA_TEST_TOKEN
 const mode = process.env.ABUSE_TEST_APPROVED
-const sessionId = process.env.QUIZPKA_TEST_SESSION_ID
 
 if (mode !== "1") {
   console.error("Set ABUSE_TEST_APPROVED=1 for an approved test window.")
@@ -17,8 +16,10 @@ if (!baseUrl || !token) {
   process.exit(2)
 }
 
+// create-quiz-session / get-quiz-session / submit-quiz-session /
+// process-attempt-outbox đã bị xóa khỏi prod (code lưu tại trash/).
+
 const cases = [
-  ["submit-quiz-session", "{".repeat(70_000)],
   ["get-paid-document", JSON.stringify({ subjectId: "invalid", documentId: "invalid" })],
   ["get-paid-question-bank", JSON.stringify({ subjectId: "invalid", examId: "invalid" })],
 ]
@@ -35,10 +36,4 @@ async function request(name, body) {
 for (const [name, body] of cases) {
   const result = await request(name, body)
   console.log(`${name}: ${result.status} ${result.text}`)
-}
-
-if (sessionId) {
-  const submitBody = JSON.stringify({ sessionId, answers: {}, idempotencyKey: crypto.randomUUID() })
-  const results = await Promise.all(Array.from({ length: 10 }, () => request("submit-quiz-session", submitBody)))
-  console.log(`submit-concurrency: ${results.map((result) => result.status).join(",")}`)
 }

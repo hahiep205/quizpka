@@ -25,6 +25,10 @@ export type ActivityEvent = {
   eventType: ActivityEventType
   metadata: Record<string, unknown>
   createdAt: string
+  // Có khi row đến từ admin RPC (join profiles) — giúp hiển thị tên user
+  // mà không cần tải toàn bộ bảng profiles.
+  displayName?: string
+  email?: string
 }
 
 export type PracticeAttemptRow = {
@@ -42,6 +46,8 @@ export type PracticeAttemptRow = {
   completedAt: string
   retryOfHistoryId?: string
   retryNumber?: number
+  displayName?: string
+  email?: string
 }
 
 const SESSION_LOGGED_KEY = "quizpka-activity-session-v1"
@@ -51,6 +57,13 @@ const ACTIVITY_THROTTLE_MS: Partial<Record<ActivityEventType, number>> = {
   view_notifications: 5 * 60_000,
   search_exam: 2_000,
   devtools_attempt: 60_000,
+  // Log-cost: trước đây các event này bắn 1 RPC cho mỗi action không giới hạn
+  // (mỗi request = 2 dòng log edge + preflight). Key throttle đã theo resource
+  // (examId/documentId) nên cùng đề mở lại trong 60s không sinh thêm log.
+  open_exam: 60_000,
+  start_attempt: 60_000,
+  view_exam_detail: 60_000,
+  download_pdf: 60_000,
 }
 const ACTIVITY_THROTTLE_KEY = "quizpka-activity-throttle-v1"
 
@@ -246,6 +259,8 @@ export function parseActivityRows(rows: unknown): ActivityEvent[] {
       eventType: r.event_type as ActivityEventType,
       metadata: asRecord(r.metadata),
       createdAt: typeof r.created_at === "string" ? r.created_at : "",
+      displayName: typeof r.display_name === "string" && r.display_name ? r.display_name : undefined,
+      email: typeof r.email === "string" && r.email ? r.email : undefined,
     })
   }
   return out.sort((a, b) => b.id - a.id)
@@ -274,6 +289,8 @@ export function parseAttemptRows(rows: unknown): PracticeAttemptRow[] {
       completedAt: typeof r.completed_at === "string" ? r.completed_at : "",
       retryOfHistoryId: typeof r.retry_of === "string" ? r.retry_of : undefined,
       retryNumber: typeof r.retry_number === "number" ? r.retry_number : undefined,
+      displayName: typeof r.display_name === "string" && r.display_name ? r.display_name : undefined,
+      email: typeof r.email === "string" && r.email ? r.email : undefined,
     })
   }
   return out

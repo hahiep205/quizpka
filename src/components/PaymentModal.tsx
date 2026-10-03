@@ -40,6 +40,7 @@ export function PaymentModal({ open, lang, payment, productId = "dsai101", order
     }
     if (!userId) return
     let active = true
+    let timer: number | undefined
     // Poll bypasses the entitlements cache on purpose: a payment can land
     // between polls, and a cached "not owned" must not hide it.
     const check = async () => {
@@ -56,11 +57,20 @@ export function PaymentModal({ open, lang, payment, productId = "dsai101", order
         if (active) setChecking(false)
       }
     }
+    // Backoff 3→6→12→24→30s thay vì poll 3s cố định (~20 request/phút): webhook
+    // SePay thường về trong vài chục giây; nút "Tôi đã thanh toán" vẫn check ngay.
+    const schedule = (delay: number) => {
+      timer = window.setTimeout(() => {
+        if (!active) return
+        void check()
+        if (active) schedule(Math.min(delay * 2, 30_000))
+      }, delay)
+    }
     void check()
-    const timer = window.setInterval(() => void check(), 3000)
+    schedule(3_000)
     return () => {
       active = false
-      window.clearInterval(timer)
+      window.clearTimeout(timer)
     }
   }, [markPaid, onPaid, open, productId, userId])
 

@@ -9,6 +9,8 @@ function payment(orderId: string, createdAt: string, paidAt: string | null): Adm
     userId: "user",
     productId: "product",
     productName: "Product",
+    userDisplayName: null,
+    userEmail: null,
     amountVnd: 10_000,
     currency: "VND",
     status: paidAt ? "paid" : "pending",

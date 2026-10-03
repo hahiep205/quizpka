@@ -14,30 +14,30 @@ export type AdminAttemptsResult =
   | { ok: true; attempts: PracticeAttemptRow[] }
   | { ok: false; error: string; attempts: PracticeAttemptRow[] }
 
-/** Timeline global (mới nhất trước), join tên user ở client qua map id->label. */
-export async function fetchActivityTimeline(limit = 300, offset = 0): Promise<AdminTimelineResult> {
+/**
+ * P-log-cost: 1 request thay cho vòng dump 1000 dòng/trang. user_activity_events
+ * bị cron prune giữ ở vài nghìn dòng gần nhất nên window 3000 đủ phủ toàn bộ
+ * dữ liệu cho timeline + anomaly detection + CSV export.
+ */
+export async function fetchAdminEvents(limit = 3000): Promise<AdminTimelineResult> {
   try {
-    const { data, error } = await supabase
-      .from("user_activity_events")
-      .select("id,user_id,event_type,metadata,created_at")
-      .order("id", { ascending: false })
-      .range(offset, offset + limit - 1)
-    if (error) return { ok: false, events: [], error: `Không đọc được user_activity_events: ${error.message}. Hãy chạy migration 20260905100000_activity_observability.sql` }
-    return { ok: true, events: parseActivityRows(data) }
+    const { data, error } = await supabase.rpc("admin_list_events", { p_limit: limit })
+    if (error) return { ok: false, events: [], error: `Không đọc được user_activity_events: ${error.message}` }
+    const result = (data ?? {}) as { items?: unknown[] }
+    return { ok: true, events: parseActivityRows(result.items) }
   } catch (err) {
     return { ok: false, events: [], error: err instanceof Error ? err.message : "Unknown error" }
   }
 }
 
-export async function fetchAllActivityTimeline(): Promise<AdminTimelineResult> {
-  const events: ActivityEvent[] = []
-  let offset = 0
-  while (true) {
-    const result = await fetchActivityTimeline(1000, offset)
-    if (!result.ok) return result
-    events.push(...result.events)
-    if (result.events.length < 1000) return { ok: true, events }
-    offset += result.events.length
+export async function fetchAdminAttempts(limit = 3000): Promise<AdminAttemptsResult> {
+  try {
+    const { data, error } = await supabase.rpc("admin_list_attempts", { p_limit: limit })
+    if (error) return { ok: false, attempts: [], error: `Không đọc được practice_attempts: ${error.message}` }
+    const result = (data ?? {}) as { items?: unknown[] }
+    return { ok: true, attempts: parseAttemptRows(result.items) }
+  } catch (err) {
+    return { ok: false, attempts: [], error: err instanceof Error ? err.message : "Unknown error" }
   }
 }
 
@@ -69,18 +69,6 @@ export async function fetchPracticeAttempts(userId?: string, limit = 300, offset
     return { ok: true, attempts: parseAttemptRows(data) }
   } catch (err) {
     return { ok: false, attempts: [], error: err instanceof Error ? err.message : "Unknown error" }
-  }
-}
-
-export async function fetchAllPracticeAttempts(userId?: string): Promise<AdminAttemptsResult> {
-  const attempts: PracticeAttemptRow[] = []
-  let offset = 0
-  while (true) {
-    const result = await fetchPracticeAttempts(userId, 1000, offset)
-    if (!result.ok) return result
-    attempts.push(...result.attempts)
-    if (result.attempts.length < 1000) return { ok: true, attempts }
-    offset += result.attempts.length
   }
 }
 
