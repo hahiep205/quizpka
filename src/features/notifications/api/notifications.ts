@@ -1,6 +1,6 @@
 import { supabase } from "@/lib/supabase"
 
-export type NotificationCursor = { createdAt: string; id: number }
+type NotificationCursor = { createdAt: string; id: number }
 
 export type UserNotification = {
   id: number
@@ -74,7 +74,7 @@ export async function fetchNotifications(
   return ((data ?? []) as NotificationRow[]).map(parseNotification)
 }
 
-export type NotificationDigest = {
+type NotificationDigest = {
   unreadCount: number
   direct: UserNotification | null
   itemsAll: UserNotification[]

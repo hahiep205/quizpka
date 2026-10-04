@@ -44,7 +44,7 @@ const paidCodes = new Set(
 
 // ---- Helpers thuần túy (đọc, không ghi) ----
 function bankPaths(exam: ExamPaper): string[] {
-  return exam.questionBanks?.length ? exam.questionBanks : exam.questionBank ? [exam.questionBank] : []
+  return exam.questionBanks ?? []
 }
 
 function bankFile(bankPath: string): string {
@@ -166,7 +166,7 @@ function sweepSubject(subjectId: string): SweepResult {
       errors.push(`exam "${exam.id}": có ${exam.questionCount} câu nhưng durationMinutes = 0`)
     }
     if (exam.questionCount === 0) {
-      const hasDoc = (subject.chapters ?? []).some((c) => c.documentId ?? c.pdfUrl)
+      const hasDoc = (subject.chapters ?? []).some((c) => c.documentId)
       if (!hasDoc) errors.push(`exam "${exam.id}": questionCount = 0 nhưng không có document chapter`)
       else infos.push(`exam "${exam.id}": môn tài liệu ảnh (questionCount = 0)`)
     }
@@ -183,7 +183,7 @@ function sweepSubject(subjectId: string): SweepResult {
     seenChapter.add(c.id)
     if (!c.label?.vi || !c.label?.en) errors.push(`chapter "${c.id}": thiếu label vi/en`)
     if (!(c.count > 0)) errors.push(`chapter "${c.id}": count phải > 0`)
-    if ((c.documentId ?? c.pdfUrl) && !(c.count >= 1)) {
+    if (c.documentId && !(c.count >= 1)) {
       errors.push(`chapter "${c.id}": document chapter count bất thường`)
     }
   }
@@ -270,7 +270,7 @@ function sweepSubject(subjectId: string): SweepResult {
     }
     // đối chiếu count từng chapter (bỏ qua chapter tài liệu ảnh/pdf)
     for (const c of subject.chapters ?? []) {
-      if (c.documentId ?? c.pdfUrl) continue
+      if (c.documentId) continue
       const actual = filterQuestionsBySubjectChapter(subject.id, combined, c.id).length
       if (actual !== c.count) {
         errors.push(`exam "${exam.id}": chapter "${c.id}" thực tế ${actual} ≠ khai báo ${c.count}`)

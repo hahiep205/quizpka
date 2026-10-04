@@ -1,22 +1,9 @@
 import { describe, expect, it } from "vitest"
-import { bucketHoursToday, bucketLast14Days, eventsByType, filterByDays, topLearners, topSubjects } from "@/features/admin/lib/adminOverview"
+import { bucketHoursToday, eventsByType, filterByDays, topSubjects } from "@/features/admin/lib/adminOverview"
 
 const NOW = Date.parse("2026-09-04T12:00:00.000Z")
 
 describe("adminOverview", () => {
-  it("buckets attempts and events into last 14 days", () => {
-    const buckets = bucketLast14Days(
-      [{ completedAt: "2026-09-04T01:00:00.000Z" } as never, { completedAt: "2026-08-01T00:00:00.000Z" } as never],
-      [{ createdAt: "2026-09-03T01:00:00.000Z" } as never],
-      NOW,
-    )
-    expect(buckets).toHaveLength(14)
-    expect(buckets[13]?.date).toBe("2026-09-04")
-    expect(buckets[13]?.attempts).toBe(1)
-    expect(buckets[12]?.events).toBe(1)
-    expect(buckets.reduce((s, b) => s + b.attempts, 0)).toBe(1)
-  })
-
   it("buckets attempts and events into 24 local hours of today", () => {
     // 2026-09-04T12:00Z; local-hour assertions use the runner's timezone,
     // so derive expectations from the same Date conversion the code uses.
@@ -33,15 +20,13 @@ describe("adminOverview", () => {
     expect(buckets.reduce((s, b) => s + b.attempts + b.events, 0)).toBe(2)
   })
 
-  it("ranks top subjects and learners", () => {
+  it("ranks top subjects", () => {
     const attempts = [
       { userId: "u1", subjectId: "math", accuracy: 80 },
       { userId: "u1", subjectId: "math", accuracy: 100 },
       { userId: "u2", subjectId: "eng", accuracy: 50 },
     ] as never[]
     expect(topSubjects(attempts as never)[0]).toMatchObject({ key: "math", count: 2 })
-    const learners = topLearners(attempts as never)
-    expect(learners[0]).toMatchObject({ userId: "u1", attempts: 2, avgAccuracy: 90 })
   })
 
   it("counts events by type", () => {

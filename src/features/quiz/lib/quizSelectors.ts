@@ -1,7 +1,7 @@
 import { isAnswerCorrect } from "@/features/quiz/lib/quizHelpers"
 import type { AnswerValue, Question } from "@/features/quiz/model/quiz.types"
 
-export type QuizStats = {
+type QuizStats = {
   correct: number
   wrong: number
   skipped: number

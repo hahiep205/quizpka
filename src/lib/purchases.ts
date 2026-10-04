@@ -77,17 +77,15 @@ export async function createPaidCheckout(productId = "dsai101") {
   }
 }
 
-export const createDsaiCheckout = () => createPaidCheckout("dsai101")
-
 const PRODUCT_PRICES_VND: Record<string, number> = {
   tadv02: 20000,
 }
 
-export function getProductPriceVnd(productId: string): number {
+function getProductPriceVnd(productId: string): number {
   return PRODUCT_PRICES_VND[productId] ?? 10000
 }
 
-export function formatProductPrice(productId: string): string {
+function formatProductPrice(productId: string): string {
   return `${new Intl.NumberFormat("vi-VN").format(getProductPriceVnd(productId))} VND`
 }
 
@@ -133,5 +131,3 @@ const ALL_PAID_PRODUCT_IDS = [
 export function getAllPaidProductIds(): string[] {
   return [...ALL_PAID_PRODUCT_IDS]
 }
-
-export const hasDsaiPurchase = (userId: string) => hasProductPurchase(userId, "dsai101")

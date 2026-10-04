@@ -47,7 +47,7 @@ export async function fetchSubjectOverrides(): Promise<SubjectDisplayOverride[]>
   return ((data ?? []) as OverrideRow[]).map(toOverride)
 }
 
-export type SaveSubjectOverrideInput = {
+type SaveSubjectOverrideInput = {
   subjectId: string
   nameVi?: string | null
   nameEn?: string | null

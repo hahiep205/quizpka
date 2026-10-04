@@ -4,7 +4,7 @@ import type { ToeicScope } from "@/data/toeic"
 import { appRoutes, navigate } from "@/app/navigation"
 import type { Language } from "@/shared/types/app"
 
-export const PRACTICE_SESSION_KEY = "quizpka-practice-session-v2"
+const PRACTICE_SESSION_KEY = "quizpka-practice-session-v2"
 export const PRACTICE_HISTORY_KEY = "quizpka-practice-history-v1"
 export type PracticeHistoryItem = {
   id: string
@@ -72,7 +72,7 @@ export type PracticeSessionPayload = {
   retryNumber?: number
 }
 
-export function savePracticeSession(payload: PracticeSessionPayload) {
+function savePracticeSession(payload: PracticeSessionPayload) {
   try { sessionStorage.setItem(PRACTICE_SESSION_KEY, JSON.stringify(payload)) } catch { /* Session resume is best-effort. */ }
 }
 
@@ -97,8 +97,7 @@ export function goToPractice(payload: PracticeSessionPayload) {
 
 export function goHomeFromPractice() {
   clearPracticeSession()
-  if (window.location.pathname === appRoutes.practice || window.location.pathname === appRoutes.result) navigate(appRoutes.dashboard)
-  else navigate(appRoutes.home, { hash: "#docs" })
+  navigate(appRoutes.dashboard)
 }
 
 export function parsePracticeSession(value: unknown): PracticeSessionPayload | null {

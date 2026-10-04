@@ -39,7 +39,7 @@ export function renderMathHtml(text: string): string {
  * inside headings, paragraphs, or option labels. Output is identical to
  * plain text when no math delimiters are present.
  */
-export function MathText({ text, className }: { text: string; className?: string }) {
+export function MathText({ text }: { text: string }) {
   const html = useMemo(() => renderMathHtml(text), [text])
-  return <span className={className} dangerouslySetInnerHTML={{ __html: html }} />
+  return <span dangerouslySetInnerHTML={{ __html: html }} />
 }

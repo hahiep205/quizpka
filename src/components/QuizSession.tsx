@@ -591,6 +591,10 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
         </div>
 
         <div className="mb-4 rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 sm:p-5">
+          <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+            <p className="lp-label text-[12px] uppercase tracking-[0.12em]">{t.modeHard}</p>
+            <p className="lp-card-meta">{getExamTitle(exam, lang)}</p>
+          </div>
           <div className="mb-2 flex items-center justify-between gap-3">
             <span className="lp-label">{t.mastered} {hardMastered} {t.of} {questions.length}</span>
             <span className="lp-label text-[#1CB0F6]">{t.progress}: {hardProgress}%</span>
@@ -601,11 +605,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
         </div>
 
         <div key={transitionKey} className="quiz-question-panel rounded-[16px] border-2 border-[#E5E5E5] bg-white p-5 shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 sm:p-6">
-          <div className="mb-5 flex flex-wrap items-center justify-between gap-2">
-            <p className="lp-label text-[12px] uppercase tracking-[0.12em]">{subject.code} · {t.modeHard}</p>
-            <p className="lp-card-meta">{getExamTitle(exam, lang)}</p>
-          </div>
-          <QuestionMedia question={hardCurrent} t={t} onZoomImage={(url) => setLightboxImage(url)} hideImage />
+          <QuestionMedia question={hardCurrent} t={t} />
           <QuizQuestionBlock
             question={hardCurrent}
             questionNumber={hardPos + 1}
@@ -649,6 +649,10 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
       </div>
 
       <div className="mb-4 rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 sm:p-5">
+        <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+          <p className="lp-label text-[12px] uppercase tracking-[0.12em]">{setup.mode === "practice" || forcePractice ? t.modePractice : t.modeExam}</p>
+          <p className="lp-card-meta">{getExamTitle(exam, lang)}</p>
+        </div>
         <div className="mb-2 flex items-center justify-between gap-3">
           <span className="lp-label">{t.question} {currentIndex + 1} {t.of} {questions.length}</span>
           <span className="lp-label text-[#1CB0F6]">{t.progress}: {progress}%</span>
@@ -660,11 +664,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
 
       <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(260px,280px)]">
         <div key={transitionKey} className="quiz-question-panel rounded-[16px] border-2 border-[#E5E5E5] bg-white p-5 shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 sm:p-6">
-          <div className="mb-5 flex flex-wrap items-center justify-between gap-2">
-            <p className="lp-label text-[12px] uppercase tracking-[0.12em]">{subject.code} · {setup.mode === "practice" || forcePractice ? t.modePractice : t.modeExam}</p>
-            <p className="lp-card-meta">{getExamTitle(exam, lang)}</p>
-          </div>
-          <QuestionMedia question={current} t={t} onZoomImage={(url) => setLightboxImage(url)} hideImage />
+          <QuestionMedia question={current} t={t} />
           <div className="space-y-5">
             {partQuestions.map((question) => (
               <QuizQuestionBlock
@@ -754,11 +754,9 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
   )
 }
 
-function QuestionMedia({ question, t, onZoomImage, hideImage = false }: {
+function QuestionMedia({ question, t }: {
   question: Question
   t: (typeof copy)["en" | "vi"]
-  onZoomImage: (url: string) => void
-  hideImage?: boolean
 }) {
   const displayPartTitle = question.partTitle ? stripPart6GroupSuffix(question.partTitle) : undefined
   return (
@@ -767,24 +765,6 @@ function QuestionMedia({ question, t, onZoomImage, hideImage = false }: {
         <div className="mb-5 rounded-[12px] border-2 border-[#B3E5FC] bg-[#E8F7FE] px-4 py-3 text-[13px] leading-6 text-[#100F3E] dark:border-sky-500/20 dark:bg-sky-500/10 dark:text-sky-100">
           {displayPartTitle ? <p className="font-extrabold text-[#129BDC]">{displayPartTitle}</p> : null}
           {question.instruction ? <p className={question.partTitle ? "mt-1" : ""}>{question.instruction}</p> : null}
-        </div>
-      ) : null}
-      {!hideImage && question.imageUrl ? (
-        <div className="mb-5 overflow-hidden rounded-[12px] border-2 border-[#E5E5E5] bg-white dark:border-white/10 dark:bg-slate-900">
-          <button
-            type="button"
-            className="block w-full cursor-zoom-in"
-            onClick={() => onZoomImage(question.imageUrl ?? "")}
-            aria-label={t.imageZoomLabel}
-          >
-            <img
-              src={question.imageUrl}
-              alt={question.partTitle ?? "Reading part image"}
-              className="h-auto w-full object-contain"
-              loading="lazy"
-            />
-          </button>
-          <p className="px-3 py-2 text-center text-[11px] font-semibold text-slate-400 dark:text-slate-500">{t.imageZoomHint}</p>
         </div>
       ) : null}
       {question.audioUrl ? (

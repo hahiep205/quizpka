@@ -27,7 +27,6 @@ import {
 import brandLogo from "@/assets/logo.webp"
 import { QuizSetupModal, type QuizSetupValues } from "@/components/QuizSetupModal"
 import { HcmChapterPickerModal } from "@/components/HcmChapterPickerModal"
-import { PdfViewerModal } from "@/components/PdfViewerModal"
 import { ImageDocViewerModal } from "@/components/ImageDocViewerModal"
 import { TadvPickerModal } from "@/components/TadvPickerModal"
 import { DsaiPickerModal } from "@/components/DsaiPickerModal"
@@ -237,8 +236,6 @@ export function DashboardPage({
     setupSubject,
     handlePickerSelect,
     handlePickerClose,
-    handlePdfClose,
-    pdfChapter,
     imageDoc,
     handleImageDocClose,
     handleSetupClose,
@@ -400,15 +397,6 @@ export function DashboardPage({
         subject={pickerSubject}
         onClose={handlePickerClose}
         onSelect={handlePickerSelect}
-      />
-
-      <PdfViewerModal
-        open={Boolean(pdfChapter)}
-        lang={lang}
-        title={pdfChapter?.title ?? null}
-        pdfUrl={pdfChapter?.url ?? null}
-        noteUrl={pdfChapter?.noteUrl ?? null}
-        onClose={handlePdfClose}
       />
 
       <ImageDocViewerModal

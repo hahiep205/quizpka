@@ -27,7 +27,7 @@ export type ToeicCategoryKey =
   | "reason"
   | "paragraph_link"
 
-export const TOEIC_CATEGORY_LABELS: Record<ToeicCategoryKey, { en: string; vi: string }> = {
+const TOEIC_CATEGORY_LABELS: Record<ToeicCategoryKey, { en: string; vi: string }> = {
   action: { en: "Action description", vi: "Mô tả hành động trong tranh" },
   state: { en: "State description", vi: "Mô tả trạng thái trong tranh" },
   question_response: { en: "Question response", vi: "Question response" },

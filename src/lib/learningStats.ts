@@ -1,6 +1,6 @@
 import type { PracticeHistoryItem } from "@/lib/practiceSession"
 
-export const LEARNING_WEEK_MS = 7 * 24 * 60 * 60 * 1000
+const LEARNING_WEEK_MS = 7 * 24 * 60 * 60 * 1000
 
 export type LearningPeriod = "week" | "month" | "all"
 export type LearningStats = {
@@ -10,12 +10,12 @@ export type LearningStats = {
   totalDurationSeconds: number
 }
 
-export function isWithinLearningWeek(completedAt: string, now = Date.now()): boolean {
+function isWithinLearningWeek(completedAt: string, now = Date.now()): boolean {
   const completed = Date.parse(completedAt)
   return Number.isFinite(completed) && now - completed <= LEARNING_WEEK_MS
 }
 
-export function isWithinLearningMonth(completedAt: string, now = Date.now()): boolean {
+function isWithinLearningMonth(completedAt: string, now = Date.now()): boolean {
   const completed = Date.parse(completedAt)
   if (!Number.isFinite(completed)) return false
   const completedDate = new Date(completed)
@@ -43,52 +43,6 @@ export function computeLearningStats(history: PracticeHistoryItem[], period: Lea
     averageAccuracy: items.length ? Math.round(accuracyTotal / items.length) : 0,
     totalDurationSeconds: durationTotal,
   }
-}
-
-export const LEARNING_POINT_WEIGHTS = {
-  accuracy: 0.5,
-  time: 0.25,
-  subjects: 0.15,
-  attempts: 0.1,
-} as const
-
-export const SUBJECT_BREADTH_TARGET = 10
-export const ATTEMPT_TARGET = 20
-
-function clamp(value: number, min: number, max: number): number {
-  return Math.min(max, Math.max(min, value))
-}
-
-export function normalizeAccuracy(stats: LearningStats): number {
-  if (stats.attempts <= 0) return 0
-  return clamp(stats.averageAccuracy, 0, 100)
-}
-
-export function normalizeSubjectsReviewed(stats: LearningStats): number {
-  return clamp((Math.max(0, stats.subjectsReviewed) / SUBJECT_BREADTH_TARGET) * 100, 0, 100)
-}
-
-export function normalizeAttempts(stats: LearningStats): number {
-  return clamp((Math.max(0, stats.attempts) / ATTEMPT_TARGET) * 100, 0, 100)
-}
-
-export function normalizeTimeEfficiency(stats: LearningStats): number {
-  if (stats.attempts <= 0 || stats.totalDurationSeconds <= 0) return 0
-  const averageMinutes = stats.totalDurationSeconds / stats.attempts / 60
-  if (averageMinutes < 3) return clamp((averageMinutes / 3) * 80, 0, 80)
-  if (averageMinutes < 8) return 80 + ((averageMinutes - 3) / 5) * 20
-  if (averageMinutes <= 40) return 100
-  return clamp(100 - (averageMinutes - 40) * 1.5, 20, 100)
-}
-
-export function computeLearningPoints(stats: LearningStats): number {
-  if (stats.attempts <= 0) return 0
-  const weighted =
-    normalizeAccuracy(stats) * LEARNING_POINT_WEIGHTS.accuracy
-    + normalizeTimeEfficiency(stats) * LEARNING_POINT_WEIGHTS.time
-    + normalizeSubjectsReviewed(stats) * LEARNING_POINT_WEIGHTS.subjects
-    + normalizeAttempts(stats) * LEARNING_POINT_WEIGHTS.attempts
-  return Math.round(weighted * 10)
 }
 
 export function formatLearningDuration(totalSeconds: number): string {

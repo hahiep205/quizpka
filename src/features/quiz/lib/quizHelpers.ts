@@ -14,7 +14,7 @@ export function shuffle<T>(items: T[]) {
   return list
 }
 
-export function mapBankItems(
+function mapBankItems(
   items: BankQuestion[],
   examId: string,
   setup: QuizSetupValues,

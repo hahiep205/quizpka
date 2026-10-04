@@ -62,7 +62,7 @@ function combineBanks(banks: BankFile[]): BankFile {
   return { parts: parts.length ? parts : undefined, questions: questions.length ? questions : undefined }
 }
 
-export type LoadQuizQuestionsInput = {
+type LoadQuizQuestionsInput = {
   subject: Subject
   exam: ExamPaper
   setup: QuizSetupValues
@@ -111,8 +111,8 @@ export async function loadQuizQuestions({ subject, exam, setup, chapterId, toeic
       ? { ...bank, questions: filterQuestionsBySubjectChapter(subject.id, bank.questions, chapterId) }
       : bank
     questions = mapBankQuestions(filteredBank, exam.id, setup)
-  } else if (exam.questionBanks?.length || exam.questionBank) {
-    const urls = exam.questionBanks?.length ? exam.questionBanks : [exam.questionBank!]
+  } else if (exam.questionBanks?.length) {
+    const urls = exam.questionBanks
     const banks = await Promise.all(urls.map((url) => fetchBank(url, signal)))
     const combined = combineBanks(banks)
     if (combined.questions?.length) {
@@ -120,7 +120,7 @@ export async function loadQuizQuestions({ subject, exam, setup, chapterId, toeic
         ? filterQuestionsBySubjectChapter(subject.id, combined.questions, chapterId)
         : combined.questions
       if (!filteredQuestions.length) {
-        throw new QuestionBankDataError(exam.questionBank ?? exam.id, "selected chapter contains no questions")
+        throw new QuestionBankDataError(exam.id, "selected chapter contains no questions")
       }
       questions = mapBankQuestions({ ...combined, questions: filteredQuestions }, exam.id, setup)
     } else {

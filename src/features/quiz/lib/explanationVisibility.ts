@@ -4,7 +4,7 @@ import type { SubjectId } from "@/data/subjects"
  * Subjects where the per-question explanation ("Giải thích: ...")
  * is hidden in the quiz UI and the review panel.
  */
-export const HIDE_EXPLANATION_SUBJECT_IDS: readonly SubjectId[] = [
+const HIDE_EXPLANATION_SUBJECT_IDS: readonly SubjectId[] = [
   "tu-tuong-ho-chi-minh",
   "lich-su-dang-cong-san-viet-nam",
   "quan-tri-hoc",

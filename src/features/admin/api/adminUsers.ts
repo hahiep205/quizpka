@@ -12,7 +12,7 @@ export type FetchAdminUsersPageOptions = {
   limit?: number
 }
 
-export type FetchAdminUsersPageResult = {
+type FetchAdminUsersPageResult = {
   ok: boolean
   error: string | null
   users: AdminUser[]
@@ -133,7 +133,7 @@ export async function fetchAdminUsersPage(options: FetchAdminUsersPageOptions = 
   }
 }
 
-export type SetUserStatusResult = { status: AdminStatus; blockedReason: string | null; blockedAt: string | null }
+type SetUserStatusResult = { status: AdminStatus; blockedReason: string | null; blockedAt: string | null }
 
 /** Khóa / mở khóa tài khoản kèm lý do. Lý do bắt buộc khi khóa, hiển thị cho user lúc login. */
 export async function setAdminUserStatus(userId: string, status: AdminStatus, reason?: string): Promise<SetUserStatusResult> {

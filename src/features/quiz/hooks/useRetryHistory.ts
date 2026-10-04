@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react"
 
-export type RetryAttempt = { correct: number; total: number; accuracy: number }
+type RetryAttempt = { correct: number; total: number; accuracy: number }
 
 export function useRetryHistory(storageKey: string) {
   const [history, setHistory] = useState<RetryAttempt[]>([])

@@ -36,7 +36,7 @@ export function logBlockedAccountView(userId: string | undefined): void {
   })()
 }
 
-export type BlockedViewStat = { userId: string; viewCount: number; lastViewedAt: string | null }
+type BlockedViewStat = { userId: string; viewCount: number; lastViewedAt: string | null }
 
 /** Admin đọc thống kê lượt xem lý do khóa của 1 user. */
 export async function fetchBlockedViewStat(userId: string): Promise<BlockedViewStat> {

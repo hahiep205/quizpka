@@ -58,14 +58,8 @@ export type ExamPaper = {
   durationMinutes: number
   title: LocalizedText
   description: LocalizedText
-  /** Optional label (e.g. update date) shown in the catalog meta row in place of the chapter count. */
-  updatedLabel?: LocalizedText
-  /** Optional text replacing the "{count} questions" segment in the catalog meta row. */
-  questionCountLabel?: LocalizedText
   /** When true, hide this exam from catalog listings (it stays reachable by id, e.g. merged into a sibling exam's picker). */
   hideFromCatalog?: boolean
-  /** Optional path to a local question-bank JSON file under /data */
-  questionBank?: string
   /** Optional collection of question banks, combined into one grouped exam. */
   questionBanks?: string[]
 }
@@ -75,10 +69,6 @@ export type ChapterOption = {
   label: LocalizedText
   /** Chapter labels this option accepts (prefix-matched). Defaults to label.vi when omitted. */
   matches?: string[]
-  /** When set, selecting this option opens the document (e.g. a PDF) instead of a quiz. */
-  pdfUrl?: string
-  /** Optional plain-text note (e.g. Luu-y.txt) shown above the document with its download. */
-  noteUrl?: string
   /** When set, selecting this option opens the gated image viewer for a paid document set. */
   documentId?: string
   /** Optional solution video/page URL shown inside the chapter picker for this option. */

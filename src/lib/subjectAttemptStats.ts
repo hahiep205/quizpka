@@ -2,40 +2,21 @@ import { getSubjectById } from "@/data/subjects"
 import { PRACTICE_HISTORY_KEY, type PracticeHistoryItem } from "@/lib/practiceSession"
 import { supabase } from "@/lib/supabase"
 
-export const SUBJECT_ATTEMPT_COUNTS_KEY = "quizpka-subject-attempt-counts-v1"
+const SUBJECT_ATTEMPT_COUNTS_KEY = "quizpka-subject-attempt-counts-v1"
 
 type AttemptCounts = Record<string, number>
-type AttemptCountListener = (counts: AttemptCounts) => void
 
 let cachedCounts: AttemptCounts = {}
-let inflight: Promise<AttemptCounts> | null = null
-const listeners = new Set<AttemptCountListener>()
 
 function emitSubjectAttemptCounts(next: AttemptCounts) {
   cachedCounts = next
   persistAttemptCounts(next)
-  for (const listener of listeners) listener(cachedCounts)
 }
 
 export function parseCount(value: unknown): number | null {
   const count = typeof value === "number" ? value : Number(value)
   if (!Number.isFinite(count) || count < 0) return null
   return Math.floor(count)
-}
-
-export function parseSubjectAttemptCounts(rows: unknown): AttemptCounts {
-  if (!Array.isArray(rows)) return {}
-  const counts: AttemptCounts = {}
-  for (const row of rows) {
-    if (!row || typeof row !== "object" || Array.isArray(row)) continue
-    const subjectId = "subject_id" in row ? row.subject_id : undefined
-    const attemptCount = "attempt_count" in row ? row.attempt_count : undefined
-    if (typeof subjectId !== "string" || !subjectId) continue
-    const count = parseCount(attemptCount)
-    if (count === null) continue
-    counts[subjectId] = count
-  }
-  return counts
 }
 
 export function parseAttemptCountMap(value: unknown): AttemptCounts {
@@ -59,7 +40,7 @@ export function mergeAttemptCounts(...maps: AttemptCounts[]): AttemptCounts {
   return merged
 }
 
-export function addAttemptCounts(...maps: AttemptCounts[]): AttemptCounts {
+function addAttemptCounts(...maps: AttemptCounts[]): AttemptCounts {
   const merged: AttemptCounts = {}
   for (const map of maps) {
     for (const [subjectId, count] of Object.entries(map)) {
@@ -97,7 +78,7 @@ function persistAttemptCounts(counts: AttemptCounts) {
   }
 }
 
-export function readLocalHistoryAttemptCounts(): AttemptCounts {
+function readLocalHistoryAttemptCounts(): AttemptCounts {
   if (typeof window === "undefined") return {}
   try {
     const counts: AttemptCounts = {}
@@ -114,47 +95,6 @@ export function readLocalHistoryAttemptCounts(): AttemptCounts {
   } catch {
     return {}
   }
-}
-
-export function formatSubjectAttemptLabel(count: number, lang: "en" | "vi"): string {
-  if (lang === "vi") return "lượt làm"
-  return count === 1 ? "attempt" : "attempts"
-}
-
-export function getCachedSubjectAttemptCounts(): AttemptCounts {
-  return cachedCounts
-}
-
-export function subscribeSubjectAttemptCounts(listener: AttemptCountListener) {
-  listeners.add(listener)
-  listener(cachedCounts)
-  return () => {
-    listeners.delete(listener)
-  }
-}
-
-export async function fetchSubjectAttemptCounts(): Promise<AttemptCounts> {
-  let server: AttemptCounts = {}
-  try {
-    const { data, error } = await supabase
-      .from("subject_attempt_counts")
-      .select("subject_id, attempt_count")
-    if (!error) server = parseSubjectAttemptCounts(data)
-  } catch {
-    // Keep local counts when the shared table is unavailable.
-  }
-  return mergeAttemptCounts(server, cachedCounts, readPersistedAttemptCounts(), readLocalHistoryAttemptCounts())
-}
-
-export async function loadSubjectAttemptCounts(): Promise<AttemptCounts> {
-  if (!inflight) {
-    inflight = fetchSubjectAttemptCounts().finally(() => {
-      inflight = null
-    })
-  }
-  const next = await inflight
-  emitSubjectAttemptCounts(next)
-  return next
 }
 
 export async function incrementSubjectAttempt(subjectId: string): Promise<void> {

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { computeLearningPoints, computeLearningStats, formatLearningDuration, normalizeAttempts, normalizeAccuracy, normalizeSubjectsReviewed, normalizeTimeEfficiency, sortValueForStats } from "./learningStats"
+import { computeLearningStats, formatLearningDuration, sortValueForStats } from "./learningStats"
 import type { PracticeHistoryItem } from "./practiceSession"
 
 function item(overrides: Partial<PracticeHistoryItem>): PracticeHistoryItem {
@@ -61,48 +61,6 @@ describe("learning stats", () => {
       averageAccuracy: 90,
       totalDurationSeconds: 120,
     })
-  })
-
-  it("scores points with accuracy-first weights on a 1000 scale", () => {
-    const stats = {
-      subjectsReviewed: 10,
-      attempts: 20,
-      averageAccuracy: 100,
-      totalDurationSeconds: 20 * 15 * 60,
-    }
-    expect(normalizeAccuracy(stats)).toBe(100)
-    expect(normalizeTimeEfficiency(stats)).toBe(100)
-    expect(normalizeSubjectsReviewed(stats)).toBe(100)
-    expect(normalizeAttempts(stats)).toBe(100)
-    expect(computeLearningPoints(stats)).toBe(1000)
-  })
-
-  it("weights accuracy at 50% and time efficiency at 25%", () => {
-    const stats = {
-      subjectsReviewed: 0,
-      attempts: 4,
-      averageAccuracy: 80,
-      totalDurationSeconds: 4 * 20 * 60,
-    }
-    expect(normalizeTimeEfficiency(stats)).toBe(100)
-    expect(normalizeSubjectsReviewed(stats)).toBe(0)
-    expect(normalizeAttempts(stats)).toBe(20)
-    expect(computeLearningPoints(stats)).toBe(Math.round((80 * 0.5 + 100 * 0.25 + 20 * 0.1) * 10))
-  })
-
-  it("does not reward rushing or empty practice", () => {
-    expect(computeLearningPoints({
-      subjectsReviewed: 1,
-      attempts: 0,
-      averageAccuracy: 100,
-      totalDurationSeconds: 0,
-    })).toBe(0)
-    expect(normalizeTimeEfficiency({
-      subjectsReviewed: 1,
-      attempts: 2,
-      averageAccuracy: 90,
-      totalDurationSeconds: 40,
-    })).toBeLessThan(30)
   })
 
   it("formats duration like the dashboard cards", () => {

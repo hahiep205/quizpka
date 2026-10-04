@@ -16,7 +16,7 @@ const exam: ExamPaper = {
   durationMinutes: 10,
   title: { en: "Test", vi: "Kiểm tra" },
   description: { en: "Test", vi: "Kiểm tra" },
-  questionBank: "/data/test.json",
+  questionBanks: ["/data/test.json"],
 }
 
 afterEach(() => vi.unstubAllGlobals())

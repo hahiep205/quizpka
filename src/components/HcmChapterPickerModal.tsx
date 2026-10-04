@@ -1,5 +1,5 @@
 import { useEffect, useId, useRef, useState } from "react"
-import { BookOpen, CirclePlay, ExternalLink, FileImage, FileText } from "lucide-react"
+import { BookOpen, CirclePlay, ExternalLink, FileImage } from "lucide-react"
 import { useAuth } from "@/auth/AuthProvider"
 import { logActivityEvent } from "@/features/activity/lib/activityLog"
 import { getChapterOptionsForSubject } from "@/data/subjectChapters"
@@ -85,9 +85,9 @@ export function HcmChapterPickerModal({ open, lang, exam, subject, onClose, onSe
           <div key={chapter.id}>
             <PickerOptionButton
               active={selected === chapter.id}
-              icon={chapter.documentId ? <FileImage className="h-5 w-5" /> : chapter.pdfUrl ? <FileText className="h-5 w-5" /> : <BookOpen className="h-5 w-5" />}
+              icon={chapter.documentId ? <FileImage className="h-5 w-5" /> : <BookOpen className="h-5 w-5" />}
               title={chapter.label[lang]}
-              subtitle={chapter.documentId ? `${chapter.count} ${t.images}` : chapter.pdfUrl ? (/\.pdf($|[?#])/i.test(chapter.pdfUrl) ? t.pdf : t.file) : `${chapter.count} ${t.questions}`}
+              subtitle={chapter.documentId ? `${chapter.count} ${t.images}` : `${chapter.count} ${t.questions}`}
               onClick={() => setSelected(chapter.id)}
             />
             {chapter.solutionUrl ? (

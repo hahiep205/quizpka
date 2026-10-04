@@ -1,5 +1,5 @@
 import { useEffect, useId, useRef, useState } from "react"
-import { BookOpen, CirclePlay, Download, ExternalLink, FileImage, FileText, Volume2 } from "lucide-react"
+import { BookOpen, CirclePlay, Download, ExternalLink, FileImage, Volume2 } from "lucide-react"
 import { useAuth } from "@/auth/AuthProvider"
 import { logActivityEvent } from "@/features/activity/lib/activityLog"
 import { getChapterOptionsForSubject } from "@/data/subjectChapters"
@@ -179,7 +179,7 @@ export function DownloadPickerModal({ open, lang, exam, subject, onClose, onConf
   const rawOpts = (getChapterOptionsForSubject(subject.id) ?? []).filter((c) => !c.hidden)
   const chapterOptions = rawOpts.length
     ? rawOpts
-    : [{ id: "all", label: { vi: "Toàn bộ", en: "All" } as const, count: exam.questionCount, documentId: undefined, pdfUrl: undefined, solutionUrl: undefined } as unknown as typeof rawOpts[number]]
+    : [{ id: "all", label: { vi: "Toàn bộ", en: "All" } as const, count: exam.questionCount, documentId: undefined, solutionUrl: undefined } as unknown as typeof rawOpts[number]]
 
   return (
     <PickerModalShell
@@ -204,9 +204,9 @@ export function DownloadPickerModal({ open, lang, exam, subject, onClose, onConf
           <div key={chapter.id}>
             <PickerOptionButton
               active={selected === chapter.id}
-              icon={chapter.documentId ? <FileImage className="h-5 w-5" /> : chapter.pdfUrl ? <FileText className="h-5 w-5" /> : <BookOpen className="h-5 w-5" />}
+              icon={chapter.documentId ? <FileImage className="h-5 w-5" /> : <BookOpen className="h-5 w-5" />}
               title={chapter.label[lang]}
-              subtitle={chapter.documentId ? `${chapter.count} ${tChapter.images}` : chapter.pdfUrl ? (/\.pdf($|[?#])/i.test(chapter.pdfUrl) ? tChapter.pdf : tChapter.file) : `${chapter.count} ${tChapter.questions}`}
+              subtitle={chapter.documentId ? `${chapter.count} ${tChapter.images}` : `${chapter.count} ${tChapter.questions}`}
               onClick={() => setSelected(chapter.id)}
             />
             {chapter.solutionUrl ? (

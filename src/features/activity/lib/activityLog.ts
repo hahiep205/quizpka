@@ -315,29 +315,3 @@ export const ACTIVITY_LABELS: Record<ActivityEventType, string> = {
   view_exam_detail: "Xem chi tiết đề",
   download_pdf: "Tải PDF",
 }
-
-function csvCell(value: string | number | null | undefined): string {
-  const s = value === null || value === undefined ? "" : String(value)
-  return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s
-}
-
-export function toTimelineCsv(events: ActivityEvent[]): string {
-  const lines = ["id,user_id,event_type,created_at,metadata"]
-  for (const e of events) {
-    lines.push([csvCell(e.id), csvCell(e.userId), csvCell(e.eventType), csvCell(e.createdAt), csvCell(JSON.stringify(e.metadata))].join(","))
-  }
-  return lines.join("\n")
-}
-
-export function toAttemptsCsv(attempts: PracticeAttemptRow[]): string {
-  const lines = ["history_id,user_id,exam_id,subject_id,title,mode,score,correct,total,accuracy,duration_seconds,retry_of,retry_number,completed_at"]
-  for (const a of attempts) {
-    lines.push([
-      csvCell(a.historyId), csvCell(a.userId), csvCell(a.examId), csvCell(a.subjectId),
-      csvCell(a.title), csvCell(a.mode), csvCell(a.score), csvCell(a.correct),
-      csvCell(a.total), csvCell(a.accuracy), csvCell(a.durationSeconds),
-      csvCell(a.retryOfHistoryId), csvCell(a.retryNumber), csvCell(a.completedAt),
-    ].join(","))
-  }
-  return lines.join("\n")
-}

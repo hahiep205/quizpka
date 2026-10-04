@@ -30,13 +30,7 @@ const copy = {
   },
 } as const
 
-export function PracticeGuestPage({
-  lang,
-  themeClassName,
-}: {
-  lang: Lang
-  themeClassName?: string
-}) {
+export function PracticePage({ lang }: { lang: Lang }) {
   const t = copy[lang]
   const [payload, setPayload] = useState<PracticeSessionPayload | null | undefined>(
     undefined
@@ -116,7 +110,7 @@ export function PracticeGuestPage({
 
   if (payload === undefined) {
     return (
-      <div className={themeClassName}>
+      <div>
         <div className="mx-auto flex min-h-svh w-full max-w-[720px] items-center justify-center px-6">
           <p className="lp-modal-desc text-[15px]">{t.loading}</p>
         </div>
@@ -126,7 +120,7 @@ export function PracticeGuestPage({
 
   if (!payload || !exam || !subject) {
     return (
-      <div className={themeClassName}>
+      <div>
         <div className="mx-auto flex min-h-svh w-full max-w-[520px] flex-col items-center justify-center px-6 text-center">
           <h1 className="lp-modal-title text-[24px]">{t.missingTitle}</h1>
           <p className="lp-modal-desc mt-3">{t.missingDesc}</p>
@@ -143,7 +137,7 @@ export function PracticeGuestPage({
   }
 
   return (
-    <div className={themeClassName}>
+    <div>
       <div className="relative flex min-h-svh flex-col pt-4">
         <QuizSession
           lang={payload.lang ?? lang}

@@ -6,11 +6,11 @@ import {
   type PracticeAttemptRow,
 } from "@/features/activity/lib/activityLog"
 
-export type AdminTimelineResult =
+type AdminTimelineResult =
   | { ok: true; events: ActivityEvent[] }
   | { ok: false; error: string; events: ActivityEvent[] }
 
-export type AdminAttemptsResult =
+type AdminAttemptsResult =
   | { ok: true; attempts: PracticeAttemptRow[] }
   | { ok: false; error: string; attempts: PracticeAttemptRow[] }
 

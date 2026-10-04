@@ -1,14 +1,11 @@
 import { supabase } from "@/lib/supabase"
 import {
-  computeLearningPoints,
-  computeLearningStats,
   sortValueForStats,
   type LearningPeriod,
   type LearningStats,
 } from "@/lib/learningStats"
-import type { PracticeHistoryItem } from "@/lib/practiceSession"
 
-export type LeaderboardSortKey = "points" | "subjects" | "attempts" | "accuracy" | "time"
+type LeaderboardSortKey = "points" | "subjects" | "attempts" | "accuracy" | "time"
 
 export type LeaderboardEntry = {
   userId: string
@@ -138,34 +135,14 @@ export function rankLeaderboard(entries: LeaderboardEntry[], sortKey: Leaderboar
   return sorted.map((entry, index) => ({ ...entry, rank: index + 1 }))
 }
 
-export function buildLocalLeaderboardEntry(input: {
-  userId: string
-  name: string
-  avatarUrl: string | null
-  visible: boolean
-  history: PracticeHistoryItem[]
-  period: LearningPeriod
-}): LeaderboardEntry {
-  const stats = computeLearningStats(input.history, input.period)
-  return {
-    userId: input.userId,
-    name: input.name,
-    avatarUrl: input.avatarUrl,
-    visible: input.visible,
-    isYou: true,
-    stats,
-    points: computeLearningPoints(stats),
-  }
-}
-
 const LEADERBOARD_SELECT =
   "user_id, display_name, avatar_url, visible, subjects_reviewed, attempts, average_accuracy, total_duration_seconds, points, week_subjects_reviewed, week_attempts, week_average_accuracy, week_total_duration_seconds, week_points, month_subjects_reviewed, month_attempts, month_average_accuracy, month_total_duration_seconds, month_points"
 const LEADERBOARD_SELECT_LEGACY =
   "user_id, display_name, avatar_url, visible, subjects_reviewed, attempts, average_accuracy, total_duration_seconds, points, week_subjects_reviewed, week_attempts, week_average_accuracy, week_total_duration_seconds, week_points"
 
 /** Server-side cap: UI chỉ hiển thị top 10, RPC giới hạn tối đa 200. */
-export const LEADERBOARD_LIMIT_DEFAULT = 100
-export const LEADERBOARD_LIMIT_MAX = 200
+const LEADERBOARD_LIMIT_DEFAULT = 100
+const LEADERBOARD_LIMIT_MAX = 200
 
 function clampLeaderboardLimit(limit?: number): number {
   if (!Number.isFinite(limit as number)) return LEADERBOARD_LIMIT_DEFAULT

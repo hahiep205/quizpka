@@ -54,7 +54,7 @@ function asWrongQuestions(value: unknown): PracticeHistoryItem["wrongQuestions"]
 }
 
 /** Lịch sử của chính user, đọc từ server để đồng bộ mọi thiết bị. */
-export async function fetchUserHistory(userId: string, limit = 100): Promise<PracticeHistoryItem[]> {
+async function fetchUserHistory(userId: string, limit = 100): Promise<PracticeHistoryItem[]> {
   const { data, error } = await supabase
     .from("practice_attempts")
     .select("history_id,user_id,exam_id,subject_id,title,mode,score,correct,total,accuracy,duration_seconds,completed_at,retry_of,retry_number,setup,lang,chapter_id,toeic_scope,wrong_questions")

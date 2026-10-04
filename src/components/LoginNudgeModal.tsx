@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from "react"
+import { useCallback, useState } from "react"
 import { History, LogIn, RotateCcw, Trophy, X, Zap } from "lucide-react"
 import { Dialog } from "@/components/ui/dialog"
 import { loginNudgeCopy as copy } from "@/shared/i18n"
@@ -18,20 +18,17 @@ const BENEFIT_ICONS = [History, RotateCcw, Trophy, Zap] as const
 export function useLoginNudge() {
   const { status } = useAuth()
   const [nudgeOpen, setNudgeOpen] = useState(false)
-  const pendingRef = useRef<(() => void) | null>(null)
 
   const requestNudge = useCallback((action: () => void) => {
     if (status !== "anonymous") {
       action()
       return
     }
-    pendingRef.current = action
     setNudgeOpen(true)
   }, [status])
 
   const closeNudge = useCallback(() => {
     setNudgeOpen(false)
-    pendingRef.current = null
   }, [])
 
   return { nudgeOpen, requestNudge, closeNudge }

@@ -17,7 +17,7 @@ export type AdminPayment = {
   createdAt: string
 }
 
-export type AdminPaymentsResult =
+type AdminPaymentsResult =
   | { ok: true; payments: AdminPayment[] }
   | { ok: false; error: string; payments: AdminPayment[] }
 

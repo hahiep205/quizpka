@@ -10,4 +10,3 @@ export const modalFrameClass = "lp-modal-frame"
 export const modalHeaderClass = "lp-modal-header"
 export const modalBodyClass = "lp-modal-body"
 export const modalFooterClass = "lp-modal-footer"
-export const mobileModalHeightClass = modalFrameClass

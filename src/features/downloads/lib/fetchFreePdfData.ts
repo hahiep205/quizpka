@@ -47,8 +47,8 @@ export async function fetchQuestionsForPdf(
   if (signal?.aborted) throw new DOMException("Aborted", "AbortError")
   let bankQuestions: BankQuestion[] = []
 
-  // TADV and other free banks use questionBanks / questionBank fields
-  const urls = exam.questionBanks?.length ? exam.questionBanks : exam.questionBank ? [exam.questionBank] : []
+  // Free banks declare their JSON files in questionBanks
+  const urls = exam.questionBanks ?? []
 
   if (urls.length) {
     const banks = await Promise.all(urls.map((u) => fetchBank(u)))

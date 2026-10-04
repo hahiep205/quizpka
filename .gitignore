@@ -18,6 +18,9 @@ dist-ssr
 trash/*
 !trash/.gitkeep
 
+supabase/.temp/
+.zcode/plans/
+
 data-backup/*
 !data-backup/.gitkeep
 

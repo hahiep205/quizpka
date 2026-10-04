@@ -7,7 +7,6 @@ import { QuizSetupModal } from "@/components/QuizSetupModal"
 import { HcmChapterPickerModal } from "@/components/HcmChapterPickerModal"
 import { LoginNudgeModal, useLoginNudge } from "@/components/LoginNudgeModal"
 import { LoginRequiredModal } from "@/components/LoginRequiredModal"
-import { PdfViewerModal } from "@/components/PdfViewerModal"
 import { ImageDocViewerModal } from "@/components/ImageDocViewerModal"
 import { TadvPickerModal } from "@/components/TadvPickerModal"
 import { DsaiPickerModal } from "@/components/DsaiPickerModal"
@@ -52,8 +51,6 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
     setupSubject,
     handlePickerSelect,
     handlePickerClose,
-    handlePdfClose,
-    pdfChapter,
     imageDoc,
     handleImageDocClose,
     handleSetupClose,
@@ -265,15 +262,6 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
         open={loginRequiredOpen}
         lang={lang}
         onClose={() => setLoginRequiredOpen(false)}
-      />
-
-      <PdfViewerModal
-        open={Boolean(pdfChapter)}
-        lang={lang}
-        title={pdfChapter?.title ?? null}
-        pdfUrl={pdfChapter?.url ?? null}
-        noteUrl={pdfChapter?.noteUrl ?? null}
-        onClose={handlePdfClose}
       />
 
       <ImageDocViewerModal

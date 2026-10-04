@@ -18,7 +18,7 @@ export function resolveExamForChapter(
   currentExam: ExamCatalogItem,
   chapter: ChapterOption,
 ): ExamCatalogItem {
-  const wantDocs = Boolean(chapter.documentId || chapter.pdfUrl)
+  const wantDocs = Boolean(chapter.documentId)
   const currentIsDocs = (currentExam.questionCount ?? 0) === 0
   if (wantDocs === currentIsDocs || !subject) return currentExam
   const sibling = examCatalog.find(
@@ -35,7 +35,6 @@ export function useChapterPractice(lang: Lang) {
   const [pickerExam, setPickerExam] = useState<ExamCatalogItem | null>(null)
   const [setupExam, setSetupExam] = useState<ExamCatalogItem | null>(null)
   const [pendingChapter, setPendingChapter] = useState<string>("all")
-  const [pdfChapter, setPdfChapter] = useState<{ title: ChapterOption["label"]; url: string; noteUrl: string | null } | null>(null)
   const [imageDoc, setImageDoc] = useState<{ title: ChapterOption["label"]; subjectId: string; documentId: string } | null>(null)
 
   const handleTryNow = (exam: ExamCatalogItem) => {
@@ -54,11 +53,6 @@ export function useChapterPractice(lang: Lang) {
     const option = subject?.chapters?.find((chapter) => chapter.id === chapterId)
     if (!option) return
     const effectiveExam = resolveExamForChapter(subject, pickerExam, option)
-    if (option?.pdfUrl) {
-      setPdfChapter({ title: option.label, url: option.pdfUrl, noteUrl: option.noteUrl ?? null })
-      setPickerExam(null)
-      return
-    }
     if (option?.documentId) {
       setImageDoc({ title: option.label, subjectId: effectiveExam.subjectId, documentId: option.documentId })
       setPickerExam(null)
@@ -69,7 +63,6 @@ export function useChapterPractice(lang: Lang) {
     setPickerExam(null)
   }
 
-  const handlePdfClose = () => setPdfChapter(null)
   const handleImageDocClose = () => setImageDoc(null)
 
   const handleSetupClose = () => {
@@ -111,8 +104,6 @@ export function useChapterPractice(lang: Lang) {
     handleTryNow,
     handlePickerSelect,
     handlePickerClose,
-    handlePdfClose,
-    pdfChapter,
     imageDoc,
     handleImageDocClose,
     handleSetupClose,

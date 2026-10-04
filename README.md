@@ -75,4 +75,4 @@ Tests are colocated with the logic they protect. The suite covers answer mapping
 
 ## Deployment
 
-Vercel builds with `npm run build` and serves `dist/`; SPA rewrites are configured in `vercel.json`. Static question banks and media are public assets, so they must not contain secrets or access-controlled material. Use a backend and authenticated URLs if protected content is required.
+Vercel builds with `npm run build` and serves `dist/`; SPA rewrites are configured in `vercel.json`. Question banks no longer ship with the website: free-subject banks load from the public R2 bucket via `toBankUrl`, and paid-subject banks stream from the private `paid-question-banks` Storage bucket through the `get-paid-question-bank` edge function (auth + purchase + rate limits). Media assets on R2 are public but contain no secrets or access-controlled material.

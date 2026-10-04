@@ -90,7 +90,7 @@ export function buildToeicGroups(questions: Question[], startIndices: number[]):
   })
 }
 
-export type ToeicTwoLevelPart = {
+type ToeicTwoLevelPart = {
   partNum: string
   partLabel: string
   totalQuestions: number

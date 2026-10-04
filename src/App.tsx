@@ -19,7 +19,7 @@ const LoginModal = lazy(() => import("@/components/LoginModal").then(({ LoginMod
 const ToeicAnnouncementModal = lazy(() => import("@/components/ToeicAnnouncementModal").then(({ ToeicAnnouncementModal: component }) => ({ default: component })))
 const DashboardPage = lazy(() => import("@/pages/DashboardPage").then(({ DashboardPage: component }) => ({ default: component })))
 const AdminPage = lazy(() => import("@/pages/AdminPage").then(({ AdminPage: component }) => ({ default: component })))
-const PracticeGuestPage = lazy(() => import("@/pages/PracticeGuestPage").then(({ PracticeGuestPage: component }) => ({ default: component })))
+const PracticePage = lazy(() => import("@/pages/PracticePage").then(({ PracticePage: component }) => ({ default: component })))
 const PolicyPage = lazy(() => import("@/pages/PolicyPage").then(({ PolicyPage: component }) => ({ default: component })))
 const QuizDetailPage = lazy(() => import("@/pages/QuizDetailPage").then(({ QuizDetailPage: component }) => ({ default: component })))
 const NotFoundPage = lazy(() => import("@/pages/NotFoundPage").then(({ NotFoundPage: component }) => ({ default: component })))
@@ -127,7 +127,7 @@ export default function App() {
     return (
       <div className={shellClassName}>
         <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_#ffffff_0%,_rgba(248,250,252,0.55)_45%,_#f8fafc_100%)] dark:bg-[radial-gradient(ellipse_at_top,_rgba(30,58,138,0.25)_0%,_rgba(2,6,23,0.2)_45%,_#020617_100%)]" />
-        <Suspense fallback={<RouteLoading />}><PracticeGuestPage lang={lang} /></Suspense>
+        <Suspense fallback={<RouteLoading />}><PracticePage lang={lang} /></Suspense>
       </div>
     )
   }

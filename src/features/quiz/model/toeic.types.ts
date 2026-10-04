@@ -1,7 +1,7 @@
-export type ToeicOptionKey = "A" | "B" | "C" | "D" | "E" | "F"
+type ToeicOptionKey = "A" | "B" | "C" | "D" | "E" | "F"
 
-export type RawToeicAnalysisEntry = { reason?: string }
-export type RawToeicVocabulary = { phrase: string; meaning: string; paraphrases?: string[] }
+type RawToeicAnalysisEntry = { reason?: string }
+type RawToeicVocabulary = { phrase: string; meaning: string; paraphrases?: string[] }
 
 export type RawToeicQuestion = {
   id?: string | number
@@ -21,21 +21,21 @@ export type RawToeicQuestion = {
   image_description?: string
 }
 
-export type RawToeicPart1Question = RawToeicQuestion & { audio?: string; image?: string }
-export type RawToeicPart2Question = RawToeicQuestion & { audio?: string }
-export type RawToeicPart3Group = { group: string | number; audio?: string; image?: string; questions: RawToeicQuestion[] }
-export type RawToeicPart4Group = { group: string | number; audio?: string; image?: string; questions: RawToeicQuestion[] }
-export type RawToeicPart5Question = RawToeicQuestion
-export type RawToeicPart6Group = { group_id?: string | number; passage?: string; questions: RawToeicQuestion[] }
-export type RawToeicPassage = { title?: string; documentId?: string | number; documentType?: string; content?: string; text?: string }
-export type RawToeicPart7Group = { groupId?: string | number; group_id?: string | number; passage?: string; passages?: RawToeicPassage[]; questions: RawToeicQuestion[] }
+type RawToeicPart1Question = RawToeicQuestion & { audio?: string; image?: string }
+type RawToeicPart2Question = RawToeicQuestion & { audio?: string }
+type RawToeicPart3Group = { group: string | number; audio?: string; image?: string; questions: RawToeicQuestion[] }
+type RawToeicPart4Group = { group: string | number; audio?: string; image?: string; questions: RawToeicQuestion[] }
+type RawToeicPart5Question = RawToeicQuestion
+type RawToeicPart6Group = { group_id?: string | number; passage?: string; questions: RawToeicQuestion[] }
+type RawToeicPassage = { title?: string; documentId?: string | number; documentType?: string; content?: string; text?: string }
+type RawToeicPart7Group = { groupId?: string | number; group_id?: string | number; passage?: string; passages?: RawToeicPassage[]; questions: RawToeicQuestion[] }
 
-export type RawToeicPart1 = RawToeicPart1Question[]
-export type RawToeicPart2 = RawToeicPart2Question[]
-export type RawToeicPart3 = RawToeicPart3Group[]
-export type RawToeicPart4 = RawToeicPart4Group[]
-export type RawToeicPart5 = RawToeicPart5Question[]
-export type RawToeicPart6 = RawToeicPart6Group[]
+type RawToeicPart1 = RawToeicPart1Question[]
+type RawToeicPart2 = RawToeicPart2Question[]
+type RawToeicPart3 = RawToeicPart3Group[]
+type RawToeicPart4 = RawToeicPart4Group[]
+type RawToeicPart5 = RawToeicPart5Question[]
+type RawToeicPart6 = RawToeicPart6Group[]
 export type RawToeicPart7 = { groups: RawToeicPart7Group[] }
 
 export type RawToeicBank =

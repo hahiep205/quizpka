@@ -5,7 +5,7 @@ import type { ActivityEvent, PracticeAttemptRow } from "@/features/activity/lib/
  * Mọi hàm đều thuần (dễ test). Chỉ gắn cờ để admin review, không tự block.
  */
 
-export type AnomalyCode = "A1" | "A2" | "A3" | "A6" | "A7"
+type AnomalyCode = "A1" | "A2" | "A3" | "A6" | "A7"
 export type AnomalySeverity = "high" | "medium" | "low"
 
 export type AnomalyFlag = {
@@ -21,7 +21,7 @@ export type AnomalyFlag = {
   createdAt: string
 }
 
-export const ANOMALY_THRESHOLDS = {
+const ANOMALY_THRESHOLDS = {
   /** A1: số giây/câu tối thiểu ở mode exam/hard (nhỏ hơn = siêu tốc). */
   minSecondsPerQuestionExam: 5,
   /** A1/A2: bỏ qua bài quá ngắn (tránh nhiễu đề 1-2 câu). */
@@ -38,7 +38,7 @@ export const ANOMALY_THRESHOLDS = {
   maxProfileUpdatesPerDay: 5,
 } as const
 
-export type AnomalyThresholds = typeof ANOMALY_THRESHOLDS
+type AnomalyThresholds = typeof ANOMALY_THRESHOLDS
 
 export const ANOMALY_META: Record<AnomalyCode, { severity: AnomalySeverity; labelVi: string }> = {
   A1: { severity: "high", labelVi: "Nộp bài siêu tốc" },
