@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url"
 import { subjects, type ExamPaper } from "@/data/subjects"
 import { filterQuestionsBySubjectChapter, hasChapterSupport } from "@/data/subjectChapters"
 
-const publicDataRoot = resolve(dirname(fileURLToPath(import.meta.url)), "../../public/data")
+const r2BanksRoot = resolve(dirname(fileURLToPath(import.meta.url)), "../../r2-banks/data")
 
 type BankQuestion = { id: number | string; chapter?: string }
 
@@ -15,7 +15,7 @@ function bankPaths(exam: ExamPaper): string[] {
 }
 
 function bankFile(bankPath: string): string {
-  return join(publicDataRoot, bankPath.replace(/^\/data\//, ""))
+  return join(r2BanksRoot, bankPath.replace(/^\/data\//, ""))
 }
 
 function loadBank(bankPath: string): unknown {
@@ -49,7 +49,7 @@ function combineChapterBanks(questionsPerBank: BankQuestion[][]): BankQuestion[]
 }
 
 describe("subject bank metadata matches real data files", () => {
-  it("ensures every declared bank path exists under public/data", () => {
+  it("ensures every declared bank path exists under r2-banks/data", () => {
     const missing: string[] = []
     for (const subject of subjects) {
       for (const exam of subject.exams) {

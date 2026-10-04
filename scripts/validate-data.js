@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url"
 
 const scriptDirectory = dirname(fileURLToPath(import.meta.url))
 const projectRoot = join(scriptDirectory, "..")
-const publicDataDirectory = join(projectRoot, "public", "data")
+const r2BanksDirectory = join(projectRoot, "r2-banks", "data")
 const optionKeys = new Set(["A", "B", "C", "D", "E", "F"])
 const toeicPartQuestionCounts = { 1: 6, 2: 25, 3: 39, 4: 30, 5: 30, 6: 16, 7: 54 }
 let failures = 0
@@ -87,7 +87,7 @@ function validateGeneralBank(value, file) {
 function isR2HostedMedia(value) {
   if (/^(https?:)?\/\//.test(value)) return true
   const relativePath = value.startsWith("/data/") ? value.slice("/data/".length) : value.startsWith("/") ? value.slice(1) : value
-  return relativePath.startsWith("tadv/") || relativePath.startsWith("tadv-traphi/") || relativePath.startsWith("toeic-test/")
+  return relativePath.startsWith("tadv/") || relativePath.startsWith("tadv-traphi/") || relativePath.startsWith("toeic-test/") || relativePath.startsWith("kinh_te_vi_mo/")
 }
 
 function validateGeneralMedia(value, file) {
@@ -96,8 +96,7 @@ function validateGeneralMedia(value, file) {
     if (!isRecord(node)) return
     for (const key of ["audioUrl", "imageUrl", "image"]) {
       if (typeof node[key] === "string" && !isR2HostedMedia(node[key])) {
-        const assetPath = node[key].startsWith("/") ? join(projectRoot, "public", node[key]) : join(publicDataDirectory, node[key])
-        if (!existsSync(assetPath)) fail(file, `referenced ${key} file is missing: ${node[key]}`)
+        fail(file, `referenced ${key} must be an absolute URL or R2-hosted (tadv/, tadv-traphi/, toeic-test/, kinh_te_vi_mo/): ${node[key]}`)
       }
     }
     Object.values(node).forEach(visit)
@@ -105,10 +104,10 @@ function validateGeneralMedia(value, file) {
   visit(value)
 }
 
-if (!existsSync(publicDataDirectory)) {
-  fail(publicDataDirectory, "public data directory does not exist")
+if (!existsSync(r2BanksDirectory)) {
+  fail(r2BanksDirectory, "r2-banks data directory does not exist")
 } else {
-  for (const file of walk(publicDataDirectory).filter((path) => path.endsWith(".json"))) {
+  for (const file of walk(r2BanksDirectory).filter((path) => path.endsWith(".json"))) {
     let value
     try {
       value = JSON.parse(readFileSync(file, "utf8"))
@@ -125,4 +124,4 @@ if (!existsSync(publicDataDirectory)) {
 if (failures > 0) {
   console.error(`[validate-data] failed with ${failures} issue(s)`)
   process.exitCode = 1
-} else console.log("[validate-data] all public question banks are valid")
+} else console.log("[validate-data] all question banks are valid")

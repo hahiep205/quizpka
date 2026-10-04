@@ -31,7 +31,7 @@ export function resolveExamForChapter(
 }
 
 export function useChapterPractice(lang: Lang) {
-  const { status, user } = useAuth()
+  const { user } = useAuth()
   const [pickerExam, setPickerExam] = useState<ExamCatalogItem | null>(null)
   const [setupExam, setSetupExam] = useState<ExamCatalogItem | null>(null)
   const [pendingChapter, setPendingChapter] = useState<string>("all")
@@ -95,7 +95,7 @@ export function useChapterPractice(lang: Lang) {
       setup,
       lang,
       chapterId: hasChapter ? pendingChapter : undefined,
-    }, status === "authenticated")
+    })
     setPendingChapter("all")
   }
 

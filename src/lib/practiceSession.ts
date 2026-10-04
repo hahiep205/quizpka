@@ -90,14 +90,9 @@ export function clearPracticeSession() {
   try { sessionStorage.removeItem(PRACTICE_SESSION_KEY) } catch { /* Storage is optional. */ }
 }
 
-export function goToPracticeGuest(payload: PracticeSessionPayload) {
+export function goToPractice(payload: PracticeSessionPayload) {
   savePracticeSession(payload)
-  navigate(appRoutes.practiceGuest)
-}
-
-export function goToPractice(payload: PracticeSessionPayload, authenticated: boolean) {
-  savePracticeSession(payload)
-  navigate(authenticated ? appRoutes.practice : appRoutes.practiceGuest)
+  navigate(appRoutes.practice)
 }
 
 export function goHomeFromPractice() {

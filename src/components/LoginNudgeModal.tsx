@@ -11,9 +11,9 @@ type Lang = "en" | "vi"
 const BENEFIT_ICONS = [History, RotateCcw, Trophy, Zap] as const
 
 /**
- * Chặn hành động "Thử ngay" của khách để mời login trước.
+ * Chặn hành động "Thử ngay" của khách: bắt buộc đăng nhập trước khi làm quiz.
  * - Đã login (hoặc đang loading session): chạy action luôn, không hiện modal.
- * - Khách: mở modal, "Bỏ qua" thì chạy tiếp như khách, "Đăng nhập ngay" đi OAuth.
+ * - Khách: mở modal đăng nhập, không có đường bỏ qua.
  */
 export function useLoginNudge() {
   const { status } = useAuth()
@@ -29,30 +29,21 @@ export function useLoginNudge() {
     setNudgeOpen(true)
   }, [status])
 
-  const skipNudge = useCallback(() => {
-    setNudgeOpen(false)
-    const action = pendingRef.current
-    pendingRef.current = null
-    action?.()
-  }, [])
-
   const closeNudge = useCallback(() => {
     setNudgeOpen(false)
     pendingRef.current = null
   }, [])
 
-  return { nudgeOpen, requestNudge, skipNudge, closeNudge }
+  return { nudgeOpen, requestNudge, closeNudge }
 }
 
 export function LoginNudgeModal({
   open,
   lang = "vi",
-  onSkip,
   onClose,
 }: {
   open: boolean
   lang?: Lang
-  onSkip: () => void
   onClose: () => void
 }) {
   const t = copy[lang]
@@ -112,14 +103,6 @@ export function LoginNudgeModal({
       </div>
 
       <div className={cn(modalFooterClass, "[&>button]:flex-1 sm:[&>button]:flex-none")}>
-        <button
-          type="button"
-          className="lp-btn lp-btn--secondary lp-btn--sm"
-          onClick={onSkip}
-          disabled={loading}
-        >
-          {t.skip}
-        </button>
         <button
           type="button"
           className="lp-btn lp-btn--primary lp-btn--sm"

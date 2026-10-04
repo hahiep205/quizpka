@@ -5,7 +5,7 @@ import type { Question } from "@/features/quiz/model/quiz.types"
 import { classifyToeicQuestion } from "@/features/quiz/lib/toeicCategories"
 
 function loadRealQuestions(): Question[] {
-  const base = resolve("public/data/toeic-test/Test-01")
+  const base = resolve("r2-banks/data/toeic-test/Test-01")
   const dirs = ["Part1", "Part2", "Part3", "Part4", "Part5", "Part6", "Part7"]
   const files: Record<string, string> = { Part1: "test01-part1.json", Part2: "part2.json", Part3: "part3.json", Part4: "part4.json", Part5: "part5.json", Part6: "part6.json", Part7: "part7.json" }
   const out: Question[] = []

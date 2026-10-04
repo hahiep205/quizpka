@@ -2,7 +2,7 @@ import { hasChapterSupport, filterQuestionsBySubjectChapter } from "@/data/subje
 import type { ExamCatalogItem, Subject } from "@/data/subjects"
 import { parseQuestionBank, QuestionBankDataError } from "@/features/quiz/lib/questionBankSchema"
 import type { BankFile, BankQuestion } from "@/features/quiz/model/quiz.types"
-import { toMediaUrl } from "@/lib/mediaUrl"
+import { toBankUrl, toMediaUrl } from "@/lib/mediaUrl"
 
 export type PdfQuestion = {
   index: number
@@ -15,7 +15,7 @@ export type PdfQuestion = {
 }
 
 async function fetchBank(url: string): Promise<BankFile> {
-  const res = await fetch(url)
+  const res = await fetch(toBankUrl(url))
   if (!res.ok) throw new QuestionBankDataError(url, `HTTP ${res.status}`)
   const json = await res.json()
   return parseQuestionBank(json, url)

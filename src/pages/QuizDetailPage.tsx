@@ -252,7 +252,6 @@ export function QuizDetailPage({ lang, slug }: { lang: Lang; slug: string }) {
       <LoginNudgeModal
         open={nudge.nudgeOpen}
         lang={lang}
-        onSkip={nudge.skipNudge}
         onClose={nudge.closeNudge}
       />
 

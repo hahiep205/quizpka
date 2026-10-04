@@ -120,10 +120,10 @@ export default function App() {
     )
   }
 
-  if ([appRoutes.practice, appRoutes.practiceGuest, appRoutes.result, appRoutes.resultGuest].includes(pathname as typeof appRoutes.practice)) {
-    const authenticatedRoute = pathname === appRoutes.practice || pathname === appRoutes.result
-    if (authenticatedRoute && status === "loading") return <RouteLoading />
-    if (authenticatedRoute && status === "anonymous") return <LoginRequiredScreen onLogin={() => void signInWithGoogle()} />
+  if ([appRoutes.practice, appRoutes.result].includes(pathname as typeof appRoutes.practice)) {
+    // Làm quiz bắt buộc đăng nhập; các URL *4guest cũ đã bị xoá hẳn (rơi vào NotFoundPage).
+    if (status === "loading") return <RouteLoading />
+    if (status === "anonymous") return <LoginRequiredScreen onLogin={() => void signInWithGoogle()} />
     return (
       <div className={shellClassName}>
         <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_#ffffff_0%,_rgba(248,250,252,0.55)_45%,_#f8fafc_100%)] dark:bg-[radial-gradient(ellipse_at_top,_rgba(30,58,138,0.25)_0%,_rgba(2,6,23,0.2)_45%,_#020617_100%)]" />

@@ -34,7 +34,7 @@ import { dsaiExamOptions } from "@/data/dsaiExams"
 import { tadvPaidExamOptions } from "@/data/tadvPaidExams"
 
 const here = dirname(fileURLToPath(import.meta.url))
-const publicDataRoot = resolve(here, "../../public/data")
+const r2BanksRoot = resolve(here, "../../r2-banks/data")
 // Đọc source purchases.ts DƯỚI DẠNG TEXT để biết môn nào trả phí,
 // thay vì import nó (import sẽ khởi tạo supabase client + cần env).
 const purchasesSource = readFileSync(resolve(here, "../lib/purchases.ts"), "utf8")
@@ -48,7 +48,7 @@ function bankPaths(exam: ExamPaper): string[] {
 }
 
 function bankFile(bankPath: string): string {
-  return join(publicDataRoot, bankPath.replace(/^\/data\//, ""))
+  return join(r2BanksRoot, bankPath.replace(/^\/data\//, ""))
 }
 
 function countBankQuestions(bank: unknown): number {

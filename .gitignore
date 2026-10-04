@@ -18,6 +18,9 @@ dist-ssr
 trash/*
 !trash/.gitkeep
 
+data-backup/*
+!data-backup/.gitkeep
+
 # Supabase local backups (DB ~53MB, khong commit bat cu gi trong nay)
 backup-database/*
 !backup-database/.gitkeep

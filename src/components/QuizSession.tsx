@@ -69,7 +69,7 @@ type QuizSessionProps = {
 
 export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope, questionIds, retryOfHistoryId, retryNumber, onExit }: QuizSessionProps) {
   const t = copy[lang]
-  const { status, user } = useAuth()
+  const { user } = useAuth()
   const hideExplanation = shouldHideExplanation(subject.id)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [answers, setAnswers] = useState<Record<string, AnswerValue>>({})
@@ -186,7 +186,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
 
   useEffect(() => {
     if (!finished) return
-    window.history.replaceState(null, "", status === "authenticated" ? appRoutes.result : appRoutes.resultGuest)
+    window.history.replaceState(null, "", appRoutes.result)
     if (historySaved.current) return
     historySaved.current = true
     void incrementSubjectAttempt(subject.id)
@@ -268,7 +268,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
         setSyncError(submitError instanceof Error ? submitError.message : "Không đồng bộ được lịch sử. Hãy kiểm tra mạng rồi nộp lại.")
       }
     })()
-  }, [activeRetryNumber, answers, chapterId, elapsedSeconds, exam, finished, hardMastered, hardProgress, hardWrongCounts, isHard, lang, questions, setup, stats.correct, stats.score10, status, subject.id, toeicScope, user, wrongQuestions])
+  }, [activeRetryNumber, answers, chapterId, elapsedSeconds, exam, finished, hardMastered, hardProgress, hardWrongCounts, isHard, lang, questions, setup, stats.correct, stats.score10, subject.id, toeicScope, user, wrongQuestions])
 
   const handleAnswer = useCallback((questionId: string, answer: AnswerValue) => {
     const question = questionById.get(questionId)
@@ -290,7 +290,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
     historySaved.current = false
     retryRootHistoryId.current ??= lastSavedHistoryId.current
     setActiveRetryNumber((current) => (current ?? 0) + 1)
-    window.history.replaceState(null, "", status === "authenticated" ? appRoutes.practice : appRoutes.practiceGuest)
+    window.history.replaceState(null, "", appRoutes.practice)
     setRetryHistory((prev) => [...prev, { correct: stats.correct, total: questions.length, accuracy: stats.accuracy }])
     const subset = wrongQuestions.length === questions.length ? shuffle([...wrongQuestions]) : wrongQuestions
     setQuestions(subset)
@@ -302,7 +302,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
     resetTimer()
     setTransitionKey((value) => value + 1)
     setForcePractice(true)
-  }, [questions, resetTimer, setQuestions, setRetryHistory, stats, status, wrongQuestions])
+  }, [questions, resetTimer, setQuestions, setRetryHistory, stats, wrongQuestions])
 
   const handleOpenReview = useCallback((questionId?: string) => {
     setReviewQuestionId(questionId)

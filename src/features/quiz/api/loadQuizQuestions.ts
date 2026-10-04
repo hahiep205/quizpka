@@ -7,6 +7,7 @@ import { parseQuestionBank, QuestionBankDataError } from "@/features/quiz/lib/qu
 import { loadToeicQuestions } from "@/features/quiz/lib/toeicHelpers"
 import type { BankFile, BankPart, Question } from "@/features/quiz/model/quiz.types"
 import { FunctionsHttpError } from "@supabase/supabase-js"
+import { toBankUrl } from "@/lib/mediaUrl"
 import { supabase } from "@/lib/supabase"
 
 /** Extract the server-sent reason (e.g. "Purchase required") instead of the
@@ -24,22 +25,22 @@ async function paidBankErrorMessage(error: unknown): Promise<string> {
   return error instanceof Error ? error.message : String(error)
 }
 
-async function fetchBank(url: string, signal: AbortSignal): Promise<BankFile> {
+async function fetchBank(path: string, signal: AbortSignal): Promise<BankFile> {
   let response: Response
   try {
-    response = await fetch(url, { signal })
+    response = await fetch(toBankUrl(path), { signal })
   } catch (error) {
     if (error instanceof DOMException && error.name === "AbortError") throw error
-    throw new QuestionBankDataError(url, `network request failed: ${error instanceof Error ? error.message : String(error)}`)
+    throw new QuestionBankDataError(path, `network request failed: ${error instanceof Error ? error.message : String(error)}`)
   }
-  if (!response.ok) throw new QuestionBankDataError(url, `request returned HTTP ${response.status}`)
+  if (!response.ok) throw new QuestionBankDataError(path, `request returned HTTP ${response.status}`)
   let json: unknown
   try {
     json = await response.json()
   } catch {
-    throw new QuestionBankDataError(url, "response is not valid JSON")
+    throw new QuestionBankDataError(path, "response is not valid JSON")
   }
-  return parseQuestionBank(json, url)
+  return parseQuestionBank(json, path)
 }
 
 function combineBanks(banks: BankFile[]): BankFile {

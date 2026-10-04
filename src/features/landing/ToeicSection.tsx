@@ -7,7 +7,6 @@ import { type ToeicScope } from "@/data/toeic"
 import { goToPractice } from "@/lib/practiceSession"
 import { toeicSectionCopy as copy } from "@/shared/i18n"
 import { getToeicScopeOption } from "@/data/toeic"
-import { useAuth } from "@/auth/AuthProvider"
 import { useSubjectOverrides } from "@/hooks/useSubjectOverrides"
 import { applySubjectDisplayOverrides, isSubjectVisible } from "@/features/admin/lib/subjectDisplay"
 import { CatalogExamCard } from "@/components/CatalogExamCard"
@@ -15,7 +14,6 @@ import { CatalogExamCard } from "@/components/CatalogExamCard"
 type Lang = "en" | "vi"
 
 export function ToeicSection({ lang }: { lang: Lang }) {
-  const { status } = useAuth()
   const t = copy[lang]
   const [pickerOpen, setPickerOpen] = useState(false)
   const [setupOpen, setSetupOpen] = useState(false)
@@ -62,7 +60,7 @@ export function ToeicSection({ lang }: { lang: Lang }) {
       setup,
       lang,
       toeicScope: selectedScope,
-    }, status === "authenticated")
+    })
   }
 
   // derive display exam for setup modal (override count/duration per scope)
@@ -116,7 +114,7 @@ export function ToeicSection({ lang }: { lang: Lang }) {
 
       <ToeicScopePickerModal open={pickerOpen} lang={lang} examId={selectedExamId} onClose={() => setPickerOpen(false)} onSelect={handlePickerSelect} />
 
-      <LoginNudgeModal open={nudge.nudgeOpen} lang={lang} onSkip={nudge.skipNudge} onClose={nudge.closeNudge} />
+      <LoginNudgeModal open={nudge.nudgeOpen} lang={lang} onClose={nudge.closeNudge} />
 
       <QuizSetupModal open={setupOpen} lang={lang} exam={setupExam} subject={setupSubject} onClose={handleSetupClose} onStart={handleSetupStart} />
     </section>

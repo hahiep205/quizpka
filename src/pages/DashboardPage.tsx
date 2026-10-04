@@ -158,7 +158,7 @@ export function DashboardPage({
   onOpenContact,
 }: DashboardPageProps) {
   const [activeView, setActiveView] = useState<DashboardView>(() => getDashboardView(getCurrentPath()))
-  const { user: dashboardUser, status: dashboardStatus } = useAuth()
+  const { user: dashboardUser } = useAuth()
   const { unreadCount: unreadNotificationCount } = useNotifications()
   const [payment, setPayment] = useState<{ payment: { qrUrl: string } } | null>(null)
   const [paymentProductId, setPaymentProductId] = useState("dsai101")
@@ -351,7 +351,6 @@ export function DashboardPage({
         lang,
         toeicScope,
       },
-      dashboardStatus === "authenticated",
     )
   }
 
@@ -1133,7 +1132,7 @@ function EmptyView({ lang, view }: { lang: Lang; view: "history" }) {
       questionIds: ids,
       retryOfHistoryId: item.retryOfHistoryId ?? item.id,
       retryNumber: (item.retryNumber ?? 0) + 1,
-    }, true)
+    })
   }
   return (
     <section className="dashboard-reveal mx-auto max-w-4xl">

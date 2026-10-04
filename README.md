@@ -16,7 +16,6 @@ npm run typecheck    # TypeScript validation
 npm run lint         # Oxlint, including type-aware rules
 npm run test         # unit tests with Vitest
 npm run validate:data # validate question-bank shapes, counts, answers, and media links
-npm run sync:data    # manual utility: copy source banks from /data into public/data (no-op without /data)
 npm run clean        # remove the generated dist/ directory
 npm run build        # validate data, typecheck, and build dist/
 npm run preview      # serve dist/ locally
@@ -52,18 +51,20 @@ src/
   features/quiz/      quiz domain model, loaders, adapters, and UI
   pages/              route-level screens
   security/           client-side interaction controls
-public/data/          published question banks and media assets
-scripts/validate-data.js  validates published question banks and media links during build
+public/              static web assets (logo, favicon)
+r2-banks/data/       free-subject question banks — git mirror of the R2 bucket objects (`data/` key prefix)
+scripts/validate-data.js  validates question banks and media links during build
 ```
 
 ## Question-bank conventions
 
-- General subject banks are JSON files referenced by `questionBank` or `questionBanks` in `src/data/subjects.ts`. Each bank lives in its own subfolder under `public/data` (e.g. `public/data/tu-tuong-hcm/`, `public/data/tadv/`). TADV media paths inside those JSON files stay relative (e.g. `tadv/test01/part1-audio.mp3`); `toMediaUrl` in `src/lib/mediaUrl.ts` serves TADV audio/images, TOEIC audio/images (`toeic-test/` → `toeic/`), and the hero videos from R2, flattening `part5-image-testN/` folders.
-- The optional manual source mirror lives in the repository root: `sync:data` copies `data/General/<subject>/**` into `public/data/<subject>/` (preserving nested folders such as `triet-hoc-mac-lenin/{2tc,3tc}`) and maps `data/Major/*.json` through `scripts/sync-data.js`.
-- TOEIC banks live under `public/data/toeic-test/Test-XX/PartN/`.
+- Question banks are NOT shipped with the website. Free-subject banks live in `r2-banks/data/` (git mirror) and are uploaded to the public R2 bucket (`data/` key prefix); at runtime `toBankUrl` in `src/lib/mediaUrl.ts` maps the logical `/data/...` paths declared in `src/data/subjects.ts`, `tadvExams.ts`, and `toeic.ts` onto the R2 base URL.
+- Paid-subject banks live in the private Supabase Storage bucket `paid-question-banks` and are served through the `get-paid-question-bank` edge function (auth + purchase + rate limits). They never touch the web host.
+- TADV media paths inside bank JSON files stay relative (e.g. `tadv/test01/part1-audio.mp3`); `toMediaUrl` in `src/lib/mediaUrl.ts` serves TADV audio/images, TOEIC audio/images (`toeic-test/` → `toeic/`), kinh_te_vi_mo images, and the hero videos from R2, flattening `part5-image-testN/` folders. Every media reference must be R2-hosted or an absolute URL; `validate-data` fails otherwise.
+- TOEIC free banks are mirrored under `r2-banks/data/toeic-test/Test-XX/PartN/` (R2 key `data/toeic-test/...`).
 - Each TOEIC JSON file must match its folder part. The loader validates the required question text, options shape, and answer fields at runtime.
 - Parts 1, 2 and 5 are arrays of questions; Parts 3, 4 and 6 are arrays of groups; Part 7 is an object with `groups`.
-- Relative media names (`audio`, `image`) are resolved from the bank file's directory, then rewritten to R2. JSON banks stay under `public/data/toeic-test/`.
+- Relative media names (`audio`, `image`) are resolved from the bank file's directory, then rewritten to R2.
 - Update the counts, file paths, and metadata together in `src/data/toeic.ts`; do not rely on a count inferred from the UI.
 
 ## Testing

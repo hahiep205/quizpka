@@ -12,7 +12,6 @@
     "typecheck": "tsc -p tsconfig.app.json --noEmit",
     "preview": "vite preview",
     "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
-    "sync:data": "node ./scripts/sync-data.js",
     "validate:data": "node ./scripts/validate-data.js"
   },
   "dependencies": {

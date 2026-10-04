@@ -14,8 +14,8 @@ export const appTranslations = {
     heroDesc:
       "Designed to help PKA students prep fast for midterms and finals across all general and major courses.",
     explore: "Experience it now",
-    freeNote: "You can try out a practice review right away without logging in!",
-    freeNote2: "Log in to explore even more.",
+    freeNote: "Practice for free with the PKA exam bank!",
+    freeNote2: "Sign in to take the quiz.",
     eyebrowBadge: "New",
     eyebrowText: "Try free learning now!",
     contribute: "Contribute",
@@ -44,8 +44,8 @@ export const appTranslations = {
     heroDesc:
       "Trang giúp sinh viên PKA ôn thi cấp tốc với kho tài liệu ôn thi giữa và cuối kỳ phong phú, bao trọn cả các môn đại cương và chuyên ngành.",
     explore: "Trải nghiệm ngay",
-    freeNote: "Bạn có thể ôn tập thử ngay mà không cần đăng nhập!",
-    freeNote2: "Đăng nhập để khám phá nhiều chức năng hơn nữa.",
+    freeNote: "Luyện tập miễn phí cùng kho đề ôn thi của PKA!",
+    freeNote2: "Đăng nhập để làm bài kiểm tra.",
     eyebrowBadge: "New",
     eyebrowText: "Học thử miễn phí ngay!",
     contribute: "Chia sẻ tài liệu",
@@ -513,8 +513,8 @@ export const loginCopy = {
 
 export const loginNudgeCopy = {
   en: {
-    title: "Sign in for the full experience",
-    subtitle: "You can try it right away as a guest, but signing in unlocks:",
+    title: "Sign in to take the quiz",
+    subtitle: "Signing in is required before starting a quiz. It also unlocks:",
     benefits: [
       { title: "Saved history", desc: "Every attempt is kept so you can review anytime." },
       { title: "Retry wrong answers", desc: "Wrong questions are collected for focused practice." },
@@ -523,13 +523,12 @@ export const loginNudgeCopy = {
     ],
     signIn: "Sign in now",
     signingIn: "Connecting to Google…",
-    skip: "Skip",
     error: "Unable to start Google sign-in. Please try again.",
     close: "Close",
   },
   vi: {
-    title: "Đăng nhập để học trọn vẹn",
-    subtitle: "Bạn có thể làm thử ngay mà không cần login, nhưng đăng nhập sẽ mở:",
+    title: "Đăng nhập để làm bài kiểm tra",
+    subtitle: "Bạn cần đăng nhập trước khi làm bài. Đăng nhập sẽ mở:",
     benefits: [
       { title: "Lưu lịch sử làm bài", desc: "Mọi lượt làm được giữ lại để xem bất cứ lúc nào." },
       { title: "Làm lại câu sai", desc: "Tự động gom câu sai để luyện lại trọng tâm." },
@@ -538,7 +537,6 @@ export const loginNudgeCopy = {
     ],
     signIn: "Đăng nhập ngay",
     signingIn: "Đang kết nối với Google…",
-    skip: "Bỏ qua",
     error: "Không thể bắt đầu đăng nhập Google. Vui lòng thử lại.",
     close: "Đóng",
   },

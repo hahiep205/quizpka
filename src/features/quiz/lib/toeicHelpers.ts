@@ -4,7 +4,7 @@ import { shuffle } from "@/features/quiz/lib/quizHelpers"
 import { getToeicPartFromFile, parseToeicBank, ToeicDataError } from "@/features/quiz/lib/toeicSchema"
 import type { Question } from "@/features/quiz/model/quiz.types"
 import type { RawToeicBank, RawToeicQuestion } from "@/features/quiz/model/toeic.types"
-import { toMediaUrl } from "@/lib/mediaUrl"
+import { toBankUrl, toMediaUrl } from "@/lib/mediaUrl"
 
 const OPTION_KEYS = ["A", "B", "C", "D", "E", "F"] as const
 
@@ -76,7 +76,8 @@ export async function loadToeicQuestions(scope: ToeicScope, examId: string, setu
     const part = getToeicPartFromFile(file)
     let response: Response
     try {
-      response = await fetch(file, { signal })
+      // Bank JSON fetches from R2; `file` stays the /data path so media directory resolution is unchanged.
+      response = await fetch(toBankUrl(file), { signal })
     } catch (error) {
       throw new ToeicDataError(file, part, `network request failed: ${error instanceof Error ? error.message : String(error)}`)
     }

@@ -258,7 +258,6 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
       <LoginNudgeModal
         open={nudge.nudgeOpen}
         lang={lang}
-        onSkip={nudge.skipNudge}
         onClose={nudge.closeNudge}
       />
 

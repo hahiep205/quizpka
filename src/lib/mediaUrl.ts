@@ -5,6 +5,21 @@ const R2_PREFIX_REWRITES = [
   ["tadv/", "tadv/"],
   ["tadv-traphi/", "tadv-traphi/"],
   ["toeic-test/", "toeic/"],
+  ["kinh_te_vi_mo/", "data/kinh_te_vi_mo/"],
+] as const
+
+/** Bank prefixes hosted on R2 under the `data/` key prefix (repo mirror: r2-banks/data/). */
+const R2_BANK_PREFIXES = [
+  "tadv/",
+  "toeic-test/",
+  "kinh_te_vi_mo/",
+  "tu-tuong-hcm-giua-ky/",
+  "lich-su-dang-giua-ky/",
+  "quan-tri-hoc-giua-ky/",
+  "chu-nghia-khoa-hoc-xa-hoi-giua-ky/",
+  "kinh-te-chinh-tri-mac-lenin-giua-ky/",
+  "triet-hoc-mac-lenin-2tc-giua-ky/",
+  "triet-hoc-mac-lenin-3tc-giua-ky/",
 ] as const
 
 function isRemoteUrl(value: string) {
@@ -38,4 +53,13 @@ export function toMediaUrl(value: unknown): string | undefined {
   if (r2Path) return `${R2_PUBLIC_BASE}/${r2Path}`
   if (original.startsWith("/")) return original
   return `/data/${relativePath}`
+}
+
+/** Resolves question-bank JSON URLs: the 10 free-subject banks load from R2 (key keeps the `data/` prefix); other paths stay as-is. */
+export function toBankUrl(value: string): string {
+  const relativePath = stripPublicPrefix(value)
+  if (R2_BANK_PREFIXES.some((prefix) => relativePath.startsWith(prefix))) {
+    return `${R2_PUBLIC_BASE}/data/${relativePath}`
+  }
+  return value
 }
