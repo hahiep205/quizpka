@@ -99,7 +99,7 @@ export function LoginNudgeModal({
         {error ? <p role="alert" className="text-center text-sm font-semibold text-red-600">{error}</p> : null}
       </div>
 
-      <div className={cn(modalFooterClass, "[&>button]:flex-1 sm:[&>button]:flex-none")}>
+      <div className={cn(modalFooterClass, "lp-modal-footer--compact items-center [&>button]:flex-none")}>
         <button
           type="button"
           className="lp-btn lp-btn--primary lp-btn--sm"

@@ -545,6 +545,12 @@ html.dark .lp-modal-desc {
   min-width: 0;
 }
 
+/* Footer chỉ 1 nút: bỏ min-height 124px thừa trên mobile. */
+.lp-modal-footer--compact {
+  min-height: 0;
+  padding-top: 0.75rem;
+}
+
 @media (min-width: 640px) {
   .lp-modal-footer {
     min-height: 0;
