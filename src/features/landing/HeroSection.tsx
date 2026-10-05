@@ -1,43 +1,20 @@
 import { GoogleIcon } from "@/shared/icons/GoogleIcon"
-import { toMediaUrl } from "@/lib/mediaUrl"
-import type { Theme } from "@/shared/types/app"
 
-function QuizPreviewCard({ theme }: { theme: Theme }) {
+function QuizPreviewCard() {
   return (
-    <div className="relative mx-auto w-full max-w-[420px]">
-      <div className="absolute -inset-x-4 bottom-0 top-12 rounded-xl bg-primary-100/35 blur-2xl dark:bg-sky-500/10" />
-      <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-white px-6 pb-7 pt-5 shadow-[var(--shadow-2)] dark:border-white/10 dark:bg-slate-900 dark:shadow-[var(--shadow-2)] sm:px-7 sm:pb-8 sm:pt-6">
-        <div className="mb-6 flex items-center justify-between gap-3">
-          <div className="flex items-center gap-1.5">
-            <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
-            <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
-            <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
-          </div>
-          <span className="min-w-0 truncate text-[11px] font-medium tracking-wide text-slate-400 sm:text-[13px]">
-            quizpka.online
-          </span>
-          <span className="text-[13px] font-medium tabular-nums tracking-wide text-slate-400">
-            00:31:07
-          </span>
-        </div>
-
-        <video
-          className="mt-2 w-full max-h-[340px] rounded-lg object-contain"
-          src={theme === "dark" ? toMediaUrl("/animo-column-drift-720p-dark.webm") : toMediaUrl("/animo-column-drift-720p.webm")}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          aria-hidden="true"
-          disablePictureInPicture
-        />
-      </div>
+    <div className="relative mx-auto w-full max-w-[360px] sm:max-w-[390px] lg:max-w-[505px]">
+      <img
+        className="max-h-[360px] w-full object-contain sm:max-h-[390px] lg:max-h-[505px]"
+        src="/hero-svg.svg?v=2"
+        alt=""
+        aria-hidden="true"
+        loading="eager"
+      />
     </div>
   )
 }
 
-export function HeroSection({ t, onOpenLogin, onOpenDashboard, authenticated, theme }: { t: Record<string, string>; onOpenLogin: () => void; onOpenDashboard: () => void; authenticated: boolean; theme: Theme }) {
+export function HeroSection({ t, onOpenLogin, onOpenDashboard, authenticated }: { t: Record<string, string>; onOpenLogin: () => void; onOpenDashboard: () => void; authenticated: boolean }) {
   return (
     <section
       id="home"
@@ -72,7 +49,7 @@ export function HeroSection({ t, onOpenLogin, onOpenDashboard, authenticated, th
                 type="button"
                 className="lp-btn lp-btn--secondary"
                 onClick={() => {
-                  document.getElementById("docs")?.scrollIntoView({ behavior: "smooth", block: "start" })
+                  document.getElementById("starts")?.scrollIntoView({ behavior: "smooth", block: "start" })
                 }}
               >
                 {authenticated ? t.quizNow : t.explore}
@@ -126,7 +103,7 @@ export function HeroSection({ t, onOpenLogin, onOpenDashboard, authenticated, th
           </div>
 
           <div className="flex items-center justify-center lg:justify-end lg:pr-2">
-            <QuizPreviewCard theme={theme} />
+            <QuizPreviewCard />
           </div>
         </div>
       </div>

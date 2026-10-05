@@ -14,6 +14,7 @@ export const appRoutes = {
   authCallback: "/auth/callback",
   policy: "/policy",
   quiz: "/quiz",
+  test: "/test",
   admin: "/admin",
   adminOverview: "/admin/overview",
   adminUsers: "/admin/users",

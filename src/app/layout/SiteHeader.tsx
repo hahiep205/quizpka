@@ -50,6 +50,7 @@ export function SiteHeader({
   onToggleTheme,
   onOpenLogin,
   t,
+  navHrefs,
 }: {
   lang: Lang
   theme: Theme
@@ -57,6 +58,7 @@ export function SiteHeader({
   onToggleTheme: () => void
   onOpenLogin: () => void
   t: Record<string, string>
+  navHrefs?: Partial<Record<NavKey, string>>
 }) {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [menuVisible, setMenuVisible] = useState(false)
@@ -65,15 +67,23 @@ export function SiteHeader({
   const { status, signOut } = useAuth()
   const authenticated = status === "authenticated"
 
+  // Map hash -> nav key theo href thực tế (tôn trọng navHrefs ghi đè, vd trang /test).
+  const navHrefDocuments = navHrefs?.documents
+  const navHrefFeatures = navHrefs?.features
+
   useEffect(() => {
+    const hrefByKey: Record<NavKey, string> = {
+      home: "#home",
+      documents: navHrefDocuments ?? "#docs",
+      features: navHrefFeatures ?? "#features",
+    }
     const resolveActive = () => {
       const hash = window.location.hash.replace("#", "")
-      if (hash === "docs" || hash === "documents") {
-        setActiveNav("documents")
-        return
-      }
-      if (hash === "features") {
-        setActiveNav("features")
+      const matched = (Object.keys(hrefByKey) as NavKey[]).find(
+        (key) => hrefByKey[key] === `#${hash}`,
+      )
+      if (matched) {
+        setActiveNav(matched)
         return
       }
 
@@ -108,7 +118,7 @@ export function SiteHeader({
       window.removeEventListener("scroll", resolveActive)
       window.removeEventListener("hashchange", resolveActive)
     }
-  }, [])
+  }, [navHrefDocuments, navHrefFeatures])
 
   useEffect(() => {
     if (mobileOpen) {
@@ -191,10 +201,11 @@ export function SiteHeader({
         <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-10 md:flex">
           {navKeys.map((item) => {
             const isActive = activeNav === item.key
+            const href = navHrefs?.[item.key] ?? item.href
             return (
               <a
                 key={item.key}
-                href={item.href}
+                href={href}
                 onClick={() => setActiveNav(item.key)}
                 className={cn(
                   "relative pb-1 text-[15px] font-bold transition-colors",
@@ -273,10 +284,11 @@ export function SiteHeader({
             <ul className="space-y-3">
               {navKeys.map((item) => {
                 const isActive = activeNav === item.key
+                const href = navHrefs?.[item.key] ?? item.href
                 return (
                   <li key={item.key} className="mobile-menu-item">
                     <a
-                      href={item.href}
+                      href={href}
                       className={cn(
                         "lp-btn lp-btn--sm lp-btn--block w-full min-w-0",
                         isActive ? "lp-btn--primary" : "lp-btn--secondary"

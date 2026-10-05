@@ -1,12 +1,10 @@
 import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react"
 import { appRoutes, navigate, useAppPath } from "@/app/navigation"
 import type { ContactModalType } from "@/components/ContactModal"
-import { DocumentsPage } from "@/pages/DocumentsPage"
 import { appTranslations as translations } from "@/shared/i18n"
 import { useGlobalSecurity } from "@/hooks/useGlobalSecurity"
 import { SiteHeader } from "@/app/layout/SiteHeader"
 import { HeroSection } from "@/features/landing/HeroSection"
-import { ToeicSection } from "@/features/landing/ToeicSection"
 import { SiteFooter } from "@/app/layout/SiteFooter"
 import type { Language, Theme } from "@/shared/types/app"
 import { readStorage, writeStorage } from "@/lib/storage"
@@ -22,6 +20,7 @@ const AdminPage = lazy(() => import("@/pages/AdminPage").then(({ AdminPage: comp
 const PracticePage = lazy(() => import("@/pages/PracticePage").then(({ PracticePage: component }) => ({ default: component })))
 const PolicyPage = lazy(() => import("@/pages/PolicyPage").then(({ PolicyPage: component }) => ({ default: component })))
 const QuizDetailPage = lazy(() => import("@/pages/QuizDetailPage").then(({ QuizDetailPage: component }) => ({ default: component })))
+const TestPage = lazy(() => import("@/pages/TestPage").then(({ TestPage: component }) => ({ default: component })))
 const NotFoundPage = lazy(() => import("@/pages/NotFoundPage").then(({ NotFoundPage: component }) => ({ default: component })))
 
 function getTodayKey(): string {
@@ -48,6 +47,11 @@ export default function App() {
   })
 
   const t = useMemo(() => translations[lang], [lang])
+  const testT = useMemo(
+    () => ({ ...translations[lang], documents: lang === "vi" ? "Chức năng" : "Features", features: lang === "vi" ? "Bắt đầu" : "Start" }),
+    [lang],
+  )
+  const testNavHrefs = useMemo(() => ({ documents: "#features", features: "#starts" }), [])
 
   useGlobalSecurity()
 
@@ -220,6 +224,39 @@ export default function App() {
     )
   }
 
+  if (pathname === appRoutes.test) {
+    return (
+      <div className={shellClassName}>
+        <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_#ffffff_0%,_rgba(248,250,252,0.55)_45%,_#f8fafc_100%)] dark:bg-[radial-gradient(ellipse_at_top,_rgba(30,58,138,0.25)_0%,_rgba(2,6,23,0.2)_45%,_#020617_100%)]" />
+        <div className="relative flex min-h-svh flex-col">
+          <SiteHeader
+            lang={lang}
+            theme={theme}
+            t={testT}
+            onToggleLang={() => setLang((current) => (current === "en" ? "vi" : "en"))}
+            onToggleTheme={() =>
+              setTheme((current) => (current === "light" ? "dark" : "light"))
+            }
+            onOpenLogin={openLogin}
+            navHrefs={testNavHrefs}
+          />
+          <HeroSection t={testT} onOpenLogin={openLogin} onOpenDashboard={() => navigate(appRoutes.dashboard)} authenticated={status === "authenticated"} />
+          <Suspense fallback={<RouteLoading />}><TestPage lang={lang} /></Suspense>
+          <SiteFooter t={t} />
+        </div>
+
+        <Suspense fallback={null}><ContactModal
+          open={contactOpen}
+          type={contactType}
+          onClose={closeContact}
+          lang={lang}
+        /></Suspense>
+
+        <Suspense fallback={null}><LoginModal open={loginOpen} onClose={closeLogin} lang={lang} /></Suspense>
+      </div>
+    )
+  }
+
   if (pathname !== appRoutes.home) {
     return (
       <>
@@ -235,16 +272,16 @@ export default function App() {
         <SiteHeader
           lang={lang}
           theme={theme}
-          t={t}
+          t={testT}
           onToggleLang={() => setLang((current) => (current === "en" ? "vi" : "en"))}
           onToggleTheme={() =>
             setTheme((current) => (current === "light" ? "dark" : "light"))
           }
           onOpenLogin={openLogin}
+          navHrefs={testNavHrefs}
         />
-        <HeroSection t={t} onOpenLogin={openLogin} onOpenDashboard={() => navigate(appRoutes.dashboard)} authenticated={status === "authenticated"} theme={theme} />
-        <DocumentsPage lang={lang} />
-        <ToeicSection lang={lang} />
+        <HeroSection t={testT} onOpenLogin={openLogin} onOpenDashboard={() => navigate(appRoutes.dashboard)} authenticated={status === "authenticated"} />
+        <Suspense fallback={<RouteLoading />}><TestPage lang={lang} /></Suspense>
         <SiteFooter t={t} />
       </div>
 
