@@ -716,7 +716,7 @@ export const toeicAnnouncementCopy = {
   vi: {
     badge: "Chào mừng",
     title: "Chào mừng đến với Quizpka!",
-    desc: "Trang ôn tập luyện thi dành riêng cho sinh viên Phenikaa - kho tài liệu giữa và cuối kỳ da dạng với nhiều môn học. Làm bài online mọi lúc, miễn phí nhiều môn.",
+    desc: "Nền tảng ôn tập và luyện thi thông qua làm Quiz dành riêng cho sinh viên Phenikaa.",
     benefits: [
       "Kho tài liệu ôn tập dành riêng cho sinh viên Phenikaa",
       "Ôn tập mọi lúc, xem và làm lại câu sai nhanh chóng",

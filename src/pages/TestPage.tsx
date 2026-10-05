@@ -94,7 +94,7 @@ export function TestPage({ lang }: { lang: Lang }) {
       {/* Thay vị trí #docs trang chủ: liệt kê chức năng (id riêng cho trang test). */}
       <section
         id="features"
-        className="mx-auto flex w-full max-w-[1120px] flex-col scroll-mt-28 border-t border-slate-200 px-6 pb-20 pt-14 dark:border-white/10 lg:px-8 lg:pb-24 lg:pt-16"
+        className="mx-auto flex w-full max-w-[1120px] flex-col scroll-mt-28 border-t border-slate-200 px-[clamp(24px,2vw+16px,32px)] pb-[clamp(80px,5vw+60px,96px)] pt-[clamp(56px,4vw+40px,64px)] dark:border-white/10"
       >
         <div className="py-4 text-center sm:py-6">
           <h2 className="lp-section-heading">
@@ -131,7 +131,7 @@ export function TestPage({ lang }: { lang: Lang }) {
       {/* Thay vị trí #features trang chủ: hướng dẫn sử dụng (id riêng cho trang test). */}
       <section
         id="starts"
-        className="mx-auto flex w-full max-w-[1120px] flex-col scroll-mt-28 border-t border-slate-200 px-6 pb-20 pt-14 dark:border-white/10 lg:px-8 lg:pb-24 lg:pt-16"
+        className="mx-auto flex w-full max-w-[1120px] flex-col scroll-mt-28 border-t border-slate-200 px-[clamp(24px,2vw+16px,32px)] pb-[clamp(80px,5vw+60px,96px)] pt-[clamp(56px,4vw+40px,64px)] dark:border-white/10"
       >
         <div className="py-4 text-center sm:py-6">
           <h2 className="lp-section-heading">

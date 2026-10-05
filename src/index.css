@@ -204,7 +204,7 @@ html.dark body {
   max-width: 14ch;
   color: var(--dark-blue);
   font-family: var(--font-display);
-  font-size: clamp(34px, 5vw, var(--heading-xl-size));
+  font-size: clamp(30px, 8vw, var(--heading-xl-size));
   font-weight: var(--heading-xl-weight);
   line-height: var(--heading-xl-line-height);
   letter-spacing: -0.02em;
@@ -213,7 +213,6 @@ html.dark body {
 @media (max-width: 640px) {
   .lp-heading {
     max-width: none;
-    font-size: var(--heading-mobile-size);
     line-height: var(--heading-mobile-line-height);
   }
 }
@@ -244,7 +243,7 @@ html.dark .lp-heading {
   margin: 0;
   color: var(--gray-light);
   font-family: var(--font-ui);
-  font-size: var(--body-md-size);
+  font-size: clamp(15px, calc(1vw + 11px), 18px);
   font-weight: var(--body-md-weight);
   line-height: var(--body-md-line-height);
   letter-spacing: 0;
@@ -365,7 +364,7 @@ html.dark .lp-note {
   margin: 0 0 16px;
   color: var(--dark-blue);
   font-family: var(--font-display);
-  font-size: clamp(30px, 4vw, 36px);
+  font-size: clamp(26px, 6vw, 36px);
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: -0.025em;
@@ -380,7 +379,7 @@ html.dark .lp-section-heading {
   max-width: 640px;
   color: var(--gray-light);
   font-family: var(--font-ui);
-  font-size: 16px;
+  font-size: clamp(14px, calc(1vw + 10px), 16px);
   font-weight: 600;
   line-height: 1.7;
   text-align: center;
