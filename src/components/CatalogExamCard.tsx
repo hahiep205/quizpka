@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge"
 import { ExamMetaRow } from "@/components/ExamMetaRow"
 import { getSubjectById, type ExamCatalogItem } from "@/data/subjects"
 import { tadvExamOptions } from "@/data/tadvExams"
+import { tadvPaidExamOptions } from "@/data/tadvPaidExams"
 import { getPaidProductId } from "@/lib/purchases"
 import type { ReactNode } from "react"
 
@@ -14,22 +15,24 @@ export function CatalogExamCard({
   categoryLabel,
   questionsLabel,
   footer,
+  hideHeaderOnMobile = false,
 }: {
   exam: ExamCatalogItem
   lang: Lang
   categoryLabel: string
   questionsLabel: string
   footer: ReactNode
+  hideHeaderOnMobile?: boolean
 }) {
   // Only individual chapters (c1..cN): group aggregates like mid/final/suutam are not chapters.
   const chapterCount = (getSubjectById(exam.subjectId)?.chapters ?? [])
     .filter((chapter) => /^c\d+$/.test(chapter.id)).length
-  const examSetCount = exam.subjectId === "tieng-anh-dau-vao" ? tadvExamOptions.length : 0
+  const examSetCount = exam.subjectId === "tieng-anh-dau-vao" ? tadvExamOptions.length : exam.subjectId === "tadv-traphi" ? tadvPaidExamOptions.length : 0
   const isPaid = getPaidProductId(exam.subjectCode) !== null
   const badgeLabel = isPaid ? categoryLabel : lang === "vi" ? "Miễn phí" : "Free"
   return (
     <article className="group flex h-full flex-col rounded-[15px] border-2 border-[#E5E5E5] bg-white p-3 shadow-[0_3px_0_#DCDCDC] transition-transform hover:-translate-y-1 dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_3px_0_rgba(0,0,0,0.35)] sm:rounded-[16px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:sm:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
-      <div className="flex items-center justify-between gap-2 sm:items-start sm:gap-3">
+      <div className={hideHeaderOnMobile ? "hidden items-center justify-between gap-2 sm:flex sm:items-start sm:gap-3" : "flex items-center justify-between gap-2 sm:items-start sm:gap-3"}>
         <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-[10px] bg-[#E8F7FE] text-[#129BDC] dark:bg-sky-500/10 dark:text-sky-300 sm:h-12 sm:w-12 sm:rounded-[14px]">
           <BookOpen className="h-4 w-4 sm:h-6 sm:w-6" strokeWidth={2} />
         </div>
@@ -40,7 +43,6 @@ export function CatalogExamCard({
         </div>
       </div>
       <div className="mt-3 min-w-0 flex-1 sm:mt-5">
-        <p className="hidden text-xs font-extrabold uppercase tracking-[0.08em] text-[#1CB0F6] sm:block">{exam.subjectCode}</p>
         <h3 className="line-clamp-2 text-[14px] font-black leading-5 tracking-[-0.02em] text-[#100F3E] dark:text-white sm:mt-2 sm:text-lg sm:leading-6">
           {exam.title[lang]}
         </h3>

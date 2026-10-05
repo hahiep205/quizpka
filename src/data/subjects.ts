@@ -852,7 +852,7 @@ export const subjects: Subject[] = [
       {
         id: "calculus-final-docs-1", type: "final", year: 2025, questionCount: 0, durationMinutes: 0,
         title: { en: "Calculus - Final", vi: "Đề Giải tích - Cuối kỳ" },
-        description: { en: "View scanned exam papers and download each image.", vi: "Xem ảnh đề thi trực tiếp và tải từng hình ảnh." },
+        description: { en: "Includes 2 final Calculus exams (3 credits), 1 image each, no answers included, from 2024.", vi: "Gồm 2 đề thi kết thúc học phần môn Giải tích (3 tín chỉ), mỗi đề gồm 1 hình ảnh, không bao gồm đáp án, thi năm 2024." },
       },
     ],
     chapters: [
@@ -869,7 +869,7 @@ export const subjects: Subject[] = [
       {
         id: "dstt-final-docs-1", type: "final", year: 2023, questionCount: 0, durationMinutes: 0,
         title: { en: "Linear Algebra - Final", vi: "Đề Đại số tuyến tính - Cuối kỳ" },
-        description: { en: "View scanned exam papers and download each image.", vi: "Xem ảnh đề thi trực tiếp và tải từng hình ảnh." },
+        description: { en: "Includes 1 final Linear Algebra exam, 1 image, no answers included, from 2023.", vi: "Gồm 1 đề thi kết thúc học phần môn Đại số tuyến tính, đề có 1 hình ảnh, không bao gồm đáp án, thi năm 2023." },
       },
     ],
     chapters: [
@@ -885,7 +885,7 @@ export const subjects: Subject[] = [
       {
         id: "xstk-midterm-docs-1", type: "midterm", year: 2025, questionCount: 0, durationMinutes: 0,
         title: { en: "Probability & Statistics - Midterm", vi: "Đề Xác suất thống kê - Giữa kỳ" },
-        description: { en: "View scanned exam papers and download each image.", vi: "Xem ảnh đề thi trực tiếp và tải từng hình ảnh." },
+        description: { en: "Includes 1 midterm Probability & Statistics exam, 1 image, no answers included, from 2025.", vi: "Gồm 1 đề thi giữa kỳ môn Xác suất thống kê, đề có 1 hình ảnh, không bao gồm đáp án, thi năm 2025." },
       },
     ],
     chapters: [
@@ -901,7 +901,7 @@ export const subjects: Subject[] = [
       {
         id: "ppt-midterm-docs-1", type: "midterm", year: 2025, questionCount: 0, durationMinutes: 0,
         title: { en: "Numerical Methods - Midterm", vi: "Đề Phương pháp tính - Giữa kỳ" },
-        description: { en: "View scanned exam papers and download each image.", vi: "Xem ảnh đề thi trực tiếp và tải từng hình ảnh." },
+        description: { en: "Includes 1 midterm Numerical Methods exam, 1 image, no answers included, from 2025.", vi: "Gồm 1 đề thi giữa kỳ môn Phương pháp tính, đề có 1 hình ảnh, không bao gồm đáp án, thi năm 2025." },
       },
     ],
     chapters: [
@@ -917,7 +917,7 @@ export const subjects: Subject[] = [
       {
         id: "ppt-final-docs-1", type: "final", year: 2025, questionCount: 0, durationMinutes: 0,
         title: { en: "Numerical Methods - Final", vi: "Đề Phương pháp tính - Cuối kỳ" },
-        description: { en: "View scanned exam papers and download each image.", vi: "Xem ảnh đề thi trực tiếp và tải từng hình ảnh." },
+        description: { en: "Includes 2 final Numerical Methods exams, 1 image each, no answers included, from 2025.", vi: "Gồm 2 đề thi cuối kỳ môn Phương pháp tính, mỗi đề có 1 hình ảnh, không bao gồm đáp án, thi năm 2025." },
       },
     ],
     chapters: [
@@ -934,7 +934,7 @@ export const subjects: Subject[] = [
       {
         id: "physics-1-final-docs-1", type: "final", year: 2025, questionCount: 0, durationMinutes: 0,
         title: { en: "Physics 1 - Final", vi: "Đề Vật Lý 1 - Cuối kỳ" },
-        description: { en: "View scanned exam papers and download each image.", vi: "Xem ảnh đề thi trực tiếp và tải từng hình ảnh." },
+        description: { en: "Includes 3 final Physics 1 exams, 2 images each, no answers included, from 2024.", vi: "Gồm 3 đề thi cuối kỳ môn Vật lý 1, mỗi đề có 2 hình ảnh, không bao gồm đáp án, thi năm 2024." },
       },
     ],
     chapters: [
@@ -951,8 +951,8 @@ export const subjects: Subject[] = [
     exams: [
       {
         id: "discrete-math-final-docs-1", type: "final", year: 2025, questionCount: 0, durationMinutes: 0,
-        title: { en: "Discrete Mathematics - Final", vi: "Đề Toán rời rạc và Quiz ôn tập - Cuối kỳ" },
-        description: { en: "View scanned exam papers and download each image.", vi: "Xem ảnh đề thi trực tiếp và tải từng hình ảnh." },
+        title: { en: "Discrete Mathematics - Final Review & Exams", vi: "Quiz ôn tập và Đề Cuối kỳ - Toán rời rạc" },
+        description: { en: "Includes 3 final Discrete Mathematics exams (7 images, no answers included) and an 80-question review quiz.", vi: "Gồm 3 đề thi cuối kỳ môn Toán rời rạc, có 7 hình ảnh, không bao gồm đáp án và Quiz ôn tập trắc nghiệm 80 câu hỏi." },
       },
       {
         id: "discrete-math-quiz-bank-1", type: "final", year: 2026, questionCount: 80, durationMinutes: 240, hideFromCatalog: true,
@@ -979,7 +979,7 @@ export const subjects: Subject[] = [
       {
         id: "business-statistics-docs-1", type: "final", year: 2025, questionCount: 0, durationMinutes: 0,
         title: { en: "Business Statistics - Final Review & Exams", vi: "Quiz ôn tập và Đề Cuối kỳ - Thống kê trong kinh doanh" },
-        description: { en: "174-question final quiz plus final exam papers from previous years.", vi: "Gồm quiz ôn tập trắc nghiệm 174 câu và Đề thi cuối kỳ của các năm trước." },
+        description: { en: "Includes 1 final Business Statistics exam (8 images, no answers included) and a 174-question review quiz.", vi: "Gồm 1 đề thi cuối kỳ môn Thống kê trong kinh doanh, có 8 hình ảnh, không bao gồm đáp án và Quiz ôn tập trắc nghiệm 174 câu hỏi." },
       },
       {
         id: "business-statistics-quiz-bank-1", type: "final", year: 2026, questionCount: 174, durationMinutes: 240, hideFromCatalog: true,

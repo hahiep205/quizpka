@@ -1,5 +1,5 @@
 import { useEffect, useId, useRef, useState } from "react"
-import { BookOpen, CirclePlay, ExternalLink, FileImage } from "lucide-react"
+import { BookOpen, CirclePlay, Download, ExternalLink, FileImage } from "lucide-react"
 import { useAuth } from "@/auth/AuthProvider"
 import { logActivityEvent } from "@/features/activity/lib/activityLog"
 import { getChapterOptionsForSubject } from "@/data/subjectChapters"
@@ -7,6 +7,9 @@ import type { ExamCatalogItem, Subject } from "@/data/subjects"
 import { getExamTitle } from "@/data/subjects"
 import { chapterPickerCopy as copy } from "@/shared/i18n"
 import { PickerModalShell, PickerOptionButton } from "@/components/PickerModalShell"
+import { useSubjectOverrides } from "@/hooks/useSubjectOverrides"
+import { isSubjectDownloadable } from "@/features/admin/lib/subjectDisplay"
+import { getPaidProductId } from "@/lib/purchases"
 
 type Lang = "en" | "vi"
 
@@ -17,15 +20,18 @@ type Props = {
   subject: Subject | null
   onClose: () => void
   onSelect: (chapterId: string) => void
+  /** Khi có handler này + môn được phép tải PDF -> nút "Hủy" thành nút "Tải về" (tải chương đang chọn). */
+  onDownloadPdf?: (exam: ExamCatalogItem, chapterId: string) => void
 }
 
-export function HcmChapterPickerModal({ open, lang, exam, subject, onClose, onSelect }: Props) {
+export function HcmChapterPickerModal({ open, lang, exam, subject, onClose, onSelect, onDownloadPdf }: Props) {
   const titleId = useId()
   const { user } = useAuth()
   const [visible, setVisible] = useState(false)
   const [state, setState] = useState<"open" | "closed">("closed")
   const [selected, setSelected] = useState<string>("all")
   const loggedExamRef = useRef<string | null>(null)
+  const displayOverrides = useSubjectOverrides()
   const t = copy[lang]
 
   useEffect(() => {
@@ -64,6 +70,8 @@ export function HcmChapterPickerModal({ open, lang, exam, subject, onClose, onSe
   if (!visible || !exam || !subject) return null
 
   const chapterOptions = (getChapterOptionsForSubject(subject.id) ?? []).filter((chapter) => !chapter.hidden)
+  const isFreeSubject = getPaidProductId(subject.code) === null
+  const showDownloadPdf = Boolean(onDownloadPdf && isFreeSubject && isSubjectDownloadable(subject.id, displayOverrides))
 
   return (
     <PickerModalShell
@@ -75,7 +83,14 @@ export function HcmChapterPickerModal({ open, lang, exam, subject, onClose, onSe
       onClose={onClose}
       footer={
         <>
-          <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={onClose}>{t.cancel}</button>
+          {showDownloadPdf ? (
+            <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={() => onDownloadPdf?.(exam, selected)}>
+              <Download className="h-4 w-4" strokeWidth={2} aria-hidden="true" />
+              {t.download}
+            </button>
+          ) : (
+            <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={onClose}>{t.cancel}</button>
+          )}
           <button type="button" className="lp-btn lp-btn--primary lp-btn--sm" onClick={() => onSelect(selected)}>{t.continue}</button>
         </>
       }

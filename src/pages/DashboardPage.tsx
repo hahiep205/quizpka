@@ -35,7 +35,7 @@ import { ToeicScopePickerModal } from "@/components/ToeicScopePickerModal"
 import { getToeicScopeOption, type ToeicScope } from "@/data/toeic"
 import { Card } from "@/components/ui/card"
 import { Dialog } from "@/components/ui/dialog"
-import { examCatalog, getSubjectById, type ExamCatalogItem } from "@/data/subjects"
+import { examCatalog, getSubjectById, type ExamCatalogItem, type Subject } from "@/data/subjects"
 import { toMediaUrl } from "@/lib/mediaUrl"
 import { cn, modalBodyClass, modalFooterClass, modalFrameClass, modalHeaderClass } from "@/lib/utils"
 import { dashboardCopy as copy } from "@/shared/i18n"
@@ -65,6 +65,10 @@ import type { ContactModalType } from "@/components/ContactModal"
 import type { UserNotification } from "@/features/notifications/api/notifications"
 import { useNotifications } from "@/features/notifications/useNotifications"
 import { DownloadPickerModal } from "@/components/DownloadPickerModal"
+import { LoginRequiredModal } from "@/components/LoginRequiredModal"
+import { DownloadLimitModal } from "@/components/DownloadLimitModal"
+import { claimPdfDownload } from "@/features/downloads/lib/pdfQuota"
+import { pdfLoginRequiredCopy } from "@/shared/i18n"
 
 type Lang = Language
 type DashboardView = "home" | "leaderboard" | "history" | "purchased" | "downloads" | "notifications" | "settings"
@@ -92,6 +96,9 @@ const navItems: Array<{
     { key: "notifications", icon: Bell },
     { key: "settings", icon: SidebarSettingsIcon },
   ]
+
+/** Các view bị ẩn khỏi điều hướng (vẫn tồn tại để modal tải PDF dùng chung). */
+const hiddenDashboardViews: DashboardView[] = ["downloads"]
 
 function SidebarSvg({ className, children }: { className?: string; children: React.ReactNode }) {
   return <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{children}</svg>
@@ -254,6 +261,93 @@ export function DashboardPage({
 
   const [downloadPickerExam, setDownloadPickerExam] = useState<ExamCatalogItem | null>(null)
   const downloadPickerSubject = downloadPickerExam ? getSubjectById(downloadPickerExam.subjectId) : null
+  const [pdfLoginOpen, setPdfLoginOpen] = useState(false)
+  const [pdfQuotaOpen, setPdfQuotaOpen] = useState(false)
+  // Khóa spam-click: mỗi cặp exam+chapter chỉ sinh 1 PDF tại 1 thời điểm.
+  const downloadingRef = useRef<Set<string>>(new Set())
+
+  const downloadExamPdf = async (exam: ExamCatalogItem, subject: Subject, chapterId: string) => {
+    // Chốt chặn cứng: môn trả phí không bao giờ được tải PDF, dù UI nào gọi tới.
+    if (getPaidProductId(subject.code) !== null) {
+      window.alert(lang === "vi" ? "Môn trả phí không hỗ trợ tải PDF." : "Paid subjects cannot be downloaded as PDF.")
+      return
+    }
+    // Khách vãng lai không thể tải: bắt đăng nhập trước.
+    if (!dashboardUser?.id) { setPdfLoginOpen(true); return }
+    // Giới hạn 10 lượt/ngày: hết lượt (hoặc bấm quá nhanh) thì báo và chặn, không sinh PDF.
+    const quota = await claimPdfDownload()
+    if (quota && ("rateLimited" in quota || !quota.allowed)) { setPdfQuotaOpen(true); return }
+    // Chặn bấm liên tục khi file trước chưa sinh xong (đỡ tốn RPC + CPU browser).
+    const inFlightKey = `${exam.id}:${chapterId}`
+    if (downloadingRef.current.has(inFlightKey)) return
+    downloadingRef.current.add(inFlightKey)
+    try {
+      logActivityEvent(dashboardUser?.id, "view_exam_detail", { examId: exam.id, chapterId, intent: "download_pdf" })
+      const { fetchQuestionsForPdf } = await import("@/features/downloads/lib/fetchFreePdfData")
+      const { generateFreePdf, downloadBlob, pdfFilename } = await import("@/features/downloads/lib/generateFreePdf")
+      const { getChapterOptionsForSubject } = await import("@/data/subjectChapters")
+      const { tadvExamOptions } = await import("@/data/tadvExams")
+      // Resolve chapterLabel for cover
+      let chapterLabel = chapterId === "all" ? (lang === "vi" ? "Toàn bộ" : "All") : chapterId
+      const chOpts = getChapterOptionsForSubject(subject.id) ?? []
+      const found = chOpts.find((c) => c.id === chapterId)
+      if (found) chapterLabel = found.label[lang]
+      const tadvOpt = tadvExamOptions.find((o) => o.id === chapterId)
+      if (tadvOpt) chapterLabel = tadvOpt.title[lang]
+
+      // TADV special: fetch its own banks
+      let questions
+      if (tadvOpt) {
+        const { parseQuestionBank } = await import("@/features/quiz/lib/questionBankSchema")
+        const banks = await Promise.all(
+          tadvOpt.questionBanks.map(async (url) => {
+            const r = await fetch(url)
+            if (!r.ok) throw new Error(`HTTP ${r.status}`)
+            return parseQuestionBank(await r.json(), url)
+          })
+        )
+        const flat = banks.flatMap((b, bi) => {
+          if ((b as unknown as { parts?: { questions: unknown[]; partTitle: string }[] }).parts?.length) {
+            const parts = (b as unknown as { parts: { questions: { id: string | number; chapter?: string }[]; partTitle: string }[] }).parts
+            return parts.flatMap((part) =>
+              part.questions.map((q) => ({ ...(q as Record<string, unknown>), id: `${bi}-${String((q as { id: unknown }).id)}`, chapter: (q as { chapter?: string }).chapter ?? part.partTitle } as Record<string, unknown>))
+            )
+          }
+          return (b.questions ?? []).map((q) => ({ ...q, id: `${bi}-${String(q.id)}` }))
+        })
+        questions = (flat as unknown as { question: string; options?: Record<string, string>; answer: string; explainAnswer?: string; explanation?: string; chapter?: string; imageUrl?: string; image?: string }[]).map((item, idx) => ({
+          index: idx + 1,
+          prompt: item.question,
+          options: Object.keys(item.options ?? {}).sort().map((k) => ({ key: k, text: String(item.options?.[k] ?? "") })),
+          answer: item.answer,
+          explanation: (item.explainAnswer ?? item.explanation ?? (item as unknown as Record<string, string>).explain_answer ?? null) as string | null,
+          chapter: (item.chapter as string) ?? null,
+          imageUrl: toMediaUrl((item as unknown as Record<string, string>).imageUrl ?? (item as unknown as Record<string, string>).image) ?? null,
+        }))
+      } else {
+        questions = await fetchQuestionsForPdf(subject, exam, chapterId)
+      }
+
+      const blob = await generateFreePdf(subject, exam, chapterLabel, questions, dashboardUser?.email ?? null)
+      const filename = pdfFilename(subject, chapterId)
+      downloadBlob(blob, filename)
+      logActivityEvent(dashboardUser?.id, "download_pdf", {
+        examId: exam.id,
+        subjectId: subject.id,
+        subjectCode: subject.code,
+        chapterId,
+        chapterLabel,
+        questionCount: questions.length,
+        email: dashboardUser?.email ?? null,
+        filename,
+      })
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : String(e)
+      window.alert(lang === "vi" ? `Không tạo được PDF: ${msg}` : `Failed to generate PDF: ${msg}`)
+    } finally {
+      downloadingRef.current.delete(inFlightKey)
+    }
+  }
 
   useEffect(() => {
     const syncView = () => setActiveView(getDashboardView(getCurrentPath()))
@@ -397,6 +491,12 @@ export function DashboardPage({
         subject={pickerSubject}
         onClose={handlePickerClose}
         onSelect={handlePickerSelect}
+        onDownloadPdf={(exam, chapterId) => {
+          const subject = pickerSubject ?? getSubjectById(exam.subjectId)
+          if (!subject) return
+          handlePickerClose()
+          void downloadExamPdf(exam, subject, chapterId)
+        }}
       />
 
       <ImageDocViewerModal
@@ -443,6 +543,7 @@ export function DashboardPage({
         subject={setupSubject}
         onClose={handleSetupClose}
         onStart={handleSetupStart}
+        onDownloadPdf={(exam) => { handleSetupClose(); setDownloadPickerExam(exam) }}
       />
 
       <PaymentModal
@@ -495,79 +596,28 @@ export function DashboardPage({
         exam={downloadPickerExam}
         subject={downloadPickerSubject}
         onClose={() => setDownloadPickerExam(null)}
-        onConfirm={async (chapterId) => {
+        onConfirm={(chapterId) => {
           const exam = downloadPickerExam
           const subject = downloadPickerSubject
           if (!exam || !subject) return
-          logActivityEvent(dashboardUser?.id, "view_exam_detail", { examId: exam.id, chapterId, intent: "download_pdf" })
           // Keep modal open while generating; close optimistically after start
-          const prevExam = exam
-          const prevSubject = subject
           setDownloadPickerExam(null)
-          try {
-            const { fetchQuestionsForPdf } = await import("@/features/downloads/lib/fetchFreePdfData")
-            const { generateFreePdf, downloadBlob, pdfFilename } = await import("@/features/downloads/lib/generateFreePdf")
-            const { getChapterOptionsForSubject } = await import("@/data/subjectChapters")
-            const { tadvExamOptions } = await import("@/data/tadvExams")
-            // Resolve chapterLabel for cover
-            let chapterLabel = chapterId === "all" ? (lang === "vi" ? "Toàn bộ" : "All") : chapterId
-            const chOpts = getChapterOptionsForSubject(prevSubject.id) ?? []
-            const found = chOpts.find((c) => c.id === chapterId)
-            if (found) chapterLabel = found.label[lang]
-            const tadvOpt = tadvExamOptions.find((o) => o.id === chapterId)
-            if (tadvOpt) chapterLabel = tadvOpt.title[lang]
-
-            // TADV special: fetch its own banks
-            let questions
-            if (tadvOpt) {
-              const { parseQuestionBank } = await import("@/features/quiz/lib/questionBankSchema")
-              const banks = await Promise.all(
-                tadvOpt.questionBanks.map(async (url) => {
-                  const r = await fetch(url)
-                  if (!r.ok) throw new Error(`HTTP ${r.status}`)
-                  return parseQuestionBank(await r.json(), url)
-                })
-              )
-              const flat = banks.flatMap((b, bi) => {
-                if ((b as unknown as { parts?: { questions: unknown[]; partTitle: string }[] }).parts?.length) {
-                  const parts = (b as unknown as { parts: { questions: { id: string | number; chapter?: string }[]; partTitle: string }[] }).parts
-                  return parts.flatMap((part) =>
-                    part.questions.map((q) => ({ ...(q as Record<string, unknown>), id: `${bi}-${String((q as { id: unknown }).id)}`, chapter: (q as { chapter?: string }).chapter ?? part.partTitle } as Record<string, unknown>))
-                  )
-                }
-                return (b.questions ?? []).map((q) => ({ ...q, id: `${bi}-${String(q.id)}` }))
-              })
-              questions = (flat as unknown as { question: string; options?: Record<string, string>; answer: string; explainAnswer?: string; explanation?: string; chapter?: string; imageUrl?: string; image?: string }[]).map((item, idx) => ({
-                index: idx + 1,
-                prompt: item.question,
-                options: Object.keys(item.options ?? {}).sort().map((k) => ({ key: k, text: String(item.options?.[k] ?? "") })),
-                answer: item.answer,
-                explanation: (item.explainAnswer ?? item.explanation ?? (item as unknown as Record<string,string>).explain_answer ?? null) as string | null,
-                chapter: (item.chapter as string) ?? null,
-                imageUrl: toMediaUrl((item as unknown as Record<string, string>).imageUrl ?? (item as unknown as Record<string, string>).image) ?? null,
-              }))
-            } else {
-              questions = await fetchQuestionsForPdf(prevSubject, prevExam, chapterId)
-            }
-
-            const blob = await generateFreePdf(prevSubject, prevExam, chapterLabel, questions, dashboardUser?.email ?? null)
-            const filename = pdfFilename(prevSubject, chapterId)
-            downloadBlob(blob, filename)
-            logActivityEvent(dashboardUser?.id, "download_pdf", {
-              examId: prevExam.id,
-              subjectId: prevSubject.id,
-              subjectCode: prevSubject.code,
-              chapterId,
-              chapterLabel,
-              questionCount: questions.length,
-              email: dashboardUser?.email ?? null,
-              filename,
-            })
-          } catch (e) {
-            const msg = e instanceof Error ? e.message : String(e)
-            window.alert(lang === "vi" ? `Không tạo được PDF: ${msg}` : `Failed to generate PDF: ${msg}`)
-          }
+          void downloadExamPdf(exam, subject, chapterId)
         }}
+      />
+
+      <LoginRequiredModal
+        open={pdfLoginOpen}
+        lang={lang}
+        onClose={() => setPdfLoginOpen(false)}
+        title={pdfLoginRequiredCopy[lang].title}
+        message={pdfLoginRequiredCopy[lang].message}
+      />
+
+      <DownloadLimitModal
+        open={pdfQuotaOpen}
+        lang={lang}
+        onClose={() => setPdfQuotaOpen(false)}
       />
     </div>
   )
@@ -577,7 +627,8 @@ function getDashboardView(path: string): DashboardView {
   if (path === appRoutes.dashboardLeaderboard) return "leaderboard"
   if (path === appRoutes.dashboardHistory) return "history"
   if (path === appRoutes.dashboardPurchased) return "purchased"
-  if (path === appRoutes.dashboardDownloads) return "downloads"
+  // Trang downloads đã ẩn khỏi điều hướng -> về home.
+  if (path === appRoutes.dashboardDownloads) return "home"
   if (path === appRoutes.dashboardNotifications) return "notifications"
   if (path === appRoutes.dashboardSettings) return "settings"
   return "home"
@@ -823,7 +874,7 @@ function DesktopSidebar({
       </a>
 
       <nav className="mt-7 flex flex-1 flex-col gap-1.5" aria-label="Dashboard">
-        {navItems.map((item) => {
+        {navItems.filter((item) => !hiddenDashboardViews.includes(item.key)).map((item) => {
           const Icon = item.icon
           const isActive = activeView === item.key
           return (
@@ -1071,9 +1122,10 @@ function HomeDashboard({
                 lang={lang}
                 categoryLabel={exam.subjectId === "toeic" ? "TOEIC" : exam.category.en === "General" ? t.general : t.major}
                 questionsLabel={t.questions}
+                hideHeaderOnMobile
                 footer={
                   <button type="button" className="lp-btn lp-btn--primary lp-btn--sm lp-btn--block mt-3 px-2 text-[12px] sm:mt-5 sm:px-4 sm:text-sm" onClick={() => onStartExam(exam)}>
-                    {formatSubjectPrice(exam.subjectCode) ?? t.start}
+                    {formatSubjectPrice(exam.subjectCode) ?? t.free}
                     <ArrowRight className="hidden h-4 w-4 sm:inline" />
                   </button>
                 }
@@ -1421,7 +1473,7 @@ function MobileNav({ activeView, lang, unreadNotificationCount, onNavigate }: { 
       ariaLabel="Mobile dashboard"
       activeKey={activeView}
       onNavigate={onNavigate}
-      items={navItems.filter((item) => item.key !== "notifications").map((item) => ({
+        items={navItems.filter((item) => item.key !== "notifications" && !hiddenDashboardViews.includes(item.key)).map((item) => ({
         key: item.key,
         icon: mobileNavIcons[item.key],
         label: mobileNavLabels[lang][item.key as keyof typeof mobileNavLabels["vi"]],

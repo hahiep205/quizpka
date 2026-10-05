@@ -103,9 +103,10 @@ export function ToeicSection({ lang }: { lang: Lang }) {
             lang={lang}
             categoryLabel={t.badge}
             questionsLabel={t.questions}
+            hideHeaderOnMobile
             footer={
               <button type="button" className="lp-btn lp-btn--primary lp-btn--sm lp-btn--block mt-4 sm:mt-5" onClick={() => tryExam(exam.id)}>
-                {t.start}
+                {t.free}
               </button>
             }
           />

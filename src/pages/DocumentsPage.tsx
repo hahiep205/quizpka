@@ -185,14 +185,14 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
               </button>
               <button
                 type="button"
-                className={cn("lp-chip w-full min-w-0 px-2 text-xs sm:text-[13px] lg:px-3", typeFilter === "general" && "is-active")}
+                className={cn("lp-chip lp-chip--hide-mobile w-full min-w-0 px-2 text-xs sm:text-[13px] lg:px-3", typeFilter === "general" && "is-active")}
                 onClick={() => setTypeFilter("general")}
               >
                 {t.general}
               </button>
               <button
                 type="button"
-                className={cn("lp-chip w-full min-w-0 px-2 text-xs sm:text-[13px] lg:px-3", typeFilter === "major" && "is-active")}
+                className={cn("lp-chip lp-chip--hide-mobile w-full min-w-0 px-2 text-xs sm:text-[13px] lg:px-3", typeFilter === "major" && "is-active")}
                 onClick={() => setTypeFilter("major")}
               >
                 {t.major}
@@ -229,13 +229,14 @@ export function DocumentsPage({ lang }: DocumentsPageProps) {
               lang={lang}
               categoryLabel={exam.category.en === "General" ? t.general : t.major}
               questionsLabel={t.questions}
+              hideHeaderOnMobile
               footer={
                 <button
                   type="button"
                   className="lp-btn lp-btn--primary lp-btn--sm lp-btn--block mt-4 sm:mt-5"
                   onClick={() => tryExam(exam)}
                 >
-                  {formatSubjectPrice(exam.subjectCode) ?? t.start}
+                  {formatSubjectPrice(exam.subjectCode) ?? t.free}
                 </button>
               }
             />

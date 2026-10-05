@@ -632,6 +632,14 @@ html.dark .lp-label {
   }
 }
 
+/* Ẩn chip trên mobile (max-sm:hidden của Tailwind không thắng nổi
+   display:inline-flex của .lp-chip vì khác layer). */
+@media (max-width: 639.98px) {
+  .lp-chip--hide-mobile {
+    display: none;
+  }
+}
+
 .lp-chip:hover {
   transform: translateY(-1px);
 }

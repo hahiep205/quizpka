@@ -18,7 +18,10 @@ export function PurchaseDetailDialog({ exam, lang, loading, error, onClose, onCo
 }) {
   const isVietnamese = lang === "vi"
   const isDocsExam = (exam?.questionCount ?? 0) === 0
-  const docSetCount = exam && isDocsExam ? (getSubjectById(exam.subjectId)?.chapters ?? []).filter((chapter) => chapter.documentId).length : 0
+  const docChapters = exam && isDocsExam ? (getSubjectById(exam.subjectId)?.chapters ?? []).filter((chapter) => chapter.documentId) : []
+  const docSetCount = docChapters.length
+  const docImageCount = docChapters.reduce((sum, chapter) => sum + (chapter.count ?? 0), 0)
+  const chapterCount = exam ? (getSubjectById(exam.subjectId)?.chapters ?? []).filter((chapter) => /^c\d+$/.test(chapter.id)).length : 0
   const [ackTerms, setAckTerms] = useState(defaultAckTerms)
   useEffect(() => { setAckTerms(defaultAckTerms) }, [exam?.id, defaultAckTerms])
   return <Dialog
@@ -50,8 +53,8 @@ export function PurchaseDetailDialog({ exam, lang, loading, error, onClose, onCo
           <p className="mt-1 text-xl font-black text-[#100F3E] dark:text-white">{docSetCount > 0 ? docSetCount : (exam?.questionCount ?? 0)}</p>
         </div>
         <div className="rounded-[14px] bg-slate-50 p-4 dark:bg-white/5">
-          <p className="text-xs font-bold text-slate-400">{docSetCount > 0 ? (isVietnamese ? "Năm thi" : "Exam year") : (isVietnamese ? "Thời lượng" : "Duration")}</p>
-          <p className="mt-1 text-xl font-black text-[#100F3E] dark:text-white">{docSetCount > 0 ? (exam?.year ?? "—") : `${exam?.durationMinutes ?? 0} ${isVietnamese ? "phút" : "min"}`}</p>
+          <p className="text-xs font-bold text-slate-400">{docSetCount > 0 ? (isVietnamese ? "Số ảnh" : "Images") : (isVietnamese ? "Số chương" : "Chapters")}</p>
+          <p className="mt-1 text-xl font-black text-[#100F3E] dark:text-white">{docSetCount > 0 ? docImageCount : chapterCount}</p>
         </div>
       </div>
       <label className="mt-4 flex cursor-pointer items-start justify-between gap-3 rounded-[14px] border-2 border-sky-200 bg-sky-50 p-4 dark:border-sky-500/20 dark:bg-sky-500/10">

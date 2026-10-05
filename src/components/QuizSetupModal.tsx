@@ -1,4 +1,5 @@
 import { useEffect, useId, useState, type ReactNode } from "react"
+import { Download } from "lucide-react"
 import { Label } from "@/components/ui/label"
 import {
   getExamTitle,
@@ -9,6 +10,9 @@ import { cn } from "@/lib/utils"
 import { isHardSupported } from "@/features/quiz/lib/quizHard"
 import { quizSetupCopy as copy } from "@/shared/i18n"
 import { PickerModalShell } from "@/components/PickerModalShell"
+import { useSubjectOverrides } from "@/hooks/useSubjectOverrides"
+import { isSubjectDownloadable } from "@/features/admin/lib/subjectDisplay"
+import { getPaidProductId } from "@/lib/purchases"
 
 type Lang = "en" | "vi"
 
@@ -31,6 +35,8 @@ type QuizSetupModalProps = {
   subject: Subject | null
   onClose: () => void
   onStart: (setup: QuizSetupValues) => void
+  /** Khi có handler này + môn được phép tải PDF -> nút "Hủy" thành nút "Tải PDF". */
+  onDownloadPdf?: (exam: ExamCatalogItem) => void
 }
 
 export function QuizSetupModal({
@@ -40,6 +46,7 @@ export function QuizSetupModal({
   subject,
   onClose,
   onStart,
+  onDownloadPdf,
 }: QuizSetupModalProps) {
   const titleId = useId()
   const [visible, setVisible] = useState(false)
@@ -47,6 +54,7 @@ export function QuizSetupModal({
   const [questionOrder, setQuestionOrder] = useState<OrderMode>("original")
   const [mode, setMode] = useState<QuizMode>("practice")
   const [timeOption, setTimeOption] = useState<TimeOption>("final60")
+  const displayOverrides = useSubjectOverrides()
   const t = copy[lang]
 
   useEffect(() => {
@@ -83,6 +91,7 @@ export function QuizSetupModal({
   const timed = timeOption !== "unlimited"
   const durationMinutes =
     timeOption === "midterm30" ? 30 : timeOption === "final60" ? 60 : 0
+  const showDownloadPdf = Boolean(onDownloadPdf && subject && getPaidProductId(subject.code) === null && isSubjectDownloadable(subject.id, displayOverrides))
 
   return (
     <PickerModalShell
@@ -94,9 +103,16 @@ export function QuizSetupModal({
       onClose={onClose}
       footer={
         <>
-          <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={onClose}>
-            {t.cancel}
-          </button>
+          {showDownloadPdf && exam ? (
+            <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={() => onDownloadPdf?.(exam)}>
+              <Download className="h-4 w-4" strokeWidth={2} />
+              {t.downloadPdf}
+            </button>
+          ) : (
+            <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={onClose}>
+              {t.cancel}
+            </button>
+          )}
           <button
             type="button"
             className="lp-btn lp-btn--primary lp-btn--sm"

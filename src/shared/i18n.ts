@@ -487,12 +487,43 @@ export const purchaseLoginRequiredCopy = {
   },
 } as const
 
+export const pdfLoginRequiredCopy = {
+  en: {
+    title: "Login required",
+    message: "You need to sign in to download materials.",
+    action: "Got it",
+    close: "Close",
+  },
+  vi: {
+    title: "Yêu cầu đăng nhập",
+    message: "Bạn phải đăng nhập mới tải được tài liệu.",
+    action: "Đã hiểu",
+    close: "Đóng",
+  },
+} as const
+
+export const pdfQuotaCopy = {
+  en: {
+    title: "Download limit reached",
+    message: "You've used all 10 PDF downloads for today. Please come back tomorrow.",
+    action: "Got it",
+    close: "Close",
+  },
+  vi: {
+    title: "Đã hết lượt tải",
+    message: "Bạn đã dùng hết 10 lượt tải PDF hôm nay. Vui lòng quay lại vào ngày mai.",
+    action: "Đã hiểu",
+    close: "Đóng",
+  },
+} as const
+
 export const quizSetupCopy = {
   en: {
     title: "Quiz Setup",
     close: "Close",
     cancel: "Cancel",
     start: "Start quiz",
+    downloadPdf: "Download PDF",
     exam: "Selected set",
     questionOrder: "Question order",
     mode: "Quiz mode",
@@ -517,6 +548,7 @@ export const quizSetupCopy = {
     close: "Đóng",
     cancel: "Hủy",
     start: "Bắt đầu",
+    downloadPdf: "Tải PDF",
     exam: "Bộ đề đã chọn",
     questionOrder: "Thứ tự câu hỏi",
     mode: "Chế độ làm bài",
@@ -545,6 +577,7 @@ export const chapterPickerCopy = {
     close: "Close",
     cancel: "Cancel",
     continue: "Continue",
+    download: "Download",
     questions: "questions",
     images: "images",
   },
@@ -554,6 +587,7 @@ export const chapterPickerCopy = {
     close: "Đóng",
     cancel: "Hủy",
     continue: "Bắt đầu",
+    download: "Tải về",
     questions: "câu hỏi",
     images: "ảnh",
   },
@@ -624,6 +658,7 @@ export const toeicSectionCopy = {
     badge: "TOEIC",
     questions: "questions",
     start: "Try now",
+    free: "Free",
   },
   vi: {
     title: "Luyện thi TOEIC cùng",
@@ -632,6 +667,7 @@ export const toeicSectionCopy = {
     badge: "TOEIC",
     questions: "câu hỏi",
     start: "Thử ngay",
+    free: "Miễn phí",
   },
 } as const
 
