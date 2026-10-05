@@ -112,7 +112,7 @@ const copy: Record<Language, Copy> = {
     timing: "Thời gian xử lý",
     note: "Lưu ý",
     methodRow: ["Chuyển khoản VietQR", "Không quá 1 phút", "Ưu tiên tài khoản của chính bạn, KHÔNG ĐƯỢC sửa nội dung chuyển khoản"],
-    lifetime: "Không giới hạn số lần làm, không giới hạn thời gian sử dụng.",
+    lifetime: "Không giới hạn số lần làm và thời gian sử dụng.",
     back: "Về trang chủ",
   },
   en: {
@@ -200,7 +200,7 @@ const copy: Record<Language, Copy> = {
     timing: "Processing time",
     note: "Note",
     methodRow: ["VietQR transfer", "Nearly instant after verification", "Use your own bank account and keep the transfer note intact"],
-    lifetime: "Unlimited attempts, lifetime access.",
+    lifetime: "Unlimited attempts with no time limit.",
     back: "Back to home",
   },
 } as const
@@ -335,9 +335,11 @@ export function PolicyPage({ lang }: { lang: Language }) {
                         </tbody>
                       </table>
                     </div>
-                    <div className="mt-4 flex items-start gap-2.5 rounded-[14px] border-2 border-sky-100 bg-[#F4FBFF] p-4 dark:border-sky-500/15 dark:bg-sky-500/[0.06]">
-                      <BadgeCheck className="mt-0.5 h-5 w-5 shrink-0 text-[#1CB0F6]" strokeWidth={2.5} />
-                      <p className="text-sm font-black leading-6 text-[#100F3E] dark:text-white">{t.lifetime}</p>
+                    <div className="mt-4">
+                      <span className="inline-flex items-center gap-1.5 rounded-full border-2 border-[#E5E5E5] bg-white px-3 py-1.5 text-xs font-black text-[#100F3E] dark:border-white/10 dark:bg-slate-900 dark:text-white">
+                        <BadgeCheck className="h-3.5 w-3.5 text-[#1CB0F6]" strokeWidth={2.5} aria-hidden="true" />
+                        {t.lifetime}
+                      </span>
                     </div>
                   </>
                 ) : null}

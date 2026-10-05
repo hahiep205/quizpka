@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
-import { X } from "lucide-react"
+import { BadgeCheck, X } from "lucide-react"
 import { Dialog } from "@/components/ui/dialog"
 import { getSubjectById, type ExamCatalogItem } from "@/data/subjects"
+import { tadvPaidExamOptions } from "@/data/tadvPaidExams"
 import { formatSubjectPrice } from "@/lib/purchases"
 import type { Language } from "@/shared/types/app"
 
@@ -21,6 +22,7 @@ export function PurchaseDetailDialog({ exam, lang, loading, error, onClose, onCo
   const docChapters = exam && isDocsExam ? (getSubjectById(exam.subjectId)?.chapters ?? []).filter((chapter) => chapter.documentId) : []
   const docSetCount = docChapters.length
   const docImageCount = docChapters.reduce((sum, chapter) => sum + (chapter.count ?? 0), 0)
+  const tadvSetCount = exam?.subjectId === "tadv-traphi" ? tadvPaidExamOptions.length : 0
   const chapterCount = exam ? (getSubjectById(exam.subjectId)?.chapters ?? []).filter((chapter) => /^c\d+$/.test(chapter.id)).length : 0
   const [ackTerms, setAckTerms] = useState(defaultAckTerms)
   useEffect(() => { setAckTerms(defaultAckTerms) }, [exam?.id, defaultAckTerms])
@@ -34,7 +36,7 @@ export function PurchaseDetailDialog({ exam, lang, loading, error, onClose, onCo
   >
     <header className="flex min-h-[86px] shrink-0 items-start justify-between gap-4 border-b border-slate-100 px-4 py-3 sm:px-6 sm:py-5 dark:border-white/10">
       <div className="min-w-0">
-        <p className="text-[10px] font-black uppercase tracking-[0.12em] text-[#129BDC]">{isVietnamese ? "Quiz dành cho PKAers" : "Quiz for PKAers"}</p>
+        <p className="hidden text-[10px] font-black uppercase tracking-[0.12em] text-[#129BDC] sm:block">{isVietnamese ? "Quiz dành cho PKAers" : "Quiz for PKAers"}</p>
         <h2 title={exam?.subjectName[lang]} className="mt-1 line-clamp-2 text-lg font-black leading-6 text-[#100F3E] dark:text-white sm:text-2xl sm:leading-7">{exam?.subjectName[lang]}</h2>
       </div>
       <button type="button" className="lp-btn lp-btn--secondary lp-btn--icon shrink-0" onClick={onClose} disabled={loading} aria-label={isVietnamese ? "Hủy" : "Cancel"}><X className="h-4 w-4" /></button>
@@ -43,18 +45,20 @@ export function PurchaseDetailDialog({ exam, lang, loading, error, onClose, onCo
       <div className="rounded-[16px] border border-sky-100 bg-[#F4FBFF] p-4 dark:border-sky-500/15 dark:bg-sky-500/[0.06]">
         <p className="text-xs font-black uppercase tracking-[0.08em] text-slate-400">{isVietnamese ? "Ghi chú" : "Note"}</p>
         <p className="mt-2 text-sm font-semibold leading-6 text-slate-600 dark:text-slate-300">{exam?.description[lang]}</p>
-        {docSetCount === 0 ? (
-          <p className="mt-2 text-sm font-bold leading-6 text-[#129BDC] dark:text-sky-300">{isVietnamese ? "Không giới hạn số lần làm, không giới hạn thời gian sử dụng." : "Unlimited attempts with no time limit."}</p>
-        ) : null}
       </div>
+      {docSetCount === 0 ? (
+        <div className="mt-3">
+          <span className="inline-flex items-center gap-1.5 rounded-full border-2 border-[#E5E5E5] bg-white px-3 py-1.5 text-xs font-black text-[#100F3E] dark:border-white/10 dark:bg-slate-900 dark:text-white"><BadgeCheck className="h-3.5 w-3.5 text-[#1CB0F6]" strokeWidth={2.5} aria-hidden="true" />{isVietnamese ? "Không giới hạn số lần làm và thời gian sử dụng." : "Unlimited attempts with no time limit."}</span>
+        </div>
+      ) : null}
       <div className="mt-4 grid grid-cols-2 gap-3">
         <div className="rounded-[14px] bg-slate-50 p-4 dark:bg-white/5">
           <p className="text-xs font-bold text-slate-400">{docSetCount > 0 ? (isVietnamese ? "Số bộ đề" : "Exam sets") : (isVietnamese ? "Số câu hỏi" : "Questions")}</p>
           <p className="mt-1 text-xl font-black text-[#100F3E] dark:text-white">{docSetCount > 0 ? docSetCount : (exam?.questionCount ?? 0)}</p>
         </div>
         <div className="rounded-[14px] bg-slate-50 p-4 dark:bg-white/5">
-          <p className="text-xs font-bold text-slate-400">{docSetCount > 0 ? (isVietnamese ? "Số ảnh" : "Images") : (isVietnamese ? "Số chương" : "Chapters")}</p>
-          <p className="mt-1 text-xl font-black text-[#100F3E] dark:text-white">{docSetCount > 0 ? docImageCount : chapterCount}</p>
+          <p className="text-xs font-bold text-slate-400">{docSetCount > 0 ? (isVietnamese ? "Số ảnh" : "Images") : tadvSetCount > 0 ? (isVietnamese ? "Số bộ đề" : "Exam sets") : (isVietnamese ? "Số chương" : "Chapters")}</p>
+          <p className="mt-1 text-xl font-black text-[#100F3E] dark:text-white">{docSetCount > 0 ? docImageCount : tadvSetCount > 0 ? tadvSetCount : chapterCount}</p>
         </div>
       </div>
       <label className="mt-4 flex cursor-pointer items-start justify-between gap-3 rounded-[14px] border-2 border-sky-200 bg-sky-50 p-4 dark:border-sky-500/20 dark:bg-sky-500/10">
