@@ -7,6 +7,43 @@ import {
 
 type LeaderboardSortKey = "points" | "subjects" | "attempts" | "accuracy" | "time"
 
+export const SCORE_WEIGHTS = { a: 0.55, c: 0.15, p: 0.15, t: 0.15 } as const
+export const SCORE_SMOOTH_P0 = 0.6
+export const SCORE_SMOOTH_M = 2
+export const SCORE_P_NORM = 21
+export const SCORE_T_MAX_MINUTES = 180
+export const SCORE_Q_BASELINE = 0.6
+
+export type ScoreBreakdown = { a: number; c: number; p: number; t: number; q: number }
+
+export type ScoreInput = {
+  /** Tổng accuracy thô (thang 0–100, ví dụ average_accuracy * attempts). */
+  accSum: number
+  attempts: number
+  subjects: number
+  totalSubjects: number
+  /** Tổng thời gian học (giây). Đủ 20 giờ đạt max. */
+  totalSeconds: number
+}
+
+/**
+ * Công thức điểm BXH v2, mirror SQL trong migration leaderboard_score_v2
+ * (refresh_user_verified_stats + backfill). Giữ 2 bản đồng bộ khi đổi số.
+ * Score = 1000 × (0.55A + 0.15C + 0.15P + 0.15R), 0–1000.
+ */
+export function computeLeaderboardScore(input: ScoreInput): { score: number; breakdown: ScoreBreakdown } {
+  const zero = { score: 0, breakdown: { a: 0, c: 0, p: 0, t: 0, q: 0 } }
+  const attempts = Math.floor(input.attempts)
+  if (!Number.isFinite(attempts) || attempts <= 0) return zero
+  const a = (Math.max(0, input.accSum) / 100 + SCORE_SMOOTH_M * SCORE_SMOOTH_P0) / (attempts + SCORE_SMOOTH_M)
+  const c = input.totalSubjects > 0 ? Math.min(1, Math.max(0, input.subjects) / input.totalSubjects) : 0
+  const p = Math.min(1, Math.log(1 + attempts) / Math.log(SCORE_P_NORM))
+  const t = Math.min(1, Math.max(0, input.totalSeconds) / 60 / SCORE_T_MAX_MINUTES)
+  const q = Math.min(1, a / SCORE_Q_BASELINE)
+  const score = Math.round(1000 * (SCORE_WEIGHTS.a * a + q * (SCORE_WEIGHTS.c * c + SCORE_WEIGHTS.p * p + SCORE_WEIGHTS.t * t)))
+  return { score, breakdown: { a, c, p, t, q } }
+}
+
 export type LeaderboardEntry = {
   userId: string
   name: string
@@ -15,6 +52,9 @@ export type LeaderboardEntry = {
   isYou: boolean
   stats: LearningStats
   points: number
+  /** Điểm v2 (null khi DB chưa migrate / đường fallback cũ không có cột). */
+  score: number | null
+  breakdown: ScoreBreakdown | null
 }
 
 export type RankedLeaderboardEntry = LeaderboardEntry & { rank: number }
@@ -39,11 +79,30 @@ type LearningStatsRow = {
   month_average_accuracy: number
   month_total_duration_seconds: number
   month_points: number
+  score: number | null
+  score_a: number | null
+  score_c: number | null
+  score_p: number | null
+  score_t: number | null
 }
 
 function asInt(value: unknown): number {
   const n = typeof value === "number" ? value : Number(value)
   return Number.isFinite(n) && n > 0 ? Math.floor(n) : 0
+}
+
+function asScore(value: unknown): number | null {
+  if (typeof value !== "number" && typeof value !== "string") return null
+  const n = Number(value)
+  if (!Number.isFinite(n) || n < 0) return null
+  return Math.floor(n)
+}
+
+function asFraction(value: unknown): number | null {
+  if (typeof value !== "number" && typeof value !== "string") return null
+  const n = Number(value)
+  if (!Number.isFinite(n) || n < 0) return null
+  return Math.min(1, n)
 }
 
 export function parseLearningStatsRows(rows: unknown): LearningStatsRow[] {
@@ -73,6 +132,11 @@ export function parseLearningStatsRows(rows: unknown): LearningStatsRow[] {
       month_average_accuracy: asInt("month_average_accuracy" in row ? row.month_average_accuracy : 0),
       month_total_duration_seconds: asInt("month_total_duration_seconds" in row ? row.month_total_duration_seconds : 0),
       month_points: asInt("month_points" in row ? row.month_points : 0),
+      score: "score" in row ? asScore(row.score) : null,
+      score_a: "score_a" in row ? asFraction(row.score_a) : null,
+      score_c: "score_c" in row ? asFraction(row.score_c) : null,
+      score_p: "score_p" in row ? asFraction(row.score_p) : null,
+      score_t: "score_t" in row ? asFraction(row.score_t) : null,
     })
   }
   return parsed
@@ -114,6 +178,13 @@ function statsForPeriod(row: LearningStatsRow, period: LearningPeriod): { stats:
 
 export function toLeaderboardEntry(row: LearningStatsRow, period: LearningPeriod, currentUserId?: string): LeaderboardEntry {
   const { stats, points } = statsForPeriod(row, period)
+  const breakdown =
+    row.score_a !== null || row.score_c !== null || row.score_p !== null || row.score_t !== null
+      ? (() => {
+          const a = row.score_a ?? 0
+          return { a, c: row.score_c ?? 0, p: row.score_p ?? 0, t: row.score_t ?? 0, q: Math.min(1, a / SCORE_Q_BASELINE) }
+        })()
+      : null
   return {
     userId: row.user_id,
     name: row.display_name?.trim() || "Quizpka",
@@ -122,14 +193,22 @@ export function toLeaderboardEntry(row: LearningStatsRow, period: LearningPeriod
     isYou: Boolean(currentUserId && row.user_id === currentUserId),
     stats,
     points,
+    score: row.score,
+    breakdown,
   }
+}
+
+function rankValue(entry: LeaderboardEntry): number {
+  return entry.score ?? entry.points
 }
 
 export function rankLeaderboard(entries: LeaderboardEntry[], sortKey: LeaderboardSortKey): RankedLeaderboardEntry[] {
   const sorted = [...entries].sort((a, b) => {
-    const delta = sortValueForStats(b.stats, b.points, sortKey) - sortValueForStats(a.stats, a.points, sortKey)
+    const delta = sortKey === "points"
+      ? rankValue(b) - rankValue(a)
+      : sortValueForStats(b.stats, b.points, sortKey) - sortValueForStats(a.stats, a.points, sortKey)
     if (delta !== 0) return delta
-    if (b.points !== a.points) return b.points - a.points
+    if (rankValue(b) !== rankValue(a)) return rankValue(b) - rankValue(a)
     return a.name.localeCompare(b.name)
   })
   return sorted.map((entry, index) => ({ ...entry, rank: index + 1 }))
@@ -140,9 +219,69 @@ const LEADERBOARD_SELECT =
 const LEADERBOARD_SELECT_LEGACY =
   "user_id, display_name, avatar_url, visible, subjects_reviewed, attempts, average_accuracy, total_duration_seconds, points, week_subjects_reviewed, week_attempts, week_average_accuracy, week_total_duration_seconds, week_points"
 
-/** Server-side cap: UI chỉ hiển thị top 10, RPC giới hạn tối đa 200. */
-const LEADERBOARD_LIMIT_DEFAULT = 100
-const LEADERBOARD_LIMIT_MAX = 200
+const LEADERBOARD_SELECT_V2 = `${LEADERBOARD_SELECT},score,score_a,score_c,score_p,score_t`
+
+/** Server-side cap: UI chỉ hiển thị top 10, RPC giới hạn tối đa 10. */
+const LEADERBOARD_LIMIT_DEFAULT = 10
+const LEADERBOARD_LIMIT_MAX = 10
+
+/** BXH điểm v2: ưu tiên RPC get_leaderboard_score_top, rồi SELECT trực tiếp
+ * cột score, cuối cùng rớt về đường legacy (điểm points cũ, không breakdown). */
+let v2MissingUntil = 0
+const V2_MISSING_TTL_MS = 5 * 60_000
+
+export async function fetchLeaderboardV2(
+  period: LearningPeriod,
+  currentUserId?: string,
+  options?: { limit?: number },
+): Promise<LeaderboardEntry[]> {
+  const limit = clampLeaderboardLimit(options?.limit)
+  const toEntries = (rows: LearningStatsRow[]) =>
+    rows
+      .filter((row) => {
+        const visible = row.visible
+        return visible || row.user_id === currentUserId
+      })
+      .map((row) => toLeaderboardEntry(row, period, currentUserId))
+  // Migration score v2 chưa chạy (RPC 404 gần đây) -> đi thẳng legacy,
+  // khỏi tốn thêm request lỗi. Muộn nhất 5 phút sau sẽ thử lại RPC.
+  if (Date.now() < v2MissingUntil) {
+    return fetchLeaderboard(period, currentUserId, options)
+  }
+  try {
+    const { data, error } = await supabase.rpc("get_leaderboard_score_top", { p_limit: limit })
+    if (!error && Array.isArray(data)) {
+      const entries = toEntries(parseLearningStatsRows(data))
+      if (entries.length > 0) return entries
+    } else if (error) {
+      if (/too many requests/i.test(error.message ?? "")) return []
+      // PGRST202 = function chưa tồn tại (migration score v2 chưa chạy) ->
+      // cột score chắc chắn cũng chưa có, bỏ qua SELECT trực tiếp để đỡ
+      // 1 request 400 vô ích, rớt thẳng về đường legacy.
+      if ((error as { code?: string }).code === "PGRST202") {
+        v2MissingUntil = Date.now() + V2_MISSING_TTL_MS
+        return fetchLeaderboard(period, currentUserId, options)
+      }
+    }
+  } catch {
+    // Rớt xuống các đường bên dưới.
+  }
+  try {
+    const { data, error } = await supabase
+      .from("user_learning_stats")
+      .select(LEADERBOARD_SELECT_V2)
+      .eq("visible", true)
+      .order("score", { ascending: false })
+      .limit(limit)
+    if (!error && Array.isArray(data)) {
+      const entries = toEntries(parseLearningStatsRows(data))
+      if (entries.length > 0) return entries
+    }
+  } catch {
+    // DB chưa migrate (thiếu cột score) -> rớt về legacy.
+  }
+  return fetchLeaderboard(period, currentUserId, options)
+}
 
 function clampLeaderboardLimit(limit?: number): number {
   if (!Number.isFinite(limit as number)) return LEADERBOARD_LIMIT_DEFAULT

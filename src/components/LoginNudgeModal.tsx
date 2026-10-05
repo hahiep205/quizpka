@@ -64,7 +64,7 @@ export function LoginNudgeModal({
       title={t.title}
       closeLabel={t.close}
       className="z-[100]"
-      panelClassName={cn("max-w-[480px] rounded-[18px] border-2 border-[#E5E5E5] bg-white shadow-[0_6px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none", modalFrameClass)}
+      panelClassName={cn("max-w-[480px] rounded-[18px] border-2 border-[#E5E5E5] bg-white shadow-[0_6px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none", modalFrameClass, "lp-modal-frame--auto")}
     >
       <div className={modalHeaderClass}>
         <div className="flex min-w-0 items-center gap-3">
@@ -73,7 +73,6 @@ export function LoginNudgeModal({
           </span>
           <div className="min-w-0">
             <h2 className="lp-modal-title text-[18px] sm:text-[20px]">{t.title}</h2>
-            <p className="lp-modal-desc mt-0.5 line-clamp-2 text-[13px]">{t.subtitle}</p>
           </div>
         </div>
         <button type="button" className="lp-btn lp-btn--secondary lp-btn--icon shrink-0" onClick={onClose} aria-label={t.close}>

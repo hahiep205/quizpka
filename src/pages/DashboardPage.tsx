@@ -699,7 +699,7 @@ function PurchasedView({ lang, onStartExam }: { lang: Lang; onStartExam: (exam: 
   )
 
   return (
-    <section className="space-y-5">
+    <section className="mx-auto max-w-5xl space-y-5">
       {loading ? <Card variant="dashed" className="py-12 text-center"><p className="text-sm font-bold text-slate-500">{lang === "vi" ? "Đang kiểm tra giao dịch…" : "Checking purchases…"}</p></Card> : null}
       {!loading && error ? <Card variant="dashed" className="py-12 text-center"><p className="text-sm font-bold text-red-500">{lang === "vi" ? "Không thể tải danh sách tài liệu đã mua." : "Could not load purchased materials."}</p></Card> : null}
       {!loading && !error && ownedIds.length ? displayedPaidExams.filter((exam) => ownedIds.includes(exam.id)).map((purchasedExam) => (

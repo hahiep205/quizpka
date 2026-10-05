@@ -487,6 +487,11 @@ html.dark .lp-modal-desc {
   height: min(509px, calc(100dvh - 2rem));
 }
 
+/* Panel ôm vừa nội dung trên mobile (bỏ cao cố định 580px). */
+.lp-modal-frame--auto {
+  height: auto;
+}
+
 @media (min-width: 640px) {
   .lp-modal-frame {
     height: auto;

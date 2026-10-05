@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react"
 import { Crown, Medal, Trophy, UserRound } from "lucide-react"
 import { useAuth } from "@/auth/AuthProvider"
 import {
-  fetchLeaderboard,
+  fetchLeaderboardV2,
   rankLeaderboard,
   type LeaderboardEntry,
   type RankedLeaderboardEntry,
@@ -63,7 +63,7 @@ export function LeaderboardView({ lang }: { lang: Language }) {
               {yourRank ? `#${yourRank}` : t.leaderboardUnranked}
             </p>
             <div className="text-right">
-              <p className="text-2xl font-black leading-none sm:text-3xl">{you ? you.points : 0}</p>
+              <p className="text-2xl font-black leading-none sm:text-3xl">{you ? displayScore(you) : 0}</p>
               <p className="mt-1 text-xs font-bold uppercase tracking-wider text-white/80">{t.points}</p>
             </div>
           </div>
@@ -91,12 +91,17 @@ export function LeaderboardView({ lang }: { lang: Language }) {
               <span className="text-right">{t.points}</span>
             </div>
             {ranked.map((entry) => (
-              <LeaderboardRow key={entry.userId} entry={entry} youLabel={t.you} labels={{
-                subjects: lang === "vi" ? "Môn" : "Subj",
-                attempts: lang === "vi" ? "Lần" : "Tries",
-                accuracy: "%",
-                time: lang === "vi" ? "Phút" : "Min",
-              }} />
+              <LeaderboardRow
+                key={entry.userId}
+                entry={entry}
+                youLabel={t.you}
+                labels={{
+                  subjects: lang === "vi" ? "Môn" : "Subj",
+                  attempts: lang === "vi" ? "Lần" : "Tries",
+                  accuracy: "%",
+                  time: lang === "vi" ? "Phút" : "Min",
+                }}
+              />
             ))}
           </div>
         </>
@@ -110,6 +115,11 @@ export function LeaderboardView({ lang }: { lang: Language }) {
       )}
     </section>
   )
+}
+
+/** Điểm hiển thị: ưu tiên điểm v2, rớt về points cũ khi DB chưa migrate. */
+function displayScore(entry: Pick<LeaderboardEntry, "score" | "points">): number {
+  return entry.score ?? entry.points
 }
 
 const PODIUM_STYLE = {
@@ -162,7 +172,7 @@ function LeaderboardPodium({
                   {place === 1 ? <Crown className="h-3 w-3" /> : <Medal className="h-3 w-3" />}
                   #{place}
                 </span>}
-              <p className="mt-1 text-xs font-extrabold text-slate-500 sm:text-sm dark:text-slate-400">{entry.points}</p>
+              <p className="mt-1 text-xs font-extrabold text-slate-500 sm:text-sm dark:text-slate-400">{displayScore(entry)}</p>
               <div className={cn("mt-2 flex w-full items-start justify-center rounded-t-[14px] pt-2 text-2xl font-black text-white/95 sm:text-3xl", style.bar, style.height)}>
                 {place}
               </div>
@@ -174,7 +184,15 @@ function LeaderboardPodium({
   )
 }
 
-function LeaderboardRow({ entry, youLabel, labels }: { entry: RankedLeaderboardEntry; youLabel: string; labels: { subjects: string; attempts: string; accuracy: string; time: string } }) {
+function LeaderboardRow({
+  entry,
+  youLabel,
+  labels,
+}: {
+  entry: RankedLeaderboardEntry
+  youLabel: string
+  labels: { subjects: string; attempts: string; accuracy: string; time: string }
+}) {
   const rankTone = entry.rank === 1
     ? "bg-amber-100 text-amber-600 dark:bg-amber-500/15 dark:text-amber-300"
     : entry.rank === 2
@@ -206,7 +224,7 @@ function LeaderboardRow({ entry, youLabel, labels }: { entry: RankedLeaderboardE
         <p className="hidden text-right text-sm font-extrabold text-[#100F3E] lg:block dark:text-white">{entry.stats.attempts}</p>
         <p className="hidden text-right text-sm font-extrabold text-[#100F3E] lg:block dark:text-white">{entry.stats.averageAccuracy}%</p>
         <p className="hidden text-right text-sm font-extrabold text-[#100F3E] lg:block dark:text-white">{formatLearningDuration(entry.stats.totalDurationSeconds)}</p>
-        <p className="text-right text-sm font-black text-[#1CB0F6] lg:text-[#100F3E] lg:dark:text-white">{entry.points}</p>
+        <p className="text-right text-sm font-black text-[#1CB0F6] lg:text-[#100F3E] lg:dark:text-white">{displayScore(entry)}</p>
       </div>
       <div className="mt-3 grid grid-cols-4 gap-2 lg:hidden">
         <MiniStat value={String(entry.stats.subjectsReviewed)} label={labels.subjects} />
@@ -246,7 +264,7 @@ function readLeaderboardCache(userId: string): LeaderboardEntry[] | null {
 function getLeaderboardInflight(userId: string): Promise<LeaderboardEntry[] | null> {
   const running = leaderboardInflight.get(userId)
   if (running) return running
-  const promise = fetchLeaderboard("all", userId, { limit: 100 })
+  const promise = fetchLeaderboardV2("all", userId, { limit: 10 })
     .then((rows) => {
       leaderboardCache.set(userId, { at: Date.now(), rows })
       leaderboardInflight.delete(userId)

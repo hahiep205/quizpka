@@ -112,10 +112,10 @@ async function getUserWithTimeout(
 }
 
 const LEADERBOARD_SELECT =
-  "user_id,display_name,avatar_url,visible,subjects_reviewed,attempts,average_accuracy,total_duration_seconds,points,week_subjects_reviewed,week_attempts,week_average_accuracy,week_total_duration_seconds,week_points,month_subjects_reviewed,month_attempts,month_average_accuracy,month_total_duration_seconds,month_points"
+  "user_id,display_name,avatar_url,visible,subjects_reviewed,attempts,average_accuracy,total_duration_seconds,points,week_subjects_reviewed,week_attempts,week_average_accuracy,week_total_duration_seconds,week_points,month_subjects_reviewed,month_attempts,month_average_accuracy,month_total_duration_seconds,month_points,score,score_a,score_c,score_p,score_t"
 
-const LIMIT_DEFAULT = 100
-const LIMIT_MAX = 200
+const LIMIT_DEFAULT = 10
+const LIMIT_MAX = 10
 const CACHE_TTL_MS = 60_000
 
 type Row = Record<string, unknown>
@@ -180,7 +180,7 @@ Deno.serve(async (req) => {
         .from("user_learning_stats")
         .select(LEADERBOARD_SELECT)
         .eq("visible", true)
-        .order("points", { ascending: false })
+        .order("score", { ascending: false })
         .limit(limit)
       if (error) throw error
       top = { at: Date.now(), rows: (data ?? []) as Row[] }

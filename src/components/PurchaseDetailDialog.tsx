@@ -41,7 +41,7 @@ export function PurchaseDetailDialog({ exam, lang, loading, error, onClose, onCo
         <p className="text-xs font-black uppercase tracking-[0.08em] text-slate-400">{isVietnamese ? "Ghi chú" : "Note"}</p>
         <p className="mt-2 text-sm font-semibold leading-6 text-slate-600 dark:text-slate-300">{exam?.description[lang]}</p>
         {docSetCount === 0 ? (
-          <p className="mt-2 text-sm font-bold leading-6 text-[#129BDC] dark:text-sky-300">{isVietnamese ? "Không giới hạn số lần làm, hạn dùng vĩnh viễn." : "Unlimited attempts, lifetime access."}</p>
+          <p className="mt-2 text-sm font-bold leading-6 text-[#129BDC] dark:text-sky-300">{isVietnamese ? "Không giới hạn số lần làm, không giới hạn thời gian sử dụng." : "Unlimited attempts with no time limit."}</p>
         ) : null}
       </div>
       <div className="mt-4 grid grid-cols-2 gap-3">

@@ -121,7 +121,7 @@ export const dashboardCopy = {
     leaderboardTitle: "Bảng xếp hạng",
     leaderboardYourRank: "Hạng của bạn",
     leaderboardUnranked: "Chưa xếp hạng",
-    leaderboardFormula: "Điểm thang 1000 = 50% độ chính xác + 25% hiệu suất thời gian + 15% môn đã ôn + 10% lần luyện.",
+    leaderboardFormula: "Điểm = 1000 × (55% chính xác + cổng chất lượng × (15% phủ môn + 15% số lần luyện + 15% giờ học)). Cổng = min(1, chính xác/60%).",
     leaderboardHidden: "Bạn đang ẩn tên. Bật hiển thị trong Cài đặt để xuất hiện trên bảng xếp hạng.",
     leaderboardEmpty: "Chưa có thành tích để xếp hạng. Luyện đề để mở hạng đầu tiên!",
     historyTitle: "Lịch sử luyện tập",
@@ -178,7 +178,7 @@ export const dashboardCopy = {
     leaderboardTitle: "Leaderboard",
     leaderboardYourRank: "Your rank",
     leaderboardUnranked: "Unranked",
-    leaderboardFormula: "Score out of 1000 = 50% accuracy + 25% time efficiency + 15% subjects reviewed + 10% attempts.",
+    leaderboardFormula: "Score = 1000 × (55% accuracy + quality gate × (15% coverage + 15% attempts + 15% hours)). Gate = min(1, accuracy/60%).",
     leaderboardHidden: "Your name is hidden. Turn on leaderboard visibility in Settings to appear here.",
     leaderboardEmpty: "No ranking yet. Complete a practice set to take the first place!",
     historyTitle: "Practice history",
@@ -445,8 +445,7 @@ export const loginCopy = {
 
 export const loginNudgeCopy = {
   en: {
-    title: "Sign in to take the quiz",
-    subtitle: "Signing in is required before starting a quiz. It also unlocks:",
+    title: "Sign in to take the Quiz",
     benefits: [
       { title: "Saved history", desc: "Every attempt is kept so you can review anytime." },
       { title: "Retry wrong answers", desc: "Wrong questions are collected for focused practice." },
@@ -459,8 +458,7 @@ export const loginNudgeCopy = {
     close: "Close",
   },
   vi: {
-    title: "Đăng nhập để làm bài kiểm tra",
-    subtitle: "Bạn cần đăng nhập trước khi làm bài. Đăng nhập sẽ mở:",
+    title: "Đăng nhập để làm Quiz",
     benefits: [
       { title: "Lưu lịch sử làm bài", desc: "Mọi lượt làm được giữ lại để xem bất cứ lúc nào." },
       { title: "Làm lại câu sai", desc: "Tự động gom câu sai để luyện lại trọng tâm." },
