@@ -44,6 +44,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     // Bỏ qua để không đốt thêm 1 GET /rest/v1/profiles mỗi lần refresh.
     if (authEvent === "TOKEN_REFRESHED") return
 
+    // Keep protected routes in a loading state while replacing the fallback
+    // profile below with the verified database role.
+    setStatus("loading")
     setProfile(createFallbackProfile(currentUser))
     try {
       const nextProfile = await loadProfileOnce(currentUser)

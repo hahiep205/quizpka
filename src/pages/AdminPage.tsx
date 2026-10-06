@@ -993,7 +993,6 @@ export function AdminPage({ lang }: Props) {
                 </section>
 
                 {kpis.blockedAccount > 0 ? (
-                  <p className="flex items-center gap-2 text-sm font-bold text-slate-500 dark:text-slate-400"><ShieldAlert className="h-4 w-4" />Blocked: {kpis.blockedAccount} — vẫn hiện ở tab Logined, ẩn ở các tab Active.</p>
                 ) : null}
 
                 {/* Tổng quan */}
