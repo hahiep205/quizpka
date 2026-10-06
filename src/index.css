@@ -480,13 +480,13 @@ html.dark .lp-modal-desc {
   max-height: min(760px, 92dvh);
 }
 
-/* Bản gọn cho nhóm picker modal: body còn ~345px trên mobile
-   (509 = 345 body + 86 header + 76 footer + ~2 viền). */
+/* Báº£n gá»n cho nhĂ³m picker modal: body cĂ²n ~345px trĂªn mobile
+   (509 = 345 body + 86 header + 76 footer + ~2 viá»n). */
 .lp-modal-frame--compact {
   height: min(509px, calc(100dvh - 2rem));
 }
 
-/* Panel ôm vừa nội dung trên mobile (bỏ cao cố định 580px). */
+/* Panel Ă´m vá»«a ná»™i dung trĂªn mobile (bá» cao cá»‘ Ä‘á»‹nh 580px). */
 .lp-modal-frame--auto {
   height: auto;
 }
@@ -549,7 +549,7 @@ html.dark .lp-modal-desc {
   min-width: 0;
 }
 
-/* Footer chỉ 1 nút: bỏ min-height 124px thừa trên mobile. */
+/* Footer chá»‰ 1 nĂºt: bá» min-height 124px thá»«a trĂªn mobile. */
 .lp-modal-footer--compact {
   min-height: 0;
   padding-top: 0.75rem;
@@ -631,8 +631,8 @@ html.dark .lp-label {
   }
 }
 
-/* Ẩn chip trên mobile (max-sm:hidden của Tailwind không thắng nổi
-   display:inline-flex của .lp-chip vì khác layer). */
+/* áº¨n chip trĂªn mobile (max-sm:hidden cá»§a Tailwind khĂ´ng tháº¯ng ná»•i
+   display:inline-flex cá»§a .lp-chip vĂ¬ khĂ¡c layer). */
 @media (max-width: 639.98px) {
   .lp-chip--hide-mobile {
     display: none;
@@ -777,3 +777,5 @@ html.dark .lp-eyebrow-blue > span:first-child {
     padding: 6px 14px 6px 6px;
   }
 }
+
+/* =========================================================

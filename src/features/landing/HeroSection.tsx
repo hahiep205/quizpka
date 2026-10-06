@@ -1,14 +1,45 @@
+import { useEffect, useRef } from "react"
 import { GoogleIcon } from "@/shared/icons/GoogleIcon"
 
 function QuizPreviewCard() {
+  const frameRef = useRef<HTMLIFrameElement>(null)
+
+  // Dark mode: ép nền body trong iframe khớp màu nền trang (slate-950).
+  useEffect(() => {
+    const frame = frameRef.current
+    const syncBg = () => {
+      const body = frame?.contentDocument?.body
+      if (!body) return
+      if (document.documentElement.classList.contains("dark")) {
+        body.style.background = "#020617"
+      } else {
+        body.style.background = ""
+      }
+    }
+    syncBg()
+    frame?.addEventListener("load", syncBg)
+    const timers = [window.setTimeout(syncBg, 500), window.setTimeout(syncBg, 2000)]
+    const observer = new MutationObserver(syncBg)
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] })
+    return () => {
+      observer.disconnect()
+      frame?.removeEventListener("load", syncBg)
+      timers.forEach((timer) => window.clearTimeout(timer))
+    }
+  }, [])
+
   return (
-    <div className="relative mx-auto w-full max-w-[clamp(360px,30vw+300px,606px)]">
-      <img
-        className="max-h-[clamp(360px,30vw+300px,606px)] w-full object-contain"
-        src="/hero-svg.svg?v=3"
-        alt=""
+    <div className="relative mx-auto w-full max-w-[clamp(360px,30vw+300px,606px)] scale-[1.12]">
+      <iframe
+        ref={frameRef}
+        title=""
         aria-hidden="true"
+        tabIndex={-1}
+        scrolling="no"
+        frameBorder="0"
         loading="eager"
+        src="/hero-svg-2.html"
+        className="aspect-[404/340] w-full overflow-hidden rounded-[20px]"
       />
     </div>
   )

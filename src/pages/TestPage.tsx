@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react"
 import {
   BarChart3,
   BookOpen,
@@ -43,7 +44,7 @@ const copy = {
   },
   en: {
     featuresSubtitle: "Features that help you learn faster, revise the right topics and track your progress.",
-    manualSubtitle: "Sign in, pick subjects, configure quizzes and start — all in a few steps.",
+    manualSubtitle: "Sign in, pick subjects, configure quizzes and start - all in a few steps.",
     features: [
       { icon: "login", title: "1-tap Google sign-in", desc: "Start learning right away, no password needed." },
       { icon: "modes", title: "3 quiz modes", desc: "Practice, mock exam and hard drills." },
@@ -89,14 +90,54 @@ const STEP_ICONS: LucideIcon[] = [
 
 export function TestPage({ lang }: { lang: Lang }) {
   const t = copy[lang]
+  const frameRef = useRef<HTMLIFrameElement>(null)
+
+  // Dark mode: ép nền body trong iframe thành #020617 (màu nền trang).
+  useEffect(() => {
+    const frame = frameRef.current
+    const syncBg = () => {
+      const doc = frame?.contentDocument
+      const body = doc?.body
+      if (!doc || !body) return
+      const root = doc.documentElement
+      root.style.margin = "0"
+      root.style.padding = "0"
+      root.style.border = "0"
+      body.style.margin = "0"
+      // Bỏ padding 16px của file gốc để SVG lấp khít khung, hết khe hở viền.
+      body.style.padding = "0"
+      body.style.border = "0"
+      body.style.outline = "none"
+      const svg = body.querySelector("svg")
+      if (svg instanceof SVGSVGElement) {
+        svg.style.display = "block"
+        svg.style.verticalAlign = "top"
+      }
+      if (document.documentElement.classList.contains("dark")) {
+        body.style.background = "#020617"
+      } else {
+        body.style.background = ""
+      }
+    }
+    syncBg()
+    frame?.addEventListener("load", syncBg)
+    const timers = [window.setTimeout(syncBg, 500), window.setTimeout(syncBg, 2000)]
+    const observer = new MutationObserver(syncBg)
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] })
+    return () => {
+      observer.disconnect()
+      frame?.removeEventListener("load", syncBg)
+      timers.forEach((timer) => window.clearTimeout(timer))
+    }
+  }, [])
   return (
     <>
       {/* Thay vị trí #docs trang chủ: liệt kê chức năng (id riêng cho trang test). */}
       <section
         id="features"
-        className="mx-auto flex w-full max-w-[1120px] flex-col scroll-mt-28 border-t border-slate-200 px-[clamp(24px,2vw+16px,32px)] pb-[clamp(80px,5vw+60px,96px)] pt-[clamp(56px,4vw+40px,64px)] dark:border-white/10"
+        className="mx-auto flex w-full max-w-[1120px] flex-col scroll-mt-28 border-t border-slate-200 px-[clamp(24px,2vw+16px,32px)] pb-[clamp(40px,2.5vw+30px,48px)] pt-[clamp(56px,4vw+40px,64px)] dark:border-white/10"
       >
-        <div className="py-4 text-center sm:py-6">
+        <div className="py-4 pb-10 text-center sm:py-6 sm:pb-12">
           <h2 className="lp-section-heading">
             {lang === "vi" ? <><span className="name-logo">Quizpka</span> có những gì?</> : <>What does <span className="name-logo">Quizpka</span> offer?</>}
           </h2>
@@ -131,9 +172,9 @@ export function TestPage({ lang }: { lang: Lang }) {
       {/* Thay vị trí #features trang chủ: hướng dẫn sử dụng (id riêng cho trang test). */}
       <section
         id="starts"
-        className="mx-auto flex w-full max-w-[1120px] flex-col scroll-mt-28 border-t border-slate-200 px-[clamp(24px,2vw+16px,32px)] pb-[clamp(80px,5vw+60px,96px)] pt-[clamp(56px,4vw+40px,64px)] dark:border-white/10"
+        className="mx-auto flex w-full max-w-[1120px] flex-col scroll-mt-28 border-t border-slate-200 px-[clamp(24px,2vw+16px,32px)] pb-[clamp(40px,2.5vw+30px,48px)] pt-[clamp(56px,4vw+40px,64px)] dark:border-white/10"
       >
-        <div className="py-4 text-center sm:py-6">
+        <div className="py-4 pb-10 text-center sm:py-6 sm:pb-12">
           <h2 className="lp-section-heading">
             {lang === "vi" ? <>Bắt đầu ôn tập với <span className="name-logo">Quizpka</span></> : <>How to use <span className="name-logo">Quizpka</span></>}
           </h2>
@@ -143,41 +184,45 @@ export function TestPage({ lang }: { lang: Lang }) {
         </div>
 
         <div className="mx-auto grid w-full max-w-[1120px] items-center gap-8 lg:grid-cols-2 lg:gap-12">
-          <div className="order-2 mx-auto w-full max-w-[360px] sm:order-1 sm:max-w-[320px] lg:max-w-none">
-            <img
-              className="h-[360px] w-full object-contain sm:h-auto"
-              src="/start-svg.svg?v=1"
-              alt=""
+          <div className="order-2 mx-auto w-full max-w-[347px] [clip-path:inset(2px_0_0_0)] sm:order-1 sm:max-w-[320px] lg:max-w-none">
+            <iframe
+              ref={frameRef}
+              title=""
               aria-hidden="true"
+              tabIndex={-1}
+              scrolling="no"
+              frameBorder="0"
               loading="lazy"
+              src="/start-svg-2.html"
+              className="mx-auto block aspect-[469/487] w-full overflow-hidden border-0 outline-none dark:bg-[#020617]"
             />
           </div>
           <ol className="relative order-1 w-full sm:order-2">
-          <span
-            aria-hidden="true"
-            className="absolute bottom-8 left-[23px] top-8 w-[3px] rounded-full bg-gradient-to-b from-[#1CB0F6] via-[#7DD3FC] to-[#B3E5FC] dark:from-sky-500/60 dark:via-sky-500/25 dark:to-transparent"
-          />
-          {t.steps.map((step, index) => {
-            const Icon = STEP_ICONS[index % STEP_ICONS.length] ?? MousePointerClick
-            return (
-              <li key={step.title} className="relative flex gap-4 pb-4 last:pb-0 sm:gap-5">
-                <span className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#1CB0F6] text-lg font-black text-white shadow-[0_3px_0_#0786C2]">
-                  {index + 1}
-                </span>
-                <div className="min-w-0 flex-1 rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] transition-transform hover:-translate-y-0.5 dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_3px_0_rgba(0,0,0,0.35)] sm:p-5">
-                  <h3 className="flex items-center gap-2 text-[15px] font-black leading-6 text-[#100F3E] dark:text-white">
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-[10px] bg-[#E8F7FE] text-[#1CB0F6] dark:bg-sky-500/10">
-                      <Icon className="h-4 w-4" strokeWidth={2} />
-                    </span>
-                    {step.title}
-                  </h3>
-                  <p className="mt-2 text-[13px] font-semibold leading-5 text-slate-500 dark:text-slate-400">
-                    {step.desc}
-                  </p>
-                </div>
-              </li>
-            )
-          })}
+            <span
+              aria-hidden="true"
+              className="absolute bottom-8 left-[23px] top-8 w-[3px] rounded-full bg-gradient-to-b from-[#1CB0F6] via-[#7DD3FC] to-[#B3E5FC] dark:from-sky-500/60 dark:via-sky-500/25 dark:to-transparent"
+            />
+            {t.steps.map((step, index) => {
+              const Icon = STEP_ICONS[index % STEP_ICONS.length] ?? MousePointerClick
+              return (
+                <li key={step.title} className="relative flex gap-4 pb-4 last:pb-0 sm:gap-5">
+                  <span className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#1CB0F6] text-lg font-black text-white shadow-[0_3px_0_#0786C2]">
+                    {index + 1}
+                  </span>
+                  <div className="min-w-0 flex-1 rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] transition-transform hover:-translate-y-0.5 dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_3px_0_rgba(0,0,0,0.35)] sm:p-5">
+                    <h3 className="flex items-center gap-2 text-[15px] font-black leading-6 text-[#100F3E] dark:text-white">
+                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-[10px] bg-[#E8F7FE] text-[#1CB0F6] dark:bg-sky-500/10">
+                        <Icon className="h-4 w-4" strokeWidth={2} />
+                      </span>
+                      {step.title}
+                    </h3>
+                    <p className="mt-2 text-[13px] font-semibold leading-5 text-slate-500 dark:text-slate-400">
+                      {step.desc}
+                    </p>
+                  </div>
+                </li>
+              )
+            })}
           </ol>
         </div>
       </section>
