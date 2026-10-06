@@ -489,11 +489,16 @@ html.dark .lp-modal-desc {
 /* Panel Ă´m vá»«a ná»™i dung trĂªn mobile (bá» cao cá»‘ Ä‘á»‹nh 580px). */
 .lp-modal-frame--auto {
   height: auto;
+  max-height: min(509px, calc(100dvh - 2rem));
 }
 
 @media (min-width: 640px) {
   .lp-modal-frame {
     height: auto;
+  }
+
+  .lp-modal-frame--auto {
+    max-height: min(760px, 92dvh);
   }
 }
 
@@ -514,6 +519,10 @@ html.dark .lp-modal-desc {
   overflow-y: auto;
   overscroll-behavior: contain;
   padding: 1rem;
+}
+
+.lp-modal-frame--auto .lp-modal-body {
+  flex: 0 1 auto;
 }
 
 @media (min-width: 640px) {

@@ -38,7 +38,7 @@ export function PickerModalShell({
         aria-modal="true"
         aria-labelledby={titleId}
         data-state={state}
-        className={cn("contact-modal-panel relative z-10 m-auto max-w-[560px] shadow-[var(--shadow-3)]", modalFrameClass, "lp-modal-frame--compact")}
+        className={cn("contact-modal-panel relative z-10 m-auto max-w-[560px] shadow-[var(--shadow-3)]", modalFrameClass, "lp-modal-frame--auto")}
       >
         <div className={modalHeaderClass}>
           <div>
@@ -78,7 +78,7 @@ export function PickerOptionButton({
       type="button"
       onClick={onClick}
       className={cn(
-        "flex min-h-[95px] w-full items-center gap-4 rounded-[12px] border-2 px-4 py-4 text-left transition-all sm:min-h-0",
+        "flex w-full items-center gap-4 rounded-[12px] border-2 px-4 py-4 text-left transition-all",
         active
           ? "border-[#1CB0F6] bg-[#E8F7FE] shadow-[0_3px_0_#1CB0F6] dark:bg-sky-500/10"
           : "border-[#E5E5E5] bg-white hover:border-[#B3E5FC] dark:border-white/10 dark:bg-slate-900"

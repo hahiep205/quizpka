@@ -25,9 +25,15 @@ export function CatalogExamCard({
   hideHeaderOnMobile?: boolean
 }) {
   // Only individual chapters (c1..cN): group aggregates like mid/final/suutam are not chapters.
-  const chapterCount = (getSubjectById(exam.subjectId)?.chapters ?? [])
+  const subjectChapters = getSubjectById(exam.subjectId)?.chapters ?? []
+  const chapterCount = subjectChapters
     .filter((chapter) => /^c\d+$/.test(chapter.id)).length
-  const examSetCount = exam.subjectId === "tieng-anh-dau-vao" ? tadvExamOptions.length : exam.subjectId === "tadv-traphi" ? tadvPaidExamOptions.length : 0
+  const documentSetCount = subjectChapters.filter((chapter) => Boolean(chapter.documentId)).length
+  const examSetCount = exam.subjectId === "tieng-anh-dau-vao"
+    ? tadvExamOptions.length
+    : exam.subjectId === "tadv-traphi"
+      ? tadvPaidExamOptions.length
+      : exam.questionCount === 0 ? documentSetCount : 0
   const isPaid = getPaidProductId(exam.subjectCode) !== null
   const badgeLabel = isPaid ? categoryLabel : lang === "vi" ? "Miễn phí" : "Free"
   return (

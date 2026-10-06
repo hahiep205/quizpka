@@ -15,7 +15,7 @@ import { cn } from "@/lib/utils"
 import { dashboardCopy as copy } from "@/shared/i18n"
 import type { Language } from "@/shared/types/app"
 
-export function LeaderboardView({ lang }: { lang: Language }) {
+export function LeaderboardView({ lang, onComputedAtChange }: { lang: Language; onComputedAtChange?: (value: string | null) => void }) {
   const t = copy[lang]
   const { user } = useAuth()
   const userId = user?.id
@@ -53,6 +53,7 @@ export function LeaderboardView({ lang }: { lang: Language }) {
         if (snapshot) {
           setRemoteEntries(snapshot.entries)
           setComputedAt(snapshot.computedAt)
+          onComputedAtChange?.(snapshot.computedAt)
         }
         if (ownScore) setPersonalScore(ownScore)
         const responseTimes = [snapshot?.fetchedAt, ownScore?.fetchedAt].filter((value): value is number => value !== undefined)
@@ -70,6 +71,7 @@ export function LeaderboardView({ lang }: { lang: Language }) {
     setRemoteEntries([])
     setPersonalScore(null)
     setComputedAt(null)
+    onComputedAtChange?.(null)
     runFetch()
     const onVisibilityChange = () => {
       if (document.visibilityState === "visible" && Date.now() - lastFetchAt >= 30 * 60_000) runFetch(true)
@@ -80,7 +82,7 @@ export function LeaderboardView({ lang }: { lang: Language }) {
       if (refreshTimer !== undefined) window.clearTimeout(refreshTimer)
       document.removeEventListener("visibilitychange", onVisibilityChange)
     }
-  }, [userId])
+  }, [onComputedAtChange, userId])
 
   const fullRanked = useMemo(() => {
     const byId = new Map(remoteEntries.map((entry) => [entry.userId, entry]))
@@ -114,8 +116,8 @@ export function LeaderboardView({ lang }: { lang: Language }) {
           </div>
         </div>
       </div>
-      <p className="text-[12px] font-semibold leading-5 text-slate-400">{t.leaderboardFormula}</p>
-      {computedAt ? <p className="-mt-3 text-[11px] font-semibold text-slate-400">{lang === "vi" ? "Cập nhật lúc" : "Updated"} {new Date(computedAt).toLocaleString(lang === "vi" ? "vi-VN" : "en-US")}</p> : null}
+      <p className="hidden text-[12px] font-semibold leading-5 text-slate-400 sm:block">{t.leaderboardFormula}</p>
+      {computedAt ? <p className="-mt-3 hidden text-[11px] font-semibold text-slate-400 sm:block">{lang === "vi" ? "Cập nhật lúc" : "Updated"} {new Date(computedAt).toLocaleString(lang === "vi" ? "vi-VN" : "en-US")}</p> : null}
 
       {!visible ? (
         <div className="rounded-[14px] border-2 border-amber-200 bg-amber-50 px-4 py-3 text-sm font-bold text-amber-700 dark:border-amber-500/20 dark:bg-amber-500/10 dark:text-amber-200">

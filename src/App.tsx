@@ -89,6 +89,12 @@ export default function App() {
     if (guestBlocked) navigate(appRoutes.home, { replace: true })
   }, [guestBlocked])
 
+  const adminPath = pathname === appRoutes.admin || pathname.startsWith(`${appRoutes.admin}/`)
+  const adminAccessBlocked = adminPath && status !== "loading" && profile?.role !== "admin"
+  useEffect(() => {
+    if (adminAccessBlocked) navigate(appRoutes.home, { replace: true })
+  }, [adminAccessBlocked])
+
   const openContact = (type: ContactModalType) => {
     setContactType(type)
     setContactOpen(true)
@@ -127,13 +133,14 @@ export default function App() {
   if (pathname === appRoutes.authCallback) return <AuthCallbackPage />
   if (pathname === appRoutes.welcomeNewUser) return <WelcomeNewUserPage />
 
+  if (adminAccessBlocked) return <RouteLoading />
+
   if (status === "blocked") return <BlockedAccountScreen reason={profile?.blocked_reason ?? null} onSignOut={() => { void signOut().then(() => navigate(appRoutes.home, { replace: true })) }} />
 
   if (guestBlocked) return <RouteLoading />
 
-  if (pathname === appRoutes.admin || pathname.startsWith(`${appRoutes.admin}/`)) {
+  if (adminPath) {
     if (status === "loading") return <RouteLoading />
-    if (profile?.role !== "admin") return <AccessDeniedScreen />
     return (
       <Suspense fallback={<RouteLoading />}><AdminPage lang={lang} /></Suspense>
     )
@@ -323,10 +330,6 @@ export default function App() {
 
 function RouteLoading() {
   return <div className="mx-auto flex min-h-svh items-center justify-center px-6"><p className="lp-modal-desc text-[15px]">Loading…</p></div>
-}
-
-function AccessDeniedScreen() {
-  return <main className="mx-auto flex min-h-svh max-w-md flex-col items-center justify-center gap-3 px-6 text-center"><h1 className="text-xl font-semibold">Không có quyền truy cập</h1><p className="text-sm text-slate-500">Trang /admin chỉ dành cho tài khoản admin.</p><a href="/" className="lp-btn lp-btn--secondary">Về trang chủ</a></main>
 }
 
 function BlockedAccountScreen({ reason, onSignOut }: { reason: string | null; onSignOut: () => void }) {

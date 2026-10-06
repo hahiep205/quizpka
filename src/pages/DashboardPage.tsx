@@ -166,6 +166,7 @@ export function DashboardPage({
   onOpenContact,
 }: DashboardPageProps) {
   const [activeView, setActiveView] = useState<DashboardView>(() => getDashboardView(getCurrentPath()))
+  const [leaderboardComputedAt, setLeaderboardComputedAt] = useState<string | null>(null)
   const { user: dashboardUser } = useAuth()
   useEffect(() => {
     if (!dashboardUser?.id) return
@@ -467,7 +468,7 @@ export function DashboardPage({
       <DesktopSidebar activeView={activeView} lang={lang} unreadNotificationCount={unreadNotificationCount} onNavigate={navigate} />
 
       <div className="lg:pl-[200px]">
-        <DashboardTopbar lang={lang} view={activeView} onlineCount={onlineCount} unreadNotificationCount={unreadNotificationCount} />
+        <DashboardTopbar lang={lang} view={activeView} onlineCount={onlineCount} unreadNotificationCount={unreadNotificationCount} computedAt={leaderboardComputedAt} />
 
         <main className={cn("mx-auto w-full max-w-[1440px] px-3 pt-4 min-[380px]:px-4 sm:px-6 sm:pt-6 md:px-8 lg:px-8 lg:pb-12 lg:pt-8 xl:px-10", activeView === "notifications" ? "pb-[calc(24px+env(safe-area-inset-bottom))]" : "pb-[calc(108px+env(safe-area-inset-bottom))]")}>
           {activeView === "home" ? (
@@ -481,7 +482,7 @@ export function DashboardPage({
               onStartExam={handleDashboardStart}
             />
           ) : null}
-          {activeView === "leaderboard" ? <LeaderboardView lang={lang} /> : null}
+          {activeView === "leaderboard" ? <LeaderboardView lang={lang} onComputedAtChange={setLeaderboardComputedAt} /> : null}
           {activeView === "history" ? <EmptyView lang={lang} view="history" /> : null}
           {activeView === "purchased" ? <PurchasedView lang={lang} onStartExam={(exam) => void handlePaidTryNow(exam)} /> : null}
           {activeView === "downloads" ? <DownloadsView lang={lang} onRequestDownload={setDownloadPickerExam} /> : null}
@@ -926,7 +927,8 @@ function DesktopSidebar({
   )
 }
 
-function DashboardTopbar({ lang, view, onlineCount = 0, unreadNotificationCount = 0 }: Pick<DashboardPageProps, "lang" | "onlineCount"> & { view: DashboardView; unreadNotificationCount?: number }) {
+function DashboardTopbar({ lang, view, onlineCount = 0, unreadNotificationCount = 0, computedAt }: Pick<DashboardPageProps, "lang" | "onlineCount"> & { view: DashboardView; unreadNotificationCount?: number; computedAt: string | null }) {
+  const [showRankInfo, setShowRankInfo] = useState(false)
   const t = copy[lang]
   const topbarTitle =
     view === "leaderboard"
@@ -970,9 +972,39 @@ function DashboardTopbar({ lang, view, onlineCount = 0, unreadNotificationCount 
       <div className="mx-auto flex h-14 w-full max-w-[1440px] items-center justify-between px-3 sm:h-16 sm:px-6 md:px-8 lg:h-[72px] lg:px-8 xl:px-10">
         {pageMeta && PageIcon ? (
           view === "leaderboard" ? (
-            <a href="/" className={mobileTitleClass} aria-label={pageMeta.title}>
-              <span className="name-logo">{pageMeta.title}</span>
-            </a>
+            <div className="flex min-w-0 flex-1 items-center lg:hidden">
+              <a href="/" className="flex min-w-0 flex-1 items-center justify-center text-center text-[27px]" aria-label={pageMeta.title}>
+                <span className="name-logo">{pageMeta.title}</span>
+              </a>
+              <button
+                type="button"
+                onClick={() => setShowRankInfo(true)}
+                aria-label={lang === "vi" ? "Thông tin cách tính điểm" : "Score information"}
+                title={lang === "vi" ? "Thông tin cách tính điểm" : "Score information"}
+                aria-haspopup="dialog"
+                aria-expanded={showRankInfo}
+                className="relative ml-2 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#F0F2F5] text-[#050505] transition-colors hover:bg-[#E4E6EB] active:scale-95 dark:bg-[#3A3B3C] dark:text-[#E4E6EB] dark:hover:bg-[#4E4F50]"
+              >
+                <span className="flex h-5 w-5 shrink-0 items-center justify-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="h-[19px] w-[19px]"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 8V12" />
+                    <path d="M12.125 15.75H12M12.25 15.75C12.25 15.8881 12.1381 16 12 16C11.8619 16 11.75 15.8881 11.75 15.75C11.75 15.6119 11.8619 15.5 12 15.5C12.1381 15.5 12.25 15.6119 12.25 15.75Z" />
+                  </svg>
+                </span>
+              </button>
+            </div>
           ) : view === "history" ? (
             <a href="/" className={mobileTitleClass} aria-label={lang === "vi" ? "Lịch sử làm quiz" : pageMeta.title}>
               <span className="name-logo">{lang === "vi" ? "Lịch sử" : pageMeta.title}</span>
@@ -1046,6 +1078,38 @@ function DashboardTopbar({ lang, view, onlineCount = 0, unreadNotificationCount 
           </div>
         </div>
       </div>
+      <Dialog
+        open={showRankInfo && view === "leaderboard"}
+        onClose={() => setShowRankInfo(false)}
+        title={lang === "vi" ? "Thông tin điểm xếp hạng" : "Ranking score information"}
+        closeLabel={lang === "vi" ? "Đóng" : "Close"}
+        className="z-[85]"
+        panelClassName="flex max-h-[calc(100dvh-2rem)] w-full max-w-[560px] flex-col overflow-hidden rounded-[20px] border-2 border-[#E5E5E5] bg-white shadow-[0_7px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none"
+      >
+        <header className="flex min-h-[86px] shrink-0 items-start justify-between gap-4 border-b border-slate-100 px-4 py-3 sm:px-6 sm:py-5 dark:border-white/10">
+          <div className="min-w-0">
+            <p className="hidden text-[10px] font-black uppercase tracking-[0.12em] text-[#129BDC] sm:block">Quiz for PKAers</p>
+            <h2 className="mt-1 text-lg font-black leading-6 text-[#100F3E] dark:text-white sm:text-2xl sm:leading-7">
+              {lang === "vi" ? "Thông tin điểm xếp hạng" : "Ranking score information"}
+            </h2>
+          </div>
+          <button type="button" className="lp-btn lp-btn--secondary lp-btn--icon shrink-0" onClick={() => setShowRankInfo(false)} aria-label={lang === "vi" ? "Đóng" : "Close"}>
+            <X className="h-4 w-4" />
+          </button>
+        </header>
+        <div className="space-y-3 overflow-y-auto p-4 sm:p-6">
+          <div className="rounded-[16px] border border-sky-100 bg-[#F4FBFF] p-4 dark:border-sky-500/15 dark:bg-sky-500/[0.06]">
+            <p className="text-xs font-black uppercase tracking-[0.08em] text-slate-400">{lang === "vi" ? "Công thức điểm" : "Score formula"}</p>
+            <p className="mt-2 text-sm font-semibold leading-6 text-slate-600 dark:text-slate-300">{t.leaderboardFormula}</p>
+          </div>
+          <div className="rounded-[16px] border border-slate-100 bg-slate-50 p-4 dark:border-white/10 dark:bg-white/5">
+            <p className="text-xs font-black uppercase tracking-[0.08em] text-slate-400">{lang === "vi" ? "Cập nhật" : "Updated"}</p>
+            <p className="mt-2 text-sm font-semibold leading-6 text-slate-600 dark:text-slate-300">
+              {computedAt ? new Date(computedAt).toLocaleString(lang === "vi" ? "vi-VN" : "en-US") : "—"}
+            </p>
+          </div>
+        </div>
+      </Dialog>
     </header>
   )
 }
@@ -1320,7 +1384,7 @@ function HistoryAttemptDialog({ item, lang, onClose, onShowWrong, onRetry }: {
   >
     <div className="flex min-h-[100px] items-start justify-between gap-4 border-b border-slate-100 px-4 py-4 sm:px-6 sm:py-5 dark:border-white/10">
       <div className="min-w-0">
-        <p className="text-[10px] font-black uppercase tracking-[0.12em] text-[#129BDC]">{lang === "vi" ? "Chi tiết lần làm bài" : "Attempt details"}</p>
+        <p className="hidden text-[10px] font-black uppercase tracking-[0.12em] text-[#129BDC] sm:block">{lang === "vi" ? "Chi tiết lần làm bài" : "Attempt details"}</p>
         <h2 className="mt-1 line-clamp-2 text-lg font-black leading-6 text-[#100F3E] dark:text-white sm:text-xl">{item?.title}</h2>
         <div className="mt-2 flex flex-wrap items-center gap-2 text-xs font-bold text-slate-400">
           <span>{item ? new Date(item.completedAt).toLocaleString(lang === "vi" ? "vi-VN" : "en-US") : ""}</span>

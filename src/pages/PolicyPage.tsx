@@ -186,7 +186,7 @@ const copy: Record<Language, Copy> = {
       },
       {
         id: "ban-quyen",
-        heading: "6. Copyright",
+        heading: "Copyright",
         intro: ["The question bank, exam sets, and all paid study materials on Quizpka belong to the development team and are protected by Vietnamese intellectual-property law."],
         list: [
           "Stealing, reposting, or distributing the materials without permission all count as copyright infringement.",

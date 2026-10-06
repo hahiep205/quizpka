@@ -32,7 +32,7 @@ export function PurchaseDetailDialog({ exam, lang, loading, error, onClose, onCo
     title={isVietnamese ? "Thông tin môn học" : "Subject details"}
     closeLabel={isVietnamese ? "Hủy" : "Cancel"}
     className="z-[85]"
-    panelClassName="flex h-[min(509px,calc(100dvh-2rem))] max-h-[calc(100dvh-2rem)] w-full max-w-[560px] flex-col overflow-hidden rounded-[20px] border-2 border-[#E5E5E5] bg-white shadow-[0_7px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none"
+    panelClassName="flex max-h-[min(509px,calc(100dvh-2rem))] w-full max-w-[560px] flex-col overflow-hidden rounded-[20px] border-2 border-[#E5E5E5] bg-white shadow-[0_7px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none sm:max-h-[min(760px,92dvh)]"
   >
     <header className="flex min-h-[86px] shrink-0 items-start justify-between gap-4 border-b border-slate-100 px-4 py-3 sm:px-6 sm:py-5 dark:border-white/10">
       <div className="min-w-0">

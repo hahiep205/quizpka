@@ -20,6 +20,9 @@ export function ExamMetaRow({
   className?: string
   examSetCount?: number
 }) {
+  const examSetIndex = Number(questionCount > 0)
+  const chapterIndex = examSetIndex + Number(examSetCount > 0)
+  const durationIndex = chapterIndex + Number(chapterCount > 0)
   return (
     <div className={cn("flex flex-nowrap items-center gap-x-2 overflow-hidden", className)}>
       {questionCount > 0 ? (
@@ -35,13 +38,13 @@ export function ExamMetaRow({
         </span>
       ) : null}
       {chapterCount > 0 ? (
-        <span className="inline-flex min-w-0 flex-1 items-center gap-1 sm:gap-1.5">
+        <span className={cn("min-w-0 flex-1 items-center gap-1 sm:gap-1.5", chapterIndex >= 2 ? "hidden sm:inline-flex" : "inline-flex")}>
           <Layers className="h-3 w-3 shrink-0 sm:h-3.5 sm:w-3.5" strokeWidth={1.75} />
           <span className="truncate whitespace-nowrap">{chapterCount === 1 ? (lang === "vi" ? "1 bộ đề" : "1 set") : `${chapterCount} ${lang === "vi" ? "chương" : "chapters"}`}</span>
         </span>
       ) : null}
       {durationMinutes > 0 ? (
-        <span className="hidden min-w-0 flex-1 items-center gap-1 sm:inline-flex sm:gap-1.5">
+        <span className={cn("min-w-0 flex-1 items-center gap-1 sm:gap-1.5", durationIndex >= 2 ? "hidden sm:inline-flex" : "inline-flex")}>
           <Clock3 className="h-3 w-3 shrink-0 sm:h-3.5 sm:w-3.5" strokeWidth={1.75} />
           <span className="truncate whitespace-nowrap">{durationMinutes} {lang === "vi" ? "phút" : "min"}</span>
         </span>
