@@ -2,10 +2,10 @@ import { GoogleIcon } from "@/shared/icons/GoogleIcon"
 
 function QuizPreviewCard() {
   return (
-    <div className="relative mx-auto w-full max-w-[clamp(300px,25vw+250px,505px)]">
+    <div className="relative mx-auto w-full max-w-[clamp(360px,30vw+300px,606px)]">
       <img
-        className="max-h-[clamp(300px,25vw+250px,505px)] w-full object-contain"
-        src="/hero-svg.svg?v=2"
+        className="max-h-[clamp(360px,30vw+300px,606px)] w-full object-contain"
+        src="/hero-svg.svg?v=3"
         alt=""
         aria-hidden="true"
         loading="eager"

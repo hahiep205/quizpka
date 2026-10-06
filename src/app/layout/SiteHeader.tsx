@@ -153,12 +153,12 @@ export function SiteHeader({
   return (
     <>
       <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-slate-50/95 shadow-[var(--shadow-1)] backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/95 dark:shadow-[var(--shadow-2)] supports-[backdrop-filter]:bg-slate-50/80 dark:supports-[backdrop-filter]:bg-slate-950/80">
-      <div className="relative mx-auto flex w-full max-w-[1120px] items-center justify-between gap-3 px-6 py-[10px] md:py-[18px] lg:px-8">
+      <div className="relative mx-auto flex w-full max-w-[1120px] items-center justify-between gap-3 px-6 py-[9px] md:py-[8px] lg:px-8">
         {/* Mobile: hamburger left */}
         <button
           type="button"
           className={cn(
-            "relative inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-800 shadow-[var(--shadow-1)] transition-all duration-200 md:hidden dark:border-white/10 dark:bg-slate-900 dark:text-slate-200",
+            "relative inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-800 shadow-[var(--shadow-1)] transition-all duration-200 md:hidden dark:border-white/10 dark:bg-slate-900 dark:text-slate-200",
             "active:scale-95",
             mobileOpen
               ? "border-primary-600 bg-primary-600 text-white shadow-none dark:border-white dark:bg-white dark:text-slate-900"

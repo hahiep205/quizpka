@@ -142,7 +142,17 @@ export function TestPage({ lang }: { lang: Lang }) {
           </p>
         </div>
 
-        <ol className="relative mx-auto w-full max-w-[760px]">
+        <div className="mx-auto grid w-full max-w-[1120px] items-center gap-8 lg:grid-cols-2 lg:gap-12">
+          <div className="order-2 mx-auto w-full max-w-[360px] sm:order-1 sm:max-w-[320px] lg:max-w-none">
+            <img
+              className="h-[360px] w-full object-contain sm:h-auto"
+              src="/start-svg.svg?v=1"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+          </div>
+          <ol className="relative order-1 w-full sm:order-2">
           <span
             aria-hidden="true"
             className="absolute bottom-8 left-[23px] top-8 w-[3px] rounded-full bg-gradient-to-b from-[#1CB0F6] via-[#7DD3FC] to-[#B3E5FC] dark:from-sky-500/60 dark:via-sky-500/25 dark:to-transparent"
@@ -168,7 +178,8 @@ export function TestPage({ lang }: { lang: Lang }) {
               </li>
             )
           })}
-        </ol>
+          </ol>
+        </div>
       </section>
     </>
   )
