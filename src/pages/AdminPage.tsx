@@ -992,9 +992,6 @@ export function AdminPage({ lang }: Props) {
                   <DashboardStatCard icon={Clock3} value={String(todayKpis.completedQuizzes)} label={lang === "vi" ? "Lượt hoàn thành quiz hôm nay" : "Completed quizzes today"} tone="violet" />
                 </section>
 
-                {kpis.blockedAccount > 0 ? (
-                ) : null}
-
                 {/* Tổng quan */}
                 <section id="admin-overview" className="scroll-mt-24 space-y-4 sm:space-y-5">
                   <div className="grid gap-3 sm:gap-4 lg:grid-cols-5">
