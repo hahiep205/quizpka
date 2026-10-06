@@ -605,7 +605,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
         </div>
 
         <div key={transitionKey} className="quiz-question-panel rounded-[16px] border-2 border-[#E5E5E5] bg-white p-5 shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 sm:p-6">
-          <QuestionMedia question={hardCurrent} t={t} />
+          <QuestionMedia question={hardCurrent} t={t} lang={lang} />
           <QuizQuestionBlock
             question={hardCurrent}
             questionNumber={hardPos + 1}
@@ -664,7 +664,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
 
       <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(260px,280px)]">
         <div key={transitionKey} className="quiz-question-panel rounded-[16px] border-2 border-[#E5E5E5] bg-white p-5 shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 sm:p-6">
-          <QuestionMedia question={current} t={t} />
+          <QuestionMedia question={current} t={t} lang={lang} />
           <div className="space-y-5">
             {partQuestions.map((question) => (
               <QuizQuestionBlock
@@ -754,10 +754,12 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
   )
 }
 
-function QuestionMedia({ question, t }: {
+function QuestionMedia({ question, t, lang }: {
   question: Question
   t: (typeof copy)["en" | "vi"]
+  lang: Lang
 }) {
+  const audioRef = useRef<HTMLAudioElement>(null)
   const displayPartTitle = question.partTitle ? stripPart6GroupSuffix(question.partTitle) : undefined
   return (
     <>
@@ -770,7 +772,13 @@ function QuestionMedia({ question, t }: {
       {question.audioUrl ? (
         <div className="mb-5 rounded-[12px] border-2 border-[#E5E5E5] bg-[#F6F7FB] p-3 dark:border-white/10 dark:bg-white/5">
           <div className="mb-2 flex items-center justify-between gap-2 text-[12px] font-extrabold text-[#129BDC]"><span>{t.listeningAudio}</span>{question.audioTimestamp ? <span>{question.audioTimestamp}</span> : null}</div>
-          <audio controls preload="metadata" className="w-full" src={question.audioUrl}>Your browser does not support audio playback.</audio>
+          <div className="flex flex-col gap-2 md:flex-row md:items-center">
+            <audio ref={audioRef} controls preload="metadata" className="w-full min-w-0 rounded-full border border-[#D1D5DB] md:flex-1 dark:border-white/15" src={question.audioUrl}>Your browser does not support audio playback.</audio>
+            <div className="flex justify-end gap-2 md:shrink-0">
+              <button type="button" title={lang === "vi" ? "Lùi 5 giây" : "Back 5 seconds"} aria-label={lang === "vi" ? "Lùi 5 giây" : "Back 5 seconds"} onClick={() => { const audio = audioRef.current; if (audio) audio.currentTime = Math.max(0, audio.currentTime - 5) }} className="rounded-full border border-[#D1D5DB] bg-[#F0F2F5] px-3 py-1.5 text-xs font-bold text-[#050505] transition-colors hover:bg-[#E4E6EB] active:scale-95 md:h-[54px] dark:border-white/15 dark:bg-[#3A3B3C] dark:text-[#E4E6EB] dark:hover:bg-[#4E4F50]">- 5s</button>
+              <button type="button" title={lang === "vi" ? "Tiến 5 giây" : "Forward 5 seconds"} aria-label={lang === "vi" ? "Tiến 5 giây" : "Forward 5 seconds"} onClick={() => { const audio = audioRef.current; if (audio) audio.currentTime = Math.min(Number.isFinite(audio.duration) ? audio.duration : audio.currentTime + 5, audio.currentTime + 5) }} className="rounded-full border border-[#D1D5DB] bg-[#F0F2F5] px-3 py-1.5 text-xs font-bold text-[#050505] transition-colors hover:bg-[#E4E6EB] active:scale-95 md:h-[54px] dark:border-white/15 dark:bg-[#3A3B3C] dark:text-[#E4E6EB] dark:hover:bg-[#4E4F50]">+ 5s</button>
+            </div>
+          </div>
         </div>
       ) : null}
       {!question.imageUrl && question.passage && !question.passage.trim().startsWith("Transcript:") ? <p className="mb-5 whitespace-pre-line rounded-[12px] border-2 border-[#E5E5E5] bg-[#F6F7FB] px-4 py-3 text-[13px] leading-6 text-[#4B4B4B] dark:border-white/10 dark:bg-white/5 dark:text-slate-200">{question.passage}</p> : null}

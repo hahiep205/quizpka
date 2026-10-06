@@ -54,7 +54,11 @@ export function buildPartNavigationItems(questions: Question[], startIndices: nu
   return startIndices.map((startIndex, index) => {
     const firstQuestion = questions[startIndex]
     const partNumber = firstQuestion.partTitle?.match(/PART\s+(\d+)/i)?.[1] ?? String(index + 1)
-    const label = `Part ${partNumber} - ${firstQuestion.section ?? "Quiz"}`
+    const numericPart = Number(partNumber)
+    const section = numericPart === 1 || numericPart === 2
+      ? "Listening"
+      : "Reading"
+    const label = `Part ${partNumber} - ${section}`
     return { startIndex, label }
   })
 }
