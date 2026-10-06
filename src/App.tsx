@@ -51,7 +51,7 @@ export default function App() {
     () => ({ ...translations[lang], documents: lang === "vi" ? "Chức năng" : "Features", features: lang === "vi" ? "Bắt đầu" : "Start" }),
     [lang],
   )
-  const testNavHrefs = useMemo(() => ({ documents: "#features", features: "#starts" }), [])
+  const testNavHrefs = useMemo(() => ({ documents: "/#features", features: "/#starts" }), [])
 
   useGlobalSecurity()
 
@@ -169,12 +169,13 @@ export default function App() {
           <SiteHeader
             lang={lang}
             theme={theme}
-            t={t}
+            t={testT}
             onToggleLang={() => setLang((current) => (current === "en" ? "vi" : "en"))}
             onToggleTheme={() =>
               setTheme((current) => (current === "light" ? "dark" : "light"))
             }
             onOpenLogin={openLogin}
+            navHrefs={testNavHrefs}
           />
           <Suspense fallback={<RouteLoading />}><PolicyPage lang={lang} /></Suspense>
           <SiteFooter t={t} />

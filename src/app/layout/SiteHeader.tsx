@@ -80,7 +80,7 @@ export function SiteHeader({
     const resolveActive = () => {
       const hash = window.location.hash.replace("#", "")
       const matched = (Object.keys(hrefByKey) as NavKey[]).find(
-        (key) => hrefByKey[key] === `#${hash}`,
+        (key) => hrefByKey[key].split("#")[1] === hash && hash,
       )
       if (matched) {
         setActiveNav(matched)
@@ -88,22 +88,22 @@ export function SiteHeader({
       }
 
       const headerOffset = 96
-      const docsEl = document.getElementById("docs")
-      const featuresEl = document.getElementById("features")
+      // Spy theo href thực tế của từng nút (đúng cả khi navHrefs ghi đè):
+      // nút nào có section đã cuộn qua header thì active, lấy section sâu nhất.
+      const sectionKeys: NavKey[] = ["documents", "features"]
+      const deepest = sectionKeys.filter((key) => {
+        const id = hrefByKey[key].split("#")[1]
+        if (!id) return false
+        const el = document.getElementById(id)
+        return el !== null && el.getBoundingClientRect().top - headerOffset <= 0
+      }).pop()
+      if (deepest) {
+        setActiveNav(deepest)
+        return
+      }
       const homeEl = document.getElementById("home")
-
-      const docsTop = docsEl?.getBoundingClientRect().top ?? Number.POSITIVE_INFINITY
-      const featuresTop = featuresEl?.getBoundingClientRect().top ?? Number.POSITIVE_INFINITY
       const homeTop = homeEl?.getBoundingClientRect().top ?? 0
 
-      if (featuresEl && featuresTop - headerOffset <= 0) {
-        setActiveNav("features")
-        return
-      }
-      if (docsEl && docsTop - headerOffset <= 0) {
-        setActiveNav("documents")
-        return
-      }
       if (homeEl && homeTop - headerOffset <= 120) {
         setActiveNav("home")
         return
