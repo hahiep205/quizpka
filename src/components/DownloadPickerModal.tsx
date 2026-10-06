@@ -212,7 +212,7 @@ export function DownloadPickerModal({ open, lang, exam, subject, onClose, onConf
             {chapter.solutionUrl ? (
               <a href={chapter.solutionUrl} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()} className="mt-2 flex min-h-[95px] w-full items-center gap-4 rounded-[12px] border-2 border-red-300 bg-red-50 px-4 py-4 text-left transition-colors hover:bg-red-100 sm:min-h-0 dark:border-red-500/40 dark:bg-red-500/10 dark:hover:bg-red-500/15">
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[12px] bg-red-500 text-white"><CirclePlay className="h-5 w-5" strokeWidth={2} /></span>
-                <span className="min-w-0 flex-1"><span className="block line-clamp-2 text-[15px] font-extrabold leading-5 text-red-600 dark:text-red-300">{lang === "vi" ? "Link giải đề của thầy Ngà" : "Solution video by Mr. Nga"}</span><span className="mt-1 block text-[13px] font-semibold leading-4 text-red-400 dark:text-red-400/80">{lang === "vi" ? "YouTube · mở trong tab mới" : "YouTube · opens in a new tab"}</span></span>
+                <span className="min-w-0 flex-1"><span className="block line-clamp-2 text-[15px] font-extrabold leading-5 text-red-600 dark:text-red-300">{lang === "vi" ? "Link giải đề của thầy Ngà" : "Mr. Nga's solution link"}</span><span className="mt-1 block text-[13px] font-semibold leading-4 text-red-400 dark:text-red-400/80">{lang === "vi" ? "YouTube · mở trong tab mới" : "YouTube · opens in a new tab"}</span></span>
                 <ExternalLink className="h-4 w-4 shrink-0 text-red-400 dark:text-red-400/70" strokeWidth={2} />
               </a>
             ) : null}

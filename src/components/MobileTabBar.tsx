@@ -44,7 +44,7 @@ export function MobileTabBar<K extends string>({
 
   return (
     <nav
-      className="pointer-events-none fixed inset-x-0 bottom-0 z-[300] px-4 pb-[calc(10px+env(safe-area-inset-bottom))] lg:hidden"
+      className="pointer-events-none fixed inset-x-0 bottom-0 z-[300] px-4 pb-[calc(18px+env(safe-area-inset-bottom))] lg:hidden"
       aria-label={ariaLabel}
     >
       <div

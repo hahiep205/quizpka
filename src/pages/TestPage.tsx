@@ -43,7 +43,7 @@ const copy = {
     ],
   },
   en: {
-    featuresSubtitle: "Features that help you learn faster, revise the right topics and track your progress.",
+    featuresSubtitle: "Features that help you review quickly and track your study progress with ease.",
     manualSubtitle: "Sign in, pick subjects, configure quizzes and start - all in a few steps.",
     features: [
       { icon: "login", title: "1-tap Google sign-in", desc: "Start learning right away, no password needed." },
@@ -51,7 +51,7 @@ const copy = {
       { icon: "history", title: "Saved history", desc: "Every attempt is kept so you can review anytime." },
       { icon: "retry", title: "Retry wrong answers", desc: "Wrong questions are collected for focused practice." },
       { icon: "trophy", title: "Leaderboard", desc: "Earn learning points and compare with others." },
-      { icon: "toeic", title: "TADV mock test", desc: "Placement English mock test matching the real format." },
+      { icon: "toeic", title: "TADV mock test", desc: "Placement English mock test following Phenikaa's real exam structure." },
       { icon: "paid", title: "Diverse materials", desc: "Includes plenty of free and paid materials." },
       { icon: "pdf", title: "Free PDF downloads", desc: "Print sets with questions and answers included." },
     ],
@@ -176,7 +176,7 @@ export function TestPage({ lang }: { lang: Lang }) {
       >
         <div className="py-4 pb-10 text-center sm:py-6 sm:pb-12">
           <h2 className="lp-section-heading">
-            {lang === "vi" ? <>Bắt đầu ôn tập với <span className="name-logo">Quizpka</span></> : <>How to use <span className="name-logo">Quizpka</span></>}
+            {lang === "vi" ? <>Bắt đầu ôn tập với <span className="name-logo">Quizpka</span></> : <>Start practicing with <span className="name-logo">Quizpka</span></>}
           </h2>
           <p className="lp-section-subheading mx-auto mt-0 text-center">
             {t.manualSubtitle}

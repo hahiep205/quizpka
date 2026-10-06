@@ -97,10 +97,10 @@ const SECTION_NAV: Array<{ key: AdminSection; icon: LucideIcon; vi: string; en: 
   { key: "notifications", icon: Megaphone, vi: "Thông báo", en: "Notifications" },
   { key: "payment", icon: WalletCards, vi: "Giao dịch", en: "Payments" },
   { key: "sendquiz", icon: Send, vi: "Cấp môn học", en: "Grant access" },
-  { key: "supports", icon: ShieldAlert, vi: "Báo lỗi", en: "Support" },
+  { key: "supports", icon: ShieldAlert, vi: "Báo lỗi", en: "Bug reports" },
   { key: "subject", icon: BookOpen, vi: "Môn học", en: "Subjects" },
   { key: "downloads", icon: Download, vi: "Tải về", en: "Downloads" },
-  { key: "timeline", icon: Activity, vi: "Luồng HĐ", en: "Timeline" },
+  { key: "timeline", icon: Activity, vi: "Luồng HĐ", en: "Activity" },
   { key: "attempts", icon: History, vi: "Lịch sử", en: "History" },
 ]
 
@@ -743,7 +743,7 @@ export function AdminPage({ lang }: Props) {
           : section === "sendquiz"
             ? lang === "vi" ? "Cấp quyền môn học" : "Grant access"
             : section === "supports"
-              ? lang === "vi" ? "Báo lỗi từ user" : "Support"
+              ? lang === "vi" ? "Báo lỗi từ user" : "User bug reports"
               : section === "subject"
                 ? lang === "vi" ? "Quản lý môn học" : "Manage subjects"
                 : section === "downloads"
@@ -751,7 +751,7 @@ export function AdminPage({ lang }: Props) {
               : section === "timeline"
                 ? lang === "vi" ? "Luồng hoạt động" : "Activity"
                 : section === "attempts"
-                  ? lang === "vi" ? "Lịch sử làm bài" : "Attempts"
+                  ? lang === "vi" ? "Lịch sử làm bài" : "Attempt history"
                   : lang === "vi" ? "Tổng quan" : "Overview"
 
   return (
@@ -1228,10 +1228,10 @@ export function AdminPage({ lang }: Props) {
                           </div>
                           {u.status === "blocked" && u.blockedReason ? <p className="mt-1.5 truncate text-[11px] font-bold text-red-500">Lý do khóa: {u.blockedReason}</p> : null}
                           <div className="mt-2.5 grid grid-cols-4 gap-1.5">
-                            <MobileUserStat value={String(u.attempts)} label={lang === "vi" ? "Lượt" : "Tries"} />
+                            <MobileUserStat value={String(u.attempts)} label={lang === "vi" ? "Lượt" : "Attempts"} />
                             <MobileUserStat value={`${u.averageAccuracy}%`} label="Acc" />
                             <MobileUserStat value={String(u.points)} label="Points" accent />
-                            <MobileUserStat value={formatAdminDuration(u.totalDurationSeconds)} label={lang === "vi" ? "Giờ học" : "Time"} />
+                            <MobileUserStat value={formatAdminDuration(u.totalDurationSeconds)} label={lang === "vi" ? "Giờ học" : "Study time"} />
                           </div>
                         </button>
                       ))}

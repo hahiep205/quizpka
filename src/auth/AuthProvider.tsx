@@ -19,7 +19,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const loadProfile = useCallback(async (currentUser: User | null) => {
     if (!currentUser) { setProfile(null); return null }
-    const { data, error } = await supabase.from("profiles").select("id,email,display_name,avatar_url,role,status,blocked_reason,blocked_at").eq("id", currentUser.id).single()
+    const { data, error } = await supabase.from("profiles").select("id,email,display_name,avatar_url,role,status,blocked_reason,blocked_at,welcome_completed").eq("id", currentUser.id).single()
     if (error) throw error
     const nextProfile = data as AuthProfile
     setProfile(nextProfile)
@@ -109,7 +109,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     logActivityEvent(user.id, "update_profile", { fields: Object.keys(updates) })
   }, [user])
 
-  const value = useMemo<AuthContextValue>(() => ({ status, user, profile, signInWithGoogle, signOut, updateProfile }), [status, user, profile, signInWithGoogle, signOut, updateProfile])
+  const completeWelcome = useCallback(async () => {
+    if (!user) throw new Error("Sign in is required to complete onboarding")
+    const { error } = await supabase.rpc("complete_my_welcome")
+    if (error) throw error
+    setProfile((current) => current ? { ...current, welcome_completed: true } : current)
+  }, [user])
+
+  const value = useMemo<AuthContextValue>(() => ({ status, user, profile, signInWithGoogle, signOut, updateProfile, completeWelcome }), [status, user, profile, signInWithGoogle, signOut, updateProfile, completeWelcome])
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }
 
@@ -138,5 +145,6 @@ function createFallbackProfile(user: User): AuthProfile {
     avatar_url: avatarUrl,
     role: "user",
     status: "active",
+    welcome_completed: true,
   }
 }

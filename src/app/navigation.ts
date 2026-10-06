@@ -12,6 +12,7 @@ export const appRoutes = {
   practice: "/practice",
   result: "/result",
   authCallback: "/auth/callback",
+  welcomeNewUser: "/welcome-new-user",
   policy: "/policy",
   quiz: "/quiz",
   test: "/test",

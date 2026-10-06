@@ -118,7 +118,7 @@ export function HcmChapterPickerModal({ open, lang, exam, subject, onClose, onSe
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className="block line-clamp-2 text-[15px] font-extrabold leading-5 text-red-600 dark:text-red-300">
-                    {lang === "vi" ? "Link giải đề của thầy Ngà" : "Solution video by Mr. Nga"}
+                    {lang === "vi" ? "Link giải đề của thầy Ngà" : "Mr. Nga's solution link"}
                   </span>
                   <span className="mt-1 block text-[13px] font-semibold leading-4 text-red-400 dark:text-red-400/80">
                     {lang === "vi" ? "YouTube · mở trong tab mới" : "YouTube · opens in a new tab"}

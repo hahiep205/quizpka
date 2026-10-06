@@ -15,8 +15,10 @@ export function AuthCallbackPage() {
   }, [])
 
   useEffect(() => {
-    if (status === "authenticated") navigate(appRoutes.dashboard, { replace: true })
-  }, [status])
+    if (status === "authenticated") {
+      navigate(profile?.welcome_completed === false ? appRoutes.welcomeNewUser : appRoutes.dashboard, { replace: true })
+    }
+  }, [status, profile?.welcome_completed])
 
   const isBlocked = status === "blocked"
   useEffect(() => {

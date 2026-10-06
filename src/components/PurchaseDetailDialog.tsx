@@ -82,7 +82,7 @@ export function PurchaseDetailDialog({ exam, lang, loading, error, onClose, onCo
           <p className="text-xs font-bold leading-5 text-amber-800 dark:text-amber-200">
             {isVietnamese
               ? "Tất cả đề thi đều là ảnh được sưu tầm, gom nhặt qua các năm trước. Lưu ý: Các dạng bài, cấu trúc đề thi có thể được thay đổi theo từng năm. Chỉ nên dùng để tham khảo, KHÔNG NÊN ÔM TỦ!"
-              : "All exams are scanned images collected from previous years. Note: question types and exam structure may change from year to year. Use for reference only!"}
+              : "All exams are scanned images collected from previous years. Note: question types and exam structure may change from year to year. Use for reference only — DO NOT rely on them alone!"}
           </p>
         </div>
       ) : null}
@@ -99,7 +99,7 @@ export function PurchaseDetailDialog({ exam, lang, loading, error, onClose, onCo
     </div>
     <footer className="grid shrink-0 grid-cols-2 gap-2 border-t border-slate-100 p-4 sm:px-6 dark:border-white/10">
       <button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={onClose} disabled={loading}>{isVietnamese ? "Hủy" : "Cancel"}</button>
-      <button type="button" className="lp-btn lp-btn--primary lp-btn--sm" onClick={onConfirm} disabled={loading || !ackTerms}>{loading ? (isVietnamese ? "Đang tạo đơn..." : "Creating...") : (exam ? formatSubjectPrice(exam.subjectCode) ?? "10.000 VND" : "10.000 VND")}</button>
+      <button type="button" className="lp-btn lp-btn--primary lp-btn--sm" onClick={onConfirm} disabled={loading || !ackTerms}>{loading ? (isVietnamese ? "Đang tạo đơn..." : "Creating order...") : (exam ? formatSubjectPrice(exam.subjectCode) ?? "10.000 VND" : "10.000 VND")}</button>
     </footer>
   </Dialog>
 }

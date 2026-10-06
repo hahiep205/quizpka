@@ -9,6 +9,7 @@ import { SiteFooter } from "@/app/layout/SiteFooter"
 import type { Language, Theme } from "@/shared/types/app"
 import { readStorage, writeStorage } from "@/lib/storage"
 import { AuthCallbackPage } from "@/pages/AuthCallbackPage"
+import { WelcomeNewUserPage } from "@/pages/WelcomeNewUserPage"
 import { useAuth } from "@/auth/AuthProvider"
 import { useOnlinePresence } from "@/hooks/useOnlinePresence"
 
@@ -30,7 +31,7 @@ function getTodayKey(): string {
 
 export default function App() {
   const pathname = useAppPath()
-  const { status, signInWithGoogle, signOut, profile, user } = useAuth()
+  const { status, signOut, profile, user } = useAuth()
   const onlineCount = useOnlinePresence(user?.id)
   const [contactOpen, setContactOpen] = useState(false)
   const [contactType, setContactType] = useState<ContactModalType | null>(null)
@@ -76,6 +77,18 @@ export default function App() {
     return () => window.clearTimeout(timer)
   }, [pathname, status])
 
+  // Guest guard: chưa đăng nhập chỉ xem được trang chủ và /policy; mọi route
+  // khác được đưa về trang chủ ngay. /auth/callback được loại trừ vì là mốc
+  // kỹ thuật của flow OAuth Google.
+  const guestBlocked =
+    status === "anonymous" &&
+    pathname !== appRoutes.home &&
+    pathname !== appRoutes.policy &&
+    pathname !== appRoutes.authCallback
+  useEffect(() => {
+    if (guestBlocked) navigate(appRoutes.home, { replace: true })
+  }, [guestBlocked])
+
   const openContact = (type: ContactModalType) => {
     setContactType(type)
     setContactOpen(true)
@@ -112,12 +125,14 @@ export default function App() {
     "relative min-h-svh bg-slate-50 transition-colors duration-300 dark:bg-slate-950"
 
   if (pathname === appRoutes.authCallback) return <AuthCallbackPage />
+  if (pathname === appRoutes.welcomeNewUser) return <WelcomeNewUserPage />
 
   if (status === "blocked") return <BlockedAccountScreen reason={profile?.blocked_reason ?? null} onSignOut={() => { void signOut().then(() => navigate(appRoutes.home, { replace: true })) }} />
 
+  if (guestBlocked) return <RouteLoading />
+
   if (pathname === appRoutes.admin || pathname.startsWith(`${appRoutes.admin}/`)) {
     if (status === "loading") return <RouteLoading />
-    if (status === "anonymous") return <LoginRequiredScreen onLogin={() => void signInWithGoogle()} />
     if (profile?.role !== "admin") return <AccessDeniedScreen />
     return (
       <Suspense fallback={<RouteLoading />}><AdminPage lang={lang} /></Suspense>
@@ -125,9 +140,9 @@ export default function App() {
   }
 
   if ([appRoutes.practice, appRoutes.result].includes(pathname as typeof appRoutes.practice)) {
-    // Làm quiz bắt buộc đăng nhập; các URL *4guest cũ đã bị xoá hẳn (rơi vào NotFoundPage).
+    // Làm quiz bắt buộc đăng nhập (guest đã bị chặn ở guard trên trang);
+    // các URL *4guest cũ đã bị xoá hẳn (rơi vào NotFoundPage).
     if (status === "loading") return <RouteLoading />
-    if (status === "anonymous") return <LoginRequiredScreen onLogin={() => void signInWithGoogle()} />
     return (
       <div className={shellClassName}>
         <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_#ffffff_0%,_rgba(248,250,252,0.55)_45%,_#f8fafc_100%)] dark:bg-[radial-gradient(ellipse_at_top,_rgba(30,58,138,0.25)_0%,_rgba(2,6,23,0.2)_45%,_#020617_100%)]" />
@@ -138,7 +153,6 @@ export default function App() {
 
   if (pathname === appRoutes.dashboard || pathname.startsWith(`${appRoutes.dashboard}/`)) {
     if (status === "loading") return <RouteLoading />
-    if (status === "anonymous") return <LoginRequiredScreen onLogin={() => void signInWithGoogle()} />
     return (
       <>
         <Suspense fallback={<RouteLoading />}><DashboardPage
@@ -305,10 +319,6 @@ export default function App() {
       /></Suspense>
     </div>
   )
-}
-
-function LoginRequiredScreen({ onLogin }: { onLogin: () => void }) {
-  return <main className="mx-auto flex min-h-svh max-w-md flex-col items-center justify-center gap-4 px-6 text-center"><h1 className="text-xl font-semibold">Vui lòng đăng nhập để tiếp tục</h1><button type="button" className="lp-btn lp-btn--primary" onClick={onLogin}>Đăng nhập với Google</button></main>
 }
 
 function RouteLoading() {

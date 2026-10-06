@@ -89,7 +89,7 @@ export function PaymentModal({ open, lang, payment, productId = "dsai101", order
       }
     : {
         title: "Scan QR to pay",
-        hint: "Use a banking app or e-wallet that supports VietQR to pay quickly.",
+        hint: "Use a banking app or e-wallet that supports VietQR to scan the QR code and pay quickly. NEVER EDIT THE TRANSFER NOTE!",
         cancel: "Cancel transaction",
         waiting: "Waiting for payment confirmation…",
         success: "Payment successful!",

@@ -8,6 +8,7 @@ export type AuthProfile = {
   avatar_url: string | null
   role: "user" | "admin"
   status: "active" | "blocked"
+  welcome_completed: boolean
   blocked_reason?: string | null
   blocked_at?: string | null
 }
@@ -18,4 +19,5 @@ export type AuthContextValue = {
   signInWithGoogle: () => Promise<void>
   signOut: () => Promise<void>
   updateProfile: (updates: { display_name?: string }) => Promise<void>
+  completeWelcome: () => Promise<void>
 }

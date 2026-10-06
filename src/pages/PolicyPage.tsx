@@ -116,20 +116,20 @@ const copy: Record<Language, Copy> = {
     back: "Về trang chủ",
   },
   en: {
-    eyebrow: "Quizpka • Policy",
+    eyebrow: "Terms • Policy",
     title: "Policies & Terms of Use",
     intro:
       "Please read the following carefully before using Quizpka and purchasing paid quiz subjects. Continued use of the service means you understand and agree to this entire policy.",
-    perks: ["Activates almost instantly", "Near-instant activation", "Unlimited attempts, forever"],
+    perks: ["Activates almost instantly", "Unlimited quiz attempts", "Unlimited usage time"],
     toc: "Contents",
     sections: [
       {
         id: "dieu-khoan",
         heading: "Terms of service",
-        intro: ["Quizpka helps students revise with multiple-choice questions, offering free sets alongside paid per-subject packs."],
+        intro: ["Quizpka is a multiple-choice revision platform built exclusively for Phenikaa students, offering free and paid exam sets for each subject."],
         list: [
-          "Sign in with Google to start practicing - your progress saves automatically, plus you unlock paid packs and notifications.",
-          "Your profile is strictly personal - please don't hand your account to others or share packs you've bought.",
+          "Sign in with your Google account to take quizzes, save progress, buy paid subjects and receive notifications.",
+          "Each account serves one person - please don't hand your account to others or share packs you've bought.",
           "Extracting, screen-recording, copying, or redistributing the question bank and study materials in any form is strictly prohibited.",
           "If we detect a violation, we may restrict or suspend the profile without advance notice.",
         ],
@@ -153,8 +153,8 @@ const copy: Record<Language, Copy> = {
         heading: "Digital product delivery",
         intro: ["Study packs are digital goods: all questions, drill modes, and mock exams live inside your account after purchase - nothing physical is ever shipped."],
         list: [
-          "Valid payment: your pack unlocks almost instantly.",
-          "Cases needing a manual hand: we finish them within 1-2 business hours.",
+          "Successful transaction: your pack unlocks almost instantly.",
+          "Cases that need manual processing: we finish them within 1-5 business hours.",
           "Open the Purchased page to find your pack and start studying.",
         ],
         accent: "bg-violet-500",
@@ -166,7 +166,7 @@ const copy: Record<Language, Copy> = {
         intro: ["Because packs unlock the moment payment completes, we don't refund packs that have already been activated."],
         list: [
           "One exception - our own technical fault blocking access to something you paid for: tell us within 7 days of purchase and we commit to a resolution plan within 24-48 business hours.",
-          "Send any questions to quizpka@gmail.com (address in the footer).",
+          "Send any questions to quizpka@gmail.com.",
         ],
         accent: "bg-amber-500",
         badge: "bg-amber-50 text-amber-700 dark:bg-amber-500/10 dark:text-amber-300",
@@ -176,10 +176,10 @@ const copy: Record<Language, Copy> = {
         heading: "Privacy commitment",
         intro: ["We keep only your name and email, used to run your account: storing study results, sending notifications, and reconciling payments."],
         list: [
-          "You sign in with Google, so we never see or store your password.",
+          "Sign-in runs through Google OAuth - Quizpka never stores your password.",
           "Money flows through SePay under proper encryption - card and bank details never sit on Quizpka servers.",
           "Data is never sold or shared externally, except where the law compels it.",
-          "Want your profile and all your data erased? Just email quizpka@gmail.com (see the footer).",
+          "Want your profile and all your data erased? Just email quizpka@gmail.com.",
         ],
         accent: "bg-rose-500",
         badge: "bg-rose-50 text-rose-600 dark:bg-rose-500/10 dark:text-rose-300",
@@ -190,7 +190,6 @@ const copy: Record<Language, Copy> = {
         intro: ["The question bank, exam sets, and all paid study materials on Quizpka belong to the development team and are protected by Vietnamese intellectual-property law."],
         list: [
           "Stealing, reposting, or distributing the materials without permission all count as copyright infringement.",
-          "When we spot it, we'll bring in the competent authorities: demanding compensation and pursuing the civil, administrative, or criminal remedies in force.",
         ],
         accent: "bg-indigo-500",
         badge: "bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-300",
@@ -199,7 +198,7 @@ const copy: Record<Language, Copy> = {
     method: "Method",
     timing: "Processing time",
     note: "Note",
-    methodRow: ["VietQR transfer", "Nearly instant after verification", "Use your own bank account and keep the transfer note intact"],
+    methodRow: ["VietQR transfer", "No more than 1 minute", "Prefer your own bank account and DO NOT edit the transfer note"],
     lifetime: "Unlimited attempts with no time limit.",
     back: "Back to home",
   },
