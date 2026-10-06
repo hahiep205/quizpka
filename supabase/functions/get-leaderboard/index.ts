@@ -1,16 +1,12 @@
-// get-leaderboard — P2 edge cache cho BXH.
+// get-leaderboard — bounded read of the shared 30-minute top-10 snapshot.
 //
 // Vụ spam 2026-09-29: 1 user bắn ~300 req full-scan user_learning_stats
 // trong ~2 phút bằng Python-urllib/Deno. Function này thay thế việc client
 // SELECT trực tiếp PostgREST:
-//   - Server truy vấn 1 lần / 60s / limit (isolate-level cache), flood N user
-//     chỉ tốn thêm các PK lookup rẻ tiền cho dòng "you".
-//   - Rate-limit 2 lớp: theo IP (pre-auth) + theo user (post-auth), tái dùng
-//     public.check_edge_rate_limit().
-//   - Trình duyệt cache riêng 60s: Cache-Control public, max-age=60.
-//     BẮT BUỘC kèm Vary: Authorization vì response chứa dòng của chính user
-//     (kể cả khi ẩn) — không có Vary, cache dùng chung sẽ rò rỉ row private
-//     của user A sang user B.
+//   - Rate-limit fail-closed theo IP và user trước khi truy vấn dữ liệu.
+//   - DB read chỉ qua service-role RPC đọc snapshot 10 dòng; clients không được SELECT
+//     hoặc gọi RPC leaderboard trực tiếp.
+//   - Response private/no-store; điểm cá nhân được lấy qua RPC riêng có auth.
 //   - Acc bị block (profiles.status <> 'active') bị 403 ngay.
 //
 // Self-contained (không import ../_shared) để deploy qua API upload không
@@ -54,20 +50,30 @@ function jsonWithCors(
 }
 
 function clientIp(req: Request): string {
-  const forwarded = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim()
-  if (forwarded) return forwarded.slice(0, 64)
+  const cloudflare = req.headers.get("cf-connecting-ip")?.trim()
+  if (cloudflare) return cloudflare.slice(0, 64)
   const real = req.headers.get("x-real-ip")?.trim()
   if (real) return real.slice(0, 64)
+  const forwarded = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim()
+  if (forwarded) return forwarded.slice(0, 64)
   return "unknown"
 }
 
 function tooMany(req: Request, windowSeconds: number): Response {
   return jsonWithCors(req, { error: "Too many requests, please slow down" }, 429, {
     "Retry-After": String(windowSeconds),
+    "Cache-Control": "private, no-store",
   })
 }
 
-// Mirror _shared/edge-guard.ts#rateGate: fixed-window, fail-open on DB error.
+function unavailable(req: Request): Response {
+  return jsonWithCors(req, { error: "Leaderboard temporarily unavailable" }, 503, {
+    "Retry-After": "30",
+    "Cache-Control": "private, no-store",
+  })
+}
+
+// Fail closed: a limiter outage must never turn off the abuse gate.
 async function rateGate(
   // deno-lint-ignore no-explicit-any
   admin: any,
@@ -82,11 +88,11 @@ async function rateGate(
       p_limit: limit,
       p_window_seconds: windowSeconds,
     })
-    if (error) return null
+    if (error) return unavailable(req)
     if (data === true) return null
     return tooMany(req, windowSeconds)
   } catch {
-    return null
+    return unavailable(req)
   }
 }
 
@@ -111,30 +117,13 @@ async function getUserWithTimeout(
   }
 }
 
-const LEADERBOARD_SELECT =
-  "user_id,display_name,avatar_url,visible,subjects_reviewed,attempts,average_accuracy,total_duration_seconds,points,week_subjects_reviewed,week_attempts,week_average_accuracy,week_total_duration_seconds,week_points,month_subjects_reviewed,month_attempts,month_average_accuracy,month_total_duration_seconds,month_points,score,score_a,score_c,score_p,score_t"
-
-const LIMIT_DEFAULT = 10
-const LIMIT_MAX = 10
-const CACHE_TTL_MS = 60_000
-
 type Row = Record<string, unknown>
 
-// Isolate-level cache: top visible rows dùng chung cho mọi user.
-// Best-effort (mất khi isolate lạnh) — rào rate-limit DB mới là bảo vệ cứng.
-const topCache = new Map<number, { at: number; rows: Row[] }>()
-
-function clampLimit(raw: unknown): number {
-  const n = typeof raw === "number" ? raw : Number(raw)
-  if (!Number.isFinite(n)) return LIMIT_DEFAULT
-  return Math.min(Math.max(Math.floor(n), 1), LIMIT_MAX)
-}
-
-// Header cache cho response: public 60s + Vary Authorization (xem chú thích đầu file).
+// Không cache trung gian; clients dùng snapshot/cache 30 phút ở tầng ứng dụng.
 function cacheHeaders(): Record<string, string> {
   return {
-    "Cache-Control": "public, max-age=60",
-    "Vary": "Origin, Authorization",
+    "Cache-Control": "private, no-store",
+    "Vary": "Origin",
   }
 }
 
@@ -145,11 +134,16 @@ Deno.serve(async (req) => {
   }
 
   try {
+    const declaredLength = Number(req.headers.get("content-length"))
+    if (Number.isFinite(declaredLength) && declaredLength > 1024) {
+      return jsonWithCors(req, { error: "Request body too large" }, 413, cacheHeaders())
+    }
+
     const admin = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!)
     const ip = clientIp(req)
 
     // Lớp 1: pre-auth gate theo IP — rớt flood trước khi tốn verify JWT.
-    const ipGate = await rateGate(admin, req, `leaderboard:ip:${ip}`, 120, 60)
+    const ipGate = await rateGate(admin, req, `leaderboard:ip:${ip}`, 600, 60)
     if (ipGate) return ipGate
 
     const auth = req.headers.get("Authorization")
@@ -163,43 +157,19 @@ Deno.serve(async (req) => {
     const userGate = await rateGate(admin, req, `leaderboard:user:${user.id}`, 30, 60)
     if (userGate) return userGate
 
-    const { data: profile, error: profileError } = await admin
-      .from("profiles")
-      .select("status")
-      .eq("id", user.id)
-      .single()
-    if (profileError) return jsonWithCors(req, { error: "Unable to verify account" }, 500, cacheHeaders())
-    if (profile.status !== "active") return jsonWithCors(req, { error: "Account is blocked" }, 403, cacheHeaders())
-
-    const input = await req.json().catch(() => null) as { limit?: unknown } | null
-    const limit = clampLimit(input?.limit)
-
-    let top = topCache.get(limit)
-    if (!top || Date.now() - top.at > CACHE_TTL_MS) {
-      const { data, error } = await admin
-        .from("user_learning_stats")
-        .select(LEADERBOARD_SELECT)
-        .eq("visible", true)
-        .order("score", { ascending: false })
-        .limit(limit)
-      if (error) throw error
-      top = { at: Date.now(), rows: (data ?? []) as Row[] }
-      topCache.set(limit, top)
+    const rawBody = await req.text()
+    if (new TextEncoder().encode(rawBody).byteLength > 1024) {
+      return jsonWithCors(req, { error: "Request body too large" }, 413, cacheHeaders())
     }
+    try { JSON.parse(rawBody) } catch { return jsonWithCors(req, { error: "Invalid request" }, 400, cacheHeaders()) }
 
-    // PK lookup rẻ tiền cho dòng "you" (kể cả khi ẩn).
-    const { data: own } = await admin
-      .from("user_learning_stats")
-      .select(LEADERBOARD_SELECT)
-      .eq("user_id", user.id)
-      .maybeSingle()
-    const rows: Row[] = [...top.rows]
-    if (own && !top.rows.some((r) => r.user_id === (own as Row).user_id)) {
-      rows.push(own as Row)
+    const { data, error } = await admin.rpc("get_leaderboard_top10_snapshot", { p_user_id: user.id })
+    if (error) {
+      if (error.code === "42501") return jsonWithCors(req, { error: "Account is blocked" }, 403, cacheHeaders())
+      throw error
     }
-
-    return jsonWithCors(req, rows, 200, cacheHeaders())
-  } catch (error) {
-    return jsonWithCors(req, { error: error instanceof Error ? error.message : "Unable to load leaderboard" }, 500, cacheHeaders())
+    return jsonWithCors(req, (data ?? { computed_at: null, entries: [] }) as Row, 200, cacheHeaders())
+  } catch {
+    return unavailable(req)
   }
 })

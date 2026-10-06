@@ -44,8 +44,10 @@ import type { Language, Theme } from "@/shared/types/app"
 import { useAuth } from "@/auth/AuthProvider"
 import { navigate as navigateApp, appRoutes, getCurrentPath, type AppPath } from "@/app/navigation"
 import { readStorage, writeStorage } from "@/lib/storage"
+import { supabase } from "@/lib/supabase"
 import { logActivityEvent } from "@/features/activity/lib/activityLog"
 import { computeLearningStats, formatLearningDuration } from "@/lib/learningStats"
+import { invalidateLeaderboardSnapshotCache } from "@/lib/leaderboard"
 import { goToPractice } from "@/lib/practiceSession"
 import type { PracticeHistoryItem } from "@/lib/practiceSession"
 import { useSyncedHistory } from "@/features/history/api/userHistory"
@@ -165,6 +167,20 @@ export function DashboardPage({
 }: DashboardPageProps) {
   const [activeView, setActiveView] = useState<DashboardView>(() => getDashboardView(getCurrentPath()))
   const { user: dashboardUser } = useAuth()
+  useEffect(() => {
+    if (!dashboardUser?.id) return
+    const migrationKey = `quizpka:${dashboardUser.id}:leaderboard-visibility-server-v1`
+    if (readStorage(migrationKey) === "true") return
+    const storedVisibility = readStorage(`quizpka:${dashboardUser.id}:leaderboard-visible`)
+    // Migrate the old local-only opt-out. Do not let a default "true" on a
+    // second device overwrite the server's saved preference.
+    if (storedVisibility !== "false") { writeStorage(migrationKey, "true"); return }
+    void Promise.resolve(supabase.rpc("update_my_leaderboard_visibility", { p_visible: false })).then(({ error }) => {
+      if (error) return
+      writeStorage(migrationKey, "true")
+      invalidateLeaderboardSnapshotCache(dashboardUser.id)
+    }).catch(() => undefined)
+  }, [dashboardUser?.id])
   const { unreadCount: unreadNotificationCount } = useNotifications()
   const [payment, setPayment] = useState<{ payment: { qrUrl: string } } | null>(null)
   const [paymentProductId, setPaymentProductId] = useState("dsai101")
@@ -1393,8 +1409,10 @@ function SettingsView({ lang, theme, onToggleLang, onToggleTheme, onOpenContact 
   const [saving, setSaving] = useState(false)
   const [saved, setSaved] = useState(false)
   const [saveError, setSaveError] = useState(false)
+  const [visibilitySaveError, setVisibilitySaveError] = useState(false)
   const [soundEnabled, setSoundEnabled] = useState(() => readStorage(`quizpka:${user?.id ?? "anonymous"}:sound-enabled`) !== "false")
   const [leaderboardVisible, setLeaderboardVisible] = useState(() => readStorage(`quizpka:${user?.id ?? "anonymous"}:leaderboard-visible`) !== "false")
+  const [visibilitySaving, setVisibilitySaving] = useState(false)
   const [emailUpdates, setEmailUpdates] = useState(() => readStorage(`quizpka:${user?.id ?? "anonymous"}:email-updates`) === "true")
 
   useEffect(() => { setDisplayName(profile?.display_name ?? "") }, [profile?.display_name])
@@ -1402,8 +1420,17 @@ function SettingsView({ lang, theme, onToggleLang, onToggleTheme, onOpenContact 
     writeStorage(`quizpka:${user?.id ?? "anonymous"}:sound-enabled`, String(soundEnabled))
   }, [soundEnabled, user?.id])
   useEffect(() => {
-    writeStorage(`quizpka:${user?.id ?? "anonymous"}:leaderboard-visible`, String(leaderboardVisible))
-  }, [leaderboardVisible, user?.id])
+    if (!user?.id) return
+    let cancelled = false
+    void Promise.resolve(supabase.rpc("get_my_leaderboard_visibility")).then(({ data, error }) => {
+      if (cancelled) return
+      if (error || typeof data !== "boolean") { setVisibilitySaveError(true); return }
+      setLeaderboardVisible(data)
+      writeStorage(`quizpka:${user.id}:leaderboard-visible`, String(data))
+      setVisibilitySaveError(false)
+    }).catch(() => { if (!cancelled) setVisibilitySaveError(true) })
+    return () => { cancelled = true }
+  }, [user?.id])
   useEffect(() => {
     writeStorage(`quizpka:${user?.id ?? "anonymous"}:email-updates`, String(emailUpdates))
   }, [emailUpdates, user?.id])
@@ -1411,6 +1438,23 @@ function SettingsView({ lang, theme, onToggleLang, onToggleTheme, onOpenContact 
   const saveProfile = async () => {
     setSaving(true); setSaved(false); setSaveError(false)
     try { await updateProfile({ display_name: displayName.trim() || undefined }); setSaved(true) } catch { setSaveError(true) } finally { setSaving(false) }
+  }
+
+  const saveLeaderboardVisibility = async (nextValue: boolean) => {
+    if (!user?.id || visibilitySaving) return
+    setVisibilitySaving(true)
+    setVisibilitySaveError(false)
+    try {
+      const { error } = await supabase.rpc("update_my_leaderboard_visibility", { p_visible: nextValue })
+      if (error) throw error
+      setLeaderboardVisible(nextValue)
+      writeStorage(`quizpka:${user.id}:leaderboard-visible`, String(nextValue))
+      invalidateLeaderboardSnapshotCache(user.id)
+    } catch {
+      setVisibilitySaveError(true)
+    } finally {
+      setVisibilitySaving(false)
+    }
   }
 
   return (
@@ -1442,7 +1486,8 @@ function SettingsView({ lang, theme, onToggleLang, onToggleTheme, onOpenContact 
         <div className="space-y-3 rounded-[20px] border-2 border-[#E5E5E5] bg-white p-5 shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)] md:col-span-2">
           <h3 className="text-lg font-black text-[#100F3E] dark:text-white">{lang === "vi" ? "Thiết lập" : "Settings"}</h3>
           <ToggleRow label={lang === "vi" ? "Bật âm thanh mặc định" : "Enable sound by default"} checked={soundEnabled} onChange={setSoundEnabled} />
-          <ToggleRow label={lang === "vi" ? "Cho phép hiển thị trên bảng xếp hạng" : "Show me on the leaderboard"} checked={leaderboardVisible} onChange={setLeaderboardVisible} />
+          <ToggleRow label={lang === "vi" ? "Cho phép hiển thị trên bảng xếp hạng" : "Show me on the leaderboard"} checked={leaderboardVisible} onChange={(value) => void saveLeaderboardVisibility(value)} />
+          {visibilitySaveError ? <p role="alert" className="text-sm font-semibold text-red-600">{lang === "vi" ? "Không thể đồng bộ trạng thái bảng xếp hạng. Vui lòng thử bật/tắt lại." : "Could not sync leaderboard visibility. Please toggle again."}</p> : null}
           <ToggleRow label={lang === "vi" ? "Nhận thông báo qua email" : "Receive email updates"} checked={emailUpdates} onChange={setEmailUpdates} />
         </div>
         <div className="rounded-[20px] border-2 border-red-100 bg-red-50/60 p-5 dark:border-red-500/20 dark:bg-red-500/5 md:col-span-2 lg:hidden">
@@ -1482,4 +1527,3 @@ function MobileNav({ activeView, lang, unreadNotificationCount, onNavigate }: { 
     />
   )
 }
-

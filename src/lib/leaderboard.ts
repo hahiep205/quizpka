@@ -55,6 +55,8 @@ export type LeaderboardEntry = {
   /** Điểm v2 (null khi DB chưa migrate / đường fallback cũ không có cột). */
   score: number | null
   breakdown: ScoreBreakdown | null
+  /** Hạng toàn bảng từ DB; null khi tài khoản đang ẩn khỏi bảng công khai. */
+  rankPosition: number | null
 }
 
 export type RankedLeaderboardEntry = LeaderboardEntry & { rank: number }
@@ -84,6 +86,7 @@ type LearningStatsRow = {
   score_c: number | null
   score_p: number | null
   score_t: number | null
+  rank_position: number | null
 }
 
 function asInt(value: unknown): number {
@@ -137,6 +140,7 @@ export function parseLearningStatsRows(rows: unknown): LearningStatsRow[] {
       score_c: "score_c" in row ? asFraction(row.score_c) : null,
       score_p: "score_p" in row ? asFraction(row.score_p) : null,
       score_t: "score_t" in row ? asFraction(row.score_t) : null,
+      rank_position: "rank_position" in row ? asInt(row.rank_position) || null : null,
     })
   }
   return parsed
@@ -195,6 +199,7 @@ export function toLeaderboardEntry(row: LearningStatsRow, period: LearningPeriod
     points,
     score: row.score,
     breakdown,
+    rankPosition: row.rank_position,
   }
 }
 
@@ -209,174 +214,147 @@ export function rankLeaderboard(entries: LeaderboardEntry[], sortKey: Leaderboar
       : sortValueForStats(b.stats, b.points, sortKey) - sortValueForStats(a.stats, a.points, sortKey)
     if (delta !== 0) return delta
     if (rankValue(b) !== rankValue(a)) return rankValue(b) - rankValue(a)
-    return a.name.localeCompare(b.name)
+    return sortKey === "points" ? a.userId.localeCompare(b.userId) : a.name.localeCompare(b.name)
   })
   return sorted.map((entry, index) => ({ ...entry, rank: index + 1 }))
 }
 
-const LEADERBOARD_SELECT =
-  "user_id, display_name, avatar_url, visible, subjects_reviewed, attempts, average_accuracy, total_duration_seconds, points, week_subjects_reviewed, week_attempts, week_average_accuracy, week_total_duration_seconds, week_points, month_subjects_reviewed, month_attempts, month_average_accuracy, month_total_duration_seconds, month_points"
-const LEADERBOARD_SELECT_LEGACY =
-  "user_id, display_name, avatar_url, visible, subjects_reviewed, attempts, average_accuracy, total_duration_seconds, points, week_subjects_reviewed, week_attempts, week_average_accuracy, week_total_duration_seconds, week_points"
+const LEADERBOARD_REFRESH_MS = 30 * 60_000
 
-const LEADERBOARD_SELECT_V2 = `${LEADERBOARD_SELECT},score,score_a,score_c,score_p,score_t`
+export type LeaderboardSnapshot = {
+  entries: LeaderboardEntry[]
+  computedAt: string | null
+  fetchedAt: number
+}
 
-/** Server-side cap: UI chỉ hiển thị top 10, RPC giới hạn tối đa 10. */
-const LEADERBOARD_LIMIT_DEFAULT = 10
-const LEADERBOARD_LIMIT_MAX = 10
+export type PersonalLeaderboardScore = {
+  score: number
+  points: number
+  visible: boolean
+  fetchedAt: number
+}
 
-/** BXH điểm v2: ưu tiên RPC get_leaderboard_score_top, rồi SELECT trực tiếp
- * cột score, cuối cùng rớt về đường legacy (điểm points cũ, không breakdown). */
-let v2MissingUntil = 0
-const V2_MISSING_TTL_MS = 5 * 60_000
+type SnapshotPayload = { rows: LearningStatsRow[]; computedAt: string | null; fetchedAt: number }
+let snapshotCache: { at: number; payload: SnapshotPayload } | null = null
+let snapshotInflight: Promise<SnapshotPayload | null> | null = null
+let snapshotVersion = 0
+const personalScoreCache = new Map<string, { at: number; value: PersonalLeaderboardScore }>()
+const personalScoreInflight = new Map<string, Promise<PersonalLeaderboardScore | null>>()
+const personalScoreVersions = new Map<string, number>()
+
+export function invalidateLeaderboardSnapshotCache(userId?: string) {
+  snapshotVersion += 1
+  snapshotCache = null
+  snapshotInflight = null
+  if (userId) {
+    personalScoreCache.delete(userId)
+    personalScoreInflight.delete(userId)
+    personalScoreVersions.set(userId, (personalScoreVersions.get(userId) ?? 0) + 1)
+  }
+}
+
+async function loadSnapshot(force = false): Promise<SnapshotPayload | null> {
+  if (!force && snapshotCache && Date.now() - snapshotCache.at < LEADERBOARD_REFRESH_MS) {
+    return snapshotCache.payload
+  }
+  if (snapshotInflight) return snapshotInflight
+
+  const version = snapshotVersion
+  const promise = (async () => {
+    try {
+      const { data, error } = await supabase.functions.invoke("get-leaderboard", { body: {} })
+      if (error || !data || typeof data !== "object") return null
+      // Accept the previous Edge response briefly during a rolling deployment.
+      if (Array.isArray(data)) {
+        const payload: SnapshotPayload = { rows: parseLearningStatsRows(data), computedAt: null, fetchedAt: Date.now() }
+        if (snapshotVersion === version) snapshotCache = { at: Date.now(), payload }
+        return payload
+      }
+      if (!("entries" in data) || !Array.isArray(data.entries)) return null
+      const payload: SnapshotPayload = {
+        rows: parseLearningStatsRows(data.entries),
+        computedAt: typeof data.computed_at === "string" ? data.computed_at : null,
+        fetchedAt: Date.now(),
+      }
+      if (snapshotVersion === version) snapshotCache = { at: Date.now(), payload }
+      return payload
+    } catch {
+      return null
+    }
+  })()
+  snapshotInflight = promise
+  void promise.then(() => {
+    if (snapshotInflight === promise) snapshotInflight = null
+  }, () => {
+    if (snapshotInflight === promise) snapshotInflight = null
+  })
+  return promise
+}
+
+export async function fetchLeaderboardSnapshot(
+  period: LearningPeriod,
+  currentUserId?: string,
+  options?: { force?: boolean },
+): Promise<LeaderboardSnapshot | null> {
+  const payload = await loadSnapshot(options?.force)
+  if (!payload) return null
+  return {
+    entries: payload.rows
+      .filter((row) => row.visible)
+      .map((row) => toLeaderboardEntry(row, period, currentUserId)),
+    computedAt: payload.computedAt,
+    fetchedAt: payload.fetchedAt,
+  }
+}
+
+export async function fetchMyLeaderboardScore(
+  userId: string,
+  options?: { force?: boolean },
+): Promise<PersonalLeaderboardScore | null> {
+  const cached = personalScoreCache.get(userId)
+  if (!options?.force && cached && Date.now() - cached.at < LEADERBOARD_REFRESH_MS) return cached.value
+  const running = personalScoreInflight.get(userId)
+  if (running) return running
+
+  const version = personalScoreVersions.get(userId) ?? 0
+  const promise = (async () => {
+    try {
+      const { data, error } = await supabase.rpc("get_my_leaderboard_score_snapshot")
+      if (error || !data || typeof data !== "object") return null
+      const row = data as Record<string, unknown>
+      const value: PersonalLeaderboardScore = {
+        score: asScore(row.score) ?? 0,
+        points: asInt(row.points),
+        visible: row.visible !== false,
+        fetchedAt: Date.now(),
+      }
+      if ((personalScoreVersions.get(userId) ?? 0) === version) personalScoreCache.set(userId, { at: Date.now(), value })
+      return value
+    } catch {
+      return null
+    }
+  })()
+  personalScoreInflight.set(userId, promise)
+  void promise.then(() => {
+    if (personalScoreInflight.get(userId) === promise) personalScoreInflight.delete(userId)
+  }, () => {
+    if (personalScoreInflight.get(userId) === promise) personalScoreInflight.delete(userId)
+  })
+  return promise
+}
 
 export async function fetchLeaderboardV2(
   period: LearningPeriod,
   currentUserId?: string,
-  options?: { limit?: number },
+  options?: { limit?: number; force?: boolean },
 ): Promise<LeaderboardEntry[]> {
-  const limit = clampLeaderboardLimit(options?.limit)
-  const toEntries = (rows: LearningStatsRow[]) =>
-    rows
-      .filter((row) => {
-        const visible = row.visible
-        return visible || row.user_id === currentUserId
-      })
-      .map((row) => toLeaderboardEntry(row, period, currentUserId))
-  // Migration score v2 chưa chạy (RPC 404 gần đây) -> đi thẳng legacy,
-  // khỏi tốn thêm request lỗi. Muộn nhất 5 phút sau sẽ thử lại RPC.
-  if (Date.now() < v2MissingUntil) {
-    return fetchLeaderboard(period, currentUserId, options)
-  }
-  try {
-    const { data, error } = await supabase.rpc("get_leaderboard_score_top", { p_limit: limit })
-    if (!error && Array.isArray(data)) {
-      const entries = toEntries(parseLearningStatsRows(data))
-      if (entries.length > 0) return entries
-    } else if (error) {
-      if (/too many requests/i.test(error.message ?? "")) return []
-      // PGRST202 = function chưa tồn tại (migration score v2 chưa chạy) ->
-      // cột score chắc chắn cũng chưa có, bỏ qua SELECT trực tiếp để đỡ
-      // 1 request 400 vô ích, rớt thẳng về đường legacy.
-      if ((error as { code?: string }).code === "PGRST202") {
-        v2MissingUntil = Date.now() + V2_MISSING_TTL_MS
-        return fetchLeaderboard(period, currentUserId, options)
-      }
-    }
-  } catch {
-    // Rớt xuống các đường bên dưới.
-  }
-  try {
-    const { data, error } = await supabase
-      .from("user_learning_stats")
-      .select(LEADERBOARD_SELECT_V2)
-      .eq("visible", true)
-      .order("score", { ascending: false })
-      .limit(limit)
-    if (!error && Array.isArray(data)) {
-      const entries = toEntries(parseLearningStatsRows(data))
-      if (entries.length > 0) return entries
-    }
-  } catch {
-    // DB chưa migrate (thiếu cột score) -> rớt về legacy.
-  }
-  return fetchLeaderboard(period, currentUserId, options)
-}
-
-function clampLeaderboardLimit(limit?: number): number {
-  if (!Number.isFinite(limit as number)) return LEADERBOARD_LIMIT_DEFAULT
-  return Math.min(Math.max(Math.floor(limit as number), 1), LEADERBOARD_LIMIT_MAX)
-}
-
-function dedupeRows(rows: LearningStatsRow[]): LearningStatsRow[] {
-  const byId = new Map<string, LearningStatsRow>()
-  for (const row of rows) {
-    if (!byId.has(row.user_id)) byId.set(row.user_id, row)
-  }
-  return [...byId.values()]
+  return (await fetchLeaderboardSnapshot(period, currentUserId, options))?.entries ?? []
 }
 
 export async function fetchLeaderboard(
   period: LearningPeriod,
   currentUserId?: string,
-  options?: { limit?: number },
+  options?: { limit?: number; force?: boolean },
 ): Promise<LeaderboardEntry[]> {
-  const limit = clampLeaderboardLimit(options?.limit)
-  try {
-    // P2: đường chính — Edge Function get-leaderboard (cache isolate 60s +
-    // rate-limit IP/user + Cache-Control public, max-age=60 kèm Vary:
-    // Authorization). Client không còn chạm PostgREST trực tiếp ở đường happy-path.
-    try {
-      const { data: fnData, error: fnError } = await supabase.functions.invoke("get-leaderboard", {
-        body: { limit },
-      })
-      if (!fnError && Array.isArray(fnData)) {
-        const rows = parseLearningStatsRows(fnData).filter(
-          (row) => row.visible || row.user_id === currentUserId,
-        )
-        if (rows.length > 0) return rows.map((row) => toLeaderboardEntry(row, period, currentUserId))
-      } else if (fnError && /too many requests/i.test(fnError.message ?? "")) {
-        // Bị rate-limit ở edge: dừng luôn, không rớt xuống các đường rẻ hơn.
-        return []
-      }
-      // Function chưa deploy / lỗi thoáng qua: rớt xuống RPC rồi direct.
-    } catch {
-      // Lỗi mạng invoke: rớt xuống các đường fallback bên dưới.
-    }
-
-    // P1: đường dự phòng — RPC server-side đã ORDER BY + LIMIT + rate-limit.
-    // Một request dù bị lộ JWT cũng chỉ tốn 1 RPC nhỏ, không full-scan.
-    const { data: rpcData, error: rpcError } = await supabase.rpc("get_leaderboard_top", {
-      p_limit: limit,
-    })
-    if (!rpcError && Array.isArray(rpcData)) {
-      const rows = parseLearningStatsRows(rpcData).filter(
-        (row) => row.visible || row.user_id === currentUserId,
-      )
-      // RPC đã trả cả dòng của chính mình (kể cả khi ẩn) để tính hạng "you".
-      if (rows.length > 0) return rows.map((row) => toLeaderboardEntry(row, period, currentUserId))
-      // RPC trống (bảng legacy / chưa migrate): rớt xuống fallback bên dưới.
-    }
-    // Bị rate-limit thì dừng luôn — không fallback sang SELECT trực tiếp,
-    // nếu không rào 30 req/phút sẽ bị bypass bởi chính client này.
-    if (rpcError && /too many requests/i.test((rpcError as { message?: string }).message ?? "")) {
-      return []
-    }
-
-    // P1 fallback: 2 query nhỏ có giới hạn thay vì 1 full-scan.
-    // 1) top visible đã sắp xếp server-side, 2) dòng của chính mình.
-    const publicQuery = supabase
-      .from("user_learning_stats")
-      .select(LEADERBOARD_SELECT)
-      .eq("visible", true)
-      .order("points", { ascending: false })
-      .limit(limit)
-    const ownQuery = currentUserId
-      ? supabase.from("user_learning_stats").select(LEADERBOARD_SELECT).eq("user_id", currentUserId).maybeSingle()
-      : null
-    const [pubRes, ownRes] = await Promise.all([
-      publicQuery,
-      ownQuery ?? Promise.resolve({ data: null, error: null } as never),
-    ])
-    let rows = parseLearningStatsRows((pubRes as { data: unknown }).data)
-    if ((pubRes as { error: unknown }).error) {
-      // Cột month_* chưa có (DB cũ): thử select legacy.
-      const legacy = await supabase
-        .from("user_learning_stats")
-        .select(LEADERBOARD_SELECT_LEGACY)
-        .eq("visible", true)
-        .order("points", { ascending: false })
-        .limit(limit)
-      if (legacy.error) return []
-      rows = parseLearningStatsRows(legacy.data)
-    }
-    const ownRow = ownRes && "data" in (ownRes as object)
-      ? parseLearningStatsRows((ownRes as { data: unknown }).data ? [(ownRes as { data: unknown }).data] : [])
-      : []
-    return dedupeRows([...ownRow, ...rows])
-      .filter((row) => row.visible || row.user_id === currentUserId)
-      .map((row) => toLeaderboardEntry(row, period, currentUserId))
-  } catch {
-    return []
-  }
+  return fetchLeaderboardV2(period, currentUserId, options)
 }

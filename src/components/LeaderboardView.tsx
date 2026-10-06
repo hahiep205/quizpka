@@ -2,9 +2,11 @@ import { useEffect, useMemo, useState } from "react"
 import { Crown, Medal, Trophy, UserRound } from "lucide-react"
 import { useAuth } from "@/auth/AuthProvider"
 import {
-  fetchLeaderboardV2,
+  fetchLeaderboardSnapshot,
+  fetchMyLeaderboardScore,
   rankLeaderboard,
   type LeaderboardEntry,
+  type PersonalLeaderboardScore,
   type RankedLeaderboardEntry,
 } from "@/lib/leaderboard"
 import { formatLearningDuration } from "@/lib/learningStats"
@@ -18,37 +20,80 @@ export function LeaderboardView({ lang }: { lang: Language }) {
   const { user } = useAuth()
   const userId = user?.id
   const [remoteEntries, setRemoteEntries] = useState<LeaderboardEntry[]>([])
-  const visible = readStorage(`quizpka:${userId ?? "anonymous"}:leaderboard-visible`) !== "false"
+  const [personalScore, setPersonalScore] = useState<PersonalLeaderboardScore | null>(null)
+  const [computedAt, setComputedAt] = useState<string | null>(null)
+  const [loading, setLoading] = useState(true)
+  const localVisibility = readStorage(`quizpka:${userId ?? "anonymous"}:leaderboard-visible`) !== "false"
   const you = remoteEntries.find((entry) => entry.userId === userId)
+  const visible = personalScore?.visible ?? you?.visible ?? localVisibility
 
   useEffect(() => {
-    if (!userId) return
+    if (!userId) { setLoading(false); setRemoteEntries([]); setPersonalScore(null); return }
+    const activeUserId = userId
     let cancelled = false
-    // P1: cache 60s + dedupe in-flight để StrictMode / remount
-    // không tạo thêm request. Script spam trước đây bắn hàng chục
-    // req/s vào user_learning_stats; cache này triệt tiêu refetch vô ý.
-    const cached = readLeaderboardCache(userId)
-    if (cached) {
-      setRemoteEntries(cached)
-      return
+    let lastFetchAt = 0
+    let fetching = false
+    let refreshTimer: number | undefined
+    function scheduleRefresh() {
+      if (refreshTimer !== undefined) window.clearTimeout(refreshTimer)
+      const delay = Math.max(0, 30 * 60_000 - (Date.now() - lastFetchAt))
+      refreshTimer = window.setTimeout(() => {
+        refreshTimer = undefined
+        if (document.visibilityState === "visible") runFetch(true)
+      }, delay)
     }
-    const promise = getLeaderboardInflight(userId)
-    void promise.then((rows) => {
-      if (!cancelled && rows) setRemoteEntries(rows)
-    })
+    function runFetch(force = false) {
+      if (cancelled || fetching) return
+      fetching = true
+      void Promise.all([
+        fetchLeaderboardSnapshot("all", activeUserId, { force }),
+        fetchMyLeaderboardScore(activeUserId, { force }),
+      ]).then(([snapshot, ownScore]) => {
+        if (cancelled) return
+        if (snapshot) {
+          setRemoteEntries(snapshot.entries)
+          setComputedAt(snapshot.computedAt)
+        }
+        if (ownScore) setPersonalScore(ownScore)
+        const responseTimes = [snapshot?.fetchedAt, ownScore?.fetchedAt].filter((value): value is number => value !== undefined)
+        lastFetchAt = responseTimes.length ? Math.min(...responseTimes) : Date.now()
+        setLoading(false)
+      }).catch(() => {
+        if (!cancelled) { lastFetchAt = Date.now(); setLoading(false) }
+      }).finally(() => {
+        fetching = false
+        if (!cancelled) scheduleRefresh()
+      })
+    }
+
+    setLoading(true)
+    setRemoteEntries([])
+    setPersonalScore(null)
+    setComputedAt(null)
+    runFetch()
+    const onVisibilityChange = () => {
+      if (document.visibilityState === "visible" && Date.now() - lastFetchAt >= 30 * 60_000) runFetch(true)
+    }
+    document.addEventListener("visibilitychange", onVisibilityChange)
     return () => {
       cancelled = true
+      if (refreshTimer !== undefined) window.clearTimeout(refreshTimer)
+      document.removeEventListener("visibilitychange", onVisibilityChange)
     }
   }, [userId])
 
   const fullRanked = useMemo(() => {
     const byId = new Map(remoteEntries.map((entry) => [entry.userId, entry]))
     const publicEntries = [...byId.values()].filter((entry) => entry.visible && (entry.points > 0 || entry.stats.attempts > 0))
-    return rankLeaderboard(publicEntries, "points")
+    return rankLeaderboard(publicEntries, "points").map((entry) => ({
+      ...entry,
+      rank: entry.rankPosition ?? entry.rank,
+    }))
   }, [remoteEntries])
 
   const ranked = fullRanked.slice(0, 10)
-  const yourRank = fullRanked.find((entry) => entry.isYou)?.rank
+  const rawYourRank = fullRanked.find((entry) => entry.isYou)?.rank
+  const yourRank = rawYourRank !== undefined && rawYourRank <= 10 ? rawYourRank : undefined
 
   return (
     <section className="dashboard-reveal mx-auto max-w-5xl space-y-5 sm:space-y-6">
@@ -63,13 +108,14 @@ export function LeaderboardView({ lang }: { lang: Language }) {
               {yourRank ? `#${yourRank}` : t.leaderboardUnranked}
             </p>
             <div className="text-right">
-              <p className="text-2xl font-black leading-none sm:text-3xl">{you ? displayScore(you) : 0}</p>
+              <p className="text-2xl font-black leading-none sm:text-3xl">{personalScore?.score ?? (you ? displayScore(you) : 0)}</p>
               <p className="mt-1 text-xs font-bold uppercase tracking-wider text-white/80">{t.points}</p>
             </div>
           </div>
         </div>
       </div>
       <p className="text-[12px] font-semibold leading-5 text-slate-400">{t.leaderboardFormula}</p>
+      {computedAt ? <p className="-mt-3 text-[11px] font-semibold text-slate-400">{lang === "vi" ? "Cập nhật lúc" : "Updated"} {new Date(computedAt).toLocaleString(lang === "vi" ? "vi-VN" : "en-US")}</p> : null}
 
       {!visible ? (
         <div className="rounded-[14px] border-2 border-amber-200 bg-amber-50 px-4 py-3 text-sm font-bold text-amber-700 dark:border-amber-500/20 dark:bg-amber-500/10 dark:text-amber-200">
@@ -77,7 +123,11 @@ export function LeaderboardView({ lang }: { lang: Language }) {
         </div>
       ) : null}
 
-      {ranked.length ? (
+      {loading ? (
+        <div className="flex min-h-[280px] items-center justify-center rounded-[20px] border-2 border-[#E5E5E5] bg-white/70 text-sm font-bold text-slate-500 dark:border-white/10 dark:bg-slate-900/60 dark:text-slate-400" role="status">
+          {lang === "vi" ? "Đang tải bảng xếp hạng…" : "Loading leaderboard…"}
+        </div>
+      ) : ranked.length ? (
         <>
           <LeaderboardPodium ranked={ranked} youLabel={t.you} />
           <div className="space-y-2.5">
@@ -243,37 +293,4 @@ function MiniStat({ value, label }: { value: string; label: string }) {
       <p className="truncate text-[10px] font-bold text-slate-400">{label}</p>
     </div>
   )
-}
-
-// P1: cache module-level 60s + dedupe promise đang bay.
-// Không dùng localStorage để tránh rò rỉ BXH sang user khác trên máy chung.
-const LEADERBOARD_CACHE_TTL_MS = 60_000
-const leaderboardCache = new Map<string, { at: number; rows: LeaderboardEntry[] }>()
-const leaderboardInflight = new Map<string, Promise<LeaderboardEntry[] | null>>()
-
-function readLeaderboardCache(userId: string): LeaderboardEntry[] | null {
-  const hit = leaderboardCache.get(userId)
-  if (!hit) return null
-  if (Date.now() - hit.at > LEADERBOARD_CACHE_TTL_MS) {
-    leaderboardCache.delete(userId)
-    return null
-  }
-  return hit.rows
-}
-
-function getLeaderboardInflight(userId: string): Promise<LeaderboardEntry[] | null> {
-  const running = leaderboardInflight.get(userId)
-  if (running) return running
-  const promise = fetchLeaderboardV2("all", userId, { limit: 10 })
-    .then((rows) => {
-      leaderboardCache.set(userId, { at: Date.now(), rows })
-      leaderboardInflight.delete(userId)
-      return rows
-    })
-    .catch(() => {
-      leaderboardInflight.delete(userId)
-      return null
-    })
-  leaderboardInflight.set(userId, promise)
-  return promise
 }
