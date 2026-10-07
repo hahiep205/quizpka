@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react"
 import { GoogleIcon } from "@/shared/icons/GoogleIcon"
 
-function QuizPreviewCard() {
+function QuizPreviewCard({ responsiveTrial }: { responsiveTrial: boolean }) {
   const frameRef = useRef<HTMLIFrameElement>(null)
 
   // Dark mode: ép nền body trong iframe khớp màu nền trang (slate-950).
@@ -29,7 +29,7 @@ function QuizPreviewCard() {
   }, [])
 
   return (
-    <div className="relative mx-auto w-full max-w-[clamp(360px,30vw+300px,606px)] scale-[1.12]">
+    <div className={`relative mx-auto w-full ${responsiveTrial ? "max-w-[min(100%,606px)] scale-100 sm:max-w-[clamp(360px,30vw+300px,606px)] sm:scale-100 2xl:scale-[1.08]" : "max-w-[clamp(360px,30vw+300px,606px)] scale-[1.12]"}`}>
       <iframe
         ref={frameRef}
         title=""
@@ -45,13 +45,13 @@ function QuizPreviewCard() {
   )
 }
 
-export function HeroSection({ t, onOpenLogin, onOpenDashboard, authenticated }: { t: Record<string, string>; onOpenLogin: () => void; onOpenDashboard: () => void; authenticated: boolean }) {
+export function HeroSection({ t, onOpenLogin, onOpenDashboard, authenticated, responsiveTrial = false }: { t: Record<string, string>; onOpenLogin: () => void; onOpenDashboard: () => void; authenticated: boolean; responsiveTrial?: boolean }) {
   return (
     <section
       id="home"
       className="relative flex min-h-[calc(100svh-76px)] w-full flex-col justify-center md:min-h-[calc(100svh-76px)]"
     >
-      <div className="mx-auto flex w-full max-w-[1120px] flex-1 flex-col justify-center px-6 py-10 sm:py-12 md:py-0 lg:px-8">
+      <div className={`mx-auto flex w-full max-w-[1120px] flex-1 flex-col justify-center px-6 py-10 sm:py-12 md:py-0 lg:px-8 ${responsiveTrial ? "max-[479px]:px-4" : ""}`}>
         <div className="lp-eyebrow-wrap">
           <div className="lp-eyebrow lp-eyebrow-blue">
             <span>{t.eyebrowBadge}</span>
@@ -71,14 +71,14 @@ export function HeroSection({ t, onOpenLogin, onOpenDashboard, authenticated }: 
               {t.heroDesc}
             </p>
 
-            <div className="lp-cta-row mt-9">
-              <button type="button" className="lp-btn lp-btn--primary" onClick={authenticated ? onOpenDashboard : onOpenLogin}>
+            <div className={`lp-cta-row mt-9 ${responsiveTrial ? "max-[479px]:flex-col max-[479px]:items-stretch" : ""}`}>
+              <button type="button" className={`lp-btn lp-btn--primary ${responsiveTrial ? "max-[479px]:w-full" : ""}`} onClick={authenticated ? onOpenDashboard : onOpenLogin}>
                 {!authenticated && <span className="flex h-[22px] w-[22px] items-center justify-center rounded-full bg-white/15"><GoogleIcon className="h-[18px] w-[18px]" /></span>}
                 {authenticated ? t.dashboardAccess : t.loginGoogle}
               </button>
               <button
                 type="button"
-                className="lp-btn lp-btn--secondary"
+                className={`lp-btn lp-btn--secondary ${responsiveTrial ? "max-[479px]:w-full" : ""}`}
                 onClick={() => {
                   document.getElementById("starts")?.scrollIntoView({ behavior: "smooth", block: "start" })
                 }}
@@ -134,7 +134,7 @@ export function HeroSection({ t, onOpenLogin, onOpenDashboard, authenticated }: 
           </div>
 
           <div className="flex items-center justify-center lg:justify-end lg:pr-2">
-            <QuizPreviewCard />
+            <QuizPreviewCard responsiveTrial={responsiveTrial} />
           </div>
         </div>
       </div>

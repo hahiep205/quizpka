@@ -77,12 +77,12 @@ export default function App() {
     return () => window.clearTimeout(timer)
   }, [pathname, status])
 
-  // Guest guard: chưa đăng nhập chỉ xem được trang chủ và /policy; mọi route
-  // khác được đưa về trang chủ ngay. /auth/callback được loại trừ vì là mốc
-  // kỹ thuật của flow OAuth Google.
+  // Guest guard: cho phép xem trang chủ, /test (bản thử responsive), và /policy;
+  // các route khác được đưa về trang chủ. /auth/callback là mốc kỹ thuật OAuth.
   const guestBlocked =
     status === "anonymous" &&
     pathname !== appRoutes.home &&
+    pathname !== appRoutes.test &&
     pathname !== appRoutes.policy &&
     pathname !== appRoutes.authCallback
   useEffect(() => {
@@ -261,10 +261,11 @@ export default function App() {
             }
             onOpenLogin={openLogin}
             navHrefs={testNavHrefs}
+            responsiveTrial
           />
-          <HeroSection t={testT} onOpenLogin={openLogin} onOpenDashboard={() => navigate(appRoutes.dashboard)} authenticated={status === "authenticated"} />
-          <Suspense fallback={<RouteLoading />}><TestPage lang={lang} /></Suspense>
-          <SiteFooter t={t} />
+          <HeroSection t={testT} onOpenLogin={openLogin} onOpenDashboard={() => navigate(appRoutes.dashboard)} authenticated={status === "authenticated"} responsiveTrial />
+          <Suspense fallback={<RouteLoading />}><TestPage lang={lang} responsiveTrial /></Suspense>
+          <SiteFooter t={t} responsiveTrial />
         </div>
 
         <Suspense fallback={null}><ContactModal

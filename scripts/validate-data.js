@@ -105,7 +105,11 @@ function validateGeneralMedia(value, file) {
 }
 
 if (!existsSync(r2BanksDirectory)) {
-  fail(r2BanksDirectory, "r2-banks data directory does not exist")
+  if (process.env.VERCEL === "1") {
+    console.log("[validate-data] skipped local R2 mirror validation on Vercel; runtime banks are fetched from Cloudflare R2")
+  } else {
+    fail(r2BanksDirectory, "r2-banks data directory does not exist")
+  }
 } else {
   for (const file of walk(r2BanksDirectory).filter((path) => path.endsWith(".json"))) {
     let value
