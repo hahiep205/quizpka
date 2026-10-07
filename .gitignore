@@ -34,6 +34,13 @@ docs/
 
 supabase/
 
+# Local-only repository guidance and tooling files.
+/.editorconfig
+/.env.example
+/.oxlintrc.json
+/.zcodeignore
+/AGENTS.md
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

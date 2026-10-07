@@ -1,78 +1,82 @@
-# QuizPKA
+# Quizpka
 
-QuizPKA is a Vite + React application for practice quizzes, chapter-based revision, English placement tests, and TOEIC sets.
+Quizpka is a web app for quiz practice, chapter-based review, English placement tests, and TOEIC preparation. The frontend is built with Vite, React, and TypeScript. Supabase provides authentication, database services, private storage, and Edge Functions; Cloudflare R2 serves public question banks and media.
+
+Production site: [quizpka.online](https://quizpka.online)
+
+## Features
+
+- Browse subjects, exams, and chapter-based practice.
+- Take timed quizzes, review answers, and track practice history.
+- Sign in and sync account data through Supabase.
+- Use paid question banks and documents through authenticated Supabase Edge Functions.
+- Access free question banks and public media from Cloudflare R2.
+- Use the leaderboard, downloads, support reports, and admin tools backed by Supabase.
+
+## Stack and services
+
+- **Frontend:** React, TypeScript, Vite, and Tailwind CSS.
+- **Hosting:** Vercel serves the static build from `dist/` and rewrites application routes to the SPA entry point.
+- **Backend:** Supabase Auth and Postgres, with Edge Functions for server-side operations.
+- **Paid content:** The private Supabase Storage bucket `paid-question-banks`, accessed through Edge Functions that check authorization and entitlements.
+- **Free content:** Public Cloudflare R2 objects. The browser loads free question banks and supported media directly from the configured R2 public URL.
+
+The browser uses `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`. These are client-side settings; keep service-role keys, payment secrets, and other privileged credentials in backend or hosting secrets only.
 
 ## Requirements
 
 - Node.js 22 or later
 - npm 10 or later
 
-## Commands
+## Local development
+
+Install dependencies and start the Vite development server:
 
 ```bash
 npm install
-npm run dev          # local development server
-npm run typecheck    # TypeScript validation
-npm run lint         # Oxlint, including type-aware rules
-npm run test         # unit tests with Vitest
-npm run validate:data # validate question-bank shapes, counts, answers, and media links
-npm run clean        # remove the generated dist/ directory
-npm run build        # validate data, typecheck, and build dist/
-npm run preview      # serve dist/ locally
+npm run dev
 ```
 
-## AI codebase memory
+Set `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` in a local `.env.local` file before running the app. `VITE_SUPABASE_PROXY_URL` is optional; leave it unset to connect directly to Supabase.
 
-This repository includes a project-scoped OpenCode MCP configuration for
-[`codebase-memory-mcp`](https://github.com/DeusData/codebase-memory-mcp). It
-indexes the code locally and gives the AI agent structural search, call-graph,
-architecture, and impact-analysis tools without uploading source code.
+## Commands
 
-Requirements:
+```bash
+npm run dev           # start the local development server
+npm run typecheck     # check application TypeScript
+npm run lint          # run Oxlint
+npm run test          # run Vitest
+npm run validate:data # validate the local R2 question-bank mirror
+npm run build         # validate the local mirror when present, typecheck, and build dist/
+npm run preview       # preview the production build locally
+npm run clean         # remove dist/
+```
 
-- Node.js 22 or later
-- npm 10 or later
-- OpenCode with MCP support
+## Question banks and media
 
-Start OpenCode from the repository root, then restart it after changing
-`opencode.json`. On first use, ask the agent to index the project. The local
-index is stored in the git-ignored `.codebase-memory/` directory.
+Free question-bank source files are kept in the local `r2-banks/data/` mirror and are ignored by Git. They are not required in the Vercel checkout: production fetches free banks from Cloudflare R2. `toBankUrl` and `toMediaUrl` in `src/lib/mediaUrl.ts` map supported logical paths to the configured public R2 URL.
 
-The MCP server is restricted to this repository through `CBM_ALLOWED_ROOT`.
-If the repository is moved, update that path in `opencode.json`.
+Run `npm run validate:data` locally when the mirror is present. It checks local JSON structure, question counts, duplicate IDs, answer/options consistency, and media URL formats. If the mirror is absent during a Vercel build, this local-only validation is skipped; that skip does not check whether each remote R2 object exists. Confirm R2 uploads separately when adding or changing a bank.
 
-## Project structure
+Paid banks and documents belong in the private Supabase Storage bucket. The app requests them through the relevant Edge Functions after authorization and entitlement checks. Do not place paid content in `public/` or in the public R2 bucket.
+
+## Project layout
 
 ```text
 src/
-  app/                application layout
-  components/         reusable and feature-level UI
-  data/               subject catalogues and client-side metadata
-  features/quiz/      quiz domain model, loaders, adapters, and UI
-  pages/              route-level screens
-  security/           client-side interaction controls
-public/              static web assets (logo, favicon)
-r2-banks/data/       free-subject question banks — git mirror of the R2 bucket objects (`data/` key prefix)
-scripts/validate-data.js  validates question banks and media links during build
+  app/                 application layout and navigation
+  auth/                Supabase authentication state
+  data/                subject catalogue and question-bank paths
+  features/            quiz, activity, downloads, admin, support, and notifications
+  pages/               route-level screens
+  lib/                 Supabase client and shared utilities
+public/                static assets copied into the web build
+scripts/               local data validation and maintenance scripts
+r2-banks/data/         local-only mirror of public R2 question-bank objects
 ```
-
-## Question-bank conventions
-
-- Question banks are NOT shipped with the website. Free-subject banks live in `r2-banks/data/` (git mirror) and are uploaded to the public R2 bucket (`data/` key prefix); at runtime `toBankUrl` in `src/lib/mediaUrl.ts` maps the logical `/data/...` paths declared in `src/data/subjects.ts`, `tadvExams.ts`, and `toeic.ts` onto the R2 base URL.
-- Paid-subject banks live in the private Supabase Storage bucket `paid-question-banks` and are served through the `get-paid-question-bank` edge function (auth + purchase + rate limits). They never touch the web host.
-- TADV media paths inside bank JSON files stay relative (e.g. `tadv/test01/part1-audio.mp3`); `toMediaUrl` in `src/lib/mediaUrl.ts` serves TADV audio/images, TOEIC audio/images (`toeic-test/` → `toeic/`), kinh_te_vi_mo images, and the hero videos from R2, flattening `part5-image-testN/` folders. Every media reference must be R2-hosted or an absolute URL; `validate-data` fails otherwise.
-- TOEIC free banks are mirrored under `r2-banks/data/toeic-test/Test-XX/PartN/` (R2 key `data/toeic-test/...`).
-- Each TOEIC JSON file must match its folder part. The loader validates the required question text, options shape, and answer fields at runtime.
-- Parts 1, 2 and 5 are arrays of questions; Parts 3, 4 and 6 are arrays of groups; Part 7 is an object with `groups`.
-- Relative media names (`audio`, `image`) are resolved from the bank file's directory, then rewritten to R2.
-- Update the counts, file paths, and metadata together in `src/data/toeic.ts`; do not rely on a count inferred from the UI.
-
-## Testing
-
-Tests are colocated with the logic they protect. The suite covers answer mapping/scoring, question-bank loading and validation, TOEIC schema adaptation, persisted practice sessions, navigation and chapter filters. Add a regression test whenever a bank format or filtering rule changes.
-
-`npm run validate:data` is also part of the production build. It checks JSON structure, declared question/part counts, duplicate IDs within a question group, multiple-choice answers, and referenced audio/image files.
 
 ## Deployment
 
-Vercel builds with `npm run build` and serves `dist/`; SPA rewrites are configured in `vercel.json`. Question banks no longer ship with the website: free-subject banks load from the public R2 bucket via `toBankUrl`, and paid-subject banks stream from the private `paid-question-banks` Storage bucket through the `get-paid-question-bank` edge function (auth + purchase + rate limits). Media assets on R2 are public but contain no secrets or access-controlled material.
+Vercel runs `npm run build` and publishes `dist/`. Configure `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` in the Vercel project settings. Client-side values prefixed with `VITE_` are included in browser code and must not contain secrets.
+
+Supabase database, Edge Functions, and Storage are backend services; they are not bundled into the Vite static output. Keep their deployment and backup procedures available to project maintainers even when their source files are stored outside the public GitHub repository.
