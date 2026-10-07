@@ -28,8 +28,9 @@ data-backup/*
 r2-banks/data/
 
 # Supabase local backups (DB ~53MB, khong commit bat cu gi trong nay)
-backup-database/*
-!backup-database/.gitkeep
+backup-database/
+
+docs/
 
 # Editor directories and files
 .vscode/*
