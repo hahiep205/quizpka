@@ -1,4 +1,7 @@
 export const R2_PUBLIC_BASE = "https://pub-2b172bb81d224085aab3d04e88be8508.r2.dev"
+export const R2_PUBLIC_ASSET_BASE = `${R2_PUBLIC_BASE}/public`
+export const R2_SRC_ASSET_BASE = `${R2_PUBLIC_BASE}/src/assets`
+export const R2_PUBLIC_ORIGIN = new URL(R2_PUBLIC_BASE).origin
 
 const HERO_VIDEO = /^animo-column-drift-720p(?:-dark)?\.webm$/
 const R2_PREFIX_REWRITES = [

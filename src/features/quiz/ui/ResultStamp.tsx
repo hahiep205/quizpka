@@ -1,17 +1,16 @@
-import liet from "@/assets/Liet.webp"
-import kem from "@/assets/Kem.webp"
-import qua from "@/assets/Qua.webp"
-import tam from "@/assets/Tam.webp"
-import kha from "@/assets/Kha.webp"
-import perfect from "@/assets/Perfect.webp"
+import { R2_SRC_ASSET_BASE } from "@/lib/mediaUrl"
+
+const stampUrls = ["Liet", "Kem", "Qua", "Tam", "Kha", "Perfect"].map(
+  (name) => `${R2_SRC_ASSET_BASE}/${name}.webp`,
+)
 
 export function getStampSrc(score: number): string {
-  if (score < 1) return liet
-  if (score < 4) return kem
-  if (score < 5) return qua
-  if (score < 6.5) return tam
-  if (score < 8.5) return kha
-  return perfect
+  if (score < 1) return stampUrls[0]
+  if (score < 4) return stampUrls[1]
+  if (score < 5) return stampUrls[2]
+  if (score < 6.5) return stampUrls[3]
+  if (score < 8.5) return stampUrls[4]
+  return stampUrls[5]
 }
 
 export function ResultStamp({ score }: { score: number }) {

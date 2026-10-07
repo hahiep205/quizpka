@@ -24,7 +24,7 @@ import {
   LogOut,
   X,
 } from "lucide-react"
-import brandLogo from "@/assets/logo.webp"
+import { R2_SRC_ASSET_BASE } from "@/lib/mediaUrl"
 import { QuizSetupModal, type QuizSetupValues } from "@/components/QuizSetupModal"
 import { HcmChapterPickerModal } from "@/components/HcmChapterPickerModal"
 import { ImageDocViewerModal } from "@/components/ImageDocViewerModal"
@@ -887,7 +887,7 @@ function DesktopSidebar({
   return (
     <aside className="fixed inset-y-0 left-0 z-40 hidden w-[200px] border-r border-slate-200 bg-white px-4 py-5 dark:border-white/10 dark:bg-slate-900 lg:flex lg:flex-col">
       <a href="/" className="flex h-12 items-center px-3" aria-label="Quizpka">
-        <img src={brandLogo} alt="Quizpka" className="h-8 w-auto object-contain" />
+        <img src={`${R2_SRC_ASSET_BASE}/logo.webp`} alt="Quizpka" className="h-8 w-auto object-contain" />
       </a>
 
       <nav className="mt-7 flex flex-1 flex-col gap-1.5" aria-label="Dashboard">

@@ -84,4 +84,4 @@ if(s==='idle')return;svg.classList.add(s);t=setTimeout(()=>svg.classList.remove(
 const auto=()=>{if(!svg.classList.length)state('wink');setTimeout(auto,7000+Math.random()*5000)};setTimeout(auto,3500);
 document.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>state(b.dataset.s));
 })();
-</script></body></html>
+</script><script>window.addEventListener("message",function(event){var data=event.data;if(event.source!==window.parent||!data||data.type!=="quizpka-theme"||(data.theme!=="dark"&&data.theme!=="light"))return;document.body.style.background=data.theme==="dark"?"#020617":"";});</script></body></html>

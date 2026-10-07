@@ -1,7 +1,7 @@
 import { useEffect, useState, type ReactNode } from "react"
 import { Languages, LogOut, Menu, Moon, Sun, X } from "lucide-react"
 import { cn } from "@/lib/utils"
-import brandLogo from "@/assets/logo.webp"
+import { R2_SRC_ASSET_BASE } from "@/lib/mediaUrl"
 import { GoogleIcon } from "@/shared/icons/GoogleIcon"
 import { useAuth } from "@/auth/AuthProvider"
 import { appRoutes, navigate } from "@/app/navigation"
@@ -194,7 +194,7 @@ export function SiteHeader({
           aria-label={t.brand.replace(".", "")}
         >
           <img
-            src={brandLogo}
+            src={`${R2_SRC_ASSET_BASE}/logo.webp`}
             alt={t.brand.replace(".", "")}
             className="h-[31px] w-auto object-contain sm:h-[35px]"
           />

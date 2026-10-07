@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import { appRoutes, navigate } from "@/app/navigation"
 import { useAuth } from "@/auth/AuthProvider"
+import { R2_PUBLIC_ASSET_BASE, R2_PUBLIC_ORIGIN } from "@/lib/mediaUrl"
 
 export function WelcomeNewUserPage() {
   const { status, profile, completeWelcome } = useAuth()
@@ -17,7 +18,7 @@ export function WelcomeNewUserPage() {
 
   useEffect(() => {
     const onMessage = (event: MessageEvent<unknown>) => {
-      if (event.origin !== window.location.origin || event.source !== frameRef.current?.contentWindow) return
+      if (event.origin !== R2_PUBLIC_ORIGIN || event.source !== frameRef.current?.contentWindow) return
       if (typeof event.data !== "object" || event.data === null || (event.data as { type?: unknown }).type !== "quizpka-welcome-complete") return
 
       setSaving(true)
@@ -42,7 +43,7 @@ export function WelcomeNewUserPage() {
       <iframe
         ref={frameRef}
         title="Chào mừng đến với QuizPKA"
-        src="/welcome-new-user.html"
+        src={`${R2_PUBLIC_ASSET_BASE}/welcome-new-user.html`}
         className="absolute inset-0 h-full min-h-svh w-full border-0"
         aria-busy={saving}
       />

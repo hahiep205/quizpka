@@ -24,8 +24,9 @@ supabase/.temp/
 data-backup/*
 !data-backup/.gitkeep
 
-# Local mirror of question banks hosted on Cloudflare R2.
+# Local mirrors of public content hosted on Cloudflare R2.
 r2-banks/data/
+src/assets/
 
 # Supabase local backups (DB ~53MB, khong commit bat cu gi trong nay)
 backup-database/
@@ -33,6 +34,8 @@ backup-database/
 docs/
 
 supabase/
+
+public/
 
 # Local-only repository guidance and tooling files.
 /.editorconfig

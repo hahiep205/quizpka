@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { Activity, Banknote, BarChart3, BookOpen, CheckCircle2, Clock3, Download, History, LayoutGrid, LogOut, Megaphone, RefreshCw, Search, Send, ShieldAlert, UserRound, Users, WalletCards, X, type LucideIcon } from "lucide-react"
 import { MobileTabBar } from "@/components/MobileTabBar"
-import brandLogo from "@/assets/logo.webp"
+import { R2_SRC_ASSET_BASE } from "@/lib/mediaUrl"
 import { useAuth } from "@/auth/AuthProvider"
 import { DashboardStatCard, dashboardStatGridClass } from "@/components/DashboardStatCard"
 import { Card } from "@/components/ui/card"
@@ -1439,7 +1439,7 @@ function AdminSidebar({
   return (
     <aside className="fixed inset-y-0 left-0 z-40 hidden w-[200px] flex-col border-r border-slate-200 bg-white px-4 py-5 lg:flex dark:border-white/10 dark:bg-slate-900">
       <a href="/" className="flex h-12 items-center gap-2 px-3" aria-label="Quizpka Admin">
-        <img src={brandLogo} alt="Quizpka" className="h-8 w-auto object-contain" />
+        <img src={`${R2_SRC_ASSET_BASE}/logo.webp`} alt="Quizpka" className="h-8 w-auto object-contain" />
         <span className="rounded-full bg-[#E8F7FE] px-2 py-0.5 text-[10px] font-black uppercase tracking-wide text-[#129BDC] dark:bg-sky-500/10">Admin</span>
       </a>
 

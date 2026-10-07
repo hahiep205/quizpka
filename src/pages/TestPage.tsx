@@ -16,6 +16,7 @@ import {
   type LucideIcon,
 } from "lucide-react"
 import type { Language } from "@/shared/types/app"
+import { R2_PUBLIC_ASSET_BASE } from "@/lib/mediaUrl"
 
 type Lang = Language
 
@@ -25,7 +26,7 @@ const copy = {
     manualSubtitle: "Đăng nhập, chọn môn, cấu hình đề và bắt đầu làm Quiz - mọi thứ chỉ trong vài bước.",
     features: [
       { icon: "login", title: "Đăng nhập Google 1 chạm", desc: "Vào học ngay, không cần mật khẩu." },
-      { icon: "modes", title: "3 chế độ làm bài", desc: "Luyện tập, thi thử và luyện câu khó." },
+      { icon: "modes", title: "3 chế độ làm bài", desc: "Luyện tập, thi thử và luyện tập hard." },
       { icon: "history", title: "Lưu lịch sử làm bài", desc: "Mọi lượt làm được giữ lại để xem bất cứ lúc nào." },
       { icon: "retry", title: "Làm lại câu sai", desc: "Tự động gom câu sai để luyện lại trọng tâm." },
       { icon: "trophy", title: "Bảng xếp hạng", desc: "Tích điểm học tập và so tài cùng mọi người." },
@@ -36,10 +37,10 @@ const copy = {
     steps: [
       { title: "Đăng nhập", desc: "Đăng nhập bằng Google để lưu toàn bộ tiến trình học." },
       { title: "Tìm tài liệu", desc: "Tìm môn theo từ khóa hoặc lọc trong danh sách đề." },
-      { title: "Sử dụng tài liệu Quiz miễn phí hoặc mua tài liệu trả phí", desc: "Làm Quiz miễn phí ngay, hoặc quét QR để thanh toán và mở khóa tài liệu Quiz trả phí." },
+      { title: "Sử dụng tài liệu Quiz miễn phí hoặc mua Quiz trả phí", desc: "Làm Quiz miễn phí ngay, hoặc quét QR để thanh toán và mở khóa tài liệu Quiz trả phí." },
       { title: "Cấu hình đề", desc: "Chọn chương, thứ tự câu hỏi, chế độ làm bài và thời gian." },
       { title: "Làm bài và xem kết quả", desc: "Trả lời từng câu, nộp bài để chấm điểm ngay." },
-      { title: "Ôn lại và tải PDF", desc: "Xem lịch sử, làm lại câu sai, tải đề miễn phí về in." },
+      { title: "Ôn lại và tải PDF", desc: "Xem lịch sử, làm lại câu sai, hoặc tải đề miễn phí về để in." },
     ],
   },
   en: {
@@ -193,7 +194,7 @@ export function TestPage({ lang, responsiveTrial = false }: { lang: Lang; respon
               scrolling="no"
               frameBorder="0"
               loading="lazy"
-              src="/start-svg-2.html"
+              src={`${R2_PUBLIC_ASSET_BASE}/start-svg-2.html`}
               className="mx-auto block aspect-[469/487] w-full overflow-hidden border-0 outline-none dark:bg-[#020617]"
             />
           </div>
