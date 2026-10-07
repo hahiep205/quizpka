@@ -44,13 +44,12 @@ npm run dev            # chạy máy chủ phát triển
 npm run typecheck      # kiểm tra kiểu TypeScript
 npm run lint           # chạy Oxlint
 npm run test           # chạy Vitest
-npm run validate:data  # kiểm tra dữ liệu câu hỏi local khi có nguồn dữ liệu
-npm run build          # kiểm tra dữ liệu phù hợp, typecheck và build dist/
+npm run build          # kiểm tra kiểu TypeScript và build dist/
 npm run preview        # xem thử bản build production
 npm run clean          # xóa dist/
 ```
 
-Bước kiểm tra dữ liệu xác thực cấu trúc JSON, số lượng câu hỏi, ID trùng, đáp án/lựa chọn và định dạng tham chiếu media. Trên Vercel, bước này được bỏ qua nếu nguồn dữ liệu local không có trong checkout; nó không kiểm tra object trên R2 có tồn tại hay không. Khi thêm hoặc cập nhật nội dung, cần bảo đảm object đã được đưa lên đúng nơi lưu trữ.
+Việc kiểm tra dữ liệu nguồn được thực hiện riêng trong môi trường phát triển khi cần. Build production không phụ thuộc vào bản sao dữ liệu cục bộ.
 
 ## Cấu trúc mã nguồn
 
@@ -62,7 +61,6 @@ src/
   features/     quiz, lịch sử, tải xuống, admin, hỗ trợ và thông báo
   pages/        các màn hình theo route
   lib/          Supabase client và tiện ích dùng chung
-scripts/        kiểm tra dữ liệu và tác vụ bảo trì
 ```
 
 ## Triển khai

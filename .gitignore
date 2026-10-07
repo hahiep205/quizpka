@@ -12,7 +12,6 @@ dist
 dist-ssr
 *.local
 
-# Local codebase-memory-mcp indexes and exports
 .codebase-memory/
 
 trash/*
@@ -24,17 +23,12 @@ supabase/.temp/
 data-backup/*
 !data-backup/.gitkeep
 
-# Local mirrors of public content hosted on Cloudflare R2.
 r2-banks/data/
 src/assets/
-
-# Supabase local backups (DB ~53MB, khong commit bat cu gi trong nay)
+scripts/
 backup-database/
-
 docs/
-
 supabase/
-
 public/
 
 # Local-only repository guidance and tooling files.
