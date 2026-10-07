@@ -1,82 +1,72 @@
 # Quizpka
 
-Quizpka is a web app for quiz practice, chapter-based review, English placement tests, and TOEIC preparation. The frontend is built with Vite, React, and TypeScript. Supabase provides authentication, database services, private storage, and Edge Functions; Cloudflare R2 serves public question banks and media.
+Quizpka là nền tảng ôn tập và luyện thi qua Quiz dành cho sinh viên Phenikaa, với kho tài liệu đa dạng cho nhiều môn học, hỗ trợ ôn tập giữa kỳ và cuối kỳ.
 
-Production site: [quizpka.online](https://quizpka.online)
+Website: [quizpka.online](https://quizpka.online)
 
-## Features
+## Tính năng
 
-- Browse subjects, exams, and chapter-based practice.
-- Take timed quizzes, review answers, and track practice history.
-- Sign in and sync account data through Supabase.
-- Use paid question banks and documents through authenticated Supabase Edge Functions.
-- Access free question banks and public media from Cloudflare R2.
-- Use the leaderboard, downloads, support reports, and admin tools backed by Supabase.
+- Đăng nhập 1 chạm nhanh chóng: Hỗ trợ đăng nhập qua Google, vào học ngay lập tức không cần nhớ mật khẩu.
+- 3 chế độ làm bài đa dạng: Luyện tập, thi thử và luyện tập hard; tích hợp tính năng thi thử TADV bám sát cấu trúc đề Tiếng Anh đầu vào của Phenikaa.
+- Lưu lịch sử & Tự động gom câu sai: Giữ lại toàn bộ lịch sử làm bài và tự động tổng hợp các câu làm sai để giúp bạn tập trung ôn luyện trọng tâm.
+- Bảng xếp hạng thi đua: Tích điểm qua từng lượt làm bài để theo dõi tiến độ và so tài cùng cộng đồng.
+- Kho tài liệu phong phú & Tải PDF miễn phí: Cung cấp đa dạng nội dung miễn phí lẫn trả phí; hỗ trợ tải đề kèm đáp án dạng PDF miễn phí để dễ dàng in ra giấy ôn tập.
 
-## Stack and services
+## Công nghệ
 
-- **Frontend:** React, TypeScript, Vite, and Tailwind CSS.
-- **Hosting:** Vercel serves the static build from `dist/` and rewrites application routes to the SPA entry point.
-- **Backend:** Supabase Auth and Postgres, with Edge Functions for server-side operations.
-- **Paid content:** The private Supabase Storage bucket `paid-question-banks`, accessed through Edge Functions that check authorization and entitlements.
-- **Free content:** Public Cloudflare R2 objects. The browser loads free question banks and supported media directly from the configured R2 public URL.
+- **Giao diện:** React, TypeScript, Vite và Tailwind CSS.
+- **Deploy:** Vercel.
+- **Backend:** Supabase Auth, Postgres, Storage và Edge Functions.
+- **Lưu trữ dữ liệu:** Cloudflare R2.
 
-The browser uses `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`. These are client-side settings; keep service-role keys, payment secrets, and other privileged credentials in backend or hosting secrets only.
+Một số tài nguyên và cấu hình phục vụ phát triển hoặc vận hành được quản lý riêng, không nằm trong repo công khai. Nội dung cần phân quyền được phục vụ qua backend sau khi kiểm tra quyền truy cập.
 
-## Requirements
+## Yêu cầu
 
-- Node.js 22 or later
-- npm 10 or later
+- Node.js 22 trở lên
+- npm 10 trở lên
 
-## Local development
+## Chạy ở môi trường local
 
-Install dependencies and start the Vite development server:
+Cài dependencies và khởi động máy chủ phát triển:
 
 ```bash
 npm install
 npm run dev
 ```
 
-Set `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` in a local `.env.local` file before running the app. `VITE_SUPABASE_PROXY_URL` is optional; leave it unset to connect directly to Supabase.
+Ứng dụng cần cấu hình `VITE_SUPABASE_URL` và `VITE_SUPABASE_ANON_KEY` để kết nối Supabase. Có thể cấu hình `VITE_SUPABASE_PROXY_URL` nếu môi trường triển khai sử dụng proxy. Các biến bắt đầu bằng `VITE_` được đưa vào mã phía trình duyệt; không đặt khóa quản trị hoặc secret trong các biến này.
 
-## Commands
+## Lệnh thường dùng
 
 ```bash
-npm run dev           # start the local development server
-npm run typecheck     # check application TypeScript
-npm run lint          # run Oxlint
-npm run test          # run Vitest
-npm run validate:data # validate the local R2 question-bank mirror
-npm run build         # validate the local mirror when present, typecheck, and build dist/
-npm run preview       # preview the production build locally
-npm run clean         # remove dist/
+npm run dev            # chạy máy chủ phát triển
+npm run typecheck      # kiểm tra kiểu TypeScript
+npm run lint           # chạy Oxlint
+npm run test           # chạy Vitest
+npm run validate:data  # kiểm tra dữ liệu câu hỏi local khi có nguồn dữ liệu
+npm run build          # kiểm tra dữ liệu phù hợp, typecheck và build dist/
+npm run preview        # xem thử bản build production
+npm run clean          # xóa dist/
 ```
 
-## Question banks and media
+Bước kiểm tra dữ liệu xác thực cấu trúc JSON, số lượng câu hỏi, ID trùng, đáp án/lựa chọn và định dạng tham chiếu media. Trên Vercel, bước này được bỏ qua nếu nguồn dữ liệu local không có trong checkout; nó không kiểm tra object trên R2 có tồn tại hay không. Khi thêm hoặc cập nhật nội dung, cần bảo đảm object đã được đưa lên đúng nơi lưu trữ.
 
-Free question-bank source files are kept in the local `r2-banks/data/` mirror and are ignored by Git. They are not required in the Vercel checkout: production fetches free banks from Cloudflare R2. `toBankUrl` and `toMediaUrl` in `src/lib/mediaUrl.ts` map supported logical paths to the configured public R2 URL.
-
-Run `npm run validate:data` locally when the mirror is present. It checks local JSON structure, question counts, duplicate IDs, answer/options consistency, and media URL formats. If the mirror is absent during a Vercel build, this local-only validation is skipped; that skip does not check whether each remote R2 object exists. Confirm R2 uploads separately when adding or changing a bank.
-
-Paid banks and documents belong in the private Supabase Storage bucket. The app requests them through the relevant Edge Functions after authorization and entitlement checks. Do not place paid content in `public/` or in the public R2 bucket.
-
-## Project layout
+## Cấu trúc mã nguồn
 
 ```text
 src/
-  app/                 application layout and navigation
-  auth/                Supabase authentication state
-  data/                subject catalogue and question-bank paths
-  features/            quiz, activity, downloads, admin, support, and notifications
-  pages/               route-level screens
-  lib/                 Supabase client and shared utilities
-public/                static assets copied into the web build
-scripts/               local data validation and maintenance scripts
-r2-banks/data/         local-only mirror of public R2 question-bank objects
+  app/          bố cục và điều hướng
+  auth/         trạng thái đăng nhập
+  data/         danh mục môn học và metadata
+  features/     quiz, lịch sử, tải xuống, admin, hỗ trợ và thông báo
+  pages/        các màn hình theo route
+  lib/          Supabase client và tiện ích dùng chung
+scripts/        kiểm tra dữ liệu và tác vụ bảo trì
 ```
 
-## Deployment
+## Triển khai
 
-Vercel runs `npm run build` and publishes `dist/`. Configure `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` in the Vercel project settings. Client-side values prefixed with `VITE_` are included in browser code and must not contain secrets.
+Vercel chạy `npm run build` và phục vụ nội dung trong `dist/`. Cấu hình `VITE_SUPABASE_URL` và `VITE_SUPABASE_ANON_KEY` trong Project Settings của Vercel.
 
-Supabase database, Edge Functions, and Storage are backend services; they are not bundled into the Vite static output. Keep their deployment and backup procedures available to project maintainers even when their source files are stored outside the public GitHub repository.
+Supabase và Cloudflare R2 là các dịch vụ backend/lưu trữ riêng với bản build giao diện. Việc cập nhật schema, Edge Functions hoặc nội dung lưu trữ được thực hiện theo quy trình vận hành tương ứng; các bản sao và tài nguyên nội bộ được quản lý riêng.
