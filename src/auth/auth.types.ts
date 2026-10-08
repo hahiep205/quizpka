@@ -1,4 +1,5 @@
 import type { User } from "@supabase/supabase-js"
+import type { UserPreferences, UserProfileUpdates } from "./profilePreferences"
 
 export type AuthStatus = "loading" | "authenticated" | "blocked" | "anonymous"
 export type AuthProfile = {
@@ -9,6 +10,11 @@ export type AuthProfile = {
   role: "user" | "admin"
   status: "active" | "blocked"
   welcome_completed: boolean
+  school_or_faculty: UserPreferences["school_or_faculty"]
+  cohort: UserPreferences["cohort"]
+  preferred_language: UserPreferences["preferred_language"] | null
+  sound_enabled: boolean | null
+  email_updates_enabled: boolean | null
   blocked_reason?: string | null
   blocked_at?: string | null
 }
@@ -19,5 +25,7 @@ export type AuthContextValue = {
   signInWithGoogle: () => Promise<void>
   signOut: () => Promise<void>
   updateProfile: (updates: { display_name?: string }) => Promise<void>
-  completeWelcome: () => Promise<void>
+  updateAccountPreferences: (updates: UserProfileUpdates) => Promise<void>
+  completeWelcome: (preferences: UserProfileUpdates) => Promise<void>
+  completeWelcomeLegacy: () => Promise<void>
 }

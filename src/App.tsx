@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react"
+import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { appRoutes, navigate, useAppPath } from "@/app/navigation"
 import type { ContactModalType } from "@/components/ContactModal"
 import { appTranslations as translations } from "@/shared/i18n"
@@ -31,7 +31,7 @@ function getTodayKey(): string {
 
 export default function App() {
   const pathname = useAppPath()
-  const { status, signOut, profile, user } = useAuth()
+  const { status, signOut, profile, user, updateAccountPreferences } = useAuth()
   const onlineCount = useOnlinePresence(user?.id)
   const [contactOpen, setContactOpen] = useState(false)
   const [contactType, setContactType] = useState<ContactModalType | null>(null)
@@ -67,6 +67,21 @@ export default function App() {
     document.documentElement.lang = lang
     writeStorage("quizpka-lang", lang)
   }, [lang])
+
+  useEffect(() => {
+    if (status === "authenticated" && profile?.preferred_language) {
+      setLang(profile.preferred_language)
+    }
+  }, [status, profile?.preferred_language, user?.id])
+
+  const handleToggleLang = useCallback(() => {
+    const previous = lang
+    const next = lang === "en" ? "vi" : "en"
+    setLang(next)
+    if (status === "authenticated" && profile?.welcome_completed) {
+      void updateAccountPreferences({ preferred_language: next }).catch(() => setLang(previous))
+    }
+  }, [lang, profile?.welcome_completed, status, updateAccountPreferences])
 
   // Login announcement: show after 1s on homepage for guests, "don't show today" persists per day
   useEffect(() => {
@@ -166,7 +181,7 @@ export default function App() {
           lang={lang}
           theme={theme}
           onlineCount={onlineCount}
-          onToggleLang={() => setLang((current) => (current === "en" ? "vi" : "en"))}
+          onToggleLang={handleToggleLang}
           onToggleTheme={() =>
             setTheme((current) => (current === "light" ? "dark" : "light"))
           }
@@ -191,7 +206,7 @@ export default function App() {
             lang={lang}
             theme={theme}
             t={testT}
-            onToggleLang={() => setLang((current) => (current === "en" ? "vi" : "en"))}
+            onToggleLang={handleToggleLang}
             onToggleTheme={() =>
               setTheme((current) => (current === "light" ? "dark" : "light"))
             }
@@ -224,7 +239,7 @@ export default function App() {
             lang={lang}
             theme={theme}
             t={t}
-            onToggleLang={() => setLang((current) => (current === "en" ? "vi" : "en"))}
+            onToggleLang={handleToggleLang}
             onToggleTheme={() =>
               setTheme((current) => (current === "light" ? "dark" : "light"))
             }
@@ -255,7 +270,7 @@ export default function App() {
             lang={lang}
             theme={theme}
             t={testT}
-            onToggleLang={() => setLang((current) => (current === "en" ? "vi" : "en"))}
+            onToggleLang={handleToggleLang}
             onToggleTheme={() =>
               setTheme((current) => (current === "light" ? "dark" : "light"))
             }
@@ -296,7 +311,7 @@ export default function App() {
           lang={lang}
           theme={theme}
           t={testT}
-          onToggleLang={() => setLang((current) => (current === "en" ? "vi" : "en"))}
+          onToggleLang={handleToggleLang}
           onToggleTheme={() =>
             setTheme((current) => (current === "light" ? "dark" : "light"))
           }

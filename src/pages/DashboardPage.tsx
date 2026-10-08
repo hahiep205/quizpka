@@ -42,6 +42,7 @@ import { dashboardCopy as copy } from "@/shared/i18n"
 import { useExamLaunch } from "@/lib/useExamLaunch"
 import type { Language, Theme } from "@/shared/types/app"
 import { useAuth } from "@/auth/AuthProvider"
+import { COHORT_OPTIONS, SCHOOL_OR_FACULTY_OPTIONS, type Cohort, type SchoolOrFaculty } from "@/auth/profilePreferences"
 import { navigate as navigateApp, appRoutes, getCurrentPath, type AppPath } from "@/app/navigation"
 import { readStorage, writeStorage } from "@/lib/storage"
 import { supabase } from "@/lib/supabase"
@@ -1468,21 +1469,26 @@ function HistoryMetric({ label, value }: { label: string; value: string }) {
 
 function SettingsView({ lang, theme, onToggleLang, onToggleTheme, onOpenContact }: DashboardPageProps) {
   const t = copy[lang]
-  const { profile, updateProfile, signOut, user } = useAuth()
+  const { profile, updateAccountPreferences, signOut, user } = useAuth()
   const [displayName, setDisplayName] = useState(profile?.display_name ?? "")
+  const [school, setSchool] = useState(profile?.school_or_faculty ?? "")
+  const [cohort, setCohort] = useState(profile?.cohort ?? "")
   const [saving, setSaving] = useState(false)
   const [saved, setSaved] = useState(false)
   const [saveError, setSaveError] = useState(false)
+  const [preferencesSaving, setPreferencesSaving] = useState(false)
+  const [preferencesSaveError, setPreferencesSaveError] = useState(false)
   const [visibilitySaveError, setVisibilitySaveError] = useState(false)
-  const [soundEnabled, setSoundEnabled] = useState(() => readStorage(`quizpka:${user?.id ?? "anonymous"}:sound-enabled`) !== "false")
+  const [soundEnabled, setSoundEnabled] = useState(profile?.sound_enabled ?? (readStorage(`quizpka:${user?.id ?? "anonymous"}:sound-enabled`) !== "false"))
   const [leaderboardVisible, setLeaderboardVisible] = useState(() => readStorage(`quizpka:${user?.id ?? "anonymous"}:leaderboard-visible`) !== "false")
   const [visibilitySaving, setVisibilitySaving] = useState(false)
-  const [emailUpdates, setEmailUpdates] = useState(() => readStorage(`quizpka:${user?.id ?? "anonymous"}:email-updates`) === "true")
+  const [emailUpdates, setEmailUpdates] = useState(profile?.email_updates_enabled ?? (readStorage(`quizpka:${user?.id ?? "anonymous"}:email-updates`) === "true"))
 
   useEffect(() => { setDisplayName(profile?.display_name ?? "") }, [profile?.display_name])
-  useEffect(() => {
-    writeStorage(`quizpka:${user?.id ?? "anonymous"}:sound-enabled`, String(soundEnabled))
-  }, [soundEnabled, user?.id])
+  useEffect(() => { setSchool(profile?.school_or_faculty ?? "") }, [profile?.school_or_faculty])
+  useEffect(() => { setCohort(profile?.cohort ?? "") }, [profile?.cohort])
+  useEffect(() => { if (profile?.sound_enabled !== null && profile?.sound_enabled !== undefined) setSoundEnabled(profile.sound_enabled) }, [profile?.sound_enabled])
+  useEffect(() => { if (profile?.email_updates_enabled !== null && profile?.email_updates_enabled !== undefined) setEmailUpdates(profile.email_updates_enabled) }, [profile?.email_updates_enabled])
   useEffect(() => {
     if (!user?.id) return
     let cancelled = false
@@ -1495,13 +1501,27 @@ function SettingsView({ lang, theme, onToggleLang, onToggleTheme, onOpenContact 
     }).catch(() => { if (!cancelled) setVisibilitySaveError(true) })
     return () => { cancelled = true }
   }, [user?.id])
-  useEffect(() => {
-    writeStorage(`quizpka:${user?.id ?? "anonymous"}:email-updates`, String(emailUpdates))
-  }, [emailUpdates, user?.id])
-
   const saveProfile = async () => {
     setSaving(true); setSaved(false); setSaveError(false)
-    try { await updateProfile({ display_name: displayName.trim() || undefined }); setSaved(true) } catch { setSaveError(true) } finally { setSaving(false) }
+    try {
+      await updateAccountPreferences({ display_name: displayName.trim() || null, school_or_faculty: (school || null) as SchoolOrFaculty | null, cohort: (cohort || null) as Cohort | null })
+      setSaved(true)
+    } catch { setSaveError(true) } finally { setSaving(false) }
+  }
+
+  const savePreference = async (key: "sound_enabled" | "email_updates_enabled", value: boolean) => {
+    if (preferencesSaving) return
+    setPreferencesSaving(true)
+    setPreferencesSaveError(false)
+    try {
+      await updateAccountPreferences({ [key]: value })
+      if (key === "sound_enabled") setSoundEnabled(value)
+      else setEmailUpdates(value)
+    } catch {
+      setPreferencesSaveError(true)
+    } finally {
+      setPreferencesSaving(false)
+    }
   }
 
   const saveLeaderboardVisibility = async (nextValue: boolean) => {
@@ -1528,7 +1548,14 @@ function SettingsView({ lang, theme, onToggleLang, onToggleTheme, onOpenContact 
           <div><h3 className="text-lg font-black text-[#100F3E] dark:text-white sm:text-xl">{lang === "vi" ? "Thông tin cá nhân" : "Profile"}</h3><p className="mt-1 text-[13px] font-semibold text-slate-500 dark:text-slate-400 sm:text-sm">{lang === "vi" ? "Thông tin tài khoản Google" : "Your Google account"}</p></div>
           <div className="mt-6 grid gap-6 md:grid-cols-[200px_minmax(0,1fr)] md:gap-8">
             <div className="flex flex-col items-center justify-center border-b border-slate-100 pb-6 md:border-b-0 md:border-r md:pb-0 md:pr-8 dark:border-white/10">{profile?.avatar_url ? <img src={profile.avatar_url} alt="" className="h-20 w-20 rounded-[20px] object-cover shadow-md sm:h-24 sm:w-24 sm:rounded-3xl" /> : <div className="flex h-20 w-20 items-center justify-center rounded-[20px] bg-sky-50 text-sky-500 dark:bg-sky-500/10 sm:h-24 sm:w-24 sm:rounded-3xl"><UserRound className="h-8 w-8 sm:h-9 sm:w-9" /></div>}<p className="mt-3 text-xs font-bold text-slate-400 sm:mt-4">Email</p><p className="mt-1 max-w-full truncate text-center text-sm font-bold text-slate-700 dark:text-slate-200">{profile?.email}</p></div>
-            <div className="min-w-0 self-center"><label className="block text-sm font-extrabold text-slate-600 dark:text-slate-300">{lang === "vi" ? "Tên hiển thị" : "Display name"}<input value={displayName} onChange={(e) => setDisplayName(e.target.value)} className="mt-2 h-12 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 text-sm font-bold text-slate-800 outline-none transition focus:border-sky-400 focus:bg-white focus:ring-4 focus:ring-sky-100 dark:border-white/10 dark:bg-slate-800 dark:text-white dark:focus:bg-slate-700 dark:focus:ring-sky-500/10" maxLength={80} /></label><button type="button" className="lp-btn lp-btn--primary lp-btn--sm mt-4 w-full sm:w-auto" disabled={saving} onClick={() => void saveProfile()}>{saving ? (lang === "vi" ? "Đang lưu…" : "Saving…") : saved ? (lang === "vi" ? "Đã lưu" : "Saved") : (lang === "vi" ? "Lưu thay đổi" : "Save changes")}</button></div>
+            <div className="min-w-0 self-center">
+              <div className="grid gap-4 sm:grid-cols-2">
+                <label className="block text-sm font-extrabold text-slate-600 dark:text-slate-300 sm:col-span-2">{lang === "vi" ? "Tên hiển thị" : "Display name"}<input value={displayName} onChange={(e) => setDisplayName(e.target.value)} className="mt-2 h-12 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 text-sm font-bold text-slate-800 outline-none transition focus:border-sky-400 focus:bg-white focus:ring-4 focus:ring-sky-100 dark:border-white/10 dark:bg-slate-800 dark:text-white dark:focus:bg-slate-700 dark:focus:ring-sky-500/10" maxLength={80} /></label>
+                <label className="block text-sm font-extrabold text-slate-600 dark:text-slate-300">{lang === "vi" ? "Trường/Khoa" : "School/Faculty"}<select value={school} onChange={(e) => setSchool(e.target.value)} className="mt-2 h-12 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 text-sm font-bold text-slate-800 outline-none transition focus:border-sky-400 focus:bg-white focus:ring-4 focus:ring-sky-100 dark:border-white/10 dark:bg-slate-800 dark:text-white dark:focus:bg-slate-700 dark:focus:ring-sky-500/10"><option value="">{lang === "vi" ? "Chưa cập nhật" : "Not set"}</option>{SCHOOL_OR_FACULTY_OPTIONS.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}</select></label>
+                <label className="block text-sm font-extrabold text-slate-600 dark:text-slate-300">{lang === "vi" ? "Khóa" : "Cohort"}<select value={cohort} onChange={(e) => setCohort(e.target.value)} className="mt-2 h-12 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 text-sm font-bold text-slate-800 outline-none transition focus:border-sky-400 focus:bg-white focus:ring-4 focus:ring-sky-100 dark:border-white/10 dark:bg-slate-800 dark:text-white dark:focus:bg-slate-700 dark:focus:ring-sky-500/10"><option value="">{lang === "vi" ? "Chưa cập nhật" : "Not set"}</option>{COHORT_OPTIONS.map((option) => <option key={option} value={option}>{option}</option>)}</select></label>
+              </div>
+              <button type="button" className="lp-btn lp-btn--primary lp-btn--sm mt-4 w-full sm:w-auto" disabled={saving} onClick={() => void saveProfile()}>{saving ? (lang === "vi" ? "Đang lưu…" : "Saving…") : saved ? (lang === "vi" ? "Đã lưu" : "Saved") : (lang === "vi" ? "Lưu thay đổi" : "Save changes")}</button>
+            </div>
           </div>
           {saveError && <p role="alert" className="mt-3 text-sm font-semibold text-red-600">{lang === "vi" ? "Không thể lưu thay đổi. Vui lòng thử lại." : "Could not save changes. Please try again."}</p>}
         </div>
@@ -1549,10 +1576,11 @@ function SettingsView({ lang, theme, onToggleLang, onToggleTheme, onOpenContact 
         </div>
         <div className="space-y-3 rounded-[20px] border-2 border-[#E5E5E5] bg-white p-5 shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)] md:col-span-2">
           <h3 className="text-lg font-black text-[#100F3E] dark:text-white">{lang === "vi" ? "Thiết lập" : "Settings"}</h3>
-          <ToggleRow label={lang === "vi" ? "Bật âm thanh mặc định" : "Enable sound by default"} checked={soundEnabled} onChange={setSoundEnabled} />
+          <ToggleRow label={lang === "vi" ? "Bật âm thanh mặc định" : "Enable sound by default"} checked={soundEnabled} disabled={preferencesSaving} onChange={(value) => void savePreference("sound_enabled", value)} />
           <ToggleRow label={lang === "vi" ? "Cho phép hiển thị trên bảng xếp hạng" : "Show me on the leaderboard"} checked={leaderboardVisible} onChange={(value) => void saveLeaderboardVisibility(value)} />
           {visibilitySaveError ? <p role="alert" className="text-sm font-semibold text-red-600">{lang === "vi" ? "Không thể đồng bộ trạng thái bảng xếp hạng. Vui lòng thử bật/tắt lại." : "Could not sync leaderboard visibility. Please toggle again."}</p> : null}
-          <ToggleRow label={lang === "vi" ? "Nhận thông báo qua email" : "Receive email updates"} checked={emailUpdates} onChange={setEmailUpdates} />
+          <ToggleRow label={lang === "vi" ? "Nhận thông báo qua email" : "Receive email updates"} checked={emailUpdates} disabled={preferencesSaving} onChange={(value) => void savePreference("email_updates_enabled", value)} />
+          {preferencesSaveError ? <p role="alert" className="text-sm font-semibold text-red-600">{lang === "vi" ? "Không thể lưu tùy chọn. Vui lòng thử lại." : "Could not save your preference. Please try again."}</p> : null}
         </div>
         <div className="rounded-[20px] border-2 border-red-100 bg-red-50/60 p-5 dark:border-red-500/20 dark:bg-red-500/5 md:col-span-2 lg:hidden">
           <h3 className="text-lg font-black text-red-700 dark:text-red-300">{lang === "vi" ? "Tài khoản" : "Account"}</h3>
@@ -1563,8 +1591,8 @@ function SettingsView({ lang, theme, onToggleLang, onToggleTheme, onOpenContact 
   )
 }
 
-function ToggleRow({ label, checked, onChange }: { label: string; checked: boolean; onChange: (value: boolean) => void }) {
-  return <label className="flex min-h-14 cursor-pointer items-center justify-between gap-4 rounded-xl border border-slate-100 px-3.5 py-3 text-sm font-bold text-slate-600 transition-colors hover:border-sky-200 dark:border-white/10 dark:text-slate-300 dark:hover:border-sky-400/30"><span className="max-w-[80%] leading-5">{label}</span><span className={cn("relative h-6 w-11 shrink-0 rounded-full transition-colors", checked ? "bg-sky-500" : "bg-slate-200 dark:bg-slate-700")}><input type="checkbox" checked={checked} onChange={(event) => onChange(event.target.checked)} className="peer sr-only" /><span className="absolute left-1 top-1 h-4 w-4 rounded-full bg-white shadow-sm transition-transform peer-checked:translate-x-5" /></span></label>
+function ToggleRow({ label, checked, onChange, disabled = false }: { label: string; checked: boolean; onChange: (value: boolean) => void; disabled?: boolean }) {
+  return <label className={cn("flex min-h-14 items-center justify-between gap-4 rounded-xl border border-slate-100 px-3.5 py-3 text-sm font-bold text-slate-600 transition-colors dark:border-white/10 dark:text-slate-300", disabled ? "cursor-wait opacity-60" : "cursor-pointer hover:border-sky-200 dark:hover:border-sky-400/30")}><span className="max-w-[80%] leading-5">{label}</span><span className={cn("relative h-6 w-11 shrink-0 rounded-full transition-colors", checked ? "bg-sky-500" : "bg-slate-200 dark:bg-slate-700")}><input type="checkbox" role="switch" aria-checked={checked} checked={checked} disabled={disabled} onChange={(event) => onChange(event.target.checked)} className="peer sr-only" /><span className="absolute left-1 top-1 h-4 w-4 rounded-full bg-white shadow-sm transition-transform peer-checked:translate-x-5" /></span></label>
 }
 
 function SettingRow({ icon: Icon, title, children }: { icon: ComponentType<{ className?: string }>; title: string; children: React.ReactNode }) {

@@ -1,6 +1,12 @@
 import { readStorage } from "@/lib/storage"
 
 const SOUND_SETTING_KEY = "quizpka-sound-enabled"
+let accountSoundPreference: boolean | null = null
+
+/** Authenticated profile value takes priority over the legacy browser setting. */
+export function setAccountSoundPreference(value: boolean | null): void {
+  accountSoundPreference = value
+}
 
 let audioContext: AudioContext | null = null
 
@@ -42,7 +48,8 @@ function scheduleTone(context: AudioContext, tone: Tone): void {
 
 /** Plays a short answer cue and silently degrades when browser audio is unavailable. */
 export function playAnswerFeedback(isCorrect: boolean): void {
-  if (readStorage(SOUND_SETTING_KEY) === "false" || typeof window === "undefined" || !window.AudioContext) return
+  const enabled = accountSoundPreference ?? readStorage(SOUND_SETTING_KEY) !== "false"
+  if (!enabled || typeof window === "undefined" || !window.AudioContext) return
 
   try {
     audioContext ??= new window.AudioContext()

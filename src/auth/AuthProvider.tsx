@@ -4,6 +4,9 @@ import { supabase } from "@/lib/supabase"
 import { logActivityEvent } from "@/features/activity/lib/activityLog"
 import { clearEntitlementsCache } from "@/features/entitlements/useEntitlements"
 import { logBlockedAccountView } from "@/features/admin/api/blockedViews"
+import { setAccountSoundPreference } from "@/features/quiz/lib/answerFeedbackSound"
+import { readStorage } from "@/lib/storage"
+import type { UserProfileUpdates } from "./profilePreferences"
 import type { AuthContextValue, AuthProfile, AuthStatus } from "./auth.types"
 
 const AuthContext = createContext<AuthContextValue | null>(null)
@@ -19,7 +22,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const loadProfile = useCallback(async (currentUser: User | null) => {
     if (!currentUser) { setProfile(null); return null }
-    const { data, error } = await supabase.from("profiles").select("id,email,display_name,avatar_url,role,status,blocked_reason,blocked_at,welcome_completed").eq("id", currentUser.id).single()
+    const { data, error } = await supabase.from("profiles").select("id,email,display_name,avatar_url,role,status,blocked_reason,blocked_at,welcome_completed,school_or_faculty,cohort,preferred_language,sound_enabled,email_updates_enabled").eq("id", currentUser.id).single()
     if (error) throw error
     const nextProfile = data as AuthProfile
     setProfile(nextProfile)
@@ -38,20 +41,26 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const applySession = useCallback(async (session: Session | null, authEvent?: AuthChangeEvent) => {
     const currentUser = session?.user ?? null
     setUser(currentUser)
-    if (!currentUser) { setProfile(null); setStatus("anonymous"); clearEntitlementsCache(); return }
+    if (!currentUser) { setAccountSoundPreference(null); setProfile(null); setStatus("anonymous"); clearEntitlementsCache(); return }
 
     // Token refresh chứng tỏ session còn sống; profile đã load lúc sign-in.
     // Bỏ qua để không đốt thêm 1 GET /rest/v1/profiles mỗi lần refresh.
     if (authEvent === "TOKEN_REFRESHED") return
 
+    setAccountSoundPreference(null)
     // Keep protected routes in a loading state while replacing the fallback
     // profile below with the verified database role.
     setStatus("loading")
     setProfile(createFallbackProfile(currentUser))
     try {
       const nextProfile = await loadProfileOnce(currentUser)
-      setStatus(nextProfile?.status === "blocked" ? "blocked" : "authenticated")
-      if (nextProfile?.status === "blocked") {
+      const hydratedProfile = nextProfile ? await migrateLegacyPreferences(currentUser, nextProfile) : null
+      if (hydratedProfile) {
+        setProfile(hydratedProfile)
+        setAccountSoundPreference(hydratedProfile.sound_enabled ?? legacySoundPreference(currentUser))
+      }
+      setStatus(hydratedProfile?.status === "blocked" ? "blocked" : "authenticated")
+      if (hydratedProfile?.status === "blocked") {
         // Tài khoản bị chặn vẫn ghi 1 log "đã xem lý do khóa" để admin biết
         // họ đã đọc thông báo chưa (bảng riêng, không dùng user_activity_events
         // vì RLS chỉ cho active user ghi vào đó).
@@ -112,14 +121,62 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     logActivityEvent(user.id, "update_profile", { fields: Object.keys(updates) })
   }, [user])
 
-  const completeWelcome = useCallback(async () => {
+  const updateAccountPreferences = useCallback(async (updates: UserProfileUpdates) => {
+    if (!user || !profile) throw new Error("Sign in is required to update account preferences")
+    const merged = {
+      display_name: updates.display_name === undefined ? profile.display_name : updates.display_name,
+      school_or_faculty: updates.school_or_faculty === undefined ? profile.school_or_faculty : updates.school_or_faculty,
+      cohort: updates.cohort === undefined ? profile.cohort : updates.cohort,
+      preferred_language: updates.preferred_language ?? profile.preferred_language ?? legacyLanguagePreference(),
+      sound_enabled: updates.sound_enabled ?? profile.sound_enabled ?? legacySoundPreference(user),
+      email_updates_enabled: updates.email_updates_enabled ?? profile.email_updates_enabled ?? legacyEmailUpdatesPreference(user),
+    }
+    const { data, error } = await supabase.rpc("update_my_account_preferences", {
+      p_display_name: merged.display_name,
+      p_school_or_faculty: merged.school_or_faculty,
+      p_cohort: merged.cohort,
+      p_preferred_language: merged.preferred_language,
+      p_sound_enabled: merged.sound_enabled,
+      p_email_updates_enabled: merged.email_updates_enabled,
+    })
+    if (error) throw error
+    setProfile((current) => current ? { ...current, ...(data as Partial<AuthProfile>) } : current)
+    if (updates.sound_enabled !== undefined) setAccountSoundPreference(updates.sound_enabled)
+    logActivityEvent(user.id, "update_profile", { fields: Object.keys(updates) })
+  }, [profile, user])
+
+  const completeWelcome = useCallback(async (preferences: UserProfileUpdates) => {
+    if (!user) throw new Error("Sign in is required to complete onboarding")
+    if (!profile) throw new Error("Profile is not available")
+    const merged = {
+      display_name: preferences.display_name === undefined ? profile.display_name : preferences.display_name,
+      school_or_faculty: preferences.school_or_faculty ?? null,
+      cohort: preferences.cohort ?? null,
+      preferred_language: preferences.preferred_language ?? "vi",
+      sound_enabled: preferences.sound_enabled ?? true,
+      email_updates_enabled: preferences.email_updates_enabled ?? true,
+    }
+    const { data, error } = await supabase.rpc("save_my_welcome_preferences", {
+      p_display_name: merged.display_name,
+      p_school_or_faculty: merged.school_or_faculty,
+      p_cohort: merged.cohort,
+      p_preferred_language: merged.preferred_language,
+      p_sound_enabled: merged.sound_enabled,
+      p_email_updates_enabled: merged.email_updates_enabled,
+    })
+    if (error) throw error
+    setProfile((current) => current ? { ...current, ...(data as Partial<AuthProfile>) } : current)
+    setAccountSoundPreference(merged.sound_enabled)
+  }, [profile, user])
+
+  const completeWelcomeLegacy = useCallback(async () => {
     if (!user) throw new Error("Sign in is required to complete onboarding")
     const { error } = await supabase.rpc("complete_my_welcome")
     if (error) throw error
     setProfile((current) => current ? { ...current, welcome_completed: true } : current)
   }, [user])
 
-  const value = useMemo<AuthContextValue>(() => ({ status, user, profile, signInWithGoogle, signOut, updateProfile, completeWelcome }), [status, user, profile, signInWithGoogle, signOut, updateProfile, completeWelcome])
+  const value = useMemo<AuthContextValue>(() => ({ status, user, profile, signInWithGoogle, signOut, updateProfile, updateAccountPreferences, completeWelcome, completeWelcomeLegacy }), [status, user, profile, signInWithGoogle, signOut, updateProfile, updateAccountPreferences, completeWelcome, completeWelcomeLegacy])
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }
 
@@ -149,5 +206,50 @@ function createFallbackProfile(user: User): AuthProfile {
     role: "user",
     status: "active",
     welcome_completed: true,
+    school_or_faculty: null,
+    cohort: null,
+    preferred_language: null,
+    sound_enabled: null,
+    email_updates_enabled: null,
   }
+}
+
+async function migrateLegacyPreferences(user: User, profile: AuthProfile): Promise<AuthProfile> {
+  if (!profile.welcome_completed || (profile.preferred_language !== null && profile.sound_enabled !== null && profile.email_updates_enabled !== null)) {
+    return profile
+  }
+
+  const storedLanguage = readStorage("quizpka-lang")
+  const legacySound = readStorage(`quizpka:${user.id}:sound-enabled`) ?? readStorage("quizpka-sound-enabled")
+  const legacyEmailUpdates = readStorage(`quizpka:${user.id}:email-updates`)
+  const preferredLanguage = storedLanguage === "en" ? "en" : "vi"
+  // Existing settings defaulted to sound on and email updates off.
+  const soundEnabled = legacySound === null ? true : legacySound !== "false"
+  const emailUpdatesEnabled = legacyEmailUpdates === "true"
+
+  try {
+    const { data, error } = await supabase.rpc("migrate_my_legacy_preferences", {
+      p_preferred_language: preferredLanguage,
+      p_sound_enabled: soundEnabled,
+      p_email_updates_enabled: emailUpdatesEnabled,
+    })
+    if (error || !data || typeof data !== "object") return profile
+    return { ...profile, ...(data as Partial<AuthProfile>) }
+  } catch {
+    // Preference migration must not prevent an existing user from signing in.
+    return profile
+  }
+}
+
+function legacySoundPreference(user: User): boolean {
+  const legacySound = readStorage(`quizpka:${user.id}:sound-enabled`) ?? readStorage("quizpka-sound-enabled")
+  return legacySound !== "false"
+}
+
+function legacyLanguagePreference(): "vi" | "en" {
+  return readStorage("quizpka-lang") === "en" ? "en" : "vi"
+}
+
+function legacyEmailUpdatesPreference(user: User): boolean {
+  return readStorage(`quizpka:${user.id}:email-updates`) === "true"
 }
