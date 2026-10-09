@@ -6,6 +6,8 @@ export type AdminUser = {
   email: string | null
   displayName: string | null
   avatarUrl: string | null
+  schoolOrFaculty: string | null
+  cohort: string | null
   role: AdminRole
   status: AdminStatus
   blockedReason: string | null

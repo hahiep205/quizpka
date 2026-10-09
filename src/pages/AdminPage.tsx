@@ -3,6 +3,7 @@ import { Activity, Banknote, BarChart3, BookOpen, CheckCircle2, Clock3, Download
 import { MobileTabBar } from "@/components/MobileTabBar"
 import { R2_SRC_ASSET_BASE } from "@/lib/mediaUrl"
 import { useAuth } from "@/auth/AuthProvider"
+import { schoolOrFacultyLabel } from "@/auth/profilePreferences"
 import { DashboardStatCard, dashboardStatGridClass } from "@/components/DashboardStatCard"
 import { Card } from "@/components/ui/card"
 import { Dialog } from "@/components/ui/dialog"
@@ -11,7 +12,7 @@ import { fetchBlockedViewStat } from "@/features/admin/api/blockedViews"
 import { fetchUserLoginEvents, type LoginEvent } from "@/features/admin/api/loginEvents"
 import { fetchAdminAttempts, fetchAdminEvents, fetchPracticeAttempts, fetchUserActivity } from "@/features/admin/api/adminActivity"
 import { ACTIVITY_LABELS, parseAttemptRows, type ActivityEvent, type ActivityEventType, type PracticeAttemptRow } from "@/features/activity/lib/activityLog"
-import { bucketHoursToday, eventsByType, filterByDays, topSubjects } from "@/features/admin/lib/adminOverview"
+import { bucketHoursToday, eventsByType, filterByDays, filterByToday, topSubjects } from "@/features/admin/lib/adminOverview"
 import { ANOMALY_META, detectAllAnomalies, detectUserAnomalies, riskScore, type AnomalyFlag, type AnomalySeverity } from "@/features/admin/lib/anomalyDetectors"
 import { supabase } from "@/lib/supabase"
 import { useOnlineUserIds } from "@/hooks/useOnlinePresence"
@@ -70,6 +71,7 @@ type Props = { lang: "vi" | "en" }
 type AdminSection = "overview" | "users" | "notifications" | "payment" | "sendquiz" | "supports" | "timeline" | "attempts" | "subject" | "downloads"
 
 const EVENT_FILTERS: Array<"all" | ActivityEventType> = ["all", "login", "open_exam", "view_exam_detail", "start_attempt", "submit_attempt", "abandon_attempt", "retry_wrong", "purchase_start", "purchase_success", "search_exam", "view_notifications", "read_notification", "devtools_attempt", "view_dashboard", "view_leaderboard", "update_profile", "download_pdf"]
+const HIDDEN_OVERVIEW_EVENT_TYPES: ActivityEventType[] = ["view_notifications", "update_profile", "open_exam", "view_exam_detail"]
 
 const EVENT_TONES: Record<ActivityEventType, string> = {
   login: "bg-emerald-50 text-emerald-500 dark:bg-emerald-500/10",
@@ -221,6 +223,7 @@ export function AdminPage({ lang }: Props) {
   const [attempts, setAttempts] = useState<PracticeAttemptRow[]>([])
   const [attemptsError, setAttemptsError] = useState<string | null>(null)
   const [eventFilter, setEventFilter] = useState<"all" | ActivityEventType>("all")
+  const [selectedOverviewEventType, setSelectedOverviewEventType] = useState<ActivityEventType | null>(null)
   const [timelineQuery, setTimelineQuery] = useState("")
   // Activity log is capped at the newest 3000 events by the hourly prune job
   // (migration 20261004110000), so the default window matches the retained
@@ -626,9 +629,13 @@ export function AdminPage({ lang }: Props) {
     return peak
   }, [hourBuckets])
   const currentHour = new Date().getHours()
-  const evTypeCounts = useMemo(() => eventsByType(rangedEvents), [rangedEvents])
+  const evTypeCounts = useMemo(
+    () => eventsByType(rangedEvents).filter((c) => !HIDDEN_OVERVIEW_EVENT_TYPES.includes(c.key as ActivityEventType)),
+    [rangedEvents],
+  )
   const evTypeMax = useMemo(() => Math.max(1, ...evTypeCounts.map((c) => c.count)), [evTypeCounts])
-  const subjectTops = useMemo(() => topSubjects(rangedAttempts), [rangedAttempts])
+  const todayAttempts = useMemo(() => filterByToday(attempts, (a) => a.completedAt), [attempts])
+  const subjectTops = useMemo(() => topSubjects(todayAttempts), [todayAttempts])
   const evTypeTotal = useMemo(() => evTypeCounts.reduce((sum, c) => sum + c.count, 0), [evTypeCounts])
   const subjectTotal = useMemo(() => subjectTops.reduce((sum, s) => sum + s.count, 0), [subjectTops])
   const eventsPerSubmit = contributionTotals.attempts > 0
@@ -1005,9 +1012,9 @@ export function AdminPage({ lang }: Props) {
                     <div className="rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
                       <div className="flex flex-wrap items-start gap-2">
                         <div className="min-w-0">
-                          <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Nhịp hoạt động · hôm nay theo giờ</p>
+                          <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Thống kê hoạt động</p>
                           <p className="mt-1 text-lg font-black tracking-tight text-[#101A33] sm:text-xl dark:text-white">
-                            {contributionTotals.attempts} nộp · {contributionTotals.events} events
+                            {contributionTotals.attempts} Lượt hoàn thành quiz - {contributionTotals.events} hoạt động
                           </p>
                         </div>
                         <div className="ml-auto flex items-center gap-3 pt-1 text-[11px] font-bold text-slate-400">
@@ -1123,9 +1130,9 @@ export function AdminPage({ lang }: Props) {
                     <div className="rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
                       <div className="flex flex-wrap items-start gap-2">
                         <div className="min-w-0">
-                          <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Events theo loại</p>
+                          <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Hoạt động trong ngày</p>
                           <p className="mt-1 text-lg font-black tracking-tight text-[#101A33] sm:text-xl dark:text-white">
-                            {evTypeTotal} events · {evTypeCounts.length} loại
+                            {evTypeTotal} Hoạt động - {evTypeCounts.length} loại
                           </p>
                         </div>
                         <p className="ml-auto flex items-center gap-1.5 pt-1 text-[11px] font-bold text-amber-500">
@@ -1138,7 +1145,7 @@ export function AdminPage({ lang }: Props) {
                           const barW = Math.round((c.count / evTypeMax) * 100)
                           const pct = evTypeTotal > 0 ? Math.round((c.count / evTypeTotal) * 100) : 0
                           return (
-                            <div key={c.key} title={`${ACTIVITY_LABELS[c.key as ActivityEventType] ?? c.key}: ${c.count} (${pct}%)`} className="relative flex h-9 items-center overflow-hidden rounded-[12px] bg-[#F1F5F9] sm:h-10 dark:bg-white/5">
+                            <button type="button" key={c.key} onClick={() => setSelectedOverviewEventType(c.key as ActivityEventType)} title={`${ACTIVITY_LABELS[c.key as ActivityEventType] ?? c.key}: ${c.count} (${pct}%) · Xem log`} className="relative flex h-9 w-full items-center overflow-hidden rounded-[12px] bg-[#F1F5F9] text-left hover:ring-2 hover:ring-sky-300 focus:outline-none focus:ring-2 focus:ring-sky-400 sm:h-10 dark:bg-white/5">
                               <div
                                 className={cn("absolute inset-y-0 left-0 rounded-[12px]", warn ? "bg-[#FBD9A0] dark:bg-amber-500/30" : "bg-[#BEE5FB] dark:bg-sky-500/25")}
                                 style={{ width: `${Math.max(barW, 13)}%`, minWidth: 104, maxWidth: "100%" }}
@@ -1150,7 +1157,7 @@ export function AdminPage({ lang }: Props) {
                                 <span className={cn("shrink-0 text-[15px] font-black tabular-nums", warn ? "text-[#B45309] dark:text-amber-300" : "text-[#101A33] dark:text-white")}>{c.count}</span>
                                 <span className="w-8 shrink-0 text-right text-xs font-bold text-slate-400 tabular-nums">{pct}%</span>
                               </div>
-                            </div>
+                            </button>
                           )
                         }) : <p className="text-xs font-semibold text-slate-400">Chưa có event nào.</p>}
                       </div>
@@ -1158,9 +1165,9 @@ export function AdminPage({ lang }: Props) {
                   </div>
                   {/* Top môn — donut + pill bars */}
                   <div className="rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
-                    <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Top môn (lượt nộp server)</p>
+                    <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Thống kê các môn được làm trong ngày</p>
                     <p className="mt-1 text-lg font-black tracking-tight text-[#101A33] sm:text-xl dark:text-white">
-                      {subjectTops.length ? `${subjectTops.length} môn có lượt nộp` : "Chưa có lượt nộp"}
+                      {subjectTops.length ? `Hôm nay có ${subjectTops.length} môn được học` : "Hôm nay chưa có môn nào được học"}
                     </p>
                     <div className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-5">
                       <div className="relative mx-auto h-[168px] w-[168px] shrink-0 sm:mx-0">
@@ -1227,6 +1234,27 @@ export function AdminPage({ lang }: Props) {
                     </div>
                   </div>
                 </section>
+                {selectedOverviewEventType ? (
+                  <Dialog open onClose={() => setSelectedOverviewEventType(null)} title={`${ACTIVITY_LABELS[selectedOverviewEventType]} · log (${rangedEvents.filter((e) => e.eventType === selectedOverviewEventType).length})`} closeLabel="Đóng log" className="z-[95]" panelClassName="max-h-[calc(100dvh_-_2rem)] w-full max-w-[760px] rounded-[20px] border-2 border-[#E5E5E5] bg-white shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none">
+                    <div className="max-h-[75dvh] space-y-2 overflow-y-auto px-5 py-4 sm:px-6">
+                      {rangedEvents.filter((e) => e.eventType === selectedOverviewEventType).length ? rangedEvents.filter((e) => e.eventType === selectedOverviewEventType).map((e) => (
+                        <details key={e.id} className="rounded-xl border border-slate-100 bg-slate-50 px-3 py-2.5 dark:border-white/10 dark:bg-white/5">
+                          <summary className="flex cursor-pointer flex-wrap items-center gap-x-2 gap-y-1 text-xs font-semibold">
+                            <span className="font-black text-[#129BDC]">{nameById.get(e.userId) ?? e.displayName ?? e.email ?? e.userId}</span>
+                            <span className="text-slate-400">{formatTime(e.createdAt, lang)}</span>
+                            <span className="ml-auto text-slate-400">Chi tiết</span>
+                          </summary>
+                          <div className="mt-2 space-y-1 text-xs text-slate-500 dark:text-slate-300">
+                            <p>User ID: <span className="break-all">{e.userId}</span></p>
+                            <p>{summarizeMetadata(e)}</p>
+                            <pre className="max-h-48 overflow-auto whitespace-pre-wrap break-all rounded-lg bg-white p-2 dark:bg-slate-950">{JSON.stringify(e.metadata, null, 2)}</pre>
+                          </div>
+                        </details>
+                      )) : <p className="py-8 text-center text-sm font-semibold text-slate-400">Không có log cho loại này trong khoảng đang thống kê.</p>}
+                      <p className="pt-1 text-[11px] text-slate-400">Hiển thị các log đã tải về trong khoảng thống kê hiện tại (tối đa 3.000 event mới nhất).</p>
+                    </div>
+                  </Dialog>
+                ) : null}
               </>
             ) : null}
 
@@ -1292,14 +1320,12 @@ export function AdminPage({ lang }: Props) {
                   {visible.length ? (
                     <div className="hidden overflow-hidden rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:shadow-[0_4px_0_#DCDCDC] md:block dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
                       <div className="overflow-x-auto">
-                        <table className="w-full min-w-[880px] text-left text-sm">
+                        <table className="w-full min-w-[1040px] text-left text-sm">
                           <thead>
                             <tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-[0.06em] text-slate-400 dark:bg-white/5">
                               <th className="px-4 py-3">User</th>
                               <th className="px-4 py-3">Role / Status</th>
-                              <th className="px-4 py-3 text-center" title="Số dấu hiệu bất thường">🚩</th>
-                              <th className="px-4 py-3 text-right">Attempts</th>
-                              <th className="px-4 py-3 text-right">Acc</th>
+                              <th className="px-4 py-3">Khoa/trường</th>
                               <th className="px-4 py-3 text-right">Points</th>
                               <th className="px-4 py-3 text-right">Giờ học</th>
                               <th className="px-4 py-3">Last active</th>
@@ -1327,15 +1353,7 @@ export function AdminPage({ lang }: Props) {
                                   <span className={cn("rounded-full px-2.5 py-1 text-[11px] font-black", u.status === "active" ? "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300" : "bg-red-50 text-red-600 dark:bg-red-500/10 dark:text-red-300")}>{u.status}</span>
                                   {u.status === "blocked" && u.blockedReason ? <p className="mt-1 max-w-[220px] truncate text-[11px] font-bold text-red-500" title={u.blockedReason}>Lý do: {u.blockedReason}</p> : null}
                                 </td>
-                                <td className="px-4 py-3 text-center">
-                                  {(flagCountByUser.get(u.id) ?? 0) > 0 ? (
-                                    <span className="inline-block rounded-full bg-red-50 px-2.5 py-1 text-[11px] font-black text-red-600 dark:bg-red-500/10 dark:text-red-300" title="Có dấu hiệu bất thường, bấm để xem">
-                                      🚩{flagCountByUser.get(u.id)}
-                                    </span>
-                                  ) : <span className="text-xs font-bold text-slate-300 dark:text-slate-600">—</span>}
-                                </td>
-                                <td className="px-4 py-3 text-right text-sm font-black text-[#100F3E] dark:text-white">{u.attempts}{u.weekAttempts ? <span className="text-xs font-bold text-slate-400"> (+{u.weekAttempts}/7d)</span> : null}</td>
-                                <td className="px-4 py-3 text-right text-sm font-extrabold text-[#100F3E] dark:text-white">{u.averageAccuracy}%</td>
+                                <td className="max-w-[300px] px-4 py-3 text-sm font-semibold text-slate-600 dark:text-slate-300" title={[u.cohort, schoolOrFacultyLabel(u.schoolOrFaculty) ?? u.schoolOrFaculty].filter(Boolean).join(" - ") || undefined}>{[u.cohort, schoolOrFacultyLabel(u.schoolOrFaculty) ?? u.schoolOrFaculty].filter(Boolean).join(" - ") || "—"}</td>
                                 <td className="px-4 py-3 text-right text-sm font-black text-[#1CB0F6]">{u.points}</td>
                                 <td className="px-4 py-3 text-right text-sm font-extrabold text-[#100F3E] dark:text-white">{formatAdminDuration(u.totalDurationSeconds)}</td>
                                 <td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(u.lastActiveAt, lang)}</td>
@@ -1366,11 +1384,6 @@ export function AdminPage({ lang }: Props) {
                               </p>
                               <p className="truncate text-xs font-semibold text-slate-400">{u.email ?? u.id}</p>
                             </div>
-                            {(flagCountByUser.get(u.id) ?? 0) > 0 ? (
-                              <span className="shrink-0 rounded-full bg-red-50 px-2 py-1 text-[11px] font-black text-red-600 dark:bg-red-500/10 dark:text-red-300">
-                                🚩{flagCountByUser.get(u.id)}
-                              </span>
-                            ) : null}
                           </div>
                           <div className="mt-2.5 flex flex-wrap items-center gap-1.5">
                             <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-black text-slate-500 dark:bg-white/10 dark:text-slate-300">{u.role}</span>
@@ -1379,8 +1392,7 @@ export function AdminPage({ lang }: Props) {
                           </div>
                           {u.status === "blocked" && u.blockedReason ? <p className="mt-1.5 truncate text-[11px] font-bold text-red-500">Lý do khóa: {u.blockedReason}</p> : null}
                           <div className="mt-2.5 grid grid-cols-4 gap-1.5">
-                            <MobileUserStat value={String(u.attempts)} label={lang === "vi" ? "Lượt" : "Attempts"} />
-                            <MobileUserStat value={`${u.averageAccuracy}%`} label="Acc" />
+                            <MobileUserStat value={[u.cohort, schoolOrFacultyLabel(u.schoolOrFaculty) ?? u.schoolOrFaculty].filter(Boolean).join(" - ") || "—"} label="Khoa/trường" />
                             <MobileUserStat value={String(u.points)} label="Points" accent />
                             <MobileUserStat value={formatAdminDuration(u.totalDurationSeconds)} label={lang === "vi" ? "Giờ học" : "Study time"} />
                           </div>
@@ -1735,6 +1747,15 @@ function UserDrawer({ user, lang, currentUserId, onStatusChange, onClose }: { us
   const userFlags = useMemo(() => detectUserAnomalies(userAttempts, userEvents), [userAttempts, userEvents])
   const isSelf = currentUserId !== null && currentUserId === user.id
   const isAdminAccount = user.role === "admin"
+  const uniqueLoginEvents = useMemo(() => {
+    const seenIps = new Set<string>()
+    return loginEvents.filter((event) => {
+      const ip = event.ipAddress.trim()
+      if (!ip || seenIps.has(ip)) return false
+      seenIps.add(ip)
+      return true
+    })
+  }, [loginEvents])
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose() }
     window.addEventListener("keydown", onKey)
@@ -1785,16 +1806,20 @@ function UserDrawer({ user, lang, currentUserId, onStatusChange, onClose }: { us
             <DrawerMetric label="Points" value={String(user.points)} />
             <DrawerMetric label="Giờ học" value={formatAdminDuration(user.totalDurationSeconds)} />
           </div>
+          <DrawerRow
+            label="Khóa - Trường/Khoa"
+            value={[user.cohort, schoolOrFacultyLabel(user.schoolOrFaculty) ?? user.schoolOrFaculty].filter(Boolean).join(" - ") || "—"}
+          />
           <DrawerRow label="ID" value={user.id} mono />
           <DrawerRow label="Ngày login đầu (created_at)" value={formatTime(user.createdAt, lang)} />
           <DrawerRow label="Hoạt động gần nhất" value={formatTime(user.lastActiveAt, lang)} />
           <DrawerRow label="Hiện trên leaderboard" value={user.leaderboardVisible ? "true" : "false"} />
           <div>
-            <p className="text-xs font-black uppercase tracking-wide text-slate-400">Lịch sử IP đăng nhập ({loginEvents.length})</p>
+            <p className="text-xs font-black uppercase tracking-wide text-slate-400">Lịch sử IP đăng nhập ({uniqueLoginEvents.length})</p>
             <div className="mt-2 space-y-1.5">
               {loginEventsError ? <p className="text-xs font-semibold text-red-500">Không đọc được lịch sử IP: {loginEventsError}</p> : null}
-              {!loginEventsError && loginEvents.length === 0 ? <p className="text-xs font-semibold text-slate-400">Chưa có IP đăng nhập được ghi nhận từ khi bật tính năng.</p> : null}
-              {loginEvents.map((event) => (
+              {!loginEventsError && uniqueLoginEvents.length === 0 ? <p className="text-xs font-semibold text-slate-400">Chưa có IP đăng nhập được ghi nhận từ khi bật tính năng.</p> : null}
+              {uniqueLoginEvents.map((event) => (
                 <div key={event.id} className="rounded-xl bg-slate-50 px-3 py-2 text-xs font-semibold dark:bg-white/5">
                   <span className="font-black text-[#100F3E] dark:text-white font-mono">{event.ipAddress}</span>
                   <span className="text-slate-400"> · {formatTime(event.loggedInAt, lang)}{event.provider ? ` · ${event.provider}` : ""}</span>

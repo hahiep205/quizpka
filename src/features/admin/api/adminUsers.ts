@@ -63,6 +63,8 @@ function parseAdminUserRow(row: AdminUserRow): AdminUser {
     email: row.email ?? null,
     displayName: row.display_name ?? null,
     avatarUrl: row.avatar_url ?? null,
+    schoolOrFaculty: null,
+    cohort: null,
     role: row.role === "admin" ? "admin" : "user",
     status: row.status === "blocked" ? "blocked" : "active",
     blockedReason: row.blocked_reason ?? null,
@@ -127,6 +129,18 @@ export async function fetchAdminUsersPage(options: FetchAdminUsersPageOptions = 
     if (error) return { ok: false, error: error.message, users: [], total: 0, kpis: null }
     const result = (data ?? {}) as { items?: AdminUserRow[]; total?: number; kpis?: AdminKpisRow }
     const users = (result.items ?? []).map(parseAdminUserRow)
+    if (users.length) {
+      const { data: profileDetails } = await supabase
+        .from("profiles")
+        .select("id,school_or_faculty,cohort")
+        .in("id", users.map((user) => user.id))
+      const detailsById = new Map((profileDetails ?? []).map((profile) => [profile.id, profile]))
+      for (const user of users) {
+        const details = detailsById.get(user.id)
+        user.schoolOrFaculty = details?.school_or_faculty ?? null
+        user.cohort = details?.cohort ?? null
+      }
+    }
     return { ok: true, error: null, users, total: Number(result.total ?? users.length), kpis: parseKpis(result.kpis) }
   } catch (err) {
     return { ok: false, error: err instanceof Error ? err.message : "Unknown error", users: [], total: 0, kpis: null }

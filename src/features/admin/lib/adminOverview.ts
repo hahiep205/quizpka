@@ -60,6 +60,19 @@ export function topSubjects(attempts: PracticeAttemptRow[], limit = 8): Array<{ 
   return countByKey(attempts.map((a) => a.subjectId), limit)
 }
 
+/** Giữ lại items có timestamp rơi vào ngày lịch hiện tại theo giờ địa phương. */
+export function filterByToday<T>(items: T[], getDate: (item: T) => string, now = Date.now()): T[] {
+  const today = new Date(now)
+  return items.filter((item) => {
+    const t = Date.parse(getDate(item))
+    if (!Number.isFinite(t)) return false
+    const date = new Date(t)
+    return date.getFullYear() === today.getFullYear()
+      && date.getMonth() === today.getMonth()
+      && date.getDate() === today.getDate()
+  })
+}
+
 export function eventsByType(events: ActivityEvent[]): Array<{ key: string; count: number }> {
   return countByKey(events.map((e) => e.eventType), 12)
 }
