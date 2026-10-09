@@ -629,6 +629,12 @@ export function AdminPage({ lang }: Props) {
   const evTypeCounts = useMemo(() => eventsByType(rangedEvents), [rangedEvents])
   const evTypeMax = useMemo(() => Math.max(1, ...evTypeCounts.map((c) => c.count)), [evTypeCounts])
   const subjectTops = useMemo(() => topSubjects(rangedAttempts), [rangedAttempts])
+  const evTypeTotal = useMemo(() => evTypeCounts.reduce((sum, c) => sum + c.count, 0), [evTypeCounts])
+  const subjectTotal = useMemo(() => subjectTops.reduce((sum, s) => sum + s.count, 0), [subjectTops])
+  const eventsPerSubmit = contributionTotals.attempts > 0
+    ? (contributionTotals.events / contributionTotals.attempts).toFixed(1).replace(".", ",")
+    : "—"
+  const currentHourLabel = `${String(currentHour).padStart(2, "0")}h`
 
   const selected = selectedId ? userCache.get(selectedId) ?? null : null
 
@@ -993,82 +999,231 @@ export function AdminPage({ lang }: Props) {
                 </section>
 
                 {/* Tổng quan */}
-                <section id="admin-overview" className="scroll-mt-24 space-y-4 sm:space-y-5">
-                  <div className="grid gap-3 sm:gap-4 lg:grid-cols-5">
-                    <div className="rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] lg:col-span-3 dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
-                      <div className="flex flex-wrap items-center gap-2">
+                <section id="admin-overview" className="scroll-mt-24 space-y-3 sm:space-y-4">
+                  <div className="grid gap-3 sm:gap-4 lg:grid-cols-2">
+                    {/* Nhịp hoạt động — biểu đồ cực 24h */}
+                    <div className="rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
+                      <div className="flex flex-wrap items-start gap-2">
                         <div className="min-w-0">
                           <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Nhịp hoạt động · hôm nay theo giờ</p>
-                          <p className="mt-1 text-sm font-black text-[#100F3E] dark:text-white">
+                          <p className="mt-1 text-lg font-black tracking-tight text-[#101A33] sm:text-xl dark:text-white">
                             {contributionTotals.attempts} nộp · {contributionTotals.events} events
                           </p>
                         </div>
-                        <div className="ml-auto flex items-center gap-3 text-[11px] font-bold text-slate-400">
-                          <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-[4px] bg-[#1CB0F6] ring-1 ring-black/5 dark:ring-white/10" />Nộp bài</span>
-                          <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-[4px] bg-[#8B5CF6] ring-1 ring-black/5 dark:ring-white/10" />Events</span>
+                        <div className="ml-auto flex items-center gap-3 pt-1 text-[11px] font-bold text-slate-400">
+                          <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-full bg-[#1CB0F6]" />Nộp bài</span>
+                          <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-full bg-[#8B5CF6]" />Events</span>
                         </div>
                       </div>
-                      <div className="mt-4 grid grid-cols-6 gap-1.5 sm:grid-cols-12 sm:gap-2 xl:grid-cols-[repeat(24,minmax(0,1fr))]">
-                        {hourBuckets.map((b) => {
-                          const isCurrentHour = b.hour === currentHour
+                      <div className="mt-2 flex flex-col gap-4 sm:flex-row sm:items-center">
+                        <div className="relative mx-auto w-full max-w-[360px] flex-1 sm:mx-0 sm:min-w-0">
+                          <svg viewBox="0 0 320 320" className="block h-auto w-full" role="img" aria-label="Biểu đồ hoạt động 24 giờ">
+                            {[56, 84, 112, 138].map((r) => (
+                              <circle key={r} cx={160} cy={160} r={r} fill="none" stroke="#E2E8F0" strokeWidth={1} strokeDasharray="2 6" opacity={0.9} />
+                            ))}
+                            {(() => {
+                              const deg = currentHour * 15 - 90
+                              const rad1 = ((deg - 7.5) * Math.PI) / 180
+                              const rad2 = ((deg + 7.5) * Math.PI) / 180
+                              const rIn = 48
+                              const rOut = 150
+                              const x1 = 160 + Math.cos(rad1) * rIn
+                              const y1 = 160 + Math.sin(rad1) * rIn
+                              const x2 = 160 + Math.cos(rad1) * rOut
+                              const y2 = 160 + Math.sin(rad1) * rOut
+                              const x3 = 160 + Math.cos(rad2) * rOut
+                              const y3 = 160 + Math.sin(rad2) * rOut
+                              const x4 = 160 + Math.cos(rad2) * rIn
+                              const y4 = 160 + Math.sin(rad2) * rIn
+                              return (
+                                <path
+                                  d={`M ${x1} ${y1} L ${x2} ${y2} A ${rOut} ${rOut} 0 0 1 ${x3} ${y3} L ${x4} ${y4} A ${rIn} ${rIn} 0 0 0 ${x1} ${y1} Z`}
+                                  fill="#1CB0F6"
+                                  opacity={0.1}
+                                  stroke="#1CB0F6"
+                                  strokeWidth={1.5}
+                                  strokeOpacity={0.55}
+                                />
+                              )
+                            })()}
+                            {hourBuckets.map((b) => {
+                              const baseDeg = b.hour * 15 - 90
+                              const spread = 2.7
+                              const lenA = b.attempts > 0 ? 10 + (b.attempts / attemptsMax) * 62 : 0
+                              const lenE = b.events > 0 ? 10 + (b.events / eventsMax) * 62 : 0
+                              const r0 = 60
+                              const mk = (deg: number, len: number) => {
+                                const rad = (deg * Math.PI) / 180
+                                return {
+                                  x1: 160 + Math.cos(rad) * r0,
+                                  y1: 160 + Math.sin(rad) * r0,
+                                  x2: 160 + Math.cos(rad) * (r0 + len),
+                                  y2: 160 + Math.sin(rad) * (r0 + len),
+                                }
+                              }
+                              const a = mk(baseDeg - spread, lenA)
+                              const e = mk(baseDeg + spread, lenE)
+                              return (
+                                <g key={b.hour}>
+                                  <title>{`${b.label}: ${b.attempts} lượt nộp, ${b.events} events`}</title>
+                                  {lenA > 0 ? <line x1={a.x1} y1={a.y1} x2={a.x2} y2={a.y2} stroke="#1CB0F6" strokeWidth={b.hour === currentHour ? 6 : 5} strokeLinecap="round" /> : null}
+                                  {lenE > 0 ? <line x1={e.x1} y1={e.y1} x2={e.x2} y2={e.y2} stroke="#8B5CF6" strokeWidth={b.hour === currentHour ? 6 : 5} strokeLinecap="round" /> : null}
+                                </g>
+                              )
+                            })}
+                            {[0, 3, 6, 9, 12, 15, 18, 21].map((h) => {
+                              const rad = ((h * 15 - 90) * Math.PI) / 180
+                              const r = 152
+                              const x = 160 + Math.cos(rad) * r
+                              const y = 160 + Math.sin(rad) * r
+                              const isCur = h === currentHour
+                              return (
+                                <text key={h} x={x} y={y} textAnchor="middle" dominantBaseline="middle" fontSize={11.5} fontWeight={isCur ? 900 : 700} fill={isCur ? "#0F172A" : "#94A3B8"}>
+                                  {`${String(h).padStart(2, "0")}h`}
+                                </text>
+                              )
+                            })}
+                          </svg>
+                          <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                            <div className="text-center">
+                              <p className="text-4xl font-black tracking-tight text-[#101A33] tabular-nums sm:text-[42px] dark:text-white">{currentHourLabel}</p>
+                              <p className="mt-0.5 text-xs font-bold text-slate-400">Giờ hiện tại</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-2 gap-2 sm:w-[204px] sm:shrink-0 sm:grid-cols-1">
+                          <div className="rounded-[16px] bg-[#EAF5FE] px-3.5 py-3 dark:bg-sky-500/10">
+                            <p className="text-[11px] font-bold text-slate-400 dark:text-slate-300">Lượt nộp bài</p>
+                            <p className="mt-0.5 text-[32px] font-black leading-none text-[#1C9CF0] tabular-nums">{contributionTotals.attempts}</p>
+                          </div>
+                          <div className="rounded-[16px] bg-[#F0EBFF] px-3.5 py-3 dark:bg-violet-500/10">
+                            <p className="text-[11px] font-bold text-slate-400 dark:text-slate-300">Tổng events</p>
+                            <p className="mt-0.5 text-[32px] font-black leading-none text-[#8B5CF6] tabular-nums">{contributionTotals.events}</p>
+                          </div>
+                          <div className="col-span-2 grid grid-cols-2 gap-2 sm:col-span-1">
+                            <div className="rounded-[14px] bg-[#F4F6FA] px-3 py-2.5 dark:bg-white/5">
+                              <p className="text-[11px] font-bold text-slate-400">Cao điểm</p>
+                              <p className="mt-0.5 text-lg font-black text-[#101A33] tabular-nums dark:text-white">{contributionPeak?.label ?? "—"}</p>
+                              <p className="mt-0.5 text-[11px] font-bold leading-snug text-slate-400">
+                                {contributionPeak && (contributionPeak.attempts > 0 || contributionPeak.events > 0)
+                                  ? `${contributionPeak.attempts} nộp · ${contributionPeak.events} ev.`
+                                  : "Chưa có dữ liệu."}
+                              </p>
+                            </div>
+                            <div className="rounded-[14px] bg-[#F4F6FA] px-3 py-2.5 dark:bg-white/5">
+                              <p className="text-[11px] font-bold leading-tight text-slate-400">Events mỗi nộp</p>
+                              <p className="mt-0.5 text-lg font-black text-[#101A33] tabular-nums dark:text-white">{eventsPerSubmit}</p>
+                              <p className="mt-0.5 text-[11px] font-bold text-slate-400">trung bình</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {/* Events theo loại — pill bars */}
+                    <div className="rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
+                      <div className="flex flex-wrap items-start gap-2">
+                        <div className="min-w-0">
+                          <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Events theo loại</p>
+                          <p className="mt-1 text-lg font-black tracking-tight text-[#101A33] sm:text-xl dark:text-white">
+                            {evTypeTotal} events · {evTypeCounts.length} loại
+                          </p>
+                        </div>
+                        <p className="ml-auto flex items-center gap-1.5 pt-1 text-[11px] font-bold text-amber-500">
+                          <span className="h-2.5 w-2.5 rounded-full bg-amber-500" />Cần chú ý
+                        </p>
+                      </div>
+                      <div className="mt-3 space-y-2">
+                        {evTypeCounts.length ? evTypeCounts.map((c) => {
+                          const warn = c.key === "retry_wrong" || c.key === "abandon_attempt" || c.key === "devtools_attempt"
+                          const barW = Math.round((c.count / evTypeMax) * 100)
+                          const pct = evTypeTotal > 0 ? Math.round((c.count / evTypeTotal) * 100) : 0
                           return (
-                            <div key={b.hour} className="min-w-0" title={`${b.label}: ${b.attempts} lượt nộp, ${b.events} events`}>
-                              <div className={`flex h-[104px] flex-col rounded-[12px] border border-black/5 bg-white px-1 pb-1.5 pt-2 transition-transform duration-150 hover:scale-[1.04] sm:h-[128px] dark:border-white/10 dark:bg-slate-900 ${isCurrentHour ? "outline outline-2 outline-offset-1 outline-[#1CB0F6]" : ""}`}>
-                                <div className="flex min-h-0 flex-1 items-end justify-center gap-1 sm:gap-1.5">
-                                  <div className="flex h-full w-2.5 flex-col justify-end overflow-hidden rounded-full bg-sky-100 sm:w-3 dark:bg-sky-500/15">
-                                    <div className="w-full rounded-full bg-[#1CB0F6]" style={{ height: `${b.attempts > 0 ? Math.max(6, Math.round((b.attempts / attemptsMax) * 100)) : 0}%` }} />
-                                  </div>
-                                  <div className="flex h-full w-2.5 flex-col justify-end overflow-hidden rounded-full bg-violet-100 sm:w-3 dark:bg-violet-500/15">
-                                    <div className="w-full rounded-full bg-[#8B5CF6]" style={{ height: `${b.events > 0 ? Math.max(6, Math.round((b.events / eventsMax) * 100)) : 0}%` }} />
-                                  </div>
-                                </div>
-                                <div className="mt-1 min-w-0 text-center text-[8px] font-black leading-tight tabular-nums sm:text-[9px]">
-                                  {b.attempts > 0 || b.events > 0 ? (
-                                    <>
-                                      <p className="truncate text-[#1CB0F6]">{b.attempts}</p>
-                                      <p className="truncate text-[#8B5CF6]">{b.events >= 1000 ? `${(b.events / 1000).toFixed(1).replace(".", ",")}k` : b.events}</p>
-                                    </>
-                                  ) : (
-                                    <p className="truncate text-slate-300 dark:text-slate-600">—</p>
-                                  )}
-                                </div>
-                                <p className="truncate text-center text-[8px] font-bold text-slate-400 sm:text-[9px]">{b.label}</p>
+                            <div key={c.key} title={`${ACTIVITY_LABELS[c.key as ActivityEventType] ?? c.key}: ${c.count} (${pct}%)`} className="relative flex h-9 items-center overflow-hidden rounded-[12px] bg-[#F1F5F9] sm:h-10 dark:bg-white/5">
+                              <div
+                                className={cn("absolute inset-y-0 left-0 rounded-[12px]", warn ? "bg-[#FBD9A0] dark:bg-amber-500/30" : "bg-[#BEE5FB] dark:bg-sky-500/25")}
+                                style={{ width: `${Math.max(barW, 13)}%`, minWidth: 104, maxWidth: "100%" }}
+                              />
+                              <div className="relative flex w-full items-center gap-2 pl-3 pr-2.5">
+                                <span className={cn("min-w-0 flex-1 truncate text-[13px] font-bold", warn ? "text-[#8A4B00] dark:text-amber-200" : "text-[#1E3A5F] dark:text-slate-100")}>
+                                  {ACTIVITY_LABELS[c.key as ActivityEventType] ?? c.key}
+                                </span>
+                                <span className={cn("shrink-0 text-[15px] font-black tabular-nums", warn ? "text-[#B45309] dark:text-amber-300" : "text-[#101A33] dark:text-white")}>{c.count}</span>
+                                <span className="w-8 shrink-0 text-right text-xs font-bold text-slate-400 tabular-nums">{pct}%</span>
                               </div>
                             </div>
                           )
-                        })}
+                        }) : <p className="text-xs font-semibold text-slate-400">Chưa có event nào.</p>}
                       </div>
-                      <p className="mt-3 border-t border-slate-100 pt-3 text-[11px] font-bold text-slate-400 dark:border-white/10">
-                        {contributionPeak && (contributionPeak.attempts > 0 || contributionPeak.events > 0)
-                          ? `Cao điểm ${contributionPeak.label} hôm nay: ${contributionPeak.attempts} lượt nộp · ${contributionPeak.events} events`
-                          : "Chưa có dữ liệu trong ngày hôm nay."}
-                      </p>
-                    </div>
-                    <div className="space-y-2.5 rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] lg:col-span-2 dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
-                      <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Events theo loại</p>
-                      {evTypeCounts.length ? evTypeCounts.map((c) => (
-                        <div key={c.key} className="flex items-center gap-2.5 text-xs font-bold">
-                          <span className="w-28 shrink-0 truncate text-slate-600 sm:w-32 dark:text-slate-300">{ACTIVITY_LABELS[c.key as ActivityEventType] ?? c.key}</span>
-                          <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-slate-100 dark:bg-white/10">
-                            <div className="h-full rounded-full bg-[#1CB0F6]" style={{ width: `${Math.round((c.count / evTypeMax) * 100)}%` }} />
-                          </div>
-                          <span className="w-8 shrink-0 text-right font-black text-[#100F3E] dark:text-white">{c.count}</span>
-                        </div>
-                      )) : <p className="text-xs font-semibold text-slate-400">Chưa có event nào.</p>}
                     </div>
                   </div>
+                  {/* Top môn — donut + pill bars */}
                   <div className="rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
                     <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Top môn (lượt nộp server)</p>
-                    <div className="mt-3 space-y-2">
-                      {subjectTops.length ? subjectTops.map((s) => (
-                        <div key={s.key} className="flex items-center gap-2.5 text-xs font-bold">
-                          <span className="w-36 shrink-0 truncate text-slate-600 sm:w-40 dark:text-slate-300">{s.key}</span>
-                          <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-slate-100 dark:bg-white/10">
-                            <div className="h-full rounded-full bg-emerald-400" style={{ width: `${Math.round((s.count / Math.max(1, subjectTops[0]?.count ?? 1)) * 100)}%` }} />
-                          </div>
-                          <span className="w-8 shrink-0 text-right font-black text-[#100F3E] dark:text-white">{s.count}</span>
+                    <p className="mt-1 text-lg font-black tracking-tight text-[#101A33] sm:text-xl dark:text-white">
+                      {subjectTops.length ? `${subjectTops.length} môn có lượt nộp` : "Chưa có lượt nộp"}
+                    </p>
+                    <div className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-5">
+                      <div className="relative mx-auto h-[168px] w-[168px] shrink-0 sm:mx-0">
+                        {subjectTotal > 0 ? (
+                          <svg viewBox="0 0 160 160" className="block h-full w-full -rotate-90">
+                            {(() => {
+                              const R = 60
+                              const C = 2 * Math.PI * R
+                              const palette = ["#0FC57C", "#3BD598", "#6FE3AE", "#A4EFC6", "#C9F5DD", "#E0F8EA", "#8ADFC0", "#5BD6A4"]
+                              let acc = 0
+                              return subjectTops.slice(0, 8).map((s, i) => {
+                                const frac = s.count / subjectTotal
+                                const start = acc
+                                acc += frac
+                                const gap = subjectTops.length > 1 ? 0.012 : 0
+                                const f = Math.max(0, frac - gap)
+                                return (
+                                  <circle
+                                    key={s.key}
+                                    cx={80}
+                                    cy={80}
+                                    r={R}
+                                    fill="none"
+                                    stroke={palette[i % palette.length]}
+                                    strokeWidth={22}
+                                    strokeDasharray={`${(f * C).toFixed(2)} ${C.toFixed(2)}`}
+                                    strokeDashoffset={(-start * C).toFixed(2)}
+                                    strokeLinecap="butt"
+                                  />
+                                )
+                              })
+                            })()}
+                          </svg>
+                        ) : (
+                          <div className="flex h-full w-full items-center justify-center rounded-full border-[22px] border-slate-100 dark:border-white/10" />
+                        )}
+                        <div className="absolute inset-0 flex flex-col items-center justify-center">
+                          <p className="text-4xl font-black tracking-tight text-[#101A33] tabular-nums dark:text-white">{subjectTotal}</p>
+                          <p className="mt-0.5 text-xs font-bold text-slate-400">lượt nộp</p>
                         </div>
-                      )) : <p className="text-xs font-semibold text-slate-400">Chưa có.</p>}
+                      </div>
+                      <div className="min-w-0 flex-1 space-y-2">
+                        {subjectTops.length ? subjectTops.slice(0, 8).map((s, i) => {
+                          const top = Math.max(1, subjectTops[0]?.count ?? 1)
+                          const barW = Math.round((s.count / top) * 100)
+                          const pct = subjectTotal > 0 ? Math.round((s.count / subjectTotal) * 100) : 0
+                          const dots = ["bg-[#0FC57C]", "bg-[#3BD598]", "bg-[#6FE3AE]", "bg-[#A4EFC6]", "bg-[#C9F5DD]"]
+                          return (
+                            <div key={s.key} title={`${s.key}: ${s.count} (${pct}%)`} className="relative flex h-10 items-center overflow-hidden rounded-[12px] bg-[#F1F5F9] sm:h-11 dark:bg-white/5">
+                              <div
+                                className="absolute inset-y-0 left-0 rounded-[12px] bg-[#B9EDD3] dark:bg-emerald-500/25"
+                                style={{ width: `${Math.max(barW, 12)}%`, minWidth: 150, maxWidth: "100%", opacity: 1 - Math.min(i, 5) * 0.06 }}
+                              />
+                              <div className="relative flex w-full items-center gap-2 pl-3 pr-2.5">
+                                <span className={cn("h-2.5 w-2.5 shrink-0 rounded-full", dots[Math.min(i, dots.length - 1)])} />
+                                <span className="min-w-0 flex-1 truncate text-[13px] font-bold text-[#1E3A5F] dark:text-slate-100">{s.key}</span>
+                                <span className="shrink-0 text-[15px] font-black text-[#101A33] tabular-nums dark:text-white">{s.count}</span>
+                                <span className="w-9 shrink-0 text-right text-xs font-bold text-slate-400 tabular-nums">{pct}%</span>
+                              </div>
+                            </div>
+                          )
+                        }) : <p className="text-xs font-semibold text-slate-400">Chưa có.</p>}
+                      </div>
                     </div>
                   </div>
                 </section>
