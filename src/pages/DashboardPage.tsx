@@ -67,6 +67,7 @@ import { applySubjectDisplayOverrides, filterDownloadableSubjectExams, filterVis
 import type { ContactModalType } from "@/components/ContactModal"
 import type { UserNotification } from "@/features/notifications/api/notifications"
 import { useNotifications } from "@/features/notifications/useNotifications"
+import { loadLeaderboardVisibility, prefetchDashboardData, setCachedLeaderboardVisibility } from "@/features/dashboard/api/dashboardPrefetch"
 import { DownloadPickerModal } from "@/components/DownloadPickerModal"
 import { LoginRequiredModal } from "@/components/LoginRequiredModal"
 import { DownloadLimitModal } from "@/components/DownloadLimitModal"
@@ -169,6 +170,8 @@ export function DashboardPage({
   const [activeView, setActiveView] = useState<DashboardView>(() => getDashboardView(getCurrentPath()))
   const [leaderboardComputedAt, setLeaderboardComputedAt] = useState<string | null>(null)
   const { user: dashboardUser } = useAuth()
+  const dashboardUserIdRef = useRef(dashboardUser?.id)
+  dashboardUserIdRef.current = dashboardUser?.id
   useEffect(() => {
     if (!dashboardUser?.id) return
     const migrationKey = `quizpka:${dashboardUser.id}:leaderboard-visibility-server-v1`
@@ -180,9 +183,35 @@ export function DashboardPage({
     void Promise.resolve(supabase.rpc("update_my_leaderboard_visibility", { p_visible: false })).then(({ error }) => {
       if (error) return
       writeStorage(migrationKey, "true")
+      setCachedLeaderboardVisibility(dashboardUser.id, false)
       invalidateLeaderboardSnapshotCache(dashboardUser.id)
     }).catch(() => undefined)
   }, [dashboardUser?.id])
+  useEffect(() => {
+    const userId = dashboardUser?.id
+    if (activeView !== "home" || !userId) return
+    const connection = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection
+    if (connection?.saveData) return
+
+    let started = false
+    let timeoutId: number | undefined
+    let idleId: number | undefined
+    const run = () => {
+      if (started || dashboardUserIdRef.current !== userId) return
+      started = true
+      void prefetchDashboardData(userId, dashboardUser?.created_at, () => dashboardUserIdRef.current === userId)
+    }
+    const idleWindow = window as Window & {
+      requestIdleCallback?: (callback: () => void, options?: { timeout: number }) => number
+      cancelIdleCallback?: (id: number) => void
+    }
+    if (idleWindow.requestIdleCallback) idleId = idleWindow.requestIdleCallback(run, { timeout: 1800 })
+    else timeoutId = window.setTimeout(run, 450)
+    return () => {
+      if (!started && idleId !== undefined) idleWindow.cancelIdleCallback?.(idleId)
+      if (!started && timeoutId !== undefined) window.clearTimeout(timeoutId)
+    }
+  }, [activeView, dashboardUser?.created_at, dashboardUser?.id])
   const { unreadCount: unreadNotificationCount } = useNotifications()
   const [payment, setPayment] = useState<{ payment: { qrUrl: string } } | null>(null)
   const [paymentProductId, setPaymentProductId] = useState("dsai101")
@@ -1492,11 +1521,10 @@ function SettingsView({ lang, theme, onToggleLang, onToggleTheme, onOpenContact 
   useEffect(() => {
     if (!user?.id) return
     let cancelled = false
-    void Promise.resolve(supabase.rpc("get_my_leaderboard_visibility")).then(({ data, error }) => {
+    void loadLeaderboardVisibility(user.id).then((visible) => {
       if (cancelled) return
-      if (error || typeof data !== "boolean") { setVisibilitySaveError(true); return }
-      setLeaderboardVisible(data)
-      writeStorage(`quizpka:${user.id}:leaderboard-visible`, String(data))
+      setLeaderboardVisible(visible)
+      writeStorage(`quizpka:${user.id}:leaderboard-visible`, String(visible))
       setVisibilitySaveError(false)
     }).catch(() => { if (!cancelled) setVisibilitySaveError(true) })
     return () => { cancelled = true }
@@ -1532,6 +1560,7 @@ function SettingsView({ lang, theme, onToggleLang, onToggleTheme, onOpenContact 
       const { error } = await supabase.rpc("update_my_leaderboard_visibility", { p_visible: nextValue })
       if (error) throw error
       setLeaderboardVisible(nextValue)
+      setCachedLeaderboardVisibility(user.id, nextValue)
       writeStorage(`quizpka:${user.id}:leaderboard-visible`, String(nextValue))
       invalidateLeaderboardSnapshotCache(user.id)
     } catch {

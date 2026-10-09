@@ -49,6 +49,8 @@ import { useAuth } from "@/auth/AuthProvider"
 import { appRoutes } from "@/app/navigation"
 import { savePracticeHistory } from "@/lib/practiceSession"
 import { endAttemptSession, logActivityEvent, submitClientReportedAttempt } from "@/features/activity/lib/activityLog"
+import { invalidateSyncedHistoryCache } from "@/features/history/api/userHistory"
+import { invalidateLeaderboardSnapshotCache } from "@/lib/leaderboard"
 import { incrementSubjectAttempt } from "@/lib/subjectAttemptStats"
 import { playAnswerFeedback } from "@/features/quiz/lib/answerFeedbackSound"
 
@@ -224,6 +226,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
       })),
     }
     savePracticeHistory(historyItem, user.id)
+    invalidateSyncedHistoryCache(user.id)
     logActivityEvent(user.id, activeRetryNumber ? "retry_wrong" : "submit_attempt", {
       historyId,
       examId: exam.id,
@@ -263,6 +266,8 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
           toeicScope,
           wrongQuestions: historyItem.wrongQuestions as unknown as Array<Record<string, unknown>>,
         })
+        invalidateSyncedHistoryCache(user.id)
+        invalidateLeaderboardSnapshotCache(user.id)
         setSyncError(null)
       } catch (submitError) {
         setSyncError(submitError instanceof Error ? submitError.message : "Không đồng bộ được lịch sử. Hãy kiểm tra mạng rồi nộp lại.")

@@ -5,6 +5,33 @@ import { submitClientReportedAttempt } from "@/features/activity/lib/activityLog
 import { examCatalog, getSubjectById } from "@/data/subjects"
 import { getPaidProductId } from "@/lib/purchases"
 
+const HISTORY_CACHE_TTL_MS = 60_000
+type HistoryCacheEntry = { history: PracticeHistoryItem[]; fetchedAt: number }
+const historyCache = new Map<string, HistoryCacheEntry>()
+const historyInflight = new Map<string, Promise<PracticeHistoryItem[]>>()
+const historyVersions = new Map<string, number>()
+
+function cachedHistory(userId: string): HistoryCacheEntry | undefined {
+  return historyCache.get(userId)
+}
+
+function isFreshHistory(entry: HistoryCacheEntry | undefined): boolean {
+  return Boolean(entry) && Date.now() - (entry as HistoryCacheEntry).fetchedAt < HISTORY_CACHE_TTL_MS
+}
+
+export function invalidateSyncedHistoryCache(userId: string): void {
+  historyCache.delete(userId)
+  historyInflight.delete(userId)
+  historyVersions.set(userId, (historyVersions.get(userId) ?? 0) + 1)
+}
+
+export function clearSyncedHistoryCache(userId?: string): void {
+  if (userId) invalidateSyncedHistoryCache(userId)
+  else {
+    for (const id of new Set([...historyCache.keys(), ...historyInflight.keys()])) invalidateSyncedHistoryCache(id)
+  }
+}
+
 type ServerAttemptRow = {
   history_id: string
   user_id: string
@@ -106,15 +133,72 @@ function isPaidAttempt(subjectId: string, examId: string): boolean {
   return false
 }
 
+async function loadAndCacheUserHistory(userId: string, userCreatedAt?: string, force = false): Promise<PracticeHistoryItem[]> {
+  const cached = cachedHistory(userId)
+  if (!force && isFreshHistory(cached)) return cached?.history ?? []
+  const running = historyInflight.get(userId)
+  if (running) return running
+  const version = historyVersions.get(userId) ?? 0
+
+  const request = (async () => {
+    const local = readPracticeHistory(userId, userCreatedAt)
+    const server = await fetchUserHistory(userId, 100)
+    const serverIds = new Set(server.map((item) => item.id))
+    const missing = local.filter((item) => !serverIds.has(item.id))
+    const merged = [...missing, ...server].sort(
+      (a, b) => Date.parse(b.completedAt) - Date.parse(a.completedAt),
+    ).slice(0, 100)
+    if ((historyVersions.get(userId) ?? 0) === version) {
+      historyCache.set(userId, { history: merged, fetchedAt: Date.now() })
+    }
+
+    // Backfill local attempts once per successful shared fetch.
+    for (const item of missing.slice(0, 20)) {
+      if (isPaidAttempt(item.subjectId, item.examId)) continue
+      void submitClientReportedAttempt({
+        historyId: item.id,
+        examId: item.examId,
+        subjectId: item.subjectId,
+        title: item.title,
+        mode: item.mode,
+        score: item.score,
+        correct: item.correct,
+        total: item.total,
+        accuracy: item.accuracy,
+        durationSeconds: item.durationSeconds,
+        retryOf: item.retryOfHistoryId,
+        retryNumber: item.retryNumber,
+        setup: item.setup as unknown as Record<string, unknown>,
+        lang: item.lang,
+        chapterId: item.chapterId,
+        toeicScope: item.toeicScope,
+        wrongQuestions: (item.wrongQuestions ?? []) as unknown as Array<Record<string, unknown>>,
+      }).catch(() => undefined)
+    }
+    return merged
+  })()
+  historyInflight.set(userId, request)
+  try {
+    return await request
+  } finally {
+    if (historyInflight.get(userId) === request) historyInflight.delete(userId)
+  }
+}
+
+/** Preload the current user's history and share the request with mounted views. */
+export function prefetchSyncedHistory(userId: string, userCreatedAt?: string): Promise<PracticeHistoryItem[]> {
+  return loadAndCacheUserHistory(userId, userCreatedAt)
+}
+
 /**
  * Lịch sử đồng bộ đa thiết bị: server là nguồn thật.
  * Merge thêm bài local chưa kịp lên server (hiển thị ngay) và backfill 1 lần.
  */
 export function useSyncedHistory(userId: string | undefined, userCreatedAt?: string) {
   const [history, setHistory] = useState<PracticeHistoryItem[]>(() =>
-    userId ? readPracticeHistory(userId, userCreatedAt) : [],
+    userId ? cachedHistory(userId)?.history ?? readPracticeHistory(userId, userCreatedAt) : [],
   )
-  const [loading, setLoading] = useState(Boolean(userId))
+  const [loading, setLoading] = useState(Boolean(userId) && !isFreshHistory(userId ? cachedHistory(userId) : undefined))
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
@@ -124,49 +208,21 @@ export function useSyncedHistory(userId: string | undefined, userCreatedAt?: str
       return
     }
     let cancelled = false
-    setLoading(true)
     setError(null)
+    const cached = cachedHistory(userId)
+    setLoading(!isFreshHistory(cached))
     const local = readPracticeHistory(userId, userCreatedAt)
-    void fetchUserHistory(userId, 100)
-      .then((server) => {
+    if (cached) setHistory(cached.history)
+    void loadAndCacheUserHistory(userId, userCreatedAt)
+      .then((merged) => {
         if (cancelled) return
-        const serverIds = new Set(server.map((item) => item.id))
-        const missing = local.filter((item) => !serverIds.has(item.id))
-        // Hiển thị mới nhất trước: gộp rồi sort theo completedAt giảm dần.
-        const merged = [...missing, ...server].sort(
-          (a, b) => Date.parse(b.completedAt) - Date.parse(a.completedAt),
-        )
-        setHistory(merged.slice(0, 100))
+        setHistory(merged)
         setError(null)
-        // Backfill bài local cũ lên server để các thiết bị khác thấy (best-effort).
-        // Bỏ qua bài trả phí: RPC luôn 400, không bao giờ sync được.
-        for (const item of missing.slice(0, 20)) {
-          if (isPaidAttempt(item.subjectId, item.examId)) continue
-          void submitClientReportedAttempt({
-            historyId: item.id,
-            examId: item.examId,
-            subjectId: item.subjectId,
-            title: item.title,
-            mode: item.mode,
-            score: item.score,
-            correct: item.correct,
-            total: item.total,
-            accuracy: item.accuracy,
-            durationSeconds: item.durationSeconds,
-            retryOf: item.retryOfHistoryId,
-            retryNumber: item.retryNumber,
-            setup: item.setup as unknown as Record<string, unknown>,
-            lang: item.lang,
-            chapterId: item.chapterId,
-            toeicScope: item.toeicScope,
-            wrongQuestions: (item.wrongQuestions ?? []) as unknown as Array<Record<string, unknown>>,
-          }).catch(() => undefined)
-        }
       })
       .catch((fetchError: unknown) => {
         if (cancelled) return
         // Rớt mạng: dùng cache local để không trắng màn hình.
-        setHistory(local)
+        setHistory(cached?.history ?? local)
         setError(fetchError instanceof Error ? fetchError.message : "Không tải được lịch sử.")
       })
       .finally(() => {
