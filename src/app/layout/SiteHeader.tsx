@@ -51,7 +51,6 @@ export function SiteHeader({
   onOpenLogin,
   t,
   navHrefs,
-  responsiveTrial = false,
 }: {
   lang: Lang
   theme: Theme
@@ -60,7 +59,6 @@ export function SiteHeader({
   onOpenLogin: () => void
   t: Record<string, string>
   navHrefs?: Partial<Record<NavKey, string>>
-  responsiveTrial?: boolean
 }) {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [menuVisible, setMenuVisible] = useState(false)
@@ -155,7 +153,7 @@ export function SiteHeader({
   return (
     <>
       <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-slate-50/95 shadow-[var(--shadow-1)] backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/95 dark:shadow-[var(--shadow-2)] supports-[backdrop-filter]:bg-slate-50/80 dark:supports-[backdrop-filter]:bg-slate-950/80">
-      <div className={cn("relative mx-auto flex w-full max-w-[1120px] items-center justify-between gap-3 px-6 py-[9px] md:py-[8px] lg:px-8", responsiveTrial && "max-[479px]:px-4")}>
+      <div className={cn("relative mx-auto flex w-full max-w-[1120px] items-center justify-between gap-3 px-6 py-[9px] md:py-[8px] lg:px-8 max-[479px]:px-4 2xl:max-w-[1200px]")}>
         {/* Mobile: hamburger left */}
         <button
           type="button"
@@ -190,13 +188,13 @@ export function SiteHeader({
 
         <a
           href="/"
-          className="absolute left-1/2 inline-flex -translate-x-1/2 items-center md:static md:translate-x-0"
+          className={cn("absolute left-1/2 inline-flex -translate-x-1/2 items-center md:static md:translate-x-0 max-[479px]:max-w-[52vw]")}
           aria-label={t.brand.replace(".", "")}
         >
           <img
             src={`${R2_SRC_ASSET_BASE}/logo.webp`}
             alt={t.brand.replace(".", "")}
-            className="h-[31px] w-auto object-contain sm:h-[35px]"
+            className={cn("h-[31px] w-auto object-contain sm:h-[35px] max-[479px]:h-[28px] max-[479px]:max-w-full")}
           />
         </a>
 
@@ -281,7 +279,7 @@ export function SiteHeader({
           />
           <nav
             data-state={menuState}
-            className={cn("mobile-menu-panel absolute left-6 right-6 top-[calc(100%-4px)] z-50 overflow-hidden rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_4px_0_#DCDCDC] md:hidden dark:border-white/10 dark:bg-slate-900", responsiveTrial && "max-[479px]:left-4 max-[479px]:right-4")}
+            className={cn("mobile-menu-panel absolute left-6 right-6 top-[calc(100%-4px)] z-50 overflow-hidden rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_4px_0_#DCDCDC] md:hidden dark:border-white/10 dark:bg-slate-900 max-[479px]:left-4 max-[479px]:right-4")}
           >
             <ul className="space-y-3">
               {navKeys.map((item) => {

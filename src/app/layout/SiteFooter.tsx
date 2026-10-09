@@ -2,14 +2,12 @@ import { appRoutes, navigate } from "@/app/navigation"
 
 export function SiteFooter({
   t,
-  responsiveTrial = false,
 }: {
   t: Record<string, string>
-  responsiveTrial?: boolean
 }) {
   return (
     <footer className="mt-auto border-t border-slate-200 bg-white/90 backdrop-blur-md dark:border-white/10 dark:bg-slate-950/90">
-      <div className={`mx-auto flex w-full max-w-[1120px] flex-col items-center gap-3 px-6 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:py-5 ${responsiveTrial ? "max-[479px]:px-4" : ""}`}>
+      <div className="mx-auto flex w-full max-w-[1120px] flex-col items-center gap-3 px-6 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:py-5 max-[479px]:px-4 2xl:max-w-[1200px]">
         <p className="order-2 text-center text-[13px] font-medium leading-5 text-slate-500 sm:order-1 sm:text-left">
           {t.copyright}
         </p>
@@ -34,7 +32,7 @@ export function SiteFooter({
           />
           <a
             href="mailto:quizpka@gmail.com"
-            className="rounded-lg px-2.5 py-1.5 text-[13px] font-medium leading-5 text-slate-500 transition-colors hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
+            className="rounded-lg px-2.5 py-1.5 text-[13px] font-medium leading-5 text-slate-500 transition-colors hover:text-slate-900 dark:text-slate-300 dark:hover:text-white max-w-full break-all text-center"
           >
             Email: quizpka@gmail.com
           </a>

@@ -89,7 +89,7 @@ const STEP_ICONS: LucideIcon[] = [
   BarChart3,
 ]
 
-export function TestPage({ lang, responsiveTrial = false }: { lang: Lang; responsiveTrial?: boolean }) {
+export function TestPage({ lang }: { lang: Lang }) {
   const t = copy[lang]
   const frameRef = useRef<HTMLIFrameElement>(null)
 
@@ -136,7 +136,7 @@ export function TestPage({ lang, responsiveTrial = false }: { lang: Lang; respon
       {/* Thay vị trí #docs trang chủ: liệt kê chức năng (id riêng cho trang test). */}
       <section
         id="features"
-        className={`mx-auto flex w-full max-w-[1120px] flex-col scroll-mt-28 border-t border-slate-200 ${responsiveTrial ? "px-[clamp(16px,2vw+10px,32px)]" : "px-[clamp(24px,2vw+16px,32px)]"} pb-[clamp(40px,2.5vw+30px,48px)] pt-[clamp(56px,4vw+40px,64px)] dark:border-white/10`}
+        className="mx-auto flex w-full max-w-[1120px] flex-col scroll-mt-28 border-t border-slate-200 px-[clamp(16px,2vw+10px,32px)] 2xl:max-w-[1200px] pb-[clamp(40px,2.5vw+30px,48px)] pt-[clamp(56px,4vw+40px,64px)] dark:border-white/10"
       >
         <div className="py-4 pb-10 text-center sm:py-6 sm:pb-12">
           <h2 className="lp-section-heading">
@@ -147,7 +147,7 @@ export function TestPage({ lang, responsiveTrial = false }: { lang: Lang; respon
           </p>
         </div>
 
-        <div className={`grid gap-4 ${responsiveTrial ? "grid-cols-1 min-[400px]:grid-cols-2 xl:grid-cols-4" : "grid-cols-2 md:grid-cols-2 xl:grid-cols-4"}`}>
+        <div className="grid gap-4 grid-cols-1 min-[400px]:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
           {t.features.map((feature) => {
             const Icon = FEATURE_ICONS[feature.icon]
             return (
@@ -173,7 +173,7 @@ export function TestPage({ lang, responsiveTrial = false }: { lang: Lang; respon
       {/* Thay vị trí #features trang chủ: hướng dẫn sử dụng (id riêng cho trang test). */}
       <section
         id="starts"
-        className={`mx-auto flex w-full max-w-[1120px] flex-col scroll-mt-28 border-t border-slate-200 ${responsiveTrial ? "px-[clamp(16px,2vw+10px,32px)]" : "px-[clamp(24px,2vw+16px,32px)]"} pb-[clamp(40px,2.5vw+30px,48px)] pt-[clamp(56px,4vw+40px,64px)] dark:border-white/10`}
+        className="mx-auto flex w-full max-w-[1120px] flex-col scroll-mt-28 border-t border-slate-200 px-[clamp(16px,2vw+10px,32px)] 2xl:max-w-[1200px] pb-[clamp(40px,2.5vw+30px,48px)] pt-[clamp(56px,4vw+40px,64px)] dark:border-white/10"
       >
         <div className="py-4 pb-10 text-center sm:py-6 sm:pb-12">
           <h2 className="lp-section-heading">

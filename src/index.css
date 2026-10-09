@@ -788,3 +788,32 @@ html.dark .lp-eyebrow-blue > span:first-child {
 }
 
 /* =========================================================
+   Landing responsive: heading balance/wrap + small-screen CTA
+   wrap (<400px) + ultra-wide heading ceiling (>=1536px).
+   .lp-heading / .lp-cta-row are landing-only (HeroSection).
+   ========================================================= */
+.lp-heading {
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 399.98px) {
+  .lp-cta-row .lp-btn {
+    min-width: 0;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+    height: auto;
+    min-height: var(--button-height);
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .lp-heading {
+    --heading-xl-size: 64px;
+  }
+}
+
+/* =========================================================

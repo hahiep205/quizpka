@@ -276,11 +276,10 @@ export default function App() {
             }
             onOpenLogin={openLogin}
             navHrefs={testNavHrefs}
-            responsiveTrial
           />
-          <HeroSection t={testT} onOpenLogin={openLogin} onOpenDashboard={() => navigate(appRoutes.dashboard)} authenticated={status === "authenticated"} responsiveTrial />
-          <Suspense fallback={<RouteLoading />}><TestPage lang={lang} responsiveTrial /></Suspense>
-          <SiteFooter t={t} responsiveTrial />
+          <HeroSection t={testT} onOpenLogin={openLogin} onOpenDashboard={() => navigate(appRoutes.dashboard)} authenticated={status === "authenticated"} />
+          <Suspense fallback={<RouteLoading />}><TestPage lang={lang} /></Suspense>
+          <SiteFooter t={t} />
         </div>
 
         <Suspense fallback={null}><ContactModal
