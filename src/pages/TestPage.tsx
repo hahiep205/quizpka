@@ -147,7 +147,7 @@ export function TestPage({ lang }: { lang: Lang }) {
           </p>
         </div>
 
-        <div className="grid gap-4 grid-cols-1 min-[400px]:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+        <div className="grid gap-3 sm:gap-4 grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
           {t.features.map((feature) => {
             const Icon = FEATURE_ICONS[feature.icon]
             return (

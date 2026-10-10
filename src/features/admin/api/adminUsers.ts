@@ -44,6 +44,8 @@ type AdminUserRow = {
 
 type AdminKpisRow = Record<string, number>
 
+export type AdminCreatedTodayUser = Pick<AdminUser, "id" | "email" | "displayName" | "avatarUrl" | "role" | "status" | "createdAt">
+
 const EMPTY_KPIS: AdminKpis = {
   totalLogined: 0,
   activeAccount: 0,
@@ -144,6 +146,45 @@ export async function fetchAdminUsersPage(options: FetchAdminUsersPageOptions = 
     return { ok: true, error: null, users, total: Number(result.total ?? users.length), kpis: parseKpis(result.kpis) }
   } catch (err) {
     return { ok: false, error: err instanceof Error ? err.message : "Unknown error", users: [], total: 0, kpis: null }
+  }
+}
+
+/** Fetches all profiles created during the current Vietnam calendar day. */
+export async function fetchAdminUsersCreatedToday(): Promise<AdminCreatedTodayUser[]> {
+  const dateParts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Ho_Chi_Minh",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(new Date())
+  const part = (type: "year" | "month" | "day") => dateParts.find((item) => item.type === type)?.value ?? ""
+  const [year, month, day] = [part("year"), part("month"), part("day")].map(Number)
+  const start = new Date(Date.UTC(year, month - 1, day) - 7 * 60 * 60 * 1000).toISOString()
+  const end = new Date(Date.UTC(year, month - 1, day + 1) - 7 * 60 * 60 * 1000).toISOString()
+  const pageSize = 500
+  const rows: AdminCreatedTodayUser[] = []
+
+  for (let offset = 0; ; offset += pageSize) {
+    const { data, error } = await supabase
+      .from("profiles")
+      .select("id,email,display_name,avatar_url,role,status,created_at")
+      .gte("created_at", start)
+      .lt("created_at", end)
+      .order("created_at", { ascending: false })
+      .range(offset, offset + pageSize - 1)
+    if (error) throw new Error(error.message)
+
+    const page = (data ?? []).map((row) => ({
+      id: row.id,
+      email: row.email ?? null,
+      displayName: row.display_name ?? null,
+      avatarUrl: row.avatar_url ?? null,
+      role: row.role === "admin" ? "admin" as const : "user" as const,
+      status: row.status === "blocked" ? "blocked" as const : "active" as const,
+      createdAt: row.created_at ?? null,
+    }))
+    rows.push(...page)
+    if (page.length < pageSize) return rows
   }
 }
 

@@ -7,7 +7,7 @@ import { schoolOrFacultyLabel } from "@/auth/profilePreferences"
 import { DashboardStatCard, dashboardStatGridClass } from "@/components/DashboardStatCard"
 import { Card } from "@/components/ui/card"
 import { Dialog } from "@/components/ui/dialog"
-import { fetchAdminUsersPage, setAdminUserStatus, type FetchAdminUsersPageOptions } from "@/features/admin/api/adminUsers"
+import { fetchAdminUsersCreatedToday, fetchAdminUsersPage, setAdminUserStatus, type AdminCreatedTodayUser, type FetchAdminUsersPageOptions } from "@/features/admin/api/adminUsers"
 import { fetchBlockedViewStat } from "@/features/admin/api/blockedViews"
 import { fetchUserLoginEvents, type LoginEvent } from "@/features/admin/api/loginEvents"
 import { fetchAdminAttempts, fetchAdminEvents, fetchPracticeAttempts, fetchUserActivity } from "@/features/admin/api/adminActivity"
@@ -171,6 +171,10 @@ export function AdminPage({ lang }: Props) {
   const [sortKey, setSortKey] = useState<AdminSortKey | "risk">("lastActive")
   const [sortDir, setSortDir] = useState<"asc" | "desc">("desc")
   const [selectedId, setSelectedId] = useState<string | null>(null)
+  const [newUsersDialogOpen, setNewUsersDialogOpen] = useState(false)
+  const [newUsersToday, setNewUsersToday] = useState<AdminCreatedTodayUser[]>([])
+  const [newUsersLoading, setNewUsersLoading] = useState(false)
+  const [newUsersError, setNewUsersError] = useState<string | null>(null)
   // Cache AdminUser theo id cho UserDrawer: drawer có thể mở từ timeline /
   // attempts (user không nằm trên trang hiện tại) — fetch 1 dòng khi thiếu.
   const [userCache, setUserCache] = useState<Map<string, AdminUser>>(new Map())
@@ -629,9 +633,12 @@ export function AdminPage({ lang }: Props) {
     return peak
   }, [hourBuckets])
   const currentHour = new Date().getHours()
+  // Card "Hoạt động trong ngày": window ngày lịch 00:00–23:59 (giờ địa phương),
+  // không dùng rangedEvents (24h trượt) để khỏi lẫn event của hôm qua.
+  const todayEvents = useMemo(() => filterByToday(events, (e) => e.createdAt), [events])
   const evTypeCounts = useMemo(
-    () => eventsByType(rangedEvents).filter((c) => !HIDDEN_OVERVIEW_EVENT_TYPES.includes(c.key as ActivityEventType)),
-    [rangedEvents],
+    () => eventsByType(todayEvents).filter((c) => !HIDDEN_OVERVIEW_EVENT_TYPES.includes(c.key as ActivityEventType)),
+    [todayEvents],
   )
   const evTypeMax = useMemo(() => Math.max(1, ...evTypeCounts.map((c) => c.count)), [evTypeCounts])
   const todayAttempts = useMemo(() => filterByToday(attempts, (a) => a.completedAt), [attempts])
@@ -644,6 +651,18 @@ export function AdminPage({ lang }: Props) {
   const currentHourLabel = `${String(currentHour).padStart(2, "0")}h`
 
   const selected = selectedId ? userCache.get(selectedId) ?? null : null
+
+  const openNewUsersToday = useCallback(() => {
+    setNewUsersDialogOpen(true)
+    setNewUsersLoading(true)
+    setNewUsersError(null)
+    void fetchAdminUsersCreatedToday()
+      .then(setNewUsersToday)
+      .catch((err: unknown) => setNewUsersError(err instanceof Error ? err.message : "Không thể tải danh sách user mới hôm nay."))
+      .finally(() => setNewUsersLoading(false))
+  }, [])
+
+  const closeNewUsersToday = useCallback(() => setNewUsersDialogOpen(false), [])
 
   const goSection = (key: AdminSection) => {
     setSection(key)
@@ -1000,7 +1019,7 @@ export function AdminPage({ lang }: Props) {
               <>
                 <section className={dashboardStatGridClass} aria-label="Statistics">
                   <DashboardStatCard icon={Users} value={String(kpis.totalLogined)} label={lang === "vi" ? "Người dùng" : "Users"} tone="blue" />
-                  <DashboardStatCard icon={UserRound} value={String(kpis.newToday)} label={lang === "vi" ? "User mới hôm nay" : "New users today"} tone="orange" />
+                  <DashboardStatCard icon={UserRound} value={String(kpis.newToday)} label={lang === "vi" ? "User mới hôm nay" : "New users today"} tone="orange" onClick={openNewUsersToday} />
                   <DashboardStatCard icon={CheckCircle2} value={String(todayKpis.purchases)} label={lang === "vi" ? "Lượt mua hôm nay" : "Purchases today"} tone="green" />
                   <DashboardStatCard icon={Clock3} value={String(todayKpis.completedQuizzes)} label={lang === "vi" ? "Lượt hoàn thành quiz hôm nay" : "Completed quizzes today"} tone="violet" />
                 </section>
@@ -1235,9 +1254,9 @@ export function AdminPage({ lang }: Props) {
                   </div>
                 </section>
                 {selectedOverviewEventType ? (
-                  <Dialog open onClose={() => setSelectedOverviewEventType(null)} title={`${ACTIVITY_LABELS[selectedOverviewEventType]} · log (${rangedEvents.filter((e) => e.eventType === selectedOverviewEventType).length})`} closeLabel="Đóng log" className="z-[95]" panelClassName="max-h-[calc(100dvh_-_2rem)] w-full max-w-[760px] rounded-[20px] border-2 border-[#E5E5E5] bg-white shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none">
+                  <Dialog open onClose={() => setSelectedOverviewEventType(null)} title={`${ACTIVITY_LABELS[selectedOverviewEventType]} · log (${todayEvents.filter((e) => e.eventType === selectedOverviewEventType).length})`} closeLabel="Đóng log" className="z-[95]" panelClassName="max-h-[calc(100dvh_-_2rem)] w-full max-w-[760px] rounded-[20px] border-2 border-[#E5E5E5] bg-white shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none">
                     <div className="max-h-[75dvh] space-y-2 overflow-y-auto px-5 py-4 sm:px-6">
-                      {rangedEvents.filter((e) => e.eventType === selectedOverviewEventType).length ? rangedEvents.filter((e) => e.eventType === selectedOverviewEventType).map((e) => (
+                      {todayEvents.filter((e) => e.eventType === selectedOverviewEventType).length ? todayEvents.filter((e) => e.eventType === selectedOverviewEventType).map((e) => (
                         <details key={e.id} className="rounded-xl border border-slate-100 bg-slate-50 px-3 py-2.5 dark:border-white/10 dark:bg-white/5">
                           <summary className="flex cursor-pointer flex-wrap items-center gap-x-2 gap-y-1 text-xs font-semibold">
                             <span className="font-black text-[#129BDC]">{nameById.get(e.userId) ?? e.displayName ?? e.email ?? e.userId}</span>
@@ -1569,6 +1588,28 @@ export function AdminPage({ lang }: Props) {
       </div>
 
       <AdminMobileNav lang={lang} section={section} onNavigate={goSection} />
+
+      <Dialog open={newUsersDialogOpen} onClose={closeNewUsersToday} title={`User mới hôm nay (${newUsersToday.length})`} closeLabel="Đóng danh sách user mới" className="z-[95]" panelClassName="max-h-[calc(100dvh_-_2rem)] w-full max-w-[680px] overflow-hidden rounded-[20px] border-2 border-[#E5E5E5] bg-white shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none">
+        <div className="flex items-center justify-between border-b border-slate-100 px-5 py-4 dark:border-white/10 sm:px-6">
+          <div>
+            <h2 className="text-lg font-black text-[#100F3E] dark:text-white">User mới hôm nay</h2>
+            <p className="mt-0.5 text-xs font-semibold text-slate-400">{newUsersToday.length} user · theo ngày lịch Việt Nam</p>
+          </div>
+          <button type="button" onClick={closeNewUsersToday} className="rounded-lg p-2 text-slate-400 hover:bg-slate-100 dark:hover:bg-white/10" aria-label="Đóng"><X className="h-5 w-5" /></button>
+        </div>
+        <div className="max-h-[70dvh] space-y-2 overflow-y-auto p-4 sm:p-5">
+          {newUsersLoading ? <p className="py-8 text-center text-sm font-semibold text-slate-400">Đang tải danh sách…</p> : null}
+          {newUsersError ? <div className="py-6 text-center"><p className="text-sm font-semibold text-red-500">{newUsersError}</p><button type="button" onClick={openNewUsersToday} className="lp-btn lp-btn--secondary lp-btn--sm mt-3">Thử lại</button></div> : null}
+          {!newUsersLoading && !newUsersError && newUsersToday.length === 0 ? <p className="py-8 text-center text-sm font-semibold text-slate-400">Hôm nay chưa có user mới.</p> : null}
+          {!newUsersLoading && !newUsersError ? newUsersToday.map((user) => (
+            <button key={user.id} type="button" onClick={() => { closeNewUsersToday(); setSelectedId(user.id) }} className="flex w-full items-center gap-3 rounded-xl border border-slate-100 px-3 py-3 text-left transition hover:bg-sky-50 dark:border-white/10 dark:hover:bg-white/5">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full bg-sky-50 text-sm font-black text-sky-500 dark:bg-sky-500/10">{user.avatarUrl ? <img src={user.avatarUrl} alt="" className="h-full w-full object-cover" /> : (user.displayName ?? user.email ?? "?").slice(0, 1).toUpperCase()}</span>
+              <span className="min-w-0 flex-1"><span className="block truncate text-sm font-extrabold text-[#100F3E] dark:text-white">{user.displayName || "Chưa đặt tên"}</span><span className="block truncate text-xs font-semibold text-slate-400">{user.email || user.id}</span></span>
+              <span className="shrink-0 text-right"><span className="block text-[11px] font-bold text-slate-500 dark:text-slate-300">{formatTime(user.createdAt, lang)}</span><span className="mt-1 inline-block rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-black text-slate-500 dark:bg-white/10 dark:text-slate-300">{user.role} · {user.status}</span></span>
+            </button>
+          )) : null}
+        </div>
+      </Dialog>
 
       {selected ? <UserDrawer user={selected} lang={lang} currentUserId={profile?.id ?? null} onStatusChange={(next) => {
         setUsers((prev) => prev.map((u) => u.id === next.id ? next : u))
