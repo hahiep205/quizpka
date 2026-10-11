@@ -87,7 +87,32 @@ export function readPracticeSession(): PracticeSessionPayload | null {
 }
 
 export function clearPracticeSession() {
-  try { sessionStorage.removeItem(PRACTICE_SESSION_KEY) } catch { /* Storage is optional. */ }
+  try { sessionStorage.removeItem(PRACTICE_SESSION_KEY) } catch { /* Session resume is best-effort. */ }
+}
+
+const PRACTICE_PAYLOAD_MIRROR_KEY = "quizpka-practice-payload-v1"
+
+/**
+ * localStorage mirror of the in-progress payload so closing + reopening the
+ * tab can land back on /practice (sessionStorage alone dies with the tab).
+ * Written on quiz mount, cleared on explicit exit or submit.
+ */
+export function mirrorPracticePayload(payload: PracticeSessionPayload) {
+  try { localStorage.setItem(PRACTICE_PAYLOAD_MIRROR_KEY, JSON.stringify(payload)) } catch { /* Best-effort. */ }
+}
+
+export function readMirroredPayload(): PracticeSessionPayload | null {
+  try {
+    const raw = localStorage.getItem(PRACTICE_PAYLOAD_MIRROR_KEY)
+    if (!raw) return null
+    return parsePracticeSession(JSON.parse(raw))
+  } catch {
+    return null
+  }
+}
+
+export function clearMirroredPayload() {
+  try { localStorage.removeItem(PRACTICE_PAYLOAD_MIRROR_KEY) } catch { /* noop */ }
 }
 
 export function goToPractice(payload: PracticeSessionPayload) {
@@ -97,6 +122,7 @@ export function goToPractice(payload: PracticeSessionPayload) {
 
 export function goHomeFromPractice() {
   clearPracticeSession()
+  clearMirroredPayload()
   navigate(appRoutes.dashboard)
 }
 

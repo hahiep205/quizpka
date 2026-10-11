@@ -3,6 +3,7 @@ import { QuizSession } from "@/components/QuizSession"
 import {
   clearPracticeSession,
   goHomeFromPractice,
+  readMirroredPayload,
   readPracticeSession,
   type PracticeSessionPayload,
 } from "@/lib/practiceSession"
@@ -38,7 +39,9 @@ export function PracticePage({ lang }: { lang: Lang }) {
   const displayOverrides = useSubjectOverrides()
 
   useEffect(() => {
-    setPayload(readPracticeSession())
+    // sessionStorage dies with the tab — fall back to the localStorage mirror
+    // so a closed + reopened tab can resume the in-progress attempt.
+    setPayload(readPracticeSession() ?? readMirroredPayload())
   }, [])
 
   const exam = useMemo(() => {

@@ -17,6 +17,20 @@ import { quizCopy as copy, toeicResultCopy } from "@/shared/i18n"
 import type { AnswerValue, Question } from "@/features/quiz/model/quiz.types"
 import { shuffle, formatTime, isAnswerCorrect } from "@/features/quiz/lib/quizHelpers"
 import { guardQuizContentCopy } from "@/features/quiz/lib/copyGuard"
+import {
+  clearQuestionsSnapshot,
+  clearQuizProgress,
+  isMatchingProgress,
+  loadQuestionsSnapshot,
+  loadQuizProgress,
+  progressStorageKeyString,
+  resumeElapsedSeconds,
+  saveQuestionsSnapshot,
+  saveQuizProgress,
+  sortedQuestionIds,
+  type QuizProgress,
+  type QuizProgressKey,
+} from "@/features/quiz/lib/quizProgress"
 import type { ToeicScope } from "@/data/toeic"
 import { getAnsweredCount, getIncorrectQuestions, getQuizStats } from "@/features/quiz/lib/quizSelectors"
 import { useQuizQuestions } from "@/features/quiz/hooks/useQuizQuestions"
@@ -49,6 +63,7 @@ import { Dialog } from "@/components/ui/dialog"
 import { useAuth } from "@/auth/AuthProvider"
 import { appRoutes } from "@/app/navigation"
 import { savePracticeHistory } from "@/lib/practiceSession"
+import { clearMirroredPayload, mirrorPracticePayload } from "@/lib/practiceSession"
 import { endAttemptSession, logActivityEvent, submitClientReportedAttempt } from "@/features/activity/lib/activityLog"
 import { invalidateSyncedHistoryCache } from "@/features/history/api/userHistory"
 import { invalidateLeaderboardSnapshotCache } from "@/lib/leaderboard"
@@ -57,8 +72,7 @@ import { playAnswerFeedback } from "@/features/quiz/lib/answerFeedbackSound"
 
 type Lang = "en" | "vi"
 
-type QuizSessionProps = {
-  lang: Lang
+type QuizSessionProps = {  lang: Lang
   subject: Subject
   exam: ExamPaper
   setup: QuizSetupValues
@@ -68,6 +82,16 @@ type QuizSessionProps = {
   retryOfHistoryId?: string
   retryNumber?: number
   onExit: () => void
+}
+
+// TEMP-DEBUG-PROGRESS: bật bằng `localStorage.__quizpkaDebugProgress = '1'`
+// rồi reproduce để xem autosave/restore chạy ra sao. Tắt mặc định.
+function dbgProgressLog(...args: unknown[]) {
+  try {
+    if (typeof window !== "undefined" && window.localStorage?.getItem("__quizpkaDebugProgress") === "1") {
+      console.log("[dbg-progress]", ...args)
+    }
+  } catch { /* noop */ }
 }
 
 export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope, questionIds, retryOfHistoryId, retryNumber, onExit }: QuizSessionProps) {
@@ -101,26 +125,45 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
   const { questions, setQuestions, loading, error, reload } = useQuizQuestions({ subject, exam, setup, chapterId, toeicScope, questionIds })
   const { history: retryHistory, setHistory: setRetryHistory, clear: clearRetryHistory } = useRetryHistory(retryStorageKey)
   const handleTimeout = useCallback(() => setFinished(true), [])
+  const [timerOffset, setTimerOffset] = useState(0)
+  /** True once the user interacts with the current question set — their input wins over restore. */
+  const [touched, setTouched] = useState(false)
   const { secondsLeft, elapsedSeconds, reset: resetTimer } = useQuizTimer({
     isRunning: !finished && !loading && !error && questions.length > 0,
     timed: setup.timed,
     durationMinutes: setup.durationMinutes,
     onTimeout: handleTimeout,
+    initialElapsedSeconds: timerOffset,
   })
   const isHard = setup.mode === "hard"
 
+  // Autosave identity: same quiz + mode share one progress slot (per user).
+  // Survives reload/closed tab via localStorage; cleared on submit or exit.
+  const progressKey = useMemo<QuizProgressKey>(() => ({
+    userId: user?.id ?? "guest",
+    subjectId: subject.id,
+    examId: exam.id,
+    chapterId,
+    toeicScope,
+    mode: setup.mode,
+  }), [user?.id, subject.id, exam.id, chapterId, toeicScope, setup.mode])
+
+  // New quiz identity (other exam/user/mode...): full reset — unless the user
+  // already interacted (e.g. auth resolving guest→user mid-quiz), in which
+  // case their in-memory input wins and only the storage namespace switches.
+  // A same-quiz refetch must NOT wipe answers/timer.
   useEffect(() => {
-    if (!loading) return
+    if (touched) return
     setCurrentIndex(0)
     setAnswers({})
     setFinished(false)
     setReviewOpen(false)
     setConfirmOpen(false)
-    clearRetryHistory()
     setReviewQuestionId(undefined)
     setReviewFilteredIds(undefined)
     setForcePractice(false)
     resetTimer()
+    setTimerOffset(0)
     setOpenDetailId(null)
     setHardQueue([])
     setHardPos(0)
@@ -128,7 +171,19 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
     setHardWrongCounts({})
     setHardSelected(undefined)
     setHardFinalAnswers({})
-  }, [clearRetryHistory, loading, resetTimer])
+    setActiveRetryNumber(retryNumber)
+    setSyncError(null)
+    setLightboxImage(null)
+    historySaved.current = false
+    lastSavedHistoryId.current = undefined
+    retryRootHistoryId.current = retryOfHistoryId
+    setTouched(false)
+  }, [progressKey, resetTimer, retryNumber, retryOfHistoryId, touched])
+
+  useEffect(() => {
+    if (!loading) return
+    clearRetryHistory()
+  }, [clearRetryHistory, loading])
 
   // Build the Practice Hard queue once the question set is ready.
   useEffect(() => {
@@ -190,8 +245,164 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
   const hardProgress = questions.length ? Math.round((hardMastered / questions.length) * 100) : 0
   const hardCompletedAll = hardMastered === questions.length
 
+  // ---- In-progress autosave (localStorage): F5/closed tab/offline resume ----
+  const snapshotRef = useRef<Question[] | null>(null)
+  const snapshotIdsRef = useRef("")
+  /** (question set + storage identity) pairs already restore-checked. */
+  const seenRef = useRef<{ set: string; key: string } | null>(null)
+  const liveRef = useRef({ answers, currentIndex, elapsedSeconds, questions, hardQueue, hardPos, hardMastered, hardWrongCounts, hardFinalAnswers, hardSelected })
+  // Mirror latest state for pagehide/interval flushes (passive effect, not render).
+  useEffect(() => {
+    liveRef.current = { answers, currentIndex, elapsedSeconds, questions, hardQueue, hardPos, hardMastered, hardWrongCounts, hardFinalAnswers, hardSelected }
+  })
+
+  const persistNow = useCallback(() => {
+    const s = liveRef.current
+    if (s.questions.length === 0) return
+    const answerCount = Object.keys(s.answers).length
+    // Never clobber a non-empty record with an empty one for the same set
+    // (reload wipes / refetch gaps must not destroy saved answers).
+    const prev = loadQuizProgress(progressKey)
+    if (prev && isMatchingProgress(prev, s.questions) && Object.keys(prev.answers).length > 0 && answerCount === 0) {
+      dbgProgressLog("persist skipped (would clobber non-empty record)")
+      return
+    }
+    dbgProgressLog("persist", progressKey.examId, progressKey.mode, "answers =", answerCount, "index =", s.currentIndex)
+    saveQuizProgress(progressKey, {
+      answers: s.answers,
+      currentIndex: s.currentIndex,
+      elapsedSeconds: s.elapsedSeconds,
+      timed: setup.timed,
+      orderedIds: s.questions.map((q) => q.id),
+      sortedIds: sortedQuestionIds(s.questions),
+      ...(isHard
+        ? {
+          hard: {
+            queueIds: s.hardQueue.map((q) => q.id),
+            pos: s.hardPos,
+            mastered: s.hardMastered,
+            wrongCounts: s.hardWrongCounts,
+            finalAnswers: s.hardFinalAnswers,
+            pendingId: s.hardSelected !== undefined ? s.hardQueue[s.hardPos]?.id : undefined,
+            pendingAnswer: s.hardSelected,
+          },
+        }
+        : {}),
+    })
+  }, [progressKey, isHard, setup.timed])
+
+  // Snapshot the question set once (offline reload fallback). Snapshot only —
+  // it must never touch the progress record (restore reads that record next).
+  useEffect(() => {
+    if (loading || questions.length === 0) return
+    const ids = sortedQuestionIds(questions).join("|")
+    if (snapshotIdsRef.current === ids) return
+    snapshotIdsRef.current = ids
+    snapshotRef.current = questions
+    saveQuestionsSnapshot(progressKey, questions)
+    dbgProgressLog("snapshot saved", questions.length, "questions")
+  }, [questions, loading, progressKey])
+
+  // Autosave on every change (debounced) + periodic flush for idle timed exams.
+  useEffect(() => {
+    if (loading || finished || questions.length === 0) return
+    const timer = window.setTimeout(() => persistNow(), 400)
+    return () => window.clearTimeout(timer)
+  }, [answers, currentIndex, questions, hardQueue, hardPos, hardMastered, hardWrongCounts, hardFinalAnswers, hardSelected, loading, finished, persistNow])
+
+  useEffect(() => {
+    if (finished || loading || questions.length === 0) return
+    const timer = window.setInterval(() => persistNow(), 15000)
+    return () => window.clearInterval(timer)
+  }, [finished, loading, questions.length, persistNow])
+
+  // Flush on tab close / reload / navigation so elapsed time is fresh.
+  useEffect(() => {
+    const flush = () => persistNow()
+    window.addEventListener("pagehide", flush)
+    return () => window.removeEventListener("pagehide", flush)
+  }, [persistNow])
+
+  // Mirror the payload so a closed + reopened tab lands back on /practice.
+  useEffect(() => {
+    mirrorPracticePayload({
+      examId: exam.id,
+      subjectId: subject.id,
+      setup,
+      lang,
+      chapterId,
+      toeicScope,
+      questionIds,
+      retryOfHistoryId,
+      retryNumber,
+    })
+  }, [exam.id, subject.id, setup, lang, chapterId, toeicScope, questionIds, retryOfHistoryId, retryNumber])
+
+  // Restore a matching saved session when a new question set arrives and the
+  // user hasn't interacted with it yet (fresh load, remount, offline snapshot).
+  // Tracked per (question set + storage identity): an auth guest→user flip must
+  // still restore the user's own record afterwards.
+  useEffect(() => {
+    if (loading) return
+    const setKey = questions.length ? sortedQuestionIds(questions).join("|") : ""
+    const storageKey = progressStorageKeyString(progressKey)
+    dbgProgressLog("restore check", { loading, error: error?.message ?? null, questions: questions.length, touched, who: progressKey.userId.slice(0, 8), key: `${progressKey.subjectId}/${progressKey.examId}/${progressKey.mode}` })
+    if (error) {
+      const saved = loadQuizProgress(progressKey)
+      const snapshot = loadQuestionsSnapshot(progressKey)
+      dbgProgressLog("restore via offline snapshot", "saved =", saved ? `${Object.keys(saved.answers).length} answers` : "none", "match =", saved && snapshot ? isMatchingProgress(saved, snapshot) : false)
+      seenRef.current = { set: setKey, key: storageKey }
+      if (saved && snapshot && isMatchingProgress(saved, snapshot)) {
+        applyRestore(saved, snapshot)
+      }
+      return
+    }
+    if (questions.length === 0) return
+    if (touched) {
+      seenRef.current = { set: setKey, key: storageKey }
+      return
+    }
+    if (seenRef.current?.set === setKey && seenRef.current?.key === storageKey) return
+    seenRef.current = { set: setKey, key: storageKey }
+    const saved = loadQuizProgress(progressKey)
+    dbgProgressLog("restore normal", "saved =", saved ? `${Object.keys(saved.answers).length} answers @${saved.currentIndex}` : "none", "match =", saved ? isMatchingProgress(saved, questions) : false)
+    if (saved && isMatchingProgress(saved, questions)) applyRestore(saved, questions)
+    function applyRestore(saved: QuizProgress, qs: Question[]) {
+      const byId = new Map(qs.map((q) => [q.id, q]))
+      const ordered = saved.orderedIds.map((id) => byId.get(id)).filter((q): q is Question => Boolean(q))
+      if (ordered.length === qs.length) setQuestions(ordered)
+      const validIds = new Set(qs.map((q) => q.id))
+      const restoredAnswers: Record<string, AnswerValue> = {}
+      for (const [id, answer] of Object.entries(saved.answers)) {
+        if (validIds.has(id)) restoredAnswers[id] = answer
+      }
+      setAnswers(restoredAnswers)
+      setCurrentIndex(Math.min(Math.max(0, saved.currentIndex), qs.length - 1))
+      setTimerOffset(resumeElapsedSeconds(saved))
+      if (isHard && saved.hard) {
+        const queue = saved.hard.queueIds.map((id) => byId.get(id)).filter((q): q is Question => Boolean(q))
+        if (queue.length > 0) {
+          const pos = Math.min(Math.max(0, saved.hard.pos), queue.length - 1)
+          setHardQueue(queue)
+          setHardPos(pos)
+          setHardMastered(Math.min(saved.hard.mastered, queue.length))
+          setHardWrongCounts(saved.hard.wrongCounts ?? {})
+          setHardFinalAnswers(saved.hard.finalAnswers ?? {})
+          const currentHard = queue[pos]
+          if (saved.hard.pendingId === currentHard?.id && saved.hard.pendingAnswer !== undefined) {
+            setHardSelected(saved.hard.pendingAnswer)
+          }
+        }
+      }
+    }
+  }, [loading, error, questions, progressKey, isHard, setQuestions, touched])
+
   useEffect(() => {
     if (!finished) return
+    // Attempt is over: drop the autosaved progress (and the tab-reopen mirror).
+    clearQuizProgress(progressKey)
+    clearQuestionsSnapshot(progressKey)
+    clearMirroredPayload()
     window.history.replaceState(null, "", appRoutes.result)
     if (historySaved.current) return
     historySaved.current = true
@@ -277,9 +488,10 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
         setSyncError(submitError instanceof Error ? submitError.message : "Không đồng bộ được lịch sử. Hãy kiểm tra mạng rồi nộp lại.")
       }
     })()
-  }, [activeRetryNumber, answers, chapterId, elapsedSeconds, exam, finished, hardMastered, hardProgress, hardWrongCounts, isHard, lang, questions, setup, stats.correct, stats.score10, subject.id, toeicScope, user, wrongQuestions])
+  }, [activeRetryNumber, answers, chapterId, elapsedSeconds, exam, finished, hardMastered, hardProgress, hardWrongCounts, isHard, lang, questions, setup, stats.correct, stats.score10, subject.id, toeicScope, user, wrongQuestions, progressKey])
 
   const handleAnswer = useCallback((questionId: string, answer: AnswerValue) => {
+    setTouched(true)
     const question = questionById.get(questionId)
     if (isPractice && question && typeof answer === "number") {
       playAnswerFeedback(isAnswerCorrect(question, answer))
@@ -288,6 +500,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
   }, [isPractice, questionById])
 
   const goToQuestion = useCallback((index: number) => {
+    setTouched(true)
     setCurrentIndex(index)
     setOpenDetailId(null)
     setTransitionKey((value) => value + 1)
@@ -327,6 +540,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
   }, [])
 
   const handleHardAnswer = useCallback((_questionId: string, answer: AnswerValue) => {
+    setTouched(true)
     if (hardSelected === undefined && hardCurrent) {
       playAnswerFeedback(isAnswerCorrect(hardCurrent, answer))
     }
@@ -382,6 +596,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
 
   // Leaving before submitting counts as abandoning the attempt. Finished
   // screens reuse the same buttons, but finished=true skips the log row.
+  // Explicit exit drops the autosaved progress (reload keeps it).
   const handleExit = useCallback(() => {
     if (!finished) {
       logActivityEvent(user?.id, "abandon_attempt", {
@@ -393,8 +608,10 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
         progress,
       })
     }
+    clearQuizProgress(progressKey)
+    clearQuestionsSnapshot(progressKey)
     onExit()
-  }, [answeredCount, exam.id, finished, onExit, progress, questions.length, setup.mode, subject.id, user?.id])
+  }, [answeredCount, exam.id, finished, onExit, progress, questions.length, setup.mode, subject.id, user?.id, progressKey])
 
   if (loading) return (<CenterCard><p className="lp-modal-desc text-[15px]">{t.loading}</p></CenterCard>)
   if (error || questions.length === 0) return (
@@ -737,6 +954,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
           questions={questions}
           answers={answers}
           partQuestionIds={partQuestionIds}
+          showQuestionGrid={subject.id !== "tieng-anh-dau-vao"}
           t={t}
           onJump={goToQuestion}
           onFinish={handleFinish}

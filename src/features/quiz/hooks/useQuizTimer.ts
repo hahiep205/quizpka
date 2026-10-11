@@ -5,6 +5,8 @@ type UseQuizTimerInput = {
   timed: boolean
   durationMinutes: number
   onTimeout: () => void
+  /** Elapsed seconds restored from a saved session (resume). Default 0. */
+  initialElapsedSeconds?: number
 }
 
 /**
@@ -13,10 +15,11 @@ type UseQuizTimerInput = {
  * - `onTimeout` fires exactly once when the countdown reaches zero.
  * - Changing `durationMinutes` mid-session resets the timer to the new duration.
  */
-export function useQuizTimer({ isRunning, timed, durationMinutes, onTimeout }: UseQuizTimerInput) {
+export function useQuizTimer({ isRunning, timed, durationMinutes, onTimeout, initialElapsedSeconds = 0 }: UseQuizTimerInput) {
   const durationSeconds = timed ? durationMinutes * 60 : 0
-  const [secondsLeft, setSecondsLeft] = useState(durationSeconds)
-  const [elapsedSeconds, setElapsedSeconds] = useState(0)
+  const clampedInitial = Math.max(0, Math.floor(initialElapsedSeconds))
+  const [secondsLeft, setSecondsLeft] = useState(() => (timed ? Math.max(0, durationSeconds - clampedInitial) : 0))
+  const [elapsedSeconds, setElapsedSeconds] = useState(clampedInitial)
 
   const reset = useCallback(() => {
     setSecondsLeft(durationSeconds)
@@ -27,6 +30,15 @@ export function useQuizTimer({ isRunning, timed, durationMinutes, onTimeout }: U
   useEffect(() => {
     reset()
   }, [reset])
+
+  // Apply a restored offset arriving after mount (progress resume loads async).
+  // Explicit reset() calls still restart from zero.
+  useEffect(() => {
+    if (clampedInitial > 0) {
+      setElapsedSeconds(clampedInitial)
+      if (timed) setSecondsLeft(Math.max(0, durationSeconds - clampedInitial))
+    }
+  }, [clampedInitial, durationSeconds, timed])
 
   useEffect(() => {
     if (!isRunning) return

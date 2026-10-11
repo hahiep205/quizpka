@@ -5,8 +5,46 @@ import type { Question, AnswerValue } from "@/features/quiz/model/quiz.types"
 import { countAnsweredInRange } from "@/features/quiz/lib/quizGrouping"
 import type { PartNavigationItem, ToeicGroup, ToeicTwoLevelData } from "@/features/quiz/lib/quizGrouping"
 
-type QuizSidebarProps = {
-  showPartNavigation: boolean
+/**
+ * Lưới ô số câu dùng chung cho mọi loại quiz (kể cả TOEIC/TADV vốn điều hướng
+ * theo Part/nhóm): xanh = đang xem, xanh nhạt = đã làm, xám = chưa làm.
+ */
+function QuestionNumberGrid({ questions, answers, partQuestionIds, onJump }: {
+  questions: Question[]
+  answers: Record<string, AnswerValue>
+  partQuestionIds: Set<string>
+  onJump: (index: number) => void
+}) {
+  return (
+    <div
+      className="grid gap-[5px] pb-1"
+      style={{ gridTemplateColumns: "repeat(4, minmax(0, 1fr))" }}
+    >
+      {questions.map((question, index) => {
+        const answered = answers[question.id] !== undefined
+        return (
+          <button
+            key={question.id}
+            type="button"
+            onClick={() => onJump(index)}
+            className={cn(
+              "box-border flex h-[32px] w-full min-w-0 items-center justify-center rounded-[9px] border-2 text-[11px] font-extrabold transition-transform active:translate-y-[1px]",
+              partQuestionIds.has(question.id)
+                ? "border-[#1CB0F6] bg-[#1CB0F6] text-white"
+                : answered
+                  ? "border-[#B3E5FC] bg-[#E8F7FE] text-[#129BDC]"
+                  : "border-[#E5E5E5] bg-[#F6F7FB] text-[#777777]"
+            )}
+          >
+            {index + 1}
+          </button>
+        )
+      })}
+    </div>
+  )
+}
+
+type QuizSidebarProps = {  showPartNavigation: boolean
   partNavigationItems: PartNavigationItem[]
   currentPartStartIndex: number
   isToeic: boolean
@@ -17,6 +55,8 @@ type QuizSidebarProps = {
   questions: Question[]
   answers: Record<string, AnswerValue>
   partQuestionIds: Set<string>
+  /** Ẩn khối "Lưới câu hỏi" phụ (VD: TADV free chỉ cần tile Part). Mặc định hiện. */
+  showQuestionGrid?: boolean
   t: (typeof quizCopy)["en" | "vi"]
   onJump: (index: number) => void
   onFinish: () => void
@@ -34,6 +74,7 @@ export const QuizSidebar = memo(function QuizSidebar({
   questions,
   answers,
   partQuestionIds,
+  showQuestionGrid = true,
   t,
   onJump,
   onFinish,
@@ -44,19 +85,29 @@ export const QuizSidebar = memo(function QuizSidebar({
           <div className="max-h-[420px] overflow-x-hidden overflow-y-auto pr-1">
             {showPartNavigation ? (
               <div className="grid grid-cols-3 gap-2 pb-1">
-                {partNavigationItems.map((part) => {
+                {partNavigationItems.map((part, partIdx) => {
                   const active = part.startIndex === currentPartStartIndex
                   const [partText, sectionText] = part.label.split(" - ")
+                  const partEnd = partIdx < partNavigationItems.length - 1 ? partNavigationItems[partIdx + 1].startIndex : questions.length
+                  const answeredInPart = countAnsweredInRange(questions, answers, part.startIndex, partEnd)
+                  const totalInPart = partEnd - part.startIndex
+                  const allAnswered = totalInPart > 0 && answeredInPart === totalInPart
+                  const someAnswered = answeredInPart > 0 && !allAnswered
                   return (
                     <button
                       key={part.startIndex}
                       type="button"
                       onClick={() => onJump(part.startIndex)}
+                      title={`${part.label}: ${answeredInPart}/${totalInPart}`}
                       className={cn(
                         "flex aspect-square flex-col items-center justify-center rounded-[12px] border-2 p-2 text-center transition-colors",
                         active
                           ? "border-[#1CB0F6] bg-[#1CB0F6] text-white shadow-[0_2px_0_#189CD8]"
-                          : "border-[#E5E5E5] bg-[#F6F7FB] text-[#4B4B4B] hover:border-[#B3E5FC] dark:border-white/10 dark:bg-white/5 dark:text-slate-200"
+                          : allAnswered
+                            ? "border-[#58CC02] bg-[#E6F5D9] text-[#3A8A00] dark:border-[#58CC02]/30 dark:bg-[#58CC02]/10 dark:text-[#7ED321]"
+                            : someAnswered
+                              ? "border-[#FFD000] bg-[#FFF8E1] text-[#9A7B00] dark:border-[#FFD000]/30 dark:bg-[#FFD000]/10"
+                              : "border-[#E5E5E5] bg-[#F6F7FB] text-[#4B4B4B] hover:border-[#B3E5FC] dark:border-white/10 dark:bg-white/5 dark:text-slate-200"
                       )}
                     >
                       <span className="text-[11px] font-extrabold leading-none">{partText}</span>
@@ -279,32 +330,25 @@ export const QuizSidebar = memo(function QuizSidebar({
                 </div>
               )
             ) : (
-              <div
-                className="grid gap-[5px] pb-1"
-                style={{ gridTemplateColumns: "repeat(4, minmax(0, 1fr))" }}
-              >
-                {questions.map((question, index) => {
-                  const answered = answers[question.id] !== undefined
-                  return (
-                    <button
-                      key={question.id}
-                      type="button"
-                      onClick={() => onJump(index)}
-                      className={cn(
-                        "box-border flex h-[32px] w-full min-w-0 items-center justify-center rounded-[9px] border-2 text-[11px] font-extrabold transition-transform active:translate-y-[1px]",
-                        partQuestionIds.has(question.id)
-                          ? "border-[#1CB0F6] bg-[#1CB0F6] text-white"
-                          : answered
-                            ? "border-[#B3E5FC] bg-[#E8F7FE] text-[#129BDC]"
-                            : "border-[#E5E5E5] bg-[#F6F7FB] text-[#777777]"
-                      )}
-                    >
-                      {index + 1}
-                    </button>
-                  )
-                })}
-              </div>
+              <QuestionNumberGrid
+                questions={questions}
+                answers={answers}
+                partQuestionIds={partQuestionIds}
+                onJump={onJump}
+              />
             )}
+            {(showPartNavigation || isToeic) && showQuestionGrid ? (
+              <>
+                <div className="my-3 h-px bg-[#E5E5E5] dark:bg-white/10" />
+                <p className="lp-label mb-3">{t.questionGrid}</p>
+                <QuestionNumberGrid
+                  questions={questions}
+                  answers={answers}
+                  partQuestionIds={partQuestionIds}
+                  onJump={onJump}
+                />
+              </>
+            ) : null}
           </div>
           <button
             type="button"
