@@ -20,6 +20,17 @@ export type Question = {
   grammarPoint?: string
 }
 
+export type BankAnalysisEntry = {
+  status?: string
+  reason?: string
+}
+
+export type BankVocabulary = {
+  phrase: string
+  meaning: string
+  paraphrases?: string[]
+}
+
 export type BankQuestion = {
   id: number | string
   question: string
@@ -31,10 +42,21 @@ export type BankQuestion = {
   explanation_text?: string
   reason?: string
   transcript?: string
+  /** TOEIC-style alias of transcript (kept for cross-bank compatibility). */
+  audio_transcript?: string
   audioTimestamp?: string
   chapter?: string
   image?: string
   imageUrl?: string
+  image_description?: string
+  /** TOEIC/TADV-style rich fields (analysis, vocabulary, strategy). */
+  correct_answer?: string
+  correct_text?: string
+  type?: string
+  grammar_point?: string
+  analysis?: Partial<Record<string, BankAnalysisEntry>>
+  vocabulary?: BankVocabulary[]
+  strategy?: string[]
 }
 
 export type BankFile = {
@@ -51,6 +73,8 @@ export type BankPart = {
   referenceNotices?: Record<string, string>
   audioUrl?: string
   imageUrl?: string
+  /** Full listening transcript shared by the whole part (TADV Parts 1-2). */
+  fullTranscript?: string
   section?: "Listening" | "Reading"
   questions: BankQuestion[]
 }

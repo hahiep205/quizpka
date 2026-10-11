@@ -1,6 +1,7 @@
 import { memo, useState } from "react"
 import { cn } from "@/lib/utils"
 import { isAnswerCorrect } from "@/features/quiz/lib/quizHelpers"
+import { guardQuizContentCopy } from "@/features/quiz/lib/copyGuard"
 import type { Question, AnswerValue } from "@/features/quiz/model/quiz.types"
 import { DetailedAnalysisContent } from "@/features/quiz/ui/DetailedAnalysisContent"
 import { formatPromptText } from "@/features/quiz/lib/formatPrompt"
@@ -19,6 +20,8 @@ export const QuizQuestionBlock = memo(function QuizQuestionBlock({
   t,
   onAnswer,
   onZoomImage,
+  detailOpen,
+  onToggleDetail,
 }: {
   question: Question
   questionNumber: number
@@ -31,14 +34,37 @@ export const QuizQuestionBlock = memo(function QuizQuestionBlock({
   t: (typeof quizCopy)["en" | "vi"]
   onAnswer: (questionId: string, answer: AnswerValue) => void
   onZoomImage?: (url: string) => void
+  /** Controlled accordion mode: when onToggleDetail is provided, the parent
+   *  owns which question's detail is open (only one at a time). Otherwise
+   *  the block manages its own open state (single-question screens). */
+  detailOpen?: boolean
+  onToggleDetail?: () => void
 }) {
   const isTextResponse = question.options.length === 0
   const textAnswer = typeof selected === "string" ? selected : ""
   const textCorrect = isAnswerCorrect(question, selected)
-  const [showDetail, setShowDetail] = useState(false)
+  const [internalShowDetail, setInternalShowDetail] = useState(false)
+  const showDetail = onToggleDetail ? (detailOpen ?? false) : internalShowDetail
+  const toggleDetail = () => {
+    // Giữ nguyên vị trí scroll: khi khối chi tiết bung ra làm trang dài thêm,
+    // trình duyệt có thể tự nhảy viewport — trả lại đúng chỗ user đang xem.
+    const y = window.scrollY
+    if (onToggleDetail) onToggleDetail()
+    else setInternalShowDetail((v) => !v)
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        if (window.scrollY !== y) window.scrollTo({ top: y })
+      })
+    })
+  }
 
   return (
-    <section className={cn("border-b border-[#E5E5E5] pb-8 last:border-b-0 last:pb-0 dark:border-white/10", compact && "pb-5")}>
+    <section
+      className={cn("select-none border-b border-[#E5E5E5] pb-8 last:border-b-0 last:pb-0 dark:border-white/10", compact && "pb-5")}
+      onCopy={guardQuizContentCopy}
+      onCut={guardQuizContentCopy}
+      onDragStart={guardQuizContentCopy}
+    >
       <p className="lp-label mb-2 text-[12px] uppercase tracking-[0.12em]">{t.question} {questionNumber}</p>
       <h2 className={cn("whitespace-pre-line", compact ? "text-[13px] leading-5 font-bold tracking-normal sm:text-[13px]" : "lp-card-title text-[18px] leading-8 sm:text-[20px]")}><MathText text={formatPromptText(question.prompt)} /></h2>
       {showImage && question.imageUrl ? (
@@ -71,7 +97,7 @@ export const QuizQuestionBlock = memo(function QuizQuestionBlock({
       <div className={cn("mt-5 flex flex-col gap-3", compact && "mt-3 gap-1.5 sm:grid sm:grid-cols-2 sm:gap-2")}>
         {isTextResponse ? (
           <>
-            <input type="text" value={textAnswer} onChange={(event) => onAnswer(question.id, event.target.value)} disabled={locked} placeholder={t.typeAnswer} className={cn("w-full rounded-[12px] border-2 bg-white px-4 py-3.5 text-[15px] font-semibold outline-none transition-colors dark:bg-slate-900", compact && "max-w-md px-3 py-2.5 text-[14px] sm:col-span-2", isPractice && textAnswer ? (textCorrect ? "border-emerald-500 text-emerald-800 dark:text-emerald-100" : "border-rose-400 text-rose-800 dark:text-rose-100") : "border-[#E5E5E5] text-[#4B4B4B] focus:border-[#1CB0F6] dark:border-white/10 dark:text-slate-200")} />
+            <input type="text" value={textAnswer} onChange={(event) => onAnswer(question.id, event.target.value)} disabled={locked} placeholder={t.typeAnswer} className={cn("w-full select-text rounded-[12px] border-2 bg-white px-4 py-3.5 text-[15px] font-semibold outline-none transition-colors dark:bg-slate-900", compact && "max-w-md px-3 py-2.5 text-[14px] sm:col-span-2", isPractice && textAnswer ? (textCorrect ? "border-emerald-500 text-emerald-800 dark:text-emerald-100" : "border-rose-400 text-rose-800 dark:text-rose-100") : "border-[#E5E5E5] text-[#4B4B4B] focus:border-[#1CB0F6] dark:border-white/10 dark:text-slate-200")} />
             {isPractice && textAnswer ? <p className={cn("rounded-[12px] px-4 py-3 text-[13px] font-semibold", compact && "sm:col-span-2", textCorrect ? "bg-emerald-50 text-emerald-800 dark:bg-emerald-500/10 dark:text-emerald-100" : "bg-rose-50 text-rose-800 dark:bg-rose-500/10 dark:text-rose-100")}>{textCorrect ? t.rightAnswer : `${t.rightAnswer}: ${question.acceptedAnswers?.join(" / ")}`}</p> : null}
           </>
         ) : question.options.map((option, index) => {
@@ -148,7 +174,7 @@ export const QuizQuestionBlock = memo(function QuizQuestionBlock({
               >
                 <button
                   type="button"
-                  onClick={() => setShowDetail((v) => !v)}
+                  onClick={toggleDetail}
                   className={cn(
                     "flex w-full items-center justify-between px-5 py-3.5 text-left transition-colors",
                     compact && "px-3 py-2.5",

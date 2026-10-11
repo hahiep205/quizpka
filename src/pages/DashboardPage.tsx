@@ -342,16 +342,12 @@ export function DashboardPage({
       const tadvOpt = tadvExamOptions.find((o) => o.id === chapterId)
       if (tadvOpt) chapterLabel = tadvOpt.title[lang]
 
-      // TADV special: fetch its own banks
+      // TADV special: fetch its own banks (JSON in private Storage bucket)
       let questions
       if (tadvOpt) {
-        const { parseQuestionBank } = await import("@/features/quiz/lib/questionBankSchema")
+        const { downloadFreeBank } = await import("@/features/quiz/api/freeBankStorage")
         const banks = await Promise.all(
-          tadvOpt.questionBanks.map(async (url) => {
-            const r = await fetch(url)
-            if (!r.ok) throw new Error(`HTTP ${r.status}`)
-            return parseQuestionBank(await r.json(), url)
-          })
+          tadvOpt.questionBanks.map((url) => downloadFreeBank(url))
         )
         const flat = banks.flatMap((b, bi) => {
           if ((b as unknown as { parts?: { questions: unknown[]; partTitle: string }[] }).parts?.length) {

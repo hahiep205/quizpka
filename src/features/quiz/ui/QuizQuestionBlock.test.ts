@@ -1,5 +1,5 @@
-import { createElement } from "react"
-import { cleanup, render, screen } from "@testing-library/react"
+import { createElement, useState } from "react"
+import { cleanup, createEvent, fireEvent, render, screen } from "@testing-library/react"
 import { afterEach, describe, expect, it, vi } from "vitest"
 import { QuizQuestionBlock } from "@/features/quiz/ui/QuizQuestionBlock"
 import { quizCopy } from "@/shared/i18n"
@@ -46,5 +46,103 @@ describe("QuizQuestionBlock images", () => {
   it("renders nothing image-related without an imageUrl", () => {
     renderBlock({ question: questionWithImage("q1") })
     expect(screen.queryByRole("img")).toBeNull()
+  })
+})
+
+function detailQuestion(id: string): Question {
+  return {
+    id,
+    prompt: `${id} prompt`,
+    options: ["A", "B"],
+    correctIndex: 0,
+    explanation: `${id} explanation`,
+    detailedExplanation: `Chiến lược:\n1. step for ${id}`,
+  }
+}
+
+function AccordionHarness() {
+  const [openId, setOpenId] = useState<string | null>(null)
+  return createElement(
+    "div",
+    null,
+    ["q1", "q2"].map((id, index) =>
+      createElement(QuizQuestionBlock, {
+        key: id,
+        question: detailQuestion(id),
+        questionNumber: index + 1,
+        selected: 0,
+        isPractice: true,
+        t: quizCopy.vi,
+        onAnswer: vi.fn(),
+        detailOpen: openId === id,
+        onToggleDetail: () => setOpenId((prev) => (prev === id ? null : id)),
+      }),
+    ),
+  )
+}
+
+describe("QuizQuestionBlock detail accordion", () => {
+  it("opens one question at a time and closes the previous one", () => {
+    render(createElement(AccordionHarness))
+    const toggles = screen.getAllByText(quizCopy.vi.detailedExplanation)
+    expect(toggles).toHaveLength(2)
+
+    fireEvent.click(toggles[0])
+    expect(screen.queryByText(/step for q1/)).not.toBeNull()
+    expect(screen.queryByText(/step for q2/)).toBeNull()
+
+    fireEvent.click(toggles[1])
+    expect(screen.queryByText(/step for q1/)).toBeNull()
+    expect(screen.queryByText(/step for q2/)).not.toBeNull()
+
+    // Clicking the open one again collapses it.
+    fireEvent.click(toggles[1])
+    expect(screen.queryByText(/step for q2/)).toBeNull()
+  })
+
+  it("manages its own open state when uncontrolled (single-question screens)", () => {
+    renderBlock({ question: detailQuestion("q1"), selected: 0 })
+    const toggle = screen.getByText(quizCopy.vi.detailedExplanation)
+
+    fireEvent.click(toggle)
+    expect(screen.queryByText(/step for q1/)).not.toBeNull()
+
+    fireEvent.click(toggle)
+    expect(screen.queryByText(/step for q1/)).toBeNull()
+  })
+})
+
+describe("QuizQuestionBlock copy guard", () => {
+  it("marks question content unselectable", () => {
+    const { container } = renderBlock({ question: detailQuestion("q1"), selected: 0 })
+    expect(container.querySelector("section")?.className).toContain("select-none")
+  })
+
+  it("blocks copy/cut/drag from question text", () => {
+    renderBlock({ question: detailQuestion("q1"), selected: 0 })
+    const prompt = screen.getByText("q1 prompt")
+
+    const copyEvent = createEvent.copy(prompt)
+    fireEvent(prompt, copyEvent)
+    expect(copyEvent.defaultPrevented).toBe(true)
+
+    const cutEvent = createEvent.cut(prompt)
+    fireEvent(prompt, cutEvent)
+    expect(cutEvent.defaultPrevented).toBe(true)
+
+    const dragEvent = createEvent.dragStart(prompt)
+    fireEvent(prompt, dragEvent)
+    expect(dragEvent.defaultPrevented).toBe(true)
+  })
+
+  it("keeps the text-answer input selectable and copyable", () => {
+    const textQuestion: Question = { id: "t1", prompt: "Type here", options: [], acceptedAnswers: ["x"] }
+    const { container } = renderBlock({ question: textQuestion, selected: "abc" })
+    const input = container.querySelector("input")
+    expect(input?.className).toContain("select-text")
+
+    const inputCopy = createEvent.copy(input!)
+    fireEvent(input!, inputCopy)
+    expect(inputCopy.defaultPrevented).toBe(false)
   })
 })

@@ -2,7 +2,9 @@ import type { QuizSetupValues } from "@/components/QuizSetupModal"
 import { filterQuestionsBySubjectChapter, hasChapterSupport } from "@/data/subjectChapters"
 import type { ExamPaper, Subject } from "@/data/subjects"
 import type { ToeicScope } from "@/data/toeic"
+import { downloadFreeBank } from "@/features/quiz/api/freeBankStorage"
 import { buildFallbackQuestions, mapBankQuestions } from "@/features/quiz/lib/quizHelpers"
+import { adaptTadvBank } from "@/features/quiz/lib/tadvHelpers"
 import { parseQuestionBank, QuestionBankDataError } from "@/features/quiz/lib/questionBankSchema"
 import { loadToeicQuestions } from "@/features/quiz/lib/toeicHelpers"
 import type { BankFile, BankPart, Question } from "@/features/quiz/model/quiz.types"
@@ -111,6 +113,14 @@ export async function loadQuizQuestions({ subject, exam, setup, chapterId, toeic
       ? { ...bank, questions: filterQuestionsBySubjectChapter(subject.id, bank.questions, chapterId) }
       : bank
     questions = mapBankQuestions(filteredBank, exam.id, setup)
+  } else if (subject.id === "tieng-anh-dau-vao" && exam.questionBanks?.length) {
+    // Free TADV bank JSON lives in the private Supabase Storage bucket
+    // (free-question-banks); media inside still resolves via toMediaUrl (R2).
+    // Rich TOEIC-style fields map via adaptTadvBank to keep per-question detail.
+    const urls = exam.questionBanks
+    const banks = await Promise.all(urls.map((url) => downloadFreeBank(url, signal)))
+    const combined = combineBanks(banks)
+    questions = adaptTadvBank(combined, exam.id, setup)
   } else if (exam.questionBanks?.length) {
     const urls = exam.questionBanks
     const banks = await Promise.all(urls.map((url) => fetchBank(url, signal)))

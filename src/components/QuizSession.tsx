@@ -16,6 +16,7 @@ import type { QuizSetupValues } from "@/components/QuizSetupModal"
 import { quizCopy as copy, toeicResultCopy } from "@/shared/i18n"
 import type { AnswerValue, Question } from "@/features/quiz/model/quiz.types"
 import { shuffle, formatTime, isAnswerCorrect } from "@/features/quiz/lib/quizHelpers"
+import { guardQuizContentCopy } from "@/features/quiz/lib/copyGuard"
 import type { ToeicScope } from "@/data/toeic"
 import { getAnsweredCount, getIncorrectQuestions, getQuizStats } from "@/features/quiz/lib/quizSelectors"
 import { useQuizQuestions } from "@/features/quiz/hooks/useQuizQuestions"
@@ -82,6 +83,8 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
   const [reviewFilteredIds, setReviewFilteredIds] = useState<string[] | undefined>(undefined)
   const [transitionKey, setTransitionKey] = useState(0)
   const [lightboxImage, setLightboxImage] = useState<string | null>(null)
+  // Accordion for per-question details on the part screen: only one open at a time.
+  const [openDetailId, setOpenDetailId] = useState<string | null>(null)
   const [forcePractice, setForcePractice] = useState(false)
   const [hardQueue, setHardQueue] = useState<Question[]>([])
   const [hardPos, setHardPos] = useState(0)
@@ -118,6 +121,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
     setReviewFilteredIds(undefined)
     setForcePractice(false)
     resetTimer()
+    setOpenDetailId(null)
     setHardQueue([])
     setHardPos(0)
     setHardMastered(0)
@@ -285,6 +289,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
 
   const goToQuestion = useCallback((index: number) => {
     setCurrentIndex(index)
+    setOpenDetailId(null)
     setTransitionKey((value) => value + 1)
   }, [])
 
@@ -609,7 +614,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
           </div>
         </div>
 
-        <div key={transitionKey} className="quiz-question-panel rounded-[16px] border-2 border-[#E5E5E5] bg-white p-5 shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 sm:p-6">
+        <div key={transitionKey} className="quiz-question-panel select-none rounded-[16px] border-2 border-[#E5E5E5] bg-white p-5 shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 sm:p-6" onCopy={guardQuizContentCopy} onCut={guardQuizContentCopy} onDragStart={guardQuizContentCopy}>
           <QuestionMedia question={hardCurrent} t={t} lang={lang} />
           <QuizQuestionBlock
             question={hardCurrent}
@@ -668,7 +673,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
       </div>
 
       <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(260px,280px)]">
-        <div key={transitionKey} className="quiz-question-panel rounded-[16px] border-2 border-[#E5E5E5] bg-white p-5 shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 sm:p-6">
+        <div key={transitionKey} className="quiz-question-panel select-none rounded-[16px] border-2 border-[#E5E5E5] bg-white p-5 shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 sm:p-6" onCopy={guardQuizContentCopy} onCut={guardQuizContentCopy} onDragStart={guardQuizContentCopy}>
           <QuestionMedia question={current} t={t} lang={lang} />
           <div className="space-y-5">
             {partQuestions.map((question) => (
@@ -684,6 +689,8 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
                 t={t}
                 onAnswer={handleAnswer}
                 onZoomImage={(url) => setLightboxImage(url)}
+                detailOpen={openDetailId === question.id}
+                onToggleDetail={() => setOpenDetailId((prev) => (prev === question.id ? null : question.id))}
               />
             ))}
           </div>

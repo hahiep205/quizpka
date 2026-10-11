@@ -8,6 +8,7 @@ describe("toMediaUrl", () => {
     expect(toMediaUrl("tadv/test01/part5-image-test1/5.png")).toBe(`${R2_PUBLIC_BASE}/tadv/test01/5.png`)
     expect(toMediaUrl("tadv-traphi/test02/part5-image-test2/1.png")).toBe(`${R2_PUBLIC_BASE}/tadv-traphi/test02/1.png`)
     expect(toMediaUrl("tadv-traphi/test06/part5-image-test6/5.png")).toBe(`${R2_PUBLIC_BASE}/tadv-traphi/test06/5.png`)
+    expect(toMediaUrl("tadv/test01/1.png")).toBe(`${R2_PUBLIC_BASE}/tadv/test01/1.png`)
   })
 
   it("rewrites TOEIC media from toeic-test/ onto the toeic/ R2 prefix", () => {

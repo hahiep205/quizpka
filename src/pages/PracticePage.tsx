@@ -69,7 +69,7 @@ export function PracticePage({ lang }: { lang: Lang }) {
         id: tadvOpt.id,
         type: "final" as const,
         year: 2026,
-        questionCount: 55,
+        questionCount: tadvOpt.questionCount ?? 50,
         durationMinutes: 60,
         title: tadvOpt.title,
         description: tadvOpt.description,

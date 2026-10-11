@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { X } from "lucide-react"
 import { Dialog } from "@/components/ui/dialog"
 import type { Question, AnswerValue } from "@/features/quiz/model/quiz.types"
+import { guardQuizContentCopy } from "@/features/quiz/lib/copyGuard"
 import { DetailedAnalysisContent } from "@/features/quiz/ui/DetailedAnalysisContent"
 import { formatPromptText } from "@/features/quiz/lib/formatPrompt"
 import { MathText } from "@/components/MathText"
@@ -42,7 +43,14 @@ export function ReviewPanel({ t, questions, answers, hideExplanation = false, in
             const selected = answers[question.id]
             const questionNumber = numberMap?.get(question.id) ?? index + 1
             return (
-              <div key={question.id} id={`review-question-${question.id}`} className="rounded-[12px] border-2 border-[#E5E5E5] bg-[#F6F7FB] p-4 dark:border-white/10 dark:bg-white/5">
+              <div
+                key={question.id}
+                id={`review-question-${question.id}`}
+                className="select-none rounded-[12px] border-2 border-[#E5E5E5] bg-[#F6F7FB] p-4 dark:border-white/10 dark:bg-white/5"
+                onCopy={guardQuizContentCopy}
+                onCut={guardQuizContentCopy}
+                onDragStart={guardQuizContentCopy}
+              >
                 <p className="lp-label text-[12px] uppercase tracking-[0.12em]">{t.question} {questionNumber}</p>
                 <p className="lp-card-title mt-2 whitespace-pre-line text-[15px] leading-6"><MathText text={formatPromptText(question.prompt)} /></p>
                 <div className="mt-3 space-y-2 text-[13px] leading-6">
