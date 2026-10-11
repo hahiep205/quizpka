@@ -8,6 +8,9 @@ import { formatPromptText } from "@/features/quiz/lib/formatPrompt"
 import { MathText } from "@/components/MathText"
 import { quizCopy } from "@/shared/i18n"
 
+// Token để lần bấm mới nhất thắng: các vòng giữ cũ tự dừng, khỏi giằng co.
+let detailGlueToken = 0
+
 export const QuizQuestionBlock = memo(function QuizQuestionBlock({
   question,
   questionNumber,
@@ -45,17 +48,43 @@ export const QuizQuestionBlock = memo(function QuizQuestionBlock({
   const textCorrect = isAnswerCorrect(question, selected)
   const [internalShowDetail, setInternalShowDetail] = useState(false)
   const showDetail = onToggleDetail ? (detailOpen ?? false) : internalShowDetail
-  const toggleDetail = () => {
-    // Giữ nguyên vị trí scroll: khi khối chi tiết bung ra làm trang dài thêm,
-    // trình duyệt có thể tự nhảy viewport — trả lại đúng chỗ user đang xem.
-    const y = window.scrollY
+  const toggleDetail = (anchor?: HTMLElement | null) => {
+    // Giữ nút bấm đứng yên trong viewport: khi accordion đóng khối chi tiết ở
+    // phía TRÊN, nội dung trượt lên dù scrollY không đổi — bù đúng khoảng trượt
+    // để mắt không bị giật. Giữ ~1.5s cho cả shift async (ảnh về muộn); user chủ
+    // động cuộn thì dừng ngay.
+    const target = anchor ?? (document.activeElement as HTMLElement | null)
+    const before = target?.getBoundingClientRect().top
     if (onToggleDetail) onToggleDetail()
     else setInternalShowDetail((v) => !v)
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        if (window.scrollY !== y) window.scrollTo({ top: y })
-      })
-    })
+    if (before == null || !target) return
+    const myGlue = ++detailGlueToken
+    let glued = true
+    const deadline = Date.now() + 1500
+    const cancel = () => {
+      glued = false
+      window.removeEventListener("wheel", cancel)
+      window.removeEventListener("touchmove", cancel)
+      window.removeEventListener("mousedown", cancel)
+      window.removeEventListener("keydown", onKeyDown)
+    }
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "ArrowUp" || e.key === "ArrowDown" || e.key === "PageUp" || e.key === "PageDown" || e.key === "Home" || e.key === "End" || e.key === " ") cancel()
+    }
+    window.addEventListener("wheel", cancel, { passive: true })
+    window.addEventListener("touchmove", cancel, { passive: true })
+    window.addEventListener("mousedown", cancel)
+    window.addEventListener("keydown", onKeyDown)
+    const tick = () => {
+      if (!glued || myGlue !== detailGlueToken || Date.now() > deadline || !target.isConnected) {
+        if (myGlue === detailGlueToken) cancel()
+        return
+      }
+      const drift = target.getBoundingClientRect().top - before
+      if (drift !== 0) window.scrollBy({ top: drift, behavior: "auto" })
+      requestAnimationFrame(tick)
+    }
+    requestAnimationFrame(tick)
   }
 
   return (
@@ -174,7 +203,7 @@ export const QuizQuestionBlock = memo(function QuizQuestionBlock({
               >
                 <button
                   type="button"
-                  onClick={toggleDetail}
+                  onClick={(e) => toggleDetail(e.currentTarget)}
                   className={cn(
                     "flex w-full items-center justify-between px-5 py-3.5 text-left transition-colors",
                     compact && "px-3 py-2.5",
