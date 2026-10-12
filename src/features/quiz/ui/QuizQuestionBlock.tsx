@@ -48,6 +48,9 @@ export const QuizQuestionBlock = memo(function QuizQuestionBlock({
   report?: { examTitle: string; subjectName: string; signedIn: boolean } | null
 }) {
   const isTextResponse = question.options.length === 0
+  // Quiz sessions show at most 4 options (A–D). Bank audit (2026-10-12,
+  // 6272 questions) verified no correct answer sits on E/F, so slicing is safe.
+  const visibleOptions = question.options.slice(0, 4)
   const textAnswer = typeof selected === "string" ? selected : ""
   const textCorrect = isAnswerCorrect(question, selected)
   const [internalShowDetail, setInternalShowDetail] = useState(false)
@@ -145,7 +148,7 @@ export const QuizQuestionBlock = memo(function QuizQuestionBlock({
             <input type="text" value={textAnswer} onChange={(event) => onAnswer(question.id, event.target.value)} disabled={locked} placeholder={t.typeAnswer} className={cn("w-full select-text rounded-[12px] border-2 bg-white px-4 py-3.5 text-[15px] font-semibold outline-none transition-colors dark:bg-slate-900", compact && "max-w-md px-3 py-2.5 text-[14px] sm:col-span-2", isPractice && textAnswer ? (textCorrect ? "border-emerald-500 text-emerald-800 dark:text-emerald-100" : "border-rose-400 text-rose-800 dark:text-rose-100") : "border-[#E5E5E5] text-[#4B4B4B] focus:border-[#1CB0F6] dark:border-white/10 dark:text-slate-200")} />
             {isPractice && textAnswer ? <p className={cn("rounded-[12px] px-4 py-3 text-[13px] font-semibold", compact && "sm:col-span-2", textCorrect ? "bg-emerald-50 text-emerald-800 dark:bg-emerald-500/10 dark:text-emerald-100" : "bg-rose-50 text-rose-800 dark:bg-rose-500/10 dark:text-rose-100")}>{textCorrect ? t.rightAnswer : `${t.rightAnswer}: ${question.acceptedAnswers?.join(" / ")}`}</p> : null}
           </>
-        ) : question.options.map((option, index) => {
+        ) : visibleOptions.map((option, index) => {
           const isSelected = selected === index
           const isCorrect = index === question.correctIndex
           const reveal = isPractice && selected !== undefined

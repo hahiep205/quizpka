@@ -112,8 +112,7 @@ describe("QuizQuestionBlock detail accordion", () => {
   })
 })
 
-describe("QuizQuestionBlock copy guard", () => {
-  it("marks question content unselectable", () => {
+describe("QuizQuestionBlock copy guard", () => {  it("marks question content unselectable", () => {
     const { container } = renderBlock({ question: detailQuestion("q1"), selected: 0 })
     expect(container.querySelector("section")?.className).toContain("select-none")
   })
@@ -144,5 +143,32 @@ describe("QuizQuestionBlock copy guard", () => {
     const inputCopy = createEvent.copy(input!)
     fireEvent(input!, inputCopy)
     expect(inputCopy.defaultPrevented).toBe(false)
+  })
+})
+
+describe("QuizQuestionBlock option cap", () => {
+  it("renders at most 4 options (hides E) with A–D labels", () => {
+    const five: Question = { id: "e1", prompt: "Pick", options: ["a", "b", "c", "d", "e"], correctIndex: 2 }
+    renderBlock({ question: five, selected: undefined })
+    // Unanswered: only the 4 option buttons exist, option E text is gone.
+    expect(screen.getAllByRole("button")).toHaveLength(4)
+    expect(screen.queryByText("e")).toBeNull()
+    expect(screen.getByText("d")).not.toBeNull()
+  })
+
+  it("still marks the correct answer within A–D", () => {
+    const onAnswer = vi.fn()
+    const five: Question = { id: "e1", prompt: "Pick", options: ["a", "b", "c", "d", "e"], correctIndex: 2 }
+    render(
+      createElement(QuizQuestionBlock, {
+        question: five,
+        questionNumber: 1,
+        selected: 2,
+        isPractice: true,
+        t: quizCopy.vi,
+        onAnswer,
+      }),
+    )
+    expect(screen.getByText("c")).not.toBeNull()
   })
 })

@@ -835,7 +835,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
           <QuestionMedia question={hardCurrent} t={t} lang={lang} />
           <QuizQuestionBlock
             question={hardCurrent}
-            questionNumber={hardPos + 1}
+            questionNumber={hardMastered + 1}
             selected={hardSelected}
             isPractice
             locked={hardAnswered}
