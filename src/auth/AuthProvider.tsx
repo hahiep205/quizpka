@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react"
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react"
 import type { AuthChangeEvent, Session, User } from "@supabase/supabase-js"
 import { supabase } from "@/lib/supabase"
 import { logActivityEvent } from "@/features/activity/lib/activityLog"
@@ -19,6 +19,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [status, setStatus] = useState<AuthStatus>("loading")
   const [user, setUser] = useState<User | null>(null)
   const [profile, setProfile] = useState<AuthProfile | null>(null)
+  // User id already put through the full sign-in flow below. supabase-js
+  // re-emits SIGNED_IN on every tab visibility return (_recoverAndRefresh);
+  // replaying the flow would flip status to "loading" and unmount pages.
+  const appliedUserIdRef = useRef<string | null>(null)
 
   const loadProfile = useCallback(async (currentUser: User | null) => {
     if (!currentUser) { setProfile(null); return null }
@@ -41,6 +45,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const applySession = useCallback(async (session: Session | null, authEvent?: AuthChangeEvent) => {
     const currentUser = session?.user ?? null
     setUser(currentUser)
+    // Same user as already applied (e.g. duplicate SIGNED_IN from tab
+    // visibility recovery): refresh tokens silently, skip the full flow.
+    if (currentUser && appliedUserIdRef.current === currentUser.id) return
+    appliedUserIdRef.current = currentUser?.id ?? null
     if (!currentUser) { setAccountSoundPreference(null); setProfile(null); setStatus("anonymous"); clearEntitlementsCache(); return }
 
     // Token refresh chứng tỏ session còn sống; profile đã load lúc sign-in.
