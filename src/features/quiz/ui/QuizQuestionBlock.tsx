@@ -4,6 +4,7 @@ import { isAnswerCorrect } from "@/features/quiz/lib/quizHelpers"
 import { guardQuizContentCopy } from "@/features/quiz/lib/copyGuard"
 import type { Question, AnswerValue } from "@/features/quiz/model/quiz.types"
 import { DetailedAnalysisContent } from "@/features/quiz/ui/DetailedAnalysisContent"
+import { QuestionReport } from "@/features/quiz/ui/QuestionReport"
 import { formatPromptText } from "@/features/quiz/lib/formatPrompt"
 import { MathText } from "@/components/MathText"
 import { quizCopy } from "@/shared/i18n"
@@ -25,6 +26,7 @@ export const QuizQuestionBlock = memo(function QuizQuestionBlock({
   onZoomImage,
   detailOpen,
   onToggleDetail,
+  report,
 }: {
   question: Question
   questionNumber: number
@@ -42,6 +44,8 @@ export const QuizQuestionBlock = memo(function QuizQuestionBlock({
    *  the block manages its own open state (single-question screens). */
   detailOpen?: boolean
   onToggleDetail?: () => void
+  /** Question error reporting (icon beside the question number). */
+  report?: { examTitle: string; subjectName: string; signedIn: boolean } | null
 }) {
   const isTextResponse = question.options.length === 0
   const textAnswer = typeof selected === "string" ? selected : ""
@@ -94,7 +98,19 @@ export const QuizQuestionBlock = memo(function QuizQuestionBlock({
       onCut={guardQuizContentCopy}
       onDragStart={guardQuizContentCopy}
     >
-      <p className="lp-label mb-2 text-[12px] uppercase tracking-[0.12em]">{t.question} {questionNumber}</p>
+      <div className="mb-2 flex items-center justify-between gap-2">
+        <p className="lp-label text-[12px] uppercase tracking-[0.12em]">{t.question} {questionNumber}</p>
+        {report ? (
+          <QuestionReport
+            question={question}
+            questionNumber={questionNumber}
+            examTitle={report.examTitle}
+            subjectName={report.subjectName}
+            signedIn={report.signedIn}
+            t={t}
+          />
+        ) : null}
+      </div>
       <h2 className={cn("whitespace-pre-line", compact ? "text-[13px] leading-5 font-bold tracking-normal sm:text-[13px]" : "lp-card-title text-[18px] leading-8 sm:text-[20px]")}><MathText text={formatPromptText(question.prompt)} /></h2>
       {showImage && question.imageUrl ? (
         <div className="mb-5 overflow-hidden rounded-[12px] border-2 border-[#E5E5E5] bg-white dark:border-white/10 dark:bg-slate-900">

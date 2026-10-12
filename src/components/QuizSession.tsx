@@ -843,6 +843,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
             t={t}
             onAnswer={handleHardAnswer}
             onZoomImage={(url) => setLightboxImage(url)}
+            report={{ examTitle: getExamTitle(exam, lang), subjectName: subject.name[lang], signedIn: Boolean(user) }}
           />
           <div className="mt-8 flex flex-row gap-3 sm:justify-end">
             <button
@@ -908,6 +909,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
                 onZoomImage={(url) => setLightboxImage(url)}
                 detailOpen={openDetailId === question.id}
                 onToggleDetail={() => setOpenDetailId((prev) => (prev === question.id ? null : question.id))}
+                report={{ examTitle: getExamTitle(exam, lang), subjectName: subject.name[lang], signedIn: Boolean(user) }}
               />
             ))}
           </div>

@@ -950,7 +950,12 @@ export function AdminPage({ lang }: Props) {
                               setSelectedSupportId(report.id)
                             }
                           }}
-                          className="cursor-pointer border-t border-slate-100 transition-colors hover:bg-sky-50/60 focus:bg-sky-50/60 focus:outline-none dark:border-white/5 dark:hover:bg-white/[0.03] dark:focus:bg-white/[0.03]"
+                          className={cn(
+                            "cursor-pointer border-t border-slate-100 transition-colors hover:bg-sky-50/60 focus:bg-sky-50/60 focus:outline-none dark:border-white/5 dark:hover:bg-white/[0.03] dark:focus:bg-white/[0.03]",
+                            report.status === "pending" && "bg-yellow-300 dark:bg-yellow-500/30",
+                            report.status === "resolved" && "bg-green-300 dark:bg-green-500/30",
+                            report.status === "unresolvable" && "bg-red-300 dark:bg-red-500/30",
+                          )}
                         >
                           <td className="px-4 py-3"><p className="font-extrabold text-[#100F3E] dark:text-white">{report.displayName ?? "(chưa đặt tên)"}</p><p className="text-xs font-semibold text-slate-400">{report.email ?? report.userId}</p></td>
                           <td className="px-4 py-3"><span className={cn("whitespace-nowrap rounded-full px-2.5 py-1 text-[11px] font-black", report.type === "contribute" ? "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300" : report.type === "feedback" ? "bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-300" : "bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-300")}>{report.type === "contribute" ? "Đóng góp tài liệu" : report.type === "feedback" ? "Góp ý" : "Báo lỗi"}</span></td>
