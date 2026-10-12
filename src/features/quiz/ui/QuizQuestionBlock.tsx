@@ -18,7 +18,6 @@ export const QuizQuestionBlock = memo(function QuizQuestionBlock({
   selected,
   isPractice,
   compact = false,
-  hideExplanation = false,
   locked = false,
   showImage = true,
   t,
@@ -33,7 +32,6 @@ export const QuizQuestionBlock = memo(function QuizQuestionBlock({
   selected: AnswerValue | undefined
   isPractice: boolean
   compact?: boolean
-  hideExplanation?: boolean
   locked?: boolean
   showImage?: boolean
   t: (typeof quizCopy)["en" | "vi"]
@@ -204,7 +202,7 @@ export const QuizQuestionBlock = memo(function QuizQuestionBlock({
             </button>
           )
         })}
-        {isPractice && selected !== undefined && (question.detailedExplanation || (!hideExplanation && question.explanation)) ? (
+        {isPractice && selected !== undefined && (question.detailedExplanation || question.explanation) ? (
           <div className={cn("flex flex-col gap-2", compact && "sm:col-span-2")}>
             {question.explanation ? (
               <div className={cn("lp-modal-desc rounded-[12px] border-2 border-[#B3E5FC] bg-[#E8F7FE] px-4 py-3.5 text-[13px] text-[#100F3E] dark:border-sky-500/20 dark:bg-sky-500/10 dark:text-sky-100", compact && "px-3 py-2.5")}>

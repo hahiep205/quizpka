@@ -71,7 +71,6 @@ type Props = { lang: "vi" | "en" }
 type AdminSection = "overview" | "users" | "notifications" | "payment" | "sendquiz" | "supports" | "timeline" | "attempts" | "subject" | "downloads"
 
 const EVENT_FILTERS: Array<"all" | ActivityEventType> = ["all", "login", "open_exam", "view_exam_detail", "start_attempt", "submit_attempt", "abandon_attempt", "retry_wrong", "purchase_start", "purchase_success", "search_exam", "view_notifications", "read_notification", "devtools_attempt", "view_dashboard", "view_leaderboard", "update_profile", "download_pdf"]
-const HIDDEN_OVERVIEW_EVENT_TYPES: ActivityEventType[] = ["view_notifications", "update_profile", "open_exam", "view_exam_detail"]
 
 const EVENT_TONES: Record<ActivityEventType, string> = {
   login: "bg-emerald-50 text-emerald-500 dark:bg-emerald-500/10",
@@ -636,10 +635,7 @@ export function AdminPage({ lang }: Props) {
   // Card "Hoạt động trong ngày": window ngày lịch 00:00–23:59 (giờ địa phương),
   // không dùng rangedEvents (24h trượt) để khỏi lẫn event của hôm qua.
   const todayEvents = useMemo(() => filterByToday(events, (e) => e.createdAt), [events])
-  const evTypeCounts = useMemo(
-    () => eventsByType(todayEvents).filter((c) => !HIDDEN_OVERVIEW_EVENT_TYPES.includes(c.key as ActivityEventType)),
-    [todayEvents],
-  )
+  const evTypeCounts = useMemo(() => eventsByType(todayEvents), [todayEvents])
   const evTypeMax = useMemo(() => Math.max(1, ...evTypeCounts.map((c) => c.count)), [evTypeCounts])
   const todayAttempts = useMemo(() => filterByToday(attempts, (a) => a.completedAt), [attempts])
   const subjectTops = useMemo(() => topSubjects(todayAttempts), [todayAttempts])

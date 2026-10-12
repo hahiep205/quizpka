@@ -30,6 +30,7 @@ describe("quizHard", () => {
     expect(isHardSupported("tu-tuong-ho-chi-minh")).toBe(true)
     expect(isHardSupported("tieng-anh-dau-vao")).toBe(false)
     expect(isHardSupported("toeic")).toBe(false)
+    expect(isHardSupported("tadv-traphi")).toBe(false)
   })
 
   it("requeues a wrong question strictly after the current position", () => {

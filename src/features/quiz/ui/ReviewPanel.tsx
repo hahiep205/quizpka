@@ -9,11 +9,10 @@ import { MathText } from "@/components/MathText"
 import { quizCopy } from "@/shared/i18n"
 import { cn, modalBodyClass, modalFooterClass, modalFrameClass, modalHeaderClass } from "@/lib/utils"
 
-export function ReviewPanel({ t, questions, answers, hideExplanation = false, initialQuestionId, filteredQuestionIds, numberMap, onClose }: {
+export function ReviewPanel({ t, questions, answers, initialQuestionId, filteredQuestionIds, numberMap, onClose }: {
   t: (typeof quizCopy)["en" | "vi"]
   questions: Question[]
   answers: Record<string, AnswerValue>
-  hideExplanation?: boolean
   initialQuestionId?: string
   filteredQuestionIds?: string[]
   numberMap?: Map<string, number>
@@ -56,7 +55,7 @@ export function ReviewPanel({ t, questions, answers, hideExplanation = false, in
                 <div className="mt-3 space-y-2 text-[13px] leading-6">
                   <p className="lp-card-desc"><span className="font-extrabold text-[#100F3E] dark:text-white">{t.yourAnswer}:</span>{" "}{selected === undefined ? t.noAnswer : typeof selected === "string" ? <MathText text={selected} /> : <><span>{`${String.fromCharCode(65 + selected)}. `}</span><MathText text={question.options[selected]} /></>}</p>
                   <p className="font-semibold text-emerald-700 dark:text-emerald-300"><span className="font-extrabold">{t.rightAnswer}:</span>{" "}{question.correctIndex === undefined ? question.acceptedAnswers?.join(" / ") : <><span>{`${String.fromCharCode(65 + question.correctIndex)}. `}</span><MathText text={question.options[question.correctIndex]} /></>}</p>
-                  {!hideExplanation && question.explanation ? (<p className="lp-modal-desc whitespace-pre-line text-[#100F3E] dark:text-sky-100"><span className="font-extrabold text-[#1CB0F6]">{t.explanation}:</span>{" "}<MathText text={question.explanation} /></p>) : null}
+                  {question.explanation ? (<p className="lp-modal-desc whitespace-pre-line text-[#100F3E] dark:text-sky-100"><span className="font-extrabold text-[#1CB0F6]">{t.explanation}:</span>{" "}<MathText text={question.explanation} /></p>) : null}
                   {question.detailedExplanation ? (
                     <div className="overflow-hidden rounded-[16px] border-2 border-[#B3E5FC] bg-white shadow-[0_2px_0_#DCDCDC] dark:border-sky-500/30 dark:bg-slate-900">
                       <button

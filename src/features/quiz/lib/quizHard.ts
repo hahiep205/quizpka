@@ -12,7 +12,7 @@ import { shuffle } from "@/features/quiz/lib/quizHelpers"
  */
 
 /** Subjects that do NOT support the Practice Hard mode (TADV + TOEIC). */
-const HARD_UNSUPPORTED_SUBJECT_IDS = new Set(["tieng-anh-dau-vao", "toeic"])
+const HARD_UNSUPPORTED_SUBJECT_IDS = new Set(["tieng-anh-dau-vao", "toeic", "tadv-traphi"])
 
 export function isHardSupported(subjectId: string): boolean {
   return !HARD_UNSUPPORTED_SUBJECT_IDS.has(subjectId)

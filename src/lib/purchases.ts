@@ -8,6 +8,7 @@ export function getPaidProductId(subjectCode: string): string | null {
   if (subjectCode === "SEC301") return "sec301"
   if (subjectCode === "MAR101") return "mar101"
   if (subjectCode === "MAC102") return "mac102"
+  if (subjectCode === "MAC101") return "mac101"
   if (subjectCode === "OIT101") return "oit101"
   if (subjectCode === "FIN101") return "fin101"
   if (subjectCode === "CIV101") return "civ101"
@@ -120,7 +121,7 @@ export async function getOwnedProductIds(userId: string, productIds: readonly st
 }
 
 const ALL_PAID_PRODUCT_IDS = [
-  "dsai101", "idsai101", "sqa101", "sec301", "mar101", "mac102", "oit101",
+  "dsai101", "idsai101", "sqa101", "sec301", "mar101", "mac102", "mac101", "oit101",
   "fin101", "civ101", "eco101", "law101", "hcm101", "mgt101", "phy101",
   "ppt101", "ppt102", "gt101", "dst101", "xst101", "mln102", "pec101",
   "mln101", "his101", "soc101", "dm101", "ta101", "rm101", "rm102",

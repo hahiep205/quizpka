@@ -9,8 +9,6 @@ export type SubjectId =
   | "lich-su-dang-cong-san-viet-nam"
   | "quan-tri-hoc"
   | "quan-tri-hoc-giua-ky"
-  | "triet-hoc-mac-lenin-2tc-giua-ky"
-  | "triet-hoc-mac-lenin-3tc-giua-ky"
   | "triet-hoc-mac-lenin-2tc"
   | "triet-hoc-mac-lenin-3tc"
   | "tu-tuong-ho-chi-minh-giua-ky"
@@ -20,7 +18,6 @@ export type SubjectId =
   | "danh-gia-va-kiem-dinh-chat-luong-phan-mem"
   | "kinh-te-vi-mo"
   | "kinh-te-vi-mo-macro"
-  | "kinh-te-chinh-tri-mac-lenin-giua-ky"
   | "kinh-te-chinh-tri-mac-lenin"
   | "ky-nang-khoi-nghiep-va-lanh-dao"
   | "phuong-phap-nghien-cuu-khoa-hoc"
@@ -275,12 +272,12 @@ export const subjects: Subject[] = [
   {
     id: "quan-tri-hoc-giua-ky",
     code: "MGT100",
-    name: { en: "Management Midterm", vi: "Quiz ôn tập Giữa kỳ - Quản trị học" },
+    name: { en: "Management Midterm", vi: "Quiz ôn tập Giữa kỳ - Quản trị học (3 tín chỉ)" },
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
         id: "mgt-midterm-bank-1", type: "midterm", year: 2026, questionCount: 162, durationMinutes: 120,
-        title: { en: "Management Midterm", vi: "Quiz ôn tập Giữa kỳ - Quản trị học" },
+        title: { en: "Management Midterm", vi: "Quiz ôn tập Giữa kỳ - Quản trị học (3 tín chỉ)" },
         description: { en: "A question bank of 162 questions divided into 4 chapters.", vi: "Gồm 162 câu hỏi được chia làm 4 chương." },
         questionBanks: [
           "/data/quan-tri-hoc-giua-ky/mgt_giua_ky.json",
@@ -298,12 +295,12 @@ export const subjects: Subject[] = [
   {
     id: "quan-tri-hoc",
     code: "MGT101",
-    name: { en: "Management", vi: "Quiz ôn tập Cuối kỳ - Quản trị học" },
+    name: { en: "Management", vi: "Quiz ôn tập Cuối kỳ - Quản trị học (3 tín chỉ)" },
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
         id: "management-final-bank-1", type: "final", year: 2026, questionCount: 450, durationMinutes: 240,
-        title: { en: "Management", vi: "Quiz ôn tập Cuối kỳ - Quản trị học" },
+        title: { en: "Management", vi: "Quiz ôn tập Cuối kỳ - Quản trị học (3 tín chỉ)" },
         description: { en: "A question bank of 450 questions across 7 chapters, covering both midterm and final content.", vi: "Gồm 450 câu hỏi chia làm 7 chương, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],
@@ -322,52 +319,14 @@ export const subjects: Subject[] = [
     ],
   },
   {
-    id: "triet-hoc-mac-lenin-2tc-giua-ky",
-    code: "MLN100",
-    name: { en: "Marxist-Leninist Philosophy (2 credits) Midterm", vi: "Quiz ôn tập Giữa kỳ - Triết học Mác - Lênin (2 tín chỉ)" },
-    category: { en: "General", vi: "Đại cương" },
-    exams: [
-      {
-        id: "philosophy-2-credit-midterm-bank-1", type: "midterm", year: 2026, questionCount: 116, durationMinutes: 120,
-        title: { en: "Marxist-Leninist Philosophy (2 credits) Midterm", vi: "Quiz ôn tập Giữa kỳ - Triết học Mác - Lênin (2 tín chỉ)" },
-        description: { en: "A question bank of 116 questions divided into 2 chapters.", vi: "Gồm 116 câu hỏi được chia làm 2 chương." },
-        questionBanks: ["/data/triet-hoc-mac-lenin-2tc-giua-ky/mln_2tc_giua_ky.json"],
-      },
-    ],
-    chapters: [
-      { id: "c12_mid", label: { en: "Chapters 1,2 - Midterm", vi: "Chương 1,2 - Giữa kỳ" }, matches: ["Chương 1", "Chương 2"], count: 116 },
-      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Chương 1"], count: 42 },
-      { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, matches: ["Chương 2"], count: 74 },
-    ],
-  },
-  {
-    id: "triet-hoc-mac-lenin-3tc-giua-ky",
-    code: "MLN103",
-    name: { en: "Marxist-Leninist Philosophy (3 credits) Midterm", vi: "Quiz ôn tập Giữa kỳ - Triết học Mác - Lênin (3 tín chỉ)" },
-    category: { en: "General", vi: "Đại cương" },
-    exams: [
-      {
-        id: "philosophy-3-credit-midterm-bank-1", type: "midterm", year: 2026, questionCount: 137, durationMinutes: 120,
-        title: { en: "Marxist-Leninist Philosophy (3 credits) Midterm", vi: "Quiz ôn tập Giữa kỳ - Triết học Mác - Lênin (3 tín chỉ)" },
-        description: { en: "A question bank of 137 questions divided into 2 chapters.", vi: "Gồm 137 câu hỏi được chia làm 2 chương." },
-        questionBanks: ["/data/triet-hoc-mac-lenin-3tc-giua-ky/mln_3tc_giua_ky.json"],
-      },
-    ],
-    chapters: [
-      { id: "c12_mid", label: { en: "Chapters 1,2 - Midterm", vi: "Chương 1,2 - Giữa kỳ" }, matches: ["Chương 1", "Chương 2"], count: 137 },
-      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Chương 1"], count: 51 },
-      { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, matches: ["Chương 2"], count: 86 },
-    ],
-  },
-  {
     id: "triet-hoc-mac-lenin-2tc",
     code: "MLN101",
-    name: { en: "Marxist-Leninist Philosophy (2 credits)", vi: "Quiz ôn tập Cuối kỳ - Triết học Mác - Lênin (2 tín chỉ)" },
+    name: { en: "Marxist-Leninist Philosophy (2 credits)", vi: "Quiz ôn tập Giữa và Cuối kỳ - Triết học Mác - Lênin (2 tín chỉ)" },
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
         id: "philosophy-2-credit-final-bank-1", type: "final", year: 2026, questionCount: 361, durationMinutes: 240,
-        title: { en: "Marxist-Leninist Philosophy (2 credits)", vi: "Quiz ôn tập Cuối kỳ - Triết học Mác - Lênin (2 tín chỉ)" },
+        title: { en: "Marxist-Leninist Philosophy (2 credits)", vi: "Quiz ôn tập Giữa và Cuối kỳ - Triết học Mác - Lênin (2 tín chỉ)" },
         description: { en: "A question bank of 361 questions across 3 chapters, covering both midterm and final content.", vi: "Gồm 361 câu hỏi chia làm 3 chương, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],
@@ -384,12 +343,12 @@ export const subjects: Subject[] = [
   {
     id: "triet-hoc-mac-lenin-3tc",
     code: "MLN102",
-    name: { en: "Marxist-Leninist Philosophy (3 credits)", vi: "Quiz ôn tập Cuối kỳ - Triết học Mác - Lênin (3 tín chỉ)" },
+    name: { en: "Marxist-Leninist Philosophy (3 credits)", vi: "Quiz ôn tập Giữa và Cuối kỳ - Triết học Mác - Lênin (3 tín chỉ)" },
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
         id: "philosophy-3-credit-final-bank-1", type: "final", year: 2026, questionCount: 246, durationMinutes: 240,
-        title: { en: "Marxist-Leninist Philosophy (3 credits)", vi: "Quiz ôn tập Cuối kỳ - Triết học Mác - Lênin (3 tín chỉ)" },
+        title: { en: "Marxist-Leninist Philosophy (3 credits)", vi: "Quiz ôn tập Giữa và Cuối kỳ - Triết học Mác - Lênin (3 tín chỉ)" },
         description: { en: "A question bank of 246 questions across 2 chapters, covering both midterm and final content.", vi: "Gồm 246 câu hỏi chia làm 2 chương, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],
@@ -501,34 +460,34 @@ export const subjects: Subject[] = [
   {
     id: "phuong-phap-nghien-cuu-khoa-hoc",
     code: "RM101",
-    name: { en: "Scientific Research Methodology", vi: "Quiz ôn tập Cuối kỳ - Phương pháp nghiên cứu khoa học" },
+    name: { en: "Scientific Research Methodology", vi: "Quiz ôn tập Giữa và Cuối kỳ - Phương pháp nghiên cứu khoa học" },
     category: { en: "Major", vi: "Chuyên ngành" },
     exams: [
       {
         id: "research-methodology-final-bank-1", type: "final", year: 2026, questionCount: 117, durationMinutes: 240,
-        title: { en: "Scientific Research Methodology", vi: "Quiz ôn tập Cuối kỳ - Phương pháp nghiên cứu khoa học" },
+        title: { en: "Scientific Research Methodology", vi: "Quiz ôn tập Giữa và Cuối kỳ - Phương pháp nghiên cứu khoa học" },
         description: { en: "A question bank of 120 questions, covering both midterm and final content.", vi: "Gồm 120 câu hỏi, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],
     chapters: [
-      { id: "all", label: { en: "Research Methodology - Final", vi: "Phương pháp nghiên cứu khoa học - Cuối kỳ" }, count: 117 },
+      { id: "all", label: { en: "Research Methodology - Final", vi: "Phương pháp nghiên cứu khoa học - Giữa và Cuối kỳ" }, count: 117 },
       { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Phương pháp nghiên cứu khoa học"], hidden: true, count: 117 },
     ],
   },
   {
     id: "nghien-cuu-khoa-hoc-trong-kinh-te",
     code: "RM102",
-    name: { en: "Research in Economics", vi: "Quiz ôn tập Cuối kỳ - Nghiên cứu khoa học trong kinh tế" },
+    name: { en: "Research in Economics", vi: "Quiz ôn tập Giữa và Cuối kỳ - Nghiên cứu khoa học trong kinh tế" },
     category: { en: "Major", vi: "Chuyên ngành" },
     exams: [
       {
         id: "nghien-cuu-khoa-hoc-trong-kinh-te-final-bank-1", type: "final", year: 2026, questionCount: 129, durationMinutes: 240,
-        title: { en: "Research in Economics", vi: "Quiz ôn tập Cuối kỳ - Nghiên cứu khoa học trong kinh tế" },
+        title: { en: "Research in Economics", vi: "Quiz ôn tập Giữa và Cuối kỳ - Nghiên cứu khoa học trong kinh tế" },
         description: { en: "A question bank of 129 questions, covering both midterm and final content.", vi: "Gồm 129 câu hỏi, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],
     chapters: [
-      { id: "all", label: { en: "Research in Economics - Final", vi: "Nghiên cứu khoa học trong kinh tế - Cuối kỳ" }, count: 129 },
+      { id: "all", label: { en: "Research in Economics - Final", vi: "Nghiên cứu khoa học trong kinh tế - Giữa và Cuối kỳ" }, count: 129 },
       { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Phương pháp nghiên cứu khoa học trong kinh tế"], hidden: true, count: 129 },
     ],
   },
@@ -557,20 +516,13 @@ export const subjects: Subject[] = [
   {
     id: "kinh-te-vi-mo",
     code: "MAC101",
-    name: { en: "Microeconomics", vi: "Quiz ôn tập - Kinh tế vi mô" },
+    name: { en: "Microeconomics", vi: "Quiz ôn tập Giữa và Cuối kỳ - Kinh tế vi mô" },
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
         id: "macroeconomics-final-bank-1", type: "final", year: 2026, questionCount: 181, durationMinutes: 240,
-        title: { en: "Microeconomics", vi: "Quiz ôn tập - Kinh tế vi mô" },
+        title: { en: "Microeconomics", vi: "Quiz ôn tập Giữa và Cuối kỳ - Kinh tế vi mô" },
         description: { en: "A question bank of 181 questions across 5 chapters, covering both midterm and final content.", vi: "Gồm 181 câu hỏi chia làm 5 chương, bao gồm cả nội dung Giữa và Cuối kỳ." },
-        questionBanks: [
-          "/data/kinh_te_vi_mo/chuong_1.json",
-          "/data/kinh_te_vi_mo/chuong_2.json",
-          "/data/kinh_te_vi_mo/chuong_3.json",
-          "/data/kinh_te_vi_mo/chuong_4.json",
-          "/data/kinh_te_vi_mo/chuong_5.json",
-        ],
       },
     ],
     chapters: [
@@ -587,50 +539,29 @@ export const subjects: Subject[] = [
   {
     id: "kinh-te-vi-mo-macro",
     code: "MAC102",
-    name: { en: "Macroeconomics", vi: "Quiz ôn tập Cuối kỳ - Kinh tế vĩ mô" },
+    name: { en: "Macroeconomics", vi: "Quiz ôn tập Giữa và Cuối kỳ - Kinh tế vĩ mô" },
     category: { en: "Major", vi: "Chuyên ngành" },
     exams: [
       {
         id: "kinh-te-vi-mo-macro-bank-1", type: "final", year: 2026, questionCount: 183, durationMinutes: 240,
-        title: { en: "Macroeconomics", vi: "Quiz ôn tập Cuối kỳ - Kinh tế vĩ mô" },
+        title: { en: "Macroeconomics", vi: "Quiz ôn tập Giữa và Cuối kỳ - Kinh tế vĩ mô" },
         description: { en: "A question bank of 183 questions, covering both midterm and final content.", vi: "Gồm 183 câu hỏi, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],
     chapters: [
-      { id: "all", label: { en: "Macroeconomics - Final", vi: "Kinh tế vĩ mô - Cuối kỳ" }, count: 183 },
+      { id: "all", label: { en: "Macroeconomics - Final", vi: "Kinh tế vĩ mô - Giữa và Cuối kỳ" }, count: 183 },
       { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Kinh tế vĩ mô"], hidden: true, count: 183 },
-    ],
-  },
-  {
-    id: "kinh-te-chinh-tri-mac-lenin-giua-ky",
-    code: "PEC100",
-    name: { en: "Marxist-Leninist Political Economy Midterm", vi: "Quiz ôn tập Giữa kỳ - Kinh tế chính trị Mác - Lênin" },
-    category: { en: "General", vi: "Đại cương" },
-    exams: [
-      {
-        id: "political-economy-midterm-bank-1", type: "midterm", year: 2026, questionCount: 155, durationMinutes: 120,
-        title: { en: "Marxist-Leninist Political Economy Midterm", vi: "Quiz ôn tập Giữa kỳ - Kinh tế chính trị Mác - Lênin" },
-        description: { en: "A question bank of 155 questions divided into 4 chapters.", vi: "Gồm 155 câu hỏi được chia làm 4 chương." },
-        questionBanks: ["/data/kinh-te-chinh-tri-mac-lenin-giua-ky/pec_giua_ky.json"],
-      },
-    ],
-    chapters: [
-      { id: "c1234_mid", label: { en: "Chapters 1,2,3,4 - Midterm", vi: "Chương 1,2,3,4 - Giữa kỳ" }, matches: ["Chương 1", "Chương 2", "Chương 3", "Chương 4"], count: 155 },
-      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Chương 1"], count: 29 },
-      { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, matches: ["Chương 2"], count: 50 },
-      { id: "c3", label: { en: "Chapter 3", vi: "Chương 3" }, matches: ["Chương 3"], count: 31 },
-      { id: "c4", label: { en: "Chapter 4", vi: "Chương 4" }, matches: ["Chương 4"], count: 45 },
     ],
   },
   {
     id: "kinh-te-chinh-tri-mac-lenin",
     code: "PEC101",
-    name: { en: "Marxist-Leninist Political Economy", vi: "Quiz ôn tập Cuối kỳ - Kinh tế chính trị Mác - Lênin" },
+    name: { en: "Marxist-Leninist Political Economy", vi: "Quiz ôn tập Giữa và Cuối kỳ - Kinh tế chính trị Mác - Lênin" },
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
         id: "political-economy-final-bank-1", type: "final", year: 2026, questionCount: 240, durationMinutes: 240,
-        title: { en: "Marxist-Leninist Political Economy", vi: "Quiz ôn tập Cuối kỳ - Kinh tế chính trị Mác - Lênin" },
+        title: { en: "Marxist-Leninist Political Economy", vi: "Quiz ôn tập Giữa và Cuối kỳ - Kinh tế chính trị Mác - Lênin" },
         description: { en: "A question bank of 240 questions across 6 chapters, covering both midterm and final content.", vi: "Gồm 240 câu hỏi chia làm 6 chương, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
     ],

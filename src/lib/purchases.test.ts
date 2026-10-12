@@ -48,9 +48,10 @@ describe("getOwnedProductIds", () => {
 describe("getAllPaidProductIds", () => {
   it("covers every paid product used by the catalog sweep", () => {
     const ids = getAllPaidProductIds()
-    expect(ids).toHaveLength(33)
-    expect(new Set(ids).size).toBe(33)
+    expect(ids).toHaveLength(34)
+    expect(new Set(ids).size).toBe(34)
     expect(ids).toContain("dsai101")
+    expect(ids).toContain("mac101")
     expect(ids).toContain("tadv02")
     expect(ids).toContain("sta201")
   })

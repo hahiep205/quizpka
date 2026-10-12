@@ -55,7 +55,6 @@ import { QuizQuestionBlock } from "@/features/quiz/ui/QuizQuestionBlock"
 import { QuizSidebar } from "@/features/quiz/ui/QuizSidebar"
 import { ReviewPanel } from "@/features/quiz/ui/ReviewPanel"
 import { ToeicResultPanel } from "@/features/quiz/ui/toeic-result/ToeicResultPanel"
-import { shouldHideExplanation } from "@/features/quiz/lib/explanationVisibility"
 import { StatCard } from "@/features/quiz/ui/StatCard"
 import { CenterCard } from "@/features/quiz/ui/CenterCard"
 import { ResultStamp } from "@/features/quiz/ui/ResultStamp"
@@ -97,7 +96,6 @@ function dbgProgressLog(...args: unknown[]) {
 export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope, questionIds, retryOfHistoryId, retryNumber, onExit }: QuizSessionProps) {
   const t = copy[lang]
   const { user } = useAuth()
-  const hideExplanation = shouldHideExplanation(subject.id)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [answers, setAnswers] = useState<Record<string, AnswerValue>>({})
   const [finished, setFinished] = useState(false)
@@ -692,7 +690,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
               )}
             </div>
           </div>
-          {reviewOpen ? <ReviewPanel t={t} questions={questions} answers={hardFinalAnswers} hideExplanation={hideExplanation} onClose={() => setReviewOpen(false)} /> : null}
+          {reviewOpen ? <ReviewPanel t={t} questions={questions} answers={hardFinalAnswers} onClose={() => setReviewOpen(false)} /> : null}
         </div>
       )
     }
@@ -730,7 +728,6 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
               t={t}
               questions={questions}
               answers={answers}
-              hideExplanation={hideExplanation}
               initialQuestionId={reviewQuestionId}
               filteredQuestionIds={reviewFilteredIds}
               numberMap={questionNumberMap}
@@ -801,7 +798,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
             {setup.mode === "practice" || forcePractice ? (<button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" onClick={() => setReviewOpen(true)}>{t.review}</button>) : null}
           </div>
         </div>
-        {reviewOpen ? <ReviewPanel t={t} questions={questions} answers={answers} hideExplanation={hideExplanation} onClose={() => setReviewOpen(false)} /> : null}
+          {reviewOpen ? <ReviewPanel t={t} questions={questions} answers={answers} onClose={() => setReviewOpen(false)} /> : null}
       </div>
     )
   }
@@ -839,7 +836,6 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
             selected={hardSelected}
             isPractice
             locked={hardAnswered}
-            hideExplanation={hideExplanation}
             t={t}
             onAnswer={handleHardAnswer}
             onZoomImage={(url) => setLightboxImage(url)}
@@ -902,7 +898,6 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
                 selected={answers[question.id]}
                 isPractice={isPractice}
                 compact
-                hideExplanation={hideExplanation}
                 showImage={partImageVisibility.get(question.id) ?? true}
                 t={t}
                 onAnswer={handleAnswer}
