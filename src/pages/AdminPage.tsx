@@ -344,7 +344,7 @@ export function AdminPage({ lang }: Props) {
     if (section !== "sendquiz") return
     let cancelled = false
     const timer = window.setTimeout(() => {
-      void fetchAdminUsersPage({ query: grantUserQuery, role: "user", sort: "displayName", desc: false, limit: 30 }).then((res) => {
+      void fetchAdminUsersPage({ query: grantUserQuery, role: "all", sort: "displayName", desc: false, limit: 30 }).then((res) => {
         if (!cancelled) setGrantUsers(res.users)
       })
     }, 300)
@@ -721,14 +721,14 @@ export function AdminPage({ lang }: Props) {
   const handleGrantPurchase = () => {
     setGrantResult(null)
     if (!grantUserId || !grantProductId) {
-      setGrantResult({ ok: false, message: "Vui lòng chọn user và môn học." })
+      setGrantResult({ ok: false, message: "Vui lòng chọn tài khoản và môn học." })
       return
     }
-    if (!window.confirm("Xác nhận đánh dấu user này đã mua môn học? Thao tác sẽ cấp quyền truy cập ngay lập tức.")) return
+    if (!window.confirm("Xác nhận đánh dấu tài khoản này đã mua môn học? Thao tác sẽ cấp quyền truy cập ngay lập tức.")) return
     setGrantSending(true)
     void grantAdminPurchase({ userId: grantUserId, productId: grantProductId })
       .then((result) => {
-        setGrantResult({ ok: true, message: result.alreadyGranted ? "User đã có quyền môn học này. Không có thay đổi mới." : "Đã cấp quyền truy cập môn học cho user." })
+        setGrantResult({ ok: true, message: result.alreadyGranted ? "Tài khoản đã có quyền môn học này. Không có thay đổi mới." : "Đã cấp quyền truy cập môn học cho tài khoản." })
         loadPayments()
       })
       .catch((err: unknown) => setGrantResult({ ok: false, message: err instanceof Error ? err.message : "Không thể cấp quyền môn học." }))
@@ -900,16 +900,16 @@ export function AdminPage({ lang }: Props) {
                     Chỉ sử dụng sau khi đã đối soát thanh toán. Thao tác này ghi nhận quyền mua trực tiếp, không tạo doanh thu hoặc giao dịch thanh toán mới.
                   </div>
                   <div>
-                    <label htmlFor="grant-user" className="text-sm font-black">User nhận quyền</label>
+                    <label htmlFor="grant-user" className="text-sm font-black">Tài khoản nhận quyền</label>
                     <label className="relative mt-2 block">
                       <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
                       <input value={grantUserQuery} onChange={(e) => setGrantUserQuery(e.target.value)} placeholder="Tìm theo tên, email hoặc ID..." className="h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white pl-9 pr-3 text-sm font-semibold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white" />
                     </label>
                     <select id="grant-user" value={grantUserId} onChange={(e) => setGrantUserId(e.target.value)} className="mt-2 h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white">
-                      <option value="">Chọn user...</option>
-                      {grantUsers.map((user) => <option key={user.id} value={user.id}>{user.displayName ?? "(chưa đặt tên)"} · {user.email ?? user.id}</option>)}
+                      <option value="">Chọn tài khoản...</option>
+                      {grantUsers.map((user) => <option key={user.id} value={user.id}>{user.displayName ?? "(chưa đặt tên)"} · {user.email ?? user.id}{user.role === "admin" ? " · admin" : ""}</option>)}
                     </select>
-                    <p className="mt-1 text-xs font-semibold text-slate-400">Hiển thị {grantUsers.length} user khớp (tối đa 30, chỉ role user).</p>
+                    <p className="mt-1 text-xs font-semibold text-slate-400">Hiển thị {grantUsers.length} tài khoản khớp (tối đa 30, gồm cả admin).</p>
                   </div>
                   <div>
                     <label htmlFor="grant-product" className="text-sm font-black">Môn học trả phí</label>
