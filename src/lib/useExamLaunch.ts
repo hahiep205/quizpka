@@ -41,11 +41,11 @@ export function useExamLaunch(lang: Lang) {
   const handleTadvSelect = (examId: string) => {
     const opt = tadvExamOptions.find((o) => o.id === examId)
     if (!opt || !tadvPickerExam) return
+    // Giữ title/description của exam catalog (giống card dashboard); chỉ thay
+    // id + banks theo option được chọn để mọi màn hình sau hiển thị đồng nhất.
     const newExam: ExamCatalogItem = {
       ...tadvPickerExam,
       id: opt.id,
-      title: opt.title,
-      description: opt.description,
       questionBanks: opt.questionBanks,
     }
     practice.setSetupExam(newExam)

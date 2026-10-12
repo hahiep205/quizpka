@@ -68,18 +68,21 @@ export function PracticePage({ lang }: { lang: Lang }) {
     if (tadvOpt) {
       const subj = getSubjectById(payload.subjectId)
       if (!subj) return null
+      // Tên hiển thị theo exam catalog (giống card dashboard), không dùng tên
+      // option (môn này chỉ có 1 đề catalog). Mô tả cũng vậy.
+      const catalogExam = subj.exams[0]
       return {
         id: tadvOpt.id,
         type: "final" as const,
         year: 2026,
         questionCount: tadvOpt.questionCount ?? 50,
         durationMinutes: 60,
-        title: tadvOpt.title,
-        description: tadvOpt.description,
+        title: catalogExam?.title ?? tadvOpt.title,
+        description: catalogExam?.description ?? tadvOpt.description,
         questionBanks: tadvOpt.questionBanks,
         subjectId: subj.id,
         subjectCode: subj.code,
-        subjectName: subj.name,
+        subjectName: getSubjectDisplayName(subj, displayOverrides.get(subj.id)),
         category: subj.category,
       }
     }
@@ -97,7 +100,7 @@ export function PracticePage({ lang }: { lang: Lang }) {
         description: dsaiOpt.description,
         subjectId: subj.id,
         subjectCode: subj.code,
-        subjectName: subj.name,
+        subjectName: getSubjectDisplayName(subj, displayOverrides.get(subj.id)),
         category: subj.category,
       }
     }

@@ -26,6 +26,10 @@ import { cn } from "@/lib/utils"
 import { fetchAdminNotificationHistory, fetchNotificationBatchDetails, fetchNotificationBatchRecipients, fetchNotificationRecipients, revokeAdminNotification, sendAdminNotifications, type AdminNotificationHistory, type NotificationRecipient } from "@/features/notifications/api/notifications"
 import { fetchAdminOrders, sortAdminPaymentsByCreatedAt, todayMidnightISO, type AdminPayment, type PaymentStatus } from "@/features/admin/api/adminPayments"
 import { grantAdminPurchase, fetchAdminProducts, type AdminProduct } from "@/features/admin/api/adminEntitlements"
+import { examCatalog } from "@/data/subjects"
+import { getPaidProductId } from "@/lib/purchases"
+import { useSubjectOverrides } from "@/hooks/useSubjectOverrides"
+import { applySubjectDisplayOverrides } from "@/features/admin/lib/subjectDisplay"
 import { deleteSupportReport, fetchSupportReports, updateSupportStatus, type SupportReport, type SupportStatus, type SupportType } from "@/features/support/api/supportReports"
 import { SubjectManager } from "@/features/admin/ui/SubjectManager"
 import { DownloadManager } from "@/features/admin/ui/DownloadManager"
@@ -213,6 +217,18 @@ export function AdminPage({ lang }: Props) {
   const [grantProductId, setGrantProductId] = useState("")
   const [grantSending, setGrantSending] = useState(false)
   const [grantResult, setGrantResult] = useState<{ ok: boolean; message: string } | null>(null)
+  // Tên đề theo catalog dashboard (kèm override) cho dropdown cấp quyền —
+  // thay vì tên product thô trong DB. Đề đầu tiên của mỗi product thắng.
+  const displayOverrides = useSubjectOverrides()
+  const productExamTitle = useMemo(() => {
+    const map = new Map<string, string>()
+    for (const exam of applySubjectDisplayOverrides(examCatalog, displayOverrides)) {
+      if (exam.hideFromCatalog) continue
+      const productId = getPaidProductId(exam.subjectCode)
+      if (productId && !map.has(productId)) map.set(productId, exam.title[lang])
+    }
+    return map
+  }, [displayOverrides, lang])
   const [supportReports, setSupportReports] = useState<SupportReport[]>([])
   const [supportsError, setSupportsError] = useState<string | null>(null)
   const [supportQuery, setSupportQuery] = useState("")
@@ -533,9 +549,9 @@ export function AdminPage({ lang }: Props) {
       if (!byId.has(payment.productId)) byId.set(payment.productId, payment.productName)
     }
     return [...byId.entries()]
-      .map(([id, name]) => ({ id, name }))
+      .map(([id, name]) => ({ id, name: productExamTitle.get(id) ?? name }))
       .sort((a, b) => a.name.localeCompare(b.name, "vi"))
-  }, [adminProducts, payments])
+  }, [adminProducts, payments, productExamTitle])
   const filteredPayments = useMemo(() => {
     const q = paymentQuery.trim().toLowerCase()
     const filtered = payments.filter((payment) => {
@@ -545,12 +561,12 @@ export function AdminPage({ lang }: Props) {
       if (paymentStatus !== "latest" && paymentStatus !== "all" && payment.status !== paymentStatus) return false
       if (paymentProduct !== "all" && payment.productId !== paymentProduct) return false
       if (!q) return true
-      return [payment.orderId, payment.transactionId, payment.productName, payment.productId, payment.userId, payment.userDisplayName, payment.userEmail]
+      return [payment.orderId, payment.transactionId, payment.productName, productExamTitle.get(payment.productId) ?? "", payment.productId, payment.userId, payment.userDisplayName, payment.userEmail]
         .some((value) => value?.toLowerCase().includes(q))
     })
     if (paymentStatus !== "latest") return filtered
     return sortAdminPaymentsByCreatedAt(filtered)
-  }, [paymentQuery, paymentStatus, paymentProduct, payments])
+  }, [paymentQuery, paymentStatus, paymentProduct, payments, productExamTitle])
   // KPI giao dịch chỉ tính trong ngày hôm nay (0h–23h59 giờ địa phương),
   // dùng cùng mốc thời gian hiển thị ở cột "Thời gian tạo đơn".
   const paymentKpis = useMemo(() => {
@@ -884,7 +900,7 @@ export function AdminPage({ lang }: Props) {
                 </Card>
                 {paymentsError ? <Card variant="dashed" className="p-5 text-sm font-bold text-red-600">{paymentsError}</Card> : null}
                 {!paymentsError && !filteredPayments.length ? <Card variant="dashed" className="py-14 text-center"><WalletCards className="mx-auto h-9 w-9 text-slate-300" /><p className="mt-3 text-sm font-bold text-slate-500">Chưa có giao dịch phù hợp.</p></Card> : null}
-                {pagedPayments.length ? <div className="overflow-x-auto rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none"><table className="w-full min-w-[900px] text-left text-sm"><thead><tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-wide text-slate-400 dark:bg-white/5"><th className="px-4 py-3">User</th><th className="px-4 py-3">Môn học</th><th className="px-4 py-3">Mã đơn</th><th className="px-4 py-3 text-right">Số tiền</th><th className="px-4 py-3">Trạng thái</th><th className="px-4 py-3">Thời gian tạo đơn</th></tr></thead><tbody>{pagedPayments.map((payment) => <tr key={payment.orderId} className="border-t border-slate-100 dark:border-white/5"><td className="px-4 py-3"><p className="font-extrabold text-[#100F3E] dark:text-white">{payment.userDisplayName ?? payment.userEmail ?? "(chưa đặt tên)"}</p><p className="text-xs font-semibold text-slate-400">{payment.userEmail ?? payment.userId}</p></td><td className="max-w-[240px] px-4 py-3 font-bold text-slate-600 dark:text-slate-300">{payment.productName}</td><td className="px-4 py-3 font-mono text-xs text-slate-500">{payment.orderId}<span className="block text-[10px] text-slate-400">{payment.transactionId ?? "Chưa có mã giao dịch"}</span></td><td className="px-4 py-3 text-right font-black text-[#129BDC]">{formatVnd(payment.amountVnd)}</td><td className="px-4 py-3"><PaymentStatusBadge status={payment.status} /></td><td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(payment.createdAt, lang)}</td></tr>)}</tbody></table></div> : null}
+                {pagedPayments.length ? <div className="overflow-x-auto rounded-[16px] border-2 border-[#E5E5E5] bg-white shadow-[0_3px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none"><table className="w-full min-w-[900px] text-left text-sm"><thead><tr className="bg-slate-50/80 text-[11px] font-bold uppercase tracking-wide text-slate-400 dark:bg-white/5"><th className="px-4 py-3">User</th><th className="px-4 py-3">Môn học</th><th className="px-4 py-3">Mã đơn</th><th className="px-4 py-3 text-right">Số tiền</th><th className="px-4 py-3">Trạng thái</th><th className="px-4 py-3">Thời gian tạo đơn</th></tr></thead><tbody>{pagedPayments.map((payment) => <tr key={payment.orderId} className="border-t border-slate-100 dark:border-white/5"><td className="px-4 py-3"><p className="font-extrabold text-[#100F3E] dark:text-white">{payment.userDisplayName ?? payment.userEmail ?? "(chưa đặt tên)"}</p><p className="text-xs font-semibold text-slate-400">{payment.userEmail ?? payment.userId}</p></td><td className="max-w-[240px] px-4 py-3 font-bold text-slate-600 dark:text-slate-300">{productExamTitle.get(payment.productId) ?? payment.productName}</td><td className="px-4 py-3 font-mono text-xs text-slate-500">{payment.orderId}<span className="block text-[10px] text-slate-400">{payment.transactionId ?? "Chưa có mã giao dịch"}</span></td><td className="px-4 py-3 text-right font-black text-[#129BDC]">{formatVnd(payment.amountVnd)}</td><td className="px-4 py-3"><PaymentStatusBadge status={payment.status} /></td><td className="px-4 py-3 text-xs font-semibold text-slate-400">{formatTime(payment.createdAt, lang)}</td></tr>)}</tbody></table></div> : null}
                 {filteredPayments.length > PAYMENT_PAGE_SIZE ? <div className="flex items-center justify-between"><p className="text-sm font-bold text-slate-400">Hiển thị {safePaymentPage * PAYMENT_PAGE_SIZE + 1}–{Math.min(filteredPayments.length, safePaymentPage * PAYMENT_PAGE_SIZE + PAYMENT_PAGE_SIZE)} / {filteredPayments.length}</p><div className="flex gap-2"><button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safePaymentPage === 0} onClick={() => setPaymentPage(safePaymentPage - 1)}>← Trước</button><button type="button" className="lp-btn lp-btn--secondary lp-btn--sm" disabled={safePaymentPage >= paymentPageCount - 1} onClick={() => setPaymentPage(safePaymentPage + 1)}>Sau →</button></div></div> : null}
               </section>
             ) : null}
@@ -911,7 +927,7 @@ export function AdminPage({ lang }: Props) {
                     <label htmlFor="grant-product" className="text-sm font-black">Môn học trả phí</label>
                     <select id="grant-product" value={grantProductId} onChange={(e) => setGrantProductId(e.target.value)} className="mt-2 h-11 w-full rounded-xl border-2 border-[#E5E5E5] bg-white px-3 text-sm font-bold outline-none focus:border-[#7DD3FC] dark:border-white/10 dark:bg-slate-800 dark:text-white">
                       <option value="">Chọn môn học...</option>
-                      {adminProducts.map((product) => <option key={product.id} value={product.id}>{product.name} · {formatVnd(product.priceVnd)}</option>)}
+                      {adminProducts.map((product) => <option key={product.id} value={product.id}>{productExamTitle.get(product.id) ?? product.name} · {formatVnd(product.priceVnd)}</option>)}
                     </select>
                   </div>
                   {grantResult ? <p className={cn("rounded-xl px-3 py-2 text-sm font-bold", grantResult.ok ? "bg-emerald-50 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300" : "bg-red-50 text-red-700 dark:bg-red-500/10 dark:text-red-300")}>{grantResult.message}</p> : null}

@@ -8,7 +8,7 @@ import { refreshSubjectOverrides, useSubjectOverrides } from "@/hooks/useSubject
 import { saveSubjectOverride } from "@/features/admin/api/subjectOverrides"
 import { fetchDownloadHistory } from "@/features/admin/api/adminActivity"
 import type { ActivityEvent } from "@/features/activity/lib/activityLog"
-import { isSubjectDownloadable, isSubjectVisible } from "@/features/admin/lib/subjectDisplay"
+import { isSubjectDownloadable, isSubjectVisible, getSubjectDisplayName } from "@/features/admin/lib/subjectDisplay"
 
 type Lang = "vi" | "en"
 
@@ -82,9 +82,11 @@ export function DownloadManager({ lang }: { lang: Lang }) {
     const normalized = query.trim().toLowerCase()
     return downloadableSubjects.filter((subject) => {
       if (!normalized) return true
-      return `${subject.code} ${subject.name.vi} ${subject.name.en}`.toLowerCase().includes(normalized)
+      const override = overrides.get(subject.id)
+      const examTitles = subject.exams.map((exam) => `${exam.title.vi} ${exam.title.en}`).join(" ")
+      return `${subject.code} ${subject.name.vi} ${subject.name.en} ${override?.nameVi ?? ""} ${override?.nameEn ?? ""} ${override?.titleVi ?? ""} ${override?.titleEn ?? ""} ${examTitles}`.toLowerCase().includes(normalized)
     })
-  }, [query])
+  }, [overrides, query])
 
   const enabledCount = downloadableSubjects.filter(
     (subject) => isSubjectDownloadable(subject.id, overrides) && isSubjectVisible(subject.id, overrides),
@@ -161,8 +163,12 @@ export function DownloadManager({ lang }: { lang: Lang }) {
         {visible.map((subject) => {
           const downloadable = isSubjectDownloadable(subject.id, overrides)
           const shown = isSubjectVisible(subject.id, overrides)
+          const override = overrides.get(subject.id)
           const examCount = examCatalog.filter((exam) => exam.subjectId === subject.id && !exam.hideFromCatalog).length
           const busy = savingId === subject.id
+          const shownExams = subject.exams.filter((exam) => !exam.hideFromCatalog)
+          const firstExamTitle = (lang === "vi" ? override?.titleVi : override?.titleEn) || shownExams[0]?.title[lang]
+          const extraExams = shownExams.length > 1 ? ` · +${shownExams.length - 1} ${lang === "vi" ? "đề" : "exams"}` : ""
           return (
             <article key={subject.id} className={cn("rounded-[15px] border-2 bg-white p-3.5 shadow-[0_3px_0_#DCDCDC] sm:p-4 dark:bg-slate-900 dark:shadow-none", downloadable && shown ? "border-[#E5E5E5] dark:border-white/10" : "border-slate-200 opacity-75 dark:border-white/5")}>
               <div className="flex items-center gap-3">
@@ -184,11 +190,16 @@ export function DownloadManager({ lang }: { lang: Lang }) {
                     ) : null}
                   </div>
                   <p className="mt-1.5 truncate text-sm font-extrabold text-[#100F3E] dark:text-white">
-                    {subject.name[lang]}
+                    {getSubjectDisplayName(subject, overrides.get(subject.id))[lang]}
                   </p>
                   <p className="truncate text-xs font-semibold text-slate-400">
                     {examCount} {lang === "vi" ? "bộ tài liệu" : "sets"}
                   </p>
+                  {firstExamTitle ? (
+                    <p className="truncate text-xs font-semibold text-[#129BDC] dark:text-sky-300" title={`${firstExamTitle}${extraExams}`}>
+                      {lang === "vi" ? "Đề hiển thị: " : "Listed as: "}{firstExamTitle}{extraExams}
+                    </p>
+                  ) : null}
                 </div>
                 <div className="flex shrink-0 flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
                   <label className="flex cursor-pointer items-center gap-2 text-xs font-bold text-slate-500 dark:text-slate-400">

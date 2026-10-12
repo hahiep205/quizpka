@@ -58,9 +58,11 @@ export function SubjectManager({ lang }: { lang: Lang }) {
       if (paidFilter === "free" && isPaid) return false
       if (paidFilter === "paid" && !isPaid) return false
       if (!normalized) return true
-      return `${subject.code} ${subject.name.vi} ${subject.name.en}`.toLowerCase().includes(normalized)
+      const override = overrides.get(subject.id)
+      const examTitles = subject.exams.map((exam) => `${exam.title.vi} ${exam.title.en}`).join(" ")
+      return `${subject.code} ${subject.name.vi} ${subject.name.en} ${override?.nameVi ?? ""} ${override?.nameEn ?? ""} ${override?.titleVi ?? ""} ${override?.titleEn ?? ""} ${examTitles}`.toLowerCase().includes(normalized)
     })
-  }, [paidFilter, query])
+  }, [overrides, paidFilter, query])
 
   const openEditor = (subject: Subject) => {
     setEditingId(subject.id)
@@ -208,6 +210,17 @@ export function SubjectManager({ lang }: { lang: Lang }) {
                   <p className="truncate text-xs font-semibold text-slate-400">
                     {subject.exams.length} {lang === "vi" ? "đề" : "exams"}
                   </p>
+                  {(() => {
+                    const shownExams = subject.exams.filter((exam) => !exam.hideFromCatalog)
+                    if (!shownExams.length) return null
+                    const firstTitle = (lang === "vi" ? override?.titleVi : override?.titleEn) || shownExams[0].title[lang]
+                    const extra = shownExams.length > 1 ? ` · +${shownExams.length - 1} ${lang === "vi" ? "đề" : "exams"}` : ""
+                    return (
+                      <p className="truncate text-xs font-semibold text-[#129BDC] dark:text-sky-300" title={`${firstTitle}${extra}`}>
+                        {lang === "vi" ? "Đề hiển thị: " : "Listed as: "}{firstTitle}{extra}
+                      </p>
+                    )
+                  })()}
                 </div>
                 <label className="flex shrink-0 cursor-pointer items-center gap-2 text-xs font-bold text-slate-500 dark:text-slate-400">
                   <input

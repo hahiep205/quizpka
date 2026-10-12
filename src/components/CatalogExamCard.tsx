@@ -49,7 +49,7 @@ export function CatalogExamCard({
         </div>
       </div>
       <div className="mt-3 min-w-0 flex-1 sm:mt-5">
-        <h3 className="line-clamp-2 text-[14px] font-black leading-5 tracking-[-0.02em] text-[#100F3E] dark:text-white sm:mt-2 sm:text-lg sm:leading-6">
+        <h3 className="line-clamp-3 text-[14px] font-black leading-5 tracking-[-0.02em] text-[#100F3E] dark:text-white sm:mt-2 sm:line-clamp-2 sm:text-lg sm:leading-6">
           {exam.title[lang]}
         </h3>
         <p className="mt-2 hidden line-clamp-2 text-[13px] font-semibold leading-5 text-slate-500 dark:text-slate-400 sm:block">

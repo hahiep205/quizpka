@@ -114,7 +114,7 @@ export const subjects: Subject[] = [
         year: 2026,
         questionCount: 50,
         durationMinutes: 60,
-        title: { en: "English Placement Mock Test", vi: "Thi thử Tiếng Anh Đầu Vào" },
+        title: { en: "English Placement Mock Test - School Sample Exam", vi: "Thi thử Tiếng Anh Đầu Vào - Đề thi mẫu của trường" },
         description: { en: "Free English placement mock test with Phenikaa University's latest sample exam.", vi: "Thỉ thử Tiếng anh đầu vào miễn phí với bộ đề mẫu mới nhất của Đại học Phenikaa." },
         questionBanks: ["/data/tadv/test01/test01.json"],
       },
