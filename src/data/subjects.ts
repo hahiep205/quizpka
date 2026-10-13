@@ -393,20 +393,20 @@ export const subjects: Subject[] = [
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "scientific-socialism-midterm-bank-1", type: "midterm", year: 2026, questionCount: 103, durationMinutes: 120,
+        id: "scientific-socialism-midterm-bank-1", type: "midterm", year: 2026, questionCount: 135, durationMinutes: 120,
         title: { en: "Scientific Socialism Midterm", vi: "Quiz ôn tập Giữa kỳ - Chủ nghĩa xã hội khoa học" },
-        description: { en: "A question bank of 103 questions divided into 4 chapters.", vi: "Gồm 103 câu hỏi được chia làm 4 chương." },
+        description: { en: "A question bank of 135 questions divided into 4 chapters.", vi: "Gồm 135 câu hỏi được chia làm 4 chương." },
         questionBanks: [
           "/data/chu-nghia-khoa-hoc-xa-hoi-giua-ky/soc_giua_ky.json",
         ],
       },
     ],
     chapters: [
-      { id: "c1234_mid", label: { en: "Scientific Socialism - Midterm", vi: "Chủ nghĩa xã hội khoa học - Giữa kỳ" }, matches: ["Chương 1", "Chương 2", "Chương 3", "Chương 4"], count: 103 },
-      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Chương 1"], count: 24 },
-      { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, matches: ["Chương 2"], count: 30 },
-      { id: "c3", label: { en: "Chapter 3", vi: "Chương 3" }, matches: ["Chương 3"], count: 27 },
-      { id: "c4", label: { en: "Chapter 4", vi: "Chương 4" }, matches: ["Chương 4"], count: 22 },
+      { id: "c1234_mid", label: { en: "Scientific Socialism - Midterm", vi: "Chủ nghĩa xã hội khoa học - Giữa kỳ" }, matches: ["Chương 1", "Chương 2", "Chương 3", "Chương 4"], count: 135 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, matches: ["Chương 1"], count: 32 },
+      { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, matches: ["Chương 2"], count: 38 },
+      { id: "c3", label: { en: "Chapter 3", vi: "Chương 3" }, matches: ["Chương 3"], count: 35 },
+      { id: "c4", label: { en: "Chapter 4", vi: "Chương 4" }, matches: ["Chương 4"], count: 30 },
     ],
   },
   {
