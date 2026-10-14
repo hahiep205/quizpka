@@ -32,6 +32,7 @@ export type SubjectId =
   | "co-so-du-lieu"
   | "khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
   | "nhap-mon-khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
+  | "mang-noron-va-hoc-sau"
   | "vat-ly-1"
   | "phuong-phap-tinh-giua-ky"
   | "phuong-phap-tinh-cuoi-ky"
@@ -759,6 +760,31 @@ export const subjects: Subject[] = [
         title: { en: "Data Science and Artificial Intelligence", vi: "Quiz ôn tập Giữa và Cuối kỳ - Khoa học dữ liệu và Trí tuệ nhân tạo" },
         description: { en: "A question bank of 298 questions, covering both midterm and final content.", vi: "Gồm 298 câu hỏi, bao gồm cả nội dung Giữa và Cuối kỳ." },
       },
+    ],
+  },
+  {
+    id: "mang-noron-va-hoc-sau",
+    code: "NNDL101",
+    name: { en: "Neural Networks and Deep Learning Midterm", vi: "Quiz ôn tập Giữa kỳ - Mạng nơron và học sâu" },
+    category: { en: "Major", vi: "Chuyên ngành" },
+    exams: [
+      {
+        id: "neural-networks-deep-learning-midterm-bank-1", type: "midterm", year: 2026, questionCount: 134, durationMinutes: 120,
+        title: { en: "Neural Networks and Deep Learning Midterm", vi: "Quiz ôn tập Giữa kỳ - Mạng nơron và học sâu" },
+        description: { en: "A question bank of 134 midterm review questions.", vi: "Gồm 134 câu hỏi ôn tập Giữa kỳ môn Mạng nơron và học sâu" },
+      },
+    ],
+    chapters: [
+      { id: "all", label: { en: "All chapters", vi: "Toàn bộ (134 câu)" }, count: 134 },
+      { id: "c1", label: { en: "Chapter 1", vi: "Chương 1" }, count: 20 },
+      { id: "c2", label: { en: "Chapter 2", vi: "Chương 2" }, count: 19 },
+      { id: "c3", label: { en: "Chapter 3", vi: "Chương 3" }, count: 12 },
+      { id: "c4", label: { en: "Chapter 4", vi: "Chương 4" }, count: 13 },
+      { id: "c5", label: { en: "Chapter 5", vi: "Chương 5" }, count: 12 },
+      { id: "c6", label: { en: "Chapter 6", vi: "Chương 6" }, count: 17 },
+      { id: "c7", label: { en: "Chapter 7", vi: "Chương 7" }, count: 10 },
+      { id: "c8", label: { en: "Chapter 8", vi: "Chương 8" }, count: 25 },
+      { id: "c9", label: { en: "Chapter 9", vi: "Chương 9" }, count: 6 },
     ],
   },
   {

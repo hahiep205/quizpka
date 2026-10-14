@@ -37,6 +37,7 @@ export function getPaidProductId(subjectCode: string): string | null {
   if (subjectCode === "DB101") return "db101"
   if (subjectCode === "ENT101") return "ent101"
   if (subjectCode === "PM101") return "pm101"
+  if (subjectCode === "NNDL101") return "nndl101"
   return null
 }
 
@@ -125,7 +126,7 @@ const ALL_PAID_PRODUCT_IDS = [
   "fin101", "civ101", "eco101", "law101", "hcm101", "mgt101", "phy101",
   "ppt101", "ppt102", "gt101", "dst101", "xst101", "mln102", "pec101",
   "mln101", "his101", "soc101", "dm101", "ta101", "rm101", "rm102",
-  "tadv02", "sta201", "db101", "ent101", "pm101",
+  "tadv02", "sta201", "db101", "ent101", "pm101", "nndl101",
 ]
 
 /** All paid product_ids (single source of truth for batch checks). */
