@@ -36,4 +36,25 @@ export const tadvPaidExamOptions: DsaiExamOption[] = [
     questionCount: 50,
     durationMinutes: 60,
   },
+  {
+    id: "english-paid-test07-bank-1",
+    title: { en: "English Placement Practice Test 6", vi: "Tiếng Anh Đầu Vào - Đề ôn tập 6" },
+    description: { en: "Test 7: 50 Listening and Reading questions following the school's sample exam structure. For practice and reference.", vi: "Đề số 7: 50 câu Nghe và Đọc theo cấu trúc đề thi mẫu của trường. Dùng để ôn tập, tham khảo." },
+    questionCount: 50,
+    durationMinutes: 60,
+  },
+  {
+    id: "english-paid-test08-bank-1",
+    title: { en: "English Placement Practice Test 7", vi: "Tiếng Anh Đầu Vào - Đề ôn tập 7" },
+    description: { en: "Test 8: 50 Listening and Reading questions following the school's sample exam structure. For practice and reference.", vi: "Đề số 8: 50 câu Nghe và Đọc theo cấu trúc đề thi mẫu của trường. Dùng để ôn tập, tham khảo." },
+    questionCount: 50,
+    durationMinutes: 60,
+  },
+  {
+    id: "english-paid-test09-bank-1",
+    title: { en: "English Placement Practice Test 8", vi: "Tiếng Anh Đầu Vào - Đề ôn tập 8" },
+    description: { en: "Test 9: 50 Listening and Reading questions following the school's sample exam structure. For practice and reference.", vi: "Đề số 9: 50 câu Nghe và Đọc theo cấu trúc đề thi mẫu của trường. Dùng để ôn tập, tham khảo." },
+    questionCount: 50,
+    durationMinutes: 60,
+  },
 ]

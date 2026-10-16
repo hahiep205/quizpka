@@ -146,13 +146,13 @@ export const subjects: Subject[] = [
   {
     id: "tadv-traphi",
     code: "TADV02",
-    name: { en: "5 New English Placement Practice Tests", vi: "5 Bộ đề quiz ôn tập Tiếng Anh đầu vào mới" },
+    name: { en: "8 New English Placement Practice Tests", vi: "8 Bộ đề quiz ôn tập Tiếng Anh đầu vào mới" },
     category: { en: "General", vi: "Đại cương" },
     exams: [
       {
-        id: "english-paid-tests-bank-1", type: "final", year: 2026, questionCount: 250, durationMinutes: 60,
-        title: { en: "English Placement Practice Tests", vi: "Quiz ôn tập Tiếng Anh Đầu Vào - 5 Bộ đề ôn tập" },
-        description: { en: "5 practice tests of 50 Listening and Reading questions following the school's sample exam structure, with equivalent level and difficulty. For practice and reference.", vi: "Gồm 5 bộ đề ôn tập, mỗi đề 50 câu Nghe và Đọc theo cấu trúc đề thi mẫu của trường, với mức độ - độ khó tương đương. Dùng để ôn tập, tham khảo." },
+        id: "english-paid-tests-bank-1", type: "final", year: 2026, questionCount: 400, durationMinutes: 60,
+        title: { en: "English Placement Practice Tests", vi: "Quiz ôn tập Tiếng Anh Đầu Vào - 8 Bộ đề ôn tập" },
+        description: { en: "8 practice tests of 50 Listening and Reading questions following the school's sample exam structure, with equivalent level and difficulty. For practice and reference.", vi: "Gồm 8 bộ đề ôn tập, mỗi đề 50 câu Nghe và Đọc theo cấu trúc đề thi mẫu của trường, với mức độ - độ khó tương đương. Dùng để ôn tập, tham khảo." },
       },
       {
         id: "english-paid-test02-bank-1", type: "final", year: 2026, questionCount: 50, durationMinutes: 60, hideFromCatalog: true,
@@ -178,6 +178,21 @@ export const subjects: Subject[] = [
         id: "english-paid-test06-bank-1", type: "final", year: 2026, questionCount: 50, durationMinutes: 60, hideFromCatalog: true,
         title: { en: "English Placement Practice Test 5", vi: "Tiếng Anh Đầu Vào - Đề ôn tập 5" },
         description: { en: "Test 6: 50 Listening and Reading questions following the school's sample exam structure. For practice and reference.", vi: "Đề số 6: 50 câu Nghe và Đọc theo cấu trúc đề thi mẫu của trường. Dùng để ôn tập, tham khảo." },
+      },
+      {
+        id: "english-paid-test07-bank-1", type: "final", year: 2026, questionCount: 50, durationMinutes: 60, hideFromCatalog: true,
+        title: { en: "English Placement Practice Test 6", vi: "Tiếng Anh Đầu Vào - Đề ôn tập 6" },
+        description: { en: "Test 7: 50 Listening and Reading questions following the school's sample exam structure. For practice and reference.", vi: "Đề số 7: 50 câu Nghe và Đọc theo cấu trúc đề thi mẫu của trường. Dùng để ôn tập, tham khảo." },
+      },
+      {
+        id: "english-paid-test08-bank-1", type: "final", year: 2026, questionCount: 50, durationMinutes: 60, hideFromCatalog: true,
+        title: { en: "English Placement Practice Test 7", vi: "Tiếng Anh Đầu Vào - Đề ôn tập 7" },
+        description: { en: "Test 8: 50 Listening and Reading questions following the school's sample exam structure. For practice and reference.", vi: "Đề số 8: 50 câu Nghe và Đọc theo cấu trúc đề thi mẫu của trường. Dùng để ôn tập, tham khảo." },
+      },
+      {
+        id: "english-paid-test09-bank-1", type: "final", year: 2026, questionCount: 50, durationMinutes: 60, hideFromCatalog: true,
+        title: { en: "English Placement Practice Test 8", vi: "Tiếng Anh Đầu Vào - Đề ôn tập 8" },
+        description: { en: "Test 9: 50 Listening and Reading questions following the school's sample exam structure. For practice and reference.", vi: "Đề số 9: 50 câu Nghe và Đọc theo cấu trúc đề thi mẫu của trường. Dùng để ôn tập, tham khảo." },
       },
     ],
   },
