@@ -6,7 +6,7 @@ import { submitSupportReport } from "@/features/support/api/supportReports"
 import type { Question } from "@/features/quiz/model/quiz.types"
 import { quizCopy } from "@/shared/i18n"
 
-export type QuestionReportKind = "prompt" | "answer" | "whole"
+export type QuestionReportKind = "question" | "answer"
 
 type T = (typeof quizCopy)["en" | "vi"]
 
@@ -46,9 +46,8 @@ export function QuestionReport({ question, questionNumber, examTitle, subjectNam
   }
 
   const kinds: Array<{ id: QuestionReportKind; label: string }> = [
-    { id: "prompt", label: t.reportOptionPrompt },
+    { id: "question", label: t.reportOptionPrompt },
     { id: "answer", label: t.reportOptionAnswer },
-    { id: "whole", label: t.reportOptionWhole },
   ]
 
   const handleConfirm = () => {

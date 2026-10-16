@@ -35,13 +35,12 @@ afterEach(() => {
 })
 
 describe("QuestionReport", () => {
-  it("opens the modal with 3 error options and disabled confirm", () => {
+  it("opens the modal with 2 error options and disabled confirm", () => {
     renderReport()
     fireEvent.click(screen.getByRole("button", { name: "Báo lỗi câu hỏi 7" }))
     expect(screen.getByRole("heading", { name: "Báo lỗi câu hỏi" })).not.toBeNull()
-    expect(screen.getByText("Lỗi đề bài")).not.toBeNull()
-    expect(screen.getByText("Lỗi đáp án")).not.toBeNull()
-    expect(screen.getByText("Lỗi cả câu hỏi")).not.toBeNull()
+    expect(screen.getByText("Lỗi câu hỏi")).not.toBeNull()
+    expect(screen.getByText("Sai đáp án")).not.toBeNull()
     expect(screen.getByRole("button", { name: "Xác nhận báo lỗi" }).hasAttribute("disabled")).toBe(true)
   })
 
@@ -49,7 +48,7 @@ describe("QuestionReport", () => {
     rpcMock.mockResolvedValue({ error: null })
     renderReport()
     fireEvent.click(screen.getByRole("button", { name: "Báo lỗi câu hỏi 7" }))
-    fireEvent.click(screen.getByText("Lỗi đáp án"))
+    fireEvent.click(screen.getByText("Sai đáp án"))
     fireEvent.click(screen.getByRole("button", { name: "Xác nhận báo lỗi" }))
 
     expect(rpcMock).toHaveBeenCalledTimes(1)
@@ -57,9 +56,9 @@ describe("QuestionReport", () => {
     expect(fn).toBe("submit_support_report")
     expect(args.p_type).toBe("report")
     expect(args.p_subject).toContain("Câu 7")
-    expect(args.p_subject).toContain("Lỗi đáp án")
+    expect(args.p_subject).toContain("Sai đáp án")
     expect(args.p_subject.length).toBeLessThanOrEqual(160)
-    expect(args.p_description).toContain("Lỗi đáp án")
+    expect(args.p_description).toContain("Sai đáp án")
     expect(args.p_description).toContain("What time is it?")
     expect(args.p_description).toContain("B. 2:00")
     expect(args.p_description.length).toBeLessThanOrEqual(4000)
@@ -79,7 +78,7 @@ describe("QuestionReport", () => {
     rpcMock.mockResolvedValue({ error: new Error("Active account required") })
     renderReport()
     fireEvent.click(screen.getByRole("button", { name: "Báo lỗi câu hỏi 7" }))
-    fireEvent.click(screen.getByText("Lỗi đề bài"))
+    fireEvent.click(screen.getByText("Lỗi câu hỏi"))
     fireEvent.click(screen.getByRole("button", { name: "Xác nhận báo lỗi" }))
     expect(await screen.findByText("Không thể gửi báo lỗi: Active account required")).not.toBeNull()
   })
