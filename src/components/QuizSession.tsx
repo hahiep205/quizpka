@@ -20,7 +20,9 @@ import { guardQuizContentCopy } from "@/features/quiz/lib/copyGuard"
 import {
   clearQuestionsSnapshot,
   clearQuizProgress,
+  hasResumableProgress,
   isMatchingProgress,
+  isProgressExpired,
   loadQuestionsSnapshot,
   loadQuizProgress,
   progressStorageKeyString,
@@ -366,6 +368,15 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
     dbgProgressLog("restore normal", "saved =", saved ? `${Object.keys(saved.answers).length} answers @${saved.currentIndex}` : "none", "match =", saved ? isMatchingProgress(saved, questions) : false)
     if (saved && isMatchingProgress(saved, questions)) applyRestore(saved, questions)
     function applyRestore(saved: QuizProgress, qs: Question[]) {
+      // Never resume a timed attempt that already ran out with no progress:
+      // the timer would fire instantly and drop the user on an empty result
+      // screen the moment they press Start. Discard it and begin fresh.
+      if (isProgressExpired(saved, setup.durationMinutes) && !hasResumableProgress(saved)) {
+        clearQuizProgress(progressKey)
+        clearQuestionsSnapshot(progressKey)
+        dbgProgressLog("restore discarded (expired empty attempt)")
+        return
+      }
       const byId = new Map(qs.map((q) => [q.id, q]))
       const ordered = saved.orderedIds.map((id) => byId.get(id)).filter((q): q is Question => Boolean(q))
       if (ordered.length === qs.length) setQuestions(ordered)
@@ -393,7 +404,7 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
         }
       }
     }
-  }, [loading, error, questions, progressKey, isHard, setQuestions, touched])
+  }, [loading, error, questions, progressKey, isHard, setQuestions, touched, setup.durationMinutes])
 
   useEffect(() => {
     if (!finished) return

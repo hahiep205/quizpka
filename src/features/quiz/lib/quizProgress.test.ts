@@ -1,9 +1,14 @@
 import { beforeEach, describe, expect, it, vi } from "vitest"
 import {
   clearQuizProgress,
+  clearQuizProgressForExam,
+  hasResumableProgress,
   isMatchingProgress,
+  isProgressExpired,
+  loadQuestionsSnapshot,
   loadQuizProgress,
   resumeElapsedSeconds,
+  saveQuestionsSnapshot,
   saveQuizProgress,
   sortedQuestionIds,
   type QuizProgressKey,
@@ -73,5 +78,41 @@ describe("quiz progress autosave", () => {
     saveQuizProgress(key, base)
     clearQuizProgress(key)
     expect(loadQuizProgress(key)).toBeNull()
+  })
+
+  it("clears every user's autosave for a fresh attempt of the same exam", () => {
+    saveQuizProgress(key, base)
+    saveQuizProgress({ ...key, userId: "guest" }, base)
+    saveQuizProgress({ ...key, examId: "other" }, base)
+    saveQuestionsSnapshot({ ...key, userId: "guest" }, [])
+
+    clearQuizProgressForExam({ subjectId: key.subjectId, examId: key.examId, chapterId: key.chapterId, toeicScope: key.toeicScope, mode: key.mode })
+
+    expect(loadQuizProgress(key)).toBeNull()
+    expect(loadQuizProgress({ ...key, userId: "guest" })).toBeNull()
+    expect(loadQuestionsSnapshot({ ...key, userId: "guest" })).toBeNull()
+    expect(loadQuizProgress({ ...key, examId: "other" })).not.toBeNull()
+  })
+})
+
+describe("expired empty attempts are not resumed", () => {
+  it("treats a record with no answers as non-resumable", () => {
+    const empty = { ...base, version: 1 as const, savedAt: Date.now(), answers: {} }
+    expect(hasResumableProgress(empty)).toBe(false)
+    expect(hasResumableProgress({ ...empty, answers: { q1: 0 } })).toBe(true)
+  })
+
+  it("treats a hard-mode record with progress as resumable", () => {
+    const empty = { ...base, version: 1 as const, savedAt: Date.now(), answers: {} }
+    expect(hasResumableProgress({ ...empty, hard: { queueIds: ["q1"], pos: 1, mastered: 0, wrongCounts: {}, finalAnswers: {} } })).toBe(true)
+    expect(hasResumableProgress({ ...empty, hard: { queueIds: ["q1"], pos: 0, mastered: 0, wrongCounts: {}, finalAnswers: {} } })).toBe(false)
+  })
+
+  it("flags a timed clock that ran out while away", () => {
+    const savedAt = Date.now() - 40 * 60 * 1000
+    const timed = { ...base, version: 1 as const, savedAt, elapsedSeconds: 25 * 60, timed: true }
+    expect(isProgressExpired(timed, 60, savedAt + 40 * 60 * 1000)).toBe(true)
+    expect(isProgressExpired(timed, 120, savedAt + 40 * 60 * 1000)).toBe(false)
+    expect(isProgressExpired({ ...timed, timed: false }, 60, savedAt + 40 * 60 * 1000)).toBe(false)
   })
 })

@@ -2,6 +2,7 @@ import type { QuizSetupValues } from "@/components/QuizSetupModal"
 import { getSubjectById, type SubjectId } from "@/data/subjects"
 import type { ToeicScope } from "@/data/toeic"
 import { appRoutes, navigate } from "@/app/navigation"
+import { clearQuizProgressForExam } from "@/features/quiz/lib/quizProgress"
 import type { Language } from "@/shared/types/app"
 
 const PRACTICE_SESSION_KEY = "quizpka-practice-session-v2"
@@ -116,6 +117,17 @@ export function clearMirroredPayload() {
 }
 
 export function goToPractice(payload: PracticeSessionPayload) {
+  // Explicit "Start" from setup = a fresh attempt. Drop any leftover autosave
+  // so a stale (possibly expired) record can't resume and land on the result
+  // screen instead of the first question. F5/closed-tab resume is unaffected
+  // (it re-enters /practice directly, without going through setup).
+  clearQuizProgressForExam({
+    subjectId: payload.subjectId,
+    examId: payload.examId,
+    chapterId: payload.chapterId,
+    toeicScope: payload.toeicScope,
+    mode: payload.setup.mode,
+  })
   savePracticeSession(payload)
   navigate(appRoutes.practice)
 }

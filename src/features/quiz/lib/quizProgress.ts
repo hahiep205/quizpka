@@ -81,6 +81,26 @@ export function resumeElapsedSeconds(saved: QuizProgress, now: number = Date.now
   return saved.elapsedSeconds + awaySeconds
 }
 
+/**
+ * A saved record only deserves a resume when the user actually did something.
+ * An untouched (autosaved) record whose timed clock has run out must NOT be
+ * restored: doing so would jump straight to an empty result screen the moment
+ * the quiz starts. Such records are discarded instead (fresh start).
+ */
+export function hasResumableProgress(saved: QuizProgress): boolean {
+  if (Object.keys(saved.answers).length > 0) return true
+  const hard = saved.hard
+  if (!hard) return false
+  return hard.mastered > 0 || hard.pos > 0 || Object.keys(hard.wrongCounts ?? {}).length > 0
+}
+
+/** Whether a timed record's clock is already exhausted relative to its duration. */
+export function isProgressExpired(saved: QuizProgress, durationMinutes: number, now: number = Date.now()): boolean {
+  const durationSeconds = saved.timed && durationMinutes > 0 ? durationMinutes * 60 : 0
+  if (durationSeconds === 0) return false
+  return resumeElapsedSeconds(saved, now) >= durationSeconds
+}
+
 export function saveQuizProgress(key: QuizProgressKey, progress: Omit<QuizProgress, "version" | "savedAt">): void {
   try {
     const record: QuizProgress = { ...progress, version: 1, savedAt: Date.now() }
@@ -110,6 +130,27 @@ export function clearQuizProgress(key: QuizProgressKey): void {
 }
 
 const SNAPSHOT_SUFFIX = ":snapshot"
+
+/**
+ * Drop any autosave (and offline snapshot) for one exam identity, regardless of
+ * user. Called when the user explicitly starts a new attempt from setup, so a
+ * stale — possibly already expired — record can never resume and jump straight
+ * to the result screen instead of starting the quiz.
+ */
+export function clearQuizProgressForExam(partial: Omit<QuizProgressKey, "userId">): void {
+  const suffix = `:${partial.subjectId}:${partial.examId}:${partial.chapterId ?? "-"}:${partial.toeicScope ?? "-"}:${partial.mode}`
+  const prefix = `${PROGRESS_PREFIX}:`
+  try {
+    const doomed: string[] = []
+    for (let index = 0; index < localStorage.length; index += 1) {
+      const storageKey = localStorage.key(index)
+      if (!storageKey || !storageKey.startsWith(prefix)) continue
+      const base = storageKey.endsWith(SNAPSHOT_SUFFIX) ? storageKey.slice(0, -SNAPSHOT_SUFFIX.length) : storageKey
+      if (base.endsWith(suffix)) doomed.push(storageKey)
+    }
+    for (const storageKey of doomed) localStorage.removeItem(storageKey)
+  } catch { /* noop */ }
+}
 
 /**
  * Full question snapshot saved once per question set so an offline reload
