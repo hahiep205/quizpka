@@ -80,7 +80,13 @@ export async function createPaidCheckout(productId = "dsai101") {
 }
 
 const PRODUCT_PRICES_VND: Record<string, number> = {
-  tadv02: 20000,
+  tadv02: 24000,
+  mln101: 12000, mln102: 12000, pm101: 12000, soc101: 12000, ent101: 12000,
+  rm101: 12000, rm102: 12000, mac101: 12000, mac102: 12000, pec101: 12000,
+  sec301: 12000, mar101: 12000, oit101: 12000, fin101: 12000, eco101: 12000,
+  civ101: 12000, law101: 12000, db101: 12000, dsai101: 12000, nndl101: 12000,
+  idsai101: 12000, dm101: 12000, sta201: 12000, mgt101: 12000, his101: 12000,
+  hcm101: 12000,
 }
 
 function getProductPriceVnd(productId: string): number {

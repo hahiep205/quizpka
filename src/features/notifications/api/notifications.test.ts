@@ -105,7 +105,17 @@ describe("notification batches API", () => {
       { id: 7, title: "Title", message: "Message", createdAt, isDirect: true, recipientCount: 55, revokedAt: createdAt, legacy: true, readAt: null, recipients: [] },
       { id: 6, title: "Title", message: "Message", createdAt, isDirect: true, recipientCount: 55, revokedAt: createdAt, legacy: false, readAt: null, recipients: [] },
     ])
-    expect(rpc).toHaveBeenCalledExactlyOnceWith("list_notification_batches", { p_before_created_at: createdAt, p_before_id: 8, p_limit: 30 })
+    expect(rpc).toHaveBeenCalledExactlyOnceWith("list_notification_batches", { p_before_created_at: createdAt, p_before_id: 8, p_limit: 30, p_direct_only: null })
+  })
+
+  it("maps the history scope filter to p_direct_only and back to null for all", async () => {
+    rpc.mockResolvedValue({ data: [], error: null })
+    await fetchAdminNotificationHistory(undefined, "broadcast")
+    expect(rpc).toHaveBeenLastCalledWith("list_notification_batches", { p_before_created_at: null, p_before_id: null, p_limit: 30, p_direct_only: false })
+    await fetchAdminNotificationHistory(undefined, "direct")
+    expect(rpc).toHaveBeenLastCalledWith("list_notification_batches", { p_before_created_at: null, p_before_id: null, p_limit: 30, p_direct_only: true })
+    await fetchAdminNotificationHistory(undefined, "all")
+    expect(rpc).toHaveBeenLastCalledWith("list_notification_batches", { p_before_created_at: null, p_before_id: null, p_limit: 30, p_direct_only: null })
   })
 
   it.each([

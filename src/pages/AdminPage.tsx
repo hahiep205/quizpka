@@ -23,7 +23,7 @@ import {
 } from "@/features/admin/lib/adminStats"
 import { appRoutes, getCurrentPath, navigate, type AppPath } from "@/app/navigation"
 import { cn } from "@/lib/utils"
-import { fetchAdminNotificationHistory, fetchNotificationBatchDetails, fetchNotificationBatchRecipients, fetchNotificationRecipients, revokeAdminNotification, sendAdminNotifications, type AdminNotificationHistory, type NotificationRecipient } from "@/features/notifications/api/notifications"
+import { fetchAdminNotificationHistory, fetchNotificationBatchDetails, fetchNotificationBatchRecipients, fetchNotificationRecipients, revokeAdminNotification, sendAdminNotifications, type AdminNotificationHistory, type AdminNotificationScope, type NotificationRecipient } from "@/features/notifications/api/notifications"
 import { fetchAdminOrders, sortAdminPaymentsByCreatedAt, todayMidnightISO, type AdminPayment, type PaymentStatus } from "@/features/admin/api/adminPayments"
 import { grantAdminPurchase, fetchAdminProducts, type AdminProduct } from "@/features/admin/api/adminEntitlements"
 import { examCatalog } from "@/data/subjects"
@@ -201,6 +201,8 @@ export function AdminPage({ lang }: Props) {
   const [notificationHistoryLoading, setNotificationHistoryLoading] = useState(false)
   const [notificationHistoryError, setNotificationHistoryError] = useState<string | null>(null)
   const [notificationHistoryMore, setNotificationHistoryMore] = useState(false)
+  const [notificationHistoryScope, setNotificationHistoryScope] = useState<AdminNotificationScope>("all")
+  const notificationHistoryScopeRef = useRef<AdminNotificationScope>("all")
   const notificationHistoryRequest = useRef(0)
   const [notificationDetailRefresh, setNotificationDetailRefresh] = useState(0)
   const [selectedNotification, setSelectedNotification] = useState<AdminNotificationHistory | null>(null)
@@ -267,7 +269,7 @@ export function AdminPage({ lang }: Props) {
     setNotificationHistoryLoading(true)
     setNotificationHistoryError(null)
     try {
-      const rows = await fetchAdminNotificationHistory(cursor)
+      const rows = await fetchAdminNotificationHistory(cursor, notificationHistoryScopeRef.current)
       if (!mountedRef.current || request !== notificationHistoryRequest.current) return
       setNotificationHistory((current) => cursor ? [...current, ...rows.filter((row) => !current.some((item) => item.id === row.id))] : rows)
       setSelectedNotification((current) => current ? rows.find((row) => row.id === current.id) ?? current : null)
@@ -730,6 +732,13 @@ export function AdminPage({ lang }: Props) {
     }).catch((err: unknown) => setNotificationResult(err instanceof Error ? err.message : "Không thể thu hồi thông báo.")).finally(() => setRevokingNotificationId(null))
   }
 
+  const handleNotificationScopeChange = (scope: AdminNotificationScope) => {
+    if (notificationHistoryScopeRef.current === scope) return
+    notificationHistoryScopeRef.current = scope
+    setNotificationHistoryScope(scope)
+    void loadNotificationHistory()
+  }
+
   const handleGrantPurchase = () => {
     setGrantResult(null)
     if (!grantUserId || !grantProductId) {
@@ -858,7 +867,14 @@ export function AdminPage({ lang }: Props) {
                   </div>
                 </Card>
                 <div className="space-y-3">
-                  <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Lịch sử đã gửi (đã tải {notificationHistory.length})</p>
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Lịch sử đã gửi (đã tải {notificationHistory.length})</p>
+                    <div role="group" aria-label="Lọc theo phạm vi" className="inline-flex items-center gap-1 rounded-full border-2 border-[#E5E5E5] bg-white p-1 dark:border-white/10 dark:bg-slate-800">
+                      {([["all", lang === "vi" ? "Tất cả" : "All"], ["broadcast", lang === "vi" ? "Gửi chung" : "Broadcast"], ["direct", lang === "vi" ? "Gửi riêng" : "Direct"]] as const).map(([value, label]) => (
+                        <button key={value} type="button" aria-pressed={notificationHistoryScope === value} onClick={() => handleNotificationScopeChange(value)} className={cn("rounded-full px-3 py-1 text-xs font-black transition-colors", notificationHistoryScope === value ? "bg-[#1CB0F6] text-white" : "text-slate-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-white/5")}>{label}</button>
+                      ))}
+                    </div>
+                  </div>
                   {notificationHistoryLoading ? <p role="status" className="text-sm">Đang tải lịch sử...</p> : null}
                   {notificationHistoryError ? <p role="alert" className="text-sm text-red-600">Không tải được lịch sử: {notificationHistoryError} <button type="button" disabled={notificationHistoryLoading} className="underline" onClick={() => void loadNotificationHistory()}>Tải lại lịch sử</button></p> : null}
                   {notificationHistory.length ? (

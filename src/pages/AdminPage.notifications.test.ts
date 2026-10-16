@@ -109,13 +109,27 @@ describe("admin batch notifications", () => {
     expect(sendButton().disabled).toBe(false)
   })
 
+  it("filters history between broadcast and direct scopes", async () => {
+    api.history.mockResolvedValue([batch(1)])
+    await open()
+    expect(api.history).toHaveBeenLastCalledWith(undefined, "all")
+    expect(screen.getByRole("button", { name: "Tất cả" }).getAttribute("aria-pressed")).toBe("true")
+    fireEvent.click(screen.getByRole("button", { name: "Gửi riêng" })); await tick()
+    expect(api.history).toHaveBeenLastCalledWith(undefined, "direct")
+    expect(screen.getByRole("button", { name: "Gửi riêng" }).getAttribute("aria-pressed")).toBe("true")
+    fireEvent.click(screen.getByRole("button", { name: "Gửi chung" })); await tick()
+    expect(api.history).toHaveBeenLastCalledWith(undefined, "broadcast")
+    fireEvent.click(screen.getByRole("button", { name: "Gửi chung" })); await tick()
+    expect(api.history).toHaveBeenCalledTimes(3)
+  })
+
   it("pages history and loads recipient details lazily with retry", async () => {
     api.history.mockResolvedValueOnce(Array.from({ length: 30 }, (_, i) => batch(i + 1))).mockResolvedValue([batch(31)])
     api.details.mockResolvedValueOnce(Array.from({ length: 50 }, (_, i) => ({ ...recipient, id: `user-${i}` }))).mockRejectedValueOnce(new Error("Details failed")).mockResolvedValue([{ ...recipient, id: "last" }])
     await open()
     expect(api.details).not.toHaveBeenCalled()
     fireEvent.click(screen.getByRole("button", { name: "Tải thêm lịch sử" })); await tick()
-    expect(api.history).toHaveBeenLastCalledWith({ createdAt: batch(30).createdAt, id: 30 })
+    expect(api.history).toHaveBeenLastCalledWith({ createdAt: batch(30).createdAt, id: 30 }, "all")
     fireEvent.click(screen.getByRole("button", { name: "Batch 31" })); await tick()
     expect(api.details).toHaveBeenLastCalledWith(31, undefined)
     fireEvent.click(screen.getByRole("button", { name: "Tải thêm người đọc" })); await tick()

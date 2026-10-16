@@ -108,11 +108,17 @@ export async function fetchNotificationDigest(options: {
   }
 }
 
-export async function fetchAdminNotificationHistory(cursor?: NotificationCursor): Promise<AdminNotificationHistory[]> {
+export type AdminNotificationScope = "all" | "broadcast" | "direct"
+
+export async function fetchAdminNotificationHistory(
+  cursor?: NotificationCursor,
+  scope: AdminNotificationScope = "all",
+): Promise<AdminNotificationHistory[]> {
   const { data, error } = await supabase.rpc("list_notification_batches", {
     p_before_created_at: cursor?.createdAt ?? null,
     p_before_id: cursor?.id ?? null,
     p_limit: 30,
+    p_direct_only: scope === "all" ? null : scope === "direct",
   })
   if (error) throw notificationError(error)
   const rows = (data ?? []) as Array<Omit<NotificationRow, "batch_id" | "read_at"> & {
