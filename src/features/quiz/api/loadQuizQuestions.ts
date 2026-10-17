@@ -113,8 +113,8 @@ export async function loadQuizQuestions({ subject, exam, setup, chapterId, toeic
       ? { ...bank, questions: filterQuestionsBySubjectChapter(subject.id, bank.questions, chapterId) }
       : bank
     questions = mapBankQuestions(filteredBank, exam.id, setup)
-  } else if (subject.id === "tieng-anh-dau-vao" && exam.questionBanks?.length) {
-    // Free TADV bank JSON lives in the private Supabase Storage bucket
+  } else if ((subject.id === "tieng-anh-dau-vao" || exam.bankSource === "storage") && exam.questionBanks?.length) {
+    // Free bank JSON lives in the private Supabase Storage bucket
     // (free-question-banks); media inside still resolves via toMediaUrl (R2).
     // Rich TOEIC-style fields map via adaptTadvBank to keep per-question detail.
     const urls = exam.questionBanks

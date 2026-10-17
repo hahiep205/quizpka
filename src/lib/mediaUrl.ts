@@ -9,6 +9,7 @@ const R2_PREFIX_REWRITES = [
   ["tadv-traphi/", "tadv-traphi/"],
   ["toeic-test/", "toeic/"],
   ["kinh_te_vi_mo/", "data/kinh_te_vi_mo/"],
+  ["ta3/", "data/ta3/"],
 ] as const
 
 /** Bank prefixes hosted on R2 under the `data/` key prefix (repo mirror: r2-banks/data/). */

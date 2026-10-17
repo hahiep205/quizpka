@@ -27,6 +27,11 @@ describe("toMediaUrl", () => {
     expect(toMediaUrl("kinh_te_vi_mo/images/do_thi_co_gian_cau.png")).toBe(`${R2_PUBLIC_BASE}/data/kinh_te_vi_mo/images/do_thi_co_gian_cau.png`)
   })
 
+  it("sends English 3 (ta3) audio to the R2 data/ prefix", () => {
+    expect(toMediaUrl("ta3/part1-audio.mp3")).toBe(`${R2_PUBLIC_BASE}/data/ta3/part1-audio.mp3`)
+    expect(toMediaUrl("/data/ta3/part2-audio.mp3")).toBe(`${R2_PUBLIC_BASE}/data/ta3/part2-audio.mp3`)
+  })
+
   it("passes through remote URLs and keeps other local assets on /data", () => {
     expect(toMediaUrl("https://cdn.example/x.png")).toBe("https://cdn.example/x.png")
     expect(toMediaUrl("/logo.svg")).toBe("/logo.svg")

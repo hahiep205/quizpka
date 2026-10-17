@@ -3,6 +3,7 @@ type ExamType = "midterm" | "final"
 export type SubjectId =
   | "tieng-anh-dau-vao"
   | "tieng-anh-1"
+  | "tieng-anh-3"
   | "tadv-traphi"
   | "tu-tuong-ho-chi-minh"
   | "lich-su-dang-cong-san-viet-nam-giua-ky"
@@ -60,6 +61,8 @@ export type ExamPaper = {
   hideFromCatalog?: boolean
   /** Optional collection of question banks, combined into one grouped exam. */
   questionBanks?: string[]
+  /** Where questionBanks are hosted: "storage" = private Supabase bucket (free-question-banks). Omitted = R2 / public fetch. */
+  bankSource?: "storage"
 }
 
 export type ChapterOption = {
@@ -193,6 +196,25 @@ export const subjects: Subject[] = [
         id: "english-paid-test09-bank-1", type: "final", year: 2026, questionCount: 50, durationMinutes: 60, hideFromCatalog: true,
         title: { en: "English Placement Practice Test 8", vi: "Tiếng Anh Đầu Vào - Đề ôn tập 8" },
         description: { en: "Test 9: 50 Listening and Reading questions following the school's sample exam structure. For practice and reference.", vi: "Đề số 9: 50 câu Nghe và Đọc theo cấu trúc đề thi mẫu của trường. Dùng để ôn tập, tham khảo." },
+      },
+    ],
+  },
+  {
+    id: "tieng-anh-3",
+    code: "TA301",
+    name: { en: "English 3 - Final", vi: "Đề ôn tập Cuối kỳ - Tiếng Anh 3" },
+    category: { en: "General", vi: "Đại cương" },
+    exams: [
+      {
+        id: "english-3-final-bank-1",
+        type: "final",
+        year: 2026,
+        questionCount: 50,
+        durationMinutes: 60,
+        title: { en: "English 3 - Final", vi: "Đề ôn tập Cuối kỳ - Tiếng Anh 3" },
+        description: { en: "50 Listening, Reading and Writing questions following the school's English 3 final exam structure, with full transcripts and detailed explanations.", vi: "Gồm 50 câu Nghe, Đọc và Viết theo cấu trúc đề thi Cuối kỳ Tiếng Anh 3 của trường, kèm transcript và giải thích chi tiết." },
+        questionBanks: ["/data/ta3/mock-test.json"],
+        bankSource: "storage",
       },
     ],
   },
