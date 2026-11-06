@@ -30,6 +30,22 @@ export async function fetchAdminEvents(limit = 3000): Promise<AdminTimelineResul
   }
 }
 
+/** Count today's submit events without relying on the capped event list. */
+export async function fetchAdminTodaySubmitCount(): Promise<{ ok: true; count: number } | { ok: false; count: number; error: string }> {
+  try {
+    const start = new Date()
+    start.setHours(0, 0, 0, 0)
+    const localDay = [start.getFullYear(), String(start.getMonth() + 1).padStart(2, "0"), String(start.getDate()).padStart(2, "0")].join("-")
+    const { data, error } = await supabase.rpc("admin_count_submit_attempts", {
+      p_day: localDay,
+    })
+    if (error) return { ok: false, count: 0, error: `Không đếm được lượt nộp bài hôm nay: ${error.message}` }
+    return { ok: true, count: Number(data) || 0 }
+  } catch (err) {
+    return { ok: false, count: 0, error: err instanceof Error ? err.message : "Unknown error" }
+  }
+}
+
 export async function fetchAdminAttempts(limit = 3000): Promise<AdminAttemptsResult> {
   try {
     const { data, error } = await supabase.rpc("admin_list_attempts", { p_limit: limit })

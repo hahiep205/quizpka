@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { bucketHoursToday, eventsByType, filterByDays, topSubjects } from "@/features/admin/lib/adminOverview"
+import { bucketHoursToday, countTodaySubmitEvents, eventsByType, filterByDays, topSubjects } from "@/features/admin/lib/adminOverview"
 
 const NOW = Date.parse("2026-09-04T12:00:00.000Z")
 
@@ -32,6 +32,19 @@ describe("adminOverview", () => {
   it("counts events by type", () => {
     const rows = eventsByType([{ eventType: "login" }, { eventType: "login" }, { eventType: "submit_attempt" }] as never)
     expect(rows[0]).toMatchObject({ key: "login", count: 2 })
+  })
+
+  it("counts only today's submit_attempt events for the KPI", () => {
+    const today = new Date(NOW)
+    const start = new Date(today.getFullYear(), today.getMonth(), today.getDate(), 0, 30).toISOString()
+    const yesterday = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 1, 23, 30).toISOString()
+    const rows = [
+      { eventType: "submit_attempt", createdAt: start },
+      { eventType: "submit_attempt", createdAt: "invalid" },
+      { eventType: "retry_wrong", createdAt: start },
+      { eventType: "submit_attempt", createdAt: yesterday },
+    ] as never
+    expect(countTodaySubmitEvents(rows, NOW)).toBe(1)
   })
 
   it("filters items by recent days, 0 keeps all", () => {

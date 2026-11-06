@@ -14,15 +14,9 @@ dist-ssr
 
 .codebase-memory/
 
-trash/*
-!trash/.gitkeep
+trash/
 
-supabase/.temp/
-.zcode/plans/
-
-data-backup/*
-!data-backup/.gitkeep
-
+data-backup/
 r2-banks/data/
 src/assets/
 scripts/

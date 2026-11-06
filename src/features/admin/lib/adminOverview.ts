@@ -77,6 +77,11 @@ export function eventsByType(events: ActivityEvent[]): Array<{ key: string; coun
   return countByKey(events.map((e) => e.eventType), 12)
 }
 
+/** Match the Overview KPI and "Nộp bài" bar: count submit events by local calendar day. */
+export function countTodaySubmitEvents(events: ActivityEvent[], now = Date.now()): number {
+  return events.filter((event) => event.eventType === "submit_attempt" && isTodayLocal(event.createdAt, now)).length
+}
+
 const DAY_MS = 24 * 60 * 60 * 1000
 
 /** Giữ lại items có date trong `days` ngày gần nhất (days=0 nghĩa là tất cả). */

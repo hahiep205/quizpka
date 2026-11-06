@@ -10,9 +10,9 @@ import { Dialog } from "@/components/ui/dialog"
 import { fetchAdminUsersCreatedToday, fetchAdminUsersPage, setAdminUserStatus, type AdminCreatedTodayUser, type FetchAdminUsersPageOptions } from "@/features/admin/api/adminUsers"
 import { fetchBlockedViewStat } from "@/features/admin/api/blockedViews"
 import { fetchUserLoginEvents, type LoginEvent } from "@/features/admin/api/loginEvents"
-import { fetchAdminAttempts, fetchAdminEvents, fetchPracticeAttempts, fetchUserActivity } from "@/features/admin/api/adminActivity"
+import { fetchAdminAttempts, fetchAdminEvents, fetchAdminTodaySubmitCount, fetchPracticeAttempts, fetchUserActivity } from "@/features/admin/api/adminActivity"
 import { ACTIVITY_LABELS, parseAttemptRows, type ActivityEvent, type ActivityEventType, type PracticeAttemptRow } from "@/features/activity/lib/activityLog"
-import { bucketHoursToday, eventsByType, filterByDays, filterByToday, topSubjects } from "@/features/admin/lib/adminOverview"
+import { bucketHoursToday, countTodaySubmitEvents, eventsByType, filterByDays, filterByToday, topSubjects } from "@/features/admin/lib/adminOverview"
 import { ANOMALY_META, detectAllAnomalies, detectUserAnomalies, riskScore, type AnomalyFlag, type AnomalySeverity } from "@/features/admin/lib/anomalyDetectors"
 import { supabase } from "@/lib/supabase"
 import { useOnlineUserIds } from "@/hooks/useOnlinePresence"
@@ -241,6 +241,7 @@ export function AdminPage({ lang }: Props) {
 
   const [events, setEvents] = useState<ActivityEvent[]>([])
   const [eventsError, setEventsError] = useState<string | null>(null)
+  const [todaySubmitCount, setTodaySubmitCount] = useState<number | null>(null)
   const [attempts, setAttempts] = useState<PracticeAttemptRow[]>([])
   const [attemptsError, setAttemptsError] = useState<string | null>(null)
   const [eventFilter, setEventFilter] = useState<"all" | ActivityEventType>("all")
@@ -332,6 +333,11 @@ export function AdminPage({ lang }: Props) {
         setEvents(res.events)
         setEventsError(res.ok ? null : res.error)
       })
+      if (section === "overview") {
+        void fetchAdminTodaySubmitCount().then((res) => {
+          if (mountedRef.current) setTodaySubmitCount(res.ok ? res.count : null)
+        })
+      }
       void fetchAdminAttempts().then((res) => {
         if (!mountedRef.current) return
         setAttempts(res.attempts)
@@ -582,8 +588,9 @@ export function AdminPage({ lang }: Props) {
   }, [payments])
   const todayKpis = useMemo(() => ({
     purchases: payments.filter((payment) => payment.status === "paid" && isToday(payment.paidAt)).length,
-    completedQuizzes: attempts.filter((attempt) => isToday(attempt.completedAt)).length,
-  }), [attempts, payments])
+    // This KPI intentionally mirrors the "Nộp bài" activity event count, not persisted attempts.
+    completedQuizzes: todaySubmitCount ?? countTodaySubmitEvents(events),
+  }), [events, payments, todaySubmitCount])
   const paymentPageCount = Math.max(1, Math.ceil(filteredPayments.length / PAYMENT_PAGE_SIZE))
   const safePaymentPage = Math.min(paymentPage, paymentPageCount - 1)
   const pagedPayments = useMemo(() => filteredPayments.slice(safePaymentPage * PAYMENT_PAGE_SIZE, safePaymentPage * PAYMENT_PAGE_SIZE + PAYMENT_PAGE_SIZE), [filteredPayments, safePaymentPage])
@@ -653,7 +660,14 @@ export function AdminPage({ lang }: Props) {
   // Card "Hoạt động trong ngày": window ngày lịch 00:00–23:59 (giờ địa phương),
   // không dùng rangedEvents (24h trượt) để khỏi lẫn event của hôm qua.
   const todayEvents = useMemo(() => filterByToday(events, (e) => e.createdAt), [events])
-  const evTypeCounts = useMemo(() => eventsByType(todayEvents), [todayEvents])
+  const evTypeCounts = useMemo(() => {
+    const counts = eventsByType(todayEvents)
+    if (todaySubmitCount === null) return counts
+    const submit = counts.find((count) => count.key === "submit_attempt")
+    if (submit) submit.count = todaySubmitCount
+    else if (todaySubmitCount > 0) counts.push({ key: "submit_attempt", count: todaySubmitCount })
+    return counts.sort((a, b) => b.count - a.count)
+  }, [todayEvents, todaySubmitCount])
   const evTypeMax = useMemo(() => Math.max(1, ...evTypeCounts.map((c) => c.count)), [evTypeCounts])
   const todayAttempts = useMemo(() => filterByToday(attempts, (a) => a.completedAt), [attempts])
   const subjectTops = useMemo(() => topSubjects(todayAttempts), [todayAttempts])
@@ -1287,7 +1301,7 @@ export function AdminPage({ lang }: Props) {
                   </div>
                 </section>
                 {selectedOverviewEventType ? (
-                  <Dialog open onClose={() => setSelectedOverviewEventType(null)} title={`${ACTIVITY_LABELS[selectedOverviewEventType]} · log (${todayEvents.filter((e) => e.eventType === selectedOverviewEventType).length})`} closeLabel="Đóng log" className="z-[95]" panelClassName="max-h-[calc(100dvh_-_2rem)] w-full max-w-[760px] rounded-[20px] border-2 border-[#E5E5E5] bg-white shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none">
+                  <Dialog open onClose={() => setSelectedOverviewEventType(null)} title={`${ACTIVITY_LABELS[selectedOverviewEventType]} · log (${evTypeCounts.find((item) => item.key === selectedOverviewEventType)?.count ?? todayEvents.filter((e) => e.eventType === selectedOverviewEventType).length})`} closeLabel="Đóng log" className="z-[95]" panelClassName="max-h-[calc(100dvh_-_2rem)] w-full max-w-[760px] rounded-[20px] border-2 border-[#E5E5E5] bg-white shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-none">
                     <div className="max-h-[75dvh] space-y-2 overflow-y-auto px-5 py-4 sm:px-6">
                       {todayEvents.filter((e) => e.eventType === selectedOverviewEventType).length ? todayEvents.filter((e) => e.eventType === selectedOverviewEventType).map((e) => (
                         <details key={e.id} className="rounded-xl border border-slate-100 bg-slate-50 px-3 py-2.5 dark:border-white/10 dark:bg-white/5">
