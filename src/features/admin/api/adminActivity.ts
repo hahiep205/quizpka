@@ -14,6 +14,8 @@ type AdminAttemptsResult =
   | { ok: true; attempts: PracticeAttemptRow[] }
   | { ok: false; error: string; attempts: PracticeAttemptRow[] }
 
+export type AdminSubjectSubmissionCount = { subjectId: string; count: number }
+
 /**
  * P-log-cost: 1 request thay cho vòng dump 1000 dòng/trang. user_activity_events
  * bị cron prune giữ ở vài nghìn dòng gần nhất nên window 3000 đủ phủ toàn bộ
@@ -43,6 +45,31 @@ export async function fetchAdminTodaySubmitCount(): Promise<{ ok: true; count: n
     return { ok: true, count: Number(data) || 0 }
   } catch (err) {
     return { ok: false, count: 0, error: err instanceof Error ? err.message : "Unknown error" }
+  }
+}
+
+export async function fetchAdminTodaySubmissionsBySubject(): Promise<{ ok: true; items: AdminSubjectSubmissionCount[] } | { ok: false; items: AdminSubjectSubmissionCount[]; error: string }> {
+  try {
+    const parts = new Intl.DateTimeFormat("en-CA", {
+      timeZone: "Asia/Ho_Chi_Minh",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    }).formatToParts(new Date())
+    const part = (type: "year" | "month" | "day") => parts.find((item) => item.type === type)?.value ?? ""
+    const day = `${part("year")}-${part("month")}-${part("day")}`
+    const { data, error } = await supabase.rpc("admin_submit_attempts_by_subject", { p_day: day })
+    if (error) return { ok: false, items: [], error: `Không tải được lượt nộp theo môn: ${error.message}` }
+    const result = (data ?? {}) as { items?: unknown[] }
+    const items = (result.items ?? []).flatMap((row) => {
+      if (typeof row !== "object" || row === null) return []
+      const item = row as { subject_id?: unknown; count?: unknown }
+      if (typeof item.subject_id !== "string") return []
+      return [{ subjectId: item.subject_id, count: Number(item.count) || 0 }]
+    })
+    return { ok: true, items }
+  } catch (err) {
+    return { ok: false, items: [], error: err instanceof Error ? err.message : "Unknown error" }
   }
 }
 

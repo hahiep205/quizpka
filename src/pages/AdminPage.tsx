@@ -10,9 +10,9 @@ import { Dialog } from "@/components/ui/dialog"
 import { fetchAdminUsersCreatedToday, fetchAdminUsersPage, setAdminUserStatus, type AdminCreatedTodayUser, type FetchAdminUsersPageOptions } from "@/features/admin/api/adminUsers"
 import { fetchBlockedViewStat } from "@/features/admin/api/blockedViews"
 import { fetchUserLoginEvents, type LoginEvent } from "@/features/admin/api/loginEvents"
-import { fetchAdminAttempts, fetchAdminEvents, fetchAdminTodaySubmitCount, fetchPracticeAttempts, fetchUserActivity } from "@/features/admin/api/adminActivity"
+import { fetchAdminAttempts, fetchAdminEvents, fetchAdminTodaySubmitCount, fetchAdminTodaySubmissionsBySubject, fetchPracticeAttempts, fetchUserActivity } from "@/features/admin/api/adminActivity"
 import { ACTIVITY_LABELS, parseAttemptRows, type ActivityEvent, type ActivityEventType, type PracticeAttemptRow } from "@/features/activity/lib/activityLog"
-import { bucketHoursToday, countTodaySubmitEvents, eventsByType, filterByDays, filterByToday, topSubjects } from "@/features/admin/lib/adminOverview"
+import { countTodaySubmitEvents, eventsByType, filterByDays, filterByToday, submitEventsBySubject } from "@/features/admin/lib/adminOverview"
 import { ANOMALY_META, detectAllAnomalies, detectUserAnomalies, riskScore, type AnomalyFlag, type AnomalySeverity } from "@/features/admin/lib/anomalyDetectors"
 import { supabase } from "@/lib/supabase"
 import { useOnlineUserIds } from "@/hooks/useOnlinePresence"
@@ -33,6 +33,8 @@ import { applySubjectDisplayOverrides } from "@/features/admin/lib/subjectDispla
 import { deleteSupportReport, fetchSupportReports, updateSupportStatus, type SupportReport, type SupportStatus, type SupportType } from "@/features/support/api/supportReports"
 import { SubjectManager } from "@/features/admin/ui/SubjectManager"
 import { DownloadManager } from "@/features/admin/ui/DownloadManager"
+import { UserGrowthChart } from "@/features/admin/ui/UserGrowthChart"
+import { TodaySubjectsChart } from "@/features/admin/ui/TodaySubjectsChart"
 
 function formatAdminDuration(totalSeconds: number): string {
   const s = Math.max(0, Math.round(totalSeconds))
@@ -242,6 +244,7 @@ export function AdminPage({ lang }: Props) {
   const [events, setEvents] = useState<ActivityEvent[]>([])
   const [eventsError, setEventsError] = useState<string | null>(null)
   const [todaySubmitCount, setTodaySubmitCount] = useState<number | null>(null)
+  const [todaySubjectSubmissionCounts, setTodaySubjectSubmissionCounts] = useState<Array<{ key: string; count: number }> | null>(null)
   const [attempts, setAttempts] = useState<PracticeAttemptRow[]>([])
   const [attemptsError, setAttemptsError] = useState<string | null>(null)
   const [eventFilter, setEventFilter] = useState<"all" | ActivityEventType>("all")
@@ -336,6 +339,9 @@ export function AdminPage({ lang }: Props) {
       if (section === "overview") {
         void fetchAdminTodaySubmitCount().then((res) => {
           if (mountedRef.current) setTodaySubmitCount(res.ok ? res.count : null)
+        })
+        void fetchAdminTodaySubmissionsBySubject().then((res) => {
+          if (mountedRef.current) setTodaySubjectSubmissionCounts(res.ok ? res.items.map((item) => ({ key: item.subjectId, count: item.count })) : null)
         })
       }
       void fetchAdminAttempts().then((res) => {
@@ -640,23 +646,6 @@ export function AdminPage({ lang }: Props) {
     [safeAttemptsPage, visibleAttempts],
   )
 
-  // Heatmap theo giờ hôm nay (giờ địa phương): dữ liệu log chỉ giữ ~1 ngày
-  // nên gom theo ngày sẽ dồn hết vào 1 ô, xem theo giờ mới thấy nhịp dùng.
-  const hourBuckets = useMemo(() => bucketHoursToday(rangedAttempts, rangedEvents), [rangedAttempts, rangedEvents])
-  const attemptsMax = useMemo(() => Math.max(1, ...hourBuckets.map((b) => b.attempts)), [hourBuckets])
-  const eventsMax = useMemo(() => Math.max(1, ...hourBuckets.map((b) => b.events)), [hourBuckets])
-  const contributionTotals = useMemo(() => ({
-    attempts: hourBuckets.reduce((sum, b) => sum + b.attempts, 0),
-    events: hourBuckets.reduce((sum, b) => sum + b.events, 0),
-  }), [hourBuckets])
-  const contributionPeak = useMemo(() => {
-    let peak = hourBuckets[0] ?? null
-    for (const b of hourBuckets) {
-      if (b.attempts + b.events > (peak ? peak.attempts + peak.events : -1)) peak = b
-    }
-    return peak
-  }, [hourBuckets])
-  const currentHour = new Date().getHours()
   // Card "Hoạt động trong ngày": window ngày lịch 00:00–23:59 (giờ địa phương),
   // không dùng rangedEvents (24h trượt) để khỏi lẫn event của hôm qua.
   const todayEvents = useMemo(() => filterByToday(events, (e) => e.createdAt), [events])
@@ -669,14 +658,12 @@ export function AdminPage({ lang }: Props) {
     return counts.sort((a, b) => b.count - a.count)
   }, [todayEvents, todaySubmitCount])
   const evTypeMax = useMemo(() => Math.max(1, ...evTypeCounts.map((c) => c.count)), [evTypeCounts])
-  const todayAttempts = useMemo(() => filterByToday(attempts, (a) => a.completedAt), [attempts])
-  const subjectTops = useMemo(() => topSubjects(todayAttempts), [todayAttempts])
+  const subjectTops = useMemo(
+    () => todaySubjectSubmissionCounts ?? submitEventsBySubject(todayEvents),
+    [todayEvents, todaySubjectSubmissionCounts],
+  )
   const evTypeTotal = useMemo(() => evTypeCounts.reduce((sum, c) => sum + c.count, 0), [evTypeCounts])
   const subjectTotal = useMemo(() => subjectTops.reduce((sum, s) => sum + s.count, 0), [subjectTops])
-  const eventsPerSubmit = contributionTotals.attempts > 0
-    ? (contributionTotals.events / contributionTotals.attempts).toFixed(1).replace(".", ",")
-    : "—"
-  const currentHourLabel = `${String(currentHour).padStart(2, "0")}h`
 
   const selected = selectedId ? userCache.get(selectedId) ?? null : null
 
@@ -1073,127 +1060,10 @@ export function AdminPage({ lang }: Props) {
 
                 {/* Tổng quan */}
                 <section id="admin-overview" className="scroll-mt-24 space-y-3 sm:space-y-4">
-                  <div className="grid gap-3 sm:gap-4 lg:grid-cols-2">
-                    {/* Nhịp hoạt động — biểu đồ cực 24h */}
-                    <div className="rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
-                      <div className="flex flex-wrap items-start gap-2">
-                        <div className="min-w-0">
-                          <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Thống kê hoạt động</p>
-                          <p className="mt-1 text-lg font-black tracking-tight text-[#101A33] sm:text-xl dark:text-white">
-                            {contributionTotals.attempts} Lượt hoàn thành quiz - {contributionTotals.events} hoạt động
-                          </p>
-                        </div>
-                        <div className="ml-auto flex items-center gap-3 pt-1 text-[11px] font-bold text-slate-400">
-                          <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-full bg-[#1CB0F6]" />Nộp bài</span>
-                          <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-full bg-[#8B5CF6]" />Events</span>
-                        </div>
-                      </div>
-                      <div className="mt-2 flex flex-col gap-4 sm:flex-row sm:items-center">
-                        <div className="relative mx-auto w-full max-w-[360px] flex-1 sm:mx-0 sm:min-w-0">
-                          <svg viewBox="0 0 320 320" className="block h-auto w-full" role="img" aria-label="Biểu đồ hoạt động 24 giờ">
-                            {[56, 84, 112, 138].map((r) => (
-                              <circle key={r} cx={160} cy={160} r={r} fill="none" stroke="#E2E8F0" strokeWidth={1} strokeDasharray="2 6" opacity={0.9} />
-                            ))}
-                            {(() => {
-                              const deg = currentHour * 15 - 90
-                              const rad1 = ((deg - 7.5) * Math.PI) / 180
-                              const rad2 = ((deg + 7.5) * Math.PI) / 180
-                              const rIn = 48
-                              const rOut = 150
-                              const x1 = 160 + Math.cos(rad1) * rIn
-                              const y1 = 160 + Math.sin(rad1) * rIn
-                              const x2 = 160 + Math.cos(rad1) * rOut
-                              const y2 = 160 + Math.sin(rad1) * rOut
-                              const x3 = 160 + Math.cos(rad2) * rOut
-                              const y3 = 160 + Math.sin(rad2) * rOut
-                              const x4 = 160 + Math.cos(rad2) * rIn
-                              const y4 = 160 + Math.sin(rad2) * rIn
-                              return (
-                                <path
-                                  d={`M ${x1} ${y1} L ${x2} ${y2} A ${rOut} ${rOut} 0 0 1 ${x3} ${y3} L ${x4} ${y4} A ${rIn} ${rIn} 0 0 0 ${x1} ${y1} Z`}
-                                  fill="#1CB0F6"
-                                  opacity={0.1}
-                                  stroke="#1CB0F6"
-                                  strokeWidth={1.5}
-                                  strokeOpacity={0.55}
-                                />
-                              )
-                            })()}
-                            {hourBuckets.map((b) => {
-                              const baseDeg = b.hour * 15 - 90
-                              const spread = 2.7
-                              const lenA = b.attempts > 0 ? 10 + (b.attempts / attemptsMax) * 62 : 0
-                              const lenE = b.events > 0 ? 10 + (b.events / eventsMax) * 62 : 0
-                              const r0 = 60
-                              const mk = (deg: number, len: number) => {
-                                const rad = (deg * Math.PI) / 180
-                                return {
-                                  x1: 160 + Math.cos(rad) * r0,
-                                  y1: 160 + Math.sin(rad) * r0,
-                                  x2: 160 + Math.cos(rad) * (r0 + len),
-                                  y2: 160 + Math.sin(rad) * (r0 + len),
-                                }
-                              }
-                              const a = mk(baseDeg - spread, lenA)
-                              const e = mk(baseDeg + spread, lenE)
-                              return (
-                                <g key={b.hour}>
-                                  <title>{`${b.label}: ${b.attempts} lượt nộp, ${b.events} events`}</title>
-                                  {lenA > 0 ? <line x1={a.x1} y1={a.y1} x2={a.x2} y2={a.y2} stroke="#1CB0F6" strokeWidth={b.hour === currentHour ? 6 : 5} strokeLinecap="round" /> : null}
-                                  {lenE > 0 ? <line x1={e.x1} y1={e.y1} x2={e.x2} y2={e.y2} stroke="#8B5CF6" strokeWidth={b.hour === currentHour ? 6 : 5} strokeLinecap="round" /> : null}
-                                </g>
-                              )
-                            })}
-                            {[0, 3, 6, 9, 12, 15, 18, 21].map((h) => {
-                              const rad = ((h * 15 - 90) * Math.PI) / 180
-                              const r = 152
-                              const x = 160 + Math.cos(rad) * r
-                              const y = 160 + Math.sin(rad) * r
-                              const isCur = h === currentHour
-                              return (
-                                <text key={h} x={x} y={y} textAnchor="middle" dominantBaseline="middle" fontSize={11.5} fontWeight={isCur ? 900 : 700} fill={isCur ? "#0F172A" : "#94A3B8"}>
-                                  {`${String(h).padStart(2, "0")}h`}
-                                </text>
-                              )
-                            })}
-                          </svg>
-                          <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-                            <div className="text-center">
-                              <p className="text-4xl font-black tracking-tight text-[#101A33] tabular-nums sm:text-[42px] dark:text-white">{currentHourLabel}</p>
-                              <p className="mt-0.5 text-xs font-bold text-slate-400">Giờ hiện tại</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="grid grid-cols-2 gap-2 sm:w-[204px] sm:shrink-0 sm:grid-cols-1">
-                          <div className="rounded-[16px] bg-[#EAF5FE] px-3.5 py-3 dark:bg-sky-500/10">
-                            <p className="text-[11px] font-bold text-slate-400 dark:text-slate-300">Lượt nộp bài</p>
-                            <p className="mt-0.5 text-[32px] font-black leading-none text-[#1C9CF0] tabular-nums">{contributionTotals.attempts}</p>
-                          </div>
-                          <div className="rounded-[16px] bg-[#F0EBFF] px-3.5 py-3 dark:bg-violet-500/10">
-                            <p className="text-[11px] font-bold text-slate-400 dark:text-slate-300">Tổng events</p>
-                            <p className="mt-0.5 text-[32px] font-black leading-none text-[#8B5CF6] tabular-nums">{contributionTotals.events}</p>
-                          </div>
-                          <div className="col-span-2 grid grid-cols-2 gap-2 sm:col-span-1">
-                            <div className="rounded-[14px] bg-[#F4F6FA] px-3 py-2.5 dark:bg-white/5">
-                              <p className="text-[11px] font-bold text-slate-400">Cao điểm</p>
-                              <p className="mt-0.5 text-lg font-black text-[#101A33] tabular-nums dark:text-white">{contributionPeak?.label ?? "—"}</p>
-                              <p className="mt-0.5 text-[11px] font-bold leading-snug text-slate-400">
-                                {contributionPeak && (contributionPeak.attempts > 0 || contributionPeak.events > 0)
-                                  ? `${contributionPeak.attempts} nộp · ${contributionPeak.events} ev.`
-                                  : "Chưa có dữ liệu."}
-                              </p>
-                            </div>
-                            <div className="rounded-[14px] bg-[#F4F6FA] px-3 py-2.5 dark:bg-white/5">
-                              <p className="text-[11px] font-bold leading-tight text-slate-400">Events mỗi nộp</p>
-                              <p className="mt-0.5 text-lg font-black text-[#101A33] tabular-nums dark:text-white">{eventsPerSubmit}</p>
-                              <p className="mt-0.5 text-[11px] font-bold text-slate-400">trung bình</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <div className="grid min-w-0 grid-cols-1 gap-3 sm:gap-4 xl:grid-cols-2">
+                    <UserGrowthChart />
                     {/* Events theo loại — pill bars */}
-                    <div className="rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
+                    <div className="hidden rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
                       <div className="flex flex-wrap items-start gap-2">
                         <div className="min-w-0">
                           <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Hoạt động trong ngày</p>
@@ -1228,76 +1098,7 @@ export function AdminPage({ lang }: Props) {
                         }) : <p className="text-xs font-semibold text-slate-400">Chưa có event nào.</p>}
                       </div>
                     </div>
-                  </div>
-                  {/* Top môn — donut + pill bars */}
-                  <div className="rounded-[16px] border-2 border-[#E5E5E5] bg-white p-4 shadow-[0_3px_0_#DCDCDC] sm:rounded-[20px] sm:p-5 sm:shadow-[0_4px_0_#DCDCDC] dark:border-white/10 dark:bg-slate-900 dark:shadow-[0_4px_0_rgba(0,0,0,0.35)]">
-                    <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-400">Thống kê các môn được làm trong ngày</p>
-                    <p className="mt-1 text-lg font-black tracking-tight text-[#101A33] sm:text-xl dark:text-white">
-                      {subjectTops.length ? `Hôm nay có ${subjectTops.length} môn được học` : "Hôm nay chưa có môn nào được học"}
-                    </p>
-                    <div className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-5">
-                      <div className="relative mx-auto h-[168px] w-[168px] shrink-0 sm:mx-0">
-                        {subjectTotal > 0 ? (
-                          <svg viewBox="0 0 160 160" className="block h-full w-full -rotate-90">
-                            {(() => {
-                              const R = 60
-                              const C = 2 * Math.PI * R
-                              const palette = ["#0FC57C", "#3BD598", "#6FE3AE", "#A4EFC6", "#C9F5DD", "#E0F8EA", "#8ADFC0", "#5BD6A4"]
-                              let acc = 0
-                              return subjectTops.slice(0, 8).map((s, i) => {
-                                const frac = s.count / subjectTotal
-                                const start = acc
-                                acc += frac
-                                const gap = subjectTops.length > 1 ? 0.012 : 0
-                                const f = Math.max(0, frac - gap)
-                                return (
-                                  <circle
-                                    key={s.key}
-                                    cx={80}
-                                    cy={80}
-                                    r={R}
-                                    fill="none"
-                                    stroke={palette[i % palette.length]}
-                                    strokeWidth={22}
-                                    strokeDasharray={`${(f * C).toFixed(2)} ${C.toFixed(2)}`}
-                                    strokeDashoffset={(-start * C).toFixed(2)}
-                                    strokeLinecap="butt"
-                                  />
-                                )
-                              })
-                            })()}
-                          </svg>
-                        ) : (
-                          <div className="flex h-full w-full items-center justify-center rounded-full border-[22px] border-slate-100 dark:border-white/10" />
-                        )}
-                        <div className="absolute inset-0 flex flex-col items-center justify-center">
-                          <p className="text-4xl font-black tracking-tight text-[#101A33] tabular-nums dark:text-white">{subjectTotal}</p>
-                          <p className="mt-0.5 text-xs font-bold text-slate-400">lượt nộp</p>
-                        </div>
-                      </div>
-                      <div className="min-w-0 flex-1 space-y-2">
-                        {subjectTops.length ? subjectTops.slice(0, 8).map((s, i) => {
-                          const top = Math.max(1, subjectTops[0]?.count ?? 1)
-                          const barW = Math.round((s.count / top) * 100)
-                          const pct = subjectTotal > 0 ? Math.round((s.count / subjectTotal) * 100) : 0
-                          const dots = ["bg-[#0FC57C]", "bg-[#3BD598]", "bg-[#6FE3AE]", "bg-[#A4EFC6]", "bg-[#C9F5DD]"]
-                          return (
-                            <div key={s.key} title={`${s.key}: ${s.count} (${pct}%)`} className="relative flex h-10 items-center overflow-hidden rounded-[12px] bg-[#F1F5F9] sm:h-11 dark:bg-white/5">
-                              <div
-                                className="absolute inset-y-0 left-0 rounded-[12px] bg-[#B9EDD3] dark:bg-emerald-500/25"
-                                style={{ width: `${Math.max(barW, 12)}%`, minWidth: 150, maxWidth: "100%", opacity: 1 - Math.min(i, 5) * 0.06 }}
-                              />
-                              <div className="relative flex w-full items-center gap-2 pl-3 pr-2.5">
-                                <span className={cn("h-2.5 w-2.5 shrink-0 rounded-full", dots[Math.min(i, dots.length - 1)])} />
-                                <span className="min-w-0 flex-1 truncate text-[13px] font-bold text-[#1E3A5F] dark:text-slate-100">{s.key}</span>
-                                <span className="shrink-0 text-[15px] font-black text-[#101A33] tabular-nums dark:text-white">{s.count}</span>
-                                <span className="w-9 shrink-0 text-right text-xs font-bold text-slate-400 tabular-nums">{pct}%</span>
-                              </div>
-                            </div>
-                          )
-                        }) : <p className="text-xs font-semibold text-slate-400">Chưa có.</p>}
-                      </div>
-                    </div>
+                    <TodaySubjectsChart subjects={subjectTops} total={subjectTotal} />
                   </div>
                 </section>
                 {selectedOverviewEventType ? (

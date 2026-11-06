@@ -60,6 +60,21 @@ export function topSubjects(attempts: PracticeAttemptRow[], limit = 8): Array<{ 
   return countByKey(attempts.map((a) => a.subjectId), limit)
 }
 
+/** Group today's submit activity events by the subject that was submitted. */
+export function submitEventsBySubject(events: ActivityEvent[]): Array<{ key: string; count: number }> {
+  const counts = new Map<string, number>()
+  for (const event of events) {
+    if (event.eventType !== "submit_attempt") continue
+    const subjectId = typeof event.metadata.subjectId === "string" && event.metadata.subjectId
+      ? event.metadata.subjectId
+      : ""
+    counts.set(subjectId, (counts.get(subjectId) ?? 0) + 1)
+  }
+  return [...counts.entries()]
+    .map(([key, count]) => ({ key, count }))
+    .sort((a, b) => b.count - a.count || a.key.localeCompare(b.key))
+}
+
 /** Giữ lại items có timestamp rơi vào ngày lịch hiện tại theo giờ địa phương. */
 export function filterByToday<T>(items: T[], getDate: (item: T) => string, now = Date.now()): T[] {
   const today = new Date(now)
