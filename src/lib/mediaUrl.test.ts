@@ -27,6 +27,11 @@ describe("toMediaUrl", () => {
     expect(toMediaUrl("kinh_te_vi_mo/images/do_thi_co_gian_cau.png")).toBe(`${R2_PUBLIC_BASE}/data/kinh_te_vi_mo/images/do_thi_co_gian_cau.png`)
   })
 
+  it("sends software-quality diagram images to the R2 data/ prefix", () => {
+    expect(toMediaUrl("danh_gia_va_kiem_dinh_chat_luong_phan_mem/images/xref111_page28.png")).toBe(`${R2_PUBLIC_BASE}/data/danh_gia_va_kiem_dinh_chat_luong_phan_mem/images/xref111_page28.png`)
+    expect(toMediaUrl("/data/danh_gia_va_kiem_dinh_chat_luong_phan_mem/images/xref197_page51.jpeg")).toBe(`${R2_PUBLIC_BASE}/data/danh_gia_va_kiem_dinh_chat_luong_phan_mem/images/xref197_page51.jpeg`)
+  })
+
   it("sends English 3 (ta3) audio to the R2 data/ prefix", () => {
     expect(toMediaUrl("ta3/part1-audio.mp3")).toBe(`${R2_PUBLIC_BASE}/data/ta3/part1-audio.mp3`)
     expect(toMediaUrl("/data/ta3/part2-audio.mp3")).toBe(`${R2_PUBLIC_BASE}/data/ta3/part2-audio.mp3`)

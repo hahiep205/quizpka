@@ -70,6 +70,7 @@ import { invalidateSyncedHistoryCache } from "@/features/history/api/userHistory
 import { invalidateLeaderboardSnapshotCache } from "@/lib/leaderboard"
 import { incrementSubjectAttempt } from "@/lib/subjectAttemptStats"
 import { playAnswerFeedback } from "@/features/quiz/lib/answerFeedbackSound"
+import { quizKeyAction } from "@/features/quiz/lib/quizKeyboard"
 
 type Lang = "en" | "vi"
 
@@ -582,6 +583,39 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
     }
   }, [hardPos, hardQueue, hardSelected])
 
+  useEffect(() => {
+    if (finished || loading || questions.length === 0) return
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (isEditableTarget(event.target) || document.querySelector("[role='dialog']")) return
+      const action = quizKeyAction(event)
+      if (!action) return
+      if (action.type === "answer") {
+        const question = isHard ? hardCurrent : questionForKeyboard(partQuestions)
+        if (!question || question.options.length <= action.optionIndex) return
+        if (isHard && hardSelected !== undefined) return
+        event.preventDefault()
+        if (isHard) handleHardAnswer(question.id, action.optionIndex)
+        else handleAnswer(question.id, action.optionIndex)
+        return
+      }
+      if (isHard) {
+        if (action.type !== "next" || hardSelected === undefined) return
+        event.preventDefault()
+        handleHardNext()
+        return
+      }
+      const index = action.type === "previous" ? previousPartIndex : nextPartIndex
+      if (index === undefined) return
+      event.preventDefault()
+      goToQuestion(index)
+      requestAnimationFrame(() => {
+        document.querySelector(".quiz-question-panel")?.scrollIntoView({ block: "start" })
+      })
+    }
+    window.addEventListener("keydown", onKeyDown)
+    return () => window.removeEventListener("keydown", onKeyDown)
+  }, [finished, goToQuestion, handleAnswer, handleHardAnswer, handleHardNext, hardCurrent, hardSelected, isHard, loading, nextPartIndex, partQuestions, previousPartIndex, questions.length])
+
   const handleHardRestart = useCallback(() => {
     historySaved.current = false
     setHardQueue(buildHardQueue(questions, setup.questionOrder === "random"))
@@ -990,6 +1024,32 @@ export function QuizSession({ lang, subject, exam, setup, chapterId, toeicScope,
       ) : null}
     </div>
   )
+}
+
+function isEditableTarget(target: EventTarget | null) {
+  if (!(target instanceof HTMLElement)) return false
+  if (target.isContentEditable) return true
+  const tag = target.tagName
+  return tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT"
+}
+
+function questionForKeyboard(partQuestions: Question[]): Question | undefined {
+  if (partQuestions.length === 0) return undefined
+  if (partQuestions.length === 1) return partQuestions[0]
+  const allowed = new Set(partQuestions.map((question) => question.id))
+  let bestId: string | undefined
+  let bestTop = Infinity
+  for (const node of document.querySelectorAll<HTMLElement>("[data-quiz-question]")) {
+    const id = node.dataset.quizQuestion
+    if (!id || !allowed.has(id)) continue
+    const rect = node.getBoundingClientRect()
+    if (rect.bottom <= 0 || rect.top >= window.innerHeight) continue
+    if (rect.top < bestTop) {
+      bestTop = rect.top
+      bestId = id
+    }
+  }
+  return partQuestions.find((question) => question.id === (bestId ?? partQuestions[0].id))
 }
 
 function QuestionMedia({ question, t, lang }: {

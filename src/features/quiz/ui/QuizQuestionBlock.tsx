@@ -94,6 +94,7 @@ export const QuizQuestionBlock = memo(function QuizQuestionBlock({
 
   return (
     <section
+      data-quiz-question={question.id}
       className={cn("select-none border-b border-[#E5E5E5] pb-8 last:border-b-0 last:pb-0 dark:border-white/10", compact && "pb-5")}
       onCopy={guardQuizContentCopy}
       onCut={guardQuizContentCopy}

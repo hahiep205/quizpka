@@ -9,6 +9,7 @@ const R2_PREFIX_REWRITES = [
   ["tadv-traphi/", "tadv-traphi/"],
   ["toeic-test/", "toeic/"],
   ["kinh_te_vi_mo/", "data/kinh_te_vi_mo/"],
+  ["danh_gia_va_kiem_dinh_chat_luong_phan_mem/", "data/danh_gia_va_kiem_dinh_chat_luong_phan_mem/"],
   ["ta3/", "data/ta3/"],
 ] as const
 
