@@ -1,5 +1,5 @@
 import { useEffect, useId, useRef, useState } from "react"
-import { BookOpen, CirclePlay, Download, ExternalLink, FileImage } from "lucide-react"
+import { BookOpen, CirclePlay, Download, ExternalLink, FileImage, FileText } from "lucide-react"
 import { useAuth } from "@/auth/AuthProvider"
 import { logActivityEvent } from "@/features/activity/lib/activityLog"
 import { getChapterOptionsForSubject } from "@/data/subjectChapters"
@@ -36,7 +36,7 @@ export function HcmChapterPickerModal({ open, lang, exam, subject, onClose, onSe
 
   useEffect(() => {
     if (open && exam) {
-      const options = (getChapterOptionsForSubject(exam.subjectId) ?? []).filter((option) => !option.hidden)
+      const options = (getChapterOptionsForSubject(exam.subjectId) ?? []).filter((option) => !option.hidden && !option.externalUrl)
       setSelected(options.some((option) => option.id === "all") ? "all" : (options[0]?.id ?? "all"))
       setVisible(true)
       setState("open")
@@ -98,13 +98,23 @@ export function HcmChapterPickerModal({ open, lang, exam, subject, onClose, onSe
       <div className="grid gap-3">
         {chapterOptions.map((chapter) => (
           <div key={chapter.id}>
-            <PickerOptionButton
-              active={selected === chapter.id}
-              icon={chapter.documentId ? <FileImage className="h-5 w-5" /> : <BookOpen className="h-5 w-5" />}
-              title={chapter.label[lang]}
-              subtitle={chapter.documentId ? `${chapter.count} ${t.images}` : `${chapter.count} ${t.questions}`}
-              onClick={() => setSelected(chapter.id)}
-            />
+            {chapter.externalUrl ? (
+              <PickerOptionButton
+                active={false}
+                icon={<FileText className="h-5 w-5" />}
+                title={chapter.label[lang]}
+                subtitle={t.openPdf}
+                href={chapter.externalUrl}
+              />
+            ) : (
+              <PickerOptionButton
+                active={selected === chapter.id}
+                icon={chapter.documentId ? <FileImage className="h-5 w-5" /> : <BookOpen className="h-5 w-5" />}
+                title={chapter.label[lang]}
+                subtitle={chapter.documentId ? `${chapter.count} ${t.images}` : `${chapter.count} ${t.questions}`}
+                onClick={() => setSelected(chapter.id)}
+              />
+            )}
             {chapter.solutionUrl ? (
               <a
                 href={chapter.solutionUrl}

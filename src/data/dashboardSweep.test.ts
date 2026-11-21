@@ -182,7 +182,7 @@ function sweepSubject(subjectId: string): SweepResult {
     if (seenChapter.has(c.id)) errors.push(`chapter "${c.id}": trùng id`)
     seenChapter.add(c.id)
     if (!c.label?.vi || !c.label?.en) errors.push(`chapter "${c.id}": thiếu label vi/en`)
-    if (!(c.count > 0)) errors.push(`chapter "${c.id}": count phải > 0`)
+    if (!(c.count > 0) && !c.externalUrl) errors.push(`chapter "${c.id}": count phải > 0`)
     if (c.documentId && !(c.count >= 1)) {
       errors.push(`chapter "${c.id}": document chapter count bất thường`)
     }
@@ -270,7 +270,7 @@ function sweepSubject(subjectId: string): SweepResult {
     }
     // đối chiếu count từng chapter (bỏ qua chapter tài liệu ảnh/pdf)
     for (const c of subject.chapters ?? []) {
-      if (c.documentId) continue
+      if (c.documentId || c.externalUrl) continue
       const actual = filterQuestionsBySubjectChapter(subject.id, combined, c.id).length
       if (actual !== c.count) {
         errors.push(`exam "${exam.id}": chapter "${c.id}" thực tế ${actual} ≠ khai báo ${c.count}`)

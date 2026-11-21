@@ -1,4 +1,4 @@
-import { X } from "lucide-react"
+import { ExternalLink, X } from "lucide-react"
 import type { ReactNode } from "react"
 import { Card } from "@/components/ui/card"
 import { cn, modalBodyClass, modalFooterClass, modalFrameClass, modalHeaderClass } from "@/lib/utils"
@@ -66,24 +66,23 @@ export function PickerOptionButton({
   title,
   subtitle,
   onClick,
+  href,
 }: {
   active: boolean
   icon: ReactNode
   title: string
   subtitle: ReactNode
-  onClick: () => void
+  onClick?: () => void
+  href?: string
 }) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      className={cn(
+  const className = cn(
         "flex w-full items-center gap-4 rounded-[12px] border-2 px-4 py-4 text-left transition-all",
         active
           ? "border-[#1CB0F6] bg-[#E8F7FE] shadow-[0_3px_0_#1CB0F6] dark:bg-sky-500/10"
           : "border-[#E5E5E5] bg-white hover:border-[#B3E5FC] dark:border-white/10 dark:bg-slate-900"
-      )}
-    >
+      )
+    const body = (
+      <>
       <span
         className={cn(
           "flex h-11 w-11 shrink-0 items-center justify-center rounded-[12px]",
@@ -96,14 +95,30 @@ export function PickerOptionButton({
         <span className="block line-clamp-2 text-[15px] font-extrabold leading-5 text-[#100F3E] dark:text-white">{title}</span>
         <span className="mt-1 block text-[13px] font-semibold leading-4 text-slate-500 dark:text-slate-400">{subtitle}</span>
       </span>
-      <span
-        className={cn(
-          "flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2",
-          active ? "border-[#1CB0F6] bg-[#1CB0F6] text-white" : "border-[#E5E5E5] bg-white dark:border-white/10"
-        )}
-      >
-        {active ? <span className="h-2 w-2 rounded-full bg-white" /> : null}
-      </span>
+      {href ? (
+        <ExternalLink className="h-4 w-4 shrink-0 text-[#1CB0F6]" strokeWidth={2} aria-hidden="true" />
+      ) : (
+        <span
+          className={cn(
+            "flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2",
+            active ? "border-[#1CB0F6] bg-[#1CB0F6] text-white" : "border-[#E5E5E5] bg-white dark:border-white/10"
+          )}
+        >
+          {active ? <span className="h-2 w-2 rounded-full bg-white" /> : null}
+        </span>
+      )}
+      </>
+    )
+  if (href) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
+        {body}
+      </a>
+    )
+  }
+  return (
+    <button type="button" onClick={onClick} className={className}>
+      {body}
     </button>
   )
 }

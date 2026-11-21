@@ -73,7 +73,7 @@ describe("subject bank metadata matches real data files", () => {
             return bank.questions
           })
         )
-        for (const chapter of subject.chapters ?? []) {
+        for (const chapter of (subject.chapters ?? []).filter((item) => !item.externalUrl)) {
           const actual = filterQuestionsBySubjectChapter(subject.id, combined, chapter.id).length
           expect(actual, `${subject.id} chapter "${chapter.id}" mismatch`).toBe(chapter.count)
         }

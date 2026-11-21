@@ -20,7 +20,7 @@ export const subjectChapterMap: Partial<Record<SubjectId, ChapterOption[]>> = Ob
 const chapterGroups: Record<string, Record<string, readonly string[]>> = Object.fromEntries(
   subjects.flatMap((subject) => {
     const groups = subject.chapters
-      ?.filter((chapter) => chapter.id !== "all")
+      ?.filter((chapter) => chapter.id !== "all" && !chapter.externalUrl)
       .map((chapter) => [chapter.id, chapter.matches ?? [chapter.label.vi]] as const)
     if (!groups?.length) return []
     return [[subject.id, Object.fromEntries(groups)] as const]

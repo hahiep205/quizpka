@@ -602,6 +602,7 @@ export const chapterPickerCopy = {
     download: "Download",
     questions: "questions",
     images: "images",
+    openPdf: "PDF · opens in a new tab",
   },
   vi: {
     title: "Chọn chương",
@@ -612,6 +613,7 @@ export const chapterPickerCopy = {
     download: "Tải về",
     questions: "câu hỏi",
     images: "ảnh",
+    openPdf: "PDF · mở trong tab mới",
   },
 } as const
 

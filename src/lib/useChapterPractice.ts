@@ -51,7 +51,7 @@ export function useChapterPractice(lang: Lang) {
     if (!pickerExam) return
     const subject = getSubjectById(pickerExam.subjectId)
     const option = subject?.chapters?.find((chapter) => chapter.id === chapterId)
-    if (!option) return
+    if (!option || option.externalUrl) return
     const effectiveExam = resolveExamForChapter(subject, pickerExam, option)
     if (option?.documentId) {
       setImageDoc({ title: option.label, subjectId: effectiveExam.subjectId, documentId: option.documentId })

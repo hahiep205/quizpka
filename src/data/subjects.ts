@@ -75,6 +75,8 @@ export type ChapterOption = {
   documentId?: string
   /** Optional solution video/page URL shown inside the chapter picker for this option. */
   solutionUrl?: string
+  /** When set, the picker card opens this URL in a new tab instead of starting a quiz. */
+  externalUrl?: string
   /** When true, the option stays available for filtering/counts but is hidden from the chapter picker. */
   hidden?: boolean
   count: number
@@ -832,18 +834,20 @@ export const subjects: Subject[] = [
     category: { en: "Major", vi: "Chuyên ngành" },
     exams: [
       {
-        id: "distributed-applications-final-bank-1", type: "final", year: 2026, questionCount: 70, durationMinutes: 90,
+        id: "distributed-applications-final-bank-1", type: "final", year: 2026, questionCount: 190, durationMinutes: 240,
         title: { en: "Distributed Applications Final", vi: "Quiz ôn tập cuối kỳ - Ứng dụng phân tán" },
-        description: { en: "A question bank of 70 final review questions across 5 parts.", vi: "Gồm 70 câu hỏi ôn tập Cuối kỳ môn Ứng dụng phân tán, chia làm 5 phần." },
+        description: { en: "A question bank of 190 final review questions: 5 parts plus a 120-question, 6-chapter compilation.", vi: "Gồm 190 câu hỏi ôn tập Cuối kỳ môn Ứng dụng phân tán: 5 phần và 120 câu tổng hợp 6 chương." },
       },
     ],
     chapters: [
-      { id: "all", label: { en: "All parts", vi: "Toàn bộ (70 câu)" }, count: 70 },
+      { id: "all", label: { en: "All questions", vi: "Toàn bộ (190 câu)" }, count: 190 },
       { id: "p1", label: { en: "Part 1 - Operating Systems and Distributed Systems", vi: "Phần 1 - Hệ điều hành và Hệ thống phân tán" }, matches: ["Phần 1"], count: 15 },
       { id: "p2", label: { en: "Part 2 - Synchronization and Algorithms", vi: "Phần 2 - Đồng bộ hóa và Thuật toán" }, matches: ["Phần 2"], count: 10 },
       { id: "p3", label: { en: "Part 3 - Security and Models", vi: "Phần 3 - Bảo mật và Mô hình" }, matches: ["Phần 3"], count: 10 },
       { id: "p4", label: { en: "Part 4 - Time Synchronization and Advanced Algorithms", vi: "Phần 4 - Đồng bộ hóa thời gian và Thuật toán nâng cao" }, matches: ["Phần 4"], count: 15 },
       { id: "p5", label: { en: "Part 5 - Programming Techniques and Applications", vi: "Phần 5 - Kỹ thuật lập trình và Ứng dụng" }, matches: ["Phần 5"], count: 20 },
+      { id: "pdf", label: { en: "Review PDF", vi: "Tài liệu ôn tập PDF" }, externalUrl: "https://pub-2b172bb81d224085aab3d04e88be8508.r2.dev/ungdungphantan-pdf.pdf", count: 0 },
+      { id: "tong-hop", label: { en: "6-chapter compilation - Review PDF", vi: "Tổng hợp 6 chương - Tài liệu ôn tập PDF" }, matches: ["Chương 1", "Chương 2", "Chương 3", "Chương 4", "Chương 5", "Chương 6"], count: 120 },
     ],
   },
   {
