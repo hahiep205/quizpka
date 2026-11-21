@@ -38,6 +38,7 @@ export function getPaidProductId(subjectCode: string): string | null {
   if (subjectCode === "ENT101") return "ent101"
   if (subjectCode === "PM101") return "pm101"
   if (subjectCode === "NNDL101") return "nndl101"
+  if (subjectCode === "UDPT101") return "udpt101"
   return null
 }
 
@@ -84,7 +85,7 @@ const PRODUCT_PRICES_VND: Record<string, number> = {
   mln101: 12000, mln102: 12000, pm101: 12000, soc101: 12000, ent101: 12000,
   rm101: 12000, rm102: 12000, mac101: 12000, mac102: 12000, pec101: 12000,
   sec301: 12000, mar101: 12000, oit101: 12000, fin101: 12000, eco101: 12000,
-  civ101: 12000, law101: 12000, db101: 12000, dsai101: 12000, nndl101: 12000,
+  civ101: 12000, law101: 12000, db101: 12000, dsai101: 12000, nndl101: 12000, udpt101: 12000,
   idsai101: 12000, dm101: 12000, sta201: 12000, mgt101: 12000, his101: 12000,
   hcm101: 12000,
 }
@@ -132,7 +133,7 @@ const ALL_PAID_PRODUCT_IDS = [
   "fin101", "civ101", "eco101", "law101", "hcm101", "mgt101", "phy101",
   "ppt101", "ppt102", "gt101", "dst101", "xst101", "mln102", "pec101",
   "mln101", "his101", "soc101", "dm101", "ta101", "rm101", "rm102",
-  "tadv02", "sta201", "db101", "ent101", "pm101", "nndl101",
+  "tadv02", "sta201", "db101", "ent101", "pm101", "nndl101", "udpt101",
 ]
 
 /** All paid product_ids (single source of truth for batch checks). */

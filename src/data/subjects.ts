@@ -34,6 +34,7 @@ export type SubjectId =
   | "khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
   | "nhap-mon-khoa-hoc-du-lieu-va-tri-tue-nhan-tao"
   | "mang-noron-va-hoc-sau"
+  | "ung-dung-phan-tan"
   | "vat-ly-1"
   | "phuong-phap-tinh-giua-ky"
   | "phuong-phap-tinh-cuoi-ky"
@@ -822,6 +823,27 @@ export const subjects: Subject[] = [
       { id: "c7", label: { en: "Chapter 7", vi: "Chương 7" }, count: 10 },
       { id: "c8", label: { en: "Chapter 8", vi: "Chương 8" }, count: 25 },
       { id: "c9", label: { en: "Chapter 9", vi: "Chương 9" }, count: 6 },
+    ],
+  },
+  {
+    id: "ung-dung-phan-tan",
+    code: "UDPT101",
+    name: { en: "Distributed Applications Final", vi: "Quiz ôn tập cuối kỳ - Ứng dụng phân tán" },
+    category: { en: "Major", vi: "Chuyên ngành" },
+    exams: [
+      {
+        id: "distributed-applications-final-bank-1", type: "final", year: 2026, questionCount: 70, durationMinutes: 90,
+        title: { en: "Distributed Applications Final", vi: "Quiz ôn tập cuối kỳ - Ứng dụng phân tán" },
+        description: { en: "A question bank of 70 final review questions across 5 parts.", vi: "Gồm 70 câu hỏi ôn tập Cuối kỳ môn Ứng dụng phân tán, chia làm 5 phần." },
+      },
+    ],
+    chapters: [
+      { id: "all", label: { en: "All parts", vi: "Toàn bộ (70 câu)" }, count: 70 },
+      { id: "p1", label: { en: "Part 1 - Operating Systems and Distributed Systems", vi: "Phần 1 - Hệ điều hành và Hệ thống phân tán" }, matches: ["Phần 1"], count: 15 },
+      { id: "p2", label: { en: "Part 2 - Synchronization and Algorithms", vi: "Phần 2 - Đồng bộ hóa và Thuật toán" }, matches: ["Phần 2"], count: 10 },
+      { id: "p3", label: { en: "Part 3 - Security and Models", vi: "Phần 3 - Bảo mật và Mô hình" }, matches: ["Phần 3"], count: 10 },
+      { id: "p4", label: { en: "Part 4 - Time Synchronization and Advanced Algorithms", vi: "Phần 4 - Đồng bộ hóa thời gian và Thuật toán nâng cao" }, matches: ["Phần 4"], count: 15 },
+      { id: "p5", label: { en: "Part 5 - Programming Techniques and Applications", vi: "Phần 5 - Kỹ thuật lập trình và Ứng dụng" }, matches: ["Phần 5"], count: 20 },
     ],
   },
   {
